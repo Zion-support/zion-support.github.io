@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of all files that need fixing
+// List of all files that need fixing;
 const filesToFix = [
   'app/consultation/page.tsx',
   'app/micro-saas/page.tsx',
@@ -31,10 +31,10 @@ const filesToFix = [
   'app/utils/link.tsx'
 ];
 
-// Function to fix a single file
+// Function to fix a single file;
 function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -44,9 +44,9 @@ function fixFile(filePath) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Remove all React imports
-    content = content.replace(/import React from ['"]react['"];\s*/g, '');
-    content = content.replace(/import React from ['"]react['"]\s*/g, '');
-    content = content.replace(/import { Helmet } from ['"]react-helmet-async['"];\s*/g, '');
+    content = content.replace(/import React from ['"]react['"];\s*/g, '');"
+    content = content.replace(/import React from ['"]react['"]\s*/g, '');"
+    content = content.replace(/import { Helmet } from ['"]react-helmet-async['"];\s*/g, '');"
     content = content.replace(/import { Helmet } from ['"]react-helmet-async['"]\s*/g, '');
     
     // Remove unused expressions and console.log statements
@@ -64,16 +64,16 @@ function fixFile(filePath) {
     
     // If the file is now empty or just has whitespace, add a basic structure
     if (content.trim() === '' || content.trim().length < 10) {
-      if (filePath.endsWith('.tsx')) {
-        const pageName = filePath.split('/').pop()?.replace('.tsx', '').replace('page', '') || 'Page';
+      if (filePath.endsWith('.tsx')) {;
+const pageName = filePath.split('/').pop()?.replace('.tsx', '').replace('page', '') || 'Page';
         const componentName = pageName.charAt(0).toUpperCase() + pageName.slice(1) + 'Page';
         
         content = `export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">></div>"
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>")
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>"
           <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.replace('Page', '').toLowerCase()}</p>
         </div>
       </div>
@@ -81,7 +81,7 @@ function fixFile(filePath) {
   );
 }`;
       } else if (filePath.endsWith('.ts')) {
-        content = `// TypeScript utility
+        content = `// TypeScript utility;
 export const utility = () => {
   return 'utility function';
 };`;
@@ -99,4 +99,5 @@ export const utility = () => {
 // Fix all files
 console.log('Starting to fix all remaining issues...');
 filesToFix.forEach(fixFile);
-console.log('All remaining issues fixed!');
+console.log('All remaining issues fixed!');"
+}}

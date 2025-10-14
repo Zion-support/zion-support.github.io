@@ -3,11 +3,11 @@ interface ResponsiveContainerProps {}
   children: React.ReactNode
   className?: string}
 const ResponsiveContainer: "React.FC<ResponsiveContainerProps> = ({ children", className = '' }) => {''}'''
-  return (
-    <div className={`max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8 ${className"}`}>"""
+  return ("
+    <div className={`max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8 ${className"}`}></div>"""
       {children}
-    </div>
+    </div>)
   )
 }
 export default ResponsiveContainer
-</ResponsiveContainerProps>
+</ResponsiveContainerProps>"

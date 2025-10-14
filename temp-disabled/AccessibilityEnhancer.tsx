@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react'''''
+import React, { useEffect } from 'react''''';
 const AccessibilityEnhancer: React.FC = () => {"}""
   useEffect(() => {}, [])
-    // Add skip link functionality
-    const addSkipLink = () => {}
+    // Add skip link functionality;
+const addSkipLink = () => {}
       const skipLink = document.createElement('a')''''
       skipLink.href = '#main-content'''''
       skipLink.textContent = 'Skip to main content'''''
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'''''
       document.body.insertBefore(skipLink, document.body.firstChild)
     }
-// Focus management for keyboard navigation
-    const handleKeyDown = (event: "KeyboardEvent) => {"}""
+// Focus management for keyboard navigation";
+const handleKeyDown = (event: "KeyboardEvent) => {"}""
       if (event.key === 'Tab') {'}'''
         document.body.classList.add('keyboard-navigation')''''
       }
@@ -18,19 +18,19 @@ const AccessibilityEnhancer: React.FC = () => {"}""
     const handleMouseDown = () => {}
       document.body.classList.remove('keyboard-navigation')''''
     }
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {}
+    // Add focus indicators for keyboard navigation;
+const addFocusStyles = () => {}
       const style = document.createElement('style')''''
       style.textContent = `
         *:focus {}
-          outline: 2px solid #3b82f6
+          outline: 2px solid #3b82f6"
           outline-offset: "2px""""
         }
       `
       document.head.appendChild(style)
     }
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {}
+    // Add ARIA landmarks;
+const addAriaLandmarks = () => {}
       const main = document.querySelector('main')''''
       if (main && !main.getAttribute('role')) {'}'''
         main.setAttribute('role', 'main')''''
@@ -45,23 +45,23 @@ const AccessibilityEnhancer: React.FC = () => {"}""
     root.style.setProperty('--font-size-multiplier',''''
       fontSize === 'large' ? '1.2' :''''
       fontSize === 'extra-large' ? '1.4' :''''
-      fontSize === 'small' ? '0.9' : '1'''''
+      fontSize === 'small' ? '0.9' : '1''''')
     )
   }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement
-  useEffect(() => {}, [])
-    const handleKeyDown = (e: "KeyboardEvent) => {"}""
+  useEffect(() => {}, [])";
+const handleKeyDown = (e: "KeyboardEvent) => {"}""
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {'}'''
-        e.preventDefault()
-        const mainContent = document.getElementById('main-content')''''
+        e.preventDefault();
+const mainContent = document.getElementById('main-content')''''
         if (mainContent) {}
           mainContent.focus()
         }
       }
       // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {'}'''
-        const activeElement = document.activeElement as HTMLElement
+      if (e.key === 'Escape') {'}''';
+const activeElement = document.activeElement as HTMLElement
         if (activeElement && activeElement.blur) {}
           activeElement.blur()
         }
@@ -71,15 +71,15 @@ const AccessibilityEnhancer: React.FC = () => {"}""
     return () => document.removeEventListener('keydown', handleKeyDown)''''
   }, [])
   // Focus management
-  useEffect(() => {}, [])
-    const handleFocusIn = (e: "FocusEvent) => {"}""
-      const target = e.target as HTMLElement
+  useEffect(() => {}, [])";
+const handleFocusIn = (e: "FocusEvent) => {"}"";
+const target = e.target as HTMLElement
       if (target) {}
         target.classList.add('focus-visible')''''
       }
-    }
-    const handleFocusOut = (e: "FocusEvent) => {"}""
-      const target = e.target as HTMLElement
+    }";
+const handleFocusOut = (e: "FocusEvent) => {"}"";
+const target = e.target as HTMLElement
       if (target) {}
         target.classList.remove('focus-visible')''''
       }
@@ -87,10 +87,10 @@ const AccessibilityEnhancer: React.FC = () => {"}""
     document.addEventListener('focusin', handleFocusIn)''''
     document.addEventListener('focusout', handleFocusOut)''''
     return () => {}
-      focusableElements.forEach(element => {}
+      focusableElements.forEach(element => {})
         element.removeEventListener('focus', handleFocus)''''
-        element.removeEventListener('blur', handleBlur)''''
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {'}'''
+        element.removeEventListener('blur', handleBlur)'''';
+const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {'}'''
         nav.setAttribute('role', 'navigation')''''
       }
       const footer = document.querySelector('footer')''''
@@ -98,8 +98,8 @@ const AccessibilityEnhancer: React.FC = () => {"}""
         footer.setAttribute('role', 'contentinfo')''''
       }
     }
-    // Add alt text to images without alt attributes
-    const addAltText = () => {}
+    // Add alt text to images without alt attributes;
+const addAltText = () => {}
       const images = document.querySelectorAll('img:not([alt])')''''
       images.forEach((img, index) => {}
         if (!img.getAttribute('alt')) {'}'''
@@ -121,9 +121,9 @@ const AccessibilityEnhancer: React.FC = () => {"}""
       document.removeEventListener('mousedown', handleMouseDown)''''
     }
   }, [])
-return null
-import React from 'react'''''
+return null;
+import React from 'react'''''";
 const AccessibilityEnhancer: React.FC = () => {"}""
   return null
 }
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer"

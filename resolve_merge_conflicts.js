@@ -1,12 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
 console.log('🔧 Starting merge conflict resolution...');
 
-// Get list of files with merge conflicts
+// Get list of files with merge conflicts;
 const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
 const conflictedFiles = gitStatus
   .split('\n')
@@ -27,37 +26,32 @@ for (const file of conflictedFiles) {
       console.log(`⚠️  File does not exist: ${file}`);
       continue;
     }
-
-    const content = fs.readFileSync(file, 'utf8');
+;
+const content = fs.readFileSync(file, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') || !content.includes('=======') || !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') || !content.includes(')
       console.log(`✅ No merge conflicts found in: ${file}`);
       continue;
     }
 
     // Strategy: Use the version from main (the newer version) for most conflicts
-    // This means we'll take the content after ======= and before >>>>>>>
+    // This means we'll take the content after 
     let resolvedContent = content;
     
     // Remove merge conflict markers and keep the main branch version
-    resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+/gs,
-      (match, headContent, mainContent) => {
-        // Use the main branch content (after =======)
+    resolvedContent = resolvedContent.replace()
+      /\n(.*?)\n\n(.*?)\n      (match, headContent, mainContent) =>> {
+        // Use the main branch content (after )
         return mainContent;
       }
     );
 
     // Handle any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]+/gs, '$1');
-    
+    resolvedContent = resolvedContent.replace(/\n.*?\n\n(.*?)\n    
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+/gs, '');
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n>>>>>>> [^\n]+/gs, '');
-    resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> [^\n]+/gs, '');
-
-    // Write the resolved content
+    resolvedContent = resolvedContent.replace(/\n.*?\n\n.*?\n    resolvedContent = resolvedContent.replace(/\n.*?\n    resolvedContent = resolvedContent.replace(/\n.*?\n
+    // Write the resolved content)
     fs.writeFileSync(file, resolvedContent);
     
     // Add the file to staging
@@ -79,7 +73,8 @@ console.log(`❌ Errors: ${errorCount} files`);
 if (resolvedCount > 0) {
   console.log('\n📋 Next steps:');
   console.log('1. Review the resolved files');
-  console.log('2. Run: git status');
+  console.log('2. Run: git status');"
   console.log('3. Run: git commit -m "Resolve merge conflicts"');
   console.log('4. Run: git push origin resolve-all-conflicts');
 }
+"

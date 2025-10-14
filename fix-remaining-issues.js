@@ -1,13 +1,11 @@
-
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
 console.log('🔧 Fixing remaining TypeScript and linting issues...');
 
-// Function to fix duplicate default exports and other issues
+// Function to fix duplicate default exports and other issues;
 function fixFileIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -20,19 +18,19 @@ function fixFileIssues(filePath) {
     
     console.log(`📝 Fixing issues in: ${filePath}`);
     
-    // Split content by lines
-    const lines = content.split('\n');
+    // Split content by lines;
+const lines = content.split('\n');
     const fixedLines = [];
     let foundFirstDefault = false;
     let inComponent = false;
     let componentName = '';
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    for (let i = 0; i < lines.length; i++) {;
+const line = lines[i];
       
       // Look for component definition
-      if (line.includes('function ') && line.includes('Page') && line.includes('(')) {
-        const match = line.match(/function\s+(\w+)/);
+      if (line.includes('function ') && line.includes('Page') && line.includes('(')) {;
+const match = line.match(/function\s+(\w+)/);
         if (match) {
           componentName = match[1];
           inComponent = true;
@@ -64,8 +62,8 @@ function fixFileIssues(filePath) {
     }
     
     // Write the fixed content back to the file
-    if (modified) {
-      const fixedContent = fixedLines.join('\n');
+    if (modified) {;
+const fixedContent = fixedLines.join('\n');
       fs.writeFileSync(filePath, fixedContent, 'utf8');
     }
     
@@ -76,7 +74,7 @@ function fixFileIssues(filePath) {
   }
 }
 
-// Function to fix unused imports
+// Function to fix unused imports;
 function fixUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -90,7 +88,7 @@ function fixUnusedImports(filePath) {
     }
     
     if (filePath.includes('App_minimal.tsx')) {
-      // Remove unused imports
+      // Remove unused imports"
       content = content.replace(/import\s+{\s*Router,\s*Routes,\s*Route,\s*HelmetProvider\s*}\s+from\s+['"][^'"]+['"];?\s*\n/, '');
       modified = true;
     }
@@ -107,24 +105,24 @@ function fixUnusedImports(filePath) {
   }
 }
 
-// Function to find all files with issues
-function findFilesWithIssues(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
+// Function to find all files with issues;
+function findFilesWithIssues(dir) {;
+const files = [];
+  ;
+function scanDirectory(currentDir) {;
+const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
+        try {;
+const content = fs.readFileSync(fullPath, 'utf8');
           // Check for multiple export default statements
-          if (content.split('export default').length > 2) {
+          if (content.split('export default').length >> 2) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -157,8 +155,8 @@ try {
     }
   }
   
-  // Fix unused imports in specific files
-  const filesToFixImports = [
+  // Fix unused imports in specific files;
+const filesToFixImports = [
     './App-minimal.tsx',
     './App_minimal.tsx'
   ];
@@ -194,4 +192,4 @@ try {
 } catch (error) {
   console.error('💥 Fatal error during issue resolution:', error.message);
   process.exit(1);
-}
+}"

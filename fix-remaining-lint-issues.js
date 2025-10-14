@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files that need lint fixes
+// Files that need lint fixes;
 const filesToFix = [
   'App_minimal.tsx',
   'App_test.tsx',
@@ -37,10 +37,10 @@ const filesToFix = [
   'app/utils/link.tsx'
 ];
 
-// Function to fix a single file
+// Function to fix a single file;
 function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -50,12 +50,12 @@ function fixFile(filePath) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Fix unused React imports
-    if (content.includes("import React from 'react';") && !content.includes('React.')) {
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {"
       content = content.replace("import React from 'react';", '');
     }
     
-    // Fix unused Helmet imports
-    if (content.includes("import { Helmet } from 'react-helmet-async';") && !content.includes('<Helmet')) {
+    // Fix unused Helmet imports"
+    if (content.includes("import { Helmet } from 'react-helmet-async';") && !content.includes('<Helmet')) {"
       content = content.replace("import { Helmet } from 'react-helmet-async';", '');
     }
     
@@ -69,7 +69,7 @@ function fixFile(filePath) {
     content = content.replace(/children\?\s*:\s*React\.ReactNode\s*,?\s*/g, '');
     
     // Fix any types
-    content = content.replace(/Record<string, any>/g, 'Record<string, unknown>');
+    content = content.replace(/Record<string, any>></Helmet>/g, 'Record<string, unknown>');
     
     // Fix unused expressions
     content = content.replace(/console\.log\([^)]*\);\s*$/gm, '');
@@ -101,4 +101,4 @@ function fixFile(filePath) {
 // Fix all files
 console.log('Starting to fix remaining lint issues...');
 filesToFix.forEach(fixFile);
-console.log('Remaining lint issue fixing completed!');
+console.log('Remaining lint issue fixing completed!');"

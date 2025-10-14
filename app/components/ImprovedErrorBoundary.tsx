@@ -1,40 +1,20 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-'use client''
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-"use client"
-const ImprovedErrorBoundary: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">"
-      <Helmet>
-        <title>Improved Error Boundary - Zion Tech Group</title>
-        <meta name="description" content="Professional improved error boundary services by Zion Tech Group." />"
-      </Helmet>}
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-        <div className="max-w-6xl mx-auto text-center">"
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-=======
-'use client'
-import React from 'react';'
+'use client';
+import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
 'use client';
 const ImprovedErrorBoundary: React.FC = () => { return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Improved Error Boundary - Zion Tech Group</title>
+    <div className="min-h-screen bg-white"></div>
+      <Helmet></Helmet>
+        <title>Improved Error Boundary - Zion Tech Group</title>"
         <meta name="description" content="Professional improved error boundary services by Zion Tech Group." />
       </Helmet> }
-      { /* Hero Section */ }
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
+      { /* Hero Section */ }"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+        <div className="max-w-6xl mx-auto text-center"></div>"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
->>>>>>> origin/main
+
             Improved Error Boundary;
-          </h1>
+          </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional improved error boundary services;
             designed to help your business grow and succeed.;
@@ -42,27 +22,21 @@ const ImprovedErrorBoundary: React.FC = () => { return (
         </div>
       </section>
       { /* Content Section */ }
-            Improved Error Boundary</h1>
+            Improved Error Boundary</h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional improved error boundary services
-<<<<<<< HEAD
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
       <section className="py-16 px-4">"
-        <div className="max-w-6xl mx-auto">"
-          <div className="grid md:grid-cols-2 gap-12 items-center">"
-=======
-            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
->>>>>>> origin/main
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+        <div className="max-w-6xl mx-auto"></div>"
+          <div className="grid md:grid-cols-2 gap-12 items-center"></div>
+
+            <div></div>"
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>""
               <p className="text-lg text-gray-600 mb-6">"
                 We provide comprehensive improved error boundary;
                 solutions tailored to your specific needs and requirements.;
 =======
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -109,16 +83,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
 <<<<<<< HEAD
       console.error('Error caught by boundary:', error, errorInfo);
-=======
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
->>>>>>> origin/main
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
     
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
@@ -133,44 +103,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       }
-=======
->>>>>>> origin/main
-  }
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: ''
-    });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
-
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-            <div className="mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified.
->>>>>>> origin/main
               </p>
-<<<<<<< HEAD
               <ul className="space-y-3">"
                 <li className="flex items-center">"
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
@@ -194,14 +127,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               <a;
                 href="$1""
                 className="$1""
-=======
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <button
-                onClick={this.handleRetry}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> origin/main
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
@@ -221,19 +146,12 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
-=======
-      { /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
->>>>>>> origin/main
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">"
@@ -270,21 +188,12 @@ export default ImprovedErrorBoundary;
               <p className="mb-6">"
                 Ready to transform your business with our improved error boundary services?</p>
               <a
-<<<<<<< HEAD
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
                 Contact Us</a></div></div></div></section>{/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
-=======
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{ /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
->>>>>>> origin/main
             Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our improved error boundary''
@@ -295,30 +204,8 @@ export default ImprovedErrorBoundary;
             Get Started Today</a></div></section></div>
   )
 export default ImprovedErrorBoundary
-<<<<<<< HEAD
 }
 export default ImprovedErrorBoundary';
-=======
-=======
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default ImprovedErrorBoundary;
-=======
-import React from "react";
-
-const ImprovedErrorBoundary = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ImprovedErrorBoundary</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
->>>>>>> origin/main
 };
 
 export default ImprovedErrorBoundary;

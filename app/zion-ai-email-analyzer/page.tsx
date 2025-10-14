@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
@@ -7,65 +6,55 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight, Mail, BarChart3, CheckCircle, Star, Clock, Zap, TrendingUp, Target, MessageSquare, Globe, Maximize, Star as StarIcon, Mail as MailIcon, Phone, MapPin, TrendingUp as TrendingUpIcon, Shield, Phone as PhoneIcon, Maximize as MaximizeIcon, Star as StarIconIcon } from "lucide-react";
-=======
-"use client"
-export default function ZionAIEmailAnalyzer() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <Helmet>
-        <title>Zion AI Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-=======
-'use client'
-import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
 export default function ZionAIEmailAnalyzer() { return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion AI Email Analyzer | Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Zion AI Email Analyzer | Zion Tech Group</title>"
         <meta name="description" content="Professional services by Zion Tech Group." />
->>>>>>> origin/main
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">"
+
+      </Helmet>"
+      <div className="container mx-auto px-4 py-16"></div>""
+        <div className="text-center mb-16"></div>""
+          <h1 className="text-5xl font-bold text-white mb-6">""
             Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>"
-          </h1>
+          </h1>"
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Advanced AI-powered email analysis and management solutions for modern businesses.;
           </p>
-        </div>
-            Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>"
+        </div>"
+            Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>""
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            Advanced AI-powered email analysis and management solutions for modern businesses.</p></div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>"
+            Advanced AI-powered email analysis and management solutions for modern businesses.</p></div>"
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>""
+            <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>""
             <p className="text-gray-300 mb-4">"
               AI-powered email content analysis and sentiment detection.;
-            </p>
+            </p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Sentiment analysis</li>
               <li>• Content categorization</li>
               <li>• Priority detection</li>
             </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>"
+          </div>"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>""
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>""
             <p className="text-gray-300 mb-4">"
               Intelligent email filtering and organization capabilities.;
-            </p>
+            </p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Spam detection</li>
               <li>• Auto-categorization</li>
               <li>• Smart routing</li>
             </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>"
+          </div>"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>""
+            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>""
             <p className="text-gray-300 mb-4">"
               AI-generated response suggestions and templates.;
-            </p>
+            </p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Smart replies</li>
               <li>• Template suggestions</li>
@@ -73,33 +62,33 @@ export default function ZionAIEmailAnalyzer() { return (
             </ul>
           </div>
         </div>
-              AI-powered email content analysis and sentiment detection.</p>
+              AI-powered email content analysis and sentiment detection.</p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Sentiment analysis</li>
               <li>• Content categorization</li>
-              <li>• Priority detection</li></ul></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>"
+              <li>• Priority detection</li></ul></div>"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>""
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>""
             <p className="text-gray-300 mb-4">"
-              Intelligent email filtering and organization capabilities.</p>
+              Intelligent email filtering and organization capabilities.</p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Spam detection</li>
               <li>• Auto-categorization</li>
-              <li>• Smart routing</li></ul></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>"
+              <li>• Smart routing</li></ul></div>"
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div>""
+            <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>""
             <p className="text-gray-300 mb-4">"
-              AI-generated response suggestions and templates.</p>
+              AI-generated response suggestions and templates.</p>"
             <ul className="text-sm text-gray-400 space-y-2">"
               <li>• Smart replies</li>
               <li>• Template suggestions</li>
-              <li>• Tone optimization</li></ul></div></div>
-        <div className="text-center">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>"
+              <li>• Tone optimization</li></ul></div></div>"
+        <div className="text-center"></div>""
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto"></div>""
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>""
             <p className="text-gray-300 mb-6">"
               Our AI email analyzer experts are ready to help you optimize your email workflow.;
-            </p>
+            </p>"
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
               Get Started Today;
             </button>
@@ -107,12 +96,10 @@ export default function ZionAIEmailAnalyzer() { return (
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
+)
   ); }
->>>>>>> origin/main
-              Our AI email analyzer experts are ready to help you optimize your email workflow.</p>
+
+              Our AI email analyzer experts are ready to help you optimize your email workflow.</p>"
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
               Get Started Today</button></div></div></div></div>
   )
@@ -122,9 +109,7 @@ export default function ZionAIEmailAnalyzer() { return (
       </div>
     </div>
   )}
-<<<<<<< HEAD
-''
-=======
+
             </button>;
           </div>
         </div>
@@ -133,12 +118,6 @@ export default function ZionAIEmailAnalyzer() { return (
   );}
 }
 '
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Mail, BarChart3, CheckCircle, Star, Clock, Zap, TrendingUp, Target, MessageSquare, Award, Globe, Monitor, RotateCcw, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail as MailIcon, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Monitor as MonitorIcon, Phone as PhoneIcon, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
->>>>>>> origin/main
 
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -273,16 +252,6 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
     { number: "99.5%", label: "Deliverability Rate", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
-=======
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function ZionAIEmailAnalyzer() {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
 >>>>>>> origin/main
 
 const HomePage = () => {
@@ -302,13 +271,10 @@ const HomePage = () => {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
   );
+>>>>>>> origin/main
+>>>>>>> origin/main
 =======
-};
-
-export default HomePage;
->>>>>>> origin/main
->>>>>>> origin/main
+"
 >>>>>>> origin/main

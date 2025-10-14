@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-'use client''
-'use client'
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
@@ -17,7 +9,6 @@ interface Props {
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
   retryCount: number;
@@ -26,14 +17,6 @@ interface State {
 export class GlobalErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
 
-=======
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId: string;
-}
-
-class EnhancedErrorFeedback extends Component<Props, State> {
->>>>>>> origin/main
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -44,20 +27,12 @@ class EnhancedErrorFeedback extends Component<Props, State> {
     };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null,
       retryCount: 0
-=======
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
->>>>>>> origin/main
     };
   }
 
@@ -68,21 +43,11 @@ class EnhancedErrorFeedback extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
 
-<<<<<<< HEAD
     // Call the onError callback if provided
-=======
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
->>>>>>> origin/main
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
@@ -137,41 +102,6 @@ class EnhancedErrorFeedback extends Component<Props, State> {
       // For now, just show an alert
       alert('Error has been reported. Thank you for your feedback!');
     }
-=======
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error tracking service
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    };
-
-    // For now, just log to console
-    console.log('Error data logged:', errorData);
-  };
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: ''
-    });
-  };
-
-  handleReload = () => {
-    window.location.reload();
->>>>>>> origin/main
   };
 
   handleReportError = () => {
@@ -201,7 +131,6 @@ class EnhancedErrorFeedback extends Component<Props, State> {
 
       // Default error UI
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
@@ -261,77 +190,6 @@ class EnhancedErrorFeedback extends Component<Props, State> {
                 </div>
               </details>
             )}
-=======
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
-            <div className="mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-3xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified.
-              </p>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
-                <pre className="text-sm text-gray-300 whitespace-pre-wrap">
-                  {this.state.error.message}
-                </pre>
-                {this.state.error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-sm text-gray-400 cursor-pointer">Stack Trace</summary>
-                    <pre className="text-xs text-gray-400 mt-2 whitespace-pre-wrap">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <button
-                onClick={this.handleRetry}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleReload}
-                className="inline-flex items-center px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Reload Page
-              </button>
-              
-              <button
-                onClick={this.handleReportError}
-                className="inline-flex items-center px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Report Error
-              </button>
-            </div>
-
-            {process.env.NODE_ENV === 'development' && (
-              <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-400">Error ID: {this.state.errorId}</span>
-                </div>
-                <div className="text-xs text-gray-500">
-                  This error has been logged for debugging purposes.
-                </div>
-              </div>
-            )}
-
-            <div className="mt-6 text-sm text-gray-400">
-              If this problem persists, please contact our support team.
-            </div>
->>>>>>> origin/main
           </div>
         </div>
       );
@@ -341,23 +199,6 @@ class EnhancedErrorFeedback extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
 export default GlobalErrorBoundary;
-=======
-export default EnhancedErrorFeedback;
-=======
-import React from "react";
-
-const EnhancedErrorFeedback = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedErrorFeedback</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default EnhancedErrorFeedback;
->>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main

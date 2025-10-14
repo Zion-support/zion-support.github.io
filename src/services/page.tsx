@@ -1,28 +1,12 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-export default function Component; PagePage() { return (
-  <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Page</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.;
-        </p>
-      </div>
-)
-)
-    </div>)
-  ); }
-}
-}
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, PieChart, TrendingDown, Activity } from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
-  const aiServices = [
+;
+const ServicesPage: React.FC = () => {;
+const aiServices = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -56,8 +40,8 @@ const ServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const itServices = [
+;
+const itServices = [
     {
       icon: Cloud,
       title: 'Cloud Services',
@@ -91,8 +75,8 @@ const ServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const microSaasServices = [
+;
+const microSaasServices = [
     {
       icon: Code,
       title: 'Developer Tools',
@@ -126,8 +110,8 @@ const ServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
-  const benefits = [
+;
+const benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -149,8 +133,8 @@ const ServicesPage: React.FC = () => {
       description: 'Quick implementation with minimal downtime'
     }
   ];
-
-  const stats = [
+;
+const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -160,34 +144,34 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Our Services - AI & IT Solutions | Zion Tech Group"
+        title="Our Services - AI & IT Solutions | Zion Tech Group""
         description="Comprehensive AI services, IT solutions, and micro SAAS tools. Transform your business with our cutting-edge technology solutions."
-        keywords={['AI services', 'IT solutions', 'micro SAAS', 'business automation', 'cloud services', 'cybersecurity']}
+        keywords={['AI services', 'IT solutions', 'micro SAAS', 'business automation', 'cloud services', 'cybersecurity']}"
         canonicalUrl="https://ziontechgroup.com/services"
       />
       <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+      "
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        {/* Hero Section */}"
+        <section className="relative py-20 px-4">"
+          <div className="container mx-auto text-center"></div>"
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">"
               Our <span className="text-cyan-400">Services</span>
-            </h1>
+            </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business. 
               From cutting-edge AI services to robust IT infrastructure, we've got you covered.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"
+            </p>"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+              <a href="/contact""
                 className="cyber-button inline-flex items-center justify-center"
-              >
+              >"
                 <Phone className="w-5 h-5 mr-2" />
                 Get Started Today
-              </a>
-              <a href="/case-studies"
+              </a>"
+              <a href="/case-studies""
                 className="cyber-button-secondary inline-flex items-center justify-center"
-              >
+              >"
                 <Eye className="w-5 h-5 mr-2" />
                 View Case Studies
               </a>
@@ -195,60 +179,60 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+        {/* Stats */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto"></div>"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"></div>)
+              {stats.map((stat, index) => ("
+                <div key={index} className="text-center"></div>"
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text"></div>
                     {stat.number}
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
-                </div>
+                  </div>"
+                  <div className="text-gray-300 font-medium"></div>{stat.label}</div>
+                </div>)
               ))}
             </div>
           </div>
         </section>
 
-        {/* AI Services */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* AI Services */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto"></div>"
+            <div className="text-center mb-12"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 AI <span className="text-purple-400">Services</span>
-              </h2>
+              </h2>"
               <p className="text-gray-300 text-lg">
                 Cutting-edge artificial intelligence solutions for modern businesses
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card group">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+            </div>"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {aiServices.map((service, index) => ("
+                <div key={index} className="cyber-card group"></div>"
+                  <div className="flex items-center mb-4"></div>"
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-purple-400" />
                     </div>
-                    <div>
+                    <div></div>"
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                      {service.popular && (
+                      {service.popular && ("
                         <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded-full">
                           Popular
-                        </span>
+                        </span>)
                       )}
                     </div>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  </div>"
+                  <p className="text-gray-300 mb-4">{service.description}</p>"
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    {service.features.map((feature, featureIndex) => ("
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
-                  </ul>
-                  <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
-                  <a href="/contact"
+                  </ul>"
+                  <div className="text-cyan-400 font-semibold mb-4"></div>{service.price}</div>"
+                  <a href="/contact""
                     className="w-full cyber-button text-center block"
                   >
                     Get Started
@@ -259,39 +243,39 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* IT Services */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* IT Services */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto"></div>"
+            <div className="text-center mb-12"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 IT <span className="text-blue-400">Services</span>
-              </h2>
+              </h2>"
               <p className="text-gray-300 text-lg">
                 Robust IT infrastructure and support services
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="cyber-card group">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+            </div>"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {itServices.map((service, index) => ("
+                <div key={index} className="cyber-card group"></div>"
+                  <div className="flex items-center mb-4"></div>"
+                    <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-blue-400" />
                     </div>
-                    <div>
+                    <div></div>"
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                     </div>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  </div>"
+                  <p className="text-gray-300 mb-4">{service.description}</p>"
+                  <ul className="space-y-2 mb-6">)
+                    {service.features.map((feature, featureIndex) => ("
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
-                  </ul>
-                  <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
-                  <a href="/contact"
+                  </ul>"
+                  <div className="text-cyan-400 font-semibold mb-4"></div>{service.price}</div>"
+                  <a href="/contact""
                     className="w-full cyber-button text-center block"
                   >
                     Get Started
@@ -302,44 +286,44 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Micro SAAS Services */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* Micro SAAS Services */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto"></div>"
+            <div className="text-center mb-12"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 Micro <span className="text-green-400">SAAS</span>
-              </h2>
+              </h2>"
               <p className="text-gray-300 text-lg">
                 Ready-to-use AI-powered applications and tools
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {microSaasServices.map((service, index) => (
-                <div key={index} className="cyber-card group">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">
+            </div>"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {microSaasServices.map((service, index) => ("
+                <div key={index} className="cyber-card group"></div>"
+                  <div className="flex items-center mb-4"></div>"
+                    <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mr-4"></div>"
                       <service.icon className="w-6 h-6 text-green-400" />
                     </div>
-                    <div>
+                    <div></div>"
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                      {service.popular && (
+                      {service.popular && ("
                         <span className="text-xs bg-green-500 text-white px-2 py-1 rounded-full">
                           Popular
-                        </span>
+                        </span>)
                       )}
                     </div>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  </div>"
+                  <p className="text-gray-300 mb-4">{service.description}</p>"
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                    {service.features.map((feature, featureIndex) => ("
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
-                  </ul>
-                  <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
-                  <a href="/contact"
+                  </ul>"
+                  <div className="text-cyan-400 font-semibold mb-4"></div>{service.price}</div>"
+                  <a href="/contact""
                     className="w-full cyber-button text-center block"
                   >
                     Get Started
@@ -350,51 +334,51 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        {/* Benefits Section */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto"></div>"
+            <div className="text-center mb-12"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
                 Why Choose <span className="text-cyan-400">Us</span>
-              </h2>
+              </h2>"
               <p className="text-gray-300 text-lg">
                 We deliver exceptional results with cutting-edge technology
               </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+            </div>"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {benefits.map((benefit, index) => ("
+                <div key={index} className="text-center"></div>"
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  </div>"
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
                   <p className="text-gray-300">{benefit.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto text-center">
-            <div className="cyber-card max-w-4xl mx-auto">
+        {/* CTA Section */}"
+        <section className="py-16 px-4">"
+          <div className="container mx-auto text-center"></div>"
+            <div className="cyber-card max-w-4xl mx-auto"></div>"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
-              </h2>
+              </h2>"
               <p className="text-gray-300 text-lg mb-8">
                 Let's discuss how our AI and IT solutions can drive your success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
+              </p>"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
+                <a href="/contact""
                   className="cyber-button inline-flex items-center justify-center"
-                >
+                >"
                   <Phone className="w-5 h-5 mr-2" />
                   Start Your Project
-                </a>
-                <a href="/demo"
+                </a>"
+                <a href="/demo""
                   className="cyber-button-secondary inline-flex items-center justify-center"
-                >
+                >"
                   <Eye className="w-5 h-5 mr-2" />
                   Request Demo
                 </a>
@@ -408,6 +392,5 @@ const ServicesPage: React.FC = () => {
     </>
   );
 };
-
-export default ServicesPage;
->>>>>>> origin/main
+;
+export default ServicesPage;"

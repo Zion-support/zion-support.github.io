@@ -13,8 +13,8 @@ interface State {
   retryCount: number;
 }
 
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class AdvancedErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {
     super(props);
     this.state = { hasError: false, retryCount: 0 };
   }
@@ -23,7 +23,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error, retryCount: 0 };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {"
     console.error("Error caught by boundary:", error, errorInfo);
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -34,21 +34,21 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: undefined,
-      retryCount: this.state.retryCount + 1,
+      retryCount: this.state.retryCount + 1,)
     });
   };
 
   render() {
     if (this.state.hasError) {
       return (
-        this.props.fallback || (
-          <div className="error-boundary">
-            <h2>Something went wrong.</h2>
+        this.props.fallback || ("
+          <div className="error-boundary"></div>
+            <h2>Something went wrong.</h2>)
             <details>{this.state.error && this.state.error.toString()}</details>
-            {this.props.enableRetry && (
+            {this.props.enableRetry && ("
               <button onClick={this.handleRetry} className="retry-button">
                 Try Again
-              </button>
+              </button>)
             )}
           </div>
         )
@@ -57,5 +57,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
+;
 export default AdvancedErrorBoundary;
+"

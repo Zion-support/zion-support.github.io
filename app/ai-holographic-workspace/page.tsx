@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from "lucide-react";
-=======
-import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
->>>>>>> origin/main
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const AIHolographicWorkspace = () => {
@@ -136,28 +132,27 @@ const AIHolographicWorkspace = () => {
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
-=======
-import React from "react";
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
-
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Home - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+;
+const HomePage = () => {"
+  return (""
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>"
+        <title>Home - Zion Tech Group</title>""
+        <meta name="description" content="Home - Zion Tech Group" />"
+      </Helmet>""
+      <div className="container mx-auto px-4 py-16"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>""
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
-
-export default HomePage;
+;
+export default HomePage;"
+"
+"

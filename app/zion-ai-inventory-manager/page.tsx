@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe, Settings } from "lucide-react";
-=======
-<<<<<<< HEAD
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe, Settings } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import { ArrowRight, BarChart3, Shield, Zap, Globe, Star, Users, CheckCircle, TrendingUp, Clock, Package, Target, Settings } from 'lucide-react';
 >>>>>>> origin/main
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -141,117 +135,11 @@ const ZionAIInventoryManager = () => {
     { number: "40%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
-=======
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
-'use client''
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-"use client"
-export default function ZionAIInventoryManager() {return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <Helmet>
-        <title>Zion AI Inventory Manager | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Inventory Manager services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">"
-            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>"
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            AI-powered inventory management solutions for modern businesses.;
-          </p>
-        </div>
-            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-            AI-powered inventory management solutions for modern businesses.</p></div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Inventory Tracking</h3>"
-            <p className="text-gray-300 mb-4">"
-              AI-powered inventory tracking and management capabilities.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• Real-time tracking</li>
-              <li>• Predictive analytics</li>
-              <li>• Automated reordering</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Demand Forecasting</h3>"
-            <p className="text-gray-300 mb-4">"
-              Advanced demand forecasting and optimization algorithms.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• ML-based predictions</li>
-              <li>• Seasonal adjustments</li>
-              <li>• Trend analysis</li>
-            </ul>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>"
-            <p className="text-gray-300 mb-4">"
-              Intelligent cost optimization and waste reduction.;
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• Cost analysis</li>
-              <li>• Waste reduction</li>
-              <li>• Efficiency metrics</li>
-            </ul>
-          </div>
-        </div>
-              AI-powered inventory tracking and management capabilities.</p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• Real-time tracking</li>
-              <li>• Predictive analytics</li>
-              <li>• Automated reordering</li></ul></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Demand Forecasting</h3>"
-            <p className="text-gray-300 mb-4">"
-              Advanced demand forecasting and optimization algorithms.</p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• ML-based predictions</li>
-              <li>• Seasonal adjustments</li>
-              <li>• Trend analysis</li></ul></div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">"
-            <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>"
-            <p className="text-gray-300 mb-4">"
-              Intelligent cost optimization and waste reduction.</p>
-            <ul className="text-sm text-gray-400 space-y-2">"
-              <li>• Cost analysis</li>
-              <li>• Waste reduction</li>
-              <li>• Efficiency metrics</li></ul></div></div>
-        <div className="text-center">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>"
-            <p className="text-gray-300 mb-6">"
-=======
-<<<<<<< HEAD
-'use client'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
-export default function ZionAIInventoryManager() { return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion AI Inventory Manager | Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group." />
-=======
-export default function ZionAIInventoryManager() {
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
 >>>>>>> origin/main
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <EnhancedSEO
         title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
         description="Revolutionary AI-powered inventory management system with demand forecasting, real-time tracking, and automated reorder points. Reduce stockouts by 60% and save costs."
@@ -317,15 +205,9 @@ const HomePage = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking, 
               and automated reorder points. Reduce stockouts by 60% and optimize your supply chain.
-=======
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Home - Zion Tech Group" />
->>>>>>> origin/main
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-<<<<<<< HEAD
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
             <p className="text-gray-300 mb-6">
@@ -560,15 +442,9 @@ const HomePage = () => {
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to manage your inventory efficiently with AI-powered insights.
             </p>
-=======
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-=======
   ); }
->>>>>>> origin/main
-              Our AI inventory management experts are ready to help you streamline your operations.</p>
+
+              Our AI inventory management experts are ready to help you streamline your operations.</p>"
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">"
               Get Started Today</button></div></div></div></div>
   )
@@ -579,9 +455,7 @@ const HomePage = () => {
       </div>
     </div>
   )}
-<<<<<<< HEAD
-''
-=======
+
             </button>;
           </div>
         </div>
@@ -590,79 +464,7 @@ const HomePage = () => {
   );}
 }
 '
-=======
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion AI Inventory Manager?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience intelligent inventory management that saves time and reduces costs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-white font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Inventory?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading companies using Zion AI Inventory Manager to streamline their operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Your Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/pricing"
-                variant="outline"
-                size="lg"
-                icon={<Target className="w-5 h-5" />}
-              >
-                View Pricing
-              </FuturisticButton>
-            </div>
-          </div>
-        </ResponsiveContainer>
-      </section>
-=======
-        </div>
-      </div>
 >>>>>>> origin/main
-    </div>
-  );
-<<<<<<< HEAD
-}
-  );
 =======
-};
-
-export default HomePage;
->>>>>>> origin/main
->>>>>>> origin/main
+"
 >>>>>>> origin/main

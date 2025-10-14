@@ -1,103 +1,26 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import { glob } from 'glob';
-
-// Find all page.tsx files
-const pageFiles = await glob('app/**/page.tsx');
-
-console.log(`Found ${pageFiles.length} page files to fix`);
-
-let fixedCount = 0;
-
-for (const filePath of pageFiles) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix malformed object properties with extra quotes
-    const malformedObjectRegex = /"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"/g;
-    if (malformedObjectRegex.test(content)) {
-      content = content.replace(malformedObjectRegex, '"$1",\n    "$2",\n    "$3",\n    "$4",\n    "$5"');
-      modified = true;
-    }
-
-    // Fix malformed JSX with extra quotes
-    const malformedJSXRegex = /<([^>]+) \/>,\s*"([^"]+)"/g;
-    if (malformedJSXRegex.test(content)) {
-      content = content.replace(malformedJSXRegex, '<$1 />,\n      color: "$2"');
-      modified = true;
-    }
-
-    // Fix malformed array syntax
-    const malformedArrayRegex = /const \w+ = \[\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"\s*\]/g;
-    if (malformedArrayRegex.test(content)) {
-      content = content.replace(malformedArrayRegex, 'const benefits = [\n    "$1",\n    "$2",\n    "$3",\n    "$4",\n    "$5"\n  ]');
-      modified = true;
-    }
-
-    // Fix malformed closing brackets
-    const malformedClosingRegex = /}\s*\]\s*const \w+/g;
-    if (malformedClosingRegex.test(content)) {
-      content = content.replace(malformedClosingRegex, '}\n  ];\n\n  const benefits');
-      modified = true;
-    }
-
-    // Fix duplicate closing parentheses
-    const duplicateParenRegex = /}\s*\);\s*}\s*\);/g;
-    if (duplicateParenRegex.test(content)) {
-      content = content.replace(duplicateParenRegex, '}\n  );');
-      modified = true;
-    }
-
-    // Fix malformed ending with extra characters
-    const extraCharsRegex = /}\s*\);\s*}\s*''\s*$/gm;
-    if (extraCharsRegex.test(content)) {
-      content = content.replace(extraCharsRegex, '}\n  );');
-      modified = true;
-    }
-
-    // Clean up any remaining malformed syntax
-    const cleanSyntaxRegex = /}\s*\);\s*}\s*}\s*''\s*$/gm;
-    if (cleanSyntaxRegex.test(content)) {
-      content = content.replace(cleanSyntaxRegex, '}\n  );');
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
-=======
 import React from 'react'
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+#!/usr/bin/env node;
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
-// Function to fix syntax errors in a file
+// Function to fix syntax errors in a file;
 function fixSyntaxErrors(filePath) {
   try {}
     let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false
     // Remove extra quotes and semicolons that were incorrectly added
-    content = content.replace(/'/g, "'");"
+    content = content.replace(/'/g, "'");""
     content = content.replace(/"/g, '"');'
-    content = content.replace(/`/g, '`');'`
-    content = content.replace(/'/g, "'");"
+    content = content.replace(/`/g, '`');'`"
+    content = content.replace(/'/g, "'");""
     content = content.replace(/"/g, '"');'
     content = content.replace(/`/g, '`');'`
     // Remove extra braces
     content = content.replace(/\{\}/g, '');'
     content = content.replace(/\{\s*\}/g, '');'
-    // Fix unterminated string literals
+    // Fix unterminated string literals"
     content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`
       if (!text.includes(quote) && text.trim() !== '') {'}
         modified = true
@@ -105,27 +28,27 @@ function fixSyntaxErrors(filePath) {
 }
       return match
     })
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;}
+    // Fix missing closing braces;
+const openBraces = (content.match(/\{/g) || []).length;}
     const closeBraces = (content.match(/\}/g) || []).length
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;}
+    if (openBraces > closeBraces) {;
+const missingBraces = openBraces - closeBraces;}
       content += '\n' + '}'.repeat(missingBraces);'
       modified = true
 }
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length
-    const closeParens = (content.match(/\)/g) || []).length
-    if (openParens > closeParens) {
-      const missingParens = openParens - closeParens;}
+    // Fix missing closing parentheses;
+const openParens = (content.match(/\(/g) || []).length;
+const closeParens = (content.match(/\)/g) || []).length
+    if (openParens > closeParens) {;
+const missingParens = openParens - closeParens;}
       content += ')'.repeat(missingParens);'
       modified = true
 }
-    // Fix missing closing square brackets
-    const openBrackets = (content.match(/\[/g) || []).length
-    const closeBrackets = (content.match(/\]/g) || []).length
-    if (openBrackets > closeBrackets) {
-      const missingBrackets = openBrackets - closeBrackets;}
+    // Fix missing closing square brackets;
+const openBrackets = (content.match(/\[/g) || []).length;
+const closeBrackets = (content.match(/\]/g) || []).length
+    if (openBrackets > closeBrackets) {;
+const missingBrackets = openBrackets - closeBrackets;}
       content += ']'.repeat(missingBrackets);'
       modified = true
 }
@@ -212,12 +135,12 @@ function fixSyntaxErrors(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);`
     return false
 }
-// Function to recursively fix syntax errors
-function fixAllSyntaxErrors(dir) {
-  const files = fs.readdirSync(dir);}
+// Function to recursively fix syntax errors;
+function fixAllSyntaxErrors(dir) {;
+const files = fs.readdirSync(dir);}
   let fixedCount = 0
-  for (const file of files) {
-    const filePath = path.join(dir, file);}
+  for (const file of files) {;
+const filePath = path.join(dir, file);}
     const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       // Skip node_modules and other build directories}
@@ -234,7 +157,7 @@ function fixAllSyntaxErrors(dir) {
   return fixedCount
 }
 // Main execution
-console.log('Starting comprehensive syntax error resolution...');'
+console.log('Starting comprehensive syntax error resolution...');';
 const fixedCount = fixAllSyntaxErrors(process.cwd())
 console.log(`Fixed syntax errors in ${fixedCount} files.`);`
->>>>>>> origin/main
+"
