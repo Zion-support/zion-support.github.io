@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const PagePage = () => {
   return (
@@ -19,7 +19,7 @@ const PagePage = () => {
       </div>
     </>
   );
-};
+}';
 
-export default PagePage;
+export default PagePage';
 

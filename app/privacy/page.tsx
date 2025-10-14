@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const PrivacyPage = () => {
   return (
@@ -24,7 +24,7 @@ const PrivacyPage = () => {
       </div>
     </>
   );
-};
+}';
 
-export default PrivacyPage;
+export default PrivacyPage';
 

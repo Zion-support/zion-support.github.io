@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { Menu, X, ChevronDown  } from 'lucide-react;
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)';
+  const [isServicesOpen, setIsServicesOpen] = useState(false)';
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
