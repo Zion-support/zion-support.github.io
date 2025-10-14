@@ -3,8 +3,10 @@ export const enhancedLogger = {
     if (process.env.NODE_ENV === 'development') {
       if (level === 'info') {
         console.warn(message, data);
-      } else {
-        console[level](message, data);
+      } else if (level === 'warn') {
+        console.warn(message, data);
+      } else if (level === 'error') {
+        console.error(message, data);
       }
     }
     
