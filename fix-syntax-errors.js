@@ -32,7 +32,8 @@ console.log(`Found ${pageFiles.length} page files and ${componentFiles.length} c
 
 // Fix function to clean up syntax errors
 function fixSyntaxErrors(content) {
-  let fixed = content;
+  // Fix malformed color classes (0o0 -> 0, 40o0 -> 400, etc.)
+  content = content.replace(/(\d+)o0/g, '$1');
   
   // Fix duplicate semicolons and quotes in imports
   fixed = fixed.replace(/import\s+([^;]+);';';/g, 'import $1;');
@@ -91,7 +92,20 @@ function fixSyntaxErrors(content) {
   // Fix malformed export statements
   fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
   
-  return fixed;
+  // Fix malformed numeric literals
+  content = content.replace(/(\d+),0o0/g, '$1,000');
+  content = content.replace(/(\d+)o0/g, '$1');
+  
+  // Fix malformed JSX expressions
+  content = content.replace(/\{\s*feature\.icon\s*\}/g, '{feature.icon}');
+  
+  // Fix malformed className attributes
+  content = content.replace(/className="([^"]*)\/50([^"]*)"/g, 'className="$1/50$2"');
+  
+  // Fix malformed closing brackets
+  content = content.replace(/\]\s*;\s*$/gm, '];');
+  
+  return content;
 }
 
 // Process all files
