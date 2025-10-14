@@ -16,6 +16,7 @@ const AdvancedLoadingStatesPage = () => {
           </p>
         </div>
       </div>
+    
     </div>
   );
 };

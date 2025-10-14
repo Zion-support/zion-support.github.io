@@ -15,10 +15,7 @@ function fixFileContent(content) {
   let fixed = content;
   
   // Remove merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> origin\/main/g, '');
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> origin\/main/g, '');
-  fixed = fixed.replace(/=======[\s\S]*?>>>>>>> origin\/main/g, '');
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
+  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?/g, '');
   
   // Fix common syntax errors
   fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
@@ -47,7 +44,7 @@ function fixFileContent(content) {
   fixed = fixed.replace(/^\s*;\s*$/gm, '');
   
   // Fix malformed function declarations
-  fixed = fixed.replace(/export default function Page\(\) {\s*=======/g, 'export default function Page() {\n  return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page - Zion Tech Group</title>\n        <meta name="description" content="Page - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">\n            This page is under construction. Please check back later.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}');
+  fixed = fixed.replace(/export default function Page\(\) {\s*/g, 'export default function Page() {\n  return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page - Zion Tech Group</title>\n        <meta name="description" content="Page - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">\n            This page is under construction. Please check back later.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}');
   
   return fixed;
 }
@@ -75,6 +72,16 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
   
   function traverse(currentDir) {
+#!/usr/bin/env node;
+import fs from "fs";";
+import path from "path";";
+import { execSync     } from "child_process";";
+console.log('🔧 Starting comprehensive error fixing process...');';
+// Function to find all files with merge conflicts;
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {

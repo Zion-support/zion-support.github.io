@@ -1,79 +1,18 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Globe } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 
-import { useState } from "react";
-
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const services = [
-    {
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: 'AI Solutions',
-      description: 'Transform your business with artificial intelligence and machine learning.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with advanced security solutions.'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Services',
-      description: 'Migrate and optimize your infrastructure in the cloud.'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Digital Transformation',
-      description: 'Modernize your business processes and technology stack.'
-    }
-  ];
-
-  const benefits = [
-    'Free initial consultation',
-    'Customized solution recommendations',
-    'No obligation to proceed',
-    'Expert technical advice',
-    'Detailed project roadmap',
-    'Competitive pricing'
-  ];
-
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Free Consultation - Zion Tech Group</title>
-        <meta name="description" content="Get a free consultation with our technology experts. Discuss your AI, cybersecurity, and digital transformation needs." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Free Consultation
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business with cutting-edge technology? 
-            Schedule a free consultation with our experts to discuss your needs and explore solutions.
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
 

@@ -57,8 +57,7 @@ function fixFileWithCleanVersion(filePath) {
 // Function to check if a file has serious syntax errors
 function hasSeriousErrors(content) {
   const errorPatterns = [
-    /<<<<<<< HEAD|=======|>>>>>>> origin\/main/,
-    /const.*=.*\(\)\s*=>\s*\(\s*"/,
+    /|    /const.*=.*\(\)\s*=>\s*\(\s*"/,
     /return\s*\(\s*"/,
     /<div[^>]*><\/div>\s*<Helmet><\/Helmet>/,
     /<title>[^<]*<\/title>"\s*<meta/,
@@ -107,6 +106,13 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
   
   function traverse(currentDir) {
+async function main() {
+  const patterns = [;
+    'app/**/*.tsx',;
+    'app/**/*.ts';
+  ];
+  
+  function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {

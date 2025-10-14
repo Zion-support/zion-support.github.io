@@ -1,43 +1,23 @@
-  export interface NextPageProps {
-  export default content;
-// Next.js type definitions
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-declare module "next" {
-    params: { [key: string]: string };
-    searchParams: { [key: string]: string | string[] | undefined };
-  }
-}
-
-declare module "*.svg" {
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-}
-
-declare module "*.png" {
-  const content: string;
-}
-
-declare module "*.jpg" {
-  const content: string;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-}
-
-declare module "*.gif" {
-  const content: string;
-}
-
-declare module "*.webp" {
-  const content: string;
-}
-  }
-  interface NextConfig { // Add any Next.js specific types here; }
-  }
-}
-// Export a utility function;
-export const nextUtil = () => { // Implementation;
-  return true; }
+const Next.dPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Next.d - Zion Tech Group</title>
+        <meta name="description" content="Next.d - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Next.d</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 export default nextUtil;
 '

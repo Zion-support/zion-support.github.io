@@ -1,112 +1,18 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import React from 'react';
 
-
-const CareersPage: React.FC = () => {
-  const openPositions = [
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Solutions',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        '5+ years experience in AI/ML',
-        'Proficiency in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving skills'
-      ]
-    },
-    {
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Protect our clients\' digital assets with advanced security solutions.',
-      requirements: [
-        '3+ years in cybersecurity',
-        'Certifications: CISSP, CISM, or equivalent',
-        'Experience with SIEM tools',
-        'Knowledge of threat intelligence'
-      ]
-    },
-    {
-      title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Design and implement scalable cloud infrastructure solutions.',
-      requirements: [
-        '4+ years cloud architecture experience',
-        'AWS/Azure/GCP certifications preferred',
-        'Experience with DevOps practices',
-        'Strong communication skills'
-      ]
-    },
-    {
-      title: 'Frontend Developer',
-      department: 'Development',
-      location: 'Remote / Middletown, DE',
-      type: 'Full-time',
-      description: 'Create beautiful and responsive user interfaces for our applications.',
-      requirements: [
-        '3+ years React/TypeScript experience',
-        'Proficiency in modern CSS frameworks',
-        'Experience with responsive design',
-        'Portfolio of previous work'
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      title: 'Collaborative Environment',
-      description: 'Work with talented professionals in a supportive team environment.'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'Cutting-Edge Technology',
-      description: 'Work with the latest technologies and tools in AI and IT.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Remote Work',
-      description: 'Flexible remote work options and work-life balance.'
-    },
-    {
-      icon: <Award className="w-8 h-8 text-red-500" />,
-      title: 'Career Growth',
-      description: 'Opportunities for professional development and advancement.'
-    },
-    {
-      icon: <Star className="w-8 h-8 text-indigo-500" />,
-      title: 'Competitive Benefits',
-      description: 'Competitive salary, bonuses, and comprehensive benefits package.'
-    }
-  ];
-
+const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative professionals. Explore career opportunities in AI, cybersecurity, cloud computing, and technology solutions." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
-
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Be part of a dynamic team that's shaping the future of technology. 
-            We're looking for passionate professionals to join us in delivering innovative solutions.
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
 
