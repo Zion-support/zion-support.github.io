@@ -1,5 +1,4 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
 interface GenericServicePageProps {
   title: 'string;','
   description: 'string;','
@@ -86,7 +85,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             </div>
             <div className="grid grid-cols-1 md: 'grid-cols-2 lg:grid-cols-4 gap-6">"','
               {features.map((feature, index) => (
-<div
+<div;
                   key={index;
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
@@ -117,7 +116,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                   <div className="flex-shrink-0">"
                     <Star className="w-6 h-6 text-yellow-400" />"
                   </div>
-<div>
+<div></div>
                     <h3 className="text-lg font-semibold text-white mb-2">
                       {benefit;
                     </h3>
@@ -192,5 +191,5 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     </>```````
   );````````
 };`````````
-export default GenericServicePage;``````````
+export default Page;``````````
 ```````````

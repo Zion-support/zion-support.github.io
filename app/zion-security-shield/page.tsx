@@ -1,30 +1,28 @@
 import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   const complianceStandards = [{name: "GDPR", description: "General Data Protection Regulation", }, {name: "HIPAA", description: "Health Insurance Portability and Accountability Act", }, {name: "SOC 2", description: "Service Organization Control 2", }, {name: "PCI DSS", description: "Payment Card Industry Data Security Standard", }, {name: "ISO 27001", description: "Information Security Management", }, {name: "NIST", description: "National Institute of Standards and Technology", }];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Zion Security Shield - AI-Powered Cybersecurity | Zion Tech Group</title>
         <meta;
           name="description"
@@ -50,9 +48,9 @@ const Page = () => {
             </div>
             <div className="inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">;
-                Zion Security
+                Zion Security;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 animate-pulse">
-                  {" "}Shield
+                  {" "}Shield;
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-lg blur opacity-30 animate-pulse"></div>
               </h1>
@@ -66,14 +64,14 @@ const Page = () => {
                 to="/contact"
                 className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
               >;
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link;
                 to="/demo"
                 className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >;
-                View Demo
+                View Demo;
               </Link>
             </div>
             {/* Key Stats */}
@@ -99,7 +97,7 @@ const Page = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">;
-                  Advanced Security Features
+                  Advanced Security Features;
                 </span>
               </h2>
               <p>;
@@ -123,7 +121,7 @@ const Page = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">;
-                  Security Services
+                  Security Services;
                 </span>
               </h2>
               <p>;
@@ -150,7 +148,7 @@ const Page = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">;
-                  Security Plans
+                  Security Plans;
                 </span>
               </h2>
               <p>;
@@ -170,7 +168,7 @@ const Page = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -211,7 +209,7 @@ const Page = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">;
-                  Compliance Standards
+                  Compliance Standards;
                 </span>
               </h2>
               <p>;
@@ -276,7 +274,7 @@ const Page = () => {
                   to="/contact"
                   className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
                 >;
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link;

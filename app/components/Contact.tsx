@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 import { EnvelopeIcon, 
-  PhoneIcon, 
+  PhoneIcon, ';
   MapPinIcon,'
-  ClockIcon } from '@heroicons/react/24/outline';
+  ClockIcon } from '@heroicons/react/24/outline;
 const Contact: React.FC = () => {,
   const [formData, setFormData] = useState({'
-    name: ''
-    email: ''
-    company: ''
-    message: '')
+    name: 
+    email: 
+    company: 
+    message: )
   });
   const handleChange = () => {
     setFormData({
@@ -18,33 +18,32 @@ const Contact: React.FC = () => {,
   };
   const handleSubmit = () => {
     e.preventDefault();
-// Handle form submission',
+// Handle form submission,
     console.log('Form submitted: ', formData);
   };
-
-  const contactInfo = [{
+  const contactInfo = [
+    {
       icon: EnvelopeIcon'
       title: 'Email'
       details: 'contact@ziontech.com'
-      description: 'Send us an email anytime',
+      description: 'Send us an email anytime,
     },
     {
       icon: PhoneIcon,'
       title: 'Phone'
       details: '+1 (555) 123-4567'
-      description: 'Mon-Fri from 9am to 6pm',
+      description: 'Mon-Fri from 9am to 6pm,
     },
     {
       icon: MapPinIcon,'
       title: 'Office'
       details: 'San Francisco, CA'
-      description: 'Visit our headquarters',
+      description: 'Visit our headquarters,
     },
     {icon: ClockIcon,'
       title: 'Response Time'
       details: '< 24 hours'
       description: 'We respond quickly'}];
-
   return ()
     <section className="py-20 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -52,12 +51,12 @@ const Contact: React.FC = () => {,
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch;
           </h2>
-          <p>
+          <p></p>
             Ready to transform your business? Let's discuss how our solutions ;
             can help you achieve your goals.
           </p>
         </div>
-    </>
+</>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div></div>
@@ -136,7 +135,7 @@ const Contact: React.FC = () => {,
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Information;
               </h3>
-              <p>
+              <p></p>
                 We're here to help! Reach out to us through any of the channels below, ;
                 and we'll get back to you as soon as possible.
               </p>
@@ -153,10 +152,10 @@ const Contact: React.FC = () => {,
                     <h4 className="text-lg font-semibold text-gray-900">
                       {info.title}
                     </h4>
-                    <p>
+                    <p></p>
                       {info.details}
                     </p>
-                    <p>
+                    <p></p>
                       {info.description}
                     </p>
                   </div>

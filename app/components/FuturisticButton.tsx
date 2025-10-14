@@ -3,7 +3,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({ ;
   className=
   variant="primary"
   size="md"
-  type = 'button}) => {';
+  type = 'button}) => {;
   const baseClasses="inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2" variantClasses = {
     </button>
   );

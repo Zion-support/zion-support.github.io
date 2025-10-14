@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { CpuChipIcon, 
   CloudIcon,
@@ -10,10 +9,10 @@ import { CpuChipIcon,
   SignalIcon,
   BriefcaseIcon,
   ArrowRightIcon,
-CheckIcon } from '@heroicons/react/24/outline';
+CheckIcon } from '@heroicons/react/24/outline;
 const SolutionsPage: React.FC = () => {
   const solutions = [
-    {
+    {';
       title: 'AI-Powered Solutions','
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.','
       icon: CpuChipIcon,
@@ -96,7 +95,7 @@ const SolutionsPage: React.FC = () => {
         'Technical Consulting'
       ],
       href: '/it-solutions'
-    }
+  }
   ];
   return (
     <>
@@ -163,12 +162,11 @@ const SolutionsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Link
+                <Link;
                   to={solution.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -201,7 +199,7 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+</>
   );
 };
-export default SolutionsPage;
+export default Page;

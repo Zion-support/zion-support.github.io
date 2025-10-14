@@ -1,9 +1,7 @@
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
+import ResponsiveContainer from '../components/ResponsiveContainer;';
+import FuturisticCard from '../components/FuturisticCard;';
+import FuturisticButton from '../components/FuturisticButton;
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -29,14 +27,14 @@ const AIAutomationPlatform = () => {
       description: "Connect and automate across all your business systems",
       icon: <Circle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
-    }
+  }
   ];
   return (
     <div className="page-container">
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -69,4 +67,4 @@ const AIAutomationPlatform = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;';

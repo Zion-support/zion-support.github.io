@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ChevronDown } from 'lucide-react';
@@ -16,8 +16,8 @@ const EnhancedNavigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigationItems = [
     {
-label: 'AI Services',
-      href: '/ai-services',
+label: 'AI Services,
+      href: '/ai-services,
       icon: <Brain className="w-6 h-6" />,
       dropdown: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
@@ -48,8 +48,8 @@ label: 'AI Services',
       ]
     },
     {
-      label: 'IT Services',
-      href: '/services',
+      label: 'IT Services,
+      href: '/services,
       icon: <Shield className="w-6 h-6" />,
       dropdown: [
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
@@ -86,8 +86,8 @@ label: 'AI Services',
       ]
     },
     {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
+      label: 'Micro SAAS,
+      href: '/micro-saas,
       icon: <Zap className="w-6 h-6" />,
       dropdown: [
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
@@ -117,8 +117,8 @@ label: 'AI Services',
       ]
     },
     {
-      label: '5G Solutions',
-      href: '/5g-solutions',
+      label: '5G Solutions,
+      href: '/5g-solutions,
       icon: <Globe className="w-6 h-6" />,
       dropdown: [
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
@@ -132,8 +132,8 @@ label: 'AI Services',
       ]
     },
     {
-      label: 'Company',
-      href: '/about',
+      label: 'Company,
+      href: '/about,
       icon: <BarChart3 className="w-6 h-6" />,
       dropdown: [
         { label: 'About Us', href: '/about' },
@@ -145,7 +145,7 @@ label: 'AI Services',
         { label: 'Press', href: '/press' },
         { label: 'Partners', href: '/partners' }
       ]
-    }
+  }
   ];
   const quickLinks = [
     { label: 'Pricing', href: '/pricing' },'
@@ -166,13 +166,13 @@ label: 'AI Services',
           {/* Desktop Navigation */}
           <nav className="hidden lg: 'flex space-x-8">"','
             {navigationItems.map((item) => (
-<div
+<div;
                 key={item.label;
                 className="relative group"
                 onMouseEnter={() => setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-<Link
+<Link;
                   to={item.href;
                   className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                 >
@@ -185,7 +185,7 @@ label: 'AI Services',
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">"
                     <div className="py-2">"
                       {item.dropdown.map((dropdownItem) => (
-<Link
+<Link;
                           key={dropdownItem.href;
                           to={dropdownItem.href;
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
@@ -203,7 +203,7 @@ label: 'AI Services',
           <div className="hidden md: 'flex items-center space-x-4">"','
             <div className="hidden lg: 'flex space-x-4">"','
               {quickLinks.map((link) => (
-<Link
+<Link;
                   key={link.href;
                   to={link.href;
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
@@ -234,7 +234,7 @@ label: 'AI Services',
             <div className="space-y-4">"
               {navigationItems.map((item) => (
 <div key={item.label}>
-                  <Link
+                  <Link;
                     to={item.href;
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)}
@@ -244,7 +244,7 @@ label: 'AI Services',
                   </Link>
                   <div className="ml-6 space-y-2">"
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
-<Link
+<Link;
                         key={dropdownItem.href;
                         to={dropdownItem.href;
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
@@ -254,7 +254,7 @@ label: 'AI Services',
                       </Link>
                     ))}
                     {item.dropdown.length > 4 && (
-<Link
+<Link;
                         to={item.href;
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)}
@@ -268,7 +268,7 @@ label: 'AI Services',
               <div className="pt-4 border-t border-white/10">"
                 <div className="space-y-2">"
                   {quickLinks.map((link) => (
-<Link
+<Link;
                       key={link.href;
                       to={link.href;
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"

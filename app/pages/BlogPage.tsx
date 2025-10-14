@@ -7,4 +7,4 @@ export default BlogPag;e;
     </React.Fragment>
   );
 };
-export default BlogPage;
+export default Page;

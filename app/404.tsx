@@ -2,7 +2,7 @@ import React from 'react';
 interface NotFoundProps {
   className?: string;
 }
-const NotFound: React.FC<NotFoundProps> = ({ className = '' }) => {
+const NotFound: React.FC<NotFoundProps> = ({ className =  }) => {
   return (
     <div className={`404-container ${className}`}>
       <h1>404</h1>
@@ -10,5 +10,4 @@ const NotFound: React.FC<NotFoundProps> = ({ className = '' }) => {
     </div>
   );
 };
-
 export default NotFound;

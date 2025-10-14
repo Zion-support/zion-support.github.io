@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'page - Zion Tech Group',
-  description: 'Advanced AI and IT solutions by Zion Tech Group',
-  keywords: 'AI, IT solutions, technology, innovation',
+import { Metadata } from 'next;
+export const metadata: Metadata = {';
+  title: 'page - Zion Tech Group,
+  description: 'Advanced AI and IT solutions by Zion Tech Group,
+  keywords: 'AI, IT solutions, technology, innovation,
 };
 const pagePage: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const pagePage: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -33,4 +33,4 @@ const pagePage: React.FC = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;

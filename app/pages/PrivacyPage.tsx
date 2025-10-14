@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const PrivacyPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async;
+const PrivacyPage: React.FC = () => {';
   const lastUpdated = 'January 1, 2024;
   const sections = [
     {
@@ -80,7 +80,7 @@ const PrivacyPage: React.FC = () => {
         'We use standard contractual clauses approved by relevant authorities.','
         'We conduct regular assessments of our international data processing activities.'
       ]
-    }
+  }
   ];
   const contactInfo = {
     email: 'privacy@ziontechgroup.com','
@@ -197,7 +197,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
-export default PrivacyPage;
+export default Page;

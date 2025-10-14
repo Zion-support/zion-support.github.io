@@ -1,28 +1,26 @@
 const DemoPage: React.FC = () => {
   const features = [{'
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';}
+      icon: 'Analytics',;
+      title: 'AI-Powered Analytics',;
+      description: 'See how our AI analyzes your data in real-time',;
+      demo: 'Live Demo;}
     },
     {'
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';}
+      icon: 'Security',;
+      title: 'Advanced Security',;
+      description: 'Experience our enterprise-grade security features',;
+      demo: 'Demo;}
     },
     {'
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';}
+      icon: 'Intelligence',;
+      title: 'Business Intelligence',;
+      description: 'Explore our comprehensive BI dashboard',;
+      demo: 'BI Demo;}
     },
-
-
-    }
+  }
   ];
-
-  const testimonials = [{
+  const testimonials = [
+    {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
@@ -38,15 +36,13 @@ const DemoPage: React.FC = () => {
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
       rating: 5;
   ];
-
   return (
     <>
-      <EnhancedSEO 
+      <EnhancedSEO;
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
@@ -163,7 +159,7 @@ const DemoPage: React.FC = () => {
           </div>
         </section>;
       </div>
-    </>
+</>
         <div className="text-center"></div>
           <h1>Page</h1>
           <p className="text-gray-300 text-lg"></p>
@@ -174,4 +170,4 @@ const DemoPage: React.FC = () => {
     </div>
   )};
 };
-export default PagePage;
+export default Page;

@@ -8,7 +8,7 @@ import { ShieldCheckIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,
+  EnvelopeIcon,';
   MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function CybersecurityPage() {
   const services = [
@@ -41,13 +41,14 @@ export default function CybersecurityPage() {
     { name: 'SOC 2 Type II', status: 'Certified' },'
     { name: 'ISO 27001', status: 'Certified' },'
     { name: 'GDPR', status: 'Compliant' },'
-    { name: 'HIPAA', status: 'Compliant' },';
-    { name: 'PCI DSS', status: 'Compliant' },';
-    { name: 'NIST', status: 'Compliant' }';
+    { name: 'HIPAA', status: 'Compliant' },;
+    { name: 'PCI DSS', status: 'Compliant' },;
+    { name: 'NIST', status: 'Compliant' };
   ];
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 const CybersecurityPage: React.FC = () => {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>CybersecurityPage - Zion Tech Group</title>
@@ -59,5 +60,7 @@ const CybersecurityPage: React.FC = () => {
           <p>This page is under construction.</p>"
         </div>
       </div>
-    </>
+</>
   )}
+    </>
+  );';

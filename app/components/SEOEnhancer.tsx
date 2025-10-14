@@ -1,9 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-{ useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD;
+{ useEffect } from 'react;
+import { Helmet } from 'react-helmet-async;
 =======
->>>>>>> origin/main
+>>>>>>> origin/main;
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -14,7 +14,7 @@ interface SEOEnhancerProps {
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title="Zion Tech Group"
-  description="Leading provider of AI and IT solutions"
+  description="Leading provider of AI and IT solutions"';
   keywords = ['AI', 'IT', 'technology', 'solutions'],;
   image,
   url,
@@ -26,7 +26,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <p>{description}</p>
       {keywords && (
         <div className="keywords"></div>
-    </>
+</>
           {keywords.map((keyword, index) => (
             <span key={index} className="keyword"></span>
               {keyword}

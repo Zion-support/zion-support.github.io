@@ -8,11 +8,11 @@ import { PhoneIcon,
   LinkedinIcon,
   TwitterIcon,
   FacebookIcon,
-  InstagramIcon } from '@heroicons/react/24/outline';
+  InstagramIcon } from '@heroicons/react/24/outline;
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const serviceCategories = [
-    {
+    {';
       title: 'AI Services',;
       icon: <Brain className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500',;
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
         {label: 'Process Automation', href: '/process-automation', },
         {label: 'Data Analytics', href: '/data-analytics', },
         {label: 'Mobile Solutions', href: '/mobile-solutions', }]
-    }
+  }
   ];
 const company = [
     { name: 'About Us', href: '/about' },
@@ -57,7 +57,6 @@ const company = [
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' }
   ];
-
   const resources = [
     { name: 'Blog', href: '/blog' },
     { name: 'Tutorials', href: '/tutorials' },
@@ -66,14 +65,12 @@ const company = [
     { name: 'Demo', href: '/demo' },
     { name: 'Pricing', href: '/pricing' }
   ];
-
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' }
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: TwitterIcon },
@@ -91,10 +88,10 @@ const company = [
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-    </>
+</>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
             </div>
-            <p>
+            <p></p>
               Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.
             </p>
             <div className="space-y-3">
@@ -114,7 +111,7 @@ const company = [
 {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <a
+                <a;
                   key={social.name;
                   href={social.href;
                   target="_blank"
@@ -135,7 +132,7 @@ const company = [
             <ul className="space-y-3">
 {services.map((service) => (
                 <li key={service.name}>
-                  <Link 
+                  <Link;
                     to={service.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
@@ -143,8 +140,8 @@ const company = [
                     {service.name;
                   </Link>
                 </li>
-              ))}          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
+              ))}          <div></div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573;
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
@@ -152,14 +149,13 @@ const company = [
               <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
             </ul>
           </div>
-
           {/* Company */}
-          <div>
+          <div></div>
             <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link;
                     to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
@@ -171,12 +167,12 @@ const company = [
             </ul>
           </div>
 {/* Resources */}
-          <div>
+          <div></div>
             <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
                 <li key={resource.name}>
-                  <Link 
+                  <Link;
                     to={resource.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
@@ -192,7 +188,7 @@ const company = [
             <ul className="space-y-3">
 {legal.map((item) => (
                 <li key={item.name}>
-                  <Link 
+                  <Link;
                     to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >

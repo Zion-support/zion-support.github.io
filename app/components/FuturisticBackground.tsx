@@ -1,8 +1,7 @@
-
 const FuturisticBackground = () => {
   return (
 <div className="relative min-h-screen">
-      <canvas
+      <canvas;
         ref={canvasRef;
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
@@ -12,11 +11,10 @@ const FuturisticBackground = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
         {/* Animated Particles */}
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
-            <div
+            <div;
               key={i;
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{

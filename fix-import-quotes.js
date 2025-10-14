@@ -1,59 +1,85 @@
-import fs from "fs;";
-import path from ";path;";
-import { fileURLToPath     } from "url;";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// Function to fix import statement quotes;
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to fix unterminated string literals in imports
 function fixImportQuotes(content) {
-  // Fix extra quotes at the end of import statements";"
-  content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"
-    return match.replace(/;\s*$/, ";)
-  })
-  // Fix missing quotes around module names"
-  content = content.replace(/from\s+([a-zA-Z0-9-]+);/g, 'from "$1";)'"'"
-  // Fix unterminated string literals in imports;
-  content = content.replace(")
-    /import\s+([^;]+);([^"]*)$/gm,"
-    "import $1;\nimport $2",
-  )
-  return content;
+  let fixed = content;
+  let changes = 0;
+
+  // Fix unterminated import statements
+  fixed = fixed.replace(/import React from 'react;/g, "import React from 'react';");
+  fixed = fixed.replace(/import React from 'react\s*$/gm, "import React from 'react';");
+  fixed = fixed.replace(/import React from 'react\n/g, "import React from 'react';\n");
+  
+  // Fix other common unterminated imports
+  fixed = fixed.replace(/import \{ ([^}]+) \} from 'lucide-react;/g, "import { $1 } from 'lucide-react';");
+  fixed = fixed.replace(/import \{ ([^}]+) \} from 'lucide-react\s*$/gm, "import { $1 } from 'lucide-react';");
+  fixed = fixed.replace(/import \{ ([^}]+) \} from 'lucide-react\n/g, "import { $1 } from 'lucide-react';\n");
+  
+  // Fix Link import
+  fixed = fixed.replace(/import \{ Link \} from 'react-router-dom;/g, "import { Link } from 'react-router-dom';");
+  fixed = fixed.replace(/import \{ Link \} from 'react-router-dom\s*$/gm, "import { Link } from 'react-router-dom';");
+  fixed = fixed.replace(/import \{ Link \} from 'react-router-dom\n/g, "import { Link } from 'react-router-dom';\n");
+  
+  // Fix EnhancedSEO import
+  fixed = fixed.replace(/import EnhancedSEO from '\.\.\/components\/EnhancedSEO;/g, "import EnhancedSEO from '../components/EnhancedSEO';");
+  fixed = fixed.replace(/import EnhancedSEO from '\.\.\/components\/EnhancedSEO\s*$/gm, "import EnhancedSEO from '../components/EnhancedSEO';");
+  fixed = fixed.replace(/import EnhancedSEO from '\.\.\/components\/EnhancedSEO\n/g, "import EnhancedSEO from '../components/EnhancedSEO';\n");
+
+  // Fix any other unterminated string literals in the first line
+  fixed = fixed.replace(/^import [^']*'[^']*$/gm, (match) => {
+    if (!match.endsWith("';")) {
+      return match + "';";
+    }
+    return match;
+  });
+
+  // Fix missing closing quotes in function parameters
+  fixed = fixed.replace(/className = \s*\)/g, "className = ''");
+  fixed = fixed.replace(/className = \s*$/gm, "className = ''");
+
+  // Count changes
+  if (fixed !== content) {
+    changes = 1;
+  }
+
+  return { content: fixed, changes };
 }
-// Function to process a single file;
-function processFile(filePath) {
-  try {";";
-const content = fs.readFileSync(filePath, "utf8");";
-const fixedContent = fixImportQuotes(content);
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Fixed: ${filePath}`)```;
-      return true;
+
+// Function to process all TSX files
+async function processFiles() {
+  const pattern = 'app/**/*.tsx';
+  const files = await glob(pattern, { cwd: process.cwd() });
+  
+  let totalFiles = 0;
+  let totalChanges = 0;
+
+  console.log(`Found ${files.length} TSX files to process...`);
+
+  files.forEach(file => {
+    try {
+      const filePath = path.join(process.cwd(), file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      
+      const { content: fixed, changes } = fixImportQuotes(content);
+      
+      if (changes > 0) {
+        fs.writeFileSync(filePath, fixed, 'utf8');
+        console.log(`Fixed: ${file}`);
+        totalChanges++;
+      }
+      
+      totalFiles++;
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
+
+  console.log(`\nProcessed ${totalFiles} files, fixed ${totalChanges} files.`);
 }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)```;
-    return false;
-}
-// Function to recursively find and process all TypeScript/React files;
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  try {;
-const items = fs.readdirSync(dirPath);
-    for (const item of items) {;
-const fullPath = path.join(dirPath, item);
-const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)"
-      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-}
-} catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message)```;
-}
-  return fixedCount;
-}
-// Main execution"
-console.log("Starting import quote fixes...")";"
-const fixedCount = processDirectory("./app")
-console.log(`Fixed ${fixedCount} files.`)``"`
-}}}
+
+// Run the fix
+processFiles().catch(console.error);

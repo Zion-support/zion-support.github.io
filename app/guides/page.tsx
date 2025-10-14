@@ -1,25 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
 const GuidesPage: React.FC = () => {
-  const guides = [{
+  const guides = [
+    {
       title: 'AI 2026 Implementation Roadmap', description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026', url: '/guides/ai-2026-implementation-roadmap', category: 'AI Implementation', icon: Brain, difficulty: 'Intermediate', duration: '45 min read', }, {
       title: 'AI 2027 Implementation Roadmap', description: 'Advanced roadmap for AI implementation strategies in 2027', url: '/guides/ai-2027-implementation-roadmap', category: 'AI Implementation', icon: Brain, difficulty: 'Advanced', duration: '60 min read', }, {
       title: 'Autonomous Business Processes Implementation Guide 2026', description: 'Step-by-step guide to implementing autonomous business processes', url: '/guides/autonomous-business-processes-implementation-guide-2026', category: 'Process Automation', icon: Zap, difficulty: 'Expert', duration: '90 min read', }];
   const categories = [{name: 'AI Implementation', icon: Brain, color: 'text-purple-400', }, {name: 'Process Automation', icon: Zap, color: 'text-blue-400', }, {name: 'Security', icon: Shield, color: 'text-red-400', }, {name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400', }, {name: 'Data Management', icon: Database, color: 'text-green-400', }, {name: 'Development', icon: Code, color: 'text-orange-400', }];
   const getDifficultyColor = () => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-400/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
-      case 'Advanced': return 'text-orange-400 bg-orange-400/20';
-      case 'Expert': return 'text-red-400 bg-red-400/20';
-      default: return 'text-gray-400 bg-gray-400/20';
+      case 'Beginner': return 'text-green-400 bg-green-400/20;
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20;
+      case 'Advanced': return 'text-orange-400 bg-orange-400/20;
+      case 'Expert': return 'text-red-400 bg-red-400/20;
+      default: return 'text-gray-400 bg-gray-400/20;
     }
   };
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Implementation Guides - Zion Tech Group</title>
         <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
@@ -92,7 +93,7 @@ const GuidesPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
-<Link
+<Link;
                       to={guide.url;
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >;
@@ -108,7 +109,7 @@ const GuidesPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
             <div className="bg-slate-800 rounded-lg p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
+                <div></div>
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
                   <p>;
                     Start with our comprehensive AI 2026 Implementation Roadmap to understand ;
@@ -121,7 +122,7 @@ const GuidesPage: React.FC = () => {
                     <li>• Measure success and ROI</li>
                   </ul>
                 </div>
-                <div>
+                <div></div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
                   <p>;
                     Explore our advanced guides for autonomous systems, process automation, ;
@@ -151,7 +152,7 @@ const GuidesPage: React.FC = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >;
-                Get Expert Consultation
+                Get Expert Consultation;
               </Link>
               <Link;
                 to="/services"
@@ -166,4 +167,4 @@ const GuidesPage: React.FC = () => {
     </>````````
   );`````````
 };``````````
-export default GuidesPage;```````````
+export default Page;```````````

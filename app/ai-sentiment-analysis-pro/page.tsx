@@ -1,9 +1,7 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer;';
+import FuturisticCard from '../components/FuturisticCard;';
+import FuturisticButton from '../components/FuturisticButton;
 const AISentimentAnalysisPro = () => {
   const features = [
     {
@@ -29,14 +27,14 @@ const AISentimentAnalysisPro = () => {
       description: "Identify sentiment trends and patterns over time","
       icon: <BarChart3 className="w-6 h-6" />,"
       color: "from-orange-500 to-red-500"
-    }
+  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">"
       <EnhancedSEO;
         title="AI Sentiment Analysis Pro - Customer Sentiment Intelligence | Zion Tech Group"
         description="Understand customer sentiment with AI-powered analysis. Real-time monitoring, emotion detection, and trend analysis for better customer insights."
-        keywords="sentiment analysis, customer sentiment, emotion detection, social media monitoring, customer insights, AI analytics"
+        keywords="sentiment analysis, customer sentiment, emotion detection, social media monitoring, customer insights, AI analytics"';
         canonical="https: '//ziontechgroup.com/ai-sentiment-analysis-pro"','
       /></EnhancedSEO>
 </EnhancedSEO>
@@ -93,11 +91,11 @@ const AISentimentAnalysisPro = () => {
           </div>
           <div className="grid grid-cols-1 sm: 'grid-cols-2 lg:grid-cols-4 gap-6">"','
             {features.map((feature, index) => (
-<FuturisticCard
+<FuturisticCard;
                 key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div
+                <div;
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon;

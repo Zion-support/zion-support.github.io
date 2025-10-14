@@ -1,4 +1,3 @@
-import lucide-react from 'lucide-react';
 export default function OptimizedLoading() {
   return (
     <div className="optimized-loading-container">"

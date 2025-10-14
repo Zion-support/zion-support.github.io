@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { CurrencyDollarIcon,
   CheckIcon,
@@ -9,10 +8,10 @@ import { CurrencyDollarIcon,
   EnvelopeIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-CloudIcon } from '@heroicons/react/24/outline';
+CloudIcon } from '@heroicons/react/24/outline;
 const PricingPage: React.FC = () => {
   const plans = [
-    {
+    {';
       name: 'Starter','
       price: '$2,999','
       period: '/month','
@@ -64,7 +63,7 @@ const PricingPage: React.FC = () => {
       popular: false;
 =======
     }
->>>>>>> origin/main
+>>>>>>> origin/main;
   ];
   const addOns = [
     {
@@ -90,7 +89,7 @@ const PricingPage: React.FC = () => {
       price: '$800','
       period: '/hour','
       description: 'Custom training sessions for your team'
-    }
+  }
   ];
   return (
     <>
@@ -145,10 +144,9 @@ const PricingPage: React.FC = () => {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>"
                     <span className="text-gray-400 ml-2">{plan.period}</span>"
                   </div>
-<<<<<<< HEAD
+<<<<<<< HEAD;
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -157,11 +155,10 @@ const PricingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
                       : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'
                   }`}
@@ -277,5 +274,8 @@ const PricingPage: React.FC = () => {
     </>```````
   );````````
 };`````````
-export default PricingPage;``````````
+export default Page;``````````
 ```````````
+      </div>
+      </div>
+      </div>

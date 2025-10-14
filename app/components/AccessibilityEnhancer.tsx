@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Skip to main content functionality;
     const addSkipLink = () => {;
-      const skipLink = document.createElement('a');';
+      const skipLink = document.createElement('a');;
       skipLink.href = '#main-content;
       skipLink.textContent = 'Skip to main content;
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50;
@@ -49,10 +49,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleMouseDown = () => {;
         document.body.classList.remove('keyboard-navigation');'
       };
-      document.addEventListener('keydown', handleKeyDown);';
-      document.addEventListener('mousedown', handleMouseDown);';
+      document.addEventListener('keydown', handleKeyDown);;
+      document.addEventListener('mousedown', handleMouseDown);;
       return () => {;
-        document.removeEventListener('keydown', handleKeyDown);';
+        document.removeEventListener('keydown', handleKeyDown);;
         document.removeEventListener('mousedown', handleMouseDown);'
       };
     };
@@ -78,7 +78,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             }
           }
         };
-        element.addEventListener('keydown', handleTabKey);';
+        element.addEventListener('keydown', handleTabKey);;
         firstFocusableElement?.focus();
         return () => {;
           element.removeEventListener('keydown', handleTabKey);'`
@@ -103,7 +103,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.head.appendChild(style);
       };
       return () => {;
-        const existingStyle = document.getElementById('accessibility-high-contrast');';
+        const existingStyle = document.getElementById('accessibility-high-contrast');;
         if (existingStyle) {
           existingStyle.remove();
         }
@@ -113,31 +113,31 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (!enableScreenReader) return;
       // Add ARIA landmarks;
       const addLandmarks = () => {;
-        const main = document.querySelector('main');';
+        const main = document.querySelector('main');;
         if (main && !main.getAttribute('role')) {;
           main.setAttribute('role', 'main');'
         }
-        const nav = document.querySelector('nav');';
+        const nav = document.querySelector('nav');;
         if (nav && !nav.getAttribute('role')) {;
           nav.setAttribute('role', 'navigation');'
         }
-        const header = document.querySelector('header');';
+        const header = document.querySelector('header');;
         if (header && !header.getAttribute('role')) {;
           header.setAttribute('role', 'banner');'
         }
-        const footer = document.querySelector('footer');';
+        const footer = document.querySelector('footer');;
         if (footer && !footer.getAttribute('role')) {;
           footer.setAttribute('role', 'contentinfo');'
         }
       };
       // Add live regions for dynamic content;
       const addLiveRegions = () => {;
-        let liveRegion = document.getElementById('live-region');';
+        let liveRegion = document.getElementById('live-region');;
         if (!liveRegion) {
-          liveRegion = document.createElement('div');';
+          liveRegion = document.createElement('div');;
           liveRegion.id = 'live-region;
-          liveRegion.setAttribute('aria-live', 'polite');';
-          liveRegion.setAttribute('aria-atomic', 'true');';
+          liveRegion.setAttribute('aria-live', 'polite');;
+          liveRegion.setAttribute('aria-atomic', 'true');;
           liveRegion.className = 'sr-only;
           document.body.appendChild(liveRegion);
         }
@@ -145,7 +145,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       addLandmarks();
       addLiveRegions();
       return () => {;
-        const liveRegion = document.getElementById('live-region');';
+        const liveRegion = document.getElementById('live-region');;
         if (liveRegion) {
           liveRegion.remove();
         }
@@ -223,3 +223,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   );`````````
 };``````````
 export default AccessibilityEnhancer;```````````
+      </div>

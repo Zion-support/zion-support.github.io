@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-
-
+<<<<<<< HEAD;
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-
-
+  size?: 'sm' | 'md' | 'lg' | 'xl;
 =======
->>>>>>> origin/main
+>>>>>>> origin/main;
   text?: string;
   fullScreen?: boolean;
   className?: string}
@@ -25,8 +21,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div;```````````
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````;
           style={{
-            animation: 'spin 1s linear infinite',';
-            willChange: 'transform
+            animation: 'spin 1s linear infinite',;
+            willChange: 'transform;
           }></div>
           <Loader2 className="w-full h-full" />"
         </div>`

@@ -25,32 +25,30 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   return (
     <div className="page-container">
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -72,4 +70,4 @@ const Page = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;

@@ -18,7 +18,7 @@
         </div>`````````
         {/* Loading text with cyber effect */}``````````
         <div className="mt-6 text-center">`
-          <p>
+          <p></p>
             {message}
           </p>
           {/* Animated dots */}

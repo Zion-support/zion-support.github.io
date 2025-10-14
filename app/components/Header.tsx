@@ -1,5 +1,5 @@
 import React from 'react';
-{ useState } from 'react';
+{ useState } from 'react;
 import { Link  , Menu,  X,  ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">;
-                  <Link>
+                  <Link></Link>
                     to={item.href;
                     className="$1"
 onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
@@ -50,7 +50,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link>
+                        <Link></Link>
                           key={subItem.name;
                           to={subItem.href;
                           className="$1"
@@ -63,7 +63,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                 </div>
               ))}
             </div>
-    </>
+</>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
@@ -116,7 +116,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
               {navigationItems.map((item) => (
                 <div key={item.name}>;
-                  <Link>
+                  <Link></Link>
                     to={item.href;
                     className="$1"
 onClick={() => setIsOpen(false)}
@@ -126,7 +126,7 @@ onClick={() => setIsOpen(false)}
                   {item.submenu && (
                     <div className="pl-4 space-y-1">
                       {item.submenu.map((subItem) => (
-                        <Link>
+                        <Link></Link>
                           key={subItem.name;
                           to={subItem.href;
                           className="$1"
@@ -140,7 +140,7 @@ onClick={() => setIsOpen(false)}
                 </div>
               ))}
               <div className="pt-4">;
-                <Link>
+                <Link></Link>
                   to="/contact";
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
                   onClick={() => setIsOpen(false)}
@@ -179,3 +179,5 @@ onClick={() => setIsOpen(false)}
   );
 };
 export default Header;
+      </div>
+      </div>

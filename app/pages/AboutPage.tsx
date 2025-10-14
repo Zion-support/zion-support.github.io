@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { UserGroupIcon,
   CpuChipIcon,
@@ -10,53 +10,52 @@ import { UserGroupIcon,
   StarIcon,
   PhoneIcon,
   EnvelopeIcon,
-MapPinIcon } from '@heroicons/react/24/outline';
+MapPinIcon } from '@heroicons/react/24/outline;
 const AboutPage: React.FC = () => {
   const values = [
-    {
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
-      icon: CpuChipIcon
+    {';
+      title: 'Innovation,
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.,
+      icon: CpuChipIcon;
     },
     {
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-      icon: ShieldCheckIcon
+      title: 'Security,
+      description: 'Your data and systems are protected with enterprise-grade security measures.,
+      icon: ShieldCheckIcon;
     },
     {
-      title: 'Reliability',
-      description: 'We deliver consistent, high-quality solutions that you can depend on.',
+      title: 'Reliability,
+      description: 'We deliver consistent, high-quality solutions that you can depend on.,
       icon: CloudIcon;
   ];
-
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
     { number: '99%', label: 'Success Rate' },
     { number: '4+', label: 'Years Experience' }
   ];
-
   const team = [
     {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      description: 'Technology visionary with 10+ years in AI and IT solutions.',
+      name: 'Kleber Santos,
+      role: 'Founder & CEO,
+      description: 'Technology visionary with 10+ years in AI and IT solutions.,
       image: '/team/kleber.jpg'
     },
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in cloud architecture and cybersecurity solutions.',
+      name: 'Sarah Johnson,
+      role: 'CTO,
+      description: 'Expert in cloud architecture and cybersecurity solutions.,
       image: '/team/sarah.jpg'
     },
     {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      description: 'Specialist in machine learning and artificial intelligence.',
+      name: 'Michael Chen,
+      role: 'Lead AI Engineer,
+      description: 'Specialist in machine learning and artificial intelligence.,
       image: '/team/michael.jpg'
-    }
+  }
   ];
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -67,14 +66,13 @@ const AboutPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              About Zion Tech Group
+              About Zion Tech Group;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Pioneering the Future of Technology
+              Pioneering the Future of Technology;
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Founded in 2020, Zion Tech Group has been at the forefront of technological innovation, 
@@ -83,13 +81,12 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Mission Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Mission
+              Our Mission;
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               To empower businesses with innovative technology solutions that drive digital transformation, 
@@ -98,19 +95,17 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Values
+              Our Values;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do
+              The principles that guide everything we do;
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
@@ -124,19 +119,17 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Impact
+              Our Impact;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Numbers that reflect our commitment to excellence
+              Numbers that reflect our commitment to excellence;
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -151,19 +144,17 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Meet Our Team
+              Meet Our Team;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The experts behind our innovative solutions
+              The experts behind our innovative solutions;
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-all duration-300">
@@ -174,7 +165,6 @@ const AboutPage: React.FC = () => {
                 <p className="text-purple-400 font-semibold mb-4">{member.role}</p>
                 <p className="text-gray-300">{member.description}</p>
               </div>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -182,25 +172,25 @@ const AboutPage: React.FC = () => {
             Ready to Work With Us?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how we can help transform your business with our technology solutions
+            Let's discuss how we can help transform your business with our technology solutions;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
             >
-              Get In Touch
+              Get In Touch;
             </Link>
-            <Link
+            <Link;
               to="/careers"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             >
-              Join Our Team
+              Join Our Team;
             </Link>
           </div>
         </div>
       </section>
-    </>
+</>
                 <div className="flex items-start"></div>
                   <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" /></CheckCircleIcon>
                   <span className="text-gray-300">Innovation-driven approach</span>
@@ -215,3 +205,6 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
             </div>
+        </section>
+    </>
+  );

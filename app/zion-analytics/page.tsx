@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const ZionAnalytics = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const ZionAnalytics = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <section className="py-20">"
           <ResponsiveContainer></ResponsiveContainer>
-            <div className="text-center">"
+            <div className="text-center">"';
               <h1 className="text-5xl md: 'text-7xl font-bold text-white mb-6">"','
                 Zion <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Analytics</span>"
               </h1>
@@ -26,7 +26,7 @@ const ZionAnalytics = () => {
           </ResponsiveContainer>
         </section>
       </div>
-    </>
+</>
   );
 };
 export default ZionAnalytics;

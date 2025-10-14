@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
+import React, { useEffect, useState, useCallback } from 'react;
 interface PerformanceOptimizerProps {
   children: Node;
-export default PerformanceOptimizer;
-        const link = document.createElement('link')';
+export default PerformanceOptimizer;';
+        const link = document.createElement('link');
         link.rel = 'preload;
         link.href = resource;
         link.as = resource.endsWith('.css') ? 'style' : 'script;

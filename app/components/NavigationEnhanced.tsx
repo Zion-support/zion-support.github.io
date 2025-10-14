@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom;
 import { Menu, 
   X, 
   ChevronDown, 
@@ -20,10 +20,9 @@ import { Menu,
   Target,
   Settings,
   Search,
-  Bell,
+  Bell,';
 User } from 'lucide-react';
 import FuturisticButton from './FuturisticButton'
-
 interface NavigationEnhancedProps {
   onSidebarToggle?: () => void;
 const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggle }) => {
@@ -105,8 +104,8 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
   ], [])
   const serviceCategories = useMemo(() => [
     {
-name: 'AI Services',
-      path: '/ai-services',
+name: 'AI Services,
+      path: '/ai-services,
       icon: <Brain className="w-6 h-6" />,
       services: [
         { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
@@ -116,8 +115,8 @@ name: 'AI Services',
       ]
     },
     {
-      name: 'IT Services',
-      path: '/it-services',
+      name: 'IT Services,
+      path: '/it-services,
       icon: <Shield className="w-6 h-6" />,
       services: [
         { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
@@ -127,8 +126,8 @@ name: 'AI Services',
       ]
     },
     {
-      name: '5G Solutions',
-      path: '/5g-solutions',
+      name: '5G Solutions,
+      path: '/5g-solutions,
       icon: <Globe className="w-6 h-6" />,
       services: [
         { name: '5G Implementation', path: '/5g-implementation' },
@@ -139,6 +138,7 @@ name: 'AI Services',
     }
   ], [])
   return (
+    <>
     <nav ;
       className="bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md sticky top-0 z-50"
       role="navigation"
@@ -192,7 +192,7 @@ name: 'AI Services',
           {/* Desktop Navigation */}
           <div className="hidden lg: 'flex space-x-8 items-center">"','
             {/* Search Button */}
-<button
+<button;
               onClick={toggleSearch}
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Search"
@@ -200,7 +200,7 @@ name: 'AI Services',
               <Search className="w-5 h-5" />"
             </button>
             {/* Sidebar Toggle Button */}
-<button
+<button;
               onClick={onSidebarToggle;
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Toggle sidebar"
@@ -208,7 +208,7 @@ name: 'AI Services',
               <SidebarIcon className="w-5 h-5" />"
             </button>
             {mainNavItems.map((item) => (
-<Link
+<Link;
                 key={item.name;
                 to={item.path}
                 className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${
@@ -221,28 +221,26 @@ name: 'AI Services',
                 }`}></span>
               </Link>
             ))}
-            
             {/* AI Services Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={toggleAiServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>AI Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : }`} />
               </button>
-              
               {isAiServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services</h3>
                   </div>
                   {aiServices.map((service) => (
-                    <Link
+                    <Link;
                       key={service.name;
                       to={service.path;
                       className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
+                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : 
                       }`}
                       onClick={() => setIsAiServicesOpen(false)}
                     >
@@ -263,15 +261,14 @@ name: 'AI Services',
                 </div>
               )}
             </div>
-
             {/* IT Services Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={toggleItServices}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>IT Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : }`} />
               </button>
               {isItServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">"
@@ -279,7 +276,7 @@ name: 'AI Services',
                     <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>"
                   </div>
                   {itServices.map((service) => (
-<Link
+<Link;
                       key={service.name;
                       to={service.path;
                       className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
@@ -294,28 +291,26 @@ name: 'AI Services',
                 </div>
               )}
             </div>
-
             {/* Micro SAAS Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={toggleMicroSaas}
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>Micro SAAS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : }`} />
               </button>
-              
               {isMicroSaasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
                   </div>
                   {microSaasServices.map((service) => (
-                    <Link
+                    <Link;
                       key={service.name;
                       to={service.path;
                       className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
+                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : 
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
                     >
@@ -347,7 +342,7 @@ name: 'AI Services',
           </div>
           {/* Mobile menu button */}
 <div className="lg:hidden">
-            <button
+            <button;
               onClick={toggleMenu}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
             >
@@ -370,17 +365,16 @@ name: 'AI Services',
 </div>
           </div>
         )}
-
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-cyan-500/20">
             <div className="flex flex-col space-y-2">
               {mainNavItems.map((item) => (
-                <Link
+                <Link;
                   key={item.name;
                   to={item.path;
                   className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
-                    location.pathname === item.path 
+                    location.pathname === item.path;
                       ? 'bg-cyan-500/20 text-cyan-400' 
                       : 'hover:bg-cyan-500/10 hover:text-cyan-400'
                   }`}
@@ -389,20 +383,19 @@ name: 'AI Services',
                   {item.name}
                 </Link>
               ))}
-              
               {/* Mobile AI Services */}
-              <div>
-                <button
+              <div></div>
+                <button;
                   onClick={toggleAiServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>AI Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : }`} />
                 </button>
                 {isAiServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">"
                     {aiServices.map((service) => (
-<Link
+<Link;
                         key={service.name;
                         to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
@@ -419,20 +412,19 @@ name: 'AI Services',
                   </div>
                 )}
               </div>
-
               {/* Mobile IT Services */}
-              <div>
-                <button
+              <div></div>
+                <button;
                   onClick={toggleItServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
                 >
                   <span>IT Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : }`} />
                 </button>
                 {isItServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">"
                     {itServices.map((service) => (
-<Link
+<Link;
                         key={service.name;
                         to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
@@ -448,20 +440,19 @@ name: 'AI Services',
                   </div>
                 )}
               </div>
-
               {/* Mobile Micro SAAS */}
-              <div>
-                <button
+              <div></div>
+                <button;
                   onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>Micro SAAS</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : }`} />
                 </button>
                 {isMicroSaasOpen && (
                   <div className="ml-4 mt-2 space-y-1">"
                     {microSaasServices.map((service) => (
-<Link
+<Link;
                         key={service.name;
                         to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
@@ -497,3 +488,5 @@ onClick={toggleMenu}
 })`````````
 NavigationEnhanced.displayName = 'NavigationEnhanced'``````````
 export default NavigationEnhanced;```````````
+    </>
+  );

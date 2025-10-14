@@ -256,5 +256,5 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     </div>
   );
 };
-
 export default ImprovedPerformanceMonitor;
+      </div>

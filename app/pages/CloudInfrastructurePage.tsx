@@ -14,13 +14,13 @@ const CloudInfrastructurePage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Infrastructure</span>
           </h1>
-          <p>
+          <p></p>
             Build, migrate, and optimize your cloud infrastructure for maximum performance, ;
             security, and cost-effectiveness.;
           </p>
         </div>
-          {services.map((service, _index
-  </>
+          {services.map((service, _index;
+</>
 ); => {
             const Icon = service.icon;
             return (
@@ -34,7 +34,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 </div>
                 <p>{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex
+                  {service.features.map((feature, featureIndex;
   </>;
 ); => (
                     </li>
@@ -62,10 +62,10 @@ const CloudInfrastructurePage: React.FC = () => {
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1>
+            <h1></h1>
               Cloud Infrastructure;
             </h1>
-            <p>
+            <p></p>
               Professional cloud infrastructure solutions tailored to your business needs.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -73,7 +73,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions;
                 </h3>
-                <p>
+                <p></p>
                   Our team of experts delivers cutting-edge cloud infrastructure solutions.
                 </p>
               </div>
@@ -81,7 +81,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation;
                 </h3>
-                <p>
+                <p></p>
                   Tailored cloud infrastructure implementations for your specific requirements.
                 </p>
               </div>
@@ -89,7 +89,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support;
                 </h3>
-                <p>
+                <p></p>
                   Round-the-clock support for all your cloud infrastructure needs.
                 </p>
               </div>
@@ -114,10 +114,10 @@ const CloudInfrastructurePage: React.FC = () => {
         </div>
       </div>;
     </div>;  );
-export default CloudInfrastructurePage;
-    </>
+export default Page;
+</>
   );
-export default CloudInfrastructurePage;
+export default Page;
 "use client;
 import React from 'react';
 const CloudInfrastructurePage = () => {
@@ -127,6 +127,8 @@ const CloudInfrastructurePage = () => {
       <h1>CloudInfrastructurePage</h1>"
       <p>This page is under development.</p>"
     </div>
-  </>
+</>
 );
 }
+      </div>
+      </div>

@@ -1,81 +1,81 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Brain, Target, BarChart3, CheckCircle, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI Content Generation',
+      title: 'AI Content Generation,
       description: 'Generate compelling email content, subject lines, and CTAs using advanced AI that understands your brand voice.'
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Smart Segmentation',
+      title: 'Smart Segmentation,
       description: 'AI-powered audience segmentation that automatically groups subscribers based on behavior, preferences, and engagement patterns.'
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Predictive Analytics',
+      title: 'Predictive Analytics,
       description: 'Advanced analytics that predict email performance, optimal send times, and subscriber behavior to maximize ROI.'
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Automation Workflows',
+      title: 'Automation Workflows,
       description: 'Intelligent email automation that triggers based on subscriber actions, preferences, and engagement levels.'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Personalization Engine',
+      title: 'Personalization Engine,
       description: 'Dynamic content personalization that adapts emails to each subscriber\'s interests, behavior, and demographics.'
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Multi-Channel Integration',
+      title: 'Multi-Channel Integration,
       description: 'Seamlessly integrate with social media, SMS, and other marketing channels for unified campaign management.'
     }
   ]
   const emailFeatures = [
     {
 icon: <Mail className="w-6 h-6" />,
-      title: 'Email Builder',
-      description: 'Drag-and-drop email builder with AI-powered templates and content suggestions.',
-      price: 'Included',
+      title: 'Email Builder,
+      description: 'Drag-and-drop email builder with AI-powered templates and content suggestions.,
+      price: 'Included,
       features: ['Drag-and-drop editor', 'AI templates', 'Mobile optimization', 'A/B testing']
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI Content Assistant',
-      description: 'Generate subject lines, email content, and CTAs using AI that learns from your best-performing campaigns.',
-      price: 'Included',
+      title: 'AI Content Assistant,
+      description: 'Generate subject lines, email content, and CTAs using AI that learns from your best-performing campaigns.,
+      price: 'Included,
       features: ['Subject line generation', 'Content creation', 'CTA optimization', 'Brand voice training']
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement patterns.',
-      price: 'Included',
+      title: 'Smart Segmentation,
+      description: 'Automatically segment your audience based on behavior, preferences, and engagement patterns.,
+      price: 'Included,
       features: ['Behavioral segmentation', 'Demographic targeting', 'Engagement scoring', 'Dynamic lists']
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with predictive insights and performance optimization.',
-      price: '$9.99/month',
+      title: 'Advanced Analytics,
+      description: 'Comprehensive analytics dashboard with predictive insights and performance optimization.,
+      price: '$9.99/month,
       features: ['Predictive analytics', 'ROI tracking', 'Engagement insights', 'Custom reports']
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Automation Studio',
-      description: 'Create complex email automation workflows with AI-powered triggers and conditions.',
-      price: '$19.99/month',
+      title: 'Automation Studio,
+      description: 'Create complex email automation workflows with AI-powered triggers and conditions.,
+      price: '$19.99/month,
       features: ['Visual workflow builder', 'AI triggers', 'Conditional logic', 'Multi-step campaigns']
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Deliverability Suite',
-      description: 'Advanced deliverability tools to ensure your emails reach the inbox and avoid spam filters.',
-      price: '$14.99/month',
+      title: 'Deliverability Suite,
+      description: 'Advanced deliverability tools to ensure your emails reach the inbox and avoid spam filters.,
+      price: '$14.99/month,
       features: ['Spam score analysis', 'IP warming', 'Reputation monitoring', 'Bounce management']
     }
   ]
@@ -128,7 +128,7 @@ icon: <Mail className="w-6 h-6" />,
       popular: false;
 =======
     }
->>>>>>> origin/main
+>>>>>>> origin/main;
   ]
   const stats = [
     { number: '40%', label: 'Higher Open Rates', icon: <Mail className="w-6 h-6 text-cyan-400" /> },"
@@ -150,13 +150,14 @@ icon: <Mail className="w-6 h-6" />,
       rating: 5;
     },
     {
-<<<<<<< HEAD
-      name: 'Sarah Johnson',
-      company: 'Marketing Agency',
-      content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.',
+<<<<<<< HEAD;
+      name: 'Sarah Johnson,
+      company: 'Marketing Agency,
+      content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.,
       rating: 5;
   ]
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>AI Email Marketing - Intelligent Email Campaigns | Zion Tech Group</title>
@@ -437,4 +438,9 @@ icon: <Mail className="w-6 h-6" />,
     </>````````
   )`````````
 }``````````
-export default AIEmailMarketingPage;```````````
+export default Page;```````````
+      </div>
+      </div>
+      </div>
+    </>
+  );

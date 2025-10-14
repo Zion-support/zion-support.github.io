@@ -40,7 +40,7 @@ const PerformanceMonitor: React.FC = () => {
       });
       observer.observe({entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'],});'
       // Get TTFB;
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;';
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;;
       if (navigationEntry) {
         setMetrics(prev => ({
           ...prev,
@@ -52,7 +52,7 @@ const PerformanceMonitor: React.FC = () => {
         // First Contentful Paint;
         const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');';
+          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');;
           if (fcp) {
             setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
           }
@@ -131,8 +131,8 @@ const PerformanceMonitor: React.FC = () => {
         setIsVisible(prev => !prev);
       }
     };
-    window.addEventListener('keydown', handleKeyPress);';
-    return () => window.removeEventListener('keydown', handleKeyPress);';
+    window.addEventListener('keydown', handleKeyPress);;
+    return () => window.removeEventListener('keydown', handleKeyPress);;
   return (
 <>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
       <div className="flex items-center justify-between mb-4"></div>

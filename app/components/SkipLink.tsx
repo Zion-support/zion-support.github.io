@@ -1,6 +1,6 @@
             <div></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p>
+              <p></p>
                 We provide comprehensive skip link;
                 solutions tailored to your specific needs and requirements.;
               </p>
@@ -21,7 +21,7 @@
             </div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p>
+              <p></p>
                 Ready to transform your business with our skip link services?;
               </p>
               <a;
@@ -47,7 +47,7 @@
                   Ongoing support</li></ul></div>
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p>
+              <p></p>
                 Ready to transform your business with our skip link services?</p>
               <a;
                 href="/contact"

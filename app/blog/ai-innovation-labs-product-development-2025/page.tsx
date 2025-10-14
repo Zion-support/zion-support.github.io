@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link;
 const InnovationLabsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -7,13 +7,13 @@ const InnovationLabsPage: React.FC = () => {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🚀 Innovation Lab
+              🚀 Innovation Lab;
             </span>
             <h1>;
-              AI Innovation Labs: Product Development Revolution 2025
+              AI Innovation Labs: Product Development Revolution 2025;
             </h1>
             <p>;
-              January 28, 2025 · 45 min read · AI Innovation
+              January 28, 2025 · 45 min read · AI Innovation;
             </p>
           </div>
           <div className="prose max-w-none">
@@ -79,10 +79,10 @@ const InnovationLabsPage: React.FC = () => {
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
               <pre className="text-sm text-gray-800 overflow-x-auto">
 {`AI Innovation Lab Stack:
-├── AI/ML Platform
-│   ├── TensorFlow & PyTorch
-│   ├── Hugging Face Transformers
-│   └── Custom AI Models
+├── AI/ML Platform;
+│   ├── TensorFlow & PyTorch;
+│   ├── Hugging Face Transformers;
+│   └── Custom AI Models;
 ├── Development Tools`
 │   ├── GitHub Copilot``
 │   ├── AI Code Generation```
@@ -105,12 +105,12 @@ const InnovationLabsPage: React.FC = () => {
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3>
               <p>;
-                Join leading companies transforming product development with AI-powered innovation
+                Join leading companies transforming product development with AI-powered innovation;
               </p>
               <div className="space-x-4">
                 <Link href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                  Schedule Innovation Assessment
+                  Schedule Innovation Assessment;
                 </Link>
                 <Link href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">;
@@ -124,4 +124,4 @@ const InnovationLabsPage: React.FC = () => {
     </div>````````
   );`````````
 }``````````
-export default InnovationLabsPage;```````````
+export default Page;```````````';

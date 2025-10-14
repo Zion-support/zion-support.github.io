@@ -25,34 +25,33 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   return (
+    <>
 <>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>
-    </>
+</>
         <div className="text-center"></div>
           <h1>Page</h1>
           <p className="text-gray-300 text-lg"></p>
@@ -63,4 +62,6 @@ const Page = () => {
     </div>
   )};
 };
-export default PagePage;
+export default Page;
+    </>
+  );

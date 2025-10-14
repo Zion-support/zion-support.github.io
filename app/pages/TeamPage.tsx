@@ -7,16 +7,16 @@ import { UserGroupIcon,
   StarIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,
+  EnvelopeIcon,';
   MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function TeamPage() {
   const team = [
     {
       name: 'Kleber Santos','
-      role: 'CEO & Founder',';
-      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',';
-      image: '/images/team/kleber-santos.jpg',';
-      linkedin: 'https://linkedin.com/in/kleber-santos',';
+      role: 'CEO & Founder',;
+      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',;
+      image: '/images/team/kleber-santos.jpg',;
+      linkedin: 'https://linkedin.com/in/kleber-santos',;
       twitter: 'https://twitter.com/kleber_santos;'
     },
     {
@@ -82,9 +82,10 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.;'
     }
   ]
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 const TeamPage: React.FC = () => {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>TeamPage - Zion Tech Group</title>
@@ -96,5 +97,7 @@ const TeamPage: React.FC = () => {
           <p>This page is under construction.</p>"
         </div>
       </div>
-    </>
+</>
   )}
+    </>
+  );';

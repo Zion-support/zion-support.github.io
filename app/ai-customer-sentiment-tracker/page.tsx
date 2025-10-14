@@ -25,32 +25,30 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   return (
     <div className="page-container">
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -68,7 +66,6 @@ const Page = () => {
             </div>
           </div>
 </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -80,7 +77,6 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -94,7 +90,6 @@ const Page = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -105,18 +100,18 @@ const Page = () => {
               Let's discuss how our page services can help your business succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
-                Contact Us
+                Contact Us;
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
@@ -125,4 +120,5 @@ const Page = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;
+      </div>

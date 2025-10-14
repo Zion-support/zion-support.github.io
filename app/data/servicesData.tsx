@@ -1,5 +1,5 @@
 import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 export default function Page() {
   return (
 <>    <div className="min-h-screen bg-white"></div>
@@ -39,4 +39,4 @@ export default function Page() {
       </div>
     </div>)}
   );
-}"
+}"';

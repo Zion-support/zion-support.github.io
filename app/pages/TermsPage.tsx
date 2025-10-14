@@ -114,7 +114,7 @@ const TermsPage: React.FC = () => {
         'You agree to submit to the personal jurisdiction of such courts.','
         'If any provision of these terms is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect.'
       ]
-    }
+  }
   ];
   const contactInfo = {
     email: 'legal@ziontechgroup.com','
@@ -123,7 +123,10 @@ const TermsPage: React.FC = () => {
   }
   return (
     <>
+    <>
       <Helmet></Helmet>
 </Helmet>
 </Helmet>
 </Helmet>
+    </>
+  );

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
+  url?: string;';
+  type?: 'website' | 'article' | 'product;
   structuredData?: any;
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
@@ -15,25 +15,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = '/og-image.svg'
   url = 'https://ziontechgroup.com'
   type = 'website'
-  structuredData
+  structuredData;
 }) => {
   const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': type === 'article' ? 'Article' : 'WebPage',
+    '@context': 'https://schema.org,
+    '@type': type === 'article' ? 'Article' : 'WebPage,
     headline: title,
     description,
     image,
     url,
 author: {,
-      '@type': 'Organization',
+      '@type': 'Organization,
 name: author,
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
+      '@type': 'Organization,
+      name: 'Zion Tech Group,
 logo: {,
-        '@type': 'ImageObject',
-url: 'https://ziontechgroup.com/logo.png',
+        '@type': 'ImageObject,
+url: 'https://ziontechgroup.com/logo.png,
       }
     },
     ...(publishedTime && {datePublished: publishedTime,}),
@@ -47,8 +47,8 @@ url: 'https://ziontechgroup.com/logo.png',
       <title>{title}</title>
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData
-  </>
+          {JSON.stringify(structuredData;
+</>
 );
         </script>
       )

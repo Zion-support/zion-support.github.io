@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { CpuChipIcon,
   CloudIcon,
@@ -7,10 +7,10 @@ import { CpuChipIcon,
   SignalIcon,
   BriefcaseIcon,
   ArrowRightIcon,
-CheckIcon } from '@heroicons/react/24/outline';
+CheckIcon } from '@heroicons/react/24/outline;
 const ServicesPage: React.FC = () => {
   const services = [
-    {
+    {';
       title: 'AI Solutions','
       description: 'Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.','
       icon: CpuChipIcon,
@@ -99,7 +99,7 @@ const ServicesPage: React.FC = () => {
       ],
       href: '/it-solutions','
       color: 'from-gray-500 to-slate-500'
-    }
+  }
   ];
   const processSteps = [
     {
@@ -121,7 +121,7 @@ const ServicesPage: React.FC = () => {
       step: '04','
       title: 'Support','
       description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'
-    }
+  }
   ];
   return (
     <>
@@ -187,12 +187,11 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
-                <Link
+                <Link;
                   to={service.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -250,5 +249,7 @@ const ServicesPage: React.FC = () => {
     </>```````
   );````````
 };`````````
-export default ServicesPage;``````````
+export default Page;``````````
 ```````````
+      </div>
+      </div>

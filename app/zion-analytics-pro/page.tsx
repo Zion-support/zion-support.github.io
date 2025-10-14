@@ -1,34 +1,33 @@
 import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, Bell, PieChart, Mail, Phone, MapPin, Play, FileText } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
-  const testimonials = [{
+  const testimonials = [
+    {
       name: "Sarah Johnson", company: "TechStart Inc.", role: "CEO", content: "Zion Analytics Pro transformed our data analysis. We now make decisions 40% faster with real-time insights.", rating: 5, avatar: "SJ", }, {
       name: "Michael Chen", company: "E-commerce Solutions", role: "CTO", content: "The predictive analytics feature helped us identify trends before our competitors. Game changer!", rating: 5, avatar: "MC", }, {
       name: "Emily Rodriguez", company: "Digital Marketing Agency", role: "Operations Director", content: "Easy to use, powerful features, and excellent support. Our team productivity increased by 60%.", rating: 5, avatar: "ER", }];
   const stats = [{number: "10, 000+", label: "Active Users", icon: <Users className="w-6 h-6" />, }, {number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" />, }, {number: "100+", label: "Integrations", icon: <Database className="w-6 h-6" />, }, {number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" />, }];
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
         <meta;
           name="description"
@@ -47,15 +46,15 @@ const Page = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div></div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
                   <BarChart3 className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Most Popular Analytics Platform</span>
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">;
-                  Zion Analytics
+                  Zion Analytics;
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
-                    {" "}Pro
+                    {" "}Pro;
                   </span>
                 </h1>
                 <p>;
@@ -67,14 +66,14 @@ const Page = () => {
                     to="/contact"
                     className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
                   >;
-                    Start Free Trial
+                    Start Free Trial;
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link;
                     to="/demo"
                     className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >;
-                    Watch Demo
+                    Watch Demo;
                     <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                   </Link>
                 </div>
@@ -135,7 +134,7 @@ const Page = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">;
-                  Powerful Features
+                  Powerful Features;
                 </span>
               </h2>
               <p>;
@@ -151,7 +150,7 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {feature.title}
                   </h3>
-                  <p>
+                  <p></p>
                     {feature.description}
                   </p>
                   <div className="space-y-2">
@@ -173,7 +172,7 @@ const Page = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">;
-                  Simple Pricing
+                  Simple Pricing;
                 </span>
               </h2>
               <p>;
@@ -193,7 +192,7 @@ const Page = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -221,7 +220,7 @@ const Page = () => {
 : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900',```````````
                     }`}
                   >;
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -234,7 +233,7 @@ const Page = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-                What Our Customers Say
+                What Our Customers Say;
               </h2>
               <p>;
                 Join thousands of businesses already using Zion Analytics Pro to drive growth.
@@ -256,7 +255,7 @@ const Page = () => {
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.avatar}
                     </div>
-                    <div>
+                    <div></div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     </div>
@@ -305,7 +304,7 @@ const Page = () => {
                   to="/contact"
                   className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
                 >;
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link;

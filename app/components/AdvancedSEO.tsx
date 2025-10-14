@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-interface AdvancedSEOProps {
+import { Helmet } from 'react-helmet-async;
+interface AdvancedSEOProps {';
   title: 'string;','
   description: 'string;','
   keywords?: string;
@@ -236,5 +236,4 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     </Helmet>
   );
 };
-
 export default AdvancedSEO;

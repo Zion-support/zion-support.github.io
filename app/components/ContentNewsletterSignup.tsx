@@ -1,5 +1,5 @@
-'use client';
-import React, { useState } from 'react';
+'use client;
+import React, { useState } from 'react;';
 import { Mail, ArrowRight } from 'lucide-react';
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState();
@@ -32,7 +32,7 @@ const ContentNewsletterSignup: React.FC = () => {
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
         <div className="max-w-2xl mx-auto text-center">
           <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">;
-            Stay Updated with AI Innovation
+            Stay Updated with AI Innovation;
           </h2>
           <p>;
             Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
@@ -59,9 +59,9 @@ const ContentNewsletterSignup: React.FC = () => {
                 <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
               ) : (
                 <>;
-                  Subscribe
+                  Subscribe;
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </>
+</>
               )}
             </button>
           </form>

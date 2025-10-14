@@ -5,11 +5,10 @@ import { CheckIcon, ;
   LightBulbIcon ;
    } from "@heroicons/react/24/outline;
 const About: React.FC = () => {
-const stats = [',
+const stats = [,
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },'
     { icon: TrophyIcon, value: '50+', label: 'Awards Won' },'
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }];
-
   const values = [{'
       title: 'Innovation'
       description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
@@ -25,7 +24,7 @@ const stats = [',
     {'
       title: 'Integrity'
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    }
+  }
   ];
   return (
 <>    <section className="py-20 bg-gray-50">
@@ -36,7 +35,7 @@ const stats = [',
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About Zion Tech Group;
             </h2>
-            <p>
+            <p></p>
               We are a leading technology company specializing in AI and IT solutions. ;
               Our mission is to empower businesses with innovative technology that drives ;
               growth, efficiency, and success.
@@ -45,16 +44,16 @@ const stats = [',
               <div className="flex items-start">
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                 <p className="text-gray-600">
-                  <strong className="text-gray-900">Expert Team:</strong> Our team consists of
+                  <strong className="text-gray-900">Expert Team:</strong> Our team consists of;
                   highly skilled professionals with deep expertise in AI, cloud computing, ;
                   and enterprise software development.
                 </p>
               </div>
-    </>
+</>
               <div className="flex items-start">
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                 <p className="text-gray-600">
-                  <strong className="text-gray-900">Proven Track Record:</strong> We have
+                  <strong className="text-gray-900">Proven Track Record:</strong> We have;
                   successfully delivered hundreds of projects for clients across various ;
                   industries and company sizes.
                 </p>
@@ -62,7 +61,7 @@ const stats = [',
               <div className="flex items-start">
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                 <p className="text-gray-600">
-                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We
+                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We;
                   leverage the latest technologies and best practices to deliver ;
                   innovative solutions that give our clients a competitive advantage.
                 </p>
@@ -85,7 +84,7 @@ const stats = [',
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p>
+              <p></p>
                 To democratize access to advanced technology and AI solutions, ;
                 enabling businesses of all sizes to compete and thrive in the ;
                 digital economy.
@@ -121,7 +120,7 @@ const stats = [',
                 <h4 className="text-xl font-semibold text-gray-900 mb-3">
                   {value.title}
                 </h4>
-                <p>
+                <p></p>
                   {value.description}
                 </p>
               </div>

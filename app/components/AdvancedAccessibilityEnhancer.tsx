@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async;';
+'use client;
+import React, { useEffect, useState } from 'react;';
 import { Eye } from 'lucide-react';
 import { Volume2 } from 'lucide-react';
 import { MousePointer } from 'lucide-react';
@@ -16,7 +16,6 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   focusIndicator: boolean;
 }
-
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -24,104 +23,92 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
     screenReader: false,
     keyboardNavigation: false,
     reducedMotion: false,
-    focusIndicator: false
+    focusIndicator: false;
   });
-
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
-    // Load saved settings from localStorage
+    // Load saved settings from localStorage;
     const savedSettings = localStorage.getItem('accessibilitySettings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
     }
   }, []);
-
   useEffect(() => {
-    // Apply accessibility settings
+    // Apply accessibility settings;
     applyAccessibilitySettings(settings);
-    
-    // Save settings to localStorage
+    // Save settings to localStorage;
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]);
-
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-    
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
     if (newSettings.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
       root.classList.remove('enhanced-focus');
     }
   };
-
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
-
   const accessibilityFeatures = [
     {
       key: 'highContrast' as keyof AccessibilitySettings,
       icon: Contrast,
-      title: 'High Contrast',
+      title: 'High Contrast,
       description: 'Increase color contrast for better visibility'
     },
     {
       key: 'largeText' as keyof AccessibilitySettings,
       icon: ZoomIn,
-      title: 'Large Text',
+      title: 'Large Text,
       description: 'Increase text size for better readability'
     },
     {
       key: 'screenReader' as keyof AccessibilitySettings,
       icon: Volume2,
-      title: 'Screen Reader',
+      title: 'Screen Reader,
       description: 'Optimize content for screen readers'
     },
     {
       key: 'keyboardNavigation' as keyof AccessibilitySettings,
       icon: Keyboard,
-      title: 'Keyboard Navigation',
+      title: 'Keyboard Navigation,
       description: 'Enable full keyboard navigation support'
     },
     {
       key: 'reducedMotion' as keyof AccessibilitySettings,
       icon: Eye,
-      title: 'Reduced Motion',
+      title: 'Reduced Motion,
       description: 'Reduce animations and motion effects'
     },
     {
       key: 'focusIndicator' as keyof AccessibilitySettings,
       icon: MousePointer,
-      title: 'Focus Indicator',
+      title: 'Focus Indicator,
       description: 'Enhanced focus indicators for navigation'
-    }
+  }
   ];
-
   if (!isVisible) {
     return (
-      <button
+      <button;
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open accessibility settings"
@@ -130,10 +117,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
       </button>
     );
   }
-
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
+      <Helmet></Helmet>
         <title>AdvancedAccessibilityEnhancer - Zion Tech Group</title>
         <meta name="description" content="Professional advancedaccessibilityenhancer services by Zion Tech Group." />
       </Helmet>
@@ -148,17 +134,17 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 Expert Solutions</h3>
-              <p>
+              <p></p>
                 Our team of experts delivers cutting-edge advancedaccessibilityenhancer solutions.</p></div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-900 mb-2">
                 Custom Implementation</h3>
-              <p>
+              <p></p>
                 Tailored advancedaccessibilityenhancer implementations for your specific requirements.</p></div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support</h3>
-              <p>
+              <p></p>
                 Round-the-clock support for all your advancedaccessibilityenhancer needs.</p></div></div>
           <div className="mt-12">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">

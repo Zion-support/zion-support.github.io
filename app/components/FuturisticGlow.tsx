@@ -1,4 +1,3 @@
-import lucide-react from 'lucide-react';
 export default function FuturisticGlow() {
   return (
     <>
@@ -14,6 +13,6 @@ export default function FuturisticGlow() {
           <ArrowRight className="w-5 h-5 ml-2" />"
         </Link>
       </div>
-    </>
+</>
   );
 }

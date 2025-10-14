@@ -1,5 +1,4 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
 interface FormData {
   name: 'string;','
   email: 'string;','
@@ -193,13 +192,12 @@ value={formData.name;
               </p>
             )}
           </div>
-
-          <div>
+          <div></div>
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
               <Mail className="w-4 h-4 inline mr-2" />
               Email Address *
             </label>
-            <input
+            <input;
               type="email"
               id="email"
               name="email"
@@ -220,12 +218,12 @@ value={formData.name;
         </div>
         {/* Phone and Company Row */}
 <div className="grid md:grid-cols-2 gap-4">
-          <div>
+          <div></div>
             <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
               <Phone className="w-4 h-4 inline mr-2" />
-              Phone Number
+              Phone Number;
             </label>
-            <input
+            <input;
               type="tel"
               id="phone"
               name="phone"
@@ -280,7 +278,7 @@ value={formData.company;
             {isServiceDropdownOpen && (
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">"
                 {services.map((service) => (
-<button
+<button;
                     key={service;
                     type="button"
                     onClick={() => handleServiceSelect(service)}
@@ -341,12 +339,12 @@ value={formData.timeline;
           </div>
         </div>
         {/* Message */}
-<div>
+<div></div>
           <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
             <FileText className="w-4 h-4 inline mr-2" />
             Message *
           </label>
-          <textarea
+          <textarea;
             id="message"
             name="message"
             value={formData.message;
@@ -374,7 +372,7 @@ disabled={isSubmitting;
             <>
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />"
               Sending...
-            </>
+</>
           ) : (
             <>`
               <Send className="w-5 h-5" />"``

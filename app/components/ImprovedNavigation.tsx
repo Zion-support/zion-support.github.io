@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD;
+import React, { useState, useEffect } from 'react;';
+import { Link, useLocation } from 'react-router-dom;
 import { ArrowRight, 
   ChevronDown, 
   Menu, 
@@ -26,556 +26,551 @@ import { ArrowRight,
   Award,
   Clock,
   CheckCircle,
-  DollarSign,
+  DollarSign,';
   Play } from 'lucide-react';
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState();
   const location = useLocation();
-
-  // Close mobile menu when route changes
+  // Close mobile menu when route changes;
   useEffect(() => {
     setIsOpen(false);
     setIsSidebarOpen(false);
   }, [location]);
-
   const navigationItems = [
     {
-      label: 'AI Services',
-      href: '/ai-services',
+      label: 'AI Services,
+      href: '/ai-services,
       icon: <Brain className="w-6 h-6" />,
-      description: 'Advanced AI Solutions',
-      color: 'from-blue-500 to-cyan-500',
+      description: 'Advanced AI Solutions,
+      color: 'from-blue-500 to-cyan-500,
       dropdown: [
         { 
           label: 'AI Analytics Dashboard Pro', 
-          href: '/ai-analytics-dashboard-pro',
-          description: 'Real-time business intelligence',
+          href: '/ai-analytics-dashboard-pro,
+          description: 'Real-time business intelligence,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'AI Cybersecurity Suite Pro', 
-          href: '/ai-cybersecurity-suite-pro',
-          description: 'Advanced threat protection',
+          href: '/ai-cybersecurity-suite-pro,
+          description: 'Advanced threat protection,
           icon: <Shield className="w-4 h-4" />
         },
         { 
           label: 'AI Content Generation Pro', 
-          href: '/ai-content-generation-pro',
-          description: 'Automated content creation',
+          href: '/ai-content-generation-pro,
+          description: 'Automated content creation,
           icon: <Sparkles className="w-4 h-4" />
         },
         { 
           label: 'AI Customer Support Chatbot', 
-          href: '/ai-customer-support-chatbot',
-          description: 'Intelligent customer service',
+          href: '/ai-customer-support-chatbot,
+          description: 'Intelligent customer service,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'AI Code Assistant Pro', 
-          href: '/ai-code-assistant-pro',
-          description: 'AI-powered development',
+          href: '/ai-code-assistant-pro,
+          description: 'AI-powered development,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'AI Business Intelligence Pro', 
-          href: '/ai-business-intelligence-pro',
-          description: 'Data-driven insights',
+          href: '/ai-business-intelligence-pro,
+          description: 'Data-driven insights,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'AI Automation Platform', 
-          href: '/ai-automation-platform',
-          description: 'Workflow automation',
+          href: '/ai-automation-platform,
+          description: 'Workflow automation,
           icon: <Zap className="w-4 h-4" />
         },
         { 
           label: 'AI Data Analytics Pro', 
-          href: '/ai-data-analytics-pro',
-          description: 'Advanced data analysis',
+          href: '/ai-data-analytics-pro,
+          description: 'Advanced data analysis,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'AI Marketing Automation', 
-          href: '/ai-marketing-automation',
-          description: 'Smart marketing campaigns',
+          href: '/ai-marketing-automation,
+          description: 'Smart marketing campaigns,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'AI HR & Recruitment Pro', 
-          href: '/ai-hr-recruitment-pro',
-          description: 'Intelligent talent management',
+          href: '/ai-hr-recruitment-pro,
+          description: 'Intelligent talent management,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'AI Financial Analysis', 
-          href: '/ai-financial-analysis',
-          description: 'Financial forecasting',
+          href: '/ai-financial-analysis,
+          description: 'Financial forecasting,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'AI Supply Chain Optimizer', 
-          href: '/ai-supply-chain-optimizer',
-          description: 'Supply chain intelligence',
+          href: '/ai-supply-chain-optimizer,
+          description: 'Supply chain intelligence,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'AI Voice Assistant Pro', 
-          href: '/ai-voice-assistant-pro',
-          description: 'Voice-activated AI',
+          href: '/ai-voice-assistant-pro,
+          description: 'Voice-activated AI,
           icon: <User className="w-4 h-4" />
         },
         { 
           label: 'AI Image Recognition Pro', 
-          href: '/ai-image-recognition-pro',
-          description: 'Computer vision solutions',
+          href: '/ai-image-recognition-pro,
+          description: 'Computer vision solutions,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'AI Predictive Maintenance', 
-          href: '/ai-predictive-maintenance',
-          description: 'Predictive analytics',
+          href: '/ai-predictive-maintenance,
+          description: 'Predictive analytics,
           icon: <Clock className="w-4 h-4" />
         },
         { 
           label: 'AI Sentiment Analysis Pro', 
-          href: '/ai-sentiment-analysis-pro',
-          description: 'Customer sentiment tracking',
+          href: '/ai-sentiment-analysis-pro,
+          description: 'Customer sentiment tracking,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'AI Recommendation Engine', 
-          href: '/ai-recommendation-engine',
-          description: 'Personalized recommendations',
+          href: '/ai-recommendation-engine,
+          description: 'Personalized recommendations,
           icon: <Star className="w-4 h-4" />
         },
         { 
           label: 'AI Fraud Detection Pro', 
-          href: '/ai-fraud-detection-pro',
-          description: 'Advanced fraud prevention',
+          href: '/ai-fraud-detection-pro,
+          description: 'Advanced fraud prevention,
           icon: <Shield className="w-4 h-4" />
         },
         { 
           label: 'AI Language Translation', 
-          href: '/ai-language-translation',
-          description: 'Real-time translation',
+          href: '/ai-language-translation,
+          description: 'Real-time translation,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'AI Chatbot Enterprise', 
-          href: '/ai-chatbot-enterprise',
-          description: 'Enterprise chatbot solutions',
+          href: '/ai-chatbot-enterprise,
+          description: 'Enterprise chatbot solutions,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'AI Data Mining Pro', 
-          href: '/ai-data-mining-pro',
-          description: 'Data extraction & analysis',
+          href: '/ai-data-mining-pro,
+          description: 'Data extraction & analysis,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'AI Video Analysis', 
-          href: '/ai-video-analysis',
-          description: 'Video content analysis',
+          href: '/ai-video-analysis,
+          description: 'Video content analysis,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'AI Time Series Forecasting', 
-          href: '/ai-time-series-forecasting',
-          description: 'Time-based predictions',
+          href: '/ai-time-series-forecasting,
+          description: 'Time-based predictions,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'AI NLP Text Analysis', 
-          href: '/ai-nlp-text-analysis',
-          description: 'Natural language processing',
+          href: '/ai-nlp-text-analysis,
+          description: 'Natural language processing,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'View All AI Services', 
-          href: '/ai-services',
-          description: 'Explore all AI solutions',
+          href: '/ai-services,
+          description: 'Explore all AI solutions,
           icon: <ArrowRight className="w-4 h-4" />
         }
       ]
     },
     {
-      label: 'IT Services',
-      href: '/services',
+      label: 'IT Services,
+      href: '/services,
       icon: <Shield className="w-6 h-6" />,
-      description: 'Comprehensive IT Solutions',
-      color: 'from-green-500 to-emerald-500',
+      description: 'Comprehensive IT Solutions,
+      color: 'from-green-500 to-emerald-500,
       dropdown: [
         { 
           label: 'Cloud Infrastructure', 
-          href: '/cloud-infrastructure',
-          description: 'Scalable cloud solutions',
+          href: '/cloud-infrastructure,
+          description: 'Scalable cloud solutions,
           icon: <Cloud className="w-4 h-4" />
         },
         { 
           label: 'Blockchain Development', 
-          href: '/blockchain-development',
-          description: 'Blockchain technology',
+          href: '/blockchain-development,
+          description: 'Blockchain technology,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'IoT Solutions', 
-          href: '/iot-solutions',
-          description: 'Internet of Things',
+          href: '/iot-solutions,
+          description: 'Internet of Things,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'AR/VR Development', 
-          href: '/ar-vr-development',
-          description: 'Immersive experiences',
+          href: '/ar-vr-development,
+          description: 'Immersive experiences,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'DevOps Solutions', 
-          href: '/devops-solutions',
-          description: 'Development operations',
+          href: '/devops-solutions,
+          description: 'Development operations,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Mobile Development', 
-          href: '/mobile-development',
-          description: 'Mobile applications',
+          href: '/mobile-development,
+          description: 'Mobile applications,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Web Development', 
-          href: '/web-development',
-          description: 'Web applications',
+          href: '/web-development,
+          description: 'Web applications,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'IT Support', 
-          href: '/it-support',
-          description: 'Technical support',
+          href: '/it-support,
+          description: 'Technical support,
           icon: <HelpCircle className="w-4 h-4" />
         },
         { 
           label: 'Network Infrastructure', 
-          href: '/network-infrastructure',
-          description: 'Network solutions',
+          href: '/network-infrastructure,
+          description: 'Network solutions,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'IT Consulting', 
-          href: '/it-consulting',
-          description: 'Technology consulting',
+          href: '/it-consulting,
+          description: 'Technology consulting,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Cybersecurity Audit', 
-          href: '/cybersecurity-audit',
-          description: 'Security assessments',
+          href: '/cybersecurity-audit,
+          description: 'Security assessments,
           icon: <Shield className="w-4 h-4" />
         },
         { 
           label: 'Data Center Services', 
-          href: '/data-center-services',
-          description: 'Data center solutions',
+          href: '/data-center-services,
+          description: 'Data center solutions,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Asset Management', 
-          href: '/asset-management',
-          description: 'IT asset tracking',
+          href: '/asset-management,
+          description: 'IT asset tracking,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'View All IT Services', 
-          href: '/services',
-          description: 'Explore all IT solutions',
+          href: '/services,
+          description: 'Explore all IT solutions,
           icon: <ArrowRight className="w-4 h-4" />
         }
       ]
     },
     {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
+      label: 'Micro SAAS,
+      href: '/micro-saas,
       icon: <Zap className="w-6 h-6" />,
-      description: 'Ready-to-Use Solutions',
-      color: 'from-purple-500 to-pink-500',
+      description: 'Ready-to-Use Solutions,
+      color: 'from-purple-500 to-pink-500,
       dropdown: [
         { 
           label: 'Zion Analytics Pro', 
-          href: '/zion-analytics-pro',
-          description: 'Business intelligence platform',
+          href: '/zion-analytics-pro,
+          description: 'Business intelligence platform,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'Zion Security Shield', 
-          href: '/zion-security-shield',
-          description: 'Advanced security protection',
+          href: '/zion-security-shield,
+          description: 'Advanced security protection,
           icon: <Shield className="w-4 h-4" />
         },
         { 
           label: 'Zion Cloud Vault', 
-          href: '/zion-cloud-vault',
-          description: 'Secure cloud storage',
+          href: '/zion-cloud-vault,
+          description: 'Secure cloud storage,
           icon: <Cloud className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Inventory Manager', 
-          href: '/zion-ai-inventory-manager',
-          description: 'Smart inventory tracking',
+          href: '/zion-ai-inventory-manager,
+          description: 'Smart inventory tracking,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'Zion HR Assistant Pro', 
-          href: '/zion-hr-assistant-pro',
-          description: 'Human resources automation',
+          href: '/zion-hr-assistant-pro,
+          description: 'Human resources automation,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Accounting Suite', 
-          href: '/zion-ai-accounting-suite',
-          description: 'Automated accounting',
+          href: '/zion-ai-accounting-suite,
+          description: 'Automated accounting,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'Zion E-commerce Optimizer', 
-          href: '/zion-ecommerce-optimizer',
-          description: 'E-commerce optimization',
+          href: '/zion-ecommerce-optimizer,
+          description: 'E-commerce optimization,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Customer Insights', 
-          href: '/zion-ai-customer-insights',
-          description: 'Customer analytics',
+          href: '/zion-ai-customer-insights,
+          description: 'Customer analytics,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Lead Scoring', 
-          href: '/zion-ai-lead-scoring',
-          description: 'Lead qualification',
+          href: '/zion-ai-lead-scoring,
+          description: 'Lead qualification,
           icon: <Star className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Document Processor', 
-          href: '/zion-ai-document-processor',
-          description: 'Document automation',
+          href: '/zion-ai-document-processor,
+          description: 'Document automation,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Social Listener', 
-          href: '/zion-ai-social-listener',
-          description: 'Social media monitoring',
+          href: '/zion-ai-social-listener,
+          description: 'Social media monitoring,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Email Optimizer', 
-          href: '/zion-ai-email-optimizer',
-          description: 'Email marketing optimization',
+          href: '/zion-ai-email-optimizer,
+          description: 'Email marketing optimization,
           icon: <Mail className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Meeting Assistant', 
-          href: '/zion-ai-meeting-assistant',
-          description: 'Meeting automation',
+          href: '/zion-ai-meeting-assistant,
+          description: 'Meeting automation,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Expense Tracker', 
-          href: '/zion-ai-expense-tracker',
-          description: 'Expense management',
+          href: '/zion-ai-expense-tracker,
+          description: 'Expense management,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Survey Builder', 
-          href: '/zion-ai-survey-builder',
-          description: 'Survey creation tool',
+          href: '/zion-ai-survey-builder,
+          description: 'Survey creation tool,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Chatbot Builder', 
-          href: '/zion-ai-chatbot-builder',
-          description: 'No-code chatbot creation',
+          href: '/zion-ai-chatbot-builder,
+          description: 'No-code chatbot creation,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Workflow Automation', 
-          href: '/zion-ai-workflow-automation',
-          description: 'Process automation',
+          href: '/zion-ai-workflow-automation,
+          description: 'Process automation,
           icon: <Zap className="w-4 h-4" />
         },
         { 
           label: 'Zion AI SEO Optimizer', 
-          href: '/zion-ai-seo-optimizer',
-          description: 'SEO optimization tool',
+          href: '/zion-ai-seo-optimizer,
+          description: 'SEO optimization tool,
           icon: <TrendingUp className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Data Warehouse', 
-          href: '/zion-ai-data-warehouse',
-          description: 'Data storage solution',
+          href: '/zion-ai-data-warehouse,
+          description: 'Data storage solution,
           icon: <Cloud className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Mobile App Builder', 
-          href: '/zion-ai-mobile-app-builder',
-          description: 'Mobile app creation',
+          href: '/zion-ai-mobile-app-builder,
+          description: 'Mobile app creation,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Zion AI API Manager', 
-          href: '/zion-ai-api-manager',
-          description: 'API management platform',
+          href: '/zion-ai-api-manager,
+          description: 'API management platform,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Backup Manager', 
-          href: '/zion-ai-backup-manager',
-          description: 'Automated backup solution',
+          href: '/zion-ai-backup-manager,
+          description: 'Automated backup solution,
           icon: <Cloud className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Testing Automation', 
-          href: '/zion-ai-testing-automation',
-          description: 'Automated testing',
+          href: '/zion-ai-testing-automation,
+          description: 'Automated testing,
           icon: <CheckCircle className="w-4 h-4" />
         },
         { 
           label: 'View All Micro SAAS', 
-          href: '/micro-saas',
-          description: 'Explore all micro SAAS',
+          href: '/micro-saas,
+          description: 'Explore all micro SAAS,
           icon: <ArrowRight className="w-4 h-4" />
         }
       ]
     },
     {
-      label: '5G Solutions',
-      href: '/5g-solutions',
+      label: '5G Solutions,
+      href: '/5g-solutions,
       icon: <Globe className="w-6 h-6" />,
-      description: 'Next-Gen Connectivity',
-      color: 'from-orange-500 to-red-500',
+      description: 'Next-Gen Connectivity,
+      color: 'from-orange-500 to-red-500,
       dropdown: [
         { 
           label: '5G Data Analytics', 
-          href: '/5g-data-analytics',
-          description: 'High-speed data analysis',
+          href: '/5g-data-analytics,
+          description: 'High-speed data analysis,
           icon: <BarChart3 className="w-4 h-4" />
         },
         { 
           label: '5G Edge Computing', 
-          href: '/5g-edge-computing',
-          description: 'Edge computing solutions',
+          href: '/5g-edge-computing,
+          description: 'Edge computing solutions,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: '5G Implementation', 
-          href: '/5g-implementation',
-          description: '5G network deployment',
+          href: '/5g-implementation,
+          description: '5G network deployment,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: '5G Mobile Applications', 
-          href: '/5g-mobile-applications',
-          description: '5G-enabled mobile apps',
+          href: '/5g-mobile-applications,
+          description: '5G-enabled mobile apps,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: '5G Network Infrastructure', 
-          href: '/5g-network-infrastructure',
-          description: '5G network architecture',
+          href: '/5g-network-infrastructure,
+          description: '5G network architecture,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: '5G Private Networks', 
-          href: '/5g-private-networks',
-          description: 'Private 5G networks',
+          href: '/5g-private-networks,
+          description: 'Private 5G networks,
           icon: <Shield className="w-4 h-4" />
         },
         { 
           label: '5G Smart City Solutions', 
-          href: '/5g-smart-city-solutions',
-          description: 'Smart city infrastructure',
+          href: '/5g-smart-city-solutions,
+          description: 'Smart city infrastructure,
           icon: <Globe className="w-4 h-4" />
         },
         { 
           label: 'View All 5G Solutions', 
-          href: '/5g-solutions',
-          description: 'Explore all 5G solutions',
+          href: '/5g-solutions,
+          description: 'Explore all 5G solutions,
           icon: <ArrowRight className="w-4 h-4" />
         }
       ]
     },
     {
-      label: 'Company',
-      href: '/about',
+      label: 'Company,
+      href: '/about,
       icon: <BarChart3 className="w-6 h-6" />,
-      description: 'About Zion Tech Group',
-      color: 'from-cyan-500 to-blue-500',
+      description: 'About Zion Tech Group,
+      color: 'from-cyan-500 to-blue-500,
       dropdown: [
         { 
           label: 'About Us', 
-          href: '/about',
-          description: 'Our story and mission',
+          href: '/about,
+          description: 'Our story and mission,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Our Team', 
-          href: '/team',
-          description: 'Meet our experts',
+          href: '/team,
+          description: 'Meet our experts,
           icon: <Users className="w-4 h-4" />
         },
         { 
           label: 'Careers', 
-          href: '/careers',
-          description: 'Join our team',
+          href: '/careers,
+          description: 'Join our team,
           icon: <Award className="w-4 h-4" />
         },
         { 
           label: 'Case Studies', 
-          href: '/case-studies',
-          description: 'Success stories',
+          href: '/case-studies,
+          description: 'Success stories,
           icon: <Star className="w-4 h-4" />
         },
         { 
           label: 'Blog', 
-          href: '/blog',
-          description: 'Latest insights',
+          href: '/blog,
+          description: 'Latest insights,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'News', 
-          href: '/news',
-          description: 'Company news',
+          href: '/news,
+          description: 'Company news,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Press', 
-          href: '/press',
-          description: 'Press releases',
+          href: '/press,
+          description: 'Press releases,
           icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'Partners', 
-          href: '/partners',
-          description: 'Our partners',
+          href: '/partners,
+          description: 'Our partners,
           icon: <Users className="w-4 h-4" />
         }
       ]
-    }
+  }
   ];
-
   const quickLinks = [
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
     { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
     { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
   ];
-
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950,
+    email: 'kleber@ziontechgroup.com,
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-
   const Sidebar = () => (
     <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
@@ -583,19 +578,18 @@ const ImprovedNavigation = () => {
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xl font-bold text-white">Menu</h2>
-            <button
+            <button;
               onClick={() => setIsSidebarOpen(false)}
               className="text-gray-400 hover:text-white transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
           </div>
-
           {/* Search */}
           <div className="mb-6">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <input
+              <input;
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery;
@@ -604,12 +598,11 @@ const ImprovedNavigation = () => {
               />
             </div>
           </div>
-
           {/* Navigation Items */}
           <div className="space-y-4">
             {navigationItems.map((item) => (
               <div key={item.label}>
-                <Link
+                <Link;
                   to={item.href;
                   className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors"
                   onClick={() => setIsSidebarOpen(false)}
@@ -617,7 +610,7 @@ const ImprovedNavigation = () => {
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
                     {item.icon;
                   </div>
-                  <div>
+                  <div></div>
                     <div className="text-white font-medium">{item.label}</div>
                     <div className="text-gray-400 text-sm">{item.description}</div>
                   </div>
@@ -625,13 +618,12 @@ const ImprovedNavigation = () => {
               </div>
             ))}
           </div>
-
           {/* Quick Links */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-medium mb-4">Quick Links</h3>
             <div className="space-y-2">
               {quickLinks.map((link) => (
-                <Link
+                <Link;
                   key={link.href;
                   to={link.href;
                   className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
@@ -643,7 +635,6 @@ const ImprovedNavigation = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-medium mb-4">Contact</h3>
@@ -666,10 +657,9 @@ const ImprovedNavigation = () => {
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
+      <Helmet></Helmet>
         <title>Improved - Zion Tech Group</title>
         <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
       </Helmet>
@@ -678,7 +668,7 @@ const ImprovedNavigation = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
 =======
->>>>>>> origin/main
+>>>>>>> origin/main;
             Improved </h1>
           <p>"
             Professional improved navigation services;

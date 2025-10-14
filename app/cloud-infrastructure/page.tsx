@@ -6,7 +6,7 @@ const HomePage = () => {
         <meta name="description" content="Home - Zion Tech Group" /></meta>
       </Helmet>"
       <div className="container mx-auto px-4 py-16"></div>"
-    </>
+</>
         <div className="text-center"></div>"
           <h1>Home</h1>"
           <p className="text-gray-300 text-lg"></p>
@@ -22,60 +22,57 @@ const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
-
   return (
     <>
-      <EnhancedSEO 
+      <EnhancedSEO;
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              Page;
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
+                Solutions;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional page services designed to help your business succeed and grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                View Demo
+                View Demo;
               </Link>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -87,7 +84,6 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -101,7 +97,6 @@ const Page = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -112,18 +107,18 @@ const Page = () => {
               Let's discuss how our page services can help your business succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
-                Contact Us
+                Contact Us;
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
@@ -132,6 +127,5 @@ const Page = () => {
     </div>
   );
 };
-
 const page = React.lazy(() => import('./page'));
 export default page;

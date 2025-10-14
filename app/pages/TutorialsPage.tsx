@@ -1,17 +1,16 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
   ClockIcon,
   UserGroupIcon,
-ArrowRightIcon } from '@heroicons/react/24/outline';
+ArrowRightIcon } from '@heroicons/react/24/outline;
 const TutorialsPage: React.FC = () => {
   const tutorials = [
     {
-      id: 1,
+      id: 1,';
       title: 'Getting Started with AI Solutions','
       description: 'Learn the fundamentals of artificial intelligence and how to implement AI solutions in your business.','
       duration: '2 hours','
@@ -45,7 +44,7 @@ const TutorialsPage: React.FC = () => {
       level: 'Intermediate','
       category: '5G Solutions','
       href: '/tutorials/5g-implementation'
-    }
+  }
   ];
   return (
     <>
@@ -83,22 +82,19 @@ const TutorialsPage: React.FC = () => {
 <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
                     {tutorial.title;
                   </h3>
-                  
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {tutorial.description;
                   </p>
-                  
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-gray-400 text-sm">
                       <ClockIcon className="w-4 h-4 mr-1" />
                       {tutorial.duration;
                     </div>
-                    
-                    <Link
+                    <Link;
                       to={tutorial.href;
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all"
                     >
-                      Start Tutorial
+                      Start Tutorial;
                       <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -131,7 +127,7 @@ const TutorialsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
-export default TutorialsPage;
+export default Page;

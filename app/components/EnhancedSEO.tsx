@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -19,25 +19,23 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogType="website"
   twitterCard="summary_large_image"
   noIndex = false,
-  noFollow = false;
+  noFollow = false;';
 }) => {'
-  const siteName = 'Zion Tech Group';
+  const siteName = 'Zion Tech Group;
   const siteUrl = 'https://ziontechgroup.com';}
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;'
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-  
-  // Enhanced meta description with better length control
-  const optimizedDescription = description.length > 160 
+  // Enhanced meta description with better length control;
+  const optimizedDescription = description.length > 160;
     ? description.substring(0, 157) + '...' 
     : description;
-
   const defaultStructuredData = {'
     '@context': 'https://schema.org','
-    '@type': 'Organization',
+    '@type': 'Organization,
     name: siteName,
     url: siteUrl,}
     logo: `${siteUrl}/logo.png`,'
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.,
     address: {'
       '@type': 'PostalAddress','
       addressLocality: 'Middletown'

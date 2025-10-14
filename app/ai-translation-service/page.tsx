@@ -1,121 +1,117 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-
+import FuturisticCard from '../components/FuturisticCard;';
+import FuturisticButton from '../components/FuturisticButton;';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 export default function AITranslationServicePage() {
   const features = [
     {
-      icon: <Languages className="w-6 h-6" />,
-      title: '100+ Languages',
+      icon: <Languages className="w-6 h-6" />,';
+      title: '100+ Languages,
       description: 'Support for over 100 languages with high accuracy translation'
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI-Powered',
+      title: 'AI-Powered,
       description: 'Advanced neural machine translation with context understanding'
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: 'Document Translation',
+      title: 'Document Translation,
       description: 'Translate documents while preserving original formatting'
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: 'Real-time Translation',
+      title: 'Real-time Translation,
       description: 'Instant translation for live conversations and content'
-    }
+  }
   ];
-
   const translationTypes = [
     {
-      category: 'Translation Types',
+      category: 'Translation Types,
       items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
     },
     {
-      category: 'Languages',
+      category: 'Languages,
       items: ['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese', 'Arabic', 'Portuguese', 'Russian', 'Italian']
     },
     {
-      category: 'Industries',
+      category: 'Industries,
       items: ['Legal', 'Medical', 'Technical', 'Business', 'Marketing', 'E-commerce', 'Education', 'Entertainment']
     },
     {
-      category: 'Features',
+      category: 'Features,
       items: ['Context Awareness', 'Industry-Specific Models', 'Quality Assurance', 'Human Review', 'API Integration', 'Batch Processing']
-    }
+  }
   ];
-
   const pricingPlans = [
     {
-      name: 'Basic',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small projects',
+      name: 'Basic,
+      price: '$29,
+      period: '/month,
+      description: 'Perfect for individuals and small projects,
       features: [
-        'Up to 100,000 words/month',
-        '50+ languages',
-        'Basic document translation',
-        'Email support',
+        'Up to 100,000 words/month,
+        '50+ languages,
+        'Basic document translation,
+        'Email support,
         'Standard accuracy'
       ]
     },
     {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for businesses and teams',
+      name: 'Professional,
+      price: '$99,
+      period: '/month,
+      description: 'Ideal for businesses and teams,
       features: [
-        'Up to 500,000 words/month',
-        '100+ languages',
-        'All document types',
-        'Priority support',
-        'API access',
+        'Up to 500,000 words/month,
+        '100+ languages,
+        'All document types,
+        'Priority support,
+        'API access,
         'Custom glossaries'
       ],
-      popular: true
+      popular: true;
     },
     {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations',
+      name: 'Enterprise,
+      price: '$299,
+      period: '/month,
+      description: 'For large organizations,
       features: [
-        'Unlimited words',
-        'All languages',
-        'Custom models',
-        '24/7 support',
-        'Dedicated account manager',
+        'Unlimited words,
+        'All languages,
+        'Custom models,
+        '24/7 support,
+        'Dedicated account manager,
         'SLA guarantee'
       ]
-    }
+  }
   ];
-
   const benefits = [
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Industry-Specific Translation',
+      title: 'Industry-Specific Translation,
       description: 'Specialized translation models for legal, medical, technical, and business content'
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Lightning Fast',
+      title: 'Lightning Fast,
       description: 'Get translations in seconds with our optimized AI models'
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Global Reach',
+      title: 'Global Reach,
       description: 'Expand your business to new markets with accurate translations'
-    }
+  }
   ];
   return (
     <div className="page-container">
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -140,10 +136,9 @@ export default function AITranslationServicePage() {
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Translation Types Section */}
         <section className="py-20 bg-white/5">
-          <ResponsiveContainer>
+          <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Translation Capabilities</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -167,10 +162,9 @@ export default function AITranslationServicePage() {
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Translation Service?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -190,10 +184,9 @@ export default function AITranslationServicePage() {
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-white/5">
-          <ResponsiveContainer>
+          <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -202,11 +195,11 @@ export default function AITranslationServicePage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-blue-400' : ''}`}>
+                <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-blue-400' : }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -227,17 +220,16 @@ export default function AITranslationServicePage() {
                     ))}
                   </ul>
                   <FuturisticButton className="w-full justify-center">
-                    Get Started
+                    Get Started;
                   </FuturisticButton>
                 </FuturisticCard>
               ))}
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer></ResponsiveContainer>
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Break Language Barriers?</h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -245,10 +237,10 @@ export default function AITranslationServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton className="bg-white text-blue-600 hover:bg-gray-100">
-                  Start Free Trial
+                  Start Free Trial;
                 </FuturisticButton>
                 <FuturisticButton variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                  Contact Sales
+                  Contact Sales;
                 </FuturisticButton>
               </div>
             </div>
@@ -258,4 +250,6 @@ export default function AITranslationServicePage() {
     </div>
   );
 };
-export default pagePage;
+export default Page;
+      </div>
+      </div>

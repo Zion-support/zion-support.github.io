@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { Calendar, 
   Clock, 
@@ -16,35 +16,29 @@ import { Calendar,
   Users,
   Award,
   BarChart3 } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: ',
+    email: ',
+    company: ',
+    phone: ',
+    service: ',
+    message: 
   });
-
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+    // Handle form submission here;
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
   };
-
   const consultationTypes = [
     {
       title: "AI Strategy Consultation",
@@ -77,9 +71,8 @@ export default function ConsultationPage() {
       price: "From $600",
       icon: <Globe className="w-6 h-6" />,
       features: ["Cloud readiness assessment", "Migration strategy", "Cost optimization"]
-    }
+  }
   ];
-
   const benefits = [
     "Expert guidance from certified professionals",
     "Customized solutions for your business needs",
@@ -87,22 +80,20 @@ export default function ConsultationPage() {
     "Follow-up support and implementation assistance",
     "Competitive pricing with flexible payment options"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
+      <EnhancedSEO;
         title="Free Consultation - Zion Tech Group | Expert Technology Consulting"
         description="Get expert technology consultation from Zion Tech Group. Free consultation for AI strategy, cybersecurity, digital transformation, and cloud migration. Book your session today."
         keywords="technology consultation, AI strategy, cybersecurity audit, digital transformation, cloud migration, free consultation, tech consulting"
         canonical="https://ziontechgroup.com/consultation"
       />
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Free Technology Consultation
+              Free Technology Consultation;
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -110,22 +101,21 @@ export default function ConsultationPage() {
             Our certified professionals are here to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
             >
-              Book Free Consultation
+              Book Free Consultation;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/services"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              View Our Services
+              View Our Services;
             </Link>
           </div>
         </div>
-
         {/* Consultation Types */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {consultationTypes.map((type, index) => (
@@ -151,7 +141,6 @@ export default function ConsultationPage() {
             </div>
           ))}
         </div>
-
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our Consultation?</h2>
@@ -164,7 +153,6 @@ export default function ConsultationPage() {
             ))}
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>

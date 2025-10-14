@@ -1,20 +1,20 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon,
   CheckIcon,
   ChartBarIcon,
   TrendingUpIcon,
   ClockIcon,
-  CurrencyDollarIcon } from '@heroicons/react/24/outline';
+  CurrencyDollarIcon } from '@heroicons/react/24/outline;
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
-    {
-      title: 'E-commerce Platform AI Optimization',
-      client: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high cart abandonment',
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
+    {';
+      title: 'E-commerce Platform AI Optimization,
+      client: 'TechRetail Inc.,
+      industry: 'E-commerce,
+      challenge: 'Low conversion rates and high cart abandonment,
+      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience,
       results: [
         { metric: 'Conversion Rate', value: '+45%', icon: TrendingUpIcon },
         { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },
@@ -23,18 +23,18 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.;'"
     },
     {
-title: 'Cloud Migration & Optimization',
-      client: 'ManufacturingPro',
-      industry: 'Manufacturing',
-      challenge: 'On-premise infrastructure limiting scalability and performance',
-      solution: 'Migrated to cloud infrastructure with auto-scaling and performance optimization',
+title: 'Cloud Migration & Optimization,
+      client: 'ManufacturingPro,
+      industry: 'Manufacturing,
+      challenge: 'On-premise infrastructure limiting scalability and performance,
+      solution: 'Migrated to cloud infrastructure with auto-scaling and performance optimization,
       results: [
         { metric: 'Performance', value: '+200%', icon: TrendingUpIcon },
         { metric: 'Cost Savings', value: '-40%', icon: CurrencyDollarIcon },
         { metric: 'Uptime', value: '99.9%', icon: CheckIcon;
       ],
       description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.;'"
-    }
+  }
   ];
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -58,35 +58,33 @@ const CaseStudiesPage: React.FC = () => {
 <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Success Stories
+              Success Stories;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Real Results for Real Businesses
+              Real Results for Real Businesses;
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Discover how we've helped businesses across various industries transform their operations 
+              Discover how we've helped businesses across various industries transform their operations;
               and achieve remarkable growth with our technology solutions.
             </p>
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Case Studies
+              Our Case Studies;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how our solutions have transformed businesses across different industries
+              See how our solutions have transformed businesses across different industries;
             </p>
           </div>
-          
           <div className="space-y-16">
             {caseStudies.map((study, index) => (
-              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : }`}>
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : }`}>
                   <div className="bg-slate-800 rounded-xl p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
@@ -94,22 +92,18 @@ const CaseStudiesPage: React.FC = () => {
                       </span>
                       <span className="text-gray-400 text-sm">{study.duration}</span>
                     </div>
-                    
                     <h3 className="text-3xl font-bold text-white mb-4">{study.title}</h3>
                     <p className="text-purple-400 font-semibold mb-6">{study.client}</p>
-                    
                     <div className="space-y-6">
-                      <div>
+                      <div></div>
                         <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                         <p className="text-gray-300">{study.challenge}</p>
                       </div>
-                      
-                      <div>
+                      <div></div>
                         <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                         <p className="text-gray-300">{study.solution}</p>
                       </div>
-                      
-                      <div>
+                      <div></div>
                         <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           {study.results.map((result, resultIndex) => (
@@ -217,10 +211,10 @@ const CaseStudiesPage: React.FC = () => {
         </div>
       </div>;
     </div>;  );
-export default CaseStudiesPage;
+export default Page;
     </div>
   )}
-export default CaseStudiesPage;
+export default Page;
 "use client;
 import React from 'react';
 export default function CaseStudiesPage() {

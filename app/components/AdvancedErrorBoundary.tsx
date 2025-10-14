@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Logger } from '../utils/logger';
+import React, { Component, ErrorInfo, ReactNode } from 'react;';
+import { Logger } from '../utils/logger;
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -28,7 +28,7 @@ interface ErrorReport {
 }
 class AdvancedErrorBoundary extends Component<;
   ErrorBoundaryProps,
-  ErrorBoundaryState
+  ErrorBoundaryState;
 > {
   private retryCount = 0;
   private maxRetries = 3;
@@ -53,10 +53,10 @@ errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}`,
       error,
       errorInfo)
     });
-    // Log error to console in development;
+    // Log error to console in development;';
     if (process.env.NODE_ENV === 'development') {
       Logger.error(
-        'Error Boundary caught an error',
+        'Error Boundary caught an error,
 { error, context: 'ErrorBoundary', errorInfo,}
       );
     }
@@ -114,15 +114,15 @@ const errorReport: ErrorReport = {,
     try {
       // Send to your error reporting service;
       await fetch('/api/errors', {
-        method: 'POST',
+        method: 'POST,
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json,
         })
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
       Logger.error(
-        'Failed to send error report',
+        'Failed to send error report,
 { error: reportError as Error, context: 'ErrorReporting',}
       );
     }
@@ -142,7 +142,7 @@ const errorReport: ErrorReport = {,
     window.location.reload();
   };
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/;
   };
   render() {
     if (this.state.hasError) {
@@ -172,7 +172,7 @@ const errorReport: ErrorReport = {,
                   </svg>
                 </div>
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>;
-                  Oops! Something went wrong
+                  Oops! Something went wrong;
                 </h2>
                 <p>;
                   We&apos;re sorry, but something unexpected happened. Our team;
@@ -185,15 +185,15 @@ const errorReport: ErrorReport = {,
                     Error Details:
                   </h3>
                   <div className='mt-2 text-sm text-red-700'>
-                    <p>
+                    <p></p>
                       <strong>Error ID:</strong> {this.state.errorId}
                     </p>
-                    <p>
+                    <p></p>
                       <strong>Message:</strong> {this.state.error?.message}
                     </p>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>;
-                        Stack Trace
+                        Stack Trace;
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
                         {this.state.error?.stack}
@@ -201,7 +201,7 @@ const errorReport: ErrorReport = {,
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>;
-                        Component Stack
+                        Component Stack;
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
                         {this.state.errorInfo?.componentStack}
@@ -225,13 +225,13 @@ const errorReport: ErrorReport = {,
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >;
-                  Reload Page
+                  Reload Page;
                 </button>
                 <button;
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >;
-                  Go to Homepage
+                  Go to Homepage;
                 </button>
               </div>
               <div className='mt-6 text-center'>
@@ -242,7 +242,7 @@ const errorReport: ErrorReport = {,
                     href="mailto:kleber@ziontechgroup.com"
                     className='text-indigo-600 hover:text-indigo-500'
                   >;
-                    kleber@ziontechgroup.com
+                    kleber@ziontechgroup.com;
                   </a>
                 </p>`
               </div>``

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 const FiveGSolutionsPage: React.FC = () => {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>FiveGSolutionsPage - Zion Tech Group</title>
@@ -13,7 +14,9 @@ const FiveGSolutionsPage: React.FC = () => {
           <p>This page is under construction.</p>"
         </div>
       </div>
-    </>
+</>
   )
 }
-export default FiveGSolutionsPage;
+export default Page;
+    </>
+  );';

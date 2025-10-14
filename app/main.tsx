@@ -1,9 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 const MainPage = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Main - Zion Tech Group</title>
         <meta name="description" content="Main - Zion Tech Group" />
       </Helmet>
@@ -17,7 +17,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
-export default MainPage;
+export default Page;';

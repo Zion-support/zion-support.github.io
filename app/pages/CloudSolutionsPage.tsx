@@ -8,7 +8,7 @@ import { CloudIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,
+  EnvelopeIcon,';
   MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function CloudSolutionsPage() {
   const services = [
@@ -41,13 +41,14 @@ export default function CloudSolutionsPage() {
     { name: 'Amazon Web Services (AWS)', logo: 'AWS' },'
     { name: 'Microsoft Azure', logo: 'Azure' },'
     { name: 'Google Cloud Platform', logo: 'GCP' },'
-    { name: 'IBM Cloud', logo: 'IBM' },';
-    { name: 'Oracle Cloud', logo: 'Oracle' },';
-    { name: 'DigitalOcean', logo: 'DO' }';
+    { name: 'IBM Cloud', logo: 'IBM' },;
+    { name: 'Oracle Cloud', logo: 'Oracle' },;
+    { name: 'DigitalOcean', logo: 'DO' };
   ];
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 const CloudSolutionsPage: React.FC = () => {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>CloudSolutionsPage - Zion Tech Group</title>
@@ -59,5 +60,7 @@ const CloudSolutionsPage: React.FC = () => {
           <p>This page is under construction.</p>"
         </div>
       </div>
-    </>
+</>
   )}
+    </>
+  );';

@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const CustomerRelationshipSAAS = () => {
   return (
     <>
@@ -9,7 +9,7 @@ const CustomerRelationshipSAAS = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <section className="py-20">"
           <ResponsiveContainer></ResponsiveContainer>
-            <div className="text-center">"
+            <div className="text-center">"';
               <h1>"','
                 Customer Relationship SAAS;
               </h1>
@@ -26,7 +26,7 @@ const CustomerRelationshipSAAS = () => {
           </ResponsiveContainer>
         </section>
       </div>
-    </>
+</>
   );
 };
 export default CustomerRelationshipSAAS;

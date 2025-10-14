@@ -1,17 +1,19 @@
 }) => {
   if (variant === 'minimal') {;
     return (
+    <>
 <>      <div className="min-h-screen flex items-center justify-center bg-slate-900"></div>
         <div className="flex items-center space-x-3"></div>
           <Loader2 className="w-6 h-6 animate-spin text-cyan-400" /></Loader2>
           <span className="text-white">{message}</span>
         </div>
-    </>
+</>
       </div>
     )};
   }
   if (variant === 'default') {;
     return (
+    <>
 <>      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="text-center"></div>
             </div>
@@ -31,6 +33,7 @@
     )};
   }
   return (
+    <>
 <>    </div>;
             LoadingStates</h1>
           <p>"
@@ -61,3 +64,5 @@
       </div>
     </div>
   )}
+    </>
+  );

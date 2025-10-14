@@ -25,34 +25,33 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
-  const benefits = [{
+  const benefits = [
+    {
       icon: TrendingUp, title: 'Increase ROI', description: 'Average 250% increase in marketing ROI with AI-powered optimization', }, {
       icon: Clock, title: 'Save Time', description: 'Reduce marketing tasks by 80% with intelligent automation', }, {
       icon: Target, title: 'Better Targeting', description: 'Reach the right audience with AI-powered targeting and personalization', }, {
       icon: BarChart, title: 'Data-Driven', description: 'Make informed decisions with comprehensive analytics and insights', }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
@@ -61,7 +60,7 @@ const Page = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1>;
-            AI Marketing Tools
+            AI Marketing Tools;
           </h1>
           <p>;
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
@@ -125,7 +124,7 @@ const Page = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title,}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >;
-                    Get Started
+                    Get Started;
                   </a>
                 </div>
               </div>
@@ -164,7 +163,7 @@ const Page = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >;
-              Call (302) 464-0950
+              Call (302) 464-0950;
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
@@ -178,4 +177,4 @@ const Page = () => {
     </div>````````
   );`````````
 };``````````
-export default MarketingToolsPage;```````````
+export default Page;```````````

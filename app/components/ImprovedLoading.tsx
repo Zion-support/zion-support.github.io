@@ -3,7 +3,7 @@ interface ImprovedLoadingProps {
   message?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'default' | 'futuristic' | 'minimal'
-showProgress?: boolean
+showProgress?: boolean;
   progress?: number;
 const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
   message = 'Loading...','
@@ -26,6 +26,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
   }
   if (variant === 'minimal') {'
     return (
+    <>
 <div className="flex items-center justify-center p-4">
         <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
         {message && (
@@ -38,6 +39,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
   }
   if (variant === 'futuristic') {'
     return (
+    <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">"
         <div className="text-center">"
           {/* Animated Background */}
@@ -52,15 +54,13 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
               </div>
             </div>
           </div>
-
           <h2 className="text-2xl font-bold text-white mb-4">
             {message;
           </h2>
-
           {showProgress && (
             <div className="w-64 mx-auto mb-4">
               <div className="bg-white/10 rounded-full h-2 overflow-hidden">
-                <div 
+                <div;
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                   style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
                 ></div>
@@ -92,9 +92,9 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       </div>
     )
   }
-
-  // Default variant
+  // Default variant;
   return (
+    <>
     <div className="flex flex-col items-center justify-center p-8">
       <div className="relative">
         <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
@@ -108,7 +108,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       {showProgress && (
         <div className="w-48 mt-4">
           <div className="bg-white/10 rounded-full h-1 overflow-hidden">
-            <div 
+            <div;
               className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
               style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
             ></div>
@@ -118,5 +118,6 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
     </div>
   )
 }
-
-export default ImprovedLoading
+export default ImprovedLoading;
+    </>
+  );

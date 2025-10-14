@@ -1,41 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;';
 import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock } from 'lucide-react';
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: ',
+    email: ',
+    company: ',
+    phone: ',
+    subject: ',
+    message: 
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     })};
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false)};
-
   const contactInfo = [
     {
-
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
+      title: 'Phone,
+      value: '+1 (555) 123-4567,
       description: 'Mon-Fri 9AM-6PM EST'
-
     },
     {'
       icon: 'Email'
@@ -50,12 +42,9 @@ export default function ContactPage()    {
       description: 'San Francisco, CA 94105'}
     },
     {'
-      icon: 'Clock',
-
+      icon: 'Clock,
       description: '9:00 AM - 6:00 PM EST'
-
       description: '9:00 AM - 6:00 PM EST'}
-
     }
   ]
   const subjects = [
@@ -74,7 +63,7 @@ export default function ContactPage()    {
         <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>
-    </>
+</>
         <div className="text-center"></div>
           <h1>Page</h1>
           <p className="text-gray-300 text-lg"></p>
@@ -82,12 +71,11 @@ export default function ContactPage()    {
           </p>
         </div>
 </section>
-
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Get in Touch
+            Get in Touch;
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
@@ -105,14 +93,12 @@ export default function ContactPage()    {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
-            Send us a Message
+            Send us a Message;
           </h2>
-          
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
@@ -122,32 +108,31 @@ export default function ContactPage()    {
               <p className="text-gray-300 mb-6">
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
-              <button
+              <button;
                 onClick={() => {
                   setIsSubmitted(false)}
                   setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
+                    name: ',
+                    email: ',
+                    company: ',
+                    phone: ',
+                    subject: ',
+                    message: 
                   })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                View Demo
+                View Demo;
               </Link>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -159,7 +144,6 @@ export default function ContactPage()    {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -171,17 +155,16 @@ export default function ContactPage()    {
                 </div>
               ))}
             </div>
-
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
                 </label>
-                <select
+                <select;
                   id="subject"
                   name="subject"
                   value={formData.subject;
                   onChange={handleChange;
-                  required
+                  required;
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
@@ -192,25 +175,23 @@ export default function ContactPage()    {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
                 </label>
-                <textarea
+                <textarea;
                   id="message"
                   name="message"
                   value={formData.message;
                   onChange={handleChange;
-                  required
+                  required;
                   rows={6;
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <div className="text-center">
-                <button
+                <button;
                   type="submit"
                   disabled={isSubmitting;
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
@@ -219,12 +200,12 @@ export default function ContactPage()    {
                     <>
                       <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Sending...
-                    </>
+</>
                   ) : (
                     <>
-                      Send Message
+                      Send Message;
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </>
+</>
                   )}
                 </button>
               </div>
@@ -235,4 +216,4 @@ export default function ContactPage()    {
     </div>
   )};
 };
-export default PagePage;
+export default Page;

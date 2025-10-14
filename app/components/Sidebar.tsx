@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react;';
+import { Link, useLocation } from 'react-router-dom;
 import { XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -13,10 +13,10 @@ import { XMarkIcon,
   MapIcon,
   CloudIcon,
   CpuChipIcon,
-  SignalIcon,
-UserGroupIcon } from '@heroicons/react/24/outline';
+  SignalIcon,';
+UserGroupIcon } from '@heroicons/react/24/outline;
 interface SidebarProps {
-  isOpen: boolean
+  isOpen: boolean;
   onClose: () => void;
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
@@ -56,11 +56,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
   return (
 <>
       {/* Backdrop */}
-      <div 
+      <div;
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-      
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
         <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
@@ -70,19 +69,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
-          <button
+          <button;
             onClick={onClose}
             className="text-gray-400 hover:text-white lg:hidden"
           >
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-
         <nav className="mt-8 px-4">
           <ul className="space-y-2">
             {navigation.map((item) => (
               <li key={item.name}>
-                <Link
+                <Link;
                   to={item.href;
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
@@ -94,13 +92,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
                 </Link>
-                
                 {/* Submenu */}
                 {item.submenu && (
                   <ul className="ml-8 mt-2 space-y-1">
                     {item.submenu.map((subItem) => (
                       <li key={subItem.name}>
-                        <Link
+                        <Link;
                           to={subItem.href;
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive(subItem.href)
@@ -120,7 +117,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
             ))}
           </ul>
         </nav>
-
         {/* Contact Info */}
         <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
           <h3 className="text-sm font-semibold text-white mb-2">Get in Touch</h3>
@@ -130,7 +126,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
           </div>
         </div>
       </div>
-    </>
+</>
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">"
           {navigation.map((link) => (
             <div key={link.name}></div>
@@ -177,7 +173,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
         </nav>;
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState();';
+  const [searchQuery, setSearchQuery] = useState();;
   const location = useLocation();
   // Close sidebar when route changes;
   useEffect(() => {
@@ -287,7 +283,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {label: '5G Network Infrastructure', href: '/5g-network-infrastructure', icon: <Globe className="w-4 h-4" />, }, '"'"
         {label: '5G Private Networks', href: '/5g-private-networks', icon: <Shield className="w-4 h-4" />, }, '"'"
         {label: '5G Smart City Solutions', href: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" />, }'"'"]
-    }
+  }
   ];
   const quickLinks = [{label: 'Home', href: '/', icon: <Home className="w-4 h-4" />, }, '"'"
     {label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" />, }, '"'"

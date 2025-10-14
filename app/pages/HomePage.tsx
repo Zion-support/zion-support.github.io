@@ -1,6 +1,5 @@
 import React from 'react';
-import react-router-dom from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead;
 import { ArrowRightIcon, ;
   ShieldCheckIcon, ;
   CloudIcon, ;
@@ -13,11 +12,11 @@ import { ArrowRightIcon, ;
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon;
-   } from "@heroicons/react/24/outline;
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
+   } from "@heroicons/react/24/outline;';
+import FuturisticBackground from '../components/FuturisticBackground;';
+import NeonButton from '../components/NeonButton;';
+import AnimatedCard from '../components/AnimatedCard;';
+import { services } from '../data/servicesData;
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -30,29 +29,29 @@ import { services } from '../data/servicesData';
     }
   const features = [
     {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.',
+      icon: CpuChipIcon,';
+      title: 'AI Solutions,
+      description: 'Advanced artificial intelligence and machine learning solutions to transform your business operations.,
       href: '/ai-solutions;
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
+      title: 'Cybersecurity,
+      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.,
       href: '/cybersecurity;
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
+      title: 'Cloud Infrastructure,
+      description: 'Scalable cloud solutions and infrastructure management for modern businesses.,
       href: '/cloud-solutions;
     },
     {
       icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business processes.',
+      title: 'Digital Transformation,
+      description: 'Complete digital transformation services to modernize your business processes.,
       href: '/digital-transformation;
-    }
+  }
   ];
   return (
 <>    <div></div>
@@ -62,7 +61,6 @@ import { services } from '../data/servicesData';
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
 structuredData={structuredData;
       />
-      
       <FuturisticBackground />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -70,7 +68,7 @@ structuredData={structuredData;
           <div className="max-w-5xl mx-auto">
             {/* Animated Title */}
             <div className="mb-8">
-              <h1>
+              <h1></h1>
                 Zion Tech Group;
               </h1>
               <div className="flex items-center justify-center gap-4 mb-4">
@@ -78,12 +76,12 @@ structuredData={structuredData;
                 <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" />
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />
               </div>
-    </>
+</>
             </div>
-            <p>
+            <p></p>
               Advanced AI and IT Solutions for Modern Businesses;
             </p>
-            <p>
+            <p></p>
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, ;
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
@@ -107,7 +105,7 @@ structuredData={structuredData;
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Our Featured Services;
             </h2>
-            <p>
+            <p></p>
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
             </p>
           </div>
@@ -163,7 +161,7 @@ structuredData={structuredData;
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
-              <p>
+              <p></p>
                 With over 4 years of experience in cutting-edge technology solutions, ;
                 we've helped businesses across various industries transform their operations ;
                 and achieve unprecedented growth.
@@ -177,11 +175,11 @@ structuredData={structuredData;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <Link
+                  <Link;
                     to={feature.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </AnimatedCard>
@@ -199,8 +197,8 @@ structuredData={structuredData;
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
-              <p>
-                Let's discuss how our technology solutions can drive your business forward
+              <p></p>
+                Let's discuss how our technology solutions can drive your business forward;
               </p>
             </div>
 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -211,11 +209,11 @@ structuredData={structuredData;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link
+                  <Link;
                     to={service.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   >
-                    Learn More
+                    Learn More;
                     <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </Link>
                 </AnimatedCard>
@@ -237,4 +235,4 @@ structuredData={structuredData;
     </div>
   );
 };
-export default HomePage;
+export default Page;

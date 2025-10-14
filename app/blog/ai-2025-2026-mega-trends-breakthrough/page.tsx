@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link;
 const AIMegaTrends20252026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -7,14 +7,14 @@ const AIMegaTrends20252026: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="text-center mb-8">
               <span className="inline-block bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                🚀 MEGA TRENDS BREAKTHROUGH • 2025-2026
+                🚀 MEGA TRENDS BREAKTHROUGH • 2025-2026;
               </span>
               <h1>;
-                AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation
+                AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation;
               </h1>
               <p>;
                 Discover the groundbreaking AI trends and breakthroughs that will revolutionize;
-                enterprise operations
+                enterprise operations;
               </p>
             </div>
             <div className="prose max-w-none">
@@ -26,7 +26,7 @@ const AIMegaTrends20252026: React.FC = () => {
                 intelligence, automation, and operational excellence.
               </p>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                🌟 Revolutionary AI Breakthroughs
+                🌟 Revolutionary AI Breakthroughs;
               </h2>
               <p>;
                 The following mega trends are reshaping the enterprise AI landscape:
@@ -78,23 +78,23 @@ const AIMegaTrends20252026: React.FC = () => {
               </p>
               <div className="bg-indigo-50 p-6 rounded-lg text-center">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">;
-                  Prepare for the AI Revolution
+                  Prepare for the AI Revolution;
                 </h3>
                 <p>;
-                  Join leading enterprises embracing the AI mega trends of 2025-2026
+                  Join leading enterprises embracing the AI mega trends of 2025-2026;
                 </p>
                 <div className="space-x-4">
                   <Link;
                     href="/contact"
                     className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
                   >;
-                    Get AI Assessment
+                    Get AI Assessment;
                   </Link>
                   <Link;
                     href="/services"
                     className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
                   >;
-                    Explore AI Services
+                    Explore AI Services;
                   </Link>
                 </div>
               </div>
@@ -104,4 +104,4 @@ const AIMegaTrends20252026: React.FC = () => {
       </div>
   );
 };
-export default AIMegaTrends20252026;
+export default AIMegaTrends20252026;';

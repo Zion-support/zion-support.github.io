@@ -1,52 +1,25 @@
 import React from 'react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import lucide-react from 'lucide-react';
-import react-router-dom from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
 const Page = () => {
   const features = [
     {
 icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   return (
     <>
-      <EnhancedSEO ;
+      <EnhancedSEO;
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
@@ -133,7 +106,7 @@ icon: <CheckCircle className="w-6 h-6" />,
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
 const page = React.lazy(() => import('./page'));'

@@ -25,29 +25,27 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>Custom Development - Zion Tech Group</title>
         <meta name="description" content="Professional custom development services by Zion Tech Group." />
         <meta name="keywords" content="custom development, software development, IT services" />;
@@ -55,7 +53,7 @@ const Page = () => {
       <div className="container mx-auto px-4 py-20">;
         <div className="text-center">;
           <h1>;
-            Custom Development
+            Custom Development;
           </h1>
           <p>;
             Professional custom development services designed to help your business grow and succeed.
@@ -69,7 +67,6 @@ const Page = () => {
             </p>
           </div>
 </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -81,7 +78,6 @@ const Page = () => {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -95,7 +91,6 @@ const Page = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">

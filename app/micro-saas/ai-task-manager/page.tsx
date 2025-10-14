@@ -1,81 +1,81 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react';
 const AITaskManagerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI Task Prioritization',
+      title: 'AI Task Prioritization,
       description: 'Intelligent AI algorithms automatically prioritize your tasks based on deadlines, importance, and your work patterns.'
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Smart Scheduling',
+      title: 'Smart Scheduling,
       description: 'AI-powered scheduling that considers your energy levels, meeting times, and optimal productivity windows.'
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Progress Analytics',
+      title: 'Progress Analytics,
       description: 'Detailed analytics and insights to track your productivity patterns and identify areas for improvement.'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Team Collaboration',
+      title: 'Team Collaboration,
       description: 'Seamless team collaboration with shared workspaces, task assignments, and real-time updates.'
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Automation',
+      title: 'Automation,
       description: 'Automate repetitive tasks and workflows to focus on what matters most with AI-powered automation.'
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Cross-Platform Sync',
+      title: 'Cross-Platform Sync,
       description: 'Sync your tasks across all devices and platforms with real-time updates and offline access.'
     }
   ]
   const taskFeatures = [
     {
 icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Smart Task Creation',
-      description: 'Create tasks using natural language and let AI extract details, set priorities, and suggest deadlines.',
-      price: 'Included',
+      title: 'Smart Task Creation,
+      description: 'Create tasks using natural language and let AI extract details, set priorities, and suggest deadlines.,
+      price: 'Included,
       features: ['Natural language input', 'Auto-categorization', 'Priority detection', 'Deadline suggestions']
     },
     {
       icon: <Calendar className="w-6 h-6" />,
-      title: 'Intelligent Scheduling',
-      description: 'AI-powered calendar integration that finds optimal time slots and prevents scheduling conflicts.',
-      price: 'Included',
+      title: 'Intelligent Scheduling,
+      description: 'AI-powered calendar integration that finds optimal time slots and prevents scheduling conflicts.,
+      price: 'Included,
       features: ['Calendar sync', 'Time blocking', 'Conflict detection', 'Energy optimization']
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Productivity Analytics',
-      description: 'Comprehensive analytics dashboard to track your productivity and identify improvement opportunities.',
-      price: 'Included',
+      title: 'Productivity Analytics,
+      description: 'Comprehensive analytics dashboard to track your productivity and identify improvement opportunities.,
+      price: 'Included,
       features: ['Time tracking', 'Productivity metrics', 'Goal tracking', 'Performance insights']
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Team Management',
-      description: 'Advanced team collaboration features with task assignments, progress tracking, and communication tools.',
-      price: '$4.99/month',
+      title: 'Team Management,
+      description: 'Advanced team collaboration features with task assignments, progress tracking, and communication tools.,
+      price: '$4.99/month,
       features: ['Team workspaces', 'Task assignments', 'Progress tracking', 'Team analytics']
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive tasks and create custom workflows to boost your productivity.',
-      price: '$2.99/month',
+      title: 'Workflow Automation,
+      description: 'Automate repetitive tasks and create custom workflows to boost your productivity.,
+      price: '$2.99/month,
       features: ['Custom workflows', 'Task automation', 'Integration triggers', 'Smart notifications']
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Advanced security features for enterprise teams including SSO, audit logs, and compliance.',
-      price: '$9.99/month',
+      title: 'Enterprise Security,
+      description: 'Advanced security features for enterprise teams including SSO, audit logs, and compliance.,
+      price: '$9.99/month,
       features: ['SSO integration', 'Audit logs', 'Compliance tools', 'Advanced permissions']
     }
   ]
@@ -126,7 +126,7 @@ icon: <CheckCircle className="w-6 h-6" />,
       popular: false;
 =======
     }
->>>>>>> origin/main
+>>>>>>> origin/main;
   ]
   const stats = [
     { number: '40%', label: 'Productivity Increase', icon: <Zap className="w-6 h-6 text-cyan-400" /> },"
@@ -148,13 +148,14 @@ icon: <CheckCircle className="w-6 h-6" />,
       rating: 5;
     },
     {
-<<<<<<< HEAD
-      name: 'Sarah Johnson',
-      company: 'Team Lead',
-      content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.',
+<<<<<<< HEAD;
+      name: 'Sarah Johnson,
+      company: 'Team Lead,
+      content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.,
       rating: 5;
   ]
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>AI Task Manager - Intelligent Task Management | Zion Tech Group</title>
@@ -435,4 +436,9 @@ icon: <CheckCircle className="w-6 h-6" />,
     </>````````
   )`````````
 }``````````
-export default AITaskManagerPage;```````````
+export default Page;```````````
+      </div>
+      </div>
+      </div>
+    </>
+  );

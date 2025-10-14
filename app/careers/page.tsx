@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const CareersPage = () => {
+const CareersPage = () => {';
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const jobCategories = [
     { id: 'all', label: 'All Positions', icon: <Briefcase className="w-5 h-5" /> },
     { id: 'engineering', label: 'Engineering', icon: <Code className="w-5 h-5" /> },
@@ -16,7 +13,6 @@ const CareersPage = () => {
     { id: 'product', label: 'Product', icon: <Target className="w-5 h-5" /> },
     { id: 'data', label: 'Data & Analytics', icon: <BarChart3 className="w-5 h-5" /> }
   ];
-
   const jobOpenings = [
     {
       id: 1,
@@ -36,7 +32,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Flexible Hours", "Learning Budget"],
       posted: "2 days ago",
-      featured: true
+      featured: true;
     },
     {
       id: 2,
@@ -56,7 +52,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Security Training", "Home Office Setup"],
       posted: "1 week ago",
-      featured: false
+      featured: false;
     },
     {
       id: 3,
@@ -76,7 +72,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Cloud Certifications", "Flexible Schedule"],
       posted: "3 days ago",
-      featured: true
+      featured: true;
     },
     {
       id: 4,
@@ -96,7 +92,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Stock Options", "Professional Development"],
       posted: "5 days ago",
-      featured: false
+      featured: false;
     },
     {
       id: 5,
@@ -116,7 +112,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Data Science Conferences", "Research Time"],
       posted: "1 week ago",
-      featured: false
+      featured: false;
     },
     {
       id: 6,
@@ -138,7 +134,6 @@ const CareersPage = () => {
       posted: "4 days ago",
       featured: false;
   ];
-
   const benefits = [
     {
       title: "Health & Wellness",
@@ -169,59 +164,54 @@ const CareersPage = () => {
       title: "Team Culture",
       description: "Collaborative environment, team events, and innovation time",
       icon: <Users className="w-8 h-8" />
-    }
+  }
   ];
-
   const stats = [
     { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
     { number: "15+", label: "Open Positions", icon: <Briefcase className="w-6 h-6" /> },
     { number: "95%", label: "Employee Satisfaction", icon: <Star className="w-6 h-6" /> },
     { number: "100%", label: "Remote Friendly", icon: <Globe className="w-6 h-6" /> }
   ];
-
   const filteredJobs = selectedCategory === 'all' 
-    ? jobOpenings 
+    ? jobOpenings;
     : jobOpenings.filter(job => job.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
+      <EnhancedSEO;
         title="Careers - Zion Tech Group | Join Our Team"
         description="Join Zion Tech Group and be part of the future of technology. Explore exciting career opportunities in AI, cybersecurity, and digital transformation."
         keywords="careers, jobs, technology careers, AI jobs, cybersecurity jobs, software development"
         canonical="https://ziontechgroup.com/careers"
       />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our
+            Join Our;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              {" "}Mission
+              {" "}Mission;
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Be part of the future of technology. Join our diverse team of innovators, engineers, and visionaries who are building the next generation of AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="#open-positions"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              View Open Positions
+              View Open Positions;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
             >
-              Get in Touch
+              Get in Touch;
             </Link>
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -238,7 +228,6 @@ const CareersPage = () => {
           </div>
         </div>
       </section>
-
       {/* Why Join Us Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -252,10 +241,9 @@ const CareersPage = () => {
               We're not just building technology – we're shaping the future. Here's what makes us special.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div
+              <div;
                 key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               >
@@ -276,29 +264,27 @@ const CareersPage = () => {
           </div>
         </div>
       </section>
-
       {/* Job Openings Section */}
       <section id="open-positions" className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Open Positions
+                Open Positions;
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find your perfect role and help us build the future of technology.
             </p>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {jobCategories.map((category) => (
-              <button
+              <button;
                 key={category.id;
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id
+                  selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
@@ -308,24 +294,22 @@ const CareersPage = () => {
               </button>
             ))}
           </div>
-
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
-              <div
+              <div;
                 key={job.id;
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
-                  job.featured ? 'ring-2 ring-cyan-500/50' : ''
+                  job.featured ? 'ring-2 ring-cyan-500/50' : 
                 }`}
               >
                 {job.featured && (
                   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                      Featured
+                      Featured;
                     </span>
                   </div>
                 )}
-                
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-3">
@@ -336,7 +320,6 @@ const CareersPage = () => {
                         {job.department;
                       </span>
                     </div>
-                    
                     <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-300">
                       <div className="flex items-center space-x-1">
                         <MapPin className="w-4 h-4" />
@@ -359,14 +342,12 @@ const CareersPage = () => {
                         <span>Posted {job.posted}</span>
                       </div>
                     </div>
-                    
                     <p className="text-gray-300 mb-4 leading-relaxed">
                       {job.description;
                     </p>
-                    
                     <div className="flex flex-wrap gap-2 mb-4">
                       {job.requirements.slice(0, 3).map((req, idx) => (
-                        <span
+                        <span;
                           key={idx;
                           className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"
                         >
@@ -375,26 +356,24 @@ const CareersPage = () => {
                       ))}
                       {job.requirements.length > 3 && (
                         <span className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">
-                          +{job.requirements.length - 3} more
+                          +{job.requirements.length - 3} more;
                         </span>
                       )}
                     </div>
                   </div>
-                  
                   <div className="flex flex-col sm:flex-row lg:flex-col gap-3 mt-4 lg:mt-0 lg:ml-6">
                     <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
-                      Apply Now
+                      Apply Now;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <button className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105">
-                      View Details
+                      View Details;
                     </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -404,7 +383,6 @@ const CareersPage = () => {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -416,18 +394,18 @@ const CareersPage = () => {
               We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Send Your Resume
+                Send Your Resume;
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/team"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
-                Meet Our Team
+                Meet Our Team;
               </Link>
             </div>
           </div>
@@ -436,3 +414,4 @@ const CareersPage = () => {
     </div>
 "
  cursor/fix-errors-and-merge-to-main-54ad;
+        </section>

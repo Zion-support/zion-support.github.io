@@ -5,12 +5,12 @@
   useEffect(() => {
     // Enhanced accessibility features;
     const addSkipLinks = () => {;
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react;
 const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
   useEffect(() => {
-    // Check for user preferences;
+    // Check for user preferences;';
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;'";
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;'";
     setIsReducedMotion(prefersReducedMotion);
@@ -61,7 +61,7 @@ border: 0;
       document.head.appendChild(style)};
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements;
-      const buttons = document.querySelectorAll('button:not([aria-label])')';
+      const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button')}'
@@ -69,7 +69,7 @@ border: 0;
     // Apply accessibility settings;
     applyAccessibilitySettings(settings)
     // Listen for system preference changes;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')';
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const handleChange = () => {
 setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     mediaQuery.addEventListener('change', handleChange);'";
@@ -128,7 +128,6 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     style.textContent = `````
       .high-contrast {
 filter: contrast(150%) brightness(110%)}
-
       .font-size-small {
         font-size: 0.875rem;
       .font-size-large {
@@ -180,7 +179,7 @@ text-orientation: mixed;
             <div className="space-y-2">"
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
                 <label key={size} className="flex items-center space-x-2">"
-<input
+<input;
                     type="radio""
                     name="fontSize""
                     value={size;
@@ -193,7 +192,7 @@ onChange={() => setFontSize(size)}
               )})
             </div>
           </div>
-<div>
+<div></div>
             <p className="text-sm text-gray-300">"
               Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
             </p>
@@ -201,15 +200,14 @@ onChange={() => setFontSize(size)}
               Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
             </p>
           </div>
-          <button
+          <button;
             onClick={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
-            Close
+            Close;
           </button>
         </div>
       </div>
-    </>
+</>
   )};
-
-export default EnhancedAccessibility
+export default EnhancedAccessibility;

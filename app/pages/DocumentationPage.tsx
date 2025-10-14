@@ -7,7 +7,7 @@ import { DocumentTextIcon,
   QuestionMarkCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,
+  EnvelopeIcon,';
   MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function DocumentationPage() {
   const sections = [
@@ -58,11 +58,11 @@ export default function DocumentationPage() {
   ]
   const quickStart = [
     { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },'
-    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },';
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },';
-    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }';
+    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },;
+    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },;
+    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' };
   ];
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 const DocumentationPage: React.FC = () => {
   return (
     <>
@@ -84,7 +84,7 @@ const DocumentationPage: React.FC = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">"
                 <DocumentTextIcon className="w-10 h-10 text-white" />"
               </div>
-            </div>
+            </div>';
             <h1>"','
               Documentation;
             </h1>
@@ -164,7 +164,7 @@ const DocumentationPage: React.FC = () => {
                 <ul className="space-y-2">"
                   {section.links.map((link, linkIndex) => (
 <li key={linkIndex}>
-                      <Link 
+                      <Link;
                         to={link.href;
                         className="text-green-400 hover:text-green-300 flex items-center group"
                       >
@@ -275,3 +275,4 @@ console.log(response.data)`}</code>
     </>`````````
   )}``````````
 ```````````
+        </section>

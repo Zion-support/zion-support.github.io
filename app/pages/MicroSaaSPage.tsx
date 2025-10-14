@@ -8,7 +8,7 @@ import { GlobeAltIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,
+  EnvelopeIcon,';
   MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function MicroSaaSPage() {
   const services = [
@@ -41,13 +41,14 @@ export default function MicroSaaSPage() {
     { name: 'E-commerce', description: 'Online retail solutions' },'
     { name: 'Healthcare', description: 'Medical practice management' },'
     { name: 'Finance', description: 'Financial services tools' },'
-    { name: 'Education', description: 'Learning management systems' },';
-    { name: 'Real Estate', description: 'Property management tools' },';
-    { name: 'Manufacturing', description: 'Production optimization' }';
+    { name: 'Education', description: 'Learning management systems' },;
+    { name: 'Real Estate', description: 'Property management tools' },;
+    { name: 'Manufacturing', description: 'Production optimization' };
   ];
-import react-helmet-async from 'react-helmet-async';
+import react-helmet-async from 'react-helmet-async;
 const MicroSaaSPage: React.FC = () => {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>MicroSaaSPage - Zion Tech Group</title>
@@ -59,5 +60,7 @@ const MicroSaaSPage: React.FC = () => {
           <p>This page is under construction.</p>"
         </div>
       </div>
-    </>
+</>
   )}
+    </>
+  );';

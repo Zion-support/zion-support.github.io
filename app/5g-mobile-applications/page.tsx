@@ -25,37 +25,34 @@ import { Building2 } from 'lucide-react';
 import { Briefcase } from 'lucide-react';
 import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Advanced Features',
+      title: 'Advanced Features,
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Secure & Reliable',
+      title: 'Secure & Reliable,
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Expert Support',
+      title: 'Expert Support,
       description: '24/7 support from our team of specialists'
-    }
+  }
   ];
-
 const FiveGMobileApplications = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>5G Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="Innovative 5G mobile applications for next-generation connectivity." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20">
-          <ResponsiveContainer>
+          <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Mobile Applications</span>
@@ -77,7 +74,6 @@ const FiveGMobileApplications = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -88,25 +84,24 @@ const FiveGMobileApplications = () => {
               Let's discuss how our page services can help your business succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
-                Contact Us
+                Contact Us;
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>
             </div>
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
-
 export default FiveGMobileApplications;

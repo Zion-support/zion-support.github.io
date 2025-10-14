@@ -1,7 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 export default function 5GSolutionsPage() {
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>5GSolutionsPage - Zion Tech Group</title>
@@ -21,7 +22,7 @@ export default function 5GSolutionsPage() {
         </section>
         {/* Content Section */}
         <section className="py-20 px-4">"
-          <div className="max-w-6xl mx-auto">"
+          <div className="max-w-6xl mx-auto">"';
             <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>"
@@ -53,5 +54,7 @@ export default function 5GSolutionsPage() {
           </div>
         </section>
       </div>
-    </>
+</>
   )}
+    </>
+  );

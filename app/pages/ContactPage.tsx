@@ -1,12 +1,11 @@
-
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react;';
+import { Helmet } from 'react-helmet-async;
 import { PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
   ClockIcon,
-  ArrowRightIcon,
-CheckIcon } from '@heroicons/react/24/outline';
+  ArrowRightIcon,';
+CheckIcon } from '@heroicons/react/24/outline;
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: ,'
@@ -140,7 +139,7 @@ const ContactPage: React.FC = () => {
                         name="name"
 value={formData.name;
                         onChange={handleInputChange;
-                        required
+                        required;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your full name"
                       /></input>
@@ -155,7 +154,7 @@ value={formData.name;
                         name="email"
 value={formData.email;
                         onChange={handleInputChange;
-                        required
+                        required;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="your@email.com"
                       /></input>
@@ -217,7 +216,7 @@ value={formData.service;
                       name="message"
 value={formData.message;
                       onChange={handleInputChange;
-                      required
+                      required;
                       rows={6;
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Tell us about your project or how we can help..."
@@ -282,7 +281,7 @@ disabled={isSubmitting;
           </div>
         </div>
       </section>
-    </>
+</>
   );
 };
-export default ContactPage;
+export default Page;

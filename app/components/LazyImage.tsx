@@ -104,7 +104,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className=
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',';
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',;
   onLoad,
   onError;
 }) => {
@@ -128,7 +128,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   <>
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>````
       {isInView && (
-<img
+<img;
           src={src;
           alt={alt;
           onLoad={handleLoad;
@@ -140,11 +140,11 @@ const LazyImage: React.FC<LazyImageProps> = ({
         />
 )}
       {!isLoaded && (
-        <div
+        <div;
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{
             backgroundImage: `url(${placeholder})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'cover,
             backgroundPosition: 'center;
           }
         />
@@ -152,7 +152,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   )
 }
-                We provide comprehensive lazy image
+                We provide comprehensive lazy image;
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
                 <li className="flex items-center">
@@ -168,7 +168,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our lazy image services?</p>
-              <a
+              <a;
                 href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                 Contact Us</a></div></div></div></section>{/* CTA Section */}
@@ -179,8 +179,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how our lazy image'
             services can help you achieve your goals.</p>
-          <a
+          <a;
             href="/contact"
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Get Started Today</a></div></section></div>
-export default LazyImage
+export default LazyImage;

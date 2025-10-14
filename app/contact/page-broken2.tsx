@@ -1,4 +1,3 @@
-import lucide-react from 'lucide-react';
 const Pagebroken2Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
@@ -39,4 +38,4 @@ const Pagebroken2Page = () => {
     </div>
   );
 };
-export default Pagebroken2Page;
+export default Page;

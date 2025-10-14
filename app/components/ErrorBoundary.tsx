@@ -1,11 +1,10 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode } from 'react;';
 import { Link } from 'react-router-dom';
-import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
+import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline;
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
-
 interface State {
   hasError: boolean;
                       </pre>
@@ -32,4 +31,4 @@ interface State {
         <div className="p-4"></div>
           <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
           <p>Please refresh the page and try again.</p>
-        </div>
+        </div>';

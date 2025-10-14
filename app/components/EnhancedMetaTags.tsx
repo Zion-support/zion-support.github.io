@@ -1,30 +1,31 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 interface EnhancedMetaTagsProps {
   title: string;
     headline: title,
     description,
-    author: {
-      '@type': 'Organization',';
+    author: {';
+      '@type': 'Organization',;
       name: author,
     },
     publisher: {
       logo: {
-        '@type': 'ImageObject',';
+        '@type': 'ImageObject',;
         url: `${siteUrl}/images/logo.png`,````
       },
     },
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     mainEntityOfPage: {
-'@type': 'WebPage',',
-'@id': finalCanonical,',
+'@type': 'WebPage',,
+'@id': finalCanonical,,
     },
     image: finalOgImage,
     ...(section && {articleSection: section,}),
     ...(tags.length > 0 && {keywords: tags.join(', '),}),'
   } : null;
   return (
+    <>
 <>    <Helmet></Helmet>
       { /* Basic Meta Tags */ }
       <title>{title}</title>`
@@ -38,3 +39,5 @@ interface EnhancedMetaTagsProps {
           <meta key={index} property="article:tag" content={tag} />"`````````
         )})``````````
 ```````````
+    </>
+  );

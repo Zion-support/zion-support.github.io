@@ -55,16 +55,15 @@ class ProductionErrorBoundary extends Component<Props, State> {
       await fetch('/api/errors', {'
         method: 'POST','
         headers: {
-'Content-Type': 'application/json',
+'Content-Type': 'application/json,
         })
         body: JSON.stringify(errorData),
       });
     } catch (reportingError) {
       // Fallback: log to console if reporting fails;
   };
-
   private getSessionId = (): string => {
-    // Generate or retrieve session ID
+    // Generate or retrieve session ID;
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -122,7 +121,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message;
                   </div>
-                  <div>
+                  <div></div>
                     <strong>Stack:</strong>
                     <pre className="whitespace-pre-wrap mt-1">
                       {this.state.error.stack;
@@ -132,31 +131,28 @@ class ProductionErrorBoundary extends Component<Props, State> {
               </details>
             )}
 <div className="space-y-3">
-              <button
+              <button;
                 onClick={this.handleRetry;
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Try Again</span>
               </button>
-
-              <button
+              <button;
                 onClick={this.handleReload;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
                 <span>Reload Page</span>
               </button>
-
-              <button
+              <button;
                 onClick={this.handleGoHome;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
               </button>
-
-              <button
+              <button;
                 onClick={this.handleReportError;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -173,9 +169,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ProductionErrorBoundary;

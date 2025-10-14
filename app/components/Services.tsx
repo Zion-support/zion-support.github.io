@@ -8,7 +8,7 @@ import { CpuChipIcon, ;
    } from "@heroicons/react/24/outline;
 const Services: React.FC = () => {
 const services = [{,
-      icon: CpuChipIcon,'
+      icon: CpuChipIcon,'';
       title: 'AI Solutions'
       description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.'
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
@@ -42,7 +42,7 @@ const services = [{,
       title: 'Digital Transformation'
       description: 'Complete digital transformation strategies to modernize your business processes.'
       features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']
-    }
+  }
   ];
   return (
 <>    <section className="py-20 bg-white">
@@ -51,12 +51,12 @@ const services = [{,
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Our Services;
           </h2>
-          <p>
+          <p></p>
             We provide comprehensive technology solutions to help your business ;
             thrive in the digital age.
           </p>
         </div>
-    </>
+</>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div;
@@ -70,7 +70,7 @@ const services = [{,
                   {service.title}
                 </h3>
               </div>
-              <p>
+              <p></p>
                 {service.description}
               </p>
               <ul className="space-y-2">
@@ -95,7 +95,7 @@ const services = [{,
             <h3 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h3>
-            <p>
+            <p></p>
               Let's discuss how our solutions can help you achieve your goals.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">

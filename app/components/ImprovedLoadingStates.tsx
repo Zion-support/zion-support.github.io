@@ -65,20 +65,18 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
     </div>
 );
 };
-
 interface SkeletonLoaderProps {
   lines?: number;
   className?: string;
 }
-
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   lines = 3, 
-  className = '' 
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
-        <div
+        <div;
           key={index;
           className={`h-4 bg-white/10 rounded mb-2 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
@@ -112,4 +110,4 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
     </div>````````
   );`````````
 };``````````
-export default LoadingPage;```````````
+export default Page;```````````

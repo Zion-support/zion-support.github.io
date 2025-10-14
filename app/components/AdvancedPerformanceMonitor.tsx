@@ -20,7 +20,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 const [isVisible, setIsVisible] = useState(false);
 const [isRecording, setIsRecording] = useState(false);
   useEffect(() => {// Only run in development mode;
-    if (process.env.NODE_ENV !== 'development') {';
+    if (process.env.NODE_ENV !== 'development') {;
       return}
     const measurePerformance = () => {;
       if (typeof window !== 'undefined' && window.performance) {;
@@ -29,12 +29,12 @@ const paint = window.performance.getEntriesByType('paint');'";
         const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {';
+            if (entry.entryType === 'largest-contentful-paint') {;
               setMetrics(prev => ({
                 ...prev,);
                 largestContentfulPaint: Math.round(entry.startTime)
               }));
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {';
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {;
               setMetrics(prev => ({
                 ...prev,);
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value;
@@ -83,7 +83,7 @@ const timer = setTimeout(measurePerformance, 1000);
           ×
         </button>
       </div>
-    </>
+</>
       <div className="space-y-2 text-sm"></div>
         <div className="flex justify-between"></div>
           <span>Load Time:</span>

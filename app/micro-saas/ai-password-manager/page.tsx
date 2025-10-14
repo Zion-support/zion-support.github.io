@@ -1,81 +1,81 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react';
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI Password Generation',
+      title: 'AI Password Generation,
       description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences.'
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Advanced Security',
+      title: 'Advanced Security,
       description: 'Military-grade encryption with zero-knowledge architecture ensures your passwords are never accessible to anyone but you.'
     },
     {
       icon: <Eye className="w-6 h-6" />,
-      title: 'Breach Monitoring',
+      title: 'Breach Monitoring,
       description: 'AI-powered monitoring scans the dark web and alerts you immediately if any of your accounts are compromised.'
     },
     {
       icon: <Key className="w-6 h-6" />,
-      title: 'Auto-Fill & Sync',
+      title: 'Auto-Fill & Sync,
       description: 'Seamlessly fill passwords across all your devices with intelligent auto-fill that learns your patterns.'
     },
     {
       icon: <Fingerprint className="w-6 h-6" />,
-      title: 'Biometric Access',
+      title: 'Biometric Access,
       description: 'Secure access using fingerprint, face ID, or other biometric authentication methods.'
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Security Analytics',
+      title: 'Security Analytics,
       description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'
     }
   ]
   const securityFeatures = [
     {
 icon: <Lock className="w-6 h-6" />,
-      title: 'Password Vault',
-      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.',
-      price: 'Included',
+      title: 'Password Vault,
+      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.,
+      price: 'Included,
       features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access']
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: 'AI Security Scan',
-      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.',
-      price: 'Included',
+      title: 'AI Security Scan,
+      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.,
+      price: 'Included,
       features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring']
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: 'Two-Factor Auth',
-      description: 'Built-in 2FA support with TOTP generation and secure backup codes.',
-      price: 'Included',
+      title: 'Two-Factor Auth,
+      description: 'Built-in 2FA support with TOTP generation and secure backup codes.,
+      price: 'Included,
       features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices']
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: 'Family Sharing',
-      description: 'Secure password sharing with family members and trusted contacts.',
-      price: '$2.99/month',
+      title: 'Family Sharing,
+      description: 'Secure password sharing with family members and trusted contacts.,
+      price: '$2.99/month,
       features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring']
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: 'Dark Web Monitoring',
-      description: 'Continuous monitoring of the dark web for your personal information and credentials.',
-      price: '$4.99/month',
+      title: 'Dark Web Monitoring,
+      description: 'Continuous monitoring of the dark web for your personal information and credentials.,
+      price: '$4.99/month,
       features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system']
     },
     {
       icon: <Database className="w-6 h-6" />,
-      title: 'Business Features',
-      description: 'Advanced features for businesses including team management and admin controls.',
-      price: '$9.99/month',
+      title: 'Business Features,
+      description: 'Advanced features for businesses including team management and admin controls.,
+      price: '$9.99/month,
       features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting']
     }
   ]
@@ -126,7 +126,7 @@ icon: <Lock className="w-6 h-6" />,
       popular: false;
 =======
     }
->>>>>>> origin/main
+>>>>>>> origin/main;
   ]
   const stats = [
     { number: '99.9%', label: 'Security Uptime', icon: <Shield className="w-6 h-6 text-cyan-400" /> },"
@@ -148,13 +148,14 @@ icon: <Lock className="w-6 h-6" />,
       rating: 5;
     },
     {
-<<<<<<< HEAD
-      name: 'Emily Rodriguez',
-      company: 'IT Manager',
-      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',
+<<<<<<< HEAD;
+      name: 'Emily Rodriguez,
+      company: 'IT Manager,
+      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.,
       rating: 5;
   ]
   return (
+    <>
     <>
       <Helmet></Helmet>
         <title>AI Password Manager - Advanced Password Security | Zion Tech Group</title>
@@ -435,4 +436,9 @@ icon: <Lock className="w-6 h-6" />,
     </>````````
   )`````````
 }``````````
-export default AIPasswordManagerPage;```````````
+export default Page;```````````
+      </div>
+      </div>
+      </div>
+    </>
+  );

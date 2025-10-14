@@ -1,13 +1,13 @@
 import React from 'react';
-import react-router-dom from 'react-router-dom';
-import @heroicons/react/24/outline from '@heroicons/react/24/outline';
+import @heroicons/react/24/outline from '@heroicons/react/24/outline;
 const Hero: React.FC = () => {
   return (
+    <>
 <>    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="absolute inset-0 bg-black opacity-20"></div>
-    </>
+</>
       </div>
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
               AI & Technology;
             </span>
           </h1>
-          <p>
+          <p></p>
             Leading provider of AI and IT solutions, empowering businesses to scale, ;
             innovate, and succeed in the digital age.
           </p>
@@ -67,3 +67,5 @@ const Hero: React.FC = () => {
   )};
 };
 export default Hero;
+    </>
+  );';

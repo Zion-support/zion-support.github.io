@@ -8,4 +8,4 @@ export default function Page() {
     </>;
   );
 };
-export default LazyLoadingPage;
+export default Page;

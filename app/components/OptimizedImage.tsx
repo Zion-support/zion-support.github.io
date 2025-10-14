@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef, useEffect } from 'react;';
+import { Helmet } from 'react-helmet-async;
 interface OptimizedImageProps {
   src: string;
   alt,
@@ -9,8 +9,8 @@ interface OptimizedImageProps {
   priority = false,;
   placeholder="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+"
   sizes="100vw"
-  quality = 85,;
-  loading = 'lazy',';
+  quality = 85,;';
+  loading = 'lazy',;
   onLoad,
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -31,44 +31,37 @@ const observer = new IntersectionObserver()
       });
     if (imgRef.current) {
       observer.observe(imgRef.current)}
-
     return () => observer.disconnect()}, [priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.()};
-
   const handleError = () => {
     setIsError(true);
     onError?.()};
-
-  // Generate WebP src if supported
+  // Generate WebP src if supported;
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc;
-    // For external images, return as-is
+    // For external images, return as-is;
     if (originalSrc.startsWith('http')) {
       return originalSrc;
-    // For local images, you could implement WebP conversion here
+    // For local images, you could implement WebP conversion here;
     return originalSrc};
-
   const optimizedSrc = getOptimizedSrc(src);
-
     return originalSrc;
   const optimizedSrc = getOptimizedSrc(src)
   return (
 <>    <div></div>
         </Helmet>
 )}
-      <div
-
+      <div;
         ref={ imgRef;
         className={`relative overflow-hidden ${className}`}
         style={{ width, height;
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
-          <div
+          <div;
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
             style={{ width, height;
           >
@@ -77,7 +70,7 @@ const observer = new IntersectionObserver()
 )}
         {/* Error state */}
         {isError && (
-          <div
+          <div;
             className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
             style={{ width, height;
           >
@@ -86,7 +79,7 @@ const observer = new IntersectionObserver()
               <div>Image not available</div>
             </div>
           </div>
-<<<<<<< HEAD
+<<<<<<< HEAD;
 )}
         {/* Actual image */}
         {isInView && !isError && (
@@ -108,7 +101,7 @@ const observer = new IntersectionObserver()
               objectFit: 'cover'
             }}
 =======
->>>>>>> origin/main
+>>>>>>> origin/main;
           />
         )
       </div>

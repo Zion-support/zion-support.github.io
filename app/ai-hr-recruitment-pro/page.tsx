@@ -1,9 +1,9 @@
 import React from 'react';
-import { Metadata } from 'next';
-export const metadata: Metadata = {
-  title: 'page - Zion Tech Group',
-  description: 'Advanced AI and IT solutions by Zion Tech Group',
-  keywords: 'AI, IT solutions, technology, innovation',
+import { Metadata } from 'next;
+export const metadata: Metadata = {';
+  title: 'page - Zion Tech Group,
+  description: 'Advanced AI and IT solutions by Zion Tech Group,
+  keywords: 'AI, IT solutions, technology, innovation,
 };
 const pagePage: React.FC = () => {
   return (
@@ -11,36 +11,35 @@ const pagePage: React.FC = () => {
       <div className="container mx-auto px-4 py-8">
         <h1>page</h1>
         <div className="prose max-w-none">
-          <p>
+          <p></p>
             Discover our comprehensive page solutions designed to transform your business.
           </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
+            <FuturisticButton;
               href="/contact"
               variant="primary"
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Get Started Today
+              Get Started Today;
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton;
               href="/demo"
               variant="outline"
               size="lg"
               icon={<Users className="w-5 h-5" />}
             >
-              View Demo
+              View Demo;
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Recruitment Features
+              Intelligent Recruitment Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to streamline your hiring process and find the best talent.
@@ -48,11 +47,11 @@ const pagePage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCard
+              <FuturisticCard;
                 key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div
+                <div;
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon;
@@ -68,10 +67,9 @@ const pagePage: React.FC = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI HR & Recruitment Pro?
@@ -90,10 +88,9 @@ const pagePage: React.FC = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Hiring?
@@ -102,21 +99,21 @@ const pagePage: React.FC = () => {
               Join leading companies using AI HR & Recruitment Pro to find and hire the best talent faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
+              <FuturisticButton;
                 href="/contact"
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Start Your Free Trial
+                Start Your Free Trial;
               </FuturisticButton>
-              <FuturisticButton
+              <FuturisticButton;
                 href="/pricing"
                 variant="outline"
                 size="lg"
                 icon={<UserCheck className="w-5 h-5" />}
               >
-                View Pricing
+                View Pricing;
               </FuturisticButton>
             </div>
           </div>
@@ -125,4 +122,4 @@ const pagePage: React.FC = () => {
     </div>
   );
 };
-export default pagePage;
+export default Page;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link;
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -20,7 +20,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   readTime,
   category,
   imageUrl,
-  slug
+  slug;
 }) => {
   return (
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -45,7 +45,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             {title}
           </Link>
         </h3>
-        <p>
+        <p></p>
           {excerpt}
         </p>
         <div className="flex items-center justify-between">
@@ -74,4 +74,4 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     </article>````````
   );`````````
 };``````````
-export default ContentPreviewCard;```````````
+export default ContentPreviewCard;```````````';
