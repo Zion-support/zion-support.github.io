@@ -1,12 +1,11 @@
-export interface ImageOptimizationOptions {
-  width?: number;
+export interface ImageOptimizationOptions {width?: number;
   height?: number;
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';'
   lazy?: boolean;}
 }
 export const optimizeImage = (
-  src: "string",;
+  src: "string",;"
   options: "ImageOptimizationOptions = {"};
 ): string => {'}';
   const { width, height, quality = 80, format = 'webp', lazy = true } = options;'
@@ -20,14 +19,12 @@ export const optimizeImage = (
   if (format) params.set('f', format);''
   if (lazy) params.set('lazy', 'true');''
   const separator = src.includes('?') ? '&' : '?';'
-  return `${src}${separator}${params.toString()}`;
+  return `${src}${separator}${params.toString()}`;`
 };
-
 export const generateResponsiveImages = (;
-  src: "string",;
-  sizes: "number[] = [320", 640, 768, 10o24, 1280, 1920];
-): string => {
-  return sizes;}
-    .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`)''
+  src: "string",;"
+  sizes: "number[] = [320", 640, 768, 10o24, 1280, 1920];"
+): string => {return sizes;}
+    .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`)`
     .join(', ');'
 };'

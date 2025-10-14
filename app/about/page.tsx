@@ -1,16 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
+import {
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
   RocketLaunchIcon,
   CheckCircleIcon,
   UsersIcon,
   GlobeAltIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
-
 const AboutPage: React.FC = () => {
   return (
     <>
@@ -18,7 +17,6 @@ const AboutPage: React.FC = () => {
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize AI and IT solutions." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,7 +29,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Mission Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -39,8 +36,8 @@ const AboutPage: React.FC = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  We are dedicated to transforming businesses through innovative AI and IT solutions. 
-                  Our mission is to make advanced technology accessible and practical for organizations 
+                  We are dedicated to transforming businesses through innovative AI and IT solutions.
+                  Our mission is to make advanced technology accessible and practical for organizations
                   of all sizes, enabling them to thrive in the digital age.
                 </p>
                 <ul className="space-y-3">
@@ -61,14 +58,13 @@ const AboutPage: React.FC = () => {
               <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="mb-6">
-                  To be the leading provider of AI and IT solutions, empowering businesses 
+                  To be the leading provider of AI and IT solutions, empowering businesses
                   to achieve unprecedented growth and efficiency through technology.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -105,7 +101,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -127,13 +122,10 @@ const AboutPage: React.FC = () => {
                 className="border border-white text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Our Services
-              </a>
-            </div>
-          </div>
-        </section>
+              </a></div>
+          </div></section>
       </div>
     </>
   );
 };
-
 export default AboutPage;

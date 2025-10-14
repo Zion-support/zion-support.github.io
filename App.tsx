@@ -2,13 +2,11 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
-
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import LoadingStates from './app/components/LoadingStates';
-
 // Pages
 import HomePage from './app/page';
 import AboutPage from './app/about/page';
@@ -21,7 +19,6 @@ import SupportPage from './app/support/page';
 import PrivacyPage from './app/privacy/page';
 import TermsPage from './app/terms/page';
 import PricingPage from './app/pricing/page';
-
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -58,7 +55,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-
 function App() {
   return (
     <HelmetProvider>
@@ -82,7 +78,6 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
-                    
                     {/* Catch all route */}
                     <Route path="*" element={
                       <div className="min-h-screen flex items-center justify-center">
@@ -106,5 +101,4 @@ function App() {
     </HelmetProvider>
   );
 }
-
 export default App;

@@ -4,14 +4,12 @@ import { usePerformanceMonitor } from '../usePerformanceMonitor;';
 describe('Performance Monitoring', () => {'
   ';'
   it('should be implemented', () => {';'
-    expect(true).toBe(true);
-}
+    expect(true).toBe(true);}
   });
 });
 describe('Performance Monitoring', () => {'
   ';'
   it('should be defined', () => {';'
-    expect(usePerformanceMonitor).toBeDefined();
-}
+    expect(usePerformanceMonitor).toBeDefined();}
   });
 });

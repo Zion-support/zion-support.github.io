@@ -1,6 +1,4 @@
-export interface Service {
-
-  id: string;
+export interface Service {id: string;
   title: string;
   description: string;
   shortDescription: string;
@@ -11,24 +9,20 @@ export interface Service {
     basic: number;
     pro: number;,
     enterprise: number;}
-
   };
-  benefits: "string[];",useCases: "string[];",technologies: "string[];",contactInfo: {,phone: "string;",email: "string;",website: "string;"
-  }
+  benefits: "string[];",useCases: "string[];",technologies: "string[];",contactInfo: {,phone: "string;",email: "string;",website: "string;""}
   };
-  href: "string;",glowColor: "'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';'"
+  href: "string;",glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange;"
 }
-
 export const services: Service[] = [
-
   // AI Services
   {''
-    id: "'ai-chatbot-enterprise'",''
-    title: "'AI Enterprise Chatbot Platform'",''
-    description: "'Advanced conversational AI platform with natural language processing", multi-language support, and seamless integration with existing business systems.',''
-    shortDescription: "'Enterprise-grade AI chatbots with advanced NLP capabilities'",''
-    category: "'AI'",''
-    icon: "'🤖'",'
+    id: "ai-chatbot-enterprise,''"
+    title: "AI Enterprise Chatbot Platform,''"
+    description: 'Advanced conversational AI platform with natural language processing", multi-language support, and seamless integration with existing business systems.',"
+    shortDescription: "Enterprise-grade AI chatbots with advanced NLP capabilities,''"
+    category: "AI,''"
+    icon: "🤖,'"
     features: [''
       'Natural Language Processing (NLP)',''
       'Multi-language Support (50+ languages)',''
@@ -58,20 +52,20 @@ export const services: Service[] = [
       'E-commerce Support''
     ],''
     technologies: ['OpenAI GPT-4', 'TensorFlow', 'Python', 'React', 'Node.js', 'MongoDB'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/ai-chatbot-enterprise'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/ai-chatbot-enterprise}'"
     },''
-    href: "'/ai-chatbot-enterprise'",''
-    glowColor: "'purple'"
+    href: "/ai-chatbot-enterprise,''"
+    glowColor: "purple"
   },
   {''
-    id: "'ai-content-generation-pro'",''
-    title: "'AI Content Generation Pro'",''
-    description: "'Revolutionary AI-powered content creation platform that generates high-quality articles", marketing copy, social media posts, and technical documentation.',''
-    shortDescription: "'AI-powered content creation for all your marketing needs'",''
-    category: "'AI'",''
-    icon: "'✍️'",'
+    id: "ai-content-generation-pro,''"
+    title: "AI Content Generation Pro,''"
+    description: 'Revolutionary AI-powered content creation platform that generates high-quality articles", marketing copy, social media posts, and technical documentation.',"
+    shortDescription: "AI-powered content creation for all your marketing needs,''"
+    category: "AI,''"
+    icon: "✍️,'"
     features: [''
       'Article & Blog Post Generation',''
       'Marketing Copy Creation',''
@@ -101,20 +95,20 @@ export const services: Service[] = [
       'Product Descriptions''
     ],''
     technologies: ['GPT-4', 'BERT', 'Python', 'FastAPI', 'React', 'PostgreSQL'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/ai-content-generation-pro'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/ai-content-generation-pro}'"
     },''
-    href: "'/ai-content-generation-pro'",''
-    glowColor: "'cyan'"
+    href: "/ai-content-generation-pro,''"
+    glowColor: "cyan"
   },
   {''
-    id: "'ai-data-analytics-pro'",''
-    title: "'AI Data Analytics Pro'",''
-    description: "'Advanced AI-powered data analytics platform that provides real-time insights", predictive analytics, and automated reporting for business intelligence.',''
-    shortDescription: "'AI-driven analytics platform for data-driven decision making'",''
-    category: "'AI'",''
-    icon: "'📊'",'
+    id: "ai-data-analytics-pro,''"
+    title: "AI Data Analytics Pro,''"
+    description: 'Advanced AI-powered data analytics platform that provides real-time insights", predictive analytics, and automated reporting for business intelligence.',"
+    shortDescription: "AI-driven analytics platform for data-driven decision making,''"
+    category: "AI,''"
+    icon: "📊,'"
     features: [''
       'Real-time Data Processing',''
       'Predictive Analytics',''
@@ -144,22 +138,21 @@ export const services: Service[] = [
       'Marketing Analytics''
     ],''
     technologies: ['Python', 'TensorFlow', 'Apache Spark', 'React', 'D3.js', 'PostgreSQL'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/ai-data-analytics-pro'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/ai-data-analytics-pro}'"
     },''
-    href: "'/ai-data-analytics-pro'",''
-    glowColor: "'green'"
+    href: "/ai-data-analytics-pro,''"
+    glowColor: "green"
   },
-
   // Micro SaaS Services
   {''
-    id: "'project-management-saas'",''
-    title: "'Project Management SaaS'",''
-    description: "'Comprehensive project management platform with task tracking", team collaboration, time tracking, and advanced reporting capabilities.',''
-    shortDescription: "'Complete project management solution for teams of all sizes'",''
-    category: "'SaaS'",''
-    icon: "'📋'",'
+    id: "project-management-saas,''"
+    title: "Project Management SaaS,''"
+    description: 'Comprehensive project management platform with task tracking", team collaboration, time tracking, and advanced reporting capabilities.',"
+    shortDescription: "Complete project management solution for teams of all sizes,''"
+    category: "SaaS,''"
+    icon: "📋,'"
     features: [''
       'Task & Project Tracking',''
       'Team Collaboration Tools',''
@@ -189,20 +182,20 @@ export const services: Service[] = [
       'Consulting Services''
     ],''
     technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redis', 'AWS'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/project-management-saas'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/project-management-saas}'"
     },''
-    href: "'/project-management-saas'",''
-    glowColor: "'blue'"
+    href: "/project-management-saas,''"
+    glowColor: "blue"
   },
   {''
-    id: "'crm-saas-platform'",''
-    title: "'CRM SaaS Platform'",''
-    description: "'Advanced Customer Relationship Management platform with lead tracking", sales pipeline management, and customer communication tools.',''
-    shortDescription: "'Complete CRM solution for sales and customer management'",''
-    category: "'SaaS'",''
-    icon: "'👥'",'
+    id: "crm-saas-platform,''"
+    title: "CRM SaaS Platform,''"
+    description: 'Advanced Customer Relationship Management platform with lead tracking", sales pipeline management, and customer communication tools.',"
+    shortDescription: "Complete CRM solution for sales and customer management,''"
+    category: "SaaS,''"
+    icon: "👥,'"
     features: [''
       'Lead & Contact Management',''
       'Sales Pipeline Tracking',''
@@ -232,20 +225,20 @@ export const services: Service[] = [
       'Account Management''
     ],''
     technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'Stripe', 'AWS'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/crm-saas-platform'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/crm-saas-platform}'"
     },''
-    href: "'/crm-saas-platform'",''
-    glowColor: "'pink'"
+    href: "/crm-saas-platform,''"
+    glowColor: "pink"
   },
   {''
-    id: "'inventory-management-saas'",''
-    title: "'Inventory Management SaaS'",''
-    description: "'Comprehensive inventory management system with real-time tracking", automated reordering, and advanced analytics for businesses.',''
-    shortDescription: "'Real-time inventory tracking and management solution'",''
-    category: "'SaaS'",''
-    icon: "'📦'",'
+    id: "inventory-management-saas,''"
+    title: "Inventory Management SaaS,''"
+    description: 'Comprehensive inventory management system with real-time tracking", automated reordering, and advanced analytics for businesses.',"
+    shortDescription: "Real-time inventory tracking and management solution,''"
+    category: "SaaS,''"
+    icon: "📦,'"
     features: [''
       'Real-time Inventory Tracking',''
       'Automated Reorder Points',''
@@ -275,22 +268,21 @@ export const services: Service[] = [
       'Distribution''
     ],''
     technologies: ['React', 'Node.js', 'MongoDB', 'Barcode Scanner API', 'AWS', 'Redis'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/inventory-management-saas'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/inventory-management-saas}'"
     },''
-    href: "'/inventory-management-saas'",''
-    glowColor: "'yellow'"
+    href: "/inventory-management-saas,''"
+    glowColor: "yellow"
   },
-
   // IT Services
   {''
-    id: "'cloud-migration-service'",''
-    title: "'Cloud Migration Service'",''
-    description: "'Complete cloud migration service that helps businesses move their infrastructure", applications, and data to the cloud securely and efficiently.',''
-    shortDescription: "'Seamless cloud migration for businesses of all sizes'",''
-    category: "'IT'",''
-    icon: "'☁️'",'
+    id: "cloud-migration-service,''"
+    title: "Cloud Migration Service,''"
+    description: 'Complete cloud migration service that helps businesses move their infrastructure", applications, and data to the cloud securely and efficiently.',"
+    shortDescription: "Seamless cloud migration for businesses of all sizes,''"
+    category: "IT,''"
+    icon: "☁️,'"
     features: [''
       'Infrastructure Assessment',''
       'Migration Planning & Strategy',''
@@ -320,20 +312,20 @@ export const services: Service[] = [
       'Cost Optimization''
     ],''
     technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Terraform'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/cloud-migration-service'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/cloud-migration-service}'"
     },''
-    href: "'/cloud-migration-service'",''
-    glowColor: "'cyan'"
+    href: "/cloud-migration-service,''"
+    glowColor: "cyan"
   },
   {''
-    id: "'cybersecurity-suite-pro'",''
-    title: "'Cybersecurity Suite Pro'",''
-    description: "'Comprehensive cybersecurity solution providing advanced threat protection", security monitoring, and compliance management for businesses.',''
-    shortDescription: "'Complete cybersecurity protection for your business'",''
-    category: "'Cybersecurity'",''
-    icon: "'🛡️'",'
+    id: "cybersecurity-suite-pro,''"
+    title: "Cybersecurity Suite Pro,''"
+    description: 'Comprehensive cybersecurity solution providing advanced threat protection", security monitoring, and compliance management for businesses.',"
+    shortDescription: "Complete cybersecurity protection for your business,''"
+    category: "Cybersecurity,''"
+    icon: "🛡️,'"
     features: [''
       'Advanced Threat Detection',''
       '24/7 Security Monitoring',''
@@ -363,20 +355,20 @@ export const services: Service[] = [
       'Security Training''
     ],''
     technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption', 'AI/ML'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/cybersecurity-suite-pro'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/cybersecurity-suite-pro}'"
     },''
-    href: "'/cybersecurity-suite-pro'",''
-    glowColor: "'purple'"
+    href: "/cybersecurity-suite-pro,''"
+    glowColor: "purple"
   },
   {''
-    id: "'5g-network-solutions'",''
-    title: "'5G Network Solutions'",''
-    description: "'Complete 5G network implementation and optimization services for businesses looking to leverage next-generation connectivity.'",''
-    shortDescription: "'Next-generation 5G network solutions for businesses'",''
-    category: "'5G'",''
-    icon: "'📡'",'
+    id: "5g-network-solutions,''"
+    title: "5G Network Solutions,''"
+    description: "Complete 5G network implementation and optimization services for businesses looking to leverage next-generation connectivity.,''"
+    shortDescription: "Next-generation 5G network solutions for businesses,''"
+    category: "5G,''"
+    icon: "📡,'"
     features: [''
       '5G Network Planning',''
       'Infrastructure Deployment',''
@@ -406,22 +398,21 @@ export const services: Service[] = [
       'Healthcare Applications''
     ],''
     technologies: ['5G NR', 'Edge Computing', 'IoT', 'AI/ML', 'Cloud Computing', 'SDN'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/5g-network-solutions'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/5g-network-solutions}'"
     },''
-    href: "'/5g-network-solutions'",''
-    glowColor: "'green'"
+    href: "/5g-network-solutions,''"
+    glowColor: "green"
   },
-
   // Blockchain Services
   {''
-    id: "'blockchain-development'",''
-    title: "'Blockchain Development'",''
-    description: "'Custom blockchain solutions including smart contracts", DeFi applications, NFT platforms, and enterprise blockchain integration.',''
-    shortDescription: "'Custom blockchain solutions for modern businesses'",''
-    category: "'Blockchain'",''
-    icon: "'⛓️'",'
+    id: "blockchain-development,''"
+    title: "Blockchain Development,''"
+    description: 'Custom blockchain solutions including smart contracts", DeFi applications, NFT platforms, and enterprise blockchain integration.',"
+    shortDescription: "Custom blockchain solutions for modern businesses,''"
+    category: "Blockchain,''"
+    icon: "⛓️,'"
     features: [''
       'Smart Contract Development',''
       'DeFi Application Development',''
@@ -451,22 +442,21 @@ export const services: Service[] = [
       'Healthcare Records''
     ],''
     technologies: ['Ethereum', 'Solidity', 'Web3.js', 'IPFS', 'React', 'Node.js'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/blockchain-development'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/blockchain-development}'"
     },''
-    href: "'/blockchain-development'",''
-    glowColor: "'blue'"
+    href: "/blockchain-development,''"
+    glowColor: "blue"
   },
-
   // IoT Services
   {''
-    id: "'iot-platform-solution'",''
-    title: "'IoT Platform Solution'",''
-    description: "'Complete IoT platform for device management", data collection, real-time monitoring, and analytics for connected devices.',''
-    shortDescription: "'Comprehensive IoT platform for connected devices'",''
-    category: "'IoT'",''
-    icon: "'🌐'",'
+    id: "iot-platform-solution,''"
+    title: "IoT Platform Solution,''"
+    description: 'Complete IoT platform for device management", data collection, real-time monitoring, and analytics for connected devices.',"
+    shortDescription: "Comprehensive IoT platform for connected devices,''"
+    category: "IoT,''"
+    icon: "🌐,'"
     features: [''
       'Device Management',''
       'Real-time Data Collection',''
@@ -496,22 +486,21 @@ export const services: Service[] = [
       'Healthcare Devices''
     ],''
     technologies: ['MQTT', 'CoAP', 'REST APIs', 'React', 'Node.js', 'MongoDB'],'
-    contactInfo: {'',phone: "'+1-30o2-464-0o950'",''
-      email: "'kleber@ziontechgroup.com'",''
-      website: "'http,s://ziontechgroup.com/iot-platform-solution'"}'
+    contactInfo: {'',phone: "+1-30o2-464-0o950,''"
+      email: "kleber@ziontechgroup.com,''"
+      website: "http,s:// ziontechgroup.com/iot-platform-solution}'"
     },''
-    href: "'/iot-platform-solution'",''
-    glowColor: "'yellow'"
+    href: "/iot-platform-solution,''"
+    glowColor: "yellow""
   },
-
   // Additional AI Services
   {
-    id: "'ai-code-assistant-pro'",'
-    title: "'AI Code Assistant Pro'",'
-    description: "'Advanced AI-powered coding assistant that helps developers write better code", debug issues, and learn new technologies with intelligent suggestions and real-time assistance.','
-    shortDescription: "'AI-powered coding assistant for developers'",'
-    category: "'AI'",'
-    icon: "'💻'",'
+    id: "ai-code-assistant-pro,'"
+    title: "AI Code Assistant Pro",'"
+    description: 'Advanced AI-powered coding assistant that helps developers write better code", debug issues, and learn new technologies with intelligent suggestions and real-time assistance.,"
+    shortDescription: "AI-powered coding assistant for developers",'"
+    category: "AI,'"
+    icon: "💻",'
     features: [
       'Intelligent Code Completion','
       'Bug Detection & Fixing','
@@ -541,20 +530,20 @@ export const services: Service[] = [
       'Code Optimization''
     ],
     technologies: ['OpenAI Codex', 'GitHub Copilot', 'VS Code', 'IntelliJ', 'Python', 'JavaScript'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/ai-code-assistant-pro'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/ai-code-assistant-pro""
     },
-    href: "'/ai-code-assistant-pro'",'
-    glowColor: "'purple'"
+    href: "/ai-code-assistant-pro,'"
+    glowColor: "purple""
   },
   {
-    id: "'ai-customer-sentiment-tracker'",'
-    title: "'AI Customer Sentiment Tracker'",'
-    description: "'Real-time customer sentiment analysis platform that monitors social media", reviews, and feedback to help businesses understand customer emotions and improve satisfaction.','
-    shortDescription: "'Real-time customer sentiment analysis and monitoring'",'
-    category: "'AI'",'
-    icon: "'😊'",'
+    id: "ai-customer-sentiment-tracker",'"
+    title: "AI Customer Sentiment Tracker,'"
+    description: "'Real-time customer sentiment analysis platform that monitors social media", reviews, and feedback to help businesses understand customer emotions and improve satisfaction.,"
+    shortDescription: "Real-time customer sentiment analysis and monitoring,'"
+    category: "AI",'"
+    icon: "😊,'"
     features: [
       'Real-time Sentiment Analysis','
       'Multi-platform Monitoring','
@@ -584,20 +573,20 @@ export const services: Service[] = [
       'Marketing Campaigns''
     ],
     technologies: ['NLP', 'Machine Learning', 'Python', 'React', 'MongoDB', 'APIs'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/ai-customer-sentiment-tracker'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/ai-customer-sentiment-tracker""
     },
-    href: "'/ai-customer-sentiment-tracker'",'
-    glowColor: "'cyan'"
+    href: "/ai-customer-sentiment-tracker,'"
+    glowColor: "cyan""
   },
   {
-    id: "'ai-automated-testing'",'
-    title: "'AI Automated Testing Suite'",'
-    description: "'Intelligent automated testing platform that uses AI to generate test cases", execute tests, and identify bugs across web and mobile applications.','
-    shortDescription: "'AI-powered automated testing for applications'",'
-    category: "'AI'",'
-    icon: "'🧪'",'
+    id: "ai-automated-testing",'"
+    title: "AI Automated Testing Suite,'"
+    description: "'Intelligent automated testing platform that uses AI to generate test cases", execute tests, and identify bugs across web and mobile applications.,"
+    shortDescription: "AI-powered automated testing for applications,'"
+    category: "AI",'"
+    icon: "🧪,'"
     features: [
       'AI Test Case Generation','
       'Automated Test Execution','
@@ -627,22 +616,21 @@ export const services: Service[] = [
       'Regression Testing''
     ],
     technologies: ['Selenium', 'Appium', 'Jest', 'Cypress', 'Python', 'JavaScript'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/ai-automated-testing'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/ai-automated-testing""
     },
-    href: "'/ai-automated-testing'",'
-    glowColor: "'green'"
+    href: "/ai-automated-testing,'"
+    glowColor: "green""
   },
-
   // Additional Micro SaaS Services
   {
-    id: "'email-marketing-automation'",'
-    title: "'Email Marketing Automation SaaS'",'
-    description: "'Complete email marketing automation platform with AI-powered personalization", advanced segmentation, and detailed analytics for businesses.','
-    shortDescription: "'AI-powered email marketing automation platform'",'
-    category: "'SaaS'",'
-    icon: "'📧'",'
+    id: "email-marketing-automation",'"
+    title: "Email Marketing Automation SaaS,'"
+    description: "'Complete email marketing automation platform with AI-powered personalization", advanced segmentation, and detailed analytics for businesses.,"
+    shortDescription: "AI-powered email marketing automation platform,'"
+    category: "SaaS",'"
+    icon: "📧,'"
     features: [
       'AI-Powered Personalization','
       'Advanced Segmentation','
@@ -672,20 +660,20 @@ export const services: Service[] = [
       'Newsletter Management''
     ],
     technologies: ['React', 'Node.js', 'SendGrid', 'MongoDB', 'Redis', 'AWS'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/email-marketing-automation'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/email-marketing-automation""
     },
-    href: "'/email-marketing-automation'",'
-    glowColor: "'pink'"
+    href: "/email-marketing-automation,'"
+    glowColor: "pink""
   },
   {
-    id: "'social-media-management-saas'",'
-    title: "'Social Media Management SaaS'",'
-    description: "'Comprehensive social media management platform with AI-powered content creation", scheduling, analytics, and engagement tools for all major platforms.','
-    shortDescription: "'Complete social media management and analytics platform'",'
-    category: "'SaaS'",'
-    icon: "'📱'",'
+    id: "social-media-management-saas",'"
+    title: "Social Media Management SaaS,'"
+    description: "'Comprehensive social media management platform with AI-powered content creation", scheduling, analytics, and engagement tools for all major platforms.,"
+    shortDescription: "Complete social media management and analytics platform,'"
+    category: "SaaS",'"
+    icon: "📱,'"
     features: [
       'Multi-platform Management','
       'AI Content Generation','
@@ -715,20 +703,20 @@ export const services: Service[] = [
       'Influencer Marketing''
     ],
     technologies: ['React', 'Node.js', 'Social APIs', 'MongoDB', 'Redis', 'AWS'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/social-media-management-saas'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/social-media-management-saas""
     },
-    href: "'/social-media-management-saas'",'
-    glowColor: "'blue'"
+    href: "/social-media-management-saas,'"
+    glowColor: "blue""
   },
   {
-    id: "'hr-management-saas'",'
-    title: "'HR Management SaaS'",'
-    description: "'Complete human resources management platform with employee onboarding", time tracking, performance management, and payroll integration.','
-    shortDescription: "'Comprehensive HR management and employee engagement platform'",'
-    category: "'SaaS'",'
-    icon: "'👥'",'
+    id: "hr-management-saas",'"
+    title: "HR Management SaaS,'"
+    description: "'Complete human resources management platform with employee onboarding", time tracking, performance management, and payroll integration.,"
+    shortDescription: "Comprehensive HR management and employee engagement platform,'"
+    category: "SaaS",'"
+    icon: "👥,'"
     features: [
       'Employee Database','
       'Time & Attendance Tracking','
@@ -758,20 +746,20 @@ export const services: Service[] = [
       'Benefits Administration''
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS', 'Redis'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/hr-management-saas'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/hr-management-saas""
     },
-    href: "'/hr-management-saas'",'
-    glowColor: "'yellow'"
+    href: "/hr-management-saas,'"
+    glowColor: "yellow""
   },
   {
-    id: "'financial-accounting-saas'",'
-    title: "'Financial Accounting SaaS'",'
-    description: "'Advanced financial management and accounting platform with automated bookkeeping", invoicing, expense tracking, and financial reporting.','
-    shortDescription: "'Complete financial management and accounting solution'",'
-    category: "'SaaS'",'
-    icon: "'💰'",'
+    id: "financial-accounting-saas",'"
+    title: "Financial Accounting SaaS,'"
+    description: "'Advanced financial management and accounting platform with automated bookkeeping", invoicing, expense tracking, and financial reporting.,"
+    shortDescription: "Complete financial management and accounting solution,'"
+    category: "SaaS",'"
+    icon: "💰,'"
     features: [
       'Automated Bookkeeping','
       'Invoice Generation','
@@ -801,22 +789,21 @@ export const services: Service[] = [
       'Financial Planning''
     ],
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'QuickBooks API', 'AWS'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/financial-accounting-saas'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/financial-accounting-saas""
     },
-    href: "'/financial-accounting-saas'",'
-    glowColor: "'green'"
+    href: "/financial-accounting-saas,'"
+    glowColor: "green""
   },
-
   // Additional IT Services
   {
-    id: "'devops-automation-service'",'
-    title: "'DevOps Automation Service'",'
-    description: "'Complete DevOps automation service including CI/CD pipeline setup", infrastructure as code, monitoring, and deployment automation.','
-    shortDescription: "'End-to-end DevOps automation and infrastructure management'",'
-    category: "'IT'",'
-    icon: "'⚙️'",'
+    id: "devops-automation-service",'"
+    title: "DevOps Automation Service,'"
+    description: "'Complete DevOps automation service including CI/CD pipeline setup", infrastructure as code, monitoring, and deployment automation.,"
+    shortDescription: "End-to-end DevOps automation and infrastructure management,'"
+    category: "IT",'"
+    icon: "⚙️,'"
     features: [
       'CI/CD Pipeline Setup','
       'Infrastructure as Code','
@@ -846,20 +833,20 @@ export const services: Service[] = [
       'Security Automation''
     ],
     technologies: ['Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'AWS', 'Prometheus'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/devops-automation-service'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/devops-automation-service""
     },
-    href: "'/devops-automation-service'",'
-    glowColor: "'cyan'"
+    href: "/devops-automation-service,'"
+    glowColor: "cyan""
   },
   {
-    id: "'api-development-service'",'
-    title: "'API Development Service'",'
-    description: "'Professional API development and integration services including RESTful APIs", GraphQL, microservices, and third-party integrations.','
-    shortDescription: "'Custom API development and integration services'",'
-    category: "'IT'",'
-    icon: "'🔌'",'
+    id: "api-development-service",'"
+    title: "API Development Service,'"
+    description: "'Professional API development and integration services including RESTful APIs", GraphQL, microservices, and third-party integrations.,"
+    shortDescription: "Custom API development and integration services,'"
+    category: "IT",'"
+    icon: "🔌,'"
     features: [
       'RESTful API Development','
       'GraphQL Implementation','
@@ -889,20 +876,20 @@ export const services: Service[] = [
       'Authentication Services''
     ],
     technologies: ['Node.js', 'Python', 'GraphQL', 'PostgreSQL', 'Redis', 'AWS'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/api-development-service'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/api-development-service""
     },
-    href: "'/api-development-service'",'
-    glowColor: "'purple'"
+    href: "/api-development-service,'"
+    glowColor: "purple""
   },
   {
-    id: "'database-optimization-service'",'
-    title: "'Database Optimization Service'",'
-    description: "'Professional database optimization and management services including performance tuning", scaling, backup strategies, and migration.','
-    shortDescription: "'Database performance optimization and management services'",'
-    category: "'IT'",'
-    icon: "'🗄️'",'
+    id: "database-optimization-service",'"
+    title: "Database Optimization Service,'"
+    description: "'Professional database optimization and management services including performance tuning", scaling, backup strategies, and migration.,"
+    shortDescription: "Database performance optimization and management services,'"
+    category: "IT",'"
+    icon: "🗄️,'"
     features: [
       'Performance Tuning','
       'Query Optimization','
@@ -932,22 +919,21 @@ export const services: Service[] = [
       'Backup Optimization''
     ],
     technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'AWS RDS', 'Docker'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/database-optimization-service'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/database-optimization-service""
     },
-    href: "'/database-optimization-service'",'
-    glowColor: "'blue'"
+    href: "/database-optimization-service,'"
+    glowColor: "blue""
   },
-
   // Additional Cybersecurity Services
   {
-    id: "'penetration-testing-service'",'
-    title: "'Penetration Testing Service'",'
-    description: "'Comprehensive penetration testing and vulnerability assessment services to identify security weaknesses and provide remediation strategies.'",'
-    shortDescription: "'Professional penetration testing and security assessment'",'
-    category: "'Cybersecurity'",'
-    icon: "'🔍'",'
+    id: "penetration-testing-service",'"
+    title: "Penetration Testing Service,'"
+    description: "Comprehensive penetration testing and vulnerability assessment services to identify security weaknesses and provide remediation strategies.",'"
+    shortDescription: "Professional penetration testing and security assessment,'"
+    category: "Cybersecurity",'"
+    icon: "🔍,'"
     features: [
       'Web Application Testing','
       'Network Penetration Testing','
@@ -977,20 +963,20 @@ export const services: Service[] = [
       'Incident Response''
     ],
     technologies: ['OWASP', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark', 'Custom Tools'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/penetration-testing-service'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/penetration-testing-service""
     },
-    href: "'/penetration-testing-service'",'
-    glowColor: "'red'"
+    href: "/penetration-testing-service,'"
+    glowColor: "red""
   },
   {
-    id: "'security-awareness-training'",'
-    title: "'Security Awareness Training'",'
-    description: "'Comprehensive cybersecurity training program for employees including phishing simulation", security best practices, and compliance training.','
-    shortDescription: "'Employee cybersecurity awareness and training program'",'
-    category: "'Cybersecurity'",'
-    icon: "'🎓'",'
+    id: "security-awareness-training",'"
+    title: "Security Awareness Training,'"
+    description: "'Comprehensive cybersecurity training program for employees including phishing simulation", security best practices, and compliance training.,"
+    shortDescription: "Employee cybersecurity awareness and training program,'"
+    category: "Cybersecurity",'"
+    icon: "🎓,'"
     features: [
       'Interactive Training Modules','
       'Phishing Simulation','
@@ -1020,22 +1006,21 @@ export const services: Service[] = [
       'Best Practices Education''
     ],
     technologies: ['LMS Platform', 'Interactive Content', 'Analytics', 'Gamification', 'Mobile App'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/security-awareness-training'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/security-awareness-training""
     },
-    href: "'/security-awareness-training'",'
-    glowColor: "'orange'"
+    href: "/security-awareness-training,'"
+    glowColor: "orange""
   },
-
   // Additional Cloud Services
   {
-    id: "'cloud-cost-optimization'",'
-    title: "'Cloud Cost Optimization Service'",'
-    description: "'Professional cloud cost optimization service that analyzes usage patterns and implements strategies to reduce cloud spending by up to 50%.'",'
-    shortDescription: "'Cloud cost optimization and resource management service'",'
-    category: "'Cloud'",'
-    icon: "'💸'",'
+    id: "cloud-cost-optimization",'"
+    title: "Cloud Cost Optimization Service,'"
+    description: "Professional cloud cost optimization service that analyzes usage patterns and implements strategies to reduce cloud spending by up to 50%.",'"
+    shortDescription: "Cloud cost optimization and resource management service,'"
+    category: "Cloud",'"
+    icon: "💸,'"
     features: [
       'Cost Analysis & Reporting','
       'Resource Optimization','
@@ -1065,20 +1050,20 @@ export const services: Service[] = [
       'Performance Tuning''
     ],
     technologies: ['AWS Cost Explorer', 'Azure Cost Management', 'GCP Billing', 'Terraform', 'CloudWatch'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/cloud-cost-optimization'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/cloud-cost-optimization""
     },
-    href: "'/cloud-cost-optimization'",'
-    glowColor: "'green'"
+    href: "/cloud-cost-optimization,'"
+    glowColor: "green""
   },
   {
-    id: "'multi-cloud-strategy'",'
-    title: "'Multi-Cloud Strategy Service'",'
-    description: "'Comprehensive multi-cloud strategy and implementation service to help businesses leverage multiple cloud providers for better resilience and cost optimization.'",'
-    shortDescription: "'Multi-cloud strategy and implementation service'",'
-    category: "'Cloud'",'
-    icon: "'☁️'",'
+    id: "multi-cloud-strategy",'"
+    title: "Multi-Cloud Strategy Service,'"
+    description: "Comprehensive multi-cloud strategy and implementation service to help businesses leverage multiple cloud providers for better resilience and cost optimization.",'"
+    shortDescription: "Multi-cloud strategy and implementation service,'"
+    category: "Cloud",'"
+    icon: "☁️,'"
     features: [
       'Cloud Strategy Planning','
       'Multi-cloud Architecture','
@@ -1108,19 +1093,18 @@ export const services: Service[] = [
       'Cost Optimization''
     ],
     technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],'
-    contactInfo: {,phone: "'+1-30o2-464-0o950'",'
-      email: "'kleber@ziontechgroup.com'",'
-      website: "'http,s://ziontechgroup.com/multi-cloud-strategy'"
+    contactInfo: {,phone: "+1-30o2-464-0o950,'"
+      email: "kleber@ziontechgroup.com",'"
+      website: "http,s:// ziontechgroup.com/multi-cloud-strategy""
     },
-    href: "'/multi-cloud-strategy'",'
-    glowColor: "'blue'"
+    href: "/multi-cloud-strategy,'"
+    glowColor: "blue""
   }
 ];
 ''
-export const getServicesByCategory = (category: "Service['category']) => {';"
+export const getServicesByCategory = (category: Service['category']) => {';""
   return services.filter(service => service.category === category);}
 };
-
 export const getServiceById = (id: "string) => {;"
   return services.find(service => service.id === id);}
 };'

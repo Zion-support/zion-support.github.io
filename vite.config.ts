@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-
 export default defineConfig({
   plugins: [
     react({
@@ -17,8 +16,7 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './utils'),
     },
   },
-  build: {
-    outDir: 'dist',
+  build: {outDir: 'dist',
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: process.env.NODE_ENV === 'development',

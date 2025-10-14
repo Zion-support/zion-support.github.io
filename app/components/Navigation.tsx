@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Bars3Icon, 
+import {
+  Bars3Icon,
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -22,18 +21,15 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
+interface NavigationProps {onSidebarToggle?: () => void;}
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
-
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { 
+    {
       name: 'Services',
       href: '/services',
       icon: BriefcaseIcon,
@@ -41,10 +37,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
+        {name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon}
       ]
     },
-    { 
+    {
       name: 'Solutions',
       href: '/solutions',
       icon: CogIcon,
@@ -54,7 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
         { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        {name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon}
       ]
     },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -62,13 +58,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    {name: 'Contact', href: '/contact', icon: PhoneIcon}
   ];
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,9 +74,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 Zion Tech Group
               </Link>
             </div>
-
             {/* Desktop Navigation */}
-            <div className="hidden md: ml-6 md:flex m,d:space-x-8">
+            <div className="hidden md:ml-6 md:flex md:space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.submenu ? (
@@ -96,7 +89,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         <ChevronDownIcon className="ml-1 h-4 w-4" />
                       </button>
                       {isServicesOpen && (
-                        <div 
+                        <div
                           className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
                           onMouseEnter={() => setIsServicesOpen(true)}
                           onMouseLeave={() => setIsServicesOpen(false)}
@@ -127,17 +120,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ))}
             </div>
           </div>
-
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
-                to="/contact"
+              to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
@@ -151,16 +142,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               )}
             </button>
           </div>
-
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
-
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigation.map((item) => (
-                <div key="{item.name}">
+                <div key={item.name}>
                   {item.submenu ? (
                     <div>
                       <button
@@ -203,7 +191,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   )}
                 </div>
               ))}
-
             </div>
           </div>
         )}
@@ -211,5 +198,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     </nav>
   );
 };
-
 export default Navigation;
