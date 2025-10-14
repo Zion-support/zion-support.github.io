@@ -9,6 +9,7 @@ import {
   ArrowRightIcon,
   HeartIcon
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from '@heroicons/react/24/outline';  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
@@ -22,6 +23,10 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
+=======
+} from '@heroicons/react/24/outline';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -35,8 +40,6 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
   ];
 
@@ -63,32 +66,7 @@ const Footer: React.FC = () => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }    { name: 'Terms of Service', href: '/terms' }
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' }
-  ];
-
-  const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Compliance', href: '/compliance' }
   ];
 
   const socialLinks = [
@@ -162,10 +140,13 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-xl">Z</span>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
@@ -189,7 +170,12 @@ const Footer: React.FC = () => {
             </p>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
             {/* Contact Info */}            <div className="space-y-3 mb-6">
+=======
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
 =======
@@ -211,6 +197,7 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
             </div>
 
+<<<<<<< HEAD
             {/* Social Links */}            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -239,10 +226,17 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 <Facebook className="w-5 h-5" />
+=======
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
+<<<<<<< HEAD
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -262,6 +256,11 @@ const Footer: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
+=======
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
             </div>
           </div>
 
@@ -269,12 +268,16 @@ const Footer: React.FC = () => {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
             <ul className="space-y-3">
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
             <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
+<<<<<<< HEAD
                   <Link 
                     to={service.href} 
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
@@ -284,6 +287,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
                   <Link
 <<<<<<< HEAD
                     to={service.href}
@@ -315,12 +320,16 @@ const Footer: React.FC = () => {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
             <ul className="space-y-3">
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
             <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
+<<<<<<< HEAD
                   <Link 
                     to={item.href} 
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
@@ -330,6 +339,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
                   <Link
 <<<<<<< HEAD
                     to={item.href}
@@ -360,14 +371,18 @@ const Footer: React.FC = () => {
           {/* Resources */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
                 <li key={resource.name}>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
             <h3 className="text-white font-semibold text-lg mb-4">Support & Legal</h3>
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
+<<<<<<< HEAD
 =======
           {/* Resources */}
           <div>
@@ -382,20 +397,17 @@ const Footer: React.FC = () => {
                   >
 <<<<<<< HEAD
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+=======
+                  <Link
+                    to={item.href}
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
                     {item.name}
                   </Link>
                 </li>
               ))}
               {legal.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    to={item.href} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
-          {/* Support */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              {support.map((item) => (
                 <li key={item.name}>
                   <Link
                     to={item.href}
@@ -437,11 +449,13 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"              />
+                className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              />
               <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
                 Subscribe
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
         {/* Contact Info */}
@@ -478,6 +492,8 @@ const Footer: React.FC = () => {
               <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />
               <span className="text-gray-300">San Francisco, CA</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
             </div>
           </div>
         </div>
@@ -489,24 +505,8 @@ const Footer: React.FC = () => {
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
-          {/* Newsletter Signup */}
-          <div className="bg-slate-800 rounded-lg p-6 mb-8">
-            <div className="max-w-md mx-auto text-center">
-              <h3 className="text-white font-semibold text-lg mb-2">Stay Updated</h3>
-              <p className="text-gray-400 mb-4">Get the latest news and updates from Zion Tech Group</p>
-              <div className="flex space-x-2">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="flex-1 px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-                <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center">
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            </div>
           </div>
+<<<<<<< HEAD
 
           {/* Copyright */}
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
@@ -543,6 +543,11 @@ const Footer: React.FC = () => {
             <span>for innovation</span>
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-4227
+=======
+          <div className="flex space-x-6 text-gray-400 text-sm">
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
           </div>
 =======
         {/* Copyright */}
