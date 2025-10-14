@@ -1,40 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  Network,
-  FileText,
-  Clock,
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart
-} from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  onSidebarToggle?: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
-
-  const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
-  }, []);
-<<<<<<< HEAD
-
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
 
   const handleResize = () => {
@@ -128,29 +101,87 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               aria-label="Toggle menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+=======
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    onSidebarToggle?.();
+  };
+
+  return (
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <a href="/" className="text-2xl font-bold text-gray-900">
+              Zion Tech
+            </a>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Home
+            </a>
+            <a href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              About
+            </a>
+            <a href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Services
+            </a>
+            <a href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Contact
+            </a>
+            <div className="flex items-center space-x-4">
+              <a href="tel:+15551234567" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                <Phone className="w-4 h-4 mr-1" />
+                +1 (555) 123-4567
+              </a>
+              <a href="mailto:info@ziontech.com" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                <Mail className="w-4 h-4 mr-1" />
+                info@ziontech.com
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#home" className="block px-3 py-2 text-white hover:text-blue-300 transition-colors">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+              <a href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 Home
               </a>
-              <a href="#services" className="block px-3 py-2 text-white hover:text-blue-300 transition-colors">
-                Services
-              </a>
-              <a href="#about" className="block px-3 py-2 text-white hover:text-blue-300 transition-colors">
+              <a href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 About
               </a>
-              <a href="#contact" className="block px-3 py-2 text-white hover:text-blue-300 transition-colors">
+              <a href="/services" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                Services
+              </a>
+              <a href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                 Contact
               </a>
-              <button className="w-full bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors mt-4">
-                Get Started
-              </button>
+              <div className="px-3 py-2 border-t">
+                <a href="tel:+15551234567" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 (555) 123-4567
+                </a>
+                <a href="mailto:info@ziontech.com" className="flex items-center text-gray-700 hover:text-blue-600 transition-colors mt-2">
+                  <Mail className="w-4 h-4 mr-2" />
+                  info@ziontech.com
+                </a>
+              </div>
             </div>
           </div>
         )}
