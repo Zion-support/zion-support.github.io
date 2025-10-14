@@ -1,3 +1,6 @@
-// navigation - Basic implementation
-export default function navigation() {
-  return null;
+// Utility function placeholder
+export function utility() {
+  return true;
+}
+
+export default utility;

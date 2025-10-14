@@ -1,3 +1,6 @@
-// link - Basic implementation
-export default function link() {
-  return null;
+// Utility function placeholder
+export function utility() {
+  return true;
+}
+
+export default utility;

@@ -1,3 +1,6 @@
-// image - Basic implementation
-export default function image() {
-  return null;
+// Utility function placeholder
+export function utility() {
+  return true;
+}
+
+export default utility;

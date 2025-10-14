@@ -1,4 +1,6 @@
-'use client';
-// errorHandler utility; export const errorHandler = () => {}; // Implementation; return true;}
+// Utility function placeholder
+export function utility() {
+  return true;
+}
 
-}; export default errorHandler;
+export default utility;

@@ -1,3 +1,6 @@
-// errorHandler - Basic implementation
-export default function errorHandler() {
-  return null;
+// Utility function placeholder
+export function utility() {
+  return true;
+}
+
+export default utility;

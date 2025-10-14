@@ -1,55 +1,50 @@
-import React, { useEffect, ReactNode } from 'react';
+'use client';
+import { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: ReactNode;
+  onOptimizationComplete?: () => void;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export default function PerformanceOptimizer({ onOptimizationComplete }: PerformanceOptimizerProps) {
   useEffect(() => {
-    const optimizeImages = () => {
+    const optimizePerformance = () => {
+      // Image optimization
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
       });
-    };
 
-    const optimizeFonts = () => {
-      // Preload critical fonts
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = '/fonts/inter.woff2';
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    };
+      // Font optimization
+      const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
+      fontLinks.forEach((link) => {
+        link.setAttribute('crossorigin', 'anonymous');
+      });
 
-    const optimizeResources = () => {
-      // Preload critical resources
-      const criticalResources = ['/css/critical.css', '/js/critical.js'];
+      // Resource preloading
+      const criticalResources = [
+        '/css/critical.css',
+        '/js/critical.js'
+      ];
+
       criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link);
-      );
+      });
+
+      if (onOptimizationComplete) {
+        onOptimizationComplete();
+      }
     };
 
-    // Run optimizations
-    optimizeImages();
-    optimizeFonts();
-    optimizeResources();
+    // Run optimizations after component mounts
+    const timer = setTimeout(optimizePerformance, 100);
+    return () => clearTimeout(timer);
+  }, [onOptimizationComplete]);
 
-    // Cleanup function
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-
-  return <React.Fragment>{children}</React.Fragment>;
-};
-
-export default PerformanceOptimizer;
+  return null; // This component doesn't render anything
+}

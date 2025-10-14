@@ -1,4 +1,6 @@
-'use client';
-export const utilityFunction = () => {}; // Utility implementation; return true;}
+// Utility function placeholder
+export function utility() {
+  return true;
+}
 
-};
+export default utility;

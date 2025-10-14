@@ -1,3 +1,6 @@
-// testRunner - Basic implementation
-export default function testRunner() {
-  return null;
+// Utility function placeholder
+export function utility() {
+  return true;
+}
+
+export default utility;

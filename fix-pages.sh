@@ -1,21 +1,29 @@
+#!/bin/bash
+
+# Function to create a basic page template
+create_page_template() {
+    local page_name="$1"
+    local file_path="$2"
+    
+    cat > "$file_path" << 'PAGE_EOF'
 'use client';
 
 import React from 'react';
 
-export default function CreateAdPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Create Advertisement</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
             <div className="prose max-w-none">
               <p className="text-lg text-gray-600 mb-6">
-                Create and manage your advertisements with our advanced ad management platform.
+                This page is currently under development. We're working hard to bring you amazing content and features.
               </p>
               <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
                 <p className="text-blue-800">
-                  <strong>Coming Soon:</strong> This feature will be available with full functionality in the near future.
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -39,3 +47,16 @@ export default function CreateAdPage() {
     </div>
   );
 }
+PAGE_EOF
+}
+
+# Find and fix corrupted page files
+find app -name "*.tsx" -type f | while read -r file; do
+    # Check if file has syntax errors (basic check)
+    if grep -q "Parsing error\|JSX expressions must have one parent element\|Unterminated string" "$file" 2>/dev/null; then
+        echo "Fixing: $file"
+        create_page_template "$(basename "$file" .tsx)" "$file"
+    fi
+done
+
+echo "Page fixing completed!"

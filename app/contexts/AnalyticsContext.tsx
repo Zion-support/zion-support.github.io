@@ -1,54 +1,77 @@
-import { createContext, useContext, useState, useEffect   } from 'react';
-interface AnalyticsContextType {}
-  trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void;
-  trackPageView: "(pageNam,e: string) => void",setUser: "(userI,d: string", properties?: Record<string, any>) => void;
-  isEnabled: "boolean"};
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-const  ({ children }) => {}
+'use client';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+  isEnabled: boolean;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-  useEffect(() => {;
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName: "string", properties?: Record<string, any>) => {;;
+  const [, setUserId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Initialize analytics
+    setIsEnabled(true);
+  }, []);
+
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
-    // Track event logic here;'
-    console.log('Analytics Event: "'", eventName, properties);;
-  }
-  const trackPageView = (pageName: 
-    i,f (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View: "'", pageName);;
-  }
-  const setUser = (newUserId: "string", properties?: Record<string, any>) => {;;
+    
+    console.log('Analytics Event:', eventName, properties);
+    
+    // In a real implementation, you would send this to your analytics service
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, eventName: string, properties?: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void }).gtag('event', eventName, properties);
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (!isEnabled) return;
+    
+    console.log('Page View:', pageName);
+    
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, configId: string, config: Record<string, unknown>) => void }).gtag) {
+      (window as unknown as { gtag: (command: string, configId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  };
+
+  const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
     setUserId(newUserId);
-    console.log('User Set: "'", newUserId, properties);;
-  }
-    // Track event logic here;console.log('Analytics Event: "'", eventName, properties);};
+    trackEvent('user_identified', { userId: newUserId, ...properties });
   };
-  const trackPageView = (pageName: 
-    i,f (!isEnabled) return;
-    // Track page view logic here;console.log('Page View: "'", pageName);};
-  };
-  const setUser = (newUserId: "string", properties?: Record<string, any>) => {;;
-    setUserId(newUserId);console.log('User Set: "'", newUserId, properties);};
-  };
-  const value: 
-    t,rackEvent,
+
+  const value = {
+    trackEvent,
     trackPageView,
     setUser,
     isEnabled
-  }
+  };
+
   return (
-    <div>Page content</div>
-  );
-    <AnalyticsContext.Provider value="{value}">
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
-
-export { AnalyticsContext }
 };
-export { AnalyticsContext };
-</string>
-</AnalyticsContextType>
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+export default AnalyticsProvider;

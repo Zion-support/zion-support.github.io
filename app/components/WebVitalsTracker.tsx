@@ -1,25 +1,29 @@
 'use client';
-import React from 'react';
-export default function WebVitalsTracker() {
-  return (
-    <div>Page content</div>
-  );
+import { useEffect } from 'react';
 
-  return (
-    <div>Page content</div>
-  );
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.;
-        </p>
+interface WebVitalsTrackerProps {
+  onVitalsUpdate?: (vitals: Record<string, number>) => void;
+}
 
-      </div>
-    </>
-  );
+export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerProps) {
+  useEffect(() => {
+    // Web Vitals tracking implementation
+    const trackWebVitals = () => {
+      // This would typically use web-vitals library
+      // For now, just a placeholder
+      if (onVitalsUpdate) {
+        onVitalsUpdate({
+          CLS: 0,
+          FID: 0,
+          FCP: 0,
+          LCP: 0,
+          TTFB: 0
+        });
+      }
+    };
 
-        </p></div></div>
-  );}
+    trackWebVitals();
+  }, [onVitalsUpdate]);
+
+  return null; // This component doesn't render anything
+}
