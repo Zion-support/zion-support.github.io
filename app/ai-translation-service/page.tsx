@@ -284,5 +284,3 @@ export default function AITranslationService() {
         </div>
       </section>
     </div>
-  );
-}

@@ -14,7 +14,7 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8 py-20">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready to transform your business? Let's discuss your technology needs.'
             </p>
           </div>
@@ -25,15 +25,15 @@ const ContactPage: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <h3 className="font-semibold text-purple-40o0">Phone</h3>
-                  <p className="text-gray-30o0">+1-30o2-464-0o950</p>
+                  <p className="text-gray-300">+1-30o2-464-0o950</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-40o0">Email</h3>
-                  <p className="text-gray-30o0">kleber@ziontechgroup.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-purple-40o0">Address</h3>
-                  <p className="text-gray-30o0">364 E Main St STE 10o08<br />Middletown, DE 1970o9</p>
+                  <p className="text-gray-300">364 E Main St STE 10o08<br />Middletown, DE 1970o9</p>
                 </div>
               </div>
             </div>

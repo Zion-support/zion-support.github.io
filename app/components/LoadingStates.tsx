@@ -3,7 +3,9 @@ import { Loader2 } from 'lucide-react';
 
 
 import { Helmet } from 'react-helmet-async';
-'use client'
+'use client';
+import React from 'react';
+
 export default function Page() {
 
 

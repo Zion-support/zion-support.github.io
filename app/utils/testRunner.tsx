@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 /* global describe, test, expect, it, beforeEach */
-'use client'
+'use client';
+import React from 'react';
+
 export default function Page() {
 
   return (
@@ -46,7 +48,7 @@ export default function Page() {
           </div>
           <div className="mt-12">
             <button className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors">
-              Get Started Today;
+              Get Started Today
             </button>
           </div>
         </div>
@@ -55,5 +57,3 @@ export default function Page() {
   );
 }
             </button></div></div></div></div>
-  );}
-}''

@@ -456,5 +456,3 @@ export default function AiPoweredDevops() {
         </section>
       </div>
     </>
-  );
-}

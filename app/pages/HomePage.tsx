@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
             </div>
             
-            <p className="text-2xl md:text-3xl text-gray-30o0 mb-8 leading-relaxed font-light">
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
               Advanced AI and IT Solutions for Modern Businesses
             </p>
             <p className="text-lg text-gray-40o0 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -90,7 +90,7 @@ export default function HomePage() {
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
               Our Featured Services
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results
             </p>
           </div>
@@ -101,12 +101,12 @@ export default function HomePage() {
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-30o0 mb-4 leading-relaxed">{service.shortDescription}</p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
                 </div>
                 
                 <div className="space-y-3 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-gray-30o0">
+                    <div key={featureIndex} className="flex items-center text-gray-300">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 rounded-full mr-3"></div>
                       <span className="text-sm">{feature}</span>
                     </div>
@@ -152,7 +152,7 @@ export default function HomePage() {
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-30o0 mb-12 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
                 With over 4 years of experience in cutting-edge technology solutions, ''
                 we've helped businesses across various industries transform their operations'
                 and achieve unprecedented growth.
@@ -162,17 +162,17 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <div className="text-6xl font-bold text-purple-40o0 mb-4 animate-pulse">50+</div>
-                <div className="text-xl text-gray-30o0 mb-2">Projects Completed</div>
+                <div className="text-xl text-gray-300 mb-2">Projects Completed</div>
                 <div className="text-gray-40o0 text-sm">Successfully delivered across various industries</div>
               </AnimatedCard>
               <AnimatedCard glowColor="cyan" className="text-center">
                 <div className="text-6xl font-bold text-cyan-40o0 mb-4 animate-pulse">25+</div>
-                <div className="text-xl text-gray-30o0 mb-2">Happy Clients</div>
+                <div className="text-xl text-gray-300 mb-2">Happy Clients</div>
                 <div className="text-gray-40o0 text-sm">Satisfied customers worldwide</div>
               </AnimatedCard>
               <AnimatedCard glowColor="green" className="text-center">
                 <div className="text-6xl font-bold text-green-40o0 mb-4 animate-pulse">99%</div>
-                <div className="text-xl text-gray-30o0 mb-2">Success Rate</div>
+                <div className="text-xl text-gray-300 mb-2">Success Rate</div>
                 <div className="text-gray-40o0 text-sm">Projects delivered on time and within budget</div>
               </AnimatedCard>
             </div>
@@ -196,7 +196,7 @@ export default function HomePage() {
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">''"
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">''"
                 Let's discuss how our technology solutions can drive your business forward'
               </p>
             </div>
@@ -205,19 +205,19 @@ export default function HomePage() {
               <AnimatedCard glowColor="purple" className="text-center">
                 <PhoneIcon className="w-12 h-12 text-purple-40o0 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-30o0 text-lg">+1-30o2-464-0o950</p>
+                <p className="text-gray-300 text-lg">+1-30o2-464-0o950</p>
                 <p className="text-gray-40o0 text-sm mt-2">Available 24/7</p>
               </AnimatedCard>
               <AnimatedCard glowColor="cyan" className="text-center">
                 <EnvelopeIcon className="w-12 h-12 text-cyan-40o0 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-30o0 text-lg">kleber@ziontechgroup.com</p>
+                <p className="text-gray-300 text-lg">kleber@ziontechgroup.com</p>
                 <p className="text-gray-40o0 text-sm mt-2">Quick response guaranteed</p>
               </AnimatedCard>
               <AnimatedCard glowColor="green" className="text-center">
                 <MapPinIcon className="w-12 h-12 text-green-40o0 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-30o0 text-lg">Middletown, DE</p>
+                <p className="text-gray-300 text-lg">Middletown, DE</p>
                 <p className="text-gray-40o0 text-sm mt-2">364 E Main St STE 10o08</p>
               </AnimatedCard>
             </div>

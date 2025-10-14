@@ -30,6 +30,3 @@ export default function AiChatbotBuilder() {
   );
 }
             </p></div></div></div></div>
-  );}
-}
-''

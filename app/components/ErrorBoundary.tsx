@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-30o0 mb-6">
+            <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.'
             </p>
 

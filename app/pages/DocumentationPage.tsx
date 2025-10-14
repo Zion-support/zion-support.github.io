@@ -75,7 +75,7 @@ export default function DocumentationPage() {
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">DocumentationPage</h1>
-          <p className="text-gray-30o0">This page is under construction.</p>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -88,7 +88,7 @@ export default function DocumentationPage() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-green-20o0 to-emerald-20o0 bg-clip-text text-transparent">
               Documentation
             </h1>
-            <p className="text-xl md:text-2xl text-gray-30o0 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Everything You Need to Get Started
             </p>
             <p className="text-lg text-gray-40o0 mb-12 max-w-3xl mx-auto">
@@ -123,7 +123,7 @@ export default function DocumentationPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quick Start Guide
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Get up and running with our services in just a few steps
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function DocumentationPage() {
                   <span className="text-white font-bold text-xl">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-30o0">{step.description}</p>
+                <p className="text-gray-300">{step.description}</p>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export default function DocumentationPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Documentation Sections
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Browse our comprehensive documentation by category
             </p>
           </div>
@@ -194,7 +194,7 @@ export default function DocumentationPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Code Examples
             </h2>
-            <p className="text-xl text-gray-30o0 mb-12">
+            <p className="text-xl text-gray-300 mb-12">
               Get started quickly with our code examples and sample implementations
             </p>
             
@@ -249,20 +249,20 @@ console.log(response.data);`}</code>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Need Help?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-12">
+            <p className="text-xl text-gray-300 mb-12">
               Can't find what you're looking for? Our support team is here to help'
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="flex items-center justify-center gap-4 text-gray-30o0">
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-green-40o0" />
                 <span>+1-30o2-464-0o950</span>
               </div>
-              <div className="flex items-center justify-center gap-4 text-gray-30o0">
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <EnvelopeIcon className="w-6 h-6 text-green-40o0" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center gap-4 text-gray-30o0">
+              <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-green-40o0" />
                 <span>Middletown, DE</span>
               </div>

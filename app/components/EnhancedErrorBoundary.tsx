@@ -133,7 +133,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </h1>
 
               {/* Error Message */}
-              <p className="text-gray-30o0 mb-6 leading-relaxed">''"
+              <p className="text-gray-300 mb-6 leading-relaxed">''"
                 We're sorry, but something unexpected happened. Our team has been notified'
                 and is working to fix this issue.
               </p>
@@ -158,14 +158,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <div className="flex space-x-3">
                   <button
                     onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-60o0 text-gray-30o0 px-4 py-2 rounded-lg font-semibold hover: bg-slate-70o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
+                    className="flex-1 border border-slate-60o0 text-gray-300 px-4 py-2 rounded-lg font-semibold hover: bg-slate-70o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
                   >
                     Go Home
                   </button>
                   
                   <button
                     onClick={this.handleReload}
-                    className="flex-1 border border-slate-60o0 text-gray-30o0 px-4 py-2 rounded-lg font-semibold hover: bg-slate-70o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
+                    className="flex-1 border border-slate-60o0 text-gray-300 px-4 py-2 rounded-lg font-semibold hover: bg-slate-70o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
                   >
                     Reload Page
                   </button>

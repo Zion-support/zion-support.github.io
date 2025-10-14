@@ -337,5 +337,3 @@ export default function AIHealthcareDiagnostics() {
         </section>
       </div>
     </>
-  );
-}

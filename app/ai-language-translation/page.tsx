@@ -1,19 +1,13 @@
-import React from  from 'react';
-'use client'
-export default function AiLanguageTranslationPage() {
+'use client';
+import React from 'react';
 
+export default function AiLanguageTranslationPage() {
   return (
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">
+    <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Ai Language Translation</h1>
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.;
+        <h1 className="text-4xl font-bold mb-8">AI Language Translation</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
         </p>
       </div>
     </div>
-  );
-}
-        </p></div></div>
-  );}
-}
-''

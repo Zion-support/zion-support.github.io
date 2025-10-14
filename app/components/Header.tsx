@@ -57,7 +57,7 @@ const Header: React.FC = () => {
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className="text-gray-30o0 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >{item.name}
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-30o0 hover: text-white hove,r:bg-slate-70o0">{subItem.name}"
+                          className="block px-4 py-2 text-sm text-gray-300 hover: text-white hove,r:bg-slate-70o0">{subItem.name}"
                         </Link>
                       ))}
                     </div>
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-30o0 hover:text-white p-2">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
+              className="text-gray-300 hover:text-white p-2">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
             </button></div></div>{/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -136,7 +136,7 @@ const Header: React.FC = () => {
                 <div key="{item.name}">
                   <Link
                     to={item.href}
-                    className="text-gray-30o0 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >{item.name}
                   </Link>{item.submenu && (

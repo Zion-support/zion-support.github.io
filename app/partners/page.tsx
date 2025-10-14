@@ -60,7 +60,7 @@ const PartnersPage: React.FC = () => {
                 Partners;
               </span>
             </h1>
-            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join our growing ecosystem of strategic partners and unlock new opportunities;
               for growth and innovation.;
             </p>
@@ -88,7 +88,7 @@ const PartnersPage: React.FC = () => {
                     <div className="text-4xl mb-4">{partner.logo}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
                     <p className="text-cyan-40o0 text-sm mb-3">{partner.category}</p>
-                    <p className="text-gray-30o0 text-sm">{partner.description}</p>
+                    <p className="text-gray-300 text-sm">{partner.description}</p>
                   </div>
                 </div>
               ))}
@@ -107,7 +107,7 @@ const PartnersPage: React.FC = () => {
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 flex items-center justify-center flex-shrink-0">
                     <Circle className="w-4 h-4 text-white" />
                   </div>
-                  <span className="text-gray-30o0 font-medium">{benefit}</span>
+                  <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -119,7 +119,7 @@ const PartnersPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Partner with Us?;
             </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Join our partner ecosystem and unlock new opportunities for growth and innovation.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

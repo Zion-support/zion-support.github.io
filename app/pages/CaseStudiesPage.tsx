@@ -73,7 +73,7 @@ const CaseStudiesPage: "React.FC = () => {"
           <h1 className="text-5xl font-bold text-white mb-6">
             Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-40o0 to-purple-40o0">Stories</span>
           </h1>
-          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover how we've helped businesses across various industries transform';'
             their operations with cutting-edge AI and IT solutions.;
           </p>
@@ -93,15 +93,15 @@ const CaseStudiesPage: "React.FC = () => {"
                   </div>
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
-                    <p className="text-gray-30o0 mb-4">{study.description}</p>
+                    <p className="text-gray-300 mb-4">{study.description}</p>
                   </div>
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-30o0">{study.challenge}</p>
+                    <p className="text-gray-300">{study.challenge}</p>
                   </div>
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-30o0">{study.solution}</p>
+                    <p className="text-gray-300">{study.solution}</p>
                   </div>
                 </div>
                 {/* Results */}
@@ -128,7 +128,7 @@ const CaseStudiesPage: "React.FC = () => {"
         <div className="text-center mt-16">
           <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Create Your Success Story?</h2>
-            <p className="text-gray-30o0 mb-6">
+            <p className="text-gray-300 mb-6">
               Let us help you achieve similar results with our proven AI and IT solutions.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -153,7 +153,7 @@ const CaseStudiesPage: "React.FC = () => {"
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
-          <p className="text-gray-30o0">This page is under construction.</p>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
     </div>;  );

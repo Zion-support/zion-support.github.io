@@ -112,26 +112,26 @@ const AiServicesPage: "React.FC = () => {"
   ];
 
   const testimonials = [{
-      name: "Dr. Sarah Johnson",";
-      company: "MedTech Solutions",";
+      name: "Dr. Sarah Johnson",;
+      company: "MedTech Solutions",;
       role: "CTO",''";
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';'"
       rating: "5;"
   }
     },
     {
-      name: "Michael Chen","
-      company: "E-commerce Plus","
+      name: "Michael Chen",
+      company: "E-commerce Plus",
       role: "CEO",''"
       content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';'"
       rating: "5;"
   }
     },
     {
-      name: "Emily Rodriguez","
-      company: "FinanceFlow","
-      role: "Head of Analytics","
-      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.","
+      name: "Emily Rodriguez",
+      company: "FinanceFlow",
+      role: "Head of Analytics",
+      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
       rating: "5;"
   }
     }
@@ -152,7 +152,7 @@ const AiServicesPage: "React.FC = () => {"
             <h1 className="text-5xl font-bold text-white mb-6">
               AI Services
             </h1>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your business with our comprehensive AI services designed to drive innovation and growth.
             </p>
           </div>
@@ -173,10 +173,10 @@ const AiServicesPage: "React.FC = () => {"
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-30o0 mb-4">
+                  <p className="text-gray-300 mb-4">
                     {service.description}
                   </p>
-                  <button className="flex items-center text-white hover:text-gray-30o0 transition-colors">
+                  <button className="flex items-center text-white hover:text-gray-300 transition-colors">
                     Learn More
                     <Right className="w-4 h-4 ml-2" />
                   </button>
@@ -192,7 +192,7 @@ const AiServicesPage: "React.FC = () => {"
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Let our AI experts help you unlock the full potential of artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -223,7 +223,7 @@ const AiServicesPage: "React.FC = () => {"
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-30o0 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
                   <button className="text-purple-40o0 hover:text-purple-30o0 font-medium flex items-center">
                     Learn More <Right className="w-4 h-4 ml-1" />
                   </button>
@@ -244,7 +244,7 @@ const AiServicesPage: "React.FC = () => {"
                 <div key={index} className="text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-30o0">{feature.description}</p>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -257,7 +257,7 @@ const AiServicesPage: "React.FC = () => {"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our AI services can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -55,7 +55,7 @@ const DigitalTransformationPage: "React.FC = () => {"
           <h1 className="text-5xl font-bold text-white mb-6">
             Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-40o0 to-cyan-40o0">Transformation</span>
           </h1>
-          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business for the digital age with comprehensive strategies, 
             modern technologies, and innovative solutions.;
           </p>
@@ -72,7 +72,7 @@ const DigitalTransformationPage: "React.FC = () => {"
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-30o0 mb-4">{service.description}</p>
+                <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="text-sm text-gray-40o0 flex items-center">
@@ -89,7 +89,7 @@ const DigitalTransformationPage: "React.FC = () => {"
         <div className="text-center">
           <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-30o0 mb-6">
+            <p className="text-gray-300 mb-6">
               Our digital transformation experts can help you modernize your operations and stay competitive.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -113,7 +113,7 @@ const DigitalTransformationPage: "React.FC = () => {"
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">DigitalTransformationPage</h1>
-          <p className="text-gray-30o0">This page is under construction.</p>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
     </div>;  );

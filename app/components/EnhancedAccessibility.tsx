@@ -266,10 +266,10 @@ const EnhancedAccessibility: React.FC = () => {
           </div>
 
           <div>
-            <p className="text-sm text-gray-30o0">
+            <p className="text-sm text-gray-300">
               Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
             </p>
-            <p className="text-sm text-gray-30o0">
+            <p className="text-sm text-gray-300">
               Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
             </p>
           </div>

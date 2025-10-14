@@ -1,3 +1,2 @@
 
 // Next.js type definitions
-

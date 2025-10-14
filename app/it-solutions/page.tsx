@@ -26,8 +26,8 @@ import {
 const ITSolutionsPage: "React.FC = () => {"
   const solutions = [
     {
-      title: "Cloud Infrastructure","
-      description: "Scalable and secure cloud infrastructure solutions for modern businesses.","
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
       icon: "CloudIcon",
       features: [
         "Scalable architecture","
@@ -38,16 +38,16 @@ const ITSolutionsPage: "React.FC = () => {"
         "Disaster recovery""
       ],
 
-      color: "from-blue-500 to-cyan-500","
-      price: "Starting at ,500/month","
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at ,500/month",
 
       benefits: ["Scalability", "Reliability", "Cost efficiency"],"
       useCases: ["Web hosting", "Data storage", "Application hosting"],"
       href: "/cloud-infrastructure"
     },
     {
-      title: "Cybersecurity Solutions","
-      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.","
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
       icon: "ShieldCheckIcon",
       features: [
         "Threat detection","
@@ -57,15 +57,15 @@ const ITSolutionsPage: "React.FC = () => {"
         "Compliance management","
         "Security training""
       ],
-      color: "from-red-50o0 to-pink-50o0","
-      price: "Starting at $2,20o0/month","
+      color: "from-red-50o0 to-pink-50o0",
+      price: "Starting at $2,20o0/month",
       benefits: ["Enhanced security", "Risk mitigation", "Compliance"],"
       useCases: ["Data protection", "Network security", "Compliance"],"
       href: "/cybersecurity"
     },
     {
-      title: "IT Consulting","
-      description: "Strategic IT consulting to help you make informed technology decisions.","
+      title: "IT Consulting",
+      description: "Strategic IT consulting to help you make informed technology decisions.",
       icon: "LightBulbIcon",
       features: [
         "Technology assessment","
@@ -76,16 +76,16 @@ const ITSolutionsPage: "React.FC = () => {"
         "Training and support""
       ],
 
-      color: "from-green-500 to-emerald-500","
-      price: "Starting at ,200/month","
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at ,200/month",
 
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],"
       useCases: ["Technology planning", "Digital transformation", "System integration"],"
       href: "/it-consulting"
     },
     {
-      title: "Network Solutions","
-      description: "Advanced networking solutions for reliable and secure connectivity.","
+      title: "Network Solutions",
+      description: "Advanced networking solutions for reliable and secure connectivity.",
       icon: "GlobeAltIcon",
       features: [
         "Network design","
@@ -96,16 +96,16 @@ const ITSolutionsPage: "React.FC = () => {"
         "Remote access""
       ],
 
-      color: "from-purple-500 to-indigo-500","
-      price: "Starting at ,800/month","
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at ,800/month",
 
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],"
       useCases: ["Office networking", "Remote work", "Data centers"],"
       href: "/network-solutions"
     },
     {
-      title: "Data Management","
-      description: "Comprehensive data management solutions for storage, processing, and analytics.","
+      title: "Data Management",
+      description: "Comprehensive data management solutions for storage, processing, and analytics.",
       icon: "ChartBarIcon",
       features: [
         "Data storage","
@@ -115,15 +115,15 @@ const ITSolutionsPage: "React.FC = () => {"
         "Backup and recovery","
         "Data governance""
       ],
-      color: "from-orange-50o0 to-red-50o0","
-      price: "Starting at $2,0o00/month","
+      color: "from-orange-50o0 to-red-50o0",
+      price: "Starting at $2,0o00/month",
       benefits: ["Better insights", "Data security", "Compliance"],"
       useCases: ["Business intelligence", "Data analytics", "Compliance"],"
       href: "/data-management"
     },
     {
-      title: "IT Support","
-      description: "Comprehensive IT support services to keep your systems running smoothly.","
+      title: "IT Support",
+      description: "Comprehensive IT support services to keep your systems running smoothly.",
       icon: "UserGroupIcon",
       features: [
         "24/7 support","
@@ -134,8 +134,8 @@ const ITSolutionsPage: "React.FC = () => {"
         "User training""
       ],
 
-      color: "from-cyan-500 to-blue-500","
-      price: "Starting at ,000/month","
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at ,000/month",
 
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
       useCases: ["Help desk", "System maintenance", "User support"],";
@@ -145,21 +145,21 @@ const ITSolutionsPage: "React.FC = () => {"
 
   const features = [
     {
-      title: "Expert Solutions","
-      description: "Our team of certified professionals delivers cutting-edge IT solutions.","
+      title: "Expert Solutions",
+      description: "Our team of certified professionals delivers cutting-edge IT solutions.",
 
       icon: CpuChipIcon},
     {
-      title: "Scalable Architecture","
-      description: "Solutions that grow with your business and adapt to changing needs.","
+      title: "Scalable Architecture",
+      description: "Solutions that grow with your business and adapt to changing needs.",
       icon: CloudIcon},
     {
-      title: "24/7 Support","
-      description: "Round-the-clock support to ensure your systems are always running.","
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your systems are always running.",
       icon: UserGroupIcon},
     {
-      title: "Security First","
-      description: "Security is built into every solution we deliver.","
+      title: "Security First",
+      description: "Security is built into every solution we deliver.",
       icon: ShieldCheckIcon}
 
   ];
@@ -289,7 +289,7 @@ import { Helmet } from 'react-helmet-async';'
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               IT Solutions
             </h1>
-            <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive IT solutions to power your business infrastructure
             </p>
             <p className="text-lg text-gray-40o0 max-w-3xl mx-auto">
@@ -312,7 +312,7 @@ import { Helmet } from 'react-helmet-async';'
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
-                  <p className="text-gray-30o0 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   
@@ -325,7 +325,7 @@ import { Helmet } from 'react-helmet-async';'
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>",
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-30o0">
+                        <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
                         </li>
@@ -383,7 +383,7 @@ import { Helmet } from 'react-helmet-async';'
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our IT Solutions?
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Expert IT services backed by years of experience and cutting-edge technology
             </p>
           </div>
@@ -393,7 +393,7 @@ import { Helmet } from 'react-helmet-async';'
                 <ServerIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 Certified IT professionals with extensive experience in enterprise infrastructure and cloud technologies.
               </p>
             </div>
@@ -402,7 +402,7 @@ import { Helmet } from 'react-helmet-async';'
                 <ClockIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 Round-the-clock monitoring and support to ensure your IT infrastructure runs smoothly at all times.
               </p>
             </div>
@@ -411,7 +411,7 @@ import { Helmet } from 'react-helmet-async';'
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 Bank-level security measures and compliance standards to protect your critical business data.
               </p>
             </div>
@@ -420,7 +420,7 @@ import { Helmet } from 'react-helmet-async';'
                 <CogIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 Flexible IT solutions that grow with your business and adapt to changing requirements.
               </p>
             </div>
@@ -435,7 +435,7 @@ import { Helmet } from 'react-helmet-async';'
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our IT Implementation Process
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               A systematic approach to delivering reliable and efficient IT solutions
             </p>
           </div>
@@ -445,7 +445,7 @@ import { Helmet } from 'react-helmet-async';'
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Assessment & Planning</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 We assess your current IT infrastructure and develop a comprehensive implementation plan.
               </p>
             </div>
@@ -454,7 +454,7 @@ import { Helmet } from 'react-helmet-async';'
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Design & Configuration</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 We design and configure your IT solutions according to best practices and your requirements.
               </p>
             </div>
@@ -463,7 +463,7 @@ import { Helmet } from 'react-helmet-async';'
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Implementation & Testing</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 We implement the solutions and conduct thorough testing to ensure everything works perfectly.
               </p>
             </div>
@@ -472,7 +472,7 @@ import { Helmet } from 'react-helmet-async';'
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Monitoring & Support</h3>
-              <p className="text-gray-30o0">
+              <p className="text-gray-300">
                 We provide ongoing monitoring, maintenance, and support to keep your systems running optimally.
               </p>
             </div>
@@ -487,7 +487,7 @@ import { Helmet } from 'react-helmet-async';'
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Optimize Your IT Infrastructure?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-12">
+            <p className="text-xl text-gray-300 mb-12">
               Let's discuss how our IT solutions can enhance your business operations and security'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -506,7 +506,7 @@ import { Helmet } from 'react-helmet-async';'
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
             </div>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-30o0">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
               <div className="flex items-center gap-3">
                 <PhoneIcon className="w-6 h-6 text-purple-40o0" />
                 <span>+1-30o2-464-0o950</span>

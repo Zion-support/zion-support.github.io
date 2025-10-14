@@ -76,7 +76,7 @@ const ImprovedImage: React.FC = () => {
             href=""
             className=""
           >
-            Get Started Today;
+            Get Started Today
           </a>
         </div>
       </section>
