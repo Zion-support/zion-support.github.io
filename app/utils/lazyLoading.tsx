@@ -1,4 +1,4 @@
-import { lazy, ComponentType } from 'react';
+import { lazy, ComponentType, Suspense } from 'react';
 import LazyWrapper from '../components/LazyWrapper';
 
 // Higher-order component for lazy loading
@@ -10,8 +10,9 @@ export const withLazyLoading = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <Suspense fallback={fallback}>
+        <LazyComponent {...(props as any)} />
+      </Suspense>
     </LazyWrapper>
   );
 };
@@ -25,8 +26,9 @@ export const createLazyComponent = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <Suspense fallback={fallback}>
+        <LazyComponent {...(props as any)} />
+      </Suspense>
     </LazyWrapper>
   );
 };
