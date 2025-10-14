@@ -6,6 +6,7 @@ const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+<<<<<<< HEAD
 // Mock CSS imports
 jest.mock('react-lazy-load-image-component/src/effects/blur.css', () => ({}));
 
@@ -23,6 +24,9 @@ jest.mock('react-lazy-load-image-component', () => {
 });
 
 Object.defineProperty(window, "matchMedia", {
+=======
+// Mock window.matchMediaObject.defineProperty(window, "matchMedia", {
+>>>>>>> d03fe0994f96ae1bf0091ebd7304a05d9dca49b7
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
@@ -41,14 +45,9 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
+  takeRecords() {
+    return [];
+  }
   unobserve() {}
 };
 

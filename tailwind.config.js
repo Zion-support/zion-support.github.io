@@ -2,6 +2,7 @@
 export default {
   content: [
     "./index.html",
+<<<<<<< HEAD
     "./app/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
@@ -28,3 +29,12 @@ export default {
   },
   plugins: [],
 }
+=======
+    "./**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+>>>>>>> d03fe0994f96ae1bf0091ebd7304a05d9dca49b7

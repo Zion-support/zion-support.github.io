@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
@@ -113,6 +114,30 @@ function App() {
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   );
+=======
+import React from 'react';
+  return (
+    <div className="min-h-screen bg-slate-900 text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI and IT Solutions for the Modern Enterprise
+          </p>
+          <div className="flex justify-center space-x-4">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>  );
+>>>>>>> d03fe0994f96ae1bf0091ebd7304a05d9dca49b7
 }
 
 export default App;

@@ -120,10 +120,14 @@ const Footer = () => {
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>
                   {category.icon}
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-lg font-semibold text-white">
                   {category.title}
                 </h3>
               </div>
+=======
+                <h3 className="text-lg font-semibold">{category.title}</h3>              </div>
+>>>>>>> d03fe0994f96ae1bf0091ebd7304a05d9dca49b7
               <ul className="space-y-3">
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -140,9 +144,14 @@ const Footer = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
+=======
+        {/* Secondary Footer Links */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 pt-8 border-t border-white/10">          <div>
+>>>>>>> d03fe0994f96ae1bf0091ebd7304a05d9dca49b7
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
