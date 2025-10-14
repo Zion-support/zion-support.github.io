@@ -376,21 +376,21 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!"</p>
+              <p className="text-gray-600 mb-4 italic">&ldquo;Zion Tech Group built our AI-powered fitness app in just 3 months. The AI features are incredible and user engagement is up 200%!&rdquo;</p>
               <div className="font-semibold text-gray-900">David Kim</div>
               <div className="text-sm text-gray-500">Founder, FitAI</div>
             </div>
             
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!"</p>
+              <p className="text-gray-600 mb-4 italic">&ldquo;Their mobile app development team delivered an amazing e-commerce app with AI recommendations. Sales increased by 150%!&rdquo;</p>
               <div className="font-semibold text-gray-900">Lisa Wang</div>
               <div className="text-sm text-gray-500">CEO, ShopSmart</div>
             </div>
             
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-              <p className="text-gray-600 mb-4 italic">"The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly."</p>
+              <p className="text-gray-600 mb-4 italic">&ldquo;The AI chatbot integration they built for our app reduced support tickets by 80% and improved customer satisfaction significantly.&rdquo;</p>
               <div className="font-semibold text-gray-900">Robert Johnson</div>
               <div className="text-sm text-gray-500">CTO, ServicePro</div>
             </div>
