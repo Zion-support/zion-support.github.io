@@ -1,5 +1,38 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react';
 
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
+
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart?: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
+const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
+  useEffect(() => {
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+
+    const performanceMetrics: PerformanceMetrics = {};
+
+    // Measure Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      performanceMetrics.lcp = lastEntry.startTime;
+      setMetrics({ ...performanceMetrics });
+    });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
@@ -8,7 +41,8 @@ import { useEffect } from 'react'
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          performanceMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          setMetrics({ ...performanceMetrics });
         }
       });
     });
@@ -24,7 +58,8 @@ import { useEffect } from 'react'
           clsValue += layoutShiftEntry.value;
         }
       });
-      metrics.cls = clsValue;
+      performanceMetrics.cls = clsValue;
+      setMetrics({ ...performanceMetrics });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -33,7 +68,8 @@ import { useEffect } from 'react'
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime;
+          performanceMetrics.fcp = entry.startTime;
+          setMetrics({ ...performanceMetrics });
         }
       });
     });
@@ -42,14 +78,15 @@ import { useEffect } from 'react'
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      performanceMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      setMetrics({ ...performanceMetrics });
     }
 
     // Send metrics after page load
     const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) {
+      if (Object.keys(performanceMetrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.log('Performance Metrics:', metrics);
+        console.log('Performance Metrics:', performanceMetrics);
       }
     };
 

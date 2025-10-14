@@ -14,7 +14,7 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
   };
 
   return (
-    <nav className="bg-slate-900 border-b border-slate-700">
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50 neon-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -25,7 +25,7 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
             <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hiddenlg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -41,7 +41,7 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}>
                     <Icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4h-4 ml-1" />}
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (

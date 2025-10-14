@@ -6,7 +6,7 @@ interface UseSEOProps {
   keywords?: string;
 }
 
-export function useSEO({ title, description, keywords }: UseSEOProps) {
+export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const metaDescription = document.querySelector('meta[name="description"]')
