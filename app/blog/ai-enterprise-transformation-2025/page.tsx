@@ -53,7 +53,7 @@ const EnterpriseTransformationPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
             <p className="text-gray-700 mb-6">
               The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
-              exponential value. Here's the proven roadmap:
+              exponential value. Here&apos;s the proven roadmap:
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>
@@ -76,7 +76,7 @@ const EnterpriseTransformationPage: React.FC = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
             <p className="text-gray-700 mb-6">
-              The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:
+              The transformation delivered measurable value across multiple dimensions. Here&apos;s the detailed breakdown:
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Direct Cost Savings</h3>
