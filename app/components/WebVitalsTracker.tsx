@@ -1,20 +1,28 @@
-'use client;'
-import React from 'react;'
-export default function WebVitalsTracker() {
-  return (
-    <div>Page content</div>
-  )
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.
-        </p>
+'use client';
 
-      </div>
-    </>
-  )
-        </p></div></div>
-  );};
+import { useEffect } from 'react';
+
+interface WebVitalsTrackerProps {
+  onVitalsUpdate?: (vitals: unknown) => void;
+}
+
+export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerProps) {
+  useEffect(() => {
+    const trackWebVitals = () => {
+      // Track Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(onVitalsUpdate);
+          getFID(onVitalsUpdate);
+          getFCP(onVitalsUpdate);
+          getLCP(onVitalsUpdate);
+          getTTFB(onVitalsUpdate);
+        });
+      }
+    };
+
+    trackWebVitals();
+  }, [onVitalsUpdate]);
+
+  return null;
+}

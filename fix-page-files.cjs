@@ -1,93 +1,68 @@
-#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 
-const fs = require("fs");
-const path = require("path");
+// Function to fix a single page file
+function fixPageFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has the problematic pattern
+    if (content.includes('return (\n    <div>Page content</div>\n  );\n\n  return (')) {
+      // Extract the page title from the h1 tag
+      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
+      const pageTitle = titleMatch ? titleMatch[1] : 'Page';
+      
+      // Create a clean page template
+      const cleanContent = `'use client';
+import React from 'react';
 
-// Function to create a simple page template
-function createPageTemplate(pageName) {
-  return `import React from 'react';
-
-export default function ${pageName}() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace(/([A-Z])/g, " $1").trim()}</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName
-            .replace(/([A-Z])/g, " $1")
-            .trim()
-            .toLowerCase()}</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${pageTitle}</h1>
+          <p className="text-gray-600 text-lg">
+            This page is under development.
+          </p>
         </div>
       </div>
     </div>
   );
 }`;
-}
-
-// Function to fix page files
-function fixPageFile(filePath) {
-  try {
-    const fileName = path.basename(filePath, ".tsx");
-    const pageName =
-      fileName.charAt(0).toUpperCase() +
-      fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-
-    console.log(`Fixing page: ${filePath}`);
-    const template = createPageTemplate(pageName);
-    fs.writeFileSync(filePath, template);
-    return true;
+      
+      fs.writeFileSync(filePath, cleanContent);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
+  return false;
 }
 
-// Function to find all page files
-function findPageFiles(dir) {
-  const files = [];
-
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules" &&
-        item !== "dist"
-      ) {
-        traverse(fullPath);
-      } else if (
-        stat.isFile() &&
-        item === "page.tsx" &&
-        fullPath.includes("/app/")
-      ) {
-        files.push(fullPath);
+// Function to recursively find and fix page files
+function fixPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixPageFiles(filePath);
+    } else if (file === 'page.tsx' && filePath.includes('/app/')) {
+      if (fixPageFile(filePath)) {
+        fixedCount++;
       }
     }
   }
-
-  traverse(dir);
-  return files;
+  
+  return fixedCount;
 }
 
-// Main execution
-console.log("🔍 Searching for page files to fix...");
-const pageFiles = findPageFiles(process.cwd());
-
-console.log(`📝 Found ${pageFiles.length} page files to fix.`);
-
-console.log("\n🔧 Fixing page files...");
-let fixedCount = 0;
-
-pageFiles.forEach((file) => {
-  if (fixPageFile(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`\n✅ Successfully fixed ${fixedCount} page files.`);
-console.log("\n🎉 Page file fixing complete!");
+// Run the fix
+const appDir = './app';
+const fixedCount = fixPageFiles(appDir);
+console.log(`Fixed ${fixedCount} page files`);

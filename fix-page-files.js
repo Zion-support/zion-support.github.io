@@ -1,55 +1,68 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
 
-// Find all page.tsx files in the app directory
-const pageFiles = await glob('app/**/page.tsx', { cwd: import.meta.url.replace('file://', '').replace('/fix-page-files.js', '') });
-
-console.log(`Found ${pageFiles.length} page files to fix`);
-
-for (const filePath of pageFiles) {
+// Function to fix a single page file
+function fixPageFile(filePath) {
   try {
-    const fullPath = path.join(import.meta.url.replace('file://', '').replace('/fix-page-files.js', ''), filePath);
-    let content = fs.readFileSync(fullPath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    // Skip if already properly formatted
-    if (content.includes('return (') && content.includes('<div className="min-h-screen')) {
-      console.log(`Skipping ${filePath} - already properly formatted`);
-      continue;
-    }
-    
-    // Extract the page name from the file path
-    const pathParts = filePath.split('/');
-    const pageName = pathParts[pathParts.length - 2]; // Get the directory name before page.tsx
-    
-    // Convert kebab-case to Title Case
-    const titleCase = pageName
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-    
-    // Create the proper JSX structure
-    const newContent = `import React from 'react';
+    // Check if file has the problematic pattern
+    if (content.includes('return (\n    <div>Page content</div>\n  );\n\n  return (')) {
+      // Extract the page title from the h1 tag
+      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
+      const pageTitle = titleMatch ? titleMatch[1] : 'Page';
+      
+      // Create a clean page template
+      const cleanContent = `'use client';
+import React from 'react';
 
-export default function ${titleCase.replace(/\s+/g, '')}Page() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${titleCase}</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.replace(/-/g, ' ')}</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${pageTitle}</h1>
+          <p className="text-gray-600 text-lg">
+            This page is under development.
+          </p>
         </div>
       </div>
     </div>
   );
-}
-`;
-    
-    fs.writeFileSync(fullPath, newContent);
-    console.log(`Fixed ${filePath}`);
+}`;
+      
+      fs.writeFileSync(filePath, cleanContent);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
+  return false;
 }
 
-console.log('Page files fix completed');
+// Function to recursively find and fix page files
+function fixPageFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixPageFiles(filePath);
+    } else if (file === 'page.tsx' && filePath.includes('/app/')) {
+      if (fixPageFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Run the fix
+const appDir = './app';
+const fixedCount = fixPageFiles(appDir);
+console.log(`Fixed ${fixedCount} page files`);

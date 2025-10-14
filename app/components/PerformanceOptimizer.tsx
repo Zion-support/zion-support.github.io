@@ -27,12 +27,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical resources
       const criticalResources = ['/css/critical.css', '/js/critical.js'];'
       criticalResources.forEach((resource) => {
-        const link = document.createElement('link');'
-        link.rel = 'preload;'
-        link.href = resource
-        link.as = resource.endsWith('.css') ? 'style' : 'script;'
-        document.head.appendChild(link)
-      )
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        document.head.appendChild(link);
+      });
     };
     // Run optimizations
     optimizeImages()
@@ -42,7 +42,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => {
       // Cleanup if needed
     };
-  }, [])
-  return <React.Fragment>{children}</React.Fragment>
+  }, []);
+
+  return <>{children}</>;
 };
-export default PerformanceOptimizer
+
+export default PerformanceOptimizer;
