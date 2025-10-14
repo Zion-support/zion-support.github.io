@@ -4,14 +4,14 @@ export const seoConstants = {
   defaultKeywords: 'technology, solutions, innovation',
   
   getTitle: (pageTitle?: string) => {
-    return pageTitle ? `${pageTitle} - ${this.defaultTitle}` : this.defaultTitle;
+    return pageTitle ? `${pageTitle} - ${seoConstants.defaultTitle}` : seoConstants.defaultTitle;
   },
   
   getDescription: (pageDescription?: string) => {
-    return pageDescription || this.defaultDescription;
+    return pageDescription || seoConstants.defaultDescription;
   },
   
   getKeywords: (pageKeywords?: string) => {
-    return pageKeywords || this.defaultKeywords;
+    return pageKeywords || seoConstants.defaultKeywords;
   }
 };

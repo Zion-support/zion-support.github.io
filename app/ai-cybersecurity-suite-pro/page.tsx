@@ -13,7 +13,7 @@ import { Database } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Link } from "react-router-dom";
 
-function AICybersecuritySuitePro() {
+function Page() {
   const features = [
     {
       icon: Shield,
@@ -112,4 +112,5 @@ function AICybersecuritySuitePro() {
 }
 
 
-export default features;
+const page = React.lazy(() => import('./page'));
+export default page;
