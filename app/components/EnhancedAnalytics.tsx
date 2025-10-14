@@ -247,16 +247,56 @@ const EnhancedAnalytics: React.FC = () => {
 
   // Expose tracking functions globally for manual tracking
   useEffect(() => {
-    (window as unknown as { [key: string]: unknown }).trackEvent = trackEvent;
-    (window as unknown as { [key: string]: unknown }).trackUserInteraction = trackUserInteraction;
-    (window as unknown as { [key: string]: unknown }).trackPerformance = trackPerformance;
-    (window as unknown as { [key: string]: unknown }).trackError = trackError;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackEvent = trackEvent;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackUserInteraction = trackUserInteraction;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackPerformance = trackPerformance;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackError = trackError;
 
     return () => {
-      delete (window as unknown as { [key: string]: unknown }).trackEvent;
-      delete (window as unknown as { [key: string]: unknown }).trackUserInteraction;
-      delete (window as unknown as { [key: string]: unknown }).trackPerformance;
-      delete (window as unknown as { [key: string]: unknown }).trackError;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackEvent;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackUserInteraction;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackPerformance;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackError;
     };
   }, [trackEvent, trackUserInteraction, trackPerformance, trackError]);
 
