@@ -1,18 +1,33 @@
 import React from 'react';
-'use client'
-export default function ComponentsPage() {
+
+interface LoadingSpinnerProps {
+  size?: 'small' | 'medium' | 'large';
+  color?: string;
+  className?: string;
+}
+
+const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'medium', 
+  color = 'text-blue-600',
+  className = ''
+}) => {
+  const sizeClasses = {
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
+    large: 'w-12 h-12'
+  };
 
   return (
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">""""
-      <div className="container mx-auto px-4">""""
-        <h1 className="text-4xl font-bold mb-8">Components</h1>""""
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.;
-        </p>
+    <div className={`flex items-center justify-center ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} ${color} border-2 border-current border-t-transparent rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
       </div>
     </div>
   );
-}"
-        </p></div></div>"
-  );"
-''""""
+};
+
+export default EnhancedLoadingSpinner;

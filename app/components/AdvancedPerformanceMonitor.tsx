@@ -1,6 +1,18 @@
-import React from 'react';
-const AdvancedPerformanceMonitor: React.FC = () => {
+import React, { useState, useEffect } from 'react';
 
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkLatency: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  totalBlockingTime: number;
+}
+
+const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -8,9 +20,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     networkLatency: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,;
-    firstInputDelay: 0,;
-    totalBlockingTime: "0;"
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    totalBlockingTime: 0
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -18,26 +30,27 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only run in development mode
-    if (process.env.NODE_ENV !== 'development') {'
+    if (process.env.NODE_ENV !== 'development') {
       return;
     }
+
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {'
+      if (typeof window !== 'undefined' && window.performance) {
         const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = window.performance.getEntriesByType('paint');
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {"
-            if (entry.entryType === 'largest-contentful-paint') {'""
-              setMetrics(prev => ({"""
-                ...prev,""""
-                largestContentfulPaint: "Math.round(entry.startTime)"
+          entries.forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              setMetrics(prev => ({
+                ...prev,
+                largestContentfulPaint: Math.round(entry.startTime)
               }));
-            }"
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {'""
-              setMetrics(prev => ({"""
-                ...prev,""""
-                cumulativeLayoutShift: "prev.cumulativeLayoutShift + (entry as any).value"
+            }
+            if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+              setMetrics(prev => ({
+                ...prev,
+                cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as PerformanceEntry & { value: number }).value
               }));
             }
           });
@@ -46,8 +59,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] });
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
         const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        
         // Memory usage (if available)
-        const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
+        const memoryUsage = (window as Window & { performance?: { memory?: { usedJSHeapSize?: number } } }).performance?.memory?.usedJSHeapSize || 0;
         
         // Network latency
         const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
@@ -55,19 +69,19 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         // Calculate Total Blocking Time
         const longTasks = window.performance.getEntriesByType('longtask');
         const totalBlockingTime = longTasks.reduce((total, task) => {
-          return total + (task.duration - 50); // 50ms is the threshold"
-        }, 0);""
-"""
-        setMetrics({""""
-          loadTime: "Math.round(loadTime)",""""
-          renderTime: "Math.round(firstContentfulPaint)",""""
-          memoryUsage: "Math.round(memoryUsage / 10o24 / 10o24)", // Convert to MB""""
-          networkLatency: "Math.round(networkLatency)",""""
-          firstContentfulPaint: "Math.round(firstContentfulPaint)","
-          largestContentfulPaint: 0, // Will be updated by observer""
-          cumulativeLayoutShift: 0, // Will be updated by observer"""
-          firstInputDelay: 0, // Would need specific measurement""""
-          totalBlockingTime: "Math.round(totalBlockingTime)"
+          return total + (task.duration - 50); // 50ms is the threshold
+        }, 0);
+
+        setMetrics({
+          loadTime: Math.round(loadTime),
+          renderTime: Math.round(firstContentfulPaint),
+          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
+          networkLatency: Math.round(networkLatency),
+          firstContentfulPaint: Math.round(firstContentfulPaint),
+          largestContentfulPaint: 0, // Will be updated by observer
+          cumulativeLayoutShift: 0, // Will be updated by observer
+          firstInputDelay: 0, // Would need specific measurement
+          totalBlockingTime: Math.round(totalBlockingTime)
         });
 
         return () => observer.disconnect();
@@ -75,18 +89,18 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     };
 
     // Measure after initial load
-    const timer = setTimeout(measurePerformance, 10o00);
+    const timer = setTimeout(measurePerformance, 1000);
 
     return () => clearTimeout(timer);
-  }, []);"
-""
-  // Toggle visibility with keyboard shortcut"""
-  useEffect(() => {""""
-    const handleKeyPress = (event: "KeyboardEvent) => {;"
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {';
+  }, []);
+
+  // Toggle visibility with keyboard shortcut
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
         setIsVisible(!isVisible);
       }
-      if (event.ctrlKey && event.shiftKey && event.key === 'R') {'
+      if (event.ctrlKey && event.shiftKey && event.key === 'R') {
         setIsRecording(!isRecording);
       }
     };
@@ -95,31 +109,71 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [isVisible, isRecording]);
 
-  // Don't render in production'
-  if (process.env.NODE_ENV === 'production') {'
+  // Don't render in production
+  if (process.env.NODE_ENV === 'production') {
     return null;
   }
+
   if (!isVisible) {
     return null;
   }
+
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';"
-  };""
-""">
-  return (""">"
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">""""
-      <div className="container mx-auto px-4">""""
-        <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>""""
-        <p className="text-gray-30o0 text-lg">
-          This component is under development.;
-        </p>
+    return 'text-red-400';
+  };
+
+  return (
+    <div className="fixed top-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-bold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-sm">
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className={getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}>
+            {metrics.loadTime}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
+            {metrics.firstContentfulPaint}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
+            {metrics.largestContentfulPaint}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}>
+            {metrics.cumulativeLayoutShift.toFixed(3)}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>Memory:</span>
+          <span>{metrics.memoryUsage}MB</span>
+        </div>
+        <div className="flex justify-between">
+          <span>TBT:</span>
+          <span className={getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600 })}>
+            {metrics.totalBlockingTime}ms
+          </span>
+        </div>
       </div>
     </div>
   );
-}
-export default AdvancedPerformanceMonitor;"
-          This component is under development.</p></div></div>"
-  )"
-export default AdvancedPerformanceMonitor""""
+};
+
+export default AdvancedPerformanceMonitor;

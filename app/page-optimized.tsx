@@ -7,50 +7,50 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-white">""
-      <Helmet>"""
-        <title>Page optimized - Zion Tech Group</title>""""
-        <meta name="description" content="Professional page optimized services by Zion Tech Group." />"""
-      </Helmet>""""
-      <div className="container mx-auto px-4 py-16">""""
-        <div className="text-center">""""
-          <h1 className="text-4xl font-bold text-gray-90o0 mb-8">""
-            Page optimized;"""
-          </h1>""""
-          <p className="text-xl text-gray-60o0 mb-8">""
-            Professional page optimized solutions tailored to your business needs.;"""
-          </p>""""
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mt-12">""""
-            <div className="bg-blue-50 border border-blue-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-blue-90o0 mb-2">""
-                Expert Solutions;"""
-              </h3>""""
-              <p className="text-blue-70o0">"
-                Our team of experts delivers cutting-edge page optimized solutions.;""
-              </p>"""
-            </div>""""
-            <div className="bg-green-50 border border-green-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-green-90o0 mb-2">""
-                Custom Implementation;"""
-              </h3>""""
-              <p className="text-green-70o0">"
-                Tailored page optimized implementations for your specific requirements.;""
-              </p>"""
-            </div>""""
-            <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-purple-90o0 mb-2">""
-                24/7 Support;"""
-              </h3>""""
-              <p className="text-purple-70o0">
-                Round-the-clock support for all your page optimized needs.;"
+      <Helmet>
+        <title>Page optimized - Zion Tech Group</title>"
+        <meta name="description" content="Professional page optimized services by Zion Tech Group." />
+      </Helmet>"
+      <div className="container mx-auto px-4 py-16">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">""
+            Page optimized;
+          </h1>"
+          <p className="text-xl text-gray-600 mb-8">""
+            Professional page optimized solutions tailored to your business needs.;
+          </p>"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">""
+                Expert Solutions;
+              </h3>"
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge page optimized solutions.
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">""
+                Custom Implementation;
+              </h3>"
+              <p className="text-green-700">"
+                Tailored page optimized implementations for your specific requirements.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">""
+                24/7 Support;
+              </h3>"
+              <p className="text-purple-700">
+                Round-the-clock support for all your page optimized needs.
               </p>"
             "
-          </div>""""
-          <div className="mt-12">""""
-            <button className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors">
+          </div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today;
             </button>
           </div>
-        </div>"
-      </div>"
+        </div>
+      </div>
     
   "

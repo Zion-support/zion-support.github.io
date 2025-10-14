@@ -1,56 +1,117 @@
-import React from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-'use client'
-export default function Page() {
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
 
-  return (
-    <div className="min-h-screen bg-white">""
-      <Helmet>"""
-        <title>GlobalErrorBoundary - Zion Tech Group</title>""""
-        <meta name="description" content="Professional globalerrorboundary services by Zion Tech Group." />"""
-      </Helmet>""""
-      <div className="container mx-auto px-4 py-16">""""
-        <div className="text-center">""""
-          <h1 className="text-4xl font-bold text-gray-90o0 mb-8">""
-            GlobalErrorBoundary;"""
-          </h1>""""
-          <p className="text-xl text-gray-60o0 mb-8">""
-            Professional globalerrorboundary solutions tailored to your business needs.;"""
-          </p>""""
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mt-12">""""
-            <div className="bg-blue-50 border border-blue-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-blue-90o0 mb-2">""
-                Expert Solutions;"""
-              </h3>""""
-              <p className="text-blue-70o0">"
-                Our team of experts delivers cutting-edge globalerrorboundary solutions.;""
-              </p>"""
-            </div>""""
-            <div className="bg-green-50 border border-green-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-green-90o0 mb-2">""
-                Custom Implementation;"""
-              </h3>""""
-              <p className="text-green-70o0">"
-                Tailored globalerrorboundary implementations for your specific requirements.;""
-              </p>"""
-            </div>""""
-            <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-purple-90o0 mb-2">""
-                24/7 Support;"""
-              </h3>""""
-              <p className="text-purple-70o0">
-                Round-the-clock support for all your globalerrorboundary needs.;"
-              </p>"
-            "
-          </div>""""
-          <div className="mt-12">""""
-            <button className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors">
-              Get Started Today;
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
+}
+
+class GlobalErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId: Math.random().toString(36).substr(2, 9)
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Global error caught by boundary:', error, errorInfo);
+    }
+
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: sendErrorToService(error, errorInfo, this.state.errorId);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <Helmet>
+            <title>Error - Zion Tech Group</title>
+          </Helmet>
+          <div className="text-center p-8 max-w-md">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            
+            {this.state.errorId && (
+              <p className="text-sm text-gray-500 mb-6">
+                Error ID: {this.state.errorId}
+              </p>
+            )}
+            
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Refresh Page
             </button>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-gray-500">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-4 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
-        </div>"
-      </div>"
-    
-  "
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default GlobalErrorBoundary;

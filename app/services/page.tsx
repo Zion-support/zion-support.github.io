@@ -7,9 +7,7 @@ import {
   CloudIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon
-} from '@heroicons/react/24/outline';
+  RocketLaunchIcon} from '@heroicons/react/24/outline';
 
 export default function ServicesPage() {
   const services = [
@@ -100,7 +98,7 @@ export default function ServicesPage() {
                 <ul className="text-sm text-gray-500 space-y-1">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center">
-                      <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />
+                      <div className="w-4 h-4 text-green-500 mr-2" />
                       {feature}
                     </li>
                   ))}

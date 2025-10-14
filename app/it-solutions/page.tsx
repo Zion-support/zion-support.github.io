@@ -5,7 +5,6 @@ import {
   ShieldCheckIcon, 
   CloudIcon, 
   RocketLaunchIcon,
-  CheckCircleIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 

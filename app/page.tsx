@@ -8,9 +8,7 @@ import {
   RocketLaunchIcon,
   ChartBarIcon,
   UsersIcon,
-  GlobeAltIcon,
-  CheckCircleIcon
-} from '@heroicons/react/24/outline';
+  GlobeAltIcon} from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
   return (

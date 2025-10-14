@@ -3,12 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
-  CloudIcon, 
   RocketLaunchIcon,
-  CheckCircleIcon,
-  UsersIcon,
-  GlobeAltIcon,
-  ChartBarIcon
+  UsersIcon
 } from '@heroicons/react/24/outline';
 
 const AboutPage: React.FC = () => {
@@ -45,15 +41,15 @@ const AboutPage: React.FC = () => {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3" />
+                    <div className="w-5 h-5 text-green-500 mr-3" />
                     <span>Innovation-driven solutions</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3" />
+                    <div className="w-5 h-5 text-green-500 mr-3" />
                     <span>Client-focused approach</span>
                   </li>
                   <li className="flex items-center">
-                    <CheckCircleIcon className="w-5 h-5 text-green-500 mr-3" />
+                    <div className="w-5 h-5 text-green-500 mr-3" />
                     <span>Cutting-edge technology</span>
                   </li>
                 </ul>

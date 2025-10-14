@@ -1,32 +1,48 @@
-import React, { Suspense, lazy, ComponentType } from 'react'
-import LoadingSpinner from './LoadingSpinner'
+import React, { useState, useRef, useEffect, ReactNode } from 'react';
+
 interface LazyWrapperProps {
-  children: "React.ReactNode"
-  fallback?: React.ReactNode}
-"
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ ""
-"""
-  children, """"
-  fallback = <LoadingSpinner size="lg" text="Loading component..." /> ";
-}) => {"";"
-  return (}";"""
-    <Suspense fallback="{fallback}">;
-      {children};
-    </Suspense>;
-  );"
-}""
-// Higher-order component for lazy loading"""
-export const withLazyLoading = <P extends object>(""""
-  Component: "ComponentType<P>",""
-  fallback?: React.ReactNode"""
-) => {""""
-  const LazyComponent = lazy(() => Promise.resolve({ default: "Component"}))""""
-  return (props: "P) => (",}">;
-      <LazyComponent {...props} />;
-    </LazyWrapper>;
-  );
+  children: ReactNode;
+  className?: string;
+  threshold?: number;
+  rootMargin?: string;
+  fallback?: ReactNode;
 }
-export default LazyWrapper;"
-};""
-"""
-export default LazyWrapper;''""""
+
+const LazyWrapper: React.FC<LazyWrapperProps> = ({
+  children,
+  className = '',
+  threshold = 0.1,
+  rootMargin = '0px',
+  fallback = <div className="w-full h-32 bg-gray-200 animate-pulse rounded" />
+}) => {
+  const [isInView, setIsInView] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasLoaded) {
+          setIsInView(true);
+          setHasLoaded(true);
+          observer.disconnect();
+        }
+      },
+      { threshold, rootMargin }
+    );
+
+    if (wrapperRef.current) {
+      observer.observe(wrapperRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [threshold, rootMargin, hasLoaded]);
+
+  return (
+    <div ref={wrapperRef} className={className}>
+      {isInView ? children : fallback}
+    </div>
+  );
+};
+
+export default LazyWrapper;

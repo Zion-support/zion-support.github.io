@@ -1,89 +1,63 @@
 import React from 'react';
 
-import { Helmet } from 'react-helmet-async';
-'use client'
-const FuturisticButtonEnhanced: React.FC = () => {
+interface FuturisticButtonEnhancedProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'primary' | 'secondary' | 'outline' | 'glow';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  loading?: boolean;
+}
+
+const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({ 
+  children,
+  className = '',
+  variant = 'primary',
+  size = 'md',
+  icon,
+  onClick,
+  type = 'button',
+  disabled = false,
+  loading = false
+}) => {
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
+  
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl',
+    secondary: 'bg-gradient-to-r from-gray-600 to-gray-700 text-white hover:from-gray-700 hover:to-gray-800 focus:ring-gray-500 shadow-lg hover:shadow-xl',
+    outline: 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+    glow: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 focus:ring-cyan-500 shadow-lg hover:shadow-cyan-500/50 shadow-cyan-500/25'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-3 py-2 text-sm',
+    md: 'px-4 py-2 text-base',
+    lg: 'px-6 py-3 text-lg'
+  };
 
   return (
-    <div className="min-h-screen bg-white">""
-      <Helmet>"""
-        <title>Futuristic Button Enhanced - Zion Tech Group</title>""""
-        <meta name="description" content="Professional futuristic button enhanced services by Zion Tech Group." />"
-      </Helmet>"
-      {/* Hero Section */}""""
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">""""
-        <div className="max-w-6xl mx-auto text-center">""""
-          <h1 className="text-5xl font-bold text-gray-90o0 mb-6">""
-            Futuristic Button Enhanced;"""
-          </h1>""""
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Professional futuristic button enhanced services;
-            designed to help your business grow and succeed.;
-          </p>"
-        </div>""
-      </section>"""
-      {/* Content Section */}""""
-      <section className="py-16 px-4">""""
-        <div className="max-w-6xl mx-auto">""""
-          <div className="grid md:grid-cols-2 gap-12 items-center">"""
-            <div>""""
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Services</h2>""""
-              <p className="text-lg text-gray-60o0 mb-6">"
-                We provide comprehensive futuristic button enhanced;""
-                solutions tailored to your specific needs and requirements.;"""
-              </p>""""
-              <ul className="space-y-3">""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>""
-                  Custom solutions;"""
-                </li>""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>""
-                  Expert consultation;"""
-                </li>""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>
-                  Ongoing support;"
-                </li>""
-              </ul>"""
-            </div>""""
-            <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg p-8 text-white">""""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
-              <p className="mb-6">"
-                Ready to transform your business with our futuristic button enhanced services?;""
-              </p>"""
-              <a;""""
-                href="""""">
-                className="">
-              >
-                Contact Us;
-              </a>
-            </div>
-          </div>"
-        </div>""
-      </section>"""
-      {/* CTA Section */}""""
-      <section className="py-16 px-4 bg-blue-60o0">""""
-        <div className="max-w-4xl mx-auto text-center">""""
-          <h2 className="text-3xl font-bold text-white mb-6">""
-            Ready to Get Started?;"""
-          </h2>""""
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our futuristic button enhanced';"
-            services can help you achieve your goals.;""
-          </p>"""
-          <a;""""
-            href="""""">
-            className="">
-          >
-            Get Started Today;
-          </a>
-        </div>
-      </section>
-    </div>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled || loading}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+    >
+      {/* Animated background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+      
+      {loading ? (
+        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+      ) : (
+        <>
+          {icon && <span className="mr-2">{icon}</span>}
+          {children}
+        </>
+      )}
+    </button>
   );
-}
-export default FuturisticButtonEnhanced;"
-};""
-"""
-export default FuturisticButtonEnhanced;''""""
+};
+
+export default FuturisticButtonEnhanced;

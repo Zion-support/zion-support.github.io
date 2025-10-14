@@ -1,56 +1,71 @@
 import React from 'react';
 
-import { Helmet } from 'react-helmet-async';
+interface FuturisticServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  className?: string;
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue';
+  onClick?: () => void;
+}
 
-'use client'
-export default function Page() {
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  className = '',
+  glowColor = 'purple',
+  onClick
+}) => {
+  const glowColors = {
+    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',
+    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',
+    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',
+    green: 'shadow-green-500/25 hover:shadow-green-500/40',
+    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40'
+  };
+
+  const borderColors = {
+    purple: 'border-purple-500/30 hover:border-purple-500/60',
+    cyan: 'border-cyan-500/30 hover:border-cyan-500/60',
+    pink: 'border-pink-500/30 hover:border-pink-500/60',
+    green: 'border-green-500/30 hover:border-green-500/60',
+    blue: 'border-blue-500/30 hover:border-blue-500/60'
+  };
 
   return (
-    <div className="min-h-screen bg-white">""
-      <Helmet>"""
-        <title>FuturisticServiceCard - Zion Tech Group</title>""""
-        <meta name="description" content="Professional futuristicservicecard services by Zion Tech Group." />"""
-      </Helmet>""""
-      <div className="container mx-auto px-4 py-16">""""
-        <div className="text-center">""""
-          <h1 className="text-4xl font-bold text-gray-90o0 mb-8">""
-            FuturisticServiceCard;"""
-          </h1>""""
-          <p className="text-xl text-gray-60o0 mb-8">""
-            Professional futuristicservicecard solutions tailored to your business needs.;"""
-          </p>""""
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mt-12">""""
-            <div className="bg-blue-50 border border-blue-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-blue-90o0 mb-2">""
-                Expert Solutions;"""
-              </h3>""""
-              <p className="text-blue-70o0">"
-                Our team of experts delivers cutting-edge futuristicservicecard solutions.;""
-              </p>"""
-            </div>""""
-            <div className="bg-green-50 border border-green-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-green-90o0 mb-2">""
-                Custom Implementation;"""
-              </h3>""""
-              <p className="text-green-70o0">"
-                Tailored futuristicservicecard implementations for your specific requirements.;""
-              </p>"""
-            </div>""""
-            <div className="bg-purple-50 border border-purple-20o0 rounded-lg p-6">""""
-              <h3 className="text-lg font-semibold text-purple-90o0 mb-2">""
-                24/7 Support;"""
-              </h3>""""
-              <p className="text-purple-70o0">
-                Round-the-clock support for all your futuristicservicecard needs.;"
-              </p>"
-            "
-          </div>""""
-          <div className="mt-12">""""
-            <button className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors">
-              Get Started Today;
-            </button>
+    <div
+      className={`
+        relative bg-gradient-to-br from-slate-800/80 to-slate-700/80
+        backdrop-blur-sm border border-slate-600/50
+        rounded-xl p-6 transition-all duration-300
+        hover:transform hover:scale-105 hover:-translate-y-1
+        ${glowColors[glowColor]}
+        ${borderColors[glowColor]}
+        ${onClick ? 'cursor-pointer' : ''}
+        ${className}
+      `}
+      onClick={onClick}
+    >
+      {/* Animated border gradient */}
+      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {icon && (
+          <div className="mb-4 text-3xl text-white">
+            {icon}
           </div>
-        </div>"
-      </div>"
-    
-  "
+        )}
+        <h3 className="text-xl font-bold text-white mb-3">
+          {title}
+        </h3>
+        <p className="text-gray-300">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default FuturisticServiceCard;

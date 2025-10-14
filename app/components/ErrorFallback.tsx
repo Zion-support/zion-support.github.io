@@ -1,89 +1,72 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
-'use client'
-const ErrorFallback: React.FC = () => {
 
+interface ErrorFallbackProps {
+  error: Error;
+  resetError: () => void;
+  errorId?: string;
+}
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ 
+  error, 
+  resetError, 
+  errorId 
+}) => {
   return (
-    <div className="min-h-screen bg-white">""
-      <Helmet>"""
-        <title>Error Fallback - Zion Tech Group</title>""""
-        <meta name="description" content="Professional error fallback services by Zion Tech Group." />"
-      </Helmet>"
-      {/* Hero Section */}""""
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">""""
-        <div className="max-w-6xl mx-auto text-center">""""
-          <h1 className="text-5xl font-bold text-gray-90o0 mb-6">""
-            Error Fallback;"""
-          </h1>""""
-          <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">
-            Professional error fallback services;
-            designed to help your business grow and succeed.;
-          </p>"
-        </div>""
-      </section>"""
-      {/* Content Section */}""""
-      <section className="py-16 px-4">""""
-        <div className="max-w-6xl mx-auto">""""
-          <div className="grid md:grid-cols-2 gap-12 items-center">"""
-            <div>""""
-              <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Services</h2>""""
-              <p className="text-lg text-gray-60o0 mb-6">"
-                We provide comprehensive error fallback;""
-                solutions tailored to your specific needs and requirements.;"""
-              </p>""""
-              <ul className="space-y-3">""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>""
-                  Custom solutions;"""
-                </li>""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>""
-                  Expert consultation;"""
-                </li>""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-60o0 rounded-full mr-3"></span>
-                  Ongoing support;"
-                </li>""
-              </ul>"""
-            </div>""""
-            <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg p-8 text-white">""""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
-              <p className="mb-6">"
-                Ready to transform your business with our error fallback services?;""
-              </p>"""
-              <a;""""
-                href="""""">
-                className="">
-              >
-                Contact Us;
-              </a>
-            </div>
-          </div>"
-        </div>""
-      </section>"""
-      {/* CTA Section */}""""
-      <section className="py-16 px-4 bg-blue-60o0">""""
-        <div className="max-w-4xl mx-auto text-center">""""
-          <h2 className="text-3xl font-bold text-white mb-6">""
-            Ready to Get Started?;"""
-          </h2>""""
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our error fallback';"
-            services can help you achieve your goals.;""
-          </p>"""
-          <a;""""
-            href="""""">
-            className="">
-          >
-            Get Started Today;
-          </a>
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <Helmet>
+        <title>Error - Zion Tech Group</title>
+      </Helmet>
+      <div className="text-center p-8 max-w-md">
+        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+          </svg>
         </div>
-      </section>
+        
+        <h1 className="text-2xl font-bold text-gray-900 mb-4">
+          Oops! Something went wrong
+        </h1>
+        
+        <p className="text-gray-600 mb-6">
+          We're sorry, but something unexpected happened. Please try again.
+        </p>
+        
+        {errorId && (
+          <p className="text-sm text-gray-500 mb-6">
+            Error ID: {errorId}
+          </p>
+        )}
+        
+        <div className="space-y-3">
+          <button
+            onClick={resetError}
+            className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Try Again
+          </button>
+          
+          <button
+            onClick={() => window.location.reload()}
+            className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
+          >
+            Refresh Page
+          </button>
+        </div>
+        
+        {process.env.NODE_ENV === 'development' && (
+          <details className="mt-6 text-left">
+            <summary className="cursor-pointer text-sm text-gray-500">
+              Error Details (Development)
+            </summary>
+            <pre className="mt-2 text-xs text-red-600 bg-red-50 p-4 rounded overflow-auto">
+              {error.toString()}
+            </pre>
+          </details>
+        )}
+      </div>
     </div>
   );
-}
-export default ErrorFallback;"
-};""
-"""
-export default ErrorFallback;''""""
+};
+
+export default ErrorFallback;
