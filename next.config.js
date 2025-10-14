@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -20,5 +19,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
