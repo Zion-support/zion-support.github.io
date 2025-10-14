@@ -10,7 +10,17 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  ChartBarIcon,
+  CogIcon,
+  DocumentTextIcon,
+  GlobeAltIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  SparklesIcon,
+  BoltIcon,
+  EyeIcon
 } from '@heroicons/react/24/outline';
 
 const HomePage: React.FC = () => {
@@ -19,25 +29,84 @@ const HomePage: React.FC = () => {
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
+      href: '/ai-solutions',
+      gradient: 'from-purple-500 to-pink-500',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      href: '/cloud-infrastructure'
+      href: '/cloud-infrastructure',
+      gradient: 'from-blue-500 to-cyan-500',
+      features: ['AWS/Azure/GCP', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization']
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
-      href: '/cybersecurity'
+      href: '/cybersecurity',
+      gradient: 'from-red-500 to-orange-500',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business.',
-      href: '/digital-transformation'
+      href: '/digital-transformation',
+      gradient: 'from-green-500 to-emerald-500',
+      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training']
+    },
+    {
+      icon: ChartBarIcon,
+      title: 'Micro SaaS Solutions',
+      description: 'Specialized software solutions for specific business needs and workflows.',
+      href: '/micro-saas-solutions',
+      gradient: 'from-indigo-500 to-purple-500',
+      features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Maintenance']
+    },
+    {
+      icon: GlobeAltIcon,
+      title: '5G Solutions',
+      description: 'Next-generation 5G network solutions for ultra-fast connectivity.',
+      href: '/5g-solutions',
+      gradient: 'from-yellow-500 to-orange-500',
+      features: ['Network Design', 'IoT Integration', 'Edge Computing', 'Performance Optimization']
+    }
+  ];
+
+  const microSaasServices = [
+    {
+      name: 'AI Content Generator Pro',
+      description: 'Generate high-quality content with AI-powered tools',
+      price: '$29/month',
+      href: '/ai-content-generator',
+      icon: DocumentTextIcon,
+      popular: true
+    },
+    {
+      name: 'Cybersecurity Monitor Suite',
+      description: '24/7 threat detection and security monitoring',
+      price: '$49/month',
+      href: '/cybersecurity-monitor',
+      icon: ShieldCheckIcon,
+      popular: true
+    },
+    {
+      name: 'Cloud Analytics Dashboard',
+      description: 'Comprehensive cloud infrastructure monitoring',
+      price: '$39/month',
+      href: '/cloud-analytics',
+      icon: ChartBarIcon,
+      popular: false
+    },
+    {
+      name: 'AI Business Automation',
+      description: 'Intelligent workflow automation platform',
+      price: '$59/month',
+      href: '/ai-automation',
+      icon: CogIcon,
+      popular: false
     }
   ];
 
@@ -48,6 +117,13 @@ const HomePage: React.FC = () => {
     'Security First',
     'Performance Optimized',
     'Cost Effective'
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Countries Served' }
   ];
 
   return (
