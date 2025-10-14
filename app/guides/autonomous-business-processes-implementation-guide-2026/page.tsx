@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag, CheckCircle, Zap, Target, BarChart, Brain, Cpu, Settings } from 'lucide-react';
+import { ArrowLeft, Clock, CheckCircle, Zap, Target, BarChart, Brain, Cpu, Settings } from 'lucide-react';
 
 export const metadata = {
   title: 'Autonomous Business Processes Implementation Guide 2026 - Complete Enterprise Automation',
