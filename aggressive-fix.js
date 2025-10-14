@@ -11,7 +11,7 @@ function runTypeCheck() {
     const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
     return output;
   } catch (error) {
-    // console.error('Error:', error);
+    // console.error('Error: ', error);'
     return error.stdout || error.stderr || '';
   }
 }
@@ -22,7 +22,7 @@ function processTypeCheckOutput() {
   
   lines.forEach(line => {
     if (line.includes('.tsx') || line.includes('.ts')) {
-      // console.log('Processing file:', line);
+      // console.log('Processing file: ', line);'
     }
   });
 }
@@ -30,7 +30,7 @@ function processTypeCheckOutput() {
 const createGenericPage = (serviceName, title, description) => `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
 export default function ${serviceName}() {
   const features = [
@@ -62,23 +62,23 @@ export default function ${serviceName}() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             ${title}
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             ${description}
           </p>
         </div>
         
-        <div className="text-center">
+        <div className="text-center"></div>
           <p className="text-gray-300">Coming Soon - ${title} Solutions</p>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function ${serviceName}() {
   );
 }`;
 
-// Run the type check processing
+// Run the type check processing;
 processTypeCheckOutput();
 
 export { createGenericPage, processTypeCheckOutput };

@@ -26,109 +26,43 @@ export default defineConfig({
     modulePreload: {
       polyfill: false,
     },
-    // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
-    // Enable compression
+    assetsInlineLimit: 4096,
     reportCompressedSize: true,
-    // Optimize for production;
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization;
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true, // Better Safari compatibility;
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    // Enhanced build optimizations;
+    chunkSizeWarningLimit: 500,
+    treeshake: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries - split into smaller chunks
           if (id.includes('react-dom')) {
             return 'react-dom'
           }
           if (id.includes('react/') && !id.includes('react-dom')) {
             return 'react-core'
           }
-          // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries - split animations and icons
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-motion';
-            }
-            if (id.includes('react-helmet')) {
-              return 'vendor-helmet';
-            }
-            return 'vendor-other';
-          }
-          
           if (id.includes('/app/pages/')) {
             return 'pages';
           }
@@ -151,10 +85,6 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    // Optimize bundle size
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    treeshake: true,
   },
   server: {
     port: 3000,
@@ -168,7 +98,6 @@ export default defineConfig({
     port: 4173,
     open: false,
   },
-  // Optimize dependencies;
   optimizeDeps: {
     include: [
       'react',

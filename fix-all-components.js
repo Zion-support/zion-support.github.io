@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
 console.log('🔧 Fixing all component files...');
 
-// Function to recursively find all component files
+// Function to recursively find all component files;
 function getAllComponentFiles(dir) {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -24,7 +24,7 @@ function getAllComponentFiles(dir) {
   return files;
 }
 
-// Function to create a basic component template
+// Function to create a basic component template;
 function createComponentTemplate(filePath) {
   const fileName = path.basename(filePath, '.tsx');
   const componentName = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
@@ -33,7 +33,7 @@ function createComponentTemplate(filePath) {
 
 const ${componentName}: React.FC = () => {
   return (
-    <div className="p-4">
+    <div className="p-4"></div>
       <h2 className="text-2xl font-bold mb-4">${componentName}</h2>
       <p>This component is under development.</p>
     </div>
@@ -44,7 +44,7 @@ export default ${componentName};
 `;
 }
 
-// Main function
+// Main function;
 function main() {
   try {
     const files = getAllComponentFiles('/workspace/app/components');
@@ -70,7 +70,7 @@ function main() {
     console.log(`❌ Errors: ${errorCount} files`);
     
   } catch (error) {
-    console.error('❌ Fatal error:', error.message);
+    console.error('❌ Fatal error: ', error.message);'
     process.exit(1);
   }
 }

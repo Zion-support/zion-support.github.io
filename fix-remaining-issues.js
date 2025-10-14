@@ -1,14 +1,14 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to add missing icon imports
+// Function to add missing icon imports;
 function addMissingIconImports(content, filePath) {
   const icons = new Set();
   
-  // Check for common icons
+  // Check for common icons;
   const iconPatterns = [
     'Brain', 'Shield', 'Zap', 'Users', 'Target', 'BarChart3', 'ArrowRight', 
     'CheckCircle', 'Globe', 'TrendingUp', 'FileText', 'Database', 'PieChart',
@@ -22,9 +22,9 @@ function addMissingIconImports(content, filePath) {
   });
   
   if (icons.size > 0) {
-    // Check if lucide-react is already imported
+    // Check if lucide-react is already imported;
     if (content.includes('from "lucide-react"') || content.includes("from 'lucide-react'")) {
-      // Add to existing import
+      // Add to existing import;
       const existingImport = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/);
       if (existingImport) {
         const existingIcons = existingImport[1].split(',').map(i => i.trim());
@@ -35,7 +35,7 @@ function addMissingIconImports(content, filePath) {
         );
       }
     } else {
-      // Add new import
+      // Add new import;
       const importStatement = `import { ${Array.from(icons).join(', ')} } from 'lucide-react';\n`;
       content = importStatement + content;
     }
@@ -44,9 +44,9 @@ function addMissingIconImports(content, filePath) {
   return content;
 }
 
-// Function to fix unescaped entities
+// Function to fix unescaped entities;
 function fixUnescapedEntities(content) {
-  // Fix single quotes in JSX text content
+  // Fix single quotes in JSX text content;
   content = content.replace(/(?<=>)[^<]*'[^<]*(?=<)/g, (match) => {
     return match.replace(/'/g, '&apos;');
   });
@@ -54,60 +54,60 @@ function fixUnescapedEntities(content) {
   return content;
 }
 
-// Function to fix parsing errors
+// Function to fix parsing errors;
 function fixParsingErrors(content) {
-  // Fix common parsing issues
+  // Fix common parsing issues;
   content = content.replace(/,\s*\)/g, ')');
   content = content.replace(/,\s*}/g, '}');
   
-  // Fix numeric literal issues
+  // Fix numeric literal issues;
   content = content.replace(/(\d+)\s*([a-zA-Z_])/g, '$1 $2');
   
   return content;
 }
 
-// Function to fix merge conflict markers
+// Function to fix merge conflict markers;
 function fixMergeConflictMarkers(content) {
-  // Remove any remaining merge conflict markers
+  // Remove any remaining merge conflict markers;
   content = content.replace(/\n?/g, '');
   content = content.replace(/  
   return content;
 }
 
-// Function to fix unused variables
+// Function to fix unused variables;
 function fixUnusedVariables(content) {
-  // Prefix unused parameters with underscore
+  // Prefix unused parameters with underscore;
   content = content.replace(/\berror\b(?=\s*[,)])/g, '_error');
   content = content.replace(/\berrorInfo\b(?=\s*[,)])/g, '_errorInfo');
   
-  // Fix unused variable assignments
+  // Fix unused variable assignments;
   content = content.replace(/const\s+error\s*=/g, 'const _error =');
   content = content.replace(/let\s+error\s*=/g, 'let _error =');
   
   return content;
 }
 
-// Function to fix TypeScript any types
+// Function to fix TypeScript any types;
 function fixTypeScriptAny(content) {
-  // Replace any with unknown
+  // Replace any with unknown;
   content = content.replace(/:\s*any\b/g, ': unknown');
   content = content.replace(/as\s+any\b/g, 'as unknown');
   
   return content;
 }
 
-// Function to remove unused imports
+// Function to remove unused imports;
 function removeUnusedImports(content) {
-  // Remove unused icon imports
+  // Remove unused icon imports;
   const lines = content.split('\n');
   const newLines = [];
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    // Check if this is an import line
+    // Check if this is an import line;
     if (line.includes('import') && line.includes('from')) {
-      // Check if any imported items are actually used
+      // Check if any imported items are actually used;
       const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
       if (importMatch) {
         const importedItems = importMatch[1].split(',').map(item => item.trim());
@@ -118,10 +118,10 @@ function removeUnusedImports(content) {
         });
         
         if (usedItems.length === 0) {
-          // Skip this import line
+          // Skip this import line;
           continue;
         } else if (usedItems.length < importedItems.length) {
-          // Update the import to only include used items
+          // Update the import to only include used items;
           const newImport = line.replace(
             /{\s*[^}]+\s*}/,
             `{ ${usedItems.join(', ')} }`
@@ -138,7 +138,7 @@ function removeUnusedImports(content) {
   return newLines.join('\n');
 }
 
-// Main function to process files
+// Main function to process files;
 async function processFiles() {
   const patterns = [
     'app/**/*.tsx',
@@ -157,7 +157,7 @@ async function processFiles() {
         const filePath = path.resolve(file);
         let content = fs.readFileSync(filePath, 'utf8');
         
-        // Apply all fixes
+        // Apply all fixes;
         content = fixMergeConflictMarkers(content);
         content = addMissingIconImports(content, file);
         content = fixUnescapedEntities(content);
@@ -166,7 +166,7 @@ async function processFiles() {
         content = fixTypeScriptAny(content);
         content = removeUnusedImports(content);
         
-        // Write back the fixed content
+        // Write back the fixed content;
         fs.writeFileSync(filePath, content, 'utf8');
         processedCount++;
         
@@ -359,6 +359,6 @@ const filesToFixImports = [;
   }
   
 } catch (error) {
-  console.error('💥 Fatal error during issue resolution:', error.message);'
+  console.error('💥 Fatal error during issue resolution: ', error.message);',
   process.exit(1);
 }"

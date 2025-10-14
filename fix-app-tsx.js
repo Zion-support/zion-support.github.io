@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 
 console.log('🔧 Fixing App.tsx syntax errors...');
@@ -28,7 +28,7 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
@@ -43,7 +43,7 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
-// Additional service pages
+// Additional service pages;
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
@@ -55,13 +55,13 @@ const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page")
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
 
-// 5G Solutions
+// 5G Solutions;
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 
-// AI Services
+// AI Services;
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AIAutomationPlatformPage = React.lazy(() => import("./app/ai-automation-platform/page"));
@@ -73,7 +73,7 @@ const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/pag
 const AIEcommerceSolutionsPage = React.lazy(() => import("./app/ai-ecommerce-solutions/page"));
 const AIMobileAppDevelopmentPage = React.lazy(() => import("./app/ai-mobile-app-development/page"));
 
-// Additional pages
+// Additional pages;
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
@@ -92,19 +92,19 @@ function App() {
   };
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
+    <GlobalErrorBoundary></GlobalErrorBoundary>
+      <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <HelmetProvider></Helmet>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <AccessibilityEnhancer></AccessibilityEnhancer>
+            <Router></Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
                 <FuturisticBackground />
                 <Navigation onSidebarToggle={handleSidebarToggle} />
                 <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
                 <Breadcrumb />
-                <main id="main-content" role="main">
+                <main id="main-content" role="main"></main>
                   <Suspense fallback={<LoadingPage />}>
-                    <Routes>
+                    <Routes></Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
@@ -179,5 +179,5 @@ try {
   fs.writeFileSync('/workspace/App.tsx', content, 'utf8');
   console.log('✅ Fixed App.tsx');
 } catch (error) {
-  console.error('❌ Error fixing App.tsx:', error.message);
+  console.error('❌ Error fixing App.tsx: ', error.message);'
 }
