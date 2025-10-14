@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-
 interface EnhancedAnalyticsProps {
   children: ReactNode;
 }
@@ -7,6 +6,5 @@ interface EnhancedAnalyticsProps {
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <div>{children}</div>;
 };
-;
 export default EnhancedAnalytics;
 "

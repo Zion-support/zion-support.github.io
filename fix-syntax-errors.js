@@ -1,21 +1,23 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix remaining syntax issues
-function fixRemainingIssues(content) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
   let fixed = content;
   
-  // Fix unterminated string literals in JSX attributes
-  fixed = fixed.replace(/className="([^"]*?)(\n|$)/gm, (match, p1, p2) => {
-    if (!p1.endsWith('"')) {
-      return `className="${p1}"${p2}`;
+  // Fix unterminated string literals by adding missing quotes
+  // Look for lines that start with a quote but don't end with one
+  fixed = fixed.replace(/^(\s*"[^"]*?)(\n|$)/gm, (match, p1, p2) => {
+    if (!p1.endsWith('"') && !p1.endsWith('";')) {
+      return p1 + '"' + p2;
     }
     return match;
   });
   
-  // Fix unterminated string literals in content attributes
+  // Fix unterminated string literals in JSX attributes
   fixed = fixed.replace(/content="([^"]*?)(\n|$)/gm, (match, p1, p2) => {
     if (!p1.endsWith('"')) {
       return `content="${p1}"${p2}`;
@@ -23,24 +25,10 @@ function fixRemainingIssues(content) {
     return match;
   });
   
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/return \("([\s\S]*?)"\);/g, (match, p1) => {
-    const cleaned = p1.replace(/"/g, '').trim();
-    return `return (\n    <>\n      ${cleaned}\n    </>\n  );`;
-  });
-  
-  // Fix missing closing quotes in JSX
-  fixed = fixed.replace(/<([^>]*?)>([^<]*?)(\n|$)/gm, (match, tag, content, newline) => {
-    if (content && !content.includes('<') && !content.includes('>') && !content.endsWith('"')) {
-      return match;
-    }
-    return match;
-  });
-  
-  // Fix malformed function declarations
-  fixed = fixed.replace(/const (\w+) = \(\) => \{"/g, (match, funcName) => {
-    return `const ${funcName} = () => {`;
-  });
+  // Remove merge conflict markers
+  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
+  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*/g, '');
+  fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
   
   // Fix extra semicolons and quotes
   fixed = fixed.replace(/;";/g, ';');
@@ -48,8 +36,26 @@ function fixRemainingIssues(content) {
   fixed = fixed.replace(/""/g, '"');
   fixed = fixed.replace(/;;/g, ';');
   
-  // Fix malformed imports
+  // Fix malformed import statements
   fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
+  fixed = fixed.replace(/import {[^}]*} from "[^"]*";";/g, (match) => match.replace(/";$/, '";'));
+  
+  // Fix JSX structure issues
+  fixed = fixed.replace(/return \("([\s\S]*?)"\);/g, (match, p1) => {
+    return `return (\n${p1}\n);`;
+  });
+  
+  // Fix missing closing tags
+  fixed = fixed.replace(/<div([^>]*)>([\s\S]*?)(\n\s*\))/g, (match, p1, p2, p3) => {
+    if (!p2.includes('</div>')) {
+      return `<div${p1}>${p2}</div>${p3}`;
+    }
+    return match;
+  });
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/export default function Page\(\) \{;/g, 'export default function Page() {');
+  fixed = fixed.replace(/const \w+ = \(\) => \{"/g, (match) => match.replace(/"/, ''));
   
   // Fix missing closing braces
   const openBraces = (fixed.match(/\{/g) || []).length;
@@ -65,10 +71,16 @@ function fixRemainingIssues(content) {
     return `<>${p1}</>`;
   });
   
-  // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
+  // Fix missing semicolons after statements
+  fixed = fixed.replace(/(\w+)\s*$/gm, (match, p1) => {
+    if (['return', 'const', 'let', 'var', 'function'].includes(p1)) {
+      return match;
+    }
+    if (!match.endsWith(';') && !match.endsWith('{') && !match.endsWith('}') && !match.endsWith(')')) {
+      return match + ';';
+    }
+    return match;
+  });
   
   return fixed;
 }
@@ -77,7 +89,7 @@ function fixRemainingIssues(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingIssues(content);
+    const fixed = fixSyntaxErrors(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -125,4 +137,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixRemainingIssues, processFile };
+export { fixSyntaxErrors, processFile };

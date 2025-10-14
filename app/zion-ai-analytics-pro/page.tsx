@@ -54,7 +54,7 @@ export default function ZionAiAnalyticsPro() {;
   Cpu,
   Globe,
   Target,
-  Calendar
+  Calendar;
 } from "lucide-react"
 
 const ZionAIAnalyticsProPage = () => {
@@ -96,7 +96,6 @@ const ZionAIAnalyticsProPage = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter"
@@ -118,7 +117,7 @@ const ZionAIAnalyticsProPage = () => {
         "Monthly reports"
         "Email notifications"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional"
@@ -143,7 +142,7 @@ const ZionAIAnalyticsProPage = () => {
         "Priority support"
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise"
@@ -167,10 +166,9 @@ const ZionAIAnalyticsProPage = () => {
         "Custom integrations"
         "On-premise deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
@@ -200,23 +198,21 @@ const ZionAIAnalyticsProPage = () => {
       avatar: "ER"
     }
   ];
-
   const stats = [
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6"
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6"
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6"
     { number: "24/7", label: "Real-time Monitoring", icon: <Monitor className="w-6 h-6"
   ];
-
   return (
     <>
       <Helmet >
         <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"
           content="Transform your business with Zion AI Analytics Pro - advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Starting at $299/month."
         />
-        <meta
+        <meta;
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, real-time dashboards, data visualization, business reporting, AI insights, data analytics platform"
     { number: "300%", label: "Faster Decision Making", icon: <TrendingUp className="w-6 h-6"
@@ -224,20 +220,20 @@ const ZionAIAnalyticsProPage = () => {
     { number: "50+", label: "Data Sources Supported", icon: <Database className="w-6 h-6"
     { number: "24/7", label: "Real-Time Monitoring", icon: <Clock className="w-6 h-6"
   ];
+>>>>>>> origin/main;
 >>>>>>> origin/main
->>>>>>> origin/main
-
+;
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> origin/main
+>>>>>>> origin/main;
       <Helmet >
         <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"
           content="Transform your business with Zion AI Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated insights. Starting from $299/month."
         />
-        <meta
+        <meta;
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, data visualization, dashboard, machine learning, business insights, data analysis"
         />
@@ -260,7 +256,7 @@ const HomePage = () => {
                 </div>
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-                    Zion AI Analytics Pro
+                    Zion AI Analytics Pro;
                   </span>
                 </h1>
                 
@@ -273,13 +269,13 @@ const HomePage = () => {
                   <Link to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                   >
-                    Start Free Trial
+                    Start Free Trial;
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   </Link>
                   <Link to="/demo"
                     className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   >
-                    Watch Demo
+                    Watch Demo;
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform"
                   </Link>
                 </div>
@@ -331,7 +327,7 @@ const HomePage = () => {
                     <Link to="/contact"
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
                     >
-                      Get Started Now
+                      Get Started Now;
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                     </Link>
                   </div>
@@ -347,17 +343,17 @@ const HomePage = () => {
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
-                  Powerful Features
+                  Powerful Features;
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                Everything you need to transform your data into actionable business insights
+                Everything you need to transform your data into actionable business insights;
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {features.map((feature, index) => (
-                <div
+                <div;
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
@@ -390,7 +386,7 @@ const HomePage = () => {
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
-                  Simple, Transparent Pricing
+                  Simple, Transparent Pricing;
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -400,10 +396,10 @@ const HomePage = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {pricingPlans.map((plan, index) => (
-                <div
+                <div;
                   key={index}
                   className={`
-                    plan.popular 
+                    plan.popular ;
                       ? 'border-cyan-500/50 shadow-cyan-500/25'
                       : 'border-white/20 hover:border-cyan-500/30'
                   }`
@@ -411,7 +407,7 @@ const HomePage = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold"
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -436,12 +432,12 @@ const HomePage = () => {
                   
                   <Link to="/contact"
                     className={`
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`
                   >
-                    Get Started
+                    Get Started;
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   </Link>
                 </div>
@@ -456,17 +452,17 @@ const HomePage = () => {
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
-                  Trusted by Industry Leaders
+                  Trusted by Industry Leaders;
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                See what our clients say about Zion AI Analytics Pro
+                See what our clients say about Zion AI Analytics Pro;
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {testimonials.map((testimonial, index) => (
-                <div
+                <div;
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
@@ -531,13 +527,13 @@ const HomePage = () => {
                 <Link to="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                 </Link>
                 <Link to="/demo"
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </Link>
               </div>
             </div>
@@ -563,40 +559,40 @@ const HomePage = () => {
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-              Zion AI Analytics Pro
+              Zion AI Analytics Pro;
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">"
+          <p className="text-xl text-gray-600 mb-8>"
             Professional page solutions tailored to your business needs.;
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12>"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6>"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2>"
                 Expert Solutions;
               </h3>
-              <p className="text-blue-700">"
+              <p className="text-blue-700>"
                 Our team of experts delivers cutting-edge page solutions.;
               </p>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6>"
+              <h3 className="text-lg font-semibold text-green-900 mb-2>"
                 Custom Implementation;
               </h3>
-              <p className="text-green-700">"
+              <p className="text-green-700>"
                 Tailored page implementations for your specific requirements.;
               </p>
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6>"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2>"
                 24/7 Support;
               </h3>
-              <p className="text-purple-700">"
+              <p className="text-purple-700>"
                 Round-the-clock support for all your page needs.;
               </p>
             </div>
           </div>
-          <div className="mt-12">"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+          <div className="mt-12>"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors>"
               Get Started Today;
             </button>
           </div>
@@ -608,7 +604,8 @@ const HomePage = () => {
 "
 }
   );
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+}}}}}}}}}

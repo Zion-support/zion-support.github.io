@@ -21,8 +21,7 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
@@ -36,8 +35,7 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
-
-// Additional service pages
+// Additional service pages;
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
@@ -55,45 +53,37 @@ const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/pa
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-
-// AI Service pages
+// AI Service pages;
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
 const AiMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-automation/page"));
 const AiCybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
-
-// New AI Services
+// New AI Services;
 const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
 const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
 const AiPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
-
-// Micro SAAS pages
+// Micro SAAS pages;
 const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
 const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
 const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
-
-// New Micro SAAS Services
+// New Micro SAAS Services;
 const ZionAiVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAiCustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-
-// Additional pages
+// Additional pages;
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
-
-// Main App Component
+// Main App Component;
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-
   const toggleSidebar = React.useCallback(() => {
     setIsSidebarOpen(prev => !prev);
   }, []);
-
   return (
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
@@ -175,13 +165,13 @@ function App() {
                     </Suspense>
                   </main>
                   <Footer />
-                  <AdvancedPerformanceOptimizer 
+                  <AdvancedPerformanceOptimizer
                     enableImageOptimization={true}
                     enablePreloading={true}
                     enableCaching={true}
                     enableCompression={true}
                   />
-                  <AdvancedPerformanceEnhancer 
+                  <AdvancedPerformanceEnhancer
                     enableImageOptimization={true}
                     enablePreloading={true}
                     enableCaching={true}

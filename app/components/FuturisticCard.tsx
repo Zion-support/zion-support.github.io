@@ -52,7 +52,7 @@ export default FuturisticCard;
     </div>)
   );
 export default FuturisticCard
-
+;
 };
 export default FuturisticCard;'
 "

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -45,7 +44,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     if (!noindex && !nofollow) robots.push('index', 'follow');
     return robots.join(', ');
   }, [noindex, nofollow]);
-
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -72,9 +70,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -144,5 +140,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
-
 export default EnhancedSEO;

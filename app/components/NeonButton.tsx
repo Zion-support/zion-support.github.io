@@ -6,7 +6,7 @@ if (to) {
 )
     )
   return (
-    <button
+    <button;
       onClick={onClick}
       className={classes}
     >

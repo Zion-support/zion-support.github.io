@@ -1,7 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer"
 
@@ -24,7 +24,6 @@ export default function ZionAIVoiceAssistantPro() {;
     "Voice-controlled presentations"
     "Multi-device synchronization"
   ];
-;
 const benefits = ["
     "Increase productivity by 60%","
     "Reduce manual tasks by 80%","
@@ -35,7 +34,6 @@ const benefits = ["
     "Reduce training time for new employees","
     "Improve response accuracy"
   ];
-;
 const pricingPlans = [
     {"
       name: "Starter","
@@ -50,7 +48,7 @@ const pricingPlans = [
         "Email support","
         "5GB storage"
       ],
-      popular: false
+      popular: false;
     },
     {"
       name: "Professional","
@@ -67,7 +65,7 @@ const pricingPlans = [
         "API access","
         "Analytics dashboard"
       ],
-      popular: true
+      popular: true;
     },
     {"
       name: "Enterprise","
@@ -85,10 +83,9 @@ const pricingPlans = [
         "Advanced analytics","
         "Custom deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
-;
 const testimonials = [
     {"
       name: "Sarah Johnson","
@@ -115,38 +112,36 @@ const testimonials = [
       avatar: "ER"
     }
   ];
-;
 const useCases = [
     {"
       title: "Customer Service","
       description: "Automate customer inquiries with intelligent voice responses","
-      icon: <Headphones className="w-8 h-8" />,"
+      icon: <Headphones className="w-8 h-8 />,"
       color: "from-blue-500 to-cyan-500"
     },
     {"
       title: "Meeting Assistant","
       description: "Transcribe, summarize, and manage meeting notes automatically","
-      icon: <Video className="w-8 h-8" />,"
+      icon: <Video className="w-8 h-8 />,"
       color: "from-purple-500 to-pink-500"
     },
     {"
       title: "Content Creation","
       description: "Generate articles, emails, and documents through voice commands","
-      icon: <FileText className="w-8 h-8" />,"
+      icon: <FileText className="w-8 h-8 />,"
       color: "from-green-500 to-emerald-500"
     },
     {"
       title: "Code Development","
       description: "Write, debug, and review code using natural language","
-      icon: <Code className="w-8 h-8" />,"
+      icon: <Code className="w-8 h-8 />,"
       color: "from-orange-500 to-red-500"
     }
   ];
-
       </Helmet>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"
+      <div className="container mx-auto px-4 py-16></div>"
+        <div className="text-center></div>"
+          <h1 className="text-4xl font-bold text-white mb-8>Home</h1>"
           <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
           </p>

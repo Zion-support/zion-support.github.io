@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
@@ -16,7 +15,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
 }) => {
   useEffect(() => {
-    // Skip to main content functionality
+    // Skip to main content functionality;
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -35,13 +34,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       `;
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
-
-    // Keyboard navigation enhancements
+    // Keyboard navigation enhancements;
     const enhanceKeyboardNavigation = () => {
       if (!enableKeyboardNavigation) return;
-
       const handleKeyDown = (e: KeyboardEvent) => {
-        // Escape key to close modals/dropdowns
+        // Escape key to close modals/dropdowns;
         if (e.key === 'Escape') {
           const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
@@ -49,37 +46,31 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
 
-        // Tab navigation improvements
+        // Tab navigation improvements;
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       };
-
-      // Remove keyboard navigation class on mouse use
+      // Remove keyboard navigation class on mouse use;
       const handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');
       };
-
       document.addEventListener('keydown', handleKeyDown);
       document.addEventListener('mousedown', handleMouseDown);
-
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };
     };
-
-    // Focus management
+    // Focus management;
     const enhanceFocusManagement = () => {
       if (!enableFocusManagement) return () => {};
-
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
           'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
         );
         const firstFocusableElement = focusableElements[0] as HTMLElement;
         const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
         const handleTabKey = (e: KeyboardEvent) => {
           if (e.key === 'Tab') {
             if (e.shiftKey) {
@@ -95,22 +86,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             }
           }
         };
-
         element.addEventListener('keydown', handleTabKey);
         firstFocusableElement?.focus();
-
         return () => {
           element.removeEventListener('keydown', handleTabKey);
         };
       };
-
       };
     };
-
-    // High contrast mode
+    // High contrast mode;
     const enhanceHighContrast = () => {
       if (!enableHighContrast) return () => {};
-
       const addHighContrastStyles = () => {
         const style = document.createElement('style');
         style.id = 'accessibility-high-contrast';
@@ -124,8 +110,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         `;
         document.head.appendChild(style);
       };
-
-
       return () => {
         const existingStyle = document.getElementById('accessibility-high-contrast');
         if (existingStyle) {
@@ -133,11 +117,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
     };
-
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
-
-      // Add ARIA landmarks
+      // Add ARIA landmarks;
       const addLandmarks = () => {
         const main = document.querySelector('main');
         if (main && !main.getAttribute('role')) {
@@ -159,8 +141,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           footer.setAttribute('role', 'contentinfo');
         }
       };
-
-      // Add live regions for dynamic content
+      // Add live regions for dynamic content;
       const addLiveRegions = () => {
         let liveRegion = document.getElementById('live-region');
         if (!liveRegion) {
@@ -172,10 +153,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.body.appendChild(liveRegion);
         }
       };
-
       addLandmarks();
       addLiveRegions();
-
       return () => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
@@ -183,14 +162,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
     };
-
-    // Initialize all enhancements
+    // Initialize all enhancements;
     addSkipLink();
     const cleanupKeyboard = enhanceKeyboardNavigation();
     const cleanupFocus = enhanceFocusManagement();
     const cleanupContrast = enhanceHighContrast();
     const cleanupMotion = enhanceScreenReader();
-
     return () => {
       if (cleanupKeyboard) cleanupKeyboard();
       if (cleanupFocus) cleanupFocus();
@@ -198,7 +175,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (cleanupMotion) cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-
   return (
     <>
       {children}
@@ -271,5 +247,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     </>
   );
 };
-
 export default AccessibilityEnhancer;

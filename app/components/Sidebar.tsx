@@ -19,15 +19,14 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon
+  UserGroupIcon;
 } from '
 interface SidebarProps {isOpen: boolean;
   onClose: () => void}
+>>>>>>> origin/main;
 >>>>>>> origin/main
->>>>>>> origin/main
-
+;
   ];
-
   const additionalLinks = [
     { name: "Privacy Policy", href: "/privacy"
     { name: "Terms of Service", href: "/terms"
@@ -35,7 +34,6 @@ interface SidebarProps {isOpen: boolean;
     { name: "Documentation", href: "/docs"
     { name: "Careers", href: "/careers"
   ];
-
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics'
     { name: 'AI Automation', href: '/ai-automation-platform'
@@ -44,7 +42,6 @@ interface SidebarProps {isOpen: boolean;
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity'
     { name: 'AI Data Analytics', href: '/ai-data-analytics'
   ];
-
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration'
     { name: 'DevOps Services', href: '/devops-services'
@@ -53,7 +50,6 @@ interface SidebarProps {isOpen: boolean;
     { name: 'Software Development', href: '/software-development'
     { name: 'Web Development', href: '/web-development'
   ];
-
   const microSaasServices = [
     { name: 'Project Management Pro', href: '/project-management-pro'
     { name: 'AI CRM Pro', href: '/zion-ai-crm-pro'
@@ -62,9 +58,7 @@ interface SidebarProps {isOpen: boolean;
     { name: 'Performance Monitor', href: '/zion-performance-monitor'
     { name: 'Email Automation', href: '/zion-email-automation'
   ];
-
   if (!isOpen) return null;
-
   return (
     <>
       <div className="fixed inset-0 z-50 md:hidden"
@@ -86,30 +80,28 @@ interface SidebarProps {isOpen: boolean;
     { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },'
     { name: 'Contact', href: '/contact', icon: PhoneIcon }'
   ];
-
   if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 md:hidden">"
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">"
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">"
-          <span className="text-xl font-bold text-white">Menu</span>"
-          <button onClick={onClose} className="text-gray-400 hover:text-white">"
-            <XMarkIcon className="w-6 h-6" />"
+    <div className="fixed inset-0 z-50 md:hidden>"
+      <div className="fixed inset-0 bg-black bg-opacity-50 onClick={onClose}></div>"
+      <div className="relative flex flex-col w-64 h-full bg-slate-900>"
+        <div className="flex items-center justify-between p-4 border-b border-slate-700>"
+          <span className="text-xl font-bold text-white>Menu</span>"
+          <button onClick={onClose} className="text-gray-400 hover:text-white>"
+            <XMarkIcon className="w-6 h-6 />"
           </button>
         </div>
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">"
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto>"
           {navigation.map((link) => (
             <div key={link.name}>
               {link.submenu ? (
                 <div>
-                  <button
+                  <button;
                     onClick={() => toggleExpanded(link.name)
-                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded""
+                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
                   >
                     <div className="flex items-center">"
-                      <link.icon className="w-5 h-5 mr-3" />"
+                      <link.icon className="w-5 h-5 mr-3 />"
                       {link.name}
                     </div>
                     <ChevronDownIcon className={`w-4 h-4 transition-transform ${`
@@ -118,7 +110,7 @@ interface SidebarProps {isOpen: boolean;
                     />
                   </button>
                   {expandedItems.includes(link.name) && (
-                    <div className="ml-4 mt-2 space-y-1">"
+                    <div className="ml-4 mt-2 space-y-1>"
                       {link.submenu.map((subLink) => (
                         <Link key={subLink.name}
                           to={subLink.href}
@@ -129,10 +121,10 @@ interface SidebarProps {isOpen: boolean;
                           }`}`
                           onClick={onClose}
                         >
-                          <subLink.icon className="w-4 h-4 mr-3" />"
+                          <subLink.icon className="w-4 h-4 mr-3 />"
                           {subLink.name}
->>>>>>> origin/main
-            <button
+>>>>>>> origin/main;
+            <button;
               onClick={onClose}
               className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
             >
@@ -144,7 +136,7 @@ interface SidebarProps {isOpen: boolean;
             {/* Main Navigation */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                Main
+                Main;
               </h3>
               <nav className="space-y-2"
                 {mainNavItems.map((item) => (
@@ -163,7 +155,7 @@ interface SidebarProps {isOpen: boolean;
             {/* Services */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                Services
+                Services;
               </h3>
               <nav className="space-y-2"
                 {serviceItems.map((item) => (
@@ -183,7 +175,7 @@ interface SidebarProps {isOpen: boolean;
             {/* AI Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                AI Services
+                AI Services;
               </h3>
               <nav className="space-y-1"
                 {aiServices.map((service) => (
@@ -193,7 +185,7 @@ interface SidebarProps {isOpen: boolean;
                     className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
                   >
                     {service.name}
-                  </Link>
+                  </Link></div>
                 ))}
               </nav>
             </div>
@@ -201,7 +193,7 @@ interface SidebarProps {isOpen: boolean;
             {/* IT Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                IT Services
+                IT Services;
               </h3>
               <nav className="space-y-1"
                 {itServices.map((service) => (
@@ -211,7 +203,7 @@ interface SidebarProps {isOpen: boolean;
                     className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
                   >
                     {service.name}
-                  </Link>
+                  </Link></div>
                 ))}
               </nav>
             </div>
@@ -219,7 +211,7 @@ interface SidebarProps {isOpen: boolean;
             {/* Micro SAAS Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                Micro SAAS
+                Micro SAAS;
               </h3>
               <nav className="space-y-1"
                 {microSaasServices.map((service) => (
@@ -229,7 +221,7 @@ interface SidebarProps {isOpen: boolean;
                     className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
                   >
                     {service.name}
-                  </Link>
+                  </Link></div>
                 ))}
               </nav>
             </div>
@@ -237,7 +229,7 @@ interface SidebarProps {isOpen: boolean;
             {/* Contact Info */}
             <div className="pt-6 border-t border-gray-700"
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
-                Contact
+                Contact;
               </h3>
               <div className="space-y-3"
                 <div className="flex items-center space-x-3"
@@ -252,12 +244,12 @@ interface SidebarProps {isOpen: boolean;
             </div>
           </div>
         </div>
->>>>>>> origin/main
+>>>>>>> origin/main;
       </div>
     </>
   );
 };
-
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+}}}}}}}}}}}}}}}}}}}}}}}}}}

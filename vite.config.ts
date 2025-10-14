@@ -1,14 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
+      // Enable React Fast Refresh;
       fastRefresh: true,
-      // Enable JSX runtime
+      // Enable JSX runtime;
       jsxRuntime: "automatic",
     }),
   ],
@@ -34,18 +33,18 @@ export default defineConfig({
     modulePreload: {
       polyfill: false,
     },
-    // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
-    // Enable compression
+    // Performance optimizations;
+    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance;
+    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load;
+    // Enable compression;
     reportCompressedSize: true,
-    // Optimize for production
+    // Optimize for production;
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
+        passes: 3, // More passes for better optimization;
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -63,7 +62,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true, // Better Safari compatibility;
         toplevel: true,
         properties: {
           regex: /^_/
@@ -74,7 +73,7 @@ export default defineConfig({
         ascii_only: true
       }
     },
-    // Enhanced build optimizations
+    // Enhanced build optimizations;
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
@@ -83,62 +82,62 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries;
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router;
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries;
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta;
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
+          // Charts and data visualization;
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries;
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring;
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling;
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // AI service pages - split into smaller chunks;
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             return `ai-${serviceName || 'services'}`
           }
-          // Zion service pages
+          // Zion service pages;
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
             return `zion-${serviceName || 'services'}`
           }
-          // 5G service pages
+          // 5G service pages;
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/5g-')[1]?.split('/')[0];
             return `5g-${serviceName || 'services'}`
           }
-          // Other service pages
+          // Other service pages;
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'pages'
           }
-          // Default chunk for other modules
+          // Default chunk for other modules;
           return 'vendor'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -146,14 +145,14 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
+    // Enable tree shaking;
     treeshake: true,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMR
+    // Enable HMR;
     hmr: {
       overlay: true,
     },
@@ -163,7 +162,7 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  // Optimize dependencies
+  // Optimize dependencies;
   optimizeDeps: {
     include: [
       "react",
@@ -174,7 +173,7 @@ export default defineConfig({
       "lucide-react",
     ],
   },
-  // CSS optimization
+  // CSS optimization;
   css: {
     devSourcemap: true,
   },

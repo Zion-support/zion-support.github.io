@@ -1,7 +1,7 @@
 
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { Heart, TrendingUp, MessageSquare, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Smile, AlertCircle } from "lucide-react";
 const AICustomerSentimentTrackerPage = () => {
   const features = [
@@ -36,7 +36,6 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter"
@@ -51,7 +50,7 @@ const AICustomerSentimentTrackerPage = () => {
         "Email support"
         "3 team members"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional"
@@ -67,7 +66,7 @@ const AICustomerSentimentTrackerPage = () => {
         "10 team members"
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise"
@@ -83,10 +82,9 @@ const AICustomerSentimentTrackerPage = () => {
         "Unlimited team members"
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   const benefits = [
     {
       icon: <Smile className="w-12 h-12 text-green-400"
@@ -109,7 +107,6 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Build stronger customer relationships through better understanding of their needs and emotions."
     }
   ];
-
   const stats = [
     { number: "35%", label: "Satisfaction Increase"
     { number: "40%", label: "Churn Reduction"
@@ -117,17 +114,16 @@ const AICustomerSentimentTrackerPage = () => {
     { number: "2.5x", label: "Faster Response"
   ];
 import { Helmet } from "react-helmet-async";
-;
-const HomePage = () => {"
-  return (""
+const HomePage = () => {
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet></Helmet>"
-        <title>Home - Zion Tech Group</title>""
+        <title>Home - Zion Tech Group</title>"
         <meta name="description" content="Home - Zion Tech Group" />"
-      </Helmet>""
-      <div className="container mx-auto px-4 py-16"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>""
+      </Helmet>"
+      <div className="container mx-auto px-4 py-16></div>"
+        <div className="text-center></div>"
+          <h1 className="text-4xl font-bold text-white mb-8>Home</h1>"
           <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
           </p>
@@ -136,7 +132,7 @@ const HomePage = () => {"
     </div>)
   );
 };
-;
 export default HomePage;"
 "
 "
+}}}}}

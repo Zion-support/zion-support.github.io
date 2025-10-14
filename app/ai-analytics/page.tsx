@@ -34,7 +34,6 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Generate detailed reports automatically and schedule them for regular delivery.'
     }
   ];
-
   const benefits = [
     'Increase data-driven decision making by 85%'
     'Reduce reporting time by 70%'
@@ -43,15 +42,15 @@ const AIAnalyticsPage: React.FC = () => {
     'Streamline business processes'
     'Gain competitive advantage through data'
   ];
-
->>>>>>> origin/main
+>>>>>>> origin/main;
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
 
       <Helmet></Helmet>"
-""
+"
         <meta name="description" content="Professional services by Zion Tech Group." />"
 "
 }
 "
+}

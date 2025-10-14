@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from "lucide-react";
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
-
   const serviceCategories = [
     {
       title: 'AI Services'
@@ -92,7 +91,6 @@ const ImprovedFooter = () => {
       ]
     },
   ], []);
-
   const services = useMemo(() => [
     { name: "AI Analytics", href: "/ai-analytics"
     { name: "AI Automation", href: "/ai-automation-platform"
@@ -106,7 +104,6 @@ const ImprovedFooter = () => {
     { name: "AI Voice Assistant", href: "/ai-voice-assistant"
     { name: "AI Workflow Automation", href: "/ai-workflow-automation"
   ], []);
-
   const itServices = useMemo(() => [
     { name: "Cloud Migration", href: "/cloud-migration"
     { name: "DevOps Services", href: "/devops-services"
@@ -116,7 +113,6 @@ const ImprovedFooter = () => {
     { name: "System Integration", href: "/system-integration"
     { name: "Web Development", href: "/web-development"
   ], []);
-
   const microSaasServices = useMemo(() => [
     { name: "Project Management Pro", href: "/project-management-pro"
     { name: "AI CRM Pro", href: "/zion-ai-crm-pro"
@@ -127,7 +123,6 @@ const ImprovedFooter = () => {
     { name: "Email Automation", href: "/zion-email-automation"
     { name: "Data Analytics", href: "/data-analytics"
   ], []);
-
   const companyLinks = useMemo(() => [
     { name: "About Us", href: "/about"
     { name: "Our Team", href: "/team"
@@ -136,7 +131,6 @@ const ImprovedFooter = () => {
     { name: "Partners", href: "/partners"
     { name: "Contact", href: "/contact"
   ], []);
-
   const supportLinks = useMemo(() => [
     { name: "Documentation", href: "/docs"
     { name: "API Reference", href: "/api"
@@ -145,7 +139,6 @@ const ImprovedFooter = () => {
     { name: "Status Page", href: "/status"
     { name: "Community", href: "/community"
   ], []);
-
   const legalLinks = useMemo(() => [
     { name: "Privacy Policy", href: "/privacy"
     { name: "Terms of Service", href: "/terms"
@@ -153,7 +146,6 @@ const ImprovedFooter = () => {
     { name: "GDPR Compliance", href: "/gdpr"
     { name: "Security", href: "/security"
   ], []);
-
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
@@ -172,7 +164,7 @@ const ImprovedFooter = () => {
             </p>
             <div className="flex space-x-4"
               {socialLinks.map((link) => (
-                <a
+                <a;
                   key={link.name}
                   href={link.url}
                   target="_blank"
@@ -183,7 +175,6 @@ const ImprovedFooter = () => {
                   {link.icon}
                 </a>
   ];
-;
 const legal = [
   const companyLinks = [
     { label: 'About Us', href: '/about'
@@ -195,7 +186,6 @@ const legal = [
     { label: 'Press', href: '/press'
     { label: 'Partners', href: '/partners'
   ];
-
   const resourceLinks = [
     { label: 'Pricing', href: '/pricing'
     { label: 'Demo', href: '/demo'
@@ -206,7 +196,6 @@ const legal = [
     { label: 'Webinars', href: '/webinars'
     { label: 'White Papers', href: '/whitepapers'
   ];
-
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy'
     { label: 'Terms of Service', href: '/terms'
@@ -215,7 +204,6 @@ const legal = [
     { label: 'Accessibility', href: '/accessibility'
     { label: 'Security', href: '/security'
   ];
-
   const socialLinks = [
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup'
     { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup'
@@ -224,20 +212,17 @@ const legal = [
     { label: 'Instagram', href: 'https://instagram.com/ziontechgroup'
     { label: 'YouTube', href: 'https://youtube.com/ziontechgroup'
   ];
-
   const stats = [
     { number: '10,000+', label: 'Active Users'
     { number: '99.9%', label: 'Uptime SLA'
     { number: '60+', label: 'Micro SAAS Solutions'
     { number: '24/7', label: 'Support Available'
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10"
       {/* Main Footer Content */}
@@ -270,7 +255,7 @@ const legal = [
                   <Link key={linkIndex}
                     to={link.href}
                     className={`
-                      link.featured 
+                      link.featured ;
                         ? 'text-cyan-400 hover:text-cyan-300 font-medium'
                         : 'text-gray-300 hover:text-cyan-400'
                     }`
@@ -282,7 +267,7 @@ const legal = [
                   </Link>
                 ))}
                 {category.links.length > 8 && (
-                  <Link
+                  <Link;
                     to={category.links.find(l => l.featured)?.href || '#'
                     className="block text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 group"
                   >
@@ -304,7 +289,7 @@ const legal = [
             <div>
               <h3 className="text-2xl font-bold text-white mb-4"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
-                  Zion Tech Group
+                  Zion Tech Group;
                 </span>
               </h3>
               <p className="text-gray-300 text-sm leading-relaxed mb-6"
@@ -317,7 +302,7 @@ const legal = [
               <h4 className="text-white font-semibold mb-4"
               <div className="flex space-x-4"
                 {socialLinks.map((social, index) => (
-                  <a
+                  <a;
                     key={index}
                     href={social.href}
                     target="_blank"
@@ -343,7 +328,7 @@ const legal = [
                 >
                   {link.label}
                 </Link>
->>>>>>> origin/main
+>>>>>>> origin/main</div>
               ))}
             </div>
           </div>
@@ -352,26 +337,25 @@ const legal = [
                 </li>
 
   ))};
-
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
-            <div className="flex items-center">"
-              <PhoneIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">+1 (555) 123-4567</span>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4>"
+            <div className="flex items-center>"
+              <PhoneIcon className="w-5 h-5 mr-2 text-blue-400 />"
+              <span className="text-gray-300>+1 (555) 123-4567</span>"
             </div>
-            <div className="flex items-center">"
-              <EnvelopeIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">info@ziontechgroup.com</span>"
+            <div className="flex items-center>"
+              <EnvelopeIcon className="w-5 h-5 mr-2 text-blue-400 />"
+              <span className="text-gray-300>info@ziontechgroup.com</span>"
             </div>
-            <div className="flex items-center space-x-3 text-gray-400">"
-              <MapPinIcon className="w-5 h-5 text-purple-400" />"
+            <div className="flex items-center space-x-3 text-gray-400>"
+              <MapPinIcon className="w-5 h-5 text-purple-400 />"
               <span>Middletown, DE 19709</span>
         {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-slate-700">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">"
-            <div className="flex items-center space-x-2">"
-              <PhoneIcon className="w-4 h-4 text-purple-400" />"
+        <div className="mt-8 pt-8 border-t border-slate-700>"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300>"
+            <div className="flex items-center space-x-2>"
+              <PhoneIcon className="w-4 h-4 text-purple-400 />"
               <div>
                 <p className="text-sm text-gray-400"
                 <p className="text-white"
@@ -392,17 +376,17 @@ const legal = [
               </div>
               <span>+1-302-464-0950</span>
             </div>
-            <div className="flex items-center space-x-2">"
-              <EnvelopeIcon className="w-4 h-4 text-purple-400" />"
+            <div className="flex items-center space-x-2>"
+              <EnvelopeIcon className="w-4 h-4 text-purple-400 />"
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2">"
-              <MapPinIcon className="w-4 h-4 text-purple-400" />"
+            <div className="flex items-center space-x-2>"
+              <MapPinIcon className="w-4 h-4 text-purple-400 />"
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            <div className="flex items-center">"
-              <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">San Francisco, CA</span>"
->>>>>>> origin/main
+            <div className="flex items-center>"
+              <MapPinIcon className="w-5 h-5 mr-2 text-blue-400 />"
+              <span className="text-gray-300>San Francisco, CA</span>"
+>>>>>>> origin/main;
             </div>
           </div>
         </div>
@@ -411,8 +395,8 @@ const legal = [
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm"
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
         { /* Bottom Section */ }"
-        <div className="mt-12 pt-8 border-t border-slate-700/50"></div>"
-          <div className="flex flex-col md:flex-row justify-between items-center"></div>"
+        <div className="mt-12 pt-8 border-t border-slate-700/50></div>"
+          <div className="flex flex-col md:flex-row justify-between items-center></div>"
             <div className="text-gray-400 text-sm"
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
@@ -428,17 +412,17 @@ const legal = [
                 </Link>)
               ))
             </div>"
-        <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center"></div>""
-          <p className="text-gray-400 text-sm">"
+        <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center></div>"
+          <p className="text-gray-400 text-sm>"
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>"
-          <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0"></div>"
+          <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0></div>"
             <span>Made with</span>"
-            <HeartIcon className="w-4 h-4 text-red-500" />"
+            <HeartIcon className="w-4 h-4 text-red-500 />"
             <span>for innovation</span>"
-          <div className="flex space-x-6 text-gray-400 text-sm"></div>""
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>""
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>"
+          <div className="flex space-x-6 text-gray-400 text-sm></div>"
+            <Link to="/privacy" className="hover:text-white transition-colors>Privacy Policy</Link>"
+            <Link to="/terms" className="hover:text-white transition-colors>Terms of Service</Link>"
           </div>
 
         {/* Bottom Bar */}
@@ -453,12 +437,12 @@ const legal = [
 
   );
 });
-
 Footer.displayName = "Footer"
 
 export default Footer;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+>>>>>>> origin/main;
 "
->>>>>>> origin/main
+>>>>>>> origin/main;
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

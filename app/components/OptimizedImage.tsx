@@ -2,7 +2,6 @@ onError?: () => void }
 import React, { useState, useRef, useEffect } from 'react';';
 import { Helmet } from 'react-helmet-async';
 interface OptimizedImageProps { src: string;
-
   alt: string;
   width?: number;
   height?: number;
@@ -13,7 +12,6 @@ interface OptimizedImageProps { src: string;
   quality?: number';
   loading?: 'lazy' | "eager"
   onLoad?: () => void;
-
   onError?: () => void; }
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
@@ -69,7 +67,6 @@ const handleLoad = () => { setIsLoaded(true);
   const handleError = () => { setIsError(true);
     onError?.(); }
   };
-
   // Generate WebP src if supported;
 const getOptimizedSrc = (originalSrc: string) => {''
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'
@@ -81,7 +78,7 @@ const getOptimizedSrc = (originalSrc: string) => {''
     if (originalSrc.startsWith('http')) { return originalSrc }
 
       return originalSrc;}
-    // For local images, you could implement WebP conversion here
+    // For local images, you could implement WebP conversion here;
     return originalSrc;
   }
   const optimizedSrc = getOptimizedSrc(src)
@@ -97,7 +94,7 @@ const getOptimizedSrc = (originalSrc: string) => {''
         </Helmet>)
       )
       <div
-
+;
         ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }}
@@ -105,25 +102,25 @@ const getOptimizedSrc = (originalSrc: string) => {''
       ></div>
         { /* Placeholder */ }
         { !isLoaded && !isError && (
-          <div
+          <div;
 "
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center" }
+            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center }"
             style={{ width, height }}
 
           ></div>"
-            <div className="text-gray-400 text-sm"></div>Loading...</div>"
+            <div className="text-gray-400 text-sm></div>Loading...</div>"
           </div>
 )
         )}
         { /* Error state */ }
         { isError && (
           <div"
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center" }
+            className="absolute inset-0 bg-gray-100 flex items-center justify-center }"
             style={{ width, height }}
 
           ></div>"
-            <div className="text-gray-400 text-sm text-center"></div>""
-              <div className="text-2xl mb-2"></div>📷</div>"
+            <div className="text-gray-400 text-sm text-center></div>"
+              <div className="text-2xl mb-2></div>📷</div>"
               <div></div>Image not available</div>
             </div>
           </div>

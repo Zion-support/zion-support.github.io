@@ -11,7 +11,6 @@ export default function AITranslationServicePage() {;
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ];
-
   const translationFeatures = [
     {
       category: 'Translation Types'
@@ -30,7 +29,6 @@ export default function AITranslationServicePage() {;
       items: ['Real-time Translation', 'Batch Processing', 'API Integration', 'Custom Models', 'Quality Scoring', 'Confidence Metrics'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Basic'
@@ -44,7 +42,7 @@ export default function AITranslationServicePage() {;
         'Basic quality checks'
         'Standard processing time'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional'
@@ -59,7 +57,7 @@ export default function AITranslationServicePage() {;
         'Fast processing'
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise'
@@ -75,10 +73,9 @@ export default function AITranslationServicePage() {;
         'Custom integrations'
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -87,7 +84,7 @@ export default function AITranslationServicePage() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16"
             <div className="text-center"
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                AI Translation
+                AI Translation;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
                   {" "
                 </span>
@@ -100,12 +97,12 @@ export default function AITranslationServicePage() {;
                 <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Translating
+                  Start Translating;
                 </Link>
                 <Link to="/contact"
                   className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
                 >
-                  Try Demo
+                  Try Demo;
                 </Link>
               </div>
             </div>
@@ -117,10 +114,10 @@ export default function AITranslationServicePage() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
-                Why Choose Our Translation Service
+                Why Choose Our Translation Service;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                Advanced AI technology meets human expertise for perfect translations
+                Advanced AI technology meets human expertise for perfect translations;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -140,10 +137,10 @@ export default function AITranslationServicePage() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
-                Translation Capabilities
+                Translation Capabilities;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                Comprehensive translation services for all your needs
+                Comprehensive translation services for all your needs;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -169,10 +166,10 @@ export default function AITranslationServicePage() {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
-                Translation Pricing
+                Translation Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                Affordable pricing for all your translation needs
+                Affordable pricing for all your translation needs;
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8"
@@ -180,7 +177,7 @@ export default function AITranslationServicePage() {;
                 <div key={index} className={`
                   {plan.popular && (
                     <div className="bg-cyan-400 text-black text-sm font-semibold px-3 py-1 rounded-full text-center mb-4"
-                      Most Popular
+                      Most Popular;
                     </div>
                   )}
                   <h3 className="text-2xl font-bold text-white mb-2"
@@ -194,17 +191,17 @@ export default function AITranslationServicePage() {;
                       <li key={featureIndex} className="flex items-center text-gray-300"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"
                         {feature}
-                      </li>
+                      </li></div>
                     ))}
                   </ul>
                   <Link to="/contact"
                     className={`
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-white/20 text-white hover:bg-white/10'
                     }`
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -224,7 +221,7 @@ export default function AITranslationServicePage() {;
             <Link to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
           </div>
         </div>
@@ -232,4 +229,5 @@ export default function AITranslationServicePage() {;
     </Layout>
   );
 }
->>>>>>> origin/main
+>>>>>>> origin/main;
+}}

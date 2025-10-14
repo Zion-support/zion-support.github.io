@@ -58,7 +58,6 @@ const CareersPage: React.FC = () => {
       ]
     }
   ];
-
   const benefits = [
     {
       icon: <Users className="w-8 h-8 text-blue-500"
@@ -91,7 +90,6 @@ const CareersPage: React.FC = () => {
       description: 'Competitive salary, bonuses, and comprehensive benefits package.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
@@ -102,7 +100,7 @@ const CareersPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16"
         <div className="text-center mb-16"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-            Join Our Team
+            Join Our Team;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto"
             Be part of a dynamic team that'
@@ -153,7 +151,7 @@ const CareersPage: React.FC = () => {
                   <Link to="/contact"
                     className="mt-4 lg:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center"
                   >
-                    Apply Now
+                    Apply Now;
                     <ArrowRight className="w-4 h-4 ml-2"
                   </Link>
                 </div>
@@ -186,32 +184,32 @@ const CareersPage: React.FC = () => {
             <Link to="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
             >
-              Send Your Resume
+              Send Your Resume;
               <Mail className="w-4 h-4 ml-2"
             </Link>
             <Link to="/about"
               className="border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Learn About Us
+              Learn About Us;
             </Link>
               </p>
               <div className="flex justify-center space-x-4"
-                <a 
+                <a ;
                   href="/"
 </p>
               <div className="flex justify-center space-x-4"
                 <a "
                   href="/" "
->>>>>>> origin/main
+>>>>>>> origin/main;
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
-                  Go Home
+                  Go Home;
                 </a>
                 <a "
                   href="/contact" "
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
-                  Contact Us
+                  Contact Us;
                 </a>
               </div>
             </div>
@@ -221,3 +219,4 @@ const CareersPage: React.FC = () => {
       </div>
     </div>
 "
+}

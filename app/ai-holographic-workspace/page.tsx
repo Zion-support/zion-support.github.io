@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO'
 
@@ -31,7 +31,6 @@ const AIHolographicWorkspace = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const capabilities = [
     "3D holographic projection technology"
     "Real-time remote collaboration tools"
@@ -46,7 +45,6 @@ const AIHolographicWorkspace = () => {
     "Spatial computing applications"
     "Immersive presentation capabilities"
   ];
-
   const pricingPlans = [
     {
       name: "Holographic Starter"
@@ -61,7 +59,7 @@ const AIHolographicWorkspace = () => {
         "Email support"
         "10GB holographic storage"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Holographic Professional"
@@ -78,7 +76,7 @@ const AIHolographicWorkspace = () => {
         "API access"
         "Custom workspace templates"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Holographic Enterprise"
@@ -95,10 +93,9 @@ const AIHolographicWorkspace = () => {
         "Advanced security protocols"
         "SLA guarantee"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Alex Thompson"
@@ -125,7 +122,6 @@ const AIHolographicWorkspace = () => {
       avatar: "JC"
     }
   ];
-
   const stats = [
     { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6"
     { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6"
@@ -133,17 +129,16 @@ const AIHolographicWorkspace = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6"
   ];
 import { Helmet } from "react-helmet-async";
-;
-const HomePage = () => {"
-  return (""
+const HomePage = () => {
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet></Helmet>"
-        <title>Home - Zion Tech Group</title>""
+        <title>Home - Zion Tech Group</title>"
         <meta name="description" content="Home - Zion Tech Group" />"
-      </Helmet>""
-      <div className="container mx-auto px-4 py-16"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>""
+      </Helmet>"
+      <div className="container mx-auto px-4 py-16></div>"
+        <div className="text-center></div>"
+          <h1 className="text-4xl font-bold text-white mb-8>Home</h1>"
           <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
           </p>
@@ -152,7 +147,7 @@ const HomePage = () => {"
     </div>)
   );
 };
-;
 export default HomePage;"
 "
 "
+}}}}}

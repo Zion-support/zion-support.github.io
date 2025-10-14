@@ -13,7 +13,7 @@ const MicroSaasPage: React.FC = () => {
       features: ["AI Task Assignment", "Real-time Collaboration", "Progress Tracking", "Resource Management"
       href: "/project-management-pro"
       price: "$29/month"
-      popular: true
+      popular: true;
     },
     {
       title: "AI CRM Pro"
@@ -22,7 +22,7 @@ const MicroSaasPage: React.FC = () => {
       features: ["AI Lead Scoring", "Automated Follow-ups", "Sales Forecasting", "Customer Insights"
       href: "/zion-ai-crm-pro"
       price: "$39/month"
-      popular: false
+      popular: false;
     },
     {
       title: "Inventory Smart"
@@ -31,7 +31,7 @@ const MicroSaasPage: React.FC = () => {
       features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Analytics Dashboard"
       href: "/zion-inventory-smart"
       price: "$24/month"
-      popular: false
+      popular: false;
     },
     {
       title: "Financial Analytics Pro"
@@ -40,7 +40,7 @@ const MicroSaasPage: React.FC = () => {
       features: ["AI Financial Insights", "Automated Reports", "Cash Flow Analysis", "Risk Assessment"
       href: "/ai-financial-analytics-pro"
       price: "$34/month"
-      popular: false
+      popular: false;
     },
     {
       title: "Performance Monitor"
@@ -49,7 +49,7 @@ const MicroSaasPage: React.FC = () => {
       features: ["Performance Metrics", "Goal Tracking", "Team Analytics", "Feedback System"
       href: "/zion-performance-monitor"
       price: "$19/month"
-      popular: false
+      popular: false;
     },
     {
       title: "Email Automation"
@@ -58,10 +58,9 @@ const MicroSaasPage: React.FC = () => {
       features: ["AI Email Templates", "Automated Campaigns", "A/B Testing", "Analytics Dashboard"
       href: "/zion-email-automation"
       price: "$29/month"
-      popular: false
+      popular: false;
     }
   ];
-
   const features = [
     {
       title: "AI-Powered Automation"
@@ -94,34 +93,32 @@ const MicroSaasPage: React.FC = () => {
       icon: <Users className="w-6 h-6 text-pink-400"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
       company: "TechStart Inc."
       role: "CEO"
       content: "
-      rating: 5
+      rating: 5;
     },
     {
       name: "Michael Chen"
       company: "DataFlow Solutions"
       role: "CTO"
       content: "
-      rating: 5
+      rating: 5;
     },
     {
       name: "Emily Rodriguez"
       company: "GrowthCorp"
       role: "Operations Manager"
       content: "The inventory management system saved us thousands in costs and reduced stockouts by 60%."
-      rating: 5
+      rating: 5;
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <EnhancedSEO
+      <EnhancedSEO;
         title="Micro SAAS Solutions - Zion Tech Group"
         description="Discover our comprehensive suite of micro SAAS solutions designed to streamline your business operations with AI-powered automation and intelligent insights."
         keywords="micro SAAS, business automation, AI solutions, project management, CRM, inventory management, financial analytics"
@@ -131,7 +128,7 @@ const MicroSaasPage: React.FC = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto text-center"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-            Micro SAAS Solutions
+            Micro SAAS Solutions;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             Streamline your business operations with our comprehensive suite of micro SAAS solutions. 
@@ -147,7 +144,7 @@ const MicroSaasPage: React.FC = () => {
             <Link to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              View Demo
+              View Demo;
             </Link>
           </div>
         </div>
@@ -157,11 +154,11 @@ const MicroSaasPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-            Our Micro SAAS Solutions
+            Our Micro SAAS Solutions;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             {microSaasServices.map((service, index) => (
-              <div
+              <div;
                 key={index}
                 className={`
                   service.popular ? 'ring-2 ring-cyan-400/50' : ''
@@ -169,7 +166,7 @@ const MicroSaasPage: React.FC = () => {
               >
                 {service.popular && (
                   <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4"
-                    Most Popular
+                    Most Popular;
                   </div>
                 )}
                 <div className="flex items-center space-x-3 mb-4"
@@ -182,7 +179,7 @@ const MicroSaasPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300"
                       <CheckCircle className="w-4 h-4 text-green-400"
                       <span>{feature}</span>
-                    </li>
+                    </li></div>
                   ))}
                 </ul>
                 <div className="flex items-center justify-between mb-4"
@@ -192,7 +189,7 @@ const MicroSaasPage: React.FC = () => {
                 <Link to={service.href}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center block"
                 >
-                  Learn More
+                  Learn More;
                 </Link>
               </div>
             ))}
@@ -224,14 +221,14 @@ const MicroSaasPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-            What Our Clients Say
+            What Our Clients Say;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 <div className="flex items-center space-x-1 mb-4"
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current</div>"
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
@@ -239,7 +236,7 @@ const MicroSaasPage: React.FC = () => {
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
 >>>>>>> origin/main
-
+;
                 </div>
               </div>
             ))}
@@ -265,7 +262,7 @@ const MicroSaasPage: React.FC = () => {
             <Link to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Schedule Demo
+              Schedule Demo;
             </Link>
         <title>Page - Zion Tech Group</title>
 
@@ -275,13 +272,14 @@ const MicroSaasPage: React.FC = () => {
                   href="/" "
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
-                  Go Home
+                  Go Home;
                 </a>
                 <a "
                   href="/contact" "
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
-                  Contact Us
+                  Contact Us;
                 </a>
               </div>
             </div>
+}

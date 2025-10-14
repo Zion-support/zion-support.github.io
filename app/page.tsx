@@ -8,7 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-
 const HomePage = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -36,7 +35,6 @@ const HomePage = () => {
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   const coreServices = [
     {
       icon: Brain,
@@ -71,7 +69,6 @@ const HomePage = () => {
       link: "/micro-saas"
     }
   ];
-
   const microSaasServices = [
     {
       name: "Zion Analytics Pro",
@@ -104,7 +101,6 @@ const HomePage = () => {
       link: "/zion-content-studio"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -131,10 +127,10 @@ const HomePage = () => {
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
     }
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+      <EnhancedSEO;
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -142,64 +138,64 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden>"
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse></div>"
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500></div>"
         </div>
 
         <ResponsiveContainer>
           <div className="text-center relative z-10">
-            <FuturisticText
+            <FuturisticText;
               as="h1"
               className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
             >
-              Transform Your Business with
+              Transform Your Business with;
               <span className="block text-3xl sm:text-4xl lg:text-6xl mt-2">
-                AI-Powered Solutions
+                AI-Powered Solutions;
               </span>
             </FuturisticText>
             
-            <ResponsiveText className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <ResponsiveText className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed>"
               Leading provider of cutting-edge AI services, IT solutions, and micro SAAS platforms. 
               Accelerate your digital transformation with our innovative technology stack.
             </ResponsiveText>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <FuturisticButton
+              <FuturisticButton;
                 as={Link}
                 to="/contact"
                 className="px-8 py-4 text-lg font-semibold"
                 variant="primary"
               >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started Today;
+                <ArrowRight className="ml-2 h-5 w-5 />"
               </FuturisticButton>
               
-              <FuturisticButton
+              <FuturisticButton;
                 as={Link}
                 to="/demo"
                 className="px-8 py-4 text-lg font-semibold"
                 variant="secondary"
               >
-                View Demo
-                <Sparkles className="ml-2 h-5 w-5" />
+                View Demo;
+                <Sparkles className="ml-2 h-5 w-5 />"
               </FuturisticButton>
             </div>
 
             {/* Contact Information */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2>"
                 <Phone className="h-4 w-4" />
                 <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2>"
                 <Mail className="h-4 w-4" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2>"
                 <MapPin className="h-4 w-4" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
@@ -209,46 +205,46 @@ const HomePage = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8>"
         <ResponsiveContainer>
           <div className="text-center mb-16">
-            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Our Core Services
+            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6>"
+              Our Core Services;
             </FuturisticText>
             <ResponsiveText className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to drive your business forward
+              Comprehensive technology solutions designed to drive your business forward;
             </ResponsiveText>
           </div>
 
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>"
             {coreServices.map((service, index) => (
               <FuturisticCard key={index} className="p-6 h-full">
-                <div className="text-center">
+                <div className="text-center>"
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                    <service.icon className="h-8 w-8 text-white" />
+                    <service.icon className="h-8 w-8 text-white />"
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4>{service.description}</p>"
                   
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                      <div key={idx} className="flex items-center text-sm text-gray-400>"
                         <Star className="h-4 w-4 text-yellow-400 mr-2" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>
+                  <div className="text-cyan-400 font-semibold mb-4>{service.pricing}</div>"
                   
-                  <FuturisticButton
+                  <FuturisticButton;
                     as={Link}
                     to={service.link}
                     className="w-full"
                     variant="outline"
                   >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    Learn More;
+                    <ArrowRight className="ml-2 h-4 w-4 />"
                   </FuturisticButton>
                 </div>
               </FuturisticCard>
@@ -260,40 +256,40 @@ const HomePage = () => {
       {/* Micro SAAS Highlights */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Featured Micro SAAS Solutions
+          <div className="text-center mb-16>"
+            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6>"
+              Featured Micro SAAS Solutions;
             </FuturisticText>
             <ResponsiveText className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Ready-to-deploy software solutions that solve specific business challenges
+              Ready-to-deploy software solutions that solve specific business challenges;
             </ResponsiveText>
           </div>
 
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>"
             {microSaasServices.map((service, index) => (
               <FuturisticCard key={index} className="p-6 h-full">
-                <div className="text-center">
+                <div className="text-center>"
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <p className="text-gray-300 mb-4>{service.description}</p>"
                   
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                      <div key={idx} className="flex items-center text-sm text-gray-400>"
                         <Star className="h-4 w-4 text-yellow-400 mr-2" />
                         {feature}
                       </div>
                     ))}
                   </div>
                   
-                  <div className="mb-4">
+                  <div className="mb-4>"
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                    <div className="text-sm text-green-400">{service.discount}</div>
+                    <div className="text-sm text-green-400>{service.discount}</div>"
                   </div>
                   
                   <div className="flex items-center justify-center mb-4">
-                    <div className="flex items-center">
+                    <div className="flex items-center>"
                       {[...Array(5)].map((_, i) => (
-                        <Star
+                        <Star;
                           key={i}
                           className={`h-4 w-4 ${
                             i < Math.floor(service.rating)
@@ -303,19 +299,19 @@ const HomePage = () => {
                         />
                       ))}
                     </div>
-                    <span className="ml-2 text-sm text-gray-400">
+                    <span className="ml-2 text-sm text-gray-400>"
                       {service.rating} ({service.reviews} reviews)
                     </span>
                   </div>
                   
-                  <FuturisticButton
+                  <FuturisticButton;
                     as={Link}
                     to={service.link}
                     className="w-full"
                     variant="primary"
                   >
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    Get Started;
+                    <ArrowRight className="ml-2 h-4 w-4 />"
                   </FuturisticButton>
                 </div>
               </FuturisticCard>
@@ -327,34 +323,34 @@ const HomePage = () => {
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              What Our Clients Say
+          <div className="text-center mb-16>"
+            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6>"
+              What Our Clients Say;
             </FuturisticText>
             <ResponsiveText className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Trusted by businesses worldwide for our innovative solutions
+              Trusted by businesses worldwide for our innovative solutions;
             </ResponsiveText>
           </div>
 
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>"
             {testimonials.map((testimonial, index) => (
               <FuturisticCard key={index} className="p-6">
-                <div className="flex items-center mb-4">
-                  <img
+                <div className="flex items-center mb-4>"
+                  <img;
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
                   />
                   <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <h4 className="font-semibold>{testimonial.name}</h4>"
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
-                    <p className="text-sm text-cyan-400">{testimonial.company}</p>
+                    <p className="text-sm text-cyan-400>{testimonial.company}</p>"
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="flex items-center">
+                <div className="flex items-center>"
                   {[...Array(5)].map((_, i) => (
-                    <Star
+                    <Star;
                       key={i}
                       className={`h-4 w-4 ${
                         i < testimonial.rating ? "text-yellow-400" : "text-gray-400"
@@ -369,35 +365,35 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30>"
         <ResponsiveContainer>
           <div className="text-center">
-            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6>"
               Ready to Transform Your Business?
             </FuturisticText>
             <ResponsiveText className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our solutions
+              Join thousands of businesses that have already transformed their operations with our solutions;
             </ResponsiveText>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <FuturisticButton
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center>"
+              <FuturisticButton;
                 as={Link}
                 to="/contact"
                 className="px-8 py-4 text-lg font-semibold"
                 variant="primary"
               >
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Start Your Journey;
+                <ArrowRight className="ml-2 h-5 w-5 />"
               </FuturisticButton>
               
-              <FuturisticButton
+              <FuturisticButton;
                 as={Link}
                 to="/pricing"
                 className="px-8 py-4 text-lg font-semibold"
                 variant="secondary"
               >
-                View Pricing
-                <Target className="ml-2 h-5 w-5" />
+                View Pricing;
+                <Target className="ml-2 h-5 w-5 />"
               </FuturisticButton>
             </div>
           </div>
@@ -405,12 +401,12 @@ const HomePage = () => {
       </section>
 
       {/* Structured Data */}
-      <script
+      <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+    
     </div>
   );
 };
-
 export default HomePage;

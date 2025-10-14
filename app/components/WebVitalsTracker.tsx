@@ -6,4 +6,5 @@ interface WebVitalsTrackerProps {
 
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
->>>>>>> origin/main
+>>>>>>> origin/main;
+}}

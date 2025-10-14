@@ -70,7 +70,6 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'text-gray-400'
     }
   ];
-
   return (
     <>
       <SEOOptimizer title="Web Development Services - Zion Tech Group"
@@ -102,10 +101,10 @@ const WebDevelopmentPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"
-              Web Development
+              Web Development;
             </h1>
             <p className="text-xl text-cyan-400 mb-8 font-medium"
-              Modern, Scalable Web Applications
+              Modern, Scalable Web Applications;
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"
               Build powerful, responsive web applications with our expert development team. 
@@ -140,11 +139,11 @@ const WebDevelopmentPage: React.FC = () => {
                   
                   <div className="text-center"
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`
-                    <a 
+                    <a ;
                       href="/contact"
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`
                     >
-                      Get Started
+                      Get Started;
                     </a>
                   </div>
                 </article>
@@ -156,7 +155,7 @@ const WebDevelopmentPage: React.FC = () => {
           <section className="mb-16"
             <div className="cyber-card p-8"
               <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"
-                Our Technology Stack
+                Our Technology Stack;
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6"
                 <div className="text-center"
@@ -210,18 +209,18 @@ const WebDevelopmentPage: React.FC = () => {
                 scalable web applications that deliver exceptional user experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <a
+                <a;
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
-                  Start Your Project
+                  Start Your Project;
                 </a>
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5"
-                  +1 302 464 0950
+                  +1 302 464 0950;
                 </a>
               </div>
             </div>
@@ -233,7 +232,7 @@ const WebDevelopmentPage: React.FC = () => {
     </>
   );
 };
-
 export default WebDevelopmentPage;
->>>>>>> origin/main
->>>>>>> origin/main
+>>>>>>> origin/main;
+>>>>>>> origin/main;
+}}}

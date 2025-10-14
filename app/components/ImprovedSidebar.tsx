@@ -9,13 +9,13 @@ const ImprovedSidebar: React.FC = () => { return (
         <meta name="description" content="Professional improved sidebar services by Zion Tech Group."
       </Helmet> }
       { /* Hero Section */ }"
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-        <div className="max-w-6xl mx-auto text-center"></div>"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100>"
+        <div className="max-w-6xl mx-auto text-center></div>"
           <h1 className="text-5xl font-bold text-gray-900 mb-6"
 
             Improved Sidebar;
           </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto>"
             Professional improved sidebar services;
             designed to help your business grow and succeed.;
           </p>
@@ -23,43 +23,43 @@ const ImprovedSidebar: React.FC = () => { return (
       </section>
       { /* Content Section */ }
             Improved Sidebar</h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto>"
             Professional improved sidebar services
-
+;
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
-      <section className="py-16 px-4">"
-        <div className="max-w-6xl mx-auto"></div>"
+      <section className="py-16 px-4>"
+        <div className="max-w-6xl mx-auto></div>"
           <div className="grid md:grid-cols-2 gap-12 items-center"
 
             <div></div>"
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>""
-              <p className="text-lg text-gray-600 mb-6">"
+              <h2 className="text-3xl font-bold text-gray-900 mb-6>Our Services</h2>"
+              <p className="text-lg text-gray-600 mb-6>"
                 We provide comprehensive improved sidebar;
                 solutions tailored to your specific needs and requirements.;
               </p>"
-              <ul className="space-y-3">""
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+              <ul className="space-y-3>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Custom solutions;
                 </li>"
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Expert consultation;
                 </li>"
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Ongoing support;
                 </li>
               </ul>
             </div>"
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""
-              <p className="mb-6">"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white></div>"
+              <h3 className="text-2xl font-bold mb-4>Get Started</h3>"
+              <p className="mb-6>"
                 Ready to transform your business with our improved sidebar services?;
               </p>
               <a;"
-                href="$1"""
-                className="$1""
+                href="$1"
+                className="$1"
               >
                 Contact Us;
               </a>
@@ -69,21 +69,21 @@ const ImprovedSidebar: React.FC = () => { return (
       </section>
 
       { /* CTA Section */ }"
-      <section className="py-16 px-4 bg-blue-600">"
-        <div className="max-w-4xl mx-auto text-center"></div>"
+      <section className="py-16 px-4 bg-blue-600>"
+        <div className="max-w-4xl mx-auto text-center></div>"
           <h2 className="text-3xl font-bold text-white mb-6"
 
             Ready to Get Started?;
           </h2>"
-          <p className="text-xl text-blue-100 mb-8">"
+          <p className="text-xl text-blue-100 mb-8>"
           </h2>"
-          <p className="text-xl text-blue-100 mb-8">"
+          <p className="text-xl text-blue-100 mb-8>"
             Let"s discuss how our improved sidebar"
             services can help you achieve your goals.;
           </p>
           <a;"
-            href="$1"""
-            className="$1""
+            href="$1"
+            className="$1"
           >
             Get Started Today;
           </a>
@@ -92,38 +92,38 @@ const ImprovedSidebar: React.FC = () => { return (
     </div>)
   );
 export default ImprovedSidebar;
-                We provide comprehensive improved sidebar
+                We provide comprehensive improved sidebar;
                 solutions tailored to your specific needs and requirements.</p>"
-              <ul className="space-y-3">""
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+              <ul className="space-y-3>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Custom solutions</li>"
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Expert consultation</li>"
-                <li className="flex items-center">""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li className="flex items-center>"
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3></span>"
                   Ongoing support</li></ul></div>"
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""
-              <p className="mb-6">"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white></div>"
+              <h3 className="text-2xl font-bold mb-4>Get Started</h3>"
+              <p className="mb-6>"
                 Ready to transform your business with our improved sidebar services?</p>
-              <a
+              <a;
 "
-                href="/contact""
+                href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                 Contact Us</a></div></div></div></section>{ /* CTA Section */ }"
-      <section className="py-16 px-4 bg-blue-600">"
-        <div className="max-w-4xl mx-auto text-center"></div>"
+      <section className="py-16 px-4 bg-blue-600>"
+        <div className="max-w-4xl mx-auto text-center></div>"
           <h2 className="text-3xl font-bold text-white mb-6"
 
             Ready to Get Started?</h2>"
-          <p className="text-xl text-blue-100 mb-8">"
+          <p className="text-xl text-blue-100 mb-8>"
             Let's discuss how our improved sidebar''
             services can help you achieve your goals.</p>
           <a"
-            href="/contact"""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors>"
             Get Started Today</a></div></section></div>
   )
 export default ImprovedSidebar;
@@ -138,12 +138,10 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState(''
   const location = useLocation();
-
-  // Close sidebar when route changes
+  // Close sidebar when route changes;
   useEffect(() => {
     onClose();
   }, [location, onClose]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -151,7 +149,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, section]
     );
   };
-
   const navigationSections = [
     {
       id: 'ai-services'
@@ -257,7 +254,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Home', href: '/'
     { label: 'Pricing', href: '/pricing'
@@ -267,7 +263,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Blog', href: '/blog'
     { label: 'Contact', href: '/contact'
   ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about'
     { label: 'Our Team', href: '/team'
@@ -277,7 +272,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Press', href: '/press'
     { label: 'Partners', href: '/partners'
   ];
-
   const filteredSections = navigationSections.map(section => ({
     ...section,
     items: section.items.filter(item => 
@@ -286,14 +280,14 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === ''
 
   if (!isOpen) return null;
-
 const ImprovedSidebar = () => {
   return (
     <div className="p-4"
       <h2 className="text-xl font-semibold mb-2"
       <p>This component is under construction.</p>
     </div>
->>>>>>> origin/main
+>>>>>>> origin/main;
   );
 export default ImprovedSidebar;
 "
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

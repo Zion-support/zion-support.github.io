@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 const Main: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Main - Zion Tech Group</title>
         <meta name="description" content="Professional main services by Zion Tech Group." />
@@ -42,41 +42,20 @@ const Main: React.FC = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support
+                  Professional support
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our main services?
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Started</h3>
+              <p className="text-gray-600 mb-6">
+                Contact us today to learn more about our main services and how we can help your business.
               </p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Contact Us
-              </a>
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our main services can help you achieve your goals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </a>
         </div>
       </section>
     </div>

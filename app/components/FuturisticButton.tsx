@@ -65,7 +65,7 @@ const baseClasses = 'inline-flex items-center justify-center font-semibold round
     lg: 'px-8 py-4 text-lg''
   };
   return (
-    <button
+    <button;
       type={ type }
       onClick={ onClick }
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
@@ -93,9 +93,10 @@ interface FuturisticButtonProps {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean;
->>>>>>> origin/main
+>>>>>>> origin/main;
   className?: string;
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
+}}}}}}}

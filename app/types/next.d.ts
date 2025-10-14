@@ -1,7 +1,7 @@
   export interface NextPageProps {
   export default content;
 // Next.js type definitions
-
+;
 declare module "next"
     params: { [key: string]: string };
     searchParams: { [key: string]: string | string[] | undefined };

@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
-    // Add structured data to the page
+    // Add structured data to the page;
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';

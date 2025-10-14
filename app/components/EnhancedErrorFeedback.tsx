@@ -15,7 +15,6 @@ interface State {
 
 export class GlobalErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -31,7 +30,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorInfo: null,
-      retryCount: 0
+      retryCount: 0;
     };
   }
 
@@ -41,20 +40,19 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
-
-    // Call the onError callback if provided
+    // Call the onError callback if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development'
       console.error('GlobalErrorBoundary caught an error:'
     }
 
-    // Log error to external service in production
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production'
-      // Here you would typically send the error to a logging service
+      // Here you would typically send the error to a logging service;
       console.error('Production error:'
     }
   }
@@ -65,44 +63,40 @@ export class GlobalErrorBoundary extends Component<Props, State> {
         hasError: false,
         error: null,
         errorInfo: null,
-        retryCount: prevState.retryCount + 1
+        retryCount: prevState.retryCount + 1;
       }));
     } else {
-      // Reset retry count and try again
+      // Reset retry count and try again;
       this.setState({
         hasError: false,
         error: null,
         errorInfo: null,
-        retryCount: 0
+        retryCount: 0;
       });
     }
   };
-
   handleGoHome = () => {
     window.location.href = '/'
   };
-
   handleReportError = () => {
     const { error, errorInfo } = this.state;
     if (error) {
-      // Create error report
+      // Create error report;
       const errorReport = {
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo?.componentStack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href;
       };
-
       // Send error report (in a real app, you'
       console.log('Error Report:'
       
-      // For now, just show an alert
+      // For now, just show an alert;
       alert('Error has been reported. Thank you for your feedback!'
     }
   };
-
   handleReportError = () => {
     const errorData = {
       error: this.state.error?.message,
@@ -111,32 +105,27 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href;
     };
-
-    // Create mailto link with error details
+    // Create mailto link with error details;
     const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`
     const body = encodeURIComponent(JSON.stringify(errorData, null, 2));
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`
     
     window.open(mailtoLink);
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI
+      // Default error UI;
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20"
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center"
-              <AlertTriangle className="w-8 h-8 text-red-400"
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
             <h1 className="text-2xl font-bold text-white mb-4"
-              Oops! Something went wrong
+              Oops! Something went wrong;
             </h1>
             
             <p className="text-gray-300 mb-6"
@@ -146,11 +135,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             {this.state.retryCount > 0 && (
               <p className="text-sm text-yellow-400 mb-4"
                 Retry attempt {this.state.retryCount} of {this.maxRetries}
-              </p>
+              </p></div>
             )}
             
             <div className="space-y-4"
-              <button
+              <button;
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -158,7 +147,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 <span>Try Again</span>
               </button>
               
-              <button
+              <button;
                 onClick={this.handleGoHome}
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -166,7 +155,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 <span>Go Home</span>
               </button>
 
-              <button
+              <button;
                 onClick={this.handleReportError}
                 className="w-full border border-orange-400 text-orange-400 px-6 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center space-x-2"
               >
@@ -189,8 +178,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
-        </div>
-      );
+        
+    </div>
+  );
     }
 
     return this.props.children;
@@ -198,5 +188,5 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export default GlobalErrorBoundary;
->>>>>>> origin/main
->>>>>>> origin/main
+>>>>>>> origin/main;
+>>>>>>> origin/main;
