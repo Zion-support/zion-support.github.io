@@ -37,8 +37,8 @@ export default [
       },
     },
     plugins: {
-      "react-hooks": reactHooks
-      "react-refresh": reactRefresh
+      "react-hooks": reactHooks,
+      "react": react
     },
     rules: {
       ...typescript.configs.recommended.rules,
