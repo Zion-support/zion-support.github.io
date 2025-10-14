@@ -15,16 +15,10 @@ import {
   Clock,
   Award,
   Users,
-  Globe,
   Code,
   Brain,
   Cloud,
-  Wifi,
-  Database,
-  BarChart3,
-  Smartphone,
-  Lock,
-  Settings
+  Wifi
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
