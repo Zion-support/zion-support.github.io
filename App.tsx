@@ -20,7 +20,7 @@ import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 
 const App: React.FC = () => {
-  const handlePerformanceMetrics = (metrics: Record<string, number>) => {
+  const handlePerformanceMetrics = (metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance Metrics:', metrics);

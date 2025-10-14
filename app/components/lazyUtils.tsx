@@ -10,7 +10,7 @@ export const withLazyLoading = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as React.ComponentProps<typeof LazyComponent>)} />
     </LazyWrapper>
   );
 };
@@ -24,7 +24,7 @@ export const createLazyComponent = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as React.ComponentProps<typeof LazyComponent>)} />
     </LazyWrapper>
   );
 };
