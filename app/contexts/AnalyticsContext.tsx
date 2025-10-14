@@ -1,9 +1,9 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -13,19 +13,25 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     // Analytics tracking implementation
-    console.log('Event tracked:', eventName, properties);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Event tracked:', eventName, properties);
+    }
   };
 
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     // Page view tracking implementation
-    console.log('Page view tracked:', pageName, properties);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page view tracked:', pageName, properties);
+    }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, unknown>) => {
     // User identification implementation
-    console.log('User identified:', userId, traits);
+    if (process.env.NODE_ENV === 'development') {
+      console.log('User identified:', userId, traits);
+    }
   };
 
   const value: AnalyticsContextType = {

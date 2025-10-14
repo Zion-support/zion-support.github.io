@@ -39,12 +39,7 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
-import CookiesPage from './app/pages/CookiesPage';
 // TODO: Add lazy imports for components when they are created
-
-import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
 
@@ -64,10 +59,27 @@ function App() {
     if (typeof window !== 'undefined') {
       // Monitor Core Web Vitals
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
+        onCLS((metric) => {
+          // Performance metric collected
+          if (process.env.NODE_ENV === 'development') {
+            console.log('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('TTFB:', metric);
+          }
+        });
       });
 
       // Monitor bundle size
@@ -75,7 +87,9 @@ function App() {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
+            if (process.env.NODE_ENV === 'development') {
+              console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
+            }
           }
         }
       });
