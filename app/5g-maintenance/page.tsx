@@ -33,9 +33,6 @@ title="5G Maintenance Services - Zion Tech Group"
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Keep your 5G network running smoothly with our comprehensive maintenance services.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
@@ -44,10 +41,8 @@ title="5G Maintenance Services - Zion Tech Group"
                 <h3 className="text-xl font-semibold text-gray-900">
                   {service.title}
                 </h3>
-              </div>
               <p className="text-gray-600 mb-6">
                 {service.description}
-              </p>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -55,10 +50,7 @@ title="5G Maintenance Services - Zion Tech Group"
                 Learn More
                 <ArrowRight className="ml-2h-4 w-4" />
               </Link>
-            </div>
           ))}
-        </div>
-
         <div className="text-center">
           <Link 
             to="/contact"
@@ -67,9 +59,6 @@ title="5G Maintenance Services - Zion Tech Group"
             Get Started Today
             <ArrowRight className="ml-2h-5 w-5" />
           </Link>
-        </div>
-      </div>
-</div>
   )
 }
 

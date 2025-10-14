@@ -17,13 +17,6 @@ const TutorialsPage: React.FC = () => {
                ">$2</p>
             <div className="text-gray-400">
               <p>Tutorials coming soon...</p>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

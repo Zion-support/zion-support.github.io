@@ -62,32 +62,24 @@ const services = [
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flexitems-center space-x-3 mb-6 group">
-              <div className="w-12h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
                 <span className="text-whitefont-bold text-xl">Z</span>
-              </div>
               <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
             </Link>
             <p className="text-gray-400mb-6 max-w-sm">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
-            </p>
-            
             {/* Contact Info */}
             <div className="space-y-3mb-6">
               <div className="flexitems-center space-x-3 text-gray-300">
-                <PhoneIcon className="w-5h-5 text-purple-400" />
+                <PhoneIcon className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
-              </div>
               <div className="flexitems-center space-x-3 text-gray-300">
-                <EnvelopeIcon className="w-5h-5 text-purple-400" />
+                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
               <div className="flexitems-center space-x-3 text-gray-300">
-                <MapPinIcon className="w-5h-5 text-purple-400" />
+                <MapPinIcon className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-              </div>
-            </div>
-
             {/* Social Links */}
             <div className="flexspace-x-4">
               {socialLinks.map((social) => (
@@ -105,9 +97,6 @@ const services = [
                   {social.icon === 'github' && '🐙'}
                 </a>
               ))}
-            </div>
-          </div>
-
           {/* Services */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
@@ -118,14 +107,12 @@ const services = [
                     to={service.href} 
                     className="text-gray-400hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-
           {/* Company */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
@@ -136,14 +123,12 @@ const services = [
                     to={item.href} 
                     className="text-gray-400hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-
           {/* Support & Legal */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
@@ -154,7 +139,7 @@ const services = [
                     to={item.href} 
                     className="text-gray-400hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
@@ -165,23 +150,19 @@ const services = [
                     to={item.href} 
                     className="text-gray-400hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRightIcon className="w-4h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-
         {/* Newsletter Signup */}
         <div className="mt-16pt-8 border-t border-slate-700/50">
           <div className="max-w-2xlmx-auto text-center">
             <h3 className="text-2xlfont-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
             <p className="text-gray-300mb-6 text-lg">
               Get the latest insights on AI and IT trends delivered to your inbox.
-            </p>
-            <div className="flexflex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -189,25 +170,17 @@ const services = [
               />
               <button className="px-8py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
                 Subscribe
-                <ArrowRightIcon className="w-4h-4 ml-2" />
+                <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="mt-12pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flexitems-center space-x-2 text-gray-400 mb-4 md:mb-0">
             <span>Made with</span>
-            <HeartIcon className="w-4h-4 text-red-400" />
+            <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
-          </div>
           <div className="flexspace-x-6">
             <Link to="/privacy" className="text-gray-400hover:text-white transition-colors text-sm">Privacy Policy</Link>
             <Link to="/terms" className="text-gray-400hover:text-white transition-colors text-sm">Terms of Service</Link>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 };

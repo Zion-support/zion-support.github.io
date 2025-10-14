@@ -51,7 +51,7 @@ const DigitalTransformationPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relativepy-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xlmd:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
             Digital Transformation
@@ -59,9 +59,6 @@ const DigitalTransformationPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with comprehensive digital solutions. From strategy to implementation, 
             we guide you through every step of your digital journey.
-          </p>
-          </div>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -70,11 +67,8 @@ const DigitalTransformationPage: React.FC = () => {
           <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800rounded-xl p-8 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8h-8 text-white" />
-                  </div>
-        </div>
-                
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300mb-6">{service.description}</p>
                 
@@ -83,24 +77,19 @@ const DigitalTransformationPage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300text-sm flex items-center">
-                        <CheckCircle className="w-4h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  </div>
-        </div>
-
                 <button className="w-fullbg-gradient-to-r from-green-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300">
                   Learn More
                 </button>
-                </div>
-        </div>
             ))}
-            </div>
-        </div>
-          </div>
-        </div>
+            
+        
+          
+        
       </section>
 
       {/* CTA Section */}
@@ -110,21 +99,16 @@ const DigitalTransformationPage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our digital transformation services can modernize your operations and drive growth.
-          </p>
-          <div className="flexflex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-rfrom-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+            Let's discuss how our digital transformation services can modernize your operations and drive growth.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
               Start Your Transformation
             </button>
             <button className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Schedule Consultation
             </button>
-            </div>
-        </div>
-          </div>
-        </div>
       </section>
-    </div>
+    
   );
 };
 

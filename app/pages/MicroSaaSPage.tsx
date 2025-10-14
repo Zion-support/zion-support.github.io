@@ -17,13 +17,6 @@ const MicroSaaSPage: React.FC = () => {
                ">$2</p>
             <div className="text-gray-400">
               <p>Micro SaaS solutions coming soon...</p>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

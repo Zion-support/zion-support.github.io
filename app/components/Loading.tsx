@@ -7,8 +7,6 @@ const Loading: React.FC = () => {
         <div className="animate-spinrounded-full h-32 w-32 border-b-2 border-purple-500 mx-auto mb-4"></div>
 <h2 className="text-2xlfont-bold text-white mb-2">Loading...</h2>
         <p className="text-gray-300">Please wait while we load the content</p>
-      </div>
-    </div>
   );
 };
 

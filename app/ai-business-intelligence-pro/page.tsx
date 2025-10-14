@@ -18,34 +18,22 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Transform your data into actionable insights with AI-powered business intelligence
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Brain className="w-12h-12 text-blue-400 mb-4" />
+              <Brain className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>
               <p className="text-gray-300">
                 Advanced AI algorithms for deep data analysis and insights.
-              </p>
-            </div>
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <BarChart3 className="w-12h-12 text-blue-400 mb-4" />
+              <BarChart3 className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Dashboards</h3>
               <p className="text-gray-300">
                 Live dashboards with real-time business metrics and KPIs.
-              </p>
-            </div>
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <TrendingUp className="w-12h-12 text-blue-400 mb-4" />
+              <TrendingUp className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
               <p className="text-gray-300">
                 Forecast trends and make data-driven decisions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

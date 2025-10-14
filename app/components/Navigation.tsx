@@ -79,9 +79,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         <div className="flexjustify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flexitems-center space-x-2 group">
-            <div className="w-8h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
               <span className="text-whitefont-bold text-lg">Z</span>
-            </div>
             <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
           </Link>
 
@@ -101,9 +100,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    <Icon className="w-4h-4" />
+                    <Icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4h-4 ml-1" />}
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   
                   {/* Dropdown Menu */}
@@ -118,23 +117,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           {subItem.name}
                         </Link>
                       ))}
-                    </div>
                   )}
-                </div>
               );
             })}
-          </div>
-
           {/* CTA Button */}
           <div className="hiddenlg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get Started
             </Link>
-          </div>
-
           {/* Mobile menu button */}
           <div className="lg:hiddenflex items-center space-x-2">
             <button
@@ -144,10 +137,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon className="blockh-6 w-6" />
             </button>
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Navigation */}
       <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
@@ -163,9 +152,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         : 'text-gray-300 hover:text-white hover:bg-slate-700'
                     }`}
                   >
-                    <item.icon className="w-5h-5 mr-3" />
+                    <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
-                    <ChevronDownIcon className="w-4h-4 ml-auto" />
+                    <ChevronDownIcon className="w-4 h-4 ml-auto" />
                   </button>
                   
                   {/* Mobile Submenu */}
@@ -181,12 +170,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           setIsSolutionsOpen(false);
                         }}
                       >
-                        <div className="w-4h-4 mr-3" />
+                        <div className="w-4 h-4 mr-3" />
                         {subItem.name}
                       </Link>
                     ))}
-                  </div>
-                </div>
               ) : (
                 <Link
                   to={item.href}
@@ -197,14 +184,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  <item.icon className="w-5h-5 mr-3" />
+                  <item.icon className="w-5 h-5 mr-3" />
                   {item.name}
                 </Link>
               )}
-            </div>
           ))}
-        </div>
-      </div>
     </nav>
   );
 }

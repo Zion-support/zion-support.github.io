@@ -58,11 +58,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="text-gray-400hover:text-white lg:hidden"
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
           >
-            <X className="w-6h-6" />
+            <X className="w-6 h-6" />
           </button>
-          </div>
-        </div>
-        
         <nav className="mt-6">
           <ul className="space-y-2px-4">
             {navigationItems.map((item) => {
@@ -78,7 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     className="flexitems-center px-4 py-3 text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors"
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
                   >
-                    <Icon className="w-5h-5 mr-3" />
+                    <Icon className="w-5 h-5 mr-3" />
                     {item.name}
                   </Link>
                 </li>
@@ -90,25 +87,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="absolutebottom-4 left-4 right-4">
           <div className="bg-slate-700rounded-lg p-4">
             <div className="flexitems-center text-sm text-gray-300 mb-2">
-              <MapPin className="w-4h-4 mr-2" />
+              <MapPin className="w-4 h-4 mr-2" />
               <span>Contact Info</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300 mb-1">
-              <Phone className="w-4h-4 mr-2" />
+              <Phone className="w-4 h-4 mr-2" />
               <span>+1 (555) 123-4567</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300">
-              <Mail className="w-4h-4 mr-2" />
+              <Mail className="w-4 h-4 mr-2" />
               <span>info@ziontechgroup.com</span>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

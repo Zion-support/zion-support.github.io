@@ -10,10 +10,6 @@ const FiveGTransformationPage: React.FC = () => {
           </h1>
 <p className="Professional services and solutions.
              ">$2</p>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }
 export default FiveGTransformationPage;

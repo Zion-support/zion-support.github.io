@@ -120,33 +120,26 @@ const PerformanceMonitor = () => {
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
           </span>
-        </div>
         <div className="flexjustify-between">
           <span>LCP:</span>
           <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </span>
-        </div>
         <div className="flexjustify-between">
           <span>FID:</span>
           <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
           </span>
-        </div>
         <div className="flexjustify-between">
           <span>CLS:</span>
           <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
-        </div>
         <div className="flexjustify-between">
           <span>TTFB:</span>
           <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
-        </div>
-      </div>
-    </div>
   );
 };
 

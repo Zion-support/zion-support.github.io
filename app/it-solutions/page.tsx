@@ -145,16 +145,14 @@ const ItSolutionsPage: React.FC = () => {
 <<<<<<< HEAD
 
       {/* Hero Section */}
-      <section className="relativepy-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xlmd:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             IT Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we&apos;ve got you covered.
-          </p>
-        </div>
+            From infrastructure to cloud, we've got you covered.
       </section>
 
       {/* Services Grid */}
@@ -164,9 +162,7 @@ const ItSolutionsPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="bg-slate-800rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8h-8 text-white" />
-                </div>
-                
+                  <service.icon className="w-8 h-8 text-white" />
                 <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300mb-6">{service.description}</p>
                 
@@ -175,29 +171,22 @@ const ItSolutionsPage: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300text-sm flex items-center">
-                        <CheckCircleIcon className="w-4h-4 text-blue-400 mr-3 flex-shrink-0" />
+                        <CheckCircleIcon className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-blue-400 mb-2">{service.price}</div>
                   <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
-                </div>
-
                 <Link
                   to={service.href}
                   className="w-fullbg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Learn More
-                  <ArrowRightIcon className="w-4h-4" />
+                  <ArrowRightIcon className="w-4 h-4" />
                 </Link>
-              </div>
             ))}
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -207,12 +196,11 @@ const ItSolutionsPage: React.FC = () => {
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our IT solutions can improve your business operations and security.
-          </p>
-          <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            Let's discuss how our IT solutions can improve your business operations and security.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started
             </Link>
@@ -222,10 +210,7 @@ const ItSolutionsPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
-        </div>
       </section>
-    </div>
   );
 }
 =======
@@ -238,27 +223,17 @@ const ItSolutionsPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Comprehensive IT services to power your digital transformation
-            </p>
-          </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Server className="w-12h-12 text-blue-400 mb-4" />
+              <Server className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
               <p className="text-gray-300">
                 Robust IT infrastructure solutions for scalable growth.
-              </p>
-            </div>
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Cloud className="w-12h-12 text-blue-400 mb-4" />
+              <Cloud className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
               <p className="text-gray-300">
                 Secure and scalable cloud computing solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

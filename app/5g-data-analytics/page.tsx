@@ -9,17 +9,17 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8h-8" />,
+      icon: <CheckCircle className="w-8 h-8" />,
       title: 'Advanced Analytics',
       description: 'Cutting-edge 5G data analytics for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8h-8" />,
+      icon: <Shield className="w-8 h-8" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8h-8" />,
+      icon: <Users className="w-8 h-8" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
@@ -34,18 +34,17 @@ const Page = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relativepy-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xlmx-auto text-center">
             <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
               5G Data Analytics
-              <span className="blockbg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional 5G data analytics services designed to help your business succeed and grow.
-            </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
@@ -59,8 +58,6 @@ const Page = () => {
               >
                 View Demo
               </Link>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -72,20 +69,14 @@ const Page = () => {
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
             <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     {feature.icon}
-                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -96,8 +87,7 @@ const Page = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our 5G data analytics services can help your business succeed.
-            </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
@@ -111,10 +101,7 @@ const Page = () => {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };

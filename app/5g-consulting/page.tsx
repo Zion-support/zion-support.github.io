@@ -33,9 +33,6 @@ const FiveGConsultingPage = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Expert guidance for your 5G transformation journey
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
@@ -44,7 +41,6 @@ const FiveGConsultingPage = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 {service.description}
-              </p>
               <Link 
                 to="/contact" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
@@ -52,10 +48,7 @@ const FiveGConsultingPage = () => {
                 Learn More
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-            </div>
           ))}
-        </div>
-
         <div className="text-center">
           <Link 
             to="/contact" 
@@ -64,9 +57,6 @@ const FiveGConsultingPage = () => {
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
-        </div>
-      </div>
-    </div>
   );
 };
 

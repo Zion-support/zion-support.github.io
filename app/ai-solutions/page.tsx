@@ -168,7 +168,7 @@ export default function AISolutionsPage() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relativepy-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xlmd:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             AI Solutions
@@ -176,8 +176,6 @@ export default function AISolutionsPage() {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions. 
             From machine learning to automation, we deliver AI that drives real results.
-          </p>
-        </div>
       </section>
 
       {/* Services Grid */}
@@ -187,9 +185,7 @@ export default function AISolutionsPage() {
             {aiServices.map((service, index) => (
               <div key={index} className="bg-slate-800rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8h-8 text-white" />
-                </div>
-                
+                  <service.icon className="w-8 h-8 text-white" />
                 <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300mb-6">{service.description}</p>
                 
@@ -198,29 +194,22 @@ export default function AISolutionsPage() {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300text-sm flex items-center">
-                        <CheckCircleIcon className="w-4h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                </div>
-
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-purple-400 mb-2">{service.price}</div>
                   <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
-                </div>
-
                 <Link
                   to={service.href}
                   className="w-fullbg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Learn More
-                  <ArrowRightIcon className="w-4h-4" />
+                  <ArrowRightIcon className="w-4 h-4" />
                 </Link>
-              </div>
             ))}
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -230,12 +219,11 @@ export default function AISolutionsPage() {
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
-          </p>
-          <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your AI Journey
             </Link>
@@ -245,9 +233,6 @@ export default function AISolutionsPage() {
             >
               Schedule Demo
             </Link>
-          </div>
-        </div>
       </section>
-    </div>
   );
 }
