@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -75,4 +76,5 @@ const FiveGConsultingPage = () => {
   )
 }
 
+import React, { Suspense } from 'react';
 export default FiveGConsultingPage

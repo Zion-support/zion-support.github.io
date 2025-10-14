@@ -10,6 +10,21 @@ import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
 import tseslint from "typescript-eslint"
 
+export default [
+  {
+    ignores: [
+      "app-broken/**",
+      "app-disabled/**", 
+      "temp-broken/**",
+      "temp-disabled/**",
+      "**/*.cjs",
+      "**/*.js",
+      "api/**",
+      "scripts/**"
+    ]
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
 export default tseslint.config(
   {
     ignores: [

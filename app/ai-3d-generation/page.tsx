@@ -51,5 +51,6 @@ const Ai3dGenerationPage: React.FC = () => {
 }
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default Ai3dGenerationPage;
 

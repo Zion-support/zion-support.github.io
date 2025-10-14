@@ -34,6 +34,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
