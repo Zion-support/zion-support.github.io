@@ -76,9 +76,6 @@ const Footer = React.memo(() => {
   const legalLinks = useMemo(() => [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" },
-    { name: "GDPR Compliance", path: "/gdpr" },
-    { name: "Security", path: "/security" },
     { name: "Sitemap", path: "/sitemap" }
   ], []);
 
