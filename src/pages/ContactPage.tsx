@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const ContactPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />
       </Helmet>
@@ -23,7 +23,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold"></h3>
-                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">
+)
+                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">)
                       +1 (234) 567-890;
                     </a>
                   </div>
@@ -40,7 +41,7 @@ const ContactPage: React.FC = () => {
                       type="$1"
                       id="$1"
                       name="$1"
-                      className="$1"
+                      className="service-card"
                       required;
                     />
                   </div>
@@ -52,7 +53,7 @@ const ContactPage: React.FC = () => {
                       type="$1"
                       id="$1"
                       name="$1"
-                      className="$1"
+                      className="service-card"
                       required;
                     />
                   </div>
@@ -63,14 +64,15 @@ const ContactPage: React.FC = () => {
                     <textarea;
                       id="$1"
                       name="$1"
+}
                       rows={4}
-                      className="$1"
+                      className="service-card"
                       required;
                     ></textarea>
                   </div>
                   <button;
                     type="$1"
-                    className="$1"
+                    className="service-card"
                   >
                     Send Message;
                   </button>
@@ -83,4 +85,4 @@ const ContactPage: React.FC = () => {
     </>
   );
 }
-export default ContactPage;
+export default ContactPag;e;

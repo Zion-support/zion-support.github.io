@@ -13,6 +13,11 @@ function App() {
           <p className="text-gray-300 text-center text-lg">
             Advanced AI and IT Solutions
           </p>
+          <div className="mt-8 text-center">
+            <p className="text-gray-400">
+              Website is being updated. Please check back soon.
+            </p>
+          </div>
         </div>
       </div>
     </Router>

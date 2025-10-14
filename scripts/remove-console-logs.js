@@ -1,2 +1,3 @@
 const removeConsoleLogs = () => {
-  console.log('Console logs removal completed'';
+  console.log('Console logs removal completed'';)
+}

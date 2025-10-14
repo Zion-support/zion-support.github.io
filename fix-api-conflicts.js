@@ -8,11 +8,13 @@ import fs from 'fs;
   '';
   '';
   '';
-  const lines = content.split('\n'';
-    if (line.startsWith('<<<<<<<') || line.startsWith('') || line.startsWith('>>>>>>>'';
-      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('') || lines[i].startsWith('>>>>>>>'';
+  const lines = content.split('\n'';)
+    if (line.startsWith('<<<<<<<') || line.startsWith('') || line.startsWith('>>>>>>>'';)
+      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('') || lines[i].startsWith(
+  '>>>>>>>'';
   return resolved.join('\n'';
   console.error('Error:'';
     const content = fs.readFileSync(filePath, 'utf8'';
 console.log('Fixing API files merge conflicts...'';
-console.log('API files merge conflict resolution completed!'';
+)
+console.log('API files merge conflict resolution completed!'';)
