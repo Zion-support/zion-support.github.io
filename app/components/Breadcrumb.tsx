@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type BreadcrumbProps = Record<string, unknown>;
 
-
-
-const Breadcrumb = () => {
-
+const Breadcrumb: React.FC<BreadcrumbProps> = () => {
   return (
-    div>
-      <h2>Breadcrumb</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="breadcrumb">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default Breadcrumb;
-
-

@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedSEOProps = Record<string, unknown>;
 
-
-
-const EnhancedSEO = () => {
-
+const EnhancedSEO: React.FC<EnhancedSEOProps> = () => {
   return (
-    div>
-      <h2>EnhancedSEO</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedseo">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedSEO;
-
-

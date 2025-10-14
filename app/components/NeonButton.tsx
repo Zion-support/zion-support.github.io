@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type NeonButtonProps = Record<string, unknown>;
 
-
-
-const NeonButton = () => {
-
+const NeonButton: React.FC<NeonButtonProps> = () => {
   return (
-    div>
-      <h2>NeonButton</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="neonbutton">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default NeonButton;
-
-

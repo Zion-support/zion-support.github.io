@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ContentCarouselProps = Record<string, unknown>;
 
-
-
-const ContentCarousel = () => {
-
+const ContentCarousel: React.FC<ContentCarouselProps> = () => {
   return (
-    div>
-      <h2>ContentCarousel</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="contentcarousel">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ContentCarousel;
-
-

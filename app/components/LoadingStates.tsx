@@ -1,16 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type LoadingStatesProps = Record<string, unknown>;
 
-
-
-const LoadingStates = () => {
-
+const LoadingStates: React.FC<LoadingStatesProps> = () => {
   return (
+    <div className="loadingstates">
+      {/* Component content */}
+    </div>
+  );
+};
 
-    <div>
-      <div>
-  );
-  );
-  );
-  );
-  );
+export default LoadingStates;

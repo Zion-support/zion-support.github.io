@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type MobileNavigationProps = Record<string, unknown>;
 
-
-
-const MobileNavigation = () => {
-
+const MobileNavigation: React.FC<MobileNavigationProps> = () => {
   return (
-    div>
-      <h2>MobileNavigation</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="mobilenavigation">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default MobileNavigation;
-
-

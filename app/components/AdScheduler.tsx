@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdSchedulerProps = Record<string, unknown>;
 
-
-
-const AdScheduler = () => {
-
+const AdScheduler: React.FC<AdSchedulerProps> = () => {
   return (
-    div>
-      <h2>AdScheduler</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="adscheduler">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdScheduler;
-
-

@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedHeroProps = Record<string, unknown>;
 
-
-
-const EnhancedHero = () => {
-
+const EnhancedHero: React.FC<EnhancedHeroProps> = () => {
   return (
-    div>
-      <h2>EnhancedHero</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedhero">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedHero;
-
-

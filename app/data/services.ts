@@ -1,5 +1,4 @@
-"use client;"// services utility; export const services = () => {
-} // Implementation; return true}""} export default services;
-
-
-
+// Data file
+export const services = [];
+export const categories = [];
+export const features = [];

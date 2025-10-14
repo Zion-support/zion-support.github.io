@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedSkipLinkProps = Record<string, unknown>;
 
-
-
-const EnhancedSkipLink = () => {
-
+const EnhancedSkipLink: React.FC<EnhancedSkipLinkProps> = () => {
   return (
-    div>
-      <h2>EnhancedSkipLink</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedskiplink">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedSkipLink;
-
-

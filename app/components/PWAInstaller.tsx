@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type PWAInstallerProps = Record<string, unknown>;
 
-
-
-const PWAInstaller = () => {
-
+const PWAInstaller: React.FC<PWAInstallerProps> = () => {
   return (
-    div>
-      <h2>PWAInstaller</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="pwainstaller">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default PWAInstaller;
-
-

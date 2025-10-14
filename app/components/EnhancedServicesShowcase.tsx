@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedServicesShowcaseProps = Record<string, unknown>;
 
-
-
-const EnhancedServicesShowcase = () => {
-
+const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = () => {
   return (
-    div>
-      <h2>EnhancedServicesShowcase</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedservicesshowcase">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedServicesShowcase;
-
-

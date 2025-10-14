@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type PerformanceEnhancerProps = Record<string, unknown>;
 
-
-
-const PerformanceEnhancer = () => {
-
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = () => {
   return (
-    div>
-      <h2>PerformanceEnhancer</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="performanceenhancer">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default PerformanceEnhancer;
-
-

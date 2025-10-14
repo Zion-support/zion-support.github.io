@@ -1,42 +1,24 @@
-"use client;";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-
-import { Link   } from "react-router-dom";
-
-
-
-
-";
-import SEO from ../components/SEO;
-
-
-
-
-"";";
-import {}  CloudIcon,"ServerIcon,
-  CpuChipIcon,
-  ChartBarIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon"} from @heroicons/react/24/outline;
-
-
-
-
-"export default function Component() {"return (
-    div>
-  );Page content</div>
+const CloudSolutionsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>CloudSolutions - Zion Tech Group</title>
+        <meta name="description" content="Professional cloudsolutions services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">CloudSolutions</h1>
+            <p className="text-gray-300 text-lg mb-8">Professional cloudsolutions services by Zion Tech Group.</p>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
 
-  const services :  [
-    {};
-      icon: "CloudIcon,""title="Cloud Migration"",      description: "Seamless migration of your applications and data to the cloud with minimal downtime.","features: [Assessment & planning", Data migration, "Application modernization", Performance optimization];"},"{}"icon: ServerIcon","title="Infrastructure Management"",      description: "Complete management of your cloud infrastructure with 24/7 monitoring and support.","features: [Server provisioning", Load balancing, "Auto-scaling", Backup & recovery];"},"{}"icon: CpuChipIcon","title="Container Solutions"",      description: "Docker and Kubernetes solutions for modern application deployment and management.","features: [Container orchestration", Microservices architecture, "CI/CD pipelines", Service mesh];"},"{}"icon: ChartBarIcon","title="Cloud Analytics"",      description: "Advanced analytics and monitoring solutions for your cloud infrastructure and applications.","features: [Performance monitoring", Cost optimization, "Security analytics", Predictive insights];"}"]"const platforms = ["{ name="Amazon Web Services (AWS)"", logo: "AWS"},    { name="""Microsoft Azure, logo: ""Azure"},    { name=""Google Cloud Platform"", logo: GCP""},    { name=""IBM Cloud", logo: ""IBM},"{ name=""Oracle Cloud", logo: "Oracle""},    { name=""DigitalOcean", logo: "DO"}"]'    <div>Page content</div>");'    <React.Fragment></React.Fragment>'      <Helmet>
+};
 
-        <title>CloudSolutionsPage - Zion Tech Group</title>
-        <meta name="description content="CloudSolutionsPage - Zion Tech Group" />      </Helmet>            <div>
-      </div>
-        <div>
-      </div>
+export default CloudSolutionsPage;

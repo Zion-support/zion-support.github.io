@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ImprovedImageProps = Record<string, unknown>;
 
-
-
-const ImprovedImage = () => {
-
+const ImprovedImage: React.FC<ImprovedImageProps> = () => {
   return (
-    div>
-      <h2>ImprovedImage</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="improvedimage">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ImprovedImage;
-
-

@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AnimatedCardProps = Record<string, unknown>;
 
-
-
-const AnimatedCard = () => {
-
+const AnimatedCard: React.FC<AnimatedCardProps> = () => {
   return (
-    div>
-      <h2>AnimatedCard</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="animatedcard">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AnimatedCard;
-
-

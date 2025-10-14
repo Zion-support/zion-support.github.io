@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ImprovedNavigationProps = Record<string, unknown>;
 
-
-
-const ImprovedNavigation = () => {
-
+const ImprovedNavigation: React.FC<ImprovedNavigationProps> = () => {
   return (
-    div>
-      <h2>ImprovedNavigation</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="improvednavigation">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ImprovedNavigation;
-
-

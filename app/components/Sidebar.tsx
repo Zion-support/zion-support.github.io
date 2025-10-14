@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SidebarProps = Record<string, unknown>;
 
-
-
-const Sidebar = () => {
-
+const Sidebar: React.FC<SidebarProps> = () => {
   return (
-    div>
-      <h2>Sidebar</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="sidebar">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default Sidebar;
-
-

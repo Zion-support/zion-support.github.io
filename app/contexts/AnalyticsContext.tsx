@@ -1,20 +1,22 @@
-import { createContext, useContext, useState, useEffect   } from "react";
+import React, { createContext, useContext, ReactNode } from "react";
 
+type AnalyticsContextType = Record<string, unknown>;
 
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-
-interface AnalyticsContextType {}"trackEvent: (eventNam,e: string", properties ?  : Record<string, any>) => void"trackPageView: (pageNam,e: string) => void",setUser: "(userI,d: string, properties ?  : Record<string, any>) => void"  isEnabled: "boolean}const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)const ({ children   }) => {}"  const [ isEnabled, setIsEnabled ] = useState(false);
-  const [ userId, setUserId ] = useState<string | null>(null);
-  useEffect(() => {;
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName = "string, properties ?   = Record<string, any>) => {"if (!isEnabled) return;"// Track event logic here;"console.log(Analytics Event: "", eventName, properties);"}const trackPageView  = (pageName: "// Track page view logic here;"console.log(Page View: "", pageName);  }const setUser  = (newUserId: "string, properties ?  : Record<string, any>) => {"setUserId(newUserId);"    console.log(User Set: "", newUserId, properties);"}    // Track event logic here;console.log(Analytics Event: "", eventName, properties)}"  }const trackPageView  = (pageName: "// Track page view logic here;console.log(Page View: "", pageName)}  }const setUser  = (newUserId: "string, properties ?  : Record<string, any>) => {"setUserId(newUserId);console.log(User Set: "", newUserId, properties)}"  }'  const value="t,rackEvent,"    trackPageView,'    setUser,'    isEnabled
-  };
-    <div>Page content</div>
-  );
-<nalyticsContext.Provider value={value}">"{children}    </AnalyticsContext.Provider>"  );
-
-export { AnalyticsContext };
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
-export { AnalyticsContext };
-</string></AnalyticsContextType>
+
+export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <AnalyticsContext.Provider value={{}}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};

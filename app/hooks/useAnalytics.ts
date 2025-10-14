@@ -1,4 +1,12 @@
-"use client;{ useContext } from "react;{ AnalyticsContext } from ";
-../contexts/AnalyticsContext;";export const useAnalytics = () => {
-;const context  = useContext(AnalyticsContext);
-  if (!context) {throw new Error(useAnalytics must be used within an AnalyticsProvider)}"}"return context;"};
+import { useState, useEffect } from 'react';
+
+export const useAnalytics = () => {
+  const [data, setData] = useState<Record<string, unknown> | null>(null);
+  
+  useEffect(() => {
+    // Hook logic
+    setData({});
+  }, []);
+  
+  return { data };
+};

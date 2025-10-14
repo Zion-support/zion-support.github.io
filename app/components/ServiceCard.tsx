@@ -1,24 +1,13 @@
-import React from "reactuse client";
+import React from "react";
 
-'export default function ServiceCard() {'  return (
-    div>
-  );Page content</div>
-  );
+type ServiceCardProps = Record<string, unknown>;
 
-    <div>Page content</div>
-  );
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className: '"text-4xl font-bold mb-8>Components</h1>        <p className: ""text-gray-30o0 text-lg>"          This page is under development.;        </p>      </div>
+const ServiceCard: React.FC<ServiceCardProps> = () => {
+  return (
+    <div className="servicecard">
+      {/* Component content */}
     </div>
   );
+};
 
-        </p></div></div>
-}
-};
-};
-};
-};
-  )};
+export default ServiceCard;

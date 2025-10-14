@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type MobileOptimizerProps = Record<string, unknown>;
 
-
-
-const MobileOptimizer = () => {
-
+const MobileOptimizer: React.FC<MobileOptimizerProps> = () => {
   return (
-    div>
-      <h2>MobileOptimizer</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="mobileoptimizer">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default MobileOptimizer;
-
-

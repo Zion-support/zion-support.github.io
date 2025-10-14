@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type FuturisticServiceCardProps = Record<string, unknown>;
 
-
-
-const FuturisticServiceCard = () => {
-
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = () => {
   return (
-    div>
-      <h2>FuturisticServiceCard</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="futuristicservicecard">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default FuturisticServiceCard;
-
-

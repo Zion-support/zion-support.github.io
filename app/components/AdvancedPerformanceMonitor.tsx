@@ -1,20 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdvancedPerformanceMonitorProps = Record<string, unknown>;
 
-
-
-const AdvancedPerformanceMonitor = () => {
-
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = () => {
   return (
-    div>
-      <h2>AdvancedPerformanceMonitor</h2>
-  );
-  );
-      <p>This component is under construction.</p>
+    <div className="advancedperformancemonitor">
+      {/* Component content */}
     </div>
   );
 };
+
 export default AdvancedPerformanceMonitor;
-
-
-

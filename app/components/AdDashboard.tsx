@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdDashboardProps = Record<string, unknown>;
 
-
-
-const AdDashboard = () => {
-
+const AdDashboard: React.FC<AdDashboardProps> = () => {
   return (
-    div>
-      <h2>AdDashboard</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="addashboard">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdDashboard;
-
-

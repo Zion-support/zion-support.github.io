@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SEOOptimizerProps = Record<string, unknown>;
 
-
-
-const SEOOptimizer = () => {
-
+const SEOOptimizer: React.FC<SEOOptimizerProps> = () => {
   return (
-    div>
-      <h2>SEOOptimizer</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="seooptimizer">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default SEOOptimizer;
-
-

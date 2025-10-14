@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SEOAuditProps = Record<string, unknown>;
 
-
-
-const SEOAudit = () => {
-
+const SEOAudit: React.FC<SEOAuditProps> = () => {
   return (
-    div>
-      <h2>SEOAudit</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="seoaudit">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default SEOAudit;
-
-

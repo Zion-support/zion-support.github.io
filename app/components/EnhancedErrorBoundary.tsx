@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedErrorBoundaryProps = Record<string, unknown>;
 
-
-
-const EnhancedErrorBoundary = () => {
-
+const EnhancedErrorBoundary: React.FC<EnhancedErrorBoundaryProps> = () => {
   return (
-    div>
-      <h2>EnhancedErrorBoundary</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancederrorboundary">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedErrorBoundary;
-
-

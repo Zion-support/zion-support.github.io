@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdManagementSystemProps = Record<string, unknown>;
 
-
-
-const AdManagementSystem = () => {
-
+const AdManagementSystem: React.FC<AdManagementSystemProps> = () => {
   return (
-    div>
-      <h2>AdManagementSystem</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="admanagementsystem">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdManagementSystem;
-
-

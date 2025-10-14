@@ -1,4 +1,9 @@
-// service-template - Basic implementation
-export default function serviceTemplate() {
-  return null;
-};
+import React from "react";
+
+export default function ServiceTemplate() {
+  return (
+    <div className="service-template">
+      {/* Service template content */}
+    </div>
+  );
+}

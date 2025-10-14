@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ResponsiveTextProps = Record<string, unknown>;
 
-
-
-const ResponsiveText = () => {
-
+const ResponsiveText: React.FC<ResponsiveTextProps> = () => {
   return (
-    div>
-      <h2>ResponsiveText</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="responsivetext">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ResponsiveText;
-
-

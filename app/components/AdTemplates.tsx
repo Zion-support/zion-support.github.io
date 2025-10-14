@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdTemplatesProps = Record<string, unknown>;
 
-
-
-const AdTemplates = () => {
-
+const AdTemplates: React.FC<AdTemplatesProps> = () => {
   return (
-    div>
-      <h2>AdTemplates</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="adtemplates">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdTemplates;
-
-

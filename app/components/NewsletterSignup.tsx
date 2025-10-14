@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type NewsletterSignupProps = Record<string, unknown>;
 
-
-
-const NewsletterSignup = () => {
-
+const NewsletterSignup: React.FC<NewsletterSignupProps> = () => {
   return (
-    div>
-      <h2>NewsletterSignup</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="newslettersignup">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default NewsletterSignup;
-
-

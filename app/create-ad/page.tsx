@@ -1,29 +1,26 @@
-"use client;";
-import React from react;
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-
-
-
-"export default function Page() {
+export default function Page() {
   return (
-    div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
+    <React.Fragment>
+      <Helmet>
+        <title>Page.Tsx - Zion Tech Group</title>
+        <meta name="description" content="Professional page.tsx services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Page.Tsx</h1>
+            <p className="text-gray-300 text-lg mb-8">Professional page.tsx services by Zion Tech Group.</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+              <p className="text-gray-200">
+                This page is under development. Please check back soon for more information about our page.tsx services.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Create Ad</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
+    </React.Fragment>
   );
-
-        </p></div></div>
 }
-};
-};
-};
-};
-  )};

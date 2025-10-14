@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdAnalyticsDashboardProps = Record<string, unknown>;
 
-
-
-const AdAnalyticsDashboard = () => {
-
+const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = () => {
   return (
-    div>
-      <h2>AdAnalyticsDashboard</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="adanalyticsdashboard">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdAnalyticsDashboard;
-
-

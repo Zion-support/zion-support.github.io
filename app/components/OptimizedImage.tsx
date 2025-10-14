@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type OptimizedImageProps = Record<string, unknown>;
 
-
-
-const OptimizedImage = () => {
-
+const OptimizedImage: React.FC<OptimizedImageProps> = () => {
   return (
-    div>
-      <h2>OptimizedImage</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="optimizedimage">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default OptimizedImage;
-
-

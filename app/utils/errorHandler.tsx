@@ -1,4 +1,6 @@
-// errorHandler - Basic implementation
-export default function errorHandler() {
-  return null;
+import React from 'react';
+
+export const UtilityComponent: React.FC = () => {
+  return <div>Utility Component</div>;
+
 };

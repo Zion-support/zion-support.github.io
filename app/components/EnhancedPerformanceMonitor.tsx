@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedPerformanceMonitorProps = Record<string, unknown>;
 
-
-
-const EnhancedPerformanceMonitor = () => {
-
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = () => {
   return (
-    div>
-      <h2>EnhancedPerformanceMonitor</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedperformancemonitor">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedPerformanceMonitor;
-
-

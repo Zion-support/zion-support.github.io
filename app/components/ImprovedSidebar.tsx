@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ImprovedSidebarProps = Record<string, unknown>;
 
-
-
-const ImprovedSidebar = () => {
-
+const ImprovedSidebar: React.FC<ImprovedSidebarProps> = () => {
   return (
-    div>
-      <h2>ImprovedSidebar</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="improvedsidebar">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ImprovedSidebar;
-
-

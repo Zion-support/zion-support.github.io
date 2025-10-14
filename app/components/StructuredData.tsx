@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type StructuredDataProps = Record<string, unknown>;
 
-
-
-const StructuredData = () => {
-
+const StructuredData: React.FC<StructuredDataProps> = () => {
   return (
-    div>
-      <h2>StructuredData</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="structureddata">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default StructuredData;
-
-

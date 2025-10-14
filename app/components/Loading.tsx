@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type LoadingProps = Record<string, unknown>;
 
-
-
-const Loading = () => {
-
+const Loading: React.FC<LoadingProps> = () => {
   return (
-    div>
-      <h2>Loading</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="loading">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default Loading;
-
-

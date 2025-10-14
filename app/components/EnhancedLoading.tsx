@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type EnhancedLoadingProps = Record<string, unknown>;
 
-
-
-const EnhancedLoading = () => {
-
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = () => {
   return (
-    div>
-      <h2>EnhancedLoading</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="enhancedloading">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default EnhancedLoading;
-
-

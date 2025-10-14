@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type FuturisticCardEnhancedProps = Record<string, unknown>;
 
-
-
-const FuturisticCardEnhanced = () => {
-
+const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = () => {
   return (
-    div>
-      <h2>FuturisticCardEnhanced</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="futuristiccardenhanced">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default FuturisticCardEnhanced;
-
-

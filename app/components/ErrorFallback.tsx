@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ErrorFallbackProps = Record<string, unknown>;
 
-
-
-const ErrorFallback = () => {
-
+const ErrorFallback: React.FC<ErrorFallbackProps> = () => {
   return (
-    div>
-      <h2>ErrorFallback</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="errorfallback">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ErrorFallback;
-
-

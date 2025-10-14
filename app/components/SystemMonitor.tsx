@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SystemMonitorProps = Record<string, unknown>;
 
-
-
-const SystemMonitor = () => {
-
+const SystemMonitor: React.FC<SystemMonitorProps> = () => {
   return (
-    div>
-      <h2>SystemMonitor</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="systemmonitor">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default SystemMonitor;
-
-

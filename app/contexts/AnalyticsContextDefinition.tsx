@@ -1,7 +1,22 @@
-import { createContext } from 'react';
+import React, { createContext, useContext, ReactNode } from "react";
 
+type AnalyticsContextType = Record<string, unknown>;
 
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+// eslint-disable-next-line react-refresh/only-export-components
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
 
-interface AnalyticsContextType {;
-  trackEvent: '(eventNam,e: string, properties ?  : Record<string, any>) => void"trackPageView: "(pageNam,e: string) => void}"const  createContext<AnalyticsContextType | undefined>(undefined);"export type { AnalyticsContextType }"export type { AnalyticsContextType };</AnalyticsContextType>
+export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <AnalyticsContext.Provider value={{}}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};

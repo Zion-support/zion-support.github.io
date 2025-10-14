@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type LazyImageProps = Record<string, unknown>;
 
-
-
-const LazyImage = () => {
-
+const LazyImage: React.FC<LazyImageProps> = () => {
   return (
-    div>
-      <h2>LazyImage</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="lazyimage">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default LazyImage;
-
-

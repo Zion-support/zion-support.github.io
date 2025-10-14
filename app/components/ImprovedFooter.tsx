@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ImprovedFooterProps = Record<string, unknown>;
 
-
-
-const ImprovedFooter = () => {
-
+const ImprovedFooter: React.FC<ImprovedFooterProps> = () => {
   return (
-    div>
-      <h2>ImprovedFooter</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="improvedfooter">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ImprovedFooter;
-
-

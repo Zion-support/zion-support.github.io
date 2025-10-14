@@ -1,22 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SEOProps = Record<string, unknown>;
 
-
-
-const SEO = () => {
-
+const SEO: React.FC<SEOProps> = () => {
   return (
-    div>
-      <h2>SEO</h2>
-  );
-  );
-      <p>This component is under construction.</p>
-      {title && <p>Title: {title}</p>};
-      {description && <p>Description: {description}</p>};
+    <div className="seo">
+      {/* Component content */}
     </div>
   );
 };
+
 export default SEO;
-
-
-

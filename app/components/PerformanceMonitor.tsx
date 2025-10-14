@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const PerformanceMonitor = () => {
+type PerformanceMonitorProps = Record<string, unknown>;
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
   return (
-    <div>
-      <h2>PerformanceMonitor</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+    <div className="performancemonitor">
+      {/* Component content */}
     </div>
   );
 };

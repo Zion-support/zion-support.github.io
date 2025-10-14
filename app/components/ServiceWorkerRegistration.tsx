@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ServiceWorkerRegistrationProps = Record<string, unknown>;
 
-
-
-const ServiceWorkerRegistration = () => {
-
+const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = () => {
   return (
-    div>
-      <h2>ServiceWorkerRegistration</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="serviceworkerregistration">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ServiceWorkerRegistration;
-
-

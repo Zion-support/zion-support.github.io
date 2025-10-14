@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type GlobalErrorBoundaryProps = Record<string, unknown>;
 
-
-
-const GlobalErrorBoundary = () => {
-
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
   return (
-    div>
-      <h2>GlobalErrorBoundary</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="globalerrorboundary">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default GlobalErrorBoundary;
-
-

@@ -1,4 +1,6 @@
-// accessibilityEnhancer.tsx utility
-export const accessibilityEnhancer = () => {
-  // Utility implementation
+import React from 'react';
+
+export const UtilityComponent: React.FC = () => {
+  return <div>Utility Component</div>;
+
 };

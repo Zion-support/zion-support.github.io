@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type ResponsiveGridProps = Record<string, unknown>;
 
-
-
-const ResponsiveGrid = () => {
-
+const ResponsiveGrid: React.FC<ResponsiveGridProps> = () => {
   return (
-    div>
-      <h2>ResponsiveGrid</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="responsivegrid">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default ResponsiveGrid;
-
-

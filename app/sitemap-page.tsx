@@ -1,4 +1,9 @@
-// sitemap-page - Basic implementation
-export default function sitemapPage() {
-  return null;
-};
+import React from "react";
+
+export default function SitemapPage() {
+  return (
+    <div className="sitemap-page">
+      {/* Sitemap content */}
+    </div>
+  );
+}

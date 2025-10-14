@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type SkipLinkProps = Record<string, unknown>;
 
-
-
-const SkipLink = () => {
-
+const SkipLink: React.FC<SkipLinkProps> = () => {
   return (
-    div>
-      <h2>SkipLink</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="skiplink">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default SkipLink;
-
-

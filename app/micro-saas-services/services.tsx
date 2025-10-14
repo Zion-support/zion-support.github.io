@@ -1,4 +1,2 @@
-// services - Basic implementation
-export default function services() {
-  return null;
-};
+export const microSaasServices = [];
+export const serviceCategories = [];

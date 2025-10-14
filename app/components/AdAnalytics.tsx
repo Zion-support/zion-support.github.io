@@ -1,19 +1,13 @@
-import React from 'react';
+import React from "react";
 
+type AdAnalyticsProps = Record<string, unknown>;
 
-
-
-const AdAnalytics = () => {
-
+const AdAnalytics: React.FC<AdAnalyticsProps> = () => {
   return (
-    div>
-      <h2>AdAnalytics</h2>
-  );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    <div className="adanalytics">
+      {/* Component content */}
+    </div>
   );
 };
+
 export default AdAnalytics;
-
-
