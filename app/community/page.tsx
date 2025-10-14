@@ -154,7 +154,6 @@ const CommunityPage: React.FC = () => {
             Developer Community
           </h1>
           <p>Connect with fellow developers, share your projects, get help, and learn from the community.</p>
-          </p>
           
           {/* Community Stats */}
           <div>{communityStats.map((stat, index) => (</div>
@@ -291,9 +290,11 @@ const CommunityPage: React.FC = () => {
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </div>
+            </button>
+          </div>
         </section>
-    </div>
+      </div>
+    </>
   );
 };
 

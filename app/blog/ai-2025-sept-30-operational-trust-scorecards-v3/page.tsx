@@ -2,9 +2,7 @@ import React from 'react';
 const OperationalTrustScorecardsPage: React.FC = () => {
 
   return (
-
     <>
-
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
@@ -69,5 +67,3 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 }
 
 export default OperationalTrustScorecardsPage;
-
-</li>
