@@ -1,4 +1,38 @@
-'use client'
-export default function ComponentsPage() {return (} <div className="min-h-screen bg-gray-900 text-white py-20">" <div className="container mx-auto px-4">" <h1 className="text-4xl font-bold mb-8">Components</h1>" <p className="text-gray-30o0 text-lg">" This page is under development. </p> </div> </div> )} </p></div></div> );}
-}''
-'
+import React from 'react';
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  title,
+  description,
+  icon,
+  className = '',
+  onClick
+}) => {
+  return (
+    <div
+      className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer ${className}`}
+      onClick={onClick}
+    >
+      {icon && (
+        <div className="mb-4 text-cyan-400">
+          {icon}
+        </div>
+      )}
+      <h3 className="text-xl font-semibold text-white mb-3">
+        {title}
+      </h3>
+      <p className="text-gray-300 leading-relaxed">
+        {description}
+      </p>
+    </div>
+  );
+};
+
+export default ServiceCard;

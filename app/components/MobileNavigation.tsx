@@ -1,8 +1,121 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const MobileNavigation: "React.FC = () => {"} return ( <div className="min-h-screen bg-white">" <Helmet> <title>Mobile - Zion Tech Group</title> <meta name="description" content="Professional mobile navigation services by Zion Tech Group." />" </Helmet>} {/* Hero Section */} <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">" <div className="max-w-6xl mx-auto text-center">" <h1 className="text-5xl font-bold text-gray-900 mb-6">" Mobile </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto">" Professional mobile navigation services designed to help your business grow and succeed. </p> </div> </section> {/* Content Section */} <section className="py-16 px-4">" <div className="max-w-6xl mx-auto">" <div className="grid md:grid-cols-2 gap-12 items-center">" <div> <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>" <p className="text-lg text-gray-600 mb-6">" We provide comprehensive mobile navigation solutions tailored to your specific needs and requirements. </p> <ul className="space-y-3">" <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Custom solutions </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Expert consultation </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Ongoing support </li> </ul> </div> <div className="bg-gradient-to-br from-blue-50o0 to-purple-600 rounded-lg p-8 text-white">" <h3 className="text-2xl font-bold mb-4">Get Started</h3>" <p className="mb-6">" Ready to transform your business with our mobile navigation services? </p> <a href="" className="flex items-center" > Contact Us </a> </div> </div> </div> </section> {/* CTA Section */} <section className="py-16 px-4 bg-blue-600">" <div className="max-w-4xl mx-auto text-center">" <h2 className="text-3xl font-bold text-white mb-6">" Ready to Get Started? </h2> <p className="text-xl text-blue-100 mb-8">''" Let's discuss how our mobile navigation' services can help you achieve your goals. </p> <a href="" className="flex items-center" > Get Started Today </a> </div> </section> </div> )
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
+interface MobileNavigationProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
-export default MobileNavigation
-};''
-export default MobileNavigation'
+
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    {
+      name: 'Services',
+      href: '/services',
+      submenu: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity' }
+      ]
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const toggleSection = (sectionName: string) => {
+    setExpandedSections(prev =>
+      prev.includes(sectionName)
+        ? prev.filter(name => name !== sectionName)
+        : [...prev, sectionName]
+    );
+  };
+
+  const isExpanded = (sectionName: string) => {
+    return expandedSections.includes(sectionName);
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 md:hidden">
+      {/* Overlay */}
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+      
+      {/* Navigation Panel */}
+      <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold text-gray-900">Navigation</h2>
+          <button
+            onClick={onClose}
+            className="p-2 hover:bg-gray-100 rounded-md"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <nav className="mt-4 px-4">
+          {navigationItems.map((item) => (
+            <div key={item.name}>
+              {item.submenu ? (
+                <div>
+                  <button
+                    onClick={() => toggleSection(item.name)}
+                    className="w-full flex items-center justify-between py-3 text-gray-700 hover:text-gray-900 transition-colors"
+                  >
+                    <span className="font-medium">{item.name}</span>
+                    <ChevronDown
+                      className={`w-4 h-4 transition-transform ${
+                        isExpanded(item.name) ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                  {isExpanded(item.name) && (
+                    <div className="pl-4 space-y-1">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="block py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                          onClick={onClose}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  to={item.href}
+                  className="block py-3 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  onClick={onClose}
+                >
+                  {item.name}
+                </Link>
+              )}
+            </div>
+          ))}
+          
+          {/* CTA Button */}
+          <div className="mt-6 pt-4 border-t">
+            <Link
+              to="/contact"
+              className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              onClick={onClose}
+            >
+              Get Started
+            </Link>
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+export default MobileNavigation;

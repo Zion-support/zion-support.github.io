@@ -1,8 +1,75 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const FuturisticTextEnhanced: "React.FC = () => {"} return ( <div className="min-h-screen bg-white">" <Helmet> <title>Futuristic Text Enhanced - Zion Tech Group</title> <meta name="description" content="Professional futuristic text enhanced services by Zion Tech Group." />" </Helmet>} {/* Hero Section */} <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">" <div className="max-w-6xl mx-auto text-center">" <h1 className="text-5xl font-bold text-gray-900 mb-6">" Futuristic Text Enhanced </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto">" Professional futuristic text enhanced services designed to help your business grow and succeed. </p> </div> </section> {/* Content Section */} <section className="py-16 px-4">" <div className="max-w-6xl mx-auto">" <div className="grid md:grid-cols-2 gap-12 items-center">" <div> <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>" <p className="text-lg text-gray-600 mb-6">" We provide comprehensive futuristic text enhanced solutions tailored to your specific needs and requirements. </p> <ul className="space-y-3">" <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Custom solutions </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Expert consultation </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Ongoing support </li> </ul> </div> <div className="bg-gradient-to-br from-blue-50o0 to-purple-600 rounded-lg p-8 text-white">" <h3 className="text-2xl font-bold mb-4">Get Started</h3>" <p className="mb-6">" Ready to transform your business with our futuristic text enhanced services? </p> <a href="" className="flex items-center" > Contact Us </a> </div> </div> </div> </section> {/* CTA Section */} <section className="py-16 px-4 bg-blue-600">" <div className="max-w-4xl mx-auto text-center">" <h2 className="text-3xl font-bold text-white mb-6">" Ready to Get Started? </h2> <p className="text-xl text-blue-100 mb-8">''" Let's discuss how our futuristic text enhanced' services can help you achieve your goals. </p> <a href="" className="flex items-center" > Get Started Today </a> </div> </section> </div> )
+import React from 'react';
+
+interface FuturisticTextEnhancedProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'default' | 'gradient' | 'neon' | 'glow' | 'animated';
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl';
+  weight?: 'thin' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black';
+  color?: string;
+  as?: 'p' | 'span' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
 }
-export default FuturisticTextEnhanced
-};''
-export default FuturisticTextEnhanced'
+
+const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
+  children,
+  className = '',
+  variant = 'default',
+  size = 'base',
+  weight = 'normal',
+  color = 'text-white',
+  as: Component = 'p',
+  glowColor = 'purple'
+}) => {
+  const sizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
+    xl: 'text-xl',
+    '2xl': 'text-2xl',
+    '3xl': 'text-3xl',
+    '4xl': 'text-4xl',
+    '5xl': 'text-5xl',
+    '6xl': 'text-6xl'
+  };
+
+  const weightClasses = {
+    thin: 'font-thin',
+    light: 'font-light',
+    normal: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold',
+    extrabold: 'font-extrabold',
+    black: 'font-black'
+  };
+
+  const variantClasses = {
+    default: '',
+    gradient: 'bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent',
+    neon: 'text-cyan-400 drop-shadow-lg',
+    glow: `text-${glowColor}-400 drop-shadow-lg`,
+    animated: 'bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent animate-pulse'
+  };
+
+  const glowColors = {
+    purple: 'drop-shadow-purple-500/50',
+    cyan: 'drop-shadow-cyan-500/50',
+    pink: 'drop-shadow-pink-500/50',
+    green: 'drop-shadow-green-500/50',
+    blue: 'drop-shadow-blue-500/50',
+    yellow: 'drop-shadow-yellow-500/50'
+  };
+
+  const glowClass = variant === 'glow' ? glowColors[glowColor] : '';
+
+  const classes = `${sizeClasses[size]} ${weightClasses[weight]} ${variantClasses[variant]} ${glowClass} ${className}`;
+
+  return (
+    <Component className={classes}>
+      {children}
+    </Component>
+  );
+};
+
+export default FuturisticTextEnhanced;

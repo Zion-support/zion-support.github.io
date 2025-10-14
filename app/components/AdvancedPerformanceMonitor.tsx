@@ -49,10 +49,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
               }));
             }
             
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
               setMetrics(prev => ({
                 ...prev,
-                cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
+                cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as PerformanceEntry & { value: number }).value
               }));
             }
           });
@@ -64,7 +64,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
         
         // Memory usage (if available)
-        const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
+        const memoryUsage = (window as unknown as { performance?: { memory?: { usedJSHeapSize?: number } } }).performance?.memory?.usedJSHeapSize || 0;
         
         // Network latency
         const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;

@@ -1,8 +1,90 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const FuturisticButtonEnhanced: "React.FC = () => {"} return ( <div className="min-h-screen bg-white">" <Helmet> <title>Futuristic Button Enhanced - Zion Tech Group</title> <meta name="description" content="Professional futuristic button enhanced services by Zion Tech Group." />" </Helmet>} {/* Hero Section */} <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">" <div className="max-w-6xl mx-auto text-center">" <h1 className="text-5xl font-bold text-gray-900 mb-6">" Futuristic Button Enhanced </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto">" Professional futuristic button enhanced services designed to help your business grow and succeed. </p> </div> </section> {/* Content Section */} <section className="py-16 px-4">" <div className="max-w-6xl mx-auto">" <div className="grid md:grid-cols-2 gap-12 items-center">" <div> <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>" <p className="text-lg text-gray-600 mb-6">" We provide comprehensive futuristic button enhanced solutions tailored to your specific needs and requirements. </p> <ul className="space-y-3">" <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Custom solutions </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Expert consultation </li> <li className="flex items-center">" <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>" Ongoing support </li> </ul> </div> <div className="bg-gradient-to-br from-blue-50o0 to-purple-600 rounded-lg p-8 text-white">" <h3 className="text-2xl font-bold mb-4">Get Started</h3>" <p className="mb-6">" Ready to transform your business with our futuristic button enhanced services? </p> <a href="" className="flex items-center" > Contact Us </a> </div> </div> </div> </section> {/* CTA Section */} <section className="py-16 px-4 bg-blue-600">" <div className="max-w-4xl mx-auto text-center">" <h2 className="text-3xl font-bold text-white mb-6">" Ready to Get Started? </h2> <p className="text-xl text-blue-100 mb-8">''" Let's discuss how our futuristic button enhanced' services can help you achieve your goals. </p> <a href="" className="flex items-center" > Get Started Today </a> </div> </section> </div> )
+import React from 'react';
+
+interface FuturisticButtonEnhancedProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'primary' | 'secondary' | 'accent' | 'neon';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  icon?: React.ReactNode;
+  onClick?: () => void;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  href?: string;
+  to?: string;
 }
-export default FuturisticButtonEnhanced
-};''
-export default FuturisticButtonEnhanced'
+
+const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
+  children,
+  className = '',
+  variant = 'primary',
+  size = 'md',
+  icon,
+  onClick,
+  disabled = false,
+  type = 'button',
+  href,
+  to
+}) => {
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none';
+  
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500',
+    secondary: 'bg-transparent border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500',
+    accent: 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500',
+    neon: 'bg-transparent border-2 border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500 animate-pulse'
+  };
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
+    xl: 'px-10 py-5 text-xl'
+  };
+
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+
+  const content = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      <span className="relative z-10">{children}</span>
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={`${classes} group`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  if (to) {
+    return (
+      <a
+        href={to}
+        className={`${classes} group`}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`${classes} group`}
+    >
+      {content}
+    </button>
+  );
+};
+
+export default FuturisticButtonEnhanced;
