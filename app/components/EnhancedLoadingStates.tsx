@@ -1,35 +1,40 @@
-'use client';';';
-import React from 'react';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
+'use client';
+import React from 'react';
 
-      </div>
-    </>
-  );
+interface LoadingStateProps {
+  isLoading: boolean;
+  error?: string | null;
+  children: React.ReactNode;
+  loadingComponent?: React.ReactNode;
+  errorComponent?: React.ReactNode;
 }
-        </p></div></div>
-  );}
+
+export default function EnhancedLoadingStates({
+  isLoading,
+  error,
+  children,
+  loadingComponent,
+  errorComponent
+}: LoadingStateProps) {
+  if (error) {
+    return errorComponent || (
+      <div className="flex items-center justify-center min-h-[200px]">
+        <div className="text-center">
+          <div className="text-red-500 text-lg font-semibold mb-2">Error</div>
+          <p className="text-gray-600">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return loadingComponent || (
+      <div className="flex items-center justify-center min-h-[200px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
 }
 
