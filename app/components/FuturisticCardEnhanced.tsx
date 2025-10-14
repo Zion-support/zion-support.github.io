@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const FuturisticCardEnhanced = () => {
-
+export default function FuturisticCardEnhanced() {
   return (
-    div>
-      <h2>FuturisticCardEnhanced</h2>
+    <div>
+      <h1>FuturisticCardEnhanced</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default FuturisticCardEnhanced;
-
-
+}

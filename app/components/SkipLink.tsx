@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const SkipLink = () => {
-
+export default function SkipLink() {
   return (
-    div>
-      <h2>SkipLink</h2>
+    <div>
+      <h1>SkipLink</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default SkipLink;
-
-
+}

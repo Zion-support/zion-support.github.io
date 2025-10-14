@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const EnhancedSkipLink = () => {
-
+export default function EnhancedSkipLink() {
   return (
-    div>
-      <h2>EnhancedSkipLink</h2>
+    <div>
+      <h1>EnhancedSkipLink</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default EnhancedSkipLink;
-
-
+}

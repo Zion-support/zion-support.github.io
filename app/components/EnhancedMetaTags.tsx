@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const EnhancedMetaTags = () => {
-
+export default function EnhancedMetaTags() {
   return (
-    div>
-      <h2>EnhancedMetaTags</h2>
+    <div>
+      <h1>EnhancedMetaTags</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default EnhancedMetaTags;
-
-
+}
