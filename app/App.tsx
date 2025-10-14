@@ -1,17 +1,6 @@
-"use client";
-
-import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import ErrorBoundary from "./components/ErrorBoundary";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
-import LoadingSpinner from "./components/LoadingSpinner";
-import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
-import CacheManager from "./components/CacheManager";
-import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
-
-// Lazy load pages for better performance
+import React, { lazy, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -44,73 +33,70 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+// Loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+  </div>
+);
+
 // Main App Component
-function App() {
+export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer>
-            <CriticalResourcePreloader />
-            <CacheManager />
-            <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/cookies" element={<CookiesPage />} />
 
-              {/* 5G Solutions Routes */}
-              <Route
-                path="/5g-data-analytics"
-                element={<FiveGDataAnalyticsPage />}
-              />
-              <Route
-                path="/5g-edge-computing"
-                element={<FiveGEdgeComputingPage />}
-              />
-              <Route
-                path="/5g-implementation"
-                element={<FiveGImplementationPage />}
-              />
-              <Route
-                path="/5g-iot-solutions"
-                element={<FiveGIoTSolutionsPage />}
-              />
-              <Route
-                path="/5g-mobile-applications"
-                element={<FiveGMobileApplicationsPage />}
-              />
-              <Route
-                path="/5g-network-infrastructure"
-                element={<FiveGNetworkInfrastructurePage />}
-              />
-              <Route
-                path="/5g-private-networks"
-                element={<FiveGPrivateNetworksPage />}
-              />
-              <Route
-                path="/5g-smart-city-solutions"
-                element={<FiveGSmartCitySolutionsPage />}
-              />
-              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
+            {/* 5G Solutions Routes */}
+            <Route
+              path="/5g-data-analytics"
+              element={<FiveGDataAnalyticsPage />}
+            />
+            <Route
+              path="/5g-edge-computing"
+              element={<FiveGEdgeComputingPage />}
+            />
+            <Route
+              path="/5g-implementation"
+              element={<FiveGImplementationPage />}
+            />
+            <Route
+              path="/5g-iot-solutions"
+              element={<FiveGIoTSolutionsPage />}
+            />
+            <Route
+              path="/5g-mobile-applications"
+              element={<FiveGMobileApplicationsPage />}
+            />
+            <Route
+              path="/5g-network-infrastructure"
+              element={<FiveGNetworkInfrastructurePage />}
+            />
+            <Route
+              path="/5g-private-networks"
+              element={<FiveGPrivateNetworksPage />}
+            />
+            <Route
+              path="/5g-smart-city-solutions"
+              element={<FiveGSmartCitySolutionsPage />}
+            />
+            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </HelmetProvider>
   );
 }
-
-export default App;

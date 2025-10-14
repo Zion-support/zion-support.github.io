@@ -1,26 +1,32 @@
 export default {
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/$1",
-    "^@/components/(.*)$": "<rootDir>/app/components/$1",
-    "^@/content/(.*)$": "<rootDir>/content/$1",
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  moduleNameMapping: {
+    '^@/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+    '^@/pages/(.*)$': '<rootDir>/app/$1',
+    '^@/utils/(.*)$': '<rootDir>/app/utils/$1',
+    '^@/types/(.*)$': '<rootDir>/app/types/$1',
+    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
+    '^@/config/(.*)$': '<rootDir>/app/config/$1',
+    '^@/data/(.*)$': '<rootDir>/app/data/$1',
+    '^@/content/(.*)$': '<rootDir>/app/content/$1'
   },
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   testMatch: [
-    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
-    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
-  collectCoverageFrom: [
-    "app/**/*.{ts,tsx}",
-    "!app/**/index.{ts,tsx}",
-    "!app/**/*.d.ts",
-  ],
-  testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
-  transformIgnorePatterns: [
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  globals: {
+    'ts-jest': {
+      useESM: true
+    }
+  },
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  preset: 'ts-jest'
 };

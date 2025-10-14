@@ -1,156 +1,59 @@
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 // Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(filePath) {
+function fixTsxFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
-    const functionNameMatch = content.match(
-      /export default function (\d+[A-Za-z]+)/,
-    );
-    if (functionNameMatch) {
-      const malformedName = functionNameMatch[1];
-      const properName = malformedName.replace(/^\d+/, "") + "Page";
-      content = content.replace(new RegExp(malformedName, "g"), properName);
+    // Fix malformed Helmet tags
+    if (content.includes('<Helmet></Helmet>')) {
+      content = content.replace(/<Helmet><\/Helmet>\s*<title>/g, '<Helmet>\n        <title>');
+      content = content.replace(/<Helmet><\/Helmet>\s*<meta/g, '<Helmet>\n        <meta');
       modified = true;
     }
 
-    // Fix malformed className attributes
-    content = content.replace(
-      /className="([^"]*?)\s+([^"]*?)"/g,
-      (match, part1, part2) => {
-        if (part1.includes("text-") && part2.includes("mb-")) {
-          return `className="${part1} ${part2}"`;
-        }
-        return match;
-      },
-    );
+    // Fix unterminated string literals
+    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
+    content = content.replace(/'([^']*)\n/g, "'$1'\n");
 
-    // Fix malformed text content
-    content = content.replace(
-      /text-4 xl font-boldtext-whitemb-6/g,
-      "text-4xl font-bold text-white mb-6",
-    );
-    content = content.replace(
-      /text-lgtext-gray-300mb-8/g,
-      "text-lg text-gray-300 mb-8",
-    );
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
+    content = content.replace(/<button([^>]*)>\s*$/gm, '<button$1></button>');
 
-    // Fix malformed JSX elements
-    content = content.replace(
-      /<title \/>([^<]+)<\/title>/g,
-      "<title>$1</title>",
-    );
-    content = content.replace(
-      /<span className="w-5 h-5ml-2" \/>([^<]+)/g,
-      '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>',
-    );
-    content = content.replace(
-      /<p className="w-5 h-5ml-2">([^<]+)/g,
-      '<p className="text-lg text-gray-300 mb-8">$1</p>',
-    );
+    // Fix JSX expressions without parent elements
+    content = content.replace(/return\s*\(\s*<div([^>]*)>\s*<Helmet/g, 'return (\n    <div$1>\n      <Helmet');
 
-    // Fix malformed Link components
-    content = content.replace(
-      /<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g,
-      (match, to, className, text) => {
-        if (className.includes("transformhover:scale-105")) {
-          className = className.replace(
-            "transformhover:scale-105",
-            "transform hover:scale-105",
-          );
-        }
-        if (className.includes("from-cyan-500to-purple-500")) {
-          className = className.replace(
-            "from-cyan-500to-purple-500",
-            "from-cyan-500 to-purple-500",
-          );
-        }
-        if (className.includes("shadow-lghover:shadow-cyan-500/25")) {
-          className = className.replace(
-            "shadow-lghover:shadow-cyan-500/25",
-            "shadow-lg hover:shadow-cyan-500/25",
-          );
-        }
-        return `<Link to="${to}" className="${className}">${text}</Link>`;
-      },
-    );
+    // Fix missing semicolons and commas
+    content = content.replace(/(\w+)\s*=\s*\{([^}]*)\}\s*$/gm, '$1: {$2},');
+    content = content.replace(/(\w+)\s*:\s*([^,}]+)\s*$/gm, '$1: $2,');
 
-    // Fix missing closing tags and malformed JSX
-    content = content.replace(
-      /<h2 className="w-5 h-5ml-2" \/>([^<]+)/g,
-      '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>',
-    );
-    content = content.replace(
-      /<p className="w-5 h-5ml-2">([^<]+)/g,
-      '<p className="text-lg text-gray-300 mb-8">$1</p>',
-    );
+    // Fix malformed function parameters
+    content = content.replace(/React\.ChangeEvent<HTMLInputElement \| HTMLTextAreaElement><\/HTMLInputElement>/g, 'React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>');
 
-    // Fix duplicate 'use client' directives
-    content = content.replace(
-      /'use client';\s*'use client';/g,
-      "'use client';",
-    );
+    // Fix array syntax issues
+    content = content.replace(/\[\s*"([^"]*)"\s*$/gm, '["$1"]');
+    content = content.replace(/\[\s*{/gm, '[{');
+    content = content.replace(/}\s*\]/gm, '}]');
 
-    // Fix malformed imports
-    content = content.replace(
-      /import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g,
-      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';",
-    );
+    // Fix object syntax issues
+    content = content.replace(/{\s*"([^"]*)"\s*$/gm, '{"$1"');
+    content = content.replace(/}\s*$/gm, '},');
 
-    // Fix malformed JSX structure
-    content = content.replace(
-      /<title>([^<]+)<\/title>\s*\{[^}]*\}/g,
-      "<title>$1</title>",
-    );
+    // Fix missing closing parentheses
+    content = content.replace(/\(\s*$/gm, '()');
 
-    // Fix incomplete function declarations
-    if (
-      content.includes("export default function") &&
-      !content.includes("return (")
-    ) {
-      const functionMatch = content.match(
-        /export default function ([^(]+)\(\)\s*\{/,
-      );
-      if (functionMatch) {
-        const functionName = functionMatch[1].trim();
-        const basicTemplate = `
-  return (
-    <>
-      <Helmet>
-        <title>${functionName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)\s*$/gm, 'className="$1"');
+    content = content.replace(/href="([^"]*)\s*$/gm, 'href="$1"');
 
-        content = content.replace(
-          /export default function ([^(]+)\(\)\s*\{[^}]*\}/s,
-          `export default function ${functionName}() {${basicTemplate}`,
-        );
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -161,39 +64,47 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Function to recursively find and fix TSX files
-function fixAllTSXFiles(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      fixedCount += fixAllTSXFiles(filePath);
-    } else if (file.endsWith(".tsx")) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
+// Function to find all TSX files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
     }
   }
-
-  return fixedCount;
+  
+  return files;
 }
 
 // Main execution
-console.log("Starting syntax error fixes...");
-const appDir = path.join(__dirname, "app");
-const fixedCount = fixAllTSXFiles(appDir);
-console.log(`Fixed ${fixedCount} files.`);
+console.log('Starting comprehensive syntax fix...');
 
-// Also fix the main App.tsx file
-const appTsxPath = path.join(__dirname, "App.tsx");
-if (fs.existsSync(appTsxPath)) {
-  if (fixSyntaxErrors(appTsxPath)) {
-    console.log("Fixed: App.tsx");
+const appDir = path.join(process.cwd(), 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixTsxFile(file)) {
+    fixedCount++;
   }
 }
 
-console.log("Syntax error fixes completed.");
+console.log(`Fixed ${fixedCount} files`);
+
+// Run type check to see remaining errors
+console.log('\nRunning type check...');
+try {
+  execSync('npm run type-check', { stdio: 'pipe' });
+  console.log('Type check passed!');
+} catch (error) {
+  const errorOutput = error.stdout?.toString() || error.stderr?.toString() || '';
+  const errorCount = (errorOutput.match(/error TS/g) || []).length;
+  console.log(`Type check found ${errorCount} errors`);
+}

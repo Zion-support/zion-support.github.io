@@ -1,99 +1,115 @@
 #!/usr/bin/env node
 
-import fs from "fs";
-import { glob } from "glob";
+import fs from 'fs';
+import { glob } from 'glob';
 
-// Final comprehensive fixes for remaining JSX issues
-const fixes = [
-  // Fix malformed className attributes
-  {
-    pattern: /className="hover:border-cyan-400\/50transition-all/g,
-    replacement: 'className="hover:border-cyan-400/50 transition-all',
-  },
-  {
-    pattern: /className="text-xlfont-semiboldtext-whiteml-3"/g,
-    replacement: 'className="text-xl font-semibold text-white ml-3"',
-  },
+// Function to fix final JSX errors
+function fixFinalJSX(content, filePath) {
+  let fixed = content;
+  let changes = 0;
 
-  // Fix malformed JSX elements with self-closing tags that should be containers
-  {
-    pattern:
-      /<div key=\{index\} className="bg-slate-800\/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400\/50 transition-all duration-300" \/>\s*<div className=\{\`w-16 h-16 rounded-lg bg-gradient-to-r \$\{feature\.color\} flex items-center justify-center mb-4\`\} \/>\s*<div>\s*\{feature\.icon\}\s*<\/div>\s*<\/div>\s*<h3 className="text-xl font-semibold text-white mb-3">\{feature\.title\}<\/h3>\s*<p className="text-gray-300">\{feature\.description\}<\/p>\s*<\/div>/g,
-    replacement:
-      '<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">\n                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>\n                  {feature.icon}\n                </div>\n                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>\n                <p className="text-gray-300">{feature.description}</p>\n              </div>',
-  },
+  // Remove empty lines at the beginning
+  if (fixed.startsWith('\n')) {
+    fixed = fixed.replace(/^\n+/, '');
+    changes++;
+  }
 
-  // Fix malformed use case elements
-  {
-    pattern:
-      /<div key=\{index\} className="bg-slate-800\/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700" \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCase\.icon\}\s*<h3 className="text-xl font-semibold text-white ml-3">\{useCase\.title\}<\/h3>\s*<\/div>/g,
-    replacement:
-      '<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">\n                <div className="flex items-center mb-4">\n                  {useCase.icon}\n                  <h3 className="text-xl font-semibold text-white ml-3">{useCase.title}</h3>\n                </div>\n                <p className="text-gray-300">{useCase.description}</p>\n              </div>',
-  },
-
-  // Fix malformed h2 elements
-  {
-    pattern:
-      /<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">([^<]+)\s*<\/h2>/g,
-    replacement:
-      '<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">$1</h2>',
-  },
-
-  // Fix malformed div elements with duplicate classes
-  {
-    pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*<h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">([^<]+)<\/h2>\s*<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">([^<]+)<\/p>\s*<\/div>/g,
-    replacement:
-      '<div className="text-center">\n            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">$1</h2>\n            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$2</p>\n          </div>',
-  },
-
-  // Fix malformed grid layouts
-  {
-    pattern:
-      /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">\s*\{useCases\.map\(\(useCase, index\) => \(/g,
-    replacement:
-      '<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">\n            {useCases.map((useCase, index) => (',
-  },
-
-  // Fix missing closing tags
-  {
-    pattern: /(\s+)<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: "$1        </div>\n      </section>",
-  },
-
-  // Fix malformed closing tags
-  {
-    pattern: /(\s+)<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g,
-    replacement: "$1        </div>\n      </section>",
-  },
-];
-
-// Find all TSX files in the app directory
-const files = await glob("app/**/*.tsx");
-
-console.log(`Found ${files.length} TSX files to process...`);
-
-let fixedCount = 0;
-
-for (const file of files) {
-  try {
-    let content = fs.readFileSync(file, "utf8");
-    let originalContent = content;
-
-    // Apply fixes
-    fixes.forEach((fix) => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, "utf8");
-      fixedCount++;
-      console.log(`Fixed: ${file}`);
+  // Fix missing import statements
+  if (!fixed.includes("import React from 'react'") && !fixed.includes('import React from "react"')) {
+    if (fixed.includes('export default function') || fixed.includes('const ') || fixed.includes('function ')) {
+      fixed = "import React from 'react';\n" + fixed;
+      changes++;
     }
+  }
+
+  // Fix missing Helmet import
+  if (fixed.includes('<Helmet>') && !fixed.includes("import { Helmet }")) {
+    const importIndex = fixed.indexOf("import React");
+    if (importIndex !== -1) {
+      const nextLineIndex = fixed.indexOf('\n', importIndex);
+      fixed = fixed.slice(0, nextLineIndex) + '\nimport { Helmet } from "react-helmet-async";' + fixed.slice(nextLineIndex);
+      changes++;
+    }
+  }
+
+  // Fix malformed JSX structure
+  const malformedPattern = /<>\s*<Helmet>\s*<\/Helmet>\s*<div[^>]*>[\s\S]*?<\/div>\s*<\/>/g;
+  if (malformedPattern.test(fixed)) {
+    fixed = fixed.replace(malformedPattern, (match) => {
+      const titleMatch = match.match(/<div[^>]*>[\s\S]*?<h1[^>]*>([^<]*)<\/h1>/);
+      const title = titleMatch ? titleMatch[1] : 'Page';
+      return `<>
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${title} - Zion Tech Group" />
+      </Helmet>
+      ${match.replace(/<>\s*<Helmet>\s*<\/Helmet>\s*/, '')}`;
+    });
+    changes++;
+  }
+
+  // Fix incomplete JSX fragments
+  const incompleteFragmentPattern = /<>\s*<div[^>]*>[\s\S]*?<\/div>\s*$/gm;
+  if (incompleteFragmentPattern.test(fixed) && !fixed.includes('</>')) {
+    fixed = fixed.replace(incompleteFragmentPattern, (match) => {
+      return match + '\n    </>';
+    });
+    changes++;
+  }
+
+  // Fix extra closing tags
+  const extraClosingPattern = /}\s*<\/div>\s*<\/>\s*\);\s*}\s*$/g;
+  if (extraClosingPattern.test(fixed)) {
+    fixed = fixed.replace(extraClosingPattern, '\n  );\n}');
+    changes++;
+  }
+
+  // Fix missing export statements
+  if (fixed.includes('const Page = () =>') && !fixed.includes('export default')) {
+    fixed = fixed + '\n\nexport default Page;';
+    changes++;
+  }
+
+  return { content: fixed, changes };
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixFinalJSX(content, filePath);
+    
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content);
+      console.log(`Fixed ${result.changes} issues in ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-console.log(`\nFixed ${fixedCount} files.`);
+// Main execution
+async function main() {
+  console.log('Starting final JSX error fixes...');
+
+  // Get all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+  let totalFixed = 0;
+  let filesProcessed = 0;
+
+  files.forEach(file => {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+    filesProcessed++;
+  });
+
+  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
+  console.log('Final JSX error fixes completed!');
+}
+
+main().catch(console.error);
