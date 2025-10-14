@@ -100,7 +100,7 @@ const SupportPage: React.FC = () => {
       name: "Phone Support",
       description: "Speak directly with our technical experts",
       icon: Phone,
-      contact: "+1 (555) 123-4567",
+      contact: "+1 302 464 0950",
       availability: "24/7 Available",
       color: "text-blue-400",
     },
@@ -108,7 +108,7 @@ const SupportPage: React.FC = () => {
       name: "Email Support",
       description: "Get detailed responses to your questions",
       icon: Mail,
-      contact: "support@ziontech.com",
+      contact: "kleber@ziontechgroup.com",
       availability: "Response within 2 hours",
       color: "text-green-400",
     },
@@ -124,7 +124,7 @@ const SupportPage: React.FC = () => {
       name: "Emergency Support",
       description: "Critical issues resolved quickly",
       icon: Zap,
-      contact: "+1 (555) 911-TECH",
+      contact: "+1 302 464 0950",
       availability: "24/7 Critical Support",
       color: "text-red-400",
     },
@@ -445,5 +445,5 @@ const SupportPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default SupportPage;
+

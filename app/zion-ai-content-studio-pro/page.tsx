@@ -54,5 +54,5 @@ const ZionAiContentStudioProPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ZionAiContentStudioProPage;
+

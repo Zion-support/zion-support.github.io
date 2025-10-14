@@ -2,6 +2,11 @@ import React, { useEffect } from "react";
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
+    // Only monitor performance in development
+    if (process.env.NODE_ENV !== 'development') {
+      return;
+    }
+
     // Monitor performance metrics
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {

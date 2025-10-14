@@ -54,5 +54,5 @@ const ZionAiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ZionAiChatbotBuilderPage;
+

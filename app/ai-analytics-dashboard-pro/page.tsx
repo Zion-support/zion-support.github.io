@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
   Zap, 
   Shield, 
   Globe, 
@@ -14,24 +11,13 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  PieChart,
-  LineChart,
-  Activity
+  Target
 } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
+  // const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -354,7 +340,7 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -403,3 +389,5 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
 };
 
 export default AiAnalyticsDashboardProPage;
+
+

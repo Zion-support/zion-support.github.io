@@ -54,5 +54,5 @@ const DevopsAdvancedPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default DevopsAdvancedPage;
+

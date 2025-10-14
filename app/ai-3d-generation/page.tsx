@@ -54,5 +54,6 @@ const Ai3DGenerationPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Ai3dGenerationPage;
+
+

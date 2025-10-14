@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Code, 
-  Zap, 
-  Shield, 
   Globe, 
   Brain, 
   CheckCircle, 
@@ -11,32 +9,19 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
   Terminal,
   GitBranch,
   Bug,
   FileText,
   Cpu,
   Database,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp
+  Cloud
 } from 'lucide-react';
 
 const AiCodeAssistantProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
+  // const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -468,7 +453,7 @@ const AiCodeAssistantProPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -517,3 +502,5 @@ const AiCodeAssistantProPage: React.FC = () => {
 };
 
 export default AiCodeAssistantProPage;
+
+

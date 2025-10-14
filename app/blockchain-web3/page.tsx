@@ -54,5 +54,5 @@ const BlockchainWeb3Page: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default BlockchainWeb3Page;
+
