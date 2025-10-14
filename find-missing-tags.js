@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 
 const filePath = '/workspace/app/page.tsx';
@@ -14,7 +14,7 @@ for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
   const lineNum = i + 1;
   
-  // Check for opening div tags
+  // Check for opening div tags;
   const divMatches = line.match(/<div[^>]*>/g);
   if (divMatches) {
     divMatches.forEach(() => {
@@ -22,7 +22,7 @@ for (let i = 0; i < lines.length; i++) {
     });
   }
   
-  // Check for closing div tags
+  // Check for closing div tags;
   const closeDivMatches = line.match(/<\/div>/g);
   if (closeDivMatches) {
     closeDivMatches.forEach(() => {
@@ -34,7 +34,7 @@ for (let i = 0; i < lines.length; i++) {
     });
   }
   
-  // Check for opening section tags
+  // Check for opening section tags;
   const sectionMatches = line.match(/<section[^>]*>/g);
   if (sectionMatches) {
     sectionMatches.forEach(() => {
@@ -42,7 +42,7 @@ for (let i = 0; i < lines.length; i++) {
     });
   }
   
-  // Check for closing section tags
+  // Check for closing section tags;
   const closeSectionMatches = line.match(/<\/section>/g);
   if (closeSectionMatches) {
     closeSectionMatches.forEach(() => {
@@ -55,11 +55,11 @@ for (let i = 0; i < lines.length; i++) {
   }
 }
 
-console.log('Issues found:');
+console.log('Issues found: ');'
 issues.forEach(issue => console.log(issue));
 
-console.log('\nUnclosed div tags:');
+console.log('\nUnclosed div tags: ');'
 divStack.forEach(tag => console.log(`Line ${tag.line}: ${tag.content}`));
 
-console.log('\nUnclosed section tags:');
+console.log('\nUnclosed section tags: ');'
 sectionStack.forEach(tag => console.log(`Line ${tag.line}: ${tag.content}`));

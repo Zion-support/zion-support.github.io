@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-;
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix unterminated string literals;
-function fixStringLiterals(content) {
+// Function to fix unterminated string literals specifically
+function fixUnterminatedStrings(content) {
   let fixed = content;
   
-  // Fix unterminated string literals in import statements;
+  // Fix unterminated string literals in import statements
   fixed = fixed.replace(/import\s+{\s*([^}]*?)\s*}\s*from\s*['"]([^'"]*?)(\n|$)/g, (match, imports, module, newline) => {
     if (!module.includes("'") && !module.includes('"')) {
       return `import { ${imports.trim()} } from '${module}';${newline}`;
@@ -16,7 +16,15 @@ function fixStringLiterals(content) {
     return match;
   });
   
-  // Fix unterminated string literals in JSX attributes;
+  // Fix unterminated string literals in regular imports
+  fixed = fixed.replace(/import\s+([^'"]*?)\s*from\s*['"]([^'"]*?)(\n|$)/g, (match, importName, module, newline) => {
+    if (!module.includes("'") && !module.includes('"')) {
+      return `import ${importName.trim()} from '${module}';${newline}`;
+    }
+    return match;
+  });
+  
+  // Fix unterminated string literals in JSX attributes
   fixed = fixed.replace(/(\w+)=['"]([^'"]*?)(\n|$)/g, (match, attr, value, newline) => {
     if (value.trim() && !value.includes('"') && !value.includes("'")) {
       return `${attr}="${value}"${newline}`;
@@ -24,7 +32,7 @@ function fixStringLiterals(content) {
     return match;
   });
   
-  // Fix unterminated string literals in object properties;
+  // Fix unterminated string literals in object properties
   fixed = fixed.replace(/(\w+):\s*['"]([^'"]*?)(\n|$)/g, (match, key, value, newline) => {
     if (value.trim() && !value.includes('"') && !value.includes("'")) {
       return `${key}: '${value}'${newline}`;
@@ -32,15 +40,7 @@ function fixStringLiterals(content) {
     return match;
   });
   
-  // Fix unterminated string literals in array elements;
-  fixed = fixed.replace(/['"]([^'"]*?)(\n|$)/g, (match, value, newline) => {
-    if (value.trim() && !value.includes('"') && !value.includes("'")) {
-      return `'${value}'${newline}`;
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX closing tags;
+  // Fix malformed JSX closing tags
   fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, (match, tag, attrs) => {
     if (!match.includes('</') && !match.includes('/>')) {
       return match + `</${tag}>`;
@@ -48,7 +48,7 @@ function fixStringLiterals(content) {
     return match;
   });
   
-  // Fix missing semicolons;
+  // Fix missing semicolons
   fixed = fixed.replace(/(\w+)\s*$/gm, (match) => {
     if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('(') && !match.includes(')')) {
       return match + ';';
@@ -59,7 +59,7 @@ function fixStringLiterals(content) {
   return fixed;
 }
 
-// Main function to process files;
+// Main function to process files
 async function processFiles() {
   const patterns = [
     'app/**/*.tsx',
@@ -81,7 +81,7 @@ async function processFiles() {
         
         totalFiles++;
         
-        let fixed = fixStringLiterals(content);
+        let fixed = fixUnterminatedStrings(content);
         
         if (fixed !== content) {
           fs.writeFileSync(filePath, fixed, 'utf8');
@@ -97,5 +97,5 @@ async function processFiles() {
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-// Run the fix;
+// Run the fix
 processFiles().catch(console.error);

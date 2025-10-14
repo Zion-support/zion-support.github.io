@@ -1,25 +1,25 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix import syntax issues
+// Function to fix import syntax issues;
 function fixImportSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix unterminated string literals in import statements
+    // Fix unterminated string literals in import statements;
     const importRegex = /import\s+{[^}]*}\s+from\s+'[^']*;([^']*)/g;
     content = content.replace(importRegex, (match, afterSemicolon) => {
-      // Find the actual end of the import statement
+      // Find the actual end of the import statement;
       const lines = match.split('\n');
       if (lines.length > 1) {
-        // This is a multi-line import that got corrupted
+        // This is a multi-line import that got corrupted;
         const firstLine = lines[0];
         const lastLine = lines[lines.length - 1];
         
-        // Reconstruct the import statement
+        // Reconstruct the import statement;
         const importMatch = firstLine.match(/import\s+{[^}]*}\s+from\s+'([^']*)/);
         if (importMatch) {
           const moduleName = importMatch[1];
@@ -29,7 +29,7 @@ function fixImportSyntax(filePath) {
       return match;
     });
     
-    // Fix missing closing quotes in import statements
+    // Fix missing closing quotes in import statements;
     content = content.replace(/from\s+'([^']*);([^']*)/g, (match, beforeSemicolon, afterSemicolon) => {
       if (afterSemicolon.trim()) {
         return `from '${beforeSemicolon}';`;
@@ -37,12 +37,12 @@ function fixImportSyntax(filePath) {
       return match;
     });
     
-    // Fix missing newlines after import statements
+    // Fix missing newlines after import statements;
     content = content.replace(/from\s+'[^']*';([a-zA-Z])/g, (match, nextChar) => {
       return match.replace(nextChar, '\n' + nextChar);
     });
     
-    // Fix missing closing quotes and add newlines
+    // Fix missing closing quotes and add newlines;
     content = content.replace(/from\s+'([^']*);([a-zA-Z])/g, (match, moduleName, nextChar) => {
       return `from '${moduleName}';\n${nextChar}`;
     });
@@ -59,7 +59,7 @@ function fixImportSyntax(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -82,7 +82,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with import syntax issues...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -103,7 +103,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

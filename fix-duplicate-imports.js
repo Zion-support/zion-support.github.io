@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix duplicate import statements
+// Function to fix duplicate import statements;
 function fixDuplicateImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Split content into lines
+    // Split content into lines;
     const lines = content.split('\n');
     const fixedLines = [];
     const seenImports = new Set();
@@ -17,11 +17,11 @@ function fixDuplicateImports(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Check if this is an import statement
+      // Check if this is an import statement;
       if (line.trim().startsWith('import ')) {
-        // Check if we've seen this exact import before
+        // Check if we've seen this exact import before;
         if (seenImports.has(line.trim())) {
-          // Skip duplicate import
+          // Skip duplicate import;
           modified = true;
           continue;
         } else {
@@ -46,7 +46,7 @@ function fixDuplicateImports(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -69,7 +69,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with duplicate import statements...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -90,7 +90,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

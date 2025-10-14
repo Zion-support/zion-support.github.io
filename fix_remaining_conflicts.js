@@ -65,8 +65,8 @@ for (const file of filesWithConflicts) {
 console.log(`\n🎉 Fixed ${resolvedCount} files with conflict markers`);```;
 if (resolvedCount > 0) {
   console.log('\n📋 Next steps:');';
-  console.log('1. Run: git add .');"'";
-  console.log('2. Run: git commit -m "Fix remaining conflict markers"');"'";
+  console.log('1. Run: 'git add .');"'";',
+  console.log('2. Run: 'git commit -m "Fix remaining conflict markers"');"'";',
   console.log('3. Run: npm run health-check');';
 }
 "

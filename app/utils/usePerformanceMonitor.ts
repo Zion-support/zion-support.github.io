@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';'
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
+  loadTime: 'number;','
+  firstContentfulPaint: 'number;','
+  largestContentfulPaint: 'number;','
+  firstInputDelay: 'number;','
   cumulativeLayoutShift: number;
 }
 
@@ -32,4 +32,5 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   return metrics;
 };
 
-export default usePerformanceMonitor
+export default usePerformanceMonitor;
+;

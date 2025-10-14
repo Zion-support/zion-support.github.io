@@ -1,4 +1,4 @@
-import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
+import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';'
 // Higher-order component for lazy loading;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 export function withLazyLoading<T extends ComponentType<any>>(

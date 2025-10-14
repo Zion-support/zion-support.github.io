@@ -1,18 +1,18 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to fix merge conflicts in a file
+// Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers
+    // Remove merge conflict markers;
     content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?/g, '');
     
-    // Fix common syntax errors
+    // Fix common syntax errors;
     content = content.replace(/import React from "react";";/g, 'import React from "react";');
     content = content.replace(/import { Helmet } from "react-helmet-async";";/g, 'import { Helmet } from "react-helmet-async";');
     content = content.replace(/return \("/g, 'return (');
@@ -25,26 +25,26 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/};"/g, '};');
     content = content.replace(/export default [^;]+;"/g, (match) => match.replace(/"/g, ''));
     
-    // Fix unterminated strings
+    // Fix unterminated strings;
     content = content.replace(/"([^"]*?)\n/g, '"$1"\n');
     
-    // Fix extra semicolons
+    // Fix extra semicolons;
     content = content.replace(/;;+/g, ';');
     content = content.replace(/;\s*;/g, ';');
     
-    // Fix malformed JSX
+    // Fix malformed JSX;
     content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
       const className = match.match(/className="([^"]*)"/)?.[1] || '';
       return `<div className="${className}">`;
     });
     
-    // Remove empty lines with just quotes
+    // Remove empty lines with just quotes;
     content = content.replace(/^\s*"\s*$/gm, '');
     
-    // Fix function declarations
+    // Fix function declarations;
     content = content.replace(/export default function Page\(\) \{\s*/g, 'export default function Page() {');
     
-    // Clean up extra whitespace
+    // Clean up extra whitespace;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
@@ -59,14 +59,14 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔧 Starting comprehensive error fix...');
 
-// Function to fix common syntax errors in a file
+// Function to fix common syntax errors in a file;
 function fixFileContent(content) {
   let fixed = content;
   
-  // Remove merge conflict markers
+  // Remove merge conflict markers;
   fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?/g, '');
   
-  // Fix common syntax errors
+  // Fix common syntax errors;
   fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
   fixed = fixed.replace(/import { Helmet } from "react-helmet-async";\s*;/g, 'import { Helmet } from "react-helmet-async";');
   fixed = fixed.replace(/const \w+Page = \(\) => {\s*return \("/g, 'const $&Page = () => {\n  return (');
@@ -81,24 +81,24 @@ function fixFileContent(content) {
   fixed = fixed.replace(/export default \w+Page;"\s*$/g, 'export default $&Page;');
   fixed = fixed.replace(/;\s*$/g, '');
   
-  // Fix malformed JSX structure
+  // Fix malformed JSX structure;
   fixed = fixed.replace(/<div className="[^"]*"><\/div>\s*<div className="[^"]*"><\/div>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page Title - Zion Tech Group</title>\n        <meta name="description" content="Page Description - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">');
   
-  // Fix unterminated strings
+  // Fix unterminated strings;
   fixed = fixed.replace(/"\s*$/gm, '');
   fixed = fixed.replace(/^"\s*/gm, '');
   
-  // Fix extra semicolons
+  // Fix extra semicolons;
   fixed = fixed.replace(/;\s*;\s*/g, ';\n');
   fixed = fixed.replace(/^\s*;\s*$/gm, '');
   
-  // Fix malformed function declarations
+  // Fix malformed function declarations;
   fixed = fixed.replace(/export default function Page\(\) {\s*/g, 'export default function Page() {\n  return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>Page - Zion Tech Group</title>\n        <meta name="description" content="Page - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">\n            This page is under construction. Please check back later.\n          </p>\n        </div>\n      </div>\n    </div>\n  );\n}');
   
   return fixed;
 }
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -116,7 +116,7 @@ function processFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findTSFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
@@ -135,7 +135,7 @@ function findTSFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting to fix merge conflicts and syntax errors...');
 
 const tsFiles = findTSFiles('./app');
@@ -157,7 +157,7 @@ for (const file of tsFiles) {
 
 console.log(`\nFixed ${fixedCount} files, ${errorCount} errors encountered.`);
 
-// Run type check to see remaining issues
+// Run type check to see remaining issues;
 console.log('\nRunning type check...');
 try {
   execSync('npm run type-check', { stdio: 'inherit' });

@@ -5,13 +5,13 @@ import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix merge conflicts and syntax errors
+// Function to fix merge conflicts and syntax errors;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflict markers
-    if (!content.includes('') && !content.includes('      return false; // No conflicts to fix
+    // Check if file has merge conflict markers;
+    if (!content.includes('') && !content.includes('      return false; // No conflicts to fix;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
@@ -28,71 +28,71 @@ function fixFile(filePath) {
       if (line.trim().startsWith('')) {
         inConflict = true;
         conflictDepth++;
-        continue; // Skip the conflict marker
+        continue; // Skip the conflict marker;
       } else if (line.trim().startsWith('')) {
-        continue; // Skip the separator
+        continue; // Skip the separator;
       } else if (line.trim().startsWith('        inConflict = false;
         conflictDepth--;
-        continue; // Skip the end marker
+        continue; // Skip the end marker;
       } else if (inConflict && conflictDepth === 1) {
-        // We're in the HEAD section, keep the line
+        // We're in the HEAD section, keep the line;
         fixedLines.push(line);
       } else if (!inConflict) {
-        // We're not in a conflict, keep the line
+        // We're not in a conflict, keep the line;
         fixedLines.push(line);
       }
-      // Skip lines in other conflict sections
+      // Skip lines in other conflict sections;
     }
     
-    // Clean up any trailing empty lines and ensure proper formatting
+    // Clean up any trailing empty lines and ensure proper formatting;
     let fixedContent = fixedLines.join('\n');
     
-    // Remove multiple consecutive empty lines
+    // Remove multiple consecutive empty lines;
     fixedContent = fixedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Ensure file ends with single newline
+    // Ensure file ends with single newline;
     fixedContent = fixedContent.trim() + '\n';
     
     fs.writeFileSync(filePath, fixedContent, 'utf8');
     return true;
     let modified = false;
 
-    // Remove merge conflict markers
+    // Remove merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       // Keep the HEAD version (first part before )
       content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)\n>>>>>>>.*?\n/g, '$1');
       modified = true;
     }
 
-    // Fix common syntax errors
-    // Remove extra quotes and semicolons
+    // Fix common syntax errors;
+    // Remove extra quotes and semicolons;
     content = content.replace(/import\s+.*?from\s+["'][^"']*["'];";/g, (match) => {
       return match.replace(/";$/, ';');
     });
 
-    // Fix JSX syntax errors
+    // Fix JSX syntax errors;
     content = content.replace(/return\s*\(\s*"([\s\S]*?)"\s*\)/g, (match, jsxContent) => {
       return `return (\n${jsxContent}\n)`;
     });
 
-    // Fix extra quotes in JSX
+    // Fix extra quotes in JSX;
     content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, '<$1>$2</$1>');
     content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, '<$1>$2</$1>');
 
-    // Fix unterminated strings
+    // Fix unterminated strings;
     content = content.replace(/([^\\])"([^"]*?)\n([^"]*?)"/g, '$1"$2$3"');
 
-    // Remove extra semicolons
+    // Remove extra semicolons;
     content = content.replace(/;;+/g, ';');
     content = content.replace(/;\s*$/gm, ';');
 
-    // Fix JSX structure
+    // Fix JSX structure;
     content = content.replace(/<div[^>]*>\s*"([^"]*)"\s*<\/div>/g, '<div$1></div>');
 
-    // Remove empty lines with just quotes
+    // Remove empty lines with just quotes;
     content = content.replace(/^\s*"\s*$/gm, '');
 
-    // Fix function declarations
+    // Fix function declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*return\s*\(\s*"([\s\S]*?)"\s*\)\s*};/g, (match, funcName, jsxContent) => {
       return `const ${funcName} = () => {\n  return (\n${jsxContent}\n  );\n};`;
     });
@@ -108,7 +108,7 @@ function fixFile(filePath) {
   return false;
 }
 
-// Function to find all files with merge conflicts
+// Function to find all files with merge conflicts;
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -127,7 +127,7 @@ function findFilesWithConflicts(dir) {
           if (content.includes('') || content.includes('            files.push(fullPath);
           }
         } catch (error) {
-          // Skip files that can't be read
+          // Skip files that can't be read;
         }
       }
     }
@@ -137,7 +137,7 @@ function findFilesWithConflicts(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with merge conflicts...');
 const conflictedFiles = findFilesWithConflicts('./app');
 
@@ -158,7 +158,7 @@ for (const file of conflictedFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 
@@ -167,7 +167,7 @@ if (fixedCount > 0) {
 } else {
   console.log('\n✨ No merge conflicts found or all conflicts were already resolved.');
 }
-// Function to recursively find and fix files
+// Function to recursively find and fix files;
 function fixDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -188,12 +188,12 @@ function fixDirectory(dirPath) {
   return fixedCount;
 }
 
-// Start fixing from the app directory
+// Start fixing from the app directory;
 console.log('Starting to fix merge conflicts and syntax errors...');
 const fixedCount = fixDirectory('./app');
 console.log(`Fixed ${fixedCount} files.`);
 
-// Also fix root level files
+// Also fix root level files;
 const rootFiles = ['App.tsx', 'main.tsx', 'vite.config.ts', 'eslint.config.js'];
 let rootFixedCount = 0;
 

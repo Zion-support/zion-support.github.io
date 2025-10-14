@@ -1,18 +1,18 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 
 const filePath = '/workspace/app/page.tsx';
 const content = fs.readFileSync(filePath, 'utf8');
 
-// Find JSX opening and closing tags
+// Find JSX opening and closing tags;
 const jsxOpenTags = content.match(/<[^/][^>]*>/g) || [];
 const jsxCloseTags = content.match(/<\/[^>]*>/g) || [];
 
-console.log('Opening tags:', jsxOpenTags.length);
-console.log('Closing tags:', jsxCloseTags.length);
+console.log('Opening tags: ', jsxOpenTags.length);'
+console.log('Closing tags: ', jsxCloseTags.length);'
 
-// Check for specific issues
+// Check for specific issues;
 const lines = content.split('\n');
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
@@ -21,7 +21,7 @@ for (let i = 0; i < lines.length; i++) {
   }
 }
 
-// Check for unclosed divs
+// Check for unclosed divs;
 let divCount = 0;
 let sectionCount = 0;
 let fragmentCount = 0;
@@ -42,6 +42,6 @@ for (const tag of jsxCloseTags) {
   if (tag.includes('</>')) closeFragmentCount++;
 }
 
-console.log('Div tags - Open:', divCount, 'Close:', closeDivCount);
-console.log('Section tags - Open:', sectionCount, 'Close:', closeSectionCount);
-console.log('Fragment tags - Open:', fragmentCount, 'Close:', closeFragmentCount);
+console.log('Div tags - Open:', divCount, 'Close: ', closeDivCount);'
+console.log('Section tags - Open:', sectionCount, 'Close: ', closeSectionCount);'
+console.log('Fragment tags - Open:', fragmentCount, 'Close: ', closeFragmentCount);'
