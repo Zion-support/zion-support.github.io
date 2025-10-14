@@ -1,5 +1,4 @@
 import React from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react";
@@ -338,4 +337,3 @@ export default function TeamPage() {
     </div>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

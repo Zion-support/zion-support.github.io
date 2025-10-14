@@ -1,17 +1,17 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
-,
-  }
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: any;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {

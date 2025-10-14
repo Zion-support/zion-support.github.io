@@ -47,7 +47,6 @@ export default function Page() {
               Get Started Today;
             </button>;
           </div>
-ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </div>
     </div>
@@ -55,4 +54,3 @@ ursor/fix-errors-and-merge-to-main-94a7
 };
 
 export default MicroSaasPage;
-ursor/fix-errors-and-merge-to-main-94a7

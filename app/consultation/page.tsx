@@ -110,7 +110,6 @@ export default function ConsultationPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Get expert guidance on AI strategy, cybersecurity, digital transformation, and cloud migration. 
             Our certified professionals are here to help you succeed.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -207,4 +206,3 @@ ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

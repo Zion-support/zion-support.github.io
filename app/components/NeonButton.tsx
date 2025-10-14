@@ -9,7 +9,6 @@ interface NeonButtonProps {
   variant?: 'primary' | 'secondary' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   className?: string}
-ursor/fix-errors-and-merge-to-main-94a7
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,

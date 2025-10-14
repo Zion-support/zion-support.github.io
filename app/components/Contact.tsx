@@ -11,7 +11,6 @@ const Contact: React.FC = () => {,
     message: '',
   });
 
-ursor/fix-errors-and-merge-to-main-94a7
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({,
       ...formData,
@@ -133,7 +132,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                 type="submit""
                 className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               ></button>
-ursor/fix-errors-and-merge-to-main-94a7
                 Send Message
               </button>
             </form>
@@ -197,7 +195,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   Proven track record
                 </li>
               </ul>
-ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
         </div>
@@ -207,4 +204,3 @@ ursor/fix-errors-and-merge-to-main-94a7
 };
 "'
 export default Contact;
-ursor/fix-errors-and-merge-to-main-94a7

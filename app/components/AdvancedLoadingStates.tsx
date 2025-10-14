@@ -4,7 +4,6 @@ interface AdvancedLoadingStatesProps {
   type?: string;
   fullScreen?: boolean;
   message?: string;
-ursor/fix-errors-and-merge-to-main-94a7
 }
 ;
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ 
@@ -42,5 +41,4 @@ const AdvancedLoadingStatesPage = () => {
     </div>
   );
 };
-ursor/fix-errors-and-merge-to-main-94a7
 export default AdvancedLoadingStates;

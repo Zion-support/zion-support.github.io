@@ -133,7 +133,6 @@ const Page = () => {
             </div>
           </div>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
   );
@@ -141,4 +140,3 @@ ursor/fix-errors-and-merge-to-main-94a7
 
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7

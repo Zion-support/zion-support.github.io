@@ -9,7 +9,6 @@ import { Sparkles } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
-ursor/fix-errors-and-merge-to-main-94a7
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -100,7 +99,6 @@ export default function AISupplyChainOptimizerPage() {
     }
   ];
 
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -242,9 +240,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

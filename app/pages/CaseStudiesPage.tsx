@@ -10,7 +10,6 @@ import {
   CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
 
-ursor/fix-errors-and-merge-to-main-94a7
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -176,7 +175,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">

@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
 const NotFound: React.FC = () => {
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -82,7 +81,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </a>;
         </div>
       </section>;
-ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 ,
@@ -142,4 +140,3 @@ ursor/fix-errors-and-merge-to-main-94a7
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Get Started Today</a></div></section></div>
 export default NotFound
-ursor/fix-errors-and-merge-to-main-94a7

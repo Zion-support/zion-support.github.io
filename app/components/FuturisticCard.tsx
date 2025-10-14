@@ -4,7 +4,6 @@ interface FuturisticCardProps {
   className?: string;
   variant?: 'default' | 'glow' | 'gradient'}
 
-ursor/fix-errors-and-merge-to-main-94a7
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, '
   className = '',';

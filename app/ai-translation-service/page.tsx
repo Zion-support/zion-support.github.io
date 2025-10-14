@@ -111,7 +111,6 @@ export default function AITranslationServicePage() {
     }
   ];
 
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -280,9 +279,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
   );
 }
-ursor/fix-errors-and-merge-to-main-94a7

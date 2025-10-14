@@ -107,34 +107,18 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <PerformanceOptimizer>
-      <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-          <EnhancedSEO
-            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-            canonical="https://ziontechgroup.com"
-            structuredData={structuredData}
-          />
-          
-          <StructuredData type="Organization" data={structuredData} />
-          
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://ziontechgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://ziontechgroup.com/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+          <Helmet>
+            <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
+            <meta name="description" content="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology." />
+            <meta name="keywords" content="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology" />
+            <script type="application/ld+json">
+              {JSON.stringify(structuredData)}
+            </script>
+          </Helmet>
 
       {/* Main Content */}
-      <main id="main-content" role="main" aria-label="Main content">
+      <div id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -265,9 +249,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+      </div>
+    </main>
   );
 };
 
 export default HomePage;
-ursor/fix-errors-and-merge-to-main-94a7

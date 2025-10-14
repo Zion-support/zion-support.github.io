@@ -98,7 +98,6 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   }, []);
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="relative min-h-screen">
       <canvas

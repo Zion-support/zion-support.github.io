@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";
@@ -181,7 +180,6 @@ const SupportPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Get 24/7 support from our expert team. Whether you need technical assistance, have questions about our services, or want to explore new possibilities, we're here for you.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
           
           {/* Search Bar */}
@@ -421,10 +419,8 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 };
 
 export default SupportPage;
-ursor/fix-errors-and-merge-to-main-94a7
