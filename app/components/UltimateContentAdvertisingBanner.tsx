@@ -1,10 +1,49 @@
-import React from 'react;'const UltimateContentAdvertisingBanner = () => {
+import React  from 'react';const UltimateContentAdvertisingBanner = () => {
   return (
     <div>
-      <h2>UltimateContentAdvertisingBanner</h2>
-      <p>This component is under construction.</p>
+
+
+
+
+
+      <h2>
+
+
+
+
+
+UltimateContentAdvertisingBanner
+
+
+
+
+
+</h2>
+
+
+
+
+
+      <p>
+
+
+
+
+
+This component is under construction.
+
+
+
+
+
+</p>
+
+
+
+
+
     </div>
   );
-}
+};
 
 export default UltimateContentAdvertisingBanner;

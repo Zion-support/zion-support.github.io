@@ -1,108 +1,65 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix remaining errors
-function fixRemainingErrors(content, filePath) {
+// Function to fix remaining syntax errors in a file
+function fixRemainingErrors(content) {
   let fixed = content;
+
+  // Fix 1: Fix malformed function declarations
+  // Pattern: const PagePage = () => {'  return (' -> const PagePage = () => {\n  return (
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{'(\s*)return\s*\(/g, 'const $1 = () => {\n  return (');
   
-  // Fix concatenated import statements
-  fixed = fixed.replace(/';'import/g, ";\nimport");
-  fixed = fixed.replace(/';'export/g, ";\nexport");
-  fixed = fixed.replace(/';'const/g, ";\nconst");
-  fixed = fixed.replace(/';'function/g, ";\nfunction");
-  fixed = fixed.replace(/';'interface/g, ";\ninterface");
-  fixed = fixed.replace(/';'type/g, ";\ntype");
+  // Fix 2: Fix JSX attributes with colons
+  // Pattern: name: "description" -> name="description"
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"/g, '$1="$2"');
+  fixed = fixed.replace(/(\w+):\s*'([^']*)'/g, "$1='$2'");
   
-  // Fix malformed quotes in import statements
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'([^']*?)'/g, 'import React from "react";\n$1');
-  fixed = fixed.replace(/import\s+{\s*(\w+)\s*}\s+from\s+"([^"]*?)";'([^']*?)'/g, 'import { $1 } from "$2";\n$3');
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+"([^"]*?)";'([^']*?)'/g, 'import $1 from "$2";\n$3');
+  // Fix 3: Fix malformed JSX closing tags
+  // Pattern: </Helmet>"      <div> -> </Helmet>\n      <div>
+  fixed = fixed.replace(/>"(\s*)</g, '>\n$1<');
   
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/name:\s*""([^"]*?)"\s+content:\s*"([^"]*?)"\s*\/>/g, 'name="$1" content="$2" />');
-  fixed = fixed.replace(/className:\s*"([^"]*?)"/g, 'className="$1"');
-  fixed = fixed.replace(/href:\s*"([^"]*?)"/g, 'href="$1"');
-  fixed = fixed.replace(/src:\s*"([^"]*?)"/g, 'src="$1"');
-  fixed = fixed.replace(/alt:\s*"([^"]*?)"/g, 'alt="$1"');
-  fixed = fixed.replace(/title:\s*"([^"]*?)"/g, 'title="$1"');
-  fixed = fixed.replace(/type:\s*"([^"]*?)"/g, 'type="$1"');
-  fixed = fixed.replace(/rel:\s*"([^"]*?)"/g, 'rel="$1"');
-  fixed = fixed.replace(/sizes:\s*"([^"]*?)"/g, 'sizes="$1"');
+  // Fix 4: Fix malformed string literals
+  // Pattern: "            This page is under construction. Please check back later."          </p>
+  fixed = fixed.replace(/"(\s*)([^"]*)"(\s*)(<\/[^>]+>)/g, '$1$2$3$4');
   
-  // Fix malformed JSX elements
-  fixed = fixed.replace(/<h1\s+className:\s*"([^"]*?)">([^<]*?)<\/h1>/g, '<h1 className="$1">$2</h1>');
-  fixed = fixed.replace(/<p\s+className:\s*"([^"]*?)">([^<]*?)<\/p>/g, '<p className="$1">$2</p>');
-  fixed = fixed.replace(/<div\s+className:\s*"([^"]*?)">([^<]*?)<\/div>/g, '<div className="$1">$2</div>');
+  // Fix 5: Fix missing closing quotes in JSX
+  fixed = fixed.replace(/(\w+)="([^"]*)"(\s*)([^"<])/g, '$1="$2"$3$4');
   
-  // Fix broken string concatenation
-  fixed = fixed.replace(/"([^"]*?)"\s*\+\s*"([^"]*?)"/g, '"$1$2"');
-  fixed = fixed.replace(/'([^']*?)'\s*\+\s*'([^']*?)'/g, "'$1$2'");
+  // Fix 6: Fix malformed JSX structure
+  // Pattern: <div>          <h1 -> <div>\n          <h1
+  fixed = fixed.replace(/>(\s*)(<[^>]+>)/g, '>\n$1$2');
   
-  // Fix malformed template literals
-  fixed = fixed.replace(/`([^`]*?)\n/g, '`$1`');
-  fixed = fixed.replace(/\$\{([^}]*?)\}/g, '${$1}');
+  // Fix 7: Fix missing closing tags
+  fixed = fixed.replace(/(<[^>]+>)(\s*)([^<]+)(\s*)(<\/[^>]+>)/g, '$1\n$2$3$4\n$5');
   
-  // Fix broken JSX fragments
-  if (fixed.includes('<>') && !fixed.includes('</>')) {
-    fixed = fixed.replace(/<>/g, '<div>');
-    fixed = fixed.replace(/([^>])\s*$/g, '$1</div>');
-  }
+  // Fix 8: Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*<div>/g, 'return (\n    <div>');
   
-  // Fix malformed function declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{/g, 'const $1 = () => {');
+  // Fix 9: Fix missing semicolons and proper formatting
+  fixed = fixed.replace(/}\s*$/gm, '}\n');
+  fixed = fixed.replace(/;\s*$/gm, ';\n');
   
-  // Fix broken return statements
-  fixed = fixed.replace(/return\s*\(\s*([^)]*?)\s*\)\s*;\s*<\/div>\s*<\/div>\s*\);/g, 'return (\n    <div>\n      $1\n    </div>\n  );');
+  // Fix 10: Fix malformed JSX attributes
+  fixed = fixed.replace(/(\w+):\s*([^"'\s>]+)(\s|>)/g, '$1="$2"$3');
   
-  // Fix malformed export statements
-  fixed = fixed.replace(/export\s+default\s+(\w+)\s*;\s*export\s+default/g, 'export default');
+  // Fix 11: Clean up extra quotes and malformed strings
+  fixed = fixed.replace(/"\s*"/g, '"');
+  fixed = fixed.replace(/""/g, '"');
   
-  // Fix broken closing tags
-  fixed = fixed.replace(/<\/\s*>/g, '</div>');
+  // Fix 12: Fix malformed JSX closing tags
+  fixed = fixed.replace(/>"(\s*)(<\/[^>]+>)/g, '>\n$1$2');
   
-  // Fix malformed JSX expressions
-  fixed = fixed.replace(/\{([^}]*?)\}/g, (match, content) => {
-    if (content.includes('=') && !content.includes(':')) {
-      return `{${content.replace(/=/g, ': ')}}`;
-    }
-    return match;
-  });
+  // Fix 13: Fix missing closing brackets
+  fixed = fixed.replace(/}\s*"(\s*)([^}])/g, '}\n$1$2');
   
-  // Fix broken component structure
-  if (filePath.includes('.tsx') || filePath.includes('.jsx')) {
-    // Ensure proper component structure
-    if (fixed.includes('export default function') && !fixed.includes('React')) {
-      fixed = 'import React from "react";\n' + fixed;
-    }
-    
-    // Fix malformed JSX return
-    if (fixed.includes('return (') && !fixed.includes('</div>')) {
-      fixed = fixed.replace(/return\s*\(\s*<div>([^<]*?)<\/div>\s*\);\s*<\/div>\s*<\/div>\s*\);/g, 'return (\n    <div>\n      $1\n    </div>\n  );');
-    }
-  }
+  // Fix 14: Fix malformed function declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{'(\s*)/g, 'const $1 = () => {\n$2');
   
-  // Fix specific patterns that are causing issues
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'\/\/\s*([^']*?)'/g, 'import React from "react";\n// $1');
-  fixed = fixed.replace(/import\s+React\s+from\s+"react";"import\s+{\s*(\w+)\s*}\s+from\s+"([^"]*?)";'([^']*?)'/g, 'import React from "react";\nimport { $1 } from "$2";\n$3');
-  
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<meta\s+name:\s*""([^"]*?)"\s+content:\s*"([^"]*?)"\s*\/>/g, '<meta name="$1" content="$2" />');
-  
-  // Fix broken string literals
-  fixed = fixed.replace(/"([^"]*?)"\s*\+\s*"([^"]*?)"/g, '"$1$2"');
-  fixed = fixed.replace(/'([^']*?)'\s*\+\s*'([^']*?)'/g, "'$1$2'");
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className:\s*"([^"]*?)"/g, 'className="$1"');
-  fixed = fixed.replace(/name:\s*"([^"]*?)"/g, 'name="$1"');
-  fixed = fixed.replace(/content:\s*"([^"]*?)"/g, 'content="$1"');
-  
-  // Fix broken JSX elements
-  fixed = fixed.replace(/<h1\s+className:\s*"([^"]*?)">([^<]*?)<\/h1>/g, '<h1 className="$1">$2</h1>');
-  fixed = fixed.replace(/<p\s+className:\s*"([^"]*?)">([^<]*?)<\/p>/g, '<p className="$1">$2</p>');
-  fixed = fixed.replace(/<div\s+className:\s*"([^"]*?)">([^<]*?)<\/div>/g, '<div className="$1">$2</div>');
+  // Fix 15: Fix malformed JSX structure
+  fixed = fixed.replace(/(<[^>]+>)(\s*)([^<]+)(\s*)(<\/[^>]+>)/g, '$1\n$2$3$4\n$5');
   
   return fixed;
 }
@@ -111,7 +68,7 @@ function fixRemainingErrors(content, filePath) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingErrors(content, filePath);
+    const fixed = fixRemainingErrors(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -127,34 +84,28 @@ function processFile(filePath) {
 
 // Main function
 async function main() {
-  console.log('Starting remaining error fixes...');
-  
-  // Get all TypeScript and JavaScript files
   const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'src/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',
-    'pages/**/*.{ts,tsx,js,jsx}',
-    'utils/**/*.{ts,tsx,js,jsx}',
-    'hooks/**/*.{ts,tsx,js,jsx}',
-    'contexts/**/*.{ts,tsx,js,jsx}',
-    'config/**/*.{ts,tsx,js,jsx}',
-    'data/**/*.{ts,tsx,js,jsx}',
-    'types/**/*.{ts,tsx,js,jsx}'
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.jsx',
+    'app/**/*.js'
   ];
   
-  let totalFixed = 0;
+  let totalFiles = 0;
+  let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
+    
     for (const file of files) {
+      totalFiles++;
       if (processFile(file)) {
-        totalFixed++;
+        fixedFiles++;
       }
     }
   }
   
-  console.log(`Fixed ${totalFixed} files`);
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

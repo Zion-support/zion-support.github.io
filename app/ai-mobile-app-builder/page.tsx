@@ -1,8 +1,116 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"export default function Page() {'  return ('    <React.Fragment>
+import React from "react";
+
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {'  return (
+    <React.Fragment>
+
+
+
+
+
 
       <Helmet>
-        <title>Ai Mobile App Builder - Zion Tech Group</title>
-        <meta name: "description" content: "Professional ai mobile app builder services by Zion Tech Group." />"      </Helmet>"      <div>"        <div>
-          <h1 className: "text-4xl font-bold text-white mb-4">Ai Mobile App Builder</h1>"          <p className: "text-gray-300">Coming soon...</p>"        </div>"      </div>"    </React.Fragment>
+        <title>
+
+
+
+
+
+Ai Mobile App Builder - Zion Tech Group
+
+
+
+
+
+</title>
+
+
+
+
+
+        <meta name="description" content="Professional ai mobile app builder services by Zion Tech Group." />
+
+
+
+
+
+
+      
+
+
+
+
+
+</Helmet>
+
+
+
+
+
+      <div>
+        <div>
+
+
+
+
+
+          <h1 className="text-4xl font-bold text-white mb-4">
+
+
+
+
+
+Ai Mobile App Builder
+
+
+
+
+
+</h1>
+
+
+
+
+
+          <p className="text-gray-300">
+
+
+
+
+
+Coming soon...
+
+
+
+
+
+</p>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+      
+
+
+
+
+
+</div>
+
+
+
+
+
+    </React.Fragment>
   );
+
 }
