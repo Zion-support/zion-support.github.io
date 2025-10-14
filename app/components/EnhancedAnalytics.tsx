@@ -1,5 +1,10 @@
 import React, { useEffect, useCallback } from 'react';
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface AnalyticsEvent {
   action: string;
   category: string;
@@ -206,10 +211,9 @@ const EnhancedAnalytics: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-          if (entry.processingStart && entry.startTime) {
-            trackPerformance('FID', entry.processingStart - entry.startTime);
-          }
+        entries.forEach((entry: PerformanceEntry) => {
+          const fidEntry = entry as PerformanceEventTiming;
+          trackPerformance('FID', fidEntry.processingStart - fidEntry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -218,9 +222,10 @@ const EnhancedAnalytics: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-          if (!entry.hadRecentInput && entry.value) {
-            clsValue += entry.value;
+        entries.forEach((entry: PerformanceEntry) => {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            clsValue += clsEntry.value;
             trackPerformance('CLS', clsValue);
           }
         });
