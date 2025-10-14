@@ -21,7 +21,7 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Zion Tech Group' })).toBeInTheDocument();
   });
   
   it('renders navigation links', () => {
