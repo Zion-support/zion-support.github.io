@@ -21,4 +21,3 @@ export default function SEOEnhancer({
   const _ = { title, description, keywords, type, structuredData }; // Parameters will be used in future implementation
   return <div className="seoenhancer">{children}</div>;
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;
