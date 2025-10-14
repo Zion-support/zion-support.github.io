@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import React from 'react';
 import React, { Suspense } from 'react';
 

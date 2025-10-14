@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import React, { Suspense } from 'react';
 const AiWorkflowAutomationPage: React.FC = () => {
   return (
     <>
@@ -49,5 +50,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiWorkflowAutomationPage;
 

@@ -89,6 +89,7 @@ import React, { Suspense } from 'react';
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
+import React, { Suspense } from 'react';
         if (process.env.NODE_ENV === 'development') {
           console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }

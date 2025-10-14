@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import React, { Suspense } from 'react';
 const AiVoiceCloningPage: React.FC = () => {
   return (
     <>
@@ -49,5 +50,6 @@ const AiVoiceCloningPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default AiVoiceCloningPage;
 

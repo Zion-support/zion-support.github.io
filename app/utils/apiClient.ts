@@ -22,6 +22,7 @@ export const apiClient = {
     return this.request(endpoint, { method: 'GET' })
   },
   
+  post(endpoint: string, data: Record<string, unknown>) {
   post(endpoint: string, data: unknown) {
     return this.request(endpoint, {
       method: 'POST',
@@ -29,6 +30,7 @@ export const apiClient = {
     })
   },
   
+  put(endpoint: string, data: Record<string, unknown>) {
   put(endpoint: string, data: unknown) {
     return this.request(endpoint, {
       method: 'PUT',

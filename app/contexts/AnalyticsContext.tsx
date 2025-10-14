@@ -14,6 +14,7 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
     if (process.env.NODE_ENV === 'development') {
       console.warn('Event tracked:', eventName, properties)
     }
@@ -21,6 +22,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }, [])
 
   const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
     if (process.env.NODE_ENV === 'development') {
       console.warn('Page view tracked:', pageName, properties)
     }
@@ -28,6 +30,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }, [])
 
   const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
     if (process.env.NODE_ENV === 'development') {
       console.warn('User identified:', userId, properties)
     }

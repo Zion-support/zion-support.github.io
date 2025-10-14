@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import React, { Suspense } from 'react';
 const ZionAiEmailAnalyzerPage: React.FC = () => {
   return (
     <>
@@ -49,4 +50,5 @@ const ZionAiEmailAnalyzerPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ZionAiEmailAnalyzerPage;

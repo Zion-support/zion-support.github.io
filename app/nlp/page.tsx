@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import React, { Suspense } from 'react';
 const NlpPage: React.FC = () => {
   return (
     <>
@@ -49,5 +50,6 @@ const NlpPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default NlpPage;
 

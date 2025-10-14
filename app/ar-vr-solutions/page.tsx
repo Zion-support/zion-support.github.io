@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+import React, { Suspense } from 'react';
 const ArVrSolutionsPage: React.FC = () => {
   return (
     <>
@@ -49,5 +50,6 @@ const ArVrSolutionsPage: React.FC = () => {
   );
 }
 
+import React, { Suspense } from 'react';
 export default ArVrSolutionsPage;
 
