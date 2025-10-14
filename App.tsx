@@ -62,38 +62,26 @@ function App() {
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-<<<<<<< HEAD
-    const logMetric = (metric: unknown) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
-    };
-    onCLS(logMetric);
-    onFCP(logMetric);
-    onLCP(logMetric);
-    onTTFB(logMetric);
-=======
     onCLS((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('CLS:', metric);
+        console.warn('CLS:', metric);
       }
     });
     onFCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('FCP:', metric);
+        console.warn('FCP:', metric);
       }
     });
     onLCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('LCP:', metric);
+        console.warn('LCP:', metric);
       }
     });
     onTTFB((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('TTFB:', metric);
+        console.warn('TTFB:', metric);
       }
     });
->>>>>>> 097a992ca525 (Fix TypeScript errors and ESLint warnings)
   });
 
   // Monitor bundle size
@@ -101,7 +89,7 @@ if (typeof window !== 'undefined') {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
         if (process.env.NODE_ENV === 'development') {
-          console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
       }
     }
@@ -110,7 +98,7 @@ if (typeof window !== 'undefined') {
 }
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      console.log('Zion Tech Group App initialized');
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
