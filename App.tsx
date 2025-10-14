@@ -7,9 +7,8 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import LoadingPage from "./app/components/LoadingStates";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -57,8 +56,7 @@ function App() {
 
   return (
     <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
+      <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -110,7 +108,6 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   );
 }
