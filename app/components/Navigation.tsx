@@ -49,24 +49,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      icon: CogIcon,
+      submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
         { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -285,6 +278,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           ))}
         </div>
       </div>
+    </div>
     </nav>
   );
 }

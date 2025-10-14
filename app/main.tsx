@@ -48,13 +48,13 @@ const Main: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
-                Ready to transform your business with our main services?;
+                Ready to transform your business with our main services?
               </p>
-              <a;
-                href="$1"
-                className="$1"
+              <a
+                href="/contact"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
               >
-                Contact Us;
+                Contact Us
               </a>
             </div>
           </div>

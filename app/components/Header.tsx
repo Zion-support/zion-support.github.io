@@ -1,26 +1,28 @@
 import React from 'react';
-import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
+      name: 'Services',
+      href: '/services',
+      submenu: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
+      ]
     },
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -38,9 +40,9 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link;
+                  <Link
                     to={item.href}
-                    className="$1"
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >

@@ -19,7 +19,7 @@ import {
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
-  LightBulbIcon;
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{
@@ -31,13 +31,13 @@ export default function AISolutionsPage() {
         "A/B testing framework",
         "Model performance monitoring",
         "Automated retraining",
-        "Edge deployment";
+        "Edge deployment"
       ],
       color: "from-purple-500 to-pink-500",
       price: "Starting at $3,500/month",
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning";
+      href: "/ai-machine-learning"
     },
     {
       title: "Natural Language Processing",
@@ -48,13 +48,13 @@ export default function AISolutionsPage() {
         "Language translation",
         "Named entity recognition",
         "Text summarization",
-        "Conversational AI";
+        "Conversational AI"
       ],
       color: "from-blue-500 to-indigo-500",
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
-      href: "/ai-nlp";
+      href: "/ai-nlp"
     },
     {
       title: "Computer Vision",

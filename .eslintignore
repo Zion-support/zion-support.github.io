@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+.next/
+out/
+app-disabled/
+app-broken/
+**/*.broken
+**/*.backup
+**/penetration-testing/
+**/test-simple/
+**/__tests__/
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx

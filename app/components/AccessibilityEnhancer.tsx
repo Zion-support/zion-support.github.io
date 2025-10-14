@@ -45,6 +45,7 @@ const AccessibilityEnhancer: React.FC = () => {
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
 
     // Reduced motion mode
     if (isReducedMotion) {
