@@ -1,11 +1,11 @@
-import React, { useState } from "react;"import { Link } from react-router-dom";"import { Menu, X, ChevronDown } from lucide-react";"const Navigation = () => {"  const [isOpen, setIsOpen] :  useState(false);
+import React, { useState } from "react;import { Link } from react-router-dom;import { Menu, X, ChevronDown } from lucide-react";const Navigation = () => {"  const [isOpen, setIsOpen] :  useState(false);
   const [isServicesOpen, setIsServicesOpen] :  useState(false);
 
   const services :  [
-    { name="AI Solutions, href=""/ai-solutions" },    { name="Cybersecurity", href: "/cybersecurity" },    { name="Cloud Infrastructure", href: ""/cloud-infrastructure },    { name=""Digital Transformation, href: ""/digital-transformation },    { name=""IT Services", href: "/it-services },"    { name="Micro SAAS", href: "/micro-saas }"  ];""  return (
-    <nav className="bg-gray-900 95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50"      <div>"        <div>"          {/* Logo */}
+    { name="AI Solutions, href=""/ai-solutions" },    { name="Cybersecurity", href="/cybersecurity" },    { name="Cloud Infrastructure", href: ""/cloud-infrastructure },    { name=""Digital Transformation, href: ""/digital-transformation },    { name=""IT Services", href="/it-services },"    { name="Micro SAAS", href="/micro-saas }"  ];"  return (
+    <nav className="bg-gray-900 95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50"      <div><div>"          {/* Logo */}
           <div>
-            <Link to="/ className="flex items-center">              <div>"                <span className="text-white font-bold text-sm">Z</span>              </div>"              <span className="text-xl font-bold text-white">Zion Tech Group</span>            </Link>"          </div>"
+            <Link to="/ className="flex items-center">              <div><span className="text-white font-bold text-sm">Z</span>              </div><span className="text-xl font-bold text-white">Zion Tech Group</span>            </Link></div>
           {/* Desktop Navigation */}
           <div>
             <div>
@@ -48,8 +48,7 @@ import React, { useState } from "react;"import { Link } from react-router-dom";"
           <div>
             <button
               onClick={() : > setIsOpen(!isOpen)}
-              className="text-gray-300 hover text-white p-2"            >"              {isOpen  ? <X className="w-6 h-6" /> : <Menu className=w-6 h-6" />}"            </button>"          </div>"
-        </div>
+              className="text-gray-300 hover text-white p-2"            >"              {isOpen  ? <X className="w-6 h-6" /> : <Menu className=w-6 h-6" />}"            </button></div></div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -64,7 +63,7 @@ import React, { useState } from "react;"import { Link } from react-router-dom";"
               </Link>
               
               <div>
-                <div className=text-gray-300 text-base font-medium mb-2">Services</div>"                <div>"                  {services.map((service) : > ("                    <Link
+                <div className=text-gray-300 text-base font-medium mb-2">Services</div><div>"                  {services.map((service) : > ("                    <Link
                       key: {service.name}
                       to={service.href}
                       className=text-gray-400 hover text-white block px-3 py-1 rounded-md text-sm""                      onClick={() : > setIsOpen(false)}"                    >"                      {service.name}

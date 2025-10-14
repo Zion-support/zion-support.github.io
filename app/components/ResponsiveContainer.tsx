@@ -1,4 +1,4 @@
-import React from "react";"interface ResponsiveContainerProps {}"  children: 
+import React from "react";interface ResponsiveContainerProps {}"  children: 
   c,lassName ?  : string
 
 const ResponsiveContainer: React.FC<Props> = ({ children }) => {}
