@@ -209,3 +209,6 @@ const Footer = () => {
 };
 
 export default Footer;
+</span>
+</span>
+</span>

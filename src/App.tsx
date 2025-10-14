@@ -69,3 +69,5 @@ const initApp = async () => {
     };
     initApp();
   }, []);
+
+}

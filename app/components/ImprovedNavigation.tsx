@@ -85,7 +85,6 @@ const ImprovedNavigation = () => {
       <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
       <p>This component is under construction.</div>
     </>
-=======
 >>>>>>> origin/main;
   );
 };

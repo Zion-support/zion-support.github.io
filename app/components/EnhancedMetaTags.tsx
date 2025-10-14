@@ -37,7 +37,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       '@type': 'Organization','''
       name: author,
     },
-    publisher: {
+    publisher: {,
       logo: {
         '@type': 'ImageObject','''
         url: `${siteUrl}/images/logo.png`,````
@@ -54,7 +54,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
     ...(tags.length > 0 && { keywords: tags.join(', ') }),'''
   } : null;
   return (
-<>    <Helmet>
+<div>    <Helmet>
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       <meta name="description" content={description} />"""

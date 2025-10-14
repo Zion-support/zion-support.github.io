@@ -21,15 +21,14 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: ErrorInfo;,
   errorId: string;
 }
 </p>
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
+    this.state={hasError: false,
       error: undefined,
       errorInfo: undefined,
       errorId: ''''
@@ -37,7 +36,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
+    return {,
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
@@ -53,7 +52,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {''
-<<<<<<< HEAD;
+;
       console.error('Error caught by boundary:', error, errorInfo);'
     }
 
@@ -98,7 +97,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               <a;
                 href="$1""""
                 className="$1"""
-=======
             <div></a>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p>"""

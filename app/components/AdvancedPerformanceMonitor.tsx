@@ -3,7 +3,7 @@
   networkLatency: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
+  cumulativeLayoutShift: number;,
   firstInputDelay: number;
 const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -187,3 +187,10 @@ export default AdvancedPerformanceMonitor;
       <h2>AdvancedPerformanceMonitor</h2>
       <p>This component is under construction.</div>
 export default AdvancedPerformanceMonitor;
+
+</p>
+}
+}
+}
+}
+}

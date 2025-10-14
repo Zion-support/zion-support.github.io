@@ -9,7 +9,6 @@ const HomePage = () => {
         <meta name="description" content="Professional services by Zion Tech Group." /></meta>
 ")}""
 }
-=======
 const PagePage = () => {
   return (
 <>
@@ -29,4 +28,4 @@ const PagePage = () => {
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;

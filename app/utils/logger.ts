@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 // Logger - Basic implementation;
 export default function Logger() {
   return null;
 }
-=======
 // Logger utility functions
 
-export const Logger = {
-  error: (message: string, error?: unknown) => {
+export const Logger={error: (message: string, error?: unknown) => {
     console.error(message, error);
   },
   info: (message: string, data?: unknown) => {
@@ -17,4 +14,4 @@ export const Logger = {
     console.warn(message, data);
   }
 };
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
+ (Fix all linting errors and merge conflicts)

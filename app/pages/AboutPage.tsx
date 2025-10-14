@@ -40,3 +40,6 @@ const AboutPage: React.FC = () => {
                 <div className="flex items-start"></div>
                   <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"""
                   <span className="text-gray-300">Cutting-edge technology</div>
+
+}
+}

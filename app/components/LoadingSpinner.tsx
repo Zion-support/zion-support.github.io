@@ -9,8 +9,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false,
   className = '''''
 }) => {
-  const sizeClasses = {
-  const spinner = (
+  const sizeClasses={const spinner = (
     <div>"`"`"``"`</div>
       <div>"""</div>
         <div;
@@ -30,3 +29,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     )
   return spinner;
+
+}
+}
+}
+}

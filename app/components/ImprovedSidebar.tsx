@@ -88,7 +88,6 @@ const ImprovedSidebar = () => {
       <h2 className="text-xl font-semibold mb-2">ImprovedSidebar</h2>
       <p>This component is under construction.</div>
     </>
-=======
 >>>>>>> origin/main;
   );
 };

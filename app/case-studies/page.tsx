@@ -19,6 +19,5 @@ const PagePage = () => {
   );
 };
 
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;

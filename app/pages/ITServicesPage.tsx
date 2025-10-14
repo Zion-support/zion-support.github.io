@@ -18,8 +18,7 @@ const ITServicesPage: React.FC = () => {
             From infrastructure to support, we"ve got you covered.""</p>
           </div>
           {services.map((service, _index
-  </>
-); => {
+  </>); => {
             const Icon = service.icon;
             return (
   <>
@@ -32,8 +31,7 @@ const ITServicesPage: React.FC = () => {
                 <p>{service.description}</p>
                 <ul className="space-y-2">""
                   {service.features.map((feature, featureIndex
-  </>
-); => (
+  </>); => (
                     </li>
                   ))
                 </div>
@@ -117,4 +115,10 @@ const ITServicesPage = () => {
       <p className="text-gray-300 text-lg">This page is under development.</div>
   </>
 );
+}
+
+}
+}
+}
+}
 }

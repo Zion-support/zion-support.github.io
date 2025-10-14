@@ -153,3 +153,5 @@ export default PerformanceMonitor;
 };
 
 export default PerformanceMonitor;
+
+}

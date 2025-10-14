@@ -10,12 +10,12 @@ interface BlogPost {
   excerpt: string;
   author: string;
   date: string;
-  category: string;
+  category: string;,
   image: string;
 }
 
 const BlogPage: React.FC = () => {
-  const blogPosts = [{
+  const blogPosts = [{,
       title: ";The Future of AI in Business',';'"
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',';'
       author: 'Zion Tech Team',';'
@@ -375,3 +375,8 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+}
+}
+}
+}
+}

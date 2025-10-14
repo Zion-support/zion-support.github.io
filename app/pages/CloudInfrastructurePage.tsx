@@ -18,8 +18,7 @@ const CloudInfrastructurePage: React.FC = () => {
             security, and cost-effectiveness.;</p>
           </div>
           {services.map((service, _index
-  </>
-); => {
+  </>); => {
             const Icon = service.icon;
             return (
   <>
@@ -32,8 +31,7 @@ const CloudInfrastructurePage: React.FC = () => {
                 <p>{service.description}</p>
                 <ul className="space-y-2">""
                   {service.features.map((feature, featureIndex
-  </>
-); => (
+  </>); => (
                     </li>
                   ))
                 </div>
@@ -117,4 +115,10 @@ const CloudInfrastructurePage = () => {
       <p className="text-gray-300 text-lg">This page is under development.</div>
   </>
 );
+}
+
+}
+}
+}
+}
 }

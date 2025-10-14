@@ -17,8 +17,7 @@ const Page = () => {
             This page is under construction. Please check back later.
           </div>
   )"
-=======
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;

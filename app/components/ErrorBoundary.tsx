@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-  error: Error | null;
+  error: Error | null;,
   errorInfo: ErrorInfo | null}
-=======
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
@@ -16,18 +14,17 @@ interface State {
   error?: Error;
   errorInfo?: ErrorInfo;
 }
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
+ (Fix all linting errors and merge conflicts)
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
-    this.state = {
-      hasError: false,
+    this.state={hasError: false,
       error: null,
       errorInfo: null;
     }
   static getDerivedStateFromError(error: Error): State {
-    return {
+    return {,
       hasError: true,
       error,
       errorInfo: null;
@@ -108,3 +105,12 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="p-4"></div>
           <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
           <p>Please refresh the page and try again.</div>
+
+}
+}
+}
+}
+}
+}
+}
+}

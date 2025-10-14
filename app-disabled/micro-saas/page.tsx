@@ -19,13 +19,13 @@ interface MicroSaasProduct {
 
   description: string;
   price: string;
-  features: string[];
+  features: string[];,
   category: string;
 }
 
 const MicroSaasPage: React.FC = () => {}
   const microSaasProducts: MicroSaasProduct[] = [
-    {
+    {,
       id: '1,''
       icon: '📊,''
       title: 'AI Analytics Dashboard,''
@@ -44,7 +44,7 @@ import {} from "react-router-dom";"
 import { Right, Circle, Star,    } from "lucide-react";"
       users: 'Up to 50 users',''
       popular: true,
-      category: 'Analytics''
+      category: 'Analytics'',
       category: 'Analytics});)},''
     {
       id: '2,''
@@ -106,7 +106,7 @@ import { Right, Circle, Star,    } from "lucide-react";"
       description: Always here when you need us;
   const features = [;
 
-    {
+    {,
       icon: title: 'Fast Setup,''
       description: Get up and running in minutes with our streamlined onboarding process;
     },
@@ -210,3 +210,6 @@ import { Right, Circle, Star,    } from "lucide-react";"
 };
 
 export default MicroSaasPage;
+}
+}
+}

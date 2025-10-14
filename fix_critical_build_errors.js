@@ -142,3 +142,13 @@ const files = findFiles('./app')''
   process.exit(1)
 }
 }'''
+
+}
+}
+}
+}
+}
+}
+}
+}
+}

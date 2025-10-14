@@ -87,7 +87,7 @@ export default LazyImage;
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
             Get Started Today</div>
   )
-export default LazyImage;
+export default LazyImage;,
   alt: string;
   className?: string;
   placeholder?: string;
@@ -133,3 +133,13 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )
     </div>
 export default LazyImage;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}

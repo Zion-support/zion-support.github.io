@@ -7,8 +7,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   onClick,
   type = 'button''}) => {'''
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2''''
-  const variantClasses = {
-    </button>
+  const variantClasses={</button>
   )
 export default FuturisticButton;
     </button>
@@ -16,7 +15,7 @@ export default FuturisticButton;
 export default FuturisticButton;
 import React from "react";
 
-interface FuturisticButtonProps {
+interface FuturisticButtonProps {,
   children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'outline';'
@@ -31,5 +30,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 };
 
 export default FuturisticButton"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;
+}
+}

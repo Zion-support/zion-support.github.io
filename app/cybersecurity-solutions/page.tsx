@@ -6,7 +6,6 @@ const HomePage = () => {
         <meta name="description" content="Professional services by Zion Tech Group." /></meta>
 ")}""
 }
-=======
 import React from "react";
 import { Helmet    } from "react-helmet-async";
 
@@ -29,4 +28,4 @@ const Page = () => {
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;

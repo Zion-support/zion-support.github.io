@@ -16,7 +16,6 @@ const HomePage = () => {
 )}
   )"
 }
-=======
 import React from "react";
 import { Helmet    } from "react-helmet-async";
 
@@ -97,4 +96,4 @@ const PagePage = () => {
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;

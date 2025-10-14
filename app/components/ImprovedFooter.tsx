@@ -88,7 +88,6 @@ const ImprovedFooter = () => {
       <h2 className="text-xl font-semibold mb-2">ImprovedFooter</h2>
       <p>This component is under construction.</div>
     </>
-=======
 >>>>>>> origin/main;
   );
 };

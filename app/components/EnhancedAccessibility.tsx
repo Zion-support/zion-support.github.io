@@ -31,7 +31,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         padding: 8px;
         text-decoration: none;
         border-radius: 4px;
-        z-index: 1000;
+        z-index: 1000;,
         transition: top 0.3s;
       `;````
       skipLink.addEventListener('focus', () => {'''
@@ -56,7 +56,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
           height: 1px;
           padding: 0;
           margin: -1px;
-          overflow: hidden;
+          overflow: hidden;,
           clip: rect(0, 0, 0, 0)
           white-space: nowrap;
           width: auto;
@@ -70,9 +70,9 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
           height: 1px;
           padding: 0;
           margin: -1px;
-          overflow: hidden;
+          overflow: hidden;,
           clip: rect(0, 0, 0, 0)
-          white-space: nowrap;
+          white-space: nowrap;,
           border: 0}
       `````
       document.head.appendChild(style)
@@ -156,7 +156,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         border-radius: 8px 0 0 8px;
         padding: 1rem;
         z-index: 1000;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease;,
         color: white }
       .accessibility-panel.visible { right: 0 }
       .accessibility-toggle { position: fixed;
@@ -167,7 +167,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         color: white;
         border: none;
         padding: 0.5rem;
-        border-radius: 8px 0 0 8px;
+        border-radius: 8px 0 0 8px;,
         cursor: pointer;
         z-index: 1001;
         font-size: 0.875rem;
@@ -228,3 +228,18 @@ export default EnhancedAccessibility;
         if (mainContent) {}
       // Alt + H: Go to home;
 export default EnhancedAccessibility;
+
+</span>
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

@@ -119,3 +119,6 @@ export default CareersPage;
       <p className="text-gray-300 text-lg">This page is under development.</div>
   );
 }
+
+}
+}

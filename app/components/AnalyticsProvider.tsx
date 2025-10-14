@@ -6,7 +6,6 @@ interface AnalyticsContextType {
 ;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-<<<<<<< HEAD
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
@@ -28,7 +27,6 @@ interface AnalyticsProviderProps {
     if (typeof window !== 'undefined' && (window as any).gtag) {'''
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {'''
         page_title: name,
-=======
 import React, { useEffect } from 'react';
 
 // Extend Window interface for Google Analytics
@@ -61,28 +59,24 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       gtag('js', new Date());
       gtag('config', GA_TRACKING_ID, {
         page_title: document.title,
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
+ (Fix all linting errors and merge conflicts)
         page_location: window.location.href,
         ...properties;
-=======
     page;
   };
 
-<<<<<<< HEAD
   return (
   <>
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       { children }
     </AnalyticsContext.Provider>
   const context = useContext(AnalyticsContext
-  </>
-);
+  </>);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');'
   }
   return context;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
-=======
+ursor/fix-errors-and-merge-to-main-54ad;
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined' && (window as { gtag?: typeof gtag }).gtag) {
@@ -160,4 +154,10 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
 };
 
 export default AnalyticsProvider;
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
+ (Fix all linting errors and merge conflicts)
+
+}
+}
+}
+}
+}

@@ -1,17 +1,14 @@
   title?: string;
   description?: string;
 }
-<<<<<<< HEAD
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group','''
       'https://twitter.com/ziontechgroup','''
       'https://github.com/ziontechgroup''''
     ]
   }
-=======
 
-const defaultSEO = {
-  title: 'Zion Tech Group - AI & IT Solutions',
+const defaultSEO={title: 'Zion Tech Group - AI & IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
@@ -45,8 +42,7 @@ export const SEO: React.FC<SEOProps> = ({
   locale = defaultSEO.locale,
   alternateLocales: _alternateLocales = [],
 }) => {
-  const seo = {
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+  const seo={title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
@@ -72,8 +68,7 @@ export const SEO: React.FC<SEOProps> = ({
     };
 
     if (author) {
-      baseStructuredData.author = {
-        '@type': 'Person',
+      baseStructuredData.author={'@type': 'Person',
         name: author,
       };
     }
@@ -89,9 +84,9 @@ export const SEO: React.FC<SEOProps> = ({
     return baseStructuredData;
   };
 
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
+ (Fix all linting errors and merge conflicts)
   return (
-<>    <Helmet>
+<div>    <Helmet>
       <title>{title}</title>
   );
 };

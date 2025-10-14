@@ -7,7 +7,7 @@ import {}
 
 const ServicesPage: React.FC = () => {
   const services = [
-    {
+    {,
       icon: <Circle className="w-6 h-6" />,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
@@ -148,3 +148,4 @@ const ServicesPage: React.FC = () => {const services = [;
 };
 
 export default ServicesPage;
+}

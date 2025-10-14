@@ -1,5 +1,5 @@
   description: string;
-  keywords: string;
+  keywords: string;,
   canonical: string;
   ogImage?: string;
   ogType?: string;
@@ -25,7 +25,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const siteUrl = 'https://ziontechgroup.com'}'''
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";`"`'"``'"`
-  const defaultStructuredData = {''''
+  const defaultStructuredData={''''
     '@context': 'https://schema.org',''''
     '@type': 'Organization','''
     name: siteName,
@@ -39,7 +39,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const mergedStructuredData = structuredData || defaultStructuredData;
   const mergedStructuredData = structuredData || defaultStructuredData;
   return (
-<>    <Helmet>
+<div>    <Helmet>
       { /* Basic Meta Tags */ }
       <title>{title}</script>
     </Helmet>

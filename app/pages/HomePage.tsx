@@ -21,8 +21,7 @@ import { services    } from "../data/servicesData";
 
 export default function HomePage()  {
 
-  const structuredData = {
-export default function HomePage() {
+  const structuredData={export default function HomePage() {
 const structuredData = {
     "@context": "https://schema.org",""
     "@type": "WebSite",""
@@ -214,3 +213,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+}
+}

@@ -1,7 +1,6 @@
   structuredData;
 }) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
+  const structuredData={'@context': 'https://schema.org',
     '@type': type === 'article' ? 'Article' : 'WebPage',
     headline: title,
     description,
@@ -32,8 +31,10 @@
       {structuredData && (
         <script type="application/ld+json">""
           {JSON.stringify(structuredData
-  </>
-);
+  </>);
         </script>
       )
     </Helmet>
+
+}
+}

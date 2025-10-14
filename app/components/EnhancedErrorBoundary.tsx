@@ -7,7 +7,7 @@ interface Props { children: ReactNode;
 }
 interface State { hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null;,
   errorId: string; }
 
 interface Props {
@@ -23,8 +23,7 @@ interface State {
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
+  public state: State={hasError: false
   };
 
   public static getDerivedStateFromError(error: Error): State {
@@ -38,7 +37,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     super(props);
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
+    return {,
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
@@ -67,7 +66,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/main;
     }
 >>>>>>> origin/main;
-=======
 )
 >>>>>>> origin/main;
   render() {
@@ -93,7 +91,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <path"
                     strokeLinecap="round" """
                     strokeLinejoin="round" ""
-                    strokeWidth={ 2 }"""
+                    strokeWidth={2 }"""
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" ""
                   /></svg>
               </div>
@@ -119,18 +117,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               { /* Action Buttons */ }"""
               <div className="space-y-3"></div>
                 <button;
-                  onClick={ this.handleRetry }"""
+                  onClick={this.handleRetry }"""
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"></button>
                   Try Again;
                 </button>
                 <div className="flex space-x-3"></div>
                   <button;
-                    onClick={ this.handleGoHome }"""
+                    onClick={this.handleGoHome }"""
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"></button>
                     Go Home;
                   </button>
                   <button;
-                    onClick={ this.handleReload }"""
+                    onClick={this.handleReload }"""
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"></button>
                     Reload Page;
                   </div>
@@ -193,6 +191,5 @@ export default EnhancedErrorBoundary';'
 ;
 export default EnhancedErrorBoundary;
 >>>>>>> origin/main;
-=======
 """
 >>>>>>> origin/main;

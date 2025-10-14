@@ -5,7 +5,6 @@ const PagePage = () => {
   return (
 <>
       <Helmet>
-=======
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page - Zion Tech Group" /></Helmet>
       <div className="container mx-auto px-4 py-16"></div>
@@ -20,4 +19,4 @@ const PagePage = () => {
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
+ursor/fix-errors-and-merge-to-main-54ad;
