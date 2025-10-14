@@ -160,6 +160,11 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   
+                  {/* New Innovative Micro SAAS Services */}
+                  <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
+                  <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
+                  <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
+                  <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
 
                   {/* Catch all route */}
                   <Route path="*" element={
