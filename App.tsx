@@ -63,50 +63,12 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('CLS:', metric);
-          }
-        });
-        onFCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('FCP:', metric);
-          }
-        });
-        onLCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('LCP:', metric);
-          }
-        });
-        onTTFB((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.warn('TTFB:', metric);
-          }
-        });
-      });
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-      // Monitor bundle size
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            if (process.env.NODE_ENV === 'development') {
-              console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['navigation'] });
-
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-        console.warn('Zion Tech Group App initialized');
-      }
-    }
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
+    return () => clearTimeout(timer);
   }, []);
 
   if (isLoading) {
