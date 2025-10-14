@@ -155,7 +155,7 @@ const MicroSaasPage: React.FC = () => {
                   className ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     category ==='All'
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      :'bg-white/10 text-gray-300 hover:bg-white/20'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}>
                   {category}
                 </button>
@@ -180,7 +180,7 @@ const MicroSaasPage: React.FC = () => {
                   className ={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     product.popular
                       ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
-                      :'border-white/20'
+                      : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {product.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

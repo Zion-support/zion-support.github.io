@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Navigation from './app/components/Navigation';
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
 
 // Pages
 import HomePage from './app/page';
@@ -36,9 +37,16 @@ const App: React.FC = () => {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Loading application...</div></div>}>
+            <Header />
+            <main className="relative z-10 pt-20" id="main-content" role="main">
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <div className="text-center">
+                    <div className="cyber-loading mx-auto mb-4"></div>
+                    <div className="text-white text-xl">Loading application...</div>
+                  </div>
+                </div>
+              }>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -47,6 +55,7 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
             </main>
+            <Footer />
           </div>
         </Router>
       </HelmetProvider>

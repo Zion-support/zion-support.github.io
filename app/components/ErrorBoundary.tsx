@@ -1,42 +1,45 @@
-
-import { Component, ReactNode, ErrorInfo  } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
 }
 
-interfaceState {
+interface State {
   hasError: boolean;
   error?: Error;
 }
 
-classError Boundary extendsComponent<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.stat e ={ hasError: false };
-  }
-  static getDerivedStateFromError(error: Error): State {
+class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+    hasError: false
+  };
+
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Uncaught error:', error, errorInfo);
   }
-  render() {
+
+  public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <button onClick ={() => window.location.reload()}
               className ="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
-              Reload Page
-            </butn>
+              Try again
+            </button>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
+
 export default ErrorBoundary;

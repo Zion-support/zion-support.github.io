@@ -14,7 +14,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded"></div>
   </div>
 ));
-ServiceCardSkeleton.displayName ='ServiceCardSkeleton';
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,10 +36,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer />
-      <PerformanceOptimizer />
-      
-      <Navigation onSidebarToggle ={() => {}} />
       
       <main className="relative">
         {/* Hero Section */}
@@ -166,8 +162,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 };

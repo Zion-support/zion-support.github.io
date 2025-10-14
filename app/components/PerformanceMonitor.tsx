@@ -1,104 +1,35 @@
-import { useEffect, useState  } from 'react';
+import React, { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart?: number;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-}
-
-const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !=='production') return;
-
-    const currentMetrics: PerformanceMetric s ={};
-
-    // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      currentMetrics.lc p = lastEntry.startTime;
-      setMetrics({ ...currentMetrics });
-    });
-    lcpObserver.observe({ entryTypes:['largest-contentful-paint'] });
-
-    // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        if (fidEntry.processingStart) {
-          currentMetrics.fi d = fidEntry.processingStart - fidEntry.startTime;
-          setMetrics({ ...currentMetrics });
+    // Monitor performance metrics
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.warn('Navigation timing:', entry);
         }
-      });
-    });
-    fidObserver.observe({ entryTypes:['first-input'] });
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value;
+        if (entry.entryType === 'paint') {
+          console.warn('Paint timing:', entry);
         }
-      });
-      currentMetrics.cl s = clsValue;
-      setMetrics({ ...currentMetrics });
+      }
     });
-    clsObserver.observe({ entryTypes:['layout-shift'] });
 
-    // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.name==='first-contentful-paint') {
-          currentMetrics.fc p = entry.startTime;
-          setMetrics({ ...currentMetrics });
-        }
+    observer.observe({ entryTypes: ['navigation', 'paint'] });
+
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS(console.warn);
+        onFCP(console.warn);
+        onLCP(console.warn);
+        onTTFB(console.warn);
       });
-    });
-    fcpObserver.observe({ entryTypes:['paint'] });
-
-    // Measure Time toFirst Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      currentMetrics.ttf b = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics({ ...currentMetrics });
     }
 
-    // Send metrics after page load
-    const sendMetrics = () => {
-      if (Object.keys(currentMetrics).length > 0) {
-        // In a real application, you would send these metrics to your analytics service
-        console.warn('Performance Metrics:', currentMetrics);
-      }
-    };
-
-    // Send metrics when page is about to unload
-      window.addEventListener('beforeunload', sendMetrics);
-
-    // Cleanup observers
     return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics);
+      observer.disconnect();
     };
-  },[]);
+  }, []);
 
   // Don't render anything in production
   if (process.env.NODE_ENV ==='production') {
@@ -151,4 +82,5 @@ const PerformanceMonitor = () => {
     </div>
   );
 };
+
 export default PerformanceMonitor;

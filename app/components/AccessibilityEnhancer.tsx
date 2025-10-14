@@ -1,4 +1,4 @@
-'use client';
+import React, { useEffect } from 'react';
 
 import React,{ useEffect } from 'react';
 
@@ -16,22 +16,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-    const root = document.documentElement;
-    
-    // High contrast mode
-    if (enableHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    
-    // Reduced motion mode
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    // Enhance accessibility features
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Keyboard navigation
     if (enableKeyboardNavigation) {
@@ -82,14 +74,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         });
       });
 
-      observer.observe(document.body,{
-        childList: true,
-        subtree: true
+      // Add ARIA labels where needed
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach((img) => {
+        img.setAttribute('alt', '');
       });
+    };
 
-      return () => observer.disconnect();
-    }
-  },[enableScreenReaderSupport]);
+    enhanceAccessibility();
 
   useEffect(() => {
     if (enableFocusManagement) {
@@ -118,12 +110,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      document.addEventListener('keydown', manageFocus);
-      return () => document.removeEventListener('keydown', manageFocus);
-    }
-  },[enableFocusManagement]);
-
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default AccessibilityEnhancer;

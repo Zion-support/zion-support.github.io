@@ -21,9 +21,7 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev);
@@ -100,75 +98,83 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  <Link to={item.href}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                    onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
-                    onMouseLeave={() => item.submenu && setActiveDropdown(null)}
-                  >
-                    {item.name}
-                    {item.submenu && (
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    )}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && activeDropdown === item.name && (
-                    <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2 z-50">
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">
-                          {subItem.icon && <subItem.icon className="mr-3 h-4 w-4" />}
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+              <a href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
+              </a>
+              <a href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </a>
+              <a href="/services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Services
+              </a>
+              <a href="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Case Studies
+              </a>
+              <a href="/careers" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Careers
+              </a>
+              <a href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </a>
             </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-white transition-colors">
+              <Phone className="w-4 h-4 mr-2" />
+              <span className="text-sm">+1 (234) 567-890</span>
+            </a>
+            <a href="mailto:info@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
+              <Mail className="w-4 h-4 mr-2" />
+              <span className="text-sm">info@ziontechgroup.com</span>
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button onClick={toggleMobileMenu}
+            <button
+              onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
-              aria-label="Toggle menu">
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
-              {navigation.map((item) => (
-                <div key={item.name}>
-                  <Link to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
-                          className="flex items-center text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.icon && <subItem.icon className="mr-3 h-4 w-4" />}
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg rounded-lg mt-2">
+              <a href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </a>
+              <a href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </a>
+              <a href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </a>
+              <a href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Case Studies
+              </a>
+              <a href="/careers" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Careers
+              </a>
+              <a href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Contact
+              </a>
+              <div className="border-t border-white/10 pt-4 mt-4">
+                <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 (234) 567-890
+                </a>
+                <a href="mailto:info@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                  <Mail className="w-4 h-4 mr-2" />
+                  info@ziontechgroup.com
+                </a>
+              </div>
             </div>
           </div>
         )}

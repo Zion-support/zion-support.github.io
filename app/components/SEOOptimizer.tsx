@@ -24,50 +24,70 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   twitterCard: _twitterCard ='summary_large_image'
 }) => {
   useEffect(() => {
-    // Update document title
-    if (title) {
-      document.title = title;
-    }
+    // Set up structured data
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": "Leading provider of advanced AI and IT solutions, transforming businesses through cutting-edge technology.",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-234-567-890",
+        "contactType": "customer service",
+        "email": "info@ziontechgroup.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Tech Street",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "postalCode": "94105",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ]
+    };
 
-    // Update meta description
-    if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', description);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name ='description';
-        meta.content = description;
-        document.head.appendChild(meta);
-      }
-    }
+    // Add structured data to page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 
-    // Update meta keywords
-    if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name ='keywords';
-        meta.content = keywords;
-        document.head.appendChild(meta);
-      }
-    }
+    // Set up meta tags for better SEO
+    const metaTags = [
+      { name: 'robots', content: 'index, follow' },
+      { name: 'author', content: 'Zion Tech Group' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:site', content: '@ziontechgroup' }
+    ];
 
-    // Update canonical URL
-    if (canonical) {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) {
-        canonicalLink.setAttribute('href', canonical);
-      } else {
-        const link = document.createElement('link');
-        link.rel ='canonical';
-        link.href = canonical;
-        document.head.appendChild(link);
-      }
-    }
-  },[title, description, keywords, canonical]);
+    metaTags.forEach(tag => {
+      const meta = document.createElement('meta');
+      Object.entries(tag).forEach(([key, value]) => {
+        meta.setAttribute(key, value);
+      });
+      document.head.appendChild(meta);
+    });
+
+    // Cleanup function
+    return () => {
+      // Remove the script tag on cleanup
+      const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      scripts.forEach(script => {
+        if (script.textContent?.includes('Zion Tech Group')) {
+          script.remove();
+        }
+      });
+    };
+  }, []);
 
   return null; // This component doesn't render anything
 };
