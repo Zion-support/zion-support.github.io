@@ -55,8 +55,8 @@ class SEOOptimizer {
   /**
    * Generate optimized title
    */
-  generateTitle(pageTitle?: string): string {
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
+  generateTitle(pageTitle?: string): string {;
+const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName) 
       ? title 
       : `${title} | ${this.config.siteName}`;
@@ -64,8 +64,8 @@ class SEOOptimizer {
   /**
    * Generate optimized description
    */
-  generateDescription(pageDescription?: string): string {
-    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
+  generateDescription(pageDescription?: string): string {;
+const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160 
       ? description.substring(0, 157) + '...' 
       : description;
@@ -73,8 +73,8 @@ class SEOOptimizer {
   /**
    * Generate keywords string
    */
-  generateKeywords(pageKeywords?: string[]): string {
-    const keywords = pageKeywords || this.currentPageData?.keywords || [];
+  generateKeywords(pageKeywords?: string[]): string {;
+const keywords = pageKeywords || this.currentPageData?.keywords || [];
     return keywords.join(', ');
   }
   /**
@@ -147,8 +147,8 @@ class SEOOptimizer {
   /**
    * Setup structured data
    */
-  private setupStructuredData(): void {
-    const structuredData = {
+  private setupStructuredData(): void {;
+const structuredData = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: this.config.siteName,
@@ -188,7 +188,7 @@ class SEOOptimizer {
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
-        articleSection: this.currentPageData.section,
+        articleSection: this.currentPageData.section,)
         keywords: this.generateKeywords()
       });
     }
@@ -197,8 +197,8 @@ class SEOOptimizer {
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: any): void {
-    const script = document.createElement('script');
+  private addStructuredData(data: any): void {;
+const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
@@ -206,8 +206,8 @@ class SEOOptimizer {
   /**
    * Setup canonical URLs
    */
-  private setupCanonicalUrls(): void {
-    const canonical = document.createElement('link');
+  private setupCanonicalUrls(): void {;
+const canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = window.location.href;
     document.head.appendChild(canonical);
@@ -219,8 +219,8 @@ class SEOOptimizer {
     // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      new PerformanceObserver((list) => {;
+const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry.startTime > 4000) { // Poor LCP
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
@@ -246,7 +246,7 @@ class SEOOptimizer {
   private trackSEOMetric(metric: string, value: number): void {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'seo_metric', {
-        metric_name: metric,
+        metric_name: metric,)
         metric_value: Math.round(value),
         event_category: 'seo'
       });
@@ -283,17 +283,17 @@ Disallow: /static/`;
   /**
    * Check for SEO issues
    */
-  checkSEOIssues(): string[] {
-    const issues: string[] = [];
-    // Check title length
-    const title = document.title;
+  checkSEOIssues(): string[] {;
+const issues: string[] = [];
+    // Check title length;
+const title = document.title;
     if (title.length < 30) {
       issues.push('Title is too short (less than 30 characters)');
     } else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');
     }
-    // Check description length
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
+    // Check description length";
+const description = document.querySelector('meta[name="description"]')?.getAttribute('content');
     if (!description) {
       issues.push('Missing meta description');
     } else if (description.length < 120) {
@@ -301,15 +301,15 @@ Disallow: /static/`;
     } else if (description.length > 160) {
       issues.push('Description is too long (more than 160 characters)');
     }
-    // Check for images without alt text
-    const images = document.querySelectorAll('img');
+    // Check for images without alt text;
+const images = document.querySelectorAll('img');
     images.forEach((img, index) => {
       if (!img.alt) {
         issues.push(`Image ${index + 1} is missing alt text`);
       }
     });
-    // Check for heading structure
-    const h1s = document.querySelectorAll('h1');
+    // Check for heading structure;
+const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {
       issues.push('Page is missing H1 tag');
     } else if (h1s.length > 1) {
@@ -320,14 +320,14 @@ Disallow: /static/`;
   /**
    * Get SEO score
    */
-  getSEOScore(): number {
-    const issues = this.checkSEOIssues();
-    const maxIssues = 10; // Maximum possible issues
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
+  getSEOScore(): number {;
+const issues = this.checkSEOIssues();
+    const maxIssues = 10; // Maximum possible issues;
+const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
     return Math.round(score);
   }
 }
-// Default configuration
+// Default configuration;
 const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
@@ -339,4 +339,4 @@ const defaultConfig: SEOConfig = {
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID
 };
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
+export default seoOptimizer;"

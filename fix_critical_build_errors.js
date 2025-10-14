@@ -1,18 +1,18 @@
 import React from 'react'
-#!/usr/bin/env node
-import fs from 'fs';'
-import path from 'path';'
+#!/usr/bin/env node;
+import fs from 'fs';';
+import path from 'path';';
 import { execSync } from 'child_process'
 '
 console.log('🔧 Fixing critical build errors...\n')
-// Function to fix critical build errors
+// Function to fix critical build errors;
 function fixFile(filePath) {
   try {'
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
     let fixed = false
-    // Fix critical syntax errors that prevent building
-    const fixes = [
+    // Fix critical syntax errors that prevent building;
+const fixes = [
       // Fix unterminated string literals in type definitions
       {'
         pattern: /children:\s*ReactNode';/g,'
@@ -33,7 +33,7 @@ function fixFile(filePath) {
       },
       // Fix malformed function parameters
       {
-        pattern: /\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{/g,'
+        pattern: /\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{/g,'""
         replacement: '({ children, className = "" }) => {'
       },
       // Fix malformed JSX attributes
@@ -41,34 +41,34 @@ function fixFile(filePath) {
         pattern: /className=\`\$\{baseClasses\}\s*\$\{variantClasses\[variant\]\}\s*\$\{className\}\`/g,'
         replacement: 'className={`${baseClasses} ${variantClasses[variant]} ${className}`}'
       },
-      // Fix malformed return statements
-      {
-        pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`>/g,'
-        replacement: 'return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>'
+      // Fix malformed return statements"
+      {""
+        pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>/g,'
+        replacement: 'return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>'
       },
       // Fix malformed closing tags
-      {
+      {)
         pattern: /;\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
         replacement: '  </div>\n  )\n}\n\nexport default Page'
       },
-      // Fix malformed export statements
-      {
-        pattern: /export\s+default\s+function\s+Page\(\)\s*\{\s*return\s*\(\s*<React\.Fragment>\s*";";/g,'
+      // Fix malformed export statements"
+      {""
+        pattern: /export\s+default\s+function\s+Page\(\)\s*\{\s*return\s*\(\s*<React\.Fragment>\s*";";/g,')
         replacement: 'export default function Page() {\n  return (\n    <React.Fragment>'
       },
-      // Fix malformed JSX elements
-      {
-        pattern: /<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`>\s*\{children\};\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
-        replacement: '  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>\n      {children}\n    </div>\n  )\n}\n\nexport default Page'
+      // Fix malformed JSX elements"
+      {"")
+        pattern: /<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>\s*\{children\};\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
+        replacement: '  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>\n      {children}\n    </div>\n  )\n}\n\nexport default Page'
 }
     ]
     // Apply fixes
-    fixes.forEach(fix => {
+    fixes.forEach(fix => {)
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement)
         fixed = true
-})
-    // Additional specific fixes for common patterns'
+})"
+    // Additional specific fixes for common patterns'""
     if (content.includes("ReactNode';") || content.includes("React.ReactNode';")) {'
       content = content.replace(/ReactNode';/g, 'ReactNode;');'
       content = content.replace(/React\.ReactNode';/g, 'React.ReactNode;')
@@ -79,9 +79,9 @@ function fixFile(filePath) {
       // This is already correct, no need to fix
 }
     // Fix duplicate export statements'
-    if (content.includes('export default Page') && content.includes('export default')) {'
-      const lines = content.split('\n')
-      const filteredLines = []
+    if (content.includes('export default Page') && content.includes('export default')) {';
+const lines = content.split('\n');
+const filteredLines = []
       let foundExport = false
       for (const line of lines) {'
         if (line.includes('export default')) {
@@ -102,14 +102,14 @@ function fixFile(filePath) {
 } catch (error) {
     console.log(`❌ Error fixing ${filePath}: ${error.message}`)
 }
-// Function to find all TypeScript/JavaScript files'
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
+// Function to find all TypeScript/JavaScript files';
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
+const files = [];
+function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir)
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
       '
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath)
@@ -120,8 +120,8 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   traverse(dir)
 }
 // Main execution
-try {'
-  const files = findFiles('./app')
+try {';
+const files = findFiles('./app')
   let fixedCount = 0
   let totalCount = files.length
   console.log(`Found ${totalCount} files to check...\n`)
@@ -140,5 +140,6 @@ try {'
 } catch (error) {'
   console.error('❌ Error during fix process:', error.message)
   process.exit(1)
-}
-}'
+}"
+}'""
+}}}}}}}}}

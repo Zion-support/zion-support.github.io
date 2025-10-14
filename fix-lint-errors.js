@@ -7,8 +7,8 @@ import fs from 'fs; import _path from '_path; #!/usr/bin/env node; function fixF
 } if (p1 === '_beforeEach' && content.includes('_beforeEach')) {'}' ' return '_beforeEach''
 } return match; }); // Fix React import issues; if (content.includes('React is not defined') || content.includes('React.')) {'}' ' if (!content.includes("import React from 'react') && !content.includes("import * as React from 'react')) {'}"' content = "import React from 'react'\n" + content;''
 _modified = true; } } // Fix duplicate keys in objects; content = content.replace(/(\s+)(icon:\s*[^,}]+),\s*\n\s*icon:\s*([^,}]+)/g, '$1icon: $2'); // Fix duplicate variable declarations; content = content.replace(/(\w+)\s+is\s+already\s+defined/g, (match, varName) => ''
-} return `_${varName}`` }); // Fix parsing errors in JSX; content = content.replace(/<div\s+([^>`]`
-      </div>]*?)\s*$/gm, '<div$1>'
+} return `_${varName}`` }); // Fix parsing errors in JSX; content = content.replace(/<div\s+([^></div>`]`)
+      </div>]*?)\s*$/gm, '<div$1></div>'"
       </div>'); content = content.replace(/<p\s+([^>]*?)\s*$/gm, '<p$1>'); // Fix unterminated strings; content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {'}' ' if (!str.includes("'")) {'}"'"'``
 } return `'${str}'`'` } return match; }); // Fix missing semicolons; content = content.replace(/([^;}])\s*$/gm, (match, char) => '``
 } if (char && !char.match(/[();,\s]/))  return char + ''
@@ -22,3 +22,6 @@ function findFilesToFix(dir)  const _files = []; function traverse(currentDir)  
 // Main execution; const workspaceDir = process.cwd(); console.log('Searching for _files to fix...'); const filesToFix = findFilesToFix(workspaceDir); console.log(`Found ${filesToFix.length} _files to process`);`'``
 let fixedCount = 0; for (const file of filesToFix)  if (fixFile(file))  fixedCount++; } console.log(`Fixed: ${file}`);`` }``
 }
+"
+console.log(`Fixed ${fixedCount} _files`);`"'`"'``)`
+"

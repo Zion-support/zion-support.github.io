@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files that still have parsing errors
+// Files that still have parsing errors;
 const filesToFix = [
   'App_minimal.tsx',
   'App_test.tsx',
@@ -73,10 +73,10 @@ const filesToFix = [
   'vite-env.d.ts'
 ];
 
-// Function to fix a single file
+// Function to fix a single file;
 function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -89,7 +89,7 @@ function fixFile(filePath) {
     content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
     
     // Fix unterminated string literals
-    content = content.replace(/"([^"]*)$/gm, '"');
+    content = content.replace(/"([^"]*)$/gm, '"');"
     content = content.replace(/'([^']*)$/gm, "'");
     content = content.replace(/`([^`]*)$/gm, '`');
     
@@ -100,6 +100,40 @@ function fixFile(filePath) {
     content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
     
     // Fix malformed function declarations
+
+    content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
+    
+    // Fix malformed JSX
+    if (content.includes('export default function') && !content.includes('return (')) {;
+const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
+      if (functionMatch) {;
+const functionName = functionMatch[1];
+        const pageName = functionName.replace('Page', '');
+        
+        // Create proper JSX structure;
+const jsxContent = `  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>")
+          <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.toLowerCase()}</p>
+        </div>
+      </div>
+    </div>
+  );`;
+        
+        content = content.replace()
+          /export default function \w+\s*\(\s*\)\s*\{[\s\S]*?\};?\s*$/,
+          `export default function ${functionName}() {\n${jsxContent}\n}`
+        );
+      }
+    }
+    
+    // Fix specific patterns for different file types
+    if (filePath.endsWith('.d.ts')) {
+      // Fix TypeScript declaration files
+      content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
+
     }
     
     if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
@@ -113,8 +147,8 @@ function fixFile(filePath) {
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
-    content = content.replace(/;\s*\[/g, ' [');
-    content = content.replace(/;\s*"/g, ' "');
+    content = content.replace(/;\s*\[/g, ' [');"
+    content = content.replace(/;\s*"/g, ' "');"
     content = content.replace(/;\s*'/g, " '");
     content = content.replace(/;\s*`/g, ' `');
     
@@ -142,46 +176,10 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-}
-          }
-        } catch (err) { // Skip files that can't be read }
-}
-        }
-      }
-    }
-  }
-  searchDirectory(dir);
-  return files;
-}
-// Main execution
-async function main() { console.log('🔍 Finding problematic files...');
-  const problematicFiles = findProblematicFiles('.'); }
-}
-  console.log(`Found ${problematicFiles.length} problematic files`);
-  let fixedCount = 0;
-  for (const file of problematicFiles) {
-  if (fixFile(file)) {
-      fixedCount++;
-}
-}
-    }
-  }
-  console.log(`✅ Fixed ${fixedCount} files`);
-  // Run a quick lint check on a few key files
-  console.log('🔍 Running quick validation...');
-  try {
-}
-}
-    execSync('pnpm run lint --max-warnings 10', { stdio: "pipe" });
-    console.log('✅ Linting improved!');
-  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }
-}
-  }
-  console.log('🎉 Remaining error fixing process completed!');
-}
-main().catch(console.error);
 
 // Fix all files
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
 console.log('Remaining syntax error fixing completed!');
+"
+}}}}}}}}}}

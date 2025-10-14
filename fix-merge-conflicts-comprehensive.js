@@ -1,22 +1,22 @@
 import React from 'react'
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
+#!/usr/bin/env node;
+import fs from 'fs';
+import path from 'path';
 import { execSync } from 'child_process'
 console.log('🔧 Starting comprehensive merge conflict resolution...')
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
+// Function to find all files with merge conflicts;
+function findFilesWithConflicts(dir) {;
+const files = [];
+function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir)
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath)
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8')
+        try {;
+const content = fs.readFileSync(fullPath, 'utf8')
             files.push(fullPath)
 } catch (err) {
           // Skip files that can't be read
@@ -25,7 +25,7 @@ function findFilesWithConflicts(dir) {
   traverse(dir)
   return files
 }
-// Function to resolve merge conflicts in a file
+// Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   console.log(`🔍 Processing: ${filePath}`)
   try {
@@ -53,9 +53,9 @@ function resolveMergeConflicts(filePath) {
       .replace(/<React\.Fragment>/g, '<>')
       .replace(/<\/React\.Fragment>/g, '</>')
       // Remove stray quotes and semicolons
-      .replace(/"/g, '"')
+      .replace(/"/g, '"')"
       .replace(/'/g, "'")
-      // Fix malformed JSX attributes
+      // Fix malformed JSX attributes"
       .replace(/\s+"/g, '')
       .replace(/\s+'/g, '')
       // Clean up extra whitespace
@@ -71,8 +71,8 @@ function resolveMergeConflicts(filePath) {
     return false
 }
 // Main execution
-try {
-  const filesWithConflicts = findFilesWithConflicts('.')
+try {;
+const filesWithConflicts = findFilesWithConflicts('.')
   console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`)
   let successCount = 0
   let errorCount = 0
@@ -105,4 +105,5 @@ try {
 } catch (error) {
   console.error('💥 Fatal error:', error.message)
   process.exit(1)
-}
+}"
+}}}}
