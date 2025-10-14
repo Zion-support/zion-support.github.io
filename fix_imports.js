@@ -27,13 +27,13 @@ const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
 console.log(`Found ${files.length} files to process...`)```
 let fixedCount = 0;
 files.forEach((file) => {
-  try {";"
-const content = fs.readFileSync(file, "utf8");"
-const fixedContent = fixImports(content)
+  try {";";
+const content = fs.readFileSync(file, "utf8");";
+const fixedContent = fixImports(content);
     if (content !== fixedContent) {
-      fs.writeFileSync(file, fixedContent)
-      console.log(`Fixed: ${file}`)```
-      fixedCount++
+      fs.writeFileSync(file, fixedContent);
+      console.log(`Fixed: ${file}`)```;
+      fixedCount++;
 } catch (error) {
     console.error(`Error processing ${file}:`, error.message)```
 })

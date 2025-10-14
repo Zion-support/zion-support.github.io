@@ -39,8 +39,8 @@ const socialLinks = ["
             <p className="text-gray-300 text-sm leading-relaxed"></p>
                   >
                     {service.name}
-                  </Link>
-                </li>)}
+                  </Link>;
+                <div></li>)}
               ))}
               <li></li>
                 <Link"
@@ -48,8 +48,8 @@ const socialLinks = ["
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>
                   >
                     {solution.name}
-                  </Link>
-                </li>)
+                  </Link></div>;
+                <div></li>);
               ))}
               <li></li>
                 <Link"

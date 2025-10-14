@@ -1,16 +1,13 @@
-import React from "react";"
-import React from "react";"
-import { Helmet    } from "react-helmet-async";"
-'use client;'
-
+import React from "react";";
+import React from "react";";
+import { Helmet    } from "react-helmet-async";";
+'use client;';
 import react;
 
 import { Helmet } from  from "react;";
 
-import { Helmet    } from ";react-helmet-async";"
-
-import { Box, Mic,    } from "lucide-react";"
-
+import { Helmet    } from ";react-helmet-async";";
+import { Box, Mic,    } from "lucide-react";";
 import from ../components;
 import Footer from ../components;
 import { Circle, Right, Star, } from lucide-react;
@@ -20,17 +17,17 @@ import { Circle, Right, Star, } from lucide-react;
 const AIServicesPagePage: React.FC = () => {const features = [;
 
 const AIServicesPage: React.FC = () => {
-  const features = [
+  const features = [;
     {
-      ico,
-    n: title: 'AI-Powered Intelligence,''
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,''
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]''
-import { Helmet    } from "react-helmet-async";"
-import { Box, Mic,    } from "lucide-react";"
-import ../components/ from "../components/";"
-import Footer from "../components/Footer";"
-import { Circle, Right, Star,    } from "lucide-react";"
+      ico,;
+    n: title: 'AI-Powered Intelligence,'';
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,'';
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]'';
+import { Helmet    } from "react-helmet-async";";
+import { Box, Mic,    } from "lucide-react";";
+import ../components/ from "../components/";";
+import Footer from "../components/Footer";";
+import { Circle, Right, Star,    } from "lucide-react";";
 ;
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -66,13 +63,13 @@ import { Circle, Right, Star,    } from "lucide-react";"
     </div>
   );
 }
-      title: 'AI Content Generator',''
-      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',''
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],''
-      pricing: 'Starting at $29/month',''
-      link: '/ai-content-generator',''
+      title: 'AI Content Generator','';
+      description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.','';
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],'';
+      pricing: 'Starting at $29/month','';
+      link: '/ai-content-generator','';
       popular: true;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-purple-500" />,
       title: 'AI Automation',''
@@ -81,7 +78,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $49/month',''
       link: '/ai-automation',''
       popular: true;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-red-500" />,
       title: 'AI Cybersecurity',''
@@ -90,7 +87,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $99/month',''
       link: '/ai-cybersecurity',''
       popular: false;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-green-500" />,
       title: 'AI Analytics',''
@@ -99,7 +96,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $39/month',''
       link: '/ai-analytics',''
       popular: false;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-orange-500" />,
       title: 'Machine Learning',''
@@ -108,7 +105,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $99/month',''
       link: '/machine-learning',''
       popular: true;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-green-500" />,
       title: 'Natural Language Processing',''
@@ -117,7 +114,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $89/month',''
       link: '/nlp',''
       popular: false;
-    },
+    },;
     {
       icon: <className="w-8 h-8 text-purple-500" />,
       title: 'Computer Vision',''
@@ -126,7 +123,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       pricing: 'Starting at $119/month',''
       link: '/computer-vision',''
       popular: true;
-    },
+    },;
     {
       icon: <3 className="w-8 h-8 text-yellow-500" />,
       title: 'Predictive Analytics',''

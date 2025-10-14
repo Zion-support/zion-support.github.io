@@ -12,8 +12,8 @@
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of a team that"s shaping the future of AI and IT solutions.
             Work on cutting-edge projects and make a real impact.;
-          </p>
-        </div>
+          </////p></div>;
+        <////div></div>;
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon;
               return (
@@ -142,4 +142,6 @@ export default CareersPage;
       <p className="text-gray-300 text-lg">This page is under development.</p>"
     </div>
   );
-}
+};
+
+export default CareersPage;

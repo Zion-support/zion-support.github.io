@@ -1,22 +1,6 @@
-import React from "react";"
+import React from "react";
 
-interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group',''
-  description = 'Leading provider of AI and IT solutions',''
-  keywords = ['AI', 'IT', 'technology', 'solutions'],''
-  image,
-  url,
-  type = 'website'''
-}) => {
+const SEOEnhancer: React.FC = () => {
   return (
 <>    <div className="seo-enhancer"></div>
       <h1>{title}</h1>
@@ -33,4 +17,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </div>
   );
 };
+
 export default SEOEnhancer;

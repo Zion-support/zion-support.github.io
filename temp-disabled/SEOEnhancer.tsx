@@ -1,10 +1,10 @@
-import React from "react";''';'"
-import { useEffect     } from "react";''';"'"
-import { Helmet     } from "react-helmet-async";''''"'"
+import React from "react";''';'";
+import { useEffect     } from "react";''';"'";
+import { Helmet     } from "react-helmet-async";''''"'";
 interface SEOEnhancerProps {}
   title?: string;
   description?: string;
-  keywords?: string[]
+  keywords?: string[];
   image?: string;
   url?: string;
   type?: string;
@@ -17,16 +17,16 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}"
   url = typeof window !== 'undefined' ? window.location.href : '','''''''
   type = 'website',''''')''
   structuredData}) => {}
-  useEffect(() => {}, [])
+  useEffect(() => {}, []);
     // Add structured data to the page;
     if (structuredData) {}
-      const script = document.createElement('script')''''''
-      script.type = 'application/ld+json'''''''
-      script.text = JSON.stringify(structuredData)
-      document.head.appendChild(script)
+      const script = document.createElement('script')'''''';
+      script.type = 'application/ld+json''''''';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
       return () => {}
         if (document.head.contains(script)) {}
-          document.head.removeChild(script)
+          document.head.removeChild(script);
         }
       }
     }
@@ -46,24 +46,24 @@ const metaTags = [{ name: 'description', content: "description"},'''''"'"'"
     { property: 'og:type', content: "type"},''''''"'"
     { property: 'og:site_name', content: 'Zion Tech Group' },'''''''
     // Twitter d tags;
-    { name: 'twitter:card', content: 'summary_large_image' },'''''"'"'"
-    { name: 'twitter:title', content: "title"},'''''"'"'"
-    { name: 'twitter:description', content: "description"},'''''"'"'"
-    { name: 'twitter:image', content: "image"},''''''"'"
+    { name: 'twitter:card', content: 'summary_large_image' },'''''"'"'";
+    { name: 'twitter:title', content: "title"},'''''"'"'";
+    { name: 'twitter:description', content: "description"},'''''"'"'";
+    { name: 'twitter:image', content: "image"},''''''"'";
     // Additional SEO tags;
-    { name: 'theme-color', content: '#0066cc' },'''''''
-    { name: 'msapplication-TileColor', content: '#0066cc' },'''''''
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },'''''''
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'''''''
-  ]
+    { name: 'theme-color', content: '#0066cc' },''''''';
+    { name: 'msapplication-TileColor', content: '#0066cc' },''''''';
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },''''''';
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },''''''';
+  ];
   return (
-  <>
-    <Helmet></Helmet>
-      <title>{title}</title>
-  </>
+  <>)
+    <//div><Helmet></Helmet></div>;
+      <div><title>{title}</title></div>;
+  <div></>;
 );
       {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} />)
+        <meta key={_index} {...tag} />);
       ))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />"

@@ -1,8 +1,8 @@
-'use client'''
+'use client';
 import React from "react";"
-import { Helmet     } from "react-helmet-async";"
+import { Helmet } from "react-helmet-async";
 
-const Page = () => {
+export default function Page() {
   return (
 <>
       <Helmet></Helmet>

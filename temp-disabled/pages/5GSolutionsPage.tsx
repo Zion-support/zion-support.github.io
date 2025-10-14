@@ -1,5 +1,4 @@
-import React from "react";"
-
+import React from "react";";
 const 5GSolutionsPage: React.FC = () => {
   return (
 <>

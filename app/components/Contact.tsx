@@ -1,55 +1,52 @@
-import React, { useState } from "react";"
-import { EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon;
-   } from "@heroicons/react/24/outline";"
+import { Clock, Phone, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',''
-    email: '',''
-    company: '',''
-    message: ''''
+    name: '',
+    email: '',
+    company: '',
+    message: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value;
+      [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission;
-    console.log('Form submitted:', formData);'
+    // Handle form submission
+    console.log('Form submitted:', formData);
   };
 
   const contactInfo = [
     {
       icon: EnvelopeIcon,
-      title: 'Email',''
-      details: 'contact@ziontech.com',''
-      description: 'Send us an email anytime'''
+      title: 'Email',
+      details: 'contact@ziontech.com',
+      description: 'Send us an email anytime'
     },
     {
       icon: PhoneIcon,
-      title: 'Phone',''
-      details: '+1 (555) 123-4567',''
-      description: 'Mon-Fri from 9am to 6pm'''
+      title: 'Phone',
+      details: '+1 (555) 123-4567',
+      description: 'Mon-Fri from 9 am to 6 pm'
     },
     {
       icon: MapPinIcon,
-      title: 'Office',''
-      details: 'San Francisco, CA',''
-      description: 'Visit our headquarters'''
+      title: 'Address',
+      details: '123 Tech Street, Innovation City, IC 12345',
+      description: 'Visit our headquarters'
     },
     {
       icon: ClockIcon,
-      title: 'Response Time',''
-      details: '< 24 hours',''
-      description: 'We respond quickly'''
+      title: 'Business Hours',
+      details: 'Mon-Fri: 9AM-6PM',
+      description: 'We are here to help'
     }
   ];
 
@@ -127,7 +124,7 @@ const Contact: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  required;
+                  required
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or requirements..."
@@ -174,7 +171,7 @@ const Contact: React.FC = () => {
                     </p>
                   </div>
                 </div>
-              )})}
+              ))}
             </div>
 
             {/* Additional Info */}
@@ -204,7 +201,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

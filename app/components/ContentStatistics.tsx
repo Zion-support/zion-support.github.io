@@ -26,4 +26,6 @@
         ))}
       </div>
     </div>
-  )}
+  );
+};
+export default ContentStatistics;

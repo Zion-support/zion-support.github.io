@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Clock, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, Clock, TrendingUp, Target, BarChart, Phone, Mail, MapPin } from 'lucide-react';
 
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [
@@ -77,39 +77,39 @@ const MarketingToolsPage: React.FC = () => {
     }
   ];
 
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
+        <meta name="description" content="Marketing Tools services and solutions from Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6">
             AI Marketing Tools
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
+              <div className="text-3 xl font-bold text-cyan-400 mb-2">6</div>
               <div className="text-gray-300">Marketing Tools</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
+              <div className="text-3 xl font-bold text-green-400 mb-2">$179</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
+              <div className="text-3 xl font-bold text-purple-400 mb-2">250%</div>
               <div className="text-gray-300">Average ROI</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
+              <div className="text-3 xl font-bold text-orange-400 mb-2">80%</div>
               <div className="text-gray-300">Time Saved</div>
             </div>
           </div>
@@ -136,8 +136,8 @@ const MarketingToolsPage: React.FC = () => {
 
       {/* Marketing Tools Grid */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text">
             Our Marketing Tools
           </h2>
           
@@ -145,7 +145,7 @@ const MarketingToolsPage: React.FC = () => {
             {marketingTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{tool.icon}</div>
+                  <div className="text-5 xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
@@ -166,7 +166,7 @@ const MarketingToolsPage: React.FC = () => {
                 </div>
 
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
+                  <div className="text-2 xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
@@ -182,8 +182,8 @@ const MarketingToolsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+        <div className="max-w-7 xl mx-auto">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our Marketing Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -200,8 +200,8 @@ const MarketingToolsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
             Ready to Transform Your Marketing?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
@@ -225,6 +225,4 @@ const MarketingToolsPage: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default MarketingToolsPage;
+}

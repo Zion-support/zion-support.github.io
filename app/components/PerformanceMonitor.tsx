@@ -1,89 +1,6 @@
+import React from "react";
+
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null;
-  });
-
->>>>>>> origin/main;
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const measurePerformance = () => {
-      // Get Core Web Vitals;
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {''
-            if (entry.name === 'first-contentful-paint') {''
-              setMetrics(prev => ({
-                ...prev,
-                fcp: entry.startTime;
-              }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {''
-            setMetrics(prev => ({
-              ...prev,
-              lcp: entry.startTime;
-            }));
-          } else if (entry.entryType === 'first-input') {''
-            setMetrics(prev => ({
-              ...prev,
-              fid: (entry as any).processingStart - entry.startTime;
-            }));
-          } else if (entry.entryType === 'layout-shift') {''
-            setMetrics(prev => ({
-              ...prev,
-              cls: (prev?.cls || 0) + (entry as any).value;
-            }));
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'
-
-      // Get TTFB;
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
-      if (navigationEntry) {
-        setMetrics(prev => ({
-          ...prev,
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
-        }));
-      }
-
-      // Measure Core Web Vitals;
-      if ('PerformanceObserver' in window) {''
-        // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');'
-          if (fcp) {
-            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
-          }
-        });
-    ttfb: null,
-    loadTime: null;
-  }
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    // Only run in browser;
-    if (typeof window === 'undefined') return";"'"
-    // Get performance metrics;
-    const getPerformanceMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";"'"
-      const paintEntries = performance.getEntriesByType('paint')";"'"
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";"'"
-      const lcp = performance.getEntriesByType('largest-contentful-paint')";"'"
-      setMetrics({
-        cls: 0, // Would need to be calculated with observer;
-        inp: 0, // Would need to be calculated with observer;
-        fcp: fcp ? fcp.startTime : null,
-        lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,
-        ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
-        loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null;
-      }
-    // Wait for page load;
   return (
 <>    <div className="fixed bottom-4 right-4 z-50">"
       <button></button>
@@ -156,6 +73,7 @@ export default PerformanceMonitor;
 export default PerformanceMonitor;
       )}
     </div>
+  );
 };
 
 export default PerformanceMonitor;

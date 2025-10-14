@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-import fs from "fs";"
+import fs from "fs";";
 // Read the AnalyticsProvider component;
 const content = fs.readFileSync("
   "/workspace/app/components/AnalyticsProvider.tsx","

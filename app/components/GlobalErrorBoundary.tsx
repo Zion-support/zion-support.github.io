@@ -24,6 +24,11 @@
             </button>
           </div>
         </div>
-      </div>
-    </div>
-  )}
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default GlobalErrorBoundary;

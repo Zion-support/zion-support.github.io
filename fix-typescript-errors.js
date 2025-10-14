@@ -27,12 +27,12 @@ function fixResponsiveContainer() {
       "utf8",)
     )
     // Add the missing interface;
-const interfaceDefinition = `interface ResponsiveContainerProps {```
+const interfaceDefinition = `interface ResponsiveContainerProps {```;
   children: React.ReactNode;
   className?: string;
-  breakpoint?: 'sm' | 'md' | 'lg' | 'xl' | '2xl'''
-}
-````
+  breakpoint?: 'sm' | 'md' | 'lg' | 'xl' | '2xl''';
+};
+````;
     // Insert the interface at the beginning after imports;
     content = content.replace(
       /\n/,
@@ -54,14 +54,14 @@ function fixServiceCard() {
       "utf8",)
     )
     // Add the missing interface;
-const interfaceDefinition = `interface ServiceCardProps {```
+const interfaceDefinition = `interface ServiceCardProps {```;
   title: string;
   description: string;
   icon?: React.ReactNode;
   className?: string;
   onClick?: () => void;
-}
-````
+};
+````;
     // Insert the interface at the beginning after imports;
     content = content.replace(
       /\n/,
@@ -120,7 +120,7 @@ const pages = ["
       fs.writeFileSync(page, content)
       console.log(`✅ Fixed ${page}`)```
     } catch (error) {
-      console.error(`❌ Error fixing ${page}:`, error.message)```
+      console.error(`❌ Error fixing ${page}:`, error.message)```;
 }
 }
 // Main execution"

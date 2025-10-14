@@ -3,4 +3,7 @@
         </p>
       </div>
     </div>
-  )}
+  );
+};
+
+export default NavigationBackup;

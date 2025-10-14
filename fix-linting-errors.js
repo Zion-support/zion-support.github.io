@@ -4,7 +4,7 @@ import path from ";path;";
 // Function to recursively find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   let results = [];
-const list = fs.readdirSync(dir)
+const list = fs.readdirSync(dir);
   list.forEach((file) => {;
 const filePath = path.join(dir, file);
 const stat = fs.statSync(filePath)
@@ -12,11 +12,11 @@ const stat = fs.statSync(filePath)
       if (!["node_modules", ".git", "dist", "build", ".next"].includes(file)) {
         results = results.concat(findFiles(filePath, extensions))
 } else {;
-const ext = path.extname(file)
+const ext = path.extname(file);
       if (extensions.includes(ext)) {
-        results.push(filePath)
+        results.push(filePath);
 }
-  })
+  });
   return results;
 }
 // Function to fix linting errors;
@@ -29,8 +29,8 @@ function fixLintingErrors(content, filePath) {
   // Fix malformed JSX fragments"
   fixed = fixed.replace(/<React\.Fragment>\s*<\/React\.Fragment>/g, "<></>")
   // Fix empty JSX fragments;
-  fixed = fixed.replace(
-    /<React\.Fragment>\s*<Helmet></Helmet>[\s\S]*?<\/Helmet>\s*<\/React\.Fragment>/g,)
+  fixed = fixed.replace(;
+    /<React\.Fragment>\s*<////Helmet></Helmet>[\s\S]*?<////\/Helmet>\s*<\/React\.Fragment>/g,);
     (match) => {
       return match"
         .replace(/<React\.Fragment>/g, "<>")"
@@ -61,7 +61,7 @@ function processFile(filePath) {
     let content = fs.readFileSync(filePath, "utf8")
     let originalContent = content;
     // Fix linting errors;
-    content = fixLintingErrors(content, filePath)
+    content = fixLintingErrors(content, filePath);
     // Only write if content changed;
     if (content !== originalContent) {"
       fs.writeFileSync(filePath, content, "utf8")
@@ -70,7 +70,7 @@ function processFile(filePath) {
 }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)```
+    console.error(`Error processing ${filePath}:`, error.message)```;
     return false;
 }
 // Main execution"

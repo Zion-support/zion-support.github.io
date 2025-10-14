@@ -8,4 +8,4 @@ const AppMinimal = () => {
   );
 };
 
-export default AppMinimal;
+

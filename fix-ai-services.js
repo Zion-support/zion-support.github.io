@@ -1,7 +1,7 @@
-import React from "react";"
+import React from "react";";
 #!/usr/bin/env node;
 import fs from "fs;";
-const filePath = ";/workspace/app/ai-services/page.tsx;"
+const filePath = ";/workspace/app/ai-services/page.tsx;";
 function fixAiServicesFile() {
   let content = fs.readFileSync(filePath, "utf8")
   // Fix all the syntax errors in this specific file"

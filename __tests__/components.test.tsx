@@ -5,7 +5,7 @@ import { HelmetProvider   } from "react-helmet-async";
 describe("Component Tests", () => {
   test("renders without crashing", () => {
     render(
-      <HelmetProvider></HelmetProvider>
+      <HelmetProvider>
         <div>Test Component</div>
       </HelmetProvider>
     );

@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-import fs from "fs";"
-// Read the Footer component";"
-const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8");"
+import fs from "fs";";
+// Read the Footer component";";
+const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8");";
 // Fix the malformed services array;
 let fixed = content;
 // Fix the malformed services array line;

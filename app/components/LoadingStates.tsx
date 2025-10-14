@@ -16,14 +16,6 @@
         <div className="text-center"></div>
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>
-=======
-          <div className="relative mb-8"></div>
-            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-              <Brain className="w-10 h-10 text-white animate-pulse" /></Brain>
-            </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
@@ -38,7 +30,9 @@
       </div>
     );
   }
+import React from "react";
 
+const LoadingStates: React.FC = () => {
   return (
 <>    </div>
             LoadingStates</h1>
@@ -69,4 +63,7 @@
         </div>
       </div>
     </div>
-  )}
+  );
+};
+
+export default LoadingStates;

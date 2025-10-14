@@ -88,7 +88,7 @@ const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 // Main App Component;
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);

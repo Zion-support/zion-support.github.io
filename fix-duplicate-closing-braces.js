@@ -1,5 +1,5 @@
-import fs from "fs;";"
-import path from "path;";"
+import fs from "fs;";";
+import path from "path;";";
 // Function to fix duplicate closing braces;
 function fixDuplicateClosingBraces(content) {
   // Fix duplicate closing braces;
@@ -20,10 +20,10 @@ function fixDuplicateClosingBraces(content) {
 }
 // Function to process all TypeScript/TSX files;
 function processFiles(dir) {;
-const files = fs.readdirSync(dir)
+const files = fs.readdirSync(dir);
   for (const file of files) {;
 const filePath = path.join(dir, file);
-const stat = fs.statSync(filePath)
+const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
       processFiles(filePath)"
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
@@ -36,7 +36,7 @@ const originalContent = content;
           fs.writeFileSync(filePath, content, "utf8")
           console.log(`Fixed: ${filePath}`)```
 } catch (error) {
-        console.error(`Error processing ${filePath}:`, error.message)```
+        console.error(`Error processing ${filePath}:`, error.message)```;
 }
 }
 // Process the app directory"

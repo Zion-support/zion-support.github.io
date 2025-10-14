@@ -214,22 +214,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         </div>
       </div>
     </div>
-  )
-export default EnhancedAccessibility;
-  )
-export default EnhancedAccessibility;
-    // Apply high contrast mode;
-  useEffect(() => {
-    // Apply font size changes;
-    document.documentElement.style.fontSize = `${fontSize}px`;````
-  }, [fontSize])
-  // Keyboard shortcuts;
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + M: Skip to main content;
-      if (event.altKey && event.key === 'm') {'''
-        event.preventDefault()
-        const mainContent = document.getElementById('main-content')";"'"
-        if (mainContent) {}
-      // Alt + H: Go to home;
+  );
+};
+
 export default EnhancedAccessibility;

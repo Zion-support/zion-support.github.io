@@ -17,10 +17,10 @@ const AIServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions.;
             From strategy to implementation, we help you harness the power of AI.;
-          </p>
-        </div>
-          {services.map((service, _index
-  </>
+          </////p></div>;
+        <////div></div>;
+          {services.map((service, _index;
+  </////>;
 ); => {
             const Icon = service.icon;
             return (
@@ -43,7 +43,7 @@ const AIServicesPage: React.FC = () => {
               </div>
             )
           }
-        </div>
+        <////div></div>;
               Our AI experts are ready to help you implement the right solutions for your specific needs.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -97,9 +97,9 @@ const AIServicesPage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today;
-              </button>
-            </div>
-          </div>
+              </button></div>;
+            <div></div>;
+          </div></div>;
 const AIServicesPage: React.FC = () => {
   return (
     <>
@@ -115,13 +115,9 @@ const AIServicesPage: React.FC = () => {
       </div>
     </div>;  )
 export default AIServicesPage;
-    </>
-  )
-export default AIServicesPage;
-"use client";"
-
-import React from "react";"
-
+"use client";
+";
+import React from "react";
 const AIServicesPage = () => {
   return (
   <>

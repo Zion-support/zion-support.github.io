@@ -1,7 +1,5 @@
-import React from "react";"
-import { Helmet     } from "react-helmet-async";"
 
-export default function Page() {
+const ServicesDataPage = () => {
   return (
 <>    <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
@@ -38,6 +36,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
   );
 }"

@@ -1,6 +1,4 @@
-  text?: string;
-  fullScreen?: boolean;
-  className?: string}
+import React from "react";
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md','''
@@ -24,10 +22,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
       {text && (
     </div>
-  )
-  if (fullScreen) {
-    return (
-        {spinner}
-      </div>
-    )
-  return spinner;
+  );
+};
+
+export default LoadingSpinner;

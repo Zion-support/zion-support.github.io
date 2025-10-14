@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 #!/usr/bin/env node;
 import fs from "fs;";
 import path from ";path;";
@@ -11,7 +11,7 @@ function fixFile(filePath) {
     let originalContent = content;
     let fixed = false;
     // Fix critical syntax errors that prevent building;
-const fixes = [
+const fixes = [;
       // Fix unterminated string literals in function endings;
       {
         pattern: /  \}\);$/gm,"
@@ -68,7 +68,7 @@ const fixes = [
     // Apply fixes;
     fixes.forEach((fix) => {
       if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement)
+        content = content.replace(fix.pattern, fix.replacement);
         fixed = true;
 })
     // Additional specific fixes for common patterns"
@@ -83,20 +83,20 @@ const fixes = [
       fixed = true;
 }
     if (fixed) {
-      fs.writeFileSync(filePath, content)
-      console.log(`✅ Fixed: ${filePath}`)```
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed: ${filePath}`)```;
       return true;
 }
     return false;
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`)```
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`)```;
     return false;
 }
 // Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   const files = []
   function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
+    const items = fs.readdirSync(currentDir);
     for (const item of items) {
       const fullPath = path.join(currentDir, item)
       const stat = fs.statSync(fullPath)
@@ -105,15 +105,15 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
         !item.startsWith(".") &&
         item !== "node_modules;"
       ) {
-        traverse(fullPath)
-      } else if ()
-        stat.isFile() &&
-        extensions.some((ext) => item.endsWith(ext))
+        traverse(fullPath);
+      } else if ();
+        stat.isFile() &&;
+        extensions.some((ext) => item.endsWith(ext));
       ) {
-        files.push(fullPath)
+        files.push(fullPath);
 }
 }
-  traverse(dir)
+  traverse(dir);
   return files;
 }
 // Main execution;
@@ -121,10 +121,10 @@ try {";"
 const files = findFiles("./app")
   let fixedCount = 0;
   let totalCount = files.length;
-  console.log(`Found ${totalCount} files to check...\n`)```
+  console.log(`Found ${totalCount} files to check...\n`)```;
   for (const file of files) {
     if (fixFile(file)) {
-      fixedCount++
+      fixedCount++;
 }
   console.log(`\n🎉 Fixed ${fixedCount} out of ${totalCount} files`)```
   // Try to build the project"

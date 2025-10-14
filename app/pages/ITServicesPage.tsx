@@ -43,7 +43,7 @@ const ITServicesPage: React.FC = () => {
               </div>
             )
           }
-        </div>
+        <////div></div>;
               Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -97,9 +97,9 @@ const ITServicesPage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today;
-              </button>
-            </div>
-          </div>
+              </button></div>;
+            <div></div>;
+          </div></div>;
 const ITServicesPage: React.FC = () => {
   return (
     <>
@@ -115,13 +115,9 @@ const ITServicesPage: React.FC = () => {
       </div>
     </div>;  )
 export default ITServicesPage;
-    </>
-  )
-export default ITServicesPage;
-"use client";"
-
-import React from "react";"
-
+"use client";
+";
+import React from "react";
 const ITServicesPage = () => {
   return (
   <>

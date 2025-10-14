@@ -26,4 +26,7 @@
         </div>
       </div>
     </div>
-  )}
+  );
+};
+
+export default PerformanceMetrics;

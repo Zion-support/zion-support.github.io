@@ -1,15 +1,15 @@
 import { Helmet    } from "react-helmet-async";
 import { 
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  CheckCircleIcon,;
+  UserGroupIcon,;
+  LightBulbIcon,;
+  ShieldCheckIcon,;
+  RocketLaunchIcon,;
+  HeartIcon,;
+  ArrowRightIcon,;
+  StarIcon,;
+  PhoneIcon,;
+  EnvelopeIcon,;
   MapPinIcon;
 const AboutPage: React.FC = () => {
   return (

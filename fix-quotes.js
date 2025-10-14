@@ -47,10 +47,35 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       console.log(`Fixed: ${filePath}`)```
       return true;
 }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message)```
-    return false;
+
+// Function to fix common import issues
+function fixImportIssues(content) {
+  // Fix missing imports for common icons
+  if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || 
+      content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||
+      content.includes('ArrowRight') || content.includes('CheckCircle')) {
+    
+    // Check if lucide-react is already imported
+    if (!content.includes('from "lucide-react"') && !content.includes("from 'lucide-react'")) {
+      // Add import at the top
+      const imports = [];
+      if (content.includes('Brain')) imports.push('Brain');
+      if (content.includes('Shield')) imports.push('Shield');
+      if (content.includes('Zap')) imports.push('Zap');
+      if (content.includes('Users')) imports.push('Users');
+      if (content.includes('Target')) imports.push('Target');
+      if (content.includes('BarChart3')) imports.push('BarChart3');
+      if (content.includes('ArrowRight')) imports.push('ArrowRight');
+      if (content.includes('CheckCircle')) imports.push('CheckCircle');
+      
+      if (imports.length > 0) {
+        const importStatement = `import { ${imports.join(', ')} } from 'lucide-react';\n`;
+        content = importStatement + content;
+      }
+    }
+  }
+  
+  return content;
 }
 // Main function;
 async function main() {

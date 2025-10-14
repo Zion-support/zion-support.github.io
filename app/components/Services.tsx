@@ -1,52 +1,12 @@
-import React from "react";"
+import { Shield } from 'lucide-react';
+import React from 'react';
 import { CpuChipIcon, 
   CloudIcon, 
   CogIcon, 
   ChartBarIcon,
   ShieldCheckIcon,
-  RocketLaunchIcon;
-   } from "@heroicons/react/24/outline";"
-
+  RocketLaunchIcon } from '@heroicons/react/24/outline';
 const Services: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',''
-      description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.',''
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']''
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',''
-      description: 'Scalable and secure cloud solutions to power your business growth.',''
-      features: ['AWS/Azure/GCP', 'DevOps & CI/CD', 'Container Orchestration', 'Cloud Migration']''
-    },
-    {
-      icon: CogIcon,
-      title: 'IT Services',''
-      description: 'Comprehensive IT support and management to keep your systems running smoothly.',''
-      features: ['System Administration', 'Network Security', 'Data Backup', '24/7 Monitoring']''
-    },
-    {
-      icon: ChartBarIcon,
-      title: 'Data Analytics',''
-      description: 'Transform your data into actionable insights with advanced analytics solutions.',''
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports']''
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',''
-      description: 'Protect your business with comprehensive security solutions and best practices.',''
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']''
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',''
-      description: 'Complete digital transformation strategies to modernize your business processes.',''
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']''
-    }
-  ];
-
   return (
 <>    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +22,7 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div;
+            <div
               key={index}
               className="group bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl hover:border-blue-300 transition-all duration-300 transform hover:-translate-y-2>"
               <div className="flex items-center mb-6">
@@ -84,7 +44,7 @@ const Services: React.FC = () => {
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                     {feature}
                   </li>
-                )})}
+                ))}
               </ul>
               
               <div className="mt-6">

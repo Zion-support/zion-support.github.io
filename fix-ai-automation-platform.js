@@ -1,10 +1,9 @@
-import fs from "fs";"
+import fs from "fs";";
 ;
-const filePath = 'app/ai-automation-platform/page.tsx';'
-let content = fs.readFileSync(filePath, 'utf8');'
-
+const filePath = 'app/ai-automation-platform/page.tsx';';
+let content = fs.readFileSync(filePath, 'utf8');';
 // Fix all the malformed object properties with extra quotes;
-const fixes = [
+const fixes = [;
   // Fix benefits array;
   { from: /"70% process efficiency gain",\s*"Automated decision making",\s*"Real-time monitoring",\s*"Cost reduction",\s*"Scalable automation"/g, to: '"70% process efficiency gain",\n    "Automated decision making",\n    "Real-time monitoring",\n    "Cost reduction",\n    "Scalable automation"' },'"'"
   
@@ -22,7 +21,7 @@ const fixes = [
 ];
 
 let modified = false;
-fixes.forEach(fix => {)
+fixes.forEach(fix => {);
   if (fix.from.test(content)) {
     content = content.replace(fix.from, fix.to);
     modified = true;
@@ -30,8 +29,8 @@ fixes.forEach(fix => {)
 });
 
 if (modified) {
-  fs.writeFileSync(filePath, content, 'utf8');'
-  console.log('Fixed ai-automation-platform page');'
+  fs.writeFileSync(filePath, content, 'utf8');';
+  console.log('Fixed ai-automation-platform page');';
 } else {
   console.log('No changes needed');'
 }"

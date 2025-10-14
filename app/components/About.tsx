@@ -1,36 +1,10 @@
-import React from "react";"
+import { Users } from 'lucide-react';
+import React from 'react';
 import { CheckIcon, 
   UsersIcon, 
   TrophyIcon, 
-  LightBulbIcon ;
-   } from "@heroicons/react/24/outline";"
-
+  LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },''
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },''
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }''
-  ];
-
-  const values = [
-    {
-      title: 'Innovation',''
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'''
-    },
-    {
-      title: 'Excellence',''
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'''
-    },
-    {
-      title: 'Partnership',''
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'''
-    },
-    {
-      title: 'Integrity',''
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'''
-    }
-  ];
-
   return (
 <>    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +16,7 @@ const About: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               We are a leading technology company specializing in AI and IT solutions. 
-              Our mission is to empower businesses with innovative technology that drives ;
+              Our mission is to empower businesses with innovative technology that drives 
               growth, efficiency, and success.
             </p>
             
@@ -83,7 +57,7 @@ const About: React.FC = () => {
                   <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
-              )})}
+              ))}
             </div>
           </div>
 
@@ -93,7 +67,7 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
               <p className="text-lg mb-6 opacity-90">
                 To democratize access to advanced technology and AI solutions, 
-                enabling businesses of all sizes to compete and thrive in the ;
+                enabling businesses of all sizes to compete and thrive in the 
                 digital economy.
               </p>
               
@@ -139,6 +113,6 @@ const About: React.FC = () => {
       </div>
     </section>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;

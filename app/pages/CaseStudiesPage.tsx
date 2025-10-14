@@ -1,17 +1,17 @@
-      ],
-      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.''";"'"
-    },
+      ],;
+      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'";";
+    },;
     {
-      ],
-      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.''";"'"
-    },
+      ],'";
+      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.'";";
+    },;
     {
-      ],
-      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.''";"'"
-    },
+      ],'";
+      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.'";";
+    },;
     {
-      ],
-      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.''";"'"
+      ],'";
+      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'";";
     }
   ];
 const CaseStudiesPage: React.FC = () => {
@@ -63,12 +63,12 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       )}
                     }
-                  </div>
-                </div>
-              </div>
-            </div>
-          )})
-        </div>
+                  </div></div>;
+                <div></div>;
+              </div></div>;
+            <div></div>;
+          )});
+        </div></div>;
               Let us help you achieve similar results with our proven AI and IT solutions.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -139,8 +139,6 @@ const CaseStudiesPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>"
         </div>
       </div>
-    </div>;  )
-export default CaseStudiesPage;
     </div>
   )}
 export default CaseStudiesPage;

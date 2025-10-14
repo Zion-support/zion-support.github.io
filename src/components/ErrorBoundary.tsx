@@ -1,13 +1,12 @@
-import React from "react";"
-
+import React from "react";";
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {''
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {'';
   return (
-<>    <div className={`errorboundary ${className}`}></div>```
+<>    <div className={`errorboundary ${className}`}></div>```)
       {children}
     </>
   );

@@ -17,10 +17,10 @@ const DigitalTransformationPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business for the digital age with comprehensive strategies, 
             modern technologies, and innovative solutions.;
-          </p>
-        </div>
-          {services.map((service, _index
-  </>
+          </////p></div>;
+        <////div></div>;
+          {services.map((service, _index;
+  </////>;
 ); => {
             const Icon = service.icon;
             return (
@@ -43,7 +43,7 @@ const DigitalTransformationPage: React.FC = () => {
               </div>
             )
           }
-        </div>
+        <////div></div>;
               Our digital transformation experts can help you modernize your operations and stay competitive.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -97,9 +97,9 @@ const DigitalTransformationPage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today;
-              </button>
-            </div>
-          </div>
+              </button></div>;
+            <div></div>;
+          </div></div>;
 const DigitalTransformationPage: React.FC = () => {
   return (
     <>
@@ -115,13 +115,9 @@ const DigitalTransformationPage: React.FC = () => {
       </div>
     </div>;  )
 export default DigitalTransformationPage;
-    </>
-  )
-export default DigitalTransformationPage;
-"use client";"
-
-import React from "react";"
-
+"use client";
+";
+import React from "react";
 const DigitalTransformationPage = () => {
   return (
   <>

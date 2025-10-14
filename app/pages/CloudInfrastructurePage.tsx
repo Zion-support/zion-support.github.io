@@ -17,10 +17,10 @@ const CloudInfrastructurePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Build, migrate, and optimize your cloud infrastructure for maximum performance, 
             security, and cost-effectiveness.;
-          </p>
-        </div>
-          {services.map((service, _index
-  </>
+          </////p></div>;
+        <////div></div>;
+          {services.map((service, _index;
+  </////>;
 ); => {
             const Icon = service.icon;
             return (
@@ -43,7 +43,7 @@ const CloudInfrastructurePage: React.FC = () => {
               </div>
             )
           }
-        </div>
+        <////div></div>;
               Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -97,9 +97,9 @@ const CloudInfrastructurePage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today;
-              </button>
-            </div>
-          </div>
+              </button></div>;
+            <div></div>;
+          </div></div>;
 const CloudInfrastructurePage: React.FC = () => {
   return (
     <>
@@ -115,13 +115,9 @@ const CloudInfrastructurePage: React.FC = () => {
       </div>
     </div>;  )
 export default CloudInfrastructurePage;
-    </>
-  )
-export default CloudInfrastructurePage;
-"use client";"
-
-import React from "react";"
-
+"use client";
+";
+import React from "react";
 const CloudInfrastructurePage = () => {
   return (
   <>

@@ -1,6 +1,6 @@
-import React from "react";"
+import React from "react";
 
-const MetaManager = () => {
+const MetaManager: React.FC = () => {
   return (
 <>    <div className="p-4">
       <h2 className="text-xl font-bold text-white mb-4">MetaManager</h2>

@@ -2,12 +2,9 @@ import react;
 
 import { Helmet } from  from "react;";
 
-import { Helmet    } from ";react-helmet-async";"
-
-import {} from "react-router-dom";"
-
-import { Circle, Right, Star, 3,    } from "lucide-react";"
-
+import { Helmet    } from ";react-helmet-async";";
+import {} from "react-router-dom";";
+import { Circle, Right, Star, 3,    } from "lucide-react";";
 interface MicroSaasProduct {
   // Add properties here;
 }
@@ -19,104 +16,102 @@ interface MicroSaasProduct {
 
   description: string;
   price: string;
-  features: string[];
+  features: string[];,;
   category: string;
 }
 
 const MicroSaasPage: React.FC = () => {}
-  const microSaasProducts: MicroSaasProduct[] = [
-    {
-      id: '1,''
-      icon: '📊,''
-      title: 'AI Analytics Dashboard,''
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses,''
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration],''
-      price: '$99/month,''
-      users: 'Up to 50 users,''
-import React from "react";"
-
+  const microSaasProducts: MicroSaasProduct[] = [;
+    {,;
+      id: '1,'';
+      icon: '📊,'';
+      title: 'AI Analytics Dashboard,'';
+      description: 'Real-time business intelligence and predictive analytics for small to medium businesses,'';
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration],'';
+      price: '$99/month,'';
+      users: 'Up to 50 users,'';
+import React from "react";";
 const MicroSaasPage: React.FC = () => {
-import { Circle, Right,    } from "lucide-react";"
-
-import React from "react";"
-import { Helmet    } from "react-helmet-async";"
-import {} from "react-router-dom";"
-import { Right, Circle, Star,    } from "lucide-react";"
-      users: 'Up to 50 users',''
-      popular: true,
-      category: 'Analytics''
-      category: 'Analytics});)},''
+import { Circle, Right,    } from "lucide-react";";
+import React from "react";";
+import { Helmet    } from "react-helmet-async";";
+import {} from "react-router-dom";";
+import { Right, Circle, Star,    } from "lucide-react";";
+      users: 'Up to 50 users','';
+      popular: true,;
+      category: 'Analytics'',;
+      category: 'Analytics});)},'';
     {
-      id: '2,''
-      icon: '👥,''
-      title: 'AI-Powered CRM,''
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions,''
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields],''
-      price: '$149/month,''
-      users: 'Up to 100 users,''
-      category: 'CRM});)},''
+      id: '2,'';
+      icon: '👥,'';
+      title: 'AI-Powered CRM,'';
+      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions,'';
+      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields],'';
+      price: '$149/month,'';
+      users: 'Up to 100 users,'';
+      category: 'CRM});)},'';
     {
-      id: '3,''
-      icon: '🔒,''
-      title: 'Monitoring Suite,''
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses,''
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response],''
-      price: '$199/month,''
-      users: 'Up to 200 users,''
-      category: '});)},''
+      id: '3,'';
+      icon: '🔒,'';
+      title: 'Monitoring Suite,'';
+      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses,'';
+      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response],'';
+      price: '$199/month,'';
+      users: 'Up to 200 users,'';
+      category: '});)},'';
     {
-      id: '4,''
-      icon: '☁️,''
-      title: 'Infrastructure Manager,''
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments,''
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management],''
-      price: '$299/month,''
-      users: 'Unlimited users,''
+      id: '4,'';
+      icon: '☁️,'';
+      title: 'Infrastructure Manager,'';
+      description: 'Automated cloud resource management and cost optimization for multi-cloud environments,'';
+      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management],'';
+      price: '$299/month,'';
+      users: 'Unlimited users,'';
     {
-      id: '5,''
+      id: '5,'';
     {
-      id: '6,''
-  const benefits = [    'No upfront costs or setup fees,;'
-    'Quick deployment in 24-48 hours,''
-    'Scalable solutions that grow with you,''
-    'Regular updates and new features,''
-    '24/7 technical support,''
-    'Easy integration with existing tools,''
-    'Free trial for all products,''
+      id: '6,'';
+  const benefits = [    'No upfront costs or setup fees,;';
+    'Quick deployment in 24-48 hours,'';
+    'Scalable solutions that grow with you,'';
+    'Regular updates and new features,'';
+    '24/7 technical support,'';
+    'Easy integration with existing tools,'';
+    'Free trial for all products,'';
     Cancel anytime, no long-term contracts;
     {
     {}
-      icon: value: '10,000+,''
-      label: 'Active description: Growing community of satisfied customers''
-    },
+      icon: value: '10,000+,'';
+      label: 'Active description: Growing community of satisfied customers'';
+    },;
     {}
-      icon: value: '99.9%,''
-      label: 'Uptime,''
+      icon: value: '99.9%,'';
+      label: 'Uptime,'';
       description: Reliable service you can count on;
-    },
+    },;
     {}
-      icon: Star,
-      value: '4.8/5,''
-      label: 'Rating,''
+      icon: Star,;
+      value: '4.8/5,'';
+      label: 'Rating,'';
       description: Highly rated by our customers;
-    },
+    },;
     {}
-      icon: value: '24/7,''
-      label: 'Support,''
+      icon: value: '24/7,'';
+      label: 'Support,'';
       description: Always here when you need us;
   const features = [;
 
-    {
-      icon: title: 'Fast Setup,''
+    {,;
+      icon: title: 'Fast Setup,'';
       description: Get up and running in minutes with our streamlined onboarding process;
-    },
+    },;
     {
-      icon: title: 'Focused Solutions,''
+      icon: title: 'Focused Solutions,'';
       description: Each micro SaaS is designed to solve specific business challenges effectively;
-    },
+    },;
     {
-      icon: Rocket,
-      title: 'Rapid Innovation,''
+      icon: Rocket,;
+      title: 'Rapid Innovation,'';
       description: Frequent updates and new features based on user feedback and market needs;
     }
   ];
@@ -210,3 +205,6 @@ import { Right, Circle, Star,    } from "lucide-react";"
 };
 
 export default MicroSaasPage;
+}
+}
+}

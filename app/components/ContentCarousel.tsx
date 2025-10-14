@@ -25,36 +25,14 @@
           </div>
         </div>
 
-        {/* Navigation buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Dots indicator */}
-        <div className="flex justify-center space-x-2 mt-6">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+const ContentCarousel: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2 xl font-bold text-white mb-4">ContentCarousel</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for ContentCarousel.
+      </p>
     </div>
-  )}
+  );
+};
+export default ContentCarousel;
