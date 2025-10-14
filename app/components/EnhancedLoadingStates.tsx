@@ -1,7 +1,12 @@
-"use client;"import React from react";''export default function EnhancedLoadingStates() {'  return ('    <div>
-      <h1 className: ""text-4xl font-bold mb-8">Enhanced Loading States</h1>      <p className: ""text-gray-300 text-lg">"        This page is under development.      </p>    </div>
+import React from "react";
+
+const EnhancedLoadingStates = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedLoadingStates</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
-}
+};
 
-
-
+export default EnhancedLoadingStates;

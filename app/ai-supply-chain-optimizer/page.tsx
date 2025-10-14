@@ -1,12 +1,23 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";export default function Page() {'  return ('    <React.Fragment>
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-
-        <title>Ai Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional ai supply chain optimizer services by Zion Tech Group." />      </Helmet>      <div>        <div>
-          <h1 className="text-4xl font-bold text-white mb-4">Ai Supply Chain Optimizer</h1>          <p className="text-gray-300">Coming soon...</p>        </div>      </div>    </React.Fragment>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
-
-
+export default HomePage;

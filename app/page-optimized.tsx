@@ -1,4 +1,4 @@
-// page-optimized - Basic implementation
-export default function pageOptimized() {
+// page-optimized - Basic implementation;
+export default function pageOptimized() {;
   return null;
 }

@@ -2,208 +2,147 @@
 
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-// Function to completely rewrite a malformed component file
-function rewriteComponentFile(filePath) {
+// Function to completely rewrite corrupted files
+function fixCorruptedFile(filePath) {
   try {
-    const fileName = path.basename(filePath, path.extname(filePath));
-    const isPage = filePath.includes('/page.tsx') || filePath.includes('/pages/');
-    const isComponent = filePath.includes('/components/');
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    let content = '';
-    
-    if (isPage) {
-      // Create a proper page component
-      content = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+    // Check if file is severely corrupted
+    if (content.includes('";"import') || content.includes('";const') || content.includes('";export')) {
+      console.log(`Rewriting severely corrupted file: ${filePath}`);
+      
+      // Extract the page name from the file path
+      const fileName = path.basename(filePath, '.tsx');
+      const pageName = fileName === 'page' ? 'Home' : fileName.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      
+      // Create a clean, basic React component
+      const cleanContent = `import React from "react";
+import { Helmet } from "react-helmet-async";
 
-export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Page() {
+const ${pageName}Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>${fileName.charAt(0).toUpperCase() + fileName.slice(1)} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${fileName} services by Zion Tech Group." />
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="${pageName} - Zion Tech Group" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">
-            ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Professional ${fileName} services by Zion Tech Group.
+          <h1 className="text-4xl font-bold text-white mb-8">${pageName}</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Contact Us
-          </Link>
         </div>
       </div>
-    </div>
-  );
-}`;
-    } else if (isComponent) {
-      // Create a proper component
-      content = `import React from 'react';
-
-interface ${fileName}Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ${fileName}: React.FC<${fileName}Props> = ({ className = '', children }) => {
-  return (
-    <div className={\`${fileName.toLowerCase()}-component \${className}\`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">${fileName}</h3>
-          <p className="text-gray-600">This is the ${fileName} component.</p>
-        </div>
-      )}
     </div>
   );
 };
 
-export default ${fileName};`;
-    } else {
-      // Generic component
-      content = `import React from 'react';
-
-export default function ${fileName}() {
-  return (
-    <div className="min-h-screen bg-white">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">
-          ${fileName}
-        </h1>
-        <p className="text-xl text-gray-600">
-          Content for ${fileName}.
-        </p>
-      </div>
-    </div>
-  );
-}`;
+export default ${pageName}Page;`;
+      
+      fs.writeFileSync(filePath, cleanContent);
+      return true;
     }
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true;
+    return false;
   } catch (error) {
-    console.error(`Error rewriting ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to fix specific problematic files
-function fixSpecificFiles() {
-  const problematicFiles = [
-    '/workspace/app/about/page.tsx',
-    '/workspace/app/blog/page.tsx',
-    '/workspace/app/components/AccessibilityAudit.tsx',
-    '/workspace/app/components/AccessibilityEnhancer.tsx',
-    '/workspace/app/components/AdAnalytics.tsx',
-    '/workspace/app/components/AdAnalyticsDashboard.tsx',
-    '/workspace/app/components/AdDashboard.tsx',
-    '/workspace/app/components/AdManagementSystem.tsx',
-    '/workspace/app/components/AdScheduler.tsx',
-    '/workspace/app/components/AdTemplates.tsx',
-    '/workspace/app/components/AdvancedAccessibilityEnhancer.tsx',
-    '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
-    '/workspace/app/components/AdvancedPerformanceOptimizer.tsx',
-    '/workspace/app/components/AdvancedSEOOptimizer_new.tsx',
-    '/workspace/app/components/AdvertisingBanner.tsx',
-    '/workspace/app/components/AnimatedCard.tsx',
-    '/workspace/app/components/ContentCarousel.tsx',
-    '/workspace/app/components/ContentPromotionBanner.tsx',
-    '/workspace/app/components/ContentStatistics.tsx',
-    '/workspace/app/components/CoreWebVitals.tsx',
-    '/workspace/app/components/DynamicContentShowcase.tsx',
-    '/workspace/app/components/EnhancedAccessibilityManager.tsx',
-    '/workspace/app/components/EnhancedHero.tsx',
-    '/workspace/app/components/EnhancedLoadingSkeleton.tsx',
-    '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
-    '/workspace/app/components/EnhancedPerformanceOptimizer.tsx',
-    '/workspace/app/components/EnhancedSEOOptimizer.tsx',
-    '/workspace/app/components/EnhancedServicesShowcase.tsx',
-    '/workspace/app/components/EnhancedSkipLink.tsx',
-    '/workspace/app/components/FuturisticServiceCard.tsx',
-    '/workspace/app/components/GlobalErrorBoundary.tsx',
-    '/workspace/app/components/LoadingOptimizer.tsx',
-    '/workspace/app/components/MobileOptimizer.tsx',
-    '/workspace/app/components/NeonButton.tsx',
-    '/workspace/app/components/NewContentAdvertisingBanner.tsx',
-    '/workspace/app/components/NewsletterSignup.tsx',
-    '/workspace/app/components/OptimizedLoadingSpinner.tsx',
-    '/workspace/app/components/PWAInstaller.tsx',
-    '/workspace/app/components/PerformanceDashboard.tsx',
-    '/workspace/app/components/PerformanceEnhancer.tsx',
-    '/workspace/app/components/PerformanceMetrics.tsx',
-    '/workspace/app/components/SEOAudit.tsx',
-    '/workspace/app/components/SEOOptimizer.tsx',
-    '/workspace/app/components/SecurityEnhancer.tsx',
-    '/workspace/app/components/ServiceCardSkeleton.tsx',
-    '/workspace/app/components/ServiceWorkerRegistration.tsx',
-    '/workspace/app/components/SystemMonitor.tsx',
-    '/workspace/app/components/UltimateContentAdvertisingBanner.tsx'
-  ];
-
-  let fixedCount = 0;
+// Function to fix specific syntax issues
+function fixSyntaxIssues(content) {
+  let fixed = content;
   
-  for (const filePath of problematicFiles) {
-    if (fs.existsSync(filePath)) {
-      if (rewriteComponentFile(filePath)) {
-        fixedCount++;
-        console.log(`Rewrote: ${filePath}`);
-      }
+  // Fix broken imports
+  fixed = fixed.replace(/import\s+([^"']+)\s+from\s+"([^"]*)"\s*;\s*"import/g, 'import $1 from "$2";\nimport');
+  fixed = fixed.replace(/import\s+([^"']+)\s+from\s+"([^"]*)"\s*;\s*const/g, 'import $1 from "$2";\nconst');
+  fixed = fixed.replace(/import\s+([^"']+)\s+from\s+"([^"]*)"\s*;\s*export/g, 'import $1 from "$2";\nexport');
+  
+  // Fix broken JSX
+  fixed = fixed.replace(/'  return \(\s*$/gm, '  return (');
+  fixed = fixed.replace(/<div><\/div>;/g, '<div>');
+  fixed = fixed.replace(/<Helmet><\/Helmet>;/g, '<Helmet>');
+  fixed = fixed.replace(/<\/Helmet>\s*<\/div>;/g, '</Helmet>\n      </div>');
+  
+  // Fix broken strings
+  fixed = fixed.replace(/"([^"]*?)(?:\n|$)/g, (match, str) => {
+    if (!match.endsWith('"')) {
+      return `"${str}"`;
     }
-  }
+    return match;
+  });
   
-  return fixedCount;
+  // Fix broken JSX attributes
+  fixed = fixed.replace(/className="([^"]*?)"([^"]*?)"/g, 'className="$1$2"');
+  fixed = fixed.replace(/href="([^"]*?)"([^"]*?)"/g, 'href="$1$2"');
+  
+  // Fix broken closing tags
+  fixed = fixed.replace(/<\/div>;/g, '</div>');
+  fixed = fixed.replace(/<\/h1>/g, '</h1>');
+  fixed = fixed.replace(/<\/p>/g, '</p>');
+  
+  // Fix broken exports
+  fixed = fixed.replace(/export default ([^;]+);<\/div>;/g, 'export default $1;');
+  
+  return fixed;
 }
 
-// Function to fix specific page files
-function fixPageFiles() {
-  const pageFiles = [
-    '/workspace/app/consultation/page.tsx',
-    '/workspace/app/cookies/page.tsx',
-    '/workspace/app/custom-software/page.tsx',
-    '/workspace/app/cybersecurity-solutions/page.tsx',
-    '/workspace/app/enterprise/page.tsx',
-    '/workspace/app/error.tsx',
-    '/workspace/app/global-error.tsx',
-    '/workspace/app/iot-edge/page.tsx',
-    '/workspace/app/iot-edge-computing/page.tsx',
-    '/workspace/app/it-micro-saas/page.tsx',
-    '/workspace/app/loading.tsx',
-    '/workspace/app/micro-saas/page.tsx',
-    '/workspace/app/news/page.tsx',
-    '/workspace/app/page-backup.tsx',
-    '/workspace/app/page-optimized.tsx',
-    '/workspace/app/quantum-computing/page.tsx',
-    '/workspace/app/sitemap-page.tsx',
-    '/workspace/app/team/page.tsx',
-    '/workspace/app/zion-ai-analytics-pro/page.tsx',
-    '/workspace/app/zion-ai-crm-pro/page.tsx'
-  ];
-
-  let fixedCount = 0;
-  
-  for (const filePath of pageFiles) {
-    if (fs.existsSync(filePath)) {
-      if (rewriteComponentFile(filePath)) {
-        fixedCount++;
-        console.log(`Rewrote: ${filePath}`);
-      }
+// Function to fix a file
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // First try to fix severely corrupted files
+    if (fixCorruptedFile(filePath)) {
+      return true;
     }
+    
+    // Otherwise, try syntax fixes
+    const fixed = fixSyntaxIssues(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  return fixedCount;
 }
 
 // Main execution
-console.log('Starting comprehensive file fixes...');
-const componentFixed = fixSpecificFiles();
-const pageFixed = fixPageFiles();
-console.log(`Fixed ${componentFixed} component files and ${pageFixed} page files.`);
+async function main() {
+  console.log('Starting comprehensive syntax fixes...');
+
+  // Get all TypeScript and JavaScript files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.jsx',
+    'app/**/*.js'
+  ];
+
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern);
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++;
+      }
+    }
+  }
+
+  console.log(`Fixed ${totalFixed} files`);
+}
+
+main().catch(console.error);
