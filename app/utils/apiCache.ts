@@ -20,7 +20,6 @@ export const apiCache = {
     }
     
     return item.data;
-  },
   
   clear: () => {
     apiCache.cache.clear();

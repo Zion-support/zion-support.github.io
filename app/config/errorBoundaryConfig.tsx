@@ -6,7 +6,6 @@ export const errorBoundaryConfig = {
     if (process.env.NODE_ENV === 'development') => {
       console.error('Error caught by boundary: ', error);
     }
-  }
 };
 
 </di>
