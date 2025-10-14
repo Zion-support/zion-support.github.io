@@ -13,17 +13,16 @@ const SupportPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Get help and support from our expert team
-            </p>
             <div className="text-gray-400">
               <p>Support information coming soon...</p>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
-
 export default SupportPage;

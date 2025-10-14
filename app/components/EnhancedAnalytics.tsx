@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const EnhancedAnalytics: React.FC = () => {
-  return null;
+interface EnhancedAnalyticsProps {
+  children: ReactNode;
+}
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
+  return <>{children}</>;
 };
-
 export default EnhancedAnalytics;

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-const MetaManager: React.FC = () => {
-  return null;
+interface MetaManagerProps {
+  children: ReactNode;
+}
+
+const MetaManager: React.FC<MetaManagerProps> = ({ children }) => {
+  return <>{children}</>;
 };
-
 export default MetaManager;

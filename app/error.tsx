@@ -14,8 +14,7 @@ const ErrorPage: React.FC = () => {
           <p className="text-gray-600">Please try again later.</p>
         </div>
       </div>
-    </>
+</>
   );
 };
-
 export default ErrorPage;
