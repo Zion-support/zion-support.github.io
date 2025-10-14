@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,51 +8,6 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  if (!isOpen) return null;
-
-  return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-  const mainNavItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
-    { name: 'Contact', href: '/contact', icon: Mail },
-  ];
-
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-  ];
-
-  if (!isOpen) return null;
-
-  return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
       {/* Overlay */}
       <div
@@ -162,9 +87,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
