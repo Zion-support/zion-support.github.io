@@ -35,5 +35,3 @@ export const generateResponsiveImages = (
 };
 
 export default optimizeImage;
-
-
