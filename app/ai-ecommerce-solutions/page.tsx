@@ -120,7 +120,7 @@ const PagePage = () => {
               Proven Results
             </h2>
             <p>Our AI e-commerce solutions deliver measurable improvements</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {industryStats.map((stat, index) => (

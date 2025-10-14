@@ -139,7 +139,7 @@ const PagePage = () => {
               Our Development Process
             </h2>
             <p>Proven 5-step process for building exceptional AI-powered mobile apps</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {developmentProcess.map((step, index) => (
