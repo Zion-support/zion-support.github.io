@@ -44,7 +44,7 @@ describe('EnhancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
 
     consoleSpy.mockRestore();
   });
@@ -86,7 +86,7 @@ describe('EnhancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
     
     // Change shouldThrow before clicking retry
     shouldThrow = false;

@@ -1,45 +1,70 @@
-  return (
-    <>
-      <Helmet>
-        <title>Shipping Rates.js - Zion Tech Group</title>
-        <meta name="description" content="Professional shipping rates.js services by Zion Tech Group." />"
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">"
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
-          <div className="max-w-6xl mx-auto text-center">"
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">"
-              Shipping Rates.js
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
-              Professional shipping rates.js services by Zion Tech Group.
-            </p>
-          </div>
-        </section>
+// API endpoint for shipping rate calculations
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">"
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>"
-                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>"
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">"
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>"
-                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>"
-              </div>
-            </div>
-          </div>
-        </section>
+  try {
+    const { 
+      origin, 
+      destination, 
+      weight, 
+      serviceType = 'standard' 
+    } = req.body;
 
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">"
-              Contact us today to learn more about our services and how they can benefit your organization.
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">"
-              Get Started
-            </button>
-          </div>
-        </section>
-      </div>
-    </>
+    if (!origin || !destination || !weight) {
+      return res.status(400).json({ 
+        error: 'Origin, destination, and weight are required' 
+      });
+    }
+
+    // In a real implementation, you would:
+    // 1. Integrate with shipping carriers (UPS, FedEx, DHL, etc.)
+    // 2. Calculate real shipping rates
+    // 3. Consider package dimensions, weight, distance
+    // 4. Apply business rules and discounts
+
+    // Mock shipping rates calculation
+    const baseRate = 15.00;
+    const weightMultiplier = parseFloat(weight) * 0.5;
+    const distanceMultiplier = 1.2; // Mock distance calculation
+    const serviceMultiplier = serviceType === 'express' ? 2.0 : 
+                             serviceType === 'overnight' ? 3.0 : 1.0;
+
+    const calculatedRate = baseRate + weightMultiplier + distanceMultiplier;
+    const finalRate = calculatedRate * serviceMultiplier;
+
+    const shippingRates = [
+      {
+        carrier: 'Standard Shipping',
+        service: 'Ground',
+        rate: finalRate.toFixed(2),
+        estimatedDays: '3-5',
+        serviceType: 'standard'
+      },
+      {
+        carrier: 'Express Shipping',
+        service: '2-Day',
+        rate: (finalRate * 1.5).toFixed(2),
+        estimatedDays: '2',
+        serviceType: 'express'
+      },
+      {
+        carrier: 'Overnight Shipping',
+        service: 'Next Day',
+        rate: (finalRate * 2.5).toFixed(2),
+        estimatedDays: '1',
+        serviceType: 'overnight'
+      }
+    ];
+
+    res.status(200).json({ 
+      success: true, 
+      rates: shippingRates,
+      currency: 'USD'
+    });
+  } catch (error) {
+    console.error('Error calculating shipping rates:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+}
