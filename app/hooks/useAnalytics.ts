@@ -5,7 +5,7 @@ export const useAnalytics = () => {
     // Analytics initialization
   }, []);
 
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+  const trackEvent = (_eventName: string, _parameters?: Record<string, unknown>) => {
     // Track event logic
   };
 
