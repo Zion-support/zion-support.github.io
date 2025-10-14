@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import React, { Suspense } from 'react';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 function HomePage() {
   const features = [
@@ -39,10 +42,18 @@ function HomePage() {
 
   return (
     <>
+      <PerformanceMonitor />
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <meta name="keywords" content="AI solutions, cybersecurity, IT services, digital transformation, automation" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
+        <link rel="canonical" href="https://zion.app" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
@@ -74,7 +85,11 @@ function HomePage() {
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-colors">
+              <div 
+                key={index} 
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -102,5 +117,6 @@ function HomePage() {
   );
 }
 
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 export default HomePage;
-

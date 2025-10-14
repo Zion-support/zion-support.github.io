@@ -1,43 +1,42 @@
 export const accessibilityChecker = {
   checkAltText: () => {
-    const images = document.querySelectorAll('img');
-    const missingAlt = Array.from(images).filter(img => !img.alt);
-    return {
-      total: images.length,
-      missingAlt: missingAlt.length,
-      issues: missingAlt.map(img => ({
-        element: img,
-        issue: 'Missing alt text'
-      }))
-    };
+    const images = document.querySelectorAll('img')
+    const issues: Array<{ element: HTMLElement; issue: string }> = []
+    
+    images.forEach((img) => {
+      if (!img.getAttribute('alt')) {
+        issues.push({
+          element: img as HTMLElement,
+          issue: 'Missing alt text'
+        })
+      }
+    })
+    
+    return issues
   },
   
-  checkHeadings: () => {
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const headingLevels = Array.from(headings).map(h => parseInt(h.tagName[1]));
-    const issues = [];
+  checkHeadingStructure: () => {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    const issues: Array<{ element: HTMLElement; issue: string }> = []
+    let previousLevel = 0
     
-    for (let i = 1; i < headingLevels.length; i++) {
-      if (headingLevels[i] > headingLevels[i - 1] + 1) {
+    headings.forEach((heading) => {
+      const currentLevel = parseInt(heading.tagName.charAt(1))
+      if (currentLevel > previousLevel + 1) {
         issues.push({
-          element: headings[i],
+          element: heading as HTMLElement,
           issue: 'Heading level skipped'
-        });
+        })
       }
-    }
+      previousLevel = currentLevel
+    })
     
-    return {
-      total: headings.length,
-      issues
-    };
+    return issues
   },
   
   checkColorContrast: () => {
     // This would require a more complex implementation
-    // For now, return a placeholder
-    return {
-      total: 0,
-      issues: []
-    };
+    // For now, return empty array
+    return []
   }
-};
+}

@@ -39,3 +39,6 @@ for (const tag of jsxCloseTags) {
   if (tag.includes('</>')) closeFragmentCount++;
 }
 
+console.log('Div tags - Open:', divCount, 'Close: ', closeDivCount);
+console.log('Section tags - Open:', sectionCount, 'Close: ', closeSectionCount);
+console.log('Fragment tags - Open:', fragmentCount, 'Close: ', closeFragmentCount);

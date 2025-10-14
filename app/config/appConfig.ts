@@ -5,12 +5,6 @@ export const appConfig = {
   url: 'https://ziontechgroup.com',
   apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   environment: process.env.NODE_ENV || 'development',
-  features: {
-    analytics: true,
-    seo: true,
-    performance: true,
-    accessibility: true
-  },
   social: {
     twitter: 'https://twitter.com/ziontechgroup',
     linkedin: 'https://linkedin.com/compunknown/ziontechgroup',
