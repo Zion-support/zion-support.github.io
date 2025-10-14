@@ -23,50 +23,101 @@ const HomePage: React.FC = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
+      description: "Advanced AI-powered analytics platform with real-time insights, predictive modeling, and automated reporting capabilities. Transform your data into actionable business intelligence.",
       price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Machine Learning Models"],
+      link: "/ai-analytics-dashboard-pro",
+      popular: true
     },
     {
       icon: <Code className="w-8 h-8" />,
       title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages and frameworks. Boost developer productivity with AI-powered coding assistance.",
       price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support", "IDE Integration"],
+      link: "/ai-code-assistant-pro",
+      popular: true
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
+      description: "Complete 5G network deployment with ultra-low latency, massive IoT connectivity, and edge computing. Enable next-generation applications and smart infrastructure.",
       price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
+      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring", "Security"],
+      link: "/5g-implementation",
+      popular: true
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Cloud Infrastructure",
+      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization. Deploy and manage applications with maximum efficiency and reliability.",
+      price: "$499/month",
+      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime", "Global CDN"],
+      link: "/ai-cloud-infrastructure"
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
+      description: "Comprehensive cybersecurity solution with AI threat detection, automated response, and compliance management. Protect your business from evolving cyber threats.",
       price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
+      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring", "Incident Response"],
       link: "/advanced-security-suite"
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
+      description: "Enterprise-grade conversational AI with multi-language support, advanced NLP, and seamless integration capabilities. Enhance customer experience with intelligent automation.",
+      price: "$249/month",
+      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard", "Custom Training"],
       link: "/ai-chatbot-enterprise"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "AI Business Intelligence Pro",
+      description: "Comprehensive BI solution with AI-driven insights, automated reporting, and advanced data visualization. Make data-driven decisions with confidence.",
+      price: "$399/month",
+      features: ["AI Insights", "Automated Reports", "Data Visualization", "Predictive Analytics", "Custom Dashboards"],
+      link: "/ai-business-intelligence-pro"
+    },
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: "AI Content Generation Pro",
+      description: "Advanced AI content creation platform for blogs, social media, marketing materials, and technical documentation. Scale your content production with AI.",
+      price: "$149/month",
+      features: ["Multi-format Content", "SEO Optimization", "Brand Voice Training", "Plagiarism Detection", "Content Scheduling"],
+      link: "/ai-content-generation-pro"
+    },
+    {
+      icon: <Workflow className="w-8 h-8" />,
+      title: "AI Automation Suite",
+      description: "Complete automation platform for business processes, workflows, and repetitive tasks with AI optimization. Streamline operations and reduce manual work.",
+      price: "$349/month",
+      features: ["Process Automation", "Workflow Management", "AI Optimization", "Integration Hub", "Performance Monitoring"],
+      link: "/ai-automation-suite"
+    },
+    {
+      icon: <Eye className="w-8 h-8" />,
+      title: "AI Content Moderation Pro",
+      description: "Advanced content moderation platform with AI-powered detection and automated content filtering. Maintain safe and compliant online communities.",
+      price: "$79/month",
+      features: ["AI Detection", "Automated Filtering", "Custom Rules", "Real-time Processing", "Analytics Dashboard"],
+      link: "/ai-content-moderation-pro"
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "AI Agricultural Intelligence Pro",
+      description: "Smart farming solution with AI-powered crop monitoring, yield prediction, and resource optimization. Revolutionize agriculture with data-driven insights.",
+      price: "$199/month",
+      features: ["Crop Monitoring", "Yield Prediction", "Resource Optimization", "Weather Integration", "Farm Analytics"],
+      link: "/ai-agricultural-intelligence-pro"
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "AI Climate Solutions Pro",
+      description: "Environmental monitoring and climate prediction platform with AI-powered analytics and reporting. Address climate challenges with intelligent solutions.",
+      price: "$149/month",
+      features: ["Environmental Monitoring", "Climate Prediction", "Carbon Tracking", "Sustainability Reports", "Alert System"],
+      link: "/ai-climate-solutions-pro"
     }
   ];
 
@@ -180,28 +231,42 @@ const HomePage: React.FC = () => {
                 {services.map((service, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                    className={`group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 hover:transform hover:scale-105 hover:shadow-2xl transition-all duration-300 relative ${
+                      service.popular 
+                        ? 'border-cyan-400/40 shadow-cyan-500/10' 
+                        : 'border-cyan-500/20 hover:border-cyan-400/40'
+                    }`}
                   >
+                    {service.popular && (
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </div>
+                      </div>
+                    )}
+                    
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{service.icon}</div>
                     </div>
+                    
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.title}
                     </h3>
+                    
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {service.description}
                     </p>
+                    
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                         <div className="flex items-center text-yellow-400">
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
-                          <Star className="w-4 h-4 fill-current" />
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-current" />
+                          ))}
                         </div>
                       </div>
+                      
                       <div className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -211,6 +276,7 @@ const HomePage: React.FC = () => {
                         ))}
                       </div>
                     </div>
+                    
                     <a
                       href={service.link}
                       className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -237,13 +303,13 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 302 464 0950</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -251,7 +317,7 @@ const HomePage: React.FC = () => {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -259,7 +325,7 @@ const HomePage: React.FC = () => {
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
             </div>
@@ -267,6 +333,7 @@ const HomePage: React.FC = () => {
         </section>
       </main>
     </div>
+    </>
   );
 };
 
