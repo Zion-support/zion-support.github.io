@@ -110,7 +110,6 @@ const PerformanceMonitor = () => {
     if (value <= thresholds.poor) return 'text-yellow-500';
     return 'text-red-500';
   };
-
   return (
     <div className="fixedbottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
       <div className="font-boldmb-2">Performance Metrics</div>
@@ -149,5 +148,4 @@ const PerformanceMonitor = () => {
     </div>
   );
 };
-
 export default PerformanceMonitor;

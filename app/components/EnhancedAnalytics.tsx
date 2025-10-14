@@ -7,5 +7,4 @@ interface EnhancedAnalyticsProps {
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
-
 export default EnhancedAnalytics;

@@ -14,9 +14,7 @@ export const dataTransformers = {
       const itemObj = item as Record<string, unknown>
       return {
         x: itemObj[xField],
-        y: itemObj[yField]
-      }
-    })
+
   },
   
   transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => {
@@ -24,9 +22,7 @@ export const dataTransformers = {
       const itemObj = item as Record<string, unknown>
       return {
         value: itemObj[valueField],
-        label: itemObj[labelField]
-      }
-    })
+
       id: item.id || index,
       ...item
     }))
@@ -34,15 +30,13 @@ export const dataTransformers = {
   
   transformToChartData: (data: Record<string, unknown>[], xField: string, yField: string) => {
     return data.map(item => ({
-      x: item[xField];,
-      y: item[yField]
+
     }))
   },
   
   transformToSelectOptions: (data: Record<string, unknown>[], valueField: string, labelField: string) => {
     return data.map(item => ({
-      value: item[valueField];,
-      label: item[labelField]
+
     }))
   }
 }

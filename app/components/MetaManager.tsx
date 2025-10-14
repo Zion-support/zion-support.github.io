@@ -7,5 +7,4 @@ interface MetaManagerProps {
 const MetaManager: React.FC<MetaManagerProps> = ({ children }) => {
   return <>{children}</>;
 };
-
 export default MetaManager;

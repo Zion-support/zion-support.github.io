@@ -3,9 +3,7 @@ export const errorHandler = {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message;,
-        fatal: false;,
-        context: context
+
       });
     }
     

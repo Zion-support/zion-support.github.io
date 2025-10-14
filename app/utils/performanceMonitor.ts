@@ -11,13 +11,7 @@ export const performanceMonitor = {
     // Send to analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance_measurement', {
-        name: name;,
-        duration: duration
-      });
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'performance_measure', {
-        measure_name: name;,
-        measure_value: duration
+
       })
     }
     if (process.env.NODE_ENV === 'development') {
@@ -35,8 +29,7 @@ export const performanceMonitor = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
-        measure_name: name;,
-        measure_value: duration
+
       })
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
