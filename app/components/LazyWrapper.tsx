@@ -3,7 +3,7 @@ import React from 'react';
 const LazyWrapper = () => {
   return (
     <div>
-      {children}
+      {fallback || children}
     </div>
   );
 };
