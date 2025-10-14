@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import React, { Suspense } from 'react';
 import App from './App';
 import './index.css';
 
@@ -39,7 +38,6 @@ import React, { Suspense } from 'react';
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-import React, { Suspense } from 'react';
           console.warn('Service Worker registration failed');
         }
       });
