@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function EnhancedAnalytics() {
+interface EnhancedAnalyticsProps {
+  children: ReactNode;
+}
+
+export default function EnhancedAnalytics({ children }: EnhancedAnalyticsProps) {
   return (
     <div className="enhancedanalytics">
-      {/* EnhancedAnalytics component implementation */}
+      {children}
     </div>
   );
 }

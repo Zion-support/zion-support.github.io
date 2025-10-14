@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function MetaManager() {
+interface MetaManagerProps {
+  children: ReactNode;
+}
+
+export default function MetaManager({ children }: MetaManagerProps) {
   return (
     <div className="metamanager">
-      {/* MetaManager component implementation */}
+      {children}
     </div>
   );
 }

@@ -1,6 +1,7 @@
-import React from 'react';
+// Test runner utility
 
 
-'// testRunner - Basic implementation'export default function testRunner() {
+// testRunner - Basic implementation
+export default function testRunner() {
   return null;
-};
+}

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function PerformanceOptimizer() {
+interface PerformanceOptimizerProps {
+  children: ReactNode;
+}
+
+export default function PerformanceOptimizer({ children }: PerformanceOptimizerProps) {
   return (
     <div className="performanceoptimizer">
-      {/* PerformanceOptimizer component implementation */}
+      {children}
     </div>
   );
 }

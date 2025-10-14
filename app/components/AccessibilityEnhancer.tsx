@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-export default function AccessibilityEnhancer() {
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+}
+
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
   return (
     <div className="accessibilityenhancer">
-      {/* AccessibilityEnhancer component implementation */}
+      {children}
     </div>
   );
 }

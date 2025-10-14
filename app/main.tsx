@@ -1,6 +1,7 @@
-import React from 'react';
+// Main entry point
 
 
-'// main - Basic implementation'export default function main() {
+// main - Basic implementation
+export default function main() {
   return null;
-};
+}
