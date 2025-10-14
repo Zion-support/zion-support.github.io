@@ -2,98 +2,103 @@
 
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(content, filePath) {
   let fixed = content;
   
-  // Fix malformed import statements with concatenated strings
-  fixed = fixed.replace(/import\s+React\s+from\s+"react";"import\s+{([^}]+)}\s+from\s+"([^"]+)";"/g, 
-    'import React from "react";
-import { $1 } from "$2";');
+  // Fix unterminated string literals
+  fixed = fixed.replace(/content="([^"]*)$/gm, 'content="$1"');
   
-  // Fix missing quotes in import statements
-  fixed = fixed.replace(/from\s+'([^']*);'/g, "from '$1';");
-  fixed = fixed.replace(/from\s+"([^"]*);"/g, 'from "$1";');
+  // Fix missing closing tags and malformed JSX
+  fixed = fixed.replace(/}\s*;\s*}\s*;\s*}\s*;\s*$/gm, '}');
+  fixed = fixed.replace(/}\s*;\s*}\s*;\s*$/gm, '}');
+  fixed = fixed.replace(/}\s*;\s*$/gm, '}');
   
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/from\s+['"]([^'"]+)['"]\s*([^;])/g, 'from "$1";
-$2');
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div[^>]*>\s*\)\s*;\s*$/gm, '</div>');
+  fixed = fixed.replace(/<main[^>]*>\s*\)\s*;\s*$/gm, '</main>');
+  fixed = fixed.replace(/<Router[^>]*>\s*\)\s*;\s*$/gm, '</Router>');
+  fixed = fixed.replace(/<HelmetProvider[^>]*>\s*\)\s*;\s*$/gm, '</HelmetProvider>');
   
-  // Fix malformed React imports
-  fixed = fixed.replace(/import\s+React\s+from\s+'react;'const/g, "import React from 'react';
-
-const");
-  fixed = fixed.replace(/import\s+React\s+from\s+"react;"const/g, 'import React from "react";
-
-const');
+  // Fix broken JSX expressions
+  fixed = fixed.replace(/\)\s*;\s*<([^>]+)>/gm, '>\n      <$1>');
+  fixed = fixed.replace(/<\/[^>]+>\s*<([^>]+)>/gm, '</$1>');
   
-  // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className="$1"');
+  // Fix missing return statements
+  if (fixed.includes('export default function') && !fixed.includes('return (')) {
+    fixed = fixed.replace(/export default function[^{]*{([^}]*)}/gm, (match, body) => {
+      if (!body.trim().includes('return')) {
+        return match.replace('{', '{\n  return (');
+      }
+      return match;
+    });
+  }
   
-  // Fix missing semicolons in variable declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {
-');
+  // Fix broken function declarations
+  fixed = fixed.replace(/export default function[^{]*{\s*'([^']*)'\s*return\s*\(/gm, 'export default function Page() {\n  return (');
   
-  // Fix malformed export statements
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\(\)\s*{\s*return\s+null;\s*}/g, 
-    'export default function $1() {
-  return null;
-}');
+  // Fix malformed JSX structure in specific patterns
+  fixed = fixed.replace(/<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/gm, '<React.Fragment>\n      </React.Fragment>');
+  
+  // Fix broken closing tags
+  fixed = fixed.replace(/<\/[^>]+>\s*;\s*$/gm, '');
+  fixed = fixed.replace(/;\s*<\/[^>]+>/gm, '</$1>');
+  
+  // Fix missing semicolons and brackets
+  fixed = fixed.replace(/}\s*export default/gm, '}\n\nexport default');
+  
+  // Clean up extra semicolons and brackets
+  fixed = fixed.replace(/;\s*;\s*$/gm, ';');
+  fixed = fixed.replace(/}\s*}\s*$/gm, '}');
   
   return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let filesProcessed = 0;
-  let filesFixed = 0;
+// Function to fix specific file patterns
+function fixSpecificFiles() {
+  const files = [
+    'app/404.tsx',
+    'app/App.tsx',
+    'app/ad-management/page.tsx',
+    'app/ai-3d-generation/page.tsx',
+    'app/ai-analytics/page.tsx',
+    'app/ai-automation-platform/page.tsx',
+    'app/ai-automation-suite/page.tsx',
+    'app/ai-automation/page.tsx'
+  ];
   
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
+  files.forEach(filePath => {
+    const fullPath = path.join(process.cwd(), filePath);
+    if (fs.existsSync(fullPath)) {
+      let content = fs.readFileSync(fullPath, 'utf8');
+      const fixed = fixSyntaxErrors(content, filePath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        filesProcessed++;
-        if (processFile(fullPath)) {
-          filesFixed++;
-        }
+      if (fixed !== content) {
+        fs.writeFileSync(fullPath, fixed);
+        console.log(`Fixed: ${filePath}`);
       }
     }
-  }
-  
-  walkDir(dirPath);
-  return { filesProcessed, filesFixed };
+  });
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
-const { filesProcessed, filesFixed } = processDirectory('./app');
-console.log(`
-Completed! Processed ${filesProcessed} files, fixed ${filesFixed} files.`);
+console.log('Fixing syntax errors...');
+fixSpecificFiles();
 
+// Find and fix all TSX files with common patterns
+const tsxFiles = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
 
+tsxFiles.forEach(filePath => {
+  const fullPath = path.join(process.cwd(), filePath);
+  let content = fs.readFileSync(fullPath, 'utf8');
+  const fixed = fixSyntaxErrors(content, filePath);
+  
+  if (fixed !== content) {
+    fs.writeFileSync(fullPath, fixed);
+    console.log(`Fixed: ${filePath}`);
+  }
+});
 
+console.log('Syntax error fixing completed!');

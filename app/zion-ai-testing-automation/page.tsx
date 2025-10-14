@@ -1,28 +1,21 @@
-"use client;";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-
-
-
-'/* global describe, test, expect, it, beforeEach */'export default function Page() {'  return (
-    div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
+export default function Page() {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Zion Ai Testing Automation - Zion Tech Group</title>
+        <meta name="description" content="Professional zion ai testing automation services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-white mb-8">Zion Ai Testing Automation</h1>
+          <p className="text-gray-300 text-lg">
+            Professional zion ai testing automation services tailored to your business needs.
+          </p>
+        </div>
       </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Zion Ai Testing Automation</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
+    </React.Fragment>
   );
-
-        </p></div></div>
 }
-};
-};
-};
-};
-  )};

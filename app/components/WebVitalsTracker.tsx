@@ -1,29 +1,14 @@
-"use client;";
-import React from react;
+import React from "react";
 
-
-
-
-"export default function WebVitalsTracker() {
+export default function WebVitalsTracker() {
   return (
-    div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
-    <div>
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8">WebVitalsTracker</h1>
+        <p className="text-gray-300 text-lg">
+          Content for WebVitalsTracker component.
+        </p>
       </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Components</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
+    </div>
   );
-
-        </p></div></div>
 }
-};
-};
-};
-};
-  )};

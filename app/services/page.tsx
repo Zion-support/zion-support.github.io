@@ -1,23 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const ServicesPage = () => {
+export default function Page() {
   return (
-    <div>
+    <React.Fragment>
       <Helmet>
         <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Professional IT services by Zion Tech Group." />
+        <meta name="description" content="Professional services services by Zion Tech Group." />
       </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-white mb-8">Services</h1>
           <p className="text-gray-300 text-lg">
-            Professional IT services and solutions for your business needs.
+            Professional services services tailored to your business needs.
           </p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
-};
-
-export default ServicesPage;
+}

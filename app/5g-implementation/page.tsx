@@ -1,38 +1,21 @@
 import React from "react";
-
-
-
-
-
 import { Helmet } from "react-helmet-async";
-
-
-
-
-
 
 export default function Page() {
   return (
-
     <React.Fragment>
-  );
-      </React.Fragment><Helmet>
-
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description"content="Professional 5G implementation services by Zion Tech Group." />
-      
-</Helmet>;
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-4">5G Implementation</h1>
-          <p className="text-gray-300">Coming soon...</p>
+      <Helmet>
+        <title>5g Implementation - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g implementation services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-white mb-8">5g Implementation</h1>
+          <p className="text-gray-300 text-lg">
+            Professional 5g implementation services tailored to your business needs.
+          </p>
         </div>
       </div>
-}
-};
-};
-};
-};
-    </React.Fragment>;
+    </React.Fragment>
   );
-};
+}
