@@ -110,14 +110,14 @@ const App: React.FC = () => {
                 }
               }}
             />
-            <MetaManager />
-            <PerformanceMonitor />
-            <EnhancedAnalytics />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+            <MetaManager>
+              <PerformanceMonitor />
+              <EnhancedAnalytics>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <Navigation />
+                    <main className="relative z-10" id="main-content" role="main">
+                      <Suspense fallback={<AdvancedLoadingStates>Loading application...</AdvancedLoadingStates>}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
@@ -125,10 +125,12 @@ const App: React.FC = () => {
                       <Route path="/contact" element={<ContactPage />} />
                     </Routes>
                   </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
+                    </main>
+                    <Footer />
+                  </div>
+                </Router>
+              </EnhancedAnalytics>
+            </MetaManager>
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
