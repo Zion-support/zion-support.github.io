@@ -4,23 +4,22 @@ import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 
 interface SidebarNavigationProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void,}
+const navigationItems = [
+  { name: "Home", href: "/", icon: User },
+  { name: "Profile", href: "/profile", icon: User },
+  { name: "Settings", href: "/settings", icon: User },
+  { name: "Help", href: "/help", icon: User },
+  { name: "About", href: "/about", icon: User }
+];
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: User },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: HelpCircle }
-  ];
-
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out">
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-xl font-semibold text-gray-800">Menu</h2>
+          <h2 className="text-lg font-semibold">Navigation</h2>
           <button
             onClick={onClose}
             className="p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
@@ -43,8 +42,9 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           ))}
         </nav>
       </div>
-    </div>
-  );
-};
-
+    </>
+  )
+}
+export default SidebarNavigation;
+}
 export default SidebarNavigation;

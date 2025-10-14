@@ -1,72 +1,44 @@
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-<<<<<<< HEAD
-const PROD_DOMAIN = 'https://ziontechgroup.com';
-
-async function handler(req, res) {
+// API endpoint for creating checkout sessions
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
-  const { productId, userId } = req.body || {};
-
-  if (!productId) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
-  }
-
-  try {
-    // Basic checkout session creation logic
-    const sessionData = {
-      productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-<<<<<<< HEAD
-    };
-
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
-    // 2. Store session data in your database
-    // 3. Return the session ID and checkout URL
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
-      sessionData
-    }));
-  } catch (error) {
-    console.error('Checkout session creation error:', error);
-=======
-    res.setHeader('Content-Type', 'application/json');
-    }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Checkout session creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
-<<<<<<< HEAD
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-=======
-      details: process.env.NODE_ENV === 'development' ? _error.message : undefined
->>>>>>> cursor/fix-errors-and-merge-to-main-100c
-    }));
-  }
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint working' });
 }
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Create Checkout Session.js
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional create checkout session.js services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
 
-export default withErrorLogging(handler);
+    if (!amount || !items) {
+      return res.status(400).json({ 
+        error: 'Missing required fields: amount and items' 
+      });
+    }
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}

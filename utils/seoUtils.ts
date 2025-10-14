@@ -12,6 +12,15 @@ interface SEOConfig {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  viewport?: string;
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -19,133 +28,131 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
-    hreflang: string;
     href: string;
+    hreflang: string;
   }>;
   structuredData?: any;
-  twitterImage?: string;
-  viewport?: string;
-  charset?: string;
-  publisher?: string;
-  language?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogUrl?: string;
-  ogSiteName?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterSite?: string;
-  twitterCreator?: string;
 }
 
 export const defaultSEOConfig: SEOConfig = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
-  keywords: [
-    'AI solutions',
-    'artificial intelligence',
-    'IT services',
-    'cloud computing',
-    'cybersecurity',
-    'digital transformation',
-    'machine learning',
-    'data analytics',
-    'automation',
-    'business intelligence'
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',';
+  description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',';
+  keywords: ['AI solutions',';
+    'artificial intelligence',';
+    'IT services',';
+    'cloud computing',';
+    'cybersecurity',';
+    'digital transformation',';
+    'machine learning',';
+    'data analytics',';
+    'automation',';
+    'business intelligence'';
   ],
-  canonicalUrl: 'https://zion.app',
-  ogImage: '/images/og-image.jpg',
-  ogType: 'website',
-  twitterCard: 'summary_large_image',
-  robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
-  charset: 'utf-8',
-  publisher: 'Zion Tech Group',
-  language: 'en-US'
+  canonicalUrl: 'https://zion.app',';
+  ogImage: '/images/og-image.jpg',';
+  ogType: 'website',';
+  twitterCard: 'summary_large_image',';
+  robots: 'index, follow',';
+  author: 'Zion Tech Group',';
+  publisher: 'Zion Tech Group',';
+  language: 'en-US',';
+  viewport: 'width=device-width, initial-scale=1.0',';
+  charset: 'UTF-8',';
+  ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',';
+  ogDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',';
+  twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',';
+  twitterDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',';
+  twitterImage: '/images/og-image.jpg',';
+  geo: {
+    latitude: '40.7128',';
+    longitude: '-74.0060',';
+    region: 'US-NY',';
+    placename: 'New York'';
+  },
+  alternate: [{ href: 'https://zion.app/en', hreflang: 'en' },';
+    { href: 'https://zion.app/es', hreflang: 'es' }';
+  ],
+  structuredData: {
+    '@context': 'https://schema.org',';
+    '@type': 'Organization',';
+    name: 'Zion Tech Group',';
+    url: 'https://zion.app',';
+    logo: 'https://zion.app/images/logo.png'';
+  }
 };
 
-export function generateSEOTags(config: SEOConfig): string {
-  const tags: string[] = [];
-
-  // Basic meta tags
-  tags.push(`<title>${config.title}</title>`);
-  tags.push(`<meta name="description" content="${config.description}" />`);
-  tags.push(`<meta name="keywords" content="${config.keywords.join(', ')}" />`);
-  tags.push(`<meta name="robots" content="${config.robots}" />`);
-  tags.push(`<meta name="viewport" content="${config.viewport || 'width=device-width, initial-scale=1'}" />`);
-  tags.push(`<meta charset="${config.charset || 'utf-8'}" />`);
-
-  // Canonical URL
-  tags.push(`<link rel="canonical" href="${config.canonicalUrl}" />`);
-
-  // Open Graph tags
-  tags.push(`<meta property="og:title" content="${config.ogTitle || config.title}" />`);
-  tags.push(`<meta property="og:description" content="${config.ogDescription || config.description}" />`);
-  tags.push(`<meta property="og:image" content="${config.ogImage}" />`);
-  tags.push(`<meta property="og:url" content="${config.ogUrl || config.canonicalUrl}" />`);
-  tags.push(`<meta property="og:type" content="${config.ogType}" />`);
-  tags.push(`<meta property="og:site_name" content="${config.ogSiteName || 'Zion Tech Group'}" />`);
-
-  // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${config.twitterCard}" />`);
-  tags.push(`<meta name="twitter:title" content="${config.twitterTitle || config.title}" />`);
-  tags.push(`<meta name="twitter:description" content="${config.twitterDescription || config.description}" />`);
-  if (config.twitterImage || config.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${config.twitterImage || config.ogImage}" />`);
-  }
-
-  // Geo tags
-  if (config.geo) {
-    if (config.geo.latitude && config.geo.longitude) {
-      tags.push(`<meta name="geo.position" content="${config.geo.latitude};${config.geo.longitude}" />`);
-    }
-    if (config.geo.region) {
-      tags.push(`<meta name="geo.region" content="${config.geo.region}" />`);
-    }
-    if (config.geo.placename) {
-      tags.push(`<meta name="geo.placename" content="${config.geo.placename}" />`);
-    }
-  }
-
-  // Alternate language tags
-  if (config.alternate && config.alternate.length > 0) {
-    config.alternate.forEach((alt: { hreflang: string; href: string }) => {
-      tags.push(`<link rel="alternate" hreflang="${alt.hreflang}" href="${alt.href}" />`);
-    });
-  }
-
-  // Structured data
-  if (config.structuredData) {
-    tags.push(`<script type="application/ld+json">${JSON.stringify(config.structuredData)}</script>`);
-  }
-
-  return tags.join('\n');
-}
-
-export function generatePageSEO(pageConfig: Partial<SEOConfig>): SEOConfig {
+export const generateSEOMeta = (config: SEOConfig) => {
   return {
-    ...defaultSEOConfig,
-    ...pageConfig
-  };
-}
-
-export function generateStructuredData(config: SEOConfig): any {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
+    title: config.title,
     description: config.description,
-    url: config.canonicalUrl,
-    logo: config.ogImage,
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/zion-tech-group'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service',
-      availableLanguage: ['English']
-    }
+    keywords: config.keywords.join(', '),';
+    robots: config.robots,
+    viewport: config.viewport,
+    charset: config.charset,
+    author: config.author,
+    publisher: config.publisher,
+    language: config.language,
+    'og:title': config.ogTitle || config.title,';
+    'og:description': config.ogDescription || config.description,';
+    'og:image': config.ogImage,';
+    'og:type': config.ogType,';
+    'og:url': config.canonicalUrl,';
+    'twitter:card': config.twitterCard,';
+    'twitter:title': config.twitterTitle || config.title,';
+    'twitter:description': config.twitterDescription || config.description,';
+    'twitter:image': config.twitterImage || config.ogImage,';
+    'geo.region': config.geo?.region,';
+    'geo.placename': config.geo?.placename,';
+    'geo.position': config.geo?.latitude && config.geo?.longitude';
+      ? `${config.geo.latitude};${config.geo.longitude}`;
+      : undefined,
+    'canonical': config.canonicalUrl,';
+    'alternate': config.alternate?.map(alt => ({';
+      rel: 'alternate',';
+      hreflang: alt.hreflang,
+      href: alt.href;
+    }))
   };
+};
+
+export const generateStructuredData = (config: SEOConfig) => {
+  return config.structuredData ? JSON.stringify(config.structuredData) : '';
+};
+
+export const generateImageAlt = (imagePath: string, alt: string) => {
+  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`;
+};
+
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {';
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 }
+
+export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
+  const baseUrl = 'https://zion.app'
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+  ${pages.map(page => `
+    <url>
+      <loc>${baseUrl}${page.path}</loc>
+      <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>'
+      <priority>${page.priority || 0.5}</priority>
+    </url>4605;
+  `).join('')}'
+</urlset>`;
+};
+
+export const generateRobotsTxt = (config: SEOConfig) => {
+  return `User-agent: *;
+Allow: /;
+Sitemap: ${config.canonicalUrl}/sitemap.xml`;
+};
+
+export default {
+  defaultSEOConfig,
+  generateSEOMeta,
+  generateStructuredData,
+  generateImageAlt,
+  generateCanonicalUrl,
+  generateSitemap,
+  generateRobotsTxt;
+};

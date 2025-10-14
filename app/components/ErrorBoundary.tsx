@@ -2,51 +2,88 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    this.setState({
+      error,
+      errorInfo
+    });
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
+      return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Refresh Page
-            </button>
+          <div className="max-w-md w-full bg-slate-800 rounded-lg p-6 border border-slate-700">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-500/20 rounded-full mb-4">
+              <svg className="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <div className="text-center">
+              <h1 className="text-lg font-medium text-white mb-2">Something went wrong</h1>
+              <p className="text-sm text-gray-400 mb-4">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Refresh Page
+              </button>
+            </div>
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We apologize for the inconvenience. Please try refreshing the page.
+              </p>
+            </div>
+            <div className="mt-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Refresh Page
+              </button>
+            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-2 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

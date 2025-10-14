@@ -1,7 +1,5 @@
-// errorHandler utility
+// errorHandler utility;
 export const errorHandler = () => {
-  // Implementation
-  return true;
-};
-
+  // Implementation;
+  return true;}
 export default errorHandler;

@@ -8,26 +8,24 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
-  image = '/images/og-image.jpg',
-  url = typeof window !== 'undefined' ? window.location.href : '',
-  type = 'website',
-  structuredData
+  title = 'Zion Tech Group - Advanced AI and IT Solutions','
+  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.','
+  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],'
+  image = '/images/og-image.jpg','
+  url = typeof window !== 'undefined' ? window.location.href : '','
+  type = 'website','
+  structuredData;
 }) => {
   useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
+    // Add structured data to the page;
+    if (structuredData) {;
       const script = document.createElement('script');
-      script.type = 'application/ld+json';
+      script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
-
       return () => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);
@@ -65,36 +63,41 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
   ];
-
   return (
     <Helmet>
       <title>{title}</title>
-      {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
-      ))}
-      
+      {metaTags.map((tag, _index) => (}
+        <meta key={_index} {...tag} />
+))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
-};
-
+  )
+}
+// Default structured data for the organization;
+      <link rel="canonical" href={url} />{/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
+)}
 // Default structured data for the organization
-export const defaultStructuredData = {
+const  {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",
@@ -105,10 +108,8 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/zion-tech-group",
+    "availableLanguage": "English"},
+  "sameAs": ["https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
     "https://github.com/zion-tech-group"
   ],
