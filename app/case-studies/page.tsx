@@ -1,130 +1,70 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
-
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Users, Award, TrendingUp, Globe, Zap } from 'lucide-react';
 
 export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
-      title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service bottlenecks",
-      solution: "AI-powered inventory optimization and automated customer support",
+      title: 'E-commerce Platform Transformation',
+      client: 'RetailCorp',
+      industry: 'E-commerce',
+      challenge: 'Legacy system causing 40% cart abandonment rate',
+      solution: 'Implemented AI-powered recommendation engine and modern cloud infrastructure',
       results: [
-        "60% reduction in inventory costs",
-        "40% increase in customer satisfaction",
-        "80% faster response times",
-        "35% increase in sales"
+        '60% increase in conversion rate',
+        '45% reduction in page load time',
+        '80% improvement in user engagement',
+        '50% increase in average order value'
       ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: true
+      image: '/images/case-studies/ecommerce.jpg',
+      duration: '6 months',
+      team: '12 developers'
     },
     {
       id: 2,
-      title: "Healthcare Data Analytics Implementation",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and treatment optimization",
-      solution: "Advanced AI analytics platform for predictive healthcare insights",
+      title: 'Healthcare Data Analytics Platform',
+      client: 'MedTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Fragmented patient data across multiple systems',
+      solution: 'Built unified data platform with AI-powered analytics and predictive modeling',
       results: [
-        "45% improvement in diagnosis accuracy",
-        "30% reduction in treatment costs",
-        "50% faster data processing",
-        "25% increase in patient outcomes"
+        '90% reduction in data processing time',
+        '75% improvement in diagnostic accuracy',
+        '60% cost savings in data management',
+        '100% compliance with HIPAA regulations'
       ],
-      duration: "8 months",
-      services: ["AI Analytics", "Data Engineering", "Machine Learning"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      image: '/images/case-studies/healthcare.jpg',
+      duration: '8 months',
+      team: '15 developers'
     },
     {
       id: 3,
-      title: "Manufacturing Process Automation",
-      company: "Industrial Corp",
-      industry: "Manufacturing",
-      challenge: "Inefficient production processes and quality control issues",
-      solution: "AI-driven process optimization and automated quality monitoring",
+      title: 'Financial Services Automation',
+      client: 'FinTech Global',
+      industry: 'Financial Services',
+      challenge: 'Manual processes causing delays and errors',
+      solution: 'Implemented RPA and AI-driven automation for loan processing and risk assessment',
       results: [
-        "55% increase in production efficiency",
-        "70% reduction in defects",
-        "40% decrease in downtime",
-        "25% cost savings"
+        '85% reduction in processing time',
+        '95% accuracy in risk assessment',
+        '70% cost reduction in operations',
+        '50% increase in customer satisfaction'
       ],
-      duration: "10 months",
-      services: ["AI Automation", "IoT Solutions", "Process Optimization"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Financial Services Risk Management",
-      company: "FinanceFirst",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection and risk assessment processes",
-      solution: "AI-powered fraud detection and real-time risk analysis",
-      results: [
-        "85% improvement in fraud detection",
-        "60% reduction in false positives",
-        "90% faster risk assessment",
-        "50% decrease in financial losses"
-      ],
-      duration: "7 months",
-      services: ["AI Fraud Detection", "Risk Analytics", "Cybersecurity"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Retail Customer Experience Enhancement",
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Personalized customer experience and inventory management",
-      solution: "AI-driven personalization and demand forecasting",
-      results: [
-        "65% increase in customer engagement",
-        "40% improvement in inventory turnover",
-        "50% boost in average order value",
-        "30% increase in customer retention"
-      ],
-      duration: "5 months",
-      services: ["AI Marketing", "Recommendation Engine", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Logistics Optimization with 5G",
-      company: "LogiTech",
-      industry: "Logistics",
-      challenge: "Real-time tracking and route optimization challenges",
-      solution: "5G-enabled IoT network with AI-powered route optimization",
-      results: [
-        "45% reduction in delivery times",
-        "35% decrease in fuel costs",
-        "80% improvement in tracking accuracy",
-        "25% increase in customer satisfaction"
-      ],
-      duration: "9 months",
-      services: ["5G Solutions", "IoT Integration", "AI Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
+      image: '/images/case-studies/fintech.jpg',
+      duration: '10 months',
+      team: '20 developers'
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
+    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
+    { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
+    { label: 'Team Members', value: '50+', icon: Users },
+    { label: 'Industry Awards', value: '25+', icon: Award }
   ];
 
   return (

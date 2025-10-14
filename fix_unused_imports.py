@@ -10,7 +10,7 @@ def fix_unused_imports(file_path):
             content = f.read()
         
         # Skip if file has merge conflicts
-        if '<<<<<<< HEAD' in content:
+        if '' in content:
             print(f"Skipping {file_path} - has merge conflicts")
             return False
         

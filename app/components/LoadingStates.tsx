@@ -3,7 +3,7 @@ import { Loader2 } from 'lucide-react';
 
 export const LoadingPage: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
         <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
@@ -105,15 +105,7 @@ export const LoadingPageEnhanced: React.FC<LoadingPageProps> = ({
 export default LoadingPage;
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
-    <div className="animate-pulse">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className="h-4 bg-gray-700 rounded mb-2"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
-        />
-      ))}
-    </div>
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
   );
 };
 

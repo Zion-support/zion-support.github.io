@@ -9,15 +9,14 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         print(f"Fixing merge conflicts in {file_path}")
         
         # Remove merge conflict markers and keep HEAD version
         # Pattern to match merge conflict blocks
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
-        
+        conflict_pattern = r'\n(.*?)\n.*?\n        
         # Replace with just the HEAD content
         def replace_conflict(match):
             head_content = match.group(1)
@@ -27,10 +26,9 @@ def fix_merge_conflicts(file_path):
         new_content = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
         
         # Clean up any remaining merge conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
-        new_content = re.sub(r'=======\n?', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]+\n?', '', new_content)
-        
+        new_content = re.sub(r'\n?', '', new_content)
+        new_content = re.sub(r'\n?', '', new_content)
+        new_content = re.sub(r'        
         # Clean up multiple consecutive newlines
         new_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', new_content)
         

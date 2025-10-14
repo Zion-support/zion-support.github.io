@@ -1,95 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
-import Layout from '../layout';
-      category: 'Blockchain Development',
-      items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-chain Solutions']
-    },
-    {
-      category: 'Web3 Integration',
-      items: ['Wallet Integration', 'MetaMask Support', 'Web3.js Integration', 'IPFS Storage', 'Decentralized Identity', 'DAO Governance']
-    },
-    {
-      category: 'Security & Audit',
-      items: ['Smart Contract Audits', 'Security Testing', 'Penetration Testing', 'Code Review', 'Vulnerability Assessment', 'Compliance Check']
-    },
-    {
-      category: 'Consulting',
-      items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance']
-    }
-  ];
+import { Helmet } from 'react-helmet-async';
+'use client'
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive blockchain and Web3 solutions for decentralized applications and smart contracts." />
+      </Helmet>
 
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/project',
-      description: 'Perfect for small blockchain projects',
-      features: [
-        'Basic smart contract development',
-        'Simple DApp creation',
-        'Token creation (ERC-20)',
-        'Basic security audit',
-        'Documentation',
-        '1 month support'
-      name: 'Professional',
-      price: '$7,999',
-      period: '/project',
-      description: 'Ideal for medium-scale blockchain solutions',
-      features: [
-        'Advanced smart contract development',
-        'Complex DApp development',
-        'Multiple token standards',
-        'Comprehensive security audit',
-        'DeFi protocol integration',
-        '3 months support',
-        'Performance optimization'
-      name: 'Enterprise',
-      price: '$19,999',
-      period: '/project',
-      description: 'Complete blockchain ecosystem development',
-      features: [
-        'Custom blockchain development',
-        'Multi-chain solutions',
-        'Advanced DeFi protocols',
-        'NFT marketplace development',
-        'Cross-chain integration',
-        '6 months support',
-        'Dedicated team',
-        '24/7 monitoring'
-      ],
-      popular: false
-    }
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Blockchain & Web3
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology and Web3 solutions. 
-              From smart contracts to DeFi protocols, we build the future of decentralized applications.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="#features"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                Learn More
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Blockchain & Web3 Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive blockchain and Web3 solutions for decentralized applications and smart contracts.
+              </p>
+              <Link to="/contact">
+                <FuturisticButton size="lg">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
               </Link>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
+      </div>
+    </>
+  );
+};
 
         {/* Features Section */}
         <section id="features" className="py-20 px-4">

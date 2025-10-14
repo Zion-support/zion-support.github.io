@@ -115,37 +115,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
+      </section>
+    </div>
+  )
 }
-
-// Higher-order component for easier usage
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
-    <ImprovedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </ImprovedErrorBoundary>
-  );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
-
-// Hook for functional components to handle errors
-export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
 
 export default ImprovedErrorBoundary;

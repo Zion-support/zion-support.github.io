@@ -43,25 +43,14 @@ const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-a
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
-// IT Services Pages
-const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
-const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
-const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
-const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
-const SoftwareDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
-const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
-const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+// Zion Services
+const ZionAnalyticsPage = React.lazy(() => import("./app/zion-analytics/page"));
+const ZionAIPlatformPage = React.lazy(() => import("./app/zion-ai-platform/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 
-// 5G Services Pages
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
-const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
+// 5G Services
+const FiveGNetworkOptimizationPage = React.lazy(() => import("./app/5g-network-optimization/page"));
+const FiveGInfrastructurePage = React.lazy(() => import("./app/5g-infrastructure/page"));
 
 // Micro SAAS Services Pages
 const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
@@ -120,11 +109,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <ImprovedErrorBoundary>

@@ -361,7 +361,16 @@ const ZionAIInventoryManager = () => {
         </div>
       </section>
     </div>
-  );
+  )
+}
+              Our AI inventory management experts are ready to help you streamline your operations.</p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+              Get Started Today</button></div></div></div></div>
+)}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+)}
 };
-
-export default ZionAIInventoryManager;

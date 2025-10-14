@@ -314,11 +314,10 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our powerful micro SAAS solutions designed to streamline your business operations. Analytics, security, cloud storage, and more." />
-        <meta name="keywords" content="micro saas, business software, analytics, security, cloud storage, productivity tools" />
+        <meta name="description" content="Comprehensive micro SAAS solutions for small and medium businesses." />
       </Helmet>
 
       <div className="min-h-screen pt-16">

@@ -165,7 +165,7 @@ const ZionAiCustomerInsights = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into actionable insights with Zion AI Customer Insights. Predictive analytics, sentiment analysis, and automated recommendations. Start your free trial!" />

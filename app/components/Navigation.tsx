@@ -182,9 +182,40 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </Link>
                   )}
                 </div>
-              ))}
+              )}
             </div>
-          </div>
+            
+            {/* AI Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleServices}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>AI Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
+                  </div>
+                  {aiServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <span className="font-medium">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              );
+            })}
 
           {/* Mobile menu button */}
           <div className="md:hidden">

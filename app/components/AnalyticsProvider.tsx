@@ -8,49 +8,90 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    // Track event with Google Analytics or other analytics service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', eventName, properties);
-    }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
+  const track = (event: string, properties?: Record<string, any>) => {
+    // Analytics tracking implementation;
+    console.log('Analytics Event:', event, properties);
+    // In a real implementation, you would send this to your analytics service;
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
+      (window as any).gtag('event', event, properties);
     }
   };
 
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    // Track page view with Google Analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-        ...properties
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    console.log('Analytics Identify:', userId, traits);
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {'
+        user_id: userId,
+        custom_map: traits;
       });
     }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, properties);
+  };
+
+  const page = (name: string, properties?: Record<string, any>) => {
+    console.log('Analytics Page:', name, properties);
+    if (typeof window !== 'undefined' && (window as any).gtag) {'
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {'
+        page_title: name,
+        page_location: window.location.href,
+        ...properties;
+      });
     }
   };
 
   useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Initialize Google Analytics or other analytics service
+    // Initialize analytics;
+    if (typeof window !== 'undefined') {'
+      // Load Google Analytics or other analytics scripts here;
       console.log('Analytics initialized');
-    }
+    };
+
+    initializeAnalytics();
   }, []);
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    try {
+      // Google Analytics 4 event tracking
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', eventName, {
+          event_category: properties?.category || 'general',
+          event_label: properties?.label || '',
+          value: properties?.value || 0,
+          ...properties,
+        });
+      }
+
+      // Custom analytics tracking
+      console.log('Event tracked:', eventName, properties);
+    } catch (error) {
+      console.error('Error tracking event:', error);
+    }
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    try {
+      // Google Analytics 4 page view tracking
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: pageName,
+          page_location: window.location.href,
+          ...properties,
+        });
+      }
+
+      // Custom page view tracking
+      console.log('Page view tracked:', pageName, properties);
+    } catch (error) {
+      console.error('Error tracking page view:', error);
+    }
+  };
 
   const value: AnalyticsContextType = {
     trackEvent,
-    trackPageView
+    trackPageView,
   };
 
   return (

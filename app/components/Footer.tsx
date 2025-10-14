@@ -14,9 +14,29 @@ const Footer: React.FC = () => {
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+  ];
+
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Support', href: '/support' },
+    { name: 'Community', href: '/community' },
+    { name: 'Status', href: '/status' },
+  ];
+
+  const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'GDPR', href: '/gdpr' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
   ];
   return (
     <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-700">
@@ -54,24 +74,110 @@ const Footer: React.FC = () => {
               <li><Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SAAS</Link></li>
             </ul>
             </div>
-          </div>
 
           {/* AI Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-services"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  to="/ai-analytics-dashboard-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Services Overview
+                  AI Analytics Dashboard
                 </Link>
               </li>
               <li>
                 <Link
+                  to="/ai-content-generator"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Content Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-cybersecurity-suite-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Cybersecurity Suite
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-customer-support-chatbot"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Customer Support
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-climate-prediction-engine"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Climate Prediction
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
                   to="/ai-analytics"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   AI Analytics
                 </Link>
@@ -79,7 +185,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/ai-automation"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   AI Automation
                 </Link>
@@ -87,7 +193,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/ai-content-generation"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   AI Content Generation
                 </Link>
@@ -95,72 +201,33 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/ai-customer-service"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
                   AI Customer Service
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-cybersecurity"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  to="/ai-marketing"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Cybersecurity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* IT Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold mb-4 text-green-400">IT Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/cloud-infrastructure"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Cloud Infrastructure
+                  AI Marketing
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/web-development"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/mobile-development"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/database-management"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Database Management
+                  Data Analytics
                 </Link>
               </li>
               <li>
                 <Link
                   to="/custom-software"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Software
+                  Custom Development
                 </Link>
               </li>
             </ul>
@@ -259,10 +326,15 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

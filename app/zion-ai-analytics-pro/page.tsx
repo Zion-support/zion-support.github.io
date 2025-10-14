@@ -174,7 +174,7 @@ export default function ZionAiAnalyticsPro() {
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, real-time dashboards, data visualization, business reporting, AI insights, data analytics platform"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-analytics-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-analytics-pro" />""
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
