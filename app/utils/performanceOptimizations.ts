@@ -1,6 +1,6 @@
 export const performanceOptimizations = {
   debounce: <T extends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
-    let timeout: NodeJS.Timeout
+    let timeout: NodeJS.Timeout;
     return ((...args: unknown[]) => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func.apply(this, args), wait);
@@ -8,7 +8,7 @@ export const performanceOptimizations = {
   },
   
   throttle: <T extends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
-    let inThrottle: boolean
+    let inThrottle: boolean;
     return ((...args: unknown[]) => {
       if (!inThrottle) {
         func.apply(this, args);
@@ -19,7 +19,7 @@ export const performanceOptimizations = {
   },
   
   memoize: <T extends (...args: unknown[]) => unknown>(func: T): T => {
-    const cache = new Map()
+    const cache = new Map();
     return ((...args: unknown[]) => {
       const key = JSON.stringify(args);
       if (cache.has(key)) {

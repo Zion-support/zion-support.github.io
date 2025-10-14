@@ -8,13 +8,15 @@ const ErrorPage: React.FC = () => {
 <title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50flexitems-centerjustify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-          <p className="text-gray-600">Please try again later.</p>
+          <h1 className="text-4xlfont-boldtext-gray-9 0 0mb-4">Something went wrong</h1>
+          <p className="text-gray-6 0 0">Please try again later.</p>
+          </div>
         </div>
       </div>
-</>
+    </>
   );
 };
+
 export default ErrorPage;
