@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Play, ArrowRight, Star, Users, ChevronLeft, Pause, ChevronRight, CheckCircle, Zap } from 'lucide-react';
 
 interface Feature {
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   stats?: {

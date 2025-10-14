@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Brain, Shield, Globe, Users, CheckCircle, Zap, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Slide {
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   features: string[];

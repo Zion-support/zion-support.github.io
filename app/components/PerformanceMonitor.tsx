@@ -83,7 +83,7 @@ const PerformanceMonitor = () => {
     const sendMetrics = () => {
       if (Object.keys(currentMetrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.log('Performance Metrics:', currentMetrics);
+        console.warn('Performance Metrics:', currentMetrics);
       }
     };
 
