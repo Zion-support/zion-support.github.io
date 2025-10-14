@@ -1,105 +1,70 @@
-'use client';';';
-import React from 'react';';';
-;import { Link } from 'react-router-dom';';';
-;import SEO from '../components/SEO';';';
-;import {}
+'use client';
+
+import React from 'react';
+import SEO from '../components/SEO';
+import {
   GlobeAltIcon,
   CpuChipIcon,
   ChartBarIcon,
   RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'';';
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
+
 export default function MicroSaaSPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
-        </div>
-      </div>
-    </div>
-  );
-}
   const services = [
-    {};
-      icon: "GlobeAltIcon",";";
-      title: "'Custom Micro SaaS Development'",'';';
-      description: "'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.'",'';';
-      features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support']'';';
+    {
+      icon: GlobeAltIcon,
+      title: "Micro-SaaS Development",
+      description: "Build focused, single-purpose SaaS applications that solve specific business problems.",
+      features: ['Rapid prototyping', 'Scalable architecture', 'API-first design', 'Multi-tenant support']
     },
-    {}
-      icon: "CpuChipIcon",";";
-      title: "'AI-Powered Micro SaaS'",'';';
-      description: "'Intelligent micro SaaS applications powered by artificial intelligence and machine learning.'",'';';
-      features: ['AI integration', 'Machine learning', 'Predictive analytics', 'Automated workflows']'';';
+    {
+      icon: CpuChipIcon,
+      title: "Cloud Infrastructure",
+      description: "Deploy and manage your micro-SaaS with reliable, scalable cloud infrastructure.",
+      features: ['Auto-scaling', 'Load balancing', 'Database management', 'Monitoring & alerts']
     },
-    {}
-      icon: "ChartBarIcon",";";
-      title: "'Analytics & Reporting'",'';';
-      description: "'Comprehensive analytics and reporting solutions for your micro SaaS applications.'",'';';
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Business intelligence']'';';
+    {
+      icon: ChartBarIcon,
+      title: "Analytics & Insights",
+      description: "Track user behavior and business metrics with comprehensive analytics.",
+      features: ['User analytics', 'Revenue tracking', 'Performance metrics', 'Custom dashboards']
     },
-    {}
-      icon: "RocketLaunchIcon",";";
-      title: "'Deployment & Scaling'",'';';
-      description: "'Seamless deployment and automatic scaling solutions for your micro SaaS applications.'",'';';
-      features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']'';';
+    {
+      icon: RocketLaunchIcon,
+      title: "Launch & Growth",
+      description: "Go to market quickly with our proven launch strategies and growth tools.",
+      features: ['MVP development', 'Marketing automation', 'User onboarding', 'Growth optimization']
     }
-  ]
-  const industries = [;
-    { name: "'E-commerce'", description: "'Online retail solutions'"},'';';
-    { name: "'Healthcare'", description: "'Medical practice management'"},'';';
-    { name: "'Finance'", description: "'Financial services tools'"},'';';
-    { name: "'Education'", description: "'Learning management systems'"},'';';
-    { name: "'Real Estate'", description: "'Property management tools'"},'';';
-    { name: "'Manufacturing'", description: "'Production optimization'"}'';';
-  ]
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEO title="Micro-SaaS Solutions - Zion Tech Group" description="Build and scale micro-SaaS applications" />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-4">Micro-SaaS Solutions</h1>
+          <p className="text-gray-300 text-lg">Build focused, profitable SaaS applications</p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-slate-800 p-6 rounded-lg">
+              <service.icon className="h-8 w-8 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <ul className="space-y-2">
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-sm text-gray-400">
+                    <CheckCircleIcon className="h-4 w-4 text-green-400 mr-2" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-    <React.Fragment></React.Fragment>
-      <Helmet>
-        <title>MicroSaaSPage - Zion Tech Group</title>
-        <meta name="description" content="MicroSaaSPage - Zion Tech Group" />";";
-      </Helmet>
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <div className="text-center">";";
-      </div>
-      </div>
-      </div>
-      </div>;
-      </div>;
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>;";";
-          <p className="text-gray-30o0">This page is under construction.</p>;";";
-        </div>;
-      </div>;
-    </>;
-  )};
+}

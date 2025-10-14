@@ -1,4 +1,4 @@
 // sitemap-page - Basic implementation
-export default function sitemap-page() {
+export default function SitemapPage() {
   return null;
 }
