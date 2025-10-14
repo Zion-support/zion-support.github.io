@@ -13,7 +13,10 @@ module.exports = {
     '^@/content/(.*)$': '<rootDir>/src/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json'
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -25,10 +28,17 @@ module.exports = {
     '!src/**/*.stories.{ts,tsx}',
     '!src/**/index.{ts,tsx}'
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/'
+  ],
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$))',
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   globals: {

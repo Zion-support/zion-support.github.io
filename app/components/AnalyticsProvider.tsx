@@ -11,7 +11,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {

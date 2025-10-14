@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 export default function ContactPage() {
   return (
@@ -83,6 +84,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }

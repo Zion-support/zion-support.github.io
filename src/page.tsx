@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 export default function Page() {
 

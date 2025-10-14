@@ -4,7 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
-import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 // import LoadingStates from './app/components/LoadingStates';
@@ -15,7 +14,7 @@ import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 
-function App() {
+const App: React.FC = () => {
   return (
     <ErrorBoundary fallback={<div>Something went wrong.</div>}>
       <HelmetProvider>
@@ -38,6 +37,6 @@ function App() {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+};
 
 export default App;

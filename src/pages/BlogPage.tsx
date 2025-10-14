@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 export default function BlogPage() {
   return (
@@ -56,6 +57,11 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </>
+=======
+)
+    </React.Fragment>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c3d6
   );
 }

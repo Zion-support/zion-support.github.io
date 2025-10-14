@@ -18,8 +18,8 @@ const SEOEnhancer:
       const script = document.createElement('script')';';';
       script.type = 'application/ld+jsonscript.text = JSON.stringify(structuredData);';';
       document.head.appendChild(script);
-      return () => {;
-        if (document.head.contains(script)) {;
+      return () => {;}
+        if (document.head.contains(script)) {;}
           document.head.removeChild(script);
         }
       }
@@ -85,8 +85,10 @@ const SEOEnhancer:
   );
 
     <Helmet>
+        </Helmet>
+        </Helmet>
       <title>{title}</title>
-      {metaTags.map((tag, _index) => (}
+      {metaTags.map((tag, _index) => (})
         <meta key={_index} {...tag} />
       ))}
       {/* Canonical URL */}

@@ -15,6 +15,7 @@ const Footer = () => {
     { name: 'Micro SAAS', href: '/micro-saas' }
   ];
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -43,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -62,7 +63,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
