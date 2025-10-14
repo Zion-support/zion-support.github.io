@@ -7,12 +7,15 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
 ) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-  const WrappedComponent = (props: React.ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* @ts-expect-error - Complex type inference issue with lazy components */}
-      <LazyComponent {...props} />
-    </Suspense>
-  );
+  const WrappedComponent = (props: React.ComponentProps<T>) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const LazyComponentAny = LazyComponent as any;
+    return (
+      <Suspense fallback={fallback || <div>Loading...</div>}>
+        <LazyComponentAny {...props} />
+      </Suspense>
+    );
+  };
   WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
   return WrappedComponent;
 }
@@ -24,12 +27,15 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
 ) {
   const LazyComponent = lazy(importFunction);
   
-  const WrappedComponent = (props: React.ComponentProps<T>) => (
-    <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* @ts-expect-error - Complex type inference issue with lazy components */}
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-  WrappedComponent.displayName = `createLazyComponent(${LazyComponent.name || 'Component'})`;
+  const WrappedComponent = (props: React.ComponentProps<T>) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const LazyComponentAny = LazyComponent as any;
+    return (
+      <Suspense fallback={fallback || <div>Loading...</div>}>
+        <LazyComponentAny {...props} />
+      </Suspense>
+    );
+  };
+  WrappedComponent.displayName = 'createLazyComponent';
   return WrappedComponent;
 }
