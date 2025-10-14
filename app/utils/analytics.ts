@@ -10,9 +10,7 @@ export const analytics = {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_path: page
-
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   }
 }

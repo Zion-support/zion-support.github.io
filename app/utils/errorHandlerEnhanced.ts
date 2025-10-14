@@ -1,8 +1,4 @@
 export const errorHandlerEnhanced = {
-  handle: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
   handle: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
       message: error.message,
@@ -13,25 +9,19 @@ export const errorHandlerEnhanced = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      // eslint-disable-next-line no-console
-      console.error('Error handled: ', errorInfo);
       console.error('Error handled: ', errorInfo)
     }
     
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-
-      });
         description: error.message,
-        fatal: false;
-      })
+        fatal: false
+      });
     }
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR';
+      code: 'GENERIC_ERROR'
     }
   }
-}
 }

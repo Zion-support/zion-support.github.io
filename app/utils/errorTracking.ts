@@ -1,8 +1,4 @@
 export const errorTracking = {
-  track: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
   track: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
       message: error.message,
@@ -13,20 +9,14 @@ export const errorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
-      // eslint-disable-next-line no-console
-      console.error('Error tracked: ', errorInfo);
       console.error('Error tracked: ', errorInfo)
     }
     
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-
-      });
         description: error.message,
-        fatal: false;
-      })
+        fatal: false
+      });
     }
   }
-}
 }
