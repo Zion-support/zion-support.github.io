@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../src/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../src/components/AdvancedPerformanceMonitor';
