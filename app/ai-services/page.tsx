@@ -1,276 +1,105 @@
-import React from 'react';'react-helmet-async;'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;';
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;';
-import FuturisticBackground from '../components/FuturisticBackground;'
-const AiServicesPage: "React.FC = () => {"
-  const services = [{;
-      icon: "Brain",'';
-      title: "'AI Consulting'",';''
-      description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",';''
-      color: "'from-purple-50o0 to-pink-50o0';"}'
-    },
-    {
-      icon: "BarChart3",''
-      title: "'AI Analytics'",';''
-      description: "'Advanced analytics solutions powered by machine learning and AI algorithms.'",';''
-      color: "'from-blue-50o0 to-cyan-50o0';"}'
-    },
-    {
-      icon: "Zap",''
-      title: "'AI Automation'",';''
-      description: "'Intelligent automation solutions to streamline your business processes.'",';''
-      color: "'from-green-50o0 to-emerald-50o0';"}'
-    },
-    {
-      icon: "FileText",''
-      title: "'AI Content Generation'",';''
-      description: "'AI-powered content creation for marketing", documentation, and communication.',';''
-      color: "'from-orange-50o0 to-red-50o0';"}'
-    },
-    {
-      icon: "MessageSquare",''
-      title: "'AI Customer Service'",';''
-      description: "'Intelligent chatbots and customer service solutions powered by AI.'",';''
-      color: "'from-indigo-50o0 to-purple-50o0';"}'
-    },
-    {
-      icon: "ico,n: Shield",
-      title: "'AI Security'",';'
-      description: "'AI-powered security solutions to protect your business and data.'",';'
-      color: "'from-cyan-50o0 to-blue-50o0';'"
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';'
-import FuturisticBackground from '../components/FuturisticBackground';'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground'
-const AiServicesPage: "React.FC = () => {"
-  const services = [
-    {
-      icon: "Brain",
-      title: "'AI Consulting'",'
-      description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",'
-      color: "'from-purple-50o0 to-pink-50o0'"
-    },
-    {
-      icon: "BarChart3",
-      title: "'AI Analytics'",'
-      description: "'Advanced analytics solutions powered by AI to extract insights from your data.'",'
-      color: "'from-blue-50o0 to-cyan-50o0'"
-    },
-    {
-      icon: "Zap",
-      title: "'AI Automation'",'
-      description: "'Automate repetitive tasks and processes with intelligent AI solutions.'",'
-      color: "'from-green-50o0 to-emerald-50o0'"
-    },
-    {
-      icon: "FileText",
-      title: "'AI Content Generation'",'
-      description: "'Generate high-quality content at scale using advanced AI models.'",'
-      color: "'from-orange-50o0 to-red-50o0'"
-    },
-    {
-      icon: "MessageSquare",
-      title: "'AI Chatbots'",'
-      description: "'Intelligent chatbots and virtual assistants for customer support.'",'
-      color: "'from-indigo-50o0 to-purple-50o0'"
-    },
-    {
-      icon: "Shield",
-      title: "'AI Security'",'
-      description: "'AI-powered security solutions to protect your business from threats.'",'
-      color: "'from-red-50o0 to-pink-50o0'"
-  }
-  ]
+import { 
+  CpuChipIcon, 
+  ShieldCheckIcon, 
+  CloudIcon, 
+  RocketLaunchIcon,
+  CheckCircleIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+
+export default function Page() {
   const features = [
     {
-
-      title: 'Custom AI Solutions','
-      description: 'Tailored AI implementations designed specifically for your business needs.','
-      icon: '🤖'},
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology',
+      icon: CpuChipIcon,
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      title: 'Machine Learning Models','
-      description: 'Advanced ML models trained on your data for optimal performance.','
-      icon: '🧠'},
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for your business',
+      icon: ShieldCheckIcon,
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      title: 'Real-time Processing','
-      description: 'High-performance AI systems that process data in real-time.','
-      icon: '⚡'},
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business needs',
+      icon: CloudIcon,
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      title: 'Scalable Architecture','
-      description: 'AI solutions that grow with your business and handle increasing loads.','
-      icon: '📈',
-      icon: Shield,''
-      title: 'AI Security',';''
-      description: 'AI-powered security solutions to protect your business and data.',';''
-      color: 'from-cyan-500 to-blue-500';}'
-
+      title: 'Innovation First',
+      description: 'Always at the forefront of technological innovation',
+      icon: RocketLaunchIcon,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
-  const testimonials = [{
-      name: "Dr. Sarah Johnson",";
-      company: "MedTech Solutions",";
-      role: "CTO",''";
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';'"
-      rating: "5;"
-  }
-    },
-    {
-      name: "Michael Chen","
-      company: "E-commerce Plus","
-      role: "CEO",''"
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';'"
-      rating: "5;"
-  }
-    },
-    {
-      name: "Emily Rodriguez","
-      company: "FinanceFlow","
-      role: "Head of Analytics","
-      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.","
-      rating: "5;"
-  }
-    }
-  ]
   return (
-    <div className="min-h-screen bg-slate-90o0">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions from Zion Tech Group." />
+        <meta name="keywords" content="page, technology solutions, AI, cloud, cybersecurity" />
       </Helmet>
-      
-      <FuturisticBackground />
-      
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI Services
+
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              Page
             </h1>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Transform your business with our comprehensive AI services designed to drive innovation and growth.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our cutting-edge page solutions. 
+              Built with the latest technology and designed for success.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white"/10 backdrop-blur-lg rounded-xl p-6 border border-white"/20 hover:bg-white"/20 transition-all duration-30o0"
-                >
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-30o0 mb-4">
-                    {service.description}
-                  </p>
-                  <button className="flex items-center text-white hover:text-gray-30o0 transition-colors">
-                    Learn More
-                    <Right className="w-4 h-4 ml-2" />
-                  </button>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the features that make our solutions stand out
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 transition-colors">
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Let our AI experts help you unlock the full potential of artificial intelligence.
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our page solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-3 rounded-lg hover: from-purple-70o0 hove,r:to-cyan-70o0 transition-all duration-30o0">
-                Get Started
-              </button>
-              <button className="border border-white"/30 text-white px-8 py-3 rounded-lg hover:bg-white"/10 transition-all duration-30o0">
-                Learn More
-              </button>
-            </div>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm: px-6 l,g:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Our AI Services
-            </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-slate-80o0 rounded-lg p-6 hover: bg-slate-70o0 transition-all duration-30o0 transform hove,r:scale-10o5">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-30o0 mb-4">{service.description}</p>
-                  <button className="text-purple-40o0 hover:text-purple-30o0 font-medium flex items-center">
-                    Learn More <Right className="w-4 h-4 ml-1" />
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 l,g:px-8 bg-slate-80o0">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Why Choose Our AI Services?
-            </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-30o0">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 l,g:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Let's discuss how our AI services can help you achieve your goals.'
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 hover: from-purple-70o0 hover:to-cyan-70o0 text-white font-bold py-3 px-8 rounded-lg transition-all duration-30o0 transform hove,r:scale-10o5">
-                Schedule Consultation
-              </button>
-              <button className="border border-purple-50o0 text-purple-40o0 hover: bg-purple-50o0 hove,r:text-white font-bold py-3 px-8 rounded-lg transition-all duration-30o0">
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )}
-export default AiServicesPage
+}
