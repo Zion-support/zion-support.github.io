@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface GlobalErrorBoundaryProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function GlobalErrorBoundary({ children, className = '' }: GlobalErrorBoundaryProps) {
+const GlobalErrorBoundary = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>GlobalErrorBoundary</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default GlobalErrorBoundary;
+
+

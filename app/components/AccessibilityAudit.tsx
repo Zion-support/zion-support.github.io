@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface AccessibilityAuditProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AccessibilityAudit({ children, className = '' }: AccessibilityAuditProps) {
+const AccessibilityAudit = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>AccessibilityAudit</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default AccessibilityAudit;
+
+

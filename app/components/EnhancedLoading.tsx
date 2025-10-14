@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface EnhancedLoadingProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function EnhancedLoading({ children, className = '' }: EnhancedLoadingProps) {
+const EnhancedLoading = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>EnhancedLoading</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default EnhancedLoading;
+
+

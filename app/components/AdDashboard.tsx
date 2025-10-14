@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface AdDashboardProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AdDashboard({ children, className = '' }: AdDashboardProps) {
+const AdDashboard = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>AdDashboard</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default AdDashboard;
+
+

@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface AdAnalyticsDashboardProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AdAnalyticsDashboard({ children, className = '' }: AdAnalyticsDashboardProps) {
+const AdAnalyticsDashboard = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>AdAnalyticsDashboard</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default AdAnalyticsDashboard;
+
+

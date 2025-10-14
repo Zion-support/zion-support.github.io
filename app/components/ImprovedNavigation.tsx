@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface ImprovedNavigationProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function ImprovedNavigation({ children, className = '' }: ImprovedNavigationProps) {
+const ImprovedNavigation = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>ImprovedNavigation</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default ImprovedNavigation;
+
+

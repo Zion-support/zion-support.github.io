@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface FuturisticButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function FuturisticButton({ children, className = '' }: FuturisticButtonProps) {
+const FuturisticButton = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>FuturisticButton</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default FuturisticButton;
+
+

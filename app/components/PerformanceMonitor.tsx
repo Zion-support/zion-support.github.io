@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface PerformanceMonitorProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function PerformanceMonitor({ children, className = '' }: PerformanceMonitorProps) {
+const PerformanceMonitor = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>PerformanceMonitor</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default PerformanceMonitor;
+
+

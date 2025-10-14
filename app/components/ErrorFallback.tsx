@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface ErrorFallbackProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function ErrorFallback({ children, className = '' }: ErrorFallbackProps) {
+const ErrorFallback = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>ErrorFallback</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default ErrorFallback;
+
+

@@ -1,15 +1,5 @@
-'use client';
-import React from 'react';
+import { createContext } from 'react';
 
-interface AnalyticsContextDefinitionProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AnalyticsContextDefinition({ children, className = '' }: AnalyticsContextDefinitionProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-}
+interface AnalyticsContextType {;
+  trackEvent: '(eventNam,e: string, properties ?  : Record<string, any>) => void"trackPageView: "(pageNam,e: string) => void}"const  createContext<AnalyticsContextType | undefined>(undefined);"export type { AnalyticsContextType }"export type { AnalyticsContextType };</AnalyticsContextType>

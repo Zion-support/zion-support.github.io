@@ -1,15 +1,18 @@
-'use client';
 import React from 'react';
 
-interface AdvancedPerformanceMonitorProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AdvancedPerformanceMonitor({ children, className = '' }: AdvancedPerformanceMonitorProps) {
+const AdvancedPerformanceMonitor = () => {
+
   return (
-    <div className={className}>
-      {children}
+    div>
+      <h2>AdvancedPerformanceMonitor</h2>
+  );
+  );
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+export default AdvancedPerformanceMonitor;
+
+
+

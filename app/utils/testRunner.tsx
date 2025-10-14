@@ -1,6 +1,6 @@
-export const TestRunner = () => {
-  // TestRunner utility function
-  return true;
-};
+import React from 'react';
 
-export default TestRunner;
+
+'// testRunner - Basic implementation'export default function testRunner() {
+  return null;
+};

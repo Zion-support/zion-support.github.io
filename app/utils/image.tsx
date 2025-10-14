@@ -1,6 +1,4 @@
-export const Image = () => {
-  // Image utility function
-  return true;
+// image - Basic implementation
+export default function image() {
+  return null;
 };
-
-export default Image;

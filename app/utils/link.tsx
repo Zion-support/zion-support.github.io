@@ -1,6 +1,4 @@
-export const Link = () => {
-  // Link utility function
-  return true;
+// link - Basic implementation
+export default function link() {
+  return null;
 };
-
-export default Link;

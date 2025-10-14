@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface HeaderProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function Header({ children, className = '' }: HeaderProps) {
+const Header = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>Header</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default Header;
+
+

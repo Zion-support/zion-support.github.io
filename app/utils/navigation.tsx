@@ -1,6 +1,6 @@
-export const Navigation = () => {
-  // Navigation utility function
-  return true;
-};
+import React from 'react';
 
-export default Navigation;
+
+'// navigation - Basic implementation'export default function navigation() {
+  return null;
+};

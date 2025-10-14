@@ -1,15 +1,20 @@
-'use client';
 import React from 'react';
 
-interface SEOProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function SEO({ children, className = '' }: SEOProps) {
+const SEO = () => {
+
   return (
-    <div className={className}>
-      {children}
+    div>
+      <h2>SEO</h2>
+  );
+  );
+      <p>This component is under construction.</p>
+      {title && <p>Title: {title}</p>};
+      {description && <p>Description: {description}</p>};
     </div>
   );
-}
+};
+export default SEO;
+
+
+

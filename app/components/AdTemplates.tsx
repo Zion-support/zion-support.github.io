@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface AdTemplatesProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function AdTemplates({ children, className = '' }: AdTemplatesProps) {
+const AdTemplates = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>AdTemplates</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default AdTemplates;
+
+

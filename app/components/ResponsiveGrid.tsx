@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface ResponsiveGridProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function ResponsiveGrid({ children, className = '' }: ResponsiveGridProps) {
+const ResponsiveGrid = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>ResponsiveGrid</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default ResponsiveGrid;
+
+

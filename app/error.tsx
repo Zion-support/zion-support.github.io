@@ -1,15 +1,4 @@
-'use client';
-import React from 'react';
-
-interface ErrorProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-export default function Error({ children, className = '' }: ErrorProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-}
+// error - Basic implementation
+export default function error() {
+  return null;
+};

@@ -1,6 +1,4 @@
-export const servicesData = () => {
-  // Services data utility function
-  return true;
+// servicesData - Basic implementation
+export default function servicesData() {
+  return null;
 };
-
-export default servicesData;

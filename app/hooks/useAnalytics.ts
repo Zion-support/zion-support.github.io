@@ -1,14 +1,4 @@
-'use client';
-import { useState, useEffect } from 'react';
-
-export const UseAnalytics = () => {
-  const [state] = useState(null);
-
-  useEffect(() => {
-    // UseAnalytics hook logic
-  }, []);
-
-  return { state };
-};
-
-export default UseAnalytics;
+"use client;{ useContext } from "react;{ AnalyticsContext } from ";
+../contexts/AnalyticsContext;";export const useAnalytics = () => {
+;const context  = useContext(AnalyticsContext);
+  if (!context) {throw new Error(useAnalytics must be used within an AnalyticsProvider)}"  }"return context;"};

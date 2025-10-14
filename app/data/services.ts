@@ -1,6 +1,5 @@
-export const services = () => {
-  // Services utility function
-  return true;
-};
+"use client;"// services utility; export const services = () => {
+} // Implementation; return true}""} export default services;
 
-export default services;
+
+

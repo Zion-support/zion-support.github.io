@@ -1,6 +1,4 @@
-export const ErrorHandler = () => {
-  // ErrorHandler utility function
-  return true;
+// errorHandler - Basic implementation
+export default function errorHandler() {
+  return null;
 };
-
-export default ErrorHandler;

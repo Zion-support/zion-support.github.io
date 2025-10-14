@@ -1,25 +1,25 @@
 'use client';
 import React, { useCallback, useEffect } from 'react';
 
+
+
+
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
-}
-
+};
 interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;
   value?: number;
-}
-
+};
 interface PageView {
   page: string;
   title: string;
   url: string;
   timestamp: number;
-}
-
+};
 const EnhancedAnalytics: React.FC = () => {
   // Track page views
   const trackPageView = useCallback((page: string, title: string, url: string) => {
@@ -105,7 +105,7 @@ const EnhancedAnalytics: React.FC = () => {
           action: 'Page Visible',
           category: 'User Behavior'
         });
-      }
+      };
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
@@ -149,8 +149,8 @@ const EnhancedAnalytics: React.FC = () => {
             label: '90%',
             value: 90
           });
-        }
-      }
+        };
+      };
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -184,7 +184,7 @@ const EnhancedAnalytics: React.FC = () => {
           category: 'User Interaction',
           label: link.href
         });
-      }
+      };
     };
 
     document.addEventListener('click', handleLinkClick);
@@ -197,7 +197,7 @@ const EnhancedAnalytics: React.FC = () => {
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
           trackPerformance('FCP', fcpEntry.startTime);
-        }
+        };
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -215,7 +215,7 @@ const EnhancedAnalytics: React.FC = () => {
         entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
           if (entry.processingStart) {
             trackPerformance('FID', entry.processingStart - entry.startTime);
-          }
+          };
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -229,7 +229,7 @@ const EnhancedAnalytics: React.FC = () => {
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
             trackPerformance('CLS', clsValue);
-          }
+          };
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });

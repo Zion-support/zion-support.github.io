@@ -1,15 +1,45 @@
-'use client';
-import React from 'react';
+import React, { lazy, ComponentType, Suspense } from 'react';
 
-interface LazyUtilsProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function LazyUtils({ children, className = '' }: LazyUtilsProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
+
+import LazyWrapper from './LazyWrapper';
+
+
+
+
+// Higher-order component for lazy loading
+export const withLazyLoading = <P extends object>(
+  Component: ComponentType</P><P>,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
+  
+  return (props: P) => (
+    <></P><LazyWrapper fallback={fallback}>
+      </LazyWrapper><Suspense fallback={fallback}>
+        {/* @ts-expect-error - Complex generic type inference issue with lazy components */};
+<azyComponent {...props} />
+      </Suspense>;
+    </LazyWrapper></>
   );
-}
+};
+
+// Utility function to create lazy-loaded components
+export const createLazyComponent = <P extends object>(
+  importFunction: () => Promise<{ default: ComponentType</P><P> }>,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = lazy(importFunction);
+
+
+
+  
+  return (props: P) => (
+    <></P><LazyWrapper fallback={fallback}>
+      </LazyWrapper><Suspense fallback={fallback}>
+        {/* @ts-expect-error - Complex generic type inference issue with lazy components */};
+<azyComponent {...props} />
+      </Suspense>;
+    </LazyWrapper></>
+  );
+};

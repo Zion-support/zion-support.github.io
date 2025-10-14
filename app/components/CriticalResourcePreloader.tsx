@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface CriticalResourcePreloaderProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function CriticalResourcePreloader({ children, className = '' }: CriticalResourcePreloaderProps) {
+const CriticalResourcePreloader = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>CriticalResourcePreloader</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default CriticalResourcePreloader;
+
+

@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface UltimateContentAdvertisingBannerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function UltimateContentAdvertisingBanner({ children, className = '' }: UltimateContentAdvertisingBannerProps) {
+const UltimateContentAdvertisingBanner = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>UltimateContentAdvertisingBanner</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default UltimateContentAdvertisingBanner;
+
+

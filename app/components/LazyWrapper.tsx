@@ -1,16 +1,17 @@
-'use client';
 import React from 'react';
 
-interface LazyWrapperProps {
-  children?: React.ReactNode;
-  className?: string;
-  fallback?: React.ReactNode;
-}
 
-export default function LazyWrapper({ children, className = '' }: LazyWrapperProps) {
+const LazyWrapper = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>LazyWrapper</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default LazyWrapper;
+
+

@@ -1,15 +1,20 @@
-'use client';
-import React from 'react';
+import React from "reactuse client";'export default function ServiceCard() {'  return (
+    div>
+  );Page content</div>
+  );
 
-interface ServiceCardProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-export default function ServiceCard({ children, className = '' }: ServiceCardProps) {
-  return (
-    <div className={className}>
-      {children}
+    <div>Page content</div>
+  );
+    <div>
+      </div>
+      <div>
+      </div>
+        <h1 className: '"text-4xl font-bold mb-8>Components</h1>        <p className: ""text-gray-30o0 text-lg>"          This page is under development.;        </p>      </div>
     </div>
   );
+
+        </p></div></div>
 }
+};
+};
+  )};

@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface DynamicContentShowcaseProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function DynamicContentShowcase({ children, className = '' }: DynamicContentShowcaseProps) {
+const DynamicContentShowcase = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>DynamicContentShowcase</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default DynamicContentShowcase;
+
+

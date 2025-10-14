@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface ImprovedSidebarProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function ImprovedSidebar({ children, className = '' }: ImprovedSidebarProps) {
+const ImprovedSidebar = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>ImprovedSidebar</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default ImprovedSidebar;
+
+

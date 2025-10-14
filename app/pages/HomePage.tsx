@@ -1,15 +1,4 @@
-'use client';
-import React from 'react';
-
-interface HomePageProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-export default function HomePage({ children, className = '' }: HomePageProps) {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-}
+// HomePage - Basic implementation
+export default function HomePage() {
+  return null;
+};

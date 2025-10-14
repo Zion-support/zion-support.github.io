@@ -1,15 +1,12 @@
-'use client';
-import React from 'react';
+import React from "react";
 
-interface ResponsiveContainerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function ResponsiveContainer({ children, className = '' }: ResponsiveContainerProps) {
+"interface ResponsiveContainerProps {}"children: 
+  c,lassName ?  : string
+
+const ResponsiveContainer: React.FC<Props> = ({ children  }) => {};
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>Page content</div>
   );
-}
+  );
+  );</Props>

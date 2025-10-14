@@ -1,15 +1,17 @@
-'use client';
 import React from 'react';
 
-interface SEOOptimizerProps {
-  children?: React.ReactNode;
-  className?: string;
-}
 
-export default function SEOOptimizer({ children, className = '' }: SEOOptimizerProps) {
+const SEOOptimizer = () => {
+
   return (
-    <div className={className}>
-      {children}
-    </div>
+    div>
+      <h2>SEOOptimizer</h2>
   );
-}
+  );
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
+  );
+};
+export default SEOOptimizer;
+
+

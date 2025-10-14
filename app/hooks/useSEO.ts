@@ -1,14 +1,22 @@
-'use client';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-export const UseSEO = () => {
-  const [state] = useState(null);
 
+
+
+export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
-    // UseSEO hook logic
-  }, []);
-
-  return { state };
+    // Add structured data to the page
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+      return () => {
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        };
+      };
+    };
+    return undefined;
+  }, [structuredData]);
 };
-
-export default UseSEO;
