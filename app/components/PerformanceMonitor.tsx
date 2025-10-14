@@ -79,9 +79,7 @@ const PerformanceMonitor = () => {
     const sendMetrics = () => {
       if (Object.keys(metrics).length > 0) {
         // Send to analytics service
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Metrics:', metrics);
-        }
+        // Performance metrics are collected silently in production
         
         // You can send to your analytics service here
         // Example: analytics.track('performance_metrics', metrics);

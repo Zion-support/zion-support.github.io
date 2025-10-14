@@ -4,9 +4,7 @@ export const performanceMonitor = {
     fn()
     const end = performance.now()
     const duration = end - start
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`${name} took ${duration.toFixed(2)}ms`)
-    }
+    // Performance measurement completed silently
     return duration
   },
   
@@ -15,9 +13,7 @@ export const performanceMonitor = {
     await fn()
     const end = performance.now()
     const duration = end - start
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`${name} took ${duration.toFixed(2)}ms`)
-    }
+    // Performance measurement completed silently
     return duration
   },
   
@@ -30,10 +26,7 @@ export const performanceMonitor = {
   measure: (name: string, startMark: string, endMark: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.measure(name, startMark, endMark)
-      const measure = performance.getEntriesByName(name)[0]
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
-      }
+      // Performance measurement completed silently
     }
   }
 }
