@@ -1,7 +1,10 @@
+/* eslint-env serviceworker */
+/* global self, caches, clients, fetch, URL, location, console */
+
 // Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1'
 const STATIC_CACHE = 'static-v1'
 const DYNAMIC_CACHE = 'dynamic-v1'
+
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
@@ -11,6 +14,7 @@ const STATIC_ASSETS = [
   '/images/icon-192x192.png',
   '/images/icon-512x512.png'
 ]
+
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -24,6 +28,7 @@ self.addEventListener('install', (event) => {
       })
   )
 })
+
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -43,10 +48,12 @@ self.addEventListener('activate', (event) => {
       })
   )
 })
+
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event
   const url = new URL(request.url)
+  
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return
@@ -91,6 +98,7 @@ self.addEventListener('fetch', (event) => {
       })
   )
 })
+
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -100,6 +108,7 @@ self.addEventListener('sync', (event) => {
     )
   }
 })
+
 // Push notifications
 self.addEventListener('push', (event) => {
   const options = {
@@ -114,12 +123,12 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-            title: 'Go to the site',
+        title: 'Go to the site',
         icon: '/images/icon-192x192.png'
       },
       {
         action: 'close',
-            title: 'Close notification',
+        title: 'Close notification',
         icon: '/images/icon-192x192.png'
       }
     ]
@@ -128,6 +137,7 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification('Zion Tech Group', options)
   )
 })
+
 // Notification click handler
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
