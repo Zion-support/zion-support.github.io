@@ -2,14 +2,12 @@ import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
-import React, { Suspense } from 'react';
   title: string;
   description: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
 }
-
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -21,7 +19,6 @@ canonicalUrl,
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-import React, { Suspense } from 'react';
       {keywords && <meta name="keywords" content={keywords} />}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
@@ -30,7 +27,6 @@ import React, { Suspense } from 'react';
       <meta property="og:description" content={description} />
 <meta property="og: type" content="website" />;
       {ogImage && <meta property="og:image" content={ogImage} />}
-      
       {/* Twitter Card */}
       <meta name="twitter: card" content="summary_large_image" />;
       <meta name="twitter:title" content={title} />
@@ -39,5 +35,4 @@ import React, { Suspense } from 'react';
     </Helmet>
   );
 };
-
 export default EnhancedSEO;

@@ -1,22 +1,22 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FiveGMigrationPage = () => {
   const services = [
     {
-      title: '5G Migration Planning';,
+      title: '5G Migration Planning',
       description: 'Strategic planning for migrating from legacy networks to 5G.';
     },
     {
-      title: 'Security Migration';,
+      title: 'Security Migration',
       description: 'Secure migration of security protocols to 5G infrastructure.';
     },
     {
-      title: 'Team Training';,
+      title: 'Team Training',
       description: 'Comprehensive training for 5G migration and new technology adoption.';
     }
   ]
@@ -36,6 +36,7 @@ title="5G Migration Services - Zion Tech Group"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Migrate to 5G technology with minimal disruption using our proven migration strategies.
           </p>
+          </div>
         </div>
 
         <div className="grid md: grid-cols-3 gap-8 mb-16">;
@@ -46,7 +47,8 @@ title="5G Migration Services - Zion Tech Group"
                 <h3 className="text-xl font-semibold text-gray-900">
                   {service.title}
                 </h3>
-              </div>
+                </div>
+        </div>
               <p className="text-gray-600 mb-6">
                 {service.description}
               </p>
@@ -57,8 +59,10 @@ title="5G Migration Services - Zion Tech Group"
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </div>
+              </div>
+        </div>
           ))}
+          </div>
         </div>
 
         <div className="text-center">
@@ -69,6 +73,7 @@ title="5G Migration Services - Zion Tech Group"
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+          </div>
         </div>
       </div>
 </div>

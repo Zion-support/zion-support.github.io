@@ -90,7 +90,8 @@ const AboutPage: React.FC = () => {
               We are a team of passionate AI and IT experts dedicated to transforming businesses 
               through innovative technology solutions.
             </p>
-          </div>
+            </div>
+        </div>
         </section>
 
         {/* Mission Section */}
@@ -111,11 +112,15 @@ const AboutPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="text-4xl font-bold text-purple-400 mb-2">{stat.number}</div>
                     <div className="text-gray-300">{stat.label}</div>
-                  </div>
+                    </div>
+        </div>
                 ))}
+                </div>
+        </div>
               </div>
+        </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* Values Section */}
@@ -128,20 +133,25 @@ const AboutPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 These core values guide everything we do and shape our approach to client success.
               </p>
-            </div>
+              </div>
+        </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
                     <value.icon className="w-8 h-8 text-white" />
-                  </div>
+                    </div>
+        </div>
                   <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
-                </div>
+                  </div>
+        </div>
               ))}
+              </div>
+        </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* Team Section */}
@@ -155,21 +165,26 @@ const AboutPage: React.FC = () => {
                 Our diverse team of experts brings together decades of experience in AI, 
                 cloud computing, cybersecurity, and business transformation.
               </p>
-            </div>
+              </div>
+        </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700 hover:border-purple-500 transition-all duration-300">
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <UserGroupIcon className="w-12 h-12 text-white" />
-                  </div>
+                    </div>
+        </div>
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                   <div className="text-purple-400 font-semibold mb-3">{member.role}</div>
                   <p className="text-gray-300 text-sm">{member.description}</p>
-                </div>
+                  </div>
+        </div>
               ))}
+              </div>
+        </div>
             </div>
-          </div>
+        </div>
         </section>
 
         {/* CTA Section */}
@@ -190,8 +205,10 @@ const AboutPage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
                 View Our Work
               </button>
+              </div>
+        </div>
             </div>
-          </div>
+        </div>
         </section>
       </div>
     </>

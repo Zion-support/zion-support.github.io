@@ -60,6 +60,7 @@ const CloudInfrastructurePage: React.FC = () => {
             Build, migrate, and optimize your cloud infrastructure with our expert solutions. 
             Scale efficiently and securely in the cloud.
           </p>
+          </div>
         </div>
       </section>
 
@@ -71,7 +72,8 @@ const CloudInfrastructurePage: React.FC = () => {
               <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
-                </div>
+                  </div>
+        </div>
                 
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -86,13 +88,17 @@ const CloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
+                  </div>
+        </div>
 
                 <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Learn More
                 </button>
-              </div>
+                </div>
+        </div>
             ))}
+            </div>
+        </div>
           </div>
         </div>
       </section>
@@ -113,6 +119,8 @@ const CloudInfrastructurePage: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Schedule Consultation
             </button>
+            </div>
+        </div>
           </div>
         </div>
       </section>

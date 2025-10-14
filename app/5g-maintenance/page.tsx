@@ -1,22 +1,22 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FiveGMaintenancePage = () => {
   const services = [
     {
-      title: '5G Network Maintenance';,
+      title: '5G Network Maintenance',
       description: 'Ongoing maintenance and optimization of 5G network infrastructure.';
     },
     {
-      title: 'Security Monitoring';,
+      title: 'Security Monitoring',
       description: 'Continuous security monitoring and threat detection for 5G networks.';
     },
     {
-      title: 'Team Training';,
+      title: 'Team Training',
       description: 'Comprehensive training for 5G network maintenance and troubleshooting.';
     }
   ]
@@ -36,6 +36,7 @@ title="5G Maintenance Services - Zion Tech Group"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Keep your 5G network running smoothly with our comprehensive maintenance services.
           </p>
+          </div>
         </div>
 
         <div className="grid md: grid-cols-3 gap-8 mb-16">;
@@ -46,7 +47,8 @@ title="5G Maintenance Services - Zion Tech Group"
                 <h3 className="text-xl font-semibold text-gray-900">
                   {service.title}
                 </h3>
-              </div>
+                </div>
+        </div>
               <p className="text-gray-600 mb-6">
                 {service.description}
               </p>
@@ -57,8 +59,10 @@ title="5G Maintenance Services - Zion Tech Group"
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </div>
+              </div>
+        </div>
           ))}
+          </div>
         </div>
 
         <div className="text-center">
@@ -69,6 +73,7 @@ title="5G Maintenance Services - Zion Tech Group"
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+          </div>
         </div>
       </div>
 </div>

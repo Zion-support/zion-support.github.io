@@ -1,24 +1,23 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 const FiveGConsultingPage = () => {
   const services = [
     {
-      title: '5G Strategy Development';,
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.';
+      title: '5G Strategy Development',
+      description: 'Comprehensive 5G implementation strategies tailored to your business needs.'
     },
     {
-      title: 'Security Assessment';,
-      description: 'Complete security evaluation for 5G network implementation.';
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for 5G network implementation.'
     },
     {
-      title: 'Team Training';,
-      description: 'Expert training for your team on 5G technologies and best practices.';
+      title: 'Team Training',
+      description: 'Expert training for your team on 5G technologies and best practices.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
@@ -34,8 +33,8 @@ const FiveGConsultingPage = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Expert guidance for your 5G transformation journey
           </p>
+          </div>
         </div>
-
         <div className="grid md: grid-cols-3 gap-8 mb-16">;
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-6">
@@ -52,10 +51,9 @@ const FiveGConsultingPage = () => {
                 Learn More
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-            </div>
-          ))}
+              </div>
         </div>
-
+          ))}
         <div className="text-center">
           <Link 
             to="/contact" 
@@ -64,11 +62,8 @@ const FiveGConsultingPage = () => {
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
-        </div>
       </div>
     </div>
   );
 };
-
-import React, { Suspense } from 'react';
 export default FiveGConsultingPage

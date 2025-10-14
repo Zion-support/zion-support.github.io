@@ -11,11 +11,10 @@ const FiveGTrainingPage: React.FC = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional services and solutions.
           </p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
-import React, { Suspense } from 'react';
-
 export default FiveGTrainingPage;

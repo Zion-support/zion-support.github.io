@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Server, Cloud } from 'lucide-react';
 
 const ItSolutionsPage: React.FC = () => {
-
-return (
+  return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
@@ -22,7 +21,7 @@ return (
             </p>
           </div>
           
-          <div className="grid md: grid-cols-2 gap-8">;
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Server className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
@@ -42,8 +41,6 @@ return (
       </div>
     </>
   );
-import React, { Suspense } from 'react';
 };
 
-import React, { Suspense } from 'react';
 export default ItSolutionsPage;

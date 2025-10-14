@@ -6,23 +6,16 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-}
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false ;};
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true;, error };
-  }
-
 import React, { Suspense } from 'react';
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
-  }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -36,13 +29,11 @@ import React, { Suspense } from 'react';
             >
               Reload Page
             </button>
+            </div>
+        </div>
           </div>
         </div>
       );
     }
-
     return this.props.children;
-  }
-}
-
 export default ErrorBoundary;

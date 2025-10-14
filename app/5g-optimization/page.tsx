@@ -29,6 +29,8 @@ const FiveGOptimizationPage: React.FC = () => {
               Optimize Now
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
+            </div>
+        </div>
           </div>
         </div>
       </section>
@@ -43,7 +45,8 @@ const FiveGOptimizationPage: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive optimization solutions to enhance your 5G network performance
             </p>
-          </div>
+            </div>
+        </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -54,7 +57,8 @@ const FiveGOptimizationPage: React.FC = () => {
               <p className="text-gray-600">
                 Advanced performance optimization to maximize throughput and minimize latency
               </p>
-            </div>
+              </div>
+        </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
@@ -64,7 +68,8 @@ const FiveGOptimizationPage: React.FC = () => {
               <p className="text-gray-600">
                 Strategic antenna placement and power optimization for maximum coverage
               </p>
-            </div>
+              </div>
+        </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <CheckCircle className="w-12 h-12 text-emerald-600 mb-4" />
@@ -74,7 +79,10 @@ const FiveGOptimizationPage: React.FC = () => {
               <p className="text-gray-600">
                 Intelligent capacity management to handle peak loads efficiently
               </p>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
       </section>
@@ -95,6 +103,7 @@ const FiveGOptimizationPage: React.FC = () => {
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
+          </div>
         </div>
       </section>
     </div>

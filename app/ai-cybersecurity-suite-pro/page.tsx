@@ -1,8 +1,6 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
+import { Shield, Brain, Lock } from 'lucide-react';
 
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (
@@ -23,7 +21,7 @@ const AICybersecuritySuiteProPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md: grid-cols-3 gap-8">;
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Shield className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Threat Detection</h3>
@@ -52,5 +50,4 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-import React, { Suspense } from 'react';
 export default AICybersecuritySuiteProPage;

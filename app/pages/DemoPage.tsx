@@ -18,7 +18,10 @@ const DemoPage: React.FC = () => {
             </p>
             <div className="text-gray-400">
               <p>Demos coming soon...</p>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
       </div>

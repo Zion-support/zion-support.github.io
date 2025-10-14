@@ -30,7 +30,7 @@ const PerformanceMonitor = () => {
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ;});
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
@@ -42,7 +42,7 @@ const PerformanceMonitor = () => {
         }
       });
     });
-    fidObserver.observe({ entryTypes: ['first-input'] ;});
+    fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Measure Cumulative Layout Shift (CLS)
     let clsValue = 0;
@@ -56,7 +56,7 @@ const PerformanceMonitor = () => {
       });
       metrics.cls = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] ;});
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
@@ -67,7 +67,7 @@ const PerformanceMonitor = () => {
         }
       });
     });
-    fcpObserver.observe({ entryTypes: ['paint'] ;});
+    fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -78,20 +78,15 @@ const PerformanceMonitor = () => {
     // Send metrics after page load
     const sendMetrics = () => {
       if (Object.keys(metrics).length > 0) {
-        // Send to analytics service
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Metrics: ';, metrics);
-        }
-        
-        // You can send to your analytics service here
-        // Example: analytics.track('performance_metrics', metrics);
+        // In a real application, you would send these metrics to your analytics service
+        console.log('Performance Metrics:', metrics);
       }
     };
 
     // Send metrics when page is about to unload
     window.addEventListener('beforeunload', sendMetrics);
 
-    // Cleanup
+    // Cleanup observers
     return () => {
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -106,18 +101,20 @@ const PerformanceMonitor = () => {
     return null;
   }
 
+  // Development mode: show performance metrics
+  const metrics: PerformanceMetrics = {};
+
+  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+    if (!value) return 'text-gray-500';
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
+  };
+
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-sm max-w-xs z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
+      <div className="font-bold mb-2">Performance Metrics</div>
       <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
-      
-      <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span>FCP:</span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -147,12 +144,6 @@ const PerformanceMonitor = () => {
           <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-600">
-        <div className="text-xs text-gray-400">
-          <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
         </div>
       </div>
     </div>
