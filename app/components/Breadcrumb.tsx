@@ -16,6 +16,7 @@ const Breadcrumb: React.FC = () => {
     return null;
   }
 
+const BreadcrumbPage = () => {
   return (
     <nav 
       className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700/50 py-3 px-4"

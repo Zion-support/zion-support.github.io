@@ -1,12 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./app/globals.css";
-ReactDOM.createRoot(document.getElementById("root")!).render(
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+
+// Ensure scheduler is properly initialized
+if (typeof window !== 'undefined') {
+  // Fix for scheduler unstable_now error
+  if (!window.performance || !window.performance.now) {
+    window.performance = window.performance || {}
+    window.performance.now = window.performance.now || (() => Date.now())
+  }
+const root = createRoot(
+  document.getElementById('root') as HTMLElement
+)
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+)
+
 // Register service worker for PWA functionality
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
@@ -14,9 +27,10 @@ if ("serviceWorker" in navigator) {
       .register("/sw.js")
       .then((registration) => {
         // Service worker registered successfully
-      })
+        console.log('Service worker registered:', registration)
+      });
       .catch((registrationError) => {
         // Service worker registration failed
-      });
-  });
+        console.log('Service worker registration failed:', registrationError)
+      });)
 }

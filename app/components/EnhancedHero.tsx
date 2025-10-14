@@ -62,106 +62,77 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   ];
 
   return (
-    <div
-      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
-    >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {backgroundImage && (
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-          />
-        )}
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column */}
-          <div className="space-y-8">
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                {title}
-              </h1>
-              <p className="text-xl text-cyan-400 mb-4 font-semibold">
-                {subtitle}
-              </p>
-              <p className="text-lg text-gray-300 mb-8">{description}</p>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>EnhancedHero - Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedhero services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            EnhancedHero</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedhero solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedhero solutions.</p>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to={primaryCta.href}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                {primaryCta.text}
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to={secondaryCta.href}
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                {secondaryCta.text}
-              </Link>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored enhancedhero implementations for your specific requirements.</p>
             </div>
-
-            {/* Benefits */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {benefits.slice(0, 4).map((benefit, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-sm">{benefit}</span>
-                </div>
-              ))}
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancedhero needs.</p>
             </div>
           </div>
-
-          {/* Right Column - Contact Info */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-6 text-center">
-                Get in Touch
-              </h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-white font-medium">{info.title}</h4>
-                      <p className="text-gray-300">{info.details}</p>
-                      <p className="text-gray-400 text-sm">
-                        {info.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-gray-400 text-sm">Happy Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">24/7</div>
-                <div className="text-gray-400 text-sm">Support</div>
-              </div>
-            </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
+}
+            EnhancedHero</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedhero solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedhero solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored enhancedhero implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your enhancedhero needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+)}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+)}
 };
-
-export default EnhancedHero;

@@ -301,393 +301,77 @@ export default function ITServices() {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Services - Zion Tech Group | Comprehensive Technology Solutions</title>
-        <meta
-          name="description"
-          content="Professional IT services including cloud infrastructure, cybersecurity, network engineering, DevOps, and managed services. Transform your technology with expert solutions."
-        />
-        <meta
-          name="keywords"
-          content="IT services, cloud migration, cybersecurity, network engineering, DevOps, managed services, IT consulting, infrastructure, database management"
-        />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      <SEOOptimizer
-        title="IT Services - Zion Tech Group | Comprehensive Technology Solutions"
-        description="Professional IT services including cloud infrastructure, cybersecurity, network engineering, DevOps, and managed services. Transform your technology with expert solutions."
-      />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  IT Services
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive technology solutions to transform your business. From cloud infrastructure 
-                to cybersecurity, we provide expert IT services that drive growth and innovation.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">15+ years experience</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">500+ projects completed</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">99.9% uptime SLA</span>
-                </div>
-                <div className="flex items-center text-green-400">
-                  <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">24/7 support</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Get Free Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  to="/case-studies"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Award className="mr-2 h-5 w-5" />
-                  View Case Studies
-                </Link>
-              </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.</p>
             </div>
           </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4">
-                    <div className="text-cyan-400">{stat.icon}</div>
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Process Section */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Our Process
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                A proven methodology that ensures successful project delivery and maximum value
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
-                    <div className="text-white">{step.icon}</div>
-                  </div>
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Services */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Featured Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our most popular IT services trusted by leading organizations worldwide
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.filter(service => service.featured).map((service, index) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-
-                  <div className="flex items-center mb-4">
-                    <span className="text-2xl font-bold text-white">{service.price}</span>
-                  </div>
-
-                  <div className="space-y-2 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className="text-sm text-gray-400">
-                        +{service.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="space-y-3">
-                    <Link
-                      to={service.link}
-                      className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300"
-                    >
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* All Services Grid */}
-        <div className="py-16 bg-black/10 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  All IT Services
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive technology solutions for every business need
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {itServices.map((service, index) => (
-                <div
-                  key={service.id}
-                  className="group relative bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color}`}>
-                      <div className="text-white">{service.icon}</div>
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-3 h-3 fill-current" />
-                      <span className="ml-1 text-xs font-medium">{service.rating}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-300 mb-3 text-sm line-clamp-2">{service.description}</p>
-
-                  <div className="flex items-center mb-3">
-                    <span className="text-lg font-bold text-white">{service.price}</span>
-                  </div>
-
-                  <div className="space-y-1 mb-4">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="truncate">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Link
-                    to={service.link}
-                    className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
-                  >
-                    View Details
-                    <ArrowRight className="ml-1 h-3 w-3" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Client Success Stories
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See how we've helped organizations transform their technology infrastructure
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
-                    </div>
-                    <div className="ml-4">
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  
-                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Pricing Section */}
-        <div className="py-16 bg-black/20 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Flexible Pricing Plans
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the IT service plan that best fits your business needs and budget
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.popular
-                      ? 'border-cyan-500/50 shadow-cyan-500/20 scale-105'
-                      : 'border-white/10 hover:border-cyan-500/30'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 text-sm">{plan.description}</p>
-                  </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-400 hover:to-purple-400'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Let our expert team help you modernize your technology stack and drive business growth.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                View Pricing
-                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-              </Link>
-            </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
+            Page</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+)}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+)}
+};

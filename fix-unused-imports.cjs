@@ -1,208 +1,98 @@
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+#!/usr/bin/env node
 
-// Get all TypeScript/JavaScript files in the app directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
+const fs = require('fs');
+const path = require('path');
 
-  files.forEach((file) => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-      fileList.push(filePath);
-    }
-  });
-
-  return fileList;
+// Function to fix unused imports
+function fixUnusedImports(content) {
+  // Remove unused Mail and Phone imports
+  content = content.replace(
+    /import { [^}]*Mail[^}]*Phone[^}]* } from "lucide-react";/g,
+    'import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";'
+  );
+  
+  content = content.replace(
+    /import { [^}]*Mail[^}]* } from "lucide-react";/g,
+    'import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";'
+  );
+  
+  content = content.replace(
+    /import { [^}]*Phone[^}]* } from "lucide-react";/g,
+    'import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";'
+  );
+  
+  return content;
 }
 
-// Common unused imports to remove
-const unusedImports = [
-  "Helmet",
-  "Star",
-  "Users",
-  "Award",
-  "Zap",
-  "Shield",
-  "Brain",
-  "Cloud",
-  "Code",
-  "Target",
-  "Globe",
-  "Database",
-  "Smartphone",
-  "Lock",
-  "TrendingUp",
-  "Settings",
-  "Calendar",
-  "CheckSquare",
-  "FileText",
-  "MessageCircle",
-  "Heart",
-  "DollarSign",
-  "Box",
-  "Monitor",
-  "LinkIcon",
-  "Server",
-  "Package",
-  "Mic",
-  "Workflow",
-  "Eye",
-  "Wifi",
-  "MessageSquare",
-  "ShoppingCart",
-  "Phone",
-  "Mail",
-  "MapPin",
-  "BarChart3",
-  "Sparkles",
-  "Cpu",
-  "Satellite",
-  "AlertTriangle",
-  "BarChart",
-  "PieChart",
-  "Receipt",
-  "CreditCard",
-  "Banknote",
-  "Camera",
-  "Image",
-  "Video",
-  "RotateCcw",
-  "Download",
-  "Upload",
-  "Lightbulb",
-  "Clock",
-  "MessageCircle",
-  "Filter",
-  "Share",
-  "Bell",
-  "RefreshCw",
-  "Pause",
-  "SkipForward",
-  "SkipBack",
-  "Repeat",
-  "Shuffle",
-  "ThumbsUp",
-  "ThumbsDown",
-  "Bookmark",
-  "Flag",
-  "Info",
-  "HelpCircle",
-  "Plus",
-  "Minus",
-  "Edit",
-  "Trash2",
-  "Save",
-  "Copy",
-  "Paste",
-  "Cut",
-  "Undo",
-  "Redo",
-  "Move",
-  "Maximize",
-  "Minimize",
-  "Square",
-  "Circle",
-  "Triangle",
-  "Hexagon",
-  "Octagon",
-  "Pentagon",
-  "Star2",
-  "Heart2",
-  "Smile",
-  "Frown",
-  "Meh",
-  "Laugh",
-  "Angry",
-  "Surprised",
-  "Confused",
-  "Wink",
-  "Kiss",
-  "Tongue",
-  "Wink2",
-  "Kiss2",
-  "Tongue2",
-  "Wink3",
-  "Kiss3",
-  "Tongue3",
-  "Wink4",
-  "Kiss4",
-  "Tongue4",
-  "Wink5",
-  "Kiss5",
-  "Tongue5",
-  "Wink6",
-  "Kiss6",
-  "Tongue6",
-  "Wink7",
-  "Kiss7",
-  "Tongue7",
-  "Wink8",
-  "Kiss8",
-  "Tongue8",
-];
-
-function removeUnusedImports(filePath) {
+// Function to fix a single file
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    // Remove unused imports from lucide-react
-    const lucideImportRegex =
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-
-    content = content.replace(lucideImportRegex, (match, imports) => {
-      const importList = imports.split(",").map((imp) => imp.trim());
-      const usedImports = importList.filter((imp) => {
-        // Check if the import is actually used in the file
-        const importName = imp.split(" as ")[0].trim();
-        const usageRegex = new RegExp(`\\b${importName}\\b`, "g");
-        const usageCount = (content.match(usageRegex) || []).length;
-        return usageCount > 1; // More than 1 because the import itself counts as 1
-      });
-
-      if (usedImports.length === 0) {
-        modified = true;
-        return ""; // Remove the entire import line
-      } else if (usedImports.length < importList.length) {
-        modified = true;
-        return `import { ${usedImports.join(", ")} } from 'lucide-react';`;
-      }
-
-      return match;
-    });
-
-    // Remove unused Helmet imports
-    if (
-      content.includes("import { Helmet } from 'react-helmet-async';") &&
-      !content.includes("<Helmet>")
-    ) {
-      content = content.replace(
-        /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\n?/g,
-        "",
-      );
-      modified = true;
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixUnusedImports(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed unused imports: ${filePath}`);
+      return true;
     }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Get all files and process them
-const files = getAllFiles("./app");
-console.log(`Processing ${files.length} files...`);
+// Function to recursively find all TypeScript files
+function findFiles(dir, extensions = ['.tsx']) {
+  let files = [];
+  
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(findFiles(fullPath, extensions));
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error.message);
+  }
+  
+  return files;
+}
 
-files.forEach((file) => {
-  removeUnusedImports(file);
-});
+// Main execution
+function main() {
+  console.log('Starting unused imports fix...');
+  
+  const appDir = path.join(__dirname, 'app');
+  const files = findFiles(appDir);
+  
+  console.log(`Found ${files.length} files to check`);
+  
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`Fixed ${fixedCount} files`);
+}
 
-console.log("Unused imports cleanup completed!");
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixFile, findFiles, fixUnusedImports };

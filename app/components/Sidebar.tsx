@@ -23,7 +23,7 @@ import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -33,11 +33,23 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { 
+      name: 'Services', 
+      href: '/services',
+      icon: BriefcaseIcon,
+      children: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Services', href: '/it-services', icon: CogIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: SignalIcon }
+      ]
+    },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+    { name: 'Blog', href: '/blog', icon: AcademicCapIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
   if (!isOpen) return null;
@@ -45,81 +57,82 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 z-40"
         onClick={onClose}
       />
       
       {/* Sidebar */}
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
+      <div className="fixed inset-y-0 left-0 w-64 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+          <div className="flex items-center space-x-2">
+            <CpuChipIcon className="h-8 w-8 text-blue-400" />
+            <span className="text-xl font-bold">Zion Tech Group</span>
           </div>
-
-          {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-              >
-                <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
-
-          {/* Services */}
-          <div className="mb-8">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Services</h3>
-            <div className="space-y-2">
-              {serviceItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-                >
-                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>{item.name}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="border-t border-gray-700 pt-6">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
-            <div className="space-y-3 px-4">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
-            </div>
-          </div>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <XMarkIcon className="h-6 w-6" />
+          </button>
         </div>
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+          {navigation.map((link) => (
+            <div key={link.name}>
+              {link.submenu ? (
+                <div>
+                  <button
+onClick={() => toggleExpanded(link.name)}
+                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
+                  >
+                    <div className="flex items-center">
+                      <link.icon className="w-5 h-5 mr-3" />
+                      {link.name}
+                    </div>
+                    <ChevronDownIcon 
+                      className={`w-4 h-4 transition-transform ${
+                        expandedItems.includes(link.name) ? 'rotate-180' :;
+                      }`} 
+                    />
+                  </button>
+                  {expandedItems.includes(link.name) && (
+                    <div className="ml-4 mt-2 space-y-1">
+                      {link.submenu.map((subLink) => (
+                        <Link
+                          key={subLink.name}
+                          to={subLink.href}
+                          className={`flex items-center px-3 py-2 text-sm transition-colors ${
+                            isActive(subLink.href)
+                              ? 'text-blue-400 bg-blue-900/20;
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800;
+                          }`}
+                          onClick={onClose}
+                        >
+                          <subLink.icon className="w-4 h-4 mr-3" />
+                          {subLink.name}
+                        </Link>
+))}
+                    </div>
+)}
+                </div>
+              ) : (
+                <Link
+                  to={link.href}
+                  className={`flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded ${
+                    isActive(link.href) ? 'text-blue-400 bg-blue-900/20' :;
+                  }`}
+                  onClick={onClose}
+                >
+                  <link.icon className="w-5 h-5 mr-3" />
+                  {link.name}
+                </Link>
+)}
+            </div>
+))}
+        </nav>
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
 export default Sidebar;

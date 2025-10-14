@@ -1,52 +1,57 @@
 import ImprovedSidebar from "./components/ImprovedSidebar";
 
-interface LayoutProps {
+export default function RootLayout({
+  children}: {
   children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+}) {
+  const structuredData = {
+    '@context': 'https://schema.org',;
+    '@type': 'Organization',;
+    name: 'Zion Tech Group',;
+    url: 'https://ziontechgroup.com',;
+    logo: 'https://ziontechgroup.com/logo.png',;
+    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',;
+    foundingDate: '2020',;
+    numberOfEmployees: '50-100',;
+    industry: 'Technology',;
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-600-9898',
+      contactType: 'Customer Service',
+      areaServed: 'US',
+      availableLanguage: 'en'},
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'},
+    offers: {
+      '@type': 'Offer',
+      category: 'AI Solutions',
+      description: 'Enterprise AI solutions, digital transformation, and cloud services'}};
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <HelmetProvider>
-        <BrowserRouter>
-          <AnalyticsProvider>
-            <EnhancedPerformanceMonitor showInProduction={false} />
-            <Helmet>
-              <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-              <meta
-                name="description"
-                content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
-              />
-              <meta
-                name="keywords"
-                content="AI solutions, IT services, digital transformation, business automation, technology consulting"
-              />
-            </Helmet>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-              {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-              
-              <ImprovedNavigation />
-
-              <main>{children}</main>
-
-              <ImprovedFooter />
-              
-              {/* Sidebar */}
-              <ImprovedSidebar 
-                isOpen={isSidebarOpen} 
-                onClose={() => setIsSidebarOpen(false)} 
-              />
-            </div>
-          </AnalyticsProvider>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <html lang='en'>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
+      <body>
+        <GlobalErrorBoundary>
+          <PerformanceMonitor />
+          <AnalyticsProvider />
+          <AccessibilityEnhancer />
+          <PWAInstaller />
+          <PerformanceOptimizer />
+          {children}
+        </GlobalErrorBoundary>
+      </body>
+    </html>
   );
-};
-
-export default Layout;
+}

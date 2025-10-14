@@ -1,3 +1,4 @@
+'use client;
 'use client';
 import { Search, Eye } from 'lucide-react';
 

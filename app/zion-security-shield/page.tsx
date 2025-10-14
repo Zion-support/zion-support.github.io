@@ -124,122 +124,91 @@ export default function ZionSecurityShield() {
     }
   ];
 
+const Page = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Protect your business with Zion Security Shield - the ultimate AI-powered cybersecurity platform. Advanced threat detection, real-time monitoring, and automated incident response."
-        />
-        <meta
-          name="keywords"
-          content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
-        />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" - Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">Enterprise-Grade Security</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-                Zion Security Shield
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with the most advanced AI-powered cybersecurity platform. 
-              Real-time threat detection, automated incident response, and comprehensive compliance management.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-                <div className="text-gray-300">Security Monitoring</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
-                <div className="text-gray-300">Protected Organizations</div>
-              </div>
-            </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8"></h1>
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Security Features
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
+                  Advanced Security Features
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to protect your business from modern cyber threats.
+                Comprehensive cybersecurity protection powered by AI and machine learning to keep your business safe.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                    {feature.icon}
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      {feature.description}
+                    </p>
+                    <div className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{benefit}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Security Features List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        {/* Security Services */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Security Suite
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
+                  Security Services
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the security tools you need in one comprehensive platform.
+                Comprehensive security services to protect your business from evolving cyber threats.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {securityFeatures.map((feature, index) => (
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {securityServices.map((service, index) => (
                 <div
                   key={index}
-                  className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-300 mb-3">{service.description}</p>
+                  <div className="text-red-400 font-bold">{service.price}</div>
                 </div>
               ))}
             </div>
@@ -247,58 +216,64 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Security Plans
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-red-400">
+                  Security Plans
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the security level that matches your business needs. All plans include 30-day free trial.
+                Choose the security plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
-                    plan.popular
-                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
-                      : 'border-white/20 hover:border-red-400'
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                    plan.popular 
+                      ? 'border-red-500/50 shadow-red-500/20' 
+                      : 'border-white/20 hover:border-red-500/30'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <div className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-                      </span>
+                      </div>
                     </div>
                   )}
-                  <div className="text-center mb-8">
+                  
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-4xl font-bold text-red-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
+                    <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
+                  
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+                        ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25'
                         : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                     }`}
                   >
-                    Start Free Trial
+                    {plan.popular ? 'Start Free Trial' : 'Get Started'}
                   </Link>
                 </div>
               ))}
@@ -306,32 +281,32 @@ export default function ZionSecurityShield() {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        {/* Compliance Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Security Leaders
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+                  Compliance Standards
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what security professionals say about Zion Security Shield
+                Meet regulatory requirements with automated compliance monitoring and reporting.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              {complianceStandards.map((standard, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 text-center group"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                  <div className="text-2xl mb-2">🛡️</div>
+                  <div className="text-sm font-semibold text-white group-hover:text-green-300 transition-colors">
+                    {standard.name}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-xs text-gray-400 mt-1">
+                    {standard.description}
                   </div>
                 </div>
               ))}
@@ -339,33 +314,63 @@ export default function ZionSecurityShield() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* Contact Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations protected by Zion Security Shield.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Schedule Security Demo
-              </Link>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Secure Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Don&apos;t wait for a security breach. Protect your business with Zion Security Shield today. 
+                Start your free trial or contact us for a security assessment.
+              </p>
+              
+              {/* Contact Details */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-red-400">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-red-400">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                >
+                  Security Assessment
+                </Link>
+              </div>
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
-}
+};
+
+export default Page;

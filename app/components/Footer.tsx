@@ -66,7 +66,6 @@ const Footer = React.memo(() => {
                 </a>
               ))}
             </div>
-          </div>
 
           {/* AI Services */}
           <div>

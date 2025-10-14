@@ -1,20 +1,4 @@
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
-
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [
     {

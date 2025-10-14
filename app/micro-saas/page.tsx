@@ -2,7 +2,7 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const MicroSAASSolutions = () => {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive micro SAAS solutions for small and medium businesses." />
