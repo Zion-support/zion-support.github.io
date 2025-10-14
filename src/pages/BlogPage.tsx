@@ -53,6 +53,5 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default BlogPage;

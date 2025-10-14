@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -46,35 +45,76 @@ import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 
-// Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-        </svg>
-      </div>
-      <div className="mt-4 text-center">
-        <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          {error.message}
-        </p>
-        <div className="mt-6">
-          <button
-            onClick={resetErrorBoundary}
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Try again
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+// New Innovative Micro SAAS Services
+const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
+const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
+const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
+const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
+const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
+const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
+const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
+const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
+const ZionAISocialMediaManagerPage = React.lazy(() => import("./app/zion-ai-social-media-manager/page"));
+const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
+const ZionAIPerformanceOptimizerPage = React.lazy(() => import("./app/zion-ai-performance-optimizer/page"));
+const ZionAICustomerChurnPredictorPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor/page"));
+const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
+const ZionAIFinancialForecasterPage = React.lazy(() => import("./app/zion-ai-financial-forecaster/page"));
+const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderator/page"));
+const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
+const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
+const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
+const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
+// 5G Solutions Pages
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
+const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
+const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
+const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
+const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
+const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
+const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+// Additional AI Services Pages
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services Pages
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
+  }, []);
+
+  const closeSidebar = useCallback(() => {
+    setIsSidebarOpen(false);
+  }, []);
+
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('Zion Tech Group App initialized');
+    }
+  }, []);
 
   return (
     <ErrorBoundary>

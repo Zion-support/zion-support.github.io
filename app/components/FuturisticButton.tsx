@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { LucideIcon, ArrowRight } from 'lucide-react';
+
 interface FuturisticButtonProps {
   children: React.ReactNode;
   className?: string;'
@@ -32,15 +35,13 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   };
 
   return (
-    <button;
+    <button>
       type={type}
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >;
       {icon && <span className="mr-2">{icon}</span>}
       {children}
-    </button>;
-  );
-};
+    </button>)};
 
-export default FuturisticButton;'
+export default FuturisticButton;

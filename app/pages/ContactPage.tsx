@@ -68,7 +68,7 @@ const ContactPage: React.FC = () => {
       details: 'Monday - Friday: 9:00 AM - 6:00 PM',
       description: 'Weekend support available'
     }
-  ];
+  };
 
   const services = [
     'AI Solutions',

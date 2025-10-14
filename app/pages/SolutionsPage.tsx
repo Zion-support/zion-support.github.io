@@ -4,7 +4,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
+  CpuChipIcon, 
+  CloudIcon, 
   ShieldCheckIcon,
   CloudIcon,
   GlobeAltIcon,
@@ -143,8 +144,8 @@ const SolutionsPage: React.FC = () => {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Solutions
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+              Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to meet your business needs

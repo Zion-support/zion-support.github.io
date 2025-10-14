@@ -7,10 +7,11 @@ import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [
     {
-      title: "Workflow Automation",
-      description: "Automate complex business processes with AI-powered workflows",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"}
+      title: "Workflow Automation",""
+      description: "Automate complex business processes with AI-powered workflows",""
+      icon: <Workflow className="w-6 h-6" />,"
+""
+      color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Smart Decision Making",
@@ -35,14 +36,7 @@ const AIAutomationPlatform = () => {
     }
   ];
 
-  const benefits = [
-    "70% process efficiency gain",
-    "Automated decision making",
-    "Seamless integrations",
-    "Real-time optimization",
-    "Scalable workflows",
-    "Cost reduction"
-  ];
+  
 
   return (
     <>
@@ -62,16 +56,13 @@ const AIAutomationPlatform = () => {
 
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Automation Platform
               </h1>
-              
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
                 Transform your business with AI-powered automation. 
                 Automate workflows, optimize processes, and make intelligent decisions at scale.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
                   icon={<Right className="w-5 h-5" />}
@@ -102,7 +93,7 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (}
+              {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
                     {feature.icon}
@@ -132,7 +123,7 @@ const AIAutomationPlatform = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (}
+              {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
@@ -163,7 +154,6 @@ const AIAutomationPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
-export default AIAutomationPlatform;'
+export default AIAutomationPlatform

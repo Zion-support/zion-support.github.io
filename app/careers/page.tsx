@@ -5,8 +5,9 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team of talented professionals and help shape the future of technology. Explore career opportunities at Zion Tech Group." />
+        <meta name="keywords" content="careers, jobs, employment, technology careers, AI jobs, software development" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;

@@ -3,15 +3,13 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 { HelmetProvider } from 'react-helmet-async';
 const App: React.FC = () => {
   return (
-    <HelmetProvider>;
-      <Router>;
-        <Routes>;}
-          <Route path="/" element={<div>Home Page</div>} />;
-        </Routes>;
-      </Router>;
-    </HelmetProvider>;
-  );
-};
+    <HelmetProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<div>Home Page</div>} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
+  )};
 
 export default App;
-'

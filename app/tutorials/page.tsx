@@ -10,8 +10,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. Sarah Johnson",
       rating: 4.8,
       students: 1250,
-      thumbnail: "🤖";}
-    },
+      thumbnail: "🤖"},
     {
       id: 2,
       title: "Infrastructure Setup",
@@ -21,8 +20,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Michael Chen",
       rating: 4.9,
       students: 980,
-      thumbnail: "☁️";}
-    },
+      thumbnail: "☁️"},
     {
       id: 3,
       title: "Cybersecurity Fundamentals",
@@ -32,8 +30,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Emily Rodriguez",
       rating: 4.7,
       students: 2100,
-      thumbnail: "🔒";}
-    },
+      thumbnail: "🔒"},
     {
       id: 4,
       title: "Advanced Machine Learning",
@@ -43,8 +40,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. David Kim",
       rating: 4.9,
       students: 750,
-      thumbnail: "🧠";}
-    },
+      thumbnail: "🧠"},
     {
       id: 5,
       title: "DevOps Best Practices",
@@ -54,8 +50,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Lisa Wang",
       rating: 4.8,
       students: 1100,
-      thumbnail: "⚙️";}
-    },
+      thumbnail: "⚙️"},
     {
       id: 6,
       title: "Data Analytics with Python",
@@ -65,26 +60,37 @@ const TutorialsPage: React.FC = () => {
       instructor: "James Wilson",
       rating: 4.6,
       students: 1650,
-      thumbnail: "📊";}
-    }
+      thumbnail: "📊"}
   ];
 
-  const categories = [{ name: "All", count: 24 },
-    { name: "AI & ML", count: 8 },
-    { name: "Computing", count: 6 },
-    { name: "Cybersecurity", count: 4 },
-    { name: "DevOps", count: 3 },
-    { name: "Data Science", count: 3 }
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Tutorials - Learn AI & IT Skills | Zion Tech Group</title>
-        <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />
-        <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -114,7 +120,7 @@ const TutorialsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button;}
+                <button>
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
@@ -131,7 +137,7 @@ const TutorialsPage: React.FC = () => {
               Featured Tutorials;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {tutorials.map((tutorial) => (}
+              {tutorials.map((tutorial) => (
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">;
@@ -191,7 +197,7 @@ const TutorialsPage: React.FC = () => {
         </section>;
       </div>
     </>
-  );
-};
+  )};
 
-export default TutorialsPage;'
+const page = React.lazy(() => import('./page'));
+export default page;

@@ -8,17 +8,16 @@ export default function Page() {
         <title>AdvancedSEOOptimizer_new - Zion Tech Group</title>
         <meta name="description" content="Professional advancedseooptimizer_new services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
             AdvancedSEOOptimizer_new;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8">;
-            Professional advancedseooptimizer_new solutions tailored to your business needs.;
-          </p>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional advancedseooptimizer_new solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 Expert Solutions;
               </h3>;
               <p className="text-blue-700">;

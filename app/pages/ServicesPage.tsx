@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon,
-  ShieldCheckIcon,
   CloudIcon,
   GlobeAltIcon,
   SignalIcon,
@@ -163,8 +162,7 @@ const ServicesPage: React.FC = () => {
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
@@ -211,8 +209,7 @@ const ServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Process Section */}
       <section className="py-20 bg-slate-800/50">
@@ -237,8 +234,7 @@ const ServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
@@ -263,8 +259,8 @@ const ServicesPage: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   );
 };

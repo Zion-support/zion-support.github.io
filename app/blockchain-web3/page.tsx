@@ -5,8 +5,9 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Blockchain & Web3 Development - Zion Tech Group</title>
+        <meta name="description" content="Professional blockchain and Web3 development services including smart contracts, DApps, DeFi protocols, and security audits." />
+        <meta name="keywords" content="blockchain development, Web3, smart contracts, DApp development, DeFi, NFT, cryptocurrency" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;

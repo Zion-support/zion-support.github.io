@@ -39,7 +39,6 @@ const AIServicesPage: React.FC = () => {
   ];
 
 
-const AIServicesPage: React.FC = () => {
   return (
 
   );

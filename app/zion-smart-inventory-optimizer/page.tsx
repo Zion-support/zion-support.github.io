@@ -8,12 +8,12 @@ export default function ZionSmartInventoryOptimizer() {
         <title>Zion Smart Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Professional Smart Inventory Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center mb-16">;
-          <h1 className="text-5xl font-bold text-white mb-6">;
-            Zion Smart Inventory Optimizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>;
-          </h1>;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Zion Smart Inventory Optimizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Advanced AI-powered solutions for modern businesses.;
           </p>;
         </div>

@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react;
 interface FuturisticCardProps {
   children: React.ReactNode;
-  className?: string;'
-  variant?: 'default' | 'glow' | 'gradient';}
-}
+  className?: string;
+  variant?: 'default' | 'glow' | 'gradient'}
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, '
@@ -24,4 +23,4 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   );
 };
 
-export default FuturisticCard;'
+export default FuturisticCard;

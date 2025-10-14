@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
 
 export default function ContactPage()    {
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    subject: '','
-    message: ''}
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    subject: '',
+    message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,9 +17,8 @@ export default function ContactPage()    {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value}
-    });
-  };
+      [e.target.name]: e.target.value
+    })};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,8 +28,7 @@ export default function ContactPage()    {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
-    setIsSubmitting(false);}
-  };
+    setIsSubmitting(false)};
 
   const contactInfo = [
     {
@@ -60,25 +58,24 @@ export default function ContactPage()    {
       description: '9:00 AM - 6:00 PM EST'}
 
     }
-  ];
-
-  const subjects = ['
-    'AI Services','
-    'IT Services','
-    'Services','
-    'Micro SAAS','
-    'Digital Transformation','
-    '5G Implementation','
+  ]
+  const subjects = [
+    'AI Services'
+    'IT Services'
+    'Services'
+    'Micro SAAS'
+    'Digital Transformation'
+    '5G Implementation'
     'Other'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
-      </Helmet>
+    <>
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -105,7 +102,7 @@ export default function ContactPage()    {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
-              return (}
+              return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
@@ -114,8 +111,7 @@ export default function ContactPage()    {
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -133,91 +129,58 @@ export default function ContactPage()    {
                 <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">'
+              <p className="text-gray-300 mb-6">
                 Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false);
-                  setFormData({'
-                    name: '','
-                    email: '','
-                    company: '','
-                    phone: '','
-                    subject: '','
-                    message: ''}
-                  });
-                }}
+                  setFormData({
+                    name: '',
+                    email: '',
+                    company: '',
+                    phone: '',
+                    subject: '',
+                    message: ''
+                  })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
-                Send Another Message
-              </button>
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
+          </div>
+        </section>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
+              ))}
+            </div>
 
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
@@ -232,7 +195,7 @@ export default function ContactPage()    {
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (}
+                  {subjects.map((subject, index) => (
                     <option key={index} value={subject}>
                       {subject}
                     </option>
@@ -271,7 +234,7 @@ export default function ContactPage()    {
                     <>
                       Send Message
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </>}
+                    </>
                   )}
                 </button>
               </div>
@@ -280,5 +243,4 @@ export default function ContactPage()    {
         </div>
       </section>
     </div>
-  );
-}'
+  )}

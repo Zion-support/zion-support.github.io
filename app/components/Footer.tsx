@@ -16,6 +16,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
+    { name: 'AI Services', href: '/ai-services' },
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
@@ -59,20 +60,20 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-700">
+    <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
-              Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
-              and digital transformation services for businesses worldwide.
+              <span className="text-white font-bold text-2xl">Zion Tech Group</span>
+            </Link>
+            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
+              Transforming businesses through cutting-edge AI and IT solutions. 
+              We help companies innovate and grow in the digital age with real, proven results.
             </p>
             
             {/* Contact Info */}
@@ -122,7 +123,13 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              ))}          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
             </ul>
           </div>
 
@@ -178,6 +185,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+      </div>
 
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700">
@@ -208,6 +216,14 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
       </div>
     </footer>
   );

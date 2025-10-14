@@ -2,130 +2,58 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Common syntax fixes
-const fixes = [
-  // Fix unterminated string literals
-  {
-    pattern: /import\s+React\s+from\s+'react';'react-helmet-async;/g,
-    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-  },
-  {
-    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'lucide-react;/g,
-    replacement: "import { $1 } from 'lucide-react';"
-  },
-  {
-    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'react-router-dom;/g,
-    replacement: "import { $1 } from 'react-router-dom';"
-  },
-  {
-    pattern: /import\s+([^;]+);$/gm,
-    replacement: (match, p1) => {
-      if (p1.includes("'") && !p1.endsWith("'")) {
-        return p1 + "';";
-      }
-      return match;
-    }
-  },
-  // Fix object syntax errors
-  {
-    pattern: /icon:\s*icon:\s*([^,]+),/g,
-    replacement: "icon: $1,"
-  },
-  {
-    pattern: /title:\s*'([^']+)',;/g,
-    replacement: "title: '$1',"
-  },
-  {
-    pattern: /description:\s*'([^']+)',;/g,
-    replacement: "description: '$1',"
-  },
-  {
-    pattern: /color:\s*'([^']+)',;/g,
-    replacement: "color: '$1',"
-  },
-  // Fix JSX syntax errors
-  {
-    pattern: /<([^>]+)>\s*$/gm,
-    replacement: (match, p1) => {
-      if (p1.includes('>') && !p1.endsWith('>')) {
-        return `<${p1}>`;
-      }
-      return match;
-    }
-  },
-  // Fix merge conflict markers
-  {
-    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-    replacement: ''
-  },
-  {
-    pattern: /=======[\s\S]*?>>>>>>> [^\n]+/g,
-    replacement: ''
-  },
-  // Fix unterminated strings in JSX
-  {
-    pattern: /className="([^"]*)$/gm,
-    replacement: (match, p1) => {
-      if (!p1.endsWith('"')) {
-        return `className="${p1}"`;
-      }
-      return match;
-    }
-  },
-  // Fix missing semicolons in imports
-  {
-    pattern: /import\s+[^;]+$/gm,
-    replacement: (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    }
-  },
-  // Fix duplicate imports
-  {
-    pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'[^']+';\s*import\s+{\s*([^}]+)\s*}\s+from\s+'[^']+';/g,
-    replacement: (match, p1, p2) => {
-      const combined = [...new Set([...p1.split(','), ...p2.split(',')])].join(', ');
-      return `import { ${combined} } from 'lucide-react';`;
-    }
-  }
-];
-
-function fixFile(filePath) {
+// Function to fix common syntax errors in TSX files
+function fixTsxFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply all fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-    });
-    
-    // Additional specific fixes for common patterns
-    content = content.replace(/'([^']*)\s*$/gm, (match, p1) => {
-      if (p1 && !p1.endsWith("'")) {
-        return `'${p1}'`;
-      }
-      return match;
-    });
-    
-    // Fix missing closing braces in objects
-    content = content.replace(/(\{[^}]*)\s*$/gm, (match, p1) => {
-      if (p1 && !p1.endsWith('}')) {
-        return p1 + '}';
-      }
-      return match;
-    });
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    let modified = false;
+
+    // Fix malformed Helmet tags
+    if (content.includes('<Helmet></Helmet>')) {
+      content = content.replace(/<Helmet><\/Helmet>\s*<title>/g, '<Helmet>\n        <title>');
+      content = content.replace(/<Helmet><\/Helmet>\s*<meta/g, '<Helmet>\n        <meta');
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
+    content = content.replace(/'([^']*)\n/g, "'$1'\n");
+
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
+    content = content.replace(/<button([^>]*)>\s*$/gm, '<button$1></button>');
+
+    // Fix JSX expressions without parent elements
+    content = content.replace(/return\s*\(\s*<div([^>]*)>\s*<Helmet/g, 'return (\n    <div$1>\n      <Helmet');
+
+    // Fix missing semicolons and commas
+    content = content.replace(/(\w+)\s*=\s*\{([^}]*)\}\s*$/gm, '$1: {$2},');
+    content = content.replace(/(\w+)\s*:\s*([^,}]+)\s*$/gm, '$1: $2,');
+
+    // Fix malformed function parameters
+    content = content.replace(/React\.ChangeEvent<HTMLInputElement \| HTMLTextAreaElement><\/HTMLInputElement>/g, 'React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>');
+
+    // Fix array syntax issues
+    content = content.replace(/\[\s*"([^"]*)"\s*$/gm, '["$1"]');
+    content = content.replace(/\[\s*{/gm, '[{');
+    content = content.replace(/}\s*\]/gm, '}]');
+
+    // Fix object syntax issues
+    content = content.replace(/{\s*"([^"]*)"\s*$/gm, '{"$1"');
+    content = content.replace(/}\s*$/gm, '},');
+
+    // Fix missing closing parentheses
+    content = content.replace(/\(\s*$/gm, '()');
+
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)\s*$/gm, 'className="$1"');
+    content = content.replace(/href="([^"]*)\s*$/gm, 'href="$1"');
+
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -136,40 +64,47 @@ function fixFile(filePath) {
   }
 }
 
-function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
-  ];
+// Function to find all TSX files
+function findTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  let totalFixed = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        'app-broken/**',
-        'app-disabled/**',
-        '**/*.test.*',
-        '**/*.spec.*'
-      ]
-    });
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    files.forEach(file => {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    });
-  });
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...findTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
+    }
+  }
   
-  console.log(`\nFixed ${totalFixed} files`);
+  return files;
 }
 
-if (require.main === module) {
-  main();
+// Main execution
+console.log('Starting comprehensive syntax fix...');
+
+const appDir = path.join(process.cwd(), 'app');
+const tsxFiles = findTsxFiles(appDir);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixTsxFile(file)) {
+    fixedCount++;
+  }
 }
 
-module.exports = { fixFile, fixes };
+console.log(`Fixed ${fixedCount} files`);
+
+// Run type check to see remaining errors
+console.log('\nRunning type check...');
+try {
+  execSync('npm run type-check', { stdio: 'pipe' });
+  console.log('Type check passed!');
+} catch (error) {
+  const errorOutput = error.stdout?.toString() || error.stderr?.toString() || '';
+  const errorCount = (errorOutput.match(/error TS/g) || []).length;
+  console.log(`Type check found ${errorCount} errors`);
+}

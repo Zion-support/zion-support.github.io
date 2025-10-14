@@ -1,44 +1,59 @@
-import '@testing-library/jest-dom';
-import React from 'react';
+require('@testing-library/jest-dom');
+const React = require('react');
 
-// Mock react-router-dom
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+  const React = require('react');
+
   return {
     ...actual,
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+    useNavigate: () => jest.fn(),
     useLocation: () => ({
       pathname: '/',
       search: '',
       hash: '',
-      state: null,
-      key: 'default'
+      state: null
     }),
-<<<<<<< HEAD
-
-    useNavigate: () => jest.fn(),
-=======
-useNavigate: () => jest.fn(),
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
+    useParams: () => ({}),
+    Link: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
+      const router = createMemoryRouter([
+        {
+          path: '/',
+          element: children
+        }
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0
+      });
+      return React.createElement(RouterProvider, { router });
+    },
+    RouterProvider: ({ router }) => null
   };
 });
 
-// Suppress console warnings
-<<<<<<< HEAD
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+};
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
       return;
     }
     originalError.call(console, ...args);

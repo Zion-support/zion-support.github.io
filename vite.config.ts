@@ -23,6 +23,50 @@ export default defineConfig({
     minify: 'esbuild',
     sourcemap: process.env.NODE_ENV === 'development',
     cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 150, // Balanced threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize for production;
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization;
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
+      },
+      mangle: {
+        safari10: true, // Better Safari compatibility;
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+    },
+    // Enhanced build optimizations;
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -67,6 +111,7 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
+    // Optimize bundle size
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     treeshake: true,
@@ -83,6 +128,7 @@ export default defineConfig({
     port: 4173,
     open: false,
   },
+  // Optimize dependencies;
   optimizeDeps: {
     include: [
       'react',

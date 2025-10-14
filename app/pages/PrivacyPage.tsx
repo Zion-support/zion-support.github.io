@@ -2,6 +2,96 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const PrivacyPage: React.FC = () => {
+  const lastUpdated = 'January 1, 2024';
+
+  const sections = [
+    {
+      title: 'Information We Collect',
+      content: [
+        'Personal Information: Name, email address, phone number, company information, and billing details.',
+        'Usage Data: Information about how you use our services, including IP addresses, browser type, and device information.',
+        'Cookies and Tracking: We use cookies and similar technologies to enhance your experience and analyze usage patterns.',
+        'Communication Data: Records of your communications with us, including support requests and feedback.'
+      ]
+    },
+    {
+      title: 'How We Use Your Information',
+      content: [
+        'Service Delivery: To provide, maintain, and improve our AI and IT solutions.',
+        'Communication: To send you updates, notifications, and respond to your inquiries.',
+        'Billing and Payments: To process payments and manage your account.',
+        'Analytics: To analyze usage patterns and improve our services.',
+        'Legal Compliance: To comply with applicable laws and regulations.'
+      ]
+    },
+    {
+      title: 'Information Sharing',
+      content: [
+        'We do not sell, trade, or rent your personal information to third parties.',
+        'We may share information with trusted service providers who assist us in operating our business.',
+        'We may disclose information when required by law or to protect our rights and safety.',
+        'In case of a business merger or acquisition, your information may be transferred to the new entity.'
+      ]
+    },
+    {
+      title: 'Data Security',
+      content: [
+        'We implement industry-standard security measures to protect your information.',
+        'All data is encrypted in transit and at rest using AES-256 encryption.',
+        'We regularly conduct security audits and penetration testing.',
+        'Access to personal information is restricted to authorized personnel only.',
+        'We maintain SOC 2 Type II compliance and ISO 27001 certification.'
+      ]
+    },
+    {
+      title: 'Your Rights',
+      content: [
+        'Access: You can request access to your personal information we hold.',
+        'Correction: You can request correction of inaccurate or incomplete information.',
+        'Deletion: You can request deletion of your personal information.',
+        'Portability: You can request a copy of your data in a portable format.',
+        'Opt-out: You can opt-out of marketing communications at any time.'
+      ]
+    },
+    {
+      title: 'Cookies and Tracking',
+      content: [
+        'We use essential cookies to provide basic functionality of our services.',
+        'Analytics cookies help us understand how visitors interact with our website.',
+        'Marketing cookies are used to deliver relevant advertisements.',
+        'You can control cookie preferences through your browser settings.',
+        'Disabling certain cookies may affect the functionality of our services.'
+      ]
+    },
+    {
+      title: 'Data Retention',
+      content: [
+        'We retain personal information only as long as necessary to fulfill the purposes outlined in this policy.',
+        'Account information is retained for the duration of your account plus 7 years for legal compliance.',
+        'Usage data is typically retained for 2 years for analytics purposes.',
+        'Marketing data is retained until you opt-out or for 3 years of inactivity.',
+        'Legal requirements may necessitate longer retention periods.'
+      ]
+    },
+    {
+      title: 'International Transfers',
+      content: [
+        'Your information may be transferred to and processed in countries other than your own.',
+        'We ensure appropriate safeguards are in place for international transfers.',
+        'We comply with applicable data protection laws, including GDPR and CCPA.',
+        'We use standard contractual clauses approved by relevant authorities.',
+        'We conduct regular assessments of our international data processing activities.'
+      ]
+    }
+  ];
+
+  const contactInfo = {
+    email: 'privacy@ziontechgroup.com',
+    phone: '+1-302-464-0950',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    dpo: 'Data Protection Officer'
+  }
+
   return (
     <>
       <Helmet>

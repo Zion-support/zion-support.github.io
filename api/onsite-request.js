@@ -1,23 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
-
-export default async function handler(req, res) {
+// API endpoint for onsite service requests
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD
-  try {
-=======
-try {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-    const data = fs.readFileSync(file, 'utf8');
-    const requests = JSON.parse(data);
+  try {    const data = fs.readFileSync(file, 'utf8');    const requests = JSON.parse(data);
     
     const newRequest = {
       id: Date.now().toString(),
@@ -39,9 +26,5 @@ try {
     console.error('Error saving onsite request:', error);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

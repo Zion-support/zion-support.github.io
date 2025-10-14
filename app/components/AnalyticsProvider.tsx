@@ -3,18 +3,17 @@ import React from 'react';
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;}
-}
+  page: (name: string, properties?: Record<string, any>) => void}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
-  children: ReactNode;}
-}
+  children: ReactNode}
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation;'
+    // Analytics tracking implementation;
     console.log('Analytics Event:', event, properties);
     // In a real implementation, you would send this to your analytics service;'
     if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -27,9 +26,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {';
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
         user_id: userId,
-        custom_map: traits;}
-      });
-    }
+        custom_map: traits})}
   };
 
   const page = (name: string, properties?: Record<string, any>) => {'
@@ -38,38 +35,30 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
         page_title: name,
         page_location: window.location.href,
-        ...properties;}
-      });
-    }
+        ...properties})}
   };
 
   useEffect(() => {
-    // Initialize analytics;'
+    // Initialize analytics;
     if (typeof window !== 'undefined') {';
-      // Load Google Analytics or other analytics scripts here;'
-      console.log('Analytics initialized');}
-    }
+      // Load Google Analytics or other analytics scripts here;
+      console.log('Analytics initialized')}
   }, []);
 
   const value: AnalyticsContextType = {
     track,
     identify,
-    page;}
-  };
+    page};
 
   return (
     <AnalyticsContext.Provider value={value}>;
       {children}
-    </AnalyticsContext.Provider>;
-  );
-};
+    </AnalyticsContext.Provider>)};
 
 const  (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
-  if (context === undefined) {'
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');}
-  }
-  return context;
-};
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')}
+  return context};
 
-export default AnalyticsProvider;'
+export default AnalyticsProvider;

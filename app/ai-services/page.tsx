@@ -36,26 +36,27 @@ const AiServicesPage: React.FC = () => {
     }
   ];
 
-  const testimonials = [{
+  const testimonials = [
+    {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
-      role: "CTO",'
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';
-      rating: 5;}
+      role: "CTO",
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
+      rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
-      role: "CEO",'
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';
-      rating: 5;}
+      role: "CEO",
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
+      rating: 5
     },
     {
       name: "Emily Rodriguez",
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5;}
+      rating: 5
     }
   ];
 
@@ -164,4 +165,5 @@ const AiServicesPage: React.FC = () => {
   );
 };
 
-export default AiServicesPage;'
+const page = React.lazy(() => import('./page'));
+export default page;

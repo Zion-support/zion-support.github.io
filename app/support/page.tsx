@@ -46,12 +46,13 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Support - Get Help | Zion Tech Group</title>'
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />';
-        <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -99,7 +100,7 @@ const SupportPage: React.FC = () => {
               Frequently Asked Questions;
             </h2>;
             <div className="space-y-6">;
-              {faqs.map((faq, _index) => (}
+              {faqs.map((faq, _index) => (
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>;
                   <p className="text-gray-300">{faq.answer}</p>;
@@ -138,7 +139,7 @@ const SupportPage: React.FC = () => {
         </section>;
       </div>
     </>
-  );
-};
+  )};
 
-export default SupportPage;'
+const page = React.lazy(() => import('./page'));
+export default page;

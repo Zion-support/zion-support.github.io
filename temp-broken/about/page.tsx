@@ -12,6 +12,5 @@ export default function PagePage() {
   );
   );
   );
-};
-
+}
 export default AboutPage;

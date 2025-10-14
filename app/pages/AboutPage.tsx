@@ -180,10 +180,6 @@ const AboutPage: React.FC = () => {
                 <p className="text-purple-400 font-semibold mb-4">{member.role}</p>
                 <p className="text-gray-300">{member.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">

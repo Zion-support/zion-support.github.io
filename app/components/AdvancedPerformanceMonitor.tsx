@@ -12,4 +12,3 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   );}
 };
 export default AdvancedPerformanceMonitor;
-'

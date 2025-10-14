@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon, 
+  ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
   ArrowRightIcon,
@@ -10,6 +11,7 @@ import {
   SignalIcon,
   BriefcaseIcon
 } from '@heroicons/react/24/outline';
+import FuturisticBackground from './components/FuturisticBackground';
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -39,19 +41,30 @@ const HomePage: React.FC = () => {
   };
 
   const features = [
-    '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Proven Results',
-    'Custom Implementation'
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    {
+      icon: CpuChipIcon,
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence solutions for your business needs",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: CloudIcon,
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions for modern businesses",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: ChartBarIcon,
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights",
+      color: "from-orange-500 to-red-500"
+    }
   ];
 
   const services = [

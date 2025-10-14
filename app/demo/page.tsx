@@ -27,30 +27,28 @@ const DemoPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5;}
-    },
+      rating: 5},
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5;}
-    },
+      rating: 5},
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5;}
-    }
+      rating: 5}
   ];
 
   return (
     <>
-      <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -128,7 +126,7 @@ const DemoPage: React.FC = () => {
               What Say About Our Demos;
             </h2>;
             <div className="grid md:grid-cols-3 gap-8">;
-              {testimonials.map((testimonial, _index) => (}
+              {testimonials.map((testimonial, _index) => (
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial.rating)].map((_, i) => (}
@@ -167,7 +165,7 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>
     </>
-  );
-};
+  )};
 
-export default DemoPage;'
+const page = React.lazy(() => import('./page'));
+export default page;

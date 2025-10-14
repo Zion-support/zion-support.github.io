@@ -59,10 +59,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
@@ -73,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
@@ -103,8 +99,8 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="space-y-3">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                onClick={() => window.location.reload()}
+                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
                 <ArrowPathIcon className="w-5 h-5" />
                 Try Again
@@ -129,7 +125,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

@@ -123,8 +123,7 @@ const PricingPage: React.FC = () => {
               and upgrade as your needs grow, or go straight to Enterprise for comprehensive solutions.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Pricing Plans */}
       <section className="py-20 bg-slate-900">
@@ -180,8 +179,7 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Add-ons Section */}
       <section className="py-20 bg-slate-800/50">
@@ -207,8 +205,7 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-slate-900">
@@ -270,8 +267,31 @@ const PricingPage: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+              Need Help Choosing a Plan?
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="flex items-center justify-center space-x-3 text-gray-600">
+                <PhoneIcon className="w-6 h-6 text-blue-600" />
+                <span>+1-302-464-0950</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-600">
+                <EnvelopeIcon className="w-6 h-6 text-blue-600" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-600">
+                <MapPinIcon className="w-6 h-6 text-blue-600" />
+                <span>Middletown, DE</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

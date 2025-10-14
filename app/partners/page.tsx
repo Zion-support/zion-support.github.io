@@ -48,14 +48,22 @@ const PartnersPage: React.FC = () => {
     'Dedicated partner success manager'';
   ];
 
+  const benefits = ['Access to cutting-edge technology',';
+    'Joint go-to-market opportunities',';
+    'Technical support and training',';
+    'Co-marketing and co-selling programs',';
+    'Priority access to new features',';
+    'Dedicated partner success manager''];
+
   return (
     <>
-      <Helmet>
-        <title>Partners - Strategic Partnerships | Zion Tech Group</title>
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
-        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -87,7 +95,7 @@ const PartnersPage: React.FC = () => {
               Strategic Partners;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {partners.map((partner, _index) => (}
+              {partners.map((partner, _index) => (
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">;
                   <div className="text-center">;
                     <div className="text-4xl mb-4">{partner.logo}</div>
@@ -107,7 +115,7 @@ const PartnersPage: React.FC = () => {
               Partner Benefits;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {benefits.map((benefit, _index) => (}
+              {benefits.map((benefit, _index) => (
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">;
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">;
                     <Circle className="w-4 h-4 text-white" />;
@@ -140,7 +148,7 @@ const PartnersPage: React.FC = () => {
         </section>;
       </div>
     </>
-  );
-};
+  )};
 
-export default PartnersPage;'
+const page = React.lazy(() => import('./page'));
+export default page;

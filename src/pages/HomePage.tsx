@@ -5,10 +5,10 @@ const Page: React.FC = () => {
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta;
-          name="description";
-          content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.";
-        />;
+        <meta
+          name="$1"
+          content="$1"
+        />
       </Helmet>
       <div className="min-h-screen bg-gray-900 text-white">;
         <main className="container mx-auto px-4 py-16">;
@@ -73,6 +73,5 @@ const Page: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default Page;
