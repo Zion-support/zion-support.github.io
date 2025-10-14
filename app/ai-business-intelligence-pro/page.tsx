@@ -112,5 +112,4 @@ function AIBusinessIntelligencePro() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AIBusinessIntelligencePro;
