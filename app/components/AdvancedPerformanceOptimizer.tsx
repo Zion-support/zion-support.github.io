@@ -171,10 +171,10 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           console.log('Service Worker registered successfully:', registration);
           
           // Track service worker registration
-          trackMetric('service_worker_registered', { scope: registration.scope });
+          trackMetric('service_worker_registered', registration.scope.length);
         } catch (error) {
           console.warn('Service Worker registration failed:', error);
-          trackMetric('service_worker_error', { error: error.message });
+          trackMetric('service_worker_error', error instanceof Error ? error.message.length : 0);
         }
       }
     };
@@ -255,11 +255,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
-      trackMetric('bundle_size', { 
-        scriptCount: scripts.length,
-        totalSize: totalScriptSize,
-        averageSize: totalScriptSize / scripts.length
-      });
+      trackMetric('bundle_size', totalScriptSize);
 
       // Track resource loading times
       const resources = performance.getEntriesByType('resource');
@@ -272,7 +268,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return acc;
       }, {} as Record<string, { count: number; totalSize: number; totalTime: number }>);
 
-      trackMetric('resource_metrics', resourceMetrics);
+      trackMetric('resource_metrics', Object.keys(resourceMetrics).length);
     };
 
     // Run analysis after page load

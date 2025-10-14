@@ -2,12 +2,19 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+import { Phone, Mail, MessageCircle, Clock, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
 interface FAQ {
   question: string;
   answer: string;
   category: string;
+}
+
+interface Resource {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  link: string;
 }
 
 const SupportPage: React.FC = () => {
@@ -94,6 +101,27 @@ const SupportPage: React.FC = () => {
   ];
 
   const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
+
+  const resources: Resource[] = [
+    {
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      icon: BookOpen,
+      link: '/docs'
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other users and experts',
+      icon: Users,
+      link: '/community'
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      icon: Zap,
+      link: '/tutorials'
+    }
+  ];
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||

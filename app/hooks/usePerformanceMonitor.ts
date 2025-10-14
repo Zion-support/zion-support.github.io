@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react';
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<Record<string, number>>({});
 
+  const trackMetric = (name: string, value: number) => {
+    setMetrics((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -21,7 +28,8 @@ export const usePerformanceMonitor = () => {
         observer.disconnect();
       };
     }
+    return undefined;
   }, []);
 
-  return { metrics };
+  return { metrics, trackMetric };
 };
