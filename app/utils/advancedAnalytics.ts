@@ -8,6 +8,9 @@ export const advancedAnalytics = {
     }
   },
   
+  trackEvent: (eventName: string, parameters: Record<string, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
   trackEvent: (action: string, category: string, label?: string, value?: number) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', action, {
@@ -28,6 +31,8 @@ export const advancedAnalytics = {
     }
   },
   
+  setUserProperties: (properties: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
   trackCustomEvent: (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {

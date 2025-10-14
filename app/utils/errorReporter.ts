@@ -1,5 +1,5 @@
 export const errorReporter = {
-  report: (error: Error, context?: Record<string, any>) => {
+  report: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
@@ -9,6 +9,8 @@ export const errorReporter = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error reported:', errorInfo);
       console.error('Error reported:', errorInfo)
     }
     

@@ -1,4 +1,6 @@
 export const enhancedErrorTracking = {
+  trackError: (error: Error, context?: Record<string, unknown>) => {
+    // Error tracking logic
   trackError: (error: Error, context?: Record<string, any>) => {
     const errorInfo = {
       message: error.message,
@@ -21,6 +23,11 @@ export const enhancedErrorTracking = {
     }
   },
   
+  trackPerformanceError: (error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(error, {
+      performance: performanceData,
+      error_type: 'performance'
+    });
   trackPerformanceError: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
       enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {

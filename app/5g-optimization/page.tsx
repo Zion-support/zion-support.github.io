@@ -56,6 +56,7 @@ export default FiveGOptimizationPage;
       </section>
 
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 
 const page = React.lazy(() => import('./page'));
 export default page;

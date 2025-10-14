@@ -1,5 +1,5 @@
 export const errorHandlerEnhanced = {
-  handle: (error: Error, context?: Record<string, any>) => {
+  handle: (error: Error, context?: Record<string, unknown>) => {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
@@ -9,6 +9,8 @@ export const errorHandlerEnhanced = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error handled:', errorInfo);
       console.error('Error handled:', errorInfo)
     }
     

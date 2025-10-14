@@ -8,6 +8,7 @@ import EnhancedSEO from '../components/EnhancedSEO'
 
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 const FiveGConsultingPage = () => {
   const services = [
     {
