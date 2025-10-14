@@ -5,7 +5,7 @@ interface SEOHeadProps {
   description?: string;
   keywords?: string;
   image?: string;
-  url?: string'
+  url?: string';
   type?: 'website' | 'article' | 'product';
   structuredData?: any}
 

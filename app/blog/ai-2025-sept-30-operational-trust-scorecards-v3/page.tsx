@@ -73,6 +73,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
   );
 };
 
-export default OperationalTrustScorecardsPage;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

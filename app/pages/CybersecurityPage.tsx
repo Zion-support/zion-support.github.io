@@ -8,13 +8,13 @@ import { ShieldCheckIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,'
+  EnvelopeIcon,';
   MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function CybersecurityPage() {
   const services = [
     {
-      icon: ShieldCheckIcon,'
+      icon: ShieldCheckIcon,';
       title: 'Advanced Threat Protection','
       description: 'Comprehensive security solutions to protect against malware, ransomware, and advanced persistent threats.','
       features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', '24/7 monitoring']

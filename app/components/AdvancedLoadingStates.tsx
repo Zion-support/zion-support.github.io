@@ -6,7 +6,7 @@ interface AdvancedLoadingStatesProps {
 
 }
 ;
-const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ '
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ ';
   type = 'spinner', 
   fullScreen, 
   message )

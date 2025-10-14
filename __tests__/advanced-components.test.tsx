@@ -21,8 +21,8 @@ jest.mock('../app/components/EnhancedErrorBoundary', () => {
 describe("Advanced Components Tests", () => {
   test("renders without crashing", () => {
     render(
-      <HelmetProvider>
-        <BrowserRouter>
+      <HelmetProvider></HelmetProvider>
+        <BrowserRouter></BrowserRouter>
           <div>Test Advanced Components</div>
         </BrowserRouter>
       </HelmetProvider>

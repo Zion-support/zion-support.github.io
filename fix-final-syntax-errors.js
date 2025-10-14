@@ -47,10 +47,10 @@ function fixFinalSyntaxErrors(filePath) {
     content = content.replace(/;\s*industry:/g, ',\n        industry: ');'
     content = content.replace(/;\s*description:/g, ',\n        description: ');'
     content = content.replace(/;\s*results:/g, ',\n        results: ');'
-    
+    ;
     // Fix malformed array syntax;
     content = content.replace(/\[\s*'[^']*',\s*;\s*client:/g, '[\n      {\n        title: \'$1\',\n        client: ');'
-    
+    ;
     // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     

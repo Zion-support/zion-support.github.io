@@ -1,10 +1,10 @@
 import React, { useState } from 'react;
 import { EnvelopeIcon, 
-  PhoneIcon, '
+  PhoneIcon, ';
   MapPinIcon''
   ClockIcon } from '@heroicons/react/24/outline;
-const Contact: React.FC = () => {,'
-  const [formData, setFormData] = useState({''
+const Contact: React.FC = () => {,';
+  const [formData, setFormData] = useState({ '': 
     name: ''''
     email: ''''
     company: ''''

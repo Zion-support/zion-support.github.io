@@ -11,7 +11,7 @@ export default function handler(req, res) {
 
     if (!email) {
       return res.status(400).json({ 
-        error: 'Email is required' 
+        error: 'Email is required' ;
       });
     }
 

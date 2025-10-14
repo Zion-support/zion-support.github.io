@@ -1,8 +1,35 @@
 import React from 'react''
 import { Helmet } from 'react-helmet-async''
 import { Link } from 'react-router-dom''
-import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react'
-
+import { ArrowRight } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Eye } from 'lucide-react';
+import { EyeOff } from 'lucide-react';
+import { Key } from 'lucide-react';
+import { Fingerprint } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Laptop } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+;
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
@@ -185,14 +212,14 @@ const AIPasswordManagerPage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16"></div>
               <Link 
-                to="/contact" 
+                to="/contact" ;
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
               ></Link>
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo" ;
                 className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
               ></Link>
                 <span>View Demo</span>
@@ -360,7 +387,7 @@ const AIPasswordManagerPage: React.FC = () => {
                   </ul>
                   
                   <Link 
-                    to="/contact" 
+                    to="/contact" ;
                     className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular'
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''
@@ -429,14 +456,14 @@ const AIPasswordManagerPage: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center"></div>
                 <Link 
-                  to="/contact" 
+                  to="/contact" ;
                   className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                 ></Link>
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                 </Link>
                 <Link 
-                  to="/pricing" 
+                  to="/pricing" ;
                   className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                 ></Link>
                   <span>View All Plans</span>

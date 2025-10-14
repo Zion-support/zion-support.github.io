@@ -1,6 +1,6 @@
 import React from 'react''
 'use client;
-export default function ZionAiDataWarehousePage() {
+function ZionAiDataWarehousePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20"></div>
       <div className="container mx-auto px-4">;

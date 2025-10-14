@@ -18,7 +18,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,'
+      errorInfo: null,';
       errorId: ''
     }}
 

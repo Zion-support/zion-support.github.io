@@ -43,3 +43,4 @@ const originalContent = content;
 console.log("Starting duplicate closing braces fixes...")"
 processFiles("./app")"
 console.log("Duplicate closing braces fixes completed!")"
+;

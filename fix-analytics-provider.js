@@ -8,7 +8,7 @@ const content = fs.readFileSync("
 // Fix the malformed content;
 let fixed = content;
 // Fix 1: 'Fix malformed import statement;',
-fixed = fixed.replace("
+fixed = fixed.replace(";
   /import React, { createContext, useContext, ReactNode }  from "react";interface AnalyticsContextType {/g,"
   'import React, { createContext, useContext, ReactNode } from "react";\n\ninterface AnalyticsContextType {',)'"'"
 );

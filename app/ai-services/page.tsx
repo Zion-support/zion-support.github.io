@@ -4,7 +4,7 @@ import { Brain, BarChart3, Zap, FileText, MessageSquare, Shield, Users, Trending
 
 const AiServicesPage: React.FC = () => {
   const services = [{
-      icon: Brain,'
+      icon: Brain,';
       title: 'AI Consulting','
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
       color: 'from-purple-500 to-pink-500'

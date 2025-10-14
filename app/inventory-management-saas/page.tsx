@@ -31,5 +31,6 @@ const InventoryManagementSAAS = () => {
   );
 };
 
-export default InventoryManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

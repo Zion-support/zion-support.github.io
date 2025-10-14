@@ -69,7 +69,7 @@ const eersPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
             <span className="text-cyan-400">eers</span>""
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Join our team and help shape the future of AI and IT solutions.
           </p>
         </div>
@@ -247,11 +247,11 @@ import { Right, Circle, Star,    } from "lucide-react";"
 
         <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>""
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent></span>
                 Page;
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8></p>
               Build the future of technology with us. Were looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
           </div>
@@ -265,7 +265,7 @@ import { Right, Circle, Star,    } from "lucide-react";"
                 className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
               >
                 {departments.map((dept) => (
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.;
 
               Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.';
@@ -283,7 +283,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   </div>
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge Technology</h3>""
-                    <p className="text-gray-300">
+                    <p className="text-gray-300"></p>
                       Work with the latest AI, quantum computing, and cloud technologies ;
                       that are shaping the future.
                     </p>
@@ -318,12 +318,13 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
 );}""
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse ""
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%, rgba(59, 130, 246, 0.3)_0%, transparent_50%)] animate-pulse" style={{ animationDelay: '1s,}}'"'"
-
+;
           <div className="relative max-w-7xl mx-auto text-center>""
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6></h1>
               Join Our Team;
             <
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto></
+>
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
             <
           <
@@ -363,7 +364,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">""
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Don't See Your Role?''
         </section>
       )}
@@ -396,7 +397,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
 
                   <p className="text-gray-300 mb-6>{position.description}</p>" > 3 && (
 
-                        <li className="text-sm text-gray-400>
+                        <li className="text-sm text-gray-400></li>
             </div>  )););
 export default eersPage;
 ;

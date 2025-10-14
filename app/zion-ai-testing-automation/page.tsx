@@ -1,7 +1,7 @@
 import React from 'react;
-/* global describe, test, expect, it, beforeEach */'
+/* global describe, test, expect, it, beforeEach */';
 'use client'
-export default function ZionAiTestingAutomationPage() {
+function ZionAiTestingAutomationPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20"></div>
       <div className="container mx-auto px-4">;

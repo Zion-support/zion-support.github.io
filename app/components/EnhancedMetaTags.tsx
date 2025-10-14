@@ -5,7 +5,7 @@ interface EnhancedMetaTagsProps {
   description: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string'
+  ogImage?: string';
   ogType?: 'website' | 'article' | 'product''
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   noIndex?: boolean,

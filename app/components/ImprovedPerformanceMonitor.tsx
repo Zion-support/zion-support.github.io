@@ -29,7 +29,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     });
   }, [onMetricsUpdate]);
   useEffect(() => {
-    // Only run in browser'
+    // Only run in browser';
     if (typeof window === 'undefined') return;
 
     // Load web-vitals library dynamically

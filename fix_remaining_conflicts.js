@@ -70,3 +70,4 @@ if (resolvedCount > 0) {
   console.log('3. Run: npm run health-check');';
 }
 "
+;

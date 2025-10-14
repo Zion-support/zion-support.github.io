@@ -180,6 +180,7 @@ const AIFinancialAnalysis = () => {
   );
 };
 
-export default AIFinancialAnalysis;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

@@ -35,13 +35,13 @@ const Page = () => {
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
 
     },'
-    {''
+    { '': 
       title: '5G Mobile Applications'''
       description: 'Custom mobile apps optimized for 5G networks'''
       price: 'Starting at $25,000'''
       features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
     },'
-    {''
+    { '': 
       title: '5G IoT Solutions'''
       description: 'IoT device connectivity and management platform'''
       price: 'Starting at $35,000'''

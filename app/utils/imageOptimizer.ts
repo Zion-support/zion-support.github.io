@@ -7,7 +7,7 @@ format?: 'webp' | 'avif' | 'jpeg' | 'png';
 export const optimizeImage = (
   src: string,
   options: ImageOptimizationOptions = {}
-): string => {'}'
+): string => { '}': 
   const { width, height, quality = 80, format = 'webp', lazy = true } = options'
   // In a real implementation, you would use a service like Cloudinary or ImageKit;
   // For now, we'll return the original src with query parameters;

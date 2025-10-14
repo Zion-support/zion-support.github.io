@@ -9,7 +9,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload critical fonts'
+      // Preload critical fonts';
       const fontLink = document.createElement('link')'
       fontLink.rel = 'preload''
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap''
@@ -36,14 +36,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Optimize images
     const optimizeImages = () => {'
       const images = document.querySelectorAll('img')'
-      images.forEach((img) => {''
-        if (!img.hasAttribute('loading')) {''
+      images.forEach((img) => { '': 
+        if (!img.hasAttribute('loading')) { '': 
           img.setAttribute('loading', 'lazy');}
         }
       });
     };
 '
-        if (!img.hasAttribute('loading')) {''
+        if (!img.hasAttribute('loading')) { '': 
           img.setAttribute('loading', 'lazy')'
 { useEffect, Node } from 'react';
 interface PerformanceOptimizerProps {

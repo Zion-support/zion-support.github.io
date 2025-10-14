@@ -30,7 +30,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Load saved settings from localStorage'
+    // Load saved settings from localStorage';
     const savedSettings = localStorage.getItem('accessibilitySettings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));

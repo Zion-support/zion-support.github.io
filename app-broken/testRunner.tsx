@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 // Custom render function with providers
 const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
-    <BrowserRouter>
+    <BrowserRouter></BrowserRouter>
       {children}
     </BrowserRouter>
   );
@@ -13,7 +13,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 
 const customRender = (
   ui: Element,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper'></RenderOptions,>
 ): RenderResult => {
   return render(ui, { wrapper: AllTheProviders, ...options });
 }

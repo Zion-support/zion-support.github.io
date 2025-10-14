@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom;
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
-  href?: string'
+  href?: string';
   onClick?: () => void;''
   variant?: 'primary' | 'secondary' | 'accent''
   size?: 'sm' | 'md' | 'lg';

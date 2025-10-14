@@ -8,13 +8,13 @@ import { CloudIcon,
   CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,'
+  EnvelopeIcon,';
   MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function CloudSolutionsPage() {
   const services = [
     {
-      icon: CloudIcon,'
+      icon: CloudIcon,';
       title: 'Cloud Migration','
       description: 'Seamless migration of your applications and data to the cloud with minimal downtime.','
       features: ['Assessment & planning', 'Data migration', 'Application modernization', 'Performance optimization']

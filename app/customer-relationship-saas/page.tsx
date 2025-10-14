@@ -31,5 +31,6 @@ const CustomerRelationshipSAAS = () => {
   );
 };
 
-export default CustomerRelationshipSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

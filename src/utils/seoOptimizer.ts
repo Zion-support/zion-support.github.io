@@ -187,7 +187,7 @@ const canonical = document.createElement('link');';
   ;
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact;
-    if (typeof window !== 'undefined' && 'performance' in window) {''
+    if (typeof window !== 'undefined' && 'performance' in window) { '': 
       // Monitor LCP (Largest Contentful Paint);
       new PerformanceObserver((list) => {;
 const entries = list.getEntries();
@@ -212,7 +212,7 @@ const entries = list.getEntries();
   }
   ;
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {''
+    if (typeof window !== 'undefined' && (window as any).gtag) { '': 
       (window as any).gtag('event', 'seo_metric', {'';
         metric_name: metric,);
         metric_value: Math.round(value),

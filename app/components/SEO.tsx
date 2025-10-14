@@ -4,7 +4,7 @@ interface SEOProps {
   title?: string
   description?: string
   keywords?: string
-  image?: string'
+  image?: string';
   url?: string''
   type?: 'website' | 'article' | 'profile;
   author?: string

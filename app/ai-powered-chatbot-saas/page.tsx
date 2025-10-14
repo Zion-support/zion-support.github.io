@@ -31,5 +31,6 @@ const AIPoweredChatbotSAAS = () => {
   );
 };
 
-export default AIPoweredChatbotSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

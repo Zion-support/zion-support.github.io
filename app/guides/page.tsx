@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async''
 import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react;
 const GuidesPage: React.FC = () => {
   const guides = [
-    {'
+    {';
       title: 'AI 2026 Implementation Roadmap','
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026','
       url: '/','
@@ -214,6 +214,7 @@ const Page = () => {
   );
 };
 
-export default Page;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

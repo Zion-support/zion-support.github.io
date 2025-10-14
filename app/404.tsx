@@ -1,12 +1,12 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>404 - Zion Tech Group</title>
-        <meta name="description" content="404 - Zion Tech Group" /></meta>
+        <meta name="description" content="404 - Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center"></div>
@@ -30,21 +30,20 @@ export default function NotFoundPage() {
                 Custom Implementation
               </h3>
               <p className="text-green-700"></p>
-                Tailored 404 implementations for your specific requirements.
+                Tailored 404 solutions designed for your specific needs.
               </p>
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>
               <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
-                24/7 Support
+                Advanced Technology
               </h3>
               <p className="text-purple-700"></p>
-                Round-the-clock support for all your 404 needs.
+                State-of-the-art 404 technology for optimal performance.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
-'

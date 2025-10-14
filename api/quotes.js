@@ -7,12 +7,12 @@ export default function handler(req, res) {
 export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint working' });
 }
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
+          <div className="max-w-6xl mx-auto text-center"></div>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
               Quotes.js
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Professional quotes.js services by Zion Tech Group.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      message: 'Quote request submitted successfully' 
+      message: 'Quote request submitted successfully' ;
     }));
   } catch (error) {
     console.error('Quote submission error:', error);

@@ -31,5 +31,6 @@ const EmployeeManagementSAAS = () => {
   );
 };
 
-export default EmployeeManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

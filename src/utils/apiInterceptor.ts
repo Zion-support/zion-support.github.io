@@ -1,5 +1,5 @@
 'use client';'
-
+;
 // import { ErrorHandler    } from "./errorHandler";";
 import { performanceMetrics    } from "./performanceMetrics";"
 // ErrorHandler class definition;

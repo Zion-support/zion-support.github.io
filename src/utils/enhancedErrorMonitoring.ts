@@ -188,7 +188,7 @@ category: 'network''',
       this.sendErrorReport(errorReport)
     }
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {''
+    if (process.env['NODE_ENV'] === 'development') { '': 
 // console.error('Error captured:', errorReport)'',
     }
   }
@@ -201,7 +201,7 @@ category: 'network''',
     )
   }
   ;
-  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {''
+  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' { '': 
     // Critical: Network errors, unhandled promise rejections;
     if (context.category === 'network' || context.category === 'promise') {'';
       return 'critical'''

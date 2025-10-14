@@ -4,11 +4,11 @@ import { CpuChipIcon,
   CloudIcon,
   CogIcon,
 
-  ChartBarIcon,'
+  ChartBarIcon,';
   ShieldCheckIcon''
   RocketLaunchIcon } from '@heroicons/react/24/outline;
 const Services: React.FC = () => {
-  const services = [{,'
+  const services = [{,';
       icon: CpuChipIcon''
       title: 'AI Solutions'''
       description: 'Cutting-edge artificial intelligence solutions to automate processes and drive innovation.'''

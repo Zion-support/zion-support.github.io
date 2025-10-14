@@ -1,4 +1,10 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react''
+import { Right } from 'lucide-react';
+import { Circle } from 'lucide-react';
+import { Workflow } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Play } from 'lucide-react';'
 import EnhancedSEO from '../components/EnhancedSEO''
 import ResponsiveContainer from '../components/ResponsiveContainer''
 import FuturisticCard from '../components/FuturisticCard''
@@ -62,7 +68,7 @@ const AIAutomationPlatform = () => {
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-
+;
                 ></FuturisticButton>
                   View Demo
                 </FuturisticButton>
@@ -136,7 +142,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-
+;
               ></FuturisticButton>
                 Start Your Automation Journey
               </FuturisticButton>

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route    } from "react-router-dom";";
 import { HelmetProvider    } from "react-helmet-async";";
 import Footer from "./components/Footer";";
 import LoadingSpinner from "./components/LoadingSpinner";";
-import ErrorBoundary from "./components/ErrorBoundary"
-
+import ErrorBoundary from "./components/ErrorBoundary";
+;
 // Lazy load pages for better performance";
 const Page = lazy(() => import("./page"));";
 const AboutPage = lazy(() => import("./about/page"));";

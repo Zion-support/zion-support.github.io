@@ -9,7 +9,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
   sizes?: string;
-  quality?: number'
+  quality?: number';
   loading?: 'lazy' | 'eager'
   onLoad?: () => void;
   onError?: () => void}

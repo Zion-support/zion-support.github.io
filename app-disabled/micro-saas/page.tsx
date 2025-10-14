@@ -76,7 +76,7 @@ import { Right, Circle, Star,    } from "lucide-react";";
       id: '5,''
     {
       id: '6,'';
-  const benefits = [    'No upfront costs or setup fees,;'
+  const benefits = [ 'No upfront costs or setup fees,;', 
     'Quick deployment in 24-48 hours,''
     'Scalable solutions that grow with you,''
     'Regular updates and new features,''
@@ -156,7 +156,7 @@ import { Right, Circle, Star,    } from "lucide-react";";
           <div className="max-w-7xl mx-auto>""
             <div className="text-center mb-16>""
               <h2 className="text-3xl font-bold text-white mb-6>Our Micro SaaS Products</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto></p>
                 Choose from our collection of specialized business tools designed to solve specific challenges.
               </p>
             </div>
@@ -186,7 +186,7 @@ product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700
           <div className="max-w-7xl mx-auto>""
             <div className="text-center mb-16>""
               <h2 className="text-3xl font-bold text-white mb-6>Why Choose Our Micro SaaS Solutions?</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto></p>
                 Weve designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>

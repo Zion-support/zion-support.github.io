@@ -19,7 +19,7 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      message: 'Onsite request submitted successfully' 
+      message: 'Onsite request submitted successfully' ;
     }));
   } catch (error) {
     console.error('Error:', error);

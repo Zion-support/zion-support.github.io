@@ -1,14 +1,14 @@
 import React from 'react;
 import { Loader2, Brain, Zap, Shield } from 'lucide-react;
 
-interface LoadingSpinnerProps {'
+interface LoadingSpinnerProps {';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '
   size = 'md', '
-  className = '' 
+  className = '' ;
 }) => {
   const sizeClasses = {'
     sm: 'w-4 h-4','
@@ -78,7 +78,7 @@ interface SkeletonLoaderProps {
 
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   lines = 3, '
-  className = '' 
+  className = '' ;
 }) => {
   return (
     <div className={`animate-pulse ${className}`}></div>

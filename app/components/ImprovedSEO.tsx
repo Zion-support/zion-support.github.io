@@ -18,7 +18,7 @@ interface ImprovedSEOProps {
   nofollow?: boolean;
 }
 
-const ImprovedSEO: React.FC<ImprovedSEOProps> = ({'
+const ImprovedSEO: React.FC<ImprovedSEOProps> = ({';
   title = 'Zion Tech Group - Advanced AI and IT Solutions','
   description = 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.','
   keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting',

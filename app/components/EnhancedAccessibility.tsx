@@ -7,7 +7,7 @@ import React from 'react''
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Enhanced accessibility features'
-    const addSkipLinks = () => {''
+    const addSkipLinks = () => { '': 
       const skipLink = document.createElement('a')''
       skipLink.href = '#main-content''
       skipLink.textContent = 'Skip to main content''
@@ -50,13 +50,13 @@ border: 0;
 
     const setupKeyboardNavigation = () => {'
       // Enhanced keyboard navigation''
-      document.addEventListener('keydown', (e) => {''
-        if (e.key === 'Tab') {''
+      document.addEventListener('keydown', (e) => { '': 
+        if (e.key === 'Tab') { '': 
           document.body.classList.add('keyboard-navigation');}
         }
       })'
 ''
-      document.addEventListener('mousedown', () => {''
+      document.addEventListener('mousedown', () => { '': 
         document.body.classList.remove('keyboard-navigation');}
       });
     };
@@ -94,11 +94,11 @@ border: 0;
     mediaQuery.addEventListener('change', handleChange)
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation'
-      document.addEventListener('keydown', (e) => {''
-        if (e.key === 'Tab') {''
+      document.addEventListener('keydown', (e) => { '': 
+        if (e.key === 'Tab') { '': 
           document.body.classList.add('keyboard-navigation')}
       })'
-      document.addEventListener('mousedown', () => {''
+      document.addEventListener('mousedown', () => { '': 
         document.body.classList.remove('keyboard-navigation')})}
     // Initialize accessibility enhancements
     addSkipLinks()

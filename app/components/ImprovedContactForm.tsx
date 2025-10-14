@@ -1,5 +1,14 @@
 import React from 'react;
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
+import { MessageSquare } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Building } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 interface FormData {
   name: 'string','
@@ -76,7 +85,7 @@ const ImprovedContactForm: React.FC = () => {
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {
       const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) {'
+      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) { '
         newErrors.phone = "Please enter a valid phone number;
       }
     }
@@ -100,7 +109,7 @@ const ImprovedContactForm: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
     
     // Clear error when user starts typing
-    if (errors[name]) {'
+    if (errors[name]) {': 
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
   };

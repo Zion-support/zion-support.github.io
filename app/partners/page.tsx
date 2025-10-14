@@ -1,38 +1,38 @@
 import React from 'react''
 import { Helmet ,   } from 'lucide-react''
 import { Circle, Right,  } from 'lucide-react;
-const PartnersPage: React.FC = () => {'
-  const partners = [{''
+const PartnersPage: React.FC = () => {';
+  const partners = [{ '': 
       name: 'Microsoft'''
       logo: '🏢'''
       description: 'Strategic partnership for cloud and AI solutions'''
       category: 'Technology'';}
     },'
-    {''
+    { '': 
       name: 'Amazon Web Services'''
       logo: '☁️'''
       description: 'infrastructure and AI services collaboration'''
       category: ''';}
     },'
-    {''
+    { '': 
       name: 'Google '''
       logo: '🔍'''
       description: 'AI and machine learning platform integration'''
       category: 'AI/ML'';}
     },'
-    {''
+    { '': 
       name: 'IBM'''
       logo: '💼'''
       description: 'Enterprise AI solutions and consulting'''
       category: 'Enterprise'';}
     },'
-    {''
+    { '': 
       name: 'Salesforce'''
       logo: '📊'''
       description: 'CRM and business intelligence integration'''
       category: 'CRM'';}
     },'
-    {''
+    { '': 
       name: 'Oracle'''
       logo: '🗄️'''
       description: 'and enterprise application solutions'''

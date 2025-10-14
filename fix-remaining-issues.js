@@ -258,7 +258,7 @@ function fixUnusedImports(filePath) {
       modified = true;
     }
     
-    if (filePath.includes('App_minimal.tsx')) {''
+    if (filePath.includes('App_minimal.tsx')) { '': 
       // Remove unused imports"
       content = content.replace(/import\s+{\s*Router,\s*Routes,\s*Route,\s*HelmetProvider\s*}\s+from\s+['"][^'"]+['"];?\s*\n/, '');"'"
       modified = true;
@@ -362,3 +362,4 @@ const filesToFixImports = [;
   console.error('💥 Fatal error during issue resolution: ', error.message);',
   process.exit(1);
 }"
+;

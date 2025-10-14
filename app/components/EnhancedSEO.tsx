@@ -16,7 +16,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
   keywords,
-  canonical,'
+  canonical,';
   ogImage = '/og-image.jpg',
   ogUrl,'
   ogType = 'website','
@@ -27,7 +27,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   structuredData,
   noIndex = false,
   noFollow = false}'
-}) => {''
+}) => { '': 
   const siteName = 'Zion Tech Group''
   const siteUrl = 'https://ziontechgroup.com';}'
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl''
@@ -35,29 +35,29 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   
   // Enhanced meta description with better length control
   const optimizedDescription = description.length > 160 '
-    ? description.substring(0, 157) + '...' 
+    ? description.substring(0, 157) + '...' ;
     : description;
 '
-  const defaultStructuredData = {''
+  const defaultStructuredData = { '': 
     '@context': 'https://schema.org'''
     '@type': 'Organization',
     name: siteName,
     url: siteUrl,}'
     logo: `${siteUrl}/logo.png`''
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {''
+    address: { '': 
       '@type': 'PostalAddress'''
       addressLocality: 'Middletown'''
       addressRegion: 'DE'''
       addressCountry: 'US'}
     },'
-    contactPoint: {''
+    contactPoint: { '': 
       '@type': 'ContactPoint'''
       telephone: '+1-302-464-0950'''
       contactType: 'customer service'''
       email: 'kleber@ziontechgroup.com'}
     },'
-    sameAs: [''
+    sameAs: [ '', 
       'https://www.linkedin.com/'''
       'https://github.com/ziontechgroup'''
       'https://twitter.com/ziontechgroup'

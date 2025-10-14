@@ -31,5 +31,6 @@ const SmartHomeSAAS = () => {
   );
 };
 
-export default SmartHomeSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

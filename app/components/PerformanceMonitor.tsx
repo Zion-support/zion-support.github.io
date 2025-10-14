@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> origin/main;
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    // Only run in development'
+    // Only run in development';
     if (process.env.NODE_ENV !== 'development') {
       return;
     }

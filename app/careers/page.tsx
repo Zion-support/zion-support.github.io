@@ -1,11 +1,36 @@
 import React, { useState } from 'react;
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Coffee } from 'lucide-react';
+import { Gamepad2 } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async"'
 import EnhancedSEO from '../components/EnhancedSEO;
 
-const CareersPage = () => {'
+const CareersPage = () => {';
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const jobCategories = ['
@@ -180,7 +205,7 @@ const CareersPage = () => {'
     { number: "100%", label: "Remote Friendly", icon: <Globe className="w-6 h-6" /> }
   ];
 '
-  const filteredJobs = selectedCategory === 'all' 
+  const filteredJobs = selectedCategory === 'all' ;
     ? jobOpenings 
     : jobOpenings.filter(job => job.category === selectedCategory);
 
@@ -437,5 +462,5 @@ const CareersPage = () => {'
     </div>
   );}'
 }'
-
+;
 '

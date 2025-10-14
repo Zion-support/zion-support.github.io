@@ -31,5 +31,6 @@ const ProjectManagementSAAS = () => {
   );
 };
 
-export default ProjectManagementSAAS;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

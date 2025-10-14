@@ -33,7 +33,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
 // Utility function to create lazy-loaded components,
 // eslint-disable-next-line @,
 export function createLazyComponent<T extends ComponentType<any>>()
-  importFunction: () => Promise<{ default: T }>
+  importFunction: () => Promise<{ default: T }></{>
   fallback?: React.ReactNode,
 ) {,
 
@@ -45,6 +45,6 @@ export function createLazyComponent<T extends ComponentType<any>>()
       {/* eslint-disable-next-line @ */},
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  );,'
+  );,';
 }'
 '

@@ -13,7 +13,7 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   RocketLaunchIcon,
-  SparklesIcon,'
+  SparklesIcon,';
   BoltIcon'}'
 } from '@heroicons/react/24/outline''
 import FuturisticBackground from '../components/FuturisticBackground''

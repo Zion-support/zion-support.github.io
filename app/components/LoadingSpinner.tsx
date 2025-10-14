@@ -4,7 +4,7 @@
 import React from 'react''
 import { Loader2 } from 'lucide-react;
 
-interface LoadingSpinnerProps {'
+interface LoadingSpinnerProps {';
   size?: 'sm' | 'md' | 'lg' | 'xl';
 
 

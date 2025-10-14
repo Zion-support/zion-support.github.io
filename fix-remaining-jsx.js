@@ -19,7 +19,7 @@ function fixRemainingJSX(content, filePath) {
   const malformedHelmetPattern = /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<meta[^>]*\/>\s*<\/Helmet>/g;
   if (malformedHelmetPattern.test(fixed)) {
     fixed = fixed.replace(malformedHelmetPattern, (match, title) => {
-      return `<Helmet>
+      return `<Helmet></Helmet>
         <title>${title}</title>
         <meta name="description" content="${title} - Zion Tech Group" />
         <meta name="keywords" content="${title.toLowerCase().replace(/\s+/g, ', ')}, AI solutions, IT services" />

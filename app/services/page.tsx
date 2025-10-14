@@ -8,7 +8,7 @@ import {
   ChartBarIcon,
   GlobeAltIcon,
   ArrowRightIcon,
-  CheckIcon,'
+  CheckIcon,';
   StarIcon'}'
 } from '@heroicons/react/24/outline;
 

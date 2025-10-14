@@ -39,7 +39,7 @@ function fixFinalJSX(content, filePath) {
       const titleMatch = match.match(/<div[^>]*>[\s\S]*?<h1[^>]*>([^<]*)<\/h1>/);
       const title = titleMatch ? titleMatch[1] : 'Page';
       return `<>
-      <Helmet>
+      <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} - Zion Tech Group" />
       </Helmet>

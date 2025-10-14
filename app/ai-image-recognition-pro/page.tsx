@@ -180,6 +180,7 @@ const AIImageRecognitionPro = () => {
   );
 };
 
-export default AIImageRecognitionPro;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

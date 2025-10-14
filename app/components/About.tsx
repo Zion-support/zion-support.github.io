@@ -1,28 +1,28 @@
 import { Users } from 'lucide-react''
 import React from 'react;
 import { CheckIcon, 
-  UsersIcon, '
+  UsersIcon, ';
   TrophyIcon, ''
   LightBulbIcon } from '@heroicons/react/24/outline;
-const About: React.FC = () => {'
-  const stats = [','
+const About: React.FC = () => {';
+  const stats = [ ',', 
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' }''
     { icon: TrophyIcon, value: '50+', label: 'Awards Won' }''
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }];
 '
-  const values = [{''
+  const values = [{ '': 
       title: 'Innovation'''
       description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
     },'
-    {''
+    { '': 
       title: 'Excellence'''
       description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
     },'
-    {''
+    { '': 
       title: 'Partnership'''
       description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
     },'
-    {''
+    { '': 
       title: 'Integrity'''
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     }];

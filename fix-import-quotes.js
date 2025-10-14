@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix import statement quotes;
 function fixImportQuotes(content) {
-  // Fix extra quotes at the end of import statements";"
+  // Fix extra quotes at the end of import statements";";
   content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"
     return match.replace(/;\s*$/, ";)
   })

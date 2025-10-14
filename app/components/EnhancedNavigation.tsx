@@ -15,7 +15,7 @@ const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigationItems = [
-    {'
+    {';
       label: 'AI Services','
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,

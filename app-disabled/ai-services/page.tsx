@@ -34,10 +34,10 @@ import { Circle, Right, Star,    } from "lucide-react";"
 ;
       <div className="container mx-auto px-4 py-16">""
         <div className="text-center">""
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
             AI Services;
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8"></p>
             Comprehensive AI solutions to transform your business.
           </p>
         </div>
@@ -45,19 +45,19 @@ import { Circle, Right, Star,    } from "lucide-react";"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""
             <div className="bg-white rounded-lg shadow-md p-6">""
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Machine Learning</h3>""
-              <p className="text-gray-600">
+              <p className="text-gray-600"></p>
                 Advanced machine learning solutions for data analysis and prediction.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">""
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>""
-              <p className="text-gray-600">
+              <p className="text-gray-600"></p>
                 AI-powered text analysis and language understanding.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">""
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Computer Vision</h3>""
-              <p className="text-gray-600">
+              <p className="text-gray-600"></p>
                 Image and video analysis using advanced AI algorithms.
               </p>
             </div>
@@ -144,7 +144,7 @@ import { Circle, Right, Star,    } from "lucide-react";"
       
       <div className="container mx-auto px-4 py-20">""
         <div className="text-center mb-16">""
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>""
       </div>
     </>

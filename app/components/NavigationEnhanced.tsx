@@ -1,32 +1,30 @@
 import React from 'react;
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Zap, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Code, 
-  Brain, 
-  BarChart3, 
-  Star, 
-  ArrowRight, 
-  Globe, 
-  Cpu, 
-  Link as LinkIcon,
-  Sidebar as SidebarIcon,
-  Video,
-  Users,
-  Target,
-  Settings,
-  Search,
-  Bell,
-  User'
-} from 'lucide-react''
-import FuturisticButton from './FuturisticButton'
-
+import { Link, useLocation } from 'react-router-dom';
+import { Menu } from 'lucide-react';
+import { X } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Link } from 'lucide-react';
+import { Sidebar } from 'lucide-react';
+import { Video } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { Bell } from 'lucide-react';
+import { User' } from 'lucide-react';'
+import FuturisticButton from './FuturisticButton';
+;
 interface NavigationEnhancedProps {
   onSidebarToggle?: () => void;
 const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggle }) => {
@@ -190,7 +188,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
       <div className="max-w-7xl mx-auto px-4"></div>
         <div className="flex justify-between items-center py-4"></div>
           <Link 
-            to="/" 
+            to="/" ;
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           ></Link>
@@ -504,5 +502,5 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
 })
 '
 NavigationEnhanced.displayName = 'NavigationEnhanced'
-
+;
 export default NavigationEnhanced'

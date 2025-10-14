@@ -1,22 +1,22 @@
 import React from "react";"
 'use client';'
-
+;
 /**
  * Accessibility issue severity levels;
  */;
 export enum A11ySeverity {
   ;
   MINOR="MINOR"
-  
+  ;
   MODERATE="MODERATE"
-  
+  ;
   SERIOUS="SERIOUS"
-  
+  ;
   CRITICAL="CRITICAL"
   A="A"
-  
+  ;
   AA="AA"
-  
+  ;
   AAA="AAA" checker = new AccessibilityChecker();
  * const result = checker.checkElement(document.getElementById('main'));'
  * if (import.meta.env.DEV) {}
@@ -407,3 +407,4 @@ const score = Math.max(0, 100 - totalPenalty);
   }
 }
 """
+;

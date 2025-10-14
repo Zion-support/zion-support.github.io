@@ -180,6 +180,7 @@ const AIHRRecruitmentPro = () => {
   );
 };
 
-export default AIHRRecruitmentPro;
+const page = React.lazy(() => import('./page'));
+export default page;
 
 '

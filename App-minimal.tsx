@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 // Minimal working App component
 function App() {
   return (
@@ -19,9 +20,8 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 
 export default App;
-'

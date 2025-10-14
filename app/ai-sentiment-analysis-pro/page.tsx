@@ -172,5 +172,6 @@ const AISentimentAnalysisPro = () => {
   );
 };
 
-export default AISentimentAnalysisPro;
+const page = React.lazy(() => import('./page'));
+export default page;
 '

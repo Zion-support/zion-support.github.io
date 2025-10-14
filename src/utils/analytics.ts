@@ -1,6 +1,6 @@
 'use client';';
 import React from "react";"
-
+;
 // Declare gtag function for Google Analytics;
 declare global {
   function gtag(...args: any[]): void;
@@ -54,7 +54,7 @@ class AnalyticsService {
         })
       }
       // Log in development;
-      if (process.env['NODE_ENV'] === 'development') {''
+      if (process.env['NODE_ENV'] === 'development') { '': 
         }
     } catch (error) {
 // console.error('Failed to track event:', error)'',

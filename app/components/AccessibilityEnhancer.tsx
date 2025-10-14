@@ -11,7 +11,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   useEffect(() => {
     // Skip to main content functionality
-    const addSkipLink = () => {'
+    const addSkipLink = () => {';
       const skipLink = document.createElement('a')'
       skipLink.href = '#main-content''
       skipLink.textContent = 'Skip to main content''

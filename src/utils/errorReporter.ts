@@ -82,18 +82,18 @@ const errorKey = `${error.name}:${error.message}`;```;
   private logToConsole(report: ErrorReport): void {;
 const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);```;
-    if (process.env['NODE_ENV'] === 'development') {''
+    if (process.env['NODE_ENV'] === 'development') { '': 
       }
-    if (process.env['NODE_ENV'] === 'development') {''
+    if (process.env['NODE_ENV'] === 'development') { '': 
       }
-    if (process.env['NODE_ENV'] === 'development') {''
+    if (process.env['NODE_ENV'] === 'development') { '': 
       }
     if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') {''
+      if (process.env['NODE_ENV'] === 'development') { '': 
         }
     }
     if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') {''
+      if (process.env['NODE_ENV'] === 'development') { '': 
         }
     }
     console.groupEnd();

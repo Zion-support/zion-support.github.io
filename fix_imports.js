@@ -2,7 +2,7 @@ import fs from "fs;";
 import { glob     } from ";glob;";
 // Fix broken import statements;
 function fixImports(content) {
-  // Fix malformed import statements where quotes are missing";"
+  // Fix malformed import statements where quotes are missing";";
   content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport')'"'"
   // Fix missing quotes around module names"
   content = content.replace(/from\s+([a-zA-Z-]+)"/g, 'from "$1"')'"'"

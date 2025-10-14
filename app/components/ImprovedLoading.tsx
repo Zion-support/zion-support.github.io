@@ -1,6 +1,6 @@
 import React from 'react;
-import { Loader2, Brain, Zap, Shield, Globe } from 'lucide-react'
-
+import { Loader2, Brain, Zap, Shield, Globe } from 'lucide-react';
+;
 interface ImprovedLoadingProps {
   message?: string'
   size?: 'sm' | 'md' | 'lg' | 'xl''

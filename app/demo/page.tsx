@@ -1,19 +1,19 @@
 import React from 'react;
 
 const DemoPage: React.FC = () => {
-  const features = [{''
+  const features = [{ '': 
       icon: 'Analytics'''
       title: 'AI-Powered Analytics'''
       description: 'See how our AI analyzes your data in real-time'''
       demo: 'Live Demo'';}
     },'
-    {''
+    { '': 
       icon: 'Security'''
       title: 'Advanced Security'''
       description: 'Experience our enterprise-grade security features'''
       demo: 'Demo'';}
     },'
-    {''
+    { '': 
       icon: 'Intelligence'''
       title: 'Business Intelligence'''
       description: 'Explore our comprehensive BI dashboard'''

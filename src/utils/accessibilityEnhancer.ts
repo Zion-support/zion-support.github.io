@@ -68,7 +68,7 @@ class AccessibilityEnhancer {
   ;
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
-    document.addEventListener('keydown', (event) => {''
+    document.addEventListener('keydown', (event) => { '': 
       // Skip links for better navigation;
       if (event.key === 'Tab' && event.shiftKey) {'';
         this.handleTabNavigation(event, true);
@@ -465,3 +465,4 @@ Screen Reader Score: ${metrics.screenReaderScore}/100;
 `;```
   }
 }"""
+;

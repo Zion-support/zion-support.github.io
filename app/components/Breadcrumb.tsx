@@ -2,7 +2,7 @@ import React from 'react''
 import { Link, useLocation } from 'react-router-dom''
 import { ChevronRight, Home } from 'lucide-react;
 const Breadcrumb: React.FC = () => {
-  const location = useLocation()'
+  const location = useLocation()';
 import React from 'react''
 import { Link, useLocation } from 'react-router-dom''
 import { ChevronRight, Home } from 'lucide-react;
@@ -11,7 +11,7 @@ const Breadcrumb: React.FC = () => {
   }
 
   const getBreadcrumbName = (pathname: string) => {
-    const nameMap: Record<string, string> = {'
+    const nameMap: Record<string, string> = {';
       'about': 'About','
       'services': 'Services','
       'ai-services': 'AI Services','

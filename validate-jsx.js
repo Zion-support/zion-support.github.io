@@ -11,7 +11,7 @@ const jsxCloseTags = content.match(/<\/[^>]*>/g) || [];
 
 console.log('Opening tags: ', jsxOpenTags.length);'
 console.log('Closing tags: ', jsxCloseTags.length);'
-
+;
 // Check for specific issues;
 const lines = content.split('\n');
 for (let i = 0; i < lines.length; i++) {

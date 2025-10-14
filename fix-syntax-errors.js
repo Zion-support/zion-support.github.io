@@ -1,102 +1,87 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Common patterns to fix
-const fixes = [
-  // Fix unterminated string literals with single quotes
-  {
-    pattern: /'([^']*),'/g,
-    replacement: "'$1'"
-  },
-  // Fix malformed object properties
-  {
-    pattern: /(\w+),'(\w+)',/g,
-    replacement: "$1: '$2',"
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /'(\w+)','(\w+)',/g,
-    replacement: "'$1', '$2',"
-  },
-  // Fix numeric literal issues
-  {
-    pattern: /(\d+),'(\w+)',/g,
-    replacement: "$1, '$2',"
-  },
-  // Fix JSX fragment closing issues
-  {
-    pattern: /<>\s*$/gm,
-    replacement: "<>"
-  },
-  // Fix missing closing tags
-  {
-    pattern: /<(\w+)([^>]*)>\s*$/gm,
-    replacement: "<$1$2></$1>"
-  },
-  // Remove git branch names from code
-  {
-    pattern: /[a-z0-9-]+\/[a-z0-9-]+-[a-z0-9-]+/g,
-    replacement: ""
-  },
-  // Fix empty object properties
-  {
-    pattern: /{\s*}/g,
-    replacement: "{}"
-  }
-];
+// Function to fix unterminated string literals
+function fixUnterminatedStrings(content) {
+  // Fix unterminated string literals in import statements
+  content = content.replace(/import\s+[^'"]*['"]([^'"]*?)['"]\s*$/gm, (match, importPath) => {
+    if (!match.endsWith(';') && !match.endsWith("'") && !match.endsWith('"')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix unterminated string literals in general
+  content = content.replace(/['"]([^'"]*?)['"]\s*$/gm, (match, stringContent) => {
+    if (!match.endsWith(';') && !match.endsWith("'") && !match.endsWith('"')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix specific patterns
+  content = content.replace(/import\s+[^'"]*['"]([^'"]*?)['"]\s*$/gm, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix JSX closing tags
+  content = content.replace(/<([^>]+)>\s*$/gm, (match, tagName) => {
+    if (!match.includes('</') && !match.includes('/>')) {
+      return match + `</${tagName.split(' ')[0]}>`;
+    }
+    return match;
+  });
+  
+  return content;
+}
 
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+// Function to fix specific file patterns
+function fixFileContent(filePath, content) {
+  let fixed = content;
+  
+  // Fix unterminated string literals
+  fixed = fixUnterminatedStrings(fixed);
+  
+  // Fix specific patterns for different file types
+  if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
+    // Fix JSX syntax
+    fixed = fixed.replace(/<([^>]+)>\s*$/gm, (match, tagName) => {
+      if (!match.includes('</') && !match.includes('/>')) {
+        return match + `</${tagName.split(' ')[0]}>`;
       }
+      return match;
     });
+  }
+  
+  return fixed;
+}
+
+// Get all TypeScript and JavaScript files
+const files = glob.sync('**/*.{ts,tsx,js,jsx}', {
+  ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+});
+
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+
+files.forEach(filePath => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixFileContent(filePath, content);
     
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      fixedCount++;
     }
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-}
+});
 
-async function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and JSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-  
-  console.log(`\nFixed ${totalFixed} files`);
-}
-
-main().catch(console.error);
-
-export { fixFile, fixes };
+console.log(`Fixed ${fixedCount} files`);
