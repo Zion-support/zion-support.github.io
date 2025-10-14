@@ -22,7 +22,5 @@ export const usePerformanceMonitor = (name: string) => {
             duration: duration;
           });
         }
-      }
     };
   }, [name]);
-};

@@ -1,5 +1,5 @@
 export const analyticsTracker = {
-  trackPageView: (_page: string, _title?: string) => {
+  trackPageView: (page: string, title?: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'page_view', {
         page_title: title || document.title,
@@ -9,8 +9,7 @@ export const analyticsTracker = {
     }
   },
   
-  trackClick: (_element: string, _location: string) => {
-    if (typeof window !== 'undefined') {
+  trackClick: (element: string, location: string) => {
       window.gtag('event', 'click', {
         event_category: 'engagement',
         event_label: element,
@@ -19,8 +18,7 @@ export const analyticsTracker = {
     }
   },
   
-  trackFormSubmit: (_formName: string, _success: boolean) => {
-    if (typeof window !== 'undefined') {
+  trackFormSubmit: (formName: string, success: boolean) => {
       window.gtag('event', 'form_submit', {
         event_category: 'engagement',
         event_label: formName,
@@ -29,8 +27,7 @@ export const analyticsTracker = {
     }
   },
   
-  trackConversion: (_conversionId: string, _value?: number) => {
-    if (typeof window !== 'undefined') {
+  trackConversion: (conversionId: string, value?: number) => {
       window.gtag('event', 'conversion', {
         send_to: conversionId,
         value: value;

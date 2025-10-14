@@ -32,17 +32,11 @@ export const errorHandler = {
       case 500:
         return { message: 'Server error', code: 'SERVER_ERROR' };
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
-    }
-  },
-  
-  log: (error: Error, context?: Record<string, unknown>) => {
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
+  log: () => {
     // Error logging logic
-    console.error('Error logged:', error, context);
-  },
-  
-  report: (error: Error, context?: Record<string, unknown>) => {
+  report: () => {
+  log: (_error: Error, _context?: Record<string, unknown>) => {
+  report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', error, context);
-  }
-};
+}}

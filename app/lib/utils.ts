@@ -11,7 +11,6 @@ export function formatDate(date: Date): string {
     month: 'long',
     day: 'numeric';
   }).format(date);
-}
 
 export function slugify(text: string): string {
   return text
@@ -19,4 +18,3 @@ export function slugify(text: string): string {
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
-}

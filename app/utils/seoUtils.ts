@@ -20,7 +20,7 @@ export const seoUtils = {
     const params = new URLSearchParams({
       title,
       description,
-      site: 'Zion Tech Group';
+      site: 'Zion Tech Group'
     })
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
   },
