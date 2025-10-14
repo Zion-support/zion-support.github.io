@@ -2,11 +2,23 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { HelmetProvider } from 'react-helmet-async'
 import HomePage from '../app/page'
+
 describe('HomePage', () => {
   it('renders without crashing', () => {
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
-  });
+    render(
+      <HelmetProvider>
+        <HomePage />
+      </HelmetProvider>
+    )
+    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument()
+  })
+  
   it('renders navigation links', () => {
-    expect(screen.getByText('Get Started')).toBeInTheDocument();
-  });
-});
+    render(
+      <HelmetProvider>
+        <HomePage />
+      </HelmetProvider>
+    )
+    expect(screen.getByText('Get Started')).toBeInTheDocument()
+  })
+})
