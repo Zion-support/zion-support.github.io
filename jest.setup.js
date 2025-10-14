@@ -1,14 +1,6 @@
-require('@testing-library/jest-dom'
-const React = require('react'
-jest.mock('react-router-dom'
-  const actual = jest.requireActual('react-router-dom'
-  const React = require('react'
-      pathname: '/'
-      search: ''
-      hash: ''
-      return React.createElement('a'
-      return React.createElement('a'
-          path: '/'
-        initialEntries: ['/'
-      typeof args[0] === 'string'
-      args[0].includes('Warning: ReactDOM.render is no longer supported'
+require('@testing-library/jest-dom');
+
+// Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
