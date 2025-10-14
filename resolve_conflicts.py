@@ -30,9 +30,7 @@ def resolve_merge_conflicts():
                 content = f.read()
             
             # Remove conflict markers and keep only HEAD version
-            # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> [commit_hash]
-            pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-            
+            # Pattern:  ...  ...             pattern = r'\n(.*?)\n\n(.*?)\n            
             def replace_conflict(match):
                 head_content = match.group(1)
                 return head_content
@@ -40,9 +38,8 @@ def resolve_merge_conflicts():
             resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
             
             # Also handle cases where there might be different conflict markers
-            # Pattern: <<<<<<< ... ======= ... >>>>>>> 
-            pattern2 = r'<<<<<<< [^\n]+\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-            resolved_content = re.sub(pattern2, replace_conflict, resolved_content, flags=re.DOTALL)
+            # Pattern: <<<<<<< ...  ... >>>>>>> 
+            pattern2 = r'<<<<<<< [^\n]+\n(.*?)\n\n(.*?)\n            resolved_content = re.sub(pattern2, replace_conflict, resolved_content, flags=re.DOTALL)
             
             # Write the resolved content back
             with open(file_path, 'w', encoding='utf-8') as f:

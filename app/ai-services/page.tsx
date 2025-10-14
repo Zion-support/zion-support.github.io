@@ -5,50 +5,49 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
 
-const AIServicesPage: React.FC = () => {
-  const stats = [
+const AIServicesPage: React.FC = () => {  const stats = [
     { icon: <Brain className="w-8 h-8 text-cyan-400" />, value: "500+", label: "AI Models Deployed" },
-    { icon: <Users className="w-8 h-8 text-purple-400" />, value: "1000+", label: "Happy Clients" },
-    { icon: <Zap className="w-8 h-8 text-yellow-400" />, value: "99.9%", label: "Uptime" },
-    { icon: <Shield className="w-8 h-8 text-green-400" />, value: "100%", label: "Security" }
+    { icon: <Shield className="w-8 h-8 text-cyan-400" />, value: "99.9%", label: "Security Uptime" },
+    { icon: <Zap className="w-8 h-8 text-cyan-400" />, value: "50%", label: "Efficiency Gain" },
+    { icon: <Users className="w-8 h-8 text-cyan-400" />, value: "200+", label: "Happy Clients" }
   ];
 
   const services = [
     {
-      title: "AI-Powered Video Generation",
-      description: "Create stunning videos using advanced AI algorithms that understand your content and generate professional-quality videos automatically.",
-      features: ["Automated video creation", "Multiple format support", "Custom branding", "Real-time preview"],
+      title: "AI Video Generation",
+      description: "Create stunning videos from text prompts using advanced AI models. Perfect for marketing, training, and content creation.",
+      features: ["Text-to-video generation", "Custom branding", "Multiple formats", "Real-time preview"],
       icon: <Brain className="w-12 h-12 text-cyan-400" />
     },
     {
-      title: "Intelligent Content Creation",
-      description: "Generate high-quality content for blogs, social media, and marketing materials using our advanced AI writing tools.",
-      features: ["SEO-optimized content", "Multiple languages", "Brand voice matching", "Content scheduling"],
-      icon: <Zap className="w-12 h-12 text-purple-400" />
+      title: "AI Content Creation",
+      description: "Generate high-quality content for blogs, social media, and marketing materials using cutting-edge AI technology.",
+      features: ["Blog post generation", "Social media content", "Email campaigns", "SEO optimization"],
+      icon: <Target className="w-12 h-12 text-cyan-400" />
     },
     {
-      title: "Advanced Analytics & Insights",
-      description: "Get deep insights into your business performance with AI-powered analytics that predict trends and optimize strategies.",
-      features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "Trend analysis"],
-      icon: <BarChart3 className="w-12 h-12 text-yellow-400" />
+      title: "AI Analytics & Insights",
+      description: "Transform your data into actionable insights with our advanced AI-powered analytics platform.",
+      features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "Data visualization"],
+      icon: <BarChart3 className="w-12 h-12 text-cyan-400" />
     },
     {
-      title: "AI Cybersecurity Solutions",
-      description: "Protect your business with intelligent security systems that detect and prevent threats before they impact your operations.",
-      features: ["Threat detection", "Automated response", "24/7 monitoring", "Compliance reporting"],
-      icon: <Shield className="w-12 h-12 text-green-400" />
+      title: "AI Cybersecurity",
+      description: "Protect your business with AI-driven security solutions that adapt and learn from threats.",
+      features: ["Threat detection", "Automated response", "Risk assessment", "Compliance monitoring"],
+      icon: <Shield className="w-12 h-12 text-cyan-400" />
     },
     {
-      title: "Workflow Automation",
-      description: "Streamline your business processes with intelligent automation that reduces manual work and increases efficiency.",
-      features: ["Process optimization", "Task automation", "Integration capabilities", "Performance tracking"],
-      icon: <Globe className="w-12 h-12 text-blue-400" />
+      title: "AI Workflow Automation",
+      description: "Streamline your business processes with intelligent automation that reduces manual work.",
+      features: ["Process automation", "Task scheduling", "Integration management", "Performance monitoring"],
+      icon: <Zap className="w-12 h-12 text-cyan-400" />
     },
     {
-      title: "AI Consulting & Strategy",
-      description: "Get expert guidance on implementing AI solutions that align with your business goals and drive measurable results.",
-      features: ["Strategic planning", "Implementation support", "Training programs", "Ongoing optimization"],
-      icon: <Users className="w-12 h-12 text-indigo-400" />
+      title: "AI Consulting",
+      description: "Get expert guidance on implementing AI solutions that align with your business goals.",
+      features: ["Strategy development", "Implementation planning", "Training programs", "Ongoing support"],
+      icon: <Users className="w-12 h-12 text-cyan-400" />
     }
   ];
 
@@ -58,8 +57,7 @@ const AIServicesPage: React.FC = () => {
     "Improve customer satisfaction scores",
     "Accelerate time-to-market for new products",
     "Enhance decision-making with data insights",
-    "Scale operations without proportional cost increases"
-  ];
+    "Scale operations without proportional cost increases"  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -69,9 +67,8 @@ const AIServicesPage: React.FC = () => {
         keywords="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI cybersecurity, business AI solutions"
         canonical="https://ziontechgroup.com/ai-services"
       />
-      
-      <FuturisticBackground />
-      
+            <FuturisticBackground />
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
@@ -133,10 +130,10 @@ const AIServicesPage: React.FC = () => {
               Comprehensive AI solutions designed to transform your business operations and drive innovation.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="flex items-center mb-6">
                   {service.icon}
                   <h3 className="text-xl font-semibold text-white ml-4">
@@ -148,8 +145,8 @@ const AIServicesPage: React.FC = () => {
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {feature}
                     </li>
                   ))}
@@ -160,15 +157,14 @@ const AIServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
+      {/* Benefits Section */}      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Services?
+              Our Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven solutions that deliver measurable results for your business.
+              A proven methodology for successful AI implementation and transformation.
             </p>
           </div>
           
@@ -178,10 +174,12 @@ const AIServicesPage: React.FC = () => {
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-gray-300 text-lg">
-                  {benefit}
+                  </div>                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-gray-300">
+                  {step.description}
                 </p>
               </div>
             ))}
@@ -197,28 +195,25 @@ const AIServicesPage: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let&apos;s discuss how our AI services can help you achieve your business goals. 
-            Get a free consultation and discover the possibilities.
-          </p>
+            Get a free consultation and discover the possibilities.          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               <span>Start Your AI Journey</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+              <ArrowRight className="w-5 h-5" />            </Link>
             <Link 
-              to="/pricing"
+              to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              View Pricing
+              Schedule a Demo
             </Link>
           </div>
         </div>
       </section>
 
-      <Footer />
-    </div>
+      <Footer />    </div>
   );
 };
 

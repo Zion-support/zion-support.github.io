@@ -12,19 +12,16 @@ def aggressive_resolve_conflicts(content):
     """
     Aggressively resolve merge conflicts by keeping only the HEAD version.
     """
-    # Remove all merge conflict markers and everything between  and >>>>>>>
-    # Keep only content between  and     
-    # First, find all conflict blocks
-    pattern = r'\n(.*?)\n.*?\n    
-    # Replace with just the HEAD content
+    # Remove all merge conflict markers and everything between <<<<<<< and >>>>>>>
+    # Keep only content between <<<<<<< and     # First, find all conflict blocks
+    pattern = r'\n(.*?)\n.*?\n    # Replace with just the HEAD content
     resolved = re.sub(pattern, r'\1', content, flags=re.DOTALL)
     
     # Also handle cases where there might be multiple conflicts in one file
     # Remove any remaining conflict markers
     resolved = re.sub(r'\n?', '', resolved)
     resolved = re.sub(r'\n?', '', resolved)
-    resolved = re.sub(r'    
-    return resolved
+    resolved = re.sub(r'    return resolved
 
 def fix_file_aggressive(file_path):
     """Fix merge conflicts aggressively in a single file."""

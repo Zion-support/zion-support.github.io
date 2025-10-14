@@ -11,6 +11,8 @@ import {
   CogIcon,
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
+  CakeIcon,
+  MapIcon,
   CloudIcon,
   CpuChipIcon,
   GlobeAltIcon,
@@ -78,8 +80,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
     { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
     { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
-    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
+    { name: 'Database Management', href: '/database-management', icon: ServerIcon },    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
     { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
     { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
   ];
@@ -99,8 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
     { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
     { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
-    { name: 'Sitemap', href: '/sitemap', icon: GlobeAltIcon },
-    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+    { name: 'Sitemap', href: '/sitemap', icon: GlobeAltIcon },    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }

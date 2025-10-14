@@ -115,7 +115,7 @@ function fixSyntaxErrors(filePath) {
 ;
     // Remove any remaining conflict markers';
     content = content.replace(/^<<<<<<<.*$/gm, '');';
-    content = content.replace(/^=======.*$/gm, '');';
+    content = content.replace(/^.*$/gm, '');';
     content = content.replace(/^>>>>>>>.*$/gm, '');
 ;
     // Write the fixed content;

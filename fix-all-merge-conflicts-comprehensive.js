@@ -13,7 +13,7 @@ function resolveMergeConflicts(filePath) {
     let originalContent = content;
 ;
     // Check if file has merge conflict markers';
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {;
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {;
       return false; // No conflicts to resolve;
 }
 }
@@ -42,12 +42,12 @@ function resolveMergeConflicts(filePath) {
 }
       }
       ';
-      if (line.trim().startsWith('=======')) {
+      if (line.trim().startsWith('')) {
   ';
         if (inConflict && conflictType === 'ours') {;
           // Check if our section has valid content';
           const ourContent = currentSection.join('\n').trim();';
-          if (ourContent && !ourContent.includes('<<<<<<<') && !ourContent.includes('=======') && !ourContent.includes('>>>>>>>')) {;
+          if (ourContent && !ourContent.includes('<<<<<<<') && !ourContent.includes('') && !ourContent.includes('>>>>>>>')) {;
             hasValidContent = true;
 }
           }';
@@ -68,7 +68,7 @@ function resolveMergeConflicts(filePath) {
   ;
             // Use their content if ours is invalid';
             const theirContent = currentSection.join('\n').trim();';
-            if (theirContent && !theirContent.includes('<<<<<<<') && !theirContent.includes('=======') && !theirContent.includes('>>>>>>>')) {;
+            if (theirContent && !theirContent.includes('<<<<<<<') && !theirContent.includes('') && !theirContent.includes('>>>>>>>')) {;
               resolvedLines.push(...currentSection);
 }
             }
@@ -97,7 +97,7 @@ function resolveMergeConflicts(filePath) {
 ;
     // Remove any remaining conflict markers';
     resolvedContent = resolvedContent.replace(/^<<<<<<<.*$/gm, '');';
-    resolvedContent = resolvedContent.replace(/^=======.*$/gm, '');';
+    resolvedContent = resolvedContent.replace(/^.*$/gm, '');';
     resolvedContent = resolvedContent.replace(/^>>>>>>>.*$/gm, '');
 ;
     // Clean up multiple empty lines';
@@ -170,7 +170,7 @@ function findFilesWithConflicts(dir) {
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {;
           try {';
             const content = fs.readFileSync(fullPath, 'utf8');';
-            if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {;
+            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {;
               files.push(fullPath);
 }
             }

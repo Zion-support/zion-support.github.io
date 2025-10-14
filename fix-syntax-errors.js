@@ -27,8 +27,7 @@ const fixes = [;
   // Fix merge conflict markers;
   {
   ;
-    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,';
-    replacement: '';
+    pattern: /[\s\S]*?[\s\S]*?    replacement: '';
 }
   },;
   // Fix malformed function declarations;
