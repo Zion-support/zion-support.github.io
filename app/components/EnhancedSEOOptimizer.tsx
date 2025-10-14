@@ -6,4 +6,5 @@ const EnhancedSEOOptimizer = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default EnhancedSEOOptimizer

@@ -6,4 +6,5 @@ const Header = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default Header

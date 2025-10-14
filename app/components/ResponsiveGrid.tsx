@@ -6,4 +6,5 @@ const ResponsiveGrid = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default ResponsiveGrid

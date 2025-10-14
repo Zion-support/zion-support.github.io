@@ -6,4 +6,5 @@ const AdManagementSystem = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default AdManagementSystem

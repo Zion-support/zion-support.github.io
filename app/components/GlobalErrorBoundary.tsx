@@ -6,4 +6,5 @@ const GlobalErrorBoundary = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default GlobalErrorBoundary

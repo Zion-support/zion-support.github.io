@@ -6,4 +6,5 @@ const LazyWrapper = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default LazyWrapper

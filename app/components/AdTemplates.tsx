@@ -6,4 +6,5 @@ const AdTemplates = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default AdTemplates

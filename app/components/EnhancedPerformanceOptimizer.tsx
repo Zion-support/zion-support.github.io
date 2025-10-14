@@ -7,5 +7,4 @@ const EnhancedPerformanceOptimizer = () => {
     </div>
   );
 };
-
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer

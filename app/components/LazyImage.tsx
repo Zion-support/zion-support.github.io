@@ -6,4 +6,5 @@ const LazyImage = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default LazyImage

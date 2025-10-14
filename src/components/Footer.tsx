@@ -3,48 +3,45 @@ import { Link } from 'react-router-dom;'
 import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react;'
 const Footer = memo(() => {
   const services = [
-    { name: 'AI Services, url: '/ai-services' },
-    { name: 'IT Solutions', url: /it-services' },'
-    { name: Cloud Services', url: '/cloud-services },'
-    { name: 'Cybersecurity, url: '/cybersecurity' }
+    { name: 'AI Services', url: '/ai-services' },'
+    { name: 'IT Solutions', url: '/it-services' },'
+    { name: 'Cloud Services', url: '/cloud-services' },'
+    { name: 'Cybersecurity', url: '/cybersecurity' }'
 
-  ];
-
+  ]
   const solutions = [
-    { name: 'Quantum Computing', url: /quantum-computing' },'
-    { name: Autonomous Systems', url: '/autonomous-systems },'
-    { name: 'Blockchain Web3, url: '/blockchain-web3' },
-    { name: 'IoT Edge Computing', url: /iot-edge-computing' }'
+    { name: 'Quantum Computing', url: '/quantum-computing' },'
+    { name: 'Autonomous Systems', url: '/autonomous-systems' },'
+    { name: 'Blockchain Web3', url: '/blockchain-web3' },'
+    { name: 'IoT Edge Computing', url: '/iot-edge-computing' }'
 
-  ];
-
+  ]
   const company = [
-    { name: About Us', url: '/about },'
-    { name: 'Team, url: '/team' },
-    { name: 'Careers', url: /careers' },'
-    { name: News', url: '/news }'
+    { name: 'About Us', url: '/about' },'
+    { name: 'Team', url: '/team' },'
+    { name: 'Careers', url: '/careers' },'
+    { name: 'News', url: '/news' }'
 
-  ];
-
+  ]
   const support = [
-    { name: 'Documentation, url: '/documentation' },
-    { name: 'Support', url: /support' },'
-    { name: FAQ', url: '/faq },'
-    { name: 'Contact, url: '/contact' }
-  ];
+    { name: 'Documentation', url: '/documentation' },'
+    { name: 'Support', url: '/support' },'
+    { name: 'FAQ', url: '/faq' },'
+    { name: 'Contact', url: '/contact' }'
+  ]
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: #' },'
-    { name: Twitter', icon: Twitter, url: '# },'
-    { name: 'LinkedIn, icon: Linkedin, url: '#' },
-    { name: 'Instagram', icon: Instagram, url: #' },'
-    { name: YouTube', icon: Youtube, url: '# },'
-    { name: 'GitHub, icon: Github, url: '#' }
-  ];
+    { name: 'Facebook', icon: Facebook, url: '#' },'
+    { name: 'Twitter', icon: Twitter, url: '#' },'
+    { name: 'LinkedIn', icon: Linkedin, url: '#' },'
+    { name: 'Instagram', icon: Instagram, url: '#' },'
+    { name: 'YouTube', icon: Youtube, url: '#' },'
+    { name: 'GitHub', icon: Github, url: '#' }'
+  ]
   return (
     <footer className="bg-gray-900 text-white">"
       <div className="max-w-7xl mx-auto px-4 py-12">"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-          {/* Company Info */}
+          {/* Company Info */};
           <div className="space-y-4">"
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
             <p className="text-sm text-cyan-400">AI & IT Solutions</p>"
@@ -54,51 +51,59 @@ const Footer = memo(() => {
             </p>
           </div>
 
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Services */}
-          <div className=space-y-4"><h4 className="text-lg font-semibold text-white">Services</h4><ul className="space-y-2""              {services.map((service) : > ("                <li key: {service.name}><Link;
-                    to={service.url}
-                    className=text-gray-400 hover text-cyan-400 transition-colors duration-300 text-sm""                  >"                    {service.name}"                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link;
-                  to="/services""                  className="text-cyan-400 hover text-white transition-colors duration-300 text-sm flex items-center group""                >"                  View All AI Services;                  <Right className=w-3 h-3 ml-1 group-hover translate-x-1 transition-transform duration-300" /></Link></li></ul>
-          </div>
-
-          {/* Solutions */}
-          <div className="space-y-4"><h4 className="text-lg font-semibold text-white Solutions  h4""            <ul className=space-y-2">"              {solutions.map((solution) : > ("                <li key: {solution.name}><Link;
-                    to={solution.url}
-                    className="text-gray-400 hover text-cyan-400 transition-colors duration-300 text-sm""                  >{solution.name}
+          {/* Services */};
+          <div className="space-y-4">"
+            <h4 className="text-lg font-semibold text-white">Services</h4>"
+            <ul className="space-y-2">"
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.url};
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm""
+                  >
+                    {service.name};
                   </Link>
                 </li>
-              ))}
+              ))};
+              <li>
+                <Link
+                  to="/services""
+                  className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group""
+                >
+                  View All AI Services
+                  <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />"
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
+          {/* Solutions */};
+          <div className="space-y-4">"
+            <h4 className="text-lg font-semibold text-white">Solutions</h4>"
+            <ul className="space-y-2">"
               {solutions.map((solution) => (
                 <li key={solution.name}>
                   <Link
-                    to={solution.url}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    to={solution.url};
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm""
                   >
-                    {solution.name}
+                    {solution.name};
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+              ))};
+              <li>
+                <Link
+                <Link
+                  to="/solutions"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                >
+                  View All Solutions
+                  to="/solutions"
+                  className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
+                >
+                  View All Solutions
+                  <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
 
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
@@ -106,10 +111,10 @@ const Footer = memo(() => {
                     to={item.url}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {item.name}
+                    {item.name};
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
 
@@ -123,10 +128,10 @@ const Footer = memo(() => {
                     to={item.url}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {item.name}
+                    {item.name};
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
         </div>

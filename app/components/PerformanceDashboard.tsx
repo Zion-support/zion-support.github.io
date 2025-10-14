@@ -6,4 +6,5 @@ const PerformanceDashboard = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default PerformanceDashboard

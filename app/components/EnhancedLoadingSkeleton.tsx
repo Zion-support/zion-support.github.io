@@ -6,4 +6,5 @@ const EnhancedLoadingSkeleton = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default EnhancedLoadingSkeleton

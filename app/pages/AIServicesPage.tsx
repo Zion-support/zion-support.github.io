@@ -3,5 +3,4 @@
 import React from 'react';
 
 export default function AIServicesPage() {
-  return null;
-}
+  return null

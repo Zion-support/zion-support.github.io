@@ -3,70 +3,53 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Remove duplicate return statements and fix JSX structure
+// Function to fix unterminated string literals and other syntax issues
+function fixStringLiterals(content) {
   let fixed = content;
   
-  // Fix unterminated string literals
-  fixed = fixed.replace(/'([^']*?)(?=\n|$)/g, (match, content) => {
-    if (content.includes('"') && !content.includes("'")) {
-      return `"${content}"`;
-    }
-    return `'${content}'`;
-  });
+  // Fix unterminated string literals at the end of lines
+  fixed = fixed.replace(/';$/gm, ';');
+  fixed = fixed.replace(/';/g, ';');
+  fixed = fixed.replace(/';/g, ';');
   
-  // Fix broken JSX - remove duplicate returns and fix structure
-  const returnRegex = /return\s*\(\s*<div[^>]*>Page content<\/div>\s*\)\s*;\s*return\s*\(/g;
-  fixed = fixed.replace(returnRegex, 'return (');
-  
-  // Fix broken JSX expressions
-  fixed = fixed.replace(/<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*\)\s*;\s*<\/p><\/div><\/div>\s*\)\s*;\s*}/g, '');
-  
-  // Fix malformed imports
-  fixed = fixed.replace(/';import/g, ";\nimport");
-  fixed = fixed.replace(/';interface/g, ";\ninterface");
-  
-  // Fix broken semicolons in imports
-  fixed = fixed.replace(/import\s+{\s*useEffect\s+\s*}\s+from\s+'react';\s*';/g, "import { useEffect } from 'react';\n");
-  
-  // Fix broken interface declarations
-  fixed = fixed.replace(/';interface\s+(\w+)\s*{\s*}\s*([^}]*?)\s*}/g, (match, name, props) => {
-    const cleanProps = props.replace(/[;']/g, '').trim();
-    return `interface ${name} {\n  ${cleanProps}\n}`;
-  });
+  // Fix broken import statements
+  fixed = fixed.replace(/import\s+React\s+from\s+'react';'/g, "import React from 'react';");
+  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+'([^']+)';'/g, "import { $1 } from '$2';");
   
   // Fix broken function declarations
-  fixed = fixed.replace(/const\s+(\w+):\s*([^=]*?)\s*=>\s*{\s*};/g, (match, name, params) => {
-    const cleanParams = params.replace(/[;']/g, '').trim();
-    return `const ${name}: React.FC<${cleanParams}> = (${cleanParams}) => {`;
-  });
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {');
   
-  // Fix broken JSX attributes
-  fixed = fixed.replace(/href="[^"]*"/g, (match) => {
-    return match.replace(/"/g, '"');
-  });
+  // Fix missing semicolons
+  fixed = fixed.replace(/}\s*$/gm, '};');
+  fixed = fixed.replace(/}\s*export/g, '}\n\nexport');
   
-  // Fix broken meta tags
-  fixed = fixed.replace(/\{ name: "'([^']*)'", content: "([^"]*)"\}/g, '{ name: "$1", content: "$2" }');
-  fixed = fixed.replace(/\{ property: "'([^']*)'", content: "([^"]*)"\}/g, '{ property: "$1", content: "$2" }');
+  // Fix broken JSX
+  fixed = fixed.replace(/return\s*\(\s*<div>\s*<h2>(\w+)<\/h2>\s*<p>This component is under construction\.<\/p>\s*<\/div>\s*\)\s*$/gm, 
+    'return (\n    <div>\n      <h2>$1</h2>\n      <p>This component is under construction.</p>\n    </div>\n  );');
   
-  // Fix broken array syntax
-  fixed = fixed.replace(/\[\s*\{\s*name:\s*"([^"]*)",\s*content:\s*"([^"]*)"\s*\},/g, '[{ name: "$1", content: "$2" },');
+  // Fix broken page components
+  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\(\)\s*{\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g, 
+    'export default function $1() {\n  return (\n    <div>\n      <h1 className="text-4xl font-bold mb-8">$1</h1>\n      <p className="text-gray-600 text-lg">\n        This page is under development.\n      </p>\n    </div>\n  );\n}');
   
-  // Fix broken string concatenation
-  fixed = fixed.replace(/keywords\.join\('([^']*)'\)/g, 'keywords.join("$1")');
-  
-  // Fix broken template literals
-  fixed = fixed.replace(/`([^`]*?)`/g, (match, content) => {
-    if (content.includes('${')) {
-      return match;
+  // Fix broken interface declarations
+  fixed = fixed.replace(/interface\s+(\w+)\s*{\s*}\s*([^}]*?)\s*}/g, (match, name, props) => {
+    const cleanProps = props.replace(/[;']/g, '').trim();
+    if (cleanProps) {
+      return `interface ${name} {\n  ${cleanProps}\n}`;
     }
-    return `"${content}"`;
+    return `interface ${name} {}`;
   });
   
-  // Remove duplicate closing braces and fix structure
-  fixed = fixed.replace(/\}\s*\}\s*\}\s*\}\s*$/g, '}');
+  // Fix broken type declarations
+  fixed = fixed.replace(/type\s+(\w+)\s*=\s*([^;]+);'/g, 'type $1 = $2;');
+  
+  // Fix broken array declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\[\s*\{\s*name:\s*"([^"]*)",\s*content:\s*"([^"]*)"\s*\},/g, 
+    'const $1 = [\n  {\n    name: "$2",\n    content: "$3"\n  },');
+  
+  // Fix broken object declarations
+  fixed = fixed.replace(/\{\s*name:\s*"([^"]*)",\s*content:\s*"([^"]*)"\s*\}/g, 
+    '{\n    name: "$1",\n    content: "$2"\n  }');
   
   // Fix broken useEffect
   fixed = fixed.replace(/useEffect\(\(\)\s*=>\s*\{\s*\}\s*([^}]*?)\s*return\s+undefined;\s*\}/g, (match, body) => {
@@ -82,9 +65,10 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/href="\{url\}"\s*\/>\s*<link\s+rel="icon"\s+type="image"\/x-icon"\s+href=""\/favicon\.ico"\s*\/>/g, 
     'href={url} />\n      <link rel="icon" type="image/x-icon" href="/favicon.ico" />');
   
-  // Clean up extra semicolons and fix structure
-  fixed = fixed.replace(/;\s*;/g, ';');
-  fixed = fixed.replace(/\s*;\s*$/gm, '');
+  // Clean up extra quotes and semicolons
+  fixed = fixed.replace(/''/g, "'");
+  fixed = fixed.replace(/;;/g, ';');
+  fixed = fixed.replace(/\s*;\s*$/gm, ';');
   
   return fixed;
 }
@@ -93,7 +77,7 @@ function fixSyntaxErrors(content) {
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const fixed = fixStringLiterals(content);
     
     // Additional file-specific fixes
     let finalContent = fixed;
@@ -175,4 +159,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { fixSyntaxErrors, fixFile };
+module.exports = { fixStringLiterals, fixFile };

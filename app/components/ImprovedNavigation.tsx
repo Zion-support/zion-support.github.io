@@ -158,5 +158,4 @@ const ImprovedNavigation = () => {
     </nav>
   );
 };
-
-export default Navigation;
+export default ImprovedNavigation

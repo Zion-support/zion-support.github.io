@@ -6,4 +6,5 @@ const PerformanceEnhancer = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default PerformanceEnhancer

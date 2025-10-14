@@ -6,4 +6,5 @@ const LoadingSpinner = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default LoadingSpinner

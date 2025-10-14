@@ -6,4 +6,5 @@ const AdvancedSEOOptimizer_new = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default AdvancedSEOOptimizer_new

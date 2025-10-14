@@ -6,7 +6,5 @@ export default function EnhancedLoadingStates() {
     <div>
       
     </div>
-  );
+  )
 };
-
-export default LoadingStates;

@@ -6,4 +6,5 @@ const FuturisticCardEnhanced = () => {
       <p>This component is under development.</p>
     </div>
   );
-}
+};
+export default FuturisticCardEnhanced

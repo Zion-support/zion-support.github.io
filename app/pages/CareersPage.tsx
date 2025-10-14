@@ -3,5 +3,4 @@
 import React from 'react';
 
 export default function CareersPage() {
-  return null;
-}
+  return null

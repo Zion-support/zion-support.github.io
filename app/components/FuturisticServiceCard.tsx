@@ -7,4 +7,5 @@ const FuturisticServiceCard = () => {
       <p className="text-gray-300">{description}</p>
     </div>
   );
-}
+};
+export default FuturisticServiceCard
