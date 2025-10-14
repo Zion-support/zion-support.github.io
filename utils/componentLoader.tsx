@@ -3,7 +3,7 @@ import React, { Suspense, ComponentType } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 
 interface OptimizedLoaderProps {
-  component: () => Promise<{ default: ComponentType<any> }>;
+  component: () => Promise<{ default: ComponentType<unknown> }>;
   fallback?: React.ReactNode;
   errorFallback?: React.ReactNode;
 }
@@ -38,7 +38,7 @@ const LoadingFallback: React.FC = () => (
 export const OptimizedLoader: React.FC<OptimizedLoaderProps> = ({ 
   component, 
   fallback = <LoadingFallback />,
-  errorFallback = <ErrorFallback error={new Error('Component failed to load')} resetErrorBoundary={() => {}} />
+  errorFallback: _errorFallback = <ErrorFallback error={new Error('Component failed to load')} resetErrorBoundary={() => {}} />
 }) => {
   const LazyComponent = React.lazy(component);
 

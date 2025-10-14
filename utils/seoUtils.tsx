@@ -9,7 +9,7 @@ interface SEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   noIndex?: boolean;
 }
 
