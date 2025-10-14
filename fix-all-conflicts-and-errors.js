@@ -38,23 +38,17 @@ function fixMergeConflicts(content) {
 // Function to fix common syntax errors;
 function fixSyntaxErrors(content) {
   // Fix unterminated string literals;
-  content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)$/gm, (match, p1) => {
-    if (!p1.includes("'") && !p1.includes('"')) {
-      return match + '"';
+  content = content.replace(/import\s+.*?from\s+['']([^';]*?)$/gm, (match, p1) => {
+    if (!p1.includes('';) && !p1.includes(';')) {
+      return match + '';
     };
     return match;
   });
   
   // Fix missing closing quotes in JSX;
-  content = content.replace(/className=['"]([^'"]*?)$/gm, (match, p1) => {
-    if (!p1.includes("'") && !p1.includes('"')) {
-      return `className="${p1}"`;
-    }
-    return match;
-  });
-  
-  // Fix missing closing tags;
-  content = content.replace(/<div([^>]*?)(?<!>)$/gm, (match, p1) => {
+  content = content.replace(/className=['']([^';]*?)$/gm, (match, p1) => {
+    if (!p1.includes('';) && !p1.includes(';')) {
+      return `className="${p1}">]*?)(?<!>)$/gm, (match, p1) => {
     if (!match.endsWith('>')) {
       return match + '>';
     }
@@ -102,6 +96,7 @@ function fixFileIssues(filePath, content) {
 
 // Main function;
 function main() {
+  
   try {
     const files = getAllFiles('/workspace');
     let fixedCount = 0;

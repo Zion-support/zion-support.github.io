@@ -1,6 +1,11 @@
 import { useContext } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
-import { AnalyticsContextType } from '../contexts/AnalyticsContextDefinition';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+}
 
 export const useAnalyticsContext = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);

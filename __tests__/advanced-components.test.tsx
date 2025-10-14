@@ -5,11 +5,13 @@ import { BrowserRouter } from 'react-router-dom';
 // Mock components that might not exist
 jest.mock('../app/components/AdvancedPerformanceMonitor', () => {
   return function MockAdvancedPerformanceMonitor() {
+  
     return <div>Mock Advanced Performance Monitor</div>;
   };
 });
 jest.mock('../app/components/AdvancedSEOOptimizer', () => {
   return function MockAdvancedSEOOptimizer() {
+  
     return <div>Mock Advanced SEO Optimizer</div>;
   };
 });

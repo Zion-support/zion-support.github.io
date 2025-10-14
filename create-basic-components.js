@@ -19,7 +19,7 @@ function createComponent(filePath, content) {
 }
 
 // Navigation component;
-const navigationComponent = `import React from "react";
+const navigationComponent = `import React from 'react';
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -27,16 +27,17 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
+    
     <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-purple-500/20"></nav>
-      <div className="container mx-auto px-4"></div>
-        <div className="flex items-center justify-between h-16"></div>
+      <div>
+    <div className="flex items-center justify-between h-16"></div>
           <Link to="/" className="text-2xl font-bold text-white"></Link>
             Zion Tech Group;
           </Link>
           
           <div className="hidden md: 'block">',
-            <div className="ml-10 flex items-baseline space-x-4"></div>
-              <Link to="/" className="text-gray-300 hover: 'text-white px-3 py-2 rounded-md text-sm font-medium">',
+            <div>
+    <Link to="/" className="text-gray-300 hover: 'text-white px-3 py-2 rounded-md text-sm font-medium">',
                 Home;
               </Link>
               <Link to="/about" className="text-gray-300 hover: 'text-white px-3 py-2 rounded-md text-sm font-medium">',
@@ -49,14 +50,12 @@ const Navigation = () => {
                 Contact;
               </Link>
             </div>
-          </div>
-          
-          <div className="md: 'hidden">',
+  </div>
+  <div className="md: 'hidden">',
             <button;
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover: 'text-white"',
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              className="text-gray-300 hover: 'text-white">
+              {isOpen ? <X className="h-6 w-6"> : <Menu className="h-6 w-6">}
             </button>
           </div>
         </div>
@@ -88,23 +87,24 @@ export default Navigation;
 `;
 
 // Footer component;
-const footerComponent = `import React from "react";
+const footerComponent = `import React from 'react';
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
+    
     <footer className="bg-slate-900/50 backdrop-blur-sm border-t border-purple-500/20"></footer>
-      <div className="container mx-auto px-4 py-12"></div>
-        <div className="grid grid-cols-1 md: 'grid-cols-4 gap-8">',
-          <div></div>
+      <div>
+    <div className="grid grid-cols-1 md: 'grid-cols-4 gap-8">',
+          <div />
             <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4"></p>
               Leading provider of AI solutions, IT services, and digital transformation.
             </p>
           </div>
           
-          <div></div>
+          <div />
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2"></ul>
               <li><Link to="/ai-services" className="text-gray-300 hover: 'text-white">AI Services</Link></li>',
@@ -114,7 +114,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div></div>
+          <div />
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2"></ul>
               <li><Link to="/about" className="text-gray-300 hover: 'text-white">About</Link></li>',
@@ -124,27 +124,26 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div></div>
+          <div />
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-            <div className="space-y-2"></div>
-              <div className="flex items-center"></div>
-                <Mail className="h-4 w-4 text-purple-400 mr-2" />
+            <div>
+    <div className="flex items-center"></div>
+                <Mail className="h-4 w-4 text-purple-400 mr-2">
                 <span className="text-gray-300">info@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center"></div>
-                <Phone className="h-4 w-4 text-purple-400 mr-2" />
+              <div>
+    <Phone className="h-4 w-4 text-purple-400 mr-2">
                 <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
-              <div className="flex items-center"></div>
-                <MapPin className="h-4 w-4 text-purple-400 mr-2" />
+              <div>
+    <MapPin className="h-4 w-4 text-purple-400 mr-2">
                 <span className="text-gray-300">New York, NY</span>
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center"></div>
-          <p className="text-gray-300"></p>
+  </div>
+  <div>
+    <p className="text-gray-300"></p>
             © 2024 Zion Tech Group. All rights reserved.
           </p>
         </div>
@@ -157,12 +156,13 @@ export default Footer;
 `;
 
 // Header component;
-const headerComponent = `import React from "react";
+const headerComponent = `import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 const Header = ({ title, description }) => {
   return (
-    <Helmet></Helmet>
+    
+    <Helmet />
       <title>{title}</title>
       <meta name="description" content={description} />
     </Helmet>
@@ -173,7 +173,7 @@ export default Header;
 `;
 
 // Sidebar component;
-const sidebarComponent = `import React from "react";
+const sidebarComponent = `import React from 'react';
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 
@@ -181,13 +181,14 @@ const Sidebar = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50"></div>
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed top-0 left-0 h-full w-64 bg-slate-900 p-6"></div>
-        <div className="flex items-center justify-between mb-8"></div>
+    
+    <div>
+    <div className="fixed inset-0 bg-black bg-opacity-50">
+      <div>
+    <div className="flex items-center justify-between mb-8"></div>
           <h2 className="text-xl font-bold text-white">Menu</h2>
           <button onClick={onClose} className="text-gray-300 hover: 'text-white">',
-            <X className="h-6 w-6" />
+            <X className="h-6 w-6">
           </button>
         </div>
         
@@ -214,7 +215,7 @@ export default Sidebar;
 `;
 
 // ErrorBoundary component;
-const errorBoundaryComponent = `import React from "react";
+const errorBoundaryComponent = `import React from 'react';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -233,14 +234,14 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-          <div className="text-center"></div>
+    
+        <div>
+    <div className="text-center"></div>
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">Please refresh the page or try again later.</p>
             <button;
               onClick={() => window.location.reload()}
-              className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-2 px-4 rounded"',
-            >
+              className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-2 px-4 rounded">
               Refresh Page;
             </button>
           </div>
@@ -256,14 +257,15 @@ export default ErrorBoundary;
 `;
 
 // Loading component;
-const loadingComponent = `import React from "react";
+const loadingComponent = `import React from 'react';
 
 const Loading = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center"></div>
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
+    
+    <div>
+    <div className="text-center"></div>
+        <div>
+    <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
   );
@@ -274,6 +276,7 @@ export default Loading;
 
 // Main execution;
 async function main() {
+  
   console.log('Creating basic components...');
   
   createComponent('app/components/Navigation.tsx', navigationComponent);

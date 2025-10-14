@@ -5,6 +5,7 @@ import { execSync } from 'child_process';
 
 // Strategy: Use our fixes (HEAD) for all conflicts since we've fixed syntax errors
 function resolveConflicts() {
+  
   try {
     console.log('Starting merge with conflict resolution...');
     
@@ -39,7 +40,7 @@ function resolveConflicts() {
     }
     
     // Commit the merge
-    execSync('git commit -m "Merge main into current branch - resolved conflicts by keeping syntax fixes\n\n- Resolved merge conflicts by preferring our syntax error fixes\n- Maintained all improvements to code structure and consistency\n- Ensured all files compile without syntax errors\n- Preserved functionality while fixing malformed code"', { stdio: 'inherit' });
+    execSync('git commit -m 'Merge main into current branch - resolved conflicts by keeping syntax fixes\n\n- Resolved merge conflicts by preferring our syntax error fixes\n- Maintained all improvements to code structure and consistency\n- Ensured all files compile without syntax errors\n- Preserved functionality while fixing malformed code';, { stdio: 'inherit' });
     
     console.log('✅ Successfully resolved all merge conflicts and merged main branch');
     return true;
@@ -52,6 +53,7 @@ function resolveConflicts() {
 
 // Alternative approach: Use git merge strategy
 function resolveWithStrategy() {
+  
   try {
     console.log('Attempting merge with strategy to prefer our changes...');
     
@@ -59,7 +61,7 @@ function resolveWithStrategy() {
     execSync('git merge origin/main -X ours --no-commit', { stdio: 'inherit' });
     
     // Commit the merge
-    execSync('git commit -m "Merge main into current branch using ours strategy\n\n- Used merge strategy to prefer our syntax error fixes\n- Maintained all improvements to code structure and consistency\n- Ensured all files compile without syntax errors"', { stdio: 'inherit' });
+    execSync('git commit -m 'Merge main into current branch using ours strategy\n\n- Used merge strategy to prefer our syntax error fixes\n- Maintained all improvements to code structure and consistency\n- Ensured all files compile without syntax errors';, { stdio: 'inherit' });
     
     console.log('✅ Successfully merged main branch using ours strategy');
     return true;
@@ -71,6 +73,7 @@ function resolveWithStrategy() {
 }
 
 async function main() {
+  
   console.log('Resolving merge conflicts and merging main branch...');
   
   // Try the strategy approach first (cleaner)

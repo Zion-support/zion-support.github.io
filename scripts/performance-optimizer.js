@@ -52,9 +52,7 @@ export default function performance-optimizer.js() {
 }
 const fs = require('fs')
 const path = require('path')
-/**
- * Performance Optimization Script
- * Optimizes the application for better performance
+
  */
 
 console.log('Running performance optimizations...')
@@ -170,7 +168,7 @@ const performanceOptimizations = `
 fs.writeFileSync(viteConfigPath, viteConfig)
 // 2. Create a performance monitoring component
 const performanceMonitorPath = path.join(__dirname, '../app/components/PerformanceMonitor.tsx')
-const performanceMonitorContent = `'use client'
+const performanceMonitorContent = `'
 import { useEffect } from 'react'
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
 interface PerformanceMetrics {
@@ -227,12 +225,11 @@ fs.writeFileSync(performanceMonitorPath, performanceMonitorContent)
 const bundleAnalyzerPath = path.join(__dirname, '../scripts/analyze-bundle.js')
 const bundleAnalyzerContent = `const fs = require('fs')
 const path = require('path')
-/**
- * Bundle Analysis Script
- * Analyzes the built bundle for optimization opportunities
+
  */
 
 function analyzeBundle() {
+  
   const distPath = path.join(__dirname, '../dist')
   if (!fs.existsSync(distPath)) {
     console.log('❌ Dist folder not found. Run npm run build first.')
@@ -288,7 +285,7 @@ fs.writeFileSync(bundleAnalyzerPath, bundleAnalyzerContent)
 const packageJsonPath = path.join(__dirname, '../package.json')
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
 packageJson.scripts['analyze:bundle'] = 'node scripts/analyze-bundle.js'
-packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html'
+packageJson.scripts['perf:audit'] = 'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html;
 packageJson.scripts['perf:check'] = 'npm run build && npm run analyze:bundle'
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 console.log('✅ Performance optimizations completed!')

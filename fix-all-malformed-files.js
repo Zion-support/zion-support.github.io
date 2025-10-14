@@ -16,7 +16,7 @@ function fixMalformedFiles(filePath) {
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase()) + 'Page';
       
       // Extract the title from the file name or content;
-      let title = componentName.replace('Page', '');
+      let title = componentName.replace('Page', ';);
       if (title.includes('AI')) {
         title = 'AI Services';
       } else if (title.includes('IT')) {
@@ -52,7 +52,7 @@ function fixMalformedFiles(filePath) {
       } else if (title.includes('Blog')) {
         title = 'Blog';
       } else {
-        title = componentName.replace('Page', '');
+        title = componentName.replace('Page', ';);
       }
       
       const newContent = `import React from 'react';
@@ -60,17 +60,18 @@ import { Helmet } from 'react-helmet-async';
 
 const ${componentName}: React.FC = () => {
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${title} | Zion Tech Group</title>
         <meta name="description" content="${title} - Professional services from Zion Tech Group" />
         <meta name="keywords" content="${title.toLowerCase()}, services, solutions, technology" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
-        <section className="py-20 px-4"></section>
-          <div className="max-w-6xl mx-auto text-center"></div>
-            <h1 className="text-5xl font-bold text-white mb-6"></h1>
+      <div>
+    <section className="py-20 px-4"></section>
+          <div>
+    <h1 className="text-5xl font-bold text-white mb-6"></h1>
               ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>

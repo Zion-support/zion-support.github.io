@@ -1,8 +1,8 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";";
 import { BrowserRouter as Router, Routes, Route    } from "react-router-dom";";
 import { HelmetProvider    } from "react-helmet-async";";
-import Footer from "./components/Footer";";
-import LoadingSpinner from "./components/LoadingSpinner";";
+import Footer from './components/Footer';";
+import LoadingSpinner from './components/LoadingSpinner';";
 import ErrorBoundary from "./components/ErrorBoundary"
 
 // Lazy load pages for better performance";
@@ -54,7 +54,7 @@ const PrivacyPage = lazy(() => import("./privacy/page"));";
 const TermsPage = lazy(() => import("./terms/page"));";
 const CookiesPage = lazy(() => import("./cookies/page"))
 ;
-const NotFoundPage = () => <div></div>Page Not Found</div>;
+const NotFoundPage = () => <div />Page Not Found</div>;
 ;
 const App: React.FC = () => {;
 const [isInitialized, setIsInitialized] = useState(false);

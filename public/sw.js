@@ -114,12 +114,12 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'Go to the site',
+            title: 'Go to the site',
         icon: '/images/icon-192x192.png'
       },
       {
         action: 'close',
-        title: 'Close notification',
+            title: 'Close notification',
         icon: '/images/icon-192x192.png'
       }
     ]

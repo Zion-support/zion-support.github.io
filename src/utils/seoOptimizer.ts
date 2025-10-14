@@ -1,4 +1,4 @@
-'use client';';
+';';
 
 interface SEOConfig {
   siteName: string;
@@ -56,7 +56,7 @@ const title = pageTitle || this.currentPageData?.title || this.config.defaultTit
   generateDescription(pageDescription?: string): string {;
 const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160 ;
-      ? description.substring(0, 157) + '...' ''
+      ? description.substring(0, 157) + '...' ';
       : description;
   }
   ;
@@ -89,7 +89,7 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     // Twitter Card tags;
     if (this.config.twitterHandle) {
       this.setMetaTag('twitter:card', 'summary_large_image');';
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);``'`;
+      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);'';`;
       this.setMetaTag('twitter:title', title);';
       this.setMetaTag('twitter:description', description);';
       this.setMetaTag('twitter:image', image);'
@@ -100,7 +100,7 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     this.setMetaTag('msapplication-TileColor', '#1e40af');'
   }
   ;
-  private setMetaTag(name: string, content: string, attribute: string="name" meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;``"`;
+  private setMetaTag(name: string, content: string, attribute: string="name" meta = document.querySelector(`meta[${attribute}="${name}"]') as HTMLMetaElement;';`;
     if (!meta) {
       meta = document.createElement('meta');';
       meta.setAttribute(attribute, name);
@@ -127,14 +127,14 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
   ;
   private setupStructuredData(): void {;
 const structuredData = {
-      '@context': 'https://schema.org',''
-      '@type': 'WebSite','';
+      '@context': 'https://schema.org',';
+      '@type': 'WebSite',';
       name: this.config.siteName,
       url: this.config.siteUrl,
       potentialAction: {
-        '@type': 'SearchAction','';
+        '@type': 'SearchAction',';
         target: `${this.config.siteUrl}/search?q={search_term_string}`,```
-        'query-input': 'required name=search_term_string'''
+        'query-input': 'required name=search_term_string';
       }
     };
     this.addStructuredData(structuredData);
@@ -143,23 +143,23 @@ const structuredData = {
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
     const structuredData = {
-      '@context': 'https://schema.org',''
-      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage','';
+      '@context': 'https://schema.org',';
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',';
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
       publisher: {
-        '@type': 'Organization','';
+        '@type': 'Organization',';
         name: this.config.siteName,
         url: this.config.siteUrl;
       }
     };
     // Add article-specific properties;
-    if (this.currentPageData.type === 'article') {'';
+    if (this.currentPageData.type === 'article') {';
       Object.assign(structuredData, {
         author: {
-          '@type': 'Person','';
+          '@type': 'Person',';
           name: this.currentPageData.author || this.config.siteName;
         },
         datePublished: this.currentPageData.publishedTime,
@@ -187,7 +187,7 @@ const canonical = document.createElement('link');';
   ;
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact;
-    if (typeof window !== 'undefined' && 'performance' in window) {''
+    if (typeof window !== 'undefined' && 'performance' in window) {';
       // Monitor LCP (Largest Contentful Paint);
       new PerformanceObserver((list) => {;
 const entries = list.getEntries();
@@ -212,11 +212,11 @@ const entries = list.getEntries();
   }
   ;
   private trackSEOMetric(metric: string, value: number): void {
-    if (typeof window !== 'undefined' && (window as any).gtag) {''
-      (window as any).gtag('event', 'seo_metric', {'';
+    if (typeof window !== 'undefined' && (window as any).gtag) {';
+      (window as any).gtag('event', 'seo_metric', {';
         metric_name: metric,);
         metric_value: Math.round(value),
-        event_category: 'seo'''
+        event_category: 'seo';
       });
     }
   }
@@ -227,7 +227,7 @@ const entries = list.getEntries();
       {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
-        changefreq: 'daily','';
+        changefreq: 'daily',';
         priority: 1.0;
       }
     ];
@@ -255,7 +255,7 @@ const title = document.title;
       issues.push('Title is too long (more than 60 characters)');'
     }
     // Check description length";";
-const description = document.querySelector('meta[name="description"]')?.getAttribute('content');"'";
+const description = document.querySelector('meta[name="description"]')?.getAttribute('content');';;
     if (!description) {
       issues.push('Missing meta description');'
     } else if (description.length < 120) {
@@ -289,12 +289,12 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100);
 }
 // Default configuration;
 const defaultConfig: SEOConfig = {
-  siteName: 'Zion Tech Group','';
-  siteUrl: 'https://zion.app','';
-  defaultTitle: 'Advanced AI and IT Solutions','';
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.','';
-  defaultImage: 'https://zion.app/og-image.jpg','';
-  twitterHandle: 'ZionTechGroup','';
+  siteName: 'Zion Tech Group',';
+  siteUrl: 'https://zion.app',';
+  defaultTitle: 'Advanced AI and IT Solutions',';
+  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',';
+  defaultImage: 'https://zion.app/og-image.jpg',';
+  twitterHandle: 'ZionTechGroup',';
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID;
 };

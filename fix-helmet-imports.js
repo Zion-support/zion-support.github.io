@@ -24,9 +24,9 @@ function fixHelmetImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     // Remove react-helmet-async import
-    content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '')
+    content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['']react-helmet-async[';];\s*\n?/g, ';)
     // Remove Helmet wrapper and move title/meta to head
-    content = content.replace(/<div></div>\s*<Helmet></Helmet>\s*<title>([^<////]*)<\/title>\s*<meta\s+name="description"\s+content="([^"]*)"\s*\/>\s*<////meta\s+name="keywords"\s+content="([^"]*)"\s*\/>\s*<\/Helmet>\s*/g, '')
+    content = content.replace(/<div />\s*<Helmet />\s*<title>([^<////]*)<\/title>\s*<meta\s+name="description"\s+content="([^"]*)"\s*\/>\s*<////meta\s+name="keywords"\s+content="([^"]*)'\s*\/>\s*<\/Helmet>\s*/g, ';)
     // Remove closing fragment
     content = content.replace(/\s*<////\/>\s*$/gm, '')
     // Clean up any remaining empty lines

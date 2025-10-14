@@ -9,11 +9,13 @@ function fixJSXComprehensive(content, filePath) {
   let changes = 0
   // Fix files with duplicate closing tags and malformed structure
   if (filePath.includes('5g-implementation') || filePath.includes('5g-solutions')) {
-    const correctStructure = `'use client'
+    const correctStructure = `'
 import React from "react"
 import { Helmet } from "react-helmet-async"
 export default function Page() {
+  
   return (
+    
     <>
       <Helmet>
         <title>${filePath.includes('5g-implementation') ? '5G Implementation' : '5G Solutions'} - Zion Tech Group</title>
@@ -41,6 +43,7 @@ export default function Page() {
 import { Helmet } from "react-helmet-async"
 const AboutPage = () => {
   return (
+    
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>About - Zion Tech Group</title>
@@ -91,11 +94,13 @@ export default AboutPage;`
 
   // Fix ai-3d-generation page
   if (filePath.includes('ai-3d-generation')) {
-    const correctStructure = `'use client'
+    const correctStructure = `'
 import React from "react"
 import { Helmet } from "react-helmet-async"
 export default function Page() {
+  
   return (
+    
     <>
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
@@ -171,19 +176,7 @@ function processFile(filePath) {
 
 // Main execution
 async function main() {
+  
   console.log('Starting comprehensive JSX error fixes...')
   // Get all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() })
-  let totalFixed = 0
-  let filesProcessed = 0
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++
-    }
-    filesProcessed++
-  })
-  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`)
-  console.log('Comprehensive JSX error fixes completed!')
-}
-
-main().catch(console.error)
+  const files = await glob('app/**

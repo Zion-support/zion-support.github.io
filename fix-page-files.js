@@ -29,19 +29,21 @@ function createPageTemplate(filePath) {
   const fileName = path.basename(path.dirname(filePath));
   const title = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   
-  return `'use client';
-import React from "react";
+  return `';
+import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 export default function Page() {
+  
   return (
+    
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} services and solutions from Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-white"></div>
-        <div className="container mx-auto px-4 py-20"></div>
+      <div>
+    <div className="container mx-auto px-4 py-20"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
           <p className="text-xl text-gray-600"></p>
             This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
@@ -56,6 +58,7 @@ export default function Page() {
 
 // Main function;
 function main() {
+  
   try {
     const files = getAllPageFiles('/workspace/app');
     let fixedCount = 0;

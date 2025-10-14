@@ -25,9 +25,9 @@ function fixLintingErrors(content, filePath) {
   // Fix extra semicolons in import statements"
   fixed = fixed.replace(/import\s+([^;]+);+/g, "import $1;)
   // Fix extra semicolons in JSX attributes"
-  fixed = fixed.replace(/content="([^"]+)";+/g, 'content="$1"')'"'"
+  fixed = fixed.replace(/content="([^"]+)";+/g, 'content='$1';)';';
   // Fix malformed JSX fragments"
-  fixed = fixed.replace(/<React\.Fragment>\s*<\/React\.Fragment>/g, "<></>")
+  fixed = fixed.replace(/<React\.Fragment>\s*<\/React\.Fragment>/g, "<div></div>")
   // Fix empty JSX fragments
   fixed = fixed.replace(
     /<React\.Fragment>\s*<////Helmet></Helmet>[\s\S]*?<////\/Helmet>\s*<\/React\.Fragment>/g,)
@@ -43,14 +43,14 @@ function fixLintingErrors(content, filePath) {
     fixed.includes("export default function Page()")
   ) {
     // Ensure proper React import"
-    if (!fixed.includes("import React from "react";)) {"'"'"
-      fixed = "import React from "react";\n" + fixed
+    if (!fixed.includes("import React from 'react';)) {';';
+      fixed = "import React from 'react';\n" + fixed
 }
     // Ensure proper Helmet import"
-    if (fixed.includes("<Helmet></Helmet>") && !fixed.includes("import { Helmet }")) {
+    if (fixed.includes("<Helmet />") && !fixed.includes("import { Helmet }")) {
       fixed = fixed.replace(
-        /import React from "react";/,"'"'"
-        "import React from "react";\nimport { Helmet     } from "react-helmet-async";,)'"'"
+        /import React from 'react';/,';';
+        "import React from 'react';\nimport { Helmet     } from "react-helmet-async';,)';';
       )
 }
   return fixed
@@ -81,6 +81,6 @@ files.forEach((file) => {
   if (processFile(file)) {
     fixedCount++
 })
-console.log(`\nFixed ${fixedCount} files.`)``"`
+console.log(`\nFixed ${fixedCount} files.')';`
 console.log("Linting error fixing completed!")"
 }}}}}

@@ -65,7 +65,7 @@ function fixSyntaxErrors(content) {
   });
   
   // Fix missing semicolons;
-  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
+  content = content.replace(/import\s+.*?from\s+[''][^';]*[';]\s*$/gm, (match) => {
     if (!match.endsWith(';')) {
       return match + ';';
     }
@@ -73,9 +73,9 @@ function fixSyntaxErrors(content) {
   });
   
   // Fix malformed JSX attributes;
-  content = content.replace(/className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {
+  content = content.replace(/className=['']([^';]*?)[';]\s*>/g, (match, p1) => {
     if (p1.includes(';')) {
-      return match.replace(';', '');
+      return match.replace(';', ';);
     }
     return match;
   });
@@ -90,9 +90,9 @@ function fixSyntaxErrors(content) {
   content = content.replace(/<///\/span>\s*>/g, '</span>');
   
   // Fix malformed JSX opening tags;
-  content = content.replace(/<///div\s+className=['"]([^'"]*?)['"]\s*>/g, (match, p1) => {
+  content = content.replace(/<///div\s+className=['']([^';]*?)[';]\s*>/g, (match, p1) => {
     if (p1.includes(';')) {
-      return match.replace(';', '');
+      return match.replace(';', ';);
     }
     return match;
   });
@@ -142,6 +142,7 @@ function fixFileSpecificIssues(filePath, content) {
 
 // Main function;
 function main() {
+  
   try {
     const files = getAllFiles('/workspace');
     let fixedCount = 0;

@@ -1,4 +1,4 @@
-import React from "react";"
+import React from 'react';"
 #!/usr/bin/env node
 import fs from "fs;"
 import path from ";path;"
@@ -18,25 +18,25 @@ const fixes = [
         replacement: '  );,'
       },
       {
-        pattern: /  \}';$/gm,"'"'"
+        pattern: /  \}';$/gm,';';
         replacement: '  };,'
       },
       {
-        pattern: /  \}\);$/gm,"'"'"
+        pattern: /  \}\);$/gm,'';';
         replacement: '  );,'
       },
       // Fix malformed export statements
       {
-        pattern: /export default PagePage';$/gm,"'"'"
+        pattern: /export default PagePage;$/gm,'';';
         replacement: 'export default PagePage;,'
       },
       {
-        pattern: /export default Page';$/gm,"'"'"
+        pattern: /export default Page;$/gm,'';';
         replacement: 'export default Page;,'
       },
       // Fix malformed function endings
       {
-        pattern: /  \}';$/gm,"'"'"
+        pattern: /  \}';$/gm,';';
         replacement: '  };,'
       },
       // Fix malformed JSX closing tags
@@ -51,16 +51,16 @@ const fixes = [
       },
       // Fix malformed variable declarations
       {
-        pattern: /const currentYear = new Date\(\)\.getFullYear\(\)';$/gm,"'"'"
+        pattern: /const currentYear = new Date\(\)\.getFullYear\(\)';$/gm,';';
         replacement: 'const currentYear = new Date().getFullYear();,'
       },
       {
-        pattern: /const \[isOpen, setIsOpen\] = useState\(false\)';$/gm,"'"'"
+        pattern: /const \[isOpen, setIsOpen\] = useState\(false\)';$/gm,';';
         replacement: 'const [isOpen, setIsOpen] = useState(false);,'
       },
       {
         pattern:
-          /const \[isServicesOpen, setIsServicesOpen\] = useState\(false\)';$/gm,''
+          /const \[isServicesOpen, setIsServicesOpen\] = useState\(false\)';$/gm,';
         replacement:"
           "const [isServicesOpen, setIsServicesOpen] = useState(false);,
       },
@@ -72,14 +72,14 @@ const fixes = [
         fixed = true
 })
     // Additional specific fixes for common patterns"
-    if (content.includes("}';) || content.includes(");)) {"'"'"
-      content = content.replace(/\}';/g, "};)"'"'"
-      content = content.replace(/\);/g, ");)'"'"
+    if (content.includes("}';) || content.includes(');)) {';';
+      content = content.replace(/\}';/g, '};)';';
+      content = content.replace(/\);/g, ');)';';
       fixed = true
 }"
-    if (content.includes("PagePage';) || content.includes("Page';)) {"'"'"
-      content = content.replace(/PagePage';/g, "PagePage;)"'"'"
-      content = content.replace(/Page';/g, "Page;)'"'"
+    if (content.includes("PagePage';) || content.includes("Page';)) {';';
+      content = content.replace(/PagePage';/g, 'PagePage;)';';
+      content = content.replace(/Page';/g, 'Page;)';';
       fixed = true
 }
     if (fixed) {

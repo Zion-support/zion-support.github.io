@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
 
-export const usePerformance = () => {
-  const [metrics, setMetrics] = useState({
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+}
+
+export const usePerformance = (): PerformanceMetrics => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: 0,
     lcp: 0,
     fid: 0,

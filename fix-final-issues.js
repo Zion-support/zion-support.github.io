@@ -7,10 +7,10 @@ import { glob } from 'glob';
 // Function to fix over-escaped quotes in JSX content;
 function fixOverEscapedQuotes(content) {
   // Fix over-escaped single quotes in JSX text content and object properties;
-  content = content.replace(/&apos;/g, "'");
+  content = content.replace(/&apos;/g, '';);
   
   // Fix over-escaped double quotes;
-  content = content.replace(/&quot;/g, '"');
+  content = content.replace(/&quot;/g, '';);
   
   // Fix over-escaped greater than and less than;
   content = content.replace(/&gt;/g, '>');
@@ -89,45 +89,6 @@ function fixUnusedVariables(content) {
 
 // Main function to process files;
 async function processFiles() {
+  
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
-    for (const file of files) {
-      try {
-        const filePath = path.resolve(file);
-        let content = fs.readFileSync(filePath, 'utf8');
-        
-        // Apply all fixes;
-        content = fixOverEscapedQuotes(content);
-        content = fixParsingErrors(content);
-        content = removeUnusedImports(content);
-        content = fixUnusedVariables(content);
-        
-        // Write back the fixed content;
-        fs.writeFileSync(filePath, content, 'utf8');
-        processedCount++;
-        
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
-      }
-    }
-  }
-  
-  console.log(`\nProcessed ${processedCount} files`);
-  if (errorCount > 0) {
-    console.log(`Encountered ${errorCount} errors`);
-  }
-}
-
-// Run the script;
-processFiles().catch(console.error);
+    'app/**

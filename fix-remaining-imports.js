@@ -37,18 +37,18 @@ function fixFile(filePath) {
       
       // Common patterns to remove;
       const patterns = [
-        /import\s*{\s*[^}]*Link[^}]*}\s*from\s*['"]react-router-dom['"];\s*\n/g,
-        /import\s*{\s*[^}]*Shield[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Globe[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Star[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Users[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Award[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Clock[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Database[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Brain[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Zap[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*PieChart[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
-        /import\s*{\s*[^}]*Frown[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
+        /import\s*{\s*[^}]*Link[^}]*}\s*from\s*['']react-router-dom[';];\s*\n/g,
+        /import\s*{\s*[^}]*Shield[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Globe[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Star[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Users[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Award[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Clock[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Database[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Brain[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Zap[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*PieChart[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
+        /import\s*{\s*[^}]*Frown[^}]*}\s*from\s*['']lucide-react[';];\s*\n/g,
       ];
       
       patterns.forEach(pattern => {
