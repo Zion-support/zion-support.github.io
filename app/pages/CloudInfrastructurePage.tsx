@@ -1,5 +1,4 @@
 import React from "react";
-
 const CloudInfrastructurePage = () => {
   return ("
     <div className="p-4">"

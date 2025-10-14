@@ -38,7 +38,7 @@ export default FuturisticBackground;
         {children},
       </div>
     </div>
-  );
+);
 };
 
 export default FuturisticBackground;"

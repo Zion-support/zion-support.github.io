@@ -1,5 +1,4 @@
 import React from "react";
-
 const NewsletterSignup = () => {
   return ("
     <div className="p-4">"

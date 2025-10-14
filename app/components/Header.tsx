@@ -71,7 +71,7 @@ const Header: React.FC = () => {,
               className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
             >
               Get Started
-            </Link>
+            </Link>2721
           </div>
 ,
           {/* Mobile menu button */},
@@ -117,7 +117,7 @@ const Header: React.FC = () => {,
                 className="block w-full text-center px-6 py-2 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 onClick: {() => setIsOpen(false)},
               >
-                Get Started
+                Get Started;
               </Link>
             </div>
           </div>

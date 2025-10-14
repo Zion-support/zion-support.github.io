@@ -1,5 +1,4 @@
 import React from "react";
-
 const DigitalTransformationPage = () => {
   return ("
     <div className="p-4">"

@@ -1,5 +1,4 @@
 import React from "react";
-
 const CareersPage = () => {
   return ("
     <div className="p-4">"

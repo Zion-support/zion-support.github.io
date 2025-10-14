@@ -1,6 +1,18 @@
-import { useEffect } from 'react';,
+import { useEffect } from 'react';
 
-export const useSEO = (structuredData?: unknown) => {,
+export interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+}
 
   useEffect(() => {,
 

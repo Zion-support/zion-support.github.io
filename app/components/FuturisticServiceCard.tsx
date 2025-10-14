@@ -1,5 +1,4 @@
 import React from "react";
-
 const FuturisticServiceCard = () => {
   return ("
     <div className="p-4">"

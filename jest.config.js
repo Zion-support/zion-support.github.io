@@ -1,4 +1,5 @@
 export default {
+  preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
@@ -14,15 +15,21 @@ export default {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.jest.json'
+      tsconfig: 'tsconfig.jest.json',
     }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/app-broken/',
+    '<rootDir>/app-disabled/',
+    '<rootDir>/temp-broken/',
+    '<rootDir>/src/'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],

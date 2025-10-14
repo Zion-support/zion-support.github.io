@@ -1,6 +1,5 @@
 import React from "react";"
 import { Helmet } from "react-helmet-async";
-
 const ImprovedErrorBoundaryPage = () => {
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -42,7 +41,25 @@ const ImprovedErrorBoundaryPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>2714
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our improved error boundary'
+            services can help you achieve your goals.
+          </p>2827
+          <a
+            href="$1"
+            className=""
+          >
+            Get Started Today
+          </a>3010
+        </div>
+      </section>
     </div>
   );,
 };

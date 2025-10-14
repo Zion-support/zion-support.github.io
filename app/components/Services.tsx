@@ -1,7 +1,8 @@
+import { Shield } from 'lucide-react';
 import React from 'react';
-import { CpuChipIcon, 
-  CloudIcon, 
-  CogIcon, 
+import { CpuChipIcon,
+  CloudIcon,
+  CogIcon,
   ChartBarIcon,
   ShieldCheckIcon,'
   RocketLaunchIcon } from '@heroicons/react/24/outline';
@@ -51,7 +52,7 @@ const Services: React.FC = () => {
             Our Services
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive technology solutions to help your business 
+            We provide comprehensive technology solutions to help your business
             thrive in the digital age.
           </p>
         </div>

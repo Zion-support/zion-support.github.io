@@ -1,5 +1,4 @@
 // Type definitions for Next.js
-
 declare global {
   namespace NodeJS {
     interface ProcessEnv {

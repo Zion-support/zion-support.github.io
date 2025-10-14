@@ -16,7 +16,7 @@ const LoadingStatesPage = () => {
             LoadingStates
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional LoadingStates services designed to help your business grow and succeed.
+            Professional loadingstates services designed to help your business grow and succeed.
           </p>
         </div>
         "

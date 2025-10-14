@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const AnimatedCard = () => {
   return ("
@@ -8,7 +8,7 @@ const AnimatedCard = () => {
         This is a placeholder component for AnimatedCard.
       </p>
     </div>
-  );
+);
 };
 "
 export default AnimatedCard;

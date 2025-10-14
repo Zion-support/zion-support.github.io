@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedAnalytics = () => {
   return ()
     <div className="p-4">"

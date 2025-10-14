@@ -15,7 +15,7 @@ const EnhancedErrorBoundaryPage = () => {
             EnhancedErrorBoundary
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional EnhancedErrorBoundary services designed to help your business grow and succeed.
+            Professional enhancederrorboundary services designed to help your business grow and succeed.
           </p>
         </div>
         "

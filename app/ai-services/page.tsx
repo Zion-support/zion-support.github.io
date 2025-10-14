@@ -271,7 +271,7 @@ const AiServicesPage = () => {
             <Link to="/demo""
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Schedule Demo
+              Schedule a Demo
             </Link>
           </div>
         </div>

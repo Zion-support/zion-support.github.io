@@ -15,8 +15,16 @@ const ContentPromotionBannerPage = () => {
             ContentPromotionBanner
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ContentPromotionBanner services designed to help your business grow and succeed.
+            Professional contentpromotionbanner services designed to help your business grow and succeed.
           </p>
+          <div className="flex space-x-4">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+              Get Started
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Learn More
+            </button>
+          </div>
         </div>
         "
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">"

@@ -1,5 +1,4 @@
 import React from "react";
-
 const MobileOptimizer = () => {
   return ("
     <div className="p-4">"

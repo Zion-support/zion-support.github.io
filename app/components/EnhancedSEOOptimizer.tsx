@@ -1,5 +1,4 @@
 import React from "react";
-
 const EnhancedSEOOptimizer = () => {
   return ("
     <div className="p-4">"

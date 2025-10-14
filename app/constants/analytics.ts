@@ -1,5 +1,10 @@
-// Analytics constants,
-export const ANALYTICS_EVENTS = {,
+// Analytics constants
+export const ANALYTICS_CONFIG = {
+  trackingId: 'G-XXXXXXXXXX',
+  measurementId: 'G-XXXXXXXXXX',
+  apiSecret: 'your-api-secret',
+  measurementProtocolSecret: 'your-measurement-protocol-secret'
+};
 
   PAGE_VIEW: 'page_view','
   CLICK: 'click','

@@ -1,4 +1,32 @@
-import React from "react";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
+
+const Breadcrumb: React.FC = () => {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
+
+  if (pathnames.length === 0) {
+    return null;
+  }
+
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' }
+  ];
+
+  let currentPath = '';
+  pathnames.forEach((pathname, index) => {
+    currentPath += `/${pathname}`;
+    const name = pathname
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+    
+    breadcrumbItems.push({
+      name,
+      href: currentPath
+    });
+  });
 
 const Breadcrumb = () => {
   return ("

@@ -1,6 +1,12 @@
-import { useEffect, useState } from 'react';,
+import { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {,
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+}
 
   loadTime: number;,
   renderTime: number;,
@@ -17,16 +23,35 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {,
     const startTime = performance.now();,
     
     const measurePerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+        const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+        
+        setMetrics({
+          loadTime,
+          firstContentfulPaint,
+          largestContentfulPaint,
+          firstInputDelay: 0, // Would need to be measured with PerformanceObserver
+          cumulativeLayoutShift: 0 // Would need to be measured with PerformanceObserver
+        });
+      }
+    };
 
-      const loadTime = performance.now() - startTime;,
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;,
-      
-      setMetrics({,
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
 
-        loadTime,
-        renderTime: performance.now() - startTime,
-        memoryUsage});,
-    };,
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
 
     // Measure after component mount,
     const timeoutId = setTimeout(measurePerformance, 100);,

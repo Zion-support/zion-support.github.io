@@ -1,5 +1,4 @@
 import React from "react";
-
 const EnhancedPerformanceMonitor = () => {
   return ("
     <div className="p-4">"

@@ -15,7 +15,7 @@ const EnhancedLoadingPage = () => {
             EnhancedLoading
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional EnhancedLoading services designed to help your business grow and succeed.
+            Professional enhancedloading services designed to help your business grow and succeed.
           </p>
         </div>
         "
@@ -42,6 +42,12 @@ const EnhancedLoadingPage = () => {
           </div>
         </div>
       </div>
+      
+      {text && (
+        <p className={`mt-4 text-gray-300 ${textSizeClasses[size]} animate-pulse`}>
+          {text}
+        </p>
+      )}
     </div>
   );,
 };

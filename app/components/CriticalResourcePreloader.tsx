@@ -15,7 +15,7 @@ const CriticalResourcePreloaderPage = () => {
             CriticalResourcePreloader
           </h1>"
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional CriticalResourcePreloader services designed to help your business grow and succeed.
+            Professional criticalresourcepreloader services designed to help your business grow and succeed.
           </p>
         </div>
         "

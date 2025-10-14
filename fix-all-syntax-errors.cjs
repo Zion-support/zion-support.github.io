@@ -25,13 +25,9 @@ function fixUnterminatedStrings(content) {
 // Function to remove merge conflict markers
 function removeMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> origin\/main/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> origin\/main/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> origin\/main/g, '')
-    .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-    .replace(/=======/g, '')
-    .replace(/>>>>>>> origin\/main/g, '');
-}
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?/g, '')
+    .replace(//g, '')
+    .replace(/}
 
 // Function to fix common JSX syntax errors
 function fixJSXSyntax(content) {
