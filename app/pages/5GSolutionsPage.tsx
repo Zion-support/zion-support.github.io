@@ -1,3 +1,2 @@
-// 5GSolutionsPage - Basic implementation
-export default function 5GSolutionsPage() {
+import React from 'react';'// 5GSolutionsPage - Basic implementation'export default function 5GSolutionsPage() {
   return null;

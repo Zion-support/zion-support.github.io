@@ -1,3 +1,2 @@
-// AIServicesPage - Basic implementation
-export default function AIServicesPage() {
+import React from 'react';'// AIServicesPage - Basic implementation'export default function AIServicesPage() {
   return null;
