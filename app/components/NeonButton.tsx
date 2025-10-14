@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-if (to) {
-    return (
-      <Link to={to} className={classes}>
-        {children}
-      </Link>
-)
-    )
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
 
-const NeonButtonPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>NeonButton - Zion Tech Group</title>
         <meta name="description" content="Professional NeonButton services by Zion Tech Group." />
         <meta name="keywords" content="NeonButton, AI solutions, IT services" />
@@ -57,8 +44,3 @@ const NeonButtonPage = () => {
   );
 };
 
-<<<<<<< HEAD
-}
-=======
-export default NeonButtonPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

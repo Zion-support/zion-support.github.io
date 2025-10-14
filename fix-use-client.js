@@ -2,7 +2,7 @@ import React from 'react'
 'use client'
 #!/usr/bin/env node;
 import fs from 'fs';
-import { glob } from 'glob'
+import { glob } from 'glob';
 // Function to fix directive placement;
 function fixUseClientDirective(content)   {}
   // Remove all directives first

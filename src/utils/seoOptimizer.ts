@@ -288,8 +288,7 @@ const issues: string[] = [];
     // Check title length;
 const title = document.title;
     if (title.length < 30) {
-      issues.push('Title is too short (less than 30 characters)');
-    } else if (title.length > 60) {
+      issues.push('Title is too short (less than 30 characters)');} else if (title.length > 60) {
       issues.push('Title is too long (more than 60 characters)');
     }
     // Check description length";

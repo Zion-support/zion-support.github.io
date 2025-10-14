@@ -21,11 +21,11 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void
   trackPageView: (pageName: string) => void
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
+const AnalyticsContext = createContext<AnalyticsContextType | undefined></AnalyticsContextType>(undefined)
 interface AnalyticsProviderProps {
   children: ReactNode
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps></AnalyticsProviderProps> = ({ children }) => {;
 const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     // Basic analytics tracking
     console.log("Analytics Event:", eventName, properties)
@@ -46,7 +46,7 @@ const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     trackPageView,
   }
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children})
   )
 }
@@ -69,7 +69,7 @@ interface State {
   hasError: boolean
   error?: Error
 }
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State></Props> {
   public state: State = {
     hasError: false
   }
@@ -121,7 +121,7 @@ interface SEOProps {
   image?: string
   url?: string
 }
-const SEO: React.FC<SEOProps> = ({
+const SEO: React.FC<SEOProps></SEOProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions
   description = "Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
   keywords = "AI, artificial intelligence, cybersecurity, cloud infrastructure, digital transformation, IT services
@@ -129,7 +129,7 @@ const SEO: React.FC<SEOProps> = ({
   url = "https://ziontechgroup.com")
 }) => {
   return (
-    <Helmet></Helmet>
+    <Helmet></Helmet></Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

@@ -45,7 +45,7 @@ import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet></Helmet></Helmet>
         <title>${titleCase} - Zion Tech Group</title>
         <meta name="description" content="Professional ${pageName} services by Zion Tech Group." />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
@@ -62,8 +62,7 @@ export default function Page() {
 }
 }
 // Function to fix AccessibilityEnhancer parsing error;
-function fixAccessibilityEnhancer() {
-  try {
+function fixAccessibilityEnhancer() {try {
     let content = fs.readFileSync(
       "/workspace/app/components/AccessibilityEnhancer.tsx
       "utf8",)

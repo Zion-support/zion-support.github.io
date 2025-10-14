@@ -8,9 +8,7 @@ import react;
 import { Helmet } from  from 'react;
 
 import { Helmet } from 'react-helmet-async';
-
 import { Box, Mic, } from 'lucide-react';
-
 import from ../components
 import Footer from ../components
 import { Circle, Right, Star, } from lucide-react;
@@ -135,7 +133,7 @@ import { Circle, Right, Star, } from 'lucide-react';
       popular: false
     }
   ]
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." />
       </Helmet>

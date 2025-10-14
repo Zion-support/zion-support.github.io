@@ -50,8 +50,8 @@ const tags = match.match(/<\/[^>]*>/g)
   )
   // Fix specific patterns for page components
   fixed = fixed.replace()
-    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g
-    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  )
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment></React>\s*\)\s*;\s*<\/React\.Fragment>/g
+    "export default function Page() {\n  return (\n    <React.Fragment></React>\n    </React.Fragment>\n  )
   )
   // Fix malformed Helmet components
   fixed = fixed.replace(/<\/Helmet>\s*<div></div>
@@ -97,8 +97,8 @@ const index = openTags.lastIndexOf(tagName[1])
   fixed = fixedLines.join("\n")
   // Fix specific malformed patterns
   fixed = fixed.replace()
-    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g
-    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  )
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment></React>\s*\)\s*;\s*<\/React\.Fragment>/g
+    "export default function Page() {\n  return (\n    <React.Fragment></React>\n    </React.Fragment>\n  )
   )
   // Fix malformed JSX with orphaned closing tags
   fixed = fixed.replace(/<div[^></div>

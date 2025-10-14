@@ -83,7 +83,7 @@ import { Helmet } from "react-helmet-async
 const PagePage = () => {
   return (
     <div></div>
-      <Helmet></Helmet>
+      <Helmet></Helmet></Helmet>
         <title>PagePage - Zion Tech Group</title>
         <meta name="description" content="PagePage - Zion Tech Group" />
       <div></div>
@@ -134,7 +134,7 @@ const services = [
             <ul className="space-y-2">)
               {services.map((service, index) => (
                 <li key={index}>
-                  <Link to={service.href} className="text-gray-400 hover:text-white transition-colors flex items-center">
+                  <Link to={service.href} className="text-gray-400 hover:text-white transition-colors flex items-center"></Link>
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name})
               ))}
@@ -142,10 +142,10 @@ const services = [
           <div></div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors"></Link>About Us</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors"></Link>Careers</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors"></Link>Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors"></Link>Contact</Link></li>
         {/* Contact Info */}
         <div className="mt-8 pt-8 border-t border-gray-700"></div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
@@ -171,8 +171,8 @@ export default Footer;`
 import { Helmet } from "react-helmet-async
 export default function Page() {
   return (
-    <React.Fragment>
-      <Helmet></Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet></Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Professional 5G implementation services by Zion Tech Group." />
       <div></div>
@@ -209,7 +209,7 @@ const filePath = path.join(process.cwd(), file)
             'import React from "react"; import { Link } from react-router-dom; import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from lucide-react; const Footer = () =>{ const currentYear : new Date().getFullYear(); const services : [ { name="AI" Solutions, href="/ai-solutions" }'
           ) ||
           content.includes(")
-            'import React from "react"; import { Helmet } from react-helmet-async; export default function Page() { return (<React.Fragment><Helmet></Helmet><title>5G Implementation - Zion Tech Group</title><meta name="description" content="Professional" 5G implementation services by Zion Tech Group. /></Helmet><div></div><div></div><h1 className="text-4xl" font-bold text-white mb-4>5G Implementation</h1><p className="text-gray-300">Coming soon...</p></div></div></React.Fragment>); }</div>'
+            'import React from "react"; import { Helmet } from react-helmet-async; export default function Page() { return (<React.Fragment></React><Helmet></Helmet></Helmet><title>5G Implementation - Zion Tech Group</title><meta name="description" content="Professional" 5G implementation services by Zion Tech Group. /></Helmet><div></div><div></div><h1 className="text-4xl" font-bold text-white mb-4>5G Implementation</h1><p className="text-gray-300">Coming soon...</p></div></div></React.Fragment>); }</div>'
           )
         ) {
           content = rewriteProblematicFile(content, filePath)

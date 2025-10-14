@@ -20,16 +20,16 @@ export default AdvancedPerformanceMonitor
     {
       file: "/workspace/app/components/AnalyticsProvider.tsx
       content: `import React, { createContext, ReactNode } from 'react';
-import { trackEvent, trackPageView } from '../utils/analytics'
+import { trackEvent, trackPageView } from '../utils/analytics';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
   trackPageView: (pageName: string) => void
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
+const AnalyticsContext = createContext<AnalyticsContextType | undefined></AnalyticsContextType>(undefined)
 interface AnalyticsProviderProps {
   children: ReactNode
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps></AnalyticsProviderProps> = ({ children }) => {;
 const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     // Basic analytics tracking
     console.log('Analytics Event:', eventName, properties)
@@ -43,7 +43,7 @@ const trackEvent = (eventName: string, properties?: Record<string, unknown>) => 
     trackPageView,
   }
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children})
   )
 }
@@ -89,8 +89,8 @@ const filesToFix = [
   for (const file of filesToFix) {
     try {
       let content = fs.readFileSync(fileutf8")
-      // Fix JSX fragment issues - replace <> with <React.Fragment> and </> with </React.Fragment>
-      content = content.replace(/<>/g<React.Fragment>)
+      // Fix JSX fragment issues - replace <> with <React.Fragment></React> and </> with </React.Fragment>
+      content = content.replace(/<>/g<React.Fragment></React>)
       content = content.replace(/<\/>/g</React.Fragment>)
       // Add React import if not present
       if (!content.includes("import React")) {

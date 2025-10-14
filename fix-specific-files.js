@@ -111,12 +111,11 @@ function createBasicPageComponent(filePath, pageName) {
     .join('');
 
   return `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const ${componentName}Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
         <meta name="description" content="Professional ${pageName.replace(/-/g, ' ')} services by Zion Tech Group." />
         <meta name="keywords" content="${pageName.replace(/-/g, ', ')}, AI solutions, IT services" />
@@ -265,7 +264,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
+  <React.StrictMode></React>
     <App />
   </React.StrictMode>
 );`;

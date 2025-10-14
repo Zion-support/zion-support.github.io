@@ -57,7 +57,7 @@ function fixMergeConflicts(filePath) {
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>'
     content = content.replace(/<\/>;/g, '</>'
-    content = content.replace(/<Helmet>/g, '<Helmet>'
+    content = content.replace(/<Helmet></Helmet>/g, '<Helmet></Helmet>'
     content = content.replace(/<\/Helmet>;/g, '</Helmet>'
     content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>'
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
@@ -100,8 +100,7 @@ function fixMergeConflicts(filePath) {
 }
 
 // Function to fix unterminated string literals
-function fixUnterminatedStrings(filePath) {
-  try {
+function fixUnterminatedStrings(filePath) {try {
     let content = fs.readFileSync(filePath, 'utf8'
     const originalContent = content;
     
@@ -113,8 +112,7 @@ function fixUnterminatedStrings(filePath) {
       let line = lines[i];
       
       // Fix unterminated string literals
-      if (line.includes(
-      }
+      if (line.includes(}
       if (line.includes(
       }
       if (line.includes(
@@ -124,7 +122,7 @@ function fixUnterminatedStrings(filePath) {
       // Fix malformed JSX syntax
       line = line.replace(/<>/g, '<>'
       line = line.replace(/<\/>;/g, '</>'
-      line = line.replace(/<Helmet>/g, '<Helmet>'
+      line = line.replace(/<Helmet></Helmet>/g, '<Helmet></Helmet>'
       line = line.replace(/<\/Helmet>;/g, '</Helmet>'
       line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>'
       line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));

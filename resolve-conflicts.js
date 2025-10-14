@@ -1,6 +1,5 @@
 import { execSync } from 'child_process';
 import { readFileSync, writeFileSync, existsSync } from 'fs';
-
 // Get list of conflicted files;
 const conflictedFiles = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })
   .split('\n')

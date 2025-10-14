@@ -8,7 +8,6 @@ interface JobPosition {
   id: number;
 
 import { Right, Circle, } from 'lucide-react';
-
 const PagePage: React.FC = () => {}
   title: string;
 

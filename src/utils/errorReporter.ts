@@ -36,13 +36,13 @@ export class ErrorReporter {
   private config: ErrorReporterConfig;
   private errorQueue: ErrorReport[] = [];
   private errorCount: Map<string, number> = new Map();
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {
+  private constructor(config: Partial<ErrorReporterConfig></ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
   }
   /**
    * Get singleton instance
    */
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
+  static getInstance(config?: Partial<ErrorReporterConfig></ErrorReporterConfig>): ErrorReporter {
     if (!ErrorReporter.instance) {
       ErrorReporter.instance = new ErrorReporter(config);
     }

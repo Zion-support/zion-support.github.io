@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 console.log('🔧 Starting comprehensive TypeScript error fix...');
 
 // Function to create a basic React page component
@@ -14,12 +13,11 @@ function createBasicPageComponent(filePath, pageName) {
     .join('');
 
   return `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const ${componentName}Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
         <meta name="description" content="Professional ${pageName.replace(/-/g, ' ')} services by Zion Tech Group." />
         <meta name="keywords" content="${pageName.replace(/-/g, ', ')}, AI solutions, IT services" />
@@ -94,7 +92,7 @@ function fixFileWithErrors(filePath) {
                      content.includes('</div>""') || 
                      content.includes('</div>"') ||
                      content.includes('<<<<<<<') ||
-                     content.includes('=======') ||
+                     content.includes('') ||
                      content.includes('>>>>>>>') ||
                      content.includes('Unterminated string literal') ||
                      content.includes('Declaration or statement expected') ||
@@ -165,7 +163,7 @@ function findFilesWithErrors(dir) {
                              content.includes('</div>""') || 
                              content.includes('</div>"') ||
                              content.includes('<<<<<<<') ||
-                             content.includes('=======') ||
+                             content.includes('') ||
                              content.includes('>>>>>>>') ||
                              content.includes('Unterminated string literal') ||
                              content.includes('Declaration or statement expected') ||

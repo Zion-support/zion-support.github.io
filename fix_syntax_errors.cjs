@@ -1,125 +1,118 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive syntax error fix...');
-
-// Function to fix common syntax errors in files
-function fixSyntaxErrors(filePath) {
-    try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let modified = false;
-
-        // Fix common merge conflict markers
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-            console.log(`⚠️  Found merge conflict markers in ${filePath}`);
-            // Remove merge conflict markers and keep the main branch version
-            content = content.replace(/<<<<<<<.*?=======.*?>>>>>>>.*?\n/gs, '');
-            content = content.replace(/<<<<<<<.*?>>>>>>>.*?\n/gs, '');
-            content = content.replace(/=======.*?\n/gs, '');
-            modified = true;
-        }
-
-        // Fix unterminated string literals
-        content = content.replace(/'([^']*?)$/gm, "'");
-        content = content.replace(/"([^"]*?)$/gm, '"');
-        
-        // Fix unterminated template literals
-        content = content.replace(/`([^`]*?)$/gm, '`');
-        
-        // Fix common TypeScript syntax errors
-        content = content.replace(/import\s+{\s*([^}]*?)\s*}\s*from\s*['"]([^'"]*?)['"];?\s*$/gm, 'import { $1 } from "$2";');
-        
-        // Fix JSX syntax errors
-        content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)>\s*$/gm, '<$1 $2>');
-        
-        // Fix function declarations
-        content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {');
-        
-        // Fix class declarations
-        content = content.replace(/class\s+([A-Z][a-zA-Z0-9]*)\s*{\s*$/gm, 'class $1 {');
-        
-        // Fix interface declarations
-        content = content.replace(/interface\s+([A-Z][a-zA-Z0-9]*)\s*{\s*$/gm, 'interface $1 {');
-        
-        // Fix type declarations
-        content = content.replace(/type\s+([A-Z][a-zA-Z0-9]*)\s*=\s*{\s*$/gm, 'type $1 = {');
-        
-        // Fix object literals
-        content = content.replace(/{\s*$/gm, '{');
-        
-        // Fix array literals
-        content = content.replace(/\[\s*$/gm, '[');
-        
-        // Fix parentheses
-        content = content.replace(/\(\s*$/gm, '(');
-        
-        // Fix brackets
-        content = content.replace(/\[\s*$/gm, '[');
-        
-        // Fix braces
-        content = content.replace(/{\s*$/gm, '{');
-        
-        // Remove empty lines at the end
-        content = content.replace(/\n\s*$/, '');
-        
-        if (modified) {
-            fs.writeFileSync(filePath, content);
-            console.log(`✅ Fixed syntax errors in ${filePath}`);
-            return true;
-        }
-        
-        return false;
-    } catch (error) {
-        console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-        return false;
+// Function to recursively find all files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        files = files.concat(findFiles(fullPath, extensions));
+      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
+  }
+  
+  return files;
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    let fixedCount = 0;
+// Function to fix common syntax errors
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-            // Skip node_modules and other common directories
-            if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-                continue;
-            }
-            fixedCount += fixFilesInDirectory(filePath);
-        } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-            if (fixSyntaxErrors(filePath)) {
-                fixedCount++;
-            }
-        }
+    // Fix common issues
+    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< [^\n]+/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    
+    // Fix malformed JSX
+    content = content.replace(/<([^>]+)>([^<]*?)<\/\1>/g, (match, tag, inner) => {
+      if (inner.includes('<') && !inner.includes('</')) {
+        return `<${tag}>${inner}</${tag}>`;
+      }
+      return match;
+    });
+    
+    // Fix unclosed JSX tags
+    content = content.replace(/<([A-Z][A-Za-z0-9]*)([^>]*?)(?<!\/)>/g, (match, tagName, attributes) => {
+      if (!match.endsWith('/>') && !match.includes('</')) {
+        return `<${tagName}${attributes}></${tagName}>`;
+      }
+      return match;
+    });
+    
+    // Fix malformed imports
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*$/gm, (match, imports, module) => {
+      const cleanImports = imports.replace(/[^a-zA-Z0-9_,\s]/g, '').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    });
+    
+    // Fix broken JSX expressions
+    content = content.replace(/\{\s*([^}]*?)\s*\}/g, (match, inner) => {
+      if (inner.includes('<') && !inner.includes('>')) {
+        return `{${inner}}`;
+      }
+      return match;
+    });
+    
+    // Remove empty lines that might cause issues
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    // Fix common TypeScript issues
+    content = content.replace(/:\s*any\s*=\s*any/g, ': any');
+    content = content.replace(/:\s*any\s*=\s*undefined/g, ': any = undefined');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
     }
     
-    return fixedCount;
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
 // Main execution
+console.log('Starting syntax error fixes...');
+
+const files = findFiles('.');
+let fixedCount = 0;
+
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`\nSyntax fixes complete! Fixed ${fixedCount} files.`);
+
+// Try to run checks after fixes
+console.log('\nRunning type check...');
 try {
-    console.log('🔍 Scanning for files to fix...');
-    const fixedCount = fixFilesInDirectory('.');
-    console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-    
-    // Run TypeScript check to see if we fixed the issues
-    console.log('🔍 Running TypeScript check...');
-    try {
-        execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
-        console.log('✅ TypeScript check passed!');
-    } catch (error) {
-        console.log('⚠️  TypeScript check still has errors, but we fixed what we could');
-    }
-    
-    console.log('🎉 Syntax error fix completed!');
+  const { execSync } = require('child_process');
+  execSync('pnpm run type-check', { stdio: 'inherit' });
+  console.log('✅ Type check passed!');
 } catch (error) {
-    console.error('❌ Error during syntax fix:', error.message);
-    process.exit(1);
+  console.log('❌ Type check still has issues, but continuing...');
+}
+
+console.log('\nRunning build...');
+try {
+  const { execSync } = require('child_process');
+  execSync('pnpm run build', { stdio: 'inherit' });
+  console.log('✅ Build passed!');
+} catch (error) {
+  console.log('❌ Build still has issues, but continuing...');
 }

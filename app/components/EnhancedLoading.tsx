@@ -1,10 +1,9 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import { Helmet } from 'react-helmet-async';
 const EnhancedLoadingPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>EnhancedLoading - Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedLoading services by Zion Tech Group." />
         <meta name="keywords" content="EnhancedLoading, AI solutions, IT services" />

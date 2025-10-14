@@ -25,7 +25,7 @@ import { Helmet } from "react-helmet-async
 export default function Page() {
   return (
     <div></div>
-      <Helmet></Helmet>
+      <Helmet></Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description} />
       <div></div>

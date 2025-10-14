@@ -17,7 +17,7 @@ function fixSpecificErrors(content, filePath) {
   // Fix 2: Fix malformed import statements with extra quotes
   fixed = fixed.replace()
     /import\s+{\s*([^}]+)\s*}\s+from\s+'([^']+)';'/g
-    "import { $1 } from '$2'
+    "import { 1 } from '$2';
   )
   fixed = fixed.replace()
     /import\s+(\w+)\s+from\s+'([^']+)';'/g
@@ -81,8 +81,7 @@ function fixSpecificErrors(content, filePath) {
   fixed = fixed.replace(/try\s*{\s*$/gmtry {")
   fixed = fixed.replace()
     /}\s*catch\s*\(\s*(\w+)\s*\)\s*{\s*$/gm
-    "} catch ($1) {
-  )
+    "} catch ($1) {)
   // Fix 15: Fix malformed switch statements
   fixed = fixed.replace(/switch\s*\(\s*(\w+)\s*\)\s*{\s*$/gmswitch ($1) {")
   // Fix 16: Fix malformed for loops

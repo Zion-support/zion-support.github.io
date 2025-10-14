@@ -69,7 +69,7 @@ const fullPath = path.join(__dirname, filePath);
     content = content.replace(/children\?\s*:\s*React\.ReactNode\s*,?\s*/g, '');
     
     // Fix any types
-    content = content.replace(/Record<string, any>></Helmet>/g, 'Record<string, unknown>');
+    content = content.replace(/Record<string, any></Helmet>></Helmet>/g, 'Record<string, unknown>');
     
     // Fix unused expressions
     content = content.replace(/console\.log\([^)]*\);\s*$/gm, '');

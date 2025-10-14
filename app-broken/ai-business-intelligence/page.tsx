@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function AiBusinessIntelligence()   {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>AiBusinessIntelligence - Zion Tech Group</title>
         <meta name="description" content="Advanced aibusinessintelligence solutions" />
       </Helmet>

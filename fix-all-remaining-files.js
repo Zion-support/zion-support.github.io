@@ -41,7 +41,7 @@ import { Link } from 'react-router-dom';
 export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>)
+      <Helmet></Helmet></Helmet>)
         <title>${fileName.charAt(0).toUpperCase() + fileName.slice(1)} - Zion Tech Group</title>
         <meta name="description" content="Professional ${fileName} services by Zion Tech Group." />
       <div className="container mx-auto px-4 py-16"></div>
@@ -53,7 +53,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}P
           <Link
             to="/contact
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300
-          >
+          ></Link>
             Contact Us
   )
 }`
@@ -63,8 +63,7 @@ interface ${fileName}Props {
   className?: string
   children?: React.ReactNode
 }
-const ${fileName}: React.FC<${fileName}Props> = ({ className = '', children }) => {
-  return ()
+const ${fileName}: React.FC<${fileName}Props> = ({ className = '', children }) => {return ()
     <div className={\`${fileName.toLowerCase()}-component \${className}\`}></div>
       {children || (
         <div className="p-4"></div>

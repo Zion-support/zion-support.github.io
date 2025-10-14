@@ -6,84 +6,7 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
-<<<<<<< HEAD
-    let content = fs.readFileSync(filePath, 'utf8')
-    let originalContent = content
-    // Remove merge conflict markers and keep the HEAD version (first part)
-        inConflict = true
-        keepLines = true
-        continue
-        inConflict = false
-        keepLines = true
-        continue
-}
-      if (!inConflict || keepLines) {
-        resolvedLines.push(line)
-}
-    const resolvedContent = resolvedLines.join('\n')
-    // Clean up any remaining syntax issues
-    let cleanedContent = resolvedContent
-      // Remove duplicate semicolons
-      .replace(/;+/g, ')
-      // Fix malformed imports
-      .replace(/import\s+([^;]+);+/g, 'import $1;')
-      // Fix malformed JSX
-      .replace(/<React\.Fragment>/g, '<>')
-      .replace(/<\/React\.Fragment>/g, '</>')
-      // Remove stray quotes and semicolons
-      .replace(/"/g, '"')
-      .replace(/'/g'")
-      // Fix malformed JSX attributes
-      .replace(/\s+"/g, '')
-      .replace(/\s+'/g, '')
-      // Clean up extra whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Remove empty lines at the end
-      .replace(/\n+$/, '\n')
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, cleanedContent, 'utf8')
-    console.log(`✅ Fixed: ${filePath}`)
-    return true
-=======
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    // Check if file has merge conflicts
-    if (!content.includes('
-      return false; // No conflicts to fix
-    }
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    // Strategy: Keep the content after ======= (usually the incoming changes)
-    // But first, let's try to be smarter about it
-    // Remove all merge conflict markers and keep the last version (after =======)
-    const lines = content.split('\n');
-    const fixedLines = [];
-    let inConflict = false;
-    let keepContent = false;
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (line.trim() === '
-        inConflict = false;
-        keepContent = false;
-        continue;
-      }
-      if (!inConflict || keepContent) {
-        fixedLines.push(line);
-      }
-    }
-    const fixedContent = fixedLines.join('\n');
-    // Additional cleanup for common issues
-    let cleanedContent = fixedContent
-      // Remove any remaining conflict markers
-      .replace(/
-      // Fix common syntax issues
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
-      .replace(/\s+$/gm, '') // Remove trailing whitespace
-      .trim();
-    // Write the fixed content back
-    fs.writeFileSync(filePath, cleanedContent, 'utf8');
-    console.log(`✅ Fixed merge conflicts in: ${filePath}`);
-    return true;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
+
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
@@ -154,13 +77,4 @@ try {
     remainingConflicts.forEach(file => console.log(`  - ${file}`));
   }
 } catch (error) {
-<<<<<<< HEAD
-  console.error('💥 Fatal error:', error.message)
-  process.exit(1)
-}
-}}}}
-=======
-  console.error('❌ Script failed:', error.message);
-  process.exit(1);
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
+

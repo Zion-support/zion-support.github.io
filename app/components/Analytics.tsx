@@ -5,7 +5,7 @@ interface AnalyticsProps {
   children?: React.ReactNode;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+const Analytics: React.FC<AnalyticsProps></AnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
 

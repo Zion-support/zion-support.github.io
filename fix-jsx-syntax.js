@@ -49,7 +49,7 @@ function fixJSXSyntax(content) {
     '<meta name="$1" content="$2" />'
   )
   // Fix malformed Helmet tags
-  fixed = fixed.replace(/<Helmet></Helmet>\s*$/gm<Helmet></Helmet>\n")
+  fixed = fixed.replace(/<Helmet></Helmet></Helmet>\s*$/gm<Helmet></Helmet></Helmet>\n")
   fixed = fixed.replace(/<\/Helmet>\s*$/gm\n</Helmet>)
   return fixed
 }

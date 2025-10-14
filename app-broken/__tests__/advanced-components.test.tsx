@@ -15,7 +15,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
   onError?: any 
 }) => {
   const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
+  const [error, setError] = React.useState<Error | null></Error>(null);
 
   React.useEffect(() => {
     const handleError = (error: Error) => {
@@ -68,7 +68,7 @@ const ErrorComponent = () => {
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
     render(
-      <AdvancedErrorBoundary>
+      <AdvancedErrorBoundary></AdvancedErrorBoundary>
         <TestComponent />
       </AdvancedErrorBoundary>
     );
@@ -79,7 +79,7 @@ describe('Advanced Components', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
     
     render(
-      <AdvancedErrorBoundary>
+      <AdvancedErrorBoundary></AdvancedErrorBoundary>
         <ErrorComponent />
       </AdvancedErrorBoundary>
     );
@@ -91,14 +91,14 @@ describe('Advanced Components', () => {
 
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
-      <Helmet>
+      <Helmet></Helmet>
         <title>Test Title</title>
         <meta name="description" content="Test description" />
       </Helmet>
     );
 
     render(
-      <HelmetProvider>
+      <HelmetProvider></HelmetProvider>
         <SEOEnhancer />
       </HelmetProvider>
     );

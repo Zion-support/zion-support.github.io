@@ -94,8 +94,8 @@ function fixCorruptedSyntax(content) {
   )
   // Fix malformed JSX return statements
   content = content.replace(
-    /\{\s*return\s*\(\s*<div></div>\s*<Helmet></Helmet>/g
-    "{\n  return (\n    <div></div>\n      <Helmet></Helmet>,)
+    /\{\s*return\s*\(\s*<div></div>\s*<Helmet></Helmet></Helmet>/g
+    "{\n  return (\n    <div></div>\n      <Helmet></Helmet></Helmet>,)
   )
   // Fix malformed closing tags
   content = content.replace(/\/>\s*"\s*<\/Helmet>/g />\n      </Helmet>)

@@ -164,7 +164,7 @@ class EnhancedErrorMonitoring {
   /**
    * Handle error with comprehensive context
    */
-  handleError(error: Error, context: Partial<ErrorContext> = {}): void {
+  handleError(error: Error, context: Partial<ErrorContext></ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
       id: this.generateErrorId(),
       message: error.message,
@@ -218,7 +218,7 @@ class EnhancedErrorMonitoring {
   /**
    * Calculate error severity
    */
-  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {
+  private calculateSeverity(error: Error, context: Partial<ErrorContext></ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {
     // Critical: Network errors, unhandled promise rejections
     if (context.category === 'network' || context.category === 'promise') {
       return 'critical'

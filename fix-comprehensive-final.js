@@ -1,7 +1,7 @@
 import React from 'react'
 #!/usr/bin/env node;
 import fs from 'fs';
-import { glob } from 'glob'
+import { glob } from 'glob';
 // Function to fix all remaining syntax issues;
 function fixAllSyntaxIssues(content)   {}
   // Fix empty string literals

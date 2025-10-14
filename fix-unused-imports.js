@@ -153,5 +153,4 @@ files.forEach(file => {
 fixUnusedImports('./App.tsx'
 
 console.log('Done fixing unused imports!'
->>>>>>> origin/main
->>>>>>> origin/main
+

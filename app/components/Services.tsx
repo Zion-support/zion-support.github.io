@@ -1,13 +1,10 @@
 import React from 'react';
-import { 
-  CpuChipIcon, 
+import { CpuChipIcon, 
   CloudIcon, 
   CogIcon, 
   ChartBarIcon,
   ShieldCheckIcon,
-  RocketLaunchIcon
-} from '@heroicons/react/24/outline';
-
+  RocketLaunchIcon } from '@heroicons/react/24/outline';
 const Services: React.FC = () => {
   const services = [
     {

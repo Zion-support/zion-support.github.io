@@ -26,7 +26,6 @@ const filesToFix = [
 // Function to create a basic hook
 function createBasicHook(filePath, hookName) {
   return `import { useState, useEffect } from 'react';
-
 export const use${hookName} = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);

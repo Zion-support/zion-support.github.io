@@ -94,7 +94,7 @@ const trackEvent = (eventName, properties = ) => {;}
   return (
     <div></div>Page content</div>)
   )
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
   )
 }
@@ -110,7 +110,7 @@ const pathnames = location.pathname.split('/').filter(x => x);'
     <div></div>Page content</div>)
   )
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-      <Link to="/" className="flex items-center hover:text-white transition-colors">
+      <Link to="/" className="flex items-center hover:text-white transition-colors"></Link>
         <Home className="w-4 h-4 mr-1" />
         Home
       {pathnames.map((name, index) => {}
@@ -119,12 +119,12 @@ const isLast = index === pathnames.length - 1
         return (
     <div></div>Page content</div>)
   )
-          <React.Fragment key={name}>
+          <React.Fragment key={name}></React>
             <ChevronRight className="w-4 h-4" />
             {isLast ? ()}
               <span className="text-white capitalize">{name.replace('-', ' ')}</span>'
             ) : ()
-              <Link to={routeTo} className="hover:text-white transition-colors capitalize">
+              <Link to={routeTo} className="hover:text-white transition-colors capitalize"></Link>
                 {name.replace('-', ' ')}'
             )}
         )
@@ -161,7 +161,7 @@ const get = (key) => {;}
   return (
     <div></div>Page content</div>)
   )
-    <CacheContext.Provider value={value}>
+    <CacheContext.Provider value={value}></CacheContext>
       {children}
   )
 }
@@ -245,7 +245,7 @@ const reportError = (error, errorInfo) => {;}
   return (
     <div></div>Page content</div>)
   )
-    <ErrorFeedbackContext.Provider value={value}>
+    <ErrorFeedbackContext.Provider value={value}></ErrorFeedbackContext>
       {children}
   )
 }
@@ -271,21 +271,21 @@ const Footer = () => {}
           <div></div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white"></Link>About</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white"></Link>Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white"></Link>Contact</Link></li>
           <div></div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white">Cloud Services</Link></li>
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-white"></Link>AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white"></Link>IT Services</Link></li>
+              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white"></Link>Cloud Services</Link></li>
           <div></div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-              <li><Link to="/case-studies" className="text-gray-400 hover:text-white">Case Studies</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white"></Link>Blog</Link></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-white"></Link>Case Studies</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white"></Link>Privacy</Link></li>
           <div></div>
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <div className="space-y-2"></div>
@@ -398,12 +398,12 @@ const navigation = [
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
         <div className="flex justify-between items-center h-16"></div>
           <div className="flex items-center"></div>
-            <Link to="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl font-bold text-white"></Link>
               Zion Tech
           <div className="hidden md:block"></div>
             <div className="ml-10 flex items-baseline space-x-4"></div>
               {navigation.map((item) => ()}
-                <Link;>
+                <Link;></Link>
                   key={item.name}
                   to={item.href}
                   className={\`px-3 py-2 rounded-md text-sm font-medium transition-colors \$`}`
@@ -424,7 +424,7 @@ const navigation = [
         <div className="md:hidden"></div>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800"></div>
             {navigation.map((item) => ()}
-              <Link;>
+              <Link;></Link>
                 key={item.name}
                 to={item.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white
@@ -481,7 +481,7 @@ const Sidebar = ({ isOpen, onClose }) => {}
             <X className="h-6 w-6" />
         <nav className="mt-4">
           {navigation.map((item) => ()}
-            <Link;>
+            <Link;></Link>
               key={item.name}
               to={item.href}
               className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white

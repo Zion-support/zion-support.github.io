@@ -16,12 +16,12 @@ function fixComprehensive(content) {
     "import $1;\n\nexport default function
   )
   // Fix malformed JSX fragments
-  content = content.replace(/<React\.Fragment><\/React>/g<React.Fragment>)
+  content = content.replace(/<React\.Fragment></React><\/React>/g<React.Fragment></React>)
   content = content.replace(/<\/React>/g</React.Fragment>)
   // Fix malformed JSX tags
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9-]*)\s*><\/\1>/g<$1>)
   // Fix malformed Helmet tags
-  content = content.replace(/<Helmet></Helmet><\/Helmet>/g<Helmet></Helmet>)
+  content = content.replace(/<Helmet></Helmet></Helmet><\/Helmet>/g<Helmet></Helmet></Helmet>)
   content = content.replace(/<\/Helmet>/g</Helmet>)
   // Fix malformed div tags
   content = content.replace(/<div></div><\/div>/g<div></div>)

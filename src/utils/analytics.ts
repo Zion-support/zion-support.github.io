@@ -168,10 +168,8 @@ class AnalyticsService {
   /**
    * Queue event for later processing
    */
-  private queueEvent(event: AnalyticsEvent): void {
-    if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
-    }
+  private queueEvent(event: AnalyticsEvent): void {if (this.queue.length < this.maxQueueSize) {
+      this.queue.push(event)}
   }
   /**
    * Process queued events

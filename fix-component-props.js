@@ -16,7 +16,7 @@ interface GlobalErrorBoundaryProps {
   children: React.ReactNode;
 }
 
-class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { hasError: boolean }> {
+class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { hasError: boolean }></GlobalErrorBoundaryProps> {
   constructor(props: GlobalErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
@@ -63,7 +63,7 @@ interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+const FuturisticBackground: React.FC<FuturisticBackgroundProps></FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

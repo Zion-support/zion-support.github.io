@@ -9,10 +9,10 @@ function fixAllJSX(content) {
   // Fix extra quotes at the end of lines
   content = content.replace(/"\s*$/gm)
   // Fix malformed JSX fragments
-  content = content.replace(/<React\.Fragment><\/React>/g<React.Fragment>)
+  content = content.replace(/<React\.Fragment></React><\/React>/g<React.Fragment></React>)
   content = content.replace(/<\/React>/g</React.Fragment>)
   // Fix malformed Helmet tags
-  content = content.replace(/<Helmet></Helmet><\/Helmet>/g<Helmet></Helmet>)
+  content = content.replace(/<Helmet></Helmet></Helmet><\/Helmet>/g<Helmet></Helmet></Helmet>)
   content = content.replace(/<\/Helmet>/g</Helmet>)
   // Fix malformed div tags
   content = content.replace(/<div></div><\/div>/g<div></div>)
@@ -27,16 +27,16 @@ function fixAllJSX(content) {
   )
   // Fix malformed JSX structure
   content = content.replace(")
-    /<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>/g
-    '<React.Fragment>\n      <Helmet></Helmet>\n        <title>$1</title>\n        <meta name="$2" content="$3" />\n      </Helmet>\n      <div></div>\n        <div></div>\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>\n        </div>\n      </div>\n    </React.Fragment>'
+    /<React\.Fragment></React>\s*<Helmet></Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>/g
+    '<React.Fragment></React>\n      <Helmet></Helmet></Helmet>\n        <title>$1</title>\n        <meta name="$2" content="$3" />\n      </Helmet>\n      <div></div>\n        <div></div>\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>\n        </div>\n      </div>\n    </React.Fragment>'
   )
   // Fix malformed function structure
   content = content.replace(")
-    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g
+    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment></React>\s*<Helmet></Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g
     `export default function Page() {
   return (
-    <React.Fragment>
-      <Helmet></Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet></Helmet>
         <title>$1</title>
         <meta name="$2" content="$3" />
       <div></div>

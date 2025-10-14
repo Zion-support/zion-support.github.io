@@ -3,11 +3,8 @@ import react;
 import { Helmet } from  from 'react;
 
 import { Helmet } from 'react-helmet-async';
-
-import { } from 'react-router-dom';
-
+import {  } from 'react-router-dom';
 import { Circle, Right, Star, 3, } from 'lucide-react';
-
 interface MicroSaasProduct {
   // Add properties here
 }
@@ -44,11 +41,10 @@ const MicroSaasPage: React.FC = () => {}
 import React from 'react';
 
 const MicroSaasPage: React.FC = () => {
-import { Circle, Right, } from 'lucide-react'
-
+import { Circle, Right, } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
+import {  } from 'react-router-dom';
 import { Right, Circle, Star, } from 'lucide-react';
       users: 'Up to 50 users',
       popular: true,
@@ -130,9 +126,8 @@ import { Right, Circle, Star, } from 'lucide-react';
 
   ];
 
-
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more. />
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software />
@@ -158,7 +153,6 @@ import { Right, Circle, Star, } from 'lucide-react';
                       ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
                       : bg-white/10 text-gray-300 hover:bg-white/20
                   }}
-
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>

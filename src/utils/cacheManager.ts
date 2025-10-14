@@ -19,7 +19,7 @@ export interface CacheConfig {
   storage?: CacheStorage;
   defaultTTL?: number;
 }
-export interface CacheEntry<T> {
+export interface CacheEntry<T></T> {
   value: T;
   timestamp: number;
   ttl: number;
@@ -110,9 +110,9 @@ export class CacheManager {
   /**
    * Set cache entry
    */
-  set<T>(key: string, value: T, options: { ttl?: number } = {}): void {
+  set<T></T>(key: string, value: T, options: { ttl?: number } = {}): void {
     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
-    const entry: CacheEntry<T> = {
+    const entry: CacheEntry<T></T> = {
       value,
       timestamp: Date.now(),
       ttl
@@ -149,11 +149,11 @@ export class CacheManager {
   /**
    * Get cache entry
    */
-  get<T>(key: string): T | undefined {
+  get<T></T>(key: string): T | undefined {
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
-    let entry: CacheEntry<T> | null = null;
+    let entry: CacheEntry<T></T> | null = null;
     if (this.storage === CacheStorage.Memory) {
-      entry = (this.memoryCache.get(key) as CacheEntry<T> | undefined) || null;
+      entry = (this.memoryCache.get(key) as CacheEntry<T></T> | undefined) || null;
     } else if (
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
@@ -162,7 +162,7 @@ export class CacheManager {
       try {
         const item = localStorage.getItem(this.getStorageKey(key));
         if (item) {
-          entry = JSON.parse(item) as CacheEntry<T>;
+          entry = JSON.parse(item) as CacheEntry<T></T>;
         }
       } catch (error) {
         logger.error('Failed to get localStorage cache', error as Error);
@@ -175,7 +175,7 @@ export class CacheManager {
       try {
         const item = sessionStorage.getItem(this.getStorageKey(key));
         if (item) {
-          entry = JSON.parse(item) as CacheEntry<T>;
+          entry = JSON.parse(item) as CacheEntry<T></T>;
         }
       } catch (error) {
         logger.error('Failed to get sessionStorage cache', error);
@@ -233,13 +233,11 @@ export class CacheManager {
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage
-    ) {
-      const keysToRemove: string[] = [];
+    ) {const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {
-          keysToRemove.push(key);
-        }
+          keysToRemove.push(key);}
       }
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
@@ -247,13 +245,11 @@ export class CacheManager {
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage
-    ) {
-      const keysToRemove: string[] = [];
+    ) {const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
         if (key && key.startsWith('cache_')) {
-          keysToRemove.push(key);
-        }
+          keysToRemove.push(key);}
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
@@ -262,12 +258,12 @@ export class CacheManager {
   /**
    * Get or set with function (handles both sync and async)
    */
-  getOrSet<T>(
+  getOrSet<T></T>(
     key: string,
-    fn: () => T | Promise<T>,
+    fn: () => T | Promise<T></T>,
     options: { ttl?: number } = {}
-  ): T | Promise<T> {
-    const cached = this.get<T>(key);
+  ): T | Promise<T></T> {
+    const cached = this.get<T></T>(key);
     if (cached !== undefined) {
       return cached;
     }
@@ -288,12 +284,12 @@ export class CacheManager {
   /**
    * Get or set with async function
    */
-  async getOrSetAsync<T>(
+  async getOrSetAsync<T></T>(
     key: string,
-    fn: () => Promise<T> | T,
+    fn: () => Promise<T></T> | T,
     options: { ttl?: number } = {}
-  ): Promise<T> {
-    const cached = this.get<T>(key);
+  ): Promise<T></T> {
+    const cached = this.get<T></T>(key);
     if (cached !== undefined) {
       return cached;
     }
@@ -307,7 +303,7 @@ export class CacheManager {
   /**
    * Memoize a function with caching
    */
-  memoize<TArgs extends unknown[], TResult>(
+  memoize<TArgs extends unknown[], TResult></TArgs>(
     fn: (...args: TArgs) => TResult,
     options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {
@@ -339,24 +335,20 @@ export class CacheManager {
     memorySize: number;
     localStorageSize: number;
     sessionStorageSize: number;
-  } {
-    let localStorageSize = 0;
+  } {let localStorageSize = 0;
     let sessionStorageSize = 0;
     if (typeof window !== 'undefined') {
       if (window.localStorage) {
         for (let i = 0; i < localStorage.length; i++) {
           const key = localStorage.key(i);
           if (key && key.startsWith('cache_')) {
-            localStorageSize++;
-          }
+            localStorageSize++;}
         }
       }
-      if (window.sessionStorage) {
-        for (let i = 0; i < sessionStorage.length; i++) {
+      if (window.sessionStorage) {for (let i = 0; i < sessionStorage.length; i++) {
           const key = sessionStorage.key(i);
           if (key && key.startsWith('cache_')) {
-            sessionStorageSize++;
-          }
+            sessionStorageSize++;}
         }
       }
     }

@@ -17,7 +17,7 @@ const patterns = [
       {
         regex:
           /import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];';'/g
-        replacement: "import { Helmet } from 'react-helmet-async'
+        replacement: "import { Helmet } from 'react-helmet-async';
       },
       // Fix malformed JSX attributes
       {

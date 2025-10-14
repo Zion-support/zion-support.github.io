@@ -26,7 +26,7 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetrics;
   private observers: MutationObserver[] = [];
   private isInitialized = false;
-  constructor(config: Partial<AccessibilityConfig> = {}) {
+  constructor(config: Partial<AccessibilityConfig></AccessibilityConfig> = {}) {
     this.config = {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
@@ -102,9 +102,7 @@ const focusableElements = this.getFocusableElements();
     let nextIndex: number;
     if (isShift) {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-    } else {
-      nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-    }
+    } else {nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;}
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
@@ -151,9 +149,7 @@ const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][n
     let nextIndex: number;
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1;
-    } else {
-      nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0;
-    }
+    } else {nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0;}
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
     event.preventDefault();
@@ -169,9 +165,7 @@ const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTML
     let nextIndex: number;
     if (event.key === 'ArrowUp') {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-    } else if (event.key === 'ArrowDown') {
-      nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0;
-    } else {
+    } else if (event.key === 'ArrowDown') {nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0;} else {
       return;
     }
     menuItems[nextIndex]?.focus();

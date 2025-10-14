@@ -49,8 +49,8 @@ const tags = match.match(/<\/[^>]*>/g)
   )
   // Fix specific malformed patterns
   fixed = fixed.replace()
-    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g
-    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  )
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment></React>\s*\)\s*;\s*<\/React\.Fragment>/g
+    "export default function Page() {\n  return (\n    <React.Fragment></React>\n    </React.Fragment>\n  )
   )
   // Fix malformed JSX with orphaned closing tags
   fixed = fixed.replace(/<div[^></div>

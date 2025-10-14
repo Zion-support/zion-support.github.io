@@ -12,7 +12,7 @@ export interface ServiceOptions {
   cache?: boolean;
   cacheDuration?: number;
 }
-export interface CacheEntry<T> {
+export interface CacheEntry<T></T> {
   data: T;
   timestamp: number;
 }
@@ -33,16 +33,14 @@ export class BaseService {
   /**
    * Check if cached data is still valid
    */
-  protected isCacheValid(key: string): boolean {
-    const _entry = this.cache.get(key);
+  protected isCacheValid(key: string): boolean {const _entry = this.cache.get(key);
     if (!_entry) return false;
     const age = Date.now() - _entry.timestamp;
-    return age < (this.options.cacheDuration || 300000);
-  }
+    return age < (this.options.cacheDuration || 300000);}
   /**
    * Get data from cache
    */
-  protected getFromCache<T>(key: string): T | null {
+  protected getFromCache<T></T>(key: string): T | null {
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
@@ -54,7 +52,7 @@ export class BaseService {
   /**
    * Set data in cache
    */
-  protected setInCache<T>(key: string, data: T): void {
+  protected setInCache<T></T>(key: string, data: T): void {
     if (!this.options.cache) return;
     this.cache.set(key, {
       data,
@@ -74,15 +72,15 @@ export class BaseService {
   /**
    * Make a GET request
    */
-  protected async get<T>(endpoint: string, useCache = true): Promise<T> {
+  protected async get<T></T>(endpoint: string, useCache = true): Promise<T></T> {
     const _cacheKey = `GET:${endpoint}`;
     if (useCache) {
-      const cached = this.getFromCache<T>(_cacheKey);
+      const cached = this.getFromCache<T></T>(_cacheKey);
       if (cached) return cached;
     }
     try {
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
+      const response = await apiClient.get<T></T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries
       });
@@ -101,10 +99,10 @@ export class BaseService {
   /**
    * Make a POST request
    */
-  protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
+  protected async post<T, D = unknown></T>(endpoint: string, data?: D): Promise<T></T> {
     try {
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.post<T></T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries
       });
@@ -120,10 +118,10 @@ export class BaseService {
   /**
    * Make a PUT request
    */
-  protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
+  protected async put<T, D = unknown></T>(endpoint: string, data?: D): Promise<T></T> {
     try {
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.put<T></T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries
       });
@@ -139,10 +137,10 @@ export class BaseService {
   /**
    * Make a PATCH request
    */
-  protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
+  protected async patch<T, D = unknown></T>(endpoint: string, data?: D): Promise<T></T> {
     try {
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
+      const response = await apiClient.patch<T></T>(`${this.baseUrl}${endpoint}`, data, {
         timeout: this.options.timeout,
         retries: this.options.retries
       });
@@ -158,10 +156,10 @@ export class BaseService {
   /**
    * Make a DELETE request
    */
-  protected async delete<T>(endpoint: string): Promise<T> {
+  protected async delete<T></T>(endpoint: string): Promise<T></T> {
     try {
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
-      const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
+      const response = await apiClient.delete<T></T>(`${this.baseUrl}${endpoint}`, {
         timeout: this.options.timeout,
         retries: this.options.retries
       });

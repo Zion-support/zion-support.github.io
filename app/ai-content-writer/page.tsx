@@ -1,12 +1,12 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Phone } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Phone } from 'lucide-react';
 import Footer from "../components/Footer";
 
 const AIContentWriterPage = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
         <meta name="description" content="AI Content Writer - Zion Tech Group" />
       </Helmet>

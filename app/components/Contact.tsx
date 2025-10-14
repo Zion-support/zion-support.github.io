@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  EnvelopeIcon, 
+import { EnvelopeIcon, 
   PhoneIcon, 
   MapPinIcon,
-  ClockIcon
-} from '@heroicons/react/24/outline';
-
+  ClockIcon } from '@heroicons/react/24/outline';
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,7 +11,7 @@ const Contact: React.FC = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement></HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -46,12 +43,10 @@ const Contact: React.FC = () => {
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
     },
-    {
-      icon: ClockIcon,
+    {icon: ClockIcon,
       title: 'Response Time',
       details: '< 24 hours',
-      description: 'We respond quickly'
-    }
+      description: 'We respond quickly'}
   ];
 
   return (

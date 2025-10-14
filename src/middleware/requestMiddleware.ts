@@ -142,8 +142,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
 /**
  * Caching middleware
  */
-export const cachingMiddleware = (ttl: number): Middleware => {
-  const _cache = new Map<string, { data: unknown; timestamp: number }>();
+export const cachingMiddleware = (ttl: number): Middleware => {const _cache = new Map<string, { data: unknown; timestamp: number}>();
   return async (context, next) => {
     if (context.request.method !== 'GET') {
       return await next();
@@ -171,8 +170,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
       try {
         return await next();
-      } catch (error) {
-        lastError = error as Error;
+      } catch (error) {lastError = error as Error;
         if (attempt < maxRetries) {
           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
@@ -203,7 +201,7 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
  * Request transformation middleware
  */
 export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext></MiddlewareContext>
 ): Middleware => {
   return async (context, next) => {
     const _transformedContext = await transformer(context);

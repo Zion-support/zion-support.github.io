@@ -15,7 +15,7 @@ const ServicesPage: React.FC = () => {const services = [;
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
       price: Starting at $1,500
       category: 'AI Services,
-      <Helmet>
+      <Helmet></Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />
       </Helmet>

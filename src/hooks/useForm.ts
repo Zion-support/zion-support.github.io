@@ -6,30 +6,28 @@ import React from 'react';
  */;
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
-import {
-  ValidationRule,
+import { ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
-  // ValidationResult as _ValidationResult
-} from '../utils/formValidation';
-export interface UseFormConfig<T extends Record<string, unknown>>> {
+   ValidationResult as _ValidationResult } from '../utils/formValidation';
+export interface UseFormConfig<T extends Record<string, unknown></T>>> {
   initialValues: T;
-  validationSchema?: Partial<Record<keyof T, ValidationRule[]>>>;
+  validationSchema?: Partial<Record<keyof T, ValidationRule[]></Record>>>;
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
 }
-export interface UseFormReturn<T extends Record<string, unknown>>> {
+export interface UseFormReturn<T extends Record<string, unknown></T>>> {
   values: T;
   errors: Record<keyof T, string[]>;
   touched: Record<keyof T, boolean>;
   isSubmitting: boolean;
   isValid: boolean;
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => void;
+  handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement></HTMLFormElement>) => void;
   setFieldValue: (field: keyof T, value: T[keyof T]) => void;
   setFieldError: (field: keyof T, errors: string[]) => void;
   setFieldTouched: (field: keyof T, touched: boolean) => void;
@@ -37,12 +35,12 @@ export interface UseFormReturn<T extends Record<string, unknown>>> {
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
 }
-export function useForm<T extends Record<string, unknown>>>({
+export function useForm<T extends Record<string, unknown></T>>>({
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true)
-}: UseFormConfig<T>): UseFormReturn<T> {;
-const [values, setValues] = useState<T>(initialValues);
-  const [errors, setErrors] = useState<Record<keyof T, string[]>>>({} as Record<keyof T, string[]>);
-  const [touched, setTouched] = useState<Record<keyof T, boolean>>>({} as Record<keyof T, boolean>);
+}: UseFormConfig<T></T>): UseFormReturn<T></T> {;
+const [values, setValues] = useState<T></T>(initialValues);
+  const [errors, setErrors] = useState<Record<keyof T, string[]></Record>>>({} as Record<keyof T, string[]>);
+  const [touched, setTouched] = useState<Record<keyof T, boolean></Record>>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field;
 const validateSingleField = useCallback()
@@ -68,7 +66,7 @@ const validateAllFields = useCallback((): boolean => {
   }, [values, validationSchema]);
   // Handle input change;
 const handleChange = useCallback()
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
 const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs
@@ -89,7 +87,7 @@ const { name, value, type } = e.target;
   );
   // Handle input blur;
 const handleBlur = useCallback()
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
 const fieldName = e.target.name as keyof T;
       setTouched(prev => ({
         ...prev,
@@ -104,7 +102,7 @@ const fieldName = e.target.name as keyof T;
   );
   // Handle form submission;
 const handleSubmit = useCallback()
-    async (e: React.FormEvent<HTMLFormElement>) => {
+    async (e: React.FormEvent<HTMLFormElement></HTMLFormElement>) => {
       e.preventDefault();
       // Mark all fields as touched;
 const allTouched = Object.keys(values).reduce((acc, key) => {

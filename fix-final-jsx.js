@@ -27,16 +27,16 @@ function fixFinalJSX(content) {
   content = content.replace(/}\s*""/g})
   // Fix missing closing Helmet tag
   content = content.replace()
-    /<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/>\s*<div></div>/g
-    '<Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      <div></div>'
+    /<Helmet></Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/>\s*<div></div>/g
+    '<Helmet></Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      <div></div>'
   )
   // Fix malformed function structure
   content = content.replace()
-    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/><\/Helmet>\s*<div></div>\s*<div></div>\s*<h1[^>]*>([^<]*)<\/h1>>\s*<p[^>]*>([^<]*)<\/p>>\s*<\/div><\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g,
+    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment></React>\s*<Helmet></Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/><\/Helmet>\s*<div></div>\s*<div></div>\s*<h1[^>]*>([^<]*)<\/h1>>\s*<p[^>]*>([^<]*)<\/p>>\s*<\/div><\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g,
     `export default function Page() {
   return (
-    <React.Fragment>
-      <Helmet></Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet></Helmet>
         <title>$1</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       <div></div>

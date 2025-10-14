@@ -27,9 +27,9 @@ export interface APIConfig {
   cacheTimeout: number;
   headers?: Record<string, string>;
   interceptors?: {
-    request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>;
-    response?: (response: Response) => Response | Promise<Response>;
-    error?: (error: Error) => Error | Promise<Error>;
+    request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig></RequestConfig>;
+    response?: (response: Response) => Response | Promise<Response></Response>;
+    error?: (error: Error) => Error | Promise<Error></Error>;
   };
 }
 export interface RequestConfig {
@@ -42,7 +42,7 @@ export interface RequestConfig {
   cache?: boolean;
   retryAttempts?: number;
 }
-export interface APIResponse<T = unknown> {
+export interface APIResponse<T = unknown></T> {
   data: T;
   status: number;
   statusText: string;
@@ -59,8 +59,8 @@ export class APIInterceptor {
   private config: APIConfig;
   private cache: Map<string, CacheEntry> = new Map();
   private errorHandler: ErrorHandler;
-  private pendingRequests: Map<string, Promise<APIResponse>> = new Map();
-  constructor(config: Partial<APIConfig> = {}) {
+  private pendingRequests: Map<string, Promise<APIResponse></APIResponse>> = new Map();
+  constructor(config: Partial<APIConfig></APIConfig> = {}) {
     this.config = {
       baseURL: config.baseURL || '',
       timeout: config.timeout || 30000,
@@ -73,7 +73,7 @@ export class APIInterceptor {
     };
     this.errorHandler = ErrorHandler.getInstance();
   }
-  static getInstance(config?: Partial<APIConfig>): APIInterceptor {
+  static getInstance(config?: Partial<APIConfig></APIConfig>): APIInterceptor {
     if (!APIInterceptor.instance) {
       APIInterceptor.instance = new APIInterceptor(config);
     }
@@ -82,23 +82,23 @@ export class APIInterceptor {
   /**
    * Make API request
    */
-  async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {
+  async request<T = unknown></T>(config: RequestConfig): Promise<APIResponse<T></APIResponse>> {
     const fullConfig = this.prepareRequest(config);
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests
     if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {
-        return cachedResponse as APIResponse<T>;
+        return cachedResponse as APIResponse<T></T>;
       }
     }
     // Check for pending identical requests
     if (this.pendingRequests.has(cacheKey)) {
-      return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
+      return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T></APIResponse>>;
     }
     // Create the request promise
-    const requestPromise = this.executeRequest<T>(fullConfig);
-    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
+    const requestPromise = this.executeRequest<T></T>(fullConfig);
+    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse></APIResponse>);
     try {
       const response = await requestPromise;
       // Cache successful GET requests
@@ -113,7 +113,7 @@ export class APIInterceptor {
   /**
    * Execute the actual request
    */
-  private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {
+  private async executeRequest<T></T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T></APIResponse>> {
     const startTime = performance.now();
     try {
       // Apply request interceptor
@@ -142,7 +142,7 @@ export class APIInterceptor {
         finalResponse = await this.config.interceptors.response(response);
       }
       // Parse response data
-      const data = await this.parseResponse<T>(finalResponse);
+      const data = await this.parseResponse<T></T>(finalResponse);
       return {
         data,
         status: finalResponse.status,
@@ -160,7 +160,7 @@ export class APIInterceptor {
       // Retry logic
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {
         await this.delay(this.config.retryDelay * attempt);
-        return this.executeRequest<T>(config, attempt + 1);
+        return this.executeRequest<T></T>(config, attempt + 1);
       }
       // Apply error interceptor
       if (this.config.interceptors?.error) {
@@ -173,50 +173,50 @@ export class APIInterceptor {
   /**
    * GET request
    */
-  async get<T = unknown>(
+  async get<T = unknown></T>(
     url: string,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'GET' });
+    config: Partial<RequestConfig></RequestConfig> = {}
+  ): Promise<APIResponse<T></APIResponse>> {
+    return this.request<T></T>({ ...config, url, method: 'GET' });
   }
   /**
    * POST request
    */
-  async post<T = unknown>(
+  async post<T = unknown></T>(
     url: string,
     body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'POST', body });
+    config: Partial<RequestConfig></RequestConfig> = {}
+  ): Promise<APIResponse<T></APIResponse>> {
+    return this.request<T></T>({ ...config, url, method: 'POST', body });
   }
   /**
    * PUT request
    */
-  async put<T = unknown>(
+  async put<T = unknown></T>(
     url: string,
     body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'PUT', body });
+    config: Partial<RequestConfig></RequestConfig> = {}
+  ): Promise<APIResponse<T></APIResponse>> {
+    return this.request<T></T>({ ...config, url, method: 'PUT', body });
   }
   /**
    * DELETE request
    */
-  async delete<T = unknown>(
+  async delete<T = unknown></T>(
     url: string,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'DELETE' });
+    config: Partial<RequestConfig></RequestConfig> = {}
+  ): Promise<APIResponse<T></APIResponse>> {
+    return this.request<T></T>({ ...config, url, method: 'DELETE' });
   }
   /**
    * PATCH request
    */
-  async patch<T = unknown>(
+  async patch<T = unknown></T>(
     url: string,
     body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'PATCH', body });
+    config: Partial<RequestConfig></RequestConfig> = {}
+  ): Promise<APIResponse<T></APIResponse>> {
+    return this.request<T></T>({ ...config, url, method: 'PATCH', body });
   }
   /**
    * Prepare request configuration
@@ -271,7 +271,7 @@ export class APIInterceptor {
   /**
    * Parse response based on content type
    */
-  private async parseResponse<T>(response: Response): Promise<T> {
+  private async parseResponse<T></T>(response: Response): Promise<T></T> {
     const contentType = response.headers.get('content-type');
     if (contentType?.includes('application/json')) {
       return await response.json();
@@ -351,7 +351,7 @@ export class APIInterceptor {
   /**
    * Update configuration
    */
-  updateConfig(config: Partial<APIConfig>): void {
+  updateConfig(config: Partial<APIConfig></APIConfig>): void {
     this.config = { ...this.config, ...config };
   }
   /**

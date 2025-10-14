@@ -27,13 +27,13 @@ function fixLintingErrors(content, filePath) {
   // Fix extra semicolons in JSX attributes
   fixed = fixed.replace(/content="([^"]+);;+/g, 'content="$1"')
   // Fix malformed JSX fragments
-  fixed = fixed.replace(/<React\.Fragment>\s*<\/React\.Fragment>/g<></>)
+  fixed = fixed.replace(/<React\.Fragment></React>\s*<\/React\.Fragment>/g<></>)
   // Fix empty JSX fragments
   fixed = fixed.replace(
-    /<React\.Fragment>\s*<Helmet></Helmet>[\s\S]*?<\/Helmet>\s*<\/React\.Fragment>/g,)
+    /<React\.Fragment></React>\s*<Helmet></Helmet></Helmet>[\s\S]*?<\/Helmet>\s*<\/React\.Fragment>/g,)
     (match) => {
       return match
-        .replace(/<React\.Fragment>/g<>)
+        .replace(/<React\.Fragment></React>/g<>)
         .replace(/<\/React\.Fragment>/g</>)
     },
   )
@@ -47,7 +47,7 @@ function fixLintingErrors(content, filePath) {
       fixed = "import React from 'react';\n" + fixed
 }
     // Ensure proper Helmet import
-    if (fixed.includes("<Helmet></Helmet>) && !fixed.includes("import { Helmet })) {
+    if (fixed.includes("<Helmet></Helmet></Helmet>) && !fixed.includes("import { Helmet })) {
       fixed = fixed.replace(
         /import React from 'react';/
         "import React from 'react';\nimport { Helmet } from 'react-helmet-async',)

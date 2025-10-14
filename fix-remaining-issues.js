@@ -2,19 +2,16 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 console.log('🔧 Fixing remaining TypeScript and linting issues...');
 
 // Function to fix duplicate default exports and other issues;
-function fixFileIssues(filePath) {
-  try {
+function fixFileIssues(filePath) {try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
     // Check if file has issues
     if (!content.includes('export default') || content.split('export default').length <= 2) {
-      return false; // No issues to fix
-    }
+      return false; // No issues to fix}
     
     console.log(`📝 Fixing issues in: ${filePath}`);
     

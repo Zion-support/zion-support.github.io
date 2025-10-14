@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -7,7 +6,7 @@ interface PerformanceMetrics {
 }
 
 export const usePerformanceMonitor = (): PerformanceMetrics => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
   });

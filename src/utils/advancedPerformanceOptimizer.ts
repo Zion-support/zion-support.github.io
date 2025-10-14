@@ -19,17 +19,17 @@ export class PerformanceOptimizer {
   /**
    * Measure function execution time
    */
-  measurePerformance<T>(
+  measurePerformance<T></T>(
     name: string,
-    fn: () => T | Promise<T>
-  ): T | Promise<T> {
+    fn: () => T | Promise<T></T>
+  ): T | Promise<T></T> {
     const start = performance.now()
     try {
       const result = fn()
       if (result instanceof Promise) {
         return result.finally(() => {
           this.recordMetric(name, performance.now() - start)
-        }) as Promise<T>
+        }) as Promise<T></T>
       } else {
         this.recordMetric(name, performance.now() - start)
         return result
@@ -67,12 +67,12 @@ export class PerformanceOptimizer {
   /**
    * Implement debounce for performance
    */
-  debounce<T extends (...args: unknown[]) => unknown>(
+  debounce<T extends (...args: unknown[]) =></T> unknown>(
     func: T,
     wait: number,
-  ): (...args: Parameters<T>) => void {
+  ): (...args: Parameters<T></T>) => void {
     let timeout: NodeJS.Timeout | null = null
-    return (...args: Parameters<T>) => {
+    return (...args: Parameters<T></T>) => {
       if (timeout) {
         clearTimeout(timeout)
       }
@@ -84,12 +84,12 @@ export class PerformanceOptimizer {
   /**
    * Implement throttle for performance
    */
-  throttle<T extends (...args: unknown[]) => unknown>(
+  throttle<T extends (...args: unknown[]) =></T> unknown>(
     func: T,
     limit: number,
-  ): (...args: Parameters<T>) => void {
+  ): (...args: Parameters<T></T>) => void {
     let inThrottle: boolean = false
-    return (...args: Parameters<T>) => {
+    return (...args: Parameters<T></T>) => {
       if (!inThrottle) {
         func(...args)
         inThrottle = true
@@ -102,16 +102,16 @@ export class PerformanceOptimizer {
   /**
    * Memoize function results
    */
-  memoize<T extends (...args: unknown[]) => unknown>(
+  memoize<T extends (...args: unknown[]) =></T> unknown>(
     func: T
-  ): (...args: Parameters<T>) => ReturnType<T> {
-    const cache = new Map<string, ReturnType<T>>()
-    return (...args: Parameters<T>): ReturnType<T> => {
+  ): (...args: Parameters<T></T>) => ReturnType<T></T> {
+    const cache = new Map<string, ReturnType<T></T>>()
+    return (...args: Parameters<T></T>): ReturnType<T></T> => {
       const key = JSON.stringify(args)
       if (cache.has(key)) {
         return cache.get(key)!
       }
-      const result = func(...args) as ReturnType<T>
+      const result = func(...args) as ReturnType<T></T>
       cache.set(key, result)
       return result
     }
@@ -119,8 +119,7 @@ export class PerformanceOptimizer {
   /**
    * Get all metrics summary
    */
-  getMetricsSummary(): Record<string, { avg: number; count: number }> {
-    const summary: Record<string, { avg: number; count: number }> = {}
+  getMetricsSummary(): Record<string, { avg: number; count: number }> {const summary: Record<string, { avg: number; count: number}> = {}
     this.metrics.forEach((values, name) => {
       summary[name] = {
         avg: this.getAverageMetric(name),

@@ -19,7 +19,7 @@ export interface HealthCheck {
   details?: Record<string, unknown>;
   duration?: number;
 }
-export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
+export type HealthCheckFunction = () => Promise<HealthCheck></HealthCheck> | HealthCheck
 class HealthCheckService {
   private checks: Map<string, HealthCheckFunction> = new Map()
   private startTime: number = Date.now()
@@ -61,15 +61,14 @@ constructor() {
   /**
    * Run all health checks
    */
-  async runChecks(): Promise<HealthStatus> {;
+  async runChecks(): Promise<HealthStatus></HealthStatus> {;
 const now = Date.now()
     // Return cached status if still valid
     if (
       this.cachedStatus &&
       now - this.lastCheckTime < this.cacheTimeout)
     ) {
-      return this.cachedStatus
-    }
+      return this.cachedStatus}
     const checks: HealthCheck[] = []
     // Run all checks
     for (const [name, checkFn] of this.checks.entries()) {
@@ -122,7 +121,7 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
   /**
    * Get current health status (may return cached)
    */
-  async getStatus(): Promise<HealthStatus> {
+  async getStatus(): Promise<HealthStatus></HealthStatus> {
     return this.runChecks()
   }
   /**
