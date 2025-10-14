@@ -30,7 +30,7 @@ const PerformanceMonitor = () => {
       const lastEntry = entries[entries.length - 1];
       metrics.lcp = lastEntry.startTime;
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] ;});
 
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
@@ -42,7 +42,7 @@ const PerformanceMonitor = () => {
         }
       });
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryTypes: ['first-input'] ;});
 
     // Measure Cumulative Layout Shift (CLS)
     let clsValue = 0;
@@ -56,7 +56,7 @@ const PerformanceMonitor = () => {
       });
       metrics.cls = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({ entryTypes: ['layout-shift'] ;});
 
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
@@ -67,7 +67,7 @@ const PerformanceMonitor = () => {
         }
       });
     });
-    fcpObserver.observe({ entryTypes: ['paint'] });
+    fcpObserver.observe({ entryTypes: ['paint'] ;});
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -80,7 +80,7 @@ const PerformanceMonitor = () => {
       if (Object.keys(metrics).length > 0) {
         // Send to analytics service
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Metrics:', metrics);
+          console.warn('Performance Metrics: ';, metrics);
         }
         
         // You can send to your analytics service here

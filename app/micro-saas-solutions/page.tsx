@@ -1,14 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Target, Rocket } from 'lucide-react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const MicroSaasSolutionsPage: React.FC = () => {
 
-import React, { Suspense } from 'react';
-  return (
+return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
@@ -26,7 +22,7 @@ import React, { Suspense } from 'react';
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">;
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Rocket className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
@@ -46,13 +42,6 @@ import React, { Suspense } from 'react';
       </div>
     </>
   );
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 };
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default MicroSaasSolutionsPage;

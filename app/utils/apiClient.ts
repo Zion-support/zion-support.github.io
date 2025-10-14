@@ -1,10 +1,10 @@
 export const apiClient = {
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';,
   
-  async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  async request<T>(endpoint: string;, options: RequestInit = {}): Promise<T> {
     const url = `${this.baseURL}${endpoint}`
     
-  async request(endpoint: string, options: RequestInit = {}) {
+  async request(endpoint: string;, options: RequestInit = {}) {
     const url = `${this.baseURL}${endpoint}`
     const response = await fetch(url, {
       headers: {
@@ -25,48 +25,50 @@ export const apiClient = {
   
   get: <T>(endpoint: string) => apiClient.request<T>(endpoint),
   post: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
-    method: 'POST',
+    method: 'POST';,
     body: JSON.stringify(data),
   }),
   put: <T>(endpoint: string, data: unknown) => apiClient.request<T>(endpoint, {
-    method: 'PUT',
+    method: 'PUT';,
     body: JSON.stringify(data),
   }),
   delete: <T>(endpoint: string) => apiClient.request<T>(endpoint, {
-    method: 'DELETE',
+    method: 'DELETE';,
   }),
 };
   async get<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'GET' })
+    return this.request<T>(endpoint, { method: 'GET' ;})
   },
   
-  async post<T>(endpoint: string, data: any): Promise<T> {
+  async post<T>(endpoint: string;, data: any): Promise<T> {
     return this.request<T>(endpoint, {
   get(endpoint: string) {
-    return this.request(endpoint, { method: 'GET' })
+    return this.request(endpoint, { method: 'GET' ;})
   },
   
-  post(endpoint: string, data: Record<string, unknown>) {
-  post(endpoint: string, data: unknown) {
+  post(endpoint: string;, data: Record<string;, unknown>) {
+  post(endpoint: string;, data: unknown) {
     return this.request(endpoint, {
-      method: 'POST',
+      method: 'POST';,
       body: JSON.stringify(data)
     })
   },
   
-  async put<T>(endpoint: string, data: any): Promise<T> {
+  async put<T>(endpoint: string;, data: any): Promise<T> {
     return this.request<T>(endpoint, {
-  put(endpoint: string, data: Record<string, unknown>) {
-  put(endpoint: string, data: unknown) {
+  put(endpoint: string;, data: Record<string;, unknown>) {
+  put(endpoint: string;, data: unknown) {
     return this.request(endpoint, {
-      method: 'PUT',
+      method: 'PUT';,
       body: JSON.stringify(data)
     })
   },
   
   async delete<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'DELETE' })
+    return this.request<T>(endpoint, { method: 'DELETE' ;})
   delete(endpoint: string) {
-    return this.request(endpoint, { method: 'DELETE' })
+    return this.request(endpoint, { method: 'DELETE' ;})
   }
 }
+
+}}}}}}}
