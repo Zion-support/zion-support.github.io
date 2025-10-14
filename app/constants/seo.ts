@@ -1,6 +1,6 @@
 // SEO constants
 export const DEFAULT_SEO = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  title: 'ZionTechGroup-AdvancedAIandITSolutions',
   description: 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
   keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
   image: '/images/og-image.jpg',
@@ -8,7 +8,7 @@ export const DEFAULT_SEO = {
 } as const;
 
 export const META_TAGS = {
-  AUTHOR: 'Zion Tech Group',
+  AUTHOR: 'ZionTechGroup',
   ROBOTS: 'index, follow',
   VIEWPORT: 'width=device-width, initial-scale=1.0',
 } as const;

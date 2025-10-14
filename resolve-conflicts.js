@@ -1,63 +1,25 @@
-import fs from 'fs';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 
-// Function to resolve merge conflicts by accepting incoming changes
-function resolveMergeConflicts(content) {
-  let resolved = content;
-  
-  // Pattern to match conflict blocks and keep only the incoming changes (our fixes)
-  const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g;
-  resolved = resolved.replace(conflictPattern, '$1');
-  
-  // Clean up any remaining conflict markers
-  resolved = resolved.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  resolved = resolved.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-  
-  return resolved;
-}
+// Get list of conflicted files
+const conflictedFiles = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })
+  .split('\n')
+  .filter(line => line.trim())
+  .map(line => line.split(' ').pop())
+  .filter(file => file);
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
-      const resolved = resolveMergeConflicts(content);
-      fs.writeFileSync(filePath, resolved, 'utf8');
-      console.log(`Resolved conflicts in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+console.log('Conflicted files:', conflictedFiles.length);
+
+// For modify/delete conflicts, remove the files that were deleted in main
+for (const file of conflictedFiles) {
+  if (existsSync(file)) {
+    console.log(`Removing conflicted file: ${file}`);
+    execSync(`git rm "${file}"`);
   }
 }
 
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'api/**/*.js'
-  ];
-  
-  let totalResolved = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
-    
-    for (const file of files) {
-      if (processFile(file)) {
-        totalResolved++;
-      }
-    }
-  }
-  
-  console.log(`\nTotal files with conflicts resolved: ${totalResolved}`);
-}
+// Add and commit the resolution
+execSync('git add .');
+execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');
 
-main();
+console.log('Merge conflicts resolved successfully');

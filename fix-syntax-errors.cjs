@@ -1,134 +1,177 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
 
-// Common patterns to fix
-const fixes = [
-  // Fix malformed import statements
-  {
-    pattern: /import React from  from 'react';/g,
-    replacement: "import React from 'react';"
-  },
-  {
-    pattern: /import React from 'react';'use client'/g,
-    replacement: "import React from 'react';\n'use client'"
-  },
-  {
-    pattern: /import React from 'react';'react-helmet-async';/g,
-    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-  },
-  
-  // Fix malformed strings with extra quotes
-  {
-    pattern: /title: "([^"]*)"",/g,
-    replacement: 'title: "$1",'
-  },
-  {
-    pattern: /description: "([^"]*)"",/g,
-    replacement: 'description: "$1",'
-  },
-  {
-    pattern: /color: "([^"]*)"",/g,
-    replacement: 'color: "$1",'
-  },
-  
-  // Fix duplicate properties
-  {
-    pattern: /color: "([^"]*)",\s*color: "([^"]*)",/g,
-    replacement: 'color: "$1",'
-  },
-  
-  // Fix malformed JSX closing tags
-  {
-    pattern: /}\s*<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix malformed function endings
-  {
-    pattern: /}\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<\/>\s*$/gm,
-    replacement: ''
-  },
-  
-  // Fix unterminated string literals
-  {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"\n'
-  },
-  
-  // Fix missing semicolons in imports
-  {
-    pattern: /import ([^;]+)\n/g,
-    replacement: 'import $1;\n'
-  },
-  
-  // Fix malformed export statements
-  {
-    pattern: /export default function ([^{]+)\s*{\s*}\s*$/gm,
-    replacement: 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}'
-  }
-];
-
-// Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
-
-let fixedCount = 0;
-let errorCount = 0;
-
-console.log(`Found ${files.length} TypeScript files to check...`);
-
-files.forEach(file => {
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    // Fix common malformed patterns
-    content = content.replace(/}\s*\);\s*}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*\);\s*}\s*}\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*$/gm, '}');
-    
-    // Fix malformed JSX
-    content = content.replace(/<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '');
-    
-    // Fix duplicate closing braces
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}');
-    
-    // Fix malformed function declarations
-    content = content.replace(/const ([^=]+) = \(\) => {\s*}\s*$/gm, 'const $1 = () => {\n  return (\n    <div>Page under development</div>\n  );\n};');
-    
-    // Fix malformed export statements
-    content = content.replace(/export default function ([^{]+)\s*{\s*}\s*$/gm, 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}');
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim() + '\n';
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+
+    // Remove any remaining merge conflict artifacts
+    if (
+      content.includes("<<<<<<< HEAD") ||
+      content.includes("=======") ||
+      content.includes(">>>>>>>")
+    ) {
+      console.log(`Removing merge conflict artifacts from: ${filePath}`);
+      content = content.replace(
+        /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>>/g,
+        "$1",
+      );
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>>/g, "");
+      content = content.replace(/=======[\s\S]*?>>>>>>>/g, "");
+      modified = true;
     }
+
+    // Fix common JSX syntax issues
+    const originalContent = content;
+
+    // Fix unclosed JSX tags by adding proper closing tags
+    content = content.replace(
+      /<div([^>]*)>(?![\s\S]*?<\/div>)/g,
+      (match, attrs) => {
+        // Only fix if there's no corresponding closing tag
+        const openTag = match;
+        const afterOpenTag = content.substring(
+          content.indexOf(match) + match.length,
+        );
+        const hasClosingTag = afterOpenTag.includes("</div>");
+
+        if (!hasClosingTag) {
+          // Find the end of the content and add closing tag
+          const lines = afterOpenTag.split("\n");
+          let indent = "";
+          for (let i = 0; i < lines.length; i++) {
+            if (lines[i].trim()) {
+              indent = lines[i].match(/^(\s*)/)[1];
+              break;
+            }
+          }
+          return match + "\n" + indent + "</div>";
+        }
+        return match;
+      },
+    );
+
+    // Fix missing closing braces for JSX elements
+    content = content.replace(
+      /(<[^>]+>)(?![\s\S]*?<\/[^>]+>)(?=\s*$)/gm,
+      (match) => {
+        const tagName = match.match(/<(\w+)/);
+        if (tagName) {
+          return match + `</${tagName[1]}>`;
+        }
+        return match;
+      },
+    );
+
+    // Fix orphaned closing tags
+    content = content.replace(/^\s*<\/[^>]+>\s*$/gm, "");
+
+    // Fix missing function declarations
+    if (
+      content.includes("return (") &&
+      !content.includes("const ") &&
+      !content.includes("function ")
+    ) {
+      content =
+        "const Component = () => {\n" +
+        content +
+        "\n};\n\nexport default Component;";
+      modified = true;
+    }
+
+    // Fix missing imports for React
+    if (content.includes("JSX") && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
+      modified = true;
+    }
+
+    // Clean up extra whitespace and empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");
+    content = content.replace(/^\s*\n/gm, "");
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+
+    return modified;
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir) {
+  const files = [];
+
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules" &&
+        item !== "dist"
+      ) {
+        traverse(fullPath);
+      } else if (
+        stat.isFile() &&
+        (item.endsWith(".tsx") ||
+          item.endsWith(".ts") ||
+          item.endsWith(".js") ||
+          item.endsWith(".jsx"))
+      ) {
+        files.push(fullPath);
+      }
+    }
+  }
+
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log("🔍 Searching for source files to fix...");
+const sourceFiles = findSourceFiles(process.cwd());
+
+console.log(`📝 Found ${sourceFiles.length} source files to check.`);
+
+console.log("\n🔧 Fixing syntax errors...");
+let fixedCount = 0;
+
+sourceFiles.forEach((file) => {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 });
 
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+console.log(`\n✅ Successfully processed ${fixedCount} files.`);
+
+if (fixedCount > 0) {
+  console.log("\n🧹 Running format and lint fixes...");
+  try {
+    execSync("npm run format", { stdio: "inherit" });
+    console.log("✅ Code formatted successfully.");
+  } catch (error) {
+    console.log("⚠️  Format command failed, continuing...");
+  }
+
+  try {
+    execSync("npm run lint:fix", { stdio: "inherit" });
+    console.log("✅ Lint fixes applied successfully.");
+  } catch (error) {
+    console.log("⚠️  Lint fix command failed, continuing...");
+  }
+}
+
+console.log("\n🎉 Syntax error fixing complete!");

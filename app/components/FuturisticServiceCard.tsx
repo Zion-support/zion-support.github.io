@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+
 const FuturisticServiceCard = () => {
   return (
-    <div className="futuristicservicecard-component">
-      <h2>FuturisticServiceCard</h2>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">FuturisticServiceCard</h2>
       <p>This component is under construction.</p>
     </div>
   );
 };
+
 export default FuturisticServiceCard;

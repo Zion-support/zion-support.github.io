@@ -1,1 +1,4 @@
-import fs from 'fs; import path from ';path; import React from ';react'; #!/usr/bin// Fixed regex; const pageTemplate = (pageName, title) => `';`'`'``
+// fix-broken-pages - Basic implementation
+export default function fix-broken-pages() {
+  return null;
+}

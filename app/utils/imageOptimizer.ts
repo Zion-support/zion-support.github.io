@@ -1,8 +1,7 @@
-'use client';
-
-export const ImageOptimizer = () => {
-  // Implementation
-  return true;
+// ImageOptimizer utility
+export const imageoptimizer = () => {
+  // Implementation here
+  console.log('ImageOptimizer utility called');
 };
 
-export default ImageOptimizer;
+export default imageoptimizer;

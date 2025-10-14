@@ -7,7 +7,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description }) => {
   return (
-    <div className="seo-component">
+    <div>
       <h2>SEO</h2>
       <p>This component is under construction.</p>
       {title && <p>Title: {title}</p>}

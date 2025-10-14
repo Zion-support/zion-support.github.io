@@ -1,31 +1,34 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // List of known broken pages that need to be fixed
 const brokenPages = [
-  'app/pages/CloudInfrastructurePage.tsx',
-  'app/pages/CloudSolutionsPage.tsx',
-  'app/pages/ContactPage.tsx',
-  'app/pages/CybersecurityPage.tsx',
-  'app/pages/DemoPage.tsx',
-  'app/pages/DocumentationPage.tsx',
-  'app/pages/ITServicesPage.tsx',
-  'app/pages/MicroSaaSPage.tsx',
-  'app/pages/PricingPage.tsx',
-  'app/pages/PrivacyPage.tsx',
-  'app/pages/ServicesPage.tsx',
-  'app/pages/SolutionsPage.tsx',
-  'app/pages/SupportPage.tsx',
-  'app/pages/TeamPage.tsx',
-  'app/pages/TermsPage.tsx',
-  'app/pages/TutorialsPage.tsx'
+  "app/pages/CloudInfrastructurePage.tsx",
+  "app/pages/CloudSolutionsPage.tsx",
+  "app/pages/ContactPage.tsx",
+  "app/pages/CybersecurityPage.tsx",
+  "app/pages/DemoPage.tsx",
+  "app/pages/DocumentationPage.tsx",
+  "app/pages/ITServicesPage.tsx",
+  "app/pages/MicroSaaSPage.tsx",
+  "app/pages/PricingPage.tsx",
+  "app/pages/PrivacyPage.tsx",
+  "app/pages/ServicesPage.tsx",
+  "app/pages/SolutionsPage.tsx",
+  "app/pages/SupportPage.tsx",
+  "app/pages/TeamPage.tsx",
+  "app/pages/TermsPage.tsx",
+  "app/pages/TutorialsPage.tsx",
 ];
 
 function fixPageComponent(filePath) {
   try {
-    const pageName = path.basename(filePath, '.tsx').replace(/([A-Z])/g, ' $1').trim();
-    const componentName = pageName.replace(/\s+/g, '') + 'Page';
-    
+    const pageName = path
+      .basename(filePath, ".tsx")
+      .replace(/([A-Z])/g, " $1")
+      .trim();
+    const componentName = pageName.replace(/\s+/g, "") + "Page";
+
     const fixedContent = `'use client';
 
 import React from 'react';
@@ -134,7 +137,7 @@ export default function ${componentName}() {
   );
 }`;
 
-    fs.writeFileSync(filePath, fixedContent, 'utf8');
+    fs.writeFileSync(filePath, fixedContent, "utf8");
     console.log(`Fixed page: ${filePath}`);
     return true;
   } catch (error) {
@@ -143,10 +146,10 @@ export default function ${componentName}() {
   }
 }
 
-console.log('Fixing all remaining broken pages...');
+console.log("Fixing all remaining broken pages...");
 let fixedCount = 0;
 
-brokenPages.forEach(pagePath => {
+brokenPages.forEach((pagePath) => {
   if (fs.existsSync(pagePath)) {
     if (fixPageComponent(pagePath)) {
       fixedCount++;

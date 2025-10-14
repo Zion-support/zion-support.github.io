@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+
 const AdTemplates = () => {
   return (
-    <div className="adtemplates-component">
-      <h2>AdTemplates</h2>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AdTemplates</h2>
       <p>This component is under construction.</p>
     </div>
   );
 };
+
 export default AdTemplates;
