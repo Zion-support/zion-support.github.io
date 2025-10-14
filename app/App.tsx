@@ -1,18 +1,5 @@
-import { BrowserRouterasRouter, Routes, Route, HelmetProvider } from 'react-router-dom';
-import HomePage from './page';
+import {Browser Routeras Router, Routes, Route, Helmet Provider }from 'react-router-dom'; import Home Page from './page'; function App ( ){return (<Helmet Provider> <Router> <div className="App"> <Routes> <Routepat h="/"element= {<Home Page /> }/> <Routepat h="*"element= {<Home Page /> }/> </Routes> 
+          </div> </Router> </Helmet Provider> );
+};
 
-function App() {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
-          <Routes>
-            <Routepat h="/" element={<HomePage />} />
-            <Routepat h="*" element={<HomePage />} />
-          </Routes>
-        </div>
-      </Router>
-    </HelmetProvider>
-  )
-    },
-exportdefault App;
+export default App;

@@ -1,69 +1,73 @@
-import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle, Link } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-constFiveGMigrationPage = () => {
+const FiveGMigrationPage = () => {
   const services = [
     {
-      title: '5GMigration Planning',
-      description: 'Strategicplanningfor migratingfromlegacy networksto-5G.',
+      title: '5G Migration Strategy',
+      description: 'Comprehensive 5g migration strategies tailored to your business needs.',
     },
     {
-      title: 'Security Migration',
-      description: 'Securemigrationof securityprotocolsto 5G infrastructure.',
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for 5g migration implementation.',
     },
     {
       title: 'Team Training',
-      description: 'Comprehensivetrainingfor 5G migration andnewtechnology adoption.',
-        },
-];
+      description: 'Expert training for your team on 5g migration technologies and best practices.',
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Enhanced SEOtitle="5GMigration Services - Zion Tech Group"
-        description="Expert 5G migration services to transition your business to next-generation wireless technology."
+      <EnhancedSEO
+        title="5G Migration - Zion Tech Group"
+        description="Professional 5G migration services by Zion Tech Group. Expert solutions for your business needs."
       />
       
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-126">
-          <h-1 className="text-4-xlfont-bold text-gray-900 mb-6">
-            5GMigration Services
-          </h-1>
-          <p className="text-xltext-gray-600 max-w-3-xl mx-auto">
-            Migrateto-5G technologywith minimaldisruptionusing ourprovenmigration strategies.
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Migration
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Expert guidance for your 5g migration transformation journey
           </p>
         </div>
-        <div className="gridmd:grid-cols-3 gap-8 mb-16">
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <divke y={index} className="bg-whiterounded-lg shadow-lg p-8">
-              <div className="flexitems-center mb-4">
-                <Check Circle className="h-8-w-8 text-blue-600 mr-3" />
-                <h-3 className="text-xlfont-semibold text-gray-900">
-                  {service.title  },
-                </h-3>
-              </div>
-              <p className="text-gray-600-mb-6">
-                {service.description  },
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {service.description}
               </p>
-              <Linkt o="/contact" 
-                className="inline-flexitems-center text-blue-600-hover:text-blue-800 font-medium"
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
-                <Arrow Right className="ml-2-h-4 w-4" />
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-          ))  },
+          ))}
         </div>
+        
         <div className="text-center">
-          <Linkt o="/contact"
-            className="inline-flexitems-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600-hover:bg-blue-700"
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           >
-            Get Started Today
-            <Arrow Right className="ml-2-h-5 w-5" />
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </div>
       </div>
     </div>
-  )
-  };
+  );
+};
 
-exportdefault FiveGMigrationPage
+export default FiveGMigrationPage;

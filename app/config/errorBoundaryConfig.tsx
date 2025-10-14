@@ -1,10 +1,2 @@
-import React, { Suspense } from 'react';
-
-exportconsterror Boundary Config = {
-  fallback: <div>Somethingwentwrong</div>,
-  onError: (_error: Error) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Errorboundarycaughtanerror:', _error);
-      },
-    },
-};
+import React, { Suspense } from 'react'; exportconsterror Boundary Config= {fallback: <div>Somethingwentwrong
+          </div>, on Error: (_error: Error )=> {if (process.env.NODE_ENV === 'development' ){console.error ('Errorboundarycaughtanerror:', _error ); } } }; 

@@ -1,133 +1,146 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Template for 5G pages
+const fiveGPageTemplate = (pageName, title, description) => `import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-const fiveGPages = [
-  'app/5g-deployment/page.tsx',
-  'app/5g-integration/page.tsx',
-  'app/5g-maintenance/page.tsx',
-  'app/5g-migration/page.tsx',
-  'app/5g-modernization/page.tsx',
-  'app/5g-monitoring/page.tsx',
-  'app/5g-optimization/page.tsx',
-  'app/5g-performance/page.tsx',
-  'app/5g-reliability/page.tsx',
-  'app/5g-scalability/page.tsx',
-  'app/5g-security/page.tsx',
-  'app/5g-support/page.tsx',
-  'app/5g-testing/page.tsx',
-  'app/5g-training/page.tsx',
-  'app/5g-transformation/page.tsx',
-  'app/5g-upgrade/page.tsx'
-];
+const ${pageName} = () => {
+  const services = [
+    {
+      title: '${title} Strategy',
+      description: 'Comprehensive ${title.toLowerCase()} strategies tailored to your business needs.',
+    },
+    {
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for ${title.toLowerCase()} implementation.',
+    },
+    {
+      title: 'Team Training',
+      description: 'Expert training for your team on ${title.toLowerCase()} technologies and best practices.',
+    },
+  ];
 
-const pageTitles = {
-  '5g-deployment': '5G Deployment Services',
-  '5g-integration': '5G Integration Services',
-  '5g-maintenance': '5G Maintenance Services',
-  '5g-migration': '5G Migration Services',
-  '5g-modernization': '5G Modernization Services',
-  '5g-monitoring': '5G Monitoring Services',
-  '5g-optimization': '5G Optimization Services',
-  '5g-performance': '5G Performance Services',
-  '5g-reliability': '5G Reliability Services',
-  '5g-scalability': '5G Scalability Services',
-  '5g-security': '5G Security Services',
-  '5g-support': '5G Support Services',
-  '5g-testing': '5G Testing Services',
-  '5g-training': '5G Training Services',
-  '5g-transformation': '5G Transformation Services',
-  '5g-upgrade': '5G Upgrade Services'
-};
-
-function createFiveGPage(filePath) {
-  const fileName = path.basename(path.dirname(filePath));
-  const title = pageTitles[fileName] || '5G Services';
-  
-  // Convert 5g-xxx to FiveGXxx format
-  const componentName = fileName
-    .split('-')
-    .map((part, index) => {
-      if (index === 0 && part === '5g') {
-        return 'FiveG';
-      }
-      return part.charAt(0).toUpperCase() + part.slice(1);
-    })
-    .join('');
-const content = `import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
-
-const ${componentName}Page: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${title.toLowerCase()} for enterprise 5G solutions." />
-      </Helmet>
+    <div className="min-h-screen bg-gray-50">
+      <EnhancedSEO
+        title="${title} - Zion Tech Group"
+        description="${description}"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-white mb-6">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ${title.toLowerCase()} for your 5G infrastructure
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Shield className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Expert Consultation</h3>
-              <p className="text-gray-300 mb-4">
-                Get expert guidance for your 5G implementation needs.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            ${title}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Expert guidance for your ${title.toLowerCase()} transformation journey
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {service.description}
               </p>
-              <Link to="/contact" className="text-blue-400 hover:text-blue-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <CheckCircle className="w-12 h-12 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Quality Assurance</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive quality checks and validation processes.
-              </p>
-              <Link to="/contact" className="text-blue-400 hover:text-blue-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Users className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-              <p className="text-gray-300 mb-4">
-                Round-the-clock support for your 5G infrastructure.
-              </p>
-              <Link to="/contact" className="text-blue-400 hover:text-blue-300 flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          </div>
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
+};
+
+export default ${pageName};`;
+
+// Page configurations
+const pageConfigs = {
+  '5g-consulting': { name: 'FiveGConsultingPage', title: '5G Consulting Services', description: 'Expert 5G consulting services to help your business leverage next-generation wireless technology.' },
+  '5g-data-analytics': { name: 'FiveGDataAnalyticsPage', title: '5G Data Analytics', description: 'Professional 5G data analytics services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-deployment': { name: 'FiveGDeploymentPage', title: '5G Deployment', description: 'Professional 5G deployment services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-edge-computing': { name: 'FiveGEdgeComputingPage', title: '5G Edge Computing', description: 'Professional 5G edge computing services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-implementation': { name: 'FiveGImplementationPage', title: '5G Implementation', description: 'Professional 5G implementation services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-infrastructure': { name: 'FiveGInfrastructurePage', title: '5G Infrastructure', description: 'Professional 5G infrastructure services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-integration': { name: 'FiveGIntegrationPage', title: '5G Integration', description: 'Professional 5G integration services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-iot-solutions': { name: 'FiveGIoTSolutionsPage', title: '5G IoT Solutions', description: 'Professional 5G IoT solutions by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-maintenance': { name: 'FiveGMaintenancePage', title: '5G Maintenance', description: 'Professional 5G maintenance services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-migration': { name: 'FiveGMigrationPage', title: '5G Migration', description: 'Professional 5G migration services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-mobile-applications': { name: 'FiveGMobileApplicationsPage', title: '5G Mobile Applications', description: 'Professional 5G mobile applications by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-modernization': { name: 'FiveGModernizationPage', title: '5G Modernization', description: 'Professional 5G modernization services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-monitoring': { name: 'FiveGMonitoringPage', title: '5G Monitoring', description: 'Professional 5G monitoring services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-network-infrastructure': { name: 'FiveGNetworkInfrastructurePage', title: '5G Network Infrastructure', description: 'Professional 5G network infrastructure services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-network-optimization': { name: 'FiveGNetworkOptimizationPage', title: '5G Network Optimization', description: 'Professional 5G network optimization services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-optimization': { name: 'FiveGOptimizationPage', title: '5G Optimization', description: 'Professional 5G optimization services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-performance': { name: 'FiveGPerformancePage', title: '5G Performance', description: 'Professional 5G performance services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-private-networks': { name: 'FiveGPrivateNetworksPage', title: '5G Private Networks', description: 'Professional 5G private networks by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-reliability': { name: 'FiveGReliabilityPage', title: '5G Reliability', description: 'Professional 5G reliability services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-scalability': { name: 'FiveGScalabilityPage', title: '5G Scalability', description: 'Professional 5G scalability services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-security': { name: 'FiveGSecurityPage', title: '5G Security', description: 'Professional 5G security services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-smart-city-solutions': { name: 'FiveGSmartCitySolutionsPage', title: '5G Smart City Solutions', description: 'Professional 5G smart city solutions by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-solutions': { name: 'FiveGSolutionsPage', title: '5G Solutions', description: 'Professional 5G solutions by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-support': { name: 'FiveGSupportPage', title: '5G Support', description: 'Professional 5G support services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-testing': { name: 'FiveGTestingPage', title: '5G Testing', description: 'Professional 5G testing services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-training': { name: 'FiveGTrainingPage', title: '5G Training', description: 'Professional 5G training services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-transformation': { name: 'FiveGTransformationPage', title: '5G Transformation', description: 'Professional 5G transformation services by Zion Tech Group. Expert solutions for your business needs.' },
+  '5g-upgrade': { name: 'FiveGUpgradePage', title: '5G Upgrade', description: 'Professional 5G upgrade services by Zion Tech Group. Expert solutions for your business needs.' },
+};
+
+// Main function to process files
+async function main() {
+  console.log('Fixing 5G pages...');
+  
+  let processedCount = 0;
+  let errorCount = 0;
+  
+  for (const [pageDir, config] of Object.entries(pageConfigs)) {
+    try {
+      const pagePath = `app/${pageDir}/page.tsx`;
+      console.log(`Processing: ${pagePath}`);
+      
+      // Create the page content
+      const pageContent = fiveGPageTemplate(config.name, config.title, config.description);
+      
+      // Write the file
+      fs.writeFileSync(pagePath, pageContent, 'utf8');
+      
+      processedCount++;
+      console.log(`✓ Fixed: ${pagePath}`);
+    } catch (error) {
+      console.error(`✗ Error processing ${pageDir}:`, error.message);
+      errorCount++;
+    }
+  }
+  
+  console.log(`\nProcessing complete!`);
+  console.log(`✓ Successfully processed: ${processedCount} files`);
+  console.log(`✗ Errors: ${errorCount} files`);
 }
 
-export default ${componentName}Page
-`;
-
-  fs.writeFileSync(path.join(__dirname, filePath), content);
-  console.log(`Created: ${filePath}`);
-}
-
-// Create all 5G pages
-fiveGPages.forEach(createFiveGPage);
-console.log('All 5G pages created successfully!');
+// Run the script
+main().catch(console.error);
