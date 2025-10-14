@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, Users } from 'lucide-react';
 
-const AISolutionsPage: React.FC = () => {
+const Page: React.FC = () => {
+
   return (
     <>
       <Helmet>
@@ -43,5 +44,5 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+export default LazyPage;

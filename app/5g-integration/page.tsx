@@ -66,5 +66,6 @@ function FiveGIntegrationPage() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+export default LazyPage;
+
