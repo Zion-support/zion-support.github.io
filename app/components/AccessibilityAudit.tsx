@@ -1,18 +1,23 @@
+'use client';
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const AccessibilityAudit = () => {
+export default function Page() {
   return (
     <>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4 xl font-bold text-white mb-8">Accessibility Audit</h1>
-          <p className="text-gray-300 text-lg">
-            This component is under construction. Please check back later.
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our components services.
           </p>
         </div>
       </div>
     </>
   );
-};
-
-export default AccessibilityAudit;
+}

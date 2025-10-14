@@ -1,60 +1,12 @@
-            Improved Error Boundary
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-            designed to help your business grow and succeed.
-          </p>
-        </div>
-      </section>
-      { /* Content Section */ }
-            Improved Error Boundary</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-import React, { Component, ErrorInfo, ReactNode } from "react;
-import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
+import React from "react";
 
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
-}
+const ImprovedErrorBoundary = () => {
+  return (
+    <div className="improved-error-boundary">
+      <h2>Improved Error Boundary</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
 
-interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId: string
-}
-
-class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: undefined,
-      errorInfo: undefined,
-      errorId: 
-    }
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
-    }
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
-    })
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {'
-
-  )
-export default ImprovedErrorBoundary
-}
-export default ImprovedErrorBoundaryPage
+export default ImprovedErrorBoundary;

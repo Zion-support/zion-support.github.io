@@ -58,14 +58,12 @@ const CareersPage: React.FC = () => {
                 <p className="text-purple-700">"
                   Collaborative, innovative, and inclusive work environment.
                 </p>
-              </div>
-            </div>"
+              </div>"
             <div className="mt-12">"
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
                 View Open Positions
               </button>
             </div>
-          </div>
 const CareersPage: React.FC = () => {
   return (
     <>

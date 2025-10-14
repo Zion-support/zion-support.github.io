@@ -1,25 +1,12 @@
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-}
+import React from "react";
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false)
-  const [userId, setUserId] = useState<string | null>(null)
-  useEffect(() => {
-    // if analytics is enabled;
-    setIsEnabled(true)}, [])
-    // if analytics is enabled;
-    setIsEnabled(true);}
-    trackPageView,
-    setUser,
-    isEnabled, }
-    isEnabled,}
+const AnalyticsContext = () => {
   return (
-    <AnalyticsContext.Provider value={value}></AnalyticsContext>
-      { children }
-    </AnalyticsContext.Provider>
-  )
-export { AnalyticsContext }
+    <div className="analytics-context">
+      <h2>Analytics Context</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AnalyticsContext;

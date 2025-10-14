@@ -1,29 +1,23 @@
-}
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children,
-  hoverEffect = true
-}) => {
-  const glowClasses = {
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',
-    green: 'shadow-green-500/25 hover:shadow-green-500/40',
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
-  }
-
-  const baseClasses = 'transition-all duration-300 transform'
-  const hoverClasses = hoverEffect ? 'hover:scale-105 hover:-translate-y-1' : 
-  const glowClass = glowClasses[glowColor]
-
+export default function Page() {
   return (
-<>
-      <div>````
-      {children}</div>
-    </div>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our components services.
+          </p>
+        </div>
+      </div>
     </>
-  )}
-    </div>
-  )
+  );
 }

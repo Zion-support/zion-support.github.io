@@ -1,65 +1,23 @@
-import { 
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
-  const isActive = (href: string) => {
-    if (href === '/') {
-      return location.pathname === '/'"}"'"'"
-    return location.pathname.startsWith(href)
-  const toggleExpanded = (item: string) => {
-    setExpandedItems(prev => 
-      prev.includes(item) 
-        ? prev.filter(i => i !== item)
-        : [...prev, item]
-interface NavigationProps {
-  onSidebarToggle?: () => void
-}
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const location = useLocation()
-  const navigation = [
-    { name: "Home", href: "/", icon: HomeIcon },"
-    { name: "About", href: "/about", icon: InformationCircleIcon },"
-    { 
-      ]
-    },
-    { 
-      name: 'Solutions','
-      href: '/solutions','
-      icon: CogIcon,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    { name: "Blog", href: "/blog", icon: DocumentTextIcon },"
-    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },"
-    { name: "Demo", href: "/demo", icon: PlayIcon },"
-    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },"
-    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },"
-    { name: "Contact", href: "/contact", icon: PhoneIcon }"
-  ]
-const Navigation: React.FC = () => {
+export default function Page() {
   return (
-<>    <nav className="bg-gray-800 text-white p-4"></nav>"
-      <div className="container mx-auto flex justify-between items-center"></div>"
-        <h1 className="text-xl font-bold">Zion Tech Group</h1>"
-        <div className="space-x-4"></div>"
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our components services.
+          </p>
+        </div>
+      </div>
     </>
-
+  );
+}

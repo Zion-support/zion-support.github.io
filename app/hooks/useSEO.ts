@@ -1,20 +1,14 @@
-import { useEffect    } from "react";
-
-export const useSEO = (structuredData?: unknown) => {
-  useEffect(() => {
-    // Add structured data to the page;
-    if (structuredData) {
-      const script = document.createElement('script');'
-      script.type = 'application/ld+json';'
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
+export const useSEO = () => {
+  // SEO hook implementation
+  return {
+    updateTitle: (title: string) => {
+      document.title = title;
+    },
+    updateDescription: (description: string) => {
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) {
+        meta.setAttribute('content', description);
+      }
     }
-    return undefined;
-  }, [structuredData]);
+  };
 };

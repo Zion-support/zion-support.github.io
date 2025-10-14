@@ -41,9 +41,7 @@
               Get Started Today
             </button>
           </div>
-        </div>
       </div>
-    </div>
             TestRunner</h1>"
           <p className="text-xl text-gray-600 mb-8">"
             Professional testrunner solutions tailored to your business needs.</p>
@@ -62,15 +60,13 @@
               <h3 className="text-lg font-semibold text-purple-900 mb-2">"
                 24/7 Support</h3>
               <p className="text-purple-700">"
-                Round-the-clock support for all your testrunner needs.</p></div></div>
+                Round-the-clock support for all your testrunner needs.</p></div>
           <div className="mt-12"></div>
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
-              Get Started Today</button></div></div></div></div>
+              Get Started Today</button></div></div>
   )
             </button>
           </div>
-        </div>
       </div>
-    </div>
   )}
 "

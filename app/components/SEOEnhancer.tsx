@@ -1,37 +1,23 @@
-import React from "react;
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group','
-  description = 'Leading provider of AI and IT solutions','
-  keywords = ['AI', 'IT', 'technology', 'solutions'],'
-  image,
-  url,
-  type = 'website
-}) => {
+export default function Page() {
   return (
-
-      <h1>{title}</h1>
-      <p>{description}</p>
-      {keywords && (
-        <div className="keywords"></div>"
-    </>
-          {keywords.map((keyword, index) => (
-            <span key={index} className="keyword"></span>"
-              {keyword}
-            </span>
-          ))}
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Components services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Components</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our components services.
+          </p>
         </div>
-      )}}
-    </div>
-  )
+      </div>
+    </>
+  );
 }
-export default SEOEnhancer

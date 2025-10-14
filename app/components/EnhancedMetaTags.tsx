@@ -1,68 +1,12 @@
-  description: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: 'website' | 'article' | "product"'"'"
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | "player"'"'"
-  noIndex?: boolean
-  structuredData?: Record<string, any></string>
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
-  title,
-  description,
-  keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology',
-  canonical,
-  ogImage = 'https://ziontechgroup.com/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  noIndex = false,
-  structuredData,
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-}) => {},
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup',
-    ],
-    headline: title,
-    description,
-    author: {
-      '@type': 'Organization',
-      name: author,
-    },
-    publisher: {,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteUrl}/images/logo.png`,````
-      },
-    },
-    datePublished: publishedTime,
-    dateModified: modifiedTime || publishedTime,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': finalCanonical,
-    },
-    image: finalOgImage,
-    ...(section && { articleSection: section }),
-    ...(tags.length > 0 && { keywords: tags.join(', ') }),
-  } : null
+import React from "react";
+
+const EnhancedMetaTags = () => {
   return (
-<div>    <Helmet>
-      { /* Basic Meta Tags */ }
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-      
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        )})
+    <div className="enhanced-meta-tags">
+      <h2>Enhanced Meta Tags</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default EnhancedMetaTags;

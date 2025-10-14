@@ -7,7 +7,15 @@ export default function Page() {
     <>
       <Helmet>
         <title>Mobile Development - Zion Tech Group</title>
-
+        <meta name="description" content="Mobile Development services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Mobile Development</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our mobile development services.
+          </p>
         </div>
       </div>
     </>

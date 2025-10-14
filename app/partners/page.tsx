@@ -1,4 +1,4 @@
-
+'use client';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -8,7 +8,6 @@ export default function Page() {
       <Helmet>
         <title>Partners - Zion Tech Group</title>
         <meta name="description" content="Partners services and solutions from Zion Tech Group" />
-      </Helmet>
       </Helmet>
       
       <div className="min-h-screen bg-white">
