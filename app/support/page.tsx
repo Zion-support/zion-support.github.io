@@ -18,7 +18,7 @@ const SupportPage: React.FC = () => {
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',
-      answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.',
+      answer: 'Contact our team for a free consultation where we&apos;ll assess your needs and recommend the best AI solutions for your business. We&apos;ll guide you through the entire process from planning to implementation.',
       category: 'general'
     },
     {
@@ -307,7 +307,7 @@ const SupportPage: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Still Need Help?</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Can't find what you're looking for? Our expert team is here to help with any questions or issues.
+                Can&apos;t find what you&apos;re looking for? Our expert team is here to help with any questions or issues.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">

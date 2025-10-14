@@ -3,13 +3,24 @@ export const securityHeaders = {
     'default-src': ["'self'"],
     'script-src': ["'self'", "'unsafe-inline'"],
     'style-src': ["'self'", "'unsafe-inline'"],
-
-    'connect-src': ["'self'", "https: "];
+    'img-src': ["'self'", "data:", "https:"],
+    'font-src': ["'self'", "https:"],
+    'connect-src': ["'self'", "https:"]
   },
   
   getCSPHeader: () => {
     return Object.entries(securityHeaders.csp)
       .map(([key, values]) => `${key} ${values.join(' ')}`)
-
-    'connect-src': ["'self'"]
+      .join('; ');
+  },
+  
+  getSecurityHeaders: () => {
+    return {
+      'Content-Security-Policy': securityHeaders.getCSPHeader(),
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+    };
   }
+};

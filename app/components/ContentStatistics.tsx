@@ -168,7 +168,7 @@ const ContentStatistics: React.FC = () => {
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
+            Discover the measurable impact we&apos;ve made for businesses worldwide through our innovative AI and IT solutions.
           </p>
         </div>
 
@@ -191,7 +191,7 @@ const ContentStatistics: React.FC = () => {
         {/* Features Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Why We&apos;re the Right Choice</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
             </p>

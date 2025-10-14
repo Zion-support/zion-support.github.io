@@ -1,30 +1,41 @@
 export const analyticsTracker = {
   trackPageView: (page: string, title?: string) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'page_view', {
-
-      })
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
+      gtag('event', 'page_view', {
+        page_title: title || document.title,
+        page_location: page
+      });
     }
   },
   
   trackClick: (element: string, location: string) => {
-      window.gtag('event', 'click', {
-
-      })
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
+      gtag('event', 'click', {
+        element_name: element,
+        location: location
+      });
     }
   },
   
   trackFormSubmit: (formName: string, success: boolean) => {
-      window.gtag('event', 'form_submit', {
-
-      })
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
+      gtag('event', 'form_submit', {
+        form_name: formName,
+        success: success
+      });
     }
   },
   
   trackConversion: (conversionId: string, value?: number) => {
-      window.gtag('event', 'conversion', {
-
-      })
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
+      gtag('event', 'conversion', {
+        conversion_id: conversionId,
+        value: value
+      });
     }
   }
-}
+};

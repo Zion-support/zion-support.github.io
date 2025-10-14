@@ -254,7 +254,7 @@ const MicroSaasPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Micro SaaS Solutions?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We've designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
+                We&apos;ve designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>
 
@@ -301,7 +301,7 @@ const MicroSaasPage: React.FC = () => {
                   <span className="text-2xl font-bold text-white">3</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Scale & Grow</h3>
-                <p className="text-gray-300">Upgrade when you're ready and scale your usage as your business grows.</p>
+                <p className="text-gray-300">Upgrade when you&apos;re ready and scale your usage as your business grows.</p>
               </div>
             </div>
           </div>

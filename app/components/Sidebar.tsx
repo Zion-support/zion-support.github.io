@@ -25,6 +25,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Overlay */}
       {isOpen && (
         <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -34,14 +35,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg:translate-x-0 lg:static lg:inset-0
       `}>
-        <div className="flexitems-center justify-between p-4 border-b border-slate-700">
-          <h2 className="text-xlfont-bold text-white">Zion Tech Group</h2>
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">
+          <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
+            className="lg:hidden text-gray-300 hover:text-white"
           >
-            <X className="w-6h-6" />
+            <X className="w-6 h-6" />
           </button>
-          </div>
         </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
