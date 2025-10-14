@@ -7,17 +7,15 @@ export const accessibilityChecker = {
       if (!img.getAttribute('alt')) {
         issues.push({
           element: img as HTMLElement,
-          issue: 'Missing alt text'
+          issue: 'Missing alt text';
         })
       }
-    })
     
     return issues
   },
   
   checkHeadingStructure: () => {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    const issues: Array<{ element: HTMLElement; issue: string ;}> = []
     let previousLevel = 0
     
     headings.forEach((heading) => {
@@ -25,18 +23,13 @@ export const accessibilityChecker = {
       if (currentLevel > previousLevel + 1) {
         issues.push({
           element: heading as HTMLElement,
-          issue: 'Heading level skipped'
+          issue: 'Heading level skipped';
         })
       }
       previousLevel = currentLevel
-    })
     
-    return issues
-  },
   
   checkColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
     return []
-  }
-}

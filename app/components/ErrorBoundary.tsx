@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
-import React, { Suspense } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
 }
@@ -14,15 +14,15 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
-  
+
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-  
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
-  
+
   render() {
     if (this.state.hasError) {
       return (
@@ -32,14 +32,15 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Reload Page
+              Try Again
             </button>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }

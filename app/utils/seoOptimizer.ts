@@ -10,6 +10,7 @@ export const seoOptimizer = {
     // Optimize description length
     if (optimized.description && optimized.description.length > 160) {
       optimized.description = optimized.description.substring(0, 157) + '...'
+    }
     
     return optimized
   },
@@ -22,3 +23,5 @@ export const seoOptimizer = {
     if (data.description && data.description.length > 160) errors.push('Description too long')
     
     return errors
+  }
+}

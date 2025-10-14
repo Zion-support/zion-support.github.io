@@ -15,7 +15,7 @@ export const apiClient = {
     })
     
     if (!response.ok) {
-      throw new Error(`HTTP _error! status: ${response.status}`)
+      throw new Error(`HTTP _error! status: ${response.status}`);
       throw new Error(`HTTP error! status: ${response.status}`)
       throw new Error(`API request failed: ${response.status}`)
     }
@@ -35,7 +35,7 @@ export const apiClient = {
   delete: <T>(endpoint: string) => apiClient.request<T>(endpoint, {
     method: 'DELETE',
   }),
-}
+};
   async get<T>(endpoint: string): Promise<T> {
     return this.request<T>(endpoint, { method: 'GET' ;})
   },

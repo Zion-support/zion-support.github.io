@@ -3,5 +3,6 @@ declare global {
     gtag: (...args: unknown[]) => void
     dataLayer: unknown[]
   }
+}
 
 export {}

@@ -1,19 +1,20 @@
-import React, { Suspense } from 'react'
+import React, { Suspense } from 'react';
+
 const FiveGTestingPage: React.FC = () => {
   return (
-    <div className="min-h-screenbg-gray-50">
-      <div className="containermx-autopx-4py-16">
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-autopx-4py-1 6">
         <div className="text-center">
-          <h1 className="text-4xlfont-boldtext-gray-900mb-6">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
             5gTesting Services
           </h1>
-          <p className="text-xltext-gray-600max-w-3xlmx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional services and solutions.
           </p>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-export default FiveGTestingPage
+export default FiveGTestingPage;

@@ -1,37 +1,23 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  type?: string
-  structuredData?: Record<string, unknown>
-  children?: React.ReactNode
+  title: string;
+  description: string;
+  keywords: string[];
+  type?: string;
+  structuredData?: Record<string, unknown>;
+  children?: React.ReactNode;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation'],
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
+  title, 
+  description, 
+  keywords, 
   type = 'website',
   structuredData,
-  children
+  children 
 }) => {
-  useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script')
-      script.type = 'application/ld+json'
-      script.textContent = JSON.stringify(structuredData)
-      document.head.appendChild(script)
-
-      return () => {
-        document.head.removeChild(script)
-      }
-    }
-  }, [structuredData])
-
   return (
     <>
       <Helmet>
@@ -41,14 +27,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content={type} />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <link rel="canonical" href={window.location.href} />
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
       </Helmet>
       {children}
     </>
-  )
-}
+  );
+};
 
-export default SEOOptimizer
+export default SEOOptimizer;

@@ -20,6 +20,7 @@ export const cacheManager = {
     }
     
     return item.data;
+  },
   
   clear: () => {
     cacheManager.cache.clear();

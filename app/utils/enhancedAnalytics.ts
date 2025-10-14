@@ -4,34 +4,31 @@ export const enhancedAnalytics = {
       window.gtag('event', 'page_view', {
         page_title: title || document.title,
         page_location: window.location.href,
-        page_path: page
+        page_path: page;
       })
     }
   },
   
-  trackUserInteraction: (action: string, category: string;, label?: string) => {
-    if (typeof window !== 'undefined') {
+  trackUserInteraction: (action: string, category: string, label?: string) => {
       window.gtag('event', action, {
         event_category: category,
-        event_label: label
+        event_label: label;
       })
     }
   },
   
   trackUserEngagement: (engagementType: string, value?: number) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', 'user_engagement', {
         engagement_type: engagementType,
-        value: value
+        value: value;
       })
     }
   },
   
   trackPerformance: (metric: string, value: number) => {
-    if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_metric', {
         metric_name: metric,
-        metric_value: value
+        metric_value: value;
       })
     }
   }
