@@ -1,104 +1,133 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { glob } from 'glob';
 
-// Files that still have React import issues;
-const filesWithReactImports = [
-  'app/case-studies/page.tsx',
-  'app/consultation/page.tsx',
-  'app/micro-saas/page.tsx',
-  'app/partners/page.tsx',
-  'app/pricing/page.tsx',
-  'app/support/page.tsx',
-  'app/data/services.tsx',
-  'app/data/servicesData.tsx'
-];
+// Function to fix over-escaped quotes in JSX content
+function fixOverEscapedQuotes(content) {
+  // Fix over-escaped single quotes in JSX text content and object properties
+  content = content.replace(/&apos;/g, "'");
+  
+  // Fix over-escaped double quotes
+  content = content.replace(/&quot;/g, '"');
+  
+  // Fix over-escaped greater than and less than
+  content = content.replace(/&gt;/g, '>');
+  content = content.replace(/&lt;/g, '<');
+  
+  // Fix over-escaped ampersands
+  content = content.replace(/&amp;/g, '&');
+  
+  return content;
+}
 
-// Files with other issues;
-const filesWithOtherIssues = [
-  'app/components/AdvancedSEOOptimizer.tsx',
-  'app/components/ContentPromotionBanner.tsx',
-  'app/config/errorBoundaryConfig.tsx',
-  'app/error.tsx',
-  'app/global-error.tsx',
-  'app/loading.tsx',
-  'app/micro-saas-services/microSaasServices.tsx',
-  'app/micro-saas-services/services.tsx',
-  'app/not-found.tsx',
-  'app/page-backup.tsx',
-  'app/page-optimized.tsx',
-  'app/service-template.tsx',
-  'app/sitemap-page.tsx',
-  'app/utils/errorHandler.tsx',
-  'app/utils/image.tsx',
-  'app/utils/link.tsx'
-];
+// Function to fix parsing errors
+function fixParsingErrors(content) {
+  // Fix common parsing issues
+  content = content.replace(/,\s*\)/g, ')');
+  content = content.replace(/,\s*}/g, '}');
+  
+  // Fix numeric literal issues
+  content = content.replace(/(\d+)\s*([a-zA-Z_])/g, '$1 $2');
+  
+  // Fix identifier issues
+  content = content.replace(/(\d+)([a-zA-Z_])/g, '$1 $2');
+  
+  return content;
+}
 
-// Function to fix React import issues;
-function fixReactImports(filePath) {
-  try {;
-const fullPath = path.join(__dirname, filePath);
+// Function to remove unused imports
+function removeUnusedImports(content) {
+  const lines = content.split('\n');
+  const newLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+    // Check if this is an import line
+    if (line.includes('import') && line.includes('from')) {
+      // Check if any imported items are actually used
+      const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
+      if (importMatch) {
+        const importedItems = importMatch[1].split(',').map(item => item.trim());
+        const usedItems = importedItems.filter(item => {
+          // Check if the item is used in the content (excluding the import line)
+          const contentWithoutImport = content.replace(line, '');
+          return contentWithoutImport.includes(item);
+        });
+        
+        if (usedItems.length === 0) {
+          // Skip this import line
+          continue;
+        } else if (usedItems.length < importedItems.length) {
+          // Update the import to only include used items
+          const newImport = line.replace(
+            /{\s*[^}]+\s*}/,
+            `{ ${usedItems.join(', ')} }`
+          );
+          newLines.push(newImport);
+          continue;
+        }
+      }
     }
+    
+    newLines.push(line);
+  }
+  
+  return newLines.join('\n');
+}
 
-    let content = fs.readFileSync(fullPath, 'utf8');
+// Function to fix unused variables
+function fixUnusedVariables(content) {
+  // Fix unused variable assignments
+  content = content.replace(/const\s+error\s*=/g, 'const _error =');
+  content = content.replace(/let\s+error\s*=/g, 'let _error =');
+  
+  return content;
+}
+
+// Main function to process files
+async function processFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js'
+  ];
+  
+  let processedCount = 0;
+  let errorCount = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
     
-    // Remove unused React imports
-    content = content.replace(/\s*/g, '');
-    content = content.replace(/import React from "react";\s*/g, '')
-    content = content.replace(/import { Helmet } from 'react-helmet-async';\s*/g, '')
-    content = content.replace(/import { Helmet } from "react-helmet-async";\s*/g, '')
-    
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed React imports: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    for (const file of files) {
+      try {
+        const filePath = path.resolve(file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Apply all fixes
+        content = fixOverEscapedQuotes(content);
+        content = fixParsingErrors(content);
+        content = removeUnusedImports(content);
+        content = fixUnusedVariables(content);
+        
+        // Write back the fixed content
+        fs.writeFileSync(filePath, content, 'utf8');
+        processedCount++;
+        
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
+        errorCount++;
+      }
+    }
+  }
+  
+  console.log(`\nProcessed ${processedCount} files`);
+  if (errorCount > 0) {
+    console.log(`Encountered ${errorCount} errors`);
   }
 }
 
-// Function to fix other issues;
-function fixOtherIssues(filePath) {
-  try {;
-const fullPath = path.join(__dirname, filePath);
-    
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
-    // Fix parsing errors and unused expressions
-    content = content.replace(/console\.log\([^)]*\);\s*$/gm, '');
-    content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-    
-    // Fix specific parsing issues
-    if (filePath.includes('AdvancedSEOOptimizer')) {
-      // Fix the interface issue
-      content = content.replace(/interface\s+{\s*$/gm, 'interface SEOProps {\n  title?: string;\n  description?: string;\n}');
-    }
-    
-    // Clean up empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed other issues: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-}
-
-// Fix all files
-console.log('Starting to fix final issues...');
-filesWithReactImports.forEach(fixReactImports);
-filesWithOtherIssues.forEach(fixOtherIssues);
-console.log('Final issue fixing completed!')
-}
+// Run the script
+processFiles().catch(console.error);

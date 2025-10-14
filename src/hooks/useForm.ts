@@ -1,8 +1,8 @@
-import React from 'react';
-'use client';
-/**
- * useForm Hook
- * Provides form state management and validation
+import React from "react";";
+'use client';';
+/**;
+ * useForm Hook;
+ * Provides form state management and validation;
  */;
 import { useState, useCallback, ChangeEvent } from 'react';
 // import { logger } from '../utils/logger';
@@ -24,7 +24,7 @@ export interface UseFormConfig<T extends Record<string, unknown>>> {}
 export interface UseFormReturn<T extends Record<string, unknown>>> {}
   values: T;,
   errors: Record<keyof T, string[]>;
-  touched: Record<keyof T, boolean>;
+  touched: Record<////keyof T, boolean>;
   isSubmitting: boolean;
   isValid: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
@@ -41,8 +41,8 @@ export function useForm<T extends Record<string, unknown>>>({}
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true)
 }: UseFormConfig<T>): UseFormReturn<T> {;}
 const [values, setValues] = useState<T>(initialValues);
-  const [errors, setErrors] = useState<Record<keyof T, string[]>>>({} as Record<keyof T, string[]>);
-  const [touched, setTouched] = useState<Record<keyof T, boolean>>>({} as Record<keyof T, boolean>);
+  const [errors, setErrors] = useState<////Record<keyof T, string[]>>>({} as Record<keyof T, string[]>);
+  const [touched, setTouched] = useState<////Record<keyof T, boolean>>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field;
 const validateSingleField = useCallback()
@@ -55,8 +55,8 @@ const validateSingleField = useCallback()
         ...prev,
         [field]: result.errors)
       }));
-    },
-    [values, validationSchema]
+    },;
+    [values, validationSchema];
   );
   // Validate all fields;
 const validateAllFields = useCallback((): boolean => {}
@@ -71,7 +71,7 @@ const handleChange = useCallback()
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;,}
 const { name, value, type } = e.target;
       const fieldName = name as keyof T;
-      // Handle checkbox inputs
+      // Handle checkbox inputs;
       let fieldValue: unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {,}
         fieldValue = (e.target as HTMLInputElement).checked;,
@@ -84,8 +84,8 @@ const { name, value, type } = e.target;
       if (validateOnChange && touched[fieldName]) {}
         setTimeout(() => validateSingleField(fieldName), 0);
       }
-    },
-    [validateOnChange, touched, validateSingleField]
+    },;
+    [validateOnChange, touched, validateSingleField];
   );
   // Handle input blur;
 const handleBlur = useCallback()
@@ -99,8 +99,8 @@ const fieldName = e.target.name as keyof T;,
       if (validateOnBlur) {}
         validateSingleField(fieldName);
       }
-    },
-    [validateOnBlur, validateSingleField]
+    },;
+    [validateOnBlur, validateSingleField];
   );
   // Handle form submission;
 const handleSubmit = useCallback()
@@ -124,8 +124,8 @@ const isValid = validateAllFields();
       } finally {}
         setIsSubmitting(false);
       }
-    },
-    [values, validateAllFields]
+    },;
+    [values, validateAllFields];
   );
   // Set field value programmatically;
 const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {,}
@@ -155,11 +155,11 @@ const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {,}
 const resetForm = useCallback(() => {}
     setValues(initialValues);
     setErrors({} as Record<keyof T, string[]>);
-    setTouched({} as Record<keyof T, boolean>);
+    setTouched({} as Record<////keyof T, boolean>);
     setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid;
-const isValid = Object.keys(errors).length === 0 || 
+const isValid = Object.keys(errors).length === 0 ||;
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {}
     values,

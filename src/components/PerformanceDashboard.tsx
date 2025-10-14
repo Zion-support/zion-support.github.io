@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
 import React, { useState, useEffect } from 'react';
 
@@ -119,9 +121,36 @@ const interval = setInterval(updateMetrics, 5000);
             Last updated: {new Date().toLocaleTimeString()}
           </div>
         </div>
-      </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>2731
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our performance dashboard
+            services can help you achieve your goals.
+          </p>2844
+          <a
+            href="$1"
+            className=""
+          >
+            Get Started Today
+          </a>3029
+        </div>
+      </section>
     </div>
   );
+}
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {'';
+  return (
+<>    <div className={`performancedashboard ${className}`}></div>```)
+      {children}
+    </>
+  );
 };
+
 export default PerformanceDashboard;
 ""

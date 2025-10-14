@@ -145,6 +145,7 @@ const stats = [
     { number: '24/7', label: 'Support Available' }
   ];
 
+const PagePage = () => {
   return (
     <>
       <SEOOptimizer>

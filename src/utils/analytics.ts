@@ -18,7 +18,7 @@ export interface AnalyticsEvent {}
 }
 export interface AnalyticsUser {}
   id?: string;
-  properties?: Record<string, unknown>;
+  properties?: Record<////string, unknown>;
 }
 class AnalyticsService {}
   private isInitialized = false
@@ -154,9 +154,9 @@ class AnalyticsService {}
    */
   private hasGtag(): boolean {}
     return (
-      typeof window !== 'undefined' &&
-      typeof window.gtag === 'function'
-    )
+      typeof window !== 'undefined' &&'')
+      typeof window.gtag === 'function''';
+    );
   }
   /**
    * Get Google Analytics ID
@@ -206,4 +206,4 @@ export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user
 if (typeof window !== 'undefined') {,}
   analytics.initialize(),
 }
-export default analytics
+export default analytics;

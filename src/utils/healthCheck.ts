@@ -1,7 +1,7 @@
-'use client';
-/**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
+'use client';';
+/**;
+ * Application Health Check Utility;
+ * Monitors application health and provides diagnostic information;
  */;
 import React from 'react';
 import { logger } from './logger';
@@ -117,7 +117,7 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
     } else if (status === 'degraded') {}
       logger.warn('Application health degraded', { healthStatus })
     }
-    return healthStatus
+    return healthStatus;
   }
   /**
    * Get current health status (may return cached)
@@ -308,7 +308,7 @@ const days = Math.floor(hours / 24)
   }
 }
 // Export singleton instance;
-export const healthCheck = new HealthCheckService()
+export const healthCheck = new HealthCheckService();
 // Export convenience functions;
 export const runHealthChecks = () => healthCheck.runChecks();
 export const getHealthStatus = () => healthCheck.getStatus();

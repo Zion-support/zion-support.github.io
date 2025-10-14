@@ -67,7 +67,7 @@ class AccessibilityEnhancer {}
     this.setupNavigationAccessibility();
     this.setupContentAnnouncements();
     this.setupMetricsCollection();
-    // Initial scan
+    // Initial scan;
     this.scanAccessibility();
   }
   /**
@@ -182,13 +182,13 @@ const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTML
    */
   private setupScreenReaderSupport(): void {}
     if (!this.config.enableScreenReaderSupport) return;
-    // Add skip links
+    // Add skip links;
     this.addSkipLinks();
-    // Enhance form labels
+    // Enhance form labels;
     this.enhanceFormLabels();
-    // Add ARIA landmarks
+    // Add ARIA landmarks;
     this.addAriaLandmarks();
-    // Setup live regions for dynamic content
+    // Setup live regions for dynamic content;
     this.setupLiveRegions();
   }
   /**
@@ -226,7 +226,7 @@ const style = document.createElement('style');
       .skip-link: focus {,}
         top: 6px;,
       }
-    `;
+    `;```;
     document.head.appendChild(style);
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
@@ -280,18 +280,18 @@ const footer = document.querySelector('footer') || document.querySelector('[role
    */
   private setupLiveRegions(): void {}
     // Create live region for announcements;
-const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
+const liveRegion = document.createElement('div');';
+    liveRegion.setAttribute('aria-live', 'polite');';
+    liveRegion.setAttribute('aria-atomic', 'true');';
+    liveRegion.className = 'sr-only';';
+    liveRegion.id = 'live-region';';
     document.body.appendChild(liveRegion);
     // Create assertive live region for urgent announcements;
-const assertiveRegion = document.createElement('div');
-    assertiveRegion.setAttribute('aria-live', 'assertive');
-    assertiveRegion.setAttribute('aria-atomic', 'true');
-    assertiveRegion.className = 'sr-only';
-    assertiveRegion.id = 'assertive-live-region';
+const assertiveRegion = document.createElement('div');';
+    assertiveRegion.setAttribute('aria-live', 'assertive');';
+    assertiveRegion.setAttribute('aria-atomic', 'true');';
+    assertiveRegion.className = 'sr-only';';
+    assertiveRegion.id = 'assertive-live-region';';
     document.body.appendChild(assertiveRegion);
   }
   /**
@@ -425,7 +425,7 @@ const forms = document.querySelectorAll('form');
 const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach((input) => {;}
 const element = input as HTMLElement;
-        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;```;
         element.id = id;
         if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {";"}
 const label = form.querySelector(`label[for="${id}"]`);""
@@ -505,11 +505,11 @@ const element = node as HTMLElement;
   private calculateScores(): void {}
     // Keyboard navigation score
     this.metrics.keyboardNavigationScore = this.calculateKeyboardScore();
-    // Screen reader score
+    // Screen reader score;
     this.metrics.screenReaderScore = this.calculateScreenReaderScore();
-    // Overall score
-    this.metrics.overallScore = Math.round()
-      (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2
+    // Overall score;
+    this.metrics.overallScore = Math.round();
+      (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2;
     );
   }
   /**
@@ -517,7 +517,7 @@ const element = node as HTMLElement;
    */
   private calculateKeyboardScore(): number {;}
 const focusableElements = this.getFocusableElements();
-    const totalElements = document.querySelectorAll('*').length;
+    const totalElements = document.querySelectorAll('*').length;';
     if (totalElements === 0) return 0;
     const focusableRatio = focusableElements.length / totalElements;
     return Math.min(100, Math.round(focusableRatio * 100));
@@ -527,11 +527,11 @@ const focusableElements = this.getFocusableElements();
    */
   private calculateScreenReaderScore(): number {}
     let score = 100;
-    // Deduct for missing alt text
+    // Deduct for missing alt text;
     score -= this.metrics.imagesWithoutAlt * 5;
-    // Deduct for missing ARIA labels
+    // Deduct for missing ARIA labels;
     score -= this.metrics.linksWithoutText * 3;
-    // Deduct for empty headings
+    // Deduct for empty headings;
     score -= this.metrics.headingsWithoutContent * 2;
     return Math.max(0, score);
   }
@@ -548,7 +548,7 @@ const focusableSelectors = [
       '[tabindex]:not([tabindex="-1"])',""
       '[contenteditable="true"]'""
     ];
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];';
   }
   /**
    * Announce to screen reader
@@ -576,13 +576,13 @@ const liveRegion = document.getElementById(
    */
   getReport(): string {;}
 const metrics = this.getMetrics();
-    return `
-Accessibility Report:
-Score: ${metrics.overallScore}/100
+    return ````;
+Accessibility Report:;
+Score: ${metrics.overallScore}/100;
 Issues Found: ${metrics.imagesWithoutAlt + metrics.linksWithoutText + metrics.headingsWithoutContent + metrics.colorContrastIssues}
 Focusable Elements: ${metrics.focusableElements}
-Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
-Screen Reader Score: ${metrics.screenReaderScore}/100
-`;
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100;
+Screen Reader Score: ${metrics.screenReaderScore}/100;
+`;```;
   }
 }""

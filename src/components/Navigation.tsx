@@ -17,10 +17,13 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {;}
 const handleScroll = () => {}
       setIsScrolled(window.scrollY > 50);
-    };
-
+    }
+    window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 ;
 const closeAllMenus = () => {}
@@ -401,14 +404,17 @@ const specializedServices = [
                   className="block cyber-button px-4 py-2 text-center",
                   onClick={closeAllMenus}
                 >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
+                  <className="w-4 h-4 inline mr-2" />
+                  (302) 464-0950;
         )}
-      </div>
-    </nav>
+  );
+}
+
+const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {'';
+  return (
+<>    <div className={`navigation ${className}`}></div>```)
+      {children}
+    </>
   );
 };
 ;

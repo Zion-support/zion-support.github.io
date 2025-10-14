@@ -77,7 +77,7 @@ const initApp = async () => {}
       }
     };
     initApp();
-  }, []);
+  }, [])
 
   if (!isInitialized) {}
     return <LoadingSpinner />;

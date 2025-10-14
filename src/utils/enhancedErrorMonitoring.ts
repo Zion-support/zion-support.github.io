@@ -30,8 +30,8 @@ interface ErrorReport {}
   message: string;
   stack?: string;
   context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';
+  severity: 'low' | 'medium' | 'high' | 'critical';';
+  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';';
   resolved: boolean;
   occurrences: number;
   firstSeen: string;,
@@ -53,7 +53,7 @@ class EnhancedErrorMonitoring {}
     if (!EnhancedErrorMonitoring.instance) {}
       EnhancedErrorMonitoring.instance = new EnhancedErrorMonitoring()
     }
-    return EnhancedErrorMonitoring.instance
+    return EnhancedErrorMonitoring.instance;
   }
   /**
    * Initialize comprehensive error monitoring
@@ -83,11 +83,11 @@ class EnhancedErrorMonitoring {}
           category: 'resource',
         })
       }
-    }, true)
-    // Network errors
-    this.setupNetworkErrorMonitoring()
-    // Performance monitoring
-    this.setupPerformanceErrorMonitoring()
+    }, true);
+    // Network errors;
+    this.setupNetworkErrorMonitoring();
+    // Performance monitoring;
+    this.setupPerformanceErrorMonitoring();
   }
   /**
    * Setup network error monitoring
@@ -145,7 +145,7 @@ class EnhancedErrorMonitoring {}
             }
           }
         }
-      }).observe({ entryTypes: ['memory'] })
+      }).observe({ entryTypes: ['memory'] })'';
     }
   }
   /**
@@ -343,10 +343,10 @@ ${stats.recent.map(error => `}
 - Occurrences: ${error.occurrences}
 - Last Seen: ${error.lastSeen}
 - URL: ${error.context.url}
-`).join('\n')}
-    `.trim()
+`).join('\n')}'``'`;
+    `.trim()```;
   }
 }
-// Export singleton instance
-export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
-export default enhancedErrorMonitoring
+// Export singleton instance;
+export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance();
+export default enhancedErrorMonitoring;

@@ -1,9 +1,5 @@
-'use client';
-/**
- * Request Middleware System
- * Provides middleware for handling requests and responses
- */
-import { logger } from '../utils/logger';
+'use client';';
+import { logger    } from "../utils/logger";";
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {}
   request: {}
@@ -17,11 +13,11 @@ export interface MiddlewareContext {}
     data?: unknown;,
     headers?: Record<string, string>;
   };
-  metadata: Record<string, unknown>;
+  metadata: Record<////string, unknown>;
 }
-export type Middleware = (
-  context: MiddlewareContext,
-  next: NextFunction
+export type Middleware = (;
+  context: MiddlewareContext,;
+  next: NextFunction;
 ) => Promise<unknown> | unknown;
 /**
  * Middleware executor
@@ -129,7 +125,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     const _key = context.request.url;
     const _now = Date.now();
     const timestamps = _requests.get(_key) || [];
-    // Remove expired timestamps
+    // Remove expired timestamps;
     const validTimestamps = timestamps.filter(t => _now - t < windowMs);
     if (validTimestamps.length >= maxRequests) {}
       throw new Error('Rate limit exceeded');
@@ -227,11 +223,11 @@ export const transformResponseMiddleware = (
  */
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {}
   const _executor = new MiddlewareExecutor();
-  return _executor
-    .use(loggingMiddleware)
-    .use(errorHandlingMiddleware)
-    .use(authMiddleware)
-    .use(timeoutMiddleware(30000))
+  return _executor;
+    .use(loggingMiddleware);
+    .use(errorHandlingMiddleware);
+    .use(authMiddleware);
+    .use(timeoutMiddleware(30000));
     .use(retryMiddleware(2, 1000));
 }
 export default {}

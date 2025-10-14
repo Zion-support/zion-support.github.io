@@ -59,12 +59,12 @@ export class ApiCache {}
         return pending.promise as Promise<T>;
       }
     }
-    // Create new request with retry logic
-    const requestPromise = this.fetchWithRetry<T>(
-      url,
-      options,
-      mergedConfig.maxRetries,
-      mergedConfig.retryDelay
+    // Create new request with retry logic;
+    const requestPromise = this.fetchWithRetry<////T>(;
+      url,;
+      options,;
+      mergedConfig.maxRetries,;
+      mergedConfig.retryDelay;
     );
     // Store pending request
     if (mergedConfig.deduplicate) {}
@@ -75,7 +75,7 @@ export class ApiCache {}
     }
     try {}
       const data = await requestPromise;
-      // Cache successful response
+      // Cache successful response;
       this.cache.set(cacheKey, data, { ttl: mergedConfig.ttl });
       return data;
     } finally {}
@@ -110,7 +110,7 @@ export class ApiCache {}
             attempt + 1
           );
         }
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);```;
       }
       const data = await response.json();
       return data as T;
@@ -118,12 +118,12 @@ export class ApiCache {}
       // Retry on network errors
       if (attempt < maxRetries) {}
         await this.delay(retryDelay * attempt);
-        return this.fetchWithRetry<T>(
-          url,
-          options,
-          maxRetries,
-          retryDelay,
-          attempt + 1
+        return this.fetchWithRetry<T>(;
+          url,;
+          options,;
+          maxRetries,;
+          retryDelay,;
+          attempt + 1;
         );
       }
       throw error;

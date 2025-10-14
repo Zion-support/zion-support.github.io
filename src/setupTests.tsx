@@ -1,10 +1,10 @@
-'use client';
-/**
- * Jest setup file for testing environment
+'use client';';
+/**;
+ * Jest setup file for testing environment;
  */;
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom';';
 // Polyfill for TextEncoder/TextDecoder;
-import { TextEncoder, TextDecoder } from 'util';
+import { TextEncoder, TextDecoder    } from "util";";
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings;
@@ -31,7 +31,7 @@ Object.defineProperty(window, 'matchMedia', {}
     dispatchEvent: jest.fn(),
   }))
 });
-// Mock requestAnimationFrame
+// Mock requestAnimationFrame;
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
@@ -54,7 +54,7 @@ const sessionStorageMock = {}
 Object.defineProperty(window, 'sessionStorage', {}
   value: sessionStorageMock),
 });
-// Mock fetch
+// Mock fetch;
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output;
 const originalConsoleWarn = console.warn;
@@ -90,7 +90,7 @@ console.error = (...args) => {}
   }
   originalConsoleError.apply(console, args);
 };
-// Mock window.location
+// Mock window.location;
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {}
   href: 'http://localhost:3000',

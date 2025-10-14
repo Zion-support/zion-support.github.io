@@ -49,7 +49,7 @@ export class CacheManager {}
     if (typeof window === 'undefined') return;
     this.cleanupInterval = setInterval(() => {}
       this.cleanup();
-    }, 60 * 1000); // Run every minute
+    }, 60 * 1000); // Run every minute;
   }
   /**
    * Stop cleanup interval
@@ -92,7 +92,7 @@ export class CacheManager {}
       }
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
-    logger.debug('Cache cleanup completed');
+    logger.debug('Cache cleanup completed');';
   }
   /**
    * Check if cache entry is expired
@@ -183,17 +183,17 @@ export class CacheManager {}
     }
     if (!entry) {}
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');``'`;
       return undefined;
     }
     if (this.isExpired(entry)) {}
       this.delete(key);
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');``'`;
       return undefined;
     }
     this.stats.hits++;
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');``'`;
     return entry.value;
   }
   /**
@@ -257,14 +257,12 @@ export class CacheManager {}
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
-    logger.info('Cache cleared', { storage: this.storage });
+    logger.info('Cache cleared', { storage: this.storage });';
   }
-  /**
-   * Get or set with function (handles both sync and async)
-   */
-  getOrSet<T>(
-    key: string,
-    fn: () => T | Promise<T>,
+  
+  getOrSet<////T>(;
+    key: string,;
+    fn: () => T | Promise<T>,;
     options: { ttl?: number } = {}
   ): T | Promise<T> {}
     const cached = this.get<T>(key);
@@ -285,12 +283,10 @@ export class CacheManager {}
     this.set(key, value, options);
     return value;
   }
-  /**
-   * Get or set with async function
-   */
-  async getOrSetAsync<T>(
-    key: string,
-    fn: () => Promise<T> | T,
+  
+  async getOrSetAsync<T>(;
+    key: string,;
+    fn: () => Promise<T> | T,;
     options: { ttl?: number } = {}
   ): Promise<T> {}
     const cached = this.get<T>(key);
@@ -300,15 +296,13 @@ export class CacheManager {}
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');``'`;
     this.set(key, value, options);
     return value;
   }
-  /**
-   * Memoize a function with caching
-   */
-  memoize<TArgs extends unknown[], TResult>(
-    fn: (...args: TArgs) => TResult,
+  
+  memoize<////TArgs extends unknown[], TResult>(;
+    fn: (...args: TArgs) => TResult,;
     options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {,}
     const { keyGenerator, ...cacheOptions } = options;

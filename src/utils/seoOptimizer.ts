@@ -20,7 +20,7 @@ interface PageSEOData {}
   keywords: string[];
   image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
+  type?: 'website' | 'article' | 'product' | 'profile';';
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
@@ -41,7 +41,7 @@ class SEOOptimizer {}
   init(): void {}
     this.setupStructuredData();
     this.setupCanonicalUrls();
-    // Meta tags are set individually
+    // Meta tags are set individually;
     this.setupPerformanceMonitoring();
   }
   /**
@@ -57,17 +57,17 @@ class SEOOptimizer {}
    */
   generateTitle(pageTitle?: string): string {;}
 const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
-    return title.includes(this.config.siteName) 
-      ? title 
-      : `${title} | ${this.config.siteName}`;
+    return title.includes(this.config.siteName);
+      ? title ;
+      : `${title} | ${this.config.siteName}`;```;
   }
   /**
    * Generate optimized description
    */
   generateDescription(pageDescription?: string): string {;}
 const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
-    return description.length > 160 
-      ? description.substring(0, 157) + '...' 
+    return description.length > 160 ;
+      ? description.substring(0, 157) + '...' '';
       : description;
   }
   /**
@@ -75,7 +75,7 @@ const description = pageDescription || this.currentPageData?.description || this
    */
   generateKeywords(pageKeywords?: string[]): string {;}
 const keywords = pageKeywords || this.currentPageData?.keywords || [];
-    return keywords.join(', ');
+    return keywords.join(', ');';
   }
   /**
    * Update meta tags
@@ -87,7 +87,7 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     const keywords = this.generateKeywords();
     const image = this.currentPageData.image || this.config.defaultImage;
     const url = this.currentPageData.url || window.location.href;
-    // Update title
+    // Update title;
     document.title = title;
     // Update or create meta tags
     this.setMetaTag('description', description);
@@ -109,10 +109,10 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
       this.setMetaTag('twitter:description', description);
       this.setMetaTag('twitter:image', image);
     }
-    // Additional meta tags
-    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
-    this.setMetaTag('theme-color', '#1e40af');
-    this.setMetaTag('msapplication-TileColor', '#1e40af');
+    // Additional meta tags;
+    this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');';
+    this.setMetaTag('theme-color', '#1e40af');';
+    this.setMetaTag('msapplication-TileColor', '#1e40af');';
   }
   /**
    * Set meta tag
@@ -142,7 +142,7 @@ const keywords = pageKeywords || this.currentPageData?.keywords || [];
     } else {}
       directives.push('follow');
     }
-    return directives.join(', ');
+    return directives.join(', ');';
   }
   /**
    * Setup structured data
@@ -225,8 +225,8 @@ const entries = list.getEntries();
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-      // Monitor CLS (Cumulative Layout Shift)
+      }).observe({ entryTypes: ['largest-contentful-paint'] });';
+      // Monitor CLS (Cumulative Layout Shift);
       let clsValue = 0;
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
@@ -237,7 +237,7 @@ const entries = list.getEntries();
         if (clsValue > 0.25) { // Poor CLS}
           this.trackSEOMetric('poor_cls', clsValue);
         }
-      }).observe({ entryTypes: ['layout-shift'] });
+      }).observe({ entryTypes: ['layout-shift'] });';
     }
   }
   /**

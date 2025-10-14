@@ -14,7 +14,7 @@ export class PerformanceOptimizer {,}
     if (!PerformanceOptimizer.instance) {}
       PerformanceOptimizer.instance = new PerformanceOptimizer()
     }
-    return PerformanceOptimizer.instance
+    return PerformanceOptimizer.instance;
   }
   /**
    * Measure function execution time
@@ -61,8 +61,8 @@ export class PerformanceOptimizer {,}
     if (!metrics || metrics.length === 0) {,}
       return 0,
     }
-    const sum = metrics.reduce((acc, val) => acc + val, 0)
-    return sum / metrics.length
+    const sum = metrics.reduce((acc, val) => acc + val, 0);
+    return sum / metrics.length;
   }
   /**
    * Implement debounce for performance
@@ -111,9 +111,9 @@ export class PerformanceOptimizer {,}
       if (cache.has(key)) {,}
         return cache.get(key)!,
       }
-      const result = func(...args) as ReturnType<T>
-      cache.set(key, result)
-      return result
+      const result = func(...args) as ReturnType<T></T>;
+      cache.set(key, result);
+      return result;
     }
   }
   /**
@@ -126,8 +126,9 @@ export class PerformanceOptimizer {,}
         avg: this.getAverageMetric(name),
         count: values.length,
       }
-    })
-    return summary
+    });
+    return summary;
   }
 }
-export default PerformanceOptimizer.getInstance()
+export default PerformanceOptimizer.getInstance();
+;

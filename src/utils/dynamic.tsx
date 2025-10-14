@@ -4,8 +4,8 @@ interface DynamicOptions {}
   loading?: () => React.ReactElement;
   ssr?: boolean;
 }
-export function dynamic<T extends ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>,
+export function dynamic<T extends ComponentType<any>>(;
+  importFunc: () => Promise<{ default: T }>,;
   options: DynamicOptions = {}
 ): ComponentType<any> {}
   const LazyComponent = lazy(importFunc);

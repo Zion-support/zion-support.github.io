@@ -41,9 +41,7 @@ function fixSyntaxErrors(content) {
   });
   
   // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  
+  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?  
   // Fix malformed function declarations
   fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{([^}]*?)(?:\n|$)/g, (match, name, body) => {
     if (!match.includes('}')) {
@@ -91,6 +89,63 @@ function fixFile(filePath) {
       return true;
     }
     
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+// Function to fix common syntax errors in TSX files
+function fixTsxFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix malformed Helmet tags
+    if (content.includes('<Helmet></Helmet>')) {
+      content = content.replace(/<Helmet><\/Helmet>\s*<title>/g, '<Helmet>\n        <title>');
+      content = content.replace(/<Helmet><\/Helmet>\s*<meta/g, '<Helmet>\n        <meta');
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
+    content = content.replace(/'([^']*)\n/g, "'$1'\n");
+
+    // Fix missing closing tags
+    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
+    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
+    content = content.replace(/<button([^>]*)>\s*$/gm, '<button$1></button>');
+
+    // Fix JSX expressions without parent elements
+    content = content.replace(/return\s*\(\s*<div([^>]*)>\s*<Helmet/g, 'return (\n    <div$1>\n      <Helmet');
+
+    // Fix missing semicolons and commas
+    content = content.replace(/(\w+)\s*=\s*\{([^}]*)\}\s*$/gm, '$1: {$2},');
+    content = content.replace(/(\w+)\s*:\s*([^,}]+)\s*$/gm, '$1: $2,');
+
+    // Fix malformed function parameters
+    content = content.replace(/React\.ChangeEvent<HTMLInputElement \| HTMLTextAreaElement><\/HTMLInputElement>/g, 'React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>');
+
+    // Fix array syntax issues
+    content = content.replace(/\[\s*"([^"]*)"\s*$/gm, '["$1"]');
+    content = content.replace(/\[\s*{/gm, '[{');
+    content = content.replace(/}\s*\]/gm, '}]');
+
+    // Fix object syntax issues
+    content = content.replace(/{\s*"([^"]*)"\s*$/gm, '{"$1"');
+    content = content.replace(/}\s*$/gm, '},');
+
+    // Fix missing closing parentheses
+    content = content.replace(/\(\s*$/gm, '()');
+
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)\s*$/gm, 'className="$1"');
+    content = content.replace(/href="([^"]*)\s*$/gm, 'href="$1"');
+
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);

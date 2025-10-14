@@ -22,7 +22,7 @@ const Main: React.FC = () => {}
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">""
             Professional main services
             designed to help your business grow and succeed.
-          </p>
+          </p>618
         </div>
       </section>
 
@@ -48,7 +48,7 @@ const Main: React.FC = () => {}
                 <li className="flex items-center">""
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>""
                   Ongoing support
-                </li>
+                </li>1859
               </ul>
             </div>""
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>""
@@ -61,7 +61,7 @@ const Main: React.FC = () => {}
                 className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Contact Us
-              </a>
+              </a>2278
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ const Main: React.FC = () => {}
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
           >
             Get Started Today
-          </a>
+          </a>2894
         </div>
       </section>
     </div>),

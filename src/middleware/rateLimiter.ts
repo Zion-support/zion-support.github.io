@@ -29,7 +29,7 @@ export class RateLimiter {}
       skipFailedRequests: false,
       ...config
     };
-    // Cleanup old entries every minute
+    // Cleanup old entries every minute;
     setInterval(() => this.cleanup(), 60000);
   }
   /**
@@ -56,7 +56,7 @@ export class RateLimiter {}
         resetTime: _record.resetTime,
       };
     }
-    // Limit exceeded
+    // Limit exceeded;
     return { allowed: false, remaining: 0, resetTime: _record.resetTime };
   }
   /**
@@ -162,7 +162,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {}
         }
       );
     }
-    // Request allowed - headers can be added to response later
+    // Request allowed - headers can be added to response later;
     return null;
   };
 }

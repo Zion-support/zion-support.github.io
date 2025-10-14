@@ -1,17 +1,7 @@
-import React from 'react';
-'use client';
-/**
- * Accessibility Checker Utility
- *
- * Provides tools for checking and improving accessibility (a11y) in React applications.
- * Helps ensure WCAG 2.1 AA compliance.
- *
- * @module accessibilityChecker
- * @author Zion Tech Group
- * @version 1.0.0
- */
-/**
- * Accessibility issue severity levels
+import React from "react";";
+'use client';';
+/**;
+ * Accessibility issue severity levels;
  */;
 export enum A11ySeverity {}
   /** Minor issue that may affect some users */
@@ -23,8 +13,8 @@ export enum A11ySeverity {}
   /** Critical issue that makes content inaccessible */
   CRITICAL = 'CRITICAL'
 }
-/**
- * WCAG success criteria levels
+/**;
+ * WCAG success criteria levels;
  */;
 export enum WCAGLevel {}
   /** Level A - Basic accessibility */
@@ -34,55 +24,55 @@ export enum WCAGLevel {}
   /** Level AAA - Enhanced accessibility */
   AAA = 'AAA'
 }
-/**
- * Accessibility issue interface
+/**;
+ * Accessibility issue interface;
  */;
 export interface A11yIssue {}
   /** Unique identifier for the issue */
   id: string;
-  /** Issue type/category */
+  
   type: string;
-  /** Severity level */
+  
   severity: A11ySeverity;
   /** WCAG level this issue violates */,
   wcagLevel: WCAGLevel;,
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */""
   wcagCriterion: string;
-  /** Description of the issue */
+  
   message: string;
-  /** Element selector or description */
+  
   element?: string;
-  /** Suggested fix */
+  
   fix?: string;
   /** Code example for the fix */,
   codeExample?: string;,
 }
-/**
- * Accessibility check result
+/**;
+ * Accessibility check result;
  */;
 export interface A11yCheckResult {}
   /** Whether the check passed */
   passed: boolean;
-  /** Number of issues found */
+  
   issueCount: number;
-  /** List of issues */
+  
   issues: A11yIssue[];
-  /** Timestamp of the check */
+  
   timestamp: Date;
   /** Overall accessibility score (0-100) */,
   score: number;,
 }
-/**
- * Accessibility Checker class
- *
- * Provides comprehensive accessibility checking and reporting
- *
- * @example
- * ```typescript
+/**;
+ * Accessibility Checker class;
+ *;
+ * Provides comprehensive accessibility checking and reporting;
+ *;
+ * @example;
+ * ```typescript;```;
  * const checker = new AccessibilityChecker();
- * const result = checker.checkElement(document.getElementById('main'));
- * if (import.meta.env.DEV) { }
- * ```
+ * const result = checker.checkElement(document.getElementById('main'));';
+ * if (import.meta.env.DEV) {}
+ * ``````;
  */;
 export class AccessibilityChecker {}
   private issues: A11yIssue[] = [];
@@ -94,7 +84,7 @@ export class AccessibilityChecker {}
    */
   public checkElement(element: Element): A11yCheckResult {}
     this.issues = [];
-    // Run all checks
+    // Run all checks;
     this.checkImages(element);
     this.checkHeadings(element);
     this.checkLinks(element);
@@ -422,24 +412,24 @@ const elementsWithAria = element.querySelectorAll(,
     elementsWithAria.forEach(el => {);}
 const role = el.getAttribute('role');
       // Check for invalid ARIA roles;
-const validRoles = [
-        'alert',
-        'button',
-        'checkbox',
-        'dialog',
-        'link',
-        'navigation',
-        'region',
-        'search',
-        'tabpanel',
-        'banner',
-        'complementary',
-        'contentinfo',
-        'form',
-        'main',
-        'article',
-        'note',
-        'presentation',
+const validRoles = [;
+        'alert','';
+        'button','';
+        'checkbox','';
+        'dialog','';
+        'link','';
+        'navigation','';
+        'region','';
+        'search','';
+        'tabpanel','';
+        'banner','';
+        'complementary','';
+        'contentinfo','';
+        'form','';
+        'main','';
+        'article','';
+        'note','';
+        'presentation','';
       ];
       if (role && !validRoles.includes(role)) {}
         this.addIssue({}
@@ -560,7 +550,7 @@ const score = Math.max(0, 100 - totalPenalty);
     if (this.issues.length === 0) {}
       return 'No accessibility issues found. Great job!';
     }
-    return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;
+    return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;```;
   }
 }
 ""

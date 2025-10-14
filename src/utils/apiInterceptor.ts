@@ -37,7 +37,7 @@ export interface RequestConfig {}
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';,
   headers?: Record<string, string>;
   body?: unknown;
-  params?: Record<string, string | number | boolean>;
+  params?: Record<////string, string | number | boolean>;
   timeout?: number;
   cache?: boolean;
   retryAttempts?: number;
@@ -96,7 +96,7 @@ export class APIInterceptor {}
     if (this.pendingRequests.has(cacheKey)) {}
       return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
     }
-    // Create the request promise
+    // Create the request promise;
     const requestPromise = this.executeRequest<T>(fullConfig);
     this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
     try {}
@@ -130,18 +130,18 @@ export class APIInterceptor {}
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
-      // Record performance metric
+      // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
       // Handle non-2xx responses
       if (!response.ok) {}
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      // Apply response interceptor
+      // Apply response interceptor;
       let finalResponse = response;
       if (this.config.interceptors?.response) {}
         finalResponse = await this.config.interceptors.response(response);
       }
-      // Parse response data
+      // Parse response data;
       const data = await this.parseResponse<T>(finalResponse);
       return {}
         data,
@@ -153,9 +153,9 @@ export class APIInterceptor {}
     } catch (error) {}
       const duration = performance.now() - startTime;
       const err = error as Error;
-      // Record error metric
+      // Record error metric;
       performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
-      // Handle error with error handler
+      // Handle error with error handler;
       this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
       // Retry logic
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {}
@@ -170,50 +170,40 @@ export class APIInterceptor {}
       throw err;
     }
   }
-  /**
-   * GET request
-   */
-  async get<T = unknown>(
-    url: string,
+  
+  async get<////T = unknown>(;
+    url: string,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'GET' });
   }
-  /**
-   * POST request
-   */
-  async post<T = unknown>(
-    url: string,
-    body?: unknown,
+  
+  async post<////T = unknown>(;
+    url: string,;
+    body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'POST', body });
   }
-  /**
-   * PUT request
-   */
-  async put<T = unknown>(
-    url: string,
-    body?: unknown,
+  
+  async put<////T = unknown>(;
+    url: string,;
+    body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'PUT', body });
   }
-  /**
-   * DELETE request
-   */
-  async delete<T = unknown>(
-    url: string,
+  
+  async delete<////T = unknown>(;
+    url: string,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'DELETE' });
   }
-  /**
-   * PATCH request
-   */
-  async patch<T = unknown>(
-    url: string,
-    body?: unknown,
+  
+  async patch<////T = unknown>(;
+    url: string,;
+    body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'PATCH', body });
@@ -243,7 +233,7 @@ export class APIInterceptor {}
       Object.entries(config.params).forEach(([key, value]) => {}
         params.append(key, String(value));
       });
-      url += `?${params.toString()}`;
+      url += `?${params.toString()}`;```;
     }
     return url;
   }
@@ -361,6 +351,6 @@ export class APIInterceptor {}
     return { ...this.config };
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const apiInterceptor = APIInterceptor.getInstance();
 export default APIInterceptor;

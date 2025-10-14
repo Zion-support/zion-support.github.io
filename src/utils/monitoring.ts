@@ -1,7 +1,7 @@
-'use client';
-/**
- * Comprehensive Monitoring Utility
- * Real-time application monitoring, performance tracking, and error reporting
+'use client';';
+/**;
+ * Comprehensive Monitoring Utility;
+ * Real-time application monitoring, performance tracking, and error reporting;
  */;
 import { performanceConfig } from '../../performance.config';
 export interface PerformanceMetrics {}
@@ -22,7 +22,7 @@ export interface ErrorReport {}
 }
 class MonitoringService {}
   private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
+  private errors: ErrorReport[] = [];
   private observer: PerformanceObserver | null = null;
 constructor() {}
     if (typeof window !== 'undefined') {,}
@@ -46,10 +46,10 @@ constructor() {}
 const lcpObserver = new PerformanceObserver((list) => {;}
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-          this.reportMetric('lcp', this.metrics.lcp)
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
+          this.reportMetric('lcp', this.metrics.lcp)'';
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })'';
         // First Input Delay;
 const fidObserver = new PerformanceObserver((list) => {;}
 const entries = list.getEntries();
@@ -58,8 +58,8 @@ const entries = list.getEntries();
             this.reportMetric('fid', this.metrics.fid);
           });
         });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        // Cumulative Layout Shift
+        fidObserver.observe({ entryTypes: ['first-input'] });';
+        // Cumulative Layout Shift;
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {);}
 const entries = list.getEntries();
@@ -69,9 +69,9 @@ const entries = list.getEntries();
               this.metrics.cls = clsValue;,
               this.reportMetric('cls', clsValue);
             }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] })'';
         // First Contentful Paint;
 const fcpObserver = new PerformanceObserver(list => {);}
 const entries = list.getEntries();
@@ -173,8 +173,8 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
     if (this.errors.length >> 50) {,}
       this.errors = this.errors.slice(-50),
     }
-    // console.error('[Error]', error)
-    // Send to error tracking service (if configured)
+    // console.error('[Error]', error)'';
+    // Send to error tracking service (if configured);
   }
   public getMetrics(): PerformanceMetrics {}
     return { ...this.metrics }
@@ -216,4 +216,5 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 }
 // Singleton instance;
 const monitoring = new MonitoringService();
-export default monitoring
+export default monitoring;
+;

@@ -55,7 +55,7 @@ class PerformanceMonitoringService {}
           }
         });
       });
-      paintObserver.observe({ type: 'paint', buffered: true });
+      paintObserver.observe({ type: 'paint', buffered: true });';
       this.observers.push(paintObserver);
       // Observe LCP
       const lcpObserver = new PerformanceObserver((list) => {}
@@ -65,19 +65,19 @@ class PerformanceMonitoringService {}
           this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number }).loadTime);
         }
       });
-      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+      lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });';
       this.observers.push(lcpObserver);
-      // Observe CLS
+      // Observe CLS;
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {}
             clsValue += (entry as PerformanceEntry & { value: number }).value;
-            this.recordWebVital('CLS', clsValue);
+            this.recordWebVital('CLS', clsValue);';
           }
         });
       });
-      clsObserver.observe({ type: 'layout-shift', buffered: true });
+      clsObserver.observe({ type: 'layout-shift', buffered: true });';
       this.observers.push(clsObserver);
       // Observe FID
       const fidObserver = new PerformanceObserver((list) => {}
@@ -85,16 +85,16 @@ class PerformanceMonitoringService {}
           this.recordWebVital('FID', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
         });
       });
-      fidObserver.observe({ type: 'first-input', buffered: true });
+      fidObserver.observe({ type: 'first-input', buffered: true });';
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB
       const navObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           const navEntry = entry as PerformanceNavigationTiming;
-          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);
+          this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);';
         });
       });
-      navObserver.observe({ type: 'navigation', buffered: true });
+      navObserver.observe({ type: 'navigation', buffered: true });';
       this.observers.push(navObserver);
     } catch (error) {}
       logger.error('Failed to initialize performance observers', error as Error);
@@ -112,8 +112,8 @@ class PerformanceMonitoringService {}
       timestamp: Date.now(),
     };
     this.webVitals[name] = metric;
-    logger.info(`Web Vital: ${name}`, { value, rating });
-    // Send to analytics
+    logger.info(`Web Vital: ${name}`, { value, rating });```;
+    // Send to analytics;
     this.sendToAnalytics(metric);
   }
   /**
@@ -129,10 +129,10 @@ class PerformanceMonitoringService {}
       INP: { good: 200, poor: 500 }
     };
     const threshold = thresholds[name];
-    if (!threshold) return 'good';
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
+    if (!threshold) return 'good';';
+    if (value <////= threshold.good) return 'good';';
+    if (value <= threshold.poor) return 'needs-improvement';';
+    return 'poor';';
   }
   /**
    * Record a custom metric
@@ -149,7 +149,7 @@ class PerformanceMonitoringService {}
     if (this.customMetrics.length > this.maxMetrics) {}
       this.customMetrics.shift();
     }
-    logger.debug(`Custom Metric: ${name}`, { value, unit });
+    logger.debug(`Custom Metric: ${name}`, { value, unit });```;
   }
   /**
    * Send metric to analytics service
@@ -330,7 +330,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
       rating: getRating(name, value)
     });
   }
-  // Also record in the main performance monitoring service
+  // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 };
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,}
@@ -343,10 +343,10 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'INP': { good: 200, poor: 500 }
   };
   const threshold = thresholds[name];
-  if (!threshold) return 'good';
-  if (value <= threshold.good) return 'good';
-  if (value <= threshold.poor) return 'needs-improvement';
-  return 'poor';
+  if (!threshold) return 'good';';
+  if (value <////= threshold.good) return 'good';';
+  if (value <= threshold.poor) return 'needs-improvement';';
+  return 'poor';';
 }
 export const getMetrics = (): Record<string, MetricData> => {}
   const result: Record<string, MetricData> = {};
@@ -375,9 +375,9 @@ export const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>
 };
 export const getPerformanceScore = (): number => {}
   const metrics = getMetrics();
-  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];
-  const webVitals = webVitalNames
-    .map(name => metrics[name])
+  const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];';
+  const webVitals = webVitalNames;
+    .map(name => metrics[name]);
     .filter(Boolean);
   if (webVitals.length === 0) return 0;
   const scores = webVitals.map(metric => {}
