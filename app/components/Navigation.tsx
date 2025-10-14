@@ -31,171 +31,202 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
   const location = useLocation()
+
   const navigation = [
-    { name: 'Home', href: '/', icon: "HomeIcon"},'''
-    { name: 'About', href: '/about', icon: "InformationCircleIcon"},'''
-    {}
-      name: 'Services', '''
-      href: '/services', '''
-      icon: "BriefcaseIcon",""
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: "CpuChipIcon"},'''
-        { name: 'IT Services', href: '/it-services', icon: "CogIcon"},'''
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: "CloudIcon"},'''
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: "ShieldCheckIcon"}'''
-      ]
-    },
-    {}
-      name: 'Solutions', '''
-      href: '/solutions', '''
-      icon: "CogIcon",""
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: "CpuChipIcon"},'''
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: "ShieldCheckIcon"},'''
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: "CloudIcon"},'''
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: "CogIcon"},'''
-        { name: 'Micro SaaS', href: '/micro-saas', icon: "GlobeAltIcon"},'''
-        { name: '5G Solutions', href: '/5g-solutions', icon: "SignalIcon"}'''
-      ]
-    },
-    { name: 'Blog', href: '/blog', icon: "DocumentTextIcon"},'''
-    { name: 'Tutorials', href: '/tutorials', icon: "AcademicCapIcon"},'''
-    { name: 'Demo', href: '/demo', icon: "PlayIcon"},'''
-    { name: 'Support', href: '/support', icon: "QuestionMarkCircleIcon"},'''
-    { name: 'Pricing', href: '/pricing', icon: "CurrencyDollarIcon"},'''
-    { name: 'Contact', href: '/contact', icon: "PhoneIcon"}'''
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Careers', href: '/careers', icon: AcademicCapIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ]
-  const isActive = (href: string) => {}
+
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+    { name: 'IT Services', href: '/it-services', icon: CogIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
+    { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+  ]
+
+  const solutions = [
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: UserGroupIcon },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: CurrencyDollarIcon },
+    { name: 'Custom Development', href: '/custom-software', icon: CogIcon }
+  ]
+
+  const isActive = (href: string) => {
     return location.pathname === href
   }
+
+  const toggleMobileMenu = () => {
+    setIsOpen(!isOpen)
+    if (onSidebarToggle) {
+      onSidebarToggle()
+    }
+  }
+
   return (
-    <nav className="bg-white shadow-lg">"""
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
-        <div className="flex justify-between h-16">"""
-          <div className="flex">"""
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">"""
-              <Link to="/" className="text-2xl font-bold text-blue-600">"""
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/" className="text-2xl font-bold text-blue-600">
                 Zion Tech Group
               </Link>
             </div>
-            {/* Desktop Navigation */}
-            <div className="hidden md:ml-6 md:flex md:space-x-8">"""
-              {navigation.map((item) => (}
-                <div key={item.name} className="relative">"""
-                  {item.submenu ? (}
-                    <div className="relative group">"""
-                      <button
-                        className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center""""
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
-                      >
-                        {item.name}
-                        <ChevronDownIcon className="ml-1 h-4 w-4" />"""
-                      </button>
-                      {isServicesOpen && (}
-                        <div
-                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50""""
-                          onMouseEnter={() => setIsServicesOpen(true)}
-                          onMouseLeave={() => setIsServicesOpen(false)}
-                        >
-                          {item.submenu.map((subItem) => (}
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100""""
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`${}
-                        isActive(item.href)
-                          ? 'text-blue-600 border-b-2 border-blue-600''''
-                          : 'text-gray-700 hover: "text-blue-600''"""
-                      } px-3 py-2 text-sm font-medium`}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
+            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`${
+                    isActive(item.href)
+                      ? 'border-blue-500 text-gray-900'
+                      : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium`}
+                >
+                  <item.icon className="w-4 h-4 mr-2" />
+                  {item.name}
+                </Link>
               ))}
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium"
+                >
+                  Services
+                  <ChevronDownIcon className="w-4 h-4 ml-1" />
+                </button>
+                {isServicesOpen && (
+                  <div className="absolute z-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        <service.icon className="w-4 h-4 mr-3" />
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Solutions Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                  className="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium"
+                >
+                  Solutions
+                  <ChevronDownIcon className="w-4 h-4 ml-1" />
+                </button>
+                {isSolutionsOpen && (
+                  <div className="absolute z-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                    {solutions.map((solution) => (
+                      <Link
+                        key={solution.name}
+                        to={solution.href}
+                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      >
+                        <solution.icon className="w-4 h-4 mr-3" />
+                        {solution.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">"""
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600""""
+          
+          <div className="hidden sm:ml-6 sm:flex sm:items-center">
+            <Link
+              to="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium"
             >
-              {isOpen ? (}
-                <XMarkIcon className="h-6 w-6" />"""
+              Get Started
+            </Link>
+          </div>
+
+          <div className="sm:hidden flex items-center">
+            <button
+              onClick={toggleMobileMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            >
+              {isOpen ? (
+                <XMarkIcon className="block h-6 w-6" />
               ) : (
-                <Bars3Icon className="h-6 w-6" />"""
+                <Bars3Icon className="block h-6 w-6" />
               )}
             </button>
           </div>
         </div>
-        {/* Mobile Navigation */}
-        {isOpen && (}
-          <div className="md:hidden">"""
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">"""
-              {navigation.map((item) => (}
-                <div key={item.name}>
-                  {item.submenu ? (}
-                    <div>
-                      <button
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left""""
-                      >
-                        {item.name}
-                        <ChevronDownIcon className="ml-1 h-4 w-4 inline" />"""
-                      </button>
-                      {isServicesOpen && (}
-                        <div className="pl-4 space-y-1">"""
-                          {item.submenu.map((subItem) => (}
-                            <Link
-                              key={subItem.name}
-                              to={subItem.href}
-                              className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm""""
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`${}
-                        isActive(item.href)
-                          ? 'text-blue-600 bg-blue-50''''
-                          : 'text-gray-700 hover: "text-blue-600''"""
-                      } block px-3 py-2 text-base font-medium`}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
+      </div>
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="sm:hidden">
+          <div className="pt-2 pb-3 space-y-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`${
+                  isActive(item.href)
+                    ? 'bg-blue-50 border-blue-500 text-blue-700'
+                    : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+                } block pl-3 pr-4 py-2 border-l-4 text-base font-medium`}
+                onClick={() => setIsOpen(false)}
+              >
+                <item.icon className="w-4 h-4 mr-2 inline" />
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Mobile Services */}
+            <div className="pl-3 pr-4 py-2">
+              <div className="text-sm font-medium text-gray-500 mb-2">Services</div>
+              {services.map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.href}
+                  className="flex items-center pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <service.icon className="w-4 h-4 mr-3" />
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile Solutions */}
+            <div className="pl-3 pr-4 py-2">
+              <div className="text-sm font-medium text-gray-500 mb-2">Solutions</div>
+              {solutions.map((solution) => (
+                <Link
+                  key={solution.name}
+                  to={solution.href}
+                  className="flex items-center pl-6 pr-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <solution.icon className="w-4 h-4 mr-3" />
+                  {solution.name}
+                </Link>
               ))}
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   )
 }
+
 export default Navigation
-</ChevronDownIcon>
-</Bars3Icon>
-</XMarkIcon>
-</ChevronDownIcon>
-</NavigationProps>
