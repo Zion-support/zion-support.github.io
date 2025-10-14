@@ -19,12 +19,12 @@ const Micro Saa S Page: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4 xl font-bold text-white mb-8">Micro SaaS Solutions</h1>
             <div className="text-gray-400">
-        
-              <p>Micro Saa S solutions coming soon...</p>
+              <p>Micro SaaS solutions coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Micro;; Saa S Page
+  );
+};
+export default MicroSaaSPage;

@@ -2,15 +2,15 @@ import React, { Component, Error Info, React Node, Suspense } from 'react'
 
 
 interface Props {
-  children: React Node
+  children: ReactNode;
 }
-  )
+
 interface State {
-  has Error: boolean
-  error?: Error
+  hasError: boolean;
+  error?: Error;
 }
-  )
-class Error Boundary extends Component<Props, State> {
+
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = { has Error: false }

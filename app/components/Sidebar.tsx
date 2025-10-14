@@ -8,22 +8,17 @@ import { Phone } from 'lucide-react'
 import { MapPin } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-
-
-
-
-
-
-
-
-
-interface Sidebar Props {
-  is Open: boolean
-  on Close: () => void
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
 }
-  )
-const Sidebar: React.FC<Sidebar Props> = ({ is Open, on Close }) => {
-  const navigation Items = 
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+  ];
   return (
     <>
       <div>
@@ -32,8 +27,7 @@ const Sidebar: React.FC<Sidebar Props> = ({ is Open, on Close }) => {
       {is Open && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          on Click={on Close}
-  )
+          onClick={onClose}
         />
       )}
   )
@@ -46,36 +40,30 @@ const Sidebar: React.FC<Sidebar Props> = ({ is Open, on Close }) => {
         lg:translate-x-0 lg:static lg:inset-0
       `}>
         <div className="flex items-center justify-between p-4 border-b border-slate-700">
-        
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
-            on Click={on Close}
-  )
+            onClick={onClose}
             className="text-white hover:text-gray-300"
           >
             <X className="w-6 h-6" />
           </button>
-        
+        </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
-            {navigation Items.map((item) => {
-              const Icon = item.icon
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
               return (
-    <div>
                 <li key={item.name}>
                   <Link
                     to={item.href}
-  )
-                    on Click={on Close}
-  )
-                    className="flex items-center text-gray-300 hover:text-white py-2"
+                    onClick={onClose}
+                    className="flex items-center text-white hover:text-gray-300 py-2"
                   >
-                    <Icon className="w -5 h-5 mr-3" />
+                    <Icon className="w-5 h-5 mr-3" />
                     {item.name}
-  )
                   </Link>
                 </li>
-              )
+              );
             })}
   )
           </ul>
@@ -83,27 +71,23 @@ const Sidebar: React.FC<Sidebar Props> = ({ is Open, on Close }) => {
 =======
         </nav>
         <div className="absolute bottom-4 left-4 right-4">
-        
           <div className="bg-slate-700 rounded-lg p-4">
-        
             <div className="flex items-center text-sm text-gray-300 mb-2">
-        
-              <Map Pin className="w-4 h-4 mr-2" />
+              <MapPin className="w-4 h-4 mr-2" />
               <span>Contact Info</span>
             </div>
             <div className="flex items-center text-sm text-gray-300 mb-1">
-        
               <Phone className="w-4 h-4 mr-2" />
               <span>+1 (555) 123-4567</span>
             </div>
             <div className="flex items-center text-sm text-gray-300">
-        
               <Mail className="w-4 h-4 mr-2" />
               <span>info@ziontechgroup.com</span>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Sidebar;;
+  );
+};
+export default Sidebar;

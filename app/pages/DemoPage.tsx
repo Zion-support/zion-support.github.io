@@ -22,9 +22,10 @@ const Demo Page: React.FC = () => {
         
               <p>Demos coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Demo;; Page
+  );
+};
+export default DemoPage;

@@ -22,9 +22,10 @@ const Terms Page: React.FC = () => {
         
               <p>Terms content coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Terms;; Page
+  );
+};
+export default TermsPage;

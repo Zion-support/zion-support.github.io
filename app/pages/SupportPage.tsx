@@ -22,9 +22,10 @@ const Support Page: React.FC = () => {
         
               <p>Support information coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Support;; Page
+  );
+};
+export default SupportPage;

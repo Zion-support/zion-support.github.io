@@ -2,11 +2,6 @@ import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Server, Cloud } from 'lucide-react'
 
-
-
-
-const It Solutions Page: React.FC = () => {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -35,48 +30,30 @@ const ItSolutionsPage: React.FC = () => {
         <title>It Solutions - Zion Tech Group</title>
         <meta name="description" content="Professional it solutions solutions and services" />
         <meta name="keywords" content="it, solutions" />
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ITSolutionsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>IT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cybersecurity, cloud solutions, and system integration services." />
+        <meta name="keywords" content="IT solutions, infrastructure management, cybersecurity, cloud solutions, system integration, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">It Solutions</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional it solutions solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
+            <h1 className="text-4xl font-bold text-white mb-8">IT Solutions</h1>
+            <div className="text-gray-400">
+              <p>IT solutions content coming soon...</p>
             </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
+          </div>
         </div>
+      </div>
     </>
   );
 };
 
-export default ItSolutionsPage;
+export default ITSolutionsPage;

@@ -10,7 +10,7 @@ const Blog Page: React.FC = () => {
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group" />
-        <meta name="keywords" content="blog, tech insights, A I, I T solutions" />
+        <meta name="keywords" content="blog, tech insights, AI, IT solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
@@ -22,9 +22,10 @@ const Blog Page: React.FC = () => {
         
               <p>Blog posts coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Blog;; Page
+  );
+};
+export default BlogPage;

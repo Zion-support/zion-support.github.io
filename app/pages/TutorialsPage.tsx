@@ -22,9 +22,10 @@ const Tutorials Page: React.FC = () => {
         
               <p>Tutorials coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Tutorials;; Page
+  );
+};
+export default TutorialsPage;

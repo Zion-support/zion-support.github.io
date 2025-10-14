@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+// import { createContext } from 'react';
 
 export interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -7,9 +7,11 @@ export interface AnalyticsContextType {
 }
 
 export interface AnalyticsProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
+}
+
 export interface AnalyticsEvent {
-  name: string
-  properties?: Record<string, unknown>
-  timestamp: number
-}}
+  name: string;
+  properties?: Record<string, unknown>;
+  timestamp: number;
+}

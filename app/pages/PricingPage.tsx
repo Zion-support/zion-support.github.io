@@ -22,9 +22,10 @@ const Pricing Page: React.FC = () => {
         
               <p>Pricing information coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Pricing;; Page
+  );
+};
+export default PricingPage;

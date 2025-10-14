@@ -33,13 +33,10 @@ const SEO Enhancer: React.FC<SEO Enhancer Props> = ({
       <meta name="twitter:description" content={description} />
       {structured Data && (
         <script type="application/ld+json">
-          {JSO N.stringify(structured Data)}
-  )
+          {JSON.stringify(structuredData)}
         </script>
       )}
-  )
     </Helmet>
-  )
-}
-  )
-export default SEO;; Enhancer
+  );
+};
+export default SEOEnhancer;

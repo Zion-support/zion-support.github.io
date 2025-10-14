@@ -22,9 +22,10 @@ const Privacy Page: React.FC = () => {
         
               <p>Privacy policy content coming soon...</p>
             </div>
+          </div>
         </div>
+      </div>
     </>
-  )
-}
-  )
-export default Privacy;; Page
+  );
+};
+export default PrivacyPage;

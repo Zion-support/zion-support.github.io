@@ -83,22 +83,21 @@ function Home Page() {
           </div>
         </section>
 
-          {/* CT A Section */}
-  )
-          <div className="text-centerbg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
-            <h2 className="text-3 xlfont-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our experts help you implement cutting-edge solutions
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-            >
-              Contact Us Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-      </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let&apos;s discuss how our technology solutions can drive your success.
+          </p>
+          <Link 
+            to="/contact" 
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+          >
+            Get Started Today
+          </Link>
+        </div>
+      </section>
     </>
   )
   }
