@@ -43,13 +43,13 @@ files.forEach(file => {
       // Find the pattern where we have <> but no </>
       const lines = content.split('\n');
       let inFragment = false;
-      let fragmentStartLine = -1;
+      let FRAGMENT_START_LINE = -1;
       
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         if (line.includes('<>') && !line.includes('</>')) {
           inFragment = true;
-          fragmentStartLine = i;
+          FRAGMENT_START_LINE = i;
         }
         if (inFragment && line.includes(');')) {
           // Found the end of return statement, need to add </>
