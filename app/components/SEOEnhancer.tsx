@@ -26,7 +26,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       document.head.appendChild(script)
       return () => {
         if (document.head.contains(script)) {
-<<<<<<< HEAD
           document.head.removeChild(script);
         }
       }
@@ -57,7 +56,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'apple-mobile-web-app-capable', content: 'yes' },';
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
   ];
-=======
           document.head.removeChild(script)}
       }}
     return undefined}, [structuredData])
@@ -67,7 +65,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     // Twitter d tags{ name: 'twitter:card', content: 'summary_large_image' },'{ name: 'twitter:title', content: title },'{ name: 'twitter:description', content: description },'{ name: 'twitter:image', content: image },'
     // Additional SEO tags{ name: 'theme-color', content: '#0066cc' },'{ name: 'msapplication-TileColor', content: '#0066cc' },'{ name: 'apple-mobile-web-app-capable', content: 'yes' },'{ name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       <title>{title}</title>
@@ -75,7 +72,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta key={_index} {...tag} />
       ))}
       {/* Canonical URL */}
-<<<<<<< HEAD
       <link rel="canonical" href={url} />
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -92,7 +88,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 }
 // Default structured data for the organization;
-=======
       <link rel="canonical" href={url} />{/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -104,7 +99,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
   )}
 // Default structured data for the organization
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const  {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -127,13 +121,11 @@ const  {
     "addressLocality": "San Francisco",
     "addressRegion": "CA",
     "postalCode": "94105",
-<<<<<<< HEAD
     "addressCountry": "US";
-  }
-}
-export default SEOEnhancer;
-=======
-    "addressCountry": "US"}
-}
+  
+};
+
+    "addressCountry": "US"
+};
+
 export default SEOEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

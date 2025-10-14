@@ -16,11 +16,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
-}
-export default TutorialsPage;
-=======
-  )}
+};
+
 export default TutorialsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -5,16 +5,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
           This component is under development.;
         </p>
       </div>
     </div>
   );
 }
-export default AdvancedPerformanceMonitor;
-=======
           This component is under development.</p></div></div>
-  )}
 export default AdvancedPerformanceMonitor
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

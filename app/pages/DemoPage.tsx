@@ -16,11 +16,7 @@ const DemoPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
-}
-export default DemoPage;
-=======
-  )}
+};
+
 export default DemoPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

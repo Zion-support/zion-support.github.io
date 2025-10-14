@@ -8,7 +8,6 @@ const TermsPage: React.FC = () => {
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />'
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -25,7 +24,6 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
         {/* Content Section */}
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -35,14 +33,12 @@ const TermsPage: React.FC = () => {
                 Service</span></h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Please read these terms carefully before using our services.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="prose prose-invert max-w-none">
                 <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
                   By accessing and using our services, you accept and agree to be bound by the terms;
                   and provision of this agreement.;
                 </p>
@@ -95,8 +91,6 @@ const TermsPage: React.FC = () => {
     </>
   );
 }
-export default TermsPage;
-=======
                   By accessing and using our services, you accept and agree to be bound by the terms
                   and provision of this agreement.</p>
                 <h2 className="text-2xl font-semibold text-white mb-4">Use License</h2>
@@ -132,6 +126,4 @@ export default TermsPage;
                 <p className="text-gray-400 text-sm mt-8">
                   Last updated: {new Date().toLocaleDateString()}
                 </p></div></div></div></section></div></>
-  )}
 export default TermsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

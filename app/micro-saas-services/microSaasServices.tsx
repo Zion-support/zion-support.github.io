@@ -12,7 +12,6 @@ const MicroSaasServices: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
             Micro Saas Services;
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -22,19 +21,16 @@ const MicroSaasServices: React.FC = () => {
         </div>
       </section>
       {/* Content Section */}
-=======
             Micro Saas Services</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional micro saas services services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
                 We provide comprehensive micro saas services;
                 solutions tailored to your specific needs and requirements.;
               </p>
@@ -89,8 +85,6 @@ const MicroSaasServices: React.FC = () => {
     </div>
   );
 }
-export default MicroSaasServices;
-=======
                 We provide comprehensive micro saas services
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -122,6 +116,4 @@ export default MicroSaasServices;
             href="/contact"
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Get Started Today</a></div></section></div>
-  )}
 export default MicroSaasServices
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

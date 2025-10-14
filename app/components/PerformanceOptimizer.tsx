@@ -9,7 +9,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const optimizeImages = () => {
       const images = document.querySelectorAll('img')
       images.forEach((img) => {
-<<<<<<< HEAD
         if (!img.hasAttribute('loading')) {';
           img.setAttribute('loading', 'lazy');
         }
@@ -25,7 +24,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     }
-=======
         if (!img.hasAttribute('loading')) {'
           img.setAttribute('loading', 'lazy')}
       })}
@@ -38,14 +36,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.type = 'font/woff2'
       link.crossOrigin = 'anonymous'
       document.head.appendChild(link)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     const optimizeResources = () => {
       // Preload critical resources
       const criticalResources = ['/css/critical.css','
         '/js/critical.js''
       ]
       criticalResources.forEach((resource) => {
-<<<<<<< HEAD
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -66,8 +62,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
   return <>{children}</>
 }
-export default PerformanceOptimizer;
-=======
         const link = document.createElement('link')
         link.rel = 'preload'
         link.href = resource
@@ -83,4 +77,3 @@ export default PerformanceOptimizer;
   return <>{children}</>
 }
 export default PerformanceOptimizer
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

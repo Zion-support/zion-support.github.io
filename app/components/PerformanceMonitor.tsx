@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
-import React, { useState, useEffect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 interface PerformanceMetrics {
   cls: number | null;
   inp: number | null;
@@ -20,13 +16,15 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
-    ttfb: null
+    ttfb: null,
+    loadTime: null
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Only run in browser
+    if (typeof window === 'undefined') return;
 
     const handleMetric = (metric: any) => {
       setMetrics(prev => ({
@@ -43,33 +41,7 @@ const PerformanceMonitor: React.FC = () => {
           non_interaction: true,
         });
       }
-    }
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-  }, []);
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>
-=======
-    ttfb: null,
-    loadTime: null
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
+    };
 
     // Get performance metrics
     const getPerformanceMetrics = () => {
@@ -79,14 +51,13 @@ const PerformanceMonitor: React.FC = () => {
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint');
       
-      setMetrics({
-        cls: 0, // Would need to be calculated with observer
-        inp: 0, // Would need to be calculated with observer
+      setMetrics(prev => ({
+        ...prev,
         fcp: fcp ? fcp.startTime : null,
         lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,
         ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
         loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
-      });
+      }));
     };
 
     // Wait for page load
@@ -95,6 +66,13 @@ const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', getPerformanceMetrics);
     }
+
+    // Set up web vitals monitoring
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
 
     return () => {
       window.removeEventListener('load', getPerformanceMetrics);
@@ -121,7 +99,6 @@ const PerformanceMonitor: React.FC = () => {
       >
         Performance
       </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
@@ -141,6 +118,18 @@ const PerformanceMonitor: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between">
+              <span>CLS:</span>
+              <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+                {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>INP:</span>
+              <span className={getScoreColor(metrics.inp, { good: 200, poor: 500 })}>
+                {metrics.inp ? `${Math.round(metrics.inp)}ms` : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
               <span>TTFB:</span>
               <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
                 {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
@@ -153,52 +142,16 @@ const PerformanceMonitor: React.FC = () => {
               </span>
             </div>
           </div>
+          
+          <div className="mt-3 pt-2 border-t border-gray-200">
+            <div className="text-xs text-gray-500">
+              <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
+            </div>
+          </div>
         </div>
-<<<<<<< HEAD
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-600">
-        <div className="text-xs text-gray-400">
-          <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
-        </div>
-      </div>
-    </div>
-  );
-import React from 'react';
-
-const PerformanceMonitor: React.FC = () => {
-  return null;
-}
-export default PerformanceMonitor;
-=======
       )}
     </div>
   );
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
