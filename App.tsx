@@ -45,48 +45,28 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer>
-              <SEOEnhancer
-                title="Zion Tech Group - Advanced AI and IT Solutions"
-                description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-                keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-                type="website"
-                structuredData={{
-                  "@context": "https://schema.org",
-                  "@type": "Organization",
-                  "name": "Zion Tech Group",
-                  "description": "Leading provider of AI and IT solutions",
-                  "url": "https://ziontechgroup.com",
-                  "logo": "https://ziontechgroup.com/images/logo.png",
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+1-555-0123",
-                    "contactType": "customer service"
-                  }
-                }}
-              />
-              <MetaManager />
-              <PerformanceMonitor onMetricsUpdate={handlePerformanceMetrics} />
-              <EnhancedAnalytics />
-              <Router>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                  <Navigation />
-                  <main className="relative z-10" id="main-content" role="main">
-                    <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </div>
-              </Router>
-            </AccessibilityEnhancer>
-          </PerformanceOptimizer>
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          <SEOEnhancer />
+          <MetaManager />
+          <PerformanceMonitor />
+          <EnhancedAnalytics />
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <Navigation />
+              <main className="relative z-10" id="main-content" role="main">
+                <Suspense fallback={<AdvancedLoadingStates />}>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+            </div>
+          </Router>
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
