@@ -1,164 +1,117 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Wifi, 
   Zap, 
   Shield, 
-  Globe, 
-  Brain, 
+  Clock, 
+  Users, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
   Download,
   Play,
-  Pause,
-  RefreshCw,
   Settings,
-  Eye,
-  Filter,
-  Calendar,
   Target,
-  Smartphone,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp,
+  Globe,
   Cpu,
   Database,
-  BarChart3,
   Activity,
-  Radio,
-  Antenna,
-  Router,
-  Server,
-  Network
+  TrendingUp,
+  Smartphone,
+  Cloud,
+  Server
 } from 'lucide-react';
 
-const FiveGImplementationPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+const FiveGImplementation: React.FC = () => {
   const features = [
     {
-      icon: <Wifi className="w-6 h-6" />,
-      title: "Ultra-Fast 5G Networks",
-      description: "Deploy cutting-edge 5G infrastructure with speeds up to 10 Gbps and ultra-low latency under 1ms.",
-      benefits: ["10 Gbps speeds", "Sub-1ms latency", "Massive connectivity", "Network slicing"]
+      icon: <Wifi className="w-8 h-8" />,
+      title: "Ultra-Fast Connectivity",
+      description: "Deploy 5G networks with speeds up to 10 Gbps and ultra-low latency of 1ms for real-time applications.",
+      benefits: ["10 Gbps speeds", "1ms latency", "Massive capacity", "Real-time processing"]
     },
     {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Edge Computing Integration",
-      description: "Implement edge computing solutions to process data closer to the source for maximum performance.",
-      benefits: ["Edge servers", "Local processing", "Reduced latency", "Real-time analytics"]
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "IoT Device Management",
-      description: "Connect and manage millions of IoT devices with our advanced device management platform.",
-      benefits: ["Device provisioning", "Remote management", "Firmware updates", "Security monitoring"]
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Security",
-      description: "Protect your 5G network with enterprise-grade security including encryption and threat detection.",
-      benefits: ["End-to-end encryption", "Threat detection", "Access control", "Compliance"]
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Network Analytics",
-      description: "Monitor and optimize your 5G network performance with real-time analytics and insights.",
-      benefits: ["Real-time monitoring", "Performance optimization", "Predictive analytics", "Custom dashboards"]
-    },
-    {
-      icon: <Settings className="w-6 h-6" />,
-      title: "Custom Solutions",
-      description: "Tailored 5G implementations designed specifically for your business requirements and use cases.",
-      benefits: ["Custom architecture", "Scalable design", "Integration support", "Future-proofing"]
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Smart Manufacturing",
-      description: "Enable Industry 4.0 with 5G-powered smart factories and automated production lines",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Automated production", "Real-time monitoring", "Predictive maintenance", "Quality control"]
-    },
-    {
-      title: "Smart Cities",
-      description: "Build connected cities with 5G infrastructure for traffic management and public services",
       icon: <Globe className="w-8 h-8" />,
-      benefits: ["Traffic optimization", "Public safety", "Environmental monitoring", "Citizen services"]
+      title: "IoT Integration",
+      description: "Connect millions of IoT devices with 5G's massive machine-type communication capabilities.",
+      benefits: ["1M devices/km²", "Low power consumption", "Long battery life", "Secure connectivity"]
     },
     {
-      title: "Healthcare",
-      description: "Revolutionize healthcare with 5G-enabled telemedicine and remote patient monitoring",
+      icon: <Cpu className="w-8 h-8" />,
+      title: "Edge Computing",
+      description: "Deploy edge computing infrastructure to process data closer to the source for faster response times.",
+      benefits: ["Edge processing", "Reduced latency", "Bandwidth optimization", "Local data processing"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Advanced Security",
+      description: "Implement enterprise-grade security with network slicing and end-to-end encryption.",
+      benefits: ["Network slicing", "End-to-end encryption", "Zero-trust architecture", "Compliance standards"]
+    },
+    {
       icon: <Activity className="w-8 h-8" />,
-      benefits: ["Remote surgery", "Patient monitoring", "Medical imaging", "Emergency response"]
+      title: "Network Optimization",
+      description: "Continuously optimize network performance with AI-powered monitoring and automated adjustments.",
+      benefits: ["AI monitoring", "Auto-optimization", "Performance analytics", "Predictive maintenance"]
     },
     {
-      title: "Autonomous Vehicles",
-      description: "Enable autonomous driving with ultra-reliable 5G connectivity and edge computing",
-      icon: <Smartphone className="w-8 h-8" />,
-      benefits: ["Vehicle-to-everything", "Real-time navigation", "Safety systems", "Fleet management"]
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate 5G networks with cloud services for scalable and flexible deployments.",
+      benefits: ["Cloud-native architecture", "Scalable deployment", "Flexible resources", "Hybrid cloud support"]
     }
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
       name: "Small Business",
       price: "$999",
-      period: "month",
-      description: "Perfect for small businesses starting their 5G journey",
+      period: "per month",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Basic 5G setup",
         "Up to 100 devices",
-        "Standard support",
-        "Basic analytics",
+        "Basic 5G coverage",
+        "Standard security",
         "Email support",
-        "1 year warranty"
+        "Basic monitoring",
+        "Cloud integration"
       ],
       popular: false
     },
     {
       name: "Enterprise",
       price: "$2,499",
-      period: "month",
-      description: "Comprehensive 5G solution for medium to large enterprises",
+      period: "per month",
+      description: "Ideal for medium to large enterprises",
       features: [
-        "Advanced 5G infrastructure",
         "Up to 1,000 devices",
-        "Edge computing",
-        "Advanced analytics",
+        "Advanced 5G features",
+        "Enhanced security",
         "Priority support",
+        "Advanced monitoring",
+        "Edge computing",
         "Custom integrations",
-        "3 years warranty",
-        "24/7 monitoring"
+        "SLA guarantee"
       ],
       popular: true
     },
     {
-      name: "Custom",
-      price: "Contact",
-      period: "us",
-      description: "Tailored 5G solutions for large-scale deployments",
+      name: "Custom Solution",
+      price: "Contact Us",
+      period: "for pricing",
+      description: "Tailored solutions for large organizations",
       features: [
-        "Custom 5G architecture",
         "Unlimited devices",
-        "Full edge computing",
-        "AI-powered analytics",
-        "Dedicated support team",
-        "Custom development",
-        "Lifetime warranty",
-        "On-site support"
+        "Full 5G capabilities",
+        "Enterprise security",
+        "24/7 dedicated support",
+        "Custom monitoring",
+        "Private 5G networks",
+        "On-premise deployment",
+        "Custom development"
       ],
       popular: false
     }
@@ -166,47 +119,64 @@ const FiveGImplementationPage: React.FC = () => {
 
   const testimonials = [
     {
+      name: "Jennifer Martinez",
+      role: "CTO, SmartCity Corp",
+      content: "The 5G implementation has transformed our smart city infrastructure. We've achieved 90% faster data processing and improved citizen services significantly.",
+      rating: 5,
+      company: "SmartCity Corp"
+    },
+    {
       name: "Robert Chen",
-      company: "Manufacturing Corp",
-      role: "CTO",
-      content: "The 5G implementation has transformed our manufacturing operations. We've seen a 60% increase in efficiency and reduced downtime by 80%.",
-      rating: 5
+      role: "IT Director, Manufacturing Inc",
+      content: "Outstanding 5G solution! Our IoT devices now communicate seamlessly, and we've reduced operational costs by 40% through improved efficiency.",
+      rating: 5,
+      company: "Manufacturing Inc"
     },
     {
-      name: "Maria Garcia",
-      company: "Smart City Initiative",
-      role: "Project Director",
-      content: "Zion Tech Group's 5G solution has enabled us to build a truly connected city. The performance and reliability exceed our expectations.",
-      rating: 5
-    },
-    {
-      name: "Dr. James Wilson",
-      company: "Regional Hospital",
-      role: "IT Director",
-      content: "The 5G network has revolutionized our telemedicine capabilities. We can now provide remote care with unprecedented quality and speed.",
-      rating: 5
+      name: "Sarah Williams",
+      role: "CEO, TechStart",
+      content: "The edge computing capabilities and ultra-low latency have enabled us to build next-generation applications that weren't possible before.",
+      rating: 5,
+      company: "TechStart"
     }
   ];
 
-  const technologies = [
-    { name: "5G NR", description: "New Radio technology" },
-    { name: "Network Slicing", description: "Virtual network segments" },
-    { name: "Edge Computing", description: "Distributed processing" },
-    { name: "IoT Platforms", description: "Device management" },
-    { name: "AI/ML", description: "Intelligent optimization" },
-    { name: "Security", description: "Advanced protection" }
+  const useCases = [
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "Smart Cities",
+      description: "Enable smart traffic management, environmental monitoring, and public safety systems.",
+      benefits: ["Traffic optimization", "Environmental monitoring", "Public safety", "Resource management"]
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "Industrial IoT",
+      description: "Connect manufacturing equipment and sensors for predictive maintenance and automation.",
+      benefits: ["Predictive maintenance", "Process automation", "Quality control", "Supply chain optimization"]
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Healthcare",
+      description: "Enable telemedicine, remote monitoring, and real-time patient data analysis.",
+      benefits: ["Telemedicine", "Remote monitoring", "Real-time diagnostics", "Patient care"]
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Autonomous Vehicles",
+      description: "Support connected and autonomous vehicles with ultra-reliable low-latency communication.",
+      benefits: ["Vehicle-to-vehicle communication", "Traffic management", "Safety systems", "Navigation"]
+    }
   ];
 
   return (
     <>
       <Helmet>
-        <title>5G Implementation Services - Next-Gen Wireless Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with cutting-edge 5G implementation services. Ultra-fast speeds, ultra-low latency, and massive IoT connectivity for the future." />
-        <meta name="keywords" content="5G implementation, 5G deployment, wireless technology, IoT connectivity, edge computing, smart cities, Industry 4.0" />
-        <meta property="og:title" content="5G Implementation Services - Zion Tech Group" />
-        <meta property="og:description" content="Next-generation 5G wireless solutions with ultra-fast speeds and ultra-low latency" />
+        <title>5G Implementation - Zion Tech Group | Next-Generation Connectivity</title>
+        <meta name="description" content="Deploy cutting-edge 5G networks with ultra-fast speeds, low latency, and massive IoT connectivity. Transform your business with next-generation wireless technology." />
+        <meta name="keywords" content="5G implementation, 5G networks, IoT connectivity, edge computing, smart cities, industrial IoT, wireless technology" />
+        <meta property="og:title" content="5G Implementation - Zion Tech Group" />
+        <meta property="og:description" content="Next-generation 5G connectivity solutions for modern businesses." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/5g-implementation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -230,12 +200,12 @@ const FiveGImplementationPage: React.FC = () => {
 
         <main className="relative z-10">
           {/* Hero Section */}
-          <section className="relative py-20 overflow-hidden">
+          <section className="py-20 pt-32">
             <div className="container mx-auto px-4">
-              <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="text-center max-w-6xl mx-auto">
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Star className="w-4 h-4 mr-2" />
-                  #1 5G Implementation Partner
+                  <Wifi className="w-4 h-4 mr-2" />
+                  Next-Generation Connectivity
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -243,8 +213,8 @@ const FiveGImplementationPage: React.FC = () => {
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Future-proof your business with next-generation 5G wireless technology. 
-                  Ultra-fast speeds, ultra-low latency, and massive IoT connectivity for the digital age.
+                  Deploy cutting-edge 5G networks with ultra-fast speeds, ultra-low latency, 
+                  and massive IoT connectivity. Transform your business with next-generation wireless technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -252,31 +222,106 @@ const FiveGImplementationPage: React.FC = () => {
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Get Free Consultation
+                    Call +1 302 464 0950
                   </a>
                   <a
-                    href="#demo"
+                    href="mailto:kleber@ziontechgroup.com"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Demo
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get Consultation
                   </a>
+                </div>
+                
+                {/* Key Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="w-8 h-8 text-cyan-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">10 Gbps</div>
+                    <div className="text-gray-400 text-sm">Peak Speed</div>
+                  </div>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Clock className="w-8 h-8 text-green-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">1ms</div>
+                    <div className="text-gray-400 text-sm">Latency</div>
+                  </div>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <Globe className="w-8 h-8 text-purple-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">1M+</div>
+                    <div className="text-gray-400 text-sm">Devices/km²</div>
+                  </div>
+                  <div className="text-center group">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                      <TrendingUp className="w-8 h-8 text-orange-400" />
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-1">99.9%</div>
+                    <div className="text-gray-400 text-sm">Reliability</div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Features Section */}
+          {/* Use Cases Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Advanced 5G Capabilities
+                    Use Cases
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Harness the power of 5G technology with our comprehensive implementation services.
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                  Transform your industry with 5G-powered solutions
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {useCases.map((useCase, index) => (
+                  <div 
+                    key={index} 
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                      <div className="text-white">{useCase.icon}</div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {useCase.description}
+                    </p>
+                    <div className="space-y-2">
+                      {useCase.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Advanced Features
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                  Everything you need for a successful 5G deployment
                 </p>
               </div>
               
@@ -284,7 +329,7 @@ const FiveGImplementationPage: React.FC = () => {
                 {features.map((feature, index) => (
                   <div 
                     key={index} 
-                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 neon-card"
+                    className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                       <div className="text-white">{feature.icon}</div>
@@ -309,130 +354,65 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Industry Applications
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Discover how 5G technology is transforming industries across the globe.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                      <div className="text-white">{useCase.icon}</div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-6">{useCase.description}</p>
-                    <div className="space-y-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Technologies Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Cutting-Edge Technologies
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We leverage the latest 5G technologies and standards to deliver superior performance.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                {technologies.map((tech, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{tech.name}</div>
-                    <div className="text-gray-300 text-sm">{tech.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Pricing Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Flexible Pricing Plans
+                    Flexible Pricing
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the 5G implementation plan that best fits your business needs and budget.
+                  Choose the 5G solution that fits your business needs and scale as you grow.
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => (
+                {pricingTiers.map((tier, index) => (
                   <div 
                     key={index} 
                     className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl ${
-                      plan.popular 
-                        ? 'border-cyan-400/40 shadow-cyan-500/10' 
+                      tier.popular 
+                        ? 'border-cyan-400/40 shadow-2xl shadow-cyan-500/10' 
                         : 'border-cyan-500/20 hover:border-cyan-400/40'
                     }`}
                   >
-                    {plan.popular && (
+                    {tier.popular && (
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
-                        </div>
+                        </span>
                       </div>
                     )}
+                    
                     <div className="text-center mb-8">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-300 mb-4">{plan.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{tier.description}</p>
                       <div className="flex items-baseline justify-center">
-                        <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                        <span className="text-gray-400 ml-2">/{plan.period}</span>
+                        <span className="text-5xl font-bold text-cyan-400">{tier.price}</span>
+                        <span className="text-gray-400 ml-2">{tier.period}</span>
                       </div>
                     </div>
+                    
                     <div className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {tier.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
+                          <span className="text-sm">{feature}</span>
                         </div>
                       ))}
                     </div>
+                    
                     <a
                       href="tel:+13024640950"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                        plan.popular
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                        tier.popular
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105'
                           : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 ))}
@@ -441,16 +421,16 @@ const FiveGImplementationPage: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <section className="py-20">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Client Success Stories
+                    Success Stories
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how organizations are transforming their operations with our 5G solutions.
+                  See how organizations are transforming with our 5G solutions.
                 </p>
               </div>
               
@@ -465,12 +445,12 @@ const FiveGImplementationPage: React.FC = () => {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gray-300 mb-6 leading-relaxed italic">
                       "{testimonial.content}"
                     </p>
-                    <div>
+                    <div className="border-t border-cyan-500/20 pt-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-cyan-400">{testimonial.role}</div>
+                      <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                       <div className="text-gray-400 text-sm">{testimonial.company}</div>
                     </div>
                   </div>
@@ -480,14 +460,14 @@ const FiveGImplementationPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready for the 5G Revolution?
+                  Ready for 5G?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Don't get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
+                  Join the 5G revolution and transform your business with next-generation connectivity.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -502,7 +482,7 @@ const FiveGImplementationPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
                   >
                     <Mail className="w-5 h-5 mr-2" />
-                    Get Free Consultation
+                    Schedule Consultation
                   </a>
                 </div>
               </div>
@@ -514,4 +494,4 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default FiveGImplementationPage;
+export default FiveGImplementation;
