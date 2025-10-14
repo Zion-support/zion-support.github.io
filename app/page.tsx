@@ -265,9 +265,8 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
 export default HomePage;
-ursor/fix-errors-and-merge-to-main-94a7

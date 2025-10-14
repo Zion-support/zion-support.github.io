@@ -152,8 +152,6 @@ export default defineConfig({
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
     treeshake: true,
   },
   server: {

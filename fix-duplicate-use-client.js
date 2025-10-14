@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-// List of files that need 'use client' directive fixes
+// List of files that might have duplicate 'use client' directives
 const filesToFix = [
-  'app/ai-3d-generation/page.tsx',
   'app/ai-analytics/page.tsx',
   'app/ai-automation-suite/page.tsx',
   'app/ai-automation/page.tsx',
@@ -22,21 +21,29 @@ const filesToFix = [
   'app/ai-financial-analysis/page.tsx'
 ];
 
-function fixUseClient(filePath) {
+function fixDuplicateUseClient(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix 'use client' directive placement
-    if (content.includes("'use client'") && !content.startsWith("'use client'")) {
-      content = content
-        .replace(/import.*?from.*?;\s*'use client'/g, "'use client';\n$&")
-        .replace(/'use client';\s*import/g, "'use client';\nimport");
-    }
+    // Remove duplicate 'use client' directives
+    const lines = content.split('\n');
+    const useClientLines = lines.filter(line => line.includes("'use client'"));
     
-    // Fix missing semicolons
-    content = content
-      .replace(/import React from 'react'$/gm, "import React from 'react';")
-      .replace(/import { Helmet } from 'react-helmet-async'$/gm, "import { Helmet } from 'react-helmet-async';");
+    if (useClientLines.length > 1) {
+      // Keep only the first 'use client' directive
+      let foundFirst = false;
+      const filteredLines = lines.filter(line => {
+        if (line.includes("'use client'")) {
+          if (!foundFirst) {
+            foundFirst = true;
+            return true;
+          }
+          return false;
+        }
+        return true;
+      });
+      content = filteredLines.join('\n');
+    }
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
@@ -49,8 +56,8 @@ function fixUseClient(filePath) {
 filesToFix.forEach(filePath => {
   const fullPath = path.join('/workspace', filePath);
   if (fs.existsSync(fullPath)) {
-    fixUseClient(fullPath);
+    fixDuplicateUseClient(fullPath);
   }
 });
 
-console.log('Use client directive fixes completed!');
+console.log('Duplicate use client directive fixes completed!');

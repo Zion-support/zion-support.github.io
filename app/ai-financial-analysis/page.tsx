@@ -1,10 +1,9 @@
 import React from 'react';
-import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
+import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
 const AIFinancialAnalysis = () => {
   const features = [
     {
@@ -31,10 +30,7 @@ const AIFinancialAnalysis = () => {
       icon: <FileText className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -50,13 +46,11 @@ const AIFinancialAnalysis = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <DollarSign className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI Financial Intelligence</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Financial Analysis
@@ -176,10 +170,8 @@ const AIFinancialAnalysis = () => {
           </div>
         </ResponsiveContainer>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
-    </div>
-  );
-};
 
-export default AIFinancialAnalysis;
-ursor/fix-errors-and-merge-to-main-94a7
+    </div>
+  )
+}
+export default AIFinancialAnalysis

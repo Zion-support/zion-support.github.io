@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
+import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 const Page = () => {
   const features = [
@@ -28,25 +29,22 @@ const Page = () => {
 
   const solutions = [
     {
-
+      title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
   ];
 
@@ -160,7 +158,8 @@ const Page = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-              )})}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -207,13 +206,12 @@ const Page = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your 5G implementation strategy
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
         </div>
       </div>
     </div>
-  )};
+    </>
+  );
+};
 
-const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+export default Page;

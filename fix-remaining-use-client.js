@@ -1,9 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-// List of files that need 'use client' directive fixes
+// List of files that still need 'use client' directive fixes
 const filesToFix = [
-  'app/ai-3d-generation/page.tsx',
   'app/ai-analytics/page.tsx',
   'app/ai-automation-suite/page.tsx',
   'app/ai-automation/page.tsx',
@@ -26,17 +25,24 @@ function fixUseClient(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix 'use client' directive placement
+    // Fix 'use client' directive placement and add semicolon
     if (content.includes("'use client'") && !content.startsWith("'use client'")) {
       content = content
-        .replace(/import.*?from.*?;\s*'use client'/g, "'use client';\n$&")
-        .replace(/'use client';\s*import/g, "'use client';\nimport");
+        .replace(/import.*?from.*?;\s*'use client'$/gm, "'use client';\n$&")
+        .replace(/'use client'$/gm, "'use client';");
     }
     
-    // Fix missing semicolons
-    content = content
-      .replace(/import React from 'react'$/gm, "import React from 'react';")
-      .replace(/import { Helmet } from 'react-helmet-async'$/gm, "import { Helmet } from 'react-helmet-async';");
+    // If 'use client' is not at the top, move it there
+    if (content.includes("'use client'") && !content.startsWith("'use client'")) {
+      const lines = content.split('\n');
+      const useClientIndex = lines.findIndex(line => line.includes("'use client'"));
+      if (useClientIndex > 0) {
+        const useClientLine = lines[useClientIndex];
+        lines.splice(useClientIndex, 1);
+        lines.unshift(useClientLine.endsWith(';') ? useClientLine : useClientLine + ';');
+        content = lines.join('\n');
+      }
+    }
     
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
@@ -53,4 +59,4 @@ filesToFix.forEach(filePath => {
   }
 });
 
-console.log('Use client directive fixes completed!');
+console.log('Remaining use client directive fixes completed!');

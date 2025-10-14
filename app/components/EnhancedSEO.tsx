@@ -5,16 +5,17 @@ interface EnhancedSEOProps {
   title?: string;
   description?: string;
   keywords?: string;
-  canonicalUrl?: string;  ogUrl?: string;
+  canonicalUrl?: string;
+  ogUrl?: string;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean}
+  noFollow?: boolean;
+}
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-ursor/fix-errors-and-merge-to-main-94a7
   title,
   description,
   keywords,
@@ -28,40 +29,46 @@ ursor/fix-errors-and-merge-to-main-94a7
   twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
   structuredData,
   noIndex = false,
-  noFollow = false}
-}) => {'
+  noFollow = false
+}) => {
   const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';}
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;'
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
+  const fullCanonical = fullCanonicalUrl;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const fullOgUrl = ogUrl ? `${siteUrl}${ogUrl}` : siteUrl;
+  const fullTitle = title ? `${title} | ${siteName}` : siteName;
+  const ogTitle = twitterTitle || title;
+  const ogDescription = twitterDescription || description;
+  const lang = 'en';
   
   // Enhanced meta description with better length control
-  const optimizedDescription = description.length > 160 
+  const optimizedDescription = description && description.length > 160 
     ? description.substring(0, 157) + '...' 
     : description;
 
-  const defaultStructuredData = {'
-    '@context': 'https://schema.org','
+  const defaultStructuredData = {
+    '@context': 'https://schema.org',
     '@type': 'Organization',
     name: siteName,
-    url: siteUrl,}
-    logo: `${siteUrl}/logo.png`,'
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {'
-      '@type': 'PostalAddress','
-      addressLocality: 'Middletown','
-      addressRegion: 'DE','
-      addressCountry: 'US'}
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      addressCountry: 'US'
     },
-    contactPoint: {'
-      '@type': 'ContactPoint','
-      telephone: '+1-302-464-0950','
-      contactType: 'customer service','
-      email: 'kleber@ziontechgroup.com'}
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
     },
-    sameAs: ['
-      'https://www.linkedin.com/company/zion-tech-group','
-      'https://github.com/ziontechgroup','
+    sameAs: [
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://github.com/ziontechgroup',
       'https://twitter.com/ziontechgroup'
     ]
   };
@@ -160,8 +167,8 @@ ursor/fix-errors-and-merge-to-main-94a7
           }, null, 2)}
         </script>
       )}
-ursor/fix-errors-and-merge-to-main-94a7
     </Helmet>
-  )};
+  );
+};
 
 export default EnhancedSEO;
