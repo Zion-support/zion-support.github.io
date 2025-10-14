@@ -19,7 +19,7 @@ import {
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
-  LightBulbIcon;
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{

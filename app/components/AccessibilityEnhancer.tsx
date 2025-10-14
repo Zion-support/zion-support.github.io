@@ -10,16 +10,19 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
       skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-// Focus management for keyboard navigation
+    };
+
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
-    }
+    };
+
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
-    }
+    };
+
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
       const style = document.createElement('style');
@@ -38,28 +41,31 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       `;
       document.head.appendChild(style);
-    }
+    };
+
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
 
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    // Initialize accessibility features
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
 
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -72,79 +78,48 @@ const AccessibilityEnhancer: React.FC = () => {
           mainContent.focus();
         }
       }
+    };
 
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Focus management
+  // Screen reader announcements
   useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
-      }
-    }
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    }
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    const announceToScreenReader = (message: string) => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
 
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    }
-    // Add alt text to images without alt attributes
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+    // Announce page changes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          const addedNode = mutation.addedNodes[0] as Element;
+          if (addedNode && addedNode.tagName === 'H1') {
+            announceToScreenReader(`Page loaded: ${addedNode.textContent}`);
+          }
         }
       });
-    }
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
-    addAltText();
+    });
 
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
 
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    }
+    return () => observer.disconnect();
   }, []);
 
-return null;
-import React from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
   return null;
-}
+};
+
 export default AccessibilityEnhancer;

@@ -1,106 +1,147 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react;
+import { 
+  CloudIcon, 
+  ServerIcon, 
+  CircleStackIcon, 
+  ShieldCheckIcon, 
+  BoltIcon, 
+  GlobeAltIcon,
+  ArrowRightIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
+
 const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
-      icon: Cloud,
-      title: 'Cloud Migration',';
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';
+  const services = [
+    {
+      icon: CloudIcon,
+      title: 'Cloud Migration',
+      description: 'Seamless migration of your existing infrastructure to the cloud with zero downtime.',
+      features: ['AWS/Azure/GCP Migration', 'Data Transfer', 'Application Modernization', 'Performance Optimization']
     },
     {
-      icon: Server,
-      title: 'Infrastructure as Code',';
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';
+      icon: ServerIcon,
+      title: 'Server Management',
+      description: 'Complete server setup, configuration, and ongoing management services.',
+      features: ['Server Provisioning', 'OS Configuration', 'Security Hardening', '24/7 Monitoring']
     },
     {
-      icon: Database,
-      title: 'Database Solutions',';
-      description: 'Optimize your database performance and scalability in the cloud environment.',';
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';
+      icon: CircleStackIcon,
+      title: 'Database Solutions',
+      description: 'Scalable database solutions for optimal performance and reliability.',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'High Availability']
     },
     {
-      icon: Shield,
-      title: 'Security & Compliance',';
-      description: 'Implement robust security measures and ensure compliance with industry standards.',';
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';
+      icon: ShieldCheckIcon,
+      title: 'Security Implementation',
+      description: 'Comprehensive security measures to protect your cloud infrastructure.',
+      features: ['Access Control', 'Encryption', 'Threat Detection', 'Compliance Management']
     },
     {
-      icon: Zap,
-      title: 'Auto-scaling',';
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';
+      icon: BoltIcon,
+      title: 'Performance Optimization',
+      description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
+      features: ['Resource Optimization', 'Cost Analysis', 'Auto-scaling', 'Load Balancing']
     },
     {
-      icon: Globe,
-      title: 'Multi-cloud Strategy',';
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';
+      icon: GlobeAltIcon,
+      title: 'Global Deployment',
+      description: 'Deploy your applications globally with optimal performance and reliability.',
+      features: ['CDN Setup', 'Multi-region Deployment', 'Edge Computing', 'Global Load Balancing']
     }
   ];
-const CloudInfrastructurePage: React.FC = () => {
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
+        <title>Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure services including migration, management, and optimization from Zion Tech Group." />
+        <meta name="keywords" content="cloud infrastructure, cloud migration, server management, database solutions, Zion Tech Group" />
+        <meta property="og:title" content="Cloud Infrastructure - Zion Tech Group" />
+        <meta property="og:description" content="Professional cloud infrastructure services including migration, management, and optimization." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/cloud-infrastructure" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
+      
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Infrastructure</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build, migrate, and optimize your cloud infrastructure for maximum performance, 
-            security, and cost-effectiveness.;
-          </p>
-        </div>
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, _index) => {
-            const Icon = service.icon;
-            return (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
-              Our cloud experts can help you design, implement, and optimize your cloud infrastructure for success.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
-                Start Migration;
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Get Assessment;
-              </button>
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Cloud Infrastructure
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Build, manage, and optimize your cloud infrastructure with our expert services. 
+                From migration to ongoing management, we ensure your cloud environment is secure, scalable, and cost-effective.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">What's Included:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center">
+                    Learn More
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Transform Your Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our cloud experts help you build a robust, scalable, and secure infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </a>
+              <a
+                href="/pricing"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                View Pricing
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>;  );
-}
+    </>
+  );
+};
+
 export default CloudInfrastructurePage;
