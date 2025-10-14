@@ -1,39 +1,38 @@
-import React, { ReactNode, useCallback } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContext';
+import React, { React Node, use Callback } from 'react';
+import { AnalyticsContext, AnalyticsContextType } from './Analytics Context';
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+interface Analytics Provider Props {
+  children: React Node;
+  },
+exportconst AnalyticsProvider: React.FC<Analytics Provider Props> = ({ children }) => {
+  const track Event = use Callback((eventName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Event tracked:', eventName, properties);
-    }
-    // Add your analytics tracking logic here
+      console.warn('Eventtracked:', event Name, properties);
+      },
+    // Addyouranalytics trackinglogichere
   }, []);
   
-  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
+  const track Page View = use Callback((pageName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Page view tracked:', pageName, properties);
-    }
-    // Add your page view tracking logic here
+      console.warn('Pageviewtracked:', page Name, properties);
+      },
+    // Addyourpage viewtrackinglogic here
   }, []);
   
-  const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+  const set User = use Callback((userId: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('User set:', userId, properties);
-    }
-    // Add your user identification logic here
+      console.warn('Userset:', user Id, properties);
+      },
+    // Addyouruser identificationlogichere
   }, []);
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    identifyUser: setUser,
+  constvalue: Analytics Context Type = {
+    track Event,
+    track Page View,
+    identifyUser: set User,
   };
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <Analytics Context.Providervalue ={value}>
+      {children  },
+    </Analytics Context.Provider>
   );
 };

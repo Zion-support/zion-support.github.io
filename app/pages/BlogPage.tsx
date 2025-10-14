@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const BlogPage: React.FC = () => {
+constBlogPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -12,9 +12,9 @@ const BlogPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
+            <h-1 className="text-4-xl font-bold text-white mb-8">Blog</h-1>
             <div className="text-gray-400">
-              <p>Blog posts coming soon...</p>
+              <p>Blogpostscoming soon...</p>
             </div>
           </div>
         </div>
@@ -22,4 +22,4 @@ const BlogPage: React.FC = () => {
     </>
   );
 };
-export default BlogPage;
+exportdefault Blog Page;

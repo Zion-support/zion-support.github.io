@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SupportPage: React.FC = () => {
+constSupportPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -12,9 +12,9 @@ const SupportPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
+            <h-1 className="text-4-xl font-bold text-white mb-8">Support</h-1>
             <div className="text-gray-400">
-              <p>Support information coming soon...</p>
+              <p>Supportinformationcoming soon...</p>
             </div>
           </div>
         </div>
@@ -22,4 +22,4 @@ const SupportPage: React.FC = () => {
     </>
   );
 };
-export default SupportPage;
+exportdefault Support Page;

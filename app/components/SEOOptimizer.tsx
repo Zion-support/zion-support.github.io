@@ -6,8 +6,6 @@ interface SEOOptimizerProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -15,9 +13,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   description,
   keywords,
   canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  ogImage
 }) => {
   useEffect(() => {
     // Update document title
@@ -63,9 +59,22 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         document.head.appendChild(link);
       }
     }
-  }, [title, description, keywords, canonical]);
 
-  return null; // This component doesn't render anything
+    // Update Open Graph image
+    if (ogImage) {
+      const ogImageMeta = document.querySelector('meta[property="og:image"]');
+      if (ogImageMeta) {
+        ogImageMeta.setAttribute('content', ogImage);
+      } else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('property', 'og:image');
+        meta.content = ogImage;
+        document.head.appendChild(meta);
+      }
+    }
+  }, [title, description, keywords, canonical, ogImage]);
+
+  return null;
 };
 
 export default SEOOptimizer;

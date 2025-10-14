@@ -6,52 +6,45 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!(img as any).loading) {
-          (img as any).loading = 'lazy';
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
         }
       });
     };
 
     const optimizeFonts = () => {
       // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = '/fonts/inter-var.woff2';
-      fontPreload.as = 'font';
-      fontPreload.type = 'font/woff2';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = '/fonts/inter.woff2';
+      fontLink.as = 'font';
+      fontLink.type = 'font/woff2';
+      fontLink.crossOrigin = 'anonymous';
+      document.head.appendChild(fontLink);
     };
 
-    const optimizeResources = () => {
-      // Add resource hints
-      const resourceHints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
-      ];
-
-      resourceHints.forEach((hint) => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        document.head.appendChild(link);
+    const optimizeScripts = () => {
+      // Defer non-critical scripts
+      const scripts = document.querySelectorAll('script[src]');
+      scripts.forEach((script) => {
+        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+          script.setAttribute('defer', '');
+        }
       });
     };
 
     // Run optimizations
     optimizeImages();
     optimizeFonts();
-    optimizeResources();
+    optimizeScripts();
 
-    // Cleanup function
+    // Cleanup on unmount
     return () => {
       // Cleanup if needed
     };
   }, []);
 
-  return null; // This component doesn't render anything
+  return null;
 };
 
 export default PerformanceOptimizer;
