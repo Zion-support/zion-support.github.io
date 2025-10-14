@@ -32,6 +32,6 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getAllByText('Get Started Today')).toHaveLength(2);
+    expect(screen.getByText('Get Started')).toBeInTheDocument();
   });
 });

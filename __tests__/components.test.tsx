@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 
 import { render } from '@testing-library/react';
 
