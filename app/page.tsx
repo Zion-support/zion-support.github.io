@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
-function HomePage() => {
-  const features = []
+function HomePage() {
+  const features = [
     {
       icon: Brain,
       title: "AI Solutions",

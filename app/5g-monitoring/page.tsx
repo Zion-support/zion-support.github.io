@@ -17,7 +17,8 @@ const FiveGMonitoringPage = () => {
       title: 'Team Training',
       description: 'Comprehensive training for 5G network monitoring and management.',
     }
-  ]
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
