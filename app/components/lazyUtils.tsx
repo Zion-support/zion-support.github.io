@@ -12,7 +12,7 @@ export function withLazyLoading<T extends ComponentType<any>>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (props: any) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>
   );
 }
@@ -28,7 +28,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return (props: any) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>
   );
 }
