@@ -1,4 +1,12 @@
-import React from 'react''; import { Helmet } from 'react-helmet-async''; const SolutionsPage: React.FC = () => {} return ( <>Helme t><///Helme t><//titl e>SolutionsPage - Zion Tech Group</titl e><//meta nam e="description" conten t="SolutionsPage - Zion Tech Group" />"" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">"" <div classNam e="text-center">"" <h1 classNam e="text-4xl font-bold mb-4">SolutionsPage</h 1>"" <p classNam e="text-gray-300">This page is under construction.</p>"" </di v><///di v>"'
-) </>) ); }
+"use client";
+
+import React from "react";
+
+export default function SolutionsPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">SolutionsPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
 }
-export default SolutionsPag;e;'"'

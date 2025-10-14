@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { 
@@ -36,8 +37,14 @@ export default function CookiesPage() {
       required: false
     }
   ];
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
 
+const HomePage = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
@@ -60,6 +67,19 @@ export default function CookiesPage() {
               to enhance your browsing experience and provide better services.
             </p>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+>>>>>>> origin/main
         </div>
       </section>
 
@@ -270,4 +290,10 @@ export default function CookiesPage() {
       </section>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/main

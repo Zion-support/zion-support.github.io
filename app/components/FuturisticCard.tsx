@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface FuturisticCardProps {
   children: "React.ReactNode"
@@ -13,13 +14,17 @@ const FuturisticCard: "React.FC<FuturisticCardProps> = ({"
     glow: 'bg-white/10 shadow-lg shadow-blue-500/20','
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'
   }
+=======
+import React from "react";
+
+const FuturisticCard = () => {
+>>>>>>> origin/main
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">FuturisticCard</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
-export default FuturisticCard;
 };
 
-export default FuturisticCard;''
+export default FuturisticCard;

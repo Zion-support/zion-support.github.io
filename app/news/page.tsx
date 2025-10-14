@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { 
@@ -54,8 +55,14 @@ export default function NewsPage() {
   ];
 
   const categories = ["All", "Product Launch", "Partnership", "Awards", "Company News", "Thought Leadership", "Growth"];
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
 
+const HomePage = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>News & Updates - Zion Tech Group</title>
@@ -78,6 +85,19 @@ export default function NewsPage() {
               and industry insights from the Zion Tech Group team.
             </p>
           </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+>>>>>>> origin/main
         </div>
       </section>
 
@@ -210,4 +230,10 @@ export default function NewsPage() {
       </section>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/main

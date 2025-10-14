@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps {
@@ -74,68 +75,17 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
     return originalSrc;
   }
   const optimizedSrc = getOptimizedSrc(src);
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const OptimizedImage = () => {
   return (
-    <>
-      {priority && (
-        <Helmet>}
-          <link rel="preload" as="image" href="{optimizedSrc}" />
-        </Helmet>
-      )}
-      <div
-        ref={imgRef}
-        className={`relative overflow-hidden ${className}`}
-        style={{ width, height }}
-      >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
-          <div
-            className="absolute inset-0 bg-gray-20o0 animate-pulse flex items-center justify-center"}"
-            style={{ width, height }}
-          >
-            <div className="text-gray-40o0 text-sm">Loading...</div>
-          </div>
-        )}
-
-        {/* Error state */}
-        {isError && (
-          <div
-            className="absolute inset-0 bg-gray-10o0 flex items-center justify-center"}"
-            style={{ width, height }}
-          >
-            <div className="text-gray-40o0 text-sm text-center">
-              <div className="text-2xl mb-2">📷</div>
-              <div>Image not available</div>
-            </div>
-          </div>
-        )}
-
-        {/* Actual image */}
-        {isInView && !isError && (
-          <img}
-            src={optimizedSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            loading={loading}
-            sizes={sizes}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`transition-opacity duration-30o0 ${''
-              isLoaded ? 'opacity-10o0' : 'opacity-0'}'
-            }`}
-            style={{''
-              width: "'10o0%'",''
-              height: "'10o0%'",''
-              objectFit: "'cover'"}'
-            }}
-          />
-        )}
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">OptimizedImage</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
-}
-export default OptimizedImage;
 };
 
-export default OptimizedImage;''
+export default OptimizedImage;

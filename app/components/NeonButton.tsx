@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 interface NeonButtonProps {
@@ -54,11 +55,16 @@ const NeonButton: "React.FC<NeonButtonProps> = ({"
       </a>
     );
   }
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const NeonButton = () => {
   return (
-    <button onClick={onClick} className={`${classes} group`}>
-      {content}
-    </button>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">NeonButton</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
 };
 

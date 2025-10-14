@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -68,8 +69,13 @@ export default function AboutPage() {
       description: 'Creative minds focused on user experience, interface design, and full-stack development.'
     }
   ];
+=======
+import React from 'react';
+>>>>>>> origin/main
 
+const AboutPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -253,5 +259,17 @@ export default function AboutPage() {
         </div>
       </section>
     </>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about Zion Tech Group</p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
   );
-}
+};
+
+export default AboutPage;

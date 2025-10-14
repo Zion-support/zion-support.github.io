@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Right, User, Calendar } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
@@ -72,107 +73,44 @@ const BlogPage: React.FC = () => {
       image: "🛡️"}"
     }
   ]
+=======
+
+export default function Page() {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Blog - AI & IT Insights | Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, cybersecurity, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="blog, AI insights, IT trends, cybersecurity, cloud computing, technology news" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Learn more about page" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Tech
-              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
-                Blog
-              </span>
-            </h1>
-            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, IT solutions, cybersecurity, 
-              and technology trends from our experts.
-            </p>
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section className="py-10 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button}
-                  key={category.id}
-                  className="px-6 py-3 bg-slate-80o0/50 backdrop-blur-sm rounded-xl border border-slate-70o0"/50 text-white hover: border-cyan-50o0"/50 hove,r:bg-slate-70o0"/50 transition-all duration-30o0"
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+              <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+              <p className="text-gray-300 mb-6">
+                This page is currently under development. We're working hard to bring you the best experience.
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="/" 
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
-                  {category.name} ({category.count})
-                </button>
-              ))}
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
             </div>
           </div>
-        </section>
-
-        {/* Blog Posts */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (}
-                <article key={post.id} className="bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70o0"/50 hover:border-cyan-50o0"/50 transition-all duration-30o0 group">
-                  <div className="text-4xl mb-4">{post.image}</div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-40o0 mb-3">
-                    <span className="flex items-center">
-                      <div className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </span>
-                    <span className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {post.author}
-                    </span>
-                  </div>
-                  <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-40o0 transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-30o0 mb-4 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cyan-40o0 text-sm font-medium">{post.readTime}</span>
-                    <button className="flex items-center text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
-                      Read More
-                      <Right className="w-4 h-4 ml-1" />
-                    </button>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-20 px-4 bg-slate-80o0"/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Subscribe to our newsletter for the latest tech insights and updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email""
-                placeholder="Enter your email""
-                className="flex-1 px-4 py-3 bg-slate-70o0"/50 border border-slate-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focu,s:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0">
-                Subscribe
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+        </div>
+      </div>
+    </div>
   );
 }
-export default BlogPage;
-};
-
-export default BlogPage;''

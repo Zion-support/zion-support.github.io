@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -421,9 +422,16 @@ export default function MicroSaaSSolutionsPage() {
     }
   ];
 
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive micro SaaS solutions with AI-powered features, competitive pricing, and rapid deployment for modern businesses." />
         <meta name="keywords" content="micro SaaS, AI solutions, business automation, cloud applications, software as a service" />
@@ -739,3 +747,21 @@ export default function MicroSaaSSolutionsPage() {
     </>
   );
 }
+=======
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
+>>>>>>> origin/main

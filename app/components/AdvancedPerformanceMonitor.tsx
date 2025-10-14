@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 const AdvancedPerformanceMonitor: "React.FC = () => {"
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -109,19 +110,17 @@ const AdvancedPerformanceMonitor: "React.FC = () => {"
     if (value <= thresholds.needsImprovement) return 'text-yellow-400'
     return 'text-red-400'
   };
+=======
+import React from 'react';
+>>>>>>> origin/main
 
+const AdvancedPerformanceMonitor = () => {
   return (
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>
-        <p className="text-gray-30o0 text-lg">
-          This component is under development.;
-        </p>
-      </div>
+    <div>
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
 export default AdvancedPerformanceMonitor;
-          This component is under development.</p></div></div>
-  )}
-export default AdvancedPerformanceMonitor

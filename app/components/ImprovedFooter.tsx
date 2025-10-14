@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -78,10 +79,17 @@ const ImprovedFooter: "React.FC = () => {"
           </a>
         </div>
       </section>
+=======
+import React from "react";
+
+const ImprovedFooter = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ImprovedFooter</h2>
+      <p>This component is under construction.</p>
+>>>>>>> origin/main
     </div>
   );
-}
-export default ImprovedFooter;
 };
 
-export default ImprovedFooter;''
+export default ImprovedFooter;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
@@ -164,3 +165,17 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+=======
+import React from "react";
+
+const Header = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Header</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default Header;
+>>>>>>> origin/main

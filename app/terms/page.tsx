@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const TermsPage: React.FC = () => {
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
@@ -90,8 +98,20 @@ const TermsPage: React.FC = () => {
       </div>
     </>
   );
+=======
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+<<<<<<< HEAD
+>>>>>>> origin/main
 }
-export default TermsPage;
+=======
 };
 
-export default TermsPage;''
+export default HomePage;

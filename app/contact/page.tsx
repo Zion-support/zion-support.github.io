@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
-export default function ContactPage() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,30 +83,28 @@ export default function ContactPage() {
     '5G Implementation',''
     'Other''
   ]
+=======
+const ContactPage = () => {
+>>>>>>> origin/main
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Contact
-            <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
-              Us
-            </span>
-          </h1>
-          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
-            Get in touch with our experts today.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
+          <p className="text-gray-300 text-lg">
+            Get in touch with our team for AI and IT solutions.
           </p>
         </div>
-      </section>
+      </div>
+    </div>
+  );
+};
 
+<<<<<<< HEAD
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -197,38 +194,13 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
+=======
+export default ContactPage;
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text""
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-70o0"/50 border border-slate-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focu,s:border-transparent"
-                    placeholder="Your company name""
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Number
-                  </label>
-                  <input
-                    type="tel""
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-70o0"/50 border border-slate-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focu,s:border-transparent"
-                    placeholder="+1 (555) 123-4567""
-                  />
-                </div>
-              </div>
+>>>>>>> origin/main
 
+
+<<<<<<< HEAD
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
@@ -291,3 +263,5 @@ export default function ContactPage() {
       </section>
     </div>
   )}
+=======
+>>>>>>> origin/main

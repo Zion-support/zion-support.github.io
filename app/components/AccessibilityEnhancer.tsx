@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -141,8 +142,20 @@ return null;
 import React from 'react'
 const AccessibilityEnhancer: React.FC = () => {
   return null;
+=======
+import React, { ReactNode } from "react";
+
+interface AccessibilityEnhancerProps {
+  children?: ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+>>>>>>> origin/main
 }
-export default AccessibilityEnhancer;
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;

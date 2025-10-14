@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -88,106 +89,16 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
   };
 
   if (!isOpen) return null;
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const Sidebar = () => {
   return (
-    <>
-      {/* Overlay */}
-      <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
-        onClick="{onClose}"
-      />
-      
-      {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold text-gray-90o0">Navigation</h2>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-10o0 rounded-md"
-          >
-            <XMarkIcon className="w-5 h-5" />
-          </button>
-        </div>
-        
-        <nav className="mt-4">
-          {navigation.map((item) => (
-            <div key="{item.name}">
-              {item.submenu ? (
-                <div>
-                  <button
-                    onClick={() => toggleSection(item.name)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-70o0 hover:bg-gray-10o0 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </div>
-                    <ChevronDownIcon 
-                      className={`w-4 h-4 transition-transform ${
-                        isExpanded(item.name) ? 'rotate-180' : '''
-                      }`} 
-                    />
-                  </button>
-                  {isExpanded(item.name) && (
-                    <div className="pl-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className={`block px-4 py-2 text-sm transition-colors ${
-                            isActive(subItem.href)
-                              ? 'text-blue-60o0 bg-blue-50''
-                              : 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50''"
-                          }`}
-                          onClick="{onClose}"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  to={item.href}
-                  className={`flex items-center px-4 py-3 transition-colors ${
-                    isActive(item.href)
-                      ? 'text-blue-60o0 bg-blue-50''
-                      : 'text-gray-70o0 hover: "text-gray-90o0 hove,r:bg-gray-10o0''"
-                  }`}
-                  onClick="{onClose}"
-                >
-                  <item.icon className="w-5 h-5 mr-3" />
-                  {item.name}
-                </Link>
-              )}
-            </div>
-          ))}
-          
-          {/* Additional Links */}
-          <div className="border-t border-gray-20o0 mt-4 pt-4">
-            <h3 className="px-4 py-2 text-sm font-semibold text-gray-50o0 uppercase tracking-wider">
-              Additional
-            </h3>
-            {additionalLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`flex items-center px-4 py-2 text-sm transition-colors ${
-                  isActive(link.href)
-                    ? 'text-blue-60o0 bg-blue-50''
-                    : 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50''"
-                }`}
-                onClick="{onClose}"
-              >
-                <link.icon className="w-4 h-4 mr-3" />
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Sidebar</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
 };
 

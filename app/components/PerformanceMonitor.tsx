@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 interface PerformanceMetrics {
@@ -117,8 +118,22 @@ const PerformanceMonitor: "React.FC = () => {"
 import React from 'react'
 const PerformanceMonitor: React.FC = () => {
   return null;
+=======
+import React from 'react';
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate: (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => void;
+>>>>>>> origin/main
 }
-export default PerformanceMonitor;
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
+  return null;
 };
 
 export default PerformanceMonitor;

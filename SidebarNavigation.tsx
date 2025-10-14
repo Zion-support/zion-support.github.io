@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, X } from 'lucide-react';
+
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -35,23 +35,26 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           <h2 className="text-lg font-semibold">Navigation</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="p-2 rounded-md hover:bg-gray-100"
           >
-            <X className="w-5 h-5" />
+            <X className="h-5 w-5" />
           </button>
         </div>
 
         <nav className="mt-4">
-          {navigationItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
-            >
-              <item.icon className="w-5 h-5 mr-3" />
-              {item.name}
-            </a>
-          ))}
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+              >
+                <Icon className="h-5 w-5 mr-3" />
+                {item.name}
+              </a>
+            );
+          })}
         </nav>
       </div>
     </>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'react'
 interface EnhancedAccessibilityProps {
   children: "Node"}
@@ -194,72 +195,18 @@ const EnhancedAccessibility: "React.FC = () => {"
       }
     }
   }, []);
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const EnhancedAccessibility = () => {
   return (
-    <>
-      <button
-        className="accessibility-toggle"
-        onClick={toggleVisibility}
-        aria-label="Toggle accessibility options""
-        title="Accessibility Options"
-      >
-        ♿ A11y
-      </button>
-      
-      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>'
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
-        
-        <div className="space-y-4">
-          <div>
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox""
-                checked={settings.highContrast}
-                onChange={toggleHighContrast}
-                className="rounded"
-              />
-              <span>High Contrast</span>
-            </label>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>
-            <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
-                <label key={size} className="flex items-center space-x-2">
-                  <input
-                    type="radio""
-                    name="fontSize"
-                    value={size}
-                    checked={settings.fontSize === size}
-                    onChange={() => setFontSize(size)}
-                    className="rounded"
-                  />
-                  <span className="capitalize">{size}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <p className="text-sm text-gray-30o0">
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
-            </p>
-            <p className="text-sm text-gray-30o0">
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
-            </p>
-          </div>
-
-          <button
-            onClick={toggleVisibility}
-            className="w-full bg-purple-60o0 text-white py-2 px-4 rounded hover:bg-purple-70o0 transition-colors"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedAccessibility</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
+<<<<<<< HEAD
 }
 export default EnhancedAccessibility;
     // Apply high contrast mode
@@ -335,6 +282,8 @@ export default EnhancedAccessibility;
   }, []);
 
   return null;
+=======
+>>>>>>> origin/main
 };
 
 export default EnhancedAccessibility;

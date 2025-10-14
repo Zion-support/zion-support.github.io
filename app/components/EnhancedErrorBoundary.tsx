@@ -1,6 +1,7 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { Component, ReactNode } from 'react';
+
 interface Props {
+<<<<<<< HEAD
   children: "ReactNode"
   fallback?: ReactNode
   onError?: (error: "Error", errorInfo: "ErrorInfo) => void"}
@@ -205,6 +206,47 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       )}
 
     return this.props.children}
+=======
+  children: ReactNode;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+>>>>>>> origin/main
 }
 
-export default EnhancedErrorBoundary
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+          </details>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;

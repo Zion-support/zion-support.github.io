@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -77,10 +78,17 @@ const MobileNavigation: "React.FC = () => {"
           </a>
         </div>
       </section>
+=======
+import React from "react";
+
+const MobileNavigation = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">MobileNavigation</h2>
+      <p>This component is under construction.</p>
+>>>>>>> origin/main
     </div>
   );
-}
-export default MobileNavigation;
 };
 
-export default MobileNavigation;''
+export default MobileNavigation;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 interface FuturisticButtonProps {
   children: "React.ReactNode"
@@ -56,19 +57,17 @@ const FuturisticButton: "React.FC<FuturisticButtonProps> = ({"
     md: "'px-6 py-3 text-base'",';''
     lg: "'px-8 py-4 text-lg';"}'
   };
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const FuturisticButton = () => {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
-    >
-      {icon && <span className="mr-2">{icon}</span>}"
-      {children}
-    </button>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">FuturisticButton</h2>
+      <p>This component is under construction.</p>
+    </div>
   );
-}
-export default FuturisticButton;
 };
 
-export default FuturisticButton;''
+export default FuturisticButton;
