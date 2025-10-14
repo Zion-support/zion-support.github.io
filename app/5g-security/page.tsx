@@ -118,4 +118,5 @@ function Page(): JSX.Element {
   );
 };
 
-export default Page;
+const page = React.lazy(() => import('./page'));
+export default page;
