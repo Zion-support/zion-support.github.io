@@ -5,6 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
 import Navigation from './app/components/Navigation';
+import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import LoadingStates from './app/components/LoadingStates';
@@ -21,6 +22,15 @@ import SupportPage from './app/support/page';
 import PrivacyPage from './app/privacy/page';
 import TermsPage from './app/terms/page';
 import PricingPage from './app/pricing/page';
+
+// Service Pages
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
+import SolutionsPage from './app/solutions/page';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 
 // New Page Components
 import DigitalTransformationPage from './app/digital-transformation/page';
@@ -82,6 +92,7 @@ function App() {
         <AnalyticsProvider>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <Header />
               <Navigation />
               <main className="relative z-10" id="main-content" role="main">
                 <Suspense fallback={<LoadingStates />}>
@@ -91,6 +102,9 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
                     <Route path="/blog" element={<BlogPage />} />
                     <Route path="/tutorials" element={<TutorialsPage />} />
                     <Route path="/demo" element={<DemoPage />} />
@@ -98,13 +112,19 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    
+                    {/* Service Pages */}
+                    <Route path="/ai-services" element={<AIServicesPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
                     
                     {/* New Pages */}
-                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                     <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
                     <Route path="/team" element={<TeamPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
                     <Route path="/news" element={<NewsPage />} />
                     <Route path="/docs" element={<DocsPage />} />
                     <Route path="/api" element={<ApiPage />} />
