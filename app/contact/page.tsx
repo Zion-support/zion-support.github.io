@@ -126,6 +126,7 @@ export default function ContactPage()    {
     setIsSubmitting(false); }
   const contactInfo = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { setIsSubmitting(false); }
   };
   const contactInfo = [
@@ -142,6 +143,34 @@ export default function ContactPage()    {
 <<<<<<< HEAD
     { title: "Phone",
       value: "+1 (555) 123-4567",
+=======
+    {
+
+      icon: 'Phone',
+icon: 'Phone',
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      icon: 'Email',
+      title: 'Email',
+      value: 'contact@ziontechgroup.com',
+      description: 'We respond within 24 hours'
+    },
+    {
+      icon: 'Location',
+      title: 'Address',
+      value: '123 Tech Street, Suite 100',
+      description: 'San Francisco, CA 94105'
+    },
+    {
+      icon: 'Clock',
+
+icon: Phone,
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
       description: 'Mon-Fri 9AM-6PM EST'
 '
       icon: "Phone",'
@@ -161,10 +190,23 @@ export default function ContactPage()    {
       value: "123 Tech Street, Suite 100",'
       description: "San Francisco, CA 94105" }
     },
+<<<<<<< HEAD
     { '
       icon: "Clock",
       description: "9:00 AM - 6:00 PM EST" }
   ]
+=======
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Monday - Friday',
+value: 'Monday - Friday',
+value: 'Monday - Friday',
+      description: '9:00 AM - 6:00 PM EST'
+    }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   const subjects = [
     'AI Services',
     'IT Services',

@@ -92,11 +92,42 @@ export default function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
   try {
+<<<<<<< HEAD
     // Add your API logic here
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("API Error:", error);
     res.status(500).json({ error: "Internal server error" });
+=======
+
+    // Process the quote request
+// Process the quote request
+    const quote = {
+      id: Date.now().toString(),
+      name,
+      email,
+      phone,
+      details,
+      country: country || 'Not specified',
+      service: service || 'General inquiry',
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+    
+    // Here you would typically save the quote to a database
+    console.log('Quote request processed:', quote.id);
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Quote request submitted successfully' 
+    }));
+  } catch (error) {
+    console.error('Quote submission error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
 }
 >>>>>>> origin/main

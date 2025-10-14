@@ -126,7 +126,11 @@ function fixFile(filePath) {
 }
     }
     // Fix merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
+=======
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     // Fix specific syntax errors
     content = content.replace(/;\s*\);/g, '\n  );');
     content = content.replace(/;\s*<\/>;/g, '\n    </>');
@@ -247,8 +251,13 @@ function findProblematicFiles(dir) {
               content.includes('</>') ||
               content.includes('') ||
               content.includes('') ||
+<<<<<<< HEAD
               content.includes('>>>>>>>')) { files.push(fullPath); }
 }
+=======
+              content.includes('>>>>>>>')) {
+            files.push(fullPath);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
           }
         } catch (err) { // Skip files that can't be read }
 }

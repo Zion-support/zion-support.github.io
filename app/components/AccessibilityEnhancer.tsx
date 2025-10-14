@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react";
 =======
 <<<<<<< HEAD
@@ -290,6 +291,65 @@ export default AccessibilityEnhancer;
     const handleMouseDown = () => {
       setSettings(prev => ({ ...prev, focusVisible: false }));
     };
+=======
+import React, { useEffect } from 'react';
+
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Skip to main content functionality
+    const addSkipLink = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
+      skipLink.style.zIndex = '9999';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Focus management for keyboard navigation
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    // Add focus indicators for keyboard navigation
+    const addFocusStyles = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .keyboard-navigation button:focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation textarea:focus,
+        .keyboard-navigation select:focus {
+          box-shadow: 0 0 0 2px #8b5cf6 !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
+
+    // Add ARIA landmarks
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+    };
+
+    // Initialize accessibility features
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
@@ -301,6 +361,7 @@ export default AccessibilityEnhancer;
     };
   }, [settings.keyboardNavigation, isVisible]);
 
+<<<<<<< HEAD
   // Announce changes to screen readers
   const announceToScreenReader = useCallback((message: string) => {
     if (settings.screenReader) {
@@ -579,3 +640,9 @@ export default AccessibilityEnhancer;
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+  return null;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

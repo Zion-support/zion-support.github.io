@@ -29,6 +29,7 @@ export default function Wallet() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -91,6 +92,19 @@ export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
+=======
+  const { address, type, name, userId } = req.body;
+
+const { address, type, name, userId } = req.body;
+  if (!address || !type) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Address and type are required' }));
+    return;
+  }
+
+  let wallets = [];
+let wallets = [];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   try {
     // Add your API logic here
     res.status(200).json({ success: true });
@@ -98,6 +112,45 @@ export default function handler(req, res) {
     console.error("API Error:", error);
     res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+
+  if (wallets.find(wallet => wallet.address === address)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+    return;
+  }
+
+  const newWallet = {
+    id: Date.now().toString(),
+    address,
+    type,
+    name: name || '',
+    userId: userId || '',
+    status: 'active',
+    createdAt: new Date().toISOString()
+  };
+
+  try {
+    wallets.push(newWallet);
+    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Wallet added successfully' 
+
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+
+res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+  }
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

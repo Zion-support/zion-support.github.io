@@ -933,6 +933,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: "/services", 
       icon: BriefcaseIcon,
       submenu: [
+<<<<<<< HEAD
         { name: "AI Services", href: "/ai-services", icon: CpuChipIcon },
         { name: "IT Services", href: "/it-services", icon: CogIcon },
         { name: "Cloud Infrastructure", href: "/cloud-infrastructure", icon: CloudIcon },
@@ -1000,6 +1001,34 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },
     { name: "Contact", href: "/contact", icon: PhoneIcon }
 >>>>>>> origin/main
+=======
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+      ]
+    },
+    { 
+      name: 'Solutions', 
+      href: '/solutions', 
+      icon: CogIcon,
+      submenu: [
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+        { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+      ]
+    },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   ];
 
 <<<<<<< HEAD
@@ -1013,6 +1042,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
         <div className="flex justify-between h-16">
           <div className="flex">
             {/* Logo */}
@@ -1024,6 +1054,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             
             {/* Desktop Navigation */}
             <div className="hidden md:ml-6 md:flex md:space-x-8">
+=======
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.submenu ? (

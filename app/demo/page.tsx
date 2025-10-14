@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';react-helmet-async";
 import { Play, Right, Circle, Star } from 'lucide-react";
 =======
@@ -7,6 +8,10 @@ import React from 'react';'react-helmet-async;
 import { Play, Right, Circle, Star } from 'lucide-react;
 import React from 'react';'
 import { Helmet , Play,  Right,  Circle,  Star } from 'lucide-react';
+=======
+import React from 'react';'react-helmet-async;
+import { Play, Right, Circle, Star } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const DemoPage: React.FC = () => {
   const features = [{'
       icon: "Analytics",';'
@@ -31,7 +36,10 @@ const DemoPage: React.FC = () => {
       description: "See how teams work together seamlessly",';
       demo: 'Collaboration Demo''; }
       demo: 'Collaboration Demo'';
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';
 import { Helmet , Play,  Right,  Circle,  Star   } from 'lucide-react";
 const DemoPage: React.FC = () => {const features = [{''
@@ -114,6 +122,7 @@ icon: Play,
       title: "Team Collaboration",
       description: "See how teams work together seamlessly",
       demo: 'Collaboration Demo'
+<<<<<<< HEAD
     {'
       icon: "Collaboration",';'
       title: "Team Collaboration",';'
@@ -126,6 +135,8 @@ import { Helmet } from "react-helmet-async";
 <<<<<<< HEAD
 
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     }
   ];
 

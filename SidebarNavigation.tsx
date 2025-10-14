@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { User, X } from 'lucide-react';
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@ import { User, X } from 'lucide-react';
 >>>>>>> origin/main
 >>>>>>> origin/main
 
+=======
+import { User, X } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;

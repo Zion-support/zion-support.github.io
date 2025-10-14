@@ -1,10 +1,15 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 =======
 >>>>>>> origin/main
 
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const App: React.FC = () => {
 <<<<<<< HEAD
   return (

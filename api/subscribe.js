@@ -29,6 +29,7 @@ export default function Subscribe() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -91,6 +92,19 @@ export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
+=======
+  const { email, name } = req.body;
+
+const { email, name } = req.body;
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
+
+  let subscribers = [];
+let subscribers = [];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   try {
     // Add your API logic here
     res.status(200).json({ success: true });
@@ -98,6 +112,40 @@ export default function handler(req, res) {
     console.error("API Error:", error);
     res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+
+  if (subscribers.find(sub => sub.email === email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    return;
+  }
+
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    status: 'active',
+    subscribedAt: new Date().toISOString()
+  };
+
+  try {
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+
+      message: 'Successfully subscribed to newsletter' 
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+  }
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 <<<<<<< HEAD
@@ -114,10 +115,38 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> origin/main
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+=======
+const fs = require('fs');
+const path = require('path');
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< [^\n]+\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     return false;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to recursively find and fix files
 function fixFilesInDirectory(dir) {
@@ -147,10 +176,31 @@ function fixFilesInDirectory(dir) {
     }
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
+=======
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('<<<<<<< HEAD')) {
+        if (fixMergeConflicts(filePath)) {
+          fixedCount++;
+        }
+      }
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
   
   return fixedCount;
 }
+<<<<<<< HEAD
 
 // Main execution
 console.log('Starting merge conflict resolution...');
@@ -291,3 +341,9 @@ if (fixedCount > 0) {
 
 console.log("\n🎉 Merge conflict resolution complete!");
 >>>>>>> origin/main
+=======
+
+console.log('Starting merge conflict resolution...');
+const fixedCount = findAndFixConflicts('.');
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';react-helmet-async";
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react";
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react";
@@ -49,9 +50,11 @@ import FuturisticBackground from '../components/FuturisticBackground'
 const AiServicesPage: React.FC = () => {
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground;
 import React from 'react';'
 import { Helmet , Right,  Star,  Brain,  BarChart3,  Zap,  FileText,  MessageSquare,  Shield   } from 'lucide-react';'
@@ -89,9 +92,12 @@ const AiServicesPage: React.FC = () => {
       title: "AI Security",';
       description: "AI-powered security solutions to protect your business and data.",';
       color: 'from-cyan-500 to-blue-500'';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, Cloud, Users, Award, Star } from 'lucide-react';
@@ -147,6 +153,7 @@ const AIServicesPage: React.FC = () => {
       color: 'from-indigo-500 to-purple-500''
     },
     {
+<<<<<<< HEAD
       icon: Shield,
       title: 'AI Security','
       description: 'AI-powered security solutions to protect your business from threats.','
@@ -178,6 +185,13 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Security','
       description: 'AI-powered security solutions to protect your business and data.','
       color: 'from-cyan-500 to-blue-500''}'
+=======
+icon: Zap,
+icon: Shield,
+      title: 'AI Security',
+      description: 'AI-powered security solutions to protect your business and data.',
+      color: 'from-cyan-500 to-blue-500'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     }
   ];
   const testimonials = [{name: "Dr. Sarah Johnson","

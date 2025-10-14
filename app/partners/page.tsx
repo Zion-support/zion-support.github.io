@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 import { Users, Globe, Shield, Zap } from 'lucide-react';
 
@@ -12,6 +13,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { } from 'react-router-dom'
 import { Circle, Right } from 'lucide-react'
+=======
+import { } from 'react-router-dom';
+import { Circle, Right, } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const PartnersPage: React.FC = () => {
   const partners = [{
 <<<<<<< HEAD

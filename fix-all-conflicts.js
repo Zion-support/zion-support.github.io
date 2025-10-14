@@ -10,6 +10,10 @@ function fixMergeConflicts(filePath) {
     // Check if file has merge conflicts
     if (!content.includes(')
     content = content.replace(/[\s\S]*?([\s\S]*?)
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     // Remove any remaining conflict markers
     content = content.replace(
   /[\s\S]*?

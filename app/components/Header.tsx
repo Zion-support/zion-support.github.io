@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown } from 'lucide-react'
+=======
+import React from 'react';
+import { useState } from 'react;
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 <<<<<<< HEAD

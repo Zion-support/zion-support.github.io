@@ -22,6 +22,7 @@ export default function Jest.setup.js() {
           </div>
         </section>
 
+<<<<<<< HEAD
         { /* Content Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -96,6 +97,33 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
+=======
+// Mock react-router-dom
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  return {
+    ...actual,
+
+    useLocation: () => ({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null,
+      key: 'default'
+    }),
+
+    useNavigate: () => jest.fn(),
+useNavigate: () => jest.fn(),
+    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
+    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
+    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
+  };
+});
+
+// Suppress console warnings
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {

@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react";
 import { Link } from 'react-router-dom";
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO";
@@ -21,9 +24,18 @@ import { CpuChipIcon,
   ArrowRightIcon,
   CheckIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
   StarIcon'}'
 } from '@heroicons/react/24/outline";
 import React from 'react'
+=======
+  StarIcon
+} from '@heroicons/react/24/outline';
+import { Helmet } from 'react-helmet-async';
+import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
+import { Circle, Star, Right } from 'lucide-react';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {''

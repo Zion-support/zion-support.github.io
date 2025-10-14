@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 import { memo } from "react"
 import { Link } from "react-router-dom"
 import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
+=======
+import { memo } from 'react;
+import { } from 'react-router-dom';
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
+&apos;use client&apos;
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 
 const Footer = memo(() => {
   const services = [

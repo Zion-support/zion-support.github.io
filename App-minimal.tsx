@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+<<<<<<< HEAD
 
 // Minimal working App component
 <<<<<<< HEAD
@@ -31,6 +32,11 @@ function App() { return (
 export default App;
 =======
   );
+=======
+// Minimal working App component;
+function App() {
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     <Router>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
         <div className="container mx-auto px-4 py-8">;

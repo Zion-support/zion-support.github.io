@@ -75,7 +75,16 @@ const AIAutomationPlatform = () => {
     },
     { title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
+<<<<<<< HEAD
       icon: <Brain className="w-6 h-6" />,
+=======
+
+      icon: <Brain className="w-6 h-6" />,
+
+icon: <Brain className="w-6 h-6" />,
+icon: <Circle className="w-6 h-6" />,
+icon: <div className="w-6 h-6" />,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
       color: "from-green-500 to-emerald-500"
 <<<<<<< HEAD
       color: "from-green-500 to-emerald-500" }
@@ -84,6 +93,7 @@ const AIAutomationPlatform = () => {
     },
     { title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
+<<<<<<< HEAD
       icon: <Settings className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
 <<<<<<< HEAD
@@ -94,6 +104,25 @@ const AIAutomationPlatform = () => {
     { title: "Integration Hub",
       description: "Connect and automate across all your business systems",
       icon: <Zap className="w-6 h-6" />,
+=======
+
+      icon: <Settings className="w-6 h-6" />,
+
+icon: <Settings className="w-6 h-6" />,
+icon: <Circle className="w-6 h-6" />,
+icon: <div className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Integration Hub",
+      description: "Connect and automate across all your business systems",
+
+      icon: <Zap className="w-6 h-6" />,
+
+icon: <Zap className="w-6 h-6" />,
+icon: <Circle className="w-6 h-6" />,
+icon: <div className="w-6 h-6" />,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
       color: "from-orange-500 to-red-500"
 <<<<<<< HEAD
       color: "from-orange-500 to-red-500" }
@@ -141,10 +170,22 @@ const AIAutomationPlatform = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
 >>>>>>> origin/main
           <ResponsiveContainer>
+<<<<<<< HEAD
             <div className="relative z-10 text-center py-20">"
               <div className="flex items-center justify-center mb-6">"
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />"
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>"
+=======
+            <div className="relative z-10 text-center py-20">
+              <div className="flex items-center justify-center mb-6">
+
+                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+
+<Brain className="w-4 h-4 text-cyan-400 mr-2" />
+<Circle className="w-4 h-4 text-cyan-400 mr-2" />
+<div className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
               </div>
 <<<<<<< HEAD
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
@@ -177,12 +218,22 @@ const AIAutomationPlatform = () => {
                 </FuturisticButton>
                 <FuturisticButton
 <<<<<<< HEAD
+<<<<<<< HEAD
                   variant="outline""
                   icon={<Play className="w-5 h-5" />}"
 =======
                   variant="outline"
                   icon={ <Play className="w-5 h-5" /> }
 >>>>>>> origin/main
+=======
+                  variant="outline"
+
+                  icon={<Play className="w-5 h-5" />}
+
+icon={<Play className="w-5 h-5" />}
+icon={<Circle className="w-5 h-5" />}
+icon={<div className="w-5 h-5" />}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
                 >
                   View Demo
                 </FuturisticButton>
@@ -310,12 +361,22 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
 <<<<<<< HEAD
+<<<<<<< HEAD
                 size="lg""
                 icon={<Zap className="w-6 h-6" />}"
 =======
                 size="lg"
                 icon={ <Zap className="w-6 h-6" /> }
 >>>>>>> origin/main
+=======
+                size="lg"
+
+                icon={<Zap className="w-6 h-6" />}
+
+icon={<Zap className="w-6 h-6" />}
+icon={<Circle className="w-6 h-6" />}
+icon={<div className="w-6 h-6" />}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
               >
                 Start Your Automation Journey
               </FuturisticButton>

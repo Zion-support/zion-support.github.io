@@ -29,6 +29,7 @@ export default function Subscribe() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -90,13 +91,50 @@ export default function Subscribe() {
 export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
+=======
+  const { email } = req.body;
+const { email } = req.body;
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
+
+    return;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
   try {
+<<<<<<< HEAD
     // Add your API logic here
     res.status(200).json({ success: true });
   } catch (error) {
     console.error("API Error:", error);
     res.status(500).json({ error: "Internal server error" });
+=======
+
+    console.log('Newsletter subscription:', email);
+
+console.log('Newsletter subscription:', email);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter' 
+    }));
+  } catch (error) {
+
+    console.error('Newsletter subscription error:', error);
+console.error('Newsletter subscription error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Failed to subscribe to newsletter',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
 }
 >>>>>>> origin/main

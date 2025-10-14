@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';react-helmet-async";
 import { Link } from 'react-router-dom";
 import { Right, Circle } from 'lucide-react";
@@ -38,6 +39,10 @@ import { Link } from 'react-router-dom;
 import { Right, Circle } from 'lucide-react;
 import React from 'react';'
 import { Helmet , Link   } from 'lucide-react';'
+=======
+import React from 'react';'react-helmet-async;
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import { Right, Circle } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{'
@@ -61,6 +66,7 @@ const SupportPage: React.FC = () => {
       action: "Send Email",';'
       color: 'from-purple-500 to-pink-500''; }
     },
+<<<<<<< HEAD
     { icon: "Book",';
       title: "Documentation",';
       description: "Browse our comprehensive guides",';
@@ -73,6 +79,14 @@ const SupportPage: React.FC = () => {
 
 import { Helmet } from "react-helmet-async";
 =======
+=======
+    {
+      icon: 'Book',';
+      title: 'Documentation',';
+      description: 'Browse our comprehensive guides',';
+      action: 'View Docs',';
+      color: 'from-orange-500 to-red-500'';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/main
@@ -208,12 +222,15 @@ icon: Phone,
       description: "Browse our comprehensive guides",
       action: "View Docs",
       color: 'from-orange-500 to-red-500'
+<<<<<<< HEAD
     {'
       icon: "Book",';'
       title: "Documentation",';'
       description: "Browse our comprehensive guides",';'
       action: "View Docs",';'
       color: 'from-orange-500 to-red-500'';}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     }
   ];
   const faqs = [{ '

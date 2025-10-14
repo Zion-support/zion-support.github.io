@@ -31,12 +31,17 @@ const DigitalTransformationPage: React.FC = () => {const services = [{
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react';
 const DigitalTransformationPage: React.FC = () => {
   const services = [{
       icon: RefreshCw,
+<<<<<<< HEAD
       title: "Process Automation",';
       description: "Streamline and automate business processes to improve efficiency and reduce manual errors.",';
+=======
+      title: 'Process Automation',
+      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
       features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
     },
     {

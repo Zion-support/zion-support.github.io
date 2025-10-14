@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react";
 import { Loader2 } from 'lucide-react";
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | "xl"
   color?: 'primary' | 'secondary' | 'white' | "gray"
 =======
 <<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -21,6 +25,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   color = 'primary','
   text,
   fullScreen = false,
+<<<<<<< HEAD
   className = '''
 }) => {
   const sizeClasses = {
@@ -41,6 +46,43 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: "w-6 h-6",
     lg: "w-8 h-8",
     xl: "w-12 h-12"
+=======
+  className = ''
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+          {text}
+        </p>
+      )}
+    </div>
+  );
+
+  if (fullScreen) {
+    return (
+<div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
+          {spinner}
+        </div>
+      </div>
+    );
+  }
+
+  return spinner;
+lg: 'w-12 h-12'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   };
 
   const colorClasses = {
@@ -90,6 +132,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 >>>>>>> origin/main
 >>>>>>> origin/main
     </div>
+<<<<<<< HEAD
   )
   if (fullScreen) {
     return (
@@ -110,6 +153,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }
 export default LoadingSpinner;
 =======
+=======
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 };
 
 <<<<<<< HEAD

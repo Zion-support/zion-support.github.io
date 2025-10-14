@@ -1,15 +1,22 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client"
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 import { Link } from 'react-router-dom";
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+import SEO from './components/SEO';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -159,12 +166,21 @@ const HomePage = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
         canonical="https://ziontechgroup.com"
+=======
+    <>
+      <SEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
+        url="/"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
       />
 
 =======

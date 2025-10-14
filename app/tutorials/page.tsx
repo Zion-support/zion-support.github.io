@@ -4,11 +4,16 @@ import { Helmet } from 'react-helmet-async'
 import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react";
 =======
 import React from 'react';'
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock } from 'lucide-react';
 >>>>>>> origin/main
+=======
+import { Helmet } from 'react-helmet-async';
+import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,

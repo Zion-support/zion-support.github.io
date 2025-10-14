@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -8,6 +12,7 @@ const __dirname = path.dirname(__filename);
 function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     // Fix common HTML entities
     const fixes = [
   }
@@ -18,6 +23,23 @@ function fixHtmlEntities(filePath) {
       { from: /&amp;/g, to: "&" },
       { from: /&rbrace;/g, to: "}" },      { from: /&lbrace;/g, to: "{" }
 ]
+=======
+
+    // Fix common HTML entities
+    const fixes = [
+
+// Fix common HTML entities
+    const fixes = [
+      { from: /&apos;/g, to: "'" },
+      { from: /&quot;/g, to: '"' },
+      { from: /&lt;/g, to: '<' },
+      { from: /&gt;/g, to: '>' },
+      { from: /&amp;/g, to: '&' },
+
+      { from: /&rbrace;/g, to: '}' },
+{ from: /&rbrace;/g, to: '}' },
+      { from: /&lbrace;/g, to: '{' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     ];
     let hasChanges = false;
     fixes.forEach(
@@ -30,10 +52,21 @@ function fixHtmlEntities(filePath) {
 }
       }
     });
+<<<<<<< HEAD
     if (hasChanges) { fs.writeFileSync(filePath, content, 'utf8'); }
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
+=======
+    
+    if (hasChanges) {
+
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed HTML entities in: ${filePath}`);
+      return true;
+    }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     return false;
   } catch (error) {
 }
@@ -73,9 +106,13 @@ files.forEach(
   }
 });
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
+<<<<<<< HEAD
 =======
 // fix-html-entities - Basic implementation
 export default function fix-html-entities() {
   return null;
 }
 >>>>>>> origin/main
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

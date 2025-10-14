@@ -10,6 +10,7 @@ export default function Component; handler(req, res) {
 >>>>>>> origin/main
   }
   try {
+<<<<<<< HEAD
 }
     const { error, stack, url, userAgent } = req.body;    console.error('Client Error Report:', { error, stack, url, userAgent })";
     console.log('Error report received:', new Date().toISOString())";
@@ -18,6 +19,19 @@ export default function Component; handler(req, res) {
 }
 <<<<<<< HEAD
     res.status(500).json({ error: 'Failed to process error report' })";
+=======
+
+    const { error, stack, url, userAgent } = req.body;
+const { error, stack, url, userAgent } = req.body;
+    console.error('Client Error Report:', { error, stack, url, userAgent });
+    console.log('Error report received:', new Date().toISOString());
+    
+    res.status(200).json({ success: true, message: 'Error report received' });
+
+  } catch (error) {
+    console.error('Error processing error report:', error);
+    res.status(500).json({ error: 'Failed to process error report' });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
 =======
     const { error, stack, url, userAgent } = req.body;    console.error('Client Error Report:', { error, stack, url, userAgent });

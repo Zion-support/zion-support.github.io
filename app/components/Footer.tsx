@@ -1,8 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react";
 import { Link } from 'react-router-dom";
 =======
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  MapPinIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
@@ -10,6 +22,7 @@ import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Face
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -362,6 +375,8 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react";
 } from '@heroicons/react/24/outline";
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },'
     { name: 'IT Solutions', href: '/it-solutions' },'
@@ -455,6 +470,7 @@ const Footer = () => {
   ];
 
   const legal = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: 'Privacy Policy', href: '/privacy' },'
     { name: 'Terms of Service', href: '/terms' },'
@@ -634,10 +650,22 @@ const Footer = () => {
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                 <span className="text-white font-bold text-xl">Z</span>
+=======
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
+  ];
+
+  return (
+    <footer className="bg-slate-900 border-t border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
+<<<<<<< HEAD
     <footer className="bg-slate-900 border-t border-slate-700/50">
 =======
     { name: 'Privacy Policy', href: '/privacy' },
@@ -656,14 +684,23 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <CpuChipIcon className="h-8 w-8 text-blue-500 mr-2" />
               <span className="text-xl font-bold">Zion Tech Group</span>
+=======
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
             </div>
 <<<<<<< HEAD
             <p className="text-gray-400 mb-6 max-w-md">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
               and digital transformation services for businesses worldwide.
             </p>
+<<<<<<< HEAD
             {/* Contact Info */}            <div className="space-y-3 mb-6">
             { /* Contact Info */ }
+=======
+            
+            {/* Contact Info */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
@@ -678,6 +715,7 @@ const Footer = () => {
                 <EnvelopeIcon className="w-4 h-4" />"
                 <span>kleber@ziontechgroup.com</span>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-3 text-gray-400">"
                 <MapPinIcon className="w-4 h-4" />"
                 <span>Middletown, DE 19709</span>
@@ -745,6 +783,17 @@ const Footer = () => {
 =======
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
+=======
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <span>Middletown, DE 19709</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
                 <Facebook className="w-5 h-5" />
             { /* Social Links */ }
             <div className="flex space-x-4">
@@ -770,6 +819,7 @@ const Footer = () => {
 <<<<<<< HEAD
                 <Github className="w-5 h-5" />
               </a>
+<<<<<<< HEAD
                   <span className="sr-only">{social.name}</span>
                   <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">
                     { social.icon === 'linkedin' && <span className="text-xs">in</span> }
@@ -788,6 +838,8 @@ const Footer = () => {
 =======
                 <Github className="h-5 w-5" />
               </a>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
             </div>
           </div>
 
@@ -795,10 +847,15 @@ const Footer = () => {
 >>>>>>> origin/main
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>"
             <ul className="space-y-3">"
             <h3 className="text-white font-semibold text-lg mb-4">Services</h3>"
             <ul className="space-y-2">"
+=======
+            <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
+            <ul className="space-y-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
               {services.map((service) => (
                 <li key={service.name}>
                   <Link 
@@ -903,10 +960,15 @@ const Footer = () => {
 >>>>>>> origin/main
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>"
             <ul className="space-y-3">"
             <h3 className="text-white font-semibold text-lg mb-4">Company</h3>"
             <ul className="space-y-2">"
+=======
+            <h3 className="text-white font-semibold text-lg mb-4">Company</h3>
+            <ul className="space-y-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
@@ -1000,6 +1062,7 @@ const Footer = () => {
 >>>>>>> origin/main
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>"
             <ul className="space-y-3 mb-8">"
               {resources.map((resource) => (
@@ -1013,17 +1076,22 @@ const Footer = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
             <h3 className="text-white font-semibold text-lg mb-4">Support & Legal</h3>
             <ul className="space-y-2">
 >>>>>>> origin/main
               {support.map((item) => (
                 <li key={item.name}>
+<<<<<<< HEAD
           { /* Resources */ }
           <div>
             <h4 className="text-lg font-semibold mb-4">Resources</h4>"
             <ul className="space-y-2">"
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
                   <Link 
 <<<<<<< HEAD
                     to={link.href} 
@@ -1096,6 +1164,7 @@ const Footer = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Newsletter Signup */}
         <div className="mt-16 pt-8 border-t border-slate-700/50">"
           <div className="max-w-2xl mx-auto text-center">"
@@ -1123,6 +1192,8 @@ const Footer = () => {
               </button>
         { /* Contact Info */ }
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
 
         {/* Contact Info */}
 <<<<<<< HEAD
@@ -1166,6 +1237,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 text-gray-400">
               <MapPinIcon className="w-5 h-5 text-purple-400" />
               <span>Middletown, DE 19709</span>
+<<<<<<< HEAD
         { /* Contact Info */ }
         <div className="mt-8 pt-8 border-t border-slate-700">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
@@ -1212,6 +1284,28 @@ const Footer = () => {
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />"
             <span>by Zion Tech Group</span>
+=======
+            </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="bg-slate-800 rounded-lg p-6 mb-8">
+            <div className="max-w-md mx-auto text-center">
+              <h3 className="text-white font-semibold text-lg mb-2">Stay Updated</h3>
+              <p className="text-gray-400 mb-4">Get the latest news and updates from Zion Tech Group</p>
+              <div className="flex space-x-2">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  className="flex-1 px-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+                <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center">
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
           </div>
 <<<<<<< HEAD
           {/* Copyright */}
@@ -1240,6 +1334,7 @@ const Footer = () => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
+<<<<<<< HEAD
             { /* Legal Links */ }
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footerLinks.legal.map((link) => (
@@ -1264,6 +1359,8 @@ const Footer = () => {
           <div className="flex space-x-6 text-gray-400 text-sm">"
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>"
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
           </div>
 <<<<<<< HEAD
         {/* Copyright */}
@@ -1364,9 +1461,13 @@ export default Footer;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ImprovedFooter;
 =======
 export default Footer;
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+export default Footer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

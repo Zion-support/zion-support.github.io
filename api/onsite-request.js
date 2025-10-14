@@ -29,6 +29,7 @@ export default function OnsiteRequest() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -97,6 +98,34 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("API Error:", error);
     res.status(500).json({ error: "Internal server error" });
+=======
+  try {
+try {
+    const data = fs.readFileSync(file, 'utf8');
+    const requests = JSON.parse(data);
+    
+    const newRequest = {
+      id: Date.now().toString(),
+      ...req.body,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+    
+    requests.push(newRequest);
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Onsite request submitted successfully' 
+    }));
+  } catch (error) {
+    console.error('Error:', error);
+    console.error('Error saving onsite request:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save request' }));
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
 }
 >>>>>>> origin/main
