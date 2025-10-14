@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SystemMonitor() {
+import React from 'react;'
+const SystemMonitor = () => {
   return (
     <div>
       <h1>SystemMonitor</h1>

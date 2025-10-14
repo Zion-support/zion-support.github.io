@@ -1,5 +1,10 @@
-'use client'
-import React from 'react'; import { Helmet } from 'react-helmet-async'; export default function ResolveMergeConflicts.js() {} return ( <>Helme t><//titl e>Resolve Merge Conflicts.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional resolve merge conflicts.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center">
+'use client;'
+import React from 'react; import { Helmet } from 'react-helmet-async'; export default function ResolveMergeConflicts.js() {} return ( <>Helme t><//titl e>Resolve Merge Conflicts.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional resolve merge conflicts.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>"" <h1 classNam e="text-5xl font-bold text-gray-900 mb-6">"; Resolve Merge Conflicts.js </h 1><//p classNam e="text-xl text-gray-600 max-w-3xl mx-auto">"; Professional resolve merge conflicts.js services by Zion Tech Group. </p><///di v><///sectio n> {/* Content Section */} <section classNam e="py-20 px-4">"" <div classNam e="max-w-6xl mx-auto">
       </div>"" <div classNam e="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       </div>"" <div classNam e="bg-white p-6 rounded-lg shadow-lg">

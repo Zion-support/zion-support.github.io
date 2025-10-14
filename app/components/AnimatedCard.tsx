@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AnimatedCard() {
+import React from 'react;'
+const AnimatedCard = () => {
   return (
     <div>
       <h1>AnimatedCard</h1>

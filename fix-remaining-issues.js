@@ -1,57 +1,75 @@
 
 #!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-console.log('🔧 Fixing remaining TypeScript and linting issues...')
-// Function to fix duplicate default exports and other issues
-function fixFileIssues(filePath) {
+
+import fs from 'fs;'
+import path from 'path;'
+
+// Function to fix remaining syntax issues
+function fixRemainingIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Check if file has issues
-    if (!content.includes(export default') || content.split('export default).length <= 2) {
-      return (false); // No issues to fix
+    let content = fs.readFileSync(filePath, 'utf8);'
+    let modified = false;
+
+    // Fix various patterns
+    const patterns = [
+      // Fix missing quotes in import statements
+      { from: /import { Helmet  } from 'react-helmet-async;/g, to: "import { Helmet } from react-helmet-async';" },'
+      { from: /import { Helmet } from react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet} from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async;" },'
+      
+      // Fix extra closing braces
+      { from: /^}\s*$/gm, to: ' },'
+      
+      // Fix any remaining unterminated strings
+      { from: /'react-helmet-async;/g, to: "react-helmet-async';" },'
+      
+      // Fix any remaining stray quotes
+      { from: /;\s*$/gm, to: ';' },
+    ];
+
+    for (const pattern of patterns) {
+      const newContent = content.replace(pattern.from, pattern.to);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
     }
-    console.log(`📝 Fixing issues in: ${filePath}`)
-    // Split content by lines
-    const lines = content.split('\n')
-    const fixedLines = []
-    let foundFirstDefault = false
-    let inComponent = false
-    let componentName = ''
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i]
-      // Look for component definition
-      if (line.includes('function ') && line.includes('Page') && line.includes('(')) {
-        const match = line.match(/function\s+(\w+)/)
-        if (match) {
-          componentName = match[1]
-          inComponent = true
+
+    // Clean up extra newlines and empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.trim() + '\n';
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);`
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);`
+  }
+  return false;
+}
+
+// Function to find all TSX/TS files
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          traverse(fullPath);
+        } else if (item.endsWith('.tsx') || item.endsWith(.ts')) {'
+          files.push(fullPath);
         }
       }
-      // Handle export default statements
-      if (line.includes('export default)) {
-        if (!foundFirstDefault) {
-          // Keep the first export default
-          foundFirstDefault = true
-          fixedLines.push(line)
-        } else {
-          // Remove duplicate export default statements
-          console.log(`  - Removing duplicate export default at line ${i + 1}`)
-          modified = true
-        }
-      } else if (line.includes('export {') && line.includes(}')) {
-        // Remove export statements that reference undefined components
-        if (line.includes(componentName) || line.includes('Page')) {
-          console.log(`  - Removing problematic export at line ${i + 1}`)
-          modified = true
-        } else {
-          fixedLines.push(line)
-        }
-      } else {
-        fixedLines.push(line)
-      }
+    } catch (error) {
+      // Skip directories we cant read'
     }
     // Write the fixed content back to the file
     if (modified) {
@@ -64,52 +82,21 @@ function fixFileIssues(filePath) {
     return false
   }
 }
-// Function to fix unused imports
-function fixUnusedImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Remove unused imports from specific files
-    if (filePath.includes('App-minimal.tsx')) {
-      // Remove unused 'App' import
-      content = content.replace(/import\s+{\s*App\s*}\s+from\s+['"][^'"]+['"];?\s*\n/, '')
-      modified = true
-    }
-    if (filePath.includes('App_minimal.tsx')) {
-      // Remove unused imports
-      content = content.replace(/import\s+{\s*Router,\s*Routes,\s*Route,\s*HelmetProvider\s*}\s+from\s+['"][^'"]+['"];?\s*\n/, '')
-      modified = true
-    }
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`📝 Fixed unused imports in: ${filePath}`)
-    }
-    return modified
-  } catch (error) {
-    console.error(`❌ Error fixing unused imports in ${filePath}:`, error.message)
-    return false
-  }
-}
-// Function to find all files with issues
-function findFilesWithIssues(dir) {
-  const files = []
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath)
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8')
-          // Check for multiple export default statements
-          if (content.split('export default').length > 2) {
-            files.push(fullPath)
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+
+// Main execution
+console.log('Fixing remaining syntax issues...);'
+
+const directories = ['./app, './src'];'
+let totalFixed = 0;
+
+for (const dir of directories) {
+  if (fs.existsSync(dir)) {
+    const tsxFiles = findTsxFiles(dir);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);`
+    
+    for (const file of tsxFiles) {
+      if (fixRemainingIssues(file)) {
+        totalFixed++;
       }
     }
   }
@@ -165,3 +152,5 @@ try {
   console.error('💥 Fatal error during issue resolution:', error.message)
   process.exit(1)
 }
+
+console.log(`Total fixed: ${totalFixed} files.`);`

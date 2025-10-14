@@ -1,4 +1,3 @@
-// fix-html-conflicts - Basic implementation
-export default function fix-html-conflicts() {
-  return null;
-}
+import fs from 'fs; import path from ;path; import { fileURLToPath } from ';url; #!/usr/bin// Fixed regex; let content = fs.readFileSync(filePath, ';utf8); console.error('Error:const lines = content.split('\nfs.writeFileSync(filePath, result.join(\n'), 'utf8if ( ![ node_modules', '.git, 'dist', build', '.next
+); if (['.html', .htm)'
+]'

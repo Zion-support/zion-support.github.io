@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedSEOOptimizer() {
+import React from 'react;'
+const EnhancedSEOOptimizer = () => {
   return (
     <div>
       <h1>EnhancedSEOOptimizer</h1>

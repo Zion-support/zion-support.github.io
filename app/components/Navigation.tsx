@@ -1,9 +1,24 @@
-import React, { useState } from "react;import { Link } from react-router-dom;import { Menu, X, ChevronDown } from lucide-react";const Navigation = () => {"  const [isOpen, setIsOpen] :  useState(false);
-  const [isServicesOpen, setIsServicesOpen] :  useState(false);
+import React, { useState } from 'react;'
+import { Link } from 'react-router-dom;'
+import { Menu, X, ChevronDown } from 'lucide-react;'
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const services :  [
-    { name="AI Solutions, href=""/ai-solutions" },    { name="Cybersecurity", href="/cybersecurity" },    { name="Cloud Infrastructure", href: ""/cloud-infrastructure },    { name=""Digital Transformation, href: ""/digital-transformation },    { name=""IT Services", href="/it-services },"    { name="Micro SAAS", href="/micro-saas }"  ];"  return (
-    <nav className="bg-gray-900 95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50"      <div><div>"          {/* Logo */}
+  const services = [
+    { name: 'AI Solutions, href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: /cybersecurity' },'
+    { name: Cloud Infrastructure', href: '/cloud-infrastructure },'
+    { name: 'Digital Transformation, href: '/digital-transformation' },
+    { name: 'IT Services', href: /it-services' },'
+    { name: Micro SAAS', href: '/micro-saas }'
+  ];
+
+  return (
+    <nav className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+      <div>
+        <div>
+          {/* Logo */}
           <div>
             <Link to="/ className="flex items-center">              <div><span className="text-white font-bold text-sm">Z</span>              </div><span className="text-xl font-bold text-white">Zion Tech Group</span>            </Link></div>
           {/* Desktop Navigation */}

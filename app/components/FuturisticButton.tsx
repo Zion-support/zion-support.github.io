@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function FuturisticButton() {
+import React from 'react;'
+const FuturisticButton = () => {
   return (
     <div>
       <h1>FuturisticButton</h1>

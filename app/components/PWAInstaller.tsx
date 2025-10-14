@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function PWAInstaller() {
+import React from 'react;'
+const PWAInstaller = () => {
   return (
     <div>
       <h1>PWAInstaller</h1>

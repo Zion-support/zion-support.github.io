@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function CriticalResourcePreloader() {
+import React from 'react;'
+const CriticalResourcePreloader = () => {
   return (
     <div>
       <h1>CriticalResourcePreloader</h1>

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedPerformanceMonitor() {
+import React from 'react;'
+const EnhancedPerformanceMonitor = () => {
   return (
     <div>
       <h1>EnhancedPerformanceMonitor</h1>

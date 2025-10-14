@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ContentCarousel() {
+import React from 'react;'
+const ContentCarousel = () => {
   return (
     <div>
       <h1>ContentCarousel</h1>

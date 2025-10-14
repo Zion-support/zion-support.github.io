@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SkipLink() {
+import React from 'react;'
+const SkipLink = () => {
   return (
     <div>
       <h1>SkipLink</h1>

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SEOOptimizer() {
+import React from 'react;'
+const SEOOptimizer = () => {
   return (
     <div>
       <h1>SEOOptimizer</h1>

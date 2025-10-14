@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function FuturisticBackground() {
+import React from 'react;'
+const FuturisticBackground = () => {
   return (
     <div>
       <h1>FuturisticBackground</h1>

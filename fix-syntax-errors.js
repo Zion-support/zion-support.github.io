@@ -1,53 +1,90 @@
-import React from 'react'
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from 'fs;'
+import path from 'path;'
 
-// Function to fix syntax errors in TSX/TS files
-function fixSyntaxErrors(content) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
   let fixed = content;
   
-  // Fix double-quoted import statements
-  fixed = fixed.replace(/"import\s+([^"]+)"\s*;"/g, 'import $1;');
+  // Fix unterminated strings
+  fixed = fixed.replace(/'([^]*?)(?=\n|$)/g, (match, str) => {'
+    if (!match.endsWith("'") && !match.endsWith("')) {'
+      return match + "";'
+    }
+    return match;
+  });
   
-  // Fix JSX attribute syntax (name: "value" -> name="value")
-  fixed = fixed.replace(/(\w+):\s*"([^"]+)"/g, '$1="$2"');
-  
-  // Fix stray quotes and semicolons in JSX
-  fixed = fixed.replace(/>"\s*</g, '><');
-  fixed = fixed.replace(/>"\s*$/gm, '>');
-  fixed = fixed.replace(/;\s*"/g, ';');
-  fixed = fixed.replace(/"\s*;\s*$/gm, ';');
-  
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/>"\s*<\/div>/g, '></div>');
-  fixed = fixed.replace(/>"\s*<\/h1>/g, '></h1>');
-  fixed = fixed.replace(/>"\s*<\/p>/g, '></p>');
-  fixed = fixed.replace(/>"\s*<\/span>/g, '></span>');
-  fixed = fixed.replace(/>"\s*<\/button>/g, '></button>');
-  fixed = fixed.replace(/>"\s*<\/a>/g, '></a>');
-  
-  // Fix stray quotes in JSX content
-  fixed = fixed.replace(/>"\s*([^<]+)\s*"</g, '>$1<');
-  fixed = fixed.replace(/>"\s*([^<]+)\s*"$/gm, '>$1');
-  
-  // Fix malformed className attributes
-  fixed = fixed.replace(/className:\s*"([^"]+)"/g, 'className="$1"');
-  
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<meta\s+name:\s*"([^"]+)"\s+content:\s*"([^"]+)"\s*\/>/g, '<meta name="$1" content="$2" />');
-  
-  // Fix stray semicolons in JSX
-  fixed = fixed.replace(/;\s*>/g, '>');
-  fixed = fixed.replace(/;\s*<\//g, '</');
+  // Fix broken JSX fragments
+  fixed = fixed.replace(/<>\s*<\/>\s*<div>/g, '<div>);'
+  fixed = fixed.replace(/<\/div>\s*<\/>/g, '</div>);'
   
   // Fix malformed function declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {');
+  fixed = fixed.replace(/export default function\s+([a-zA-Z0-9-_]+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g, 
+    'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n});'
   
-  // Fix malformed export statements
-  fixed = fixed.replace(/export\s+default\s+(\w+);\s*$/gm, 'export default $1;');
+  // Fix broken imports
+  fixed = fixed.replace(/';import\s+/g, ";\nimport ");
+  fixed = fixed.replace(/import\s+{\s*useEffect\s+\s*}\s+from\s+'react';/g, "import { useEffect } from react';");'
+  
+  // Fix broken interface declarations
+  fixed = fixed.replace(/;interface\s+([a-zA-Z0-9]+)Props\s*{\s*}/g, ";\ninterface $1Props {\n  title?: string;\n  description?: string;\n  keywords?: string[];\n  image?: string;\n  url?: string;\n  type?: string;\n  structuredData?: unknown;\n}");'
+  
+  // Fix broken JSX expressions
+  fixed = fixed.replace(/<div>\s*<\/div>\s*<div>\s*<\/div>/g, ');'
+  fixed = fixed.replace(/<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>/g, ');'
+  
+  // Fix broken return statements
+  fixed = fixed.replace(/return\s*\(\s*<div>Page content<\/div>\s*\);\s*return\s*\(\s*<div>Page content<\/div>\s*\);/g, 
+    'return (\n    <div>Page content</div>\n  ););'
+  
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g, 
+    'return (\n    <div>Page content</div>\n  ););'
+  
+  // Fix broken semicolons and quotes
+  fixed = fixed.replace(/;\s*;/g, ';);'
+  fixed = fixed.replace(/'([^]*?)'([^']*?)/g, "'$1$2'");
+  
+  // Fix broken function parameters
+  fixed = fixed.replace(/const\s+([a-zA-Z0-9]+):\s*$/g, 'const $1 = () => {');
+  
+  // Fix broken useEffect
+  fixed = fixed.replace(/useEffect\(\(\)\s*{\s*}\s*$/g, 'useEffect(() => {\n    // Effect logic here\n  }, []);');
+  
+  // Fix broken meta tags
+  fixed = fixed.replace(/\{ name: "'([^']+)", content: "([^"]+)"\}/g, '{ name: "$1", content: "$2" }');
+  
+  // Fix broken JSX attributes
+  fixed = fixed.replace(/href="\{url\}"/g, 'href={url}');
+  fixed = fixed.replace(/type="image"\/x-icon"/g, 'type="image/x-icon"');
+  
+  // Fix broken array syntax
+  fixed = fixed.replace(/\[\s*{\s*name:\s*'([^']+),\s*content:\s*'([^']+)\s*},\s*;\s*{/g, '
+    '[\n    { name: "$1", content: "$2" },\n    {);'
+  
+  // Fix broken object syntax
+  fixed = fixed.replace(/\{\s*name:\s*'([^]+)',\s*content:\s*'([^]+)'\s*},\s*;\s*{/g, '
+    { name: "$1", content: "$2" },\n    {');'
+  
+  // Fix broken template literals
+  fixed = fixed.replace(/`([^`]*?)(?=\n|$)/g, (match, str) => {`
+    if (!match.endsWith(`')) {'`
+      return match + `';'`
+    }
+    return match;
+  });
+  
+  // Fix broken JSX closing tags
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*\);\s*}/g, \n  );\n}');'
+  
+  // Fix broken arrow functions
+  fixed = fixed.replace(/=>\s*{\s*}\s*$/g, => {\n    return null;\n  };');'
+  
+  // Fix broken component structure
+  if (fixed.includes(return (') && !fixed.includes('export default)) {'
+    fixed = `import React from 'react;\n\nexport default function Component() {\n  ${fixed}\n}`;'`
+  }
   
   return fixed;
 }
@@ -55,62 +92,43 @@ function fixSyntaxErrors(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const content = fs.readFileSync(filePath, 'utf8);'
+    const fixed = fixSyntaxErrors(content, filePath);
     
-    fixed = `import React from "react";
-import { Helmet } from "react-helmet-async";
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed: ${filePath}`);`
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);`
+    return false;
+  }
+}
 
-export default function Page() {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>${pageTitle} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${pageTitle.toLowerCase()} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900">
-        <div className="container mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold text-white mb-8">${pageTitle}</h1>
-          <p className="text-gray-300 text-lg">
-            Professional ${pageTitle.toLowerCase()} services to help your business grow.
-          </p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-}`;
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.) && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith(.ts') || file.endsWith('.jsx) || file.endsWith('.js')) {
+      if (processFile(filePath)) {
+        fixedCount++;
+      }
+    }
   }
   
-  return fixed;
+  return fixedCount;
 }
 
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
-      }
-    });
-  });
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
-}
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
-
-export { fixSyntaxErrors, processFile };
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = processDirectory('/workspace');'
+console.log(`Fixed ${fixedCount} files.`);`

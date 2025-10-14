@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function PerformanceMonitor() {
+import React from 'react;'
+const PerformanceMonitor = () => {
   return (
     <div>
       <h1>PerformanceMonitor</h1>

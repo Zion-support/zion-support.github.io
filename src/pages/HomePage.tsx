@@ -1,4 +1,8 @@
-import React from "react";import react-helmet-async from react-helmet-async";'const HomePage: React.FC = () => {return ('    <div>'      <Helmet>
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
+const HomePage: React.FC = () => {return (
+    <>
+      <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta;
           name=""description""          content=""Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.""        /></Helmet><div className="min-h-screen bg-gray-900 text-white"><main className=""container mx-auto px-4 py-16"><section className=""text-center mb-16>""            <h1 className="text-5xl font-bold mb-6">"              Welcome to <span className=""text-blue-400">Zion Tech Group</span></h1><p className=""text-xl text-gray-300 mb-8>""              Leading provider of AI-powered enterprise solutions</p><div className="flex justify-center space-x-4"><a"                href="/contact""                className="bg-blue-600 hover bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"""              >"                Get Started</a>
@@ -17,5 +21,6 @@ import React from "react";import react-helmet-async from react-helmet-async";'co
           </section>
         </main>
       </div>
-  )}
-export default HomePage</div>
+  )};
+export default HomePage;
+'

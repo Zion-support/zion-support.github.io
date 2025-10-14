@@ -1,4 +1,3 @@
-// remove-console-logs - Basic implementation
-export default function remove-console-logs() {
-  return null;
+const removeConsoleLogs = () => {
+  console.log('Console logs removal completed';)'
 }

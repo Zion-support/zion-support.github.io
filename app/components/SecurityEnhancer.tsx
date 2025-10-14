@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SecurityEnhancer() {
+import React from 'react;'
+const SecurityEnhancer = () => {
   return (
     <div>
       <h1>SecurityEnhancer</h1>

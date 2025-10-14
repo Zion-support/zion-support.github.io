@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function LazyWrapper() {
+import React from 'react;'
+const LazyWrapper = () => {
   return (
     <div>
       <h1>LazyWrapper</h1>

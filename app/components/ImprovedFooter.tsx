@@ -1,5 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react;'
+const ImprovedFooter = () => {
+  return (
+    <div>
+      <h2>ImprovedFooter</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
 
 export default function Footer() {
   return (

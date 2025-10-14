@@ -1,5 +1,5 @@
-import React from 'react';
-import { User, X } from 'lucide-react';
+import React from 'react;'
+import { User, X } from 'lucide-react;'
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -7,11 +7,11 @@ interface SidebarNavigationProps {
 }
 
 const navigationItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Profile', href: '/profile' },
-  { name: 'Settings', href: '/settings' },
-  { name: 'Help', href: '/help' },
-  { name: 'About', href: '/about' }
+  { name: 'Home, href: '/', icon: User },
+  { name: 'Profile', href: /profile', icon: User },'
+  { name: Settings', href: '/settings, icon: User },'
+  { name: 'Help, href: '/help', icon: User },
+  { name: 'About', href: /about', icon: User }'
 ];
 
 export default function SidebarNavigation() {
@@ -27,9 +27,9 @@ export default function SidebarNavigation() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${`
+          isOpen ? translate-x-0' : '-translate-x-full'
+        }`}`
       >
         <div className="flex items-center justify-between p-4 border-b">
           <h2 className="text-lg font-semibold">Navigation</h2>
@@ -57,6 +57,5 @@ export default function SidebarNavigation() {
           })}
         </nav>
       </div>
-    </>
   );
 }

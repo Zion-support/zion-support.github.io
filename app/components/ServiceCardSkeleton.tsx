@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ServiceCardSkeleton() {
+import React from 'react;'
+const ServiceCardSkeleton = () => {
   return (
     <div>
       <h1>ServiceCardSkeleton</h1>

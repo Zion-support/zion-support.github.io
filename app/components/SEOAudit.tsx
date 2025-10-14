@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SEOAudit() {
+import React from 'react;'
+const SEOAudit = () => {
   return (
     <div>
       <h1>SEOAudit</h1>

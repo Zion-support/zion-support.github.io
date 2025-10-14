@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function FuturisticButtonEnhanced() {
+import React from 'react;'
+const FuturisticButtonEnhanced = () => {
   return (
     <div>
       <h1>FuturisticButtonEnhanced</h1>

@@ -1,4 +1,2 @@
-// fix-all-pages - Basic implementation
-export default function fix-all-pages() {
-  return null;
-}
+import fs from 'fs; import path from ;path; import { fileURLToPath } from ';url; #!/usr/bin// Fixed regex; let content = fs.readFileSync(filePath, ';utf8); if (!content.includes('export default') || content.includes();) || content.includes(console.error('Error:'
+}; ); const fileName = path.basename(filePath, .tsx)'; const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Pageconst fixedContent = `import React from react';`'``'`

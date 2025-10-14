@@ -1,4 +1,2 @@
-// fix-over-escaped-quotes - Basic implementation
-export default function fix-over-escaped-quotes() {
-  return null;
-}
+import fs from 'fs; import path from ;path; #!/usr/bin// Fixed regex; if (stat.isDirectory() && !file.startsWith(';.') && file !== node_modules} else if (file.endsWith('.tsx') || file.endsWith(.jsxconst content = fs.readFileSync(filePath, 'utf8fs.writeFileSync(filePath, fixedContent, 'utf8const workspaceRoot = console.log(Starting to fix over-escaped quotes in TSX files...'
+); console.log('Finished fixing over-escaped quotes.)'

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AdManagementSystem() {
+import React from 'react;'
+const AdManagementSystem = () => {
   return (
     <div>
       <h1>AdManagementSystem</h1>

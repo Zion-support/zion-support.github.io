@@ -1,37 +1,19 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React from 'react;'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom;'
+import { HelmetProvider } from 'react-helmet-async;'
+import { ErrorBoundary } from 'react-error-boundary;'
 
 // Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import Navigation from './app/components/Navigation';
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
-
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOEnhancer from './app/components/SEOEnhancer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import MetaManager from './app/components/MetaManager';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
-import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
+import Navigation from './app/components/Navigation;'
+import Footer from './app/components/Footer;'
+import AnalyticsProvider from './app/components/AnalyticsProvider;'
+// import LoadingStates from './app/components/LoadingStates;'
 
 // Pages
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
-
-const App: React.FC = () => {
-  const handlePerformanceMetrics = (metrics: Record<string, unknown>) => {
-    console.log('Performance metrics:', metrics);
-  };
+import HomePage from './app/page;'
+import AboutPage from './app/about/page;'
+import ServicesPage from './app/services/page;'
+import ContactPage from './app/contact/page;'
 
   return (
     <ErrorBoundary>

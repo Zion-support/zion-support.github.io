@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AccessibilityAudit() {
+import React from 'react;'
+const AccessibilityAudit = () => {
   return (
     <div>
       <h1>AccessibilityAudit</h1>

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function StructuredData() {
+import React from 'react;'
+const StructuredData = () => {
   return (
     <div>
       <h1>StructuredData</h1>

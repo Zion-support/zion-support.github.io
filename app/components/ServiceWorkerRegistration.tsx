@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ServiceWorkerRegistration() {
+import React from 'react;'
+const ServiceWorkerRegistration = () => {
   return (
     <div>
       <h1>ServiceWorkerRegistration</h1>

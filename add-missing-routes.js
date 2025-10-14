@@ -1,4 +1,2 @@
-// add-missing-routes - Basic implementation
-export default function add-missing-routes() {
-  return null;
-}
+// import path from 'path // This file is used to add missing routes to the application''
+// Its a utility script that can be run to generate route files' console.log('Add missing routes utility)''

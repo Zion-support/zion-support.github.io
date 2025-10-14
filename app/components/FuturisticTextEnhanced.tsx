@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function FuturisticTextEnhanced() {
+import React from 'react;'
+const FuturisticTextEnhanced = () => {
   return (
     <div>
       <h1>FuturisticTextEnhanced</h1>

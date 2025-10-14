@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ErrorBoundary() {
+import React from 'react;'
+const ErrorBoundary = () => {
   return (
     <div>
       <h1>ErrorBoundary</h1>

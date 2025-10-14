@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function LoadingOptimizer() {
+import React from 'react;'
+const LoadingOptimizer = () => {
   return (
     <div>
       <h1>LoadingOptimizer</h1>

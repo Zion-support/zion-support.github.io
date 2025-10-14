@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function OptimizedImage() {
+import React from 'react;'
+const OptimizedImage = () => {
   return (
     <div>
       <h1>OptimizedImage</h1>

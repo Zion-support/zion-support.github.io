@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ContentPromotionBanner() {
+import React from 'react;'
+const ContentPromotionBanner = () => {
   return (
     <div>
       <h1>ContentPromotionBanner</h1>

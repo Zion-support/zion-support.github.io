@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function SEOHead() {
+import React from 'react;'
+const SEOHead = () => {
   return (
     <div>
       <h1>SEOHead</h1>

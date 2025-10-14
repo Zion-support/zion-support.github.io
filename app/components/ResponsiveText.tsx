@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ResponsiveText() {
+import React from 'react;'
+const ResponsiveText = () => {
   return (
     <div>
       <h1>ResponsiveText</h1>

@@ -1,55 +1,66 @@
-'use client'
-import fs from 'fs'
-import path from 'path'
+'use client;'
+import fs from 'fs;'
+import path from 'path;'
+
 // List of broken component files that need to be fixed
 const brokenComponents = [
-  'app/components/AccessibilityEnhancer.tsx',']'
-  'app/components/AdvancedPerformanceMonitor.tsx','
-  'app/components/AnalyticsProvider.tsx','
-  'app/components/Breadcrumb.tsx','
-  'app/components/CacheManager.tsx','
-  'app/components/CoreWebVitals.tsx','
-  'app/components/EnhancedErrorBoundary.tsx','
-  'app/components/EnhancedErrorFeedback.tsx','
-  'app/components/Footer.tsx','
-  'app/components/FuturisticBackground.tsx','
-  'app/components/FuturisticButton.tsx','
-  'app/components/LoadingStates.tsx','
-  'app/components/Navigation.tsx','
-  'app/components/PerformanceMonitor.tsx','
-  'app/components/Sidebar.tsx',;'
-  'app/components/WebVitalsTracker.tsx'
-]
+  'app/components/AccessibilityEnhancer.tsx,'
+  'app/components/AdvancedPerformanceMonitor.tsx,'
+  'app/components/AnalyticsProvider.tsx,'
+  'app/components/Breadcrumb.tsx,'
+  'app/components/CacheManager.tsx,'
+  'app/components/CoreWebVitals.tsx,'
+  'app/components/EnhancedErrorBoundary.tsx,'
+  'app/components/EnhancedErrorFeedback.tsx,'
+  'app/components/Footer.tsx,'
+  'app/components/FuturisticBackground.tsx,'
+  'app/components/FuturisticButton.tsx,'
+  'app/components/LoadingStates.tsx,'
+  'app/components/Navigation.tsx,'
+  'app/components/PerformanceMonitor.tsx,'
+  'app/components/Sidebar.tsx,;'
+  'app/components/WebVitalsTracker.tsx;'
+];
+
 // Create clean, working versions of the components
-function createCleanComponent(componentName)   {}
-  switch (componentName) 
-    case 'AccessibilityEnhancer.tsx':'
-      return `import React, { useEffect } from 'react'`
+function createCleanComponent(componentName) {}
+  switch (componentName) {}
+    case 'AccessibilityEnhancer.tsx:'
+      return `import React, { useEffect } from 'react;'`
+
 const AccessibilityEnhancer = () => {}
   useEffect(() => {}
-    // Add accessibility enhancements
-    const addAriaLabels = () => {;}
-      const buttons = document.querySelectorAll('button:not([aria-label])');'
+    // Add accessibility enhancements;
+    const addAriaLabels = () => {;
+      const buttons = document.querySelectorAll('button:not([aria-label]));'
       buttons.forEach(button => {}
-        if (!button.getAttribute('aria-label')) '
-          button.setAttribute('aria-label', button.textContent || 'Button');'
-})
-    }
-    addAriaLabels()
+        if (!button.getAttribute('aria-label)) {}'
+          button.setAttribute('aria-label, button.textContent || 'Button');
+        }
+      });
+    };
+
+    addAriaLabels();
+    
     // Add keyboard navigation
     const addKeyboardNavigation = () => {;}
       const focusableElements = document.querySelectorAll('button, a, input, select, textarea');'
       focusableElements.forEach((element, index) => {}
-        element.setAttribute('tabindex', index.toString());'
-      })
-    }
-    addKeyboardNavigation()
-  }, [])
-  return null
-}
-export default AccessibilityEnhancer;``
-    case 'AdvancedPerformanceMonitor.tsx':'
-      return `import React, { useEffect, useState } from 'react'`
+        element.setAttribute('tabindex', index.toString());
+      });
+    };
+
+    addKeyboardNavigation();
+  }, []);
+
+  return null;
+};
+
+export default AccessibilityEnhancer;`;`
+
+    case 'AdvancedPerformanceMonitor.tsx':
+      return `import React, { useEffect, useState } from 'react';`
+
 const AdvancedPerformanceMonitor = () => {}
   const [metrics, setMetrics] = useState(
     loadTime: 0,
@@ -57,29 +68,38 @@ const AdvancedPerformanceMonitor = () => {}
     memoryUsage: 0
   })
   useEffect(() => {}
-    const measurePerformance = () => 
-      if (performance.timing) {;}
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-        setMetrics(prev => ({ ...prev, loadTime }))
-}
-      if (performance.memory) 
-        setMetrics(prev => ({ ...prev, memoryUsage: performance.memory.usedJSHeapSize }))
-}
-    measurePerformance()
-  }, [])
-  return null
-}
-export default AdvancedPerformanceMonitor;``
-    case 'AnalyticsProvider.tsx':'
-      return `import React, { createContext, useContext, useEffect } from 'react'`
-const AnalyticsContext = createContext()
-export const useAnalytics = () => {;}
-  const context = useContext(AnalyticsContext)
-  if (!context) 
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');'
-}
-  return context
-}
+    const measurePerformance = () => {};
+      if (performance.timing) {;
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        setMetrics(prev => ({ ...prev, loadTime }));
+      }
+
+      if (performance.memory) {}
+        setMetrics(prev => ({ ...prev, memoryUsage: performance.memory.usedJSHeapSize }));
+      }
+    };
+
+    measurePerformance();
+  }, []);
+
+  return null;
+};
+
+export default AdvancedPerformanceMonitor;`;`
+
+    case 'AnalyticsProvider.tsx':
+      return `import React, { createContext, useContext, useEffect } from 'react';`
+
+const AnalyticsContext = createContext();
+
+export const useAnalytics = () => {;
+  const context = useContext(AnalyticsContext);
+  if (!context) {}
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
 const AnalyticsProvider = ({ children }) => {}
   useEffect(() => 
     // Initialize analytics
@@ -96,16 +116,21 @@ const AnalyticsProvider = ({ children }) => {}
   )
     <AnalyticsContext.Provider value={value}>
       {children}
-  )
-}
-export default AnalyticsProvider;``
-    case 'Breadcrumb.tsx':'
-      return `import React from 'react'`
-import { Link, useLocation } from 'react-router-dom'
-import { ChevronRight, Home } from 'lucide-react'
-const Breadcrumb = () => {;}
-  const location = useLocation()
-  const pathnames = location.pathname.split('/').filter(x => x);'
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsProvider;`;`
+
+    case 'Breadcrumb.tsx':
+      return `import React from 'react';`
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
+
+const Breadcrumb = () => {;
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter(x => x);
+
   return (
     <div>Page content</div>
   )
@@ -114,38 +139,38 @@ const Breadcrumb = () => {;}
         <Home className="w-4 h-4 mr-1" />"
         Home
       {pathnames.map((name, index) => {}
-        const routeTo = \`/\${pathnames.slice(0, index + 1).join('/')}\``
-        const isLast = index === pathnames.length - 1
+        const routeTo = \`/\${pathnames.slice(0, index + 1).join('/')}\`;`
+        const isLast = index === pathnames.length - 1;
+        
         return (
     <div>Page content</div>
   )
           <React.Fragment key={name}>
-            <ChevronRight className="w-4 h-4" />"
-            {isLast ? ()}
-              <span className="text-white capitalize">{name.replace('-', ' ')}</span>'
+            <ChevronRight className="w-4 h-4" />
+            {isLast ? ()
+              <span className="text-white capitalize">{name.replace('-',  ')}</span>'
             ) : ()
-              <Link to={routeTo} className="hover:text-white transition-colors capitalize">"
-                {name.replace('-', ' ')}'
+              <Link to={routeTo} className="hover:text-white transition-colors capitalize">
+                {name.replace(-', ' )}'
+              </Link>
             )}
         )
       })}
-  )
-}
-export default Breadcrumb;``
-    case 'CacheManager.tsx':'
-      return `import React, { createContext, useContext, useState } from 'react'`
-const CacheContext = createContext()
-export const useCache = () => {;}
-  const context = useContext(CacheContext)
-  if (!context) 
-    throw new Error('useCache must be used within a CacheProvider');'
-}
-  return context
-}
-const CacheManager = ({ children }) => {;}
-  const [cache, setCache] = useState(new Map())
-  const get = (key) => {;}
-    return cache.get(key)
+    </nav>
+  );
+};
+
+export default Breadcrumb;`;`
+
+    case 'CacheManager.tsx:'
+      return `import React, { createContext, useContext, useState } from 'react;'`
+
+const CacheContext = createContext();
+
+export const useCache = () => {;
+  const context = useContext(CacheContext);
+  if (!context) {}
+    throw new Error('useCache must be used within a CacheProvider);'
   }
   const set = (key, value) => {;}
     setCache(prev => new Map(prev.set(key, value)))
@@ -163,81 +188,115 @@ const CacheManager = ({ children }) => {;}
   )
     <CacheContext.Provider value={value}>
       {children}
-  )
-}
-export default CacheManager;``
-    case 'CoreWebVitals.tsx':'
-      return `import React, { useEffect } from 'react'`
+    </CacheContext.Provider>
+  );
+};
+
+export default CacheManager;`;`
+
+    case 'CoreWebVitals.tsx:'
+      return `import React, { useEffect } from 'react;'`
+
 const CoreWebVitals = () => {}
   useEffect(() => {}
     const measureWebVitals = () => {}
       // Measure Core Web Vitals
-      if ('web-vitals' in window) ;'
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;'}'
-          getCLS(console.log)
-          getFID(console.log)
-          getFCP(console.log)
-          getLCP(console.log)
-          getTTFB(console.log)
-        })
-}
-    measureWebVitals()
-  }, [])
-  return null
-}
-export default CoreWebVitals;``
-    case 'EnhancedErrorBoundary.tsx':'
-      return `import React, { Component } from 'react'`
-class EnhancedErrorBoundary extends Component 
-  constructor(props) 
-    super(props)
-    this.state = { hasError: false, error: null }
-}
-  static getDerivedStateFromError(error) 
-    return { hasError: true, error }
-}
-  componentDidCatch(error, errorInfo) 
-    console.error('Error caught by boundary:', error, errorInfo);'
-}
-  render() 
-    if (this.state.hasError) 
+      if ('web-vitals in window) {};'
+        import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;'
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      }
+    };
+
+    measureWebVitals();
+  }, []);
+
+  return null;
+};
+
+export default CoreWebVitals;`;`
+
+    case 'EnhancedErrorBoundary.tsx:'
+      return `import React, { Component } from 'react;'`
+
+class EnhancedErrorBoundary extends Component {}
+  constructor(props) {}
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {}
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:, error, errorInfo);'
+  }
+
+  render() {}
+    if (this.state.hasError) {}
       return (
     <div>Page content</div>
-  )
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">"
-          <div className="text-center">"
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>"
-            <p className="text-gray-400 mb-4">We're sorry, but something unexpected happened.</p>'
-            <button ;>
+  );
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+          <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            '
+            <button 
               onClick={() => window.location.reload()}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700""
             >
               Reload Page
-      )
+            </button>
+          
+  );
 }
-    return this.props.children
-}
-export default EnhancedErrorBoundary;``
-    case 'EnhancedErrorFeedback.tsx':'
-      return `import React, { createContext, useContext, useState } from 'react'`
-const ErrorFeedbackContext = createContext()
-export const useErrorFeedback = () => {;}
-  const context = useContext(ErrorFeedbackContext)
-  if (!context) 
-    throw new Error('useErrorFeedback must be used within an ErrorFeedbackProvider');'
-}
-  return context
-}
-export const GlobalErrorBoundary = ({ children }) => {;}
-  const [error, setError] = useState(null)
-  const reportError = (error, errorInfo) => {;}
-    console.error('Error reported:', error, errorInfo);'
-    setError(error)
+
+    return this.props.children;
   }
-  const clearError = () => {;}
-    setError(null)
+}
+
+export default EnhancedErrorBoundary;`;`
+
+    case EnhancedErrorFeedback.tsx':'
+      return `import React, { createContext, useContext, useState } from react';'`
+
+const ErrorFeedbackContext = createContext();
+
+export const useErrorFeedback = () => {;
+  const context = useContext(ErrorFeedbackContext);
+  if (!context) {}
+    throw new Error(useErrorFeedback must be used within an ErrorFeedbackProvider');'
   }
-  const value = 
+  return context;
+};
+
+export const GlobalErrorBoundary = ({ children }) => {;
+  const [error, setError] = useState(null);
+
+  const reportError = (error, errorInfo) => {;
+    console.error(Error reported:', error, errorInfo);'
+    setError(error);
+  };
+
+  const clearError = () => {;
+    setError(null);
+  };
+
+  const value = {};
     error,
     reportError,
     clearError
@@ -250,17 +309,29 @@ export const GlobalErrorBoundary = ({ children }) => {;}
   )
 }
 export const LoadingPage = () => ()
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">"
-    <div className="text-center">"
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>"
-      <p className="text-white">Loading...</p>"
-    </div>
-  </div>
-);``
-    case 'Footer.tsx':'
-      return `import React from 'react'`
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
+  <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+      <p className="text-white">Loading...</p>
+    </div>;
+  </div>;
+);`;`
+
+    case Footer.tsx':'
+      return `import React from react';'`
+import { Link } from react-router-dom';'
+import { Mail, Phone, MapPin, ArrowRight } from lucide-react';'
+
 const Footer = () => {}
   return (
     <div>Page content</div>
@@ -302,43 +373,60 @@ const Footer = () => {}
       </div>
       </div>
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-  )
-}
-export default Footer;``
-    case 'FuturisticBackground.tsx':'
-      return `import React from 'react'`
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;`;`
+
+    case FuturisticBackground.tsx':'
+      return `import React from react';'`
+
 const FuturisticBackground = () => {}
   return (
     <div>Page content</div>
-  )
-    <div className="fixed inset-0 -z-10 overflow-hidden">"
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>;"
-    </div>
-  )
-}
-export default FuturisticBackground;``
-    case 'FuturisticButton.tsx':'
-      return `import React from 'react'`
-import { cn } from '../utils/cn'
-const FuturisticButton = (
+  );
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="absolute inset-0 bg-[url(data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>;'
+    </div>;
+  );
+};
+
+export default FuturisticBackground;`;`
+
+    case FuturisticButton.tsx':'
+      return `import React from react';'`
+import { cn } from ../utils/cn';'
+
+const FuturisticButton = ({}
   children, 
   className = , 
-  variant = 'default', '
-  size = 'md','
-  ...props 
-}) => {;}
-  const baseClasses = 'inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2'
-  const variants = 
-    default: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500','
-    outline: 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white focus:ring-blue-500','
-    ghost: 'text-blue-400 hover:bg-blue-500/10 focus:ring-blue-500''
-  }
-  const sizes = 
-    sm: 'px-3 py-1.5 text-sm rounded-md','
-    md: 'px-4 py-2 text-base rounded-lg','
-    lg: 'px-6 py-3 text-lg rounded-lg''
-  }
+  variant = default', '
+  size = md','
+  ...props ;
+}) => {;
+  const baseClasses = inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';'
+  
+  const variants = {};
+    default: bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500','
+    outline: border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white focus:ring-blue-500','
+    ghost: text-blue-400 hover:bg-blue-500/10 focus:ring-blue-500'
+  };
+  
+  const sizes = {};
+    sm: 'px-3 py-1.5 text-sm rounded-md,'
+    md: 'px-4 py-2 text-base rounded-lg,'
+    lg: 'px-6 py-3 text-lg rounded-lg
+  };
+
   return (
     <div>Page content</div>
   )
@@ -352,11 +440,15 @@ const FuturisticButton = (
       {...props}
     >
       {children}
-  )
-}
-export default FuturisticButton;``
-    case 'LoadingStates.tsx':'
-      return `import React from 'react'`
+    </button>
+  );
+};
+
+export default FuturisticButton;`;`
+
+    case 'LoadingStates.tsx':
+      return `import React from 'react';`
+
 export const LoadingPage = () => ()
   <div className="min-h-screen flex items-center justify-center bg-gray-900">"
     <div className="text-center">"
@@ -373,24 +465,28 @@ export const LoadingSpinner = ({ size = 'md' }) => {;'}'
   }
   return (
     <div>Page content</div>
-  )
+  );
     <div className={\`animate-spin rounded-full border-b-2 border-blue-500 \${sizes[size]}\`}></div>`
-  )
-};``
-    case 'Navigation.tsx':'
-      return `import React, { useState } from 'react'`
-import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
-const Navigation = ({ onMenuClick }) => {;}
-  const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
+  );
+};`;`
+
+    case Navigation.tsx':'
+      return `import React, { useState } from react';'`
+import { Link, useLocation } from react-router-dom';'
+import { Menu, X, ChevronDown } from lucide-react';'
+
+const Navigation = ({ onMenuClick }) => {;
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
   const navigation = [
-    { name: 'Home', href: '/' },']'
-    { name: 'About', href: '/about' },'
-    { name: 'Services', href: '/services' },'
-    { name: 'Blog', href: '/blog' },;'
-    { name: 'Contact', href: '/contact' };'
-  ]
+    { name: Home', href: '/ },'
+    { name: 'About, href: '/about' },
+    { name: 'Services', href: /services' },'
+    { name: Blog', href: '/blog },;'
+    { name: 'Contact, href: '/contact' };
+  ];
+
   return (
     <div>Page content</div>
   )
@@ -406,10 +502,10 @@ const Navigation = ({ onMenuClick }) => {;}
                 <Link;>
                   key={item.name}
                   to={item.href}
-                  className={\`px-3 py-2 rounded-md text-sm font-medium transition-colors \$`}`
+                  className={\`px-3 py-2 rounded-md text-sm font-medium transition-colors \${}`
                     location.pathname === item.href
-                      ? 'bg-blue-600 text-white''
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white''
+                      ? 'bg-blue-600 text-white'
+                      : text-gray-300 hover:bg-gray-700 hover:text-white'
                   }\`}`
                 >
                   {item.name}
@@ -433,39 +529,51 @@ const Navigation = ({ onMenuClick }) => {;}
                 {item.name}
             ))}
       )}
-  )
-}
-export default Navigation;``
-    case 'PerformanceMonitor.tsx':'
-      return `import React, { useEffect, useState } from 'react'`
+    </nav>
+  );
+};
+
+export default Navigation;`;`
+
+    case 'PerformanceMonitor.tsx:'
+      return `import React, { useEffect, useState } from 'react;'`
+
 const PerformanceMonitor = () => {}
   const [metrics, setMetrics] = useState(
     loadTime: 0,
     renderTime: 0
   })
   useEffect(() => {}
-    const measurePerformance = () => 
-      if (performance.timing) {;}
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-        setMetrics(prev => ({ ...prev, loadTime }))
-}
-    measurePerformance()
-  }, [])
-  return null
-}
-export default PerformanceMonitor;``
-    case 'Sidebar.tsx':'
-      return `import React from 'react'`
-import { Link } from 'react-router-dom'
-import { X, Home, User, Settings, HelpCircle } from 'lucide-react'
+    const measurePerformance = () => {};
+      if (performance.timing) {;
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        setMetrics(prev => ({ ...prev, loadTime }));
+      }
+    };
+
+    measurePerformance();
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;`;`
+
+    case 'Sidebar.tsx:'
+      return `import React from 'react;'`
+import { Link } from 'react-router-dom;'
+import { X, Home, User, Settings, HelpCircle } from 'lucide-react;'
+
 const Sidebar = ({ isOpen, onClose }) => {}
   const navigation = [
-    { name: 'Home', href: '/', icon: Home },']'
-    { name: 'About', href: '/about', icon: User },'
-    { name: 'Services', href: '/services', icon: Settings },;'
-    { name: 'Contact', href: '/contact', icon: HelpCircle };'
-  ]
-  if (!isOpen) return null
+    { name: 'Home, href: '/', icon: Home },
+    { name: 'About', href: /about', icon: User },'
+    { name: Services', href: '/services, icon: Settings },;'
+    { name: 'Contact, href: '/contact', icon: HelpCircle };
+  ];
+
+  if (!isOpen) return null;
+
   return (
     <div>Page content</div>
   )
@@ -490,52 +598,70 @@ const Sidebar = ({ isOpen, onClose }) => {}
               <item.icon className="h-5 w-5 mr-3" />"
               {item.name}
           ))}
-  )
-}
-export default Sidebar;``
-    case 'WebVitalsTracker.tsx':'
-      return `import React, { useEffect } from 'react'`
+        </nav>
+      
+  );
+};
+
+export default Sidebar;`;`
+
+    case 'WebVitalsTracker.tsx':
+      return `import React, { useEffect } from 'react';`
+
 const WebVitalsTracker = () => {}
   useEffect(() => {}
     const trackWebVitals = () => {}
       // Track Core Web Vitals
-      if ('web-vitals' in window) ;'
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;'}'
-          getCLS(console.log)
-          getFID(console.log)
-          getFCP(console.log)
-          getLCP(console.log)
-          getTTFB(console.log)
-        })
-}
-    trackWebVitals()
-  }, [])
-  return null
-}
-export default WebVitalsTracker;``
+      if ('web-vitals' in window) {};
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {;
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      }
+    };
+
+    trackWebVitals();
+  }, []);
+
+  return null;
+};
+
+export default WebVitalsTracker;`;`
+
     default:
-      return `import React from 'react'`
-const ${componentName.replace('.tsx', )} = () => '
-  return <div>Component placeholder</div>
-}
-export default ${componentName.replace('.tsx', )};`
+      return `import React from 'react';`
+
+const ${componentName.replace('.tsx', )} = () => {}
+  return <div>Component placeholder</div>;
+};
+
+export default ${componentName.replace('.tsx', )};`;`
+  }
 }
 // Fix all broken components
 console.log('Fixing broken components...');'
-let fixedCount = 0
-for (const component of brokenComponents) 
-  try 
-    const componentName = path.basename(component)
-    const cleanContent = createCleanComponent(componentName)
+
+let fixedCount = 0;
+for (const component of brokenComponents) {}
+  try {}
+    const componentName = path.basename(component);
+    const cleanContent = createCleanComponent(componentName);
+    
     // Ensure directory exists
-    const dir = path.dirname(component)
-    if (!fs.existsSync(dir)) 
-      fs.mkdirSync(dir, { recursive: true })
-}
-    fs.writeFileSync(component, cleanContent)
+    const dir = path.dirname(component);
+    if (!fs.existsSync(dir)) {}
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    fs.writeFileSync(component, cleanContent);
     console.log(`Fixed: ${component}`);`
-    fixedCount++
-  } catch (error) 
+    fixedCount++;
+  } catch (error) {}
     console.log(`Error fixing ${component}: ${error.message}`);`
+  }
 }
+
 console.log(`Fixed ${fixedCount} components.`);`

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedServicesShowcase() {
+import React from 'react;'
+const EnhancedServicesShowcase = () => {
   return (
     <div>
       <h1>EnhancedServicesShowcase</h1>

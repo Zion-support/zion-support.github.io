@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function NeonButton() {
+import React from 'react;'
+const NeonButton = () => {
   return (
     <div>
       <h1>NeonButton</h1>

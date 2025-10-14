@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function LoadingSpinner() {
+import React from 'react;'
+const LoadingSpinner = () => {
   return (
     <div>
       <h1>LoadingSpinner</h1>

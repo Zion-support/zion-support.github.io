@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedMetaTags() {
+import React from 'react;'
+const EnhancedMetaTags = () => {
   return (
     <div>
       <h1>EnhancedMetaTags</h1>

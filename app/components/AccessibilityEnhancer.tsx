@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AccessibilityEnhancer() {
+import React from 'react;'
+const AccessibilityEnhancer = () => {
   return (
     <div>
       <h1>AccessibilityEnhancer</h1>

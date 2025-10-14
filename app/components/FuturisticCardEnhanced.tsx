@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function FuturisticCardEnhanced() {
+import React from 'react;'
+const FuturisticCardEnhanced = () => {
   return (
     <div>
       <h1>FuturisticCardEnhanced</h1>

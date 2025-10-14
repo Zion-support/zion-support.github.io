@@ -1,12 +1,5 @@
-import React from "react";
-
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-}
-
-export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
+import React from 'react;'
+const FuturisticServiceCard = () => {
   return (
     <div className="bg-gray-800 p-6 rounded-lg">
       {icon && <div className="mb-4">{icon}</div>}

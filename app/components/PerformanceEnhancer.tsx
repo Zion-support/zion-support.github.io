@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function PerformanceEnhancer() {
+import React from 'react;'
+const PerformanceEnhancer = () => {
   return (
     <div>
       <h1>PerformanceEnhancer</h1>

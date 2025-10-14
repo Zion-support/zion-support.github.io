@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AdScheduler() {
+import React from 'react;'
+const AdScheduler = () => {
   return (
     <div>
       <h1>AdScheduler</h1>

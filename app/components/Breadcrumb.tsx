@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function Breadcrumb() {
+import React from 'react;'
+const Breadcrumb = () => {
   return (
     <div>
       <h1>Breadcrumb</h1>

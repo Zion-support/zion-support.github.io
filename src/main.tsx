@@ -1,6 +1,17 @@
-import React from "react";import { Helmet } from react-helmet-async;const Main: React.FC = () => {"  return (
-    <div className: ""min-h-screen bg-white>""      <Helmet><title>Main - Zion Tech Group</title><meta name="description" content: ""Professional main services by Zion Tech Group. />""      </Helmet>"      "      {/* Hero Section */}
-      <section className=py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"><div className="max-w-6xl mx-auto text-center"><h1 className="text-5xl font-bold text-gray-900 mb-6""            Main</h1><p className=text-xl text-gray-600 max-w-3xl mx-auto">"            Professional main services;            designed to help your business grow and succeed."          </p>
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+const Main: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">"
+      <Helmet>
+        <title>Main - Zion Tech Group</title>
+        <meta name="description" content="Professional main services by Zion Tech Group." />"
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+        <div className="max-w-6xl mx-auto text-center">"
+          
         </div>
       </section>
       
@@ -16,7 +27,22 @@ import React from "react";import { Helmet } from react-helmet-async;const Main: 
       </section>
       
       {/* CTA Section */}
-      <section className=py-16 px-4 bg-blue-600"><div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6""            Ready to Get Started?"          </h2>          <p className="text-xl text-blue-100 mb-8">"            Let"s discuss how our main"'            services can help you achieve your goals.          </p>'          <a;'            href="/contact""            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover bg-gray-100 transition-colors""          >"            Get Started Today</a></div>
+      <section className="py-16 px-4 bg-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
+          <h2 className="text-3xl font-bold text-white mb-6">"
+            Ready to Get Started?
+          </h2>'
+          <p className="text-xl text-blue-100 mb-8">"
+            Let's discuss how our main'
+            services can help you achieve your goals.
+          </p>
+          <a;
+            href="/contact""
+            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+          >
+            Get Started Today;
+          </a>
+        </div>
       </section>
     </div>
   );

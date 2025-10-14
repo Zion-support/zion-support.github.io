@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function OptimizedLoadingSpinner() {
+import React from 'react;'
+const OptimizedLoadingSpinner = () => {
   return (
     <div>
       <h1>OptimizedLoadingSpinner</h1>

@@ -1,4 +1,7 @@
-import React from "react";import react-helmet-async from react-helmet-async;const BlogPage: React.FC = () => {return ("    <div>
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
+const BlogPage: React.FC = () => {return (
+    <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name=""description content=""Latest insights and updates from Zion Tech Group." /></Helmet><div className=""min-h-screen bg-gray-900 text-white py-16>""        <div className="container mx-auto px-4"><div className=""max-w-4xl mx-auto"><h1 className=""text-4xl font-bold text-center mb-8>Our Blog</h1>""            <section className="mb-12"><div className=""grid md grid-cols-2 gap-8"><article className=""bg-gray-800 p-6 rounded-lg>""                  <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4"><span>January 15, 2024</span><span>•</span><span>AI Solutions</span>
@@ -13,5 +16,6 @@ import React from "react";import react-helmet-async from react-helmet-async;cons
           </div>
         </div>
       </div>
-  )}
-export default PagePage</div>
+  )};
+export default PagePage;
+'

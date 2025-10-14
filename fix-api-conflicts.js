@@ -1,4 +1,2 @@
-// fix-api-conflicts - Basic implementation
-export default function fix-api-conflicts() {
-  return null;
-}
+import fs from 'fs; #!/usr/bin// Fixed regex;; const lines = content.split('\n)'; return resolved.join(\nconsole.error('Error:const content = fs.readFileSync(filePath, 'utf8console.log(Fixing API files merge conflicts...'
+); console.log('API files merge conflict resolution completed!)'

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function NewsletterSignup() {
+import React from 'react;'
+const NewsletterSignup = () => {
   return (
     <div>
       <h1>NewsletterSignup</h1>

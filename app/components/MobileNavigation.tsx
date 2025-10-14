@@ -1,21 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
-
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const services = [
-    { name: "AI Solutions", href: "/ai-solutions" },
-    { name: "Cybersecurity", href: "/cybersecurity" },
-    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
-    { name: "Digital Transformation", href: "/digital-transformation" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SAAS", href: "/micro-saas" }
-  ];
-
-export default function MobileNavigation() {
+import React from 'react;'
+const MobileNavigation = () => {
   return (
     <nav className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

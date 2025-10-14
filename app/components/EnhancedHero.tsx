@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedHero() {
+import React from 'react;'
+const EnhancedHero = () => {
   return (
     <div>
       <h1>EnhancedHero</h1>

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ContentStatistics() {
+import React from 'react;'
+const ContentStatistics = () => {
   return (
     <div>
       <h1>ContentStatistics</h1>

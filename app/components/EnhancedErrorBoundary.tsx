@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedErrorBoundary() {
+import React from 'react;'
+const EnhancedErrorBoundary = () => {
   return (
     <div>
       <h1>EnhancedErrorBoundary</h1>

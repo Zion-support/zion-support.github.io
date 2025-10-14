@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ErrorFallback() {
+import React from 'react;'
+const ErrorFallback = () => {
   return (
     <div>
       <h1>ErrorFallback</h1>

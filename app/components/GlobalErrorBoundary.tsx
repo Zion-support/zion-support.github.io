@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function GlobalErrorBoundary() {
+import React from 'react;'
+const GlobalErrorBoundary = () => {
   return (
     <div>
       <h1>GlobalErrorBoundary</h1>

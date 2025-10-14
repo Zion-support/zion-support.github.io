@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function NewContentAdvertisingBanner() {
+import React from 'react;'
+const NewContentAdvertisingBanner = () => {
   return (
     <div>
       <h1>NewContentAdvertisingBanner</h1>

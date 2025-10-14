@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AdDashboard() {
+import React from 'react;'
+const AdDashboard = () => {
   return (
     <div>
       <h1>AdDashboard</h1>

@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function MobileOptimizer() {
+import React from 'react;'
+const MobileOptimizer = () => {
   return (
     <div>
       <h1>MobileOptimizer</h1>

@@ -1,10 +1,19 @@
-import React from "react";
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
 
 const EnhancedFooter: React.FC = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">Enhanced Footer</h2>
-      <p className="text-gray-300">This is the enhanced footer component.</p>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Enhanced Footer - Zion Tech Group</title>
+        <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          
+        </div>
+      </section>
     </div>
   );
 };

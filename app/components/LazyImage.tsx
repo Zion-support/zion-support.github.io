@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function LazyImage() {
+import React from 'react;'
+const LazyImage = () => {
   return (
     <div>
       <h1>LazyImage</h1>

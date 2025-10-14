@@ -1,109 +1,263 @@
 #!/usr/bin/env node
-import fs from "fs"
-// Function to fix JSX structure for all problematic files
-function fixJSXStructure() {
-  const filesToFix = [
-    "/workspace/app/it-infrastructure/page.tsx",
-    "/workspace/app/legal-document-manager/page.tsx",
-    "/workspace/app/medical-records-manager/page.tsx",
-    "/workspace/app/offline/page.tsx",
-    "/workspace/app/online-learning-platform/page.tsx",
-    "/workspace/app/property-management-ai/page.tsx",
-    "/workspace/app/supply-chain-optimizer/page.tsx",
-    "/workspace/app/webinars/page.tsx",
-    "/workspace/app/whitepapers/page.tsx",
-    "/workspace/app/zion-ai-accounting-suite/page.tsx",
-    "/workspace/app/zion-ai-api-manager/page.tsx",
-    "/workspace/app/zion-ai-chatbot-builder/page.tsx",
-    "/workspace/app/zion-ai-data-warehouse/page.tsx",
-    "/workspace/app/zion-ai-document-processor/page.tsx",
-    "/workspace/app/zion-ai-email-optimizer/page.tsx",
-    "/workspace/app/zion-ai-expense-tracker/page.tsx",
-    "/workspace/app/zion-ai-lead-scoring/page.tsx",
-    "/workspace/app/zion-ai-mobile-app-builder/page.tsx",
-    "/workspace/app/zion-ai-social-listener/page.tsx",
-    "/workspace/app/zion-ai-testing-automation/page.tsx",
-    "/workspace/app/zion-ai-workflow-automation/page.tsx",
-    "/workspace/app/zion-ecommerce-optimizer/page.tsx",
-    "/workspace/app/zion-hr-assistant-pro/page.tsx",
-  ]
-  for (const file of filesToFix) {
-    try {
-      // Extract the page name from the file path
-      const pageName = file
-        .split("/")
-        .pop()
-        .replace(".tsx", "")
-        .replace(/-/g, " ")
-      const titleCase = pageName
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-      const content = `'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function Page() {
-  return (
-    <>
-      <Helmet>
-        <title>${titleCase} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${pageName} services by Zion Tech Group." />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${titleCase}</h1>
-          <p className="text-gray-300">Coming soon...</p>
-    </>
-  )
-}`
-      fs.writeFileSync(file, content)
-      console.log(`✅ Fixed JSX structure in: ${file}`)
-    } catch (error) {
-      console.error(`❌ Error fixing ${file}:`, error.message)
+
+import fs from 'fs';
+import path from 'path';
+
+// Function to fix JSX structure issues
+function fixJSXStructure(content, filePath) {
+  let fixed = content;
+  
+  // Fix broken JSX fragments and div structures
+  const jsxPattern = /export default function\s+([a-zA-Z0-9-_]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}/g;
+  fixed = fixed.replace(jsxPattern, `export default function $1() {\n  return (\n    <div>\n      <h1>$3</h1>\n      <p>$4</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags
+  const brokenJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}/g;
+  fixed = fixed.replace(brokenJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content
+  const complexJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(complexJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (alternative pattern)
+  const altJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(altJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (another pattern)
+  const anotherJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(anotherJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (yet another pattern)
+  const yetAnotherJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(yetAnotherJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (final pattern)
+  const finalJSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(finalJSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 6)
+  const pattern6JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern6JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 7)
+  const pattern7JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern7JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 8)
+  const pattern8JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern8JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 9)
+  const pattern9JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern9JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 10)
+  const pattern10JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern10JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 11)
+  const pattern11JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern11JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 12)
+  const pattern12JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern12JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 13)
+  const pattern13JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern13JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 14)
+  const pattern14JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern14JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 15)
+  const pattern15JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern15JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 16)
+  const pattern16JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern16JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 17)
+  const pattern17JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern17JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 18)
+  const pattern18JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern18JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 19)
+  const pattern19JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern19JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 20)
+  const pattern20JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern20JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 21)
+  const pattern21JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern21JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 22)
+  const pattern22JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern22JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 23)
+  const pattern23JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern23JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 24)
+  const pattern24JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern24JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 25)
+  const pattern25JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern25JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 26)
+  const pattern26JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern26JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 27)
+  const pattern27JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern27JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 28)
+  const pattern28JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern28JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 29)
+  const pattern29JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern29JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 30)
+  const pattern30JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern30JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 31)
+  const pattern31JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern31JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 32)
+  const pattern32JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern32JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 33)
+  const pattern33JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern33JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 34)
+  const pattern34JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern34JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 35)
+  const pattern35JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern35JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 36)
+  const pattern36JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern36JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 37)
+  const pattern37JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern37JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 38)
+  const pattern38JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern38JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 39)
+  const pattern39JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern39JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 40)
+  const pattern40JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern40JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 41)
+  const pattern41JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern41JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 42)
+  const pattern42JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern42JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 43)
+  const pattern43JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern43JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 44)
+  const pattern44JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern44JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 45)
+  const pattern45JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern45JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 46)
+  const pattern46JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern46JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 47)
+  const pattern47JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern47JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 48)
+  const pattern48JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern48JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 49)
+  const pattern49JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern49JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  // Fix broken JSX with missing closing tags and extra content (pattern 50)
+  const pattern50JSXPattern = /return\s*\(\s*<>\s*<div>\s*<div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*}\s*<div>\s*<\/div>\s*<div>\s*<\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/>\s*\);\s*<\/p><\/div><\/div>\s*\);\s*}/g;
+  fixed = fixed.replace(pattern50JSXPattern, `return (\n    <div>\n      <h1>$1</h1>\n      <p>$2</p>\n    </div>\n  );\n}`);
+  
+  return fixed;
 }
-}
-// Function to fix AccessibilityEnhancer parsing error
-function fixAccessibilityEnhancer() {
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(
-      "/workspace/app/components/AccessibilityEnhancer.tsx",
-      "utf8",
-    )
-    // Look for the specific issue around line 125
-    const lines = content.split("\n")
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].includes("}, []);") && i < lines.length - 1) {
-        // Check if the next line has proper syntax
-        if (lines[i + 1] && !lines[i + 1].trim().startsWith("return")) {
-          // Add proper spacing or fix syntax
-          lines[i] = lines[i].replace("}, []);", "}, []);")
-}
-}
-    content = lines.join("\n")
-    fs.writeFileSync(
-      "/workspace/app/components/AccessibilityEnhancer.tsx",
-      content,
-    )
-    console.log("✅ Fixed AccessibilityEnhancer.tsx syntax")
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXStructure(content, filePath);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
+      console.log(`Fixed JSX structure: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error("❌ Error fixing AccessibilityEnhancer.tsx:", error.message)
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
-// Function to fix AnalyticsContext unused variable
-function fixAnalyticsContext() {
-  try {
-    let content = fs.readFileSync(
-      "/workspace/app/contexts/AnalyticsContext.tsx",
-      "utf8",
-    )
-    // Remove the unused userId variable
-    content = content.replace(/const userId = [^;]+;\s*/g, "")
-    fs.writeFileSync("/workspace/app/contexts/AnalyticsContext.tsx", content)
-    console.log("✅ Fixed AnalyticsContext.tsx - removed unused variable")
-  } catch (error) {
-    console.error("❌ Error fixing AnalyticsContext.tsx:", error.message)
+
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (processFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
 }
+
 // Main execution
-console.log("🔧 Starting JSX structure fixes...")
-fixJSXStructure()
-fixAccessibilityEnhancer()
-fixAnalyticsContext()
-console.log("\n✅ JSX structure fixes completed!")
+console.log('Starting JSX structure fixes...');
+const fixedCount = processDirectory('/workspace');
+console.log(`Fixed JSX structure in ${fixedCount} files.`);

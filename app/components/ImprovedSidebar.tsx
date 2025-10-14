@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function ImprovedSidebar() {
+import React from 'react;'
+const ImprovedSidebar = () => {
   return (
     <div>
       <h1>ImprovedSidebar</h1>

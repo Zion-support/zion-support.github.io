@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function PerformanceDashboard() {
+import React from 'react;'
+const PerformanceDashboard = () => {
   return (
     <div>
       <h1>PerformanceDashboard</h1>

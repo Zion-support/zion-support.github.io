@@ -1,11 +1,11 @@
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-v1'
 const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.svg',
-  '/logo192.png'
+  '/,'
+  '/static/js/bundle.js,'
+  '/static/css/main.css,'
+  '/manifest.json,'
+  '/favicon.svg,'
+  '/logo192.png
 ];
 
 const CACHE_NAME = 'zion-tech-v1';
@@ -40,3 +40,16 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
+
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  // Handle offline form submissions or other background tasks
+  console.log('Background sync triggered');'
+
+}

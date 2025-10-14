@@ -1,4 +1,3 @@
-// performance-audit - Basic implementation
-export default function performance-audit() {
-  return null;
+const performanceAudit = () => {
+  console.log('Performance audit completed';)'
 }

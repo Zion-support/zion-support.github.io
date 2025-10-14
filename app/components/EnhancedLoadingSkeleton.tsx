@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedLoadingSkeleton() {
+import React from 'react;'
+const EnhancedLoadingSkeleton = () => {
   return (
     <div>
       <h1>EnhancedLoadingSkeleton</h1>

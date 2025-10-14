@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function AdTemplates() {
+import React from 'react;'
+const AdTemplates = () => {
   return (
     <div>
       <h1>AdTemplates</h1>

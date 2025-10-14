@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function EnhancedLoading() {
+import React from 'react;'
+const EnhancedLoading = () => {
   return (
     <div>
       <h1>EnhancedLoading</h1>
