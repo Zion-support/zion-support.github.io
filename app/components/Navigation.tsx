@@ -20,12 +20,11 @@ import {
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon
 } from '@heroicons/react/24/outline';
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
