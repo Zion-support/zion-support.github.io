@@ -56,5 +56,5 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
+const page = React.lazy(() => Promise.resolve({ default: AICybersecuritySuiteProPage }));
 export default page;

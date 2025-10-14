@@ -1,5 +1,5 @@
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import React from 'react';
 
-const page = React.lazy(() => import('./page'));
+const page = React.lazy(() => Promise.resolve({ default: () => <div>5G Training Page</div> }));
 export default page;
 

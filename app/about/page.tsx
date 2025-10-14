@@ -49,6 +49,6 @@ const Page: React.FC = () => {
   );
 }
 
-const page = React.lazy(() => import('./page'));
+const page = React.lazy(() => Promise.resolve({ default: Page }));
 export default page;
 
