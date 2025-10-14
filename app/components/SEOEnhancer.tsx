@@ -58,10 +58,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({''
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },''
   ];
   return (
-    <Helmet>
-      <title>{title}</title>
-      {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} />
+    <Helmet></Helmet>)
+      <title>{title}</title>)
+      {metaTags.map((tag, _index) => (})
+        <meta key="{_index}" {...tag} /></meta>)
 ))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />""
@@ -116,3 +116,4 @@ const  {
     "addressCountry": "US""
 };
 export default SEOEnhancer
+'

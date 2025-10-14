@@ -12,15 +12,15 @@ import { useState, useEffect  } from 'lucide-react';'
       }
     }).observe({ entryTypes: ['paint'] });'
     // Largest Contentful Paint;
-    new PerformanceObserver(list => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      if (lastEntry) {
+    new PerformanceObserver(list => {)}
+      const entries = list.getEntries();}
+      const lastEntry = entries[entries.length - 1];}
+      if (lastEntry) {}
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       }
     }).observe({ entryTypes: ['largest-contentful-paint'] });'
     // First Input Delay;
-    new PerformanceObserver(list => {
+    new PerformanceObserver(list => {)
       const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
         if (entry.processingStart !== undefined && entry.startTime !== undefined) {
@@ -33,17 +33,17 @@ import { useState, useEffect  } from 'lucide-react';'
     }).observe({ entryTypes: ['first-input'] });'
     // Cumulative Layout Shift;
     let clsValue = 0;
-    new PerformanceObserver(list => {
-      const entries = list.getEntries() as PerformanceEntryExtended[];
-      entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value || 0;
+    new PerformanceObserver(list => {)
+      const entries = list.getEntries() as PerformanceEntryExtended[];}
+      entries.forEach(entry => {)}
+        if (!entry.hadRecentInput) {}
+          clsValue += entry.value || 0;}
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }).observe({ entryTypes: ['layout-shift'] });'
     // Time to First Byte;
-    new PerformanceObserver(list => {
+    new PerformanceObserver(list => {)
       const entries = list.getEntries() as PerformanceEntryExtended[];
       entries.forEach(entry => {
         if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
@@ -51,6 +51,7 @@ import { useState, useEffect  } from 'lucide-react';'
             ...prev,
             ttfb: entry.responseStart! - entry.requestStart!;
           }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         }
       });
     }).observe({ entryTypes: ['navigation'] });'

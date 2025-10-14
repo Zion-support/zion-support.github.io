@@ -24,16 +24,23 @@ function fixFinalJSX(content, filePath) {
       const nextLineIndex = fixed.indexOf('\n', importIndex);'
       fixed = fixed.slice(0, nextLineIndex) + '\nimport { Helmet } from "react-helmet-async'; + fixed.slice(nextLineIndex);'"
       changes++;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
     }
   }
   // Fix malformed JSX structure
-  const malformedPattern = /<>\s*<Helmet>\s*<\/Helmet>\s*<div[^>]*>[\s\S]*?<\/div>\s*<\/>/g;
+  const malformedPattern = /<>\s*<Helmet>\s*<\/Helmet>\s*<div[^>]*>[\s\S]*?<\/div>\s*<\/>/g
   if (malformedPattern.test(fixed)) {
     fixed = fixed.replace(malformedPattern, (match) => {
       const titleMatch = match.match(/<div[^>]*>[\s\S]*?<h1[^>]*>([^<]*)<\/h1>/);
       const title = titleMatch ? titleMatch[1] : 'Page';'
       return `<>
       <Helmet>
+=======
+      const titleMatch = match.match(/<div[^>]*>[\s\S]*?<h1[^>]*>([^<]*)<\/h1>/);}
+      const title = titleMatch ? titleMatch[1] : 'Page';}
+      return `<>}
+      <Helmet ></Helmet>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} - Zion Tech Group" />"
       </Helmet>
@@ -68,17 +75,32 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');'
     const result = fixFinalJSX(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content);
+      fs.writeFileSync(filePath, result.content)
+      console.log(`Fixed ${result.changes} issues in ${filePath}`)
+      return true
+    }
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixFinalJSX(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
       console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('Starting final JSX error fixes...');'
   // Get all TypeScript/TSX files in the app directory

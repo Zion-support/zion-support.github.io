@@ -6,16 +6,18 @@ function fixRemainingJSX(content, filePath) {
   let fixed = content;
   let changes = 0;
   // Fix duplicate closing Helmet tags
-  const duplicateHelmetPattern = /<\/Helmet>\s*<\/Helmet>/g;
+<<<<<<< HEAD
+  const duplicateHelmetPattern = /<\/Helmet>\s*<\/Helmet>/g
   if (duplicateHelmetPattern.test(fixed)) {
     fixed = fixed.replace(duplicateHelmetPattern, '</Helmet>');'
     changes++;
   }
   // Fix malformed Helmet structure
   const malformedHelmetPattern = /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<meta[^>]*\/>\s*<\/Helmet>/g;
-  if (malformedHelmetPattern.test(fixed)) {
-    fixed = fixed.replace(malformedHelmetPattern, (match, title) => {
-      return `<Helmet>
+  if (malformedHelmetPattern.test(fixed)) {}
+    fixed = fixed.replace(malformedHelmetPattern, (match, title) => {}
+      return `<Helmet ></Helmet>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         <title>${title}</title>
         <meta name="description" content="${title} - Zion Tech Group" />"
         <meta name="keywords" content="${title.toLowerCase().replace(/\s+/g, ', ')}, AI solutions, IT services" />'"
@@ -58,6 +60,7 @@ function fixRemainingJSX(content, filePath) {
   if (malformedJSXPattern.test(fixed)) {
     fixed = fixed.replace(malformedJSXPattern, '\n  );\n}');'
     changes++;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
   return { content: fixed, changes };
 }
@@ -67,17 +70,32 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');'
     const result = fixRemainingJSX(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content);
+      fs.writeFileSync(filePath, result.content)
+      console.log(`Fixed ${result.changes} issues in ${filePath}`)
+      return true
+    }
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixRemainingJSX(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
       console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('Starting remaining JSX error fixes...');'
   // Get all TypeScript/TSX files in the app directory

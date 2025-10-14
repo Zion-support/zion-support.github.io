@@ -100,7 +100,7 @@ const Page = () => {
                 size="lg""
                 icon={<Play className="w-5 h-5" />}""
               >
-                Start Free Trial
+                Start Free Trial;
               </FuturisticButton>
               <FuturisticButton
                 href="/demo""
@@ -108,7 +108,7 @@ const Page = () => {
                 size="lg""
                 icon={<Video className="w-5 h-5" />}""
               >
-                Watch Demo
+                Watch Demo;
               </FuturisticButton>
             </div>
             {/* Stats */}
@@ -151,8 +151,8 @@ const Page = () => {
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">""
                     {feature.stats}
                   </span>
-                </div>
-              </FuturisticCard>
+                </div>)
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>

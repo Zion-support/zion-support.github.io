@@ -95,7 +95,7 @@ function fixFile(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }

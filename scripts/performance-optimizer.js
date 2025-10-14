@@ -21,7 +21,7 @@ import { Helmet } from 'react-helmet-async';''
 export default function performance-optimizer.js() {
   return (}
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>performance-optimizer.js - Zion Tech Group</title>
         <meta name="description" content="Professional performance-optimizer.js services by Zion Tech Group." />""
       <div className="min-h-screen bg-white">""
@@ -63,6 +63,7 @@ let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');''
 // Enhanced chunk splitting strategy
 const optimizedChunkConfig = `
         manualChunks: (id) => {
+<<<<<<< HEAD
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {''
             if (id.includes('react') || id.includes('react-dom')) {''
@@ -107,7 +108,7 @@ const optimizedChunkConfig = `
           return 'app';''
         },`;
 // Replace the existing chunk configuration
-viteConfig = viteConfig.replace(
+viteConfig = viteConfig.replace()
   /manualChunks: \(id\) => \{[\s\S]*?\},/,
   optimizedChunkConfig
 );
@@ -123,10 +124,10 @@ const performanceOptimizations = `
     cssTarget: 'chrome80',''
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-    rollupOptions: {
-      output: {
+    cssCodeSplit: true,}
+    assetsInlineLimit: 4096,}
+    rollupOptions: {}
+      output: {}
         ${optimizedChunkConfig}
         chunkFileNames: 'assets/[name]-[hash].js',''
         entryFileNames: 'assets/[name]-[hash].js',''
@@ -141,7 +142,14 @@ const performanceOptimizations = `
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || ')) {''
             return \`assets/fonts/[name]-[hash].\${ext}\`;
           }
-          return \`assets/[name]-[hash].\${ext}\`;
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {}
+            return \`assets/images/[name]-[hash].\${ext}\`;
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {}
+            return \`assets/fonts/[name]-[hash].\${ext}\`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+          }
+          return \`assets/[name]-[hash].\${ext}\`
         }
       }
     },
@@ -152,15 +160,15 @@ const performanceOptimizations = `
         pure_funcs: ['console.log', 'console.info', 'console.debug'],''
         passes: 2,
       },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/
+      mangle: {}
+        safari10: true,}
+        properties: {}
+          regex: /^_/}
         }
       },
-      format: {
-        comments: false,
-        ascii_only: true
+      format: {}
+        comments: false,}
+        ascii_only: true}
       }
     }
   },`;
@@ -172,10 +180,17 @@ const performanceMonitorContent = `'use client';''
 import { useEffect } from 'react';''
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';''
 interface PerformanceMetrics {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
+<<<<<<< HEAD
+  name: string
+  value: number
+  delta: number
+  id: string
+=======
+  name: string;}
+  value: number;}
+  delta: number;}
+  id: string;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
@@ -189,7 +204,14 @@ const PerformanceMonitor: React.FC = () => {
           event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),''
           non_interaction: true,
+        })
+=======
+          event_category: 'Web Vitals',)}
+          event_label: metric.id,)}
+          value: Math.round(metric.name ="==" 'CLS' ? metric.value * 1000 : metric.value),}
+          non_interaction: true,}
         });
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
       }
     };
     // Measure Core Web Vitals
@@ -210,6 +232,7 @@ const PerformanceMonitor: React.FC = () => {
               delta: entry.startTime,
               id: 'fcp-custom''
             });
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
           }
         }
       });
@@ -290,37 +313,72 @@ console.log('🔍 Run "npm run perf:audit" to run Lighthouse audit');'"'"
 const optimizePerformance = () => {
   console.log('🚀 Starting performance optimization...');''
   // Create optimized CSS
+<<<<<<< HEAD
   const cssOptimizations = `
 /* Performance optimizations */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
 body {
-  font-display: swap;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-display: swap
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 }
 /* Critical CSS for above-the-fold content */
 .hero-section {
-  contain: layout style paint;
+  contain: layout style paint
+=======
+  const cssOptimizations = `}
+/* Performance optimizations */}
+* {}
+  box-sizing: border-box;}
+}
+
+html {}
+  scroll-behavior: smooth;}
+}
+
+body {}
+  font-display: swap;}
+  -webkit-font-smoothing: antialiased;}
+  -moz-osx-font-smoothing: grayscale;}
+}
+
+/* Critical CSS for above-the-fold content */
+.hero-section {}
+  contain: layout style paint;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 /* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
+<<<<<<< HEAD
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+=======
+  *::after {}
+    animation-duration: 0.01ms !important;}
+    animation-iteration-count: 1 !important;}
+    transition-duration: 0.01ms !important;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 /* Optimize images */
+<<<<<<< HEAD
 img {
-  loading: lazy;
-  decoding: async;
+  loading: lazy
+  decoding: async
+=======
+img {}
+  loading: lazy;}
+  decoding: async;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 /* Optimize fonts */
 @font-face {

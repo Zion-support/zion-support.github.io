@@ -18,7 +18,6 @@ const AccessibilityEnhancer: React.FC = () => {
       toggle.onclick = () => {
         document.body.classList.toggle('high-contrast');''
       };
-      document.body.appendChild(toggle);
     };
     // Focus management
     const enhanceFocus = () => {
@@ -29,8 +28,8 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;
         }
-        .high-contrast {
-          filter: contrast(150%) brightness(1.2);
+        .high-contrast {}
+          filter: contrast(150%) brightness(110%);}
         }
       `;
       document.head.appendChild(style);

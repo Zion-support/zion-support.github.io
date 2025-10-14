@@ -19,18 +19,18 @@ import React from 'react;'
       style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important}
+outline-offset: 2px !important;
         .sr-only {
           position: absolute;
           width: 1px;
           height: 1px;
           padding: 0;
           margin: -1px;
-          overflow: hidden,
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap;
-          border: 0}
-      `;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);}
+          white-space: nowrap;}
+border: 0;}
+      `;}
       document.head.appendChild(style)};
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements
@@ -64,7 +64,7 @@ import React from 'react;'
     addAriaLabels();
     setupKeyboardNavigation();
     // Cleanup;
-    return () => {
+    return () => {}
       // Cleanup if needed}}, []);
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))}
     mediaQuery.addEventListener('change', handleChange)''
@@ -168,7 +168,7 @@ import React from 'react;'
         writing-mode: vertical-rl;
         text-orientation: mixed}
       .accessibility-toggle:hover {
-        background: #7c3aed}
+        background: #7c3aed;
     `;
     document.head.appendChild(style);
     return () => {
@@ -217,7 +217,7 @@ onChange={() => setFontSize(size)}
                   />
                   <span className="capitalize">{size}</span>""
                 </label>
-))}
+              )})
             </div>
           </div>
           <div>

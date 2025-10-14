@@ -5,10 +5,10 @@ interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: 'boolean','}
+  error: 'Error | null','}
+  errorInfo: 'ErrorInfo | null','}
+  errorId: string;}
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -45,16 +45,16 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     }
   }
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
+    // In a real application, you would send this to an error reporting service;
+    // like Sentry, LogRocket, or Bugsnag;
     const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
+      errorId: this.state.errorId,}
+      timestamp: new Date().toISOString(),}
+      userAgent: navigator.userAgent,}
+      url: window.location.href;}
     };
     // For now, just log to console
     };
@@ -70,10 +70,10 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
   render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
+    if (this.state.hasError) {}
+      // Custom fallback UI;}
+      if (this.props.fallback) {}
+        return this.props.fallback;}
       }
       // Default error UI
       return (
@@ -104,8 +104,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                       </summary>
                       <pre className="text-red-300 text-xs mt-2 overflow-auto">""
                         {this.state.error.stack}
-                      </pre>
-                    </details>
+                      </pre>)
+                    </details>)
                   )}
                 </div>
               )}

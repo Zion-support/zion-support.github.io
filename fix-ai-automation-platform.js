@@ -16,10 +16,10 @@ const fixes = [;
   { from: /const benefits = \[\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)",\s*"([^"]+)"\s*\]/g, to: 'const benefits = [\n    "$1",\n    "$2",\n    "$3",\n    "$4",\n    "$5"\n  ]' }'"'"'"
 ];
 let modified = false;
-fixes.forEach(fix => {);
-  if (fix.from.test(content)) {
-    content = content.replace(fix.from, fix.to);
-    modified = true;
+fixes.forEach(fix => {);}
+  if (fix.from.test(content)) {}
+    content = content.replace(fix.from, fix.to);}
+    modified = true;}
   }
 });
 if (modified) {

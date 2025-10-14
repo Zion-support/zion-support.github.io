@@ -17,6 +17,17 @@ function fixApiFile(content)   {};
   fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/g, "console.error('API Error:', error););"'";'"
   return fixed;
 }
+<<<<<<< HEAD
+// Function to process a single file
+function processFile(filePath)   {}
+  try 
+const content = fs.readFileSync(filePath, 'utf8');'
+const fixed = fixApiFile(content)
+    if (content !== fixed)
+      fs.writeFileSync(filePath, fixed, 'utf8');''
+      console.log(`Fixed: ${filePath}`);````
+      return true
+=======
 // Function to process a single file;
 function processFile(filePath)   {};
   try ;
@@ -26,11 +37,12 @@ const fixed = fixApiFile(content);
       fs.writeFileSync(filePath, fixed, 'utf8');';'
       console.log(`Fixed: ${filePath}`);````;
       return true;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
-    return false;
-  } catch (error);
-    console.error(`Error processing ${filePath}:`, error.message);````;
-    return false;
+    return false
+  } catch (error)
+    console.error(`Error processing ${filePath}:`, error.message);````
+    return false
 }
 // Main function;
 async function main()   {};
@@ -45,9 +57,14 @@ const files = await glob(pattern, { cwd: process.cwd() });
         totalFixed++;
 }
 }
-  console.log(`\nTotal API files fixed: ${totalFixed}`);````;
+  console.log(`\nTotal API files fixed: ${totalFixed}`);````
 }
-if (import.meta.url === `file://${process.argv[1]}`) ````;
+<<<<<<< HEAD
+if (import.meta.url === `file://${process.argv[1]}`) ````
+  main()
+=======
+if (import.meta.url ="==" `file://${process.argv[1]}`) ````;
   main();
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 export { fixApiFile, processFile }""

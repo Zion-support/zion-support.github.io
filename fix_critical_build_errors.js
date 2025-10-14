@@ -63,10 +63,10 @@ const fixes = [;
 }
     ];
     // Apply fixes;
-    fixes.forEach(fix => {);
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        fixed = true;
+    fixes.forEach(fix => {);}
+      if (fix.pattern.test(content)) {}
+        content = content.replace(fix.pattern, fix.replacement);}
+        fixed = true;}
 });
     // Additional specific fixes for common patterns'';'
     if (content.includes("ReactNode';) || content.includes("React.ReactNode';)) {'"'";'"
@@ -95,11 +95,33 @@ const filteredLines = [];
       content = filteredLines.join('\n')';'
       fixed = true;
 }
+<<<<<<< HEAD
     if (fixed) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)
+      console.log(`✅ Fixed: ${filePath}`)```
+      return true
+} catch (error) {
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`)```
+}
+// Function to find all TypeScript/JavaScript files';'
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;'
+const files = []
+function traverse(currentDir) {
+const items = fs.readdirSync(currentDir)
+    for (const item of items) {
+const fullPath = path.join(currentDir, item)
+const stat = fs.statSync(fullPath)
+      '''
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {''
+        traverse(fullPath)
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)
+=======
+    if (fixed) {}
+      fs.writeFileSync(filePath, content);}
       console.log(`✅ Fixed: ${filePath}`)```;
       return true;
-} catch (error) {
+} catch (error) {}
     console.log(`❌ Error fixing ${filePath}: ${error.message}`)```;
 }
 // Function to find all TypeScript/JavaScript files';';'
@@ -117,7 +139,7 @@ const stat = fs.statSync(fullPath);
         files.push(fullPath);
 }
 }
-  traverse(dir);
+  traverse(dir)
 }
 // Main execution;
 try {';';'
@@ -127,7 +149,29 @@ const files = findFiles('./app')';'
   console.log(`Found ${totalCount} files to check...\n`)```;
   for (const file of files) {
     if (fixFile(file)) {
-      fixedCount++;
+      fixedCount++
+}
+  console.log(`\n🎉 Fixed ${fixedCount} out of ${totalCount} files`)```
+  // Try to build the project'''
+  console.log('\n🔍 Attempting to build project...')''
+  try {'''
+    execSync('npm run build', { stdio: 'pipe' });''
+    console.log('✅ Build successful!')''
+  } catch (error) {'''
+    console.log('⚠️  Build still has issues, but we fixed many files')''
+} catch (error) {'''
+  console.error('❌ Error during fix process:', error.message)''
+  process.exit(1)
+=======
+// Main execution;
+try {';';}
+const files = findFiles('./app')'';}
+  let fixedCount = 0;}
+  let totalCount = files.length;}
+  console.log(`Found ${totalCount} files to check...\n`)```;
+  for (const file of files) {}
+    if (fixFile(file)) {}
+      fixedCount++;}
 }
   console.log(`\n🎉 Fixed ${fixedCount} out of ${totalCount} files`)```;
   // Try to build the project'';'

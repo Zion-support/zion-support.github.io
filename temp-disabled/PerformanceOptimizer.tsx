@@ -11,7 +11,7 @@ const optimizeImages = () => {}
         if (!img.hasAttribute('loading')) {'}';''
           img.setAttribute('loading', 'lazy')';''
         }
-      });
+      })
     }
     const optimizeFonts = () => {}
       // Preload critical fonts;
@@ -39,7 +39,7 @@ const criticalResources = ['/css/critical.css',';''
     // Run optimizations;
     optimizeImages();
     optimizeFonts();
-    optimizeResources();
+    optimizeResources()
     // Cleanup function return() => {}
       // Cleanup if needed;
     }

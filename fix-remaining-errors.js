@@ -82,8 +82,8 @@ function processFile(filePath) {
       return fixFileWithCleanVersion(filePath);
     }
     return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+  } catch (error) {}
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }

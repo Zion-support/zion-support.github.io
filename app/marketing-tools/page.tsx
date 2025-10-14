@@ -101,8 +101,28 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
                   <p className="text-gray-300">{feature.description}</p>""
                 </div>
-              ))}
-            </div>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-white mb-3">Features:</h4>)
+                  <ul className="space-y-2"></ul>)
+                    {tool.features.map((feature, featureIndex) => (}
+                      <li key="{featureIndex}" className="flex items-center text-sm text-gray-300"></li>
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
+                        {feature})
+                      </li>)
+                    ))}
+                  </ul>
+                </div>
+                <div className="text-center"></div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
+                  <a;
+                    href="{`mailto:kleber@ziontechgroup.com?subject=Interest" in ${tool.title,}`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                  >;
+                    Get Started
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
         {/* CTA Section */}

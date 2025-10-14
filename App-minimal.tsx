@@ -17,9 +17,9 @@ function App() {
               Website is being updated. Please check back soon.
             </p>
           </div>
-        </div>
-      </div>
-    </Router>
-  );
+        </div>}
+      </div>})
+    </>)}
+  );}
 }
 export default App;

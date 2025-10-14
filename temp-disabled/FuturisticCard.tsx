@@ -17,9 +17,10 @@ const variantClasses = {}
   <>)</>
     <//div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>```;
       {children}
-    </>
+    </div>)
+  </>)
 );
-  );
+  )
 }
 export default FuturisticCard;
 </FuturisticCardProps>""

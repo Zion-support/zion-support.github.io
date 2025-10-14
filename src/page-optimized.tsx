@@ -67,5 +67,6 @@ function OptimizedHomePage() {}
     </div>),
   );,
 };
-export default OptimizedHomePage;
-""
+
+export default page-optimized;
+;

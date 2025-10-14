@@ -16,15 +16,23 @@ const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAre
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
-    setFormData(prev => ({}
-      ...prev,
+    setFormData(prev => ({})
+      ...prev,)
       [e.target.name]: e.target.value;)
 })))
+<<<<<<< HEAD
+}, [])
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({
+  const handleSubmit = useCallback(async (e: .FormEvent) => {
+  const handleSubmit = useCallback (async (e: .FormEvent) => {
+    e.preventDefault();    setIsSubmitting(true)
+=======
 }, []);
 const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;
   const handleSubmit = useCallback(async (e: .FormEvent) => {;
   const handleSubmit = useCallback (async (e: .FormEvent) => {;
     e.preventDefault();    setIsSubmitting(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
       setFormData({
         name: ',''
         email: ',''
@@ -33,6 +41,7 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
         service: ',''
 message: ']''
     });]
+<<<<<<< HEAD
     } catch (error) {
       setSubmitStatus('error)]''
       setSubmitStatus('error);''
@@ -149,7 +158,7 @@ message: ']''
                         Send Message
         </div>
       </div>
-  );
+  )
 }
       {/* Contact Form and Info *
       <section className="py-20 px-4>""

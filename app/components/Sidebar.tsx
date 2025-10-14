@@ -18,6 +18,9 @@ interface SidebarProps {
   onClose: () => void;
 }
 
+interface SidebarProps {}
+  isOpen: boolean}
+  onClose: () => void;}
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
@@ -45,7 +48,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ];
 
   if (!isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
@@ -111,4 +113,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Sidebar;
+export default Sidebar'

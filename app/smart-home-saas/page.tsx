@@ -24,9 +24,9 @@ const SmartHomeSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default SmartHomeSAAS;

@@ -1,32 +1,33 @@
 interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  robots: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  viewport?: string;
-  charset?: string;
-  publisher?: string;
-  language?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage: string
+  ogType: string
+  twitterCard: string
+  robots: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  viewport?: string
+  charset?: string
+  publisher?: string
+  language?: string
+  ogTitle?: string
+  ogDescription?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
   geo?: {
-    latitude?: string;
-    longitude?: string;
-    region?: string;
-    placename?: string;
-  };
+<<<<<<< HEAD
+    latitude?: string
+    longitude?: string
+    region?: string
+    placename?: string
+  }
   alternate?: Array<{
     href: string;
     hreflang: string;
@@ -143,8 +144,16 @@ export default {
   defaultSEOConfig,
   generateSEOMeta,
   generateStructuredData,
+<<<<<<< HEAD
   generateImageAlt,
   generateCanonicalUrl,
   generateSitemap,
-  generateRobotsTxt;
+  generateRobotsTxt
+}
+=======
+  generateImageAlt,}
+  generateCanonicalUrl,}
+  generateSitemap,}
+  generateRobotsTxt;}
 };
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1

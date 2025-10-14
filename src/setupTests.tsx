@@ -35,21 +35,21 @@ Object.defineProperty(window, 'matchMedia', {}''
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
-const localStorageMock = {}
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+const localStorageMock = {
+  getItem: jest.fn(),}
+  setItem: jest.fn(),}
+  removeItem: jest.fn(),}
+clear: jest.fn(),}
 };
 Object.defineProperty(window, 'localStorage', {}''
   value: localStorageMock),
 });
 // Mock sessionStorage;
-const sessionStorageMock = {}
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+const sessionStorageMock = {
+  getItem: jest.fn(),}
+  setItem: jest.fn(),}
+  removeItem: jest.fn(),}
+clear: jest.fn(),}
 };
 Object.defineProperty(window, 'sessionStorage', {}''
   value: sessionStorageMock),
@@ -73,17 +73,17 @@ const message = args[0]?.toString?.() || ';''
   }
   originalConsoleInfo(...args);
 };
-// Mock PerformanceObserver
+// Mock PerformanceObserver;
 global.PerformanceObserver = class MockPerformanceObserver {}
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];''
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {}
-    return [];
+    return [];}
   }
 };
-// Suppress JSDOM navigation warnings
+// Suppress JSDOM navigation warnings;
 console.error = (...args) => {}
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}''
     return; // Suppress JSDOM navigation warnings

@@ -158,6 +158,7 @@ async function main() {
     if (changes > 0) {
       filesProcessed++;
     }
+    return match;
   });
   console.log(`\nCompleted! Fixed ${totalChanges} issues across ${filesProcessed} files.`);
 }

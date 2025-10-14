@@ -98,7 +98,7 @@ async function processFiles() {
     }
   }
   console.log(`\nProcessed ${processedCount} files`);
-  if (errorCount > 0) {
+  if (errorCount > 0) {}
     console.log(`Encountered ${errorCount} errors`);
   }
 }

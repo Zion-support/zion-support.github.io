@@ -4,10 +4,10 @@ interface Props {
   fallback?: ReactNode;
 }
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: 'boolean','}
+  error?: Error;}
+  errorInfo?: ErrorInfo;}
+  errorId?: string;}
 }
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -59,9 +59,8 @@ class ProductionErrorBoundary extends Component<Props, State> {
         },
         body: JSON.stringify(errorData),
       });
-    } catch (reportingError) {
-      // Fallback: log to console if reporting fails
-      }
+    } catch (reportingError) {}
+      // Fallback: log to console if reporting fails;}
   };
   private getSessionId = (): string => {
     // Generate or retrieve session ID
@@ -84,10 +83,10 @@ class ProductionErrorBoundary extends Component<Props, State> {
   private handleReportError = () => {
     const errorDetails = {
       errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      url: window.location.href,
-      timestamp: new Date().toISOString(),
+      message: this.state.error?.message,}
+      stack: this.state.error?.stack,}
+      url: window.location.href,}
+      timestamp: new Date().toISOString(),}
     };
     // Create mailto link with error details
     const subject = `Error Report - ${this.state.errorId}`;
@@ -96,10 +95,10 @@ class ProductionErrorBoundary extends Component<Props, State> {
     window.open(mailtoLink);
   };
   render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
+    if (this.state.hasError) {}
+      // Custom fallback UI;}
+      if (this.props.fallback) {}
+        return this.props.fallback;}
       }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">""
@@ -122,7 +121,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
                   <div className="mb-2">""
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  <div>
+                  <div></div>
                     <strong>Stack:</strong>
                     <pre className="whitespace-pre-wrap mt-1">""
                       {this.state.error.stack}

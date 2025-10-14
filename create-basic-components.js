@@ -131,10 +131,10 @@ const Footer = () => {
           <p className="text-gray-300">""
             © 2024 Zion Tech Group. All rights reserved.
           </p>
-        </div>
-      </div>
-    </footer>
-  );
+        </div>}
+      </div>}
+    </footer>}
+  );}
 };
 export default Footer;
 `;
@@ -181,8 +181,8 @@ const Sidebar = ({ isOpen, onClose }) => {
             Contact
           </Link>
         </nav>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 export default Sidebar;
@@ -211,7 +211,7 @@ class ErrorBoundary extends React.Component {
               onClick={() => window.location.reload()}
               className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded""
             >
-              Refresh Page
+              Refresh Page;
             </button>
           </div>
         </div>

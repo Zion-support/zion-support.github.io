@@ -1,4 +1,5 @@
 // API endpoint for newsletter subscription
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {'
     return res.status(405).json({ error: 'Method not allowed' });'
@@ -17,5 +18,6 @@ export default function handler(req, res) {
       error: 'Failed to subscribe to newsletter','
       details: process.env.NODE_ENV === 'development' ? error.message : undefined'
     }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }

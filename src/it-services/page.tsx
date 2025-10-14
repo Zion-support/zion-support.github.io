@@ -534,5 +534,6 @@ const benefits = [
     </div>,
   );,
 };
+
+export default page;
 ;
-export default ITServicesPage;""

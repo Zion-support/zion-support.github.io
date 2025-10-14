@@ -11,19 +11,19 @@ import { ZoomIn } from 'lucide-react;'
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  reducedMotion: boolean;
-  focusIndicator: boolean;
+  screenReader: boolean;}
+  keyboardNavigation: boolean;}
+  reducedMotion: boolean;}
+  focusIndicator: boolean;}
 }
 const AdvancedAccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
-    screenReader: false,
-    keyboardNavigation: false,
-    reducedMotion: false,
-    focusIndicator: false
+    screenReader: false,}
+    keyboardNavigation: false,}
+    reducedMotion: false,})
+    focusIndicator: false})
   });
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {

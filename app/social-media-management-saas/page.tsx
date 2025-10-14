@@ -24,9 +24,9 @@ const SocialMediaManagementSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default SocialMediaManagementSAAS;

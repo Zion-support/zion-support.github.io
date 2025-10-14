@@ -249,8 +249,8 @@ const AISolutionsPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 export default AISolutionsPage;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -22,10 +22,10 @@ const HomePage: React.FC = () => {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+      "addressLocality": "Middletown",}
+      "addressRegion": "DE",}
+      "postalCode": "19709",}
+      "addressCountry": "US"}
     },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -126,7 +126,7 @@ const HomePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )};
 };
 
 export default HomePage;

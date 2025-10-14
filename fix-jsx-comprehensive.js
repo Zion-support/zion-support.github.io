@@ -27,10 +27,10 @@ export default function Page() {
         </div>
       </div>
     </>
-  );
-}`;
-    fixed = correctStructure;
-    changes++;
+  )
+}`
+    fixed = correctStructure
+    changes++
   }
   // Fix about page
   if (filePath.includes('about/page.tsx')) {'
@@ -72,10 +72,27 @@ const AboutPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
     </div>
-  );
+  )
+}
+export default AboutPage;`
+    fixed = correctStructure
+    changes++
+  }
+
+  // Fix ai-3d-generation page
+  if (filePath.includes('ai-3d-generation')) {
+    const correctStructure = `'use client'
+import React from "react"
+import { Helmet } from "react-helmet-async"
+=======
+        </div>}
+      </div>})
+    </div>)}
+  );}
 };
 export default AboutPage;`;
     fixed = correctStructure;
@@ -89,7 +106,7 @@ import { Helmet } from "react-helmet-async";"
 export default function Page() {
   return (
     <>
-      <Helmet>
+      <Helmet ></Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI 3D Generation services and solutions from Zion Tech Group" />"
       </Helmet>
@@ -99,10 +116,51 @@ export default function Page() {
           <p className="text-xl text-gray-600">"
             This page is under development. Please check back soon for more information about our AI 3D generation services.
           </p>
+<<<<<<< HEAD
         </div>
       </div>
     </>
-  );
+  )
+}`
+    fixed = correctStructure
+    changes++
+  }
+
+  // Fix files with missing Helmet closing tags
+  const helmetPattern = /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*$/gm
+  if (helmetPattern.test(fixed)) {
+    fixed = fixed.replace(helmetPattern, (match, title) => {
+      return match + '\n      </Helmet>'
+    })
+    changes++
+  }
+
+  // Fix files with JSX expressions must have one parent element
+  const jsxParentPattern = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<\/>\s*<div/g
+  if (jsxParentPattern.test(fixed)) {
+    fixed = fixed.replace(jsxParentPattern, (match) => {
+      return match.replace(/<\/>\s*<div/, '<div')
+    })
+    changes++
+  }
+
+  // Fix duplicate closing tags
+  const duplicateClosingPattern = /<\/div>\s*<\/>\s*<\/div>\s*<\/>\s*\);\s*}\s*<\/div>\s*<\/>\s*\);\s*}/g
+  if (duplicateClosingPattern.test(fixed)) {
+    fixed = fixed.replace(duplicateClosingPattern, '\n    </>\n  );\n}')
+    changes++
+  }
+
+  // Fix malformed JSX structure with extra closing tags
+  const extraClosingPattern = /}\s*<\/div>\s*<\/>\s*\);\s*}/g
+  if (extraClosingPattern.test(fixed)) {
+    fixed = fixed.replace(extraClosingPattern, '\n  );\n}')
+    changes++
+=======
+        </div>}
+      </div>})
+    </>)}
+  );}
 }`;
     fixed = correctStructure;
     changes++;
@@ -134,6 +192,7 @@ export default function Page() {
   if (extraClosingPattern.test(fixed)) {
     fixed = fixed.replace(extraClosingPattern, '\n  );\n}');'
     changes++;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
   return { content: fixed, changes };
 }
@@ -143,17 +202,32 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');'
     const result = fixJSXComprehensive(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content);
+      fs.writeFileSync(filePath, result.content)
+      console.log(`Fixed ${result.changes} issues in ${filePath}`)
+      return true
+    }
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixJSXComprehensive(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
       console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('Starting comprehensive JSX error fixes...');'
   // Get all TypeScript/TSX files in the app directory

@@ -106,8 +106,8 @@ const AIFinancialAnalysis = () => {
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">""
                   {feature.description}
-                </p>
-              </FuturisticCard>
+                </p>)
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>

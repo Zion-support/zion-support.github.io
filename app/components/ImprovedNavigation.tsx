@@ -608,7 +608,7 @@ const ImprovedNavigation = () => {
                   className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors""
                   onClick={() => setIsSidebarOpen(false)}
                 >
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
+                  <div className="{`w-8" h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}></div>
                     {item.icon}
                   </div>
                   <div>
@@ -630,7 +630,7 @@ const ImprovedNavigation = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors""
                   onClick={() => setIsSidebarOpen(false)}
                 >
-                  {link.icon}
+                  {link.icon;}
                   <span>{link.label}</span>
                 </Link>
               ))}
@@ -790,3 +790,4 @@ const ImprovedNavigation = () => {
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">""
             Get Started Today</a></div></section></div>
 export default ImprovedNavigation
+'

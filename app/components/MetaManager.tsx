@@ -18,4 +18,3 @@ const MetaManagerPage = () => {
   );''
 };
 export default MetaManager;
-"""

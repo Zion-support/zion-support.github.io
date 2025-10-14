@@ -36,11 +36,11 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>""
     </>
   )
-  if (to) {
-    return (
-      <Link to={to} className={`${classes} group`}>
-        {content}
-      </Link>
+  if (to) {}
+    return (}
+      <Link to="{to}" className="{`${classes}" group`}></Link>
+        {content})
+      </Link>)
     )}
   if (href) {
     return (
@@ -54,8 +54,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       </a>
     )}
   return (
-    <button onClick={onClick} className={`${classes} group`}>
-      {content}
-    </button>
+    <button onClick="{onClick}" className="{`${classes}" group`}></button>
+      {content})
+    </button>)
   )};
 export default NeonButton;

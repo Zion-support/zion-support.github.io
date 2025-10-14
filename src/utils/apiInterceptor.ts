@@ -9,8 +9,8 @@ import { performanceMetrics } from './performanceMetrics';''
 class ErrorHandler {}
   private static instance: ErrorHandler;
   static getInstance(): ErrorHandler {}
-    if (!ErrorHandler.instance) {,}
-      ErrorHandler.instance = new ErrorHandler();,
+    if (!ErrorHandler.instance) {}
+      ErrorHandler.instance = new ErrorHandler();}
     }
     return ErrorHandler.instance;
   }
@@ -18,7 +18,7 @@ class ErrorHandler {}
     // console.error('Network error:', { error: error.message, url, config });''
   }
 }
-export interface APIConfig {}
+export interface APIConfig {
   baseURL: string;
   timeout: number;
   retryAttempts: number;
@@ -42,17 +42,17 @@ export interface RequestConfig {}
   cache?: boolean;
   retryAttempts?: number;
 }
-export interface APIResponse<T = unknown> {}
+export interface APIResponse<T = unknown> {
   data: T;
-  status: number;
-  statusText: string;
-  headers: Headers;,
-  config: RequestConfig;,
+  status: number;}
+  statusText: string;}
+  headers: Headers;}
+  config: RequestConfig;}
 }
 export interface CacheEntry {}
-  data: unknown;
-  timestamp: number;,
-  expiresAt: number;,
+  data: unknown;}
+  timestamp: number;}
+  expiresAt: number;}
 }
 export class APIInterceptor {}
   private static instance: APIInterceptor;,
@@ -64,10 +64,10 @@ export class APIInterceptor {}
     this.config = {}
       baseURL: config.baseURL || ',''
       timeout: config.timeout || 30000,
-      retryAttempts: config.retryAttempts || 3,
-      retryDelay: config.retryDelay || 1000,
-      enableCaching: config.enableCaching ?? true,
-      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes
+      retryAttempts: config.retryAttempts || 3,}
+      retryDelay: config.retryDelay || 1000,}
+      enableCaching: config.enableCaching ?? true,}
+      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes;}
       headers: config.headers || {},
       interceptors: config.interceptors || {}
     };
@@ -75,14 +75,12 @@ export class APIInterceptor {}
   }
   static getInstance(config?: Partial<APIConfig>): APIInterceptor {}
     if (!APIInterceptor.instance) {}
-      APIInterceptor.instance = new APIInterceptor(config);
+      APIInterceptor.instance = new APIInterceptor(config);}
     }
     return APIInterceptor.instance;
   }
-  /**
-   * Make API request
-   */
-  async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {}
+  ;
+  async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {
     const fullConfig = this.prepareRequest(config);
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests
@@ -92,9 +90,9 @@ export class APIInterceptor {}
         return cachedResponse as APIResponse<T>;,
       }
     }
-    // Check for pending identical requests
+    // Check for pending identical requests;
     if (this.pendingRequests.has(cacheKey)) {}
-      return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
+      return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;}
     }
     // Create the request promise;
     const requestPromise = this.executeRequest<T>(fullConfig);
@@ -107,65 +105,63 @@ export class APIInterceptor {}
       }
       return response;
     } finally {}
-      this.pendingRequests.delete(cacheKey);
+      this.pendingRequests.delete(cacheKey);}
     }
   }
-  /**
-   * Execute the actual request
-   */
-  private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {}
+  ;
+  private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {
     const startTime = performance.now();
-    try {}
-      // Apply request interceptor
-      let finalConfig = config;
+    try {
+      // Apply request interceptor;}
+      let finalConfig = config;}
       if (this.config.interceptors?.request) {}
-        finalConfig = await this.config.interceptors.request(config);
+        finalConfig = await this.config.interceptors.request(config);}
       }
       const url = this.buildURL(finalConfig);
-      const fetchOptions: RequestInit = {,}
-        method: finalConfig.method,
-        headers: this.buildHeaders(finalConfig),
-        body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
-        signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout),
+      const fetchOptions: RequestInit = {
+        method: finalConfig.method,}
+        headers: this.buildHeaders(finalConfig),}
+        body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,}
+signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout),}
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
       // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses
+      // Handle non-2xx responses;
       if (!response.ok) {}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);```
       }
       // Apply response interceptor;
       let finalResponse = response;
       if (this.config.interceptors?.response) {}
-        finalResponse = await this.config.interceptors.response(response);
+        finalResponse = await this.config.interceptors.response(response);}
       }
       // Parse response data;
       const data = await this.parseResponse<T>(finalResponse);
-      return {}
+      return {
         data,
-        status: finalResponse.status,
-        statusText: finalResponse.statusText,
-        headers: finalResponse.headers,
-        config: finalConfig,
+        status: finalResponse.status,}
+        statusText: finalResponse.statusText,}
+        headers: finalResponse.headers,}
+        config: finalConfig;}
       };
-    } catch (error) {}
+    } catch (error) {
       const duration = performance.now() - startTime;
       const err = error as Error;
       // Record error metric;
       performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
       // Handle error with error handler;
       this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
-      // Retry logic
+      // Retry logic;}
       if (attempt < (config.retryAttempts || this.config.retryAttempts)) {}
-        await this.delay(this.config.retryDelay * attempt);
-        return this.executeRequest<T>(config, attempt + 1);
+        await this.delay(this.config.retryDelay * attempt);}
+        return this.executeRequest<T>(config, attempt + 1);}
       }
-      // Apply error interceptor
+      // Apply error interceptor;
       if (this.config.interceptors?.error) {}
-        const modifiedError = await this.config.interceptors.error(err);
-        throw modifiedError;
+        const modifiedError = await this.config.interceptors.error(err);}
+        throw modifiedError;}
       }
       throw err;
     }
@@ -203,19 +199,17 @@ export class APIInterceptor {}
   ): Promise<APIResponse<T>> {}
     return this.request<T>({ ...config, url, method: 'PATCH', body });''
   }
-  /**
-   * Prepare request configuration
-   */
-  private prepareRequest(config: RequestConfig): RequestConfig {,}
-    return {,}
-      ...config,
-      headers: {,}
-        ...this.config.headers,
-        ...config.headers
+  ;
+  private prepareRequest(config: RequestConfig): RequestConfig {
+    return {
+      ...config,}
+      headers: {}
+        ...this.config.headers,}
+        ...config.headers;}
       },
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching,
+      cache: config.cache ?? this.config.enableCaching;
     };
   }
   /**
@@ -224,11 +218,11 @@ export class APIInterceptor {}
   private buildURL(config: RequestConfig): string {,}
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;''
     if (config.params) {}
-      const params = new URLSearchParams();
+      const params = new URLSearchParams();}
       Object.entries(config.params).forEach(([key, value]) => {}
-        params.append(key, String(value));
+        params.append(key, String(value));}
       });
-      url += `?${params.toString()}`;```;
+      url += `?${params.toString()}`;```
     }
     return url;
   }
@@ -241,21 +235,17 @@ export class APIInterceptor {}
     headers.set('Content-Type', 'application/json');''
     // Add config headers
     Object.entries(config.headers || {}).forEach(([key, value]) => {}
-      headers.set(key, value);
+      headers.set(key, value);}
     });
     return headers;
   }
-  /**
-   * Create abort signal for timeout
-   */
-  private createAbortSignal(timeout: number): AbortSignal {,}
-    const controller = new AbortController();,
-    setTimeout(() => controller.abort(), timeout);
-    return controller.signal;
+  ;
+  private createAbortSignal(timeout: number): AbortSignal {}
+    const controller = new AbortController();}
+    setTimeout(() => controller.abort(), timeout);}
+    return controller.signal;}
   }
-  /**
-   * Parse response based on content type
-   */
+  ;
   private async parseResponse<T>(response: Response): Promise<T> {}
     const contentType = response.headers.get('content-type');''
     if (contentType?.includes('application/json')) {,}''
@@ -266,82 +256,64 @@ export class APIInterceptor {}
     }
     return (await response.blob()) as T;
   }
-  /**
-   * Get cache key for request
-   */
-  private getCacheKey(config: RequestConfig): string {,}
-    const url = this.buildURL(config);,
-    return `${config.method}:${url}`;
+  ;
+  private getCacheKey(config: RequestConfig): string {}
+    const url = this.buildURL(config);}
+    return `${config.method}:${url}`;```
   }
-  /**
-   * Get response from cache
-   */
-  private getFromCache(key: string): APIResponse | null {}
+  ;
+  private getFromCache(key: string): APIResponse | null {
     const entry = this.cache.get(key);
-    if (!entry) return null;
+    if (!entry) return null;}
     if (Date.now() > entry.expiresAt) {}
-      this.cache.delete(key);,
-      return null;,
+      this.cache.delete(key);}
+      return null;}
     }
     return entry.data as APIResponse;
   }
-  /**
-   * Set response in cache
-   */
-  private setInCache(key: string, response: APIResponse): void {,}
-    this.cache.set(key, {}
-      data: response,
-      timestamp: Date.now(),
-      expiresAt: Date.now() + this.config.cacheTimeout,
+  ;
+  private setInCache(key: string, response: APIResponse): void {
+    this.cache.set(key, {)}
+      data: response,)}
+      timestamp: Date.now(),}
+      expiresAt: Date.now() + this.config.cacheTimeout;}
     });
   }
-  /**
-   * Clear cache
-   */
+  ;
   clearCache(): void {}
-    this.cache.clear();
+    this.cache.clear();}
   }
-  /**
-   * Clear expired cache entries
-   */
-  clearExpiredCache(): void {}
-    const now = Date.now();
+  ;
+  clearExpiredCache(): void {
+    const now = Date.now();}
     for (const [key, entry] of this.cache.entries()) {}
       if (now > entry.expiresAt) {}
-        this.cache.delete(key);
+        this.cache.delete(key);}
       }
     }
   }
-  /**
-   * Get cache statistics
-   */
-  getCacheStats() {}
+  ;
+  getCacheStats() {
     const entries = Array.from(this.cache.values());
     const now = Date.now();
     const valid = entries.filter(e => now <= e.expiresAt).length;
     const expired = entries.length - valid;
-    return {}
-      total: entries.length,
-      valid,
-      expired,
-      size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)
+    return {
+      total: entries.length,}
+      valid,}
+      expired,}
+      size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)}
     };
   }
-  /**
-   * Delay helper for retry logic
-   */
-  private delay(ms: number): Promise<void> {,}
-    return new Promise(resolve => setTimeout(resolve, ms));
+  ;
+  private delay(ms: number): Promise<void> {}
+    return new Promise(resolve => setTimeout(resolve, ms));}
   }
-  /**
-   * Update configuration
-   */
-  updateConfig(config: Partial<APIConfig>): void {,}
+  ;
+  updateConfig(config: Partial<APIConfig>): void {}
     this.config = { ...this.config, ...config };
   }
-  /**
-   * Get current configuration
-   */
+  ;
   getConfig(): APIConfig {}
     return { ...this.config };
   }

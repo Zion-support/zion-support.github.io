@@ -62,8 +62,8 @@ const Page = () => {
               >
                 View Demo
               </Link>
-            </div>
-          </div>
+            </div>)
+          </div>)
 )
           {serviceCategories.map((category, categoryIndex) => {;
 const Icon = category.icon
@@ -125,6 +125,14 @@ const Icon = category.icon
         </div>
       </section>
     </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   )};
 const page = React.lazy(() => import('./page'));''
 export default page;

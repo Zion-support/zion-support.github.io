@@ -19,10 +19,10 @@ interface AdvancedSEOProps {
   lang?: string;
   author?: string;
   publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  readingTime?: number;
+  modifiedTime?: string;}
+  section?: string;}
+  tags?: string[];}
+  readingTime?: number;}
 }
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   title,
@@ -139,7 +139,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "wordCount": readingTime ? readingTime * 200 : undefined""
   } : null;
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />""

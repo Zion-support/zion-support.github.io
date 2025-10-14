@@ -78,6 +78,7 @@ import { services } from '../data/servicesData;'
                 <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" />""
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200 />""
               </div>
+    </>
             </div>
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">""
               Advanced AI and IT Solutions for Modern Businesses;

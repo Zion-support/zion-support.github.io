@@ -12,10 +12,10 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
   icon: Icon,
-  features,
-  benefits,
-  pricing,
-  category,
+  features,}
+  benefits,}
+  pricing,})
+  category,})
 }) => {
   const categoryColors = {
     AI: "from-purple-500 to-pink-600",""
@@ -26,8 +26,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600";""
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content={description} />""
         <meta
@@ -94,8 +94,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     <h3 className="text-lg font-semibold text-white">""
                       {feature}
                     </h3>
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </section>

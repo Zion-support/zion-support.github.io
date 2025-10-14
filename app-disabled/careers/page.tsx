@@ -11,7 +11,7 @@ const PagePage: React.FC = () => {}
   location: string;
   type: string;
   description: string;
-  requirements: string[];,;
+  requirements: string[];
   benefits: string[];
 }
 const eersPage: React.FC = () => {
@@ -279,6 +279,7 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
         </section>
   return (
   <>
+    <div></div>
 <>        <title>eers - Zion Tech Group | Join Our Team<
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture. ""
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs ""
@@ -328,7 +329,8 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     {benefit.description}
                   </p>
         </div>
-      </>
+      </div>)
+    </>)
   );
 };
           {/* CTA Section */}

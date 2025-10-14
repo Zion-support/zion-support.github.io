@@ -3,13 +3,14 @@ interface ContentPreviewCardProps {
   title: string;''
   excerpt: string;
   author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  slug: string;
-  imageUrl?: string;
+  publishedAt: string;
+  readTime: string;}
+  category: string;}
+  imageUrl?: string;}
+  slug: string;}
 }
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
+  id: _id,
   title,
   excerpt,
   author,

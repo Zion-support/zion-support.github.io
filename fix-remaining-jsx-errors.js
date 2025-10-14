@@ -169,7 +169,7 @@ function processFile(filePath) {
       return changes;
     }
     return 0;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return 0;
   }

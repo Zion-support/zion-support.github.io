@@ -48,11 +48,7 @@ const CookiesPage = lazy(() => import("./cookies/page"));""
 ;
 const NotFoundPage = () => <div></div>Page Not Found</div>
 ;
-const App: React.FC = () => {}
-,
-};
-;,
-};
+const App: React.FC = () => {;
 const [isInitialized, setIsInitialized] = useState(false);
   useEffect(() => {}
     // Initialize app;

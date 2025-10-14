@@ -50,8 +50,8 @@ const TutorialsPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>Tutorials - Zion Tech Group</title>
         <meta name="description" content="Comprehensive tutorials and guides for AI, cybersecurity, cloud computing, and digital transformation technologies." />""
         <meta name="keywords" content="tutorials, AI learning, cybersecurity training, cloud computing guides, 5G technology" />""

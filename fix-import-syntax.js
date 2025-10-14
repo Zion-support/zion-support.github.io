@@ -44,7 +44,7 @@ function fixImportSyntax(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -79,8 +79,8 @@ for (const file of sourceFiles) {
       fixedCount++;
       console.log(`✅ Fixed: ${file}`);
     }
-  } catch (error) {
-    errorCount++;
+  } catch (error) {}
+    errorCount++;}
     console.error(`❌ Error fixing ${file}:`, error.message);
   }
 }

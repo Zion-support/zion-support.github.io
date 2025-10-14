@@ -14,17 +14,17 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
     constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
+    this.state = {}
+      hasError: false,}
+      error: null,}
+      errorInfo: null}
     };
   }
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
+    return {}
+      hasError: true,}
+      error,}
+      errorInfo: null}
     };
   }
   componentDidCatch(error: Error, errorInfo: any) {
@@ -43,10 +43,10 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
   handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
+    this.setState({}
+      hasError: false,}
+      error: null,})
+      errorInfo: null})
     });
   };
   render() {

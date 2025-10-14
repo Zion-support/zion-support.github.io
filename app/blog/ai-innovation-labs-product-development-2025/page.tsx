@@ -13,7 +13,9 @@ const InnovationLabsPage: React.FC = () => {
             <h1 className="text-4 xl font-bold text-gray-900 mb-4">""
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
-            <p>January 28, 2025 · 45 min read · AI Innovation</p>
+            <p>;
+              January 28, 2025 · 45 min read · AI Innovation
+            </p>
           </div>
           <div className="prose max-w-none">""
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>""
@@ -42,7 +44,7 @@ const InnovationLabsPage: React.FC = () => {
               <li><strong>Focus:</strong> AI-driven product innovation and development</li>
               <li><strong>Team:</strong> 200+ AI researchers and product engineers</li>
               <li><strong>Projects:</strong> 50+ active AI-powered product initiatives</li>
-              <li><strong>Impact:</strong> $2 B+ in new product revenue generated</li>
+              <li><strong>Impact:</strong> $2B+ in new product revenue generated</li>
             </ul>
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>""
             <p className="text-gray-700 mb-6">""
@@ -81,17 +83,17 @@ const InnovationLabsPage: React.FC = () => {
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
 │   └── Custom AI Models
-├── Development Tools
-│   ├── GitHub Copilot
-│   ├── AI Code Generation
-│   └── Automated Testing
-├── Data & Analytics
-│   ├── Real-time Data Processing
-│   ├── Predictive Analytics
-│   └── Market Intelligence
-└── Infrastructure
-    ├── Cloud-native Architecture
-    ├── Kubernetes & Docker
+├── Development Tools`
+│   ├── GitHub Copilot``
+│   ├── AI Code Generation```
+│   └── Automated Testing````
+├── Data & Analytics`````
+│   ├── Real-time Data Processing``````
+│   ├── Predictive Analytics```````
+│   └── Market Intelligence````````}
+└── Infrastructure`````````}
+    ├── Cloud-native Architecture``````````}
+    ├── Kubernetes & Docker```````````}
     └── CI/CD Automation`}
               </pre>
             </div>
@@ -120,8 +122,8 @@ const InnovationLabsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 export default InnovationLabsPage;

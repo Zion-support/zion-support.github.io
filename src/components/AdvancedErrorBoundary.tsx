@@ -52,4 +52,4 @@ constructor(props: Props) {,}
 }
 ;
 export default AdvancedErrorBoundary;
-""
+;

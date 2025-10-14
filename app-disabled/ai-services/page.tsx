@@ -12,7 +12,7 @@ import { Circle, Right, Star, } from lucide-react;
 ;
 const AIServicesPagePage: React.FC = () => {const features = [;
 const AIServicesPage: React.FC = () => {
-  const features = [;
+  const features = [
     {
       ico,;
     n: title: 'AI-Powered Intelligence,';''
@@ -63,7 +63,7 @@ import { Circle, Right, Star,    } from "lucide-react";";""
       pricing: 'Starting at $29/month',';''
       link: '/ai-content-generator',';''
       popular: true;
-    },;
+    },
     {
       icon: <className="w-8 h-8 text-purple-500" />,""
       title: 'AI Automation',''

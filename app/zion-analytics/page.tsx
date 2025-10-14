@@ -24,9 +24,9 @@ const ZionAnalytics = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default ZionAnalytics;

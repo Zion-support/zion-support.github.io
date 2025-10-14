@@ -75,15 +75,15 @@ img.setAttribute('loading', 'lazy')}''
     optimizeFonts()
     optimizeResources()
     // Cleanup function;
-    return () => {
+    return () => {}
       // Cleanup if needed}}, []);
     // Initialize optimizations
     const initializeOptimizations = () => {
       preloadCriticalResources();
-      preconnectExternalDomains();
-      optimizeImages();
-      optimizeThirdPartyScripts();
-      setIsOptimized(true);
+      preconnectExternalDomains();}
+      optimizeImages();}
+      optimizeThirdPartyScripts();}
+      setIsOptimized(true);}
     };
     // Run optimizations after component mount
     const timer = setTimeout(initializeOptimizations, 100);
@@ -131,7 +131,7 @@ img.setAttribute('loading', 'lazy')}''
       threshold: 0.1
     };
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach(entry => {)
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
           // Add animation classes when element comes into view
@@ -177,14 +177,14 @@ img.setAttribute('loading', 'lazy')}''
     <>{children}</>
       {/* Performance monitoring styles */}
       <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
+        @keyframes fade-in {}
+          from {})
+            opacity: 0;)}
+            transform: translateY(20px);}
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+          to {}
+            opacity: 1;}
+            transform: translateY(0);}
           }
         }
         .animate-fade-in {
@@ -199,25 +199,25 @@ img.setAttribute('loading', 'lazy')}''
           src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');''
         }
         /* Critical CSS for above-the-fold content */
-        .hero-section {
-          contain: layout style paint;
+        .hero-section {}
+          contain: layout style paint;}
         }
         .navigation {
           contain: layout style;
         }
         /* Optimize animations for better performance */
-        .transition-transform {
-          will-change: transform;
+        .transition-transform {}
+          will-change: transform;}
         }
         .transition-opacity {
           will-change: opacity;
         }
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+          * {}
+            animation-duration: 0.01ms !important;}
+            animation-iteration-count: 1 !important;}
+            transition-duration: 0.01ms !important;}
           }
         }
       `}</style>

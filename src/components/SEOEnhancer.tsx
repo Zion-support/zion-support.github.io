@@ -32,6 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
+  <>
     <div></div>
       <Helmet></Helmet>
         <title>SEO Enhancer - Zion Tech Group</title>
@@ -43,16 +44,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <div className="min-h-screen bg-white"></div>""
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">""
           <div className="max-w-6xl mx-auto text-center"></div>""
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">""
-              SEO Enhancer
+            <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>";
+              SEO Enhancer;
             </h1>""
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">""
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>";
               Professional SEO enhancement services by Zion Tech Group.
             </p>
           </div>
         </section>
       </div>
-    </div>)
-  )
+    </div>)}
+  </>)}
+);}
+  )}
 }
 ""
+;

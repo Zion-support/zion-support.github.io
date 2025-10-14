@@ -15,10 +15,10 @@ const AppPage = () => {
           <div className="text-center">""
             <h1 className="text-4xl font-bold text-white mb-8">App</h1>""
           </div>
-        </div>
-      </div>
-    </>
-  );
+        </div>}
+      </div>})
+    </>)}
+  );}
 };
 export default AppPage;
 `;

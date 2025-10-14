@@ -130,9 +130,15 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p>;
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 const page = React.lazy(() => import('./page'));''

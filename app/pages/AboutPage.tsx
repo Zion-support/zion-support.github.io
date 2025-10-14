@@ -140,8 +140,8 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div className="text-gray-300 text-lg">""
                   {stat.label}
-                </div>
-              </div>
+                </div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -191,8 +191,8 @@ const AboutPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 };
 export default AboutPage;

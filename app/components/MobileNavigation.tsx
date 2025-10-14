@@ -134,3 +134,4 @@ const MobileNavigation: React.FC = () => {
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">""
             Get Started Today</a></div></section></div>
 export default MobileNavigation
+'

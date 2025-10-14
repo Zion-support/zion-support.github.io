@@ -125,6 +125,7 @@ const AIPasswordManagerPage: React.FC = () => {
       ],
       popular: false
     }
+>>>>>>> origin/main
   ]
   const stats = [
     { number: '99.9%', label: 'Security Uptime', icon: <Shield className="w-6 h-6 text-cyan-400" /> },'"'"
@@ -153,8 +154,8 @@ const AIPasswordManagerPage: React.FC = () => {
     }
   ]
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>AI Password Manager - Advanced Password Security | Zion Tech Group</title>
         <meta name="description" content="Secure your digital life with our AI-powered password manager. Advanced encryption, breach monitoring, and intelligent password generation with 99.9% security uptime." />""
         <meta name="keywords" content="AI password manager, password security, password generator, breach monitoring, two-factor authentication, password vault" />""
@@ -217,8 +218,8 @@ const AIPasswordManagerPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">""
                     {stat.label}
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>
@@ -246,8 +247,8 @@ const AIPasswordManagerPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 leading-relaxed">""
                     {feature.description}
-                  </p>
-                </div>
+                  </p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -352,7 +353,7 @@ const AIPasswordManagerPage: React.FC = () => {
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900''
                     }`}
-                  >
+                  ></Link>
                     Get Started
                   </Link>
                 </div>

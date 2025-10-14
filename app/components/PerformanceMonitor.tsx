@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react;'
 interface PerformanceMetrics {
   cls: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
+  fcp: number | null;}
+  lcp: number | null;}
+  ttfb: number | null;}
+  loadTime: number | null;}
 }
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -21,12 +21,12 @@ const PerformanceMonitor: React.FC = () => {
     }
     // Simulate performance metrics for development
     const simulateMetrics = () => {
-      setMetrics({
+      setMetrics({)
         cls: Math.random() * 0.1,
-        fcp: Math.random() * 1000 + 500,
-        lcp: Math.random() * 2000 + 1000,
-        ttfb: Math.random() * 500 + 200,
-        loadTime: Math.random() * 3000 + 1000
+        fcp: Math.random() * 1000 + 500,}
+        lcp: Math.random() * 2000 + 1000,}
+        ttfb: Math.random() * 500 + 200,}
+        loadTime: Math.random() * 3000 + 1000}
       });
     };
     // Simulate metrics after a delay

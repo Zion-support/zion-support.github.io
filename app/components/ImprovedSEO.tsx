@@ -41,7 +41,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   const fullTwitterImage = twitterImage || ogImage;
   const fullOgUrl = ogUrl || canonicalUrl;
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />""

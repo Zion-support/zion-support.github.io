@@ -31,10 +31,10 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     lg: 'px-8 py-4 text-lg';}''
   };
   return (
-    <button>
-      type={type}
-      onClick={onClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+    <button></button>
+      type="{type}"
+      onClick="{onClick}"
+      className="{`${baseClasses}" ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
     >;
       {icon && <span className="mr-2">{icon}</span>}""
       {children}

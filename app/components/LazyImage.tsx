@@ -91,8 +91,6 @@ interface LazyImageProps {
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void,
-}
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -101,23 +99,17 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onLoad,
   onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
+    const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
+          setIsInView(true);}
+          observer.disconnect()}
       },
-      { threshold: 0.1 });
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
-    return () => observer.disconnect()
-  }, [])
+      {threshold: 0.1,}
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
@@ -147,7 +139,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
             backgroundSize: 'cover',''
             backgroundPosition: 'center;''
           }
-        />
+        /></div>
 )}
     </div>
   )
@@ -184,3 +176,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">""
             Get Started Today</a></div></section></div>
 export default LazyImage
+'

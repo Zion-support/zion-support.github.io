@@ -34,7 +34,7 @@ function fixFile(filePath) {
         // We're not in a conflict, keep the line'
         fixedLines.push(line);
       }
-      // Skip lines in other conflict sections
+      // Skip lines in other conflict sections;
     }
     // Clean up any trailing empty lines and ensure proper formatting
     let fixedContent = fixedLines.join('\n');'
@@ -81,7 +81,7 @@ function fixFile(filePath) {
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
   return false;
@@ -122,8 +122,8 @@ for (const file of conflictedFiles) {
       fixedCount++;
       console.log(`✅ Fixed: ${file}`);
     }
-  } catch (error) {
-    errorCount++;
+  } catch (error) {}
+    errorCount++;}
     console.error(`❌ Error fixing ${file}:`, error.message);
   }
 }
@@ -135,7 +135,7 @@ if (fixedCount > 0) {
 } else {
   console.log('\n✨ No merge conflicts found or all conflicts were already resolved.');'
 }
-// Function to recursively find and fix files
+// Function to recursively find and fix files;
 function fixDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;

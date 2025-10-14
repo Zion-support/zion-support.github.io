@@ -35,15 +35,17 @@ const imgRef = useRef<HTMLImageElement>(null)
     if (priority) return;
 const observer = new IntersectionObserver()
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
+        if (entry.isIntersecting) {}
+          setIsInView(true);}
+          observer.disconnect();}
+          setIsInView(true);}
           observer.disconnect()}
       },
       {
         threshold: 0.1,
         rootMargin: '50px'}''
       });
-    if (imgRef.current) {
+    if (imgRef.current) {}
       observer.observe(imgRef.current)}
     return () => observer.disconnect()}, [priority]);
   const handleLoad = () => {
@@ -94,10 +96,11 @@ const observer = new IntersectionObserver()
               <div className="text-2xl mb-2">📷</div>""
               <div>Image not available</div>
             </div>
-          </div>
+          </div>)
+<<<<<<< HEAD)
 )}
         {/* Actual image */}
-        {isInView && !isError && (
+        {isInView && !isError && (}
           <img}
             src={optimizedSrc}
             alt={alt}

@@ -34,7 +34,7 @@ function auditHTMLStructure() {
         if (!html.includes('<////title>')) {''
           issues.push(`Missing ${tag} tag`);
         }
-      } else {
+      } else {}
         issues.push(`Missing ${tag} meta tag`);
       }
     }
@@ -165,27 +165,27 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
   const allIssues = [;
     ...htmlAudit.issues,;
     ...sitemapAudit.issues,;
-    ...robotsAudit.issues,;
-    ...performanceAudit.issues;
+    ...robotsAudit.issues,;]
+    ...performanceAudit.issues;]
   ];
   const allRecommendations = [;
     ...htmlAudit.recommendations,;
     ...sitemapAudit.recommendations,;
-    ...robotsAudit.recommendations,;
-    ...performanceAudit.recommendations;
+    ...robotsAudit.recommendations,;]
+    ...performanceAudit.recommendations;]
   ];
   const report = {
     timestamp: new Date().toISOString(),;
-    summary: {
-      totalIssues: allIssues.length,;
-      totalRecommendations: allRecommendations.length,;
-      score: Math.max(0, 100 - (allIssues.length * 10));
+    summary: {}
+      totalIssues: allIssues.length,;}
+      totalRecommendations: allRecommendations.length,;}
+      score: Math.max(0, 100 - (allIssues.length * 10));}
     },;
     audits: {
-      html: htmlAudit,;
-      sitemap: sitemapAudit,;
-      robots: robotsAudit,;
-      performance: performanceAudit;
+      html: htmlAudit,;}
+      sitemap: sitemapAudit,;}
+      robots: robotsAudit,;}
+      performance: performanceAudit;}
     },;
     issues: allIssues,;
     recommendations: allRecommendations;
@@ -200,10 +200,32 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
   console.log(`❌ Issues found: ${report.summary.totalIssues}`);
   console.log(`💡 Recommendations: ${report.summary.totalRecommendations}`);
   return report;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 // Main audit function;
 async function audit() {
   try {
+<<<<<<< HEAD
+    const htmlAudit = auditHTMLStructure()
+    const sitemapAudit = auditSitemap()
+    const robotsAudit = auditRobots()
+    const performanceAudit = auditPerformance()
+    const report = generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit)
+    console.log('🎉 SEO audit completed successfully!')
+    if (report.summary.totalIssues > 0) {
+      console.log('\n❌ Issues to fix:')
+      report.issues.forEach(issue => console.log(`   - ${issue}`))
+    }
+
+    if (report.summary.totalRecommendations > 0) {
+      console.log('\n💡 Recommendations:')
+      report.recommendations.forEach(rec => console.log(`   - ${rec}`))
+    }
+
+  } catch (error) {
+    console.error('❌ Error during SEO audit:', error)
+    process.exit(1)
+=======
     const htmlAudit = auditHTMLStructure();
     const sitemapAudit = auditSitemap();
     const robotsAudit = auditRobots();

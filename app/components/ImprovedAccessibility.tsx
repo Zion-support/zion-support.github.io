@@ -8,28 +8,28 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 interface ImprovedAccessibilityProps {
-  children: React.ReactNode;
+  children: 'React.ReactNode','
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableLargeText?: boolean;
-  enableReducedMotion?: boolean;
+  enableScreenReader?: boolean;}
+  enableHighContrast?: boolean;}
+  enableLargeText?: boolean;}
+  enableReducedMotion?: boolean;}
 }
 const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = false,
-  enableLargeText = false,
-  enableReducedMotion = false
+  enableScreenReader = true,}
+  enableHighContrast = false,}
+  enableLargeText = false,})
+  enableReducedMotion = false;})
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: enableHighContrast,
     largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,
-    screenReader: enableScreenReader,
-    keyboardNavigation: enableKeyboardNavigation,
-    focusVisible: false
+    reducedMotion: enableReducedMotion,}
+    screenReader: enableScreenReader,}
+    keyboardNavigation: enableKeyboardNavigation,})
+    focusVisible: false;})
   });
   const [isVisible, setIsVisible] = useState(false);
   // Apply accessibility settings
@@ -127,7 +127,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     });
   };
   return (
-    <>
+    <></>
       {children}
       {/* Accessibility Toggle Button */}
       <button
@@ -169,7 +169,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
                     settings.highContrast ? 'translate-x-6' : 'translate-x-0.5''
                   }`}
-                />
+                /></div>
               </button>
             </div>
             {/* Large Text */}
@@ -189,7 +189,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
                     settings.largeText ? 'translate-x-6' : 'translate-x-0.5''
                   }`}
-                />
+                /></div>
               </button>
             </div>
             {/* Reduced Motion */}
@@ -209,7 +209,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5''
                   }`}
-                />
+                /></div>
               </button>
             </div>
             {/* Screen Reader */}
@@ -229,7 +229,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
                     settings.screenReader ? 'translate-x-6' : 'translate-x-0.5''
                   }`}
-                />
+                /></div>
               </button>
             </div>
             {/* Keyboard Navigation */}
@@ -249,7 +249,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5''
                   }`}
-                />
+                /></div>
               </button>
             </div>
           </div>
@@ -281,10 +281,10 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         Skip to main content
       </a>
       {/* Accessibility Styles */}
-      <style jsx global>{`
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
+      <style jsx global>{`}
+        .high-contrast {}
+          --tw-bg-opacity: '1','}
+          --tw-text-opacity: 1;}
         }
         .high-contrast * {
           background-color: var(--tw-bg-opacity) !important;
@@ -314,25 +314,25 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           outline-offset: 2px !important;
         }
         .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
+          position: 'absolute','
+          width: '1px','
+          height: '1px','
+          padding: '0','
+          margin: '-1px','
+          overflow: 'hidden','}
+          clip: rect(0, 0, 0, 0);}
+          white-space: 'nowrap','}
+          border: 0;}
         }
         .focus\\:not-sr-only:focus {
           position: static;
           width: auto;
           height: auto;
           padding: 0.5rem 1rem;
-          margin: 0;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
+          margin: 0;}
+          overflow: visible;}
+          clip: auto;}
+          white-space: normal;}
         }
       `}</style>
     </>

@@ -94,7 +94,7 @@ async function finalCleanup() {
           fs.unlinkSync(file);
           console.log(`Deleted: ${file}`);
           deletedCount++;
-        } catch (error) {
+        } catch (error) {}
           console.error(`Error deleting ${file}:`, error.message);
         }
       }

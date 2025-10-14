@@ -36,10 +36,10 @@ function fixJSXSyntax(content, filename) {
             <h1 className="text-4xl font-bold text-white mb-8">Page</h1>"
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>"
           </div>
-        </div>
-      </div>
-    </>`
-    );
+        </div>}
+      </div>})
+    </>`)}
+    );}
   }
   return fixed;
 }
@@ -72,8 +72,8 @@ const ${pageName.replace(/\s+/g, ')}Page = () => {'
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>"
           </div>
         </div>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 };
 export default ${pageName.replace(/\s+/g, ')}Page;`;'
@@ -82,7 +82,7 @@ export default ${pageName.replace(/\s+/g, ')}Page;`;'
       fs.writeFileSync(filePath, properStructure);
       console.log(`Fixed: ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }

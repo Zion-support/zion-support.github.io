@@ -11,7 +11,7 @@ function fixImports(content) {
     /import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+)"\s*import/g,""
     'import { $1     } from "$2";\nimport','"'"'"
   )
-  // Fix missing quotes in import statements;
+  // Fix missing quotes in import statements
   content = content.replace()
     /from\s+([a-zA-Z-]+)\s*import/g,""
     'from "$1";\nimport','"'"'"
@@ -25,16 +25,26 @@ function fixImports(content) {
 // Find all TypeScript/TSX files in the app directory";""
 const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })"
 console.log(`Found ${files.length} files to process...`)```
-let fixedCount = 0;
+let fixedCount = 0
 files.forEach((file) => {
   try {";";"
 const content = fs.readFileSync(file, "utf8");";"
 const fixedContent = fixImports(content);
     if (content !== fixedContent) {
-      fs.writeFileSync(file, fixedContent);
+      fs.writeFileSync(file, fixedContent)
+      console.log(`Fixed: ${file}`)```
+      fixedCount++
+} catch (error) {
+=======
+  try {";";
+const content = fs.readFileSync(file, "utf8");";}
+const fixedContent = fixImports(content);}
+    if (content !="=" fixedContent) {}
+      fs.writeFileSync(file, fixedContent);}
       console.log(`Fixed: ${file}`)```;
       fixedCount++;
-} catch (error) {
+} catch (error) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
     console.error(`Error processing ${file}:`, error.message)```
 })
 console.log(`Fixed ${fixedCount} files.`)``"`"

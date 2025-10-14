@@ -12,6 +12,8 @@ interface SEOProps {
   modifiedTime?: string
   section?: string
   tags?: string[]}
+="======"
+>>>>>>> origin/main
   title?: string;
   description?: string;
   keywords?: string;
@@ -65,7 +67,7 @@ const SEO: React.FC<SEOProps> = ({
     ]
   }
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>{title}</title>
 """
       <meta name=description content={description} />"""

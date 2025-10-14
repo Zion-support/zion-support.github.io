@@ -22,6 +22,7 @@ const filesToFix = [;
   }
 ];
 function fixImports(filePath, imports) {
+<<<<<<< HEAD
   try {
     let content = fs.readFileSync(filePath, 'utf8');'
     // Find the existing lucide-react import;
@@ -43,8 +44,9 @@ function fixImports(filePath, imports) {
     }
     fs.writeFileSync(filePath, content);
     console.log(`Fixed imports for: ${filePath}`);
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Fix all files;

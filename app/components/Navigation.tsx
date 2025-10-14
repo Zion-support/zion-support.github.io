@@ -21,13 +21,13 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ sidebarOpen, setSidebarOpen }) => {
   const location = useLocation();
-  const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
+const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
-  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
-
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);}
+  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);';}
+';}
+  const navigation = ['}
+    { name: 'Home', href: '/', icon: HomeIcon },'
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     {
       name: 'Services',

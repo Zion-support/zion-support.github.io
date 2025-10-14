@@ -34,7 +34,7 @@ function fixTypeScriptErrors(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -51,8 +51,8 @@ function findTypeScriptFiles(dir) {
         if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {'
           traverse(fullPath);
         }
-      } else if (item.match(/\.(ts|tsx)$/)) {
-        files.push(fullPath);
+      } else if (item.match(/\.(ts|tsx)$/)) {}
+        files.push(fullPath);}
       }
     }
   }

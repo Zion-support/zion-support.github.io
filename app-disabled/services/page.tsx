@@ -84,7 +84,8 @@ const ServicesPage: React.FC = () => {const services = [;
             </div>
           </div>
         </div>
-      </>
+      </div>
+    </>
   );
 };
 export default ServicesPage;

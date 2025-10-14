@@ -58,8 +58,8 @@ function processFile(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+  } catch (error) {}
+    console.error(`Error fixing JSX ${filePath}:`, error.message);
     return false;
   }
 }

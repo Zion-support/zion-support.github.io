@@ -98,10 +98,10 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
         <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
         <div className="absolute inset-0 border-2 border-cyan-400/30 rounded-full animate-ping"></div>""
       </div>
-      {message && (
-        <span className={`mt-4 text-gray-300 ${textSizeClasses[size]}`}>
-          {message}
-        </span>
+      {message && (}
+        <span className="{`mt-4" text-gray-300 ${textSizeClasses[size]}`}></span>
+          {message})
+        </span>)
       )}
       {showProgress && (
         <div className="w-48 mt-4">""

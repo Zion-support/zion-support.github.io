@@ -132,7 +132,7 @@ const Page = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 const page = React.lazy(() => import('./page'));''

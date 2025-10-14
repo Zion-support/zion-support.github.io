@@ -24,9 +24,9 @@ const AIPoweredChatbotSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default AIPoweredChatbotSAAS;

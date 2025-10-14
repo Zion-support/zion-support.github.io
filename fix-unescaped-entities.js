@@ -68,10 +68,10 @@ function fixFile(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');'
       console.log(`Fixed: ${filePath}`);
-    } else {
+    } else {}
       console.log(`No changes needed: ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }

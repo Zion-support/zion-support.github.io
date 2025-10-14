@@ -127,6 +127,7 @@ const AIEmailMarketingPage: React.FC = () => {
       ],
       popular: false
     }
+>>>>>>> origin/main
   ]
   const stats = [
     { number: '40%', label: 'Higher Open Rates', icon: <Mail className="w-6 h-6 text-cyan-400" /> },'"'"
@@ -155,8 +156,8 @@ const AIEmailMarketingPage: React.FC = () => {
     }
   ]
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>AI Email Marketing - Intelligent Email Campaigns | Zion Tech Group</title>
         <meta name="description" content="Transform your email marketing with AI-powered campaigns. Smart segmentation, content generation, and automation with 40% higher open rates and 300% ROI increase." />""
         <meta name="keywords" content="AI email marketing, email automation, email campaigns, email segmentation, email analytics, email personalization" />""
@@ -219,8 +220,8 @@ const AIEmailMarketingPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">""
                     {stat.label}
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>
@@ -248,8 +249,8 @@ const AIEmailMarketingPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 leading-relaxed">""
                     {feature.description}
-                  </p>
-                </div>
+                  </p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -354,7 +355,7 @@ const AIEmailMarketingPage: React.FC = () => {
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900''
                     }`}
-                  >
+                  ></Link>
                     Get Started
                   </Link>
                 </div>

@@ -190,11 +190,11 @@ const match = line.match(/function\s+(\w+)/);
         if (line.includes(componentName) || line.includes('Page')) {';'
           console.log(`  - Removing problematic export at line ${i + 1}`);```;
           modified = true;
-        } else {
-          fixedLines.push(line);
+        } else {}
+          fixedLines.push(line);}
         }
-      } else {
-        fixedLines.push(line);
+      } else {}
+        fixedLines.push(line);}
       }
     }
     // Write the fixed content back to the file;
@@ -203,7 +203,7 @@ const fixedContent = fixedLines.join('\n');';'
       fs.writeFileSync(filePath, fixedContent, 'utf8');';'
     }
     return modified;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error fixing issues in ${filePath}:`, error.message);```;
     return false;
   }
@@ -229,7 +229,7 @@ function fixUnusedImports(filePath) {
       console.log(`📝 Fixed unused imports in: ${filePath}`);```;
     }
     return modified;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error fixing unused imports in ${filePath}:`, error.message);```;
     return false;
   }
@@ -269,11 +269,11 @@ try {
   let fixedCount = 0;
   let errorCount = 0;
   // Fix duplicate export issues;
-  for (const file of problematicFiles) {
-    if (fixFileIssues(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+  for (const file of problematicFiles) {}
+    if (fixFileIssues(file)) {}
+      fixedCount++;}
+    } else {}
+      errorCount++;}
     }
   }
   // Fix unused imports in specific files;
@@ -289,7 +289,7 @@ const filesToFixImports = [;
     }
   }
   console.log(`\nProcessed ${processedCount} files`);
-  if (errorCount > 0) {
+  if (errorCount > 0) {}
     console.log(`Encountered ${errorCount} errors`);
   }
   // Run type check to verify fixes;

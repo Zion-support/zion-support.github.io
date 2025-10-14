@@ -29,6 +29,7 @@ self.addEventListener('activate', (event) => {'
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
+<<<<<<< HEAD
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
@@ -36,10 +37,15 @@ self.addEventListener('activate', (event) => {'
               return caches.delete(cacheName);
             }
           })
-        );
+        )
       })
+<<<<<<< HEAD
       .then(() => {
-        return self.clients.claim();
+        return self.clients.claim()
+=======
+      .then(() => {}
+        return self.clients.claim();}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
       })
   );
 });
@@ -53,17 +59,33 @@ self.addEventListener('fetch', (event) => {'
   }
   // Skip cross-origin requests
   if (url.origin !== location.origin) {
-    return;
+    return
+=======
+self.addEventListener('fetch', (event) => {}
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !="=" 'GET') {}
+    return;}
   }
   event.respondWith(
     caches.match(request)
+<<<<<<< HEAD
       .then((response) => {
         // Return cached version if available
         if (response) {
-          return response;
+          return response
+=======
+      .then((response) => {}
+        // Return cached version if available}
+        if (response) {}
+          return response;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         }
         // Otherwise, fetch from network
         return fetch(request)
+<<<<<<< HEAD
           .then((response) => {
             // Don't cache if not a valid response'
             if (!response || response.status !== 200 || response.type !== 'basic') {'
@@ -73,6 +95,7 @@ self.addEventListener('fetch', (event) => {'
             const responseToCache = response.clone();
             // Cache dynamic content
             caches.open(DYNAMIC_CACHE)
+<<<<<<< HEAD
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
@@ -119,6 +142,10 @@ self.addEventListener('push', (event) => {'
         icon: '/images/icon-192x192.png''
       }
     ]
+<<<<<<< HEAD
+  }
+  event.waitUntil(
+=======
   };
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)'

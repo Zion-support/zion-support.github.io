@@ -87,10 +87,10 @@ const CookieConsent: React.FC = () => {
             >
               Accept All
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+          </div>}
+        </div>}
+      </div>}
+    </div>}
+  )}
 };
 export default CookieConsent;

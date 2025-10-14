@@ -26,7 +26,7 @@ const content = fs.readFileSync(fullPath, 'utf8')';''
   return files;
 }
 // Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {
+function resolveMergeConflicts(filePath) {}
   console.log(`🔍 Processing: ${filePath}`)```;
   try {
     let content = fs.readFileSync(filePath, 'utf8')';''
@@ -34,13 +34,13 @@ function resolveMergeConflicts(filePath) {
     // Remove merge conflict markers and keep the HEAD version (first part);
         inConflict = true;
         keepLines = true;
-        continue;
-        inConflict = false;
-        keepLines = true;
-        continue;
+        continue;}
+        inConflict = false;}
+        keepLines = true;}
+        continue;}
 }
-      if (!inConflict || keepLines) {
-        resolvedLines.push(line);
+      if (!inConflict || keepLines) {}
+        resolvedLines.push(line);}
 }
     const resolvedContent = resolvedLines.join('\n')';''
     // Clean up any remaining syntax issues;
@@ -66,7 +66,7 @@ function resolveMergeConflicts(filePath) {
     fs.writeFileSync(filePath, cleanedContent, 'utf8')';''
     console.log(`✅ Fixed: ${filePath}`)```;
     return true;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message)```;
     return false;
 }
@@ -76,13 +76,13 @@ const filesWithConflicts = findFilesWithConflicts('.')';''
   console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`)```;
   let successCount = 0;
   let errorCount = 0;
-  for (const file of filesWithConflicts) {
-    if (resolveMergeConflicts(file)) {
-      successCount++;
-    } else {
-      errorCount++;
+  for (const file of filesWithConflicts) {}
+    if (resolveMergeConflicts(file)) {}
+      successCount++;}
+    } else {}
+      errorCount++;}
 }
-  console.log(`\n📊 Summary:`)```;
+  console.log(`\n📊 Summary: '`)```;',
   console.log(`✅ Successfully fixed: ${successCount} files`)```;
   console.log(`❌ Failed to fix: ${errorCount} files`)```;
   if (successCount > 0) {

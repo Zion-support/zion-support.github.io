@@ -1,4 +1,10 @@
-// fix-all-zion-pages - Basic implementation;
+<<<<<<< HEAD
+// fix-all-zion-pages - Basic implementation
 export default function fix-all-zion-pages() {
-  return null;
+  return null
+=======
+// fix-all-zion-pages - Basic implementation;
+export default function fix-all-zion-pages() {}
+  return null;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }

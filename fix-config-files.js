@@ -33,11 +33,11 @@ export default defineConfig({
           }
         },
         assetFileNames: (assetInfo) => {
-          if (
-            assetInfo.name &&
-            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
-          ) {
-            return \`assets/images/[name]-[hash][extname]\`;
+          if ()
+            assetInfo.name &&)}
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)}
+          ) {}
+            return \`assets/images/[name]-[hash][extname]\`;}
           }
           return \`assets/[name]-[hash][extname]\`;
         },
@@ -48,10 +48,10 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: false,
-    cors: true,
-    hmr: {
-      overlay: true,
+    open: false,}
+    cors: true,}
+    hmr: {}
+      overlay: true,}
     },
   },
   optimizeDeps: {

@@ -22,9 +22,9 @@ const ContactPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+    setFormData(prev => ({}
+      ...prev,})
+      [name]: value;})
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
@@ -126,7 +126,7 @@ const ContactPage: React.FC = () => {
                     }}
                     className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300""
                   >
-                    Send Another Message
+                    Send Another Message;
                   </button>
                 </div>
               ) : (

@@ -39,7 +39,7 @@ function fixMergeConflicts(filePath) {
     fs.writeFileSync(filePath, content);
     console.log(`Fixed merge conflicts in: ${filePath}`);
     return true;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
 import { fileURLToPath } from 'url';'
 const __filename = fileURLToPath(import.meta.url);
@@ -87,7 +87,7 @@ function processFile(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -119,7 +119,7 @@ for (const file of tsFiles) {
     } else {
       errorCount++;
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }

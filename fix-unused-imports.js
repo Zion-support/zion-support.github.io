@@ -26,7 +26,7 @@ function fixUnusedImports(filePath) {
     // Use ESLint to fix unused imports
     execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });'"
     console.log(`✓ Fixed ${filePath}`);
-  } catch (error) {
+  } catch (error) {}
     console.log(`⚠ Could not auto-fix ${filePath}: ${error.message}`);
   }
 }

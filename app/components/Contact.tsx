@@ -160,9 +160,9 @@ const Contact: React.FC = () => {,
                     <p className="text-gray-600 text-sm">""
                       {info.description},
                     </p>
-                  </div>
-                </div>
-              ))},
+                  </div>)
+                </div>)
+              )})}
             </div>
             {/* Additional Info */}""
             <div className="bg-gray-50 rounded-lg p-6">""
@@ -191,7 +191,7 @@ const Contact: React.FC = () => {,
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 "'"'"'"'"'"

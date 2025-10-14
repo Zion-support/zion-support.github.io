@@ -20,10 +20,17 @@ function fixZionAiPages() {
         // Make sure it ends with just one closing brace""
         content = content.replace(/\s*}\s*$/g, "}")"
 }
+<<<<<<< HEAD
+      fs.writeFileSync(page, content)
+      console.log(`✅ Fixed syntax in ${page}`)```
+    } catch (error) {
+      console.error(`❌ Error fixing ${page}:`, error.message)```
+=======
       fs.writeFileSync(page, content);
       console.log(`✅ Fixed syntax in ${page}`)```;
-    } catch (error) {
+    } catch (error) {}
       console.error(`❌ Error fixing ${page}:`, error.message)```;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 }
 // Main execution""

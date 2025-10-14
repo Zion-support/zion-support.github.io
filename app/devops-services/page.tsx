@@ -130,7 +130,7 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section> cursor/analyze-improve-and-deploy-application-9c39
+        </section> 
       </div>
     </>
   );

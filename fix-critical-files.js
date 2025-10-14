@@ -22,8 +22,8 @@ const ${componentName} = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 };
 export default ${componentName};`;
@@ -40,13 +40,13 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement'
 );
 root.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
+  <React.StrictMode></React>
+    <HelmetProvider></HelmetProvider>
+      <BrowserRouter></BrowserRouter>
+        <App /></App>
       </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>
+    </HelmetProvider>)
+  </React.StrictMode>)
 );`;
 }
 // Function to create a clean App.tsx
@@ -140,8 +140,8 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section>)
+    </div>)
   );
 };
 export default HomePage;`;

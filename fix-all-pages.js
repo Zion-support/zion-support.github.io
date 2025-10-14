@@ -51,7 +51,7 @@ export default PagePage;`;
         </////div></div>
       <////div></div>`;
       },;
-      // Pattern 3: Malformed JSX structure;
+      // Pattern 3: 'Malformed JSX structure;',
       {
         pattern: /<////>\s*</div[^>]*><\/div>\s*<\/>\s*<////\/>\s*<div[^>]*><\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>/g,;
         replacement: `<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;"
@@ -79,7 +79,7 @@ export default PagePage;`;
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -91,9 +91,9 @@ async function main() {
   let totalFixed = 0;
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (await fixPageFile(file)) {
-        totalFixed++;
+    for (const file of files) {}
+      if (await fixPageFile(file)) {}
+        totalFixed++;}
       }
     }
   }

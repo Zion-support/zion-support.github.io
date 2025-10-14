@@ -70,7 +70,7 @@ function fixFileComprehensively(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -117,9 +117,9 @@ async function main() { console.log('🔍 Finding all problematic files...');';'
 }
   console.log(`Found ${problematicFiles.length} problematic files`);```;
   let fixedCount = 0;
-  for (const file of problematicFiles) {
-  if (fixFileComprehensively(file)) {
-      fixedCount++;
+  for (const file of problematicFiles) {}
+  if (fixFileComprehensively(file)) {}
+      fixedCount++;}
 }
 }
     }

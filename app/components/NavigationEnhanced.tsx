@@ -58,10 +58,10 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
   // Close all dropdowns when route changes
   useEffect(() => {
     setIsServicesOpen(false)
-    setIsMicroSaasOpen(false)
-    setIsItServicesOpen(false)
-    setIsAiServicesOpen(false)
-    setIsOpen(false)
+    setIsMicroSaasOpen(false)}
+    setIsItServicesOpen(false)}
+    setIsAiServicesOpen(false)}
+    setIsOpen(false)}
   }, [location.pathname])
   const aiServices = useMemo(() => [
     { name: 'AI Video Generator', path: '/zion-ai-video-generator', icon: <Video className="w-4 h-4" />, featured: true },'"'"
@@ -216,7 +216,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${
                   location.pathname === item.path ? 'text-cyan-400' : 'text-white''
                 }`}
-              >
+              ></Link>
                 {item.name}
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${
                   location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full''
@@ -259,7 +259,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                         )}
                       </div>
                     </Link>
-                  ))}
+))}
                 </div>
               )}
             </div>
@@ -289,7 +289,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       </div>
                       <span className="font-medium">{service.name}</span>""
                     </Link>
-                  ))}
+))}
                 </div>
               )}
             </div>
@@ -339,7 +339,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               size="sm""
               icon={<ArrowRight className="w-4 h-4" />}""
             >
-              Get Started
+              Get Started;
             </FuturisticButton>
           </div>
           {/* Mobile menu button */}
@@ -364,7 +364,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
               />
-            </div>
+</div>
           </div>
         )}
         {/* Mobile menu */}
@@ -380,13 +380,13 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       ? 'bg-cyan-500/20 text-cyan-400' ''
                       : 'hover:bg-cyan-500/10 hover:text-cyan-400''
                   }`}
-                  onClick={toggleMenu}
-                >
-                  {item.name}
-                </Link>
+                  onClick="{toggleMenu}"
+                ></Link>
+                  {item.name})
+                </Link>)
               ))}
               {/* Mobile AI Services */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleAiServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium""
@@ -406,16 +406,16 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;}
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}""
                       </Link>
-                    ))}
+))}
                   </div>
                 )}
               </div>
               {/* Mobile IT Services */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleItServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium""
@@ -435,15 +435,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;}
                         <span>{service.name}</span>
                       </Link>
-                    ))}
+))}
                   </div>
                 )}
               </div>
               {/* Mobile Micro SAAS */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium""
@@ -463,7 +463,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;}
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}""
                       </Link>

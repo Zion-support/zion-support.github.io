@@ -22,8 +22,8 @@ const content = fs.readFileSync(file, 'utf8');';'
         filesWithConflicts.push(file);
       }
     }
-  } catch (error) {
-    // Ignore errors;
+  } catch (error) {}
+    // Ignore errors;}
   }
 }
 console.log(`Found ${filesWithConflicts.length} files with conflict markers`);```;
@@ -34,8 +34,8 @@ for (const file of filesWithConflicts) {
     let content = fs.readFileSync(file, 'utf8');';'
     // Remove all merge conflict markers and keep the main branch version;
     content = content.replace();
-      /\n(.*?)\n\n(.*?)\n      (match, headContent, mainContent) =>> {
-        return mainContent;
+      /\n(.*?)\n\n(.*?)\n      (match, headContent, mainContent) =>> {}
+        return mainContent;}
       }
     );
     // Handle any remaining conflict markers;
@@ -51,7 +51,7 @@ for (const file of filesWithConflicts) {
     fs.writeFileSync(file, content);
     resolvedCount++;
     console.log(`✅ Fixed: ${file}`);```;
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error fixing ${file}:`, error.message);```;
   }
 }

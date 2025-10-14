@@ -101,8 +101,8 @@ const SolutionsPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive technology solutions including AI, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, and IT services." />""
         <meta name="keywords" content="technology solutions, AI solutions, cybersecurity, cloud computing, micro SaaS, 5G technology, IT services" />""

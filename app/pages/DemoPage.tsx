@@ -78,8 +78,8 @@ const DemoPage: React.FC = () => {
     }
   ];
   return (
-    <React.Fragment>
-      <Helmet>
+    <React.Fragment></React>
+      <Helmet></Helmet>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Experience our technology solutions with interactive demos. See AI, cybersecurity, cloud infrastructure, and more in action." />""
         <meta name="keywords" content="demo, technology demo, AI demo, cybersecurity demo, cloud demo, micro SaaS demo" />""

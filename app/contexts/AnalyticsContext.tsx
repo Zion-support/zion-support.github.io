@@ -7,14 +7,14 @@ interface AnalyticsContextType {
   isEnabled: boolean}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 const  ({ children }) => {
-  const [
-    isEnabled, setIsEnabled,
+  const []
+    isEnabled, setIsEnabled,]
   ] = useState(false)
-  const [
-    userId, setUserId,
-  ] = useState<string | null>(null)
-  useEffect(() => {
-    // if analytics is enabled
+  const []
+    userId, setUserId,]}
+  ] = useState<string | null>(null)}
+  useEffect(() => {}
+    // if analytics is enabled;}
 setIsEnabled(true)}, [])
     // if analytics is enabled;
     setIsEnabled(true)}, []);
@@ -30,14 +30,14 @@ setIsEnabled(true)}, [])
     setUserId(newUserId);
     console.log('User Set:', newUserId, properties)};''
   const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-    isEnabled,
+    trackEvent,}
+    trackPageView,}
+    setUser,}
+    isEnabled,}
   }
     isEnabled,}
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
+    <AnalyticsContext.Provider value="{value}"></AnalyticsContext>)
+      {children})
     </AnalyticsContext.Provider>)};
 export { AnalyticsContext };

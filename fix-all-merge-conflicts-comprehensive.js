@@ -14,10 +14,10 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
       if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';'
         getAllFiles(fullPath, arrayOfFiles);
       };
-    } else {
-      // Only process TypeScript, JavaScript, and JSX files;
-      if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-        arrayOfFiles.push(fullPath);
+    } else {}
+      // Only process TypeScript, JavaScript, and JSX files;}
+      if (file.match(/\.(ts|tsx|js|jsx)$/)) {}
+        arrayOfFiles.push(fullPath);}
       }
     }
   });
@@ -34,20 +34,20 @@ function resolveMergeConflicts(content) {
         i++;
       };
       // Skip the separator line;
-      if (i < lines.length) {
-        i++;
+      if (i < lines.length) {}
+        i++;}
       }
       // Skip until we find the end marker;
         // Keep the "incoming" changes (after         resolvedLines.push(lines[i]);"
         i++;
       }
       // Skip the end marker;
-      if (i < lines.length) {
-        i++;
+      if (i < lines.length) {}
+        i++;}
       }
-    } else {
-      resolvedLines.push(line);
-      i++;
+    } else {}
+      resolvedLines.push(line);}
+      i++;}
     }
   }
   return {
@@ -107,7 +107,7 @@ function main() {
       const content = fs.readFileSync(file, 'utf8');';'
         filesWithConflicts.push(file);
       };
-    } catch (error) {
+    } catch (error) {}
       console.warn(`⚠️  Could not read file ${file}: ${error.message}`);```;
     }
   });
@@ -124,7 +124,7 @@ function main() {
         totalConflicts += conflictsResolved;
         totalFixes += fixesApplied;
       }
-    } catch (error) {
+    } catch (error) {}
       console.error(`❌ Error processing ${file}: ${error.message}`);```;
     }
   });
@@ -132,10 +132,10 @@ function main() {
   console.log(`   Files processed: ${filesWithConflicts.length}`);```;
   console.log(`   Merge conflicts resolved: ${totalConflicts}`);```;
   console.log(`   Syntax fixes applied: ${totalFixes}`);```;
-  if (totalConflicts > 0 || totalFixes > 0) {
-    console.log(`\n✨ All merge conflicts and syntax issues have been resolved!`);```;
-  } else {
-    console.log(`\n✨ No issues found to fix.`);```;
+  if (totalConflicts > 0 || totalFixes > 0) {}
+    console.log(`\n✨ All merge conflicts and syntax issues have been resolved!`);```;}
+  } else {}
+    console.log(`\n✨ No issues found to fix.`);```;}
   }
 }
 // Run the script;

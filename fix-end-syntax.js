@@ -49,8 +49,9 @@ for (const filePath of pageFiles) {
       console.log(`Fixed: ${filePath}`);```;
       fixedCount++;
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);```;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 console.log(`Fixed ${fixedCount} files`);```;

@@ -11,19 +11,20 @@ function fixDuplicateClosingBraces(content) {
     /\s*\)\s*\n\s*\}\s*\n\s*\)\s*\n\s*\}\s*$/g,""
     "\n  )\n}","
   )
-  // Fix malformed closing braces;
+  // Fix malformed closing braces
   content = content.replace()
     /\s*\)\s*\n\s*\}\s*\n\s*\)\s*\n\s*\}\s*$/g,""
     "\n  )\n}","
   )
-  return content;
+  return content
 }
-// Function to process all TypeScript/TSX files;
-function processFiles(dir) {;
-const files = fs.readdirSync(dir);
-  for (const file of files) {;
-const filePath = path.join(dir, file);
-const stat = fs.statSync(filePath);
+<<<<<<< HEAD
+// Function to process all TypeScript/TSX files
+function processFiles(dir) {
+const files = fs.readdirSync(dir)
+  for (const file of files) {
+const filePath = path.join(dir, file)
+const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       processFiles(filePath)""
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {"
@@ -35,8 +36,13 @@ const originalContent = content;
         if (content !== originalContent) {""
           fs.writeFileSync(filePath, content, "utf8")"
           console.log(`Fixed: ${filePath}`)```
+<<<<<<< HEAD
 } catch (error) {
+        console.error(`Error processing ${filePath}:`, error.message)```
+=======
+} catch (error) {}
         console.error(`Error processing ${filePath}:`, error.message)```;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 }
 // Process the app directory""

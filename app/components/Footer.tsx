@@ -35,6 +35,13 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' }
   ];
 
+
+  const socialLinks = ['
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },'
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: TwitterIcon },'
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: FacebookIcon },']
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon }]
+  ];
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -84,8 +91,8 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {item.name}
-                  </Link>
-                </li>
+                  </Link>)
+                </li>)
               ))}
             </ul>
           </div>

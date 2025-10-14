@@ -25,10 +25,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     console.error('Enhanced Error Boundary caught an error:', error, errorInfo);''
   }
   render() {
-    if (this.state.hasError) {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
+    if (this.state.hasError) {}
+  error: Error | null;}
+  errorInfo: ErrorInfo | null;}
+  retryCount: number;}
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryTimeoutId: NodeJS.Timeout | null = null;
@@ -60,10 +60,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+      errorId: this.state.errorId,}
+      timestamp: new Date().toISOString(),}
+      userAgent: navigator.userAgent,}
+      url: window.location.href,}
     };
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
@@ -108,7 +108,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <div>
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  <div>
+                  <div></div>
                     <strong>Error ID:</strong> {this.state.errorId}
                   </div>
                   {this.state.error.stack && (
@@ -116,16 +116,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                       <strong>Stack Trace:</strong>
                       <pre className="mt-2 text-xs bg-black/40 p-2 rounded overflow-auto">""
                         {this.state.error.stack}
-                      </pre>
-                    </div>
+                      </pre>)
+                    </div>)
                   )}
                   {this.state.errorInfo?.componentStack && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="mt-2 text-xs bg-black/40 p-2 rounded overflow-auto">""
                         {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
+                      </pre>)
+                    </div>)
                   )}
                 </div>
               </div>
@@ -173,6 +173,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
+>>>>>>> origin/main;
           </div>
         </>
       )}

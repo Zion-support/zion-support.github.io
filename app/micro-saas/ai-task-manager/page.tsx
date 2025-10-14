@@ -125,6 +125,7 @@ const AITaskManagerPage: React.FC = () => {
       ],
       popular: false
     }
+>>>>>>> origin/main
   ]
   const stats = [
     { number: '40%', label: 'Productivity Increase', icon: <Zap className="w-6 h-6 text-cyan-400" /> },'"'"
@@ -153,8 +154,8 @@ const AITaskManagerPage: React.FC = () => {
     }
   ]
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>AI Task Manager - Intelligent Task Management | Zion Tech Group</title>
         <meta name="description" content="Boost your productivity with our AI-powered task manager. Smart prioritization, intelligent scheduling, and team collaboration with 40% productivity increase." />""
         <meta name="keywords" content="AI task manager, task management, productivity, smart scheduling, team collaboration, workflow automation" />""
@@ -217,8 +218,8 @@ const AITaskManagerPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">""
                     {stat.label}
-                  </div>
-                </div>
+                  </div>)
+                </div>)
               ))}
             </div>
           </div>
@@ -246,8 +247,8 @@ const AITaskManagerPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300 leading-relaxed">""
                     {feature.description}
-                  </p>
-                </div>
+                  </p>)
+                </div>)
               ))}
             </div>
           </div>
@@ -352,7 +353,7 @@ const AITaskManagerPage: React.FC = () => {
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700''
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900''
                     }`}
-                  >
+                  ></Link>
                     Get Started
                   </Link>
                 </div>

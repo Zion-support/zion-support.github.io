@@ -20,7 +20,7 @@ jest.mock('react-router-dom', () => {'
       return React.createElement('a', { href: to, ...props }, children);'
     },
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
+    MemoryRouter: ({ children }) => {}
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
         {
@@ -33,7 +33,7 @@ jest.mock('react-router-dom', () => {'
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null
+    RouterProvider: ({ router }) => null;
   };
 });
 global.IntersectionObserver = class IntersectionObserver {

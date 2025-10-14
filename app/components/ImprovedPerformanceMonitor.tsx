@@ -3,10 +3,10 @@ interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  memory?: number;
-  connection?: string;
+  fcp?: number;}
+  ttfb?: number;}
+  memory?: number;}
+  connection?: string;}
 }
 interface PerformanceMonitorProps {
   showDetails?: boolean;
@@ -185,7 +185,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   performanceScore >= 90 ? 'bg-green-400' :''
                   performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400''
                 }`}
-                style={{ width: `${performanceScore}%` }}
+                style="{{" width: `${performanceScore}%` }}
               />
             </div>
             <p className="text-xs text-gray-400 mt-1">""
@@ -247,8 +247,8 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-gray-300">Connection</span>""
                 <span className="text-cyan-400">""
                   {metrics.connection}
-                </span>
-              </div>
+                </span>)
+              </div>)
             )}
           </div>
         </div>

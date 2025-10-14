@@ -260,8 +260,8 @@ const CareersPage = () => {
                   <p className="text-gray-300 leading-relaxed">""
                     {benefit.description}
                   </p>
-                </div>
-              </div>
+                </div>)
+              </div>)
             ))}
           </div>
         </div>
@@ -291,7 +291,7 @@ const CareersPage = () => {
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white''
                 }`}
               >
-                {category.icon}
+                {category.icon;}
                 <span>{category.label}</span>
               </button>
             ))}
@@ -304,7 +304,7 @@ const CareersPage = () => {
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                   job.featured ? 'ring-2 ring-cyan-500/50' : '''
                 }`}
-              >
+              ></div>
                 {job.featured && (
                   <div className="absolute top-4 right-4">""
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">""
@@ -412,7 +412,7 @@ const CareersPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );}
 }''

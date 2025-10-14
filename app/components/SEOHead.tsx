@@ -65,7 +65,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData;
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />""
       <meta name="keywords" content={keywords} />""

@@ -65,6 +65,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
+>>>>>>> origin/main
   ];
   const addOns = [
     {

@@ -76,7 +76,37 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                 </div>
               ))}
             </div>
-          </div>
+    </>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8"></nav>
+            {navigationItems.map((item) => (}
+              <div key="{item.name}" className="relative group"></div>
+                <Link;
+                  to="{item.href}")
+                  className="text-gray-300 hover:text-white transition-colors flex items-center")
+                  onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
+                  onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
+                >
+                  {item.name}
+                  {item.submenu && <ChevronDown className="w-4 h-4 ml-1" />}
+                </Link>
+                {item.submenu && isServicesOpen && ()}
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50"></div>)}
+                    {item.submenu.map((subItem) => (}
+                      <Link;}
+                        key="{subItem.name}"
+                        to="{subItem.href}"
+                        className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">"
+                        {subItem.name})
+                      </Link>)
+                    ))}
+                  </div>
+                )}}
+              </div>
+            ))}
+          </nav>
           {/* CTA Button */}
           <div className="hidden md:block">;""
             <Link>
@@ -107,7 +137,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                     className="$1""
 onClick={() => setIsOpen(false)}
                   >
-                    {item.name}
+                    {item.name;
                   </Link>
                   {item.submenu && (
                     <div className="pl-4 space-y-1">""
@@ -134,6 +164,15 @@ onClick={() => setIsOpen(false)}
                   Get Started;
                 </Link>
               </div>
+            ))}
+            <div className="pt-4"></div>
+              <Link;
+                to="/contact"
+                className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
+                onClick="{()" => setIsOpen(false)}
+              >;
+                Get Started;
+              </Link>
             </div>
           </div>
         )}

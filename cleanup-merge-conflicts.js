@@ -18,9 +18,10 @@ function cleanMergeConflicts(filePath) {
     fs.writeFileSync(filePath, content, 'utf8');';'
     console.log(`Cleaned: ${filePath}`);```;
     return true;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error cleaning ${filePath}:`, error.message);```;
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 async function main() {
@@ -37,13 +38,20 @@ async function main() {
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {';'
         cleanedCount += cleanDirectory(fullPath);
       };
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
     } else if (stat.isFile()) {
-      // Only process TypeScript, JavaScript, and JSX files;
+      // Only process TypeScript, JavaScript, and JSX files
       if (/\.(ts|tsx|js|jsx)$/.test(item)) {
         const content = fs.readFileSync(fullPath, 'utf8');';'
         if (content.includes('';'
           if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++;
+            cleanedCount++
+=======
+        const content = fs.readFileSync(fullPath, 'utf8');';}
+        if (content.includes(''';)}
+          if (cleanMergeConflicts(fullPath)) {}
+            cleanedCount++;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
           }
         }
       }

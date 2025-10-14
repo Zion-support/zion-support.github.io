@@ -1,4 +1,5 @@
 // API endpoint for general subscription
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {'
     return res.status(405).json({ error: 'Method not allowed' });'
@@ -25,10 +26,29 @@ export default function handler(req, res) {
   }
   const newSubscriber = {
     id: Date.now().toString(),
+<<<<<<< HEAD
     email,
     name: name || ','
     status: 'active','
     subscribedAt: new Date().toISOString()
+  }
+  try {
+    subscribers.push(newSubscriber)
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2))
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Successfully subscribed!'
+    }))
+  } catch (error) {
+    console.error('Error writing subscribers:', error)
+    res.setHeader('Content-Type', 'application/json')
+    res.status(500).end(JSON.stringify({ error: 'Internal server error' }))
+=======
+    email,}
+    name: name || '',}
+    status: 'active',}
+    subscribedAt: new Date().toISOString()}
   };
   try {
     subscribers.push(newSubscriber);

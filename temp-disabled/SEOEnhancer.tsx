@@ -17,7 +17,7 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
   url = typeof window !== 'undefined' ? window.location.href : ','''
   type = 'website',')'''
   structuredData}) => {}
-  useEffect(() => {}, []);
+  useEffect(() => {}, [])
     // Add structured data to the page;
     if (structuredData) {}
       const script = document.createElement('script')';''
@@ -26,7 +26,7 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""
       document.head.appendChild(script);
       return () => {}
         if (document.head.contains(script)) {}
-          document.head.removeChild(script);
+          document.head.removeChild(script)
         }
       }
     }
@@ -62,8 +62,8 @@ const metaTags = [{ name: 'description', content: "description"},'"'"'"'"'"'"'"
       <div><title>{title}</title></div>
   <div></>
 );
-      {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} />);
+      {metaTags.map((tag, _index) => (})
+        <meta key="{_index}" {...tag} />)
       ))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />""

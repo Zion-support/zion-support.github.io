@@ -33,8 +33,9 @@ function fixHelmetImports(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');'
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Fix all files;

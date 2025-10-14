@@ -14,7 +14,7 @@ interface MicroSaasProduct {
   title: string;
   description: string;
   price: string;
-  features: string[];,;
+  features: string[];
   category: string;
 }
 const MicroSaasPage: React.FC = () => {}
@@ -85,13 +85,13 @@ import { Right, Circle, Star,    } from "lucide-react";";"
       icon: value: '99.9%,';'
       label: 'Uptime,';'
       description: Reliable service you can count on;
-    },;
+    },
     {}
       icon: Star,;
       value: '4.8/5,';'
       label: 'Rating,';'
       description: Highly rated by our customers;
-    },;
+    },
     {}
       icon: value: '24/7,';'
       label: 'Support,';'

@@ -188,8 +188,8 @@ const CaseStudiesPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 };
 export default CaseStudiesPage;

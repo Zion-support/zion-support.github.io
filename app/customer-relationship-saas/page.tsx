@@ -24,9 +24,9 @@ const CustomerRelationshipSAAS = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default CustomerRelationshipSAAS;

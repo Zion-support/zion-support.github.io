@@ -14,10 +14,10 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
       if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';'
         getAllFiles(fullPath, arrayOfFiles);
       };
-    } else {
-      // Only process TypeScript, JavaScript, and JSX files;
-      if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-        arrayOfFiles.push(fullPath);
+    } else {}
+      // Only process TypeScript, JavaScript, and JSX files;}
+      if (file.match(/\.(ts|tsx|js|jsx)$/)) {}
+        arrayOfFiles.push(fullPath);}
       }
     }
   });
@@ -90,17 +90,17 @@ function main() {
         totalFixes += fixesApplied;
         filesProcessed++;
       }
-    } catch (error) {
+    } catch (error) {}
       console.warn(`⚠️  Could not process file ${file}: ${error.message}`);`;
     }
   });
   console.log(`\n🎉 Summary:`);`;
   console.log(`   Files processed: ${filesProcessed}`);`;
   console.log(`   Total fixes applied: ${totalFixes}`);`;
-  if (totalFixes > 0) {
-    console.log(`\n✨ All HTML entities have been fixed!`);`;
-  } else {
-    console.log(`\n✨ No HTML entities found to fix.`);`;
+  if (totalFixes > 0) {}
+    console.log(`\n✨ All HTML entities have been fixed!`);`;}
+  } else {}
+    console.log(`\n✨ No HTML entities found to fix.`);`;}
   }
 }
 // Run the script;

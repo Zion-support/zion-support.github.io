@@ -250,8 +250,8 @@ const EnhancedNavigation = () => {
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1""
                         onClick={() => setIsOpen(false)}
                       >
-                        {dropdownItem.label}
-                      </Link>
+                        {dropdownItem.label;}
+                      </Link>}
                     ))}
                     {item.dropdown.length > 4 && (
                       <Link
@@ -274,8 +274,8 @@ const EnhancedNavigation = () => {
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2""
                       onClick={() => setIsOpen(false)}
                     >
-                      {link.label}
-                    </Link>
+                      {link.label;}
+                    </Link>}
                   ))}
                 </div>
               </div>

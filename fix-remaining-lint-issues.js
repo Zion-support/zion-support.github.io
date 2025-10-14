@@ -78,8 +78,9 @@ const fullPath = path.join(__dirname, filePath);
     }
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);```;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);```;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Fix all files;

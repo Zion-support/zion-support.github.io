@@ -128,6 +128,6 @@ const ITSolutionsPage: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+  )};
 };
 export default ITSolutionsPage;

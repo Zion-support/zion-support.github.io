@@ -75,8 +75,8 @@ const CareersPage: React.FC = () => {
     }
   ];
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join our team of technology experts. Explore career opportunities at Zion Tech Group and help shape the future of AI and IT solutions." />""
         <meta name="keywords" content="careers, jobs, AI engineer, cybersecurity, cloud architect, technology careers" />""
@@ -202,8 +202,8 @@ const CareersPage: React.FC = () => {
             <ArrowRightIcon className="w-5 h-5" />""
           </Link>
         </div>
-      </section>
-    </>
+      </section>)
+    </>)
   );
 };
 export default CareersPage;

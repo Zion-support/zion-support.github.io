@@ -80,7 +80,7 @@ export default ${componentName};`;
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -110,7 +110,7 @@ for (const file of tsFiles) {
     if (fixSyntaxErrors(file)) {
       fixedCount++;
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`Failed to process ${file}:`, error.message);
     errorCount++;
   }

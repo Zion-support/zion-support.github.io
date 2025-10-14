@@ -18,7 +18,7 @@ filesWithConflicts.forEach(filePath => {
     content = content.replace(/\n\n\n+/g, '\n\n');'
     fs.writeFileSync(filePath, content);
     console.log(`Fixed merge conflicts in: ${filePath}`);
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });

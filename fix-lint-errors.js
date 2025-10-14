@@ -10,10 +10,10 @@ function fixFile(filePath) {
     const uniqueImports = new Set();
     const fixedImports = [];
     for (const line of importLines) {
-      const trimmed = line.trim();
-      if (!uniqueImports.has(trimmed)) {
-        uniqueImports.add(trimmed);
-        fixedImports.push(line);
+      const trimmed = line.trim();}
+      if (!uniqueImports.has(trimmed)) {}
+        uniqueImports.add(trimmed);}
+        fixedImports.push(line);}
       }
     }
     // Fix unused variables by prefixing with underscore;
@@ -51,7 +51,7 @@ function fixFile(filePath) {
     // Fix duplicate keys in objects;
     content = content.replace(/(\s+)(icon:\s*[^,}]+),\s*\n\s*icon:\s*([^,}]+)/g, '$1icon: $2');''
     // Fix duplicate variable declarations;
-    content = content.replace(/(\w+)\s+is\s+already\s+defined/g, (match, varName) => {
+    content = content.replace(/(\w+)\s+is\s+already\s+defined/g, (match, varName) => {}
       return `_${varName}`;
     });
     // Fix parsing errors in JSX
@@ -95,7 +95,7 @@ function fixFile(filePath) {
       return true;
     }
     return false;
-  } catch (_error) {
+  } catch (_error) {}
     console._error(`Error fixing ${filePath}:`, _error.message);
     return false;
   }

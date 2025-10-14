@@ -1,4 +1,5 @@
 // API endpoint for creating checkout sessions
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {'
     return res.status(405).json({ error: 'Method not allowed' });'
@@ -20,6 +21,7 @@ export default function handler(req, res) {
       return res.status(400).json({
         error: 'Missing required fields: amount and items' '
       });
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
     }
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">"
@@ -35,7 +37,7 @@ export default function handler(req, res) {
             </button>
           </div>
         </section>
-      </div>
-    </>
+</div>
+</>
   )
 }

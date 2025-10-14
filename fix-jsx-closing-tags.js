@@ -36,7 +36,7 @@ async function fixJSXFile(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -53,9 +53,9 @@ async function main() {
       cwd: process.cwd(),
       ignore: ['node_modules/**']'
     });
-    for (const file of files) {
-      if (await fixJSXFile(file)) {
-        totalFixed++;
+    for (const file of files) {}
+      if (await fixJSXFile(file)) {}
+        totalFixed++;}
       }
     }
   }

@@ -92,7 +92,7 @@ export default function App() {
             <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />""
           </Routes>
         </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
+      </BrowserRouter>)
+    </HelmetProvider>)
   );
 }

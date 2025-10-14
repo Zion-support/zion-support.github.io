@@ -62,7 +62,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   };
   const mergedStructuredData = structuredData || defaultStructuredData;
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={optimizedDescription} />""

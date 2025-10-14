@@ -46,8 +46,8 @@ function main() {
         fs.writeFileSync(filePath, content, 'utf8');'
         fixedCount++;
         console.log(`✅ Fixed: ${filePath}`);
-      } catch (error) {
-        errorCount++;
+      } catch (error) {}
+        errorCount++;}
         console.error(`❌ Error processing ${filePath}:`, error.message);
       }
     }

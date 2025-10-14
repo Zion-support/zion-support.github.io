@@ -89,8 +89,8 @@ const PrivacyPage: React.FC = () => {
     dpo: 'Data Protection Officer''
   }
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information." />""
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR compliance" />""

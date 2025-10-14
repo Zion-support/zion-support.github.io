@@ -8,5 +8,5 @@ export function createAdvancedMonitoring()   {};
     'monitoring/performance-monitor.js': '';'
       performanceCheck: () => ({ status: 'ok' })'';'
 }
-  return monitoringFiles;
+  return monitoringFiles
 }

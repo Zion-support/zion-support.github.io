@@ -392,8 +392,10 @@ const Navigation: React.FC<NavigationProps> = ({ className = ', children }) => {
   return (
 <>    <div className={`navigation ${className}`}></div>```)
       {children}
-    </>
-  );
+    </div>)
+    </>)
+  )};
 };
 ;
-export default Navigation;""
+export default Navigation
+;

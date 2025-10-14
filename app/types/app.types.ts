@@ -1,17 +1,17 @@
-/**;
- * Application Types;
- * Core type definitions for the Zion Tech Group website;
+/**
+ * Application Types
+ * Core type definitions for the Zion Tech Group website
+ */
+/**
+ * Performance Metrics Interface
+ * Web Vitals and performance measurement types
  */;
-/**;
- * Performance Metrics Interface;
- * Web Vitals and performance measurement types;
- */;
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;
-  fid?: number; // First Input Delay;
-  cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
+  lcp?: number; // Largest Contentful Paint;}
+  fid?: number; // First Input Delay;}
+  cls?: number; // Cumulative Layout Shift;}
+  ttfb?: number; // Time to First Byte}
 }
 /**;
  * Performance Report Interface;
@@ -49,10 +49,9 @@ export interface MemoryStats {
 /**;
  * Layout Shift Interface;
  */;
-export interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInpu,
-    t: boolean;
+export interface LayoutShift extends PerformanceEntry {}
+  value: number;}
+  hadRecentInput: boolean;}
 }
 /**;
  * Performance with Memory Interface;
@@ -125,14 +124,13 @@ export interface ContactForm {
 }
 /**
  * API Response Interface
- */
-export interface ApiResponse<T = unknown> {
-    success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
-  timestam,
-    p: number;
+ */;
+export interface ApiResponse<T = any> {
+  success: boolean;
+  data?: T;}
+  error?: string;}
+  message?: string;}
+  timestamp: number;}
 }
 /**;
  * SEO Metadata Interface;
@@ -222,8 +220,7 @@ export interface TeamMember {
   ,
   };
   expertise: string[];
-  feature,
-    d: boolean;
+  featured: boolean;
 }
 /**;
  * FAQ Item Interface;
@@ -252,11 +249,10 @@ export interface NewsletterSubscription {
 /**;
  * Error Boundary Props Interface;
  */;
-export interface ErrorBoundaryProps {
-    children: React.ReactNode;
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void ,
-  }>;
-  onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
+export interface ErrorBoundaryProps {}
+  children: React.ReactNode;}
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
 /**;
  * Error Boundary State Interface;
@@ -314,7 +310,7 @@ export interface UserPreferences {
 /**;
  * Utility Types;
  */;
-export type Optional<T, K extends keyof T> = Omit<////T, K> & Partial<Pick<T, K>>;
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
     [
@@ -360,4 +356,4 @@ export interface BuildConfig {
     pw,
     a: boolean;
   };
-</PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T></PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T>}
+}

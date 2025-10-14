@@ -72,7 +72,7 @@ const ImprovedContactForm: React.FC = () => {
       newErrors.email = "Please enter a valid email address";""
     }
     // Phone validation (optional but if provided, should be valid)
-    if (formData.phone.trim()) {
+    if (formData.phone.trim()) {}
       const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
       if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, '))) {''
         newErrors.phone = "Please enter a valid phone number";""
@@ -89,7 +89,7 @@ const ImprovedContactForm: React.FC = () => {
       newErrors.service = "Please select a service";""
     }
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).length ="==" 0;
   };
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -115,7 +115,7 @@ const ImprovedContactForm: React.FC = () => {
     }
     setIsSubmitting(true);
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
       // In a real app, you would send the data to your backend
       console.log('Form submitted:', formData);''
@@ -150,7 +150,7 @@ const ImprovedContactForm: React.FC = () => {
           onClick={() => setIsSubmitted(false)}
           className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors""
         >
-          Send Another Message
+          Send Another Message;
         </button>
       </div>
     );
@@ -284,8 +284,8 @@ const ImprovedContactForm: React.FC = () => {
                     onClick={() => handleServiceSelect(service)}
                     className="w-full px-4 py-3 text-left text-white hover:bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg""
                   >
-                    {service}
-                  </button>
+                    {service;}
+                  </button>}
                 ))}
               </div>
             )}

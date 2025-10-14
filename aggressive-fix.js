@@ -71,8 +71,8 @@ export default function ${serviceName}() {
         <div className="text-center">"
           <p className="text-gray-300">Coming Soon - ${title} Solutions</p>"
         </div>
-      </div>
-    </div>
+      </div>)
+    </div>)
   );
 }`;
 // Run the type check processing

@@ -131,7 +131,7 @@ function fixJSXErrors(filePath) {
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }

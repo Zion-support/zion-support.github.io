@@ -24,9 +24,9 @@ const FiveGNetworkOptimization = () => {
               </Link>
             </div>
           </ResponsiveContainer>
-        </section>
-      </div>
-    </>
-  );
+        </section>}
+      </div>})
+    </>)}
+  );}
 };
 export default FiveGNetworkOptimization;

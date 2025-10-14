@@ -11,15 +11,29 @@ const stat = fs.statSync(filePath)
     if (stat && stat.isDirectory()) {""
       if (!["node_modules", ".git", "dist", "build", ".next"].includes(file)) {"
         results = results.concat(findFiles(filePath, extensions))
-} else {;
-const ext = path.extname(file);
+} else {
+const ext = path.extname(file)
       if (extensions.includes(ext)) {
-        results.push(filePath);
+        results.push(filePath)
+=======
+  let results = [];
+const list = fs.readdirSync(dir);
+  list.forEach((file) => {;
+const filePath = path.join(dir, file);
+const stat = fs.statSync(filePath)}
+    if (stat && stat.isDirectory()) {"}
+      if (!["node_modules", ".git", "dist", "build", ".next"].includes(file)) {}
+        results = results.concat(findFiles(filePath, extensions))}
+} else {;}
+const ext = path.extname(file);}
+      if (extensions.includes(ext)) {}
+        results.push(filePath);}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
-  });
-  return results;
+  })
+  return results
 }
-// Function to fix linting errors;
+// Function to fix linting errors
 function fixLintingErrors(content, filePath) {
   let fixed = content;
   // Fix extra semicolons in import statements""
@@ -53,9 +67,9 @@ function fixLintingErrors(content, filePath) {
         "import React from "react";\nimport { Helmet     } from "react-helmet-async";,)'"'"'"
       )
 }
-  return fixed;
+  return fixed
 }
-// Main function to process files;
+// Main function to process files
 function processFile(filePath) {
   try {""
     let content = fs.readFileSync(filePath, "utf8")"
@@ -66,12 +80,19 @@ function processFile(filePath) {
     if (content !== originalContent) {""
       fs.writeFileSync(filePath, content, "utf8")"
       console.log(`Fixed: ${filePath}`)```
-      return true;
+      return true
 }
-    return false;
+<<<<<<< HEAD
+    return false
   } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)```
+    return false
+=======
+    return false;
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message)```;
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 // Main execution""
 console.log("Starting linting error fix...")";""
@@ -80,6 +101,12 @@ let fixedCount = 0;
 files.forEach((file) => {
   if (processFile(file)) {
     fixedCount++
+=======
+let fixedCount = 0;
+files.forEach((file) => {}
+  if (processFile(file)) {}
+    fixedCount++}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 })
 console.log(`\nFixed ${fixedCount} files.`)``"`"
 console.log("Linting error fixing completed!")""

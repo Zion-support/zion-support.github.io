@@ -38,6 +38,10 @@ return(<.Fragment>)
                   <p className="text-gray-300 mb-4">{feature.description</p>}""
                   {feature.benefits && (;
                     <ul>
+=======
+                  {feature.benefits && (;})
+                    <ul>})
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <Circle />
         {/* CTA Section */} <section className="py-20 px-4">""
@@ -56,6 +60,7 @@ return(<.Fragment>)
       ))
       <Footer />
   );
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 export default PageBackupPage;
 </div></div></div></div></div></section></section></h1>

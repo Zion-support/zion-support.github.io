@@ -27,8 +27,8 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     yellow: 'border-yellow-500/30 hover:border-yellow-500/60''
   };
   return (
-    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
-      {children}
-    </div>
+    <div className="{`${baseClasses}" ${hoverClasses} ${glowClass} ${className}`}></div>
+      {children})
+    </div>)
   )};
 export default AnimatedCard;

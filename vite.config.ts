@@ -2,11 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const resolve = path.resolve;
+
 export default defineConfig({
   plugins: [
     react({
-      fastRefresh: true,
-      jsxRuntime: 'automatic',
+      // Enable React Fast Refresh
+      fastRefresh: true
     })
   ],
   resolve: {
@@ -29,8 +31,8 @@ export default defineConfig({
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
     // Optimize bundle size

@@ -61,8 +61,8 @@ export default function Page() {
             ${content}
           </div>
         </div>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 }`;
 // Home page template
@@ -72,7 +72,7 @@ import { ArrowRight, CheckCircle, Star, Globe, Mail, Phone } from "lucide-react"
 export default function HomePage() {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI solutions, IT services, and digital transformation for businesses worldwide." />"
       </Helmet>
@@ -143,8 +143,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 }`;
 // Error page template
@@ -175,8 +175,8 @@ export default function ErrorPage() {
             </button>
           </div>
         </div>
-      </div>
-    </>
+      </div>)
+    </>)
   );
 }`;
 // Function to create directory if it doesn't exist'

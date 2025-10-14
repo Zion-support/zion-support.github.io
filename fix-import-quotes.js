@@ -16,41 +16,77 @@ function fixImportQuotes(content) {
     /import\s+([^;]+);([^"]*)$/gm,""
     "import $1;\nimport $2","
   )
+  return content
+=======
+    "import $1;\nimport $2",;
+  );
   return content;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
-// Function to process a single file;
+// Function to process a single file
 function processFile(filePath) {
   try {";";"
 const content = fs.readFileSync(filePath, "utf8");";"
 const fixedContent = fixImportQuotes(content);
     if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent);
+      fs.writeFileSync(filePath, fixedContent)
+      console.log(`Fixed: ${filePath}`)```
+      return true
+}
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)```
+    return false
+=======
+  try {";";
+const content = fs.readFileSync(filePath, "utf8");";}
+const fixedContent = fixImportQuotes(content);}
+    if (content !="=" fixedContent) {}
+      fs.writeFileSync(filePath, fixedContent);}
       console.log(`Fixed: ${filePath}`)```;
       return true;
 }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message)```;
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
-// Function to recursively find and process all TypeScript/React files;
+// Function to recursively find and process all TypeScript/React files
 function processDirectory(dirPath) {
-  let fixedCount = 0;
-  try {;
-const items = fs.readdirSync(dirPath);
-    for (const item of items) {;
-const fullPath = path.join(dirPath, item);
-const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+  let fixedCount = 0
+  try {
+const items = fs.readdirSync(dirPath)
+    for (const item of items) {
+const fullPath = path.join(dirPath, item)
+const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         fixedCount += processDirectory(fullPath)""
       } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {"
         if (processFile(fullPath)) {
-          fixedCount++;
+          fixedCount++
 }
 } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message)```;
+    console.error(`Error processing directory ${dirPath}:`, error.message)```
+=======
+  let fixedCount = 0;
+  try {;
+const items = fs.readdirSync(dirPath);
+    for (const item of items) {;
+const fullPath = path.join(dirPath, item);}
+const stat = fs.statSync(fullPath);}
+      if (stat.isDirectory()) {}
+        fixedCount += processDirectory(fullPath)"}
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {}
+        if (processFile(fullPath)) {}
+          fixedCount++;}
 }
-  return fixedCount;
+} catch (error) {}
+    console.error(`Error processing directory ${dirPath}:`, error.message)```;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
+}
+  return fixedCount
 }
 // Main execution""
 console.log("Starting import quote fixes...")";""

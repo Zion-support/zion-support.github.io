@@ -19,24 +19,24 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     const particles: Array<{
       x: number;
       y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
+      vx: number;}
+      vy: number;}
+      size: number;}
+      opacity: number;}
     }> = [];
     const createParticle = () => {
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.5 + 0.1,
+        vx: (Math.random() - 0.5) * 0.5,}
+        vy: (Math.random() - 0.5) * 0.5,}
+        size: Math.random() * 2 + 1,}
+        opacity: Math.random() * 0.5 + 0.1,}
       };
     };
     // Initialize particles
-    for (let i = 0; i < 50; i++) {
-      particles.push(createParticle());
+    for (let i = 0; i < 50; i++) {}
+      particles.push(createParticle());}
     }
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);

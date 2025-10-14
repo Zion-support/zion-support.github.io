@@ -5,11 +5,11 @@ export interface Service {
   shortDescription: string;
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT;''
   icon: string;
-  features: string[];
-  pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number};
+  features: string[];}
+  pricing: {}
+    basic: number;}
+    pro: number;}
+    enterprise: number}
   benefits: string[];
   useCases: string[];
   technologies: string[];
@@ -35,10 +35,10 @@ export const services: Service[] = [
       'AI Chatbots',''
       'Automated Decision Making;''
     ],
-    pricing: {
-      basic: 5000,
-      pro: 15000,
-      enterprise: 50000
+    pricing: {}
+      basic: 5000,}
+      pro: 15000,}
+      enterprise: 50000;}
     },
     benefits: [
       'Increased Efficiency',''

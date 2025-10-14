@@ -20,15 +20,14 @@ export const defaultStructuredData = {
   "url": "https://ziontechgroup.com","""
   "logo": "https://ziontechgroup.com/images/logo.png","""
   "contactPoint": {"""
-    "@type": "ContactPoint","""
-    "telephone": "+1-555-0123","""
-    "contactType": "customer service","""
-    "availableLanguage": "English"""
+    "@type": "ContactPoint","""}
+    "telephone": "+1-555-0123","""}
+    "contactType": "customer service","""}
+    "availableLanguage": "English"""}
   },"""
   "sameAs": ["""
-    "https://www.linkedin.com/company/zion-tech-group","""
-    "https://twitter.com/ziontechgroup","""
-    "https://www.facebook.com/ziontechgroup"""
+    "https://www.linkedin.com/","""
+    "https://twitter.com/ziontechgroup","""]
+    "https://www.facebook.com/ziontechgroup"""]
   ]
-};
-"""
+}"

@@ -123,9 +123,9 @@ const About: React.FC = () => {
                 </h4>""
                 <p className="text-gray-600">""
                   {value.description},
-                </p>
-              </div>
-            ))},
+                </p>)
+              </div>)
+            ))}
           </div>
         </div>
       </div>

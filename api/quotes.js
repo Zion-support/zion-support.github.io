@@ -1,4 +1,5 @@
 // API endpoint for quote requests
+<<<<<<< HEAD
 export default function handler(req, res) {
   if (req.method !== 'POST') {'
     return res.status(405).json({ error: 'Method not allowed' });'
@@ -28,6 +29,23 @@ export default function handler(req, res) {
       service: service || 'General inquiry','
       status: 'pending','
       createdAt: new Date().toISOString()
+    }
+    // Here you would typically save the quote to a database
+    console.log('Quote request processed:', quote.id)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Quote request submitted successfully' 
+    }))
+  } catch (error) {
+    console.error('Quote submission error:', error)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+=======
+      country: country || 'Not specified',}
+      service: service || 'General inquiry',}
+      status: 'pending',}
+      createdAt: new Date().toISOString()}
     };
     // Here you would typically save the quote to a database
     console.log('Quote request processed:', quote.id);'

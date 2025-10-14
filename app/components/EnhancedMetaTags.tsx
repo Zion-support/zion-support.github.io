@@ -9,12 +9,12 @@ interface EnhancedMetaTagsProps {
   ogType?: 'website' | 'article' | 'product;'
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;'
   noIndex?: boolean,
-  structuredData?: Record<string, any>
+  structuredData?: Record<string, any></string>
   author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  publishedTime?: string;}
+  modifiedTime?: string;}
+  section?: string;}
+  tags?: string[];}
 }
 const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   title,
@@ -94,7 +94,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   } : null;
   const finalStructuredData = structuredData || (articleStructuredData || defaultStructuredData)
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />""

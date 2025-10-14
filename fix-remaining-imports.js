@@ -52,7 +52,7 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content);
       console.log(`✓ Manually fixed ${filePath}`);
     }
-  } catch (error) {
+  } catch (error) {}
     console.log(`✗ Failed to fix ${filePath}: ${error.message}`);
   }
 }

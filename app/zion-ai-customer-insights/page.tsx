@@ -96,7 +96,7 @@ const Page = () => {
               size="lg""
               icon={<Brain className="w-5 h-5" />}""
             >
-              Start Free Trial
+              Start Free Trial;
             </FuturisticButton>
             <FuturisticButton
               href="#demo""
@@ -104,7 +104,7 @@ const Page = () => {
               size="lg""
               icon={<BarChart3 className="w-5 h-5" />}""
             >
-              View Demo
+              View Demo;
             </FuturisticButton>
           </div>
           {/* Stats */}

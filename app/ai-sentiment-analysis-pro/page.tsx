@@ -66,7 +66,7 @@ const AISentimentAnalysisPro = () => {
               size="lg""
               icon={<ArrowRight className="w-5 h-5" />}""
             >
-              Get Started Today
+              Get Started Today;
             </FuturisticButton>
             <FuturisticButton
               href="/demo""
@@ -74,7 +74,7 @@ const AISentimentAnalysisPro = () => {
               size="lg""
               icon={<TrendingUp className="w-5 h-5" />}""
             >
-              View Demo
+              View Demo;
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -106,8 +106,8 @@ const AISentimentAnalysisPro = () => {
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">""
                   {feature.description}
-                </p>
-              </FuturisticCard>
+                </p>)
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>
@@ -150,7 +150,7 @@ const AISentimentAnalysisPro = () => {
                 size="lg""
                 icon={<ArrowRight className="w-5 h-5" />}""
               >
-                Start Your Free Trial
+                Start Your Free Trial;
               </FuturisticButton>
               <FuturisticButton
                 href="/pricing""

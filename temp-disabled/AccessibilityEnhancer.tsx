@@ -27,7 +27,7 @@ const addFocusStyles = () => {}
           outline-offset: "2px""
         }
       ````;
-      document.head.appendChild(style);
+      document.head.appendChild(style)
     }
     // Add ARIA landmarks;
 const addAriaLandmarks = () => {}
@@ -56,14 +56,14 @@ const addAriaLandmarks = () => {}
         e.preventDefault();
 const mainContent = document.getElementById('main-content')';''
         if (mainContent) {}
-          mainContent.focus();
+          mainContent.focus()
         }
       }
       // Escape key to close modals/dropdowns;
       if (e.key === 'Escape') {'}';;''
 const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {}
-          activeElement.blur();
+          activeElement.blur()
         }
       }
     }
@@ -105,13 +105,13 @@ const addAltText = () => {}
         if (!img.getAttribute('alt')) {'}';''
           img.setAttribute('alt', `Image ${index + 1}`)'``'`;''
         }
-      });
+      })
     }
     // Initialize accessibility enhancements;
     addSkipLink();
     addFocusStyles();
     addAriaLandmarks();
-    addAltText();
+    addAltText()
     // Add event listeners;
     document.addEventListener('keydown', handleKeyDown)';''
     document.addEventListener('mousedown', handleMouseDown)';''

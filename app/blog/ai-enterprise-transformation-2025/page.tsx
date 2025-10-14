@@ -13,7 +13,9 @@ const EnterpriseTransformationPage: React.FC = () => {
             <h1 className="text-4 xl font-bold text-gray-900 mb-4">""
               AI Enterprise Transformation: $50 M Annual Savings Blueprint
             </h1>
-            <p>January 28, 2025 · 50 min read · Enterprise AI</p>
+            <p>;
+              January 28, 2025 · 50 min read · Enterprise AI
+            </p>
           </div>
           <div className="prose max-w-none">""
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🎯 Transformation Results</h2>""
@@ -96,9 +98,9 @@ const EnterpriseTransformationPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
+        </div>}
+      </div>}
+    </div>}
+  );}
 };
 export default EnterpriseTransformationPage;

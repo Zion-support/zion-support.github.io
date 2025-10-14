@@ -79,6 +79,21 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
+            {/* Key Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
+              <div className="text-center"></div>
+                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Threat Detection Rate</div>
+              </div>
+              <div className="text-center"></div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">&lt;1min</div>
+                <div className="text-gray-300">Response Time</div>
+              </div>
+              <div className="text-center"></div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-gray-300">Monitoring</div>
+              </div>
+            </div>
           </div>
         </section>
         {/* Features Section */}

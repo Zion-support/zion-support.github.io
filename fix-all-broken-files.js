@@ -2,6 +2,7 @@
 import fs from 'fs';'
 import { glob } from 'glob';'
 // Function to create a proper page structure
+<<<<<<< HEAD
 function createProperPage(title, description) {
   return `'use client';'
 import React from "react";"
@@ -10,6 +11,17 @@ export default function Page() {
   return (
     <>
       <Helmet>
+=======
+function createProperPage(title, description) {}
+  return `'use client';}
+import React from "react";}
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {}
+  return (}
+    <>}
+      <Helmet ></Helmet>}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description} - Zion Tech Group" />"
       </Helmet>
@@ -22,10 +34,17 @@ export default function Page() {
             </p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </>
+  )
+}`
+=======
+      </div>)
+    </>)
   );
 }`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
 }
 // Function to fix broken files
 function fixBrokenFile(content, filePath) {
@@ -44,6 +63,7 @@ function fixBrokenFile(content, filePath) {
     const newContent = createProperPage(title, title);
     changes++;
     return { content: newContent, changes };
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
   return { content, changes };
 }
@@ -53,17 +73,32 @@ function processFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');'
     const result = fixBrokenFile(content, filePath);
     if (result.changes > 0) {
-      fs.writeFileSync(filePath, result.content);
+      fs.writeFileSync(filePath, result.content)
+      console.log(`Fixed broken file: ${filePath}`)
+      return true
+    }
+    return false
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
+=======
+    const content = fs.readFileSync(filePath, 'utf8');
+    const result = fixBrokenFile(content, filePath);}
+    }
+    if (result.changes > 0) {}
+      fs.writeFileSync(filePath, result.content);}
       console.log(`Fixed broken file: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
   }
 }
 // Main execution
+<<<<<<< HEAD
 async function main() {
   console.log('Starting comprehensive fix for all broken files...');'
   // Get all TypeScript/TSX files in the app directory
