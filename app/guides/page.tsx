@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react'
 const GuidesPage: React.FC = () => {
   const guides = [
     {
@@ -36,8 +35,7 @@ const GuidesPage: React.FC = () => {
     ,
   }
   ,
-  ];
-
+  ]
   const categories = [
     {
     name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,
@@ -58,21 +56,18 @@ const GuidesPage: React.FC = () => {
     name: 'Development', icon: Code, color: 'text-orange-400' ,
   }
   ,
-  ];
-
+  ]
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-400/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
-      case 'Advanced': return 'text-orange-400 bg-orange-400/20';
-      case 'Expert': return 'text-red-400 bg-red-400/20';
-      default: return 'text-gray-400 bg-gray-400/20';
+      case 'Beginner': return 'text-green-400 bg-green-400/20'
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20'
+      case 'Advanced': return 'text-orange-400 bg-orange-400/20'
+      case 'Expert': return 'text-red-400 bg-red-400/20'
+      default: return 'text-gray-400 bg-gray-400/20'
     ,
   }
-  };
-
+  }
 const Page = () => {
-ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -86,7 +81,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </nav>
-
         <main className="container mx-auto px-4 py-16">
           {/* Header  */}
           <div className="text-center mb-16">
@@ -97,11 +91,10 @@ ursor/fix-errors-and-merge-to-main-94a7
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Step-by-step guides to help you implement AI, automation, and digital transformation 
+              Step-by-step guides to help you implement AI, automation, and digital transformation
               solutions in your enterprise with confidence.
             </p>
           </div>
-
           {/* Categories  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
@@ -114,7 +107,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               ))}
             </div>
           </section>
-
           {/* Guides Grid  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
@@ -130,14 +122,12 @@ ursor/fix-errors-and-merge-to-main-94a7
                       <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
                     <Link
@@ -151,7 +141,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               ))}
             </div>
           </section>
-
           {/* Getting Started  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
@@ -160,7 +149,7 @@ ursor/fix-errors-and-merge-to-main-94a7
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
                   <p className="text-gray-300 mb-4">
-                    Start with our comprehensive AI 2026 Implementation Roadmap to understand 
+                    Start with our comprehensive AI 2026 Implementation Roadmap to understand
                     the fundamentals and plan your AI transformation journey.
                   </p>
                   <ul className="space-y-2 text-gray-300">
@@ -173,7 +162,7 @@ ursor/fix-errors-and-merge-to-main-94a7
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
                   <p className="text-gray-300 mb-4">
-                    Explore our advanced guides for autonomous systems, process automation, 
+                    Explore our advanced guides for autonomous systems, process automation,
                     and cutting-edge AI implementations.
                   </p>
                   <ul className="space-y-2 text-gray-300">
@@ -186,14 +175,13 @@ ursor/fix-errors-and-merge-to-main-94a7
               </div>
             </div>
           </section>
-
           {/* Call to Action  */}
           <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need Personalized Guidance?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our experts are available to provide personalized implementation guidance 
+              Our experts are available to provide personalized implementation guidance
               tailored to your specific business needs and requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -213,8 +201,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </section>
         </main>
       </>
-  );
-};
-
-export default Page;
-ursor/fix-errors-and-merge-to-main-94a7
+  )
+}
+export default Page

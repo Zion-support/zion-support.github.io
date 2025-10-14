@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
-
+import React from 'react'
+import { Helmet , Right,  User,  Calendar  } from 'lucide-react'
 const Page = () => {
   const features = [
     {
@@ -18,8 +17,7 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
@@ -27,7 +25,7 @@ const Page = () => {
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -145,9 +143,8 @@ const Page = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
-  )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+</div>
+</>
+  )}
+const page = React.lazy(() => import('./page'))
+export default page

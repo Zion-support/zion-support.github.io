@@ -1,27 +1,25 @@
-import React, { Component, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
-
+import React, { Component, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline'
 interface Props {
-    children: ReactNode;
-  fallback?: ReactNode;
-,
-  }
+  children: ReactNode
+  fallback?: ReactNode
+}
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
+  hasError: boolean
+  error: Error | null
+  errorInfo: any
 }
 
 class ErrorBoundary extends Component<Props, State> {
     constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -29,24 +27,23 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorInfo: null
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
     this.setState({
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
   }
 
@@ -55,9 +52,8 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    });
-  };
-
+    })
+  }
   render() {
     if (this.state.hasError) {
       return (
@@ -68,15 +64,15 @@ class ErrorBoundary extends Component<Props, State> {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
-            
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
@@ -106,7 +102,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <ArrowPathIcon className="w-5 h-5" />
                 Try Again
               </button>
-              
+
               <Link
                 to="/"
                 className="w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
@@ -129,8 +125,8 @@ class ErrorBoundary extends Component<Props, State> {
       )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

@@ -1,13 +1,13 @@
 import React from "react";"
-#!/usr/bin/env node;
-import fs from "fs;";
-import { glob     } from ";glob;";
-// Function to fix quote issues in a file;
+#!/usr/bin/env node
+import fs from "fs;"
+import { glob     } from ";glob;"
+// Function to fix quote issues in a file
 function fixFile(filePath) {
   try {";"
     let content = fs.readFileSync(filePath, "utf8")
-    let modified = false;
-    // Fix specific patterns;
+    let modified = false
+    // Fix specific patterns
 const fixes = [
       // Fix stray quotes at end of JSX elements"
       { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
@@ -36,16 +36,16 @@ const fixes = [
       // Fix specific pattern: ); -> )"'"'"
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
     ]
-    fixes.forEach((fix) => {;
+    fixes.forEach((fix) => {
 const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
+        content = newContent
+        modified = true
 })
     if (modified) {"
       fs.writeFileSync(filePath, content, "utf8")
       console.log(`Fixed: ${filePath}`)```
-      return true;
+      return true
 }
 
 // Function to fix common import issues
@@ -54,35 +54,34 @@ function fixImportIssues(content) {
   if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || 
       content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||
       content.includes('ArrowRight') || content.includes('CheckCircle')) {
-    
+
     // Check if lucide-react is already imported
     if (!content.includes('from "lucide-react"') && !content.includes("from 'lucide-react'")) {
       // Add import at the top
-      const imports = [];
-      if (content.includes('Brain')) imports.push('Brain');
-      if (content.includes('Shield')) imports.push('Shield');
-      if (content.includes('Zap')) imports.push('Zap');
-      if (content.includes('Users')) imports.push('Users');
-      if (content.includes('Target')) imports.push('Target');
-      if (content.includes('BarChart3')) imports.push('BarChart3');
-      if (content.includes('ArrowRight')) imports.push('ArrowRight');
-      if (content.includes('CheckCircle')) imports.push('CheckCircle');
-      
+      const imports = []
+      if (content.includes('Brain')) imports.push('Brain')
+      if (content.includes('Shield')) imports.push('Shield')
+      if (content.includes('Zap')) imports.push('Zap')
+      if (content.includes('Users')) imports.push('Users')
+      if (content.includes('Target')) imports.push('Target')
+      if (content.includes('BarChart3')) imports.push('BarChart3')
+      if (content.includes('ArrowRight')) imports.push('ArrowRight')
+      if (content.includes('CheckCircle')) imports.push('CheckCircle')
       if (imports.length > 0) {
-        const importStatement = `import { ${imports.join(', ')} } from 'lucide-react';\n`;
-        content = importStatement + content;
+        const importStatement = `import { ${imports.join(', ')} } from 'lucide-react';\n`
+        content = importStatement + content
       }
     }
   }
-  
-  return content;
+
+  return content
 }
-// Main function;
+// Main function
 async function main() {
   // Find all page.tsx files";"
 const pageFiles = await glob("app/**/page.tsx", { cwd: process.cwd() })
   console.log(`Found ${pageFiles.length} page files to check...`)```
-  let fixedCount = 0;
+  let fixedCount = 0
   pageFiles.forEach((file) => {
     if (fixFile(file)) {
       fixedCount++

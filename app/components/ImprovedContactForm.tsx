@@ -1,18 +1,17 @@
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
-
+import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react"
 interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-  service: string;
-  budget: string;
-  timeline: string;
+  name: string
+  email: string
+  phone: string
+  company: string
+  message: string
+  service: string
+  budget: string
+  timeline: string
 }
 
 interface FormErrors {
-  [key: string]: string;
+  [key: string]: string
 }
 
 const ImprovedContactForm: React.FC = () => {
@@ -25,13 +24,11 @@ const ImprovedContactForm: React.FC = () => {
     service: "",
     budget: "",
     timeline: "",
-  });
-  
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
-
+  })
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false)
   const services = [
     "AI Solutions",
     "Cybersecurity",
@@ -44,8 +41,7 @@ const ImprovedContactForm: React.FC = () => {
     "Micro SAAS",
     "5G Solutions",
     "Other"
-  ];
-
+  ]
   const budgets = [
     "Under $10,000",
     "$10,000 - $50,000",
@@ -53,8 +49,7 @@ const ImprovedContactForm: React.FC = () => {
     "$100,000 - $500,000",
     "Over $500,000",
     "Not sure"
-  ];
-
+  ]
   const timelines = [
     "ASAP",
     "Within 1 month",
@@ -62,87 +57,77 @@ const ImprovedContactForm: React.FC = () => {
     "3-6 months",
     "6+ months",
     "Flexible"
-  ];
-
+  ]
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
-
+    const newErrors: FormErrors = {}
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
+      newErrors.name = "Name is required"
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";
+      newErrors.name = "Name must be at least 2 characters"
     }
 
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
+      newErrors.email = "Email is required"
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";
+      newErrors.email = "Please enter a valid email address"
     }
 
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {
-      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/
       if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
-        newErrors.phone = "Please enter a valid phone number";
+        newErrors.phone = "Please enter a valid phone number"
       }
     }
 
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
+      newErrors.message = "Message is required"
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
+      newErrors.message = "Message must be at least 10 characters"
     }
 
     // Service validation
     if (!formData.service) {
-      newErrors.service = "Please select a service";
+      newErrors.service = "Please select a service"
     }
 
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
+      setErrors(prev => ({ ...prev, [name]: '' }))
     }
-  };
-
+  }
   const handleServiceSelect = (service: string) => {
-    setFormData(prev => ({ ...prev, service }));
-    setIsServiceDropdownOpen(false);
+    setFormData(prev => ({ ...prev, service }))
+    setIsServiceDropdownOpen(false)
     if (errors.service) {
-      setErrors(prev => ({ ...prev, service: '' }));
+      setErrors(prev => ({ ...prev, service: '' }))
     }
-  };
-
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault()
     if (!validateForm()) {
-      return;
+      return
     }
 
-    setIsSubmitting(true);
-    
+    setIsSubmitting(true)
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise(resolve => setTimeout(resolve, 2000))
       // In a real app, you would send the data to your backend
-      console.log('Form submitted:', formData);
-      
-      setIsSubmitted(true);
+      console.log('Form submitted:', formData)
+      setIsSubmitted(true)
       setFormData({
         name: "",
         email: "",
@@ -152,14 +137,13 @@ const ImprovedContactForm: React.FC = () => {
         service: "",
         budget: "",
         timeline: "",
-      });
+      })
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
+  }
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center">
@@ -177,7 +161,7 @@ const ImprovedContactForm: React.FC = () => {
           Send Another Message
         </button>
       </div>
-    );
+    )
   }
 
   return (
@@ -305,7 +289,7 @@ const ImprovedContactForm: React.FC = () => {
               </span>
               <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-            
+
             {isServiceDropdownOpen && (
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                 {services.map((service) => (
@@ -417,7 +401,6 @@ const ImprovedContactForm: React.FC = () => {
         </button>
       </form>
     </div>
-  );
-};
-
-export default ImprovedContactForm;
+  )
+}
+export default ImprovedContactForm

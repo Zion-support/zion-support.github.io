@@ -1,21 +1,20 @@
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 interface ImprovedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: any
+  noindex?: boolean
+  nofollow?: boolean
 }
 
 const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
@@ -35,14 +34,13 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   noindex = false,
   nofollow = false
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullOgTitle = ogTitle || fullTitle;
-  const fullOgDescription = ogDescription || description;
-  const fullTwitterTitle = twitterTitle || fullOgTitle;
-  const fullTwitterDescription = twitterDescription || fullOgDescription;
-  const fullTwitterImage = twitterImage || ogImage;
-  const fullOgUrl = ogUrl || canonicalUrl;
-
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullOgTitle = ogTitle || fullTitle
+  const fullOgDescription = ogDescription || description
+  const fullTwitterTitle = twitterTitle || fullOgTitle
+  const fullTwitterDescription = twitterDescription || fullOgDescription
+  const fullTwitterImage = twitterImage || ogImage
+  const fullOgUrl = ogUrl || canonicalUrl
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -53,10 +51,10 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#06b6d4" />
-      
+
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullOgTitle} />
@@ -68,7 +66,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       {fullOgUrl && <meta property="og:url" content={fullOgUrl} />}
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTwitterTitle} />
@@ -77,36 +75,36 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       <meta name="twitter:image:alt" content={fullTwitterTitle} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
+
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
-      
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
+
       {/* DNS Prefetch for performance */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      
+
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
+
       {/* Default Organization Structured Data */}
       {!structuredData && (
         <script type="application/ld+json">
@@ -139,7 +137,6 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
         </script>
       )}
     </Helmet>
-  );
-};
-
-export default ImprovedSEO;
+  )
+}
+export default ImprovedSEO

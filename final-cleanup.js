@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
 // Files to keep (essential files only)
 const keepFiles = [
   'App.tsx',
@@ -54,71 +53,65 @@ const keepFiles = [
   'tsconfig.json',
   'vite.config.ts',
   'eslint.config.js'
-];
-
+]
 // Directories to keep
 const keepDirs = [
   'node_modules',
   '.git',
   'src'
-];
-
+]
 // Function to check if a file should be kept
 function shouldKeepFile(filePath) {
   // Check if it's in the keep list
   if (keepFiles.includes(filePath)) {
-    return true;
+    return true
   }
-  
+
   // Check if it's in a keep directory
   for (const dir of keepDirs) {
     if (filePath.startsWith(dir + '/')) {
-      return true;
+      return true
     }
   }
-  
-  return false;
+
+  return false
 }
 
 // Function to delete all corrupted files
 async function finalCleanup() {
-  console.log('Performing final cleanup...');
-  
+  console.log('Performing final cleanup...')
   // Find all TypeScript and TSX files
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
     '**/*.tsx',
     '**/*.ts'
-  ];
-  
-  let deletedCount = 0;
-  
+  ]
+  let deletedCount = 0
   for (const pattern of patterns) {
     const files = await glob(pattern, { 
       ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] 
-    });
-    
+    })
     for (const file of files) {
       if (!shouldKeepFile(file)) {
         try {
-          fs.unlinkSync(file);
-          console.log(`Deleted: ${file}`);
-          deletedCount++;
+          fs.unlinkSync(file)
+          console.log(`Deleted: ${file}`)
+          deletedCount++
         } catch (error) {
-          console.error(`Error deleting ${file}:`, error.message);
+          console.error(`Error deleting ${file}:`, error.message)
         }
       }
     }
   }
-  
-  console.log(`Deleted ${deletedCount} corrupted files`);
+
+  console.log(`Deleted ${deletedCount} corrupted files`)
 }
 
 // Main execution
 async function main() {
-  await finalCleanup();
-  console.log('Final cleanup completed!');
+  await finalCleanup()
+  console.log('Final cleanup completed!')
 }
 
-main().catch(console.error);
+main().catch(console.error)

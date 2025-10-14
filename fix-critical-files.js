@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 // Function to create a clean, working page component
 function createCleanPage(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
-  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  
-  return `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+  const fileName = path.basename(filePath, '.tsx')
+  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page'
+  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  return `import React from "react"
+import { Helmet } from "react-helmet-async"
 const ${componentName} = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -28,25 +25,22 @@ const ${componentName} = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ${componentName};`;
+  )
+}
+export default ${componentName};`
 }
 
 // Function to create a clean main.tsx
 function createCleanMain() {
-  return `import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
-import './index.css';
-
+  return `import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App'
+import './index.css'
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
-);
-
+)
 root.render(
   <React.StrictMode>
     <HelmetProvider>
@@ -55,21 +49,19 @@ root.render(
       </BrowserRouter>
     </HelmetProvider>
   </React.StrictMode>
-);`;
+);`
 }
 
 // Function to create a clean App.tsx
 function createCleanApp() {
-  return `import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+  return `import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 // Import pages
-import HomePage from './page';
-import AboutPage from './about/page';
-import ServicesPage from './services/page';
-import ContactPage from './contact/page';
-
+import HomePage from './page'
+import AboutPage from './about/page'
+import ServicesPage from './services/page'
+import ContactPage from './contact/page'
 function App() {
   return (
     <div className="App">
@@ -84,18 +76,17 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;`;
+export default App;`
 }
 
 // Function to create a clean home page
 function createCleanHomePage() {
-  return `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+  return `import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -103,7 +94,7 @@ const HomePage = () => {
         <title>Zion Tech Group - AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
@@ -158,37 +149,32 @@ const HomePage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default HomePage;`;
+  )
+}
+export default HomePage;`
 }
 
 // Main execution
-console.log('Starting critical file fixes...');
-
+console.log('Starting critical file fixes...')
 // Fix main.tsx
-const mainPath = './app/main.tsx';
-fs.writeFileSync(mainPath, createCleanMain());
-console.log('Fixed main.tsx');
-
+const mainPath = './app/main.tsx'
+fs.writeFileSync(mainPath, createCleanMain())
+console.log('Fixed main.tsx')
 // Fix App.tsx
-const appPath = './app/App.tsx';
-fs.writeFileSync(appPath, createCleanApp());
-console.log('Fixed App.tsx');
-
+const appPath = './app/App.tsx'
+fs.writeFileSync(appPath, createCleanApp())
+console.log('Fixed App.tsx')
 // Fix home page
-const homePath = './app/page.tsx';
-fs.writeFileSync(homePath, createCleanHomePage());
-console.log('Fixed page.tsx');
-
+const homePath = './app/page.tsx'
+fs.writeFileSync(homePath, createCleanHomePage())
+console.log('Fixed page.tsx')
 // Fix about page (already done, but ensure it's clean)
-const aboutPath = './app/about/page.tsx';
+const aboutPath = './app/about/page.tsx'
 if (fs.existsSync(aboutPath)) {
-  const aboutContent = fs.readFileSync(aboutPath, 'utf8');
+  const aboutContent = fs.readFileSync(aboutPath, 'utf8')
   if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {
-    fs.writeFileSync(aboutPath, createCleanPage(aboutPath));
-    console.log('Fixed about/page.tsx');
+    fs.writeFileSync(aboutPath, createCleanPage(aboutPath))
+    console.log('Fixed about/page.tsx')
   }
 }
 
@@ -198,13 +184,12 @@ const criticalPages = [
   './app/contact/page.tsx',
   './app/404.tsx',
   './app/not-found.tsx'
-];
-
+]
 for (const pagePath of criticalPages) {
   if (fs.existsSync(pagePath)) {
-    fs.writeFileSync(pagePath, createCleanPage(pagePath));
-    console.log(`Fixed ${pagePath}`);
+    fs.writeFileSync(pagePath, createCleanPage(pagePath))
+    console.log(`Fixed ${pagePath}`)
   }
 }
 
-console.log('Critical file fixes completed!');
+console.log('Critical file fixes completed!')

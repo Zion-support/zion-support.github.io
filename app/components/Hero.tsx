@@ -1,7 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
-import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
-ursor/fix-errors-and-merge-to-main-94a7
+import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline'
 const Hero: React.FC = () => {
   return ()
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden"></section>,
@@ -9,14 +8,12 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="absolute inset-0 bg-black opacity-20"></div>
       </div>
-      
       {/* Animated background elements */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>"
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>"
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
       </div>
-
       {/* Content */}"
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
         <div className="max-w-4xl mx-auto">"
@@ -28,7 +25,7 @@ const Hero: React.FC = () => {
           </h1>
           "
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">,
-            Leading provider of AI and IT solutions, empowering businesses to scale, 
+            Leading provider of AI and IT solutions, empowering businesses to scale,
             innovate, and succeed in the digital age.
           </p>
           "
@@ -72,7 +69,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 "'
-export default Hero;
+export default Hero

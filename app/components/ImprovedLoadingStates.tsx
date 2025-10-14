@@ -1,8 +1,7 @@
-import { Loader2, Brain, Zap, Shield } from 'lucide-react';
-
+import { Loader2, Brain, Zap, Shield } from 'lucide-react'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
+  size?: 'sm' | 'md' | 'lg'
+  className?: string
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
@@ -13,18 +12,16 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  };
-
+  }
   return (
     <div className={`flex items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
     </div>
-  );
-};
-
+  )
+}
 interface LoadingPageProps {
-  message?: string;
-  showIcon?: boolean;
+  message?: string
+  showIcon?: boolean
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
@@ -45,13 +42,12 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
         <p className="mt-4 text-white text-lg">{message}</p>
       </div>
     </div>
-  );
-};
-
+  )
+}
 interface LoadingCardProps {
-  title?: string;
-  description?: string;
-  icon?: React.ReactNode;
+  title?: string
+  description?: string
+  icon?: React.ReactNode
 }
 
 export const LoadingCard: React.FC<LoadingCardProps> = ({ 
@@ -70,12 +66,11 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
       <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </div>
-  );
-};
-
+  )
+}
 interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
+  lines?: number
+  className?: string
 }
 
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
@@ -93,20 +88,18 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
         />
       ))}
     </div>
-  );
-};
-
+  )
+}
 interface ServiceLoadingProps {
-  serviceName: string;
+  serviceName: string
 }
 
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) => {
   const getServiceIcon = (service: string) => {
-    if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />;
-    if (service.toLowerCase().includes('security')) return <Shield className="w-8 h-8 text-purple-400" />;
-    return <Zap className="w-8 h-8 text-blue-400" />;
-  };
-
+    if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />
+    if (service.toLowerCase().includes('security')) return <Shield className="w-8 h-8 text-purple-400" />
+    return <Zap className="w-8 h-8 text-blue-400" />
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-6">
@@ -120,7 +113,6 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
         <p className="text-gray-300">Preparing your personalized experience...</p>
       </div>
     </div>
-  );
-};
-
-export default LoadingPage;
+  )
+}
+export default LoadingPage

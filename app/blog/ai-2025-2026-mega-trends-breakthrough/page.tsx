@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
-
+import React from 'react'
+import Link from 'next/link'
 const AIMegaTrends20252026: React.FC = () => {
     return (
     <div className="min-h-screen bg-gray-50">
@@ -101,7 +100,6 @@ const AIMegaTrends20252026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default AIMegaTrends20252026;
+  )
+}
+export default AIMegaTrends20252026

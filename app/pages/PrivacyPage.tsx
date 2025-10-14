@@ -1,9 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024';
-
+  const lastUpdated = 'January 1, 2024'
   const sections = [
     {
       title: 'Information We Collect',
@@ -83,8 +81,7 @@ const PrivacyPage: React.FC = () => {
         'We conduct regular assessments of our international data processing activities.'
       ]
     }
-  ];
-
+  ]
   const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1-302-464-0950',
@@ -105,7 +102,7 @@ const PrivacyPage: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Privacy Policy
           </h1>
-          
+
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-gray-300 mb-8">
               Last updated: {new Date().toLocaleDateString()}
@@ -217,7 +214,6 @@ const PrivacyPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default PrivacyPage;
+  )
+}
+export default PrivacyPage

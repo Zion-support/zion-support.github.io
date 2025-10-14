@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
   ArrowPathIcon,
   UserGroupIcon,
   CloudIcon,
@@ -9,9 +9,7 @@ import {
   ArrowRightIcon,
   CheckIcon,
   ChartBarIcon
-} from '@heroicons/react/24/outline';
-
-ursor/fix-errors-and-merge-to-main-94a7
+} from '@heroicons/react/24/outline'
 const DigitalTransformationPage: React.FC = () => {
   const services = [
     {
@@ -58,8 +56,7 @@ const DigitalTransformationPage: React.FC = () => {
         'Performance Monitoring'
       ]
     }
-  ];
-
+  ]
   const benefits = [
     {
       title: 'Increased Efficiency',
@@ -85,8 +82,7 @@ const DigitalTransformationPage: React.FC = () => {
       icon: ChartBarIcon,
       value: '90%'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -94,24 +90,21 @@ const DigitalTransformationPage: React.FC = () => {
         <meta name="description" content="Transform your business with our comprehensive digital transformation services. Process automation, cloud migration, AI integration, and change management." />
         <meta name="keywords" content="digital transformation, process automation, cloud migration, AI integration, change management, business transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-ursor/fix-errors-and-merge-to-main-94a7
               Digital Transformation
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Transform Your Business for the Digital Age
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Embrace digital transformation with our comprehensive services that modernize your business processes, 
+              Embrace digital transformation with our comprehensive services that modernize your business processes,
               improve efficiency, and drive growth in today's competitive landscape.
             </p>
             <Link
@@ -124,7 +117,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,7 +128,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Comprehensive solutions to modernize your business operations
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -146,11 +137,9 @@ ursor/fix-errors-and-merge-to-main-94a7
                   </div>
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -159,7 +148,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -172,7 +160,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,7 +171,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               See the measurable impact of digital transformation on your business
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -199,7 +185,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,7 +196,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               A structured approach to ensure successful digital transformation
             </p>
           </div>
-          
           <div className="grid md:grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Assessment', description: 'Analyze current processes and identify transformation opportunities' },
@@ -230,7 +214,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -257,7 +240,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </section>
     </>
-  );
-};
-
-export default DigitalTransformationPage;
+  )
+}
+export default DigitalTransformationPage

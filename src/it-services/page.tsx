@@ -1,14 +1,14 @@
-'use client';
-import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
+'use client'
+import React from 'react'
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
 const ITServicesPage: React.FC = () => {}
 ,
-};
+}
 ;,
-};
+}
 const itServices = [
     // Infrastructure & Cloud Services
     {}
@@ -225,8 +225,8 @@ const itServices = [
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     }
-  ];
-;
+  ]
+
 const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -240,8 +240,8 @@ const categories = [
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
-;
+  ]
+
 const additionalServices = [
     {}
       icon: Users,
@@ -279,8 +279,8 @@ const additionalServices = [
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month',
     }
-  ];
-;
+  ]
+
 const benefits = [
     {}
       icon: Star,
@@ -302,8 +302,7 @@ const benefits = [
       title: 'Certified Professionals',
       description: 'Microsoft, AWS, and Google certified engineers'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
       <Navigation />
@@ -537,6 +536,6 @@ const benefits = [
       <Footer />
     </div>,
   );,
-};
-;
+}
+
 export default ITServicesPage;""

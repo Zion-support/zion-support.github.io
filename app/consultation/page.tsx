@@ -1,14 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
+  Calendar,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Shield,
+  Zap,
   Globe,
   Mail,
   Smartphone,
@@ -17,9 +17,8 @@ import {
   Users,
   Award,
   BarChart3
-} from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+} from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -28,25 +27,21 @@ export default function ConsultationPage() {
     phone: '',
     service: '',
     message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-  };
-
+    console.log('Form submitted:', formData)
+    setIsSubmitted(true)
+  }
   const consultationTypes = [
     {
       title: "AI Strategy Consultation",
@@ -80,16 +75,14 @@ export default function ConsultationPage() {
       icon: <Globe className="w-6 h-6" />,
       features: ["Cloud readiness assessment", "Migration strategy", "Cost optimization"]
     }
-  ];
-
+  ]
   const benefits = [
     "Expert guidance from certified professionals",
     "Customized solutions for your business needs",
     "Actionable recommendations and next steps",
     "Follow-up support and implementation assistance",
     "Competitive pricing with flexible payment options"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -98,7 +91,6 @@ export default function ConsultationPage() {
         keywords="technology consultation, AI strategy, cybersecurity audit, digital transformation, cloud migration, free consultation, tech consulting"
         canonical="https://ziontechgroup.com/consultation"
       />
-      
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -108,9 +100,8 @@ export default function ConsultationPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Get expert guidance on AI strategy, cybersecurity, digital transformation, and cloud migration. 
+            Get expert guidance on AI strategy, cybersecurity, digital transformation, and cloud migration.
             Our certified professionals are here to help you succeed.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -128,7 +119,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </Link>
           </div>
         </div>
-
         {/* Consultation Types */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {consultationTypes.map((type, index) => (
@@ -154,7 +144,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           ))}
         </div>
-
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Our Consultation?</h2>
@@ -167,7 +156,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             ))}
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
@@ -194,7 +182,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center group"
@@ -205,6 +192,5 @@ ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </div>
     </div>
-  );
+  )
 }
-ursor/fix-errors-and-merge-to-main-94a7

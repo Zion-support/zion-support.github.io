@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from "lucide-react"
 export default function OptimizedLoading() {
   return (
     <div className="optimized-loading-container">
@@ -15,5 +14,5 @@ export default function OptimizedLoading() {
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
     </div>
-  );
+  )
 }

@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
-import { Menu } from 'lucide-react';
-import { X } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import { Menu } from 'lucide-react'
+import { X } from 'lucide-react'
+import { Brain } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Zap } from 'lucide-react'
+import { Globe } from 'lucide-react'
+import { BarChart3 } from 'lucide-react'
+import { Cloud } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
 const EnhancedNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const navigationItems = [
     {
       label: 'AI Services',
@@ -148,15 +146,13 @@ const EnhancedNavigation = () => {
         { label: 'Partners', href: '/partners' }
       ]
     }
-  ];
-
+  ]
   const quickLinks = [
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
     { label: 'Consultation', href: '/consultation' }
-  ];
-
+  ]
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,7 +181,7 @@ const EnhancedNavigation = () => {
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
-                
+
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
@@ -274,7 +270,7 @@ const EnhancedNavigation = () => {
                   </div>
                 </div>
               ))}
-              
+
               <div className="pt-4 border-t border-white/10">
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
@@ -294,7 +290,6 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </header>
-  );
-};
-
-export default EnhancedNavigation;
+  )
+}
+export default EnhancedNavigation

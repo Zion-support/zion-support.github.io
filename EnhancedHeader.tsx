@@ -39,11 +39,18 @@ const EnhancedHeader: React.FC = () => {
                 Home
               <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 About
+              </Link>
               <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Services
+              </Link>
               <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Contact
-        )}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   )
 }
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+export default EnhancedHeader

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
   ServerIcon,
   CloudIcon,
   ShieldCheckIcon,
@@ -10,9 +10,7 @@ import {
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon
-} from '@heroicons/react/24/outline';
-
-ursor/fix-errors-and-merge-to-main-94a7
+} from '@heroicons/react/24/outline'
 const ITServicesPage: React.FC = () => {
   const services = [
     {
@@ -59,8 +57,7 @@ const ITServicesPage: React.FC = () => {
         'Predictive Maintenance'
       ]
     }
-  ];
-
+  ]
   const benefits = [
     '24/7 Expert Support',
     'Proactive Monitoring',
@@ -68,8 +65,7 @@ const ITServicesPage: React.FC = () => {
     'Cost Optimization',
     'Security Compliance',
     'Performance Optimization'
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -77,24 +73,21 @@ const ITServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and AI integration for modern businesses." />
         <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, AI integration, IT support" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-ursor/fix-errors-and-merge-to-main-94a7
               IT Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive IT Solutions for Modern Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              From infrastructure management to AI integration, we provide end-to-end IT services 
+              From infrastructure management to AI integration, we provide end-to-end IT services
               that keep your business running smoothly and securely.
             </p>
             <Link
@@ -107,7 +100,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -119,7 +111,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Comprehensive IT solutions designed to meet your business needs
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -129,11 +120,9 @@ ursor/fix-errors-and-merge-to-main-94a7
                   </div>
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -142,7 +131,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -155,7 +143,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +154,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               We provide comprehensive IT solutions that keep your business running smoothly
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -183,7 +169,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -210,7 +195,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </section>
     </>
-  );
-};
-
-export default ITServicesPage;
+  )
+}
+export default ITServicesPage

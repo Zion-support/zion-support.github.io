@@ -1,6 +1,6 @@
 :app/utils/__tests__/performanceMonitoring.tsx
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from "react"
+import { Helmet } from "react-helmet-async"
 const PerformanceMonitoringTestPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -40,13 +40,12 @@ const PerformanceMonitoringTestPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default PerformanceMonitoringTestPage;
-import { describe, it, expect    } from "@jest/globals";
-
-describe('Performance Monitoring', () => {'';
-  it('should be defined', () => {'';
-    expect(true).toBe(true);
-  });
+  )
+}
+export default PerformanceMonitoringTestPage
+import { describe, it, expect    } from "@jest/globals"
+describe('Performance Monitoring', () => {''
+  it('should be defined', () => {''
+    expect(true).toBe(true)
+  })
 });"

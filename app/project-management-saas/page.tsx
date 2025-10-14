@@ -1,5 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
-
+import ResponsiveContainer from '../components/ResponsiveContainer'
 const ProjectManagementSAAS = () => {
   return (
     <>
@@ -9,7 +8,7 @@ const ProjectManagementSAAS = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20">
+<section className="py-20">
           <ResponsiveContainer>
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -27,9 +26,8 @@ const ProjectManagementSAAS = () => {
             </div>
           </ResponsiveContainer>
         </section>
-      </div>
-    </>
-  );
-};
-
-export default ProjectManagementSAAS;
+</div>
+</>
+  )
+}
+export default ProjectManagementSAAS

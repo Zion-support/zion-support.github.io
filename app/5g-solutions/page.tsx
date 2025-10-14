@@ -1,6 +1,7 @@
-import React from 'react';
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, CheckCircle, Shield, Wifi, Smartphone } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
 const Page = () => {
   const features = [
     {
@@ -14,42 +15,37 @@ const Page = () => {
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
+      icon: Smartphone,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
       icon: Wifi,
-
-
+      title: 'Network Coverage',
+      description: 'Comprehensive 5G network coverage and optimization'
     }
-  ];
-
+  ]
   const solutions = [
     {
-
+      title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
@@ -57,7 +53,7 @@ const Page = () => {
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -158,9 +154,12 @@ const Page = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                  {feature.icon}
                 </div>
-              )})}
+                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -188,13 +187,13 @@ const Page = () => {
                       <Right className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
                     </li>
-))}
+                  ))}
                 </ul>
                 <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Get Started
                 </button>
               </div>
-))}
+            ))}
           </div>
         </div>
       </div>
@@ -207,13 +206,25 @@ const Page = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your 5G implementation strategy
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-  )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+    </>
+  )
+}
+export default Page

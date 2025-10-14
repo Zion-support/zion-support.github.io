@@ -1,6 +1,5 @@
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 // List of files to fix (from the linting errors)
 const filesToFix = [
   'app/components/FuturisticBackgroundEnhanced.tsx',
@@ -24,8 +23,7 @@ const filesToFix = [
   'app/micro-saas-services/services.tsx',
   'app/not-found.tsx',
   'app/service-template.tsx'
-];
-
+]
 // Common replacements for unescaped entities
 const replacements = [
   { from: "Let's", to: "Let&apos;s" },
@@ -52,37 +50,33 @@ const replacements = [
   { from: "doesn't", to: "doesn&apos;t" },
   { from: "didn't", to: "didn&apos;t" },
   { from: "will", to: "will" }, // This one doesn't need escaping
-];
-
+]
 function fixFile(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
+      console.log(`File not found: ${filePath}`)
+      return
     }
 
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
     replacements.forEach(({ from, to }) => {
       if (content.includes(from)) {
-        content = content.replace(new RegExp(from, 'g'), to);
-        modified = true;
+        content = content.replace(new RegExp(from, 'g'), to)
+        modified = true
       }
-    });
-
+    })
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed: ${filePath}`)
     } else {
-      console.log(`No changes needed: ${filePath}`);
+      console.log(`No changes needed: ${filePath}`)
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message)
   }
 }
 
 // Fix all files
-filesToFix.forEach(fixFile);
-
-console.log('Done fixing unescaped entities!');
+filesToFix.forEach(fixFile)
+console.log('Done fixing unescaped entities!')

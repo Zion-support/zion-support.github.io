@@ -1,13 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-    title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
+    title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product'
   structuredData?: any}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -64,8 +63,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ]
     }
   }
-  const finalStructuredData = structuredData || defaultStructuredData;
-
+  const finalStructuredData = structuredData || defaultStructuredData
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
@@ -88,6 +86,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         </script>
 )}
     </Helmet>
-  )};
-
-export default SEOHead;
+  )}
+export default SEOHead

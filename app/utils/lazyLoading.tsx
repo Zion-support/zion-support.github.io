@@ -5,5 +5,5 @@ export default function LazyLoading() {
       <h1>LazyLoading</h1>
       <p>This component is under development.</p>
     </div>)
-  );
+  )
 }

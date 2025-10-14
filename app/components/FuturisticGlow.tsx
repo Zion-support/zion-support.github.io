@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
+import { ArrowRight } from "lucide-react"
 export default function FuturisticGlow() {
   return (
     <>
@@ -16,5 +15,5 @@ export default function FuturisticGlow() {
         </Link>
       </div>
     </>
-  );
+  )
 }

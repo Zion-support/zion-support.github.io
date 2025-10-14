@@ -1,20 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useState, useRef, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  placeholder?: string;
-  sizes?: string;
-  quality?: number;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  placeholder?: string
+  sizes?: string
+  quality?: number
   loading?: 'lazy' | 'eager'
-  onLoad?: () => void;
+  onLoad?: () => void
   onError?: () => void}
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -27,52 +25,43 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,
   loading = 'lazy'
   onLoad,
-
   onError })
-}) => {;
-const [isLoaded, setIsLoaded] = useState(false);
-const [isError, setIsError] = useState(false);
-const [isInView, setIsInView] = useState(priority);
+}) => {
+const [isLoaded, setIsLoaded] = useState(false)
+const [isError, setIsError] = useState(false)
+const [isInView, setIsInView] = useState(priority)
 const imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
-    if (priority) return;
+    if (priority) return
 const observer = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsInView(true)
           observer.disconnect()}
       },
       {
-        threshold: 0.1,;
+        threshold: 0.1,
         rootMargin: '50px'}
-      });
+      })
     if (imgRef.current) {
       observer.observe(imgRef.current)}
-
-    return () => observer.disconnect()}, [priority]);
-
+    return () => observer.disconnect()}, [priority])
   const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.()};
-
+    setIsLoaded(true)
+    onLoad?.()}
   const handleError = () => {
-    setIsError(true);
-    onError?.()};
-
+    setIsError(true)
+    onError?.()}
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc}
-    
     // For external images, return as-is
     if (originalSrc.startsWith('http')) {
       return originalSrc}
-    
     // For local images, you could implement WebP conversion here
-    return originalSrc};
-
-  const optimizedSrc = getOptimizedSrc(src);
-
+    return originalSrc}
+  const optimizedSrc = getOptimizedSrc(src)
     return originalSrc}
   const optimizedSrc = getOptimizedSrc(src)
   return (
@@ -83,7 +72,6 @@ const observer = new IntersectionObserver()
         </Helmet>
 )}
       <div
-
         ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
@@ -120,7 +108,7 @@ const observer = new IntersectionObserver()
             sizes={sizes}
             onLoad={handleLoad}
             onError={handleError}
-            className={`transition-opacity duration-300 ${;
+            className={`transition-opacity duration-300 ${
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
             style={{
@@ -132,7 +120,5 @@ const observer = new IntersectionObserver()
 )}
       </div>
     </>
-  )};
-
+  )}
 export default OptimizedImage
-ursor/fix-errors-and-merge-to-main-94a7

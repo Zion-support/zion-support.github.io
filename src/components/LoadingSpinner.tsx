@@ -1,9 +1,9 @@
 import React from "react";""
 const LoadingSpinner: React.FC = () => {}
 ,
-};
+}
 ,
-};
+}
   return (
     <div></div>
       <h1>LoadingSpinner</h1>""
@@ -13,5 +13,5 @@ const LoadingSpinner: React.FC = () => {}
     </div>)
   )
 }
-;
+
 export default LoadingSpinner""

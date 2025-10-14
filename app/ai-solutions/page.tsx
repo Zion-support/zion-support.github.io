@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
   CpuChipIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
@@ -10,8 +10,7 @@ import {
   ArrowRightIcon,
   CheckIcon,
   SparklesIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {
@@ -86,8 +85,7 @@ const AISolutionsPage: React.FC = () => {
       useCases: ['Document processing', 'Data entry', 'Workflow optimization'],
       href: '/ai-automation'
     }
-  ];
-
+  ]
   const industries = [
     { name: 'Healthcare', icon: '🏥', description: 'Medical imaging, drug discovery, patient care' },
     { name: 'Finance', icon: '💰', description: 'Fraud detection, risk assessment, trading algorithms' },
@@ -95,22 +93,20 @@ const AISolutionsPage: React.FC = () => {
     { name: 'Manufacturing', icon: '🏭', description: 'Quality control, predictive maintenance, supply chain optimization' },
     { name: 'Education', icon: '🎓', description: 'Personalized learning, content generation, assessment tools' },
     { name: 'Transportation', icon: '🚗', description: 'Autonomous vehicles, route optimization, traffic management' }
-  ];
-
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions including machine learning, computer vision, NLP, and automation. Transform your business with cutting-edge artificial intelligence technology." />
         <meta name="keywords" content="AI solutions, machine learning, computer vision, NLP, artificial intelligence, automation, AI consulting" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -124,7 +120,7 @@ const AISolutionsPage: React.FC = () => {
               Transform Your Business with Artificial Intelligence
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to automate processes, gain insights, and drive innovation. 
+              Leverage cutting-edge AI technology to automate processes, gain insights, and drive innovation.
               Our comprehensive AI solutions are designed to solve complex business challenges.
             </p>
             <Link
@@ -137,7 +133,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,7 +144,6 @@ const AISolutionsPage: React.FC = () => {
               Comprehensive artificial intelligence services designed to transform your business
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -162,11 +156,9 @@ const AISolutionsPage: React.FC = () => {
                     <p className="text-purple-400 font-semibold">{service.price}</p>
                   </div>
                 </div>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Key Features</h4>
@@ -179,7 +171,6 @@ const AISolutionsPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Benefits</h4>
                     <div className="flex flex-wrap gap-2">
@@ -190,7 +181,6 @@ const AISolutionsPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                  
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                     <div className="flex flex-wrap gap-2">
@@ -202,7 +192,6 @@ const AISolutionsPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <Link
                   to={service.href}
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -215,7 +204,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -227,7 +215,6 @@ const AISolutionsPage: React.FC = () => {
               AI solutions tailored for various industries and business needs
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 text-center">
@@ -239,7 +226,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -265,9 +251,8 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
-  );
-};
-
-export default AISolutionsPage;
-ursor/fix-errors-and-merge-to-main-94a7
+</div>
+</>
+  )
+}
+export default AISolutionsPage

@@ -1,30 +1,27 @@
-// import fs from 'fs';
-// import path from 'path';
-// import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
+// import fs from 'fs'
+// import path from 'path'
+// import { fileURLToPath } from 'url'
+import { execSync } from 'child_process'
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 function runTypeCheck() {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    return output;
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' })
+    return output
   } catch (error) {
-    // console.error('Error:', error);
-    return error.stdout || error.stderr || '';
+    // console.error('Error:', error)
+    return error.stdout || error.stderr || ''
   }
 }
 
 function processTypeCheckOutput() {
-  const typeCheckOutput = runTypeCheck();
-  const lines = typeCheckOutput.split('\n');
-  
+  const typeCheckOutput = runTypeCheck()
+  const lines = typeCheckOutput.split('\n')
   lines.forEach(line => {
     if (line.includes('.tsx') || line.includes('.ts')) {
-      // console.log('Processing file:', line);
+      // console.log('Processing file:', line)
     }
-  });
+  })
 }
 
 const createGenericPage = (serviceName, title, description) => `'use client'
@@ -52,8 +49,7 @@ export default function ${serviceName}() {
       description: 'Targeted solutions designed for your specific needs.',
       benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
-  ];
-
+  ]
   const stats = [
     { label: 'Projects Completed', value: '100+' },
     { label: 'Success Rate', value: '98%' },
@@ -67,7 +63,7 @@ export default function ${serviceName}() {
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -77,16 +73,14 @@ export default function ${serviceName}() {
             ${description}
           </p>
         </div>
-        
+
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ${title} Solutions</p>
         </div>
       </div>
     </div>
-  );
-}`;
-
+  )
+}`
 // Run the type check processing
-processTypeCheckOutput();
-
-export { createGenericPage, processTypeCheckOutput };
+processTypeCheckOutput()
+export { createGenericPage, processTypeCheckOutput }

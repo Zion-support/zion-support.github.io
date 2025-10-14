@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
-ursor/fix-errors-and-merge-to-main-94a7
-import { Helmet } from "react-helmet-async";
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React, { useState } from 'react'
+import { Link } from "react-router-dom"
+import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react"
+import { Helmet } from "react-helmet-async"
+import EnhancedSEO from '../components/EnhancedSEO'
 const CareersPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const jobCategories = [
     { id: 'all', label: 'All Positions', icon: <Briefcase className="w-5 h-5" /> },
     { id: 'engineering', label: 'Engineering', icon: <Code className="w-5 h-5" /> },
@@ -16,8 +13,7 @@ const CareersPage = () => {
     { id: 'cloud', label: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
     { id: 'product', label: 'Product', icon: <Target className="w-5 h-5" /> },
     { id: 'data', label: 'Data & Analytics', icon: <BarChart3 className="w-5 h-5" /> }
-  ];
-
+  ]
   const jobOpenings = [
     {
       id: 1,
@@ -139,8 +135,7 @@ const CareersPage = () => {
       posted: "4 days ago",
       featured: false
     }
-  ];
-
+  ]
   const benefits = [
     {
       title: "Health & Wellness",
@@ -172,19 +167,16 @@ const CareersPage = () => {
       description: "Collaborative environment, team events, and innovation time",
       icon: <Users className="w-8 h-8" />
     }
-  ];
-
+  ]
   const stats = [
     { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
     { number: "15+", label: "Open Positions", icon: <Briefcase className="w-6 h-6" /> },
     { number: "95%", label: "Employee Satisfaction", icon: <Star className="w-6 h-6" /> },
     { number: "100%", label: "Remote Friendly", icon: <Globe className="w-6 h-6" /> }
-  ];
-
-  const filteredJobs = selectedCategory === 'all' 
-    ? jobOpenings 
-    : jobOpenings.filter(job => job.category === selectedCategory);
-
+  ]
+  const filteredJobs = selectedCategory === 'all'
+    ? jobOpenings
+    : jobOpenings.filter(job => job.category === selectedCategory)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -193,7 +185,6 @@ const CareersPage = () => {
         keywords="careers, jobs, technology careers, AI jobs, cybersecurity jobs, software development"
         canonical="https://ziontechgroup.com/careers"
       />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
@@ -205,7 +196,6 @@ const CareersPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Be part of the future of technology. Join our diverse team of innovators, engineers, and visionaries who are building the next generation of AI and IT solutions.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -224,7 +214,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -241,7 +230,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Why Join Us Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -255,7 +243,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               We're not just building technology – we're shaping the future. Here's what makes us special.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -279,7 +266,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Job Openings Section */}
       <section id="open-positions" className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -293,7 +279,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Find your perfect role and help us build the future of technology.
             </p>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {jobCategories.map((category) => (
@@ -311,7 +296,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               </button>
             ))}
           </div>
-
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job) => (
@@ -328,7 +312,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </span>
                   </div>
                 )}
-                
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-3">
@@ -339,7 +322,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                         {job.department}
                       </span>
                     </div>
-                    
                     <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-300">
                       <div className="flex items-center space-x-1">
                         <MapPin className="w-4 h-4" />
@@ -362,11 +344,9 @@ ursor/fix-errors-and-merge-to-main-94a7
                         <span>Posted {job.posted}</span>
                       </div>
                     </div>
-                    
                     <p className="text-gray-300 mb-4 leading-relaxed">
                       {job.description}
                     </p>
-                    
                     <div className="flex flex-wrap gap-2 mb-4">
                       {job.requirements.slice(0, 3).map((req, idx) => (
                         <span
@@ -383,7 +363,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                       )}
                     </div>
                   </div>
-                  
                   <div className="flex flex-col sm:flex-row lg:flex-col gap-3 mt-4 lg:mt-0 lg:ml-6">
                     <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
                       Apply Now
@@ -397,7 +376,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               </div>
             ))}
           </div>
-
           {filteredJobs.length === 0 && (
             <div className="text-center py-12">
               <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -407,7 +385,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -439,4 +416,3 @@ ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );}
 }'
-ursor/fix-errors-and-merge-to-main-94a7

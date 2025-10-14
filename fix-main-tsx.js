@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
-console.log('🔧 Fixing main.tsx...');
-
-const mainContent = `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import fs from 'fs'
+console.log('🔧 Fixing main.tsx...')
+const mainContent = `import React from "react"
+import { Helmet } from "react-helmet-async"
 const MainPage = () => {
   return (
     <>
@@ -23,15 +20,13 @@ const MainPage = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default MainPage;
-`;
-
+  )
+}
+export default MainPage
+`
 try {
-  fs.writeFileSync('/workspace/app/main.tsx', mainContent, 'utf8');
-  console.log('✅ Fixed main.tsx');
+  fs.writeFileSync('/workspace/app/main.tsx', mainContent, 'utf8')
+  console.log('✅ Fixed main.tsx')
 } catch (error) {
-  console.error('❌ Error fixing main.tsx:', error.message);
+  console.error('❌ Error fixing main.tsx:', error.message)
 }

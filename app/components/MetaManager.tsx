@@ -1,6 +1,4 @@
 import React, { ReactNode } from "react";""
-ursor/fix-errors-and-merge-to-main-94a7
-
 const MetaManagerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -17,7 +15,7 @@ const MetaManagerPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default MetaManager;
+  )
+}
+export default MetaManager
 """

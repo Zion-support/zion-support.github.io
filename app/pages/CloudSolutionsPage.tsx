@@ -1,6 +1,6 @@
-import React from 'react';;
-import { Link } from 'react-router-dom';;
-import SEO from '../components/SEO;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO
 import {
   CloudIcon,
   ServerIcon,
@@ -10,8 +10,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';
-} from '@heroicons/react/24/outline;
+  MapPinIcon'
+} from '@heroicons/react/24/outline
 export default function CloudSolutionsPage() {
   const services = [
     {
@@ -47,7 +47,7 @@ export default function CloudSolutionsPage() {
     { name: 'Oracle Cloud', logo: 'Oracle' },
     { name: 'DigitalOcean', logo: 'DO' }
   ]
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 const CloudSolutionsPage: React.FC = () => {
   return (
     <>

@@ -1,7 +1,6 @@
-import { Star } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';
-
+import { Star } from 'lucide-react'
+import React from 'react'
+import Link from 'next/link'
 const EnterpriseTransformationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -109,7 +108,6 @@ const EnterpriseTransformationPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default EnterpriseTransformationPage;
+  )
+}
+export default EnterpriseTransformationPage

@@ -1,6 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import React from "react"
+import { Helmet } from "react-helmet-async"
 const SeoConstantsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -17,8 +16,6 @@ const SeoConstantsPage = () => {
         </div>
       </div>
     </div>
-  );
-ursor/fix-errors-and-merge-to-main-94a7
-};
-
+  )
+}
 export default seoconstants

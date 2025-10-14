@@ -1,28 +1,27 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
   title?: string
   description?: string
   keywords?: string
   image?: string
-  url?: string';
-  type?: 'website' | 'article' | 'profile;
+  url?: string'
+  type?: 'website' | 'article' | 'profile
   author?: string
   publishedTime?: string
   modifiedTime?: string
   section?: string
   tags?: string[]}
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
   type?: 'website' | 'article' | 'profile'
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
   tags?: string[]}
 
 const SEO: React.FC<SEOProps> = ({
@@ -86,6 +85,5 @@ const SEO: React.FC<SEOProps> = ({
       { /* Canonical URL */ }"""
       <link rel="canonical" href={url} />""
     </Helmet>
-  )};
-
-export default SEO;
+  )}
+export default SEO

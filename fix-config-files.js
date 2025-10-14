@@ -1,16 +1,12 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
-console.log('🔧 Fixing config files...');
-
+import fs from 'fs'
+console.log('🔧 Fixing config files...')
 // Fix vite.config.ts
-const viteConfig = `import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-
-const resolve = path.resolve;
-
+const viteConfig = `import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
+import path from "path"
+const resolve = path.resolve
 export default defineConfig({
   plugins: [
     react({
@@ -34,7 +30,7 @@ export default defineConfig({
         manualChunks: (id) => {
           // Vendor chunks
           if (id.includes('node_modules')) {
-            return 'vendor';
+            return 'vendor'
           }
         },
         assetFileNames: (assetInfo) => {
@@ -42,9 +38,9 @@ export default defineConfig({
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return \`assets/images/[name]-[hash][extname]\`;
+            return \`assets/images/[name]-[hash][extname]\`
           }
-          return \`assets/[name]-[hash][extname]\`;
+          return \`assets/[name]-[hash][extname]\`
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
@@ -66,20 +62,17 @@ export default defineConfig({
       'react-router-dom',
     ],
   },
-});
-`;
-
+})
+`
 // Fix About.tsx
-const aboutComponent = `import React from "react";
-import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline";
-
+const aboutComponent = `import React from "react"
+import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline"
 const About: React.FC = () => {
   const stats = [
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
     { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
-  ];
-
+  ]
   const values = [
     {
       title: 'Innovation',
@@ -97,8 +90,7 @@ const About: React.FC = () => {
       title: 'Integrity',
       description: 'We conduct business with the highest ethical standards, building trust through transparency and honesty.',
     }
-  ];
-
+  ]
   return (
     <div className="bg-white py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,20 +132,16 @@ const About: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default About;
-`;
-
+  )
+}
+export default About
+`
 try {
-  fs.writeFileSync('/workspace/vite.config.ts', viteConfig, 'utf8');
-  console.log('✅ Fixed vite.config.ts');
-  
-  fs.writeFileSync('/workspace/app/components/About.tsx', aboutComponent, 'utf8');
-  console.log('✅ Fixed About.tsx');
-  
-  console.log('🎉 Config files fixed!');
+  fs.writeFileSync('/workspace/vite.config.ts', viteConfig, 'utf8')
+  console.log('✅ Fixed vite.config.ts')
+  fs.writeFileSync('/workspace/app/components/About.tsx', aboutComponent, 'utf8')
+  console.log('✅ Fixed About.tsx')
+  console.log('🎉 Config files fixed!')
 } catch (error) {
-  console.error('❌ Error fixing config files:', error.message);
+  console.error('❌ Error fixing config files:', error.message)
 }

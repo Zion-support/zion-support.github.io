@@ -1,6 +1,6 @@
 
-import EnhancedSEO from '../components/EnhancedSEO';
-import { 
+import EnhancedSEO from '../components/EnhancedSEO'
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -9,9 +9,7 @@ import {
   ArrowRightIcon,
   CheckIcon,
   StarIcon;'}
-} from '@heroicons/react/24/outline';
-
-
+} from '@heroicons/react/24/outline'
 const Page = () => {
   const features = [
     {
@@ -32,12 +30,11 @@ const Page = () => {
   ]
   return (
     <>
-      <EnhancedSEO 
+      <EnhancedSEO
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -68,7 +65,7 @@ const Page = () => {
             </div>
           </div>
 )
-          {serviceCategories.map((category, categoryIndex) => {;
+          {serviceCategories.map((category, categoryIndex) => {
 const Icon = category.icon
             return (
 "
@@ -76,7 +73,6 @@ const Icon = category.icon
         <div className="flex items-center mb-12"></div>
                   <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
                     <Icon className={`w-8 h-8 ${category.color}`} />
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -88,7 +84,6 @@ const Icon = category.icon
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -102,7 +97,6 @@ const Icon = category.icon
             )})}
         </div>
       </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -131,8 +125,6 @@ const Icon = category.icon
         </div>
       </section>
     </>
-  )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+  )}
+const page = React.lazy(() => import('./page'))
+export default page

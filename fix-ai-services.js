@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
-const content = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground';
-
+import fs from 'fs'
+const content = `import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react'
+import FuturisticBackground from '../components/FuturisticBackground'
 const AiServicesPage: React.FC = () => {
   const services = [
     {
@@ -45,8 +43,7 @@ const AiServicesPage: React.FC = () => {
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: "Dr. Sarah Johnson",
@@ -69,8 +66,7 @@ const AiServicesPage: React.FC = () => {
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
       rating: 5
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -81,7 +77,7 @@ const AiServicesPage: React.FC = () => {
       </Helmet>
       <FuturisticBackground>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <section className="relative py-20 px-4">
+<section className="relative py-20 px-4">
             <div className="max-w-7xl mx-auto text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI
@@ -172,10 +168,8 @@ const AiServicesPage: React.FC = () => {
         </div>
       </FuturisticBackground>
     </>
-  );
-};
-
-export default AiServicesPage;`;
-
-fs.writeFileSync('/workspace/app/ai-services/page.tsx', content, 'utf8');
-console.log('Fixed ai-services/page.tsx');
+  )
+}
+export default AiServicesPage;`
+fs.writeFileSync('/workspace/app/ai-services/page.tsx', content, 'utf8')
+console.log('Fixed ai-services/page.tsx')

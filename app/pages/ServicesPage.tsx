@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon,
   CloudIcon,
@@ -9,8 +9,7 @@ import {
   BriefcaseIcon,
   ArrowRightIcon,
   CheckIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const ServicesPage: React.FC = () => {
   const services = [
     {
@@ -103,8 +102,7 @@ const ServicesPage: React.FC = () => {
       href: '/it-solutions',
       color: 'from-gray-500 to-slate-500'
     }
-  ];
-
+  ]
   const processSteps = [
     {
       step: '01',
@@ -126,8 +124,7 @@ const ServicesPage: React.FC = () => {
       title: 'Support',
       description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -141,7 +138,7 @@ const ServicesPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -162,7 +159,8 @@ const ServicesPage: React.FC = () => {
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
@@ -175,7 +173,7 @@ const ServicesPage: React.FC = () => {
               Comprehensive solutions designed to meet your business needs
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -185,11 +183,11 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
+
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -198,7 +196,7 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to={service.href}
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -209,7 +207,8 @@ const ServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Process Section */}
       <section className="py-20 bg-slate-800/50">
@@ -222,7 +221,7 @@ const ServicesPage: React.FC = () => {
               A structured approach to delivering exceptional results
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center">
@@ -234,7 +233,8 @@ const ServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
@@ -259,10 +259,9 @@ const ServicesPage: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
-  );
-};
-
-export default ServicesPage;
+  )
+}
+export default ServicesPage

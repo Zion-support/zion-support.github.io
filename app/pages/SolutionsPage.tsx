@@ -1,8 +1,7 @@
 
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon, 
   CloudIcon, 
@@ -13,8 +12,7 @@ import {
   BriefcaseIcon,
   ArrowRightIcon,
   CheckIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const SolutionsPage: React.FC = () => {
   const solutions = [
     {
@@ -101,8 +99,7 @@ const SolutionsPage: React.FC = () => {
       ],
       href: '/it-solutions'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -116,7 +113,7 @@ const SolutionsPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -151,7 +148,7 @@ const SolutionsPage: React.FC = () => {
               Comprehensive technology solutions designed to meet your business needs
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -161,11 +158,11 @@ const SolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {solution.description}
                 </p>
-                
+
                 <ul className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -174,7 +171,7 @@ const SolutionsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to={solution.href}
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -214,7 +211,6 @@ const SolutionsPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
-
-export default SolutionsPage;
+  )
+}
+export default SolutionsPage

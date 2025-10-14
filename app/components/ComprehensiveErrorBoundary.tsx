@@ -1,27 +1,26 @@
-import { Link } from 'react-router-dom';
-
+import { Link } from 'react-router-dom'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
 }
 
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -29,27 +28,26 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      this.logErrorToService(error, errorInfo)
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
   }
 
@@ -64,29 +62,25 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
-
+    }
     // For now, just log to console
-    };
-
+    }
   handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    });
-  };
-
+    })
+  }
   handleReload = () => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  }
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       // Default error UI
@@ -97,11 +91,11 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
               <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-8 h-8 text-red-400" />
               </div>
-              
+
               <h1 className="text-3xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 We're sorry, but something unexpected happened. Our team has been notified 
                 and is working to fix the issue. In the meantime, you can try refreshing 
@@ -135,7 +129,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Try Again
                 </button>
-                
+
                 <button
                   onClick={this.handleReload}
                   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
@@ -153,7 +147,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                   Go Home
                 </Link>
-                
+
                 <Link
                   to="/contact"
                   className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
@@ -171,11 +165,11 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ComprehensiveErrorBoundary;
+export default ComprehensiveErrorBoundary

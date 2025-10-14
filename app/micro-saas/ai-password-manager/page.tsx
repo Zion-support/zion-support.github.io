@@ -176,16 +176,16 @@ const AIPasswordManagerPage: React.FC = () => {
               <Lock className="w-4 h-4" />
               <span>AI-Powered Password Security</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Password Manager</span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Secure your digital life with our AI-powered password manager. Advanced encryption, 
               breach monitoring, and intelligent password generation to keep your accounts safe.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <Link 
                 to="/contact" 
@@ -217,7 +217,7 @@ const AIPasswordManagerPage: React.FC = () => {
                 Experience the power of AI-driven password security with our proven track record.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
@@ -248,7 +248,7 @@ const AIPasswordManagerPage: React.FC = () => {
                 Everything you need to secure your digital life with advanced AI-powered password management.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -278,7 +278,7 @@ const AIPasswordManagerPage: React.FC = () => {
                 Comprehensive security features to protect your passwords and personal information.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {securityFeatures.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -332,7 +332,7 @@ const AIPasswordManagerPage: React.FC = () => {
                 Choose the plan that fits your security needs. All plans include a 30-day free trial.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
@@ -347,7 +347,7 @@ const AIPasswordManagerPage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -356,7 +356,7 @@ const AIPasswordManagerPage: React.FC = () => {
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -365,7 +365,7 @@ const AIPasswordManagerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link 
                     to="/contact" 
                     className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -393,7 +393,7 @@ const AIPasswordManagerPage: React.FC = () => {
                 Join thousands of users who trust our AI-powered password manager for their security.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -430,12 +430,12 @@ const AIPasswordManagerPage: React.FC = () => {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Ready to Secure Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Digital Life?</span>
               </h2>
-              
+
               <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
                 Don't wait for a security breach. Protect your accounts with our AI-powered password manager. 
                 Start your free trial today and experience the peace of mind that comes with advanced security.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link 
                   to="/contact" 
@@ -455,8 +455,8 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+</div>
+</>
   )
 }
 

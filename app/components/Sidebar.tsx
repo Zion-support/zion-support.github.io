@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { 
   XMarkIcon,
   HomeIcon,
@@ -16,17 +16,15 @@ import {
   GlobeAltIcon,
   SignalIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 interface SidebarProps {
   isOpen: boolean
   onClose: () => void
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
-
+  const location = useLocation()
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set())
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -49,17 +47,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ];
-
+  ]
   const isActive = (href: string) => {
     if (href === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/'
     }
-    return location.pathname.startsWith(href);
-  };
-
-  if (!isOpen) return null;
-
+    return location.pathname.startsWith(href)
+  }
+  if (!isOpen) return null
   return (
     <>
       {/* Backdrop */}
@@ -67,7 +62,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-      
+
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
         <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
@@ -101,7 +96,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
                 </Link>
-                
+
                 {/* Submenu */}
                 {item.submenu && (
                   <ul className="ml-8 mt-2 space-y-1">
@@ -138,7 +133,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
-
-export default Sidebar;
+  )
+}
+export default Sidebar

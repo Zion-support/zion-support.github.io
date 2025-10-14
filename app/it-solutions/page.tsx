@@ -1,8 +1,8 @@
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
   ServerIcon,
   CloudIcon,
   ShieldCheckIcon,
@@ -11,8 +11,7 @@ import {
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const ITSolutionsPage: React.FC = () => {
   const services = [
     {
@@ -39,9 +38,7 @@ const ITSolutionsPage: React.FC = () => {
       icon: CpuChipIcon,
       features: ['Machine Learning', 'Process Automation', 'Data Analytics', 'Predictive Maintenance']
     }
-  ];
-
-ursor/fix-errors-and-merge-to-main-94a7
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -49,7 +46,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, and AI integration services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, AI integration" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -64,7 +60,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +71,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                 From infrastructure management to AI integration, we provide end-to-end IT solutions
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -86,11 +80,9 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </div>
                     <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                   </div>
-                  
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -99,7 +91,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                       </li>
                     ))}
                   </ul>
-                  
                   <Link
                     to="/contact"
                     className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -112,7 +103,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-slate-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -136,11 +126,8 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
-  );
-};
-
-export default ITSolutionsPage;
-ursor/fix-errors-and-merge-to-main-94a7
+  )
+}
+export default ITSolutionsPage

@@ -1,30 +1,26 @@
-import React, { useState } from 'react';
-import { EnvelopeIcon, 
-  PhoneIcon, 
+import React, { useState } from 'react'
+import { EnvelopeIcon,
+  PhoneIcon,
   MapPinIcon,'
-  ClockIcon } from '@heroicons/react/24/outline';
+  ClockIcon } from '@heroicons/react/24/outline'
 const Contact: React.FC = () => {,
   const [formData, setFormData] = useState({'
     name: '','
     email: '','
     company: '','
     message: '',
-  });
-
-ursor/fix-errors-and-merge-to-main-94a7
+  })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({,
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     // Handle form submission',
-    console.log('Form submitted:', formData);
-  };
-
+    console.log('Form submitted:', formData)
+  }
   const contactInfo = [{
       icon: EnvelopeIcon,'
       title: 'Email','
@@ -46,8 +42,7 @@ ursor/fix-errors-and-merge-to-main-94a7
     {icon: ClockIcon,'
       title: 'Response Time','
       details: '< 24 hours','
-      description: 'We respond quickly'}];
-
+      description: 'We respond quickly'}]
   return ()
     <section className="py-20 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -56,7 +51,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             Get In Touch
           </h2>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
-            Ready to transform your business? Let's discuss how our solutions 
+            Ready to transform your business? Let's discuss how our solutions
             can help you achieve your goals.
           </p>
         </div>
@@ -97,7 +92,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   />
                 </div>
               </div>
-              
               <div>"
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -112,7 +106,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                   placeholder="Your company name"
                 />
               </div>
-              
               <div>"
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -128,12 +121,10 @@ ursor/fix-errors-and-merge-to-main-94a7
                   placeholder="Tell us about your project or requirements..."
                 />
               </div>
-              
               <button"
                 type="submit""
                 className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               ></button>
-ursor/fix-errors-and-merge-to-main-94a7
                 Send Message
               </button>
             </form>
@@ -173,7 +164,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                 </div>
               ))},
             </div>
-
             {/* Additional Info */}"
             <div className="bg-gray-50 rounded-lg p-6">"
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -197,14 +187,12 @@ ursor/fix-errors-and-merge-to-main-94a7
                   Proven track record
                 </li>
               </ul>
-ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 "'
-export default Contact;
-ursor/fix-errors-and-merge-to-main-94a7
+export default Contact

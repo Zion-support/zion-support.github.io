@@ -1,10 +1,9 @@
-import React from 'react';
-import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
+import React from 'react'
+import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
 const AIDataAnalyticsPro = () => {
   const features = [
     {
@@ -31,10 +30,7 @@ const AIDataAnalyticsPro = () => {
       icon: <Brain className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -43,31 +39,26 @@ const AIDataAnalyticsPro = () => {
         keywords="AI data analytics, business intelligence, predictive analytics, data visualization, machine learning, real-time analytics"
         canonical="https://ziontechgroup.com/ai-data-analytics-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Data Analytics Pro
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+            Transform your data into actionable insights with our advanced AI-powered analytics platform.
             Get real-time processing, predictive modeling, and automated insights that drive business growth.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -88,7 +79,6 @@ const AIDataAnalyticsPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -122,7 +112,6 @@ const AIDataAnalyticsPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -144,7 +133,6 @@ const AIDataAnalyticsPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -176,10 +164,7 @@ const AIDataAnalyticsPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
     </div>
-  );
-};
-
-export default AIDataAnalyticsPro;
-ursor/fix-errors-and-merge-to-main-94a7
+  )
+}
+export default AIDataAnalyticsPro

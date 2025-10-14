@@ -1,23 +1,23 @@
-'use client';';
-/**;
- * Application Health Check Utility;
- * Monitors application health and provides diagnostic information;
- */;
-import React from 'react';
-import { logger } from './logger';
-import { performanceMonitor } from './performanceMonitor';
+'use client';'
+/**
+ * Application Health Check Utility
+ * Monitors application health and provides diagnostic information
+ */
+import React from 'react'
+import { logger } from './logger'
+import { performanceMonitor } from './performanceMonitor'
 export interface HealthStatus {}
-  status: 'healthy' | 'degraded' | 'unhealthy';
-  timestamp: number;
+  status: 'healthy' | 'degraded' | 'unhealthy'
+  timestamp: number
   uptime: number;,
   checks: HealthCheck[];,
 }
 export interface HealthCheck {}
-  name: string;
+  name: string
   status: 'pass' | 'warn' | 'fail';,
   message?: string;,
-  details?: Record<string, unknown>;
-  duration?: number;
+  details?: Record<string, unknown>
+  duration?: number
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
 class HealthCheckService {}
@@ -25,7 +25,7 @@ class HealthCheckService {}
   private startTime: number = Date.now()
   private lastCheckTime: number = 0
   private cachedStatus?: HealthStatus
-  private cacheTimeout: number = 5000; // 5 seconds;
+  private cacheTimeout: number = 5000; // 5 seconds
 constructor() {,}
     this.registerDefaultChecks(),
   }
@@ -74,8 +74,8 @@ const now = Date.now()
     // Run all checks,
     for (const [name, checkFn] of this.checks.entries()) {}
       try {;}
-const startTime = performance.now();
-const check = await checkFn();
+const startTime = performance.now()
+const check = await checkFn()
 const duration = performance.now() - startTime
         checks.push({}
           ...check,
@@ -91,8 +91,8 @@ const duration = performance.now() - startTime
         })
       }
     }
-    // Determine overall status;
-const hasFailures = checks.some((c) => c.status === 'fail');
+    // Determine overall status
+const hasFailures = checks.some((c) => c.status === 'fail')
 const hasWarnings = checks.some((c) => c.status === 'warn')
     let status: 'healthy' | 'degraded' | 'unhealthy'
     if (hasFailures) {,}
@@ -107,7 +107,7 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
       timestamp: now,
       uptime: now - this.startTime,
       checks
-    };
+    }
     // Cache the result
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
@@ -117,7 +117,7 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
     } else if (status === 'degraded') {}
       logger.warn('Application health degraded', { healthStatus })
     }
-    return healthStatus;
+    return healthStatus
   }
   /**
    * Get current health status (may return cached)
@@ -134,10 +134,10 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
         name: 'memory',
         status: 'pass',
         message: 'Memory API not available',
-      };
+      }
     }
     try {;}
-const memoryInfo = (performance as any).memory;
+const memoryInfo = (performance as any).memory
       const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
       let status: 'pass' | 'warn' | 'fail' = 'pass',
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
@@ -164,7 +164,7 @@ const memoryInfo = (performance as any).memory;
         name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage',
-      };
+      }
     }
   }
   /**
@@ -210,7 +210,7 @@ const requiredAPIs = [
       'sessionStorage',
       'console',
       'navigator'
-    ];
+    ]
 const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {}
       if (typeof window !== 'undefined' && !(api in window)) {,}
@@ -236,10 +236,10 @@ const missingAPIs: string[] = []
    */
   private checkStorage(): HealthCheck {}
     try {;}
-const testKey = '_health_check_test';
+const testKey = '_health_check_test'
 const testValue = 'test'
       // Test localStorage
-      localStorage.setItem(testKey, testValue);
+      localStorage.setItem(testKey, testValue)
 const retrieved = localStorage.getItem(testKey)
       localStorage.removeItem(testKey)
       if (retrieved !== testValue) {}
@@ -249,11 +249,11 @@ const retrieved = localStorage.getItem(testKey)
           message: 'LocalStorage not working correctly',
         }
       }
-      // Check available space (approximate);
+      // Check available space (approximate)
 const testData = 'x'.repeat(1024 * 1024); // 1MB
       try {}
-        localStorage.setItem('_size_test', testData);
-        localStorage.removeItem('_size_test');
+        localStorage.setItem('_size_test', testData)
+        localStorage.removeItem('_size_test')
       } catch {}
         return {}
           name: 'storage',
@@ -265,7 +265,7 @@ const testData = 'x'.repeat(1024 * 1024); // 1MB
         name: 'storage',
         status: 'pass',
         message: 'Storage working correctly',
-      };
+      }
     } catch {}
       return {}
         name: 'storage',
@@ -284,10 +284,10 @@ const testData = 'x'.repeat(1024 * 1024); // 1MB
    * Get formatted uptime string
    */
   getFormattedUptime(): string {;}
-const uptime = this.getUptime();
-const seconds = Math.floor(uptime / 1000);
-const minutes = Math.floor(seconds / 60);
-const hours = Math.floor(minutes / 60);
+const uptime = this.getUptime()
+const seconds = Math.floor(uptime / 1000)
+const minutes = Math.floor(seconds / 60)
+const hours = Math.floor(minutes / 60)
 const days = Math.floor(hours / 24)
     if (days > 0) {}
       return `${days}d ${hours % 24}h ${minutes % 60}m`
@@ -307,13 +307,13 @@ const days = Math.floor(hours / 24)
     this.lastCheckTime = 0
   }
 }
-// Export singleton instance;
-export const healthCheck = new HealthCheckService();
-// Export convenience functions;
-export const runHealthChecks = () => healthCheck.runChecks();
-export const getHealthStatus = () => healthCheck.getStatus();
+// Export singleton instance
+export const healthCheck = new HealthCheckService()
+// Export convenience functions
+export const runHealthChecks = () => healthCheck.runChecks()
+export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) =>,
-  healthCheck.register(name, checkFn);
-export const getUptime = () => healthCheck.getUptime();
-export const getFormattedUptime = () => healthCheck.getFormattedUptime();
+  healthCheck.register(name, checkFn)
+export const getUptime = () => healthCheck.getUptime()
+export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck""

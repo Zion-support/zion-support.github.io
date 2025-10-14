@@ -1,63 +1,63 @@
-import React from 'react';
-import { useState, useEffect  } from 'lucide-react';
-import {   } from 'lucide-react';
-import { ChevronDown, Menu, X, Right, Star, Square,  } from 'lucide-react';
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+import React from 'react'
+import { useState, useEffect  } from 'lucide-react'
+import {   } from 'lucide-react'
+import { ChevronDown, Menu, X, Right, Star, Square,  } from 'lucide-react'
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
     }
-  }, []);
-;
+  }, [])
+
 const closeAllMenus = () => {}
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
-  };
-;
+    setIsMenuOpen(false)
+    setIsServicesOpen(false)
+    setIsAIOpen(false)
+    setIsITOpen(false)
+    setIsSpecializedOpen(false)
+  }
+
 const toggleMenu = () => {}
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)
     if (isMenuOpen) {}
-      closeAllMenus();
+      closeAllMenus()
     }
-  };
-;
+  }
+
 const toggleServices = () => {}
-    setIsServicesOpen(!isServicesOpen);
+    setIsServicesOpen(!isServicesOpen)
     if (isServicesOpen) {}
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
+      setIsAIOpen(false)
+      setIsITOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
+
 const toggleAI = () => {}
-    setIsAIOpen(!isAIOpen);
+    setIsAIOpen(!isAIOpen)
     if (isAIOpen) {}
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
+      setIsITOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
+
 const toggleIT = () => {}
-    setIsITOpen(!isITOpen);
+    setIsITOpen(!isITOpen)
     if (isITOpen) {}
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
+      setIsAIOpen(false)
+      setIsSpecializedOpen(false)
     }
-  };
-;
+  }
+
 const toggleSpecialized = () => {}
-    setIsSpecializedOpen(!isSpecializedOpen);
+    setIsSpecializedOpen(!isSpecializedOpen)
     if (isSpecializedOpen) {}
-      setIsAIOpen(false);
-      setIsITOpen(false);
+      setIsAIOpen(false)
+      setIsITOpen(false)
     }
-  };
-;
+  }
+
 const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText },
@@ -90,8 +90,8 @@ const microSAASServices = [
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
-  ];
-;
+  ]
+
 const aiServices = [
     { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
@@ -116,8 +116,8 @@ const aiServices = [
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
-;
+  ]
+
 const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
     { name: 'Enterprise Security Solutions', href: '/enterprise-security', icon: Shield },
@@ -141,8 +141,8 @@ const itServices = [
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
     { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
-;
+  ]
+
 const specializedServices = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
@@ -156,8 +156,7 @@ const specializedServices = [
     { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-  ];
-
+  ]
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${>}
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
@@ -182,7 +181,7 @@ const specializedServices = [
                 <span>Services</span>,
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isServicesOpen && (""}
                 <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6"></div>""
                   <div className="grid grid-cols-3 gap-6"></div>""
@@ -319,7 +318,7 @@ const specializedServices = [
                   <span>Services</span>,
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isServicesOpen && (""}
                   <div className="mt-4 pl-4 space-y-3"></div>""
                     <div></div>""
@@ -389,17 +388,17 @@ const specializedServices = [
                   onClick={closeAllMenus}
                 >
                   <className="w-4 h-4 inline mr-2" />
-                  (302) 464-0950;
+                  (302) 464-0950
         )}
-  );
+  )
 }
 
-const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {'';
+const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => {''
   return (
 <>    <div className={`navigation ${className}`}></div>```)
       {children}
     </>
-  );
-};
-;
+  )
+}
+
 export default Navigation;""

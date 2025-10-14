@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React, { useState } from 'react'
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react"
+import EnhancedSEO from '../components/EnhancedSEO'
 const SupportPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const supportCategories = [
     { id: 'all', label: 'All Topics', icon: <HelpCircle className="w-5 h-5" /> },
     { id: 'getting-started', label: 'Getting Started', icon: <Zap className="w-5 h-5" /> },
@@ -16,8 +13,7 @@ const SupportPage = () => {
     { id: 'cloud', label: 'Cloud & Infrastructure', icon: <Globe className="w-5 h-5" /> },
     { id: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },
     { id: 'billing', label: 'Billing & Account', icon: <Settings className="w-5 h-5" /> }
-  ];
-
+  ]
   const faqItems = [
     {
       id: 1,
@@ -75,8 +71,7 @@ const SupportPage = () => {
       category: "cloud",
       featured: false
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       title: "Live Chat",
@@ -110,8 +105,7 @@ const SupportPage = () => {
       responseTime: "Immediate",
       link: "/docs"
     }
-  ];
-
+  ]
   const resources = [
     {
       title: "Getting Started Guide",
@@ -141,26 +135,22 @@ const SupportPage = () => {
       icon: <Award className="w-6 h-6" />,
       link: "/best-practices"
     }
-  ];
-
+  ]
   const stats = [
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "< 2 min", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> },
     { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> }
-  ];
-
-  const filteredFAQs = selectedCategory === 'all' 
-    ? faqItems 
-    : faqItems.filter(item => item.category === selectedCategory);
-
-  const searchResults = searchQuery 
-    ? faqItems.filter(item => 
+  ]
+  const filteredFAQs = selectedCategory === 'all'
+    ? faqItems
+    : faqItems.filter(item => item.category === selectedCategory)
+  const searchResults = searchQuery
+    ? faqItems.filter(item =>
         item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredFAQs;
-
+    : filteredFAQs
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -169,7 +159,6 @@ const SupportPage = () => {
         keywords="technical support, customer service, help desk, AI support, cloud support, 24/7 support"
         canonical="https://ziontechgroup.com/support"
       />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
@@ -181,9 +170,7 @@ const SupportPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Get 24/7 support from our expert team. Whether you need technical assistance, have questions about our services, or want to explore new possibilities, we're here for you.
-ursor/fix-errors-and-merge-to-main-94a7
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -199,7 +186,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -216,7 +202,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Support Channels */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -230,7 +215,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Choose the support channel that works best for you. All channels are available 24/7.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportChannels.map((channel, index) => (
               <div
@@ -271,7 +255,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -285,7 +268,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Find quick answers to common questions about our services and solutions.
             </p>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {supportCategories.map((category) => (
@@ -303,7 +285,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               </button>
             ))}
           </div>
-
           {/* FAQ Items */}
           <div className="space-y-6">
             {searchResults.map((item) => (
@@ -320,7 +301,6 @@ ursor/fix-errors-and-merge-to-main-94a7
                     </span>
                   </div>
                 )}
-                
                 <div className="pr-20">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {item.question}
@@ -332,7 +312,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               </div>
             ))}
           </div>
-
           {searchResults.length === 0 && (
             <div className="text-center py-12">
               <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -342,7 +321,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           )}
         </div>
       </section>
-
       {/* Resources Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -356,7 +334,6 @@ ursor/fix-errors-and-merge-to-main-94a7
               Explore our comprehensive documentation, guides, and resources to get the most out of our services.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, index) => (
               <div
@@ -392,7 +369,6 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -421,10 +397,7 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
     </div>
-  );
-};
-
-export default SupportPage;
-ursor/fix-errors-and-merge-to-main-94a7
+  )
+}
+export default SupportPage

@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from 'react'
 interface PerformanceMetrics {
-  cls: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
+  cls: number | null
+  fcp: number | null
+  lcp: number | null
+  ttfb: number | null
+  loadTime: number | null
 }
-
-ursor/fix-errors-and-merge-to-main-94a7
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
@@ -16,12 +13,11 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     ttfb: null,
     loadTime: null
-  });
-
+  })
   useEffect(() => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') {
-      return;
+      return
     }
 
     // Simulate performance metrics for development
@@ -32,18 +28,15 @@ const PerformanceMonitor: React.FC = () => {
         lcp: Math.random() * 2000 + 1000,
         ttfb: Math.random() * 500 + 200,
         loadTime: Math.random() * 3000 + 1000
-      });
-    };
-
+      })
+    }
     // Simulate metrics after a delay
-    const timer = setTimeout(simulateMetrics, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
+    const timer = setTimeout(simulateMetrics, 2000)
+    return () => clearTimeout(timer)
+  }, [])
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null;
+    return null
   }
 
   return (
@@ -57,7 +50,6 @@ const PerformanceMonitor: React.FC = () => {
         <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
     </div>
-  );
-};
-
-export default PerformanceMonitor;
+  )
+}
+export default PerformanceMonitor

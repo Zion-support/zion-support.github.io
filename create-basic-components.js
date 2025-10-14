@@ -1,31 +1,28 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 // Function to create directory if it doesn't exist
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+    fs.mkdirSync(dirPath, { recursive: true })
   }
 }
 
 // Function to create a component
 function createComponent(filePath, content) {
-  const dir = path.dirname(filePath);
-  ensureDir(dir);
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log(`Created: ${filePath}`);
+  const dir = path.dirname(filePath)
+  ensureDir(dir)
+  fs.writeFileSync(filePath, content, 'utf8')
+  console.log(`Created: ${filePath}`)
 }
 
 // Navigation component
-const navigationComponent = `import React from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-
+const navigationComponent = `import React from "react"
+import { Link } from "react-router-dom"
+import { Menu, X } from "lucide-react"
 const Navigation = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
+  const [isOpen, setIsOpen] = React.useState(false)
   return (
     <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-purple-500/20">
       <div className="container mx-auto px-4">
@@ -33,7 +30,7 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-bold text-white">
             Zion Tech Group
           </Link>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -50,7 +47,7 @@ const Navigation = () => {
               </Link>
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -60,7 +57,7 @@ const Navigation = () => {
             </button>
           </div>
         </div>
-        
+
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -81,17 +78,14 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
-`;
-
+  )
+}
+export default Navigation
+`
 // Footer component
-const footerComponent = `import React from "react";
-import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
-
+const footerComponent = `import React from "react"
+import { Link } from "react-router-dom"
+import { Mail, Phone, MapPin } from "lucide-react"
 const Footer = () => {
   return (
     <footer className="bg-slate-900/50 backdrop-blur-sm border-t border-purple-500/20">
@@ -103,7 +97,7 @@ const Footer = () => {
               Leading provider of AI solutions, IT services, and digital transformation.
             </p>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
@@ -113,7 +107,7 @@ const Footer = () => {
               <li><Link to="/cybersecurity" className="text-gray-300 hover:text-white">Cybersecurity</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
@@ -123,7 +117,7 @@ const Footer = () => {
               <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2">
@@ -142,7 +136,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-300">
             © 2024 Zion Tech Group. All rights reserved.
@@ -150,36 +144,29 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
-`;
-
+  )
+}
+export default Footer
+`
 // Header component
-const headerComponent = `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+const headerComponent = `import React from "react"
+import { Helmet } from "react-helmet-async"
 const Header = ({ title, description }) => {
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
     </Helmet>
-  );
-};
-
-export default Header;
-`;
-
+  )
+}
+export default Header
+`
 // Sidebar component
-const sidebarComponent = `import React from "react";
-import { Link } from "react-router-dom";
-import { X } from "lucide-react";
-
+const sidebarComponent = `import React from "react"
+import { Link } from "react-router-dom"
+import { X } from "lucide-react"
 const Sidebar = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
+  if (!isOpen) return null
   return (
     <div className="fixed inset-0 z-50">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
@@ -190,7 +177,7 @@ const Sidebar = ({ isOpen, onClose }) => {
             <X className="h-6 w-6" />
           </button>
         </div>
-        
+
         <nav className="space-y-4">
           <Link to="/" className="block text-gray-300 hover:text-white py-2">
             Home
@@ -207,27 +194,24 @@ const Sidebar = ({ isOpen, onClose }) => {
         </nav>
       </div>
     </div>
-  );
-};
-
-export default Sidebar;
-`;
-
+  )
+}
+export default Sidebar
+`
 // ErrorBoundary component
-const errorBoundaryComponent = `import React from "react";
-
+const errorBoundaryComponent = `import React from "react"
 class ErrorBoundary extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo)
   }
 
   render() {
@@ -245,19 +229,17 @@ class ErrorBoundary extends React.Component {
             </button>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
-`;
-
+export default ErrorBoundary
+`
 // Loading component
-const loadingComponent = `import React from "react";
-
+const loadingComponent = `import React from "react"
 const Loading = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -266,24 +248,20 @@ const Loading = () => {
         <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
-  );
-};
-
-export default Loading;
-`;
-
+  )
+}
+export default Loading
+`
 // Main execution
 async function main() {
-  console.log('Creating basic components...');
-  
-  createComponent('app/components/Navigation.tsx', navigationComponent);
-  createComponent('app/components/Footer.tsx', footerComponent);
-  createComponent('app/components/Header.tsx', headerComponent);
-  createComponent('app/components/Sidebar.tsx', sidebarComponent);
-  createComponent('app/components/ErrorBoundary.tsx', errorBoundaryComponent);
-  createComponent('app/components/Loading.tsx', loadingComponent);
-  
-  console.log('Basic components created successfully!');
+  console.log('Creating basic components...')
+  createComponent('app/components/Navigation.tsx', navigationComponent)
+  createComponent('app/components/Footer.tsx', footerComponent)
+  createComponent('app/components/Header.tsx', headerComponent)
+  createComponent('app/components/Sidebar.tsx', sidebarComponent)
+  createComponent('app/components/ErrorBoundary.tsx', errorBoundaryComponent)
+  createComponent('app/components/Loading.tsx', loadingComponent)
+  console.log('Basic components created successfully!')
 }
 
-main().catch(console.error);
+main().catch(console.error)

@@ -1,4 +1,3 @@
 export const utilityFunction = () => {
-  // Utility implementation;
-  return true};
-
+  // Utility implementation
+  return true}

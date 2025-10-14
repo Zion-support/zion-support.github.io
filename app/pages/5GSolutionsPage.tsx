@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function 5GSolutionsPage() {
   return (
     <>
@@ -8,7 +7,7 @@ export default function 5GSolutionsPage() {
         <title>5GSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -56,6 +55,6 @@ export default function 5GSolutionsPage() {
             </button>
           </div>
         </section>
-      </div>
-    </>
+</div>
+</>
   )}

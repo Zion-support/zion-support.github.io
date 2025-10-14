@@ -1,12 +1,11 @@
-import { Shield } from 'lucide-react';
-import React from 'react';
+import { Shield } from 'lucide-react'
+import React from 'react'
 import { CpuChipIcon,
   CloudIcon,
   CogIcon,
-ursor/fix-errors-and-merge-to-main-94a7
   ChartBarIcon,
   ShieldCheckIcon,'
-  RocketLaunchIcon } from '@heroicons/react/24/outline';
+  RocketLaunchIcon } from '@heroicons/react/24/outline'
 const Services: React.FC = () => {
   const services = [{,
       icon: CpuChipIcon,'
@@ -43,8 +42,7 @@ const Services: React.FC = () => {
       title: 'Digital Transformation','
       description: 'Complete digital transformation strategies to modernize your business processes.','
       features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']
-    }];
-
+    }]
   return ()
     <section className="py-20 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
@@ -94,7 +92,6 @@ const Services: React.FC = () => {
             </div>,
           ))},
         </div>
-
         {/* CTA Section */}"
         <div className="text-center mt-16">"
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">"
@@ -112,6 +109,6 @@ const Services: React.FC = () => {
       </div>
     </section>
   );,
-};
+}
 "'
-export default Services;
+export default Services

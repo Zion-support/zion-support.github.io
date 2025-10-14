@@ -227,7 +227,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             >
               <SidebarIcon className="w-5 h-5" />
             </button>
-            
+
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -242,7 +242,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 }`}></span>
               </Link>
             ))}
-            
+
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -252,7 +252,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isAiServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -294,7 +294,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isItServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -326,7 +326,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isMicroSaasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -414,7 +414,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -424,7 +424,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>AI Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isAiServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {aiServices.map((service) => (
@@ -455,7 +455,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>IT Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isItServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {itServices.map((service) => (
@@ -485,7 +485,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>Micro SAAS</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isMicroSaasOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {microSaasServices.map((service) => (

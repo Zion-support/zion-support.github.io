@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (
     <>
@@ -25,7 +24,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       <section className="py-12">
         <div className="max-w-3 xl mx-auto px-4 space-y-10">
           <div>
@@ -36,7 +34,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               outcomes) so leaders can make tradeoffs responsibly.
             </p>
           </div>
-
           <div>
             <h2 className="text-2 xl font-bold mb-3">Scorecard    Structure</h2>
             <ul className="list-disc pl-6 text-gray-300 space-y-2">
@@ -58,7 +55,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h2 className="text-2 xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300">
@@ -70,8 +66,6 @@ const OperationalTrustScorecardsPage: React.FC = () => {
         </section>
       </main>
     </>
-  );
-};
-
-export default OperationalTrustScorecardsPage;
-ursor/fix-errors-and-merge-to-main-94a7
+  )
+}
+export default OperationalTrustScorecardsPage

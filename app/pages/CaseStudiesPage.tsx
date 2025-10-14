@@ -1,16 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import {
   ArrowRightIcon,
   CheckIcon,
   ChartBarIcon,
   TrendingUpIcon,
   ClockIcon,
   CurrencyDollarIcon
-} from '@heroicons/react/24/outline';
-
-ursor/fix-errors-and-merge-to-main-94a7
+} from '@heroicons/react/24/outline'
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -69,8 +67,7 @@ const CaseStudiesPage: React.FC = () => {
       duration: '3 months',
       image: '/case-studies/ai-customer-service.jpg'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -78,13 +75,11 @@ const CaseStudiesPage: React.FC = () => {
         <meta name="description" content="Explore our successful case studies and see how we've helped businesses transform with AI, cybersecurity, cloud infrastructure, and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, cybersecurity, cloud infrastructure, IT solutions, business transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -94,13 +89,12 @@ const CaseStudiesPage: React.FC = () => {
               Real Results for Real Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Discover how we've helped businesses across various industries transform their operations 
+              Discover how we've helped businesses across various industries transform their operations
               and achieve remarkable growth with our technology solutions.
             </p>
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +106,6 @@ const CaseStudiesPage: React.FC = () => {
               See how our solutions have transformed businesses across different industries
             </p>
           </div>
-          
           <div className="space-y-16">
             {caseStudies.map((study, index) => (
               <div key={index} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
@@ -124,21 +117,17 @@ const CaseStudiesPage: React.FC = () => {
                       </span>
                       <span className="text-gray-400 text-sm">{study.duration}</span>
                     </div>
-                    
                     <h3 className="text-3xl font-bold text-white mb-4">{study.title}</h3>
                     <p className="text-purple-400 font-semibold mb-6">{study.client}</p>
-                    
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                         <p className="text-gray-300">{study.challenge}</p>
                       </div>
-                      
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                         <p className="text-gray-300">{study.solution}</p>
                       </div>
-                      
                       <div>
                         <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -156,7 +145,6 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
                   <div className="bg-slate-800 rounded-xl p-8 h-full flex items-center justify-center">
                     <div className="text-center">
@@ -165,7 +153,7 @@ const CaseStudiesPage: React.FC = () => {
                       </div>
                       <h4 className="text-xl font-semibold text-white mb-2">Project Overview</h4>
                       <p className="text-gray-300">
-                        This case study demonstrates our expertise in delivering measurable results 
+                        This case study demonstrates our expertise in delivering measurable results
                         that drive business growth and operational efficiency.
                       </p>
                     </div>
@@ -176,8 +164,6 @@ const CaseStudiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -204,7 +190,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         </div>
       </section>
     </>
-  );
-};
-
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage

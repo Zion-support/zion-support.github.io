@@ -1,25 +1,25 @@
-import React from 'react';
-import { useEffect, useCallback, useRef  } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-&apos;use client&apos;
+import React from 'react'
+import { useEffect, useCallback, useRef  } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+&apos;use client&apos
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-  structuredData?: unknown;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  noIndex?: boolean
+  structuredData?: unknown
 }
 
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  children?: .Node;
+  seoData: SEOData
+  children?: .Node
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
-  children;
+  children
 }) => {
   const {
     title,
@@ -28,9 +28,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData;
-  } = seoData;
-
+    structuredData
+  } = seoData
   const baseStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -41,12 +40,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service";
+      "contactType": "customer service"
     }
-  };
-
-  const finalStructuredData = structuredData || baseStructuredData;
-
+  }
+  const finalStructuredData = structuredData || baseStructuredData
   return (
     <div></div>
       <Helmet></Helmet>

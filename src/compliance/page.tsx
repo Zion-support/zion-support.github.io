@@ -1,21 +1,21 @@
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react'
 const CompliancePage: React.FC = () => {}
 ,
-};
+}
 ;,
-};
+}
 const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+  ]
 const complianceFrameworks = [
     {}
       name: 'SOC 2 Type II',
@@ -56,7 +56,7 @@ const complianceFrameworks = [
         'Breach notification procedures'
       ]
     }
-  ];
+  ]
 const complianceAreas = [
     {}
       title: 'Data Protection',
@@ -82,7 +82,7 @@ const complianceAreas = [
       icon: Users,
       frameworks: ['HIPAA', 'HITECH', 'FDA']
     }
-  ];
+  ]
 const auditSchedule = [
     {}
       quarter: 'Q1 2024',
@@ -117,7 +117,7 @@ const auditSchedule = [
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>""
         <Navigation />
-        
+
         {/* Header */}""
         <section className="bg-white shadow-sm border-b">""
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6"></div>""
@@ -347,5 +347,5 @@ const auditSchedule = [
     </>,
   ),
 }
-;
+
 export default CompliancePage""

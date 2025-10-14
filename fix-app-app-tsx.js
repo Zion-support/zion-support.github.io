@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-
-console.log('🔧 Fixing app/App.tsx syntax errors...');
-
-const content = `import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import fs from 'fs'
+console.log('🔧 Fixing app/App.tsx syntax errors...')
+const content = `import React from "react"
+import { Helmet } from "react-helmet-async"
 const AppPage = () => {
   return (
     <>
@@ -22,15 +19,13 @@ const AppPage = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default AppPage;
-`;
-
+  )
+}
+export default AppPage
+`
 try {
-  fs.writeFileSync('/workspace/app/App.tsx', content, 'utf8');
-  console.log('✅ Fixed app/App.tsx');
+  fs.writeFileSync('/workspace/app/App.tsx', content, 'utf8')
+  console.log('✅ Fixed app/App.tsx')
 } catch (error) {
-  console.error('❌ Error fixing app/App.tsx:', error.message);
+  console.error('❌ Error fixing app/App.tsx:', error.message)
 }

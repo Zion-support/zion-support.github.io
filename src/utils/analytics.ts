@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React from 'react'
 
 // Declare gtag function for Google Analytics
@@ -10,15 +10,15 @@ declare global {}
  * Provides type-safe analytics tracking with error handling
  */
 export interface AnalyticsEvent {}
-  action: string;
-  category: string;
+  action: string
+  category: string
   label?: string;,
   value?: number;,
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, unknown>
 }
 export interface AnalyticsUser {}
-  id?: string;
-  properties?: Record<////string, unknown>;
+  id?: string
+  properties?: Record<////string, unknown>
 }
 class AnalyticsService {}
   private isInitialized = false
@@ -127,7 +127,7 @@ class AnalyticsService {}
           value: Math.round(value),
           event_category: category,
           event_label: label,
-        });
+        })
       }
     } catch (error) {}
       // console.error('Failed to track timing:', error)
@@ -155,8 +155,8 @@ class AnalyticsService {}
   private hasGtag(): boolean {}
     return (
       typeof window !== 'undefined' &&'')
-      typeof window.gtag === 'function''';
-    );
+      typeof window.gtag === 'function'''
+    )
   }
   /**
    * Get Google Analytics ID
@@ -206,4 +206,4 @@ export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user
 if (typeof window !== 'undefined') {,}
   analytics.initialize(),
 }
-export default analytics;
+export default analytics

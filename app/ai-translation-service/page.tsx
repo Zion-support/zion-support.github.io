@@ -1,10 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
+import ResponsiveContainer from '../components/ResponsiveContainer'
 export default function AITranslationServicePage() {
   const features = [
     {
@@ -27,8 +26,7 @@ export default function AITranslationServicePage() {
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations and content'
     }
-  ];
-
+  ]
   const translationTypes = [
     {
       category: 'Translation Types',
@@ -46,8 +44,7 @@ export default function AITranslationServicePage() {
       category: 'Features',
       items: ['Context Awareness', 'Industry-Specific Models', 'Quality Assurance', 'Human Review', 'API Integration', 'Batch Processing']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Basic',
@@ -91,8 +88,7 @@ export default function AITranslationServicePage() {
         'SLA guarantee'
       ]
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
@@ -109,9 +105,7 @@ export default function AITranslationServicePage() {
       title: 'Global Reach',
       description: 'Expand your business to new markets with accurate translations'
     }
-  ];
-
-ursor/fix-errors-and-merge-to-main-94a7
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -119,7 +113,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         <meta name="description" content="Professional AI-powered translation services supporting 100+ languages with industry-specific models and real-time translation." />
         <meta name="keywords" content="AI translation, machine translation, document translation, multilingual, language services" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -143,7 +136,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -166,7 +158,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Translation Types Section */}
         <section className="py-20 bg-white/5">
           <ResponsiveContainer>
@@ -193,7 +184,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -216,7 +206,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 bg-white/5">
           <ResponsiveContainer>
@@ -260,7 +249,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -280,9 +268,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
-  );
+  )
 }
-ursor/fix-errors-and-merge-to-main-94a7

@@ -1,10 +1,8 @@
-import React from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react";
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React from 'react'
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react"
+import EnhancedSEO from '../components/EnhancedSEO'
 export default function TeamPage() {
   const teamMembers = [
     {
@@ -91,15 +89,13 @@ export default function TeamPage() {
       achievements: ["Engineering Leader", "Software Architecture Expert", "Open Source Maintainer"],
       icon: <Zap className="w-6 h-6" />
     }
-  ];
-
+  ]
   const stats = [
     { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
     { number: "15+", label: "Years Average Experience", icon: <Award className="w-6 h-6" /> },
     { number: "25+", label: "PhD Holders", icon: <Brain className="w-6 h-6" /> },
     { number: "100+", label: "Certifications", icon: <CheckCircle className="w-6 h-6" /> }
-  ];
-
+  ]
   const values = [
     {
       title: "Innovation First",
@@ -121,8 +117,7 @@ export default function TeamPage() {
       description: "We stay ahead by constantly learning and adapting to new technologies",
       icon: <Clock className="w-8 h-8" />
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -131,7 +126,6 @@ export default function TeamPage() {
         keywords="team, experts, AI researchers, engineers, technology leaders, cybersecurity experts, cloud architects"
         canonical="https://ziontechgroup.com/team"
       />
-      
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto text-center">
@@ -146,7 +140,6 @@ export default function TeamPage() {
           </p>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +156,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Team Members */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -177,7 +169,6 @@ export default function TeamPage() {
               Meet the visionary leaders driving innovation and excellence at Zion Tech Group.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div
@@ -190,7 +181,6 @@ export default function TeamPage() {
                   <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform duration-300">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </div>
-                  
                   {/* Member Info */}
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-300 transition-colors">
@@ -202,12 +192,10 @@ export default function TeamPage() {
                       <span className="text-gray-300 text-sm">{member.expertise}</span>
                     </div>
                   </div>
-                  
                   {/* Bio */}
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {member.bio}
                   </p>
-                  
                   {/* Achievements */}
                   <div className="mb-4">
                     <h4 className="text-white font-medium mb-2 text-sm">Key Achievements:</h4>
@@ -220,7 +208,6 @@ export default function TeamPage() {
                       ))}
                     </div>
                   </div>
-                  
                   {/* Social Links */}
                   <div className="flex justify-center space-x-4">
                     {member.social.linkedin && (
@@ -268,7 +255,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -282,7 +268,6 @@ export default function TeamPage() {
               The principles that guide our team and shape our approach to technology and innovation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div
@@ -306,7 +291,6 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -336,6 +320,5 @@ export default function TeamPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
-ursor/fix-errors-and-merge-to-main-94a7

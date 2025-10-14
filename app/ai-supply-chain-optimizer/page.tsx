@@ -1,18 +1,16 @@
-import { ArrowRight } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-ursor/fix-errors-and-merge-to-main-94a7
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
+import { ArrowRight } from 'lucide-react'
+import { Globe } from 'lucide-react'
+import { BarChart3 } from 'lucide-react'
+import { Zap } from 'lucide-react'
+import { Target } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Star } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
+import { TrendingUp } from 'lucide-react'
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
 export default function AISupplyChainOptimizerPage() {
   const features = [
     {
@@ -35,8 +33,7 @@ export default function AISupplyChainOptimizerPage() {
       title: 'Risk Management',
       description: 'Identify and mitigate supply chain risks with AI-powered risk assessment'
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -80,8 +77,7 @@ export default function AISupplyChainOptimizerPage() {
         'Dedicated account manager'
       ]
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
@@ -98,9 +94,7 @@ export default function AISupplyChainOptimizerPage() {
       title: 'Global Scale',
       description: 'Manage complex supply chains across multiple countries and time zones'
     }
-  ];
-
-ursor/fix-errors-and-merge-to-main-94a7
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -108,7 +102,6 @@ ursor/fix-errors-and-merge-to-main-94a7
         <meta name="description" content="Optimize your supply chain with AI-powered route planning, inventory management, and predictive analytics." />
         <meta name="keywords" content="supply chain optimization, AI logistics, inventory management, route optimization" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
@@ -132,7 +125,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -155,7 +147,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <ResponsiveContainer>
@@ -178,7 +169,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -222,7 +212,6 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <ResponsiveContainer>
@@ -242,9 +231,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </ResponsiveContainer>
         </section>
-ursor/fix-errors-and-merge-to-main-94a7
       </div>
     </div>
-  );
+  )
 }
-ursor/fix-errors-and-merge-to-main-94a7

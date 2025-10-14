@@ -1,27 +1,24 @@
 export interface Service {
-  id: string;
+  id: string
   title: string,
-        description: string;
-ursor/fix-errors-and-merge-to-main-94a7
-  shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
-  icon: string;
-  features: string[];
+        description: string
+  shortDescription: string
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT'
+  icon: string
+  features: string[]
   pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number};
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
+    basic: number
+    pro: number
+    enterprise: number}
+  benefits: string[]
+  useCases: string[]
+  technologies: string[]
   contactInfo: {
-    phone: string;
-    email: string;
+    phone: string
+    email: string
     website: string;}
-  };
-
+  }
 }
-
 export const services: Service[] = [
   {
     id: 'ai-solutions',
@@ -36,7 +33,7 @@ export const services: Service[] = [
       'Computer Vision',
       'Predictive Analytics',
       'AI Chatbots',
-      'Automated Decision Making;
+      'Automated Decision Making
     ],
     pricing: {
       basic: 5000,
@@ -49,7 +46,7 @@ export const services: Service[] = [
       'Better Decision Making',
       'Automated Processes',
       'Improved Customer Experience',
-      'Competitive Advantage;
+      'Competitive Advantage
     ],
     useCases: [
       'Customer Service Automation',
@@ -57,7 +54,7 @@ export const services: Service[] = [
       'Fraud Detection',
       'Content Generation',
       'Data Analysis',
-      'Process Optimization;
+      'Process Optimization
     ],
     technologies: [
       'TensorFlow',
@@ -66,17 +63,16 @@ export const services: Service[] = [
       'Hugging Face',
       'Scikit-learn',
       'Pandas',
-      'NumPy;
+      'NumPy
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'ai@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-solutions;
+      website: 'https://ziontechgroup.com/ai-solutions
     },
-    href: '/ai-solutions;
+    href: '/ai-solutions
   },
   {
-
     id: 'cybersecurity',
     title: 'Cybersecurity',
     description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',
@@ -89,22 +85,21 @@ export const services: Service[] = [
       'Security Monitoring',
       'Compliance Management',
       'Incident Response',
-      'Security Training;
+      'Security Training
     ],
     pricing: {
       basic: 3000,
       pro: 10000,
-      enterprise: 30000;
+      enterprise: 30000
     ,
   },
     benefits: [
-
       'Enhanced Security',
       'Compliance Assurance',
       'Risk Mitigation',
       '24/7 Monitoring',
       'Expert Support',
-      'Peace of Mind;
+      'Peace of Mind
     ],
     useCases: [
       'Network Security',
@@ -112,7 +107,7 @@ export const services: Service[] = [
       'Compliance Auditing',
       'Threat Hunting',
       'Security Awareness',
-      'Incident Management;
+      'Incident Management
     ],
     technologies: [
       'SIEM',
@@ -121,17 +116,16 @@ export const services: Service[] = [
       'SOAR',
       'NGFW',
       'WAF',
-      'DLP;
+      'DLP
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'security@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cybersecurity;
+      website: 'https://ziontechgroup.com/cybersecurity
     },
-    href: '/cybersecurity;
+    href: '/cybersecurity
   },
   {
-
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure',
     description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',
@@ -144,7 +138,7 @@ export const services: Service[] = [
       'DevOps Implementation',
       'Cloud Management',
       'Auto-scaling',
-      'Disaster Recovery;
+      'Disaster Recovery
     ],
     pricing: {
       basic: 2000,
@@ -157,7 +151,7 @@ export const services: Service[] = [
       'High Availability',
       'Flexibility',
       'Global Reach',
-      'Reduced Maintenance;
+      'Reduced Maintenance
     ],
     useCases: [
       'Application Hosting',
@@ -165,7 +159,7 @@ export const services: Service[] = [
       'Backup Solutions',
       'Development Environments',
       'Production Workloads',
-      'Hybrid Cloud;
+      'Hybrid Cloud
     ],
     technologies: [
       'AWS',
@@ -174,14 +168,14 @@ export const services: Service[] = [
       'Docker',
       'Kubernetes',
       'Terraform',
-      'Ansible;
+      'Ansible
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'cloud@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cloud-infrastructure;
+      website: 'https://ziontechgroup.com/cloud-infrastructure
     },
-    href: '/cloud-infrastructure;
+    href: '/cloud-infrastructure
   },
   {
     id: 'digital-transformation',
@@ -196,7 +190,7 @@ export const services: Service[] = [
       'System Integration',
       'Change Management',
       'Digital Strategy',
-      'Technology Adoption;
+      'Technology Adoption
     ],
     pricing: {
       basic: 10000,
@@ -209,7 +203,7 @@ export const services: Service[] = [
       'Increased Agility',
       'Cost Reduction',
       'Competitive Advantage',
-      'Future-Ready Operations;
+      'Future-Ready Operations
     ],
     useCases: [
       'Process Modernization',
@@ -217,7 +211,7 @@ export const services: Service[] = [
       'Workflow Automation',
       'Digital Strategy',
       'Change Management',
-      'Technology Adoption;
+      'Technology Adoption
     ],
     technologies: [
       'RPA',
@@ -226,14 +220,14 @@ export const services: Service[] = [
       'Data Analytics',
       'Cloud Platforms',
       'Mobile Solutions',
-      'IoT Integration;
+      'IoT Integration
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'transformation@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/digital-transformation;
+      website: 'https://ziontechgroup.com/digital-transformation
     },
-    href: '/digital-transformation;
+    href: '/digital-transformation
   },
   {
     id: '5g-solutions',
@@ -248,7 +242,7 @@ export const services: Service[] = [
       'Mobile Optimization',
       'Enterprise Services',
       'Edge Computing',
-      'Network Slicing;
+      'Network Slicing
     ],
     pricing: {
       basic: 15000,
@@ -261,7 +255,7 @@ export const services: Service[] = [
       'Massive Connectivity',
       'Enhanced Mobility',
       'Edge Computing',
-      'Future-Ready Infrastructure;
+      'Future-Ready Infrastructure
     ],
     useCases: [
       'Smart Cities',
@@ -269,7 +263,7 @@ export const services: Service[] = [
       'Autonomous Vehicles',
       'Remote Work',
       'AR/VR Applications',
-      'Real-time Analytics;
+      'Real-time Analytics
     ],
     technologies: [
       '5G NR',
@@ -278,14 +272,14 @@ export const services: Service[] = [
       'MEC',
       'IoT Platforms',
       'SDN/NFV',
-      'AI/ML;
+      'AI/ML
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: '5g@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/5g-solutions;
+      website: 'https://ziontechgroup.com/5g-solutions
     },
-    href: '/5g-solutions;
+    href: '/5g-solutions
   },
   {
     id: 'micro-saas',
@@ -300,7 +294,7 @@ export const services: Service[] = [
       'Subscription Management',
       'Scalable Architecture',
       'Multi-tenancy',
-      'Analytics Dashboard;
+      'Analytics Dashboard
     ],
     pricing: {
       basic: 8000,
@@ -313,7 +307,7 @@ export const services: Service[] = [
       'Cost-Effective',
       'Easy Maintenance',
       'Multi-tenant Support',
-      'Revenue Generation;
+      'Revenue Generation
     ],
     useCases: [
       'Business Tools',
@@ -321,7 +315,7 @@ export const services: Service[] = [
       'Industry Solutions',
       'API Services',
       'Data Management',
-      'Automation Tools;
+      'Automation Tools
     ],
     technologies: [
       'React',
@@ -330,19 +324,17 @@ export const services: Service[] = [
       'Redis',
       'Docker',
       'Kubernetes',
-      'Stripe API;
+      'Stripe API
     ],
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'saas@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/micro-saas-solutions;
+      website: 'https://ziontechgroup.com/micro-saas-solutions
     },
-    href: '/micro-saas-solutions;
+    href: '/micro-saas-solutions
   }
-];
-
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category)};
-
+  return services.filter(service => service.category === category)}
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id)};
+  return services.find(service => service.id === id)}

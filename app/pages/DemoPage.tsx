@@ -1,8 +1,7 @@
 
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   PlayIcon,
   CpuChipIcon,
@@ -14,8 +13,7 @@ import {
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const DemoPage: React.FC = () => {
   const demos = [
     {
@@ -78,10 +76,9 @@ const DemoPage: React.FC = () => {
       ],
       duration: '22 minutes'
     }
-  ];
-
+  ]
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Experience our technology solutions with interactive demos. See AI, cybersecurity, cloud infrastructure, and more in action." />
@@ -93,7 +90,7 @@ const DemoPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -128,7 +125,7 @@ const DemoPage: React.FC = () => {
               Choose from our comprehensive range of technology demonstrations
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {demos.map((demo, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
@@ -141,11 +138,11 @@ const DemoPage: React.FC = () => {
                     <p className="text-purple-400 text-sm">{demo.duration}</p>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {demo.description}
                 </p>
-                
+
                 <ul className="space-y-3 mb-6">
                   {demo.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -154,7 +151,7 @@ const DemoPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
@@ -175,7 +172,7 @@ const DemoPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Schedule a personalized demo tailored to your business needs
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-slate-800 rounded-xl p-6">
               <PhoneIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -190,7 +187,7 @@ const DemoPage: React.FC = () => {
               <p className="text-gray-400 text-sm">Quick response guaranteed</p>
             </div>
           </div>
-          
+
           <Link
             to="/contact"
             className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
@@ -201,7 +198,6 @@ const DemoPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
-
-export default DemoPage;
+  )
+}
+export default DemoPage

@@ -1,21 +1,20 @@
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
 }
 
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -24,7 +23,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -33,15 +32,14 @@ class ProductionErrorBoundary extends Component<Props, State> {
       error,
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    });
-
+    })
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       }
 
     // In production, you would typically send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      this.logErrorToService(error, errorInfo)
     }
   }
 
@@ -57,8 +55,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
         url: window.location.href,
         userId: 'anonymous', // You would get this from your auth context
         sessionId: this.getSessionId(),
-      };
-
+      }
       // Send to your error reporting service
       // Example: Sentry, LogRocket, Bugsnag, etc.
       await fetch('/api/errors', {
@@ -67,34 +64,29 @@ class ProductionErrorBoundary extends Component<Props, State> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorData),
-      });
+      })
     } catch (reportingError) {
       // Fallback: log to console if reporting fails
       }
-  };
-
+  }
   private getSessionId = (): string => {
     // Generate or retrieve session ID
-    let sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId')
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionStorage.setItem('sessionId', sessionId)
     }
-    return sessionId;
-  };
-
+    return sessionId
+  }
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
   private handleReload = () => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  }
   private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   private handleReportError = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -102,21 +94,18 @@ class ProductionErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       url: window.location.href,
       timestamp: new Date().toISOString(),
-    };
-
+    }
     // Create mailto link with error details
-    const subject = `Error Report - ${this.state.errorId}`;
-    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
-    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.open(mailtoLink);
-  };
-
+    const subject = `Error Report - ${this.state.errorId}`
+    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`
+    const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(mailtoLink)
+  }
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -125,11 +114,11 @@ class ProductionErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
@@ -194,11 +183,11 @@ class ProductionErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ProductionErrorBoundary;
+export default ProductionErrorBoundary

@@ -1,8 +1,7 @@
 
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CurrencyDollarIcon,
   CheckIcon,
@@ -12,8 +11,7 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -67,8 +65,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const addOns = [
     {
       name: 'AI Development',
@@ -94,8 +91,7 @@ const PricingPage: React.FC = () => {
       period: '/hour',
       description: 'Custom training sessions for your team'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -109,7 +105,7 @@ const PricingPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -123,7 +119,8 @@ const PricingPage: React.FC = () => {
               and upgrade as your needs grow, or go straight to Enterprise for comprehensive solutions.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Pricing Plans */}
       <section className="py-20 bg-slate-900">
@@ -136,7 +133,7 @@ const PricingPage: React.FC = () => {
               Flexible pricing options to meet your business needs
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
               <div key={index} className={`bg-slate-800 rounded-xl p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
@@ -147,7 +144,7 @@ const PricingPage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
@@ -156,7 +153,7 @@ const PricingPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -165,7 +162,7 @@ const PricingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -179,7 +176,8 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Add-ons Section */}
       <section className="py-20 bg-slate-800/50">
@@ -192,7 +190,7 @@ const PricingPage: React.FC = () => {
               Enhance your plan with these additional services
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300">
@@ -205,7 +203,8 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-slate-900">
@@ -218,23 +217,23 @@ const PricingPage: React.FC = () => {
               Common questions about our pricing and services
             </p>
           </div>
-          
+
           <div className="space-y-8">
             <div className="bg-slate-800 rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Can I change my plan anytime?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
             </div>
-            
+
             <div className="bg-slate-800 rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Do you offer custom solutions?</h3>
               <p className="text-gray-300">Absolutely! Our Enterprise plan includes fully customized solutions tailored to your specific business requirements.</p>
             </div>
-            
+
             <div className="bg-slate-800 rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">What's included in support?</h3>
               <p className="text-gray-300">All plans include email support. Professional and Enterprise plans include priority support with faster response times and additional communication channels.</p>
             </div>
-            
+
             <div className="bg-slate-800 rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for Starter and Professional plans. Enterprise plans may include setup costs depending on the complexity of your requirements.</p>
@@ -252,7 +251,7 @@ const PricingPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Contact us to discuss your specific needs and get a personalized quote
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -267,9 +266,10 @@ const PricingPage: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Info */}
+      {/* Contact Info */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
@@ -291,9 +291,7 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
     </>
-  );
-};
-
-export default PricingPage;
+  )
+}
+export default PricingPage

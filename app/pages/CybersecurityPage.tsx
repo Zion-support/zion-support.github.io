@@ -1,6 +1,6 @@
-import React from 'react';;
-import { Link } from 'react-router-dom';;
-import SEO from '../components/SEO;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO
 import {
   ShieldCheckIcon,
   LockClosedIcon,
@@ -10,8 +10,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';
-} from '@heroicons/react/24/outline;
+  MapPinIcon'
+} from '@heroicons/react/24/outline
 export default function CybersecurityPage() {
   const services = [
     {
@@ -47,7 +47,7 @@ export default function CybersecurityPage() {
     { name: 'PCI DSS', status: 'Compliant' },
     { name: 'NIST', status: 'Compliant' }
   ]
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 const CybersecurityPage: React.FC = () => {
   return (
     <>

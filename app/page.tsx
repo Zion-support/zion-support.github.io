@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -10,9 +10,8 @@ import {
   GlobeAltIcon,
   SignalIcon,
   BriefcaseIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from './components/FuturisticBackground';
-
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from './components/FuturisticBackground'
 const HomePage: React.FC = () => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -38,8 +37,7 @@ const HomePage: React.FC = () => {
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
     ]
-  };
-
+  }
   const features = [
     {
       icon: CpuChipIcon,
@@ -65,8 +63,7 @@ const HomePage: React.FC = () => {
       description: "Transform your data into actionable insights",
       color: "from-orange-500 to-red-500"
     }
-  ];
-
+  ]
   const services = [
     {
       title: 'AI Solutions',
@@ -104,8 +101,7 @@ const HomePage: React.FC = () => {
       icon: BriefcaseIcon,
       href: '/it-solutions'
     }
-  ];
-
+  ]
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -117,9 +113,9 @@ const HomePage: React.FC = () => {
             canonical="https://ziontechgroup.com"
             structuredData={structuredData}
           />
-          
+
           <StructuredData type="Organization" data={structuredData} />
-          
+
           <StructuredData 
             type="WebSite" 
             data={{
@@ -142,13 +138,13 @@ const HomePage: React.FC = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         {/* Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
         <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
@@ -161,7 +157,7 @@ const HomePage: React.FC = () => {
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
@@ -193,7 +189,7 @@ const HomePage: React.FC = () => {
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
@@ -224,7 +220,7 @@ const HomePage: React.FC = () => {
               Our proven track record speaks for itself
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -269,7 +265,6 @@ const HomePage: React.FC = () => {
         </div>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
-  );
-};
-
-export default HomePage;
+  )
+}
+export default HomePage

@@ -1,32 +1,31 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Wifi } from 'lucide-react';
-import { Building2 } from 'lucide-react';
-import { Briefcase } from 'lucide-react';
-import { Lightbulb } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
+import React from 'react'
+import { ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Star } from 'lucide-react'
+import { Users } from 'lucide-react'
+import { Clock } from 'lucide-react'
+import { DollarSign } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Code } from 'lucide-react'
+import { Database } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Settings } from 'lucide-react'
+import { Target } from 'lucide-react'
+import { TrendingUp } from 'lucide-react'
+import { PieChart } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
+import { Heart } from 'lucide-react'
+import { Globe } from 'lucide-react'
+import { Smartphone } from 'lucide-react'
+import { Network } from 'lucide-react'
+import { Lock } from 'lucide-react'
+import { Cpu } from 'lucide-react'
+import { Wifi } from 'lucide-react'
+import { Building2 } from 'lucide-react'
+import { Briefcase } from 'lucide-react'
+import { Lightbulb } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
 const Page = () => {
   const features = [
     {
@@ -44,8 +43,7 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
@@ -53,7 +51,7 @@ const Page = () => {
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -83,18 +81,18 @@ const Page = () => {
               </Link>
             </div>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Zion AI Customer Insights
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your customer data into actionable insights with AI-powered analytics. 
             Predict behavior, prevent churn, and deliver personalized experiences that drive growth.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
               href="#pricing"
@@ -181,10 +179,9 @@ const Page = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
-  );
-};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+</div>
+</>
+  )
+}
+const page = React.lazy(() => import('./page'))
+export default page

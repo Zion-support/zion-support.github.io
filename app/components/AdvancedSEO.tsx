@@ -1,29 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 interface AdvancedSEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  readingTime?: number;
+  title: string
+  description: string
+  keywords?: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  ogType?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: object
+  noindex?: boolean
+  nofollow?: boolean
+  lang?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  readingTime?: number
 }
 
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
@@ -51,16 +50,15 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   tags = [],
   readingTime
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullOgTitle = ogTitle || fullTitle;
-  const fullOgDescription = ogDescription || description;
-  const fullTwitterTitle = twitterTitle || fullTitle;
-  const fullTwitterDescription = twitterDescription || description;
-  const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
-  const fullTwitterImage = twitterImage || fullOgImage;
-  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-  const currentDate = new Date().toISOString();
-
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullOgTitle = ogTitle || fullTitle
+  const fullOgDescription = ogDescription || description
+  const fullTwitterTitle = twitterTitle || fullTitle
+  const fullTwitterDescription = twitterDescription || description
+  const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630'
+  const fullTwitterImage = twitterImage || fullOgImage
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '')
+  const currentDate = new Date().toISOString()
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -110,8 +108,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         "category": "Software"
       }
     ]
-  };
-
+  }
   // Article structured data if publishedTime is provided
   const articleStructuredData = publishedTime ? {
     "@context": "https://schema.org",
@@ -141,8 +138,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "articleSection": section,
     "keywords": tags.join(', '),
     "wordCount": readingTime ? readingTime * 200 : undefined
-  } : null;
-
+  } : null
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -251,7 +247,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         })}
       </script>
     </Helmet>
-  );
-};
-
-export default AdvancedSEO;
+  )
+}
+export default AdvancedSEO

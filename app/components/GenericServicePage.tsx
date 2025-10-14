@@ -1,13 +1,12 @@
-import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
-
+import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react"
 interface GenericServicePageProps {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  benefits: string[];
-  pricing?: string;
-  category: "AI" | "IT" | "MicroSAAS" | "Emerging";
+  title: string
+  description: string
+  icon: React.ComponentType<any>
+  features: string[]
+  benefits: string[]
+  pricing?: string
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging"
 }
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
@@ -24,11 +23,9 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     IT: "from-blue-500 to-cyan-600",
     MicroSAAS: "from-green-500 to-emerald-600",
     Emerging: "from-orange-500 to-red-600",
-  };
-
+  }
   const categoryColor =
-    categoryColors[category] || "from-cyan-500 to-purple-600";
-
+    categoryColors[category] || "from-cyan-500 to-purple-600"
   return (
     <>
       <Helmet>
@@ -197,7 +194,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
         </main>
       </div>
     </>
-  );
-};
-
-export default GenericServicePage;
+  )
+}
+export default GenericServicePage

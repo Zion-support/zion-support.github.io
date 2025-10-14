@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react'
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,34 +8,26 @@ export default function ContactPage()    {
     phone: '',
     subject: '',
     message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })};
-
+    })}
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false)};
-
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setIsSubmitted(true)
+    setIsSubmitting(false)}
   const contactInfo = [
     {
-
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
-
     },
     {'
       icon: 'Email','
@@ -52,11 +43,8 @@ export default function ContactPage()    {
     },
     {'
       icon: 'Clock',
-
       description: '9:00 AM - 6:00 PM EST'
-
       description: '9:00 AM - 6:00 PM EST'}
-
     }
   ]
   const subjects = [
@@ -67,16 +55,14 @@ export default function ContactPage()    {
     'Digital Transformation'
     '5G Implementation'
     'Other'
-  ];
-
+  ]
   return (
     <>
-      <EnhancedSEO 
+      <EnhancedSEO
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -87,12 +73,11 @@ export default function ContactPage()    {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
+            Ready to transform your business with AI and IT solutions?
             Get in touch with our experts today.
           </p>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -101,7 +86,7 @@ export default function ContactPage()    {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
+              const Icon = info.icon
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
@@ -115,14 +100,12 @@ export default function ContactPage()    {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Send us a Message
           </h2>
-          
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
@@ -134,7 +117,7 @@ export default function ContactPage()    {
               </p>
               <button
                 onClick={() => {
-                  setIsSubmitted(false);
+                  setIsSubmitted(false)
                   setFormData({
                     name: '',
                     email: '',
@@ -157,7 +140,6 @@ export default function ContactPage()    {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -169,7 +151,6 @@ export default function ContactPage()    {
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -181,7 +162,6 @@ export default function ContactPage()    {
                 </div>
               ))}
             </div>
-
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
@@ -202,7 +182,6 @@ export default function ContactPage()    {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
@@ -218,7 +197,6 @@ export default function ContactPage()    {
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"
@@ -244,4 +222,3 @@ export default function ContactPage()    {
       </section>
     </div>
   )}
-ursor/fix-errors-and-merge-to-main-94a7

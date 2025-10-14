@@ -1,38 +1,32 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-
-console.log('🔧 Fixing page files...');
-
+import fs from 'fs'
+import path from 'path'
+console.log('🔧 Fixing page files...')
 // Function to recursively find all page files
 function getAllPageFiles(dir) {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
+  let files = []
+  const items = fs.readdirSync(dir)
   for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
-      files = files.concat(getAllPageFiles(fullPath));
+      files = files.concat(getAllPageFiles(fullPath))
     } else if (stat.isFile() && item === 'page.tsx') {
-      files.push(fullPath);
+      files.push(fullPath)
     }
   }
-  
-  return files;
+
+  return files
 }
 
 // Function to create a proper page template
 function createPageTemplate(filePath) {
-  const fileName = path.basename(path.dirname(filePath));
-  const title = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  
-  return `'use client';
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
+  const fileName = path.basename(path.dirname(filePath))
+  const title = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+  return `'use client'
+import React from "react"
+import { Helmet } from "react-helmet-async"
 export default function Page() {
   return (
     <>
@@ -49,40 +43,37 @@ export default function Page() {
         </div>
       </div>
     </>
-  );
+  )
 }
-`;
+`
 }
 
 // Main function
 function main() {
   try {
-    const files = getAllPageFiles('/workspace/app');
-    let fixedCount = 0;
-    let errorCount = 0;
-    
-    console.log(`📁 Found ${files.length} page files to process...`);
-    
+    const files = getAllPageFiles('/workspace/app')
+    let fixedCount = 0
+    let errorCount = 0
+    console.log(`📁 Found ${files.length} page files to process...`)
     for (const filePath of files) {
       try {
-        const content = createPageTemplate(filePath);
-        fs.writeFileSync(filePath, content, 'utf8');
-        fixedCount++;
-        console.log(`✅ Fixed: ${filePath}`);
+        const content = createPageTemplate(filePath)
+        fs.writeFileSync(filePath, content, 'utf8')
+        fixedCount++
+        console.log(`✅ Fixed: ${filePath}`)
       } catch (error) {
-        errorCount++;
-        console.error(`❌ Error processing ${filePath}:`, error.message);
+        errorCount++
+        console.error(`❌ Error processing ${filePath}:`, error.message)
       }
     }
-    
-    console.log(`\n🎉 Page fixing complete!`);
-    console.log(`✅ Fixed: ${fixedCount} files`);
-    console.log(`❌ Errors: ${errorCount} files`);
-    
+
+    console.log(`\n🎉 Page fixing complete!`)
+    console.log(`✅ Fixed: ${fixedCount} files`)
+    console.log(`❌ Errors: ${errorCount} files`)
   } catch (error) {
-    console.error('❌ Fatal error:', error.message);
-    process.exit(1);
+    console.error('❌ Fatal error:', error.message)
+    process.exit(1)
   }
 }
 
-main();
+main()
