@@ -10,12 +10,14 @@ export const accessibilityChecker = {
           issue: 'Missing alt text'
         })
       }
+    })
     
     return issues
   },
   
   checkHeadingStructure: () => {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    const issues: Array<{ element: HTMLElement; issue: string }> = []
     let previousLevel = 0
     
     headings.forEach((heading) => {
