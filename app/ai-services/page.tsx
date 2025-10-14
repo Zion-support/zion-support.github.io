@@ -4,93 +4,105 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star } from "lucide-react";
 
 const AiServicesPage = () => {
+  const stats = [
+    { icon: <div className="w-8 h-8 bg-cyan-500 rounded-lg flex items-center justify-center">📊</div>, value: "500+", label: "Projects Completed" },
+    { icon: <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">🤖</div>, value: "50+", label: "AI Models Deployed" },
+    { icon: <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">⚡</div>, value: "99.9%", label: "Uptime" },
+    { icon: <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">👥</div>, value: "200+", label: "Happy Clients" }
+  ];
+
   const aiServices = [
     {
-      title: "AI Video Generation",
-      description: "Create professional videos with AI-powered tools",
-      icon: "🎥",
-      price: "$2,500/month",
-      features: ["Automated video creation", "Voice synthesis", "Scene generation", "Multi-language support"],
-      color: "from-blue-500 to-cyan-500",
-      popular: true
-    },
-    {
-      title: "AI Content Creation",
-      description: "Generate high-quality content at scale",
-      icon: "✍️",
-      price: "$1,800/month",
-      features: ["Blog posts", "Social media content", "Email campaigns", "SEO optimization"],
-      color: "from-purple-500 to-pink-500"
+      title: "AI Content Generation",
+      description: "Create high-quality content at scale with our advanced AI writing tools.",
+      icon: <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">✍️</div>,
+      features: ["Blog Posts", "Social Media", "Product Descriptions", "Email Campaigns"],
+      price: "$299/month",
+      popular: true,
+      href: "/contact"
     },
     {
       title: "AI Analytics",
-      description: "Advanced data analysis and insights",
-      icon: "📊",
-      price: "$2,200/month",
-      features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "Data visualization"],
-      color: "from-green-500 to-emerald-500"
+      description: "Transform your data into actionable insights with machine learning.",
+      icon: <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">📈</div>,
+      features: ["Predictive Analytics", "Real-time Dashboards", "Custom Reports", "Data Visualization"],
+      price: "$499/month",
+      popular: false,
+      href: "/contact"
+    },
+    {
+      title: "AI Automation",
+      description: "Automate repetitive tasks and workflows with intelligent automation.",
+      icon: <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">⚙️</div>,
+      features: ["Process Automation", "Workflow Optimization", "Task Scheduling", "Integration"],
+      price: "$399/month",
+      popular: false,
+      href: "/contact"
     },
     {
       title: "AI Cybersecurity",
-      description: "Protect your business with AI security",
-      icon: "🔒",
-      price: "$3,000/month",
-      features: ["Threat detection", "Automated response", "Security monitoring", "Compliance reporting"],
-      color: "from-red-500 to-orange-500"
+      description: "Protect your business with AI-powered security solutions.",
+      icon: <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">🛡️</div>,
+      features: ["Threat Detection", "Anomaly Detection", "Security Monitoring", "Incident Response"],
+      price: "$599/month",
+      popular: false,
+      href: "/contact"
     },
     {
-      title: "AI Workflow Automation",
-      description: "Streamline business processes",
-      icon: "⚙️",
-      price: "$1,500/month",
-      features: ["Process automation", "Task scheduling", "Integration management", "Performance monitoring"],
-      color: "from-indigo-500 to-purple-500"
+      title: "AI Video Generation",
+      description: "Create professional videos with AI-powered video generation tools.",
+      icon: <div className="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center">🎥</div>,
+      features: ["Video Creation", "Voice Synthesis", "Animation", "Editing"],
+      price: "$799/month",
+      popular: false,
+      href: "/contact"
     },
     {
       title: "AI Document Processing",
-      description: "Intelligent document analysis and data extraction",
-      icon: "📄",
-      price: "$1,200/month",
+      description: "Intelligent document analysis and data extraction.",
+      icon: <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">📄</div>,
       features: ["OCR Processing", "Data Extraction", "Document Classification", "Form Recognition"],
-      color: "from-gray-500 to-slate-500"
+      price: "$299/month",
+      popular: false,
+      href: "/contact"
     }
   ];
 
   const features = [
     {
-      title: "Expert AI Team",
-      description: "Our team of AI specialists brings years of experience in machine learning and artificial intelligence.",
-      icon: "👥"
+      title: "Expert Team",
+      description: "Our AI specialists have years of experience in machine learning and artificial intelligence.",
+      icon: <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">👨‍💻</div>
     },
     {
       title: "Custom Solutions",
-      description: "Tailored AI solutions designed specifically for your business needs and objectives.",
-      icon: "🎯"
+      description: "Tailored AI solutions designed specifically for your business needs and requirements.",
+      icon: <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">🎯</div>
     },
     {
       title: "24/7 Support",
-      description: "Round-the-clock support to ensure your AI systems run smoothly and efficiently.",
-      icon: "🕐"
+      description: "Round-the-clock support to ensure your AI systems run smoothly at all times.",
+      icon: <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">🕒</div>
     }
   ];
 
   const testimonials = [
     {
       name: "Sarah Johnson",
-      title: "CEO, TechCorp",
-      content: "Zion Tech Group's AI services transformed our business operations. The results exceeded our expectations.",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group's AI services transformed our business operations. The automation solutions saved us 40 hours per week.",
       rating: 5
     },
     {
       name: "Michael Chen",
-      title: "CTO, InnovateLab",
-      content: "The AI analytics platform provided insights we never knew existed. Highly recommended!",
+      role: "CTO, DataFlow",
+      content: "The AI analytics platform provided insights we never knew existed. Our decision-making process is now data-driven.",
       rating: 5
     },
     {
       name: "Emily Rodriguez",
-      title: "Director, DataFlow",
-      content: "Professional, reliable, and innovative. Their AI solutions are cutting-edge and effective.",
+      role: "Marketing Director, GrowthCo",
+      content: "The AI content generation tools helped us scale our content marketing by 300% while maintaining quality.",
       rating: 5
     }
   ];
@@ -130,6 +142,27 @@ const AiServicesPage = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center mb-4">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,12 +183,16 @@ const AiServicesPage = () => {
                   </div>
                 )}
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
-                    <span className="text-2xl">{service.icon}</span>
+                  <div className="text-cyan-400">
+                    {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">
+                    {service.title}
+                  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-gray-300 mb-4">
+                  {service.description}
+                </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
@@ -165,9 +202,11 @@ const AiServicesPage = () => {
                   ))}
                 </ul>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  <span className="text-2xl font-bold text-white">
+                    {service.price}
+                  </span>
                 </div>
-                <Link to="/contact"
+                <Link to={service.href}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center block"
                 >
                   Learn More
@@ -188,10 +227,14 @@ const AiServicesPage = () => {
             {features.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">{feature.icon}</span>
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -215,7 +258,7 @@ const AiServicesPage = () => {
                 <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.title}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             ))}

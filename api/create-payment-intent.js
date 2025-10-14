@@ -3,7 +3,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
+  
   try {
     const { amount, currency = 'usd', metadata = {} } = req.body;
 
@@ -24,7 +24,6 @@ export default async function handler(req, res) {
       status: 'requires_payment_method',
       metadata: metadata,
     };
-
     res.status(200).json({ paymentIntent: mockPaymentIntent });
   } catch (error) {
     console.error('Error creating payment intent:', error);

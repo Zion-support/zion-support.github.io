@@ -12,6 +12,8 @@ export const useAnalyticsContext = () => {
     data,
     loading,
     error,
-    // Add your hook methods here
+    setData,
+    setLoading,
+    setError,
   };
 };

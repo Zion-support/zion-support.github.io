@@ -1,49 +1,115 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  HomeIcon, 
+  UserGroupIcon, 
+  CogIcon, 
+  DocumentTextIcon,
+  ChartBarIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  CpuChipIcon,
+  XMarkIcon,
+  Bars3Icon
+} from '@heroicons/react/24/outline';
 
-const Sidebar: React.FC = () => {
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+    { name: 'IT Services', href: '/it-services', icon: CloudIcon },
+    { name: 'Analytics', href: '/analytics', icon: ChartBarIcon },
+    { name: 'Security', href: '/security', icon: ShieldCheckIcon },
+    { name: 'About', href: '/about', icon: UserGroupIcon },
+    { name: 'Contact', href: '/contact', icon: DocumentTextIcon },
+  ];
+
+  const additionalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Our Team", href: "/team" },
+    { name: "Documentation", href: "/docs" },
+    { name: "Careers", href: "/careers" }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Sidebar - Zion Tech Group</title>
-        <meta name="description" content="Professional Sidebar services by Zion Tech Group." />
-        <meta name="keywords" content="Sidebar, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Sidebar
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional Sidebar services designed to help your business grow and succeed.
-          </p>
-        </div>
+    <>
+      {/* Mobile menu button */}
+      <div className="lg:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="bg-slate-800 text-white p-2 rounded-md hover:bg-slate-700 transition-colors"
+        >
+          {isOpen ? (
+            <XMarkIcon className="h-6 w-6" />
+          ) : (
+            <Bars3Icon className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+      {/* Sidebar */}
+      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-slate-900 transform ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      } lg:translate-x-0 transition-transform duration-300 ease-in-out lg:static lg:inset-0`}>
         
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
-            <p className="text-gray-300">
-              Our team of experts provides cutting-edge solutions tailored to your specific needs.
-            </p>
+        <div className="flex flex-col h-full">
+          {/* Logo */}
+          <div className="flex items-center justify-center h-16 px-4 bg-slate-800">
+            <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
           </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your systems run smoothly at all times.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-            <p className="text-gray-300">
-              Track record of delivering successful projects and exceeding client expectations.
-            </p>
+
+          {/* Navigation */}
+          <nav className="flex-1 px-4 py-6 space-y-2">
+            {navigation.map((item) => {
+              const isActive = location.pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    isActive
+                      ? 'bg-cyan-600 text-white'
+                      : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <item.icon className="mr-3 h-5 w-5" />
+                  {item.name}
+                </Link>
+              );
+            })}
+          </nav>
+
+          {/* Additional Links */}
+          <div className="px-4 py-4 border-t border-slate-700">
+            <div className="space-y-2">
+              {additionalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Overlay for mobile */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

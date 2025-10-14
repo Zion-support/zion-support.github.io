@@ -1,36 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { HelmetProvider } from "react-helmet-async";
+import AdvancedSEOOptimizer from "../app/components/AdvancedSEOOptimizer";
+import AdvancedPerformanceMonitor from "../app/components/AdvancedPerformanceMonitor";
 
-// Mock components that might not exist
-const MockAdvancedPerformanceMonitor = () => {
-  return <div>Advanced Performance Monitor</div>;
+// Mock component for testing error boundary
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
+  }
+  return <div>No error content</div>;
 };
 
-const MockEnhancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>;
-};
+describe("Advanced Components", () => {
 
-const MockAdvancedSEOOptimizer = () => {
-  return <div>Advanced SEO Optimizer</div>;
-};
-
-describe('Advanced Components', () => {
-  describe('MockAdvancedPerformanceMonitor', () => {
-    it('renders without crashing', () => {
-      render(<MockAdvancedPerformanceMonitor />);
-      expect(screen.getByText('Advanced Performance Monitor')).toBeInTheDocument();
-    });
-  });
-
-  describe('MockEnhancedErrorBoundary', () => {
-    it('renders children when no error occurs', () => {
+  describe("AdvancedSEOOptimizer", () => {
+    test("renders without crashing", () => {
       render(
-        <MockEnhancedErrorBoundary>
-          <div>Child component</div>
-        </MockEnhancedErrorBoundary>
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
+        </HelmetProvider>
       );
-      expect(screen.getByText('Child component')).toBeInTheDocument();
+      expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
     });
   });
 

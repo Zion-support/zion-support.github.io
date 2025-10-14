@@ -34,4 +34,4 @@ export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> =
       {children}
     </AnalyticsContext.Provider>
   );
-};
+export { AnalyticsContext }
