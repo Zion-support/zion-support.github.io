@@ -1,5 +1,5 @@
 export const apiCache = {
-  cache: new Map<string;, { data: unknown; timestamp: number; ttl: number ;}>(),
+  cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
   
   set: (key: string, data: unknown, ttl: number = 300000) => {
     apiCache.cache.set(key, {
@@ -16,17 +16,14 @@ export const apiCache = {
     const now = Date.now();
     if (now - item.timestamp > item.ttl) {
       apiCache.cache.delete(key);
-      return null;
-    }
+      return null}
     
     return item.data;
   },
   
   clear: () => {
-    apiCache.cache.clear();
-  },
+    apiCache.cache.clear()},
   
   delete: (key: string) => {
-    apiCache.cache.delete(key);
-  }
+    apiCache.cache.delete(key)}
 };

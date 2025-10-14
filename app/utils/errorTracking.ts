@@ -21,15 +21,7 @@ export const errorTracking = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-<<<<<<< HEAD
-        description: _error.message;,
-        fatal: false;,
-        custom_parameters: context
-=======
-        description: _error.message,
-        fatal: false,
-        custom_parameters: context;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+
       });
         description: error.message,
         fatal: false;

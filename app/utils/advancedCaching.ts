@@ -3,8 +3,7 @@ export const advancedCaching = {
     const item = {
       value,
       timestamp: Date.now(),
-      ttl: ttl * 1000;
-    };
+      ttl: ttl * 1000};
     localStorage.setItem(key, JSON.stringify(item));
   },
   
@@ -17,8 +16,7 @@ export const advancedCaching = {
     
     if (now - parsed.timestamp > parsed.ttl) {
       localStorage.removeItem(key);
-      return null;
-    }
+      return null}
     
     return parsed.value;
   },
@@ -28,8 +26,7 @@ export const advancedCaching = {
       const keys = Object.keys(localStorage);
       keys.forEach(key => {
         if (key.includes(pattern)) {
-          localStorage.removeItem(key);
-        }
+          localStorage.removeItem(key)}
       });
     } else {
       localStorage.clear();
