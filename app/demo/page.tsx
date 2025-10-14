@@ -19,7 +19,7 @@ const PagePage = () => {
       </div>
     </>
   );
-}';
+};
 
-export default PagePage';
+export default PagePage;
 

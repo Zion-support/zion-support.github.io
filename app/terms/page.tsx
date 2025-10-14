@@ -24,7 +24,7 @@ const TermsPage = () => {
       </div>
     </>
   );
-}';
+};
 
-export default TermsPage';
+export default TermsPage;
 

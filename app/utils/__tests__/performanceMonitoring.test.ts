@@ -6,7 +6,7 @@ describe('Performance Monitoring', () => {;
   it('should be implemented', () => {;;
     expect(true).toBe(true);
 }
-  });
+  );
 });
 describe('Performance Monitoring', () => {;
   ;;
@@ -14,5 +14,5 @@ describe('Performance Monitoring', () => {;
     expect(usePerformanceMonitor).toBeDefined();
 }
 
-  });
+  );
 });

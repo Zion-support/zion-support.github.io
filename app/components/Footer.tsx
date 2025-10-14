@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight  } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()';
+    const currentYear = new Date().getFullYear();
   
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },

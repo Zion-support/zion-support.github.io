@@ -24,7 +24,7 @@ const PrivacyPage = () => {
       </div>
     </>
   );
-}';
+};
 
-export default PrivacyPage';
+export default PrivacyPage;
 

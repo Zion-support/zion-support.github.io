@@ -4,6 +4,6 @@ import { createContext   } from 'react';
   trackPageView: "(pageNam,e: string) => void"};;
 const  createContext<AnalyticsContextType | undefined>(undefined)';
 export type { AnalyticsContextType }
-export type { AnalyticsContextType }';
+export type { AnalyticsContextType };
 </AnalyticsContextType>
 

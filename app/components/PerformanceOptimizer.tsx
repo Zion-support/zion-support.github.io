@@ -1,7 +1,7 @@
 import React, { useEffect, ReactNode } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: ReactNode';
+  children: ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
@@ -12,7 +12,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
-      });
+      );
     };
 
     const optimizeFonts = () => {
@@ -35,7 +35,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.href = resource;
         link.as = resource.endsWith('.css') ? 'style' : 'script;
         document.head.appendChild(link);
-      });
+      );
     };
 
     // Run optimizations
