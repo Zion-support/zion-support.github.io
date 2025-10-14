@@ -12,14 +12,13 @@ const LazyWrapper: React.FC = () => {
 =======
 interface LazyWrapperProps {
   children: React.ReactNode;
-  fallback?: React.ReactNode;
 }
 >>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
-export default function LazyWrapper({ children, fallback }: LazyWrapperProps) {
+export default function LazyWrapper({ children }: LazyWrapperProps) {
   return (
-    <React.Suspense fallback={fallback || <div>Loading...</div>}>
+    <div className="lazy-wrapper">
       {children}
-    </React.Suspense>
+    </div>
   );
 }

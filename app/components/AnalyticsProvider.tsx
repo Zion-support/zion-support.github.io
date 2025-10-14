@@ -23,25 +23,25 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 export default AnalyticsProvider;
 =======
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
-  // const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-  //   // Analytics tracking implementation
-  //   console.log('Analytics Event:', event, properties);
-  // };
+  const trackEvent = (event: string, properties?: Record<string, unknown>) => {
+    // Analytics tracking implementation
+    console.log('Analytics Event:', event, properties);
+  };
 
-  // const trackPageView = (page: string) => {
-  //   // Page view tracking implementation
-  //   console.log('Page View:', page);
-  // };
+  const trackPageView = (page: string) => {
+    // Page view tracking implementation
+    console.log('Page View:', page);
+  };
 
-  // const value = {
-  //   trackEvent,
-  //   trackPageView,
-  // };
+  const contextValue = {
+    trackEvent,
+    trackPageView,
+  };
 
   return (
-    <div>
+    <AnalyticsContext.Provider value={contextValue}>
       {children}
-    </div>
+    </AnalyticsContext.Provider>
   );
 }
 
