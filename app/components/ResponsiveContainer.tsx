@@ -1,29 +1,12 @@
 import React from 'react';
-interface ResponsiveContainerProps { children: React.ReactNode
-  className?: string }
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = '' }) => {'
 
+const ResponsiveContainer = () => {
   return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>`
-  children: React.ReactNode;
-  className?: string;}
-
-}
-');
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = '' }) => { ';
-  return ( }
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>;
-      { children }
-
-    </div>)
-  );
-export default ResponsiveContainer;
-
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>{ children }
-
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-white mb-4">ResponsiveContainer</h2>
+      <p className="text-gray-300">This component is under construction.</p>
     </div>
   );
-export default ResponsiveContainer
-
 };
-export default ResponsiveContainer;'
+
+export default ResponsiveContainer;

@@ -1,181 +1,154 @@
-<<<<<<< HEAD
 import React from 'react';
-
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Target, Workflow } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, CheckCircle, TrendingUp, Settings, Target, Workflow } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-=======
->>>>>>> origin/main
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
-import EnhancedSEO from '../components/EnhancedSEO'
-import ResponsiveContainer from '../components/ResponsiveContainer'
-import FuturisticCard from '../components/FuturisticCard'
-import FuturisticButton from '../components/FuturisticButton'
-<<<<<<< HEAD
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton";
 const AIAutomationPlatform = () => {
   const features = [
     {
-      title: "Workflow Automation",""
-      description: "Automate complex business processes with AI-powered workflows",""
-      icon: <Workflow className="w-6 h-6" />,"
-""
+      title: "Workflow Automation",
+      description: "Automate complex business processes with AI-powered workflows",
+      icon: <Workflow className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
-"
-    },""
-    { title: "Smart Decision Making",""
-      description: "AI-driven decision making for automated business processes",""
-      icon: <Brain className="w-6 h-6" />,""
+    },
+    {
+      title: "Smart Analytics",
+      description: "Get insights and predictions from your data automatically",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
-"
-    },""
-    { title: "Process Optimization",""
-      description: "Continuously optimize processes using machine learning",""
-      icon: <Settings className="w-6 h-6" />,""
+    },
+    {
+      title: "AI Integration",
+      description: "Seamlessly integrate AI capabilities into existing systems",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
-"
-    },""
-    { title: "Integration Hub",""
-      description: "Connect and automate across all your business systems",""
-      icon: <Zap className="w-6 h-6" />,""
+    },
+    {
+      title: "Custom Solutions",
+      description: "Tailored automation solutions for your specific needs",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
-
     }
   ];
-;
-const benefits = ["
-""
-    "70% process efficiency gain",""
-    "Automated decision making",""
-    "Seamless integrations",""
-    "Real-time optimization",""
-    "Scalable workflows",""
-    "Cost reduction"
+
+  const benefits = [
+    "Reduce manual work by up to 80%",
+    "Improve accuracy and consistency",
+    "Scale operations without scaling costs",
+    "Get real-time insights and reporting",
+    "24/7 automated monitoring",
+    "Easy integration with existing tools"
   ];
 
   return (
-    <>"
-      <EnhancedSEO""
-        title="AI Automation Platform - Intelligent Process Automation | Zion Tech Group""""
-        description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises.""""
-        keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA""
-      />"
-""
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>"
-        { /* Hero Section */ }""
-        <section className="relative overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div></div>
-"
-          <ResponsiveContainer>""
-            <div className="relative z-10 text-center py-20"></div>"""
-              <div className="flex items-center justify-center mb-6"></div>"""
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />"""
-                <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>"
-              </div>"
-""
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Automation Platform
-              </h1>"
-              ""
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Transform your business with AI-powered automation. 
-                Automate workflows, optimize processes, and make intelligent decisions at scale.
-              </p>"
-              ""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-                <FuturisticButton""
-                  icon={ <Right className="w-5 h-5" />>> }
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Automation Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our AI-powered automation platform. Streamline workflows, boost efficiency, and scale operations." />
+      </Helmet>
+      <EnhancedSEO />
 
-                >
-                  Get Started Today
-                </FuturisticButton>
-                <FuturisticButton"
-""
-                  variant="outline"""
-                  icon={ <Play className="w-5 h-5" />>> }
-
-                >
-                  View Demo
-                </FuturisticButton>
-              </div>
-            </div>
-          </ResponsiveContainer>
+      <ResponsiveContainer>
+        {/* Hero Section */}
+        <section className="py-20 text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AI Automation Platform
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business operations with our intelligent automation platform. 
+            Streamline workflows, reduce costs, and scale efficiently with AI-powered solutions.
+          </p>
+          <FuturisticButton className="text-lg px-8 py-4">
+            Start Your Automation Journey
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </FuturisticButton>
         </section>
 
         {/* Features Section */}
-"
-          <ResponsiveContainer>""
-            <div className="text-center mb-16"></div>"""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-                Advanced Automation Features"
-              </h2>""
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">"
-                Everything you need to automate and optimize your business processes.
-              </p>
-            </div>"
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-
-                  </p>)
-                </FuturisticCard>)
-              ))
-            </div>
-          </ResponsiveContainer>
+        <section className="py-20">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">
+            Powerful Automation Features
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <FuturisticCard key={index} className="p-6">
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center text-white mb-4`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </FuturisticCard>
+            ))}
+          </div>
         </section>
 
         {/* Benefits Section */}
-"
-          <ResponsiveContainer>""
-            <div className="text-center mb-16"></div>"""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-                Why Choose AI Automation Platform?"
-              </h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-                Experience intelligent automation that transforms your business operations.
+        <section className="py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our Platform?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Our AI automation platform is designed to help businesses of all sizes 
+                streamline their operations and achieve unprecedented efficiency.
               </p>
-            </div>"
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-                </div>
-              ))
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </ResponsiveContainer>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8">
+              <div className="text-center">
+                <Target className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+                <h3 className="text-2xl font-bold text-white mb-4">Proven Results</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Efficiency Increase</span>
+                    <span className="text-2xl font-bold text-green-400">80%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Cost Reduction</span>
+                    <span className="text-2xl font-bold text-blue-400">60%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-300">Time Savings</span>
+                    <span className="text-2xl font-bold text-purple-400">70%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
-"
-          <ResponsiveContainer>""
-            <div className="text-center"></div>"""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
-                Ready to Automate Your Business?"
-              </h2>""
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
-                Join thousands of businesses already using AI automation to streamline their operations.
-              </p>
-              <FuturisticButton"
-""
-                size="lg"""
-                icon={ <Zap className="w-6 h-6" />>> }
-
-              >
-                Start Your Automation Journey
-              </FuturisticButton>
-            </div>
-          </ResponsiveContainer>
+        <section className="py-20 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Automate Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses that have transformed their operations with our AI automation platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton className="text-lg px-8 py-4">
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </FuturisticButton>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold rounded-lg transition-colors">
+              Schedule Demo
+            </button>
+          </div>
         </section>
-
-      </div>
-
+      </ResponsiveContainer>
     </div>
-  );"
-"
-}
-"
+  );
+};
+
+export default AIAutomationPlatform;

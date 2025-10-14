@@ -1,11 +1,12 @@
-</div>
-  )
-  if (fullScreen) {
-    return (
+import React from 'react';
 
-        {spinner}
-      </div>
-    )
-  return spinner;
-
+const LoadingSpinner = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-bold text-white mb-4">LoadingSpinner</h2>
+      <p className="text-gray-300">This component is under construction.</p>
+    </div>
+  );
 };
+
+export default LoadingSpinner;
