@@ -1,5 +1,4 @@
 // 404 - Basic implementation
-export default function 404() {
+export default function NotFound() {
   return null;
-
 }
