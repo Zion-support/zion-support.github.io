@@ -24,9 +24,9 @@ const App: React.FC = () => {
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>
-            <AccessibilityEnhancer />
-            <SEOOptimizer />
-            <Router>
+            <AccessibilityEnhancer>
+              <SEOOptimizer>
+                <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <Navigation />
                 <main className="relative z-10" id="main-content" role="main">
@@ -41,7 +41,9 @@ const App: React.FC = () => {
                 </main>
                 <Footer />
               </div>
-            </Router>
+                </Router>
+              </SEOOptimizer>
+            </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
