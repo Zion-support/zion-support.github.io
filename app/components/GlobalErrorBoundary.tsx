@@ -48,8 +48,10 @@ GlobalErrorBoundary
             </button>1998
           </div>
         </div>
-      </div>
-    </div>
-  );
+      );
+    }
+
+    return this.props.children;
+  }
 }
 

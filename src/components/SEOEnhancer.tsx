@@ -64,4 +64,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {children}
   );
 }
-export default SEOEnhancer;
+
+;

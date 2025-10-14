@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -22,19 +22,20 @@ const Footer: React.FC = () => {
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Support', href: '/support' }
   ];
 
-  const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
+  const resources = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
     { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Help Center', href: '/help' }
   ];
 
   const socialLinks = [
@@ -44,9 +45,10 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -86,6 +88,7 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+        </div>
 
           {/* Company */}
           <div>

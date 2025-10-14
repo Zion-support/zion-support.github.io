@@ -98,21 +98,4 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => response || fetch(event.request))
-  );
-});
-`;
-
-  const swPath = path.join(__dirname, '..', 'public', 'sw.js');
-  fs.writeFileSync(swPath, serviceWorkerContent);
-  console.log('✅ Service worker updated');
-
-  console.log('🎉 Performance optimization completed!');
-};
-
-optimizePerformance();
+}

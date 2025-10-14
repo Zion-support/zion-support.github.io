@@ -1,17 +1,3 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const ImprovedNavigation: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Improved - Zion Tech Group</title>
-        <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Improved </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 Professional improved navigation services
@@ -44,8 +30,8 @@ We provide comprehensive improved navigation
                   Ongoing support
                 </li>1885
               </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our improved navigation services?
@@ -78,7 +64,7 @@ We provide comprehensive improved navigation
           </a>2946
         </div>
       </section>
-    </div>
+    </div>)
   );
 };
 

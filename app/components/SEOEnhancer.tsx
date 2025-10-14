@@ -1,14 +1,12 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
 interface SEOEnhancerProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: unknown}
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: string;
+}
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions','
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.','

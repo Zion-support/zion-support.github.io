@@ -1,7 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const EnhancedLoading: React.FC = () => {
+import React from "react";
+
+const EnhancedLoading = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

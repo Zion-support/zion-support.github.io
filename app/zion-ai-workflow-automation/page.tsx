@@ -1,6 +1,7 @@
-import React from 'react'
-'use client'
-export default function ZionAiWorkflowAutomationPage() {
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+const Page = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">

@@ -1,17 +1,3 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const MobileNavigation: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Mobile - Zion Tech Group</title>
-        <meta name="description" content="Professional mobile navigation services by Zion Tech Group." />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Mobile </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 Professional mobile navigation services
@@ -44,8 +30,8 @@ We provide comprehensive mobile navigation
                   Ongoing support
                 </li>1873
               </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our mobile navigation services?
@@ -78,7 +64,7 @@ We provide comprehensive mobile navigation
           </a>2930
         </div>
       </section>
-    </div>
+    </div>)
   );
 };
 

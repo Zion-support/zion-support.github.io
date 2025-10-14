@@ -1,6 +1,15 @@
-import React from 'react'
-'use client'
-export default function AiMobileAppDevelopmentPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Database, Code, Smartphone, Cloud } from 'lucide-react';;
+
+const AIMobileAppDevelopmentPage: React.FC = () =>&apos;,
+      icon: <Code className="w-8 h-8 text-blue-600" />&apos;,
+      icon: <Smartphone className="w-8 h-8 text-green-600" />&apos;,
+      icon: <Database className="w-8 h-8 text-purple-600" />&apos;,
+      icon: <Cloud className="w-8 h-8 text-orange-600" />&apos;
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">

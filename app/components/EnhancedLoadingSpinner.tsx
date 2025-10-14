@@ -1,6 +1,22 @@
-import React from 'react'
-'use client'
-export default function ComponentsPage() {
+import React from 'react';
+
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">

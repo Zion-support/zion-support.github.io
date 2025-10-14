@@ -1,7 +1,33 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Page() {
+import React from 'react';
+
+const DynamicContentShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: "🚀",
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence that transforms your business operations",
+      benefits: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+    },
+    {
+      icon: "⚡",
+      title: "Lightning Fast Performance",
+      description: "Optimized for speed with 99.9% uptime and sub-second response times",
+      benefits: ["Edge Computing", "CDN Optimization", "Real-time Processing"]
+    },
+    {
+      icon: "🔒",
+      title: "Enterprise Security",
+      description: "Bank-level security with comprehensive compliance and data protection",
+      benefits: ["End-to-End Encryption", "SOC 2 Compliance", "GDPR Ready"]
+    },
+    {
+      icon: "📊",
+      title: "Advanced Analytics",
+      description: "Real-time insights and predictive analytics for data-driven decisions",
+      benefits: ["Business Intelligence", "Predictive Modeling", "Custom Dashboards"]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -49,7 +75,7 @@ DynamicContentShowcase
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

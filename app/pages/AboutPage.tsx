@@ -33,12 +33,11 @@ return (    <>
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"
       </Helmet>
       
-      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -67,7 +66,7 @@ Empowering businesses through innovative technology solutions
                   </div>
                   <div className="text-gray-600">{stat.label}</div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>

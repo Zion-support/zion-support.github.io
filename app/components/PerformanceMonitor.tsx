@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
   lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
   ttfb: number | null;
-  loadTime: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -62,27 +61,33 @@ ttfb: null
           
           <div className="space-y-2 text-xs">
             <div className="flex justify-between">
-              <span>FCP:</span>
-              <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-                {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>LCP:</span>
-              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+              <span className="text-gray-300">LCP:</span>
+              <span className={getMetricColor(metrics.lcp, { good: 2500, poor: 4000 })}>
                 {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between">
-              <span>TTFB:</span>
-              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-                {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
+              <span className="text-gray-300">FID:</span>
+              <span className={getMetricColor(metrics.fid, { good: 100, poor: 300 })}>
+                {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between">
-              <span>Load Time:</span>
-              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}>
-                {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}
+              <span className="text-gray-300">CLS:</span>
+              <span className={getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+                {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-300">FCP:</span>
+              <span className={getMetricColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+                {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-300">TTFB:</span>
+              <span className={getMetricColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+                {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
               </span>
             </div>
           </div>

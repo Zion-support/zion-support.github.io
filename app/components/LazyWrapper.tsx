@@ -1,13 +1,6 @@
-import React, { Suspense, lazy, ComponentType } from 'react'
-import LoadingSpinner from './LoadingSpinner'
-interface LazyWrapperProps {
-  children: React.ReactNode
-  fallback?: React.ReactNode}
+import React from "react";
 
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  children, 
-  fallback = <LoadingSpinner size="lg" text="Loading component..." /> 
-}) => {
+const LazyWrapper: React.FC = () => {
   return (
     <Suspense fallback={fallback}>
       {children}

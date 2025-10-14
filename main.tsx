@@ -29,10 +29,9 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        // Service worker registered successfully
-      })
-      .catch((registrationError) => {
-        // Service worker registration failed
-      });
-  });
+        // Service worker registered successfully;
+}
+}
+}
+}
 }

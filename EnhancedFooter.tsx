@@ -1,5 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const EnhancedFooter: React.FC = () => {
   return (

@@ -33,6 +33,23 @@ if (!isEnabled) return;
     setUser,
     isEnabled,
   }
+  return context;
+};
+
+interface AnalyticsContextProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
+  const value = {
+    trackEvent: (event: string, properties?: Record<string, unknown>) => {
+      console.log('Analytics Event:', event, properties);
+    },
+    trackPageView: (page: string) => {
+      console.log('Page View:', page);
+    }
+  };
+
   return (
 <AnalyticsContext.Provider value={value}>
       {children}

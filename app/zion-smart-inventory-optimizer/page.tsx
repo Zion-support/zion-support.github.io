@@ -1,12 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function ZionSmartInventoryOptimizer() {
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Smart Inventory Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional Smart Inventory Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">

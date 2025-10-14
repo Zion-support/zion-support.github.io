@@ -1,12 +1,13 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>5g Implementation - Zion Tech Group</title>
+        <meta name="description" content="5g Implementation services and solutions from Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -49,7 +50,7 @@ Page
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

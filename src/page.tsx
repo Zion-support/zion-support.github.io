@@ -1,5 +1,7 @@
-import React from 'react';
-export default function PagePage() {
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -10,4 +12,6 @@ export default function PagePage() {
       </div>
     </div>
   );
-}
+};
+
+export default PagePage;

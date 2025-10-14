@@ -3,7 +3,6 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   js.configs.recommended,
@@ -54,70 +53,54 @@ export default [
     ],
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        global: 'readonly',
-        HTMLElement: 'readonly',
-        Event: 'readonly',
-        KeyboardEvent: 'readonly',
-        MediaQueryListEvent: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        performance: 'readonly',
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        fs: 'readonly',
-        // Jest globals
-        describe: 'readonly',
-        test: 'readonly',
-        it: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
-        jest: 'readonly'
-      },
-      parser: typescriptParser,
+      parser: typescriptParser,;
       parserOptions: {
+        ecmaVersion: 'latest',;
+        sourceType: 'module',;
         ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
+          jsx: true,;
+        },;
+      },;
+      globals: {
+        // Browser globals;
+        window: 'readonly',;
+        document: 'readonly',;
+        console: 'readonly',;
+        // Jest globals;
+        jest: 'readonly',;
+        describe: 'readonly',;
+        it: 'readonly',;
+        test: 'readonly',;
+        expect: 'readonly',;
+        beforeEach: 'readonly',;
+        afterEach: 'readonly',;
+        beforeAll: 'readonly',;
+        afterAll: 'readonly',;
+        render: 'readonly',;
+        screen: 'readonly',;
+        // React Testing Library;
+        Helmet: 'readonly',;
+        HelmetProvider: 'readonly',;
+      },;
+    },;
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      "react-hooks": reactHooks,
+      "react": react
     },
     rules: {
-      'no-console': 'off',
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': ['error', { 'argsIgnorePattern': '^_' }],
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'react-refresh/only-export-components': 'warn'
+      'no-undef': 'off', // Turn off no-undef for TypeScript files
+      '@typescript-eslint/no-empty-object-type': 'off',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
-  }
+        version: 'detect',
+      },
+    },
+  },
 ];

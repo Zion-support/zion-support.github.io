@@ -26,7 +26,8 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon
               return (
-                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+  <>
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
@@ -37,16 +38,6 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             })}
           </div>2108
         </div>
-        {/* Open Positions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {openPositions.map((position, _index) => (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                  <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
-                    {position.type}
                   </span>
                 </div>
                 <div className="flex items-center text-gray-400 mb-3">
@@ -60,16 +51,9 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                   Apply Now
                 </button>3411
               </div>
-            ))}
+            ))
           </div>
         </div>
-        {/* Company Culture */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>
               <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>

@@ -1,13 +1,13 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Infrastructure() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const CloudInfrastructurePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
+        <title>Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure solutions by Zion Tech Group." />
+        <meta name="keywords" content="cloud infrastructure, cloud services, AWS, Azure, Google Cloud, cloud migration" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -67,7 +67,9 @@ Our cloud infrastructure experts are ready to help you build a scalable, secure,
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
+"
 }
 
+export default CloudInfrastructurePage;

@@ -1,12 +1,49 @@
+'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Page() {
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+const Ai3dGenerationPage: React.FC = () => {
+  const features = [
+    {
+      title: 'VR/AR Integration',
+      description: 'Create immersive experiences and virtual environments',
+      icon: '🥽'
+    },
+    {
+      title: 'Game Asset Creation',
+      description: 'Generate 3D models for games and interactive media',
+      icon: '🎮'
+    },
+    {
+      title: 'Architectural Visualization',
+      description: 'Transform blueprints into photorealistic 3D models',
+      icon: '🏗️'
+    },
+    {
+      title: 'Product Prototyping',
+      description: 'Rapid 3D prototyping for product development',
+      icon: '📦'
+    }
+  ];
+
+  const benefits = [
+    'Text-to-3D conversion in seconds',
+    'High-quality mesh generation',
+    'Multiple format exports (OBJ, FBX, GLTF)',
+    'Real-time preview and editing',
+    'AI-powered optimization',
+    'Cloud-based processing'
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
+        <meta name="keywords" content="AI 3D generation, 3D modeling, VR AR, game assets, architectural visualization, product prototyping" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -49,7 +86,7 @@ Page
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

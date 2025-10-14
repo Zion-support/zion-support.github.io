@@ -1,18 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, { useState, useCallback } from 'react';
+
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  placeholder?: string
-  sizes?: string
-  quality?: number
-  loading?: 'lazy' | 'eager'
-  onLoad?: () => void
-  onError?: () => void}
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  loading?: 'lazy' | 'eager';
+}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -26,7 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,
   loading = 'lazy',
   onLoad,
-  onError
+  onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -73,15 +68,25 @@ return originalSrc;
   const optimizedSrc = getOptimizedSrc(src)
 
   return (
-    <>
-      {priority && (
-        <Helmet>
-          <link rel="preload" as="image" href={optimizedSrc} />
-        </Helmet>
+    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
+      {!isLoaded && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+        </div>
       )}
-      <div
-        ref={imgRef}
-        className={`relative overflow-hidden ${className}`}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        onLoad={handleLoad}
+        onError={handleError}
         style={{ width, height }}
       >
         {/* Placeholder */},

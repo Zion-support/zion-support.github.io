@@ -8,6 +8,14 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
 interface AnalyticsProviderProps {
   children: ReactNode
 }
@@ -41,10 +49,22 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     }
   }
   useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Load Google Analytics or other analytics scripts here
-      console.log('Analytics initialized');
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_TRACKING_ID}`;
+      document.head.appendChild(script);
+
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', process.env.REACT_APP_GA_TRACKING_ID || 'GA_TRACKING_ID');
     }
   }, []);
 

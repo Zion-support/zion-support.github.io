@@ -1,6 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableScreenReaderSupport = true,
+  enableKeyboardNavigation = true,
+  enableHighContrast = false,
+  enableReducedMotion = false
+}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -92,6 +106,9 @@ const AccessibilityEnhancer: React.FC = () => {
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 
+    // Listen for route changes (this would need to be integrated with your router)
+    window.addEventListener('popstate', handleRouteChange);
+    
     return () => {
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
@@ -124,12 +141,8 @@ const AccessibilityEnhancer: React.FC = () => {
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    }
-  }, []);
+    applyHighContrast();
+  }, [enableHighContrast]);
 
 return null;
 import React from 'react';

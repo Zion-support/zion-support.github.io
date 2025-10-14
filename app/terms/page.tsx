@@ -1,12 +1,44 @@
+'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { FileText, Shield, AlertTriangle, CheckCircle } from 'lucide-react'
+
 const TermsPage: React.FC = () => {
+  const sections = [
+    {
+      title: 'Acceptance of Terms',
+      content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.'
+    },
+    {
+      title: 'Use License',
+      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.'
+    },
+    {
+      title: 'Service Availability',
+      content: 'We strive to maintain high service availability but do not guarantee uninterrupted access. We reserve the right to modify or discontinue services with reasonable notice.'
+    },
+    {
+      title: 'User Responsibilities',
+      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must comply with all applicable laws and regulations.'
+    },
+    {
+      title: 'Intellectual Property',
+      content: 'All content, trademarks, and intellectual property on this website are owned by Zion Tech Group or our licensors. Users may not reproduce, distribute, or create derivative works without permission.'
+    },
+    {
+      title: 'Limitation of Liability',
+      content: 'In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, or use, arising out of or relating to the use of our services.'
+    }
+  ]
+
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />'
-        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
+        <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
+        <meta name="description" content="Read our terms of service and legal conditions for using our AI and IT services. Understand your rights and responsibilities." />
+        <meta name="keywords" content="terms of service, legal terms, conditions, user agreement, service terms, legal compliance" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -79,6 +111,26 @@ By accessing and using our services, you accept and agree to be bound by the ter
             </div>
           </div>
         </section>
+
+        {/* Contact Information */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">Questions About These Terms?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              If you have any questions about these terms of service, please contact our legal team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Contact Legal Team
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Download PDF
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </div>
     </>
   );

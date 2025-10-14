@@ -1,8 +1,4 @@
-import React from 'react'
-interface FuturisticCardProps {
-  children: React.ReactNode
-  className?: string
-  variant?: 'default' | 'glow' | 'gradient'}
+import React from "react";
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
@@ -15,9 +11,10 @@ default: 'bg-white/10',';
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''
   }
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
-    </div>
+  <>
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>{children}````
+    </>
+);
   );
 };
 

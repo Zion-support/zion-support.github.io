@@ -1,16 +1,15 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-/* global describe, test, expect, it, beforeEach */
-'use client'
-export default function Page() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const TestRunnerPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>TestRunner - Zion Tech Group</title>
         <meta name="description" content="Professional testrunner services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
 TestRunner
           </h1>506
@@ -26,7 +25,7 @@ TestRunner
                 Our team of experts delivers cutting-edge testrunner solutions.
               </p>1031
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
               <h3 className="text-lg font-semibold text-green-900 mb-2">
                 Custom Implementation
               </h3>1275
@@ -34,7 +33,7 @@ TestRunner
                 Tailored testrunner implementations for your specific requirements.
               </p>1407
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support
               </h3>1658
@@ -43,7 +42,7 @@ TestRunner
               </p>1782
             </div>
           </div>
-          <div className="mt-12">
+          <div className="mt-12"></div>"
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today
             </button>1987

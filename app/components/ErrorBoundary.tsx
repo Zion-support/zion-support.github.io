@@ -1,10 +1,10 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -18,19 +18,11 @@ error: Error | null;
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    }
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    }
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -45,9 +37,6 @@ console.error('ErrorBoundary caught an error:', error, errorInfo);
 
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-
-    // In production, you might want to log this to an error reporting service
-    // Example: logErrorToService(error, errorInfo);
   }
 
   handleReset = () => {
@@ -78,22 +67,27 @@ console.error('ErrorBoundary caught an error:', error, errorInfo);
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
-We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-
+            
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-Error Details (Development Only)                </summary>
-                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development Only)
+                </summary>
+                <div className="bg-black/50 rounded-lg p-4 text-xs text-red-300 font-mono overflow-auto">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
+                  <div>
+                    <strong>Stack:</strong>
+                    <pre className="mt-1 whitespace-pre-wrap">
+                      {this.state.error.stack}
+                    </pre>
+                  </div>
                   {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack Trace:</strong>
+                    <div className="mt-2">
+                      <strong>Component Stack:</strong>
                       <pre className="mt-1 whitespace-pre-wrap">
                         {this.state.errorInfo.componentStack}
                       </pre>
@@ -102,20 +96,21 @@ Error Details (Development Only)                </summary>
                 </div>
               </details>
             )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
               >
-                <RefreshCw className="w-4 h-4" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               
-              <Link
-                to="/"
-className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"              >
-                <Home className="w-4 h-4" />
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200"
+              >
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </Link>
             </div>
@@ -160,6 +155,9 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
               </div>
             </div>
           </div>
+        <div className="p-4"></div>
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }

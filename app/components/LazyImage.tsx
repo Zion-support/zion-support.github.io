@@ -1,12 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const LazyImage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
+      <Helmet></Helmet>
         <title>Lazy Image - Zion Tech Group</title>
-        <meta name="description" content="Professional lazy image services by Zion Tech Group." />
+        <meta name="description" content="Professional lazy image services by Zion Tech Group." />"
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">

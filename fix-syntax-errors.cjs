@@ -1,55 +1,66 @@
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors in a file;
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');';
-    // Fix missing commas in object literals and arrays;
-    // Look for patterns like: key: value\n  key2: value2;
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing commas in JSX props;
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');';
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');';
-    // Fix incomplete function calls - add missing closing parentheses;
-    // Look for patterns like: lazy(() => import("./path/page")\nconst;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');';
-    // Fix missing closing parentheses in lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');';
-    // Fix missing commas after lazy imports;
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');';
-    // Fix incomplete JSX elements;
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');';
-    // Fix missing closing tags in JSX;
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');';
-    // Fix missing commas in array elements;
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');';
-    // Fix missing closing brackets in objects;
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');';
-    // Fix incomplete function declarations;
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');';
-    // Fix missing export statements;
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');';
-    // Clean up multiple empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
-    // Remove any remaining orphaned markers;
-    content = content.replace(/^<<<<<<<|^;
-      return true;
-    }
-    
-    return false;
-  } catch (_error) {
-    global.console._error(`  ❌ Error processing ${filePath}:`, _error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c;
-    return false;
-  }
+// Function to create a proper page template
+function createPageTemplate(title, description) {
+  return `'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}`;
 }
 
-        }
-      }
-    } catch (_error) {
-      // Skip directories that can't be read';
-    }
-  } else {
-    global.console.log(`File not found: ${filePath}`);
-  }
+// Find all page.tsx files
+const pageFiles = glob.sync('app/**/page.tsx');
 
+console.log(`Found ${pageFiles.length} page files to process`);
+
+pageFiles.forEach(filePath => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has syntax errors (contains malformed patterns)
+    if (content.includes(';""') || (content.includes('import') && content.includes('""')) || content.includes('<div></div>') || content.includes('<>    <div></div>')) {
+      console.log(`Fixing: ${filePath}`);
+      
+      // Extract title from path
+      const pathParts = filePath.split('/');
+      const folderName = pathParts[pathParts.length - 2];
+      const title = folderName.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      
+      const description = `${title} services and solutions from Zion Tech Group`;
+      
+      // Create new content
+      const newContent = createPageTemplate(title, description);
+      
+      // Write the fixed content
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+});
+
+console.log('Syntax error fixing completed!');

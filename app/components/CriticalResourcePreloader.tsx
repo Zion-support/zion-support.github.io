@@ -1,7 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const CriticalResourcePreloader: React.FC = () => {
+import React from "react";
+
+const CriticalResourcePreloader = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

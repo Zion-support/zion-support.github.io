@@ -1,7 +1,16 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const ImprovedSidebar: React.FC = () => {
+import React from "react";
+import { Link } from "react-router-dom";
+import { Home, Users, Settings, BarChart3, Mail, Phone, MapPin } from "lucide-react";
+
+const ImprovedSidebar = () => {
+  const navigationItems = [
+    { name: "Home", href: "/", icon: Home },
+    { name: "About", href: "/about", icon: Users },
+    { name: "Services", href: "/services", icon: Settings },
+    { name: "Analytics", href: "/analytics", icon: BarChart3 },
+    { name: "Contact", href: "/contact", icon: Mail },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

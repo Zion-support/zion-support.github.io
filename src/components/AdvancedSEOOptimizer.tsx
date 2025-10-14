@@ -77,4 +77,4 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       {children}
   );
 }
-export default AdvancedSEOOptimizer;
+;

@@ -1,5 +1,5 @@
-import '@testing-library/jest-dom';
-import React from 'react';
+// Learn more: https://github.com/testing-library/jest-dom
+require("@testing-library/jest-dom");
 
 // Mock react-router-dom
 jest.mock('react-router-dom', () => {
@@ -33,15 +33,30 @@ jest.mock('react-router-dom', () => {
   };
 });
 
-// Suppress console warnings
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  takeRecords() {
+    return [];
+  }
+  unobserve() {}
+};
+
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
-  console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
+  console.error = jest.fn((...args) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+    ) {
       return;
     }
     originalError.call(console, ...args);
-  };
+  });
 });
 
 afterAll(() => {

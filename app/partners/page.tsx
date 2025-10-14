@@ -1,52 +1,14 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { } from 'react-router-dom'
-import { Circle, Right, } from 'lucide-react'
-const PartnersPage: React.FC = () => {
-  const partners = [{
-      name: 'Microsoft','
-      logo: '🏢','
-      description: 'Strategic partnership for cloud and AI solutions','
-      category: 'Technology''},
-    {
-      name: 'Amazon Web Services','
-      logo: '☁️','
-      description: 'infrastructure and AI services collaboration','
-      category: '''},
-    {
-      name: 'Google ','
-      logo: '🔍','
-      description: 'AI and machine learning platform integration','
-      category: 'AI/ML''},
-    {
-      name: 'IBM','
-      logo: '💼','
-      description: 'Enterprise AI solutions and consulting','
-      category: 'Enterprise''},
-    {
-      name: 'Salesforce','
-      logo: '📊','
-      description: 'CRM and business intelligence integration','
-      category: 'CRM''},
-    {
-      name: 'Oracle','
-      logo: '🗄️','
-      description: 'and enterprise application solutions','
-      category: '''}
-  ]
-  const benefits = ['Access to cutting-edge technology','
-    'Joint go-to-market opportunities','
-    'Technical support and training','
-    'Co-marketing and co-selling programs','
-    'Priority access to new features','
-    'Dedicated partner success manager''
-  ]
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
   return (
-    <>
-      <Helmet>
+<>
+      <Helmet></Helmet>
         <title>Partners - Strategic Partnerships | Zion Tech Group</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
-        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />
+        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />"
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -133,7 +95,8 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
+)
   );
 };
 

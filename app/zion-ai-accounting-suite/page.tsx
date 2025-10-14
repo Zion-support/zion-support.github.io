@@ -1,5 +1,5 @@
-import React from 'react'
-'use client'
+import React from "react";
+;
 export default function ZionAiAccountingSuitePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -11,5 +11,6 @@ This page is under development.
       </div>
     </div>
   );
+
 }
 

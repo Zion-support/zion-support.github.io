@@ -35,21 +35,41 @@ const SupportPage: React.FC = () => {
       question: 'How do I get started with your AI services?','
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.''},
     {
-      question: 'What is your response time for support requests?','
-      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.''},
+      question: 'How do I get started with your AI services?',
+      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan. We\'ll guide you through every step of the process.'
+    },
     {
-      question: 'Do you offer training for your solutions?','
-      answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.''},
+      question: 'What is your typical project timeline?',
+      answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish. We provide detailed project plans with milestones and regular updates throughout the process.'
+    },
     {
-      question: 'What if I need custom development?','
-      answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.''}
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes! We offer comprehensive ongoing support including monitoring, maintenance, updates, and 24/7 technical assistance. Our support plans are tailored to your specific needs and requirements.'
+    },
+    {
+      question: 'What technologies do you work with?',
+      answer: 'We work with a wide range of technologies including Python, JavaScript, React, Node.js, AWS, Azure, Google Cloud, TensorFlow, PyTorch, and many more. We stay current with the latest technologies and best practices.'
+    },
+    {
+      question: 'How do you ensure data security?',
+      answer: 'We implement industry-standard security measures including encryption, secure data transmission, access controls, and compliance with GDPR, HIPAA, and other relevant regulations. Your data security is our top priority.'
+    },
+    {
+      question: 'Can you work with our existing systems?',
+      answer: 'Absolutely! We specialize in integrating with existing systems and can work with your current infrastructure. We\'ll assess your systems and create a seamless integration plan that works with your existing setup.'
+    }
   ]
+
+  const handleFaqToggle = (index: number) => {
+    setOpenFaq(openFaq === index ? null : index)
+  }
+
   return (
     <>
       <Helmet>
-        <title>Support - Get Help | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Live chat, phone support, documentation, and more." />'
-        <meta name="keywords" content="support, help, customer service, technical support, documentation, FAQ" />
+        <title>Support - Zion Tech Group | 24/7 Technical Support</title>
+        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Phone, email, and live chat support available." />
+        <meta name="keywords" content="technical support, customer service, help desk, AI support, IT support, 24/7 support" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -139,6 +159,74 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Contact Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Send us a Message</h2>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="How can we help?"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    placeholder="Tell us about your issue or question..."
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
       </div>
     </>
   );

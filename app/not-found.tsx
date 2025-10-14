@@ -1,7 +1,40 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-const NotFound: React.FC = () => {
+import Link from 'next/link';
+import { Home, Phone } from 'lucide-react';
+
+export default function NotFound() {
+  const popularPages = [
+    {
+      title: 'AI Services',
+      description: 'Explore our comprehensive AI and IT solutions',
+      href: '/services',
+      icon: '🤖'
+    },
+    {
+      title: 'Blog & Insights',
+      description: 'Read about latest AI trends and innovations',
+      href: '/blog',
+      icon: '📚'
+    },
+    {
+      title: 'About Us',
+      description: 'Learn more about Zion Tech Group',
+      href: '/about',
+      icon: '👥'
+    },
+    {
+      title: 'Case Studies',
+      description: 'See our success stories and client results',
+      href: '/case-studies',
+      icon: '📊'
+    },
+    {
+      title: 'Contact Us',
+      description: 'Get in touch with our AI experts',
+      href: '/contact',
+      icon: '📞'
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

@@ -1,11 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function AiChatbotBuilder() {
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">

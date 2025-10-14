@@ -20,11 +20,10 @@ const Main: React.FC = () => {
           </p>618
         </div>
       </section>
-      {/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+      <section className="py-16 px-4"></section>
+        <div className="max-w-6xl mx-auto"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center"></div>
+            <div></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
                 We provide comprehensive main
@@ -80,5 +79,6 @@ const Main: React.FC = () => {
       </section>
     </div>
   );
-}
+};
+;
 export default Main;

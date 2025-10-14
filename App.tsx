@@ -1,75 +1,95 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, useEffect, useState, useCallback } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import "./app/styles/futuristic.css";
+import "./app/styles/futuristic-enhanced.css";
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import Sidebar from "./app/components/Sidebar";
+import HomePage from "./app/page";
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
 
-// Components
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import LoadingSpinner from './app/components/LoadingSpinner';
+// Lazy load pages for better performance
+const AboutPage = React.lazy(() => import("./app/about/page"));
+const ContactPage = React.lazy(() => import("./app/contact/page"));
+const ServicesPage = React.lazy(() => import("./app/services/page"));
+const PricingPage = React.lazy(() => import("./app/pricing/page"));
+const BlogPage = React.lazy(() => import("./app/blog/page"));
+const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
+const TermsPage = React.lazy(() => import("./app/terms/page"));
+const DemoPage = React.lazy(() => import("./app/demo/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
+// Additional pages
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
+const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
+const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
+const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
+const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
 
-// Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+// 5G Services Pages
+const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
+const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
+const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
+const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
+const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
+const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
+const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 
-// Additional Pages
-import CybersecurityPage from './app/pages/CybersecurityPage';
-import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
+// Micro SAAS Services Pages
+const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
+const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
+const CustomerRelationshipManagerPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const InventoryManagementSystemPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
+const FinancialReportingToolPage = React.lazy(() => import("./app/ai-financial-analytics-pro/page"));
+const EmployeeTimeTrackerPage = React.lazy(() => import("./app/zion-performance-monitor/page"));
+const SocialMediaSchedulerPage = React.lazy(() => import("./app/zion-ai-marketing-automation/page"));
+const EmailMarketingPlatformPage = React.lazy(() => import("./app/zion-email-automation/page"));
+const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/page"));
+const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
-// Error fallback component
-export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-        </svg>
-      </div>
-      <div className="mt-4 text-center">
-        <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
-        <p className="mt-2 text-sm text-gray-500">
-          {error.message}
-        </p>
-        <div className="mt-6">
-          <button
-            onClick={resetErrorBoundary}
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-          >
-            Try again
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+
+// Additional AI Services Pages
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services Pages
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
@@ -138,13 +158,19 @@ function App() {
                 </ErrorBoundary>
               </main>
               <Footer />
+              
+              {/* Performance and SEO optimizations */}
+              <AdvancedPerformanceOptimizer />
+              <EnhancedSEOOptimizer />
+              <EnhancedAccessibilityManager />
+              <AnalyticsProvider />
               <PerformanceMonitor />
-              <AccessibilityEnhancer />
+              <WebVitalsTracker />
             </div>
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+          </FuturisticBackground>
+        </GlobalErrorBoundary>
+      </Router>
+    </HelmetProvider>
   );
 };
 

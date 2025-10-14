@@ -32,22 +32,31 @@ const DemoPage: React.FC = () => {
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
       rating: 5},
     {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5},
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      rating: 5,
+      comment: 'The AI analytics demo was incredible. We could see exactly how it would transform our data insights.'
+    },
     {
-      name: "Emily Rodriguez",
-      company: "InnovateLabs",
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5}
+      name: 'Michael Chen',
+      company: 'DataFlow Systems',
+      rating: 5,
+      comment: 'The automation demo showed us how we could save hours of manual work every day.'
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'CustomerFirst',
+      rating: 5,
+      comment: 'The chatbot demo was so realistic. It felt like talking to a real customer service agent.'
+    }
   ]
+
   return (
     <>
       <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+        <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See exactly how our technology can transform your business." />
+        <meta name="keywords" content="AI demo, technology demo, interactive demo, AI analytics, automation demo, chatbot demo" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -74,8 +83,9 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Demo Features */}
-        <section className="py-20 px-4">
+
+        {/* Demo Selector */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Interactive Demos
@@ -112,17 +122,14 @@ const DemoPage: React.FC = () => {
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
 <Play className="w-10 h-10 text-white ml-1" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
-                  <p className="text-gray-300 mb-4">See our AI solutions in action</p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                    Play </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
         {/* Testimonials */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               What Say About Our Demos
@@ -132,21 +139,22 @@ const DemoPage: React.FC = () => {
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <div key={i} className="w-5 h-5 text-yellow-400">★</div>
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">&ldquo{testimonial.content}&rdquo</p>6825
                   <div>
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-cyan-400 text-sm">{testimonial.company}</p>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to See More?
@@ -165,6 +173,8 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function ZionAIInventoryManager() {
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

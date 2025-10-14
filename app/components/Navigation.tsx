@@ -1,40 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Bars3Icon, 
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
+  Menu, 
+  X, 
+  Globe, 
+  Users, 
+  Code, 
+  Mail, 
+  Brain, 
+  Shield, 
+  Zap, 
+  ArrowRight, 
+  Star, 
+  Award, 
+  BarChart3, 
+  Cloud, 
+  Sparkles, 
+  Smartphone, 
+  Monitor,
+  Phone,
+  MapPin,
+  Database,
+  ChevronDown,
+  ChevronRight
+} from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 20);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { 
       name: 'Services', 
       href: '/services', 
@@ -94,7 +114,11 @@ const isActive = (path: string) => {
   }
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -103,6 +127,10 @@ const isActive = (path: string) => {
               <span className="text-white font-bold text-lg">Z</span>
 
             </div>
+            <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </Link>
 
 {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -112,17 +140,9 @@ const isActive = (path: string) => {
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.href)
-                        ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                    className="text-gray-300 hover:text-white transition-colors"
                   >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                    {item.name}
                   </Link>
                   
                   {/* Dropdown Menu */},
@@ -144,19 +164,19 @@ const isActive = (path: string) => {
             })}
           </div>5566
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="px-4 py-2 text-gray-300 hover:text-white transition-colors"
             >
-              Get Started
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+              Contact
+            </Link>
+            <Link
+              to="/demo"
+              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center"
+            >
+              Get Started <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
@@ -211,19 +231,30 @@ const isActive = (path: string) => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-            >
-              {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
-            </button>
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-40 bg-black bg-opacity-50" onClick={toggleMobileMenu} />
+      )}
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
+        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      }`}>
+        <div className="flex items-center justify-between p-6 border-b border-gray-700">
+          <div className="flex items-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech
+            </span>
           </div>
+          <button
+            onClick={toggleMobileMenu}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
         </div>
 
         {/* Mobile Navigation */},
@@ -267,13 +298,52 @@ const isActive = (path: string) => {
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
+                      {activeDropdown === item.name ? (
+                        <ChevronDown className="w-4 h-4" />
+                      ) : (
+                        <ChevronRight className="w-4 h-4" />
+                      )}
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className="ml-4 mt-2 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            onClick={toggleMobileMenu}
+                            className="flex items-center text-gray-400 hover:text-white transition-colors py-1"
+                          >
+                            <dropdownItem.icon className="w-4 h-4 mr-3" />
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    onClick={toggleMobileMenu}
+                    className="block text-gray-300 hover:text-white transition-colors py-2"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Mobile CTA */}
+          <div className="pt-6 border-t border-gray-700">
+            <Link
+              to="/demo"
+              onClick={toggleMobileMenu}
+              className="block w-full text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+            >
+              Get Started
+            </Link>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );

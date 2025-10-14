@@ -11,14 +11,19 @@ interface EnhancedAccessibilityProps {
   children: React.ReactNode;
 }
 
-const EnhancedAccessibility: React.FC = () => {
+interface AccessibilitySettings {
+  highContrast: boolean;
+  fontSize: number;
+  reducedMotion: boolean;
+}
+
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
-    fontSize: 'normal',
-    reducedMotion: false,
-    screenReader: false
+    fontSize: 16,
+    reducedMotion: false
   })
-  const [isVisible, setIsVisible] = useState(false)
+
   useEffect(() => {
     // Enhanced accessibility features
     const addSkipLinks = () => {
@@ -93,10 +98,10 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }));
 
   useEffect(() => {
     applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])'''
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
-    const root = document.documentElement
-    // Apply high contrast
+    const root = document.documentElement;
+    // Apply high contrast;
     if (settings.highContrast) {
       root.classList.add('high-contrast')} else {
       root.classList.remove('high-contrast')}
@@ -125,65 +130,41 @@ root.classList.add('reduced-motion');
 
   // Add CSS for accessibility features
   useEffect(() => {
-    const style = document.createElement('style')
-    style.id = 'enhanced-accessibility-styles'
-    style.textContent = `
+    const style = document.createElement('style')'''
+    style.id = 'enhanced-accessibility-styles''''
+    style.textContent = `````
       .high-contrast {
-        filter: contrast(150%) brightness(110%)}
-
-      .font-size-small {
-        font-size: 0.875rem}
-
-      .font-size-large {
-        font-size: 1.125rem}
-
-      .font-size-extra-large {
-        font-size: 1.25rem}
-
-      .reduced-motion * {
-        animation-duration: 0.01ms !important
-        animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important}
-
-      .accessibility-panel {
-        position: fixed
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important }
+      .accessibility-panel { position: fixed;
         top: 50%
-        right: -300px
+        right: -300px;
         transform: translateY(-50%)
-        width: 300px
-        background: #1e293b
-        border: 1px solid #334155
-        border-radius: 8px 0 0 8px
-        padding: 1rem
-        z-index: 1000
-        transition: right 0.3s ease
-        color: white}
-
-      .accessibility-panel.visible {
-        right: 0}
-
-      .accessibility-toggle {
-        position: fixed
+        width: 300px;
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 8px 0 0 8px;
+        padding: 1rem;
+        z-index: 1000;
+        transition: right 0.3s ease;
+        color: white }
+      .accessibility-panel.visible { right: 0 }
+      .accessibility-toggle { position: fixed;
         top: 50%
-        right: 0
+        right: 0;
         transform: translateY(-50%)
-        background: #8b5cf6
-        color: white
-        border: none
-        padding: 0.5rem
-        border-radius: 8px 0 0 8px
-        cursor: pointer
-        z-index: 1001
-        font-size: 0.875rem
-        writing-mode: vertical-rl
-        text-orientation: mixed}
-
-      .accessibility-toggle:hover {
-        background: #7c3aed}
-    `
+        background: #8b5cf6;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        border-radius: 8px 0 0 8px;
+        cursor: pointer;
+        z-index: 1001;
+        font-size: 0.875rem;
+        writing-mode: vertical-rl;
     document.head.appendChild(style)
     return () => {
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')
+      const existingStyle = document.getElementById('enhanced-accessibility-styles')'''
       if (existingStyle) {
 existingStyle.remove();
       }
@@ -191,65 +172,35 @@ existingStyle.remove();
   }, [])
 
   return (
-    <>
-      <button
-        className="accessibility-toggle"
-        onClick={toggleVisibility}
-        aria-label="Toggle accessibility options"
-        title="Accessibility Options"
-      >
-        ♿ A11y
+<>
+      <button></button>
+        ♿ A11y;
       </button>
-      
-      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
-        
-        <div className="space-y-4">
-          <div>
-            <label className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={settings.highContrast}
-                onChange={toggleHighContrast}
-                className="rounded"
-              />
+      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>"`"`'"``'"`
+        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>"
+        <div className="space-y-4">"
+          <div></>
+            <label className="flex items-center space-x-2">"
+              <input;
+              /></input>
               <span>High Contrast</span>
             </label>
           </div>
-
-          <div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>
-            <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
-                <label key={size} className="flex items-center space-x-2">
-                  <input
-                    type="radio"
-                    name="fontSize"
-                    value={size}
-                    checked={settings.fontSize === size}
-                    onChange={() => setFontSize(size)}
-                    className="rounded"
-                  />
-                  <span className="capitalize">{size}</span>
+          <div></div>
+            <label className="block text-sm font-medium mb-2">Font Size</label>"
+            <div className="space-y-2">"
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('''
+                <label key={size} className="flex items-center space-x-2">"
+                  <input;
+                  /></input>
+                  <span className="capitalize">{size}</span>"
                 </label>
-              ))}
+              )})
             </div>
           </div>
-
-          <div>
-            <p className="text-sm text-gray-300">
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
-            </p>
-            <p className="text-sm text-gray-300">
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}
-            </p>
-          </div>
-
-          <button
-            onClick={toggleVisibility}
-            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"
+          <div></div>
           >
-            Close
+            Close;
           </button>
         </div>
       </div>

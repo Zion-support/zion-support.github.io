@@ -41,8 +41,9 @@ const CloudInfrastructurePage: React.FC = () => {
   ]
 const CloudInfrastructurePage: React.FC = () => {
   return (
+  <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
-      <Helmet>
+      <Helmet></Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
         <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
@@ -63,7 +64,8 @@ const CloudInfrastructurePage: React.FC = () => {
           {services.map((service, _index) => {
             const Icon = service.icon
             return (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+  <>
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mr-4">
                     <Icon className="w-6 h-6 text-white" />
@@ -72,12 +74,11 @@ const CloudInfrastructurePage: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
-                      <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
-                      {feature}
+                  {service.features.map((feature, featureIndex
+  </>
+); => (
                     </li>
-                  ))}
+                  ))
                 </ul>
               </div>
             )

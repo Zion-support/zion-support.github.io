@@ -1,81 +1,80 @@
+'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { BookOpen, Play, Clock, Users, Star } from 'lucide-react'
+
 const TutorialsPage: React.FC = () => {
-  const tutorials = [{
+  const tutorials = [
+    {
       id: 1,
-      title: "Getting Started with AI Development",
-      description: "Learn the fundamentals of AI development and machine learning concepts.",
-      duration: "2 hours",
-      level: "Beginner",
-      instructor: "Dr. Sarah Johnson",
+      title: 'Introduction to AI and Machine Learning',
+      description: 'Learn the fundamentals of artificial intelligence and machine learning concepts.',
+      level: 'Beginner',
+      duration: '2 hours',
       rating: 4.8,
       students: 1250,
-      thumbnail: "🤖"},
+      category: 'AI & ML'
+    },
     {
       id: 2,
-      title: "Infrastructure Setup",
-      description: "Complete guide to setting up cloud infrastructure on AWS and Azure.",
-      duration: "3 hours",
-      level: "Intermediate",
-      instructor: "Michael Chen",
+      title: 'Cloud Computing Fundamentals',
+      description: 'Master the basics of cloud computing platforms and services.',
+      level: 'Intermediate',
+      duration: '3 hours',
       rating: 4.9,
       students: 980,
-      thumbnail: "☁️"},
+      category: 'Cloud'
+    },
     {
       id: 3,
-      title: "Cybersecurity Fundamentals",
-      description: "Essential cybersecurity practices and threat protection strategies.",
-      duration: "4 hours",
-      level: "Beginner",
-      instructor: "Emily Rodriguez",
+      title: 'Web Development with React',
+      description: 'Build modern web applications using React and TypeScript.',
+      level: 'Intermediate',
+      duration: '4 hours',
       rating: 4.7,
       students: 2100,
-      thumbnail: "🔒"},
+      category: 'Web Dev'
+    },
     {
       id: 4,
-      title: "Advanced Machine Learning",
-      description: "Deep dive into advanced ML algorithms and neural networks.",
-      duration: "6 hours",
-      level: "Advanced",
-      instructor: "Dr. David Kim",
+      title: 'Cybersecurity Best Practices',
+      description: 'Learn essential cybersecurity measures to protect your business.',
+      level: 'Advanced',
+      duration: '2.5 hours',
       rating: 4.9,
       students: 750,
-      thumbnail: "🧠"},
+      category: 'Security'
+    },
     {
       id: 5,
-      title: "DevOps Best Practices",
-      description: "Learn modern DevOps practices and CI/CD pipeline implementation.",
-      duration: "5 hours",
-      level: "Intermediate",
-      instructor: "Lisa Wang",
-      rating: 4.8,
-      students: 1100,
-      thumbnail: "⚙️"},
+      title: 'Database Design and Optimization',
+      description: 'Design efficient databases and optimize performance.',
+      level: 'Intermediate',
+      duration: '3.5 hours',
+      rating: 4.6,
+      students: 890,
+      category: 'Database'
+    },
     {
       id: 6,
-      title: "Data Analytics with Python",
-      description: "Master data analysis and visualization using Python and popular libraries.",
-      duration: "4 hours",
-      level: "Intermediate",
-      instructor: "James Wilson",
-      rating: 4.6,
-      students: 1650,
-      thumbnail: "📊"}
+      title: 'DevOps and CI/CD Pipelines',
+      description: 'Implement DevOps practices and continuous integration/deployment.',
+      level: 'Advanced',
+      duration: '5 hours',
+      rating: 4.8,
+      students: 650,
+      category: 'DevOps'
+    }
   ]
-  const categories = [{ name: "All", count: 24 },
-    { name: "AI & ML", count: 8 },
-    { name: "Computing", count: 6 },
-    { name: "Cybersecurity", count: 4 },
-    { name: "DevOps", count: 3 },
-    { name: "Data Science", count: 3 }
-  ]
+
   return (
     <>
       <Helmet>
-        <title>Tutorials - Learn AI & IT Skills | Zion Tech Group</title>
-        <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />
-        <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />
+        <title>Tutorials - Zion Tech Group | Learn Technology Skills</title>
+        <meta name="description" content="Comprehensive tutorials on AI, cloud computing, web development, cybersecurity, and more. Learn from industry experts." />
+        <meta name="keywords" content="tutorials, online courses, AI learning, cloud computing, web development, cybersecurity, technology education" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -102,8 +101,9 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Categories */}
-        <section className="py-10 px-4">
+
+        {/* Tutorials Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category, _index) => (
@@ -125,15 +125,15 @@ const TutorialsPage: React.FC = () => {
             </h2>4783
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {tutorials.map((tutorial) => (
-                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
-                  <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">
-                      {tutorial.level}
-                    </span>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm">{tutorial.rating}</span>
+                <div key={tutorial.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <BookOpen className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {tutorial.level}
+                      </span>
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -151,6 +151,7 @@ const TutorialsPage: React.FC = () => {
                       {tutorial.students} students
                     </span>6402
                   </div>
+                  
                   <div className="flex items-center justify-between">
                     <span className="text-cyan-400 text-sm font-medium">{tutorial.instructor}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -163,8 +164,59 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Learning Paths */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Learning Paths</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-4">AI & Machine Learning</h3>
+                <p className="text-gray-300 mb-6">Complete path from basics to advanced AI implementation.</p>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Introduction to AI</li>
+                  <li>• Machine Learning Fundamentals</li>
+                  <li>• Deep Learning</li>
+                  <li>• AI Implementation</li>
+                </ul>
+                <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-medium">
+                  Start Learning Path →
+                </button>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-4">Cloud Computing</h3>
+                <p className="text-gray-300 mb-6">Master cloud platforms and services for modern applications.</p>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Cloud Fundamentals</li>
+                  <li>• AWS Services</li>
+                  <li>• Azure Platform</li>
+                  <li>• Cloud Security</li>
+                </ul>
+                <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-medium">
+                  Start Learning Path →
+                </button>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-4">Full-Stack Development</h3>
+                <p className="text-gray-300 mb-6">Build complete web applications from frontend to backend.</p>
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li>• Frontend Development</li>
+                  <li>• Backend Development</li>
+                  <li>• Database Design</li>
+                  <li>• Deployment</li>
+                </ul>
+                <button className="mt-6 text-cyan-400 hover:text-cyan-300 font-medium">
+                  Start Learning Path →
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Learning?
@@ -183,6 +235,8 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     </>
   );

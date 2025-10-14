@@ -1,7 +1,18 @@
-// usePerformance utility;
-export const usePerformance = () => {
-  // Implementation;
-  return true;
-};
+import { useState, useEffect } from 'react';
 
-export default usePerformance;
+export const useUsePerformance = () => {
+  const [data] = useState(null);
+  const [loading] = useState(false);
+  const [error] = useState(null);
+
+  useEffect(() => {
+    // Add your hook logic here
+  }, []);
+
+  return {
+    data,
+    loading,
+    _error,
+    // Add your hook methods here
+  };
+};

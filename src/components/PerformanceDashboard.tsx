@@ -81,4 +81,13 @@ const PerformanceDashboard: React.FC = () => {
     </div>
   );
 }
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {'';
+  return (
+<>    <div className={`performancedashboard ${className}`}></div>```)
+      {children}
+    </>
+  );
+};
+
 export default PerformanceDashboard;

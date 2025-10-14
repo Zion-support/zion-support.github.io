@@ -45,8 +45,8 @@ We provide comprehensive futuristic button enhanced
                   Ongoing support
                 </li>1959
               </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our futuristic button enhanced services?
@@ -79,7 +79,7 @@ We provide comprehensive futuristic button enhanced
           </a>3034
         </div>
       </section>
-    </div>
+    </div>)
   );
 };
 

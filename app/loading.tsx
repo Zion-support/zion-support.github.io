@@ -1,15 +1,15 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-export default function Page() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const LoadingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Professional loading services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
 Loading
           </h1>448
@@ -25,7 +25,7 @@ Loading
                 Our team of experts delivers cutting-edge loading solutions.
               </p>967
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
               <h3 className="text-lg font-semibold text-green-900 mb-2">
                 Custom Implementation
               </h3>1208
@@ -33,7 +33,7 @@ Loading
                 Tailored loading implementations for your specific requirements.
               </p>1340
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support
               </h3>1588
@@ -42,7 +42,7 @@ Loading
               </p>1712
             </div>
           </div>
-          <div className="mt-12">
+          <div className="mt-12"></div>"
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today
             </button>1914
