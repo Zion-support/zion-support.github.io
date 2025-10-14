@@ -15,7 +15,7 @@ function App() {
           </p>
           <div className="mt-8 text-center">
             <p className="text-gray-400">
-              Website is being updated. Please check back soon.
+              Welcome to our minimal app version
             </p>
           </div>
         </div>

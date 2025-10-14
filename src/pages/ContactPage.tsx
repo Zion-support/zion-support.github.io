@@ -41,7 +41,11 @@ const ContactPage: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                       required
                     />
                   </div>
@@ -53,7 +57,11 @@ const ContactPage: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                       required
                     />
                   </div>
@@ -65,7 +73,11 @@ const ContactPage: React.FC = () => {
                       id="message"
                       name="message"
                       rows={4}
+<<<<<<< HEAD
+                      className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                       required
                     ></textarea>
                   </div>

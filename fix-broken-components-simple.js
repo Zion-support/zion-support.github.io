@@ -1,3 +1,4 @@
+'use client';
 import fs from 'fs';
 import path from 'path';
 
@@ -17,19 +18,26 @@ const brokenComponents = [
   'app/components/LoadingStates.tsx',
   'app/components/Navigation.tsx',
   'app/components/PerformanceMonitor.tsx',
-  'app/components/Sidebar.tsx',
-  'app/components/WebVitalsTracker.tsx'
+  'app/components/Sidebar.tsx',;
+  'app/components/WebVitalsTracker.tsx';
 ];
 
 // Create simple, working versions of the components
-function createSimpleComponent(componentName) {
-  const componentBaseName = componentName.replace('.tsx', '');
+function createSimpleComponent(componentName) {}
+  const componentBaseName = componentName.replace('.tsx', );
   
   return `import React from 'react';
 
-const ${componentBaseName} = () => {
+const ${componentBaseName} = () => {}
   return (
+    <div>Page content</div>
+  );
     <div className="p-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <h3 className="text-white text-lg font-semibold mb-2">${componentBaseName}</h3>
       <p className="text-gray-400">This is a placeholder component.</p>
     </div>
@@ -43,21 +51,21 @@ export default ${componentBaseName};`;
 console.log('Fixing broken components with simple versions...');
 
 let fixedCount = 0;
-for (const component of brokenComponents) {
-  try {
+for (const component of brokenComponents) {}
+  try {}
     const componentName = path.basename(component);
     const cleanContent = createSimpleComponent(componentName);
     
     // Ensure directory exists
     const dir = path.dirname(component);
-    if (!fs.existsSync(dir)) {
+    if (!fs.existsSync(dir)) {}
       fs.mkdirSync(dir, { recursive: true });
     }
     
     fs.writeFileSync(component, cleanContent);
     console.log(`Fixed: ${component}`);
     fixedCount++;
-  } catch (error) {
+  } catch (error) {}
     console.log(`Error fixing ${component}: ${error.message}`);
   }
 }

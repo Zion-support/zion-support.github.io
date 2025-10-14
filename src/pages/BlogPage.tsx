@@ -42,7 +42,11 @@ const BlogPage: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
+<<<<<<< HEAD
+                  className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
                   className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 />
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">
                   Subscribe

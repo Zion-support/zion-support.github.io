@@ -1,24 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> cursor/fix-errors-and-merge-to-main-e238
 
-const PricingPage: React.FC = () => {
+export default function Pricing() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group pricing page." />
+        <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Pricing plans for Zion Tech Group AI solutions, cybersecurity, and cloud services." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pricing</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our pricing page.
-          </p>
+          <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default PricingPage;
+}

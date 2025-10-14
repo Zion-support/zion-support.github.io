@@ -6,7 +6,11 @@ export default function ServicesPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Our Services</h1>
         <p className="text-gray-300 text-lg">
+<<<<<<< HEAD
+          Comprehensive AI and IT solutions for your business needs.
+=======
           Comprehensive AI and IT solutions for your business.
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
         </p>
       </div>
     </div>
