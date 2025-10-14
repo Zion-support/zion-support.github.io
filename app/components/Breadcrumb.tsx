@@ -1,31 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
-interface BreadcrumbProps {
-  items: Array<{
-    label: string;
-    href?: string;
-  }>;
-  className?: string;
-}
+  const getBreadcrumbName = (pathname: string) => {
+    const nameMap: Record<string, string> = {
+      'ai-services': 'AI Services',''
+      'ai-analytics': 'AI Analytics',''
+      'ai-automation-platform': 'AI Automation Platform',''
+      'ai-content-generation': 'AI Content Generation',''
+      'ai-customer-support': 'AI Customer Support',''
+      'ai-cybersecurity': 'AI Cybersecurity',''
+      'ai-data-analytics': 'AI Data Analytics',''
+      'ai-document-processing': 'AI Document Processing',''
+      'ai-marketing-automation': 'AI Marketing Automation',''
+      'ai-predictive-analytics': 'AI Predictive Analytics',''
+      'ai-voice-assistant': 'AI Voice Assistant',''
+      'ai-workflow-automation': 'AI Workflow Automation',''
+      'services': 'IT Services',''
+      'cloud-migration': 'Cloud Migration',''
+      'devops-services': 'DevOps Services',''
+      'it-consulting': 'IT Consulting',''
+      'network-security': 'Network Security',''
+      'software-development': 'Software Development',''
+      'web-development': 'Web Development',''
+      'micro-saas': 'Micro SAAS',''
+      '5g-solutions': '5G Solutions',''
+      'about': 'About Us',''
+      'contact': 'Contact',''
+      'blog': 'Blog',''
+      'privacy': 'Privacy Policy',''
+      'terms': 'Terms of Service'''
+    };
 
-export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
+    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
+  };
+
   return (
-    <nav className={`breadcrumb ${className}`} aria-label="Breadcrumb">
-      <ol className="flex space-x-2">
-        {items.map((item, index) => (
-          <li key={index} className="flex items-center">
-            {index > 0 && <span className="mx-2">/</span>}
-            {item.href ? (
-              <Link to={item.href} className="text-blue-600 hover:text-blue-800">
-                {item.label}
-              </Link>
-            ) : (
-              <span className="text-gray-500">{item.label}</span>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
-  );
-}
