@@ -1,8 +1,6 @@
 import React from "react";
 
-type AnalyticsProviderProps = Record<string, unknown>;
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
+const AnalyticsProvider: React.FC<Record<string, unknown>> = () => {
   return (
     <div className="analyticsprovider">
       {/* Component content */}
