@@ -1,34 +1,34 @@
-import React from "react"";
-import fs from "fs"";
-import path from "path"";
-import { fileURLToPath } from "url";
+import React from "react
+import fs from "fs
+import path from "path
+import { fileURLToPath } from "url
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Function to fix final JSX issues;
 function fixFinalJSX(content) {
-  // Remove all extra quotes at the end of lines"
-  content = content.replace(/"\s*$/gm, "")
-  // Fix malformed JSX structure"
-  content = content.replace(/<title>([^<]*)<\/title>>"/g, "<title>$1</title>")
+  // Remove all extra quotes at the end of lines
+  content = content.replace(/"\s*$/gm)
+  // Fix malformed JSX structure
+  content = content.replace(/<title>([^<]*)<\/title>>/g<title>$1</title>)
   content = content.replace(")
-    /<h1[^>]*>([^<]*)<\/h1>>""/g,"
-    '<h1 className="text-4xl font-bold text-white mb-8">$1</h1>',
+    /<h1[^>]*>([^<]*)<\/h1>>"/g
+    '<h1 className="text-4xl font-bold text-white mb-8">$1</h1>'
   )
   content = content.replace()
-    /<p[^>]*>([^<]*)<\/p>>/g,"
-    '<p className="text-gray-300 text-lg">$1</p>',
+    /<p[^>]*>([^<]*)<\/p>>/g
+    '<p className="text-gray-300 text-lg">$1</p>'
   )
-  // Fix malformed closing tags"
-  content = content.replace(/<\/div><\/div>/g, "</div>\n      </div>")
+  // Fix malformed closing tags
+  content = content.replace(/<\/div><\/div>/g</div>\n      </div>)
   content = content.replace(")
-    /<\/React\.Fragment>\s*\);\s*"/g,"
-    "</React.Fragment>\n  );",
-  )"
-  content = content.replace(/}\s*""/g, "}")
+    /<\/React\.Fragment>\s*\);\s*"/g
+    "</React.Fragment>\n  )
+  )
+  content = content.replace(/}\s*""/g})
   // Fix missing closing Helmet tag
   content = content.replace()
-    /<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/>\s*<div></div>/g,"
-    '<Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      <div></div>',
+    /<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta[^>]*\/>\s*<div></div>/g
+    '<Helmet></Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>\n      <div></div>'
   )
   // Fix malformed function structure
   content = content.replace()
@@ -37,11 +37,11 @@ function fixFinalJSX(content) {
   return (
     <React.Fragment>
       <Helmet></Helmet>
-        <title>$1</title>"
+        <title>$1</title>
         <meta name="description" content="Professional services by Zion Tech Group." />
       <div></div>
-        <div></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">$2</h1>"
+        <div></div>
+          <h1 className="text-4xl font-bold text-white mb-8">$2</h1>
           <p className="text-gray-300 text-lg">$3</p>)
   )
 }`,
@@ -50,8 +50,8 @@ function fixFinalJSX(content) {
 }
 // Function to process a single file;
 function processFile(filePath) {
-  try {";
-const content = fs.readFileSync(filePath, "utf8");
+  try {
+const content = fs.readFileSync(filePathutf8")
 const fixedContent = fixFinalJSX(content)
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent)
@@ -72,7 +72,7 @@ const items = fs.readdirSync(dirPath)
 const fullPath = path.join(dirPath, item);
 const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)"
+        fixedCount += processDirectory(fullPath)
       } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         if (processFile(fullPath)) {
           fixedCount++
@@ -82,9 +82,8 @@ const stat = fs.statSync(fullPath)
 }
   return fixedCount
 }
-// Main execution"
-console.log("Starting final JSX fixes...")";
+// Main execution
+console.log("Starting final JSX fixes...")
 const fixedCount = processDirectory("./app")
 console.log(`Fixed ${fixedCount} files.`)
-"
 }

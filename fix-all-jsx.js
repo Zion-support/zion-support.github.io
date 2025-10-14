@@ -1,47 +1,47 @@
-import React from "react"";
-import fs from "fs"";
-import path from "path"";
-import { fileURLToPath } from "url";
+import React from "react
+import fs from "fs
+import path from "path
+import { fileURLToPath } from "url
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Function to fix all JSX and syntax issues;
 function fixAllJSX(content) {
-  // Fix extra quotes at the end of lines"
-  content = content.replace(/"\s*$/gm, "")
-  // Fix malformed JSX fragments"
-  content = content.replace(/<React\.Fragment><\/React>/g, "<React.Fragment>")"
-  content = content.replace(/<\/React>/g, "</React.Fragment>")
-  // Fix malformed Helmet tags"
-  content = content.replace(/<Helmet></Helmet>"<\/Helmet>/g, "<Helmet></Helmet>")"
-  content = content.replace(/<\/Helmet>/g, "</Helmet>")
-  // Fix malformed div tags"
-  content = content.replace(/<div></div><\/div>/g, "<div></div>")"
-  content = content.replace(/<\/div>/g, "</div>")
-  // Fix malformed title tags"
-  content = content.replace(/<title>([^<]*)<\/title>>"""/g, "<title>$1</title>")"
-  content = content.replace(/<title>([^<]*)<\/title>>"/g, "<title>$1</title>")
+  // Fix extra quotes at the end of lines
+  content = content.replace(/"\s*$/gm)
+  // Fix malformed JSX fragments
+  content = content.replace(/<React\.Fragment><\/React>/g<React.Fragment>)
+  content = content.replace(/<\/React>/g</React.Fragment>)
+  // Fix malformed Helmet tags
+  content = content.replace(/<Helmet></Helmet><\/Helmet>/g<Helmet></Helmet>)
+  content = content.replace(/<\/Helmet>/g</Helmet>)
+  // Fix malformed div tags
+  content = content.replace(/<div></div><\/div>/g<div></div>)
+  content = content.replace(/<\/div>/g</div>)
+  // Fix malformed title tags
+  content = content.replace(/<title>([^<]*)<\/title>>""/g<title>$1</title>)
+  content = content.replace(/<title>([^<]*)<\/title>>/g<title>$1</title>)
   // Fix malformed meta tags
   content = content.replace(")
-    /<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>/g,"
-    '<meta name="$1" content="$2" />',
+    /<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>/g
+    '<meta name="$1" content="$2" />'
   )
   // Fix malformed JSX structure
   content = content.replace(")
-    /<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>/g,"
-    '<React.Fragment>\n      <Helmet></Helmet>\n        <title>$1</title>\n        <meta name="$2" content="$3" />\n      </Helmet>\n      <div></div>\n        <div></div>\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>\n        </div>\n      </div>\n    </React.Fragment>',
+    /<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>/g
+    '<React.Fragment>\n      <Helmet></Helmet>\n        <title>$1</title>\n        <meta name="$2" content="$3" />\n      </Helmet>\n      <div></div>\n        <div></div>\n          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>\n          <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>\n        </div>\n      </div>\n    </React.Fragment>'
   )
   // Fix malformed function structure
   content = content.replace(")
-    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)"\s+content="([^"]*)"\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g,
+    /export default function Page\(\) \{\s*return\s*\(\s*<React\.Fragment>\s*<Helmet></Helmet>\s*<title>([^<]*)<\/title>>\s*<meta\s+name="([^"]*)\s+content="([^"]*)\s*\/><\/Helmet>\s*<div></div>\s*<\/div>\s*<\/React\.Fragment>\s*\);\s*\}/g
     `export default function Page() {
   return (
     <React.Fragment>
       <Helmet></Helmet>
-        <title>$1</title>"
+        <title>$1</title>
         <meta name="$2" content="$3" />
       <div></div>
-        <div></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>"
+        <div></div>
+          <h1 className="text-4xl font-bold text-white mb-8">$1</h1>
           <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>)
   )
 }`,
@@ -50,8 +50,8 @@ function fixAllJSX(content) {
 }
 // Function to process a single file;
 function processFile(filePath) {
-  try {";
-const content = fs.readFileSync(filePath, "utf8");
+  try {
+const content = fs.readFileSync(filePathutf8")
 const fixedContent = fixAllJSX(content)
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent)
@@ -72,7 +72,7 @@ const items = fs.readdirSync(dirPath)
 const fullPath = path.join(dirPath, item);
 const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath)"
+        fixedCount += processDirectory(fullPath)
       } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         if (processFile(fullPath)) {
           fixedCount++
@@ -82,8 +82,8 @@ const stat = fs.statSync(fullPath)
 }
   return fixedCount
 }
-// Main execution"
-console.log("Starting comprehensive JSX fixes...")";
+// Main execution
+console.log("Starting comprehensive JSX fixes...")
 const fixedCount = processDirectory("./app")
-console.log(`Fixed ${fixedCount} files.`)"
+console.log(`Fixed ${fixedCount} files.`)
 }}}

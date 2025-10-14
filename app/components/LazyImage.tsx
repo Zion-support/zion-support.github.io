@@ -1,6 +1,4 @@
-import React from "react";
-;
-const LazyImage = () => {
-  return (
-")
+import React    from "react
+const LazyImage = () => {"
+  return ()
 }

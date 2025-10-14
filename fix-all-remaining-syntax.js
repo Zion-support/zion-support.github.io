@@ -11,16 +11,16 @@ function fixSyntaxErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false
     // Remove extra quotes and semicolons that were incorrectly added
-    content = content.replace(/'/g, "'");""
+    content = content.replace(/'/g'")
     content = content.replace(/"/g, '"');'
-    content = content.replace(/`/g, '`');'`"
-    content = content.replace(/'/g, "'");""
+    content = content.replace(/`/g, '`');'`
+    content = content.replace(/'/g'")
     content = content.replace(/"/g, '"');'
     content = content.replace(/`/g, '`');'`
     // Remove extra braces
     content = content.replace(/\{\}/g, '');'
     content = content.replace(/\{\s*\}/g, '');'
-    // Fix unterminated string literals"
+    // Fix unterminated string literals
     content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`
       if (!text.includes(quote) && text.trim() !== '') {'}
         modified = true
@@ -160,4 +160,3 @@ const filePath = path.join(dir, file);}
 console.log('Starting comprehensive syntax error resolution...');';
 const fixedCount = fixAllSyntaxErrors(process.cwd())
 console.log(`Fixed syntax errors in ${fixedCount} files.`);`
-"

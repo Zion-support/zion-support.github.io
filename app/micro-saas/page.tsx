@@ -1,16 +1,16 @@
-import React from "react"
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from "react
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react
+import { Helmet } from "react-helmet-async
+import { Link }    from "react-router-dom
 import EnhancedSEO from '../components/EnhancedSEO'
 
-const MicroSaasPage: React.FC = () => {
-  const microSaasServices = [
-    {
+const MicroSaasPage: React.FC = () => {"
+  const microSaasServices = ["
+    {"
       title: "Project Management Pro"
       description: "Advanced project management with AI-powered insights and automation"
       icon: <Workflow className="w-8 h-8 text-cyan-400"
-      features: ["AI Task Assignment", "Real-time Collaboration", "Progress Tracking", "Resource Management"
+      features: ["AI Task Assignment"Real-time Collaboration"Progress Tracking"Resource Management"
       href: "/project-management-pro"
       price: "$29/month"
       popular: true
@@ -19,7 +19,7 @@ const MicroSaasPage: React.FC = () => {
       title: "AI CRM Pro"
       description: "Intelligent customer relationship management with predictive analytics"
       icon: <Users className="w-8 h-8 text-purple-400"
-      features: ["AI Lead Scoring", "Automated Follow-ups", "Sales Forecasting", "Customer Insights"
+      features: ["AI Lead Scoring"Automated Follow-ups"Sales Forecasting"Customer Insights"
       href: "/zion-ai-crm-pro"
       price: "$39/month"
       popular: false
@@ -28,7 +28,7 @@ const MicroSaasPage: React.FC = () => {
       title: "Inventory Smart"
       description: "Smart inventory management with demand forecasting and optimization"
       icon: <Package className="w-8 h-8 text-green-400"
-      features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Analytics Dashboard"
+      features: ["Demand Forecasting"Auto Reordering"Stock Optimization"Analytics Dashboard"
       href: "/zion-inventory-smart"
       price: "$24/month"
       popular: false
@@ -37,7 +37,7 @@ const MicroSaasPage: React.FC = () => {
       title: "Financial Analytics Pro"
       description: "Advanced financial reporting and analysis with AI insights"
       icon: <BarChart3 className="w-8 h-8 text-blue-400"
-      features: ["AI Financial Insights", "Automated Reports", "Cash Flow Analysis", "Risk Assessment"
+      features: ["AI Financial Insights"Automated Reports"Cash Flow Analysis"Risk Assessment"
       href: "/ai-financial-analytics-pro"
       price: "$34/month"
       popular: false
@@ -46,7 +46,7 @@ const MicroSaasPage: React.FC = () => {
       title: "Performance Monitor"
       description: "Employee performance tracking and analytics platform"
       icon: <Monitor className="w-8 h-8 text-orange-400"
-      features: ["Performance Metrics", "Goal Tracking", "Team Analytics", "Feedback System"
+      features: ["Performance Metrics"Goal Tracking"Team Analytics"Feedback System"
       href: "/zion-performance-monitor"
       price: "$19/month"
       popular: false
@@ -55,7 +55,7 @@ const MicroSaasPage: React.FC = () => {
       title: "Email Automation"
       description: "Intelligent email marketing and automation platform"
       icon: <Mail className="w-8 h-8 text-pink-400"
-      features: ["AI Email Templates", "Automated Campaigns", "A/B Testing", "Analytics Dashboard"
+      features: ["AI Email Templates"Automated Campaigns"A/B Testing"Analytics Dashboard"
       href: "/zion-email-automation"
       price: "$29/month"
       popular: false
@@ -100,14 +100,14 @@ const MicroSaasPage: React.FC = () => {
       name: "Sarah Johnson"
       company: "TechStart Inc."
       role: "CEO"
-      content: "
+      content:
       rating: 5
     },
     {
       name: "Michael Chen"
       company: "DataFlow Solutions"
       role: "CTO"
-      content: "
+      content:
       rating: 5
     },
     {
@@ -231,10 +231,9 @@ const MicroSaasPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 <div className="flex items-center space-x-1 mb-4"
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
+                <p className="text-gray-300 mb-4 italic">{testimonial.content}
                 <div>
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
@@ -269,16 +268,16 @@ const MicroSaasPage: React.FC = () => {
             </Link>
         <title>Page - Zion Tech Group</title>
 
-              </p>"
+              </p>
               <div className="flex justify-center space-x-4"
-                <a "
-                  href="/" "
+                <a
+                  href="/"
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home
                 </a>
-                <a "
-                  href="/contact" "
+                <a
+                  href="/contact"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Contact Us

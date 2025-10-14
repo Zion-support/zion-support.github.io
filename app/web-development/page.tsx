@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock } from "lucide-react";
+import { Link } from "react-router-dom
+import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
 
 const WebDevelopmentPage: React.FC = () => {
@@ -69,8 +69,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'
       color: 'text-gray-400'
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer title="Web Development Services - Zion Tech Group"

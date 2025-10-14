@@ -9,12 +9,12 @@ function fixApiFile(content)   {}
   fixed = fixed.replace(/20o0/g, '200');'
   fixed = fixed.replace(/50o0/g, '500');'
   // Fix malformed string literals
-  fixed = fixed.replace(/'Method not allowed'/g, "'Method not allowed'");""
-  fixed = fixed.replace(/'Internal server error'/g, "'Internal server error'");"
+  fixed = fixed.replace(/'Method not allowed'/g'Method not allowed'")
+  fixed = fixed.replace(/'Internal server error'/g'Internal server error'")
   fixed = fixed.replace(/'true'/g, 'true');'
   fixed = fixed.replace(/'false'/g, 'false');'
-  // Fix malformed console.error calls"
-  fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/g, "console.error('API Error:', error);");"
+  // Fix malformed console.error calls
+  fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/gconsole.error('API Error:', error))
   return fixed
 }
 // Function to process a single file;
@@ -50,4 +50,4 @@ const files = await glob(pattern, { cwd: process.cwd() })
 if (import.meta.url === `file://${process.argv[1]}`) `
   main()
 }
-export { fixApiFile, processFile }"
+export { fixApiFile, processFile }

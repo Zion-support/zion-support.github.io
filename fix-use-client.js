@@ -12,7 +12,7 @@ function fixUseClientDirective(content)   {}
       content.includes('export function') ||'
       content.includes('const ') && content.includes('= () =>')) '
     // Add at the very top
-    content = "\n" + content;"
+    content = "\n" + content
 }
   return content
 }
@@ -22,8 +22,8 @@ function fixImportStatements(content)   {}
   content = content.replace(/import\s+.*?\s+from\s+from\s+/g, (match) => {}
     return match.replace(/\s+from\s+from\s+/, ' from ');'
   })
-  // Ensure imports have semicolons"
-  content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => "
+  // Ensure imports have semicolons
+  content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?!;)/g, (match) =>
     if (!match.endsWith(')) '
       return match + ''
 }
@@ -40,10 +40,10 @@ function fixJSXSyntax(content)   {}
       </div>]*>(?!.*<\/div>)/g, (match) => {}
     return match + '\n      </div>'
   })
-  // Fix unterminated string literals"
-  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'"
-  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'"
-  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'"
+  // Fix unterminated string literals
+  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'
+  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'
+  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'
   content = content.replace(/alt\s*=\s*["']([^"']*?)\s*$/gm, 'alt="$1"');'
   return content
 }
@@ -117,4 +117,4 @@ const files = await glob(pattern, )
   console.log('Use client directive fix completed!');'
 }
 // Run the script
-main().catch(console.error)"
+main().catch(console.error)

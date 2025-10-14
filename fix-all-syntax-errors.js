@@ -104,10 +104,10 @@ const functionName = functionMatch[1];
         
         // Create proper JSX structure;
 const jsxContent = `  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>")
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>)
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.replace('Page', '').toLowerCase()}</p>
         </div>
       </div>
@@ -125,14 +125,14 @@ const jsxContent = `  return (
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
-    content = content.replace(/;\s*\[/g, ' [');"
-    content = content.replace(/;\s*"/g, ' "');"
-    content = content.replace(/;\s*'/g, " '");
+    content = content.replace(/;\s*\[/g, ' [')
+    content = content.replace(/;\s*"/g, ' "')
+    content = content.replace(/;\s*'/g '")
     content = content.replace(/;\s*`/g, ' `');
     
-    // Fix string literals"
-    content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'");"
-    content = content.replace(/"([^"]*)"([^"]*)"/g, '"$1$2"');
+    // Fix string literals
+    content = content.replace(/'([^']*)'([^']*)'/g'$1$2'")
+    content = content.replace(/"([^"]*)([^"]*)/g, '"$1$2"')
     
     // Fix object syntax
     content = content.replace(/\{\s*;\s*/g, '{\n  ');
@@ -162,5 +162,5 @@ const jsxContent = `  return (
 // Fix all files
 console.log('Starting to fix syntax errors...');
 filesToFix.forEach(fixFile);
-console.log('Syntax error fixing completed!');"
+console.log('Syntax error fixing completed!')
 }}

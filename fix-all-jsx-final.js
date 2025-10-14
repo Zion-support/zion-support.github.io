@@ -1,47 +1,47 @@
 import React from 'react'
 #!/usr/bin/env node;
-import fs from "fs"";
-import path from "path"";
-import { glob } from "glob"
+import fs from "fs
+import path from "path
+import { glob } from "glob
 // Function to fix all JSX attributes;
 function fixAllJSXFinal(content) {
   let fixed = content
-  // Fix JSX attributes with colons instead of equals"
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"/g, '$1="$2"')"
-  fixed = fixed.replace(/(\w+):\s*'([^']*)'/g, "$1='$2'")
-  // Fix JSX attributes with quotes around JavaScript expressions"
-  fixed = fixed.replace(/key="\{([^}]+)\}"/g, "key={$1}")"
-  fixed = fixed.replace(/to="\{([^}]+)\}"/g, "to={$1}")"
-  fixed = fixed.replace(/className="\{([^}]+)\}"/g, "className={$1}")"
-  fixed = fixed.replace(/onClick="\{([^}]+)\}"/g, "onClick={$1}")"
-  fixed = fixed.replace(/href="\{([^}]+)\}"/g, "href={$1}")"
-  fixed = fixed.replace(/src="\{([^}]+)\}"/g, "src={$1}")"
-  fixed = fixed.replace(/alt="\{([^}]+)\}"/g, "alt={$1}")"
-  fixed = fixed.replace(/id="\{([^}]+)\}"/g, "id={$1}")"
-  fixed = fixed.replace(/type="\{([^}]+)\}"/g, "type={$1}")"
-  fixed = fixed.replace(/value="\{([^}]+)\}"/g, "value={$1}")"
-  fixed = fixed.replace(/placeholder="\{([^}]+)\}"/g, "placeholder={$1}")"
-  fixed = fixed.replace(/name="\{([^}]+)\}"/g, "name={$1}")"
-  fixed = fixed.replace(/role="\{([^}]+)\}"/g, "role={$1}")"
-  fixed = fixed.replace(/aria-label="\{([^}]+)\}"/g, "aria-label={$1}")
+  // Fix JSX attributes with colons instead of equals
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)/g, '$1="$2"')
+  fixed = fixed.replace(/(\w+):\s*'([^']*)'/g$1='$2'")
+  // Fix JSX attributes with quotes around JavaScript expressions
+  fixed = fixed.replace(/key="\{([^}]+)\}/gkey={$1})
+  fixed = fixed.replace(/to="\{([^}]+)\}/gto={$1})
+  fixed = fixed.replace(/className="\{([^}]+)\}/gclassName={$1})
+  fixed = fixed.replace(/onClick="\{([^}]+)\}/gonClick={$1})
+  fixed = fixed.replace(/href="\{([^}]+)\}/ghref={$1})
+  fixed = fixed.replace(/src="\{([^}]+)\}/gsrc={$1})
+  fixed = fixed.replace(/alt="\{([^}]+)\}/galt={$1})
+  fixed = fixed.replace(/id="\{([^}]+)\}/gid={$1})
+  fixed = fixed.replace(/type="\{([^}]+)\}/gtype={$1})
+  fixed = fixed.replace(/value="\{([^}]+)\}/gvalue={$1})
+  fixed = fixed.replace(/placeholder="\{([^}]+)\}/gplaceholder={$1})
+  fixed = fixed.replace(/name="\{([^}]+)\}/gname={$1})
+  fixed = fixed.replace(/role="\{([^}]+)\}/grole={$1})
+  fixed = fixed.replace(/aria-label="\{([^}]+)\}/garia-label={$1})
   fixed = fixed.replace(")
-    /aria-labelledby="\{([^}]+)\}"/g,"
-    "aria-labelledby={$1}",
+    /aria-labelledby="\{([^}]+)\}/g
+    "aria-labelledby={$1}
   )
   fixed = fixed.replace(")
-    /aria-describedby="\{([^}]+)\}"/g,"
-    "aria-describedby={$1}",
-  )"
-  fixed = fixed.replace(/data-testid="\{([^}]+)\}"/g, "data-testid={$1}")
+    /aria-describedby="\{([^}]+)\}/g
+    "aria-describedby={$1}
+  )
+  fixed = fixed.replace(/data-testid="\{([^}]+)\}/gdata-testid={$1})
   return fixed
 }
 // Function to process a single file;
 function processFile(filePath) {
-  try {";
-const content = fs.readFileSync(filePath, "utf8");
+  try {
+const content = fs.readFileSync(filePathutf8")
 const fixed = fixAllJSXFinal(content)
-    if (content !== fixed) {"
-      fs.writeFileSync(filePath, fixed, "utf8")
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixedutf8")
       console.log(`Fixed: ${filePath}`)
       return true
 }
@@ -51,8 +51,8 @@ const fixed = fixAllJSXFinal(content)
     return false
 }
 // Main function
-async function main() {";
-const patterns = ["app/**/*.tsx", "app/**/*.jsx"]
+async function main() {
+const patterns = ["app/**/*.tsx"app/**/*.jsx"]
   let totalFiles = 0
   let fixedFiles = 0
   for (const pattern of patterns) {;
@@ -68,4 +68,4 @@ const files = await glob(pattern, { cwd: process.cwd() })
 if (import.meta.url === `file://${process.argv[1]}`) {
   main()
 }
-export { fixAllJSXFinal, processFile }"
+export { fixAllJSXFinal, processFile }

@@ -9,7 +9,7 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Enable JSX runtime
-      jsxRuntime: "automatic",
+      jsxRuntime: "automatic"
     }),
   ],
   resolve: {
@@ -22,7 +22,7 @@ export default defineConfig({
       "@/hooks": resolve(__dirname, "./hooks"),
       "@/config": resolve(__dirname, "./config"),
       "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      "@/content": resolve(__dirname, "./content")
     },
   },
   build: {
@@ -171,7 +171,7 @@ export default defineConfig({
       "react-router-dom",
       "react-helmet-async",
       "framer-motion",
-      "lucide-react",
+      "lucide-react"
     ],
   },
   // CSS optimization

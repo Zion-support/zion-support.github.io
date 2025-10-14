@@ -1,9 +1,9 @@
 'use client'
 #!/usr/bin/env node; import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; console.log(' Starting final comprehensive error fixing process...');'
-// Function to fix a single file comprehensively; function fixFileComprehensively(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); const originalContent = content; // Fix merge conflict markers; content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n // Fix unterminated string literals; content = content.replace(/import React from 'react';]*)/g, "import React from 'react';);'"'"
-} content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);'"
-content = content.replace(//g, ");' // Fix malformed JSX; content = content.replace(/<>/g, '<>'); content = content.replace(/<\/>/g, '</>'); content = content.replace(/<Helme t><///Helme t>/g, '<Helme t><///Helme t>'); content = content.replace(/<\/Helme t>/g, '</Helme t>'); content = content.replace(/<titl e>([^<]*)<\/titl e>>/g, '<titl e>$1</titl e>'); content = content.replace(/<meta[^>]*\/>/g, (match) => match.slice(0, -1)); // Fix unterminated string constants; content = content.replace(/import React from 'react';]*)/g, "import React from 'react';);'"
-content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);' // Fix malformed function declarations; content = content.replace( /export default functio;n; ([ ^ {} ]"')
+// Function to fix a single file comprehensively; function fixFileComprehensively(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); const originalContent = content; // Fix merge conflict markers; content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n // Fix unterminated string literals; content = content.replace(/import React from 'react';]*)/gimport React from 'react';);'"'
+} content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/gimport { Helmet } from 'react-helmet-async';);'
+content = content.replace(//g);' // Fix malformed JSX; content = content.replace(/<>/g, '<>'); content = content.replace(/<\/>/g, '</>'); content = content.replace(/<Helme t><///Helme t>/g, '<Helme t><///Helme t>'); content = content.replace(/<\/Helme t>/g, '</Helme t>'); content = content.replace(/<titl e>([^<]*)<\/titl e>>/g, '<titl e>$1</titl e>'); content = content.replace(/<meta[^>]*\/>/g, (match) => match.slice(0, -1)); // Fix unterminated string constants; content = content.replace(/import React from 'react';]*)/gimport React from 'react';);'
+content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/gimport { Helmet } from 'react-helmet-async';);' // Fix malformed function declarations; content = content.replace( /export default functio;n; ([ ^ {} ]')
 )
 ) ]+)\s*{/g, 'export default functio;n; $1 {')}' // Fix missing closing parentheses and brackets content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>\s*\)/g, 'return (\n <div>\n$1\n </div>\n );\n}`;`'` } // Fix specific parsing errors content = content.replace(// / Unexpected token <</g, '// // Unexpected token <<') content = content.replace(// / Unexpected token :/g, '// // Unexpected token :') content = content.replace(// / Unexpected token }/g, '// // Unexpected token }') content = content.replace( /Unexpected token \['`')
 )
@@ -25,6 +25,5 @@ let fixedCount = 0; for (const file of problematicFiles) {} if (fixFileComprehen
 } execSync('pnpm run build', { stdio: 'pipe' }); console.log(' Build successful!'); } catch (error) {} console.log(' Build issues remain, but syntax errors should be resolved')''
 } } console.log(' Final comprehensive error fixing process completed!')''
 }
-"
 main().catch(console.error);`"'`"'`"'
-"
+

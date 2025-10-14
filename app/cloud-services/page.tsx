@@ -1,11 +1,11 @@
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scalability",
+      icon: <TrendingUp className="w-6 h-6" />
+      title: "Scalability"
       description: "Scale your infrastructure up or down based on demand"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security",
+      icon: <Shield className="w-6 h-6" />
+      title: "Security"
       description: "Enterprise-grade security with advanced threat protection"
     },
     {

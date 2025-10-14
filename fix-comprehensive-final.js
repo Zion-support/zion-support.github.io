@@ -19,14 +19,14 @@ function fixAllSyntaxIssues(content)   {}
     return match + '\n      </div>'
   })
   // Fix unterminated string literals
-  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'"
-  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'"
-  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'"
+  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'
+  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'
+  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'
   content = content.replace(/alt\s*=\s*["']([^"']*?)\s*$/gm, 'alt="$1"');'
   // Fix malformed JSX fragments
   content = content.replace(/<>\s*$/gm, '<></>');'
-  // Fix missing semicolons"
-  content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => "
+  // Fix missing semicolons
+  content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?!;)/g, (match) =>
     if (!match.endsWith(')) '
       return match + ''
 }
@@ -87,4 +87,4 @@ const files = await glob(pattern, )
   console.log('Comprehensive final fix completed!');'
 }
 // Run the script
-main().catch(console.error)"
+main().catch(console.error)

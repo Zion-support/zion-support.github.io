@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from "react-router-dom";
-import { Languages, Target, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom
+import { Languages, Target, CheckCircle }    from "lucide-react
 import Layout from '../layout'
 
-export default function AITranslationServicePage() {;
-  const features = [
-    {
+export default function AITranslationServicePage() {
+  const features = ["
+    {"
       icon: <Target className="w-6 h-6 text-green-400"
       title: 'Industry-Specific Translation'
       description: 'Specialized translation models for legal, medical, technical, and business content'
@@ -89,7 +89,7 @@ export default function AITranslationServicePage() {;
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
                 AI Translation
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
-                  {" "
+                  {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"

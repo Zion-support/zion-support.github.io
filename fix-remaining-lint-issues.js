@@ -50,13 +50,13 @@ const fullPath = path.join(__dirname, filePath);
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Fix unused React imports
-    if (content.includes("import React from 'react';") && !content.includes('React.')) {"
-      content = content.replace("import React from 'react';", '');
+    if (content.includes("import React from 'react') && !content.includes('React.')) {
+      content = content.replace("import React from 'react', '')
     }
     
-    // Fix unused Helmet imports"
-    if (content.includes("import { Helmet } from 'react-helmet-async';") && !content.includes('<Helmet')) {"
-      content = content.replace("import { Helmet } from 'react-helmet-async';", '');
+    // Fix unused Helmet imports
+    if (content.includes("import { Helmet } from 'react-helmet-async') && !content.includes('<Helmet')) {
+      content = content.replace("import { Helmet } from 'react-helmet-async', '')
     }
     
     // Fix unused useContext imports
@@ -101,4 +101,4 @@ const fullPath = path.join(__dirname, filePath);
 // Fix all files
 console.log('Starting to fix remaining lint issues...');
 filesToFix.forEach(fixFile);
-console.log('Remaining lint issue fixing completed!');"
+console.log('Remaining lint issue fixing completed!')

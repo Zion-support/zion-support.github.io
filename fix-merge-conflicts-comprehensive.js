@@ -53,9 +53,9 @@ function resolveMergeConflicts(filePath) {
       .replace(/<React\.Fragment>/g, '<>')
       .replace(/<\/React\.Fragment>/g, '</>')
       // Remove stray quotes and semicolons
-      .replace(/"/g, '"')"
-      .replace(/'/g, "'")
-      // Fix malformed JSX attributes"
+      .replace(/"/g, '"')
+      .replace(/'/g'")
+      // Fix malformed JSX attributes
       .replace(/\s+"/g, '')
       .replace(/\s+'/g, '')
       // Clean up extra whitespace
@@ -105,5 +105,5 @@ const filesWithConflicts = findFilesWithConflicts('.')
 } catch (error) {
   console.error('💥 Fatal error:', error.message)
   process.exit(1)
-}"
+}
 }}}}

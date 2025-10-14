@@ -1,43 +1,43 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock } from "lucide-react";
-export default function ZionAiAnalyticsPro() {;
-  const features = [
-    {
+import { Helmet } from "react-helmet-async
+import { Link } from "react-router-dom
+import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock }    from "lucide-react
+export default function ZionAiAnalyticsPro() {
+  const features = ["
+    {"
       title: "Real-time Analytics Dashboard"
       description: "Monitor your business performance with live dashboards that update in real-time, providing instant insights into key metrics and KPIs."
       icon: <Monitor className="w-8 h-8"
-      benefits: ["Live data updates", "Customizable widgets", "Mobile-responsive design", "Export capabilities"
+      benefits: ["Live data updates"Customizable widgets"Mobile-responsive design"Export capabilities"
     },
     {
       title: "Predictive Modeling & Forecasting"
       description: "Leverage advanced AI algorithms to predict future trends, forecast sales, and identify opportunities before they happen."
       icon: <Brain className="w-8 h-8"
-      benefits: ["Sales forecasting", "Trend prediction", "Risk assessment", "Opportunity identification"
+      benefits: ["Sales forecasting"Trend prediction"Risk assessment"Opportunity identification"
     },
     {
       title: "Custom Report Generation"
       description: "Create detailed, professional reports automatically with our AI-powered report generator that adapts to your business needs."
       icon: <FileText className="w-8 h-8"
-      benefits: ["Automated scheduling", "Custom templates", "Multiple formats", "Brand customization"
+      benefits: ["Automated scheduling"Custom templates"Multiple formats"Brand customization"
     },
     {
       title: "API Integration & Data Connectors"
       description: "Connect seamlessly with over 100+ business applications and data sources to centralize all your business intelligence."
       icon: <Database className="w-8 h-8"
-      benefits: ["100+ integrations", "Real-time sync", "Data transformation", "Secure connections"
+      benefits: ["100+ integrations"Real-time sync"Data transformation"Secure connections"
     },
     {
       title: "Mobile App Access"
       description: "Access your analytics anywhere with our native mobile apps for iOS and Android, featuring offline capabilities."
       icon: <Smartphone className="w-8 h-8"
-      benefits: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized UI"
+      benefits: ["Native mobile apps"Offline access"Push notifications"Touch-optimized UI"
     },
     {
       title: "White-label Solutions"
       description: "Rebrand our analytics platform as your own with complete white-label customization options for agencies and resellers."
       icon: <Settings className="w-8 h-8"
-      benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"
+      benefits: ["Custom branding"Domain mapping"API access"Reseller tools"
   Zap, 
   Shield, 
   Clock, 
@@ -55,8 +55,7 @@ export default function ZionAiAnalyticsPro() {;
   Globe,
   Target,
   Calendar
-} from "lucide-react"
-
+} from "lucide-react
 const ZionAIAnalyticsProPage = () => {
   const features = [
     {
@@ -177,7 +176,7 @@ const ZionAIAnalyticsProPage = () => {
       company: "TechStart Inc."
       role: "CEO"
       content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence."
-      content: "
+      content:
       rating: 5,
       avatar: "SJ"
     },
@@ -211,8 +210,7 @@ const ZionAIAnalyticsProPage = () => {
   return (
     <>
       <Helmet >
-        <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title>
-        <meta
+        <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title><meta
           name="description"
           content="Transform your business with Zion AI Analytics Pro - advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Starting at $299/month."
         />
@@ -232,8 +230,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
 >>>>>>> origin/main
       <Helmet >
-        <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title>
-        <meta
+        <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title><meta
           name="description"
           content="Transform your business with Zion AI Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated insights. Starting from $299/month."
         />
@@ -247,8 +244,7 @@ const HomePage = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"
-        
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
           <div className="max-w-7xl mx-auto"
@@ -472,10 +468,9 @@ const HomePage = () => {
                 >
                   <div className="flex items-center mb-4"
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">{testimonial.content}
                   <div className="flex items-center"
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3"
                       {testimonial.avatar}
@@ -566,37 +561,37 @@ const HomePage = () => {
               Zion AI Analytics Pro
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">"
+          <p className="text-xl text-gray-600 mb-8">
             Professional page solutions tailored to your business needs.;
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 Expert Solutions;
               </h3>
-              <p className="text-blue-700">"
+              <p className="text-blue-700">
                 Our team of experts delivers cutting-edge page solutions.;
               </p>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
                 Custom Implementation;
               </h3>
-              <p className="text-green-700">"
+              <p className="text-green-700">
                 Tailored page implementations for your specific requirements.;
               </p>
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support;
               </h3>
-              <p className="text-purple-700">"
+              <p className="text-purple-700">
                 Round-the-clock support for all your page needs.;
               </p>
             </div>
           </div>
-          <div className="mt-12">"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today;
             </button>
           </div>
@@ -605,7 +600,6 @@ const HomePage = () => {
     </div>
   )
         <meta name="description" content="Professional services by Zion Tech Group."
-"
 }
   );
 >>>>>>> origin/main

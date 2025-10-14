@@ -51,9 +51,9 @@ const fullPath = path.join(__dirname, filePath);
     
     // Remove unused React imports
     content = content.replace(/\s*/g, '');
-    content = content.replace(/import React from "react";\s*/g, '');
-    content = content.replace(/import { Helmet } from 'react-helmet-async';\s*/g, '');"
-    content = content.replace(/import { Helmet } from "react-helmet-async";\s*/g, '');
+    content = content.replace(/import React from "react";\s*/g, '')
+    content = content.replace(/import { Helmet } from 'react-helmet-async';\s*/g, '')
+    content = content.replace(/import { Helmet } from "react-helmet-async";\s*/g, '')
     
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed React imports: ${filePath}`);
@@ -100,5 +100,5 @@ const fullPath = path.join(__dirname, filePath);
 console.log('Starting to fix final issues...');
 filesWithReactImports.forEach(fixReactImports);
 filesWithOtherIssues.forEach(fixOtherIssues);
-console.log('Final issue fixing completed!');"
+console.log('Final issue fixing completed!')
 }

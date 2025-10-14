@@ -1,17 +1,17 @@
 import React from 'react'
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async
+import { Link } from "react-router-dom
+import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
 
-const AIServicesPage: React.FC = () => {
-  const aiServices = [
-    {
+const AIServicesPage: React.FC = () => {"
+  const aiServices = ["
+    {"
       title: "AI Video Generation"
       description: "Create professional videos in minutes with AI-powered script generation, voice synthesis, and smart editing"
       icon: <Video className="w-8 h-8"
       price: "From $29/month"
-      features: ["AI Script Writing", "Voice Synthesis", "Auto Editing", "Multiple Formats"
+      features: ["AI Script Writing"Voice Synthesis"Auto Editing"Multiple Formats"
       href: "/ai-video-generation"
       popular: true
     },
@@ -20,7 +20,7 @@ const AIServicesPage: React.FC = () => {
       description: "Generate high-quality content for blogs, social media, and marketing materials using advanced AI"
       icon: <MessageSquare className="w-8 h-8"
       price: "From $19/month"
-      features: ["Blog Writing", "Social Media", "Email Campaigns", "SEO Optimization"
+      features: ["Blog Writing"Social Media"Email Campaigns"SEO Optimization"
       href: "/ai-content-generation"
       popular: false
     },
@@ -29,7 +29,7 @@ const AIServicesPage: React.FC = () => {
       description: "Advanced analytics and insights powered by machine learning for data-driven decisions"
       icon: <BarChart3 className="w-8 h-8"
       price: "From $39/month"
-      features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards", "Automated Reports"
+      features: ["Predictive Analytics"Real-time Insights"Custom Dashboards"Automated Reports"
       href: "/ai-analytics"
       popular: true
     },
@@ -38,7 +38,7 @@ const AIServicesPage: React.FC = () => {
       description: "Intelligent chatbots and customer service automation for 24/7 support"
       icon: <Users className="w-8 h-8"
       price: "From $24/month"
-      features: ["Smart Chatbots", "Ticket Routing", "Sentiment Analysis", "Multi-language Support"
+      features: ["Smart Chatbots"Ticket Routing"Sentiment Analysis"Multi-language Support"
       href: "/ai-customer-support"
       popular: false
     },
@@ -47,7 +47,7 @@ const AIServicesPage: React.FC = () => {
       description: "Advanced threat detection and security automation powered by AI"
       icon: <Shield className="w-8 h-8"
       price: "From $49/month"
-      features: ["Threat Detection", "Automated Response", "Risk Assessment", "Compliance Monitoring"
+      features: ["Threat Detection"Automated Response"Risk Assessment"Compliance Monitoring"
       href: "/ai-cybersecurity"
       popular: false
     },
@@ -56,7 +56,7 @@ const AIServicesPage: React.FC = () => {
       description: "Automate complex business processes with intelligent workflow management"
       icon: <Target className="w-8 h-8"
       price: "From $34/month"
-      features: ["Process Automation", "Smart Routing", "Task Management", "Performance Analytics"
+      features: ["Process Automation"Smart Routing"Task Management"Performance Analytics"
       href: "/ai-workflow-automation"
       popular: false
     }
@@ -107,14 +107,14 @@ const AIServicesPage: React.FC = () => {
       name: "Sarah Johnson"
       company: "TechStart Inc."
       role: "CEO"
-      content: "
+      content:
       rating: 5
     },
     {
       name: "Michael Chen"
       company: "DataFlow Solutions"
       role: "CTO"
-      content: "
+      content:
       rating: 5
     },
     {
@@ -127,76 +127,76 @@ import React from 'react'
 const AIServicesPage: React.FC = () => {;
 const services = [
     {
-      title: "AI Consulting",""
-      description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps.",""
+      title: "AI Consulting"
+      description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps."
       color: "from-purple-500 to-pink-500"
-    {"
-      icon: BarChart3,""
-      title: "AI Analytics",""
-      description: "Advanced analytics solutions powered by AI to extract insights from your data.",""
+    {
+      icon: BarChart3
+      title: "AI Analytics"
+      description: "Advanced analytics solutions powered by AI to extract insights from your data."
       color: "from-blue-500 to-cyan-500"
-    {"
-      icon: Zap,""
-      title: "AI Automation",""
-      description: "Automate repetitive tasks and processes with intelligent AI solutions.",""
+    {
+      icon: Zap
+      title: "AI Automation"
+      description: "Automate repetitive tasks and processes with intelligent AI solutions."
       color: "from-green-500 to-emerald-500"
-    {"
-      icon: FileText,""
-      title: "AI Content Generation",""
-      description: "Generate high-quality content at scale using advanced AI models.",""
+    {
+      icon: FileText
+      title: "AI Content Generation"
+      description: "Generate high-quality content at scale using advanced AI models."
       color: "from-orange-500 to-red-500"
-    {"
-      icon: MessageSquare,""
-      title: "AI Chatbots",""
-      description: "Intelligent chatbots and virtual assistants for customer support.","
-      icon: MessageCircle,""
-      title: "AI Customer Service",""
-      description: "Intelligent chatbots and customer service solutions powered by AI.",""
-      color: "from-indigo-500 to-purple-500" },"
-    { icon: Shield,""
-      title: "AI Security",""
-      description: "AI-powered security solutions to protect your business from threats.","
+    {
+      icon: MessageSquare
+      title: "AI Chatbots"
+      description: "Intelligent chatbots and virtual assistants for customer support."
+      icon: MessageCircle
+      title: "AI Customer Service"
+      description: "Intelligent chatbots and customer service solutions powered by AI."
+      color: "from-indigo-500 to-purple-500" }
+    { icon: Shield
+      title: "AI Security"
+      description: "AI-powered security solutions to protect your business from threats."
       color: 'from-red-500 to-pink-500'
-      description: "AI-powered security solutions to protect your business and data.",""
+      description: "AI-powered security solutions to protect your business and data."
       color: "from-cyan-500 to-blue-500"
   ];
-const features = ["
-    {""
-      title: "Custom AI Solutions",""
-      description: "Tailored AI implementations designed specifically for your business needs.",""
-      icon: "🤖" },"
-    {""
-      title: "Machine Learning Models",""
-      description: "Advanced ML models trained on your data for optimal performance.",""
-      icon: "🧠" },"
-    {""
-      title: "Real-time Processing",""
-      description: "High-performance AI systems that process data in real-time.",""
-      icon: "⚡" },""
-    { title: "Scalable Architecture",""
+const features = [
+    {
+      title: "Custom AI Solutions"
+      description: "Tailored AI implementations designed specifically for your business needs."
+      icon: "🤖" }
+    {
+      title: "Machine Learning Models"
+      description: "Advanced ML models trained on your data for optimal performance."
+      icon: "🧠" }
+    {
+      title: "Real-time Processing"
+      description: "High-performance AI systems that process data in real-time."
+      icon: "⚡" }
+    { title: "Scalable Architecture"
       description: "AI solutions that grow with your business and handle increasing loads."
-      icon: '📈'"
-      icon: Shield,'""
-      title: "AI Security",';'""
+      icon: '📈'
+      icon: Shield,'
+      title: "AI Security",';'"
       description: "AI-powered security solutions to protect your business and data."
       color: 'from-cyan-500 to-blue-500''
-    }"
-  ];";"
-const testimonials = [{ name: "Dr. Sarah Johnson",""
-      company: "MedTech Solutions",""
-      role: "CTO",'""
+    }
+  ]
+const testimonials = [{ name: "Dr. Sarah Johnson"
+      company: "MedTech Solutions"
+      role: "CTO",'"
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy."
-      rating: 5; }"
-    },""
-    { name: "Michael Chen",""
-      company: "E-commerce Plus",""
-      role: "CEO",'""
+      rating: 5; }
+    }
+    { name: "Michael Chen"
+      company: "E-commerce Plus"
+      role: "CEO",'"
       content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly."
-      rating: 5; }"
-    },""
-    { name: "Emily Rodriguez",""
-      company: "FinanceFlow",""
-      role: "Head of Analytics",""
+      rating: 5; }
+    }
+    { name: "Emily Rodriguez"
+      company: "FinanceFlow"
+      role: "Head of Analytics"
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective."
       rating: 5; }
     }
@@ -334,10 +334,9 @@ const testimonials = [{ name: "Dr. Sarah Johnson",""
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
                 <div className="flex items-center space-x-1 mb-4"
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
+                <p className="text-gray-300 mb-4 italic">{testimonial.content}
                 <div>
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
@@ -376,55 +375,44 @@ const testimonials = [{ name: "Dr. Sarah Johnson",""
       <FuturisticBackground />
             </div>
           ))}
-        </div>"
-""
-        <div className="text-center mt-16"></div>""
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>""
+        </div>
+        <div className="text-center mt-16"><h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-gray-300 mb-8"
-            Contact our AI experts to discuss how we can transform your business with artificial intelligence."
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              Get Free Consultation"
-            </button>""
+            Contact our AI experts to discuss how we can transform your business with artificial intelligence.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              Get Free Consultation
+            </button>
             <button className="border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               View All Services
             </button>
           </div>
-"
-        { /* CTA Section */ }""
-        <section className="py-20 px-4">""
-          <div className="max-w-4xl mx-auto text-center"></div>""
-            <h2 className="text-4xl font-bold text-white mb-6"
-
-              Ready to Transform Your Business with AI?"
-            </h2>""
-            <p className="text-xl text-gray-300 mb-8">"
-              Let our AI experts help you unlock the full potential of artificial intelligence."
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"""
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">"
+        { /* CTA Section */ }
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center"><h2 className="text-4xl font-bold text-white mb-6"
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our AI experts help you unlock the full potential of artificial intelligence.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300">
                 Get Started
-              </button>"
-""
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">""
-      <div className="relative z-10 min-h-screen bg-slate-900"></div>"
-        { /* Hero Section */ }""
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto text-center"></div>""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-
-              AI Services"
-            </h1>""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
+      <div className="relative z-10 min-h-screen bg-slate-900"></div>
+        { /* Hero Section */ }
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. 
-              From consulting to implementation, we deliver AI that drives real results."
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"""
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
-                Get Started"
-              </button>""
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">"
+              From consulting to implementation, we deliver AI that drives real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -432,95 +420,85 @@ const testimonials = [{ name: "Dr. Sarah Johnson",""
         </section>
       </div>
     </div>
-"
-      <FuturisticBackground>;""
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;"
-          { /* Hero Section */ }""
-          <section className="relative py-20 px-4">;""
-            <div className="max-w-7xl mx-auto text-center"></div>;""
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"
-"
-                AI;""
+      <FuturisticBackground>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+          { /* Hero Section */ }
+          <section className="relative py-20 px-4">
+            <div className="max-w-7xl mx-auto text-center"><h1 className="text-5xl md:text-7xl font-bold text-white mb-6"
+                AI
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
                   Services;
-                </span>"
-              </h1>""
+                </span>
+              </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Transform your business with our comprehensive AI services.;
-                From analytics to automation, we provide cutting-edge AI solutions.;"
-              </p>""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                  Get Started;""
-                  <Right className="w-5 h-5 ml-2 inline" />"
-                </button>""
+                From analytics to automation, we provide cutting-edge AI solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                  Get Started
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                   Learn More;
 
                 </button>;
               </div>
             </div>
-          </section>;"
-          { /* Services Grid */ }""
-          <section className="py-20 px-4">;""
-            <div className="max-w-7xl mx-auto"></div>;""
-              <h2 className="text-4xl font-bold text-white text-center mb-16"
-                Our AI Services;"
-              </h2>;""
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>;"
-                { services.map((service, _index) => ( }""
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"></div>;"
+          </section>
+          { /* Services Grid */ }
+          <section className="py-20 px-4">
+            <div className="max-w-7xl mx-auto"><h2 className="text-4xl font-bold text-white text-center mb-16"
+                Our AI Services
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                { services.map((service, _index) => ( }
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group"></div>
                     <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`
-                      aria-hidden="true";"
-                    >;""
-                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;"
-                    </div>""
-                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>;""
+                      aria-hidden="true"
+                    >
+                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>
                     <p className="text-gray-300 text-sm text-center"
                   </div>)
                 ))}
               </div>
             </div>
-          </section>;"
-          { /* Testimonials Section */ }""
-          <section className="py-20 px-4 bg-slate-800/30">;""
-            <div className="max-w-7xl mx-auto"></div>;""
-              <h2 className="text-4xl font-bold text-white text-center mb-16"
-                What Our Clients Say;"
-              </h2>;""
-              <div className="grid md:grid-cols-3 gap-8"></div>;"
-                { testimonials.map((testimonial, _index) => ( }""
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"></div>;""
-                    <div className="flex items-center mb-4"></div>;)"
-                      { [...Array(testimonial.rating)].map((_, i) => ( }""
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"
-                      ))}"
-                    </div>""
-                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;"
-                    <div></div>;""
-                      <p className="text-white font-semibold">{testimonial.name}</p>;""
+          </section>
+          { /* Testimonials Section */ }
+          <section className="py-20 px-4 bg-slate-800/30">
+            <div className="max-w-7xl mx-auto"><h2 className="text-4xl font-bold text-white text-center mb-16"
+                What Our Clients Say
+              </h2>
+              <div className="grid md:grid-cols-3 gap-8"></div>
+                { testimonials.map((testimonial, _index) => ( }
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50"></div>
+                    <div className="flex items-center mb-4"></div>;)
+                      { [...Array(testimonial.rating)].map((_, i) => ( }
+                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
+                    </div>
+                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                    <div></div>
+                      <p className="text-white font-semibold">{testimonial.name}</p>
                       <p className="text-cyan-400 text-sm"
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-          </section>;"
-          { /* CTA Section */ }""
-          <section className="py-20 px-4">;""
-            <div className="max-w-4xl mx-auto text-center"></div>;""
-              <h2 className="text-4xl font-bold text-white mb-6"
-
-                Ready to Transform Your Business with AI?;"
-              </h2>""
+          </section>
+          { /* CTA Section */ }
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto text-center"><h2 className="text-4xl font-bold text-white mb-6"
+                Ready to Transform Your Business with AI?
+              </h2>
               <p className="text-xl text-gray-300 mb-8"
-                Join hundreds of companies already using our AI services to drive innovation and growth.;"
-              </p>""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
-                  Start Your AI Journey;""
-                  <Right className="w-5 h-5 ml-2 inline" />"
-                </button>""
+                Join hundreds of companies already using our AI services to drive innovation and growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                  Start Your AI Journey
+                  <Right className="w-5 h-5 ml-2 inline" />
+                </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                   Schedule Consultation;
 
@@ -532,65 +510,56 @@ const testimonials = [{ name: "Dr. Sarah Johnson",""
       </FuturisticBackground>;
     </>
   );
-};"
-        { /* Services Grid */ }""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto"></div>""
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-
-              Our AI Services"
-            </h2>""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>""
-              {services.map((service, index) => (""
-                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105"></div>""
+}
+        { /* Services Grid */ }
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto"><h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
+              Our AI Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              {services.map((service, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105"></div>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}></div>`
-                    <service.icon className="w-6 h-6 text-white" />""
-                  </div>""
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"""
-                  <p className="text-gray-300 mb-4">{service.description}</p>"""
-                  <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center">"""
-                    Learn More <Right className="w-4 h-4 ml-1" />"
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <button className="text-purple-400 hover:text-purple-300 font-medium flex items-center">
+                    Learn More <Right className="w-4 h-4 ml-1" />
                   </button>)
                 </div>)
               ))
             </div>
           </div>
         </section>
-"
-        { /* Features Section */ }""
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">""
-          <div className="max-w-7xl mx-auto"></div>""
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-
-              Why Choose Our AI Services?"
-            </h2>""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>""
-              {features.map((feature, index) => (""
-                <div key={index} className="text-center"></div>"""
-                  <div className="text-4xl mb-4"></div>{feature.icon}</div>"""
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"""
-                  <p className="text-gray-300">{feature.description}</p>"
+        { /* Features Section */ }
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+          <div className="max-w-7xl mx-auto"><h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
+              Why Choose Our AI Services?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+              {features.map((feature, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="text-4xl mb-4"></div>{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>)
               ))
             </div>
           </div>
         </section>
-"
-        { /* CTA Section */ }""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-4xl mx-auto text-center"></div>""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
-
-              Ready to Transform Your Business with AI?"
-            </h2>""
-            <p className="text-xl text-gray-300 mb-8">"
+        { /* CTA Section */ }
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our AI services can help you achieve your goals.'
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"""
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
-                Schedule Consultation"
-              </button>""
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">"
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"><button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Schedule Consultation
+              </button>
+              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
                 View Portfolio
               </button>
             </div>
@@ -601,8 +570,7 @@ const testimonials = [{ name: "Dr. Sarah Johnson",""
   )
 export default AiServicesPage;
 export default AiServicesPage';
-    </div>
-  );
+    </div>);
 };
 
 export default AIServicesPage;

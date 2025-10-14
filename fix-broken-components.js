@@ -109,9 +109,9 @@ const pathnames = location.pathname.split('/').filter(x => x);'
   return (
     <div></div>Page content</div>)
   )
-    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">""
-      <Link to="/" className="flex items-center hover:text-white transition-colors">""
-        <Home className="w-4 h-4 mr-1" />"
+    <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+      <Link to="/" className="flex items-center hover:text-white transition-colors">
+        <Home className="w-4 h-4 mr-1" />
         Home
       {pathnames.map((name, index) => {}
         const routeTo = \`/\${pathnames.slice(0, index + 1).join('/')}\``;
@@ -119,12 +119,12 @@ const isLast = index === pathnames.length - 1
         return (
     <div></div>Page content</div>)
   )
-          <React.Fragment key={name}>"
-            <ChevronRight className="w-4 h-4" />"
-            {isLast ? ()}"
+          <React.Fragment key={name}>
+            <ChevronRight className="w-4 h-4" />
+            {isLast ? ()}
               <span className="text-white capitalize">{name.replace('-', ' ')}</span>'
-            ) : ()"
-              <Link to={routeTo} className="hover:text-white transition-colors capitalize">"
+            ) : ()
+              <Link to={routeTo} className="hover:text-white transition-colors capitalize">
                 {name.replace('-', ' ')}'
             )}
         )
@@ -203,14 +203,14 @@ constructor(props)
     if (this.state.hasError) 
       return (
     <div></div>Page content</div>)
-  )"
-        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>""
-          <div className="text-center"></div>""
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>""
+  )
+        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+          <div className="text-center"></div>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-400 mb-4">We're sorry, but something unexpected happened.</p>'
             <button ;>
-              onClick={() => window.location.reload()}"
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700""
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700
             >
               Reload Page
       )
@@ -249,11 +249,11 @@ const reportError = (error, errorInfo) => {;}
       {children}
   )
 }
-export const LoadingPage = () => ()"
-  <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>""
-    <div className="text-center"></div>""
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div></div>""
-      <p className="text-white">Loading...</p>"
+export const LoadingPage = () => ()
+  <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+    <div className="text-center"></div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div></div>
+      <p className="text-white">Loading...</p>
     </div>
   </div>
 );``
@@ -264,41 +264,41 @@ import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 const Footer = () => {}
   return (
     <div></div>Page content</div>)
-  )"
-    <footer className="bg-gray-900 border-t border-gray-800">""
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"></div>""
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>"
-          <div></div>"
-            <h3 className="text-white font-semibold mb-4">Company</h3>""
-            <ul className="space-y-2">""
-              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>""
-              <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>""
-              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>"
-          <div></div>"
-            <h3 className="text-white font-semibold mb-4">Services</h3>""
-            <ul className="space-y-2">""
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>""
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>""
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white">Cloud Services</Link></li>"
-          <div></div>"
-            <h3 className="text-white font-semibold mb-4">Resources</h3>""
-            <ul className="space-y-2">""
-              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>""
-              <li><Link to="/case-studies" className="text-gray-400 hover:text-white">Case Studies</Link></li>""
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>"
-          <div></div>"
-            <h3 className="text-white font-semibold mb-4">Contact</h3>""
-            <div className="space-y-2"></div>""
-              <div className="flex items-center text-gray-400"></div>""
-                <Mail className="w-4 h-4 mr-2" />"
-                contact@ziontech.com"
-              <div className="flex items-center text-gray-400"></div>""
-                <Phone className="w-4 h-4 mr-2" />"
-                +1 (555) 123-4567"
-              <div className="flex items-center text-gray-400"></div>""
-                <MapPin className="w-4 h-4 mr-2" />"
-                San Francisco, CA"
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"></div>"
+  )
+    <footer className="bg-gray-900 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
+              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white">Cloud Services</Link></li>
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-white">Case Studies</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>
+          <div></div>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <div className="space-y-2"></div>
+              <div className="flex items-center text-gray-400"></div>
+                <Mail className="w-4 h-4 mr-2" />
+                contact@ziontech.com
+              <div className="flex items-center text-gray-400"></div>
+                <Phone className="w-4 h-4 mr-2" />
+                +1 (555) 123-4567
+              <div className="flex items-center text-gray-400"></div>
+                <MapPin className="w-4 h-4 mr-2" />
+                San Francisco, CA
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"></div>
       </div>
       </div>
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
@@ -310,10 +310,10 @@ export default Footer;``
 const FuturisticBackground = () => {}
   return (
     <div></div>Page content</div>)
-  )"
-    <div className="fixed inset-0 -z-10 overflow-hidden"></div>""
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>""
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div></div>;"
+  )
+    <div className="fixed inset-0 -z-10 overflow-hidden"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div></div>
     </div>
   )
 }
@@ -357,11 +357,11 @@ const variants =
 export default FuturisticButton;``
     case 'LoadingStates.tsx':'
       return `import React from 'react'`;
-export const LoadingPage = () => ()"
-  <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>""
-    <div className="text-center"></div>""
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div></div>""
-      <p className="text-white">Loading...</p>"
+export const LoadingPage = () => ()
+  <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+    <div className="text-center"></div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div></div>
+      <p className="text-white">Loading...</p>
     </div>
   </div>
 );
@@ -393,15 +393,15 @@ const navigation = [
   ]
   return (
     <div></div>Page content</div>)
-  )"
-    <nav className="bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">""
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>""
-        <div className="flex justify-between items-center h-16"></div>""
-          <div className="flex items-center"></div>""
-            <Link to="/" className="text-2xl font-bold text-white">"
-              Zion Tech"
-          <div className="hidden md:block"></div>""
-            <div className="ml-10 flex items-baseline space-x-4"></div>"
+  )
+    <nav className="bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+        <div className="flex justify-between items-center h-16"></div>
+          <div className="flex items-center"></div>
+            <Link to="/" className="text-2xl font-bold text-white">
+              Zion Tech
+          <div className="hidden md:block"></div>
+            <div className="ml-10 flex items-baseline space-x-4"></div>
               {navigation.map((item) => ()}
                 <Link;>
                   key={item.name}
@@ -413,21 +413,21 @@ const navigation = [
                   }\`}`
                 >
                   {item.name}
-              ))}"
-          <div className="md:hidden"></div>"
+              ))}
+          <div className="md:hidden"></div>
             <button;>
-              onClick={() => setIsOpen(!isOpen)}"
-              className="text-gray-400 hover:text-white focus:outline-none focus:text-white""
-            >"
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}"
-      {isOpen && ()}"
-        <div className="md:hidden"></div>""
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800"></div>"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-400 hover:text-white focus:outline-none focus:text-white
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+      {isOpen && ()}
+        <div className="md:hidden"></div>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800"></div>
             {navigation.map((item) => ()}
               <Link;>
                 key={item.name}
-                to={item.href}"
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white""
+                to={item.href}
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -468,26 +468,26 @@ const Sidebar = ({ isOpen, onClose }) => {}
   if (!isOpen) return null
   return (
     <div></div>Page content</div>)
-  )"
-    <div className="fixed inset-0 z-50 md:hidden"></div>""
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-75" onClick={onClose}></div></div>""
-      <div className="fixed top-0 left-0 w-64 h-full bg-gray-800 shadow-lg"></div>""
-        <div className="flex items-center justify-between p-4 border-b border-gray-700"></div>""
-          <h2 className="text-lg font-semibold text-white">Menu</h2>"
+  )
+    <div className="fixed inset-0 z-50 md:hidden"></div>
+      <div className="fixed inset-0 bg-gray-900 bg-opacity-75" onClick={onClose}></div></div>
+      <div className="fixed top-0 left-0 w-64 h-full bg-gray-800 shadow-lg"></div>
+        <div className="flex items-center justify-between p-4 border-b border-gray-700"></div>
+          <h2 className="text-lg font-semibold text-white">Menu</h2>
           <button;>
-            onClick={onClose}"
-            className="text-gray-400 hover:text-white""
-          >"
-            <X className="h-6 w-6" />""
-        <nav className="mt-4">"
+            onClick={onClose}
+            className="text-gray-400 hover:text-white
+          >
+            <X className="h-6 w-6" />
+        <nav className="mt-4">
           {navigation.map((item) => ()}
             <Link;>
               key={item.name}
-              to={item.href}"
-              className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white""
+              to={item.href}
+              className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white
               onClick={onClose}
-            >"
-              <item.icon className="h-5 w-5 mr-3" />"
+            >
+              <item.icon className="h-5 w-5 mr-3" />
               {item.name}
           ))}
   )
@@ -538,4 +538,4 @@ const dir = path.dirname(component)
   } catch (error) 
     console.log(`Error fixing ${component}: ${error.message}`);`
 }
-console.log(`Fixed ${fixedCount} components.`);`"
+console.log(`Fixed ${fixedCount} components.`);`

@@ -15,6 +15,4 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({ children,
 )
   );
 };
-;
 export default LazyWrapper;
-"

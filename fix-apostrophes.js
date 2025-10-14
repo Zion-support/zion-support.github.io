@@ -6,6 +6,6 @@ if (content.includes(contraction))  content = content.replace(regex, escaped); _
 } console._error(`Error processing ${filePath}:`, _error.message);`` }``
 }
 function processDirectory(dir)  const _files = fs.readdirSync(dir); for (const file of _files)  const filePath = path.join(dir, file); const stat = fs.statSync(filePath); if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {'}' processDirectory(filePath); } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {'}' ' fixFile(filePath); } }''
-}"
+}
 // Process the workspace; processDirectory('/workspace'); console.log('Apostrophe fixing complete!');`"'`"'``
-"
+

@@ -1,8 +1,7 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require("@testing-library/jest-dom"
-
-// Polyfills for Node.js environment"
-const { TextEncoder, TextDecoder } = require("util"
+require("@testing-library/jest-dom
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require("util
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -21,7 +20,7 @@ jest.mock('react-lazy-load-image-component'
     },
   };
 });
-Object.defineProperty(window, "matchMedia"
+Object.defineProperty(windowmatchMedia
   writable: true,)
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
@@ -50,10 +49,10 @@ constructor() {}
 const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
-    if ("
-      typeof args[0] === "string" &&"
-      (args[0].includes("Warning: ReactDOM.render") ||"
-        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit
     ) {
       return;
     }
@@ -63,4 +62,4 @@ beforeAll(() => {
 
 afterAll(() => {
   console.error = originalError;
-});"
+})

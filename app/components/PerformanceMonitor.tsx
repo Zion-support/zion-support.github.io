@@ -120,7 +120,6 @@ const PerformanceMonitor: React.FC = () => {
       {isVisible && (
         <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
@@ -150,8 +149,7 @@ const PerformanceMonitor: React.FC = () => {
             </div>
             
             <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-  );
+              <span className="text-gray-600">TTFB:</span>);
 };
 
 export default PerformanceMonitor;

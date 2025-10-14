@@ -1,33 +1,33 @@
 #!/usr/bin/env node;
-import fs from "fs"";
-import path from "path""
+import fs from "fs
+import path from "path
 console.log("🔧 Fixing unterminated string literals...")
 // Function to fix unterminated string literals in a file;
 function fixStringLiterals(filePath) {
-  try {"
-    let content = fs.readFileSync(filePath, "utf8")
+  try {
+    let content = fs.readFileSync(filePathutf8")
     let modified = false
     // Fix common patterns of unterminated string literals;
 const patterns = [
       // Fix import statements with extra quotes and semicolons
-      {"
-        regex: /import\s+React\s+from\s+['"]react['"];';'/g,"
-        replacement: "",
+      {
+        regex: /import\s+React\s+from\s+['"]react['"];';'/g
+        replacement:
       },
       {
-        regex:"
-          /import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];';'/g,"
-        replacement: "import { Helmet } from 'react-helmet-async';",
+        regex:
+          /import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];';'/g
+        replacement: "import { Helmet } from 'react-helmet-async'
       },
       // Fix malformed JSX attributes
-      {"
-        regex: /content="[^"]*";+"/g,"
-        replacement: (match) => match.replace(/;+"/, '"'),
+      {
+        regex: /content="[^"]*";+"/g
+        replacement: (match) => match.replace(/;+"/, '"')
       },
       // Fix malformed JSX elements
       {
-        regex: /<[^>]*;+[^>]*>/g,"
-        replacement: (match) => match.replace(/;+/g, ""),
+        regex: /<[^>]*;+[^>]*>/g
+        replacement: (match) => match.replace(/;+/g)
       },
       // Fix malformed function declarations
       {
@@ -37,10 +37,10 @@ const patterns = [
           match,
           funcName,)
         ) => `export default function ${funcName}() {
-  return ("
-    <div className="min-h-screen bg-white flex items-center justify-center"></div>"
-      <div className="text-center"></div>"
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">${funcName}</h1>"
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center"></div>
+      <div className="text-center"></div>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">${funcName}</h1>
         <p className="text-xl text-gray-600">Coming soon...</p>)
   )
 }`,
@@ -52,12 +52,12 @@ const newContent = content.replace(pattern.regex, pattern.replacement)
         content = newContent
         modified = true
 }
-    // Additional cleanup"
-    content = content.replace(/;+$/gm, "")"
-    content = content.replace(/^;+/gm, "")"
-    content = content.replace(/\s+;+\s+/g, " ")"
-    content = content.replace(/['"]+$/gm, "")"
-    content = content.replace(/^['"]+/gm, "")
+    // Additional cleanup
+    content = content.replace(/;+$/gm)
+    content = content.replace(/^;+/gm)
+    content = content.replace(/\s+;+\s+/g)
+    content = content.replace(/['"]+$/gm)
+    content = content.replace(/^['"]+/gm)
     // Remove any remaining merge conflict markers
     if (modified) {
       fs.writeFileSync(filePath, content)
@@ -69,8 +69,8 @@ const newContent = content.replace(pattern.regex, pattern.replacement)
     console.error(`❌ Error processing ${filePath}:`, error.message)
     return false
 }
-// Function to recursively find all TypeScript/JavaScript files";
-function findFiles(dir, extensions = [".tsx", ".ts", ".jsx", ".js"]) {
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = [".tsx".ts".jsx".js"]) {
   let files = []
   try {;
 const items = fs.readdirSync(dir)
@@ -78,9 +78,9 @@ const items = fs.readdirSync(dir)
 const fullPath = path.join(dir, item);
 const stat = fs.statSync(fullPath)
       if ()
-        stat.isDirectory() &&"
-        !item.startsWith(".") &&"
-        item !== "node_modules"
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules
       ) {
         files = files.concat(findFiles(fullPath, extensions))
       } else if ()
@@ -95,8 +95,8 @@ const stat = fs.statSync(fullPath)
   return files
 }
 // Main execution
-try {"
-  console.log("📁 Scanning for files with string literal issues...")";
+try {
+  console.log("📁 Scanning for files with string literal issues...")
 const files = findFiles(".")
   let fixedCount = 0
   let totalFiles = 0
@@ -107,11 +107,10 @@ const files = findFiles(".")
 }
   console.log(`\n📊 Summary:`)
   console.log(`   Total files processed: ${totalFiles}`)
-  console.log(`   Files with string literal issues fixed: ${fixedCount}`)"
+  console.log(`   Files with string literal issues fixed: ${fixedCount}`)
   console.log("\n🎉 String literal fixes completed!")
-} catch (error) {"
+} catch (error) {
   console.error("❌ Error during string literal fixes:", error.message)
   process.exit(1)
 }
-"
 }}}}

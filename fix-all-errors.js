@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from "child_process";
+import { execSync } from "child_process
 console.log('🔧 Starting comprehensive error fixing process...'
 
 // Function to find all files with merge conflicts
@@ -113,11 +113,11 @@ function fixUnterminatedStrings(filePath) {
       let line = lines[i];
       
       // Fix unterminated string literals
-      if (line.includes("
+      if (line.includes(
       }
-      if (line.includes("
+      if (line.includes(
       }
-      if (line.includes("
+      if (line.includes(
         line = line.replace(/'use client'
       }
       

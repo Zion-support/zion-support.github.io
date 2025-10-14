@@ -1,38 +1,38 @@
-import fs from "fs"";
-import path from "path"";
-import { fileURLToPath } from "url";
+import fs from "fs
+import path from "path
+import { fileURLToPath } from "url
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Function to fix a single file;
 function fixFile(filePath) {
-  try {"
-    let content = fs.readFileSync(filePath, "utf8")
+  try {
+    let content = fs.readFileSync(filePathutf8")
     let originalContent = content
-    // Fix 'use client' directive"
-    content = content.replace(/'use client';';';/g, "'use client';")
+    // Fix 'use client' directive
+    content = content.replace(/'use client';';';/g'use client')
     // Fix import statements
     content = content.replace(
-      /';';/g,"
-      "",)
+      /';';/g
+      ",)
     )
     content = content.replace(
       /import { [^}]+ } from '[^']+';';';/g,)
-      (match) => {"
-        return match.replace(/';';';$/, "';")
+      (match) => {
+        return match.replace(/';';';$/')
       },
     )
-    // Fix JSX with extra quotes and semicolons"
-    content = content.replace(/\/>";";/g, " />")"
-    content = content.replace(/>";";/g, ">")"
-    content = content.replace(/className="[^"]*">";";/g, (match) => {"
-      return match.replace(/>";";$/, ">")
+    // Fix JSX with extra quotes and semicolons
+    content = content.replace(/\/>;/g />)
+    content = content.replace(/>;/g>)
+    content = content.replace(/className="[^"]*">;/g, (match) => {
+      return match.replace(/>;$/>)
     })
-    // Fix any remaining stray quotes and semicolons"
-    content = content.replace(/";";/g, "")"
-    content = content.replace(/";/g, "")
-    // Fix merge conflict markers"
-    content = content.replace(/[\s\S]*? [^\n]+/g, "")
-    // Fix specific file patterns"
+    // Fix any remaining stray quotes and semicolons
+    content = content.replace(/";/g)
+    content = content.replace(/";/g)
+    // Fix merge conflict markers
+    content = content.replace(/[\s\S]*? [^\n]+/g)
+    // Fix specific file patterns
     if (filePath.includes("services.ts")) {
       content = `'use client';
 export interface Service {
@@ -56,39 +56,39 @@ export const services: Service[] = [
 }
 ];
 export default services;`
-}"
+}
     if (filePath.includes("global-error.tsx")) {
       content = `'use client';
 export default function GlobalError() {
-  return ("
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>"
-      <div className="text-center"></div>"
-        <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>"
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>
+      <div className="text-center"></div>
+        <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
         <p className="text-gray-300">Please try again later.</p>)
   )
 }`
-}"
+}
     if (filePath.includes("not-found.tsx")) {
       content = `'use client';
 export default function NotFound() {
-  return ("
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>"
-      <div className="text-center"></div>"
-        <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>"
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>
+      <div className="text-center"></div>
+        <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
         <p className="text-gray-300">The page you are looking for does not exist.</p>)
   )
 }`
 }
     if (")
-      filePath.includes("page-backup.tsx") ||"
+      filePath.includes("page-backup.tsx") ||
       filePath.includes("page-optimized.tsx")
     ) {
       content = `'use client';
 export default function Page() {
-  return ("
-    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>"
-      <div className="text-center"></div>"
-        <h1 className="text-4xl font-bold mb-4">Page</h1>"
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center"></div>
+      <div className="text-center"></div>
+        <h1 className="text-4xl font-bold mb-4">Page</h1>
         <p className="text-gray-300">This page is under development.</p>)
   )
 }`
@@ -109,9 +109,9 @@ const firstReturn = match.match(/return \([\s\S]*?\);/)[0]
         return firstReturn
       },
     )
-    // Fix stray closing braces and parentheses"
-    content = content.replace(/\s*\}\s*\}\s*$/, "}")"
-    content = content.replace(/\s*\)\s*;\s*\}\s*$/, ");\n}")
+    // Fix stray closing braces and parentheses
+    content = content.replace(/\s*\}\s*\}\s*$/})
+    content = content.replace(/\s*\)\s*;\s*\}\s*$/);\n})
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content)
@@ -128,19 +128,19 @@ const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       fixAllFiles(filePath)
     } else if (")
-      file.endsWith(".tsx") ||"
-      file.endsWith(".ts") ||"
-      file.endsWith(".js") ||"
+      file.endsWith(".tsx") ||
+      file.endsWith(".ts") ||
+      file.endsWith(".js") ||
       file.endsWith(".jsx")
     ) {
       fixFile(filePath)
 }
 }
-// Start fixing from the app directory";
-const appDir = path.join(__dirname, "app")
+// Start fixing from the app directory
+const appDir = path.join(__dirnameapp")
 if (fs.existsSync(appDir)) {
-  fixAllFiles(appDir)"
+  fixAllFiles(appDir)
   console.log("All remaining files have been processed.")
-} else {"
+} else {
   console.log("App directory not found.")
-}"
+}

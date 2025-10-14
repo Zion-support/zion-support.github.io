@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb } from "lucide-react";
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
-    {
+import { Helmet } from "react-helmet-async
+import { Link } from "react-router-dom
+import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb }    from "lucide-react
+const AIAnalyticsPage: React.FC = () => {"
+  const features = ["
+    {"
       icon: <BarChart3 className="w-8 h-8 text-blue-500"
       title: 'Real-time Analytics'
       description: 'Monitor your data in real-time with advanced visualization tools and interactive dashboards.'
@@ -48,10 +48,6 @@ const AIAnalyticsPage: React.FC = () => {
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-
-      <Helmet></Helmet>"
-""
-        <meta name="description" content="Professional services by Zion Tech Group." />"
-"
+      <Helmet></Helmet>
+        <meta name="description" content="Professional services by Zion Tech Group."  />
 }
-"

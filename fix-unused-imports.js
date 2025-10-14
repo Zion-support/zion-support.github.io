@@ -34,13 +34,13 @@ function fixUnusedImports(filePath) {
     let modified = false;
     
     // Remove unused imports from lucide-react
-    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["
+    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react[
     const matches = content.match(lucideImportRegex);
     
     if (matches) {
       matches.forEach(match => {
         // Extract the imports
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react["
+        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react[
         if (importMatch) {
           const imports = importMatch[1].split(','
           const usedImports = [];
@@ -68,12 +68,12 @@ function fixUnusedImports(filePath) {
     }
     
     // Remove unused React imports
-    const reactImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react["
+    const reactImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react[
     const reactMatches = content.match(reactImportRegex);
     
     if (reactMatches) {
       reactMatches.forEach(match => {
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react["
+        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react[
         if (importMatch) {
           const imports = importMatch[1].split(','
           const usedImports = [];
@@ -100,12 +100,12 @@ function fixUnusedImports(filePath) {
     }
     
     // Remove unused react-router-dom imports
-    const routerImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom["
+    const routerImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom[
     const routerMatches = content.match(routerImportRegex);
     
     if (routerMatches) {
       routerMatches.forEach(match => {
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom["
+        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom[
         if (importMatch) {
           const imports = importMatch[1].split(','
           const usedImports = [];

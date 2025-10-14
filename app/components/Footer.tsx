@@ -1,14 +1,14 @@
-import React, { useMemo } from "react"
-import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from "lucide-react";
+import React, { useMemo } from "react
+import { Link } from "react-router-dom
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react
+import { Link } from "react-router-dom
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle }    from "lucide-react
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = [
-    {
-      title: 'AI Services'
+  const serviceCategories = ["
+    {"
+      title: 'AI Services'"
       icon: <Brain className="w-5 h-5"
       color: 'from-blue-500 to-cyan-500'
       links: [
@@ -183,7 +183,6 @@ const ImprovedFooter = () => {
                   {link.icon}
                 </a>
   ];
-;
 const legal = [
   const companyLinks = [
     { label: 'About Us', href: '/about'
@@ -354,24 +353,24 @@ const legal = [
   ))};
 
         {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
-            <div className="flex items-center">"
-              <PhoneIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">+1 (555) 123-4567</span>"
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex items-center">
+              <PhoneIcon className="w-5 h-5 mr-2 text-blue-400" />
+              <span className="text-gray-300">+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center">"
-              <EnvelopeIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">info@ziontechgroup.com</span>"
+            <div className="flex items-center">
+              <EnvelopeIcon className="w-5 h-5 mr-2 text-blue-400" />
+              <span className="text-gray-300">info@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-3 text-gray-400">"
-              <MapPinIcon className="w-5 h-5 text-purple-400" />"
+            <div className="flex items-center space-x-3 text-gray-400">
+              <MapPinIcon className="w-5 h-5 text-purple-400" />
               <span>Middletown, DE 19709</span>
         {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-slate-700">"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">"
-            <div className="flex items-center space-x-2">"
-              <PhoneIcon className="w-4 h-4 text-purple-400" />"
+        <div className="mt-8 pt-8 border-t border-slate-700">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <PhoneIcon className="w-4 h-4 text-purple-400" />
               <div>
                 <p className="text-sm text-gray-400"
                 <p className="text-white"
@@ -392,16 +391,16 @@ const legal = [
               </div>
               <span>+1-302-464-0950</span>
             </div>
-            <div className="flex items-center space-x-2">"
-              <EnvelopeIcon className="w-4 h-4 text-purple-400" />"
+            <div className="flex items-center space-x-2">
+              <EnvelopeIcon className="w-4 h-4 text-purple-400" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center space-x-2">"
-              <MapPinIcon className="w-4 h-4 text-purple-400" />"
+            <div className="flex items-center space-x-2">
+              <MapPinIcon className="w-4 h-4 text-purple-400" />
               <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            <div className="flex items-center">"
-              <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />"
-              <span className="text-gray-300">San Francisco, CA</span>"
+            <div className="flex items-center">
+              <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />
+              <span className="text-gray-300">San Francisco, CA</span>
 >>>>>>> origin/main
             </div>
           </div>
@@ -410,42 +409,35 @@ const legal = [
           { /* Copyright */ }
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm"
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
-        { /* Bottom Section */ }"
-        <div className="mt-12 pt-8 border-t border-slate-700/50"></div>"
-          <div className="flex flex-col md:flex-row justify-between items-center"></div>"
-            <div className="text-gray-400 text-sm"
+        { /* Bottom Section */ }
+        <div className="mt-12 pt-8 border-t border-slate-700/50"><div className="flex flex-col md:flex-row justify-between items-center"><div className="text-gray-400 text-sm"
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            { /* Legal Links */ }"
+            { /* Legal Links */ }
             <div className="flex space-x-6 mt-4 md:mt-0"
               {footerLinks.legal.map((link) => (
                 <Link key={link.name}
-                  to={ link.href }"
+                  to={ link.href }
                   className="text-gray-400 hover:text-purple-400 text-sm transition-colors"
-
                 >
                   { link.name }
                 </Link>)
               ))
-            </div>"
-        <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center"></div>""
-          <p className="text-gray-400 text-sm">"
+            </div>
+        <div className="mt-8 pt-8 border-t border-slate-700 flex flex-col md:flex-row justify-between items-center"><p className="text-gray-400 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
-          </p>"
-          <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0"></div>"
-            <span>Made with</span>"
-            <HeartIcon className="w-4 h-4 text-red-500" />"
-            <span>for innovation</span>"
-          <div className="flex space-x-6 text-gray-400 text-sm"></div>""
-            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>""
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>"
+          </p>
+          <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0"><span>Made with</span>
+            <HeartIcon className="w-4 h-4 text-red-500" />
+            <span>for innovation</span>
+          <div className="flex space-x-6 text-gray-400 text-sm"><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
 
         {/* Bottom Bar */}
           <p className="text-gray-400"
             © {currentYear} Zion Tech Group. All rights reserved. Made with{ ' '
             <HeartIcon className="w-4 h-4 inline text-red-500"
-
           </p>
         </div>
       </div>
@@ -455,10 +447,8 @@ const legal = [
 });
 
 Footer.displayName = "Footer"
-
 export default Footer;
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
-"
 >>>>>>> origin/main

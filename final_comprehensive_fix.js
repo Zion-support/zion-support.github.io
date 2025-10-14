@@ -38,34 +38,34 @@ const tagName = tag.split(' ')[0];
   });
   
   // Fix malformed imports
-  content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+)"\s*import/g, 'import { $1 } from "$2";\nimport');"
-  content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport');
+  content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+)\s*import/g, 'import { $1 } from "$2";\nimport')
+  content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport')
   
-  // Fix broken string literals"
-  content = content.replace(/"([^"]*)"\s*([^;]*);/g, '"$1"$2;');
+  // Fix broken string literals
+  content = content.replace(/"([^"]*)\s*([^;]*);/g, '"$1"$2;')
   
-  // Fix missing quotes in object properties"
-  content = content.replace(/name="([^"]*),/g, 'name: "$1",');"
-  content = content.replace(/href="([^"]*),/g, 'href: "$1",');
+  // Fix missing quotes in object properties
+  content = content.replace(/name="([^"]*),/g, 'name: "$1",')
+  content = content.replace(/href="([^"]*),/g, 'href: "$1",')
   
-  // Fix broken array syntax"
-  content = content.replace(/\[\s*{\s*name="([^"]*),/g, '[\n    { name: "$1",');"
-  content = content.replace(/href="([^"]*)\s*},\s*{\s*name="([^"]*),/g, 'href: "$1" },\n    { name: "$2",');"
-  content = content.replace(/href="([^"]*)\s*}\s*\]/g, 'href: "$1" }\n  ]');
+  // Fix broken array syntax
+  content = content.replace(/\[\s*{\s*name="([^"]*),/g, '[\n    { name: "$1",')
+  content = content.replace(/href="([^"]*)\s*},\s*{\s*name="([^"]*),/g, 'href: "$1" },\n    { name: "$2",')
+  content = content.replace(/href="([^"]*)\s*}\s*\]/g, 'href: "$1" }\n  ]')
   
-  // Fix broken function declarations"
-  content = content.replace(/"const\s+([^=]+)\s*=\s*\(/g, 'const $1 = (');"
-  content = content.replace(/"const\s+([^:]+):\s*([^;]+);/g, 'const $1 = $2;');"
-  content = content.replace(/"const\s+([^:]+):\s*\[/g, 'const $1 = [');
+  // Fix broken function declarations
+  content = content.replace(/"const\s+([^=]+)\s*=\s*\(/g, 'const $1 = (')
+  content = content.replace(/"const\s+([^:]+):\s*([^;]+);/g, 'const $1 = $2;')
+  content = content.replace(/"const\s+([^:]+):\s*\[/g, 'const $1 = [')
   
-  // Fix broken interface declarations"
-  content = content.replace(/interface\s+([^{]+)\s*{\s*"([^"]*):\s*([^;]*);/g, 'interface $1 {\n  $2: $3;');
+  // Fix broken interface declarations
+  content = content.replace(/interface\s+([^{]+)\s*{\s*"([^"]*):\s*([^;]*);/g, 'interface $1 {\n  $2: $3;')
   
   // Fix missing semicolons
   content = content.replace(/}\s*$/gm, '};');
   
-  // Fix broken JSX attributes"
-  content = content.replace(/className="([^"]*)"\s*([^>]*>)/g, 'className="$1"$2');
+  // Fix broken JSX attributes
+  content = content.replace(/className="([^"]*)\s*([^>]*>)/g, 'className="$1"$2')
   
   // Fix missing closing tags
   content = content.replace(/<([A-Z][^>]*)>([\s\S]*?)(?=<[A-Z]|$)/g, (match, tag, body) => {;
@@ -100,8 +100,8 @@ const tagName = tag.split(' ')[0];
   content = content.replace(/}\s*<[A-Z]/g, '}\n<');
   content = content.replace(/\)\s*<[A-Z]/g, ')\n<');
   
-  // Fix broken quotes"
-  content = content.replace(/"\s*([^"]*)\s*"/g, '"$1"');
+  // Fix broken quotes
+  content = content.replace(/"\s*([^"]*)\s*"/g, '"$1"')
   
   // Fix missing newlines after imports
   content = content.replace(/import[^;]+;([^<])/g, (match, after) =>> {
@@ -135,4 +135,4 @@ const content = fs.readFileSync(file, 'utf8');
   }
 });
 
-console.log(`Fixed ${fixedCount} files.`);"
+console.log(`Fixed ${fixedCount} files.`)

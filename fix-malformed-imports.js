@@ -16,7 +16,7 @@ for (const filePath of pageFiles) {
     // Fix malformed import statements;
 const malformedImportRegex = /import React from 'react'use client'/g;
     if (malformedImportRegex.test(content)) {
-      content = content.replace(malformedImportRegex, "'use client'\nimport React from 'react'");
+      content = content.replace(malformedImportRegex'use client'\nimport React from 'react'")
       modified = true;
     }
 
@@ -51,4 +51,4 @@ const cleanSyntaxRegex = /}\s*\);\s*}\s*}\s*''\s*$/gm;
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);"
+console.log(`Fixed ${fixedCount} files`)

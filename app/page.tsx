@@ -1,38 +1,35 @@
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
-
-const HomePage = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+import { Link } from "react-router-dom
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react
+import EnhancedSEO from "./components/EnhancedSEO
+import FuturisticBackground from "./components/FuturisticBackground
+import FuturisticCard from "./components/FuturisticCard
+import FuturisticButton from "./components/FuturisticButton
+import FuturisticText from "./components/FuturisticText
+import ResponsiveContainer from "./components/ResponsiveContainer
+import ResponsiveGrid from "./components/ResponsiveGrid
+import ResponsiveText    from "./components/ResponsiveText
+const HomePage = () => {"
+  const structuredData = {"
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    "name": "Zion Tech Group"
+    "url": "https://ziontechgroup.com"
+    "logo": "https://ziontechgroup.com/logo.png"
+    "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+    "contactPoint": {"
+      "@type": "ContactPoint"
+      "telephone": "+1-302-464-0950"
+      "contactType": "customer service"
       "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+    }address": {"
+      "@type": "PostalAddress"
+      "streetAddress": "364 E Main St STE 1008"
+      "addressLocality": "Middletown"
+      "addressRegion": "DE"
+      "postalCode": "19709"
       "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
+    }sameAs": ["
+      "https://linkedin.com/company/zion-tech-group"
       "https://twitter.com/ziontechgroup"
     ]
   };
@@ -40,65 +37,65 @@ const HomePage = () => {
   const coreServices = [
     {
       icon: Brain,
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence services including machine learning, natural language processing, and computer vision.",
-      features: ["Machine Learning", "NLP", "Computer Vision", "Predictive Analytics"],
-      pricing: "From $2,500/month",
+      title: "AI Solutions"
+      description: "Cutting-edge artificial intelligence services including machine learning, natural language processing, and computer vision."
+      features: ["Machine Learning"NLP"Computer Vision"Predictive Analytics"]
+      pricing: "From $2,500/month"
       link: "/ai-services"
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards.",
-      features: ["Threat Detection", "Security Audits", "Compliance", "Incident Response"],
-      pricing: "From $1,800/month",
+      title: "Cybersecurity"
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance with industry standards."
+      features: ["Threat Detection"Security Audits"Compliance"Incident Response"]
+      pricing: "From $1,800/month"
       link: "/cybersecurity-solutions"
     },
     {
       icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions and migration services to optimize your infrastructure and reduce costs.",
-      features: ["Cloud Migration", "Infrastructure Setup", "Monitoring", "Cost Optimization"],
-      pricing: "From $3,000/month",
+      title: "Cloud Infrastructure"
+      description: "Scalable cloud solutions and migration services to optimize your infrastructure and reduce costs."
+      features: ["Cloud Migration"Infrastructure Setup"Monitoring"Cost Optimization"]
+      pricing: "From $3,000/month"
       link: "/cloud-infrastructure"
     },
     {
       icon: Zap,
-      title: "Micro SAAS",
-      description: "Ready-to-use software solutions that can be deployed quickly to solve specific business problems.",
-      features: ["Quick Deployment", "Customizable", "Scalable", "Cost-Effective"],
-      pricing: "From $99/month",
+      title: "Micro SAAS"
+      description: "Ready-to-use software solutions that can be deployed quickly to solve specific business problems."
+      features: ["Quick Deployment"Customizable"Scalable"Cost-Effective"]
+      pricing: "From $99/month"
       link: "/micro-saas"
     }
   ];
 
   const microSaasServices = [
     {
-      name: "Zion Analytics Pro",
-      description: "Advanced business intelligence and analytics platform",
-      price: "$299/month",
-      discount: "20% off first year",
-      features: ["Real-time Analytics", "Custom Dashboards", "AI Insights", "API Integration"],
+      name: "Zion Analytics Pro"
+      description: "Advanced business intelligence and analytics platform"
+      price: "$299/month"
+      discount: "20% off first year"
+      features: ["Real-time Analytics"Custom Dashboards"AI Insights"API Integration"]
       rating: 4.9,
       reviews: 127,
       link: "/zion-analytics-pro"
     },
     {
-      name: "Zion Security Shield",
-      description: "Comprehensive cybersecurity monitoring and protection",
-      price: "$199/month",
-      discount: "15% off first year",
-      features: ["24/7 Monitoring", "Threat Detection", "Compliance Reports", "Incident Response"],
+      name: "Zion Security Shield"
+      description: "Comprehensive cybersecurity monitoring and protection"
+      price: "$199/month"
+      discount: "15% off first year"
+      features: ["24/7 Monitoring"Threat Detection"Compliance Reports"Incident Response"]
       rating: 4.8,
       reviews: 89,
       link: "/zion-security-shield"
     },
     {
-      name: "Zion Content Studio",
-      description: "AI-powered content creation and management platform",
-      price: "$149/month",
-      discount: "25% off first year",
-      features: ["AI Writing", "Content Planning", "SEO Optimization", "Multi-platform Publishing"],
+      name: "Zion Content Studio"
+      description: "AI-powered content creation and management platform"
+      price: "$149/month"
+      discount: "25% off first year"
+      features: ["AI Writing"Content Planning"SEO Optimization"Multi-platform Publishing"]
       rating: 4.7,
       reviews: 156,
       link: "/zion-content-studio"
@@ -107,33 +104,32 @@ const HomePage = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      company: "TechCorp Solutions",
-      role: "CTO",
-      content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 40% increase in efficiency.",
+      name: "Sarah Johnson"
+      company: "TechCorp Solutions"
+      role: "CTO"
+      content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 40% increase in efficiency."
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
     },
     {
-      name: "Michael Chen",
-      company: "DataFlow Inc",
-      role: "CEO",
-      content: "Their micro SAAS solutions helped us scale quickly without the overhead of building everything from scratch.",
+      name: "Michael Chen"
+      company: "DataFlow Inc"
+      role: "CEO"
+      content: "Their micro SAAS solutions helped us scale quickly without the overhead of building everything from scratch."
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
     },
     {
-      name: "Emily Rodriguez",
-      company: "SecureNet Ltd",
-      role: "Security Director",
-      content: "The cybersecurity solutions provided by Zion Tech Group are top-notch. We feel completely protected.",
+      name: "Emily Rodriguez"
+      company: "SecureNet Ltd"
+      role: "Security Director"
+      content: "The cybersecurity solutions provided by Zion Tech Group are top-notch. We feel completely protected."
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -145,11 +141,7 @@ const HomePage = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-        </div>
-
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"><div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"><div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         <ResponsiveContainer>
           <div className="text-center relative z-10">
             <FuturisticText
@@ -229,7 +221,6 @@ const HomePage = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-400">
@@ -240,7 +231,6 @@ const HomePage = () => {
                   </div>
                   
                   <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>
-                  
                   <FuturisticButton
                     as={Link}
                     to={service.link}
@@ -275,7 +265,6 @@ const HomePage = () => {
                 <div className="text-center">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-400">
@@ -351,7 +340,7 @@ const HomePage = () => {
                     <p className="text-sm text-cyan-400">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4">{testimonial.content}</p>
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -409,8 +398,7 @@ const HomePage = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-    </div>
-  );
+    </div>);
 };
 
 export default HomePage;

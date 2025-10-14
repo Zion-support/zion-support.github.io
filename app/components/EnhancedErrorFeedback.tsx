@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from "lucide-react";
+import { AlertTriangle, RefreshCw, Home, Mail }    from "lucide-react
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -127,8 +127,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
-      // Default error UI
+      // Default error UI"
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20"
@@ -183,14 +182,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 <div className="mt-2 p-4 bg-slate-800/50 rounded text-xs text-gray-300 overflow-auto"
                   <pre>{this.state.error.toString()}</pre>
                   {this.state.errorInfo && (
-                    <pre className="mt-2"
-                  )}
+                    <pre className="mt-2"")}
                 </div>
               </details>
             )}
-          </div>
-        </div>
-      );
+          </div></div>);
     }
 
     return this.props.children;

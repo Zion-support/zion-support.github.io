@@ -28,24 +28,24 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   }, [isItServicesOpen])
 
   const itServices = useMemo(() => [
-    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> }
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> }
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> }
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> }
+    { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> }
+    { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> }
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
+    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true }
+    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true }
+    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true }
+    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> }
+    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> }
+    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> }
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
@@ -66,7 +66,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className="w-4 h-4" />
       services: [
         { name: 'AI Analytics', path: '/ai-analytics' },
         { name: 'AI Automation', path: '/ai-automation' },
@@ -79,7 +79,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     {
       name: 'IT Services',
       path: '/it-services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <Shield className="w-4 h-4" />
       services: [
         { name: 'Cloud Services', path: '/cloud-services' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
@@ -92,7 +92,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     {
       name: '5G Solutions',
       path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
+      icon: <Globe className="w-4 h-4" />
       services: [
         { name: '5G Implementation', path: '/5g-implementation' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
@@ -148,7 +148,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link 
-            to="/" 
+            to="/"
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           >
@@ -465,4 +465,4 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
 Navigation.displayName = 'Navigation'
 
-export default Navigation
+export default Navigation;

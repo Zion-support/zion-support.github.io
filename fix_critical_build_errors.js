@@ -33,7 +33,7 @@ const fixes = [
       },
       // Fix malformed function parameters
       {
-        pattern: /\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{/g,'""
+        pattern: /\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{/g,'
         replacement: '({ children, className = "" }) => {'
       },
       // Fix malformed JSX attributes
@@ -41,8 +41,8 @@ const fixes = [
         pattern: /className=\`\$\{baseClasses\}\s*\$\{variantClasses\[variant\]\}\s*\$\{className\}\`/g,'
         replacement: 'className={`${baseClasses} ${variantClasses[variant]} ${className}`}'
       },
-      // Fix malformed return statements"
-      {""
+      // Fix malformed return statements
+      {
         pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>/g,'
         replacement: 'return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>'
       },
@@ -51,13 +51,13 @@ const fixes = [
         pattern: /;\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
         replacement: '  </div>\n  )\n}\n\nexport default Page'
       },
-      // Fix malformed export statements"
-      {""
-        pattern: /export\s+default\s+function\s+Page\(\)\s*\{\s*return\s*\(\s*<React\.Fragment>\s*";";/g,')
+      // Fix malformed export statements
+      {
+        pattern: /export\s+default\s+function\s+Page\(\)\s*\{\s*return\s*\(\s*<React\.Fragment>\s*";/g,')
         replacement: 'export default function Page() {\n  return (\n    <React.Fragment>'
       },
-      // Fix malformed JSX elements"
-      {"")
+      // Fix malformed JSX elements
+      {")
         pattern: /<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>\s*\{children\};\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
         replacement: '  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>\n      {children}\n    </div>\n  )\n}\n\nexport default Page'
 }
@@ -67,9 +67,9 @@ const fixes = [
       if (fix.pattern.test(content)) {
         content = content.replace(fix.pattern, fix.replacement)
         fixed = true
-})"
-    // Additional specific fixes for common patterns'""
-    if (content.includes("ReactNode';") || content.includes("React.ReactNode';")) {'
+})
+    // Additional specific fixes for common patterns'
+    if (content.includes("ReactNode') || content.includes("React.ReactNode')) {'
       content = content.replace(/ReactNode';/g, 'ReactNode;');'
       content = content.replace(/React\.ReactNode';/g, 'React.ReactNode;')
       fixed = true
@@ -140,6 +140,6 @@ const files = findFiles('./app')
 } catch (error) {'
   console.error('❌ Error during fix process:', error.message)
   process.exit(1)
-}"
-}'""
+}
+}'
 }}}}}}}}}

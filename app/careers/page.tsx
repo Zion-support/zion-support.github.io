@@ -1,5 +1,5 @@
 
-import { Helmet } from "react-helmet-async";
+import { Helmet }    from "react-helmet-async
 import React from 'react'
 
 
@@ -57,10 +57,9 @@ const CareersPage: React.FC = () => {
         'Portfolio of previous work'
       ]
     }
-  ];
-
-  const benefits = [
-    {
+  ]
+  const benefits = ["
+    {"
       icon: <Users className="w-8 h-8 text-blue-500"
       title: 'Collaborative Environment'
       description: 'Work with talented professionals in a supportive team environment.'
@@ -95,11 +94,8 @@ const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative professionals. Explore career opportunities in AI, cybersecurity, cloud computing, and technology solutions."
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16"
+        <title>Careers - Zion Tech Group</title><meta name="description" content="Join our team of innovative professionals. Explore career opportunities in AI, cybersecurity, cloud computing, and technology solutions."
+      </Helmet><div className="container mx-auto px-4 py-16"
         <div className="text-center mb-16"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
             Join Our Team
@@ -159,7 +155,6 @@ const CareersPage: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-300 mb-4"
-                
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2"
                   <ul className="space-y-1"
@@ -200,15 +195,15 @@ const CareersPage: React.FC = () => {
                   href="/"
 </p>
               <div className="flex justify-center space-x-4"
-                <a "
-                  href="/" "
+                <a
+                  href="/"
 >>>>>>> origin/main
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home
                 </a>
-                <a "
-                  href="/contact" "
+                <a
+                  href="/contact"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Contact Us
@@ -220,4 +215,3 @@ const CareersPage: React.FC = () => {
         </div>
       </div>
     </div>
-"

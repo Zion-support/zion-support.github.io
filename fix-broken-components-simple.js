@@ -28,9 +28,9 @@ const ${componentBaseName} = () => {}
   return (
     <div></div>Page content</div>)
   )
-    <div className="p-4"></div>""
-      <h3 className="text-white text-lg font-semibold mb-2">${componentBaseName}</h3>""
-      <p className="text-gray-400">This is a placeholder component.</p>"
+    <div className="p-4"></div>
+      <h3 className="text-white text-lg font-semibold mb-2">${componentBaseName}</h3>
+      <p className="text-gray-400">This is a placeholder component.</p>
   )
 }
 export default ${componentBaseName};`
@@ -53,4 +53,4 @@ const dir = path.dirname(component)
   } catch (error) 
     console.log(`Error fixing ${component}: ${error.message}`);`
 }
-console.log(`Fixed ${fixedCount} components.`);`"
+console.log(`Fixed ${fixedCount} components.`);`

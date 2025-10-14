@@ -1,15 +1,14 @@
 #!/usr/bin/env node;
-import fs from "fs";
-// Read the Footer component";
-const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8");
+import fs from "fs
+// Read the Footer component
+const content = fs.readFileSync("/workspace/app/components/Footer.tsx"utf8")
 // Fix the malformed services array
 let fixed = content;
 // Fix the malformed services array line
-fixed = fixed.replace("
-  /{ name="AI Solutions, href: "\/ai-solutions" },    { name="Cybersecurity", href="\/cybersecurity" },    { name="Cloud Infrastructure", href="\/cloud-infrastructure },    { name: "Digital Transformation, href="\/digital-transformation },    { name="IT Services", href="\/it-services },"    { name="Micro SAAS", href="\/micro-saas }/g,"
+fixed = fixed.replace(
+  /{ name="AI Solutions, href: "\/ai-solutions" },    { name="Cybersecurity", href="\/cybersecurity" },    { name="Cloud Infrastructure", href="\/cloud-infrastructure },    { name: "Digital Transformation, href="\/digital-transformation },    { name="IT Services", href="\/it-services }    { name="Micro SAAS", href="\/micro-saas }/g
   '{ name: "AI Solutions", href: "/ai-solutions" },\n    { name: "Cybersecurity", href: "/cybersecurity" },\n    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },\n    { name: "Digital Transformation", href: "/digital-transformation" },\n    { name: "IT Services", href: "/it-services" },\n    { name: "Micro SAAS", href: "/micro-saas" }',)
 );
-// Write the fixed content back"
-fs.writeFileSync("/workspace/app/components/Footer.tsx", fixed, "utf8");"
-console.log("Fixed Footer services array");
-"
+// Write the fixed content back
+fs.writeFileSync("/workspace/app/components/Footer.tsx", fixedutf8")
+console.log("Fixed Footer services array")

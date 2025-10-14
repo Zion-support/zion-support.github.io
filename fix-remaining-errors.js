@@ -89,8 +89,8 @@ const fullPath = path.join(__dirname, filePath);
     content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
     
     // Fix unterminated string literals
-    content = content.replace(/"([^"]*)$/gm, '"');"
-    content = content.replace(/'([^']*)$/gm, "'");
+    content = content.replace(/"([^"]*)$/gm, '"')
+    content = content.replace(/'([^']*)$/gm'")
     content = content.replace(/`([^`]*)$/gm, '`');
     
     // Fix malformed imports
@@ -111,11 +111,11 @@ const functionName = functionMatch[1];
         const pageName = functionName.replace('Page', '');
         
         // Create proper JSX structure;
-const jsxContent = `  return ("
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>")
+const jsxContent = `  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>)
           <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.toLowerCase()}</p>
         </div>
       </div>
@@ -147,9 +147,9 @@ const jsxContent = `  return ("
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
-    content = content.replace(/;\s*\[/g, ' [');"
-    content = content.replace(/;\s*"/g, ' "');"
-    content = content.replace(/;\s*'/g, " '");
+    content = content.replace(/;\s*\[/g, ' [')
+    content = content.replace(/;\s*"/g, ' "')
+    content = content.replace(/;\s*'/g '")
     content = content.replace(/;\s*`/g, ' `');
     
     // Fix object syntax
@@ -180,6 +180,5 @@ const jsxContent = `  return ("
 // Fix all files
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
-console.log('Remaining syntax error fixing completed!');
-"
+console.log('Remaining syntax error fixing completed!')
 }}}}}}}}}}

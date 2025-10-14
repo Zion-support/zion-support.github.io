@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from "react-router-dom";
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom
+import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone }    from "lucide-react
 import {
   XMarkIcon,
   HomeIcon,
@@ -26,9 +26,8 @@ interface SidebarProps {isOpen: boolean;
 >>>>>>> origin/main
 >>>>>>> origin/main
 
-  ];
-
-  const additionalLinks = [
+  ]"
+  const additionalLinks = ["
     { name: "Privacy Policy", href: "/privacy"
     { name: "Terms of Service", href: "/terms"
     { name: "Our Team", href: "/team"
@@ -89,27 +88,26 @@ interface SidebarProps {isOpen: boolean;
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 md:hidden">"
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">"
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">"
-          <span className="text-xl font-bold text-white">Menu</span>"
-          <button onClick={onClose} className="text-gray-400 hover:text-white">"
-            <XMarkIcon className="w-6 h-6" />"
+  return (<div className="fixed inset-0 z-50 md:hidden">
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div className="relative flex flex-col w-64 h-full bg-slate-900">
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">
+          <span className="text-xl font-bold text-white">Menu</span>
+          <button onClick={onClose} className="text-gray-400 hover:text-white">
+            <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">"
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navigation.map((link) => (
             <div key={link.name}>
               {link.submenu ? (
                 <div>
                   <button
                     onClick={() => toggleExpanded(link.name)
-                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded""
+                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
                   >
-                    <div className="flex items-center">"
-                      <link.icon className="w-5 h-5 mr-3" />"
+                    <div className="flex items-center">
+                      <link.icon className="w-5 h-5 mr-3" />
                       {link.name}
                     </div>
                     <ChevronDownIcon className={`w-4 h-4 transition-transform ${`
@@ -118,7 +116,7 @@ interface SidebarProps {isOpen: boolean;
                     />
                   </button>
                   {expandedItems.includes(link.name) && (
-                    <div className="ml-4 mt-2 space-y-1">"
+                    <div className="ml-4 mt-2 space-y-1">
                       {link.submenu.map((subLink) => (
                         <Link key={subLink.name}
                           to={subLink.href}
@@ -129,7 +127,7 @@ interface SidebarProps {isOpen: boolean;
                           }`}`
                           onClick={onClose}
                         >
-                          <subLink.icon className="w-4 h-4 mr-3" />"
+                          <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
 >>>>>>> origin/main
             <button

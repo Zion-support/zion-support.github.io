@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs'
-import { execSync } from "child_process";
+import { execSync } from "child_process
 console.log('🔧 Fixing remaining merge conflict markers...'
 
 // Get list of files with merge conflicts;
@@ -12,7 +12,7 @@ const conflictedFiles = gitStatus
   .filter(file => file && !file.includes('node_modules') && !file.includes('.git'
 
 // Also check for files with conflict markers;
-const allFiles = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx"
+const allFiles = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx
   .split('\n'
   .filter(file => file.trim());
 
@@ -73,7 +73,6 @@ console.log(`\n🎉 Fixed ${resolvedCount} files with conflict markers`
 if (resolvedCount > 0) {
   console.log('\n📋 Next steps:'
   console.log('1. Run: git add .'
-  console.log('2. Run: git commit -m "Fix remaining conflict markers"
+  console.log('2. Run: git commit -m "Fix remaining conflict markers
   console.log('3. Run: npm run health-check'
 }
-"

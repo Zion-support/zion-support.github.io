@@ -46,7 +46,7 @@ const observer = new IntersectionObserver()
           observer.disconnect()}
       },
 
-      { threshold: 0.1,'"
+      { threshold: 0.1,'
         rootMargin: "50px" }
       }
     )
@@ -91,11 +91,8 @@ const getOptimizedSrc = (originalSrc: string) => {''
     <>
 
       { priority && (
-        <Helmet></Helmet> }"
-          <link rel="preload" as="image" href={optimizedSrc} />
-
-        </Helmet>)
-      )
+        <Helmet></Helmet> }
+          <link rel="preload" as="image" href={optimizedSrc} /></Helmet>)")
       <div
 
         ref={ imgRef }
@@ -106,24 +103,22 @@ const getOptimizedSrc = (originalSrc: string) => {''
         { /* Placeholder */ }
         { !isLoaded && !isError && (
           <div
-"
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center" }
             style={{ width, height }}
 
-          ></div>"
-            <div className="text-gray-400 text-sm"></div>Loading...</div>"
+          ></div>
+            <div className="text-gray-400 text-sm"></div>Loading...</div>
           </div>
 )
         )}
         { /* Error state */ }
         { isError && (
-          <div"
+          <div
             className="absolute inset-0 bg-gray-100 flex items-center justify-center" }
             style={{ width, height }}
 
-          ></div>"
-            <div className="text-gray-400 text-sm text-center"></div>""
-              <div className="text-2xl mb-2"></div>📷</div>"
+          ></div>
+            <div className="text-gray-400 text-sm text-center"><div className="text-2xl mb-2"></div>📷</div>
               <div></div>Image not available</div>
             </div>
           </div>
@@ -143,7 +138,7 @@ const getOptimizedSrc = (originalSrc: string) => {''
             className={`transition-opacity duration-300 ${'
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
-            style={{'"
+            style={{'
               width: "100%",'"
               height: "100%",'"
               objectFit: "cover" }
@@ -153,4 +148,3 @@ const getOptimizedSrc = (originalSrc: string) => {''
         )
       </div>
     </>
-"

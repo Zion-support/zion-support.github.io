@@ -8,27 +8,27 @@ export default function AiPoweredDevOps() {
     {
       title: 'Intelligent CI/CD',
       description: 'AI-powered continuous integration and deployment pipelines that adapt and optimize automatically.',
-      icon: <Cpu className="w-8 h-8" />,
+      icon: <Cpu className="w-8 h-8" />
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Automated Testing',
       description: 'Smart test generation and execution with AI-driven test case optimization and coverage analysis.',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" />
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Security Scanning',
       description: 'Advanced AI security scanning that detects vulnerabilities and suggests remediation strategies.',
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" />
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Performance Monitoring',
-      description: 'Real-time performance monitoring with predictive analytics and automated scaling recommendations.',
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: 'from-orange-500 to-red-500'
-    }
+      description: 'Real-time performance monitoring with predictive analytics and automated scaling recommendations.',;
+      icon: <TrendingUp className="w-8 h-8" />
+      color: 'from-orange-500 to-red-500';
+    };
   ];
 
   const benefits = [
@@ -66,15 +66,12 @@ export default function AiPoweredDevOps() {
   return (
     <>
       <Helmet>
-        <title>AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations</title>
-        <meta name="description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, automated testing, and smart monitoring solutions." />
-        <meta name="keywords" content="AI DevOps, intelligent CI/CD, automated testing, AI monitoring, DevOps automation, smart deployment" />
-        <meta property="og:title" content="AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations" />
-        <meta property="og:description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, and smart monitoring solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-powered-devops" />
-      </Helmet>
-
+        <title>AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations</title><meta name="description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, automated testing, and smart monitoring solutions."  />
+        <meta name="keywords" content="AI DevOps, intelligent CI/CD, automated testing, AI monitoring, DevOps automation, smart deployment"  />
+        <meta property="og:title" content="AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations"  />
+        <meta property="og:description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, and smart monitoring solutions."  />
+        <meta property="og:type" content="website"  />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-powered-devops" /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

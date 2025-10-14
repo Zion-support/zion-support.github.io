@@ -13,13 +13,13 @@ console.log('Conflicted files:', conflictedFiles.length);
 // For modify/delete conflicts, remove the files that were deleted in main
 for (const file of conflictedFiles) {
   if (existsSync(file)) {
-    console.log(`Removing conflicted file: ${file}`);"
-    execSync(`git rm "${file}"`);
+    console.log(`Removing conflicted file: ${file}`)
+    execSync(`git rm "${file}`)
   }
 }
 
 // Add and commit the resolution
-execSync('git add .');"
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');
+execSync('git add .')
+execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"')
 
-console.log('Merge conflicts resolved successfully');"
+console.log('Merge conflicts resolved successfully')

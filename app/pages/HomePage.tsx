@@ -25,16 +25,16 @@ export default function HomePage()  {
   const structuredData = {
 export default function HomePage() {
 const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@context": "https://schema.org"
+    "@type": "WebSite"
+    "name": "Zion Tech Group"
+    "url": "https://ziontechgroup.com"
+    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation."
+    "potentialAction": {"
+      "@type": "SearchAction
+      "target": "https://ziontechgroup.com/search?q={search_term_string}
+      "query-input": "required name=search_term_string
+    };
   };
 
   return (
@@ -110,8 +110,7 @@ const structuredData = {
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"></div>
-                      <span className="text-sm">{feature}</span>
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"><span className="text-sm">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -148,8 +147,7 @@ const structuredData = {
 
       {/* About Section */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -192,8 +190,7 @@ const structuredData = {
 
       {/* Contact Section */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-slate-900"></div>
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="absolute inset-0 bg-slate-900"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">

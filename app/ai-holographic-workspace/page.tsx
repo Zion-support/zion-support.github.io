@@ -1,12 +1,12 @@
 
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom
 <<<<<<< HEAD
-import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from "lucide-react";
+import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
 
-const AIHolographicWorkspace = () => {
-  const features = [
-    {
+const AIHolographicWorkspace = () => {"
+  const features = ["
+    {"
       title: "3D Holographic Display"
       description: "Immersive 3D holographic interface that projects data and applications into your physical space."
       icon: <Monitor className="w-8 h-8"
@@ -120,7 +120,7 @@ const AIHolographicWorkspace = () => {
       name: "James Chen"
       company: "Global Engineering Solutions"
       role: "CTO"
-      content: "
+      content:
       rating: 5,
       avatar: "JC"
     }
@@ -132,18 +132,12 @@ const AIHolographicWorkspace = () => {
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6"
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6"
   ];
-import { Helmet } from "react-helmet-async";
-;
+import { Helmet }    from "react-helmet-async"
 const HomePage = () => {"
-  return (""
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Helmet></Helmet>"
-        <title>Home - Zion Tech Group</title>""
-        <meta name="description" content="Home - Zion Tech Group" />"
-      </Helmet>""
-      <div className="container mx-auto px-4 py-16"></div>""
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>""
+      <Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
           <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
           </p>
@@ -152,7 +146,4 @@ const HomePage = () => {"
     </div>)
   );
 };
-;
-export default HomePage;"
-"
-"
+export default HomePage;

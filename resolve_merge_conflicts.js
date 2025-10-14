@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 import fs from 'fs'
 import path from 'path'
-import { execSync } from "child_process";
+import { execSync } from "child_process
 console.log('🔧 Starting merge conflict resolution...'
 
 // Get list of files with merge conflicts;
@@ -73,7 +73,6 @@ if (resolvedCount > 0) {
   console.log('\n📋 Next steps:'
   console.log('1. Review the resolved files'
   console.log('2. Run: git status'
-  console.log('3. Run: git commit -m "Resolve merge conflicts"
+  console.log('3. Run: git commit -m "Resolve merge conflicts
   console.log('4. Run: git push origin resolve-all-conflicts'
 }
-"
