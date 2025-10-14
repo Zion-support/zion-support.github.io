@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -39,7 +32,6 @@ export const crm = {
 
   }
 
-=======
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -71,46 +63,14 @@ export const crm = {
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   },
->>>>>>> origin/auto/autonomy-17186719616
 };
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-
-  async updateStatus(
-    connection: ProviderConnection
-    status: Record<string, any>
-  ) {
-    connection: ProviderConnection,
-    status: Record<string, any>,
-  ) {;
-    return mockProviderCall(connection, "update_status", { status });
-  }
-}
-
-
-  async createCandidate(
-    connection: ProviderConnection,
-    candidate: Record<string, any>
-  ) {
-    return executeProviderAction(connection, 'createCandidate', { candidate });
-  },
-};
 
 
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
@@ -121,4 +81,3 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
->>>>>>> origin/auto/autonomy-17186719616

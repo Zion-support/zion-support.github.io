@@ -2,16 +2,14 @@
 
 export const Performancemonitoring = {
   init: () => {
-    console.log('Performancemonitoring initialized');
-  },
-  
-  process: (data: unknown) => {
+    },
+
+  process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Performancemonitoring cleaned up');
-  }
+    },
 };
 
 export default Performancemonitoring;

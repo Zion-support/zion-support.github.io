@@ -14,10 +14,7 @@ export interface EnterpriseIt2026Service {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseIT2026Services: EnterpriseIt2026Service[] = [
   {
     id: "2026-enterprise-it",

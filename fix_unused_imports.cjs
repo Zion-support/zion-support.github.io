@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Find all .tsx files in the app directory
-const appDir = './app';
+const appDir = "./app";
 const files = [];
 
 function findTsxFiles(dir) {
@@ -12,7 +12,7 @@ function findTsxFiles(dir) {
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
       findTsxFiles(fullPath);
-    } else if (item.endsWith('.tsx')) {
+    } else if (item.endsWith(".tsx")) {
       files.push(fullPath);
     }
   }
@@ -22,13 +22,17 @@ findTsxFiles(appDir);
 
 function fixUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, "utf8");
+
     // Check if the file has the pattern with unused imports
-    if (content.includes("import { CheckCircle, ArrowRight, Star, Zap, Brain, Target, Clock, Users, Globe } from 'lucide-react'")) {
+    if (
+      content.includes(
+        "import { CheckCircle, ArrowRight, Star, Zap, Brain, Target, Clock, Users, Globe } from 'lucide-react'",
+      )
+    ) {
       content = content.replace(
         "import { CheckCircle, ArrowRight, Star, Zap, Brain, Target, Clock, Users, Globe } from 'lucide-react'",
-        "import { CheckCircle, Brain, Target } from 'lucide-react'"
+        "import { CheckCircle, Brain, Target } from 'lucide-react'",
       );
       fs.writeFileSync(filePath, content);
       console.log(`Fixed unused imports in: ${filePath}`);
@@ -41,4 +45,4 @@ function fixUnusedImports(filePath) {
 // Fix all files
 files.forEach(fixUnusedImports);
 
-console.log('Unused imports fixing completed!');
+console.log("Unused imports fixing completed!");

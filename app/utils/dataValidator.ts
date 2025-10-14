@@ -2,16 +2,14 @@
 
 export const Datavalidator = {
   init: () => {
-    console.log('Datavalidator initialized');
-  },
-  
-  process: (data: unknown) => {
+    },
+
+  process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Datavalidator cleaned up');
-  }
+    },
 };
 
 export default Datavalidator;

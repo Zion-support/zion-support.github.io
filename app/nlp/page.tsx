@@ -1,15 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-;
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const NLPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Natural Language Processing | Zion Tech Group</title>
-        <meta name="description" content="Advanced NLP solutions for text analysis and understanding" />
+        <meta
+          name="description"
+          content="Advanced NLP solutions for text analysis and understanding"
+        />
       </Helmet>
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

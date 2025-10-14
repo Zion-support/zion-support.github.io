@@ -1,72 +1,60 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { AnalyticsProvider } from './components/AnalyticsProvider';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ErrorBoundary } from 'react-error-boundary';
-import { ErrorFallback } from './components/ErrorFallback';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-;
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
+// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import MobileNavigation from "./components/MobileNavigation";
+import ImprovedNavigation from "./components/ImprovedNavigation";
+import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedSidebar from "./components/ImprovedSidebar";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
         <BrowserRouter>
           <AnalyticsProvider>
-            <PerformanceMonitor />
+            <EnhancedPerformanceMonitor showInProduction={false} />
             <Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-              <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-              <meta name="keywords" content="AI solutions, IT services, digital transformation, business automation, technology consulting" />
+              <meta
+                name="description"
+                content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
+              />
+              <meta
+                name="keywords"
+                content="AI solutions, IT services, digital transformation, business automation, technology consulting"
+              />
             </Helmet>
-            
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="flex justify-between items-center py-4">
-                    <Link to="/" className="text-2xl font-bold text-white">
-                      Zion Tech Group
-                    </Link>
-                    <nav className="hidden md:flex space-x-8">
-                      <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                        About
-                      </Link>
-                      <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                        Services
-                      </Link>
-                      <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                        Contact
-                      </Link>
-                    </nav>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                    >
-                      Contact Us
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </header>
+
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
               
-              <main>
-                {children}
-              </main>
+              <ImprovedNavigation />
+
+              <main>{children}</main>
+
+              <ImprovedFooter />
               
-              <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  <p className="text-gray-300">
-                    © 2024 Zion Tech Group. All rights reserved.
-                  </p>
-                </div>
-              </footer>
+              {/* Sidebar */}
+              <ImprovedSidebar 
+                isOpen={isSidebarOpen} 
+                onClose={() => setIsSidebarOpen(false)} 
+              />
             </div>
           </AnalyticsProvider>
         </BrowserRouter>

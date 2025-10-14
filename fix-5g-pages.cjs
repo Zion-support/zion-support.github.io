@@ -1,14 +1,14 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 const pages = [
-  '5g-implementation',
-  '5g-iot-solutions', 
-  '5g-mobile-applications',
-  '5g-network-infrastructure',
-  '5g-private-networks',
-  '5g-smart-city-solutions',
-  '5g-solutions'
+  "5g-implementation",
+  "5g-iot-solutions",
+  "5g-mobile-applications",
+  "5g-network-infrastructure",
+  "5g-private-networks",
+  "5g-smart-city-solutions",
+  "5g-solutions",
 ];
 
 const template = `import React from 'react';
@@ -40,36 +40,37 @@ export default function {PAGE_NAME}Page() {
 }`;
 
 const pageTitles = {
-  '5g-implementation': '5G Implementation',
-  '5g-iot-solutions': '5G IoT Solutions',
-  '5g-mobile-applications': '5G Mobile Applications',
-  '5g-network-infrastructure': '5G Network Infrastructure',
-  '5g-private-networks': '5G Private Networks',
-  '5g-smart-city-solutions': '5G Smart City Solutions',
-  '5g-solutions': '5G Solutions'
+  "5g-implementation": "5G Implementation",
+  "5g-iot-solutions": "5G IoT Solutions",
+  "5g-mobile-applications": "5G Mobile Applications",
+  "5g-network-infrastructure": "5G Network Infrastructure",
+  "5g-private-networks": "5G Private Networks",
+  "5g-smart-city-solutions": "5G Smart City Solutions",
+  "5g-solutions": "5G Solutions",
 };
 
 const pageDescriptions = {
-  '5g-implementation': '5G implementation',
-  '5g-iot-solutions': '5G IoT solutions',
-  '5g-mobile-applications': '5G mobile applications',
-  '5g-network-infrastructure': '5G network infrastructure',
-  '5g-private-networks': '5G private networks',
-  '5g-smart-city-solutions': '5G smart city solutions',
-  '5g-solutions': '5G solutions'
+  "5g-implementation": "5G implementation",
+  "5g-iot-solutions": "5G IoT solutions",
+  "5g-mobile-applications": "5G mobile applications",
+  "5g-network-infrastructure": "5G network infrastructure",
+  "5g-private-networks": "5G private networks",
+  "5g-smart-city-solutions": "5G smart city solutions",
+  "5g-solutions": "5G solutions",
 };
 
-pages.forEach(page => {
-  const pageName = page.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('');
-  
+pages.forEach((page) => {
+  const pageName = page
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("");
+
   const content = template
     .replace(/{PAGE_NAME}/g, pageName)
     .replace(/{PAGE_TITLE}/g, pageTitles[page])
     .replace(/{PAGE_DESCRIPTION}/g, pageDescriptions[page]);
-  
-  const filePath = path.join(__dirname, 'app', page, 'page.tsx');
+
+  const filePath = path.join(__dirname, "app", page, "page.tsx");
   fs.writeFileSync(filePath, content);
   console.log(`Fixed ${page}/page.tsx`);
 });

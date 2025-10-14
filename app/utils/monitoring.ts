@@ -2,16 +2,14 @@
 
 export const Monitoring = {
   init: () => {
-    console.log('Monitoring initialized');
-  },
-  
-  process: (data: unknown) => {
+    },
+
+  process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Monitoring cleaned up');
-  }
+    },
 };
 
 export default Monitoring;

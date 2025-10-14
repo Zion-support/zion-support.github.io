@@ -1,8 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export interface PracticalBusinessSolution2029 {
   id: string;
   name: string;
@@ -43,10 +40,7 @@ export interface PracticalBusinessSolution2029 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/auto/autonomy-17186719616
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
@@ -465,14 +459,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 198
   }
 ];
-<<<<<<< HEAD
-export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular);
-};
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category);
-};
-=======
 
 export const getPopularPracticalBusinessSolutions2029 = () => {
   return practicalBusinessSolutions2029.filter(service => service.popular);
@@ -482,7 +468,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
   return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
->>>>>>> origin/auto/autonomy-17186719616
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));

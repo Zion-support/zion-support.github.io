@@ -1,18 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
   if (req.method === 'GET') {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
     const { status, topic, tag, author, limit, offset } = req.query;
@@ -25,7 +17,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
-=======
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -67,29 +58,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       seo: {
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
->>>>>>> origin/auto/autonomy-17186719616
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
       },
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 },
-<<<<<<< HEAD
-    }
-    posts.unshift (post);
-    write_posts (posts);
-    return res.status (201).json (post);
-  }
 
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-=======
     };
     posts.unshift(post);
     writePosts(posts);
@@ -98,4 +75,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
->>>>>>> origin/auto/autonomy-17186719616

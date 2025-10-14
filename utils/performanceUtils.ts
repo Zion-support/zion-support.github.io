@@ -1,120 +1,150 @@
-export function debounce<T extends (...args: unknown[]) => any>(
-  func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-}
-
-export function throttle<T extends (...args: unknown[]) => any>(
-  func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+// Performance optimization utilities
+export const performanceOptimizer = {
+  init() {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      this.setupPerformanceMonitoring();
+      this.optimizeImages();
+      this.setupLazyLoading();
     }
-  };
-}
+  },
 
-export function createIntersectionObserver(
-  callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
-): IntersectionObserver | null {
-  if (typeof window === 'undefined') return null;
-  return new IntersectionObserver(callback, options);
-}
-
-export function getMemoryUsage(): unknown {
-  if (typeof window === 'undefined' || !('memory' in performance)) return null;
-  return (performance as any).memory;
-}
-
-export function preloadCriticalResources(): void {
-  if (typeof window === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+  setupPerformanceMonitoring() {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
-    document.head.appendChild(link);
-  });
-}
+  },
 
-export function optimizeImage(src: string, width?: number, height?: number): string {
-  if (!src) return '';
+  optimizeImages() {
+    // Lazy load images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  },
+
+  setupLazyLoading() {
+    // Preload critical resources
+    const criticalResources = [
+      '/app/styles/futuristic.css',
+      '/app/styles/futuristic-enhanced.css'
+    ];
+
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'style';
+      document.head.appendChild(link);
+    });
+  },
+
+  cleanup() {
+    // Cleanup performance monitoring
+    if (typeof window !== 'undefined') {
+      // Remove any performance observers
+      const observers = (window as any).__performanceObservers || [];
+      observers.forEach((observer: any) => observer.disconnect());
+    }
+  }
+};
+
+// Image optimization utility
+export const optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {
+  if (!src) return src;
   
+  // If it's already an optimized URL, return as is
+  if (src.includes('w_') || src.includes('q_')) return src;
+  
+  // For placeholder images, return as is
+  if (src.includes('placeholder') || src.includes('api/placeholder')) return src;
+  
+  // Add optimization parameters
   const params = new URLSearchParams();
   if (width) params.set('w', width.toString());
   if (height) params.set('h', height.toString());
-  params.set('q', '80');
-  params.set('f', 'auto');
+  params.set('q', quality.toString());
+  params.set('f', 'auto'); // Auto format
   
-  return `${src}?${params.toString()}`;
-}
+  const separator = src.includes('?') ? '&' : '?';
+  return `${src}${separator}${params.toString()}`;
+};
 
-export function createLazyImageObserver(): IntersectionObserver | null {
-  if (typeof window === 'undefined') return null;
+// Bundle size optimization
+export const optimizeBundle = {
+  // Lazy load non-critical components
+  lazyLoadComponent: (importFn: () => Promise<any>) => {
+    return React.lazy(importFn);
+  },
   
-  return new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            img.classList.add('loaded');
-          }
-        }
-      });
-    },
-    {
-      rootMargin: '50px 0px',
-      threshold: 0.01
+  // Preload critical routes
+  preloadRoute: (routePath: string) => {
+    if (typeof window !== 'undefined') {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = routePath;
+      document.head.appendChild(link);
     }
-  );
-}
+  }
+};
 
-export function checkPerformanceBudget(): void {
-  if (typeof window === 'undefined') return;
+// Memory optimization
+export const memoryOptimizer = {
+  // Clean up unused objects
+  cleanup: () => {
+    if (typeof window !== 'undefined' && 'gc' in window) {
+      (window as any).gc();
+    }
+  },
   
-  const budget = {
-    fcp: 1800, // First Contentful Paint
-    lcp: 2500, // Largest Contentful Paint
-    fid: 100,  // First Input Delay
-    cls: 0.1   // Cumulative Layout Shift
-  };
+  // Monitor memory usage
+  getMemoryUsage: () => {
+    if (typeof window !== 'undefined' && 'memory' in performance) {
+      return (performance as any).memory;
+    }
+    return null;
+  }
+};
 
-  // This would typically integrate with a performance monitoring service
-  console.log('Performance budget check:', budget);
-}
+// Cache optimization
+export const cacheOptimizer = {
+  // Set cache headers for static assets
+  setCacheHeaders: (response: Response) => {
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    return response;
+  },
+  
+  // Clear cache when needed
+  clearCache: () => {
+    if ('caches' in window) {
+      caches.keys().then(names => {
+        names.forEach(name => {
+          caches.delete(name);
+        });
+      });
+    }
+  }
+};
 
-export function addResourceHints(): void {
-  if (typeof window === 'undefined') return;
-  
-  // Add DNS prefetch for external domains
-  const domains = ['fonts.googleapis.com', 'fonts.gstatic.com'];
-  
-  domains.forEach(domain => {
-    const link = document.createElement('link');
-    link.rel = 'dns-prefetch';
-    link.href = `//${domain}`;
-    document.head.appendChild(link);
-  });
-}
+export default performanceOptimizer;

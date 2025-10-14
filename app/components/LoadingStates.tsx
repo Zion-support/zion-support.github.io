@@ -1,62 +1,76 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
-;
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8'
+interface LoadingPageProps {
+  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
+  message?: string;
+  size?: 'sm' | 'md' | 'lg';
+  variant?: 'default' | 'futuristic';
+}
+
+const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  type = 'loading', 
+  message = 'Loading...', 
+  size = 'md',
+  variant = 'futuristic'
+}) => {
+  const getIcon = () => {
+    switch (type) {
+      case 'ai':
+        return <Brain className="animate-pulse" />;
+      case 'security':
+        return <Shield className="animate-pulse" />;
+      case 'performance':
+        return <Zap className="animate-pulse" />;
+      case 'global':
+        return <Globe className="animate-pulse" />;
+      default:
+        return <Loader2 className="animate-spin" />;
+    }
   };
-  
-  return (
-    <div className="flex items-center justify-center">
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
-    </div>
-  );
-};
 
-export const LoadingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <div className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+  const getSizeClasses = () => {
+    switch (size) {
+      case 'sm':
+        return 'w-6 h-6';
+      case 'lg':
+        return 'w-12 h-12';
+      default:
+        return 'w-8 h-8';
+    }
+  };
+
+  if (variant === 'default') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="text-center">
+          <Loader2 className="w-12 h-12 animate-spin text-cyan-400 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-white mb-2">{message}</h2>
+          <p className="text-gray-400">Please wait while we load the content...</p>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h3>
-        <p className="text-gray-300">Initializing advanced AI systems...</p>
+      </div>
+    );
+  }
+
+  // Futuristic variant
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className={`${getSizeClasses()} text-cyan-400 mx-auto mb-4`}>
+          {getIcon()}
+        </div>
+        <p className="text-white text-lg font-medium">{message}</p>
+        <div className="mt-4 flex justify-center">
+          <div className="animate-pulse flex space-x-1">
+            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export const LoadingDots: React.FC = () => {
-  return (
-    <div className="flex space-x-1">
-      <div className="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-      <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-      <div className="w-2 h-2 bg-green-500 rounded-full animate-bounce" style={{ animationDelay: '0.3s' }}></div>
-    </div>
-  );
-};
-
-export const LoadingPulse: React.FC = () => {
-  return (
-    <div className="flex space-x-2">
-      <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-      <div className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-      <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.6s' }}></div>
-    </div>
-  );
-};
-
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
-  return (
-    <div className="space-y-2">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div key={index} className="h-4 bg-gray-300 rounded animate-pulse"></div>
-      ))}
-    </div>
-  );
-};
+export { LoadingPage };
+export default LoadingPage;

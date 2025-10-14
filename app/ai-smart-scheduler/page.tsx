@@ -1,99 +1,103 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-;
-import Layout from '../layout';
-import { Brain, Users, Zap, Globe, Clock, CheckCircle, User } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import Layout from "../layout";
 
 export default function AISmartScheduler() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Scheduling',
-      description: 'Intelligent scheduling that learns from your patterns and preferences'
+      title: "AI-Powered Scheduling",
+      description:
+        "Intelligent scheduling that learns from your patterns and preferences",
     },
     {
       icon: <Users className="w-6 h-6 text-purple-400" />,
-      title: 'Team Coordination',
-      description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
+      title: "Team Coordination",
+      description:
+        "Seamlessly coordinate meetings across multiple time zones and schedules",
     },
     {
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Optimization',
-      description: 'Automatically finds the best meeting times for maximum productivity'
+      title: "Auto-Optimization",
+      description:
+        "Automatically finds the best meeting times for maximum productivity",
     },
     {
       icon: <Globe className="w-6 h-6 text-green-400" />,
-      title: 'Global Integration',
-      description: 'Works with all major calendar platforms and time zones'
-    }
+      title: "Global Integration",
+      description: "Works with all major calendar platforms and time zones",
+    },
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small teams',
+      name: "Starter",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for individuals and small teams",
       features: [
-        'Up to 5 team members',
-        'Basic AI scheduling',
-        'Calendar integration',
-        'Email notifications',
-        'Mobile app access'
+        "Up to 5 team members",
+        "Basic AI scheduling",
+        "Calendar integration",
+        "Email notifications",
+        "Mobile app access",
       ],
-      popular: false
+      popular: false,
     },
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      name: "Professional",
+      price: "$79",
+      period: "/month",
+      description: "Ideal for growing businesses",
       features: [
-        'Up to 25 team members',
-        'Advanced AI optimization',
-        'Custom meeting templates',
-        'Analytics dashboard',
-        'Priority support',
-        'API access'
+        "Up to 25 team members",
+        "Advanced AI optimization",
+        "Custom meeting templates",
+        "Analytics dashboard",
+        "Priority support",
+        "API access",
       ],
-      popular: true
+      popular: true,
     },
     {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
+      name: "Enterprise",
+      price: "$199",
+      period: "/month",
+      description: "For large organizations",
       features: [
-        'Unlimited team members',
-        'Custom AI training',
-        'White-label options',
-        'Advanced analytics',
-        'Dedicated support',
-        'Custom integrations'
+        "Unlimited team members",
+        "Custom AI training",
+        "White-label options",
+        "Advanced analytics",
+        "Dedicated support",
+        "Custom integrations",
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      company: 'TechStart Inc.',
-      content: 'This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.',
-      rating: 5
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      content:
+        "This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.",
+      rating: 5,
     },
     {
-      name: 'Michael Rodriguez',
-      company: 'Global Consulting',
-      content: 'Finally, a scheduling tool that actually understands our complex team dynamics.',
-      rating: 5
+      name: "Michael Rodriguez",
+      company: "Global Consulting",
+      content:
+        "Finally, a scheduling tool that actually understands our complex team dynamics.",
+      rating: 5,
     },
     {
-      name: 'Emily Watson',
-      company: 'RemoteFirst Co.',
-      content: 'The time zone handling is flawless. Our international team coordination has never been smoother.',
-      rating: 5
-    }
+      name: "Emily Watson",
+      company: "RemoteFirst Co.",
+      content:
+        "The time zone handling is flawless. Our international team coordination has never been smoother.",
+      rating: 5,
+    },
   ];
 
   return (
@@ -106,18 +110,19 @@ export default function AISmartScheduler() {
               AI-Powered Scheduling
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
-              Optimize meetings, coordinate teams, and maximize productivity automatically.
+              Transform your scheduling chaos into organized efficiency with our
+              intelligent AI-powered scheduler. Optimize meetings, coordinate
+              teams, and maximize productivity automatically.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                to="#demo" 
+              <Link
+                to="#demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Watch Demo
@@ -143,7 +148,9 @@ export default function AISmartScheduler() {
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
                   {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white ml-3">
+                    {feature.title}
+                  </h3>
                 </div>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -165,23 +172,33 @@ export default function AISmartScheduler() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-gray-900 p-8 rounded-lg relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
+              <div
+                key={index}
+                className={`bg-gray-900 p-8 rounded-lg relative ${plan.popular ? "ring-2 ring-cyan-400" : ""}`}
+              >
+                {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {plan.name}
+                </h3>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-4xl font-bold text-white">
+                    {plan.price}
+                  </span>
                   <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-gray-300"
+                    >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
                     </li>
@@ -191,8 +208,8 @@ export default function AISmartScheduler() {
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+                      ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700"
+                      : "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10"
                   }`}
                 >
                   Get Started
@@ -223,8 +240,12 @@ export default function AISmartScheduler() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="font-semibold text-white">{testimonial.name}</div>
-                <div className="text-sm text-gray-400">{testimonial.company}</div>
+                <div className="font-semibold text-white">
+                  {testimonial.name}
+                </div>
+                <div className="text-sm text-gray-400">
+                  {testimonial.company}
+                </div>
               </div>
             ))}
           </div>
@@ -238,17 +259,18 @@ export default function AISmartScheduler() {
             Ready to Transform Your Scheduling?
           </h2>
           <p className="text-gray-200 text-lg mb-8">
-            Join thousands of teams already using AI Smart Scheduler to optimize their productivity
+            Join thousands of teams already using AI Smart Scheduler to optimize
+            their productivity
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
             >
               Start Your Free Trial
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Learn More

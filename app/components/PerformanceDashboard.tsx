@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PerformanceDashboardProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface PerformanceDashboardProps {
 
 const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

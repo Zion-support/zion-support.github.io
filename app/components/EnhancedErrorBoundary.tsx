@@ -1,7 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-;
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -10,34 +9,77 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
     
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
-    
-    // In production, send to error reporting service
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // Example: sendErrorToService(error, errorInfo);
+      this.logErrorToService(error, errorInfo);
     }
   }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to an error reporting service
+    // like Sentry, LogRocket, or Bugsnag
+    const errorData = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      errorId: this.state.errorId,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+    };
+
+    // For now, just log to console
+    console.error('Error data:', errorData);
+  };
+
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    });
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
 
   render() {
     if (this.state.hasError) {
@@ -46,28 +88,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-gray-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; this.state.error &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
-              <div className="bg-red-900/50 border border-red-500 rounded-lg p-4 mb-6 text-left">
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-red-300 text-sm overflow-auto">
+                <pre className="text-sm text-gray-300 whitespace-pre-wrap">
                   {this.state.error.toString()}
                 </pre>
-                {this.state.errorInfo &amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp; (
-                  <pre className="text-red-300 text-sm mt-2 overflow-auto">
+                {this.state.errorInfo && (
+                  <pre className="text-sm text-gray-400 mt-2 whitespace-pre-wrap">
                     {this.state.errorInfo.componentStack}
                   </pre>
                 )}
@@ -76,8 +118,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => window.location.reload()}
-                className="flex items-center justify-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                onClick={this.handleRetry}
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
@@ -85,11 +127,32 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               
               <Link
                 to="/"
-                className="flex items-center justify-center border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
               >
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </Link>
+              
+              <button
+                onClick={this.handleReload}
+                className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+              >
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Reload Page
+              </button>
+            </div>
+
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-4">
+                If this problem persists, please contact our support team.
+              </p>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                support@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>

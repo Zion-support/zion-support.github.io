@@ -1,7 +1,4 @@
-import React from 'react';
-import { Search } from 'lucide-react';
-;
-
+import React from "react";
 
 interface SearchBarProps {
   children?: React.ReactNode;
@@ -12,9 +9,9 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

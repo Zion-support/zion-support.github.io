@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
-;
+import React, { useState } from "react";
+import { MessageSquare } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -13,43 +12,47 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
-    service: ''
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+    service: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubmitted(true);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        service: ''
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+        service: "",
       });
+
     } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
+      } finally {
       setIsSubmitting(false);
     }
   };
@@ -59,7 +62,9 @@ const ContactForm: React.FC = () => {
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>
+        <p>
+          Your message has been sent successfully. We'll get back to you soon.
+        </p>
       </div>
     );
   }
@@ -68,7 +73,10 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Full Name *
           </label>
           <input
@@ -81,9 +89,12 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-        
+
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Email Address *
           </label>
           <input
@@ -100,7 +111,10 @@ const ContactForm: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Phone Number
           </label>
           <input
@@ -112,9 +126,12 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-        
+
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
             Company
           </label>
           <input
@@ -129,7 +146,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="service"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           Service Interest
         </label>
         <select
@@ -149,7 +169,10 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 mb-2"
+        >
           Message *
         </label>
         <textarea
@@ -169,7 +192,7 @@ const ContactForm: React.FC = () => {
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
