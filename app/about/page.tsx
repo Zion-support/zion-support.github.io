@@ -1,7 +1,7 @@
-//   { number: "24/7", label: "Support Available" }// ];
-=======
 //   { number: "24/7", label: "Support Available" }
 // ];
+=======
+import { Helmet } from 'react-helmet-async';
 
 const,
   AboutPage: React.FC = () => {

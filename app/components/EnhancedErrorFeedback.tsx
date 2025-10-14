@@ -1,6 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function Page() => {
+import { Helmet } from 'react-helmet-async';
+
+const ComponentsPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Components</title>

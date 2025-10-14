@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
+
 const AiSpaceTechnologyProPage: React.FC = () => {
   return (
     <>Helmet>

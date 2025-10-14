@@ -1,5 +1,22 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Zap, Star, Users, TrendingUp } from 'lucide-react';
+
+interface MicroSaasProduct {
+  id: string;
+  icon: string;
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  users: string;
+  popular: boolean;
+  category: string;
+}
+
 const MicroSaasPage: React.FC = () => {
   return (
     <>Helmet>

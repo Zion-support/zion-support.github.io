@@ -1,45 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react'
-const DigitalTransformationPage: React.FC = () => {
-  const services = []
-    {
-      icon: RefreshCw,
-      title: 'Process Automation',
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',
-      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']
-    },
-    {
-      icon: Users,
-      title: 'Change Management',
-      description: 'Guide your team through digital transformation with comprehensive change management strategies.',
-      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop comprehensive digital transformation strategies aligned with your business objectives.',
-      features: ['Digital Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your digital infrastructure and processes for maximum performance and scalability.',
-      features: ['Performance Analysis', 'System Optimization', 'Scalability Planning', 'Monitoring Setup']
-    },
-    {
-      icon: Lightbulb,
-      title: 'Innovation Consulting',
-      description: 'Identify and implement innovative technologies to drive business growth and competitiveness.',
-      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Implementation Support']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Ensure the quality and reliability of your digital transformation initiatives.',
-      features: ['Testing Strategies', 'Quality Metrics', 'Compliance Checking', 'Continuous Improvement']
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const PagesPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-slate-9 0 0 text-white">
       <Helmet>

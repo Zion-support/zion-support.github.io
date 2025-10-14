@@ -1,7 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react'
-const CareersPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const PagesPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-gradient-to-brfrom-slate-9 00 via-rose-9 0 0 to-slate-9 0 0">
       <Helmet>

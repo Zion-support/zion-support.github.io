@@ -1,20 +1,4 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import {
-  CpuChipIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline'
-const stats = []
-    { label: 'Projects Completed', value: '500+', number: '500+', },
-    { label: 'Happy Clients', value: '200+', number: '200+', },
-    { label: 'Team Members', value: '50+', number: '50+', },
-    { label: 'Years Experience', value: '10+', number: '10+', }
-  ]
-  const AboutPage: React.FC = () => {
-  
+import { Helmet } from 'react-helmet-async';
 
   const values = []
     {

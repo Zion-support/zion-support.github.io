@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
+
 const GdprPage: React.FC = () => {
   return (
     <>Helmet>

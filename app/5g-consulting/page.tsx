@@ -1,22 +1,6 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGConsultingPage = () => {
-  const services = [
-    {
-      title: '5G Strategy Development',
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.',
-    },
-    {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5G network implementation.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5G technologies and best practices.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const FiveGConsultingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

@@ -1,28 +1,6 @@
-import React from 'react'
-import { ArrowRight } from 'lucide-react'
-import { CheckCircle } from 'lucide-react'
-import { Users } from 'lucide-react'
-import { Shield } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGDataAnalyticsPage = () => {
-  const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Analytics',
-      description: 'Cutting-edge 5G data analytics for maximum efficiency',
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime',
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const FiveGDataAnalyticsPage: React.FC = () => {
   return (
     <>
       <EnhancedSEO 

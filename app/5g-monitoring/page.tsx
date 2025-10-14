@@ -1,22 +1,6 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGMonitoringPage = () => {
-  const services = [
-    {
-      title: '5G Network Monitoring',
-      description: 'Real-time monitoring and analysis of 5G network performance.',
-    },
-    {
-      title: 'Security Monitoring',
-      description: 'Advanced security monitoring and threat detection for 5G networks.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G network monitoring and management.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const FiveGMonitoringPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 

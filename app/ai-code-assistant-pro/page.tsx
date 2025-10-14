@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
+
 const AiCodeAssistantProPage: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b03
   return (

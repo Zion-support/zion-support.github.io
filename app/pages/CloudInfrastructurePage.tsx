@@ -1,45 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Server, Shield, Zap, Database, Globe } from 'lucide-react'
-const CloudInfrastructurePage: React.FC = () => {
-  const services = []
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']
-    },
-    {
-      icon: Server,
-      title: 'Cloud Architecture',
-      description: 'Design and implement scalable, secure, and cost-effective cloud architectures.',
-      features: ['Multi-cloud Strategy', 'Auto-scaling', 'Load Balancing', 'Disaster Recovery']
-    },
-    {
-      icon: Shield,
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Monitoring']
-    },
-    {
-      icon: Zap,
-      title: 'DevOps & Automation',
-      description: 'Streamline your development and deployment processes with modern DevOps practices.',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automated Testing']
-    },
-    {
-      icon: Database,
-      title: 'Cloud Databases',
-      description: 'Managed database services with high availability, scalability, and performance.',
-      features: ['Database Migration', 'Backup & Recovery', 'Performance Tuning', 'Security Hardening']
-    },
-    {
-      icon: Globe,
-      title: 'Global Infrastructure',
-      description: 'Worldwide cloud infrastructure to ensure low latency and high availability.',
-      features: ['CDN Setup', 'Edge Computing', 'Global Load Balancing', 'Multi-region Deployment']
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const PagesPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-slate-9 0 0 text-white">
       <Helmet>

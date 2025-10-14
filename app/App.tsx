@@ -1,7 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import HomePage from './page'
-function App() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AppPage: React.FC = () => {
   return (
     <HelmetProvider></HelmetProvider>
       <Router></Router>

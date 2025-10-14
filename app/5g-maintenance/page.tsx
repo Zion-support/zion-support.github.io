@@ -1,22 +1,4 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGMaintenancePage = () => {
-  const services = [
-    {
-      title: '5G Network Maintenance',
-      description: 'Ongoing maintenance and optimization of 5G network infrastructure.',
-    },
-    {
-      title: 'Security Monitoring',
-      description: 'Continuous security monitoring and threat detection for 5G networks.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G network maintenance and troubleshooting.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
 
 constFivegmaintenancepagePage: React.FC = () => {
   return (

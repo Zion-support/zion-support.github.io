@@ -1,5 +1,6 @@
-import React from 'react'
-const Loading: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const ComponentsPage: React.FC = () => {
   return (
     <div className="min-h-screenflexitems-centerjustify-centerbg-slate-9 0 0">
       <div className="text-center">

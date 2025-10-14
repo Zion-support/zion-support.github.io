@@ -1,86 +1,63 @@
-import React, { useState, useEffect } from 'react'
-interface LoadingState {
-  isLoading: boolean
-  progress: number
-  message: string
+import React from 'react';
+
+interface AdvancedLoadingStatesProps {
+  type?: 'spinner' | 'skeleton' | 'dots' | 'pulse';
+  fullScreen?: boolean;
+  message?: string;
+  className?: string;
 }
 
-const AdvancedLoadingStates: React.FC = () => {
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-    isLoading: false,
-    progress: 0,
-    message: 'Loading...',
-  })
-  useEffect(() => {
-    // Simulate loading states for different scenarios
-    const simulateLoading = () => {
-      setLoadingState({
-        isLoading: true,
-        progress: 0,
-        message: 'Initializing...',
-      })
-      const interval = setInterval(() => {
-        setLoadingState(prev => {
-          const newProgress = prev.progress + Math.random() * 20
-          let message = 'Loading...'
-          if (newProgress < 30) => {
-            message = 'Loading resources...'
-          } else if (newProgress < 60) => {
-            message = 'Processing data...'
-          } else if (newProgress < 90) => {
-            message = 'Finalizing...'
-          } else {
-            message = 'Almost done...'
-          }
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({
+  type = 'spinner',
+  fullScreen = false,
+  message = 'Loading...',
+  className = ''
+}) => {
+  const baseClasses = fullScreen 
+    ? 'fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50'
+    : 'flex items-center justify-center p-8';
 
-          if (newProgress >= 100) => {
-            clearInterval(interval)
-            return {
-              isLoading: false,
-              progress: 100,
-              message: 'Complete!',
-            }
-          }
-
-          return {
-            ...prev,
-            progress: Math.min(newProgress, 100),
-            message
-          }
-        })
-      }, 200)
-      return () => clearInterval(interval)
+  const getLoadingContent = () => {
+    switch (type) {
+      case 'skeleton':
+        return (
+          <div className="space-y-4 w-full max-w-md">
+            <div className="h-4 bg-gray-300 rounded animate-pulse"></div>
+            <div className="h-4 bg-gray-300 rounded animate-pulse w-3/4"></div>
+            <div className="h-4 bg-gray-300 rounded animate-pulse w-1/2"></div>
+          </div>
+        );
+      case 'dots':
+        return (
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+          </div>
+        );
+      case 'pulse':
+        return (
+          <div className="w-8 h-8 bg-blue-500 rounded-full animate-pulse"></div>
+        );
+      default: // spinner
+        return (
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+        );
     }
-    // Only show loading in development
-    if (process.env.NODE_ENV === 'development') => {
-      const timeout = setTimeout(simulateLoading, 1000)
-      return () => clearTimeout(timeout)
-    }
-  }, [])
-  if (!loadingState.isLoading) => {
-    return null
-  }
+  };
 
-constComponentspagePage: React.FC = () => {
   return (
-    <div className="fixedinset-0 bg-blackbg-opacity-50 flexitems-centerjustify-centerz-50">
-      <div className="bg-whiterounded-lg p-8 max-w-mdw-fullmx-4">
-        <div className="text-center">
-          <div className="animate-spinrounded-fullh-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
-          <h3 className="text-lgfont-semibold text-gray-900 mb-2">
-            {loadingState.message}</h3>
-          <div className="w-fullbg-gray-200 rounded-fullh-2 mb-4">
-            <div
-              className="bg-blue-600 h-2 rounded-fulltransition-allduration-300"
-              style={{ width: `${loadingState.progress}%` }}
-            ></div>
-          <p className="text-smtext-gray-600">
-            {Math.round(loadingState.progress)}% complete</p>
+    <div className={`${baseClasses} ${className}`}>
+      <div className="text-center">
+        {getLoadingContent()}
+        {message && (
+          <p className="mt-4 text-white text-sm font-medium">
+            {message}
+          </p>
+        )}
+      </div>
     </div>
-  )
-}
-export default AdvancedLoadingStates
-</LoadingState>
-</div>
-</div>
-</div>
+  );
+};
+
+export default AdvancedLoadingStates;

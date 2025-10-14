@@ -1,51 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react'
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = []
-    {
-      title: 'E-commerce Platform AI Optimization',
-      client: 'TechRetail Inc.',
-      industry: 'E-commerce',
-      challenge: 'Low conversion rates and high cart abandonment',
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
-      results: []
-        { metric: 'Conversion Rate', value: '+45%', icon: TrendingUp },
-        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUp },
-        { metric: 'Customer Satisfaction', value: '+60%', icon: Users },
-        { metric: 'Implementation Time', value: '3 months', icon: Clock }
-      ],
-      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.',
-    },
-    {
-      title: 'Manufacturing Process Automation',
-      client: 'AutoParts Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'Manual quality control processes causing delays and errors',
-      solution: 'Deployed computer vision and AI-powered quality control systems',
-      results: []
-        { metric: 'Quality Defects', value: '-80%', icon: TrendingUp },
-        { metric: 'Production Speed', value: '+35%', icon: TrendingUp },
-        { metric: 'Cost Savings', value: '$2.5M', icon: DollarSign },
-        { metric: 'Implementation Time', value: '6 months', icon: Clock }
-      ],
-      description: 'Our AI-powered quality control system reduced defects by 80% while increasing production speed by 35%, saving the client $2.5M annually.',
-    },
-    {
-      title: 'Healthcare Data Analytics Platform',
-      client: 'MedCenter Health System',
-      industry: 'Healthcare',
-      challenge: 'Fragmented patient data and inefficient treatment planning',
-      solution: 'Built comprehensive AI analytics platform for patient data integration and predictive treatment recommendations',
-      results: []
-        { metric: 'Treatment Accuracy', value: '+55%', icon: TrendingUp },
-        { metric: 'Patient Outcomes', value: '+40%', icon: Users },
-        { metric: 'Cost Reduction', value: '$1.8M', icon: DollarSign },
-        { metric: 'Implementation Time', value: '8 months', icon: Clock }
-      ],
-      description: 'The AI analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8M.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const PagesPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-slate-9 0 0 text-white">
       <Helmet>

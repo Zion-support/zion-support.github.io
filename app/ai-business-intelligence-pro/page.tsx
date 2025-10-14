@@ -1,7 +1,6 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, BarChart3, TrendingUp } from 'lucide-react'
-const AIBusinessIntelligenceProPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const AiBusinessIntelligenceProPage: React.FC = () => {
   return (
     <>Helmet>
         <title>Ai Business Intelligence Pro</title>

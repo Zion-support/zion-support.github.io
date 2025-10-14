@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-const ErrorPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const AppPage: React.FC = () => {
   return (
     <>Helmet>
         <title>App</title>

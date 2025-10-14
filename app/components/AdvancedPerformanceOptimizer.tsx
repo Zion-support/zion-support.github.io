@@ -165,11 +165,11 @@ constAdvancedperformanceoptimizerpagePage: React.FC<Advancedperformanceoptimizer
           const registration= await navigator.serviceWorker.register('/sw.js');
           console.warn('Service Workerregisteredsuccessfully:', registration);
           
-          // Service worker registered successfully
-          console.warn('Service Workerscope:', registration.scope);
+          // Track service worker registration
+          trackMetric('service_worker_registered', registration.scope.length);
         } catch (error) {
-          console.warn('Service Workerregistrationfailed:', error);
-          console.warn('Service Workererrordetails:', error instanceof Error ? error.message : 'Unknown error');
+          console.warn('Service Worker registration failed:', error);
+          trackMetric('service_worker_error', error instanceof Error ? error.message.length : 0);
         }
       }
     };
@@ -247,11 +247,7 @@ constAdvancedperformanceoptimizerpagePage: React.FC<Advancedperformanceoptimizer
         return total + (script.src ? 0 : script.text Content?.length || 0);
       }, 0);
 
-      console.warn('bundleAnalysis: ', { 
-        scriptCount: scripts.length,
-        totalSize: totalScriptSize,
-        averageSize: totalScriptSize / scripts.length;
-      });
+      trackMetric('bundle_size', totalScriptSize);
 
       // Track resourceloadingtimesconstresources= performance.get Entries By Type('resource');
       const resourceMetrics= resources.reduce((acc, resource) => {
@@ -263,7 +259,7 @@ constAdvancedperformanceoptimizerpagePage: React.FC<Advancedperformanceoptimizer
         return acc;
       }, {} as Record<string, { count: number; totalSize: number; totalTime: number }>);
 
-      console.warn('resourceMetrics: ', resourceMetrics);
+      trackMetric('resource_metrics', Object.keys(resourceMetrics).length);
     };
 
     // Run analysis after page load;

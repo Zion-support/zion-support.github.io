@@ -1,4 +1,5 @@
-import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async';
+
 const FiveGTransformationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">

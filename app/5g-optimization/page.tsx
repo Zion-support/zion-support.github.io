@@ -1,7 +1,5 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
+import { Helmet } from 'react-helmet-async';
+
 const FiveGOptimizationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">

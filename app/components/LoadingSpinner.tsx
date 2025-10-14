@@ -1,9 +1,4 @@
-import React from 'react'
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  fullScreen?: boolean
-  message?: string
-}
+import { Helmet } from 'react-helmet-async';
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 

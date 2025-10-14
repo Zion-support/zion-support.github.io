@@ -1,22 +1,4 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGIntegrationPage = () => {
-  const services = [
-    {
-      title: '5G System Integration',
-      description: 'Seamless integration of 5G technology with existing systems.',
-    },
-    {
-      title: 'Security Integration',
-      description: 'Comprehensive security integration for 5G networks.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for 5G integration and maintenance.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
 
 constFivegintegrationpagePage: React.FC = () => {
   return (

@@ -1,22 +1,4 @@
-import React, { Suspense } from 'react'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-const FiveGMigrationPage = () => {
-  const services = [
-    {
-      title: '5G Migration Planning',
-      description: 'Strategic planning for migrating from legacy networks to 5G.',
-    },
-    {
-      title: 'Security Migration',
-      description: 'Secure migration of security protocols to 5G infrastructure.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G migration and new technology adoption.',
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
 
 constFivegmigrationpagePage: React.FC = () => {
   return (

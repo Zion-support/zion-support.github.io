@@ -1,88 +1,130 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix specific files
-function fixFile(filePath) {
+// List of specific files to fix based on the error output
+const filesToFix = [
+  'app/components/AdvancedErrorBoundary.tsx',
+  'app/components/ComprehensiveErrorBoundary.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/EnhancedErrorFeedback.tsx',
+  'app/components/EnhancedSEO.tsx',
+  'app/components/ErrorBoundary.tsx',
+  'app/components/ErrorFallback.tsx',
+  'app/components/ErrorHandler.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/ImprovedErrorBoundary.tsx',
+  'app/components/Loading.tsx',
+  'app/components/LoadingSpinner.tsx',
+  'app/components/ProductionErrorBoundary.tsx',
+  'app/components/ServiceWorkerRegistration.tsx',
+  'app/error.tsx',
+  'app/global-error.tsx',
+  'app/pages/AIServicesPage.tsx',
+  'app/pages/AboutPage.tsx',
+  'app/pages/CareersPage.tsx',
+  'app/pages/CaseStudiesPage.tsx',
+  'app/pages/CloudInfrastructurePage.tsx',
+  'app/pages/DigitalTransformationPage.tsx',
+  'app/pages/ITServicesPage.tsx'
+];
+
+// Fix unused imports in a file
+const fixUnusedImports = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix specific unused imports based on the error messages
-    const fixes = [
-      // ContentStatistics.tsx
-      { pattern: /import { [^}]*ArrowRight[^}]* } from 'lucide-react';/, replacement: "import { } from 'lucide-react';" },
-      
-      // DynamicContentShowcase.tsx
-      { pattern: /import { [^}]*Clock[^}]*Award[^}]* } from 'lucide-react';/, replacement: "import { } from 'lucide-react';" },
-      
-      // ErrorBoundary.tsx
-      { pattern: /import React, { [^}]* } from 'react';/, replacement: "import { } from 'react';" },
-      
-      // Sidebar.tsx
-      { pattern: /import { [^}]*Home[^}]*Users[^}]*Settings[^}]* } from 'lucide-react';/, replacement: "import { } from 'lucide-react';" },
-      
-      // errorBoundaryConfig.tsx
-      { pattern: /import React from 'react';/, replacement: "" },
-      
-      // useAnalytics.ts
-      { pattern: /import { [^}]*AnalyticsContextType[^}]* } from '\.\.\/contexts\/AnalyticsContext';/, replacement: "import { } from '../contexts/AnalyticsContext';" },
-      
-      // micro-saas/page.tsx
-      { pattern: /import { [^}]*ArrowRight[^}]*Shield[^}]*Cloud[^}]*BarChart3[^}]*MessageSquare[^}]* } from 'lucide-react';/, replacement: "import { } from 'lucide-react';" },
-      
-      // support/page.tsx
-      { pattern: /import { [^}]*CheckCircle[^}]* } from 'lucide-react';/, replacement: "import { } from 'lucide-react';" }
-    ];
-
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
-      }
+    if (!fs.existsSync(filePath)) {
+      return false;
     }
-
-    // Clean up empty import lines
-    content = content.replace(/import { } from '[^']+';/g, '');
-    content = content.replace(/import React from 'react';\n\n/g, '');
-    content = content.replace(/import React from 'react';\n/g, '');
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
+    const updatedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Skip empty import statements
+      if (line.trim() === 'import {} from' || line.includes('import {} from')) {
+        continue;
+      }
+      
+      // Check for unused Suspense import
+      if (line.includes('import') && line.includes('Suspense') && !content.includes('<Suspense')) {
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const filteredImports = imports.filter(imp => imp !== 'Suspense');
+          if (filteredImports.length === 0) {
+            continue; // Skip this line entirely
+          } else {
+            const newLine = line.replace(/import\s*{[^}]+}\s*from/, `import { ${filteredImports.join(', ')} } from`);
+            updatedLines.push(newLine);
+            continue;
+          }
+        }
+        continue; // Skip the line
+      }
+      
+      // Check for unused React import (if no JSX)
+      if (line.includes('import React') && !content.includes('<') && !content.includes('React.')) {
+        continue; // Skip this line
+      }
+      
+      // Check for other unused imports
+      if (line.includes('import') && line.includes('{')) {
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const usedImports = imports.filter(imp => {
+            const importName = imp.split(' as ')[0].trim();
+            // Check if the import is used in the file (excluding the import line itself)
+            const contentWithoutImports = content.split('\n').filter(l => !l.includes('import')).join('\n');
+            return contentWithoutImports.includes(importName);
+          });
+          
+          if (usedImports.length === 0) {
+            continue; // Skip this line entirely
+          } else if (usedImports.length !== imports.length) {
+            const newLine = line.replace(/import\s*{[^}]+}\s*from/, `import { ${usedImports.join(', ')} } from`);
+            updatedLines.push(newLine);
+            continue;
+          }
+        }
+      }
+      
+      updatedLines.push(line);
+    }
+    
+    const updatedContent = updatedLines.join('\n');
+    if (updatedContent !== content) {
+      fs.writeFileSync(filePath, updatedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
+};
 
-// Specific files to fix
-const files = [
-  'app/components/ContentStatistics.tsx',
-  'app/components/DynamicContentShowcase.tsx',
-  'app/components/ErrorBoundary.tsx',
-  'app/components/Sidebar.tsx',
-  'app/config/errorBoundaryConfig.tsx',
-  'app/hooks/useAnalytics.ts',
-  'app/micro-saas/page.tsx',
-  'app/support/page.tsx'
-];
-
-console.log(`Processing ${files.length} files`);
-
-let fixedCount = 0;
-for (const file of files) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    if (fixFile(fullPath)) {
+// Main execution
+const main = () => {
+  console.log('Fixing unused imports in specific files...');
+  
+  let fixedCount = 0;
+  let errorCount = 0;
+  
+  for (const file of filesToFix) {
+    if (fixUnusedImports(file)) {
       fixedCount++;
+    } else {
+      errorCount++;
     }
-  } else {
-    console.log(`File not found: ${fullPath}`);
   }
-}
+  
+  console.log(`\nFixed ${fixedCount} files`);
+  console.log(`Errors: ${errorCount} files`);
+  console.log('Done!');
+};
 
-console.log(`Fixed ${fixedCount} files`);
+main();

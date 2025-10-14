@@ -1,45 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react'
-const AIServicesPage: React.FC = () => {
-  const services = []
-    {
-      icon: Brain,
-      title: 'AI Strategy & Consulting',
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
-    },
-    {
-      icon: Bot,
-      title: 'Conversational AI',
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']
-    },
-    {
-      icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']
-    },
-    {
-      icon: Shield,
-      title: 'AI Security Solutions',
-      description: 'Advanced AI-powered security systems to protect your digital assets and detect threats in real-time.',
-      features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Compliance Monitoring']
-    },
-    {
-      icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation that reduces costs and improves efficiency.',
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']
-    },
-    {
-      icon: Target,
-      title: 'Custom AI Development',
-      description: 'Bespoke AI solutions designed specifically for your unique business challenges and opportunities.',
-      features: ['Custom Algorithms', 'API Development', 'Integration Services', 'Ongoing Support']
-    }
-  ]
+import { Helmet } from 'react-helmet-async';
+
+const PagesPage: React.FC = () => {
   return (
     <div className="min-h-screenbg-slate-9 0 0 text-white">
       <Helmet>

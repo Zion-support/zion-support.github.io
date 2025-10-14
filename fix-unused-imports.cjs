@@ -1,96 +1,118 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to fix unused Suspense imports
-function fixUnusedImports(filePath) {
+// Find all files with unused imports
+const findFilesWithUnusedImports = () => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const result = execSync('find app -name "*.tsx" -o -name "*.ts" | head -50', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(Boolean);
+  } catch (error) {
+    console.error('Error finding files:', error.message);
+    return [];
+  }
+};
 
-    // Check if Suspense is imported but not used in JSX
-    const hasSuspenseImport = content.includes("import { Suspense } from 'react'") || 
-                             content.includes("import React, { Suspense } from 'react'");
-    
-    if (hasSuspenseImport) {
-      // Check if Suspense is actually used in JSX
-      const hasSuspenseInJSX = content.includes('<Suspense') || content.includes('</Suspense>');
-      
-      if (!hasSuspenseInJSX) {
-        // Remove Suspense from import
-        content = content.replace(/import React, { Suspense } from 'react';/, "import React from 'react';");
-        content = content.replace(/import { Suspense } from 'react';/, '');
-        
-        // Clean up empty import lines
-        content = content.replace(/import React, { } from 'react';\n/, '');
-        content = content.replace(/import { } from 'react';\n/, '');
-        
-        modified = true;
-      }
-    }
-
-    // Fix unused imports in general
+// Remove unused imports from a file
+const removeUnusedImports = (filePath) => {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    const newLines = [];
+    const updatedLines = [];
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Skip empty import lines
-      if (line.trim() === "import { } from 'react';" || 
-          line.trim() === "import React, { } from 'react';") {
+      // Skip empty import statements
+      if (line.trim() === 'import {} from' || line.includes('import {} from')) {
         continue;
       }
       
-      newLines.push(line);
+      // Check for unused React import
+      if (line.includes('import React') && !content.includes('<React') && !content.includes('React.')) {
+        // Check if React is actually used
+        const reactUsage = content.match(/<[A-Z][a-zA-Z]*/g) || [];
+        const hasJSX = reactUsage.length > 0;
+        if (!hasJSX) {
+          continue; // Skip this line
+        }
+      }
+      
+      // Check for unused Suspense import
+      if (line.includes('import') && line.includes('Suspense') && !content.includes('<Suspense')) {
+        // Remove Suspense from the import
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const filteredImports = imports.filter(imp => imp !== 'Suspense');
+          if (filteredImports.length === 0) {
+            continue; // Skip this line entirely
+          } else {
+            const newLine = line.replace(/import\s*{[^}]+}\s*from/, `import { ${filteredImports.join(', ')} } from`);
+            updatedLines.push(newLine);
+            continue;
+          }
+        }
+        continue; // Skip the line
+      }
+      
+      // Check for other unused imports
+      if (line.includes('import') && line.includes('{')) {
+        const importMatch = line.match(/import\s*{([^}]+)}\s*from/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const usedImports = imports.filter(imp => {
+            // Check if the import is used in the file
+            const importName = imp.split(' as ')[0].trim();
+            return content.includes(importName) && !content.includes(`import.*${importName}`);
+          });
+          
+          if (usedImports.length === 0) {
+            continue; // Skip this line entirely
+          } else if (usedImports.length !== imports.length) {
+            const newLine = line.replace(/import\s*{[^}]+}\s*from/, `import { ${usedImports.join(', ')} } from`);
+            updatedLines.push(newLine);
+            continue;
+          }
+        }
+      }
+      
+      updatedLines.push(line);
     }
     
-    if (modified || newLines.length !== lines.length) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
+    const updatedContent = updatedLines.join('\n');
+    if (updatedContent !== content) {
+      fs.writeFileSync(filePath, updatedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
+};
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
+// Main execution
+const main = () => {
+  console.log('Finding files with unused imports...');
+  const files = findFilesWithUnusedImports();
+  console.log(`Found ${files.length} files to check`);
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx')) {
-        files.push(fullPath);
-      }
+  let fixedCount = 0;
+  let errorCount = 0;
+  
+  for (const file of files) {
+    if (removeUnusedImports(file)) {
+      fixedCount++;
+    } else {
+      errorCount++;
     }
   }
   
-  traverse(dir);
-  return files;
-}
+  console.log(`\nFixed ${fixedCount} files`);
+  console.log(`Errors: ${errorCount} files`);
+  console.log('Done!');
+};
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixUnusedImports(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} files`);
+main();
