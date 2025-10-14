@@ -9,7 +9,7 @@ export const usePerformanceMonitor = (name: string) => {
     return () => {
       if (startTime.current) {
         const endTime = performance.now();
-        const Duration = endTime - startTime.current;
+        const duration = endTime - startTime.current;
         
         // Performance measurement logged
         // eslint-disable-next-line no-console

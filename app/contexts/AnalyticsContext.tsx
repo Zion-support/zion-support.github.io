@@ -1,12 +1,5 @@
-import React, { createContext, ReactNode, useCallback } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
-  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+import React, { ReactNode, useCallback } from 'react';
+import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContext';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -45,12 +38,4 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       {children}
     </AnalyticsContext.Provider>
   );
-};
-
-export const useAnalytics = () => {
-  const context = React.useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
 };
