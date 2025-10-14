@@ -64,22 +64,23 @@ if (typeof window !== 'undefined') {
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
     onCLS((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('CLS:', metric);
+import React, { Suspense } from 'react';
+        console.warn('CLS:', metric);
       }
     });
     onFCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('FCP:', metric);
+        console.warn('FCP:', metric);
       }
     });
     onLCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('LCP:', metric);
+        console.warn('LCP:', metric);
       }
     });
     onTTFB((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.log('TTFB:', metric);
+        console.warn('TTFB:', metric);
       }
     });
   });
@@ -89,7 +90,7 @@ if (typeof window !== 'undefined') {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
         if (process.env.NODE_ENV === 'development') {
-          console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
       }
     }
@@ -98,7 +99,7 @@ if (typeof window !== 'undefined') {
 }
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      console.log('Zion Tech Group App initialized');
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
