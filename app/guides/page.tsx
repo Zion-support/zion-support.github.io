@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, } from 'lucide-react';
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
-    {
+    {,
       title: 'AI 2026 Implementation Roadmap',
       description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
       url: '/guides/ai-2026-implementation-roadmap',
       category: 'AI Implementation',
-      icon: BookOpen,
+      icon: Brain,
       difficulty: 'Intermediate',
       duration: '45 min read'
     },
@@ -19,7 +19,7 @@ const GuidesPage: React.FC = () => {
       description: 'Advanced roadmap for AI implementation strategies in 2027',
       url: '/guides/ai-2027-implementation-roadmap',
       category: 'AI Implementation',
-      icon: BookOpen,
+      icon: Brain,
       difficulty: 'Advanced',
       duration: '60 min read'
     },
@@ -28,16 +28,16 @@ const GuidesPage: React.FC = () => {
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation',
-      icon: BookOpen,
+      icon: Zap,
       difficulty: 'Expert',
       duration: '90 min read'
     }
   ];
 
   const categories = [
-    { name: 'AI Implementation', icon: BookOpen, color: 'text-purple-400' },
-    { name: 'Process Automation', icon: BookOpen, color: 'text-blue-400' },
-    { name: 'Security', icon: BookOpen, color: 'text-red-400' },
+    { name: 'AI Implementation', icon: Brain, color: 'text-purple-400' },
+    { name: 'Process Automation', icon: Zap, color: 'text-blue-400' },
+    { name: 'Security', icon: Shield, color: 'text-red-400' },
     { name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' },
     { name: 'Data Management', icon: Database, color: 'text-green-400' },
     { name: 'Development', icon: Code, color: 'text-orange-400' }
@@ -48,7 +48,7 @@ const GuidesPage: React.FC = () => {
       case 'Beginner': return 'text-green-400 bg-green-400/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
-      case 'Expert': return 'text-red-400 bg-red-400/20';
+      case 'Expert': return 'text-red-400 bg-red-400/20';,
       default: return 'text-gray-400 bg-gray-400/20';
     }
   };
@@ -58,27 +58,24 @@ const GuidesPage: React.FC = () => {
       <Helmet>
         <title>Implementation Guides - Zion Tech Group</title>
         <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
+      </Helmet>
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Navigation */}
+      <div>{/* Navigation */}</div>
+    </>
         <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between h-16">
-              <Link to="/" className="flex items-center space-x-2 text-2 xl font-bold text-cyan-400">
-                <span className="text-3 xl">⚡</span>
-                <span>Zion Tech Group</span>
-              </Link>
+              <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-cyan-400">
+                <span>⚡</span>
+                <span>Zion Tech Group</Link>
               <div className="hidden lg:flex items-center space-x-8">
-                <Link to="/" className="text-white hover:text-cyan-400 transition-colors">Home</Link>
-                <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">About</Link>
-                <Link to="/services" className="text-white hover:text-cyan-400 transition-colors">Services</Link>
-                <Link to="/guides" className="text-cyan-400 font-semibold">Guides</Link>
-                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</Link>
-              </div>
-            </div>
-          </div>
+                <Link to="Home">Home</Link>
+                <Link to="About">About</Link>
+                <Link to="Services">Services</Link>
+                <Link to="Guides">Guides</Link>
+                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</div>
         </nav>
 
         <main className="container mx-auto px-4 py-16">
@@ -86,34 +83,27 @@ const GuidesPage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <BookOpen className="w-16 h-16 text-cyan-400" />
-              <h1 className="text-4 xl md:text-6 xl font-bold text-white">
-                Implementation <span className="text-cyan-400">Guides</span>
-              </h1>
+              <h1 className="text-4xl md:text-6xl font-bold text-white">
+                Implementation <span className="text-cyan-400">Guides</h1>
             </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-              Step-by-step guides to help you implement AI, automation, and digital transformation 
-              solutions in your enterprise with confidence.
-            </p>
-          </div>
+            <p>Step-by-step guides to help you implement AI, automation, and digital transformation 
+              solutions in your enterprise with confidence.</p>
+            </div>
 
           {/* Categories */}
           <section className="mb-16">
-            <h2 className="text-3 xl font-bold text-white mb-8">Guide Categories</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {categories.map((category, index) => (
+            <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
+            <div>{categories.map((category, index) => (</div>
                 <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
                   <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
-                  <h3 className="text-white font-semibold text-sm">{category.name}</h3>
-                </div>
+                  <h3 className="text-white font-semibold text-sm">{category.name}</div>
               ))}
-            </div>
-          </section>
+            </section>
 
           {/* Guides Grid */}
           <section className="mb-16">
-            <h2 className="text-3 xl font-bold text-white mb-8">Available Guides</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guides.map((guide, index) => (
+            <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
+            <div>{guides.map((guide, index) => (</div>
                 <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
                   <div className="flex items-start space-x-4 mb-4">
                     <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -122,79 +112,65 @@ const GuidesPage: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
                       <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
-                    </div>
-                  </div>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>
+                    <span>{guide.category}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
-                  </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">{guide.duration}</span>
+                    <span>{guide.duration}</span>
                     <Link
                       to={guide.url}
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
                       Read Guide →
-                    </Link>
-                  </div>
-                </div>
+                    </div>
               ))}
-            </div>
-          </section>
+            </section>
 
-          {/* Getting ted */}
+          {/* Getting Started */}
           <section className="mb-16">
-            <h2 className="text-3 xl font-bold text-white mb-8">Getting ted</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
             <div className="bg-slate-800 rounded-lg p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
-                  <p className="text-gray-300 mb-4">
-                    t with our comprehensive AI 2026 Implementation Roadmap to understand 
-                    the fundamentals and plan your AI transformation journey.
+                  <p>Start with our comprehensive AI 2026 Implementation Roadmap to understand 
+                    the fundamentals and plan your AI transformation journey.</p>
                   </p>
                   <ul className="space-y-2 text-gray-300">
                     <li>• Assess your current AI readiness</li>
                     <li>• Plan your implementation strategy</li>
                     <li>• Choose the right technologies</li>
-                    <li>• Measure success and ROI</li>
-                  </ul>
+                    <li>• Measure success and ROI</ul>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
-                  <p className="text-gray-300 mb-4">
-                    Explore our advanced guides for autonomous systems, process automation, 
-                    and cutting-edge AI implementations.
+                  <p>Explore our advanced guides for autonomous systems, process automation, 
+                    and cutting-edge AI implementations.</p>
                   </p>
                   <ul className="space-y-2 text-gray-300">
                     <li>• Autonomous business processes</li>
                     <li>• Advanced AI architectures</li>
                     <li>• Enterprise automation strategies</li>
-                    <li>• Future-ready implementations</li>
-                  </ul>
+                    <li>• Future-ready implementations</ul>
                 </div>
-              </div>
-            </div>
-          </section>
+            </section>
 
           {/* Call to Action */}
-          <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2 xl p-12">
-            <h2 className="text-3 xl font-bold text-white mb-4">
+          <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Need Personalized Guidance?
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2 xl mx-auto">
-              Our experts are available to provide personalized implementation guidance 
-              tailored to your specific business needs and requirements.
+            <p>Our experts are available to provide personalized implementation guidance 
+              tailored to your specific business needs and requirements.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+              <Link to="
+                Get Expert Consultation
+              ">
                 Get Expert Consultation
               </Link>
               <Link
@@ -202,13 +178,14 @@ const GuidesPage: React.FC = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
               >
                 View Our Services
-              </Link>
-            </div>
-          </section>
-        </main>
+              </div>
+          </main>
       </div>
     </>
   );
 };
 
 export default GuidesPage;
+</span>
+</li>
+</li>

@@ -1,6 +1,7 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
 export default function Page() {
   return (
     <>
@@ -8,6 +9,8 @@ export default function Page() {
         <title>Ai Content Writer - Zion Tech Group</title>
         <meta name="description" content="Ai Content Writer services and solutions from Zion Tech Group" />
       </Helmet>
+      </Helmet>
+      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4 xl font-bold text-gray-900 mb-8">Ai Content Writer</h1>

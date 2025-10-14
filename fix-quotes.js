@@ -1,120 +1,70 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Function to fix over-escaped quotes
-function fixOverEscapedQuotes(content) {
-  // Fix over-escaped single quotes in imports and strings
-  content = content.replace(/&apos;/g, "'");
-  
-  // Fix over-escaped double quotes
-  content = content.replace(/&quot;/g, '"');
-  
-  // Fix over-escaped greater than and less than
-  content = content.replace(/&gt;/g, '>');
-  content = content.replace(/&lt;/g, '<');
-  
-  // Fix over-escaped ampersands
-  content = content.replace(/&amp;/g, '&');
-  
-  return content;
+import React from "react";"
+#!/usr/bin/env node;
+import fs from "fs;";
+import { glob     } from ";glob;";
+// Function to fix quote issues in a file;
+function fixFile(filePath) {
+  try {";"
+    let content = fs.readFileSync(filePath, "utf8")""
+    let modified = false;
+    // Fix specific patterns;
+const fixes = [
+      // Fix stray quotes at end of JSX elements"""
+      { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
+      // Fix stray quotes in return statements"""
+      { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
+      // Fix unterminated string literals with quotes"""
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: "$1$2" },'"'"
+      // Fix stray quotes in JSX structure"""
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: "$1$2" },'"'"
+      // Fix multiple semicolons and quotes"""
+      { pattern: /;\s*'$/gm, replacement: "" },'"'"
+      // Fix stray quotes at end of lines"""
+      { pattern: /;\s*'$/gm, replacement: "" },'"'"
+      // Fix unterminated string literals"""
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: "$1$2" },'"'"
+      // Fix stray quotes in return statements"""
+      { pattern: /(\s*\));\s*'(\s*})/g, replacement: "$1$2" },'"'"
+      // Fix stray quotes in JSX"""
+      { pattern: /(\s*<[^>]+>);\s*'(\s*<\/[^>]+>)/g, replacement: "$1$2" },'"'"
+      // Fix stray quotes at end of return"""
+      { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
+      // Fix stray quotes in JSX elements"""
+      { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
+      // Fix specific pattern: <p>text</p>'; -> <p>text</p>"'"'"
+      { pattern: /(\s*<[^>]+>[^<]*<\/[^>>]+>);\s*'$/gm, replacement: "$1" },'"'"
+      // Fix specific pattern: ); -> )"'"'"
+      { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
+    ]
+    fixes.forEach((fix) => {;
+const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+})
+    if (modified) {"""
+      fs.writeFileSync(filePath, content, "utf8")""
+      console.log(`Fixed: ${filePath}`)```
+      return true;
 }
-
-// Function to fix common import issues
-function fixImportIssues(content) {
-  // Fix missing imports for common icons
-  if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || 
-      content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||
-      content.includes('ArrowRight') || content.includes('CheckCircle')) {
-    
-    // Check if lucide-react is already imported
-    if (!content.includes('from "lucide-react"') && !content.includes("from 'lucide-react'")) {
-      // Add import at the top
-      const imports = [];
-      if (content.includes('Brain')) imports.push('Brain');
-      if (content.includes('Shield')) imports.push('Shield');
-      if (content.includes('Zap')) imports.push('Zap');
-      if (content.includes('Users')) imports.push('Users');
-      if (content.includes('Target')) imports.push('Target');
-      if (content.includes('BarChart3')) imports.push('BarChart3');
-      if (content.includes('ArrowRight')) imports.push('ArrowRight');
-      if (content.includes('CheckCircle')) imports.push('CheckCircle');
-      
-      if (imports.length > 0) {
-        const importStatement = `import { ${imports.join(', ')} } from 'lucide-react';\n`;
-        content = importStatement + content;
-      }
-    }
-  }
-  
-  return content;
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)```
+    return false;
 }
-
-// Function to fix parsing errors
-function fixParsingErrors(content) {
-  // Fix common parsing issues
-  content = content.replace(/import\s+&apos;([^&]+)&apos;/g, "import '$1'");
-  content = content.replace(/import\s+&quot;([^"]+)&quot;/g, 'import "$1"');
-  
-  // Fix React import issues
-  content = content.replace(/import\s+React\s+from\s+&apos;react&apos;/g, "import React from 'react'");
-  
-  // Fix JSX issues
-  content = content.replace(/className=&apos;([^&]+)&apos;/g, "className='$1'");
-  content = content.replace(/className=&quot;([^"]+)&quot;/g, 'className="$1"');
-  
-  return content;
+// Main function;
+async function main() {
+  // Find all page.tsx files";"
+const pageFiles = await glob("app/**/page.tsx", { cwd: process.cwd() })""
+  console.log(`Found ${pageFiles.length} page files to check...`)```
+  let fixedCount = 0;
+  pageFiles.forEach((file) => {
+    if (fixFile(file)) {
+      fixedCount++
+})
+  console.log(
+    `Fixed ${fixedCount} files out of ${pageFiles.length} total files.`,)```
+  )
 }
-
-// Main function to process files
-async function processFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
-  ];
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
-    for (const file of files) {
-      try {
-        const filePath = path.resolve(file);
-        let content = fs.readFileSync(filePath, 'utf8');
-        
-        // Check if file has over-escaped quotes
-        if (content.includes('&apos;') || content.includes('&quot;') || content.includes('&gt;') || content.includes('&lt;')) {
-          console.log(`Fixing quotes in: ${file}`);
-          content = fixOverEscapedQuotes(content);
-        }
-        
-        // Fix import issues
-        content = fixImportIssues(content);
-        
-        // Fix parsing errors
-        content = fixParsingErrors(content);
-        
-        // Write back the fixed content
-        fs.writeFileSync(filePath, content, 'utf8');
-        processedCount++;
-        
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
-      }
-    }
-  }
-  
-  console.log(`\nProcessed ${processedCount} files`);
-  if (errorCount > 0) {
-    console.log(`Encountered ${errorCount} errors`);
-  }
-}
-
-// Run the script
-processFiles().catch(console.error);
+main().catch(console.error)"""
+}}

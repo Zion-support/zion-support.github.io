@@ -1,48 +1,30 @@
-import React, { Component, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Global Error Boundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4 xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We&apos;re sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              Reload Page
+            GlobalErrorBoundary</h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional globalerrorboundary solutions tailored to your business needs.</p>"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions</h3>"
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge globalerrorboundary solutions.</p></div>"
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation</h3>"
+              <p className="text-green-700">"
+                Tailored globalerrorboundary implementations for your specific requirements.</p></div>"
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support</h3>"
+              <p className="text-purple-700">"
+                Round-the-clock support for all your globalerrorboundary needs.</p></div></div>"
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today</button></div></div></div></div>
+  )
             </button>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default GlobalErrorBoundary;
+      </div>
+    </div>
+  )}
+"

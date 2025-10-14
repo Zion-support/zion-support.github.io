@@ -7,7 +7,8 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
-  children}: {
+  children,
+}: {
   children: React.ReactNode;
 }) {
   const structuredData = {
@@ -25,39 +26,44 @@ export default function RootLayout({
       telephone: '+1-302-600-9898',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en'},
+      availableLanguage: 'en',
+    },
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
     ],
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US'},
+      addressCountry: 'US',
+    },
     offers: {
       '@type': 'Offer',
       category: 'AI Solutions',
-      description: 'Enterprise AI solutions, digital transformation, and cloud services'}};
+      description: 'Enterprise AI solutions, digital transformation, and cloud services',
+    },
+  };
 
   return (
-    <html lang="en">
+    <html lang='en'>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)}}
+            __html: JSON.stringify(structuredData),
+          }}
         />
       </head>
       <body>
         <GlobalErrorBoundary>
           <PerformanceMonitor />
-          <AnalyticsProvider />
-          <AccessibilityEnhancer>
-            <PWAInstaller />
-            <PerformanceOptimizer />
-            {children}
-          </AccessibilityEnhancer>
-        </GlobalErrorBoundary>
-      </body>
+          <AnalyticsProvider>
+            <AccessibilityEnhancer>
+              <PWAInstaller>
+                <PerformanceOptimizer>
+                  {children}
+                </PWAInstaller>
+            </AnalyticsProvider>
+        </body>
     </html>
   );
 }
