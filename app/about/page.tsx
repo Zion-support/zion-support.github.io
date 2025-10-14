@@ -31,46 +31,27 @@ import { Helmet } from 'react-helmet-async';
 //     expertise: "5G Technology & IoT",
 //     image: "/images/team/david-kim.jpg",
 //     bio: "Telecommunications expert with extensive experience in 5G implementation."
+//   }
+// ];
+
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-28e9
-//   }
-// ];
-
-// Company values (for future use)
-// const values = [
-//   {
-//     icon: <Brain className="w-8 h-8" />,
-//     title: "Innovation First",
-//     description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions."
-//   },
-//   {
-//     icon: <Shield className="w-8 h-8" />,
-//     title: "Security & Trust",
-//     description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures."
-//   },
-//   {
-//     icon: <Users className="w-8 h-8" />,
-//     title: "Client Success",
-//     description: "Our success is measured by our clients' success. We're committed to delivering exceptional results."
-//   },
-//   {
-//     icon: <Award className="w-8 h-8" />,
-//     title: "Excellence",
-//     description: "We maintain the highest standards of quality in everything we do, from code to customer service."
-=======
-//   }
-// ];
-
 // Company stats (for future use)
 // const stats = [
 //   { number: "500+", label: "Projects Completed" },
 //   { number: "150+", label: "Happy Clients" },
 //   { number: "99.9%", label: "Uptime Guarantee" },
 //   { number: "24/7", label: "Support Available" }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
 =======
 // ];
+=======
+  // Company stats (for future use)
+  // const stats = [
+  //   { number: "500+", label: "Projects Completed" },
+  //   { number: "150+", label: "Happy Clients" },
+  //   { number: "99.9%", label: "Uptime Guarantee" },
+  //   { number: "24/7", label: "Support Available" }
+  // ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea81
 
 const AboutPage: React.FC = () => {
   return (
