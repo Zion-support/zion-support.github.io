@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Files that still have React import issues
+// Files that still have React import issues;
 const filesWithReactImports = [
   'app/case-studies/page.tsx',
   'app/consultation/page.tsx',
@@ -17,7 +17,7 @@ const filesWithReactImports = [
   'app/data/servicesData.tsx'
 ];
 
-// Files with other issues
+// Files with other issues;
 const filesWithOtherIssues = [
   'app/components/AdvancedSEOOptimizer.tsx',
   'app/components/ContentPromotionBanner.tsx',
@@ -37,10 +37,10 @@ const filesWithOtherIssues = [
   'app/utils/link.tsx'
 ];
 
-// Function to fix React import issues
+// Function to fix React import issues;
 function fixReactImports(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -50,10 +50,10 @@ function fixReactImports(filePath) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Remove unused React imports
-    content = content.replace(/import React from 'react';\s*/g, '');
-    content = content.replace(/import React from "react";\s*/g, '');
-    content = content.replace(/import { Helmet } from 'react-helmet-async';\s*/g, '');
-    content = content.replace(/import { Helmet } from "react-helmet-async";\s*/g, '');
+    content = content.replace(/\s*/g, '');
+    content = content.replace(/import React from "react";\s*/g, '')
+    content = content.replace(/import { Helmet } from 'react-helmet-async';\s*/g, '')
+    content = content.replace(/import { Helmet } from "react-helmet-async";\s*/g, '')
     
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed React imports: ${filePath}`);
@@ -63,10 +63,10 @@ function fixReactImports(filePath) {
   }
 }
 
-// Function to fix other issues
+// Function to fix other issues;
 function fixOtherIssues(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -100,4 +100,5 @@ function fixOtherIssues(filePath) {
 console.log('Starting to fix final issues...');
 filesWithReactImports.forEach(fixReactImports);
 filesWithOtherIssues.forEach(fixOtherIssues);
-console.log('Final issue fixing completed!');
+console.log('Final issue fixing completed!')
+}

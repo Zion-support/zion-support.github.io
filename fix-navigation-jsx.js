@@ -1,24 +1,24 @@
 import React from 'react'
-#!/usr/bin/env node
-import fs from "fs"
-// Read the Navigation component
+#!/usr/bin/env node;
+import fs from "fs
+// Read the Navigation component;
 const content = fs.readFileSync(
-  "/workspace/app/components/Navigation.tsx",
-  "utf8",
+  "/workspace/app/components/Navigation.tsx
+  "utf8",)
 )
 // Fix the malformed JSX attributes
 let fixed = content
 // Fix JSX attributes with quotes around JavaScript expressions
-fixed = fixed.replace(/key="\{([^}]+)\}"/g, "key={$1}")
-fixed = fixed.replace(/to="\{([^}]+)\}"/g, "to={$1}")
-fixed = fixed.replace(/className="\{([^}]+)\}"/g, "className={$1}")
-fixed = fixed.replace(/onClick="\{([^}]+)\}"/g, "onClick={$1}")
+fixed = fixed.replace(/key="\{([^}]+)\}/gkey={$1})
+fixed = fixed.replace(/to="\{([^}]+)\}/gto={$1})
+fixed = fixed.replace(/className="\{([^}]+)\}/gclassName={$1})
+fixed = fixed.replace(/onClick="\{([^}]+)\}/gonClick={$1})
 // Fix malformed object syntax
-fixed = fixed.replace(/(\w+)=([^,}]+),/g, "$1: $2,")
-fixed = fixed.replace(/(\w+)=([^,}]+)}/g, "$1: $2}")
+fixed = fixed.replace(/(\w+)=([^,}]+),/g$1: $2)
+fixed = fixed.replace(/(\w+)=([^,}]+)}/g$1: $2})
 // Fix missing quotes in object properties
 fixed = fixed.replace(/(\w+):\s*([^"',}]+),/g, '$1: "$2",')
 fixed = fixed.replace(/(\w+):\s*([^"',}]+)}/g, '$1: "$2"}')
 // Write the fixed content back
-fs.writeFileSync("/workspace/app/components/Navigation.tsx", fixed, "utf8")
+fs.writeFileSync("/workspace/app/components/Navigation.tsx", fixedutf8")
 console.log("Fixed Navigation JSX attributes")

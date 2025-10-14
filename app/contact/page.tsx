@@ -1,485 +1,216 @@
-import React, { useState} from "react""
-import { Helmet} from "react-helmet-async""
-import { Circle, Send, Phone, Mail, MapPin, Clock} from "lucide-react""
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: ",""
-    email: ",""
-    company: ",""
-    phone: ",""
-    subject: ",""
-    message: ""}"
-import React from "react";"
-import { Helmet} from "react-helmet-async";"
-  const [formData, setFormData] = useState({
-    name: ","
-    email: ","
-    company: ","
-    phone: ","
-    subject: ","
-    message: "})"
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-import React, { useState} from "react";"
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock} from "lucide-react";"
-export default function ContactPage() {
-  const [formData, setFormData] = useState({""
-    name: ",""
-    email: ",""
-    company: ",""
-    phone: ",""
-    subject: ",""
-    message: "}"}"
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-import React, { useState} from "react";""
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock} from "lucide-react";"
-export default function ContactPage()    {
-  const [formData, setFormData] = useState({""
-    name: ",""
-    email: ",""
-    company: ",""
-    phone: ",""
-    subject: ",""
-    message: "}});"
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value}}}
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-  const contactInfo = [
-    {setIsSubmitting(false)
-  const contactInfo = [
-    {
-      icon: "Phone",      title: "Phone",""
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)
-  const contactInfo = [
-    {
-      title: "Phone",""
-      value: "+1 (555) 123-4567",""
-      description: "Mon-Fri 9AM-6PM EST""
-""
-      icon: "Phone",""
-      title: "Phone",""
-      value: "+1 (555) 123-4567",""
-      description: "Mon-Fri 9AM-6PM EST"}"},"
-    {""
-      icon: "Email",""
-      title: "Email",""
-      value: "contact@ziontechgroup.com",""
-      description: "We respond within 24 hours"}"},"
-    {""
-      icon: "Location",""
-      title: "Address",""
-      value: "123 Tech Street, Suite 100",""
-      description: "San Francisco, CA 94105"}"},"
-    {""
-      icon: "Clock",""
-      description: "9:00 AM - 6:00 PM EST"}]"
-  const subjects = [})}})}
-  const handleSubmit = async (e: React.FormEvent) => { e.preventDefault()
-    setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setIsSubmitting(false)}
-  const contactInfo = [
-    { setIsSubmitting(false)}};
-  const contactInfo = [
-    { icon: "Phone",      title: "Phone","
-    {
-      icon: "Phone",      title: "Phone",""
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitted(true)
-    setIsSubmitting(false)}
-  const contactInfo = [
-    { title: "Phone","
-      value: "+1 (555) 123-4567","
-      description: "Mon-Fri 9AM-6PM EST""
-""
-      icon: "Phone",""
-      title: "Phone",""
-      value: "+1 (555) 123-4567",""
-      description: "Mon-Fri 9AM-6PM EST"}},"
-    { ""
-      icon: "Email",""
-      title: "Email",""
-      value: "contact@ziontechgroup.com",""
-      description: "We respond within 24 hours"}},"
-    { ""
-      icon: "Location",""
-      title: "Address",""
-      value: "123 Tech Street, Suite 100",""
-      description: "San Francisco, CA 94105"}},"
-    { ""
-      icon: "Clock","
-      description: "9:00 AM - 6:00 PM EST"}]"
-  const subjects = [
-    "AI Services","
-    "IT Services","
-    "Services","
-    "Micro SAAS","
-    "Digital Transformation","
-    "5G Implementation","
-      description: "9:00 AM - 6:00 PM EST"}"
-    {
-      title: "Phone",""
-      value: "+1 (555) 123-4567",""
-      description: "Mon-Fri 9AM-6PM EST""
-""
-      icon: "Phone",""
-      title: "Phone",""
-      value: "+1 (555) 123-4567",""
-      description: "Mon-Fri 9AM-6PM EST"}"},"
-    {""
-      icon: "Email",""
-      title: "Email",""
-      value: "contact@ziontechgroup.com",""
-      description: "We respond within 24 hours"}"},"
-    {""
-      icon: "Location",""
-      title: "Address",""
-      value: "123 Tech Street, Suite 100",""
-      description: "San Francisco, CA 94105"}"},"
-    {""
-      icon: "Clock",""
-      description: "9:00 AM - 6:00 PM EST"}];"
-  const benefits = [
-    "AI Services",""
-    "IT Services",""
-    "Services",""
-    "Micro SAAS",""
-    "Digital Transformation",""
-    "5G Implementation",""
-      description: "9:00 AM - 6:00 PM EST"}"}];"
-  const subjects = [""
-    "AI Services",""
-    "IT Services",""
-    "Services",""
-    "Micro SAAS",""
-    "Digital Transformation",""
-    "5G Implementation",""
-    "Other"]"
-const ContactPage = () => {
+<<<<<<< HEAD
+import React from "react
+import { Helmet }    from "react-helmet-async
+    'AI Services','
+    'IT Services','
+    'Services','
+    'Micro SAAS','
+    'Digital Transformation','
+    '5G Implementation','
+      description: '9:00 AM - 6:00 PM EST'}'
+    }
+  ];
+const subjects = [''
+    'AI Services',''
+    'IT Services',''
+    'Services',''
+    'Micro SAAS',''
+    'Digital Transformation',''
+    '5G Implementation',''
+    'Other''
+  ]""
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet></Helmet></</Helmet>
-        <title>Contact Us - Zion Tech Group</title><//title></<//title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />""
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />""
-      </Helmet><//Helmet></<//Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">""
-        <div className="max-w-7xl mx-auto text-center">""
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">""
-    <div className="min-h-screen bg-white">"
-      <Helmet></Helmet></</Helmet>
-        <title>Contact - Zion Tech Group</title><//title></<//title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />"
-      </Helmet><//Helmet></<//Helmet>
-      { /* Hero Section */}
-      <section className="relative py-20 px-4">"
-        <div className="max-w-7xl mx-auto text-center">"
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
-            Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">""
-              Us
-            </span></h1><//h1></<//h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""
-            Ready to transform your business with AI and IT solutions?
-            Get in touch with our experts today.
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center">"
-          <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>"
-          <p className="text-gray-300 text-lg">"
-            Get in touch with our team for AI and IT solutions.
-          </p></div><//div></section><//section></<//section>
-      { /* Contact Info */}
+    <div className="min-h-screen bg-white"><Helmet><title>Contact - Zion Tech Group</title><meta name="description" content="Contact Zion Tech Group for AI and IT solutions" /></Helmet>
+          </p>
+        </div>
+
       {/* Contact Info */}
-      <section className="py-20 px-4">""
-        <div className="max-w-7xl mx-auto">""
-          <h2 className="text-4xl font-bold text-white text-center mb-16">""
-      <section className="py-20 px-4">"
-        <div className="max-w-7xl mx-auto">"
-          <h2 className="text-4xl font-bold text-white text-center mb-16">"
+
             Get in Touch
-          </h2><//h2></<//h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
-            {contactInfo.map((info, index) => {
-              const Icon = info.icon
-              return (
-              const Icon = info.icon;
-              return (}
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">""
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">""
-                    <Icon className="w-6 h-6 text-white" />""
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">"
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">"
-                    <Icon className="w-6 h-6 text-white" />"
-                  </div><//div></<//div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>""
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>""
-                  <p className="text-gray-400 text-sm">{info.description}</p>""
-                </div><//div></<//div>
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
+            {contactInfo.map((info, index) => {;
+const Icon = info.icon
+              return (<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"><div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"><Icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
+                  <p className="text-gray-400 text-sm">{info.description}</p>
+                </div>)
               )}
-          </div></div><//div></section><//section></<//section>
-      { /* Contact Form */}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
-      <section className="py-20 px-4 bg-slate-800/30">""
-        <div className="max-w-4xl mx-auto">""
-          <h2 className="text-4xl font-bold text-white text-center mb-16">""
-      <section className="py-20 px-4 bg-slate-800/30">"
-        <div className="max-w-4xl mx-auto">"
-          <h2 className="text-4xl font-bold text-white text-center mb-16">"
+
             Send us a Message
-          </h2><//h2></<//h2>
+          </h2>
+          
           {isSubmitted ? (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">""
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">""
-                <Circle className="w-8 h-8 text-white" />""
-              </div><//div></<//div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>""
-              <p className="text-gray-300 mb-6">""
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>"
-              <p className="text-gray-300 mb-6">"""
-                Thank you for contacting us. We"ll get back to you within 24 hours.""
-              </p><//p></<//p>
-              <button
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"><div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>
+                <Circle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+              <p className="text-gray-300 mb-6">''"
+                Thank you for contacting us. We'll get back to you within 24 hours.'
+              </p>
+              <button)
                 onClick={() => {
                   setIsSubmitted(false)
                   setFormData({
-                    name: ","
-                    email: ","
-                    company: ","
-                    phone: ","
-                    subject: ","
-                    message: "})}}"
-                  setIsSubmitted(false);
-                  setFormData({ ""
-                    name: ",""
-                    email: ",""
-                    company: ",""
-                    phone: ",""
-                    subject: ",""
-                    message: "}})}}"
-                    name: ",""
-                    email: ",""
-                    company: ",""
-                    phone: ",""
-                    subject: ",""
-                    message: ""}"
-                  setIsSubmitted(false)
-                  setFormData({""
-                    name: ",""
-                    email: ",""
-                    company: ",""
-                    phone: ",""
-                    subject: ",""
-                    message: "}"}"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"})}}"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300""
+
               >
                 Send Another Message
-              </button></div><//div></<//div>
+              </button>
+            </div>)
           ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">""
-              <div className="grid md:grid-cols-2 gap-6 mb-6">""
-                <div></div></</div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">""
+            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+              <div className="grid md:grid-cols-2 gap-6 mb-6"><div></div>
+                  <label htmlFor="name" className="block text-white font-medium mb-2">
                     Full Name *
-                  </label><//label></<//label>
+                  </label>
                   <input
-                    type="text""
-                    id="name""
-                    name="name""
-                    value={formData.name}
-                    onChange={handleChange}
-                    type="text""
-                    id="name""
-                    name="name""
-                    value={ formData.name}
-                    onChange={ handleChange}
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={ formData.name }
+                    onChange={ handleChange }
+
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="Your full name""
-                  /></div><//div></<//div>
-                <div></div></</div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">""
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div></div>
+                  <label htmlFor="email" className="block text-white font-medium mb-2">
                     Email Address *
-                  </label><//label></<//label>
+                  </label>
                   <input
-                    type="email""
-                    id="email""
-                    name="email""
-                    value={formData.email}
-                    onChange={handleChange}
-                    type="email""
-                    id="email""
-                    name="email""
-                    value={ formData.email}
-                    onChange={ handleChange}
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={ formData.email }
+                    onChange={ handleChange }
+
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="your.email@company.com""
-                  /></div><//div></div><//div></<//div>
-              <div className="grid md:grid-cols-2 gap-6 mb-6">""
-              <div className="grid md:grid-cols-2 gap-6 mb-6">"
-                <div></div></</div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">""
+                    placeholder="your.email@company.com"
+                  />
+                </div>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6 mb-6"><div></div>
+                  <label htmlFor="company" className="block text-white font-medium mb-2">
                     Company
-                  </label><//label></<//label>
+                  </label>
                   <input
-                    type="text""
-                    id="company""
-                    name="company""
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="Your company name""
-                    type="text""
-                    id="company""
-                    name="company""
-                    value={ formData.company}
-                    onChange={ handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="Your company name""
-                  /></div><//div></<//div>
-                <div></div></</div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">""
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={ formData.company }
+                    onChange={ handleChange }
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div></div>
+                  <label htmlFor="phone" className="block text-white font-medium mb-2">
                     Number
-                  </label><//label></<//label>
+                  </label>
                   <input
-                    type="tel""
-                    id="phone""
-                    name="phone""
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="+1 (555) 123-4567""
-                  /></div><//div></div><//div></<//div>
-              <div className="mb-6">""
-                <label htmlFor="subject" className="block text-white font-medium mb-2">""
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={ formData.phone }
+                    onChange={ handleChange }
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent")
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+              <div className="mb-6"><label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
-                </label><//label></<//label>
+                </label>
                 <select
-                  id="subject""
-                  name="subject""
-                  value={formData.subject}
-                  onChange={handleChange}
-                    type="tel""
-                    id="phone""
-                    name="phone""
-                    value={ formData.phone}
-                    onChange={ handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="+1 (555) 123-4567""
-                  /></div><//div></div><//div></<//div>
-              <div className="mb-6">"
-                <label htmlFor="subject" className="block text-white font-medium mb-2">"
-                  Subject *
-                </label><//label></<//label>
-                <select
-                  id="subject""
-                  name="subject""
-                  value={ formData.subject}
-                  onChange={ handleChange}
+                  id="subject"
+                  name="subject"
+                  value={ formData.subject }
+                  onChange={ handleChange }
+
                   required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""></select
-                  id="subject""
-                  name="subject""
-                  value={ formData.subject}
-                  onChange={ handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""></</select
-                  id="subject""
-                  name="subject""
-                  value={ formData.subject}
-                  onChange={ handleChange}
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"">
-                  <option value=">Select a subject</option>""
-                  {subjects.map((subject, index) => (}
-                  <option value=">Select a subject</option>"
-                  { subjects.map((subject, index) => (}
-                    <option key={index} value={subject}></option key={index} value={subject}></</option key={index} value={subject}>
-                      { subject}
-                    </option><//option></<//option>
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="">Select a subject</option>
+                  { subjects.map((subject, index) => ( }
+
+                    <option key={index} value={subject}>
+                      { subject }
+                    </option>)
                   ))
-                </select></div><//div></<//div>
-              <div className="mb-8">""
-                <label htmlFor="message" className="block text-white font-medium mb-2">""
+                </select>
+              </div>
+              <div className="mb-8"><label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
-                </label><//label></<//label>
+                </label>
                 <textarea
-                  id="message""
-                  name="message""
-                  value={formData.message}
-                  onChange={handleChange}
+                  id="message"
+                  name="message"
+                  value={ formData.message }
+                  onChange={ handleChange }
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none""
-                  placeholder="Tell us about your project or how we can help you...""
-                /></div><//div></<//div>
-              <div className="text-center">""
-                <button
-                  type="submit""
-                  disabled={isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none""
-              <div className="mb-8">"
-                <label htmlFor="message" className="block text-white font-medium mb-2">"
-                  Message *
-                </label><//label></<//label>
-                <textarea
-                  id="message""
-                  name="message""
-                  value={ formData.message}
-                  onChange={ handleChange}
-                  required
-                  rows={ 6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none""
-                  placeholder="Tell us about your project or how we can help you...""
-                /></div><//div></<//div>
-              <div className="text-center">"
-                <button
-                  type="submit""
-                  disabled={ isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none""></button
-                  type="submit""
-                  disabled={ isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none""></</button
-                  type="submit""
-                  disabled={ isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"">
+                  rows={ 6 }
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                  placeholder="Tell us about your project or how we can help you..."
+                />
+              </div>
+              <div className="text-center"><button"
+                  type="submit"
+                  disabled={ isSubmitting }
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                >
                   { isSubmitting ? (
-                    <></></</>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>""
+                    <>
+                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Sending...
-                    </><//></<//>
+                    </>)
                   ) : (
-                    <></></</>
+                    <>
                       Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />""
-                    </>}
-                      <Send className="w-5 h-5 ml-2 inline" />"
-                    </>}
+                      <Send className="w-5 h-5 ml-2 inline" />
+                    </> })
                   )}
-                </button></div><//div></form><//form></<//form>
+
+                </button>
+              </div>
+            </form>
           )
-        </div></section><//section></div></div><//div></<//div>
-  )
-  )}""
-  )};
+        </div>
+      </section>
+
+    </div>);
+};
+export default ContactPage;
+};
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+const PagePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

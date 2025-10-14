@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone } from 'lucide-react';
@@ -8,9 +9,8 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 import Analytics from '../components/Analytics';
-
-const AIFraudDetectionPage: React.FC = () => {
-  const fraudServices = [
+const AIFraudDetectionPage: React.FC = () => {;
+const fraudServices = [
     {
       title: 'Real-time Fraud Detection',
       description: 'Instant detection of fraudulent activities using advanced AI algorithms',
@@ -76,8 +76,7 @@ const AIFraudDetectionPage: React.FC = () => {
       color: 'text-gray-400'
     }
   ];
-
-  const benefits = [
+const benefits = [
     {
       title: '99.9% Accuracy',
       description: 'Our AI models achieve 99.9% accuracy in fraud detection',
@@ -120,7 +119,7 @@ const AIFraudDetectionPage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       >
-        <div></div>
+        <div></div></div>
       </AccessibilityEnhancer>
       <SecurityEnhancer
         enableCSP={true}
@@ -129,10 +128,7 @@ const AIFraudDetectionPage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -153,13 +149,13 @@ const AIFraudDetectionPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose Our AI Fraud Detection?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>)
               {benefits.map((benefit, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
+                  <div className="text-4xl mb-4"></div>{benefit.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3 neon-text">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </section>
@@ -169,33 +165,28 @@ const AIFraudDetectionPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Our Fraud Detection Services
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
               {fraudServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"><service.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                  <div className="mb-4"><h4 className="text-sm font-semibold text-red-400 mb-2">Features:</h4>
+                    <ul className="space-y-1">)
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
                           {feature}
-                        </li>
+                        </li>)
                       ))}
                     </ul>
                   </div>
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/contact" 
+                  <div className="text-center"><div className={`text-lg font-bold mb-2 neon-text ${service.color}`}></div>{service.price}</div>
+                    <a
+                      href="/contact"
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Get Started
@@ -208,12 +199,10 @@ const AIFraudDetectionPage: React.FC = () => {
 
           {/* Industry Applications */}
           <section className="mb-16">
-            <div className="cyber-card p-8">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            <div className="cyber-card p-8"><h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
                 Industry Applications
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div className="text-center"></div>
                   <h3 className="text-xl font-semibold text-cyan-400 mb-4">Financial Services</h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• Credit Card Fraud Prevention</li>
@@ -222,8 +211,7 @@ const AIFraudDetectionPage: React.FC = () => {
                     <li>• Identity Verification</li>
                   </ul>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-purple-400 mb-4">E-commerce</h3>
+                <div className="text-center"><h3 className="text-xl font-semibold text-purple-400 mb-4">E-commerce</h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• Payment Fraud Prevention</li>
                     <li>• Chargeback Protection</li>
@@ -231,8 +219,7 @@ const AIFraudDetectionPage: React.FC = () => {
                     <li>• Transaction Monitoring</li>
                   </ul>
                 </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-green-400 mb-4">Insurance</h3>
+                <div className="text-center"><h3 className="text-xl font-semibold text-green-400 mb-4">Insurance</h3>
                   <ul className="space-y-2 text-sm text-gray-300">
                     <li>• Claims Fraud Detection</li>
                     <li>• Document Verification</li>
@@ -246,16 +233,14 @@ const AIFraudDetectionPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+            <div className="cyber-card p-8 max-w-4xl mx-auto"><h2 className="text-3xl font-bold text-white mb-4 neon-text">
                 Protect Your Business from Fraud
               </h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Don't let fraud damage your business. Our AI-powered fraud detection systems 
+                Don&apos;t let fraud damage your business. Our AI-powered fraud detection systems 
                 provide real-time protection and help you stay ahead of emerging threats.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"><a"
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
@@ -278,5 +263,27 @@ const AIFraudDetectionPage: React.FC = () => {
     </>
   );
 };
-
 export default AIFraudDetectionPage;
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Fraud Detection - Zion Tech Group</title>
+        <meta name="description" content="Ai Fraud Detection services and solutions from Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Fraud Detection</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our ai fraud detection services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

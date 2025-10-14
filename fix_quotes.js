@@ -1,59 +1,60 @@
-#!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { execSync } from "child_process"
+<<<<<<< HEAD
+#!/usr/bin/env node;
+import fs from "fs
+import path from "path
+import { execSync } from "child_process
 console.log("🔧 Fixing unterminated string literals...\n")
-// Function to fix unterminated string literals
+// Function to fix unterminated string literals;
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8")
+    let content = fs.readFileSync(filePathutf8")
     let originalContent = content
     let fixed = false
-    // Fix unterminated string literals in import statements
-    const fixes = [
+    // Fix unterminated string literals in import statements;
+const fixes = [
       // Fix import statements missing closing quotes
       {
-        pattern: /import\s+React\s+from\s+'react;/g,
-        replacement: "import React from 'react';",
+        pattern: /import\s+React\s+from\s+'react;/g
+        replacement:
       },
       {
-        pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'([^']+);/g,
-        replacement: "import { $1 } from '$2';",
+        pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+'([^']+);/g
+        replacement: "import { $1 } from '$2'
       },
       {
-        pattern: /import\s+([^'"]+)\s+from\s+'([^']+);/g,
-        replacement: "import $1 from '$2';",
+        pattern: /import\s+([^'"]+)\s+from\s+'([^']+);/g
+        replacement: "import $1 from '$2'
       },
       // Fix double quotes
       {
-        pattern: /import\s+React\s+from\s+"react;/g,
-        replacement: 'import React from "react";',
+        pattern: /import\s+React\s+from\s+"react;/g
+        replacement: 'import React from "react";'
       },
       {
-        pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+);/g,
-        replacement: 'import { $1 } from "$2";',
+        pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+);/g
+        replacement: 'import { $1 } from "$2";'
       },
       {
-        pattern: /import\s+([^'"]+)\s+from\s+"([^"]+);/g,
-        replacement: 'import $1 from "$2";',
+        pattern: /import\s+([^'"]+)\s+from\s+"([^"]+);/g
+        replacement: 'import $1 from "$2";'
       },
       // Fix other common unterminated strings
       {
-        pattern: /content="([^"]*);/g,
-        replacement: 'content="$1"',
+        pattern: /content="([^"]*);/g
+        replacement: 'content="$1"'
       },
       {
-        pattern: /content='([^']*);/g,
-        replacement: "content='$1'",
+        pattern: /content='([^']*);/g
+        replacement: "content='$1'
       },
       // Fix malformed JSX attributes
       {
-        pattern: /className="([^"]*);/g,
-        replacement: 'className="$1"',
+        pattern: /className="([^"]*);/g
+        replacement: 'className="$1"'
       },
       {
-        pattern: /className='([^']*);/g,
-        replacement: "className='$1'",
+        pattern: /className='([^']*);/g
+        replacement: "className='$1'
       },
     ]
     // Apply fixes
@@ -63,22 +64,22 @@ function fixFile(filePath) {
         fixed = true
 })
     // Additional specific fixes for common patterns
-    if (content.includes("'react;") || content.includes('"react;')) {
-      content = content.replace(/'react;/g, "'react';")
+    if (content.includes("'react) || content.includes('"react;')) {
+      content = content.replace(/'react;/g'react')
       content = content.replace(/"react;/g, '"react";')
       fixed = true
 }
-    if (
-      content.includes("'react-helmet-async;") ||
+    if (")
+      content.includes("'react-helmet-async) ||
       content.includes('"react-helmet-async;')
     ) {
       content = content.replace(
-        /'react-helmet-async;/g,
-        "'react-helmet-async';",
+        /'react-helmet-async;/g
+        "'react-helmet-async',)
       )
       content = content.replace(
-        /"react-helmet-async;/g,
-        '"react-helmet-async";',
+        /"react-helmet-async;/g
+        '"react-helmet-async";',)
       )
       fixed = true
 }
@@ -93,20 +94,20 @@ function fixFile(filePath) {
     return false
 }
 // Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (
+function findFiles(dir, extensions = [".ts".tsx".js".jsx"]) {
+const files = [];
+function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir)
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
+      if ()
         stat.isDirectory() &&
         !item.startsWith(".") &&
-        item !== "node_modules"
+        item !== "node_modules
       ) {
         traverse(fullPath)
-      } else if (
+      } else if ()
         stat.isFile() &&
         extensions.some((ext) => item.endsWith(ext))
       ) {
@@ -118,7 +119,7 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
 }
 // Main execution
 try {
-  const files = findFiles("./app")
+const files = findFiles("./app")
   let fixedCount = 0
   let totalCount = files.length
   console.log(`Found ${totalCount} files to check...\n`)
@@ -138,3 +139,8 @@ try {
   console.error("❌ Error during fix process:", error.message)
   process.exit(1)
 }
+}}}
+=======
+// fix_quotes.js - Under development
+console.log('fix_quotes.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

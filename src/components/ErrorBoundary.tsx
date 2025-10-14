@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from "react"
 
 interface Props {
@@ -18,21 +19,21 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
 
-  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {"
     console.error("Uncaught error:", error, errorInfo)
   }
 
   public render() {
     if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
+      return ("
+        <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white"></div>"
+          <div className="text-center"></div>"
+            <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>"
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <button
-              onClick={() => window.location.reload()}
+            <button)
+              onClick={() => window.location.reload()}"
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Refresh Page
@@ -45,5 +46,20 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children
   }
 }
-
-export default ErrorBoundary
+;
+export default ErrorBoundary"
+=======
+import React from 'react';
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

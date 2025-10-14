@@ -1,21 +1,28 @@
-import React from 'react''''''
+import React from 'react'''''
 interface FuturisticCardProps {}
   children: React.ReactNode
   className?: string
-  variant?: 'default' | 'glow' | 'gradient'}'''''
+<<<<<<< HEAD
+  variant?: 'default' | 'glow' | 'gradient'}'''';
 const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}""
+=======
+  variant?: 'default' | 'glow' | 'gradient'}''''
+const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   children,
-  className = '',''''''
-  variant = 'default''}) => {'}''''
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm''''''
-  const variantClasses = {}
-    default: 'bg-white/10',''''''
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',''''''
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''''''}'
+  className = '',''''')
+  variant = 'default''}) => {'}''';
+const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm''''';
+const variantClasses = {}
+    default: 'bg-white/10','''''
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20','''''
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''''''
+  }
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></</div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>
       {children}
-    </div><//div></<//div>
-  )}
+    </div>)
+  )
+}
 export default FuturisticCard
-</FuturisticCardProps><//FuturisticCardProps></<//FuturisticCardProps>
+</FuturisticCardProps>"

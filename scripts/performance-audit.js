@@ -1,4 +1,8 @@
-const performanceAudit = () => { console.log("Performance audit completed";)}"
+<<<<<<< HEAD
 // performance-audit - Basic implementation
-export default function performance-audit() {
-  return null}
+export default function performanceAudit() {
+  console.log('Performance audit completed');
+  return null;
+}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

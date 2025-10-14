@@ -1,7 +1,5 @@
-// SeoConstants utility
-export const seoconstants = () => {
-  // Implementation here
-  console.log('SeoConstants utility called');
-};
+// SeoConstants utility functions
 
-export default seoconstants;
+export const SeoConstants = {
+  // Add your utility functions here
+};

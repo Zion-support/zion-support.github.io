@@ -1,8 +1,12 @@
-// services utility;
-export const services = () => {// Implementation;
-  return true}
-export default services;
+<<<<<<< HEAD
 export const services = () => { // Implementation;
-  return true}};
+  return true; }
+};
 export default services;
-"use client;"// services utility; export const services = () => {"} // Implementation; return true}"} export default services;";""
+=======
+// Services data
+
+export const Services = {
+  // Add your data here
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

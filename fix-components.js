@@ -1,22 +1,22 @@
-#!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { glob } from "glob"
-// Function to create a basic component template
+#!/usr/bin/env node;
+import fs from "fs
+import path from "path
+import { glob } from "glob
+// Function to create a basic component template;
 function createBasicComponentTemplate(componentName) {
-  return `import React from "react"
+  return `import React from "react
 const ${componentName} = () => {
   return (
-    <div>
+    <div></div>
       <h2>${componentName}</h2>
-      <p>This component is under construction.</p>
+      <p>This component is under construction.</p>)
   )
 }
 export default ${componentName};`
 }
-// Function to create AnalyticsProvider component
+// Function to create AnalyticsProvider component;
 function createAnalyticsProviderComponent() {
-  return `import React, { createContext, useContext, ReactNode } from "react"
+  return `import React, { createContext, useContext, ReactNode } from "react
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void
   trackPageView: (pageName: string) => void
@@ -25,8 +25,8 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 interface AnalyticsProviderProps {
   children: ReactNode
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
+const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     // Basic analytics tracking
     console.log("Analytics Event:", eventName, properties)
     // In a real implementation, you would send this to your analytics service
@@ -36,9 +36,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const trackPageView = (pageName: string) => {
     console.log("Page View:", pageName)
     if (typeof window !== "undefined" && (window as any).gtag) {
-      (window as any).gtag("config", "GA_MEASUREMENT_ID", {
+      (window as any).gtag("config"GA_MEASUREMENT_ID", {
         page_title: pageName,
-        page_location: window.location.href,
+        page_location: window.location.href,)
       })
 }
   const value = {
@@ -47,11 +47,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      {children})
   )
 }
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+export const useAnalytics = () => {;
+const context = useContext(AnalyticsContext)
   if (context === undefined) {
     throw new Error("useAnalytics must be used within an AnalyticsProvider")
 }
@@ -59,9 +59,9 @@ export const useAnalytics = () => {
 }
 export default AnalyticsProvider;`
 }
-// Function to create ErrorBoundary component
+// Function to create ErrorBoundary component;
 function createErrorBoundaryComponent() {
-  return `import React, { Component, ErrorInfo, ReactNode } from "react"
+  return `import React, { Component, ErrorInfo, ReactNode } from "react
 interface Props {
   children: ReactNode
 }
@@ -82,13 +82,13 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center">
+        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
-            <button
+            <button)
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
             >
               Reload Page
       )
@@ -97,23 +97,23 @@ class ErrorBoundary extends Component<Props, State> {
 }
 export default ErrorBoundary;`
 }
-// Function to create Loading component
+// Function to create Loading component;
 function createLoadingComponent() {
-  return `import React from "react"
+  return `import React from "react
 const Loading = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+      <div className="text-center"></div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500 mx-auto mb-4"></div></div>
+        <p className="text-white text-lg">Loading...</p>)
   )
 }
 export default Loading;`
 }
-// Function to create SEO component
+// Function to create SEO component;
 function createSEOComponent() {
-  return `import React from "react"
-import { Helmet } from "react-helmet-async"
+  return `import React from "react
+import { Helmet } from "react-helmet-async
 interface SEOProps {
   title?: string
   description?: string
@@ -122,14 +122,14 @@ interface SEOProps {
   url?: string
 }
 const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.",
-  keywords = "AI, artificial intelligence, cybersecurity, cloud infrastructure, digital transformation, IT services",
-  image = "/og-image.jpg",
-  url = "https://ziontechgroup.com"
+  title = "Zion Tech Group - Advanced AI and IT Solutions
+  description = "Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
+  keywords = "AI, artificial intelligence, cybersecurity, cloud infrastructure, digital transformation, IT services
+  image = "/og-image.jpg
+  url = "https://ziontechgroup.com")
 }) => {
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -141,34 +141,34 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={image} />)
   )
 }
 export default SEO;`
 }
 // Main function to process files
 async function processFiles() {
-  const componentFiles = await glob("app/components/*.tsx", {
+const componentFiles = await glob("app/components/*.tsx", {)
     cwd: process.cwd(),
   })
   let processedCount = 0
   let errorCount = 0
   for (const file of componentFiles) {
-    try {
-      const filePath = path.join(process.cwd(), file)
-      const componentName = path.basename(file, ".tsx")
+    try {;
+const filePath = path.join(process.cwd(), file)
+const componentName = path.basename(file.tsx")
       let content
       // Special handling for specific components
       if (componentName === "AnalyticsProvider") {
         content = createAnalyticsProviderComponent()
       } else if (
         componentName === "ErrorBoundary" ||
-        componentName === "GlobalErrorBoundary"
+        componentName === "GlobalErrorBoundary")
       ) {
         content = createErrorBoundaryComponent()
       } else if (
         componentName === "Loading" ||
-        componentName === "LoadingSpinner"
+        componentName === "LoadingSpinner")
       ) {
         content = createLoadingComponent()
       } else if (componentName === "SEO") {
@@ -177,7 +177,7 @@ async function processFiles() {
         content = createBasicComponentTemplate(componentName)
 }
       // Write the fixed content
-      fs.writeFileSync(filePath, content, "utf8")
+      fs.writeFileSync(filePath, contentutf8")
       processedCount++
       console.log(`Fixed: ${file}`)
     } catch (error) {
@@ -190,3 +190,4 @@ async function processFiles() {
 }
 // Run the fix
 processFiles().catch(console.error)
+}}}}}
