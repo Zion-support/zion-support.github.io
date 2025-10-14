@@ -12,7 +12,9 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
       <LazyComponent {...(props as ComponentProps<T>)} />
     </Suspense>
   );
-  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
+  
+  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
+  
   return WrappedComponent;
 }
 
@@ -28,6 +30,8 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
       <LazyComponent {...(props as ComponentProps<T>)} />
     </Suspense>
   );
+  
   WrappedComponent.displayName = `createLazyComponent(${LazyComponent.name || 'Component'})`;
+  
   return WrappedComponent;
 }
