@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const EnhancedPerformanceOptimizer = () => {
-
+export default function EnhancedPerformanceOptimizer() {
   return (
-    div>
-      <h2>EnhancedPerformanceOptimizer</h2>
+    <div>
+      <h1>EnhancedPerformanceOptimizer</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default EnhancedPerformanceOptimizer;
-
-
+}

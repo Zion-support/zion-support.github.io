@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const CoreWebVitals = () => {
-
+export default function CoreWebVitals() {
   return (
-    div>
-      <h2>CoreWebVitals</h2>
+    <div>
+      <h1>CoreWebVitals</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default CoreWebVitals;
-
-
+}

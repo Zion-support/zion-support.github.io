@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const ImprovedFooter = () => {
-
+export default function ImprovedFooter() {
   return (
-    div>
-      <h2>ImprovedFooter</h2>
+    <div>
+      <h1>ImprovedFooter</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default ImprovedFooter;
-
-
+}

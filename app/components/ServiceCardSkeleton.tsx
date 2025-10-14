@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const ServiceCardSkeleton = () => {
-
+export default function ServiceCardSkeleton() {
   return (
-    div>
-      <h2>ServiceCardSkeleton</h2>
+    <div>
+      <h1>ServiceCardSkeleton</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default ServiceCardSkeleton;
-
-
+}

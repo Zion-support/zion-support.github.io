@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const PerformanceMonitor = () => {
-
+export default function PerformanceMonitor() {
   return (
-    div>
-      <h2>PerformanceMonitor</h2>
+    <div>
+      <h1>PerformanceMonitor</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default PerformanceMonitor;
-
-
+}

@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const FuturisticTextEnhanced = () => {
-
+export default function FuturisticTextEnhanced() {
   return (
-    div>
-      <h2>FuturisticTextEnhanced</h2>
+    <div>
+      <h1>FuturisticTextEnhanced</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default FuturisticTextEnhanced;
-
-
+}

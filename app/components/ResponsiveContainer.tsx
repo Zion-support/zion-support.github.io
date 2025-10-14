@@ -1,12 +1,10 @@
 import React from "react";
 
-
-"interface ResponsiveContainerProps {}"children: 
-  c,lassName ?  : string
-
-const ResponsiveContainer: React.FC<Props> = ({ children  }) => {};
+export default function ResponsiveContainer() {
   return (
-    div>Page content</div>
+    <div>
+      <h1>ResponsiveContainer</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-  );</Props>
+}

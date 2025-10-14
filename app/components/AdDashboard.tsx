@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const AdDashboard = () => {
-
+export default function AdDashboard() {
   return (
-    div>
-      <h2>AdDashboard</h2>
+    <div>
+      <h1>AdDashboard</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default AdDashboard;
-
-
+}

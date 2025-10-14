@@ -1,25 +1,10 @@
-"use client;";
-import React from react;
+import React from "react";
 
-
-"export default function Navigation-backup() {
+export default function Navigation-backup() {
   return (
-    div>
-  );Page content</div>
-  );
-
-    <div>Page content</div>
-  );
     <div>
-      </div>
-      <div>
-      </div>
-        <h1 className: ""text-4xl font-bold mb-8">Components</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;        </p>
-      </div>
+      <h1>Navigation-backup</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-
-        </p></div></div>
 }
-};
-};
-  )};

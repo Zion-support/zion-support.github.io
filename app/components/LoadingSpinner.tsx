@@ -1,17 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const LoadingSpinner = () => {
-
+export default function LoadingSpinner() {
   return (
-    div>
-      <h2>LoadingSpinner</h2>
+    <div>
+      <h1>LoadingSpinner</h1>
+      <p>This component is under development.</p>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default LoadingSpinner;
-
-
+}

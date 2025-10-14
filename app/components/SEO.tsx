@@ -1,20 +1,10 @@
-import React from 'react';
+import React from "react";
 
-
-const SEO = () => {
-
+export default function SEO() {
   return (
-    div>
-      <h2>SEO</h2>
-  );
-  );
-      <p>This component is under construction.</p>
-      {title && <p>Title: {title}</p>};
-      {description && <p>Description: {description}</p>};
+    <div>
+      <h1>SEO</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-export default SEO;
-
-
-
+}
