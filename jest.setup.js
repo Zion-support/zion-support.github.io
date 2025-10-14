@@ -1,18 +1,18 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require("@testing-library/jest-dom");
 
-// Polyfills for Node.js environment
+// Polyfills for Node.js environment";
 const { TextEncoder, TextDecoder } = require("util");
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock window.matchMedia
+// Mock window.matchMedia"
 Object.defineProperty(window, "matchMedia", {
-  writable: true,
+  writable: true,)
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
-    onchange: null,
+    onchange: null,)
     addListener: jest.fn(),
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
@@ -22,8 +22,8 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+global.IntersectionObserver = class IntersectionObserver {;
+constructor() {}
   disconnect() {}
   observe() {}
   takeRecords() {
@@ -32,13 +32,13 @@ global.IntersectionObserver = class IntersectionObserver {
   unobserve() {}
 };
 
-// Suppress console errors in tests
+// Suppress console errors in tests;
 const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === "string" &&
-      (args[0].includes("Warning: ReactDOM.render") ||
+    if ("
+      typeof args[0] === "string" &&")
+      (args[0].includes("Warning: ReactDOM.render") ||"
         args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
     ) {
       return;
@@ -49,4 +49,4 @@ beforeAll(() => {
 
 afterAll(() => {
   console.error = originalError;
-});
+});"

@@ -1,9 +1,9 @@
 import React from 'react'
 'use client'
-#!/usr/bin/env node
-import fs from 'fs'
+#!/usr/bin/env node;
+import fs from 'fs';
 import { glob } from 'glob'
-// Function to fix directive placement
+// Function to fix directive placement;
 function fixUseClientDirective(content)   {}
   // Remove all directives first
   content = content.replace(/\s*/g, )
@@ -16,13 +16,13 @@ function fixUseClientDirective(content)   {}
 }
   return content
 }
-// Function to fix import statement issues
+// Function to fix import statement issues;
 function fixImportStatements(content)   {}
   // Fix malformed import statements
   content = content.replace(/import\s+.*?\s+from\s+from\s+/g, (match) => {}
     return match.replace(/\s+from\s+from\s+/, ' from ');'
   })
-  // Ensure imports have semicolons
+  // Ensure imports have semicolons"
   content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?!;)/g, (match) => "
     if (!match.endsWith(')) '
       return match + ''
@@ -31,41 +31,41 @@ function fixImportStatements(content)   {}
   })
   return content
 }
-// Function to fix JSX syntax
+// Function to fix JSX syntax;
 function fixJSXSyntax(content)   {}
   // Fix malformed JSX fragments
   content = content.replace(/<>\s*$/gm, '<></>');'
   // Fix missing closing tags
-  content = content.replace(/<div[^>]
+  content = content.replace(/<div[^></div>])
       </div>]*>(?!.*<\/div>)/g, (match) => {}
     return match + '\n      </div>'
   })
-  // Fix unterminated string literals
-  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'
-  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'
-  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'
+  // Fix unterminated string literals"
+  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');'"
+  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');'"
+  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');'"
   content = content.replace(/alt\s*=\s*["']([^"']*?)\s*$/gm, 'alt="$1"');'
   return content
 }
-// Function to fix function syntax
+// Function to fix function syntax;
 function fixFunctionSyntax(content)   {}
   // Fix missing function bodies
   content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{?\s*$/gm, }
-    'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}');'
+    'export default function $1() {\n  return (\n    <div></div>Page content</div>\n  );\n}');'
   // Fix missing return statements
   content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, }
-    'function $1() {\n  return (\n    <div>Content</div>\n  );\n}');'
+    'function $1() {\n  return (\n    <div></div>Content</div>\n  );\n}');'
   return content
 }
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath)   {}
   try 
     // Skip broken and disabled directories
     if (filePath.includes('app-broken') || filePath.includes('app-disabled')) '
       return false
 }
-    let content = fs.readFileSync(filePath, 'utf8');'
-    const originalContent = content
+    let content = fs.readFileSync(filePath, 'utf8');';
+const originalContent = content
     // Apply fixes
     content = fixUseClientDirective(content)
     content = fixImportStatements(content)
@@ -85,12 +85,12 @@ function processFile(filePath)   {}
 // Main function
 async function main()   {}
   return (
-    <div>Content</div>
+    <div></div>Content</div>)
   )
 }
   console.log('Starting final directive fix...');'
-  // Get all TypeScript and JavaScript files, excluding broken/disabled directories
-  const patterns = [
+  // Get all TypeScript and JavaScript files, excluding broken/disabled directories;
+const patterns = [
     'app/**/*.{ts,tsx,js,jsx}',']'
     'api/**/*.{ts,tsx,js,jsx}','
     'components/**/*.{ts,tsx,js,jsx}','
@@ -98,8 +98,8 @@ async function main()   {}
   ]
   let totalFiles = 0
   let fixedFiles = 0
-  for (const pattern of patterns) 
-    const files = await glob(pattern, 
+  for (const pattern of patterns) ;
+const files = await glob(pattern, )
       cwd: process.cwd(),
       ignore: ['**/app-broken/**', '**/app-disabled/**']'
     })
@@ -113,4 +113,4 @@ async function main()   {}
   console.log('Final directive fix completed!');'
 }
 // Run the script
-main().catch(console.error)
+main().catch(console.error)"

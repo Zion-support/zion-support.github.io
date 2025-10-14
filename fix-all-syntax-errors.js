@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
+;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files that need fixing
+// List of files that need fixing;
 const filesToFix = [
   'app/case-studies/page.tsx',
   'app/consultation/page.tsx',
@@ -64,18 +64,18 @@ const filesToFix = [
   'app/pages/5GSolutionsPage.tsx'
 ];
 
-// Function to extract page name from file path
-function getPageName(filePath) {
-  const parts = filePath.split('/');
+// Function to extract page name from file path;
+function getPageName(filePath) {;
+const parts = filePath.split('/');
   const fileName = parts[parts.length - 1];
   const pageName = fileName.replace('.tsx', '').replace('page', '');
   return pageName.charAt(0).toUpperCase() + pageName.slice(1) + 'Page';
 }
 
-// Function to fix a single file
+// Function to fix a single file;
 function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
+  try {;
+const fullPath = path.join(__dirname, filePath);
     
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
@@ -96,25 +96,25 @@ function fixFile(filePath) {
     content = content.replace(/;\s*var/g, '\nvar');
     
     // Fix malformed JSX
-    if (content.includes('export default function') && !content.includes('return (')) {
-      const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
-      if (functionMatch) {
-        const functionName = functionMatch[1];
+    if (content.includes('export default function') && !content.includes('return (')) {;
+const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
+      if (functionMatch) {;
+const functionName = functionMatch[1];
         const pageName = getPageName(filePath);
         
-        // Create proper JSX structure
-        const jsxContent = `  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>
+        // Create proper JSX structure;
+const jsxContent = `  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>")
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName.replace('Page', '')}</h1>"
           <p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.replace('Page', '').toLowerCase()}</p>
         </div>
       </div>
     </div>
   );`;
         
-        content = content.replace(
+        content = content.replace()
           /export default function \w+\s*\(\s*\)\s*\{[\s\S]*?\};?\s*$/,
           `export default function ${functionName}() {\n${jsxContent}\n}`
         );
@@ -125,13 +125,13 @@ function fixFile(filePath) {
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
-    content = content.replace(/;\s*\[/g, ' [');
-    content = content.replace(/;\s*"/g, ' "');
+    content = content.replace(/;\s*\[/g, ' [');"
+    content = content.replace(/;\s*"/g, ' "');"
     content = content.replace(/;\s*'/g, " '");
     content = content.replace(/;\s*`/g, ' `');
     
-    // Fix string literals
-    content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'");
+    // Fix string literals"
+    content = content.replace(/'([^']*)'([^']*)'/g, "'$1$2'");"
     content = content.replace(/"([^"]*)"([^"]*)"/g, '"$1$2"');
     
     // Fix object syntax
@@ -162,4 +162,5 @@ function fixFile(filePath) {
 // Fix all files
 console.log('Starting to fix syntax errors...');
 filesToFix.forEach(fixFile);
-console.log('Syntax error fixing completed!');
+console.log('Syntax error fixing completed!');"
+}}

@@ -1,17 +1,16 @@
 'use client';
 /**
  * Jest setup file for testing environment
- */
-import React from 'react';
+ */;
 import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder
+// Polyfill for TextEncoder/TextDecoder;
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder as any;
 global.TextDecoder = TextDecoder as any;
-// Suppress jsdom navigation warnings
+// Suppress jsdom navigation warnings;
 const originalConsoleError = console.error;
-console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+console.error = (...args) => {;
+const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -20,11 +19,11 @@ console.error = (...args) => {
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
-  writable: true,
+  writable: true,)
   value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
-    onchange: null,
+    onchange: null,)
     addListener: jest.fn(), // deprecated
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
@@ -35,7 +34,7 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-// Mock localStorage
+// Mock localStorage;
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -43,9 +42,9 @@ const localStorageMock = {
   clear: jest.fn()
 };
 Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock
+  value: localStorageMock)
 });
-// Mock sessionStorage
+// Mock sessionStorage;
 const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -53,22 +52,22 @@ const sessionStorageMock = {
   clear: jest.fn()
 };
 Object.defineProperty(window, 'sessionStorage', {
-  value: sessionStorageMock
+  value: sessionStorageMock)
 });
 // Mock fetch
 global.fetch = jest.fn();
-// Mock console methods for cleaner test output
+// Mock console methods for cleaner test output;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
+console.warn = (...args) => {;
+const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
-console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
+console.info = (...args) => {;
+const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }

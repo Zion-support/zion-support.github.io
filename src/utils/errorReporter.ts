@@ -1,8 +1,9 @@
+import React from 'react';
 'use client';
 /**
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities
- */
+ */;
 import { logger } from './logger';
 export interface ErrorReport {
   message: string;
@@ -29,7 +30,7 @@ const defaultConfig: ErrorReporterConfig = {
 };
 /**
  * ErrorReporter class for comprehensive error handling
- */
+ */;
 export class ErrorReporter {
   private static instance: ErrorReporter;
   private config: ErrorReporterConfig;
@@ -53,9 +54,9 @@ export class ErrorReporter {
   reportError(
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
-  ): void {
-    const errorReport: ErrorReport = {
+    context?: Record<string, unknown>)
+  ): void {;
+const errorReport: ErrorReport = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
@@ -64,8 +65,8 @@ export class ErrorReporter {
       severity,
       context: this.config.captureContext ? context : undefined
     };
-    // Track error frequency
-    const errorKey = `${error.name}:${error.message}`;
+    // Track error frequency;
+const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);
@@ -84,8 +85,8 @@ export class ErrorReporter {
   /**
    * Log error to console with formatting
    */
-  private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity);
+  private logToConsole(report: ErrorReport): void {;
+const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {
       }
@@ -106,8 +107,8 @@ export class ErrorReporter {
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {
+  private getConsoleStyle(severity: ErrorReport['severity']): string {;
+const styles = {
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
@@ -125,7 +126,7 @@ export class ErrorReporter {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        },
+        },)
         body: JSON.stringify(report)
       });
     } catch (error) {
@@ -164,10 +165,10 @@ export class ErrorReporter {
   }
   /**
    * Export errors as JSON
-   */
-  exportErrors(): string {
+   */;
+exportErrors(): string {
     return JSON.stringify(
-      {
+      {)
         timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
         errors: this.errorQueue
@@ -179,26 +180,26 @@ export class ErrorReporter {
 }
 /**
  * Convenience function to report errors
- */
+ */;
 export const reportError = (
   error: Error,
   severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  context?: Record<string, unknown>)
 ): void => {
   ErrorReporter.getInstance().reportError(error, severity, context);
 };
 /**
  * React error boundary helper
- */
+ */;
 export const captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string
-): void => {
-  const report = ErrorReporter.getInstance();
+  componentName: string)
+): void => {;
+const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {
     componentName,
-    componentStack: errorInfo.componentStack
+    componentStack: errorInfo.componentStack)
   });
 };
 export default ErrorReporter;
