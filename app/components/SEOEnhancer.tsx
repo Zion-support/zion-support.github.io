@@ -8,7 +8,6 @@ interface SEOEnhancerProps {
   type?: string;
   structuredData?: Record<string, unknown>;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
@@ -35,5 +34,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   );
 };
-
 export default SEOEnhancer;

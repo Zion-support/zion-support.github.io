@@ -25,18 +25,10 @@ export const seoUtils = {
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
   },
   
-  generateStructuredData: (data: any) => {
+  generateStructuredData: (data: Record<string, unknown>) => {
     return {
-      '@context': 'https: //schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-<<<<<<< HEAD
-      url: 'https://ziontechgroup.com';,
-      logo: 'https://ziontechgroup.com/logo.png';,
-=======
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d
       description: 'Leading technology solutions provider',
       ...data
     }

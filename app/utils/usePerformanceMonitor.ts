@@ -9,7 +9,7 @@ export const usePerformanceMonitor = (name: string) => {
     return () => {
       if (startTime.current) {
         const endTime = performance.now();
-        const Duration = endTime - startTime.current;
+        const duration = endTime - startTime.current;
         
         // Performance measurement logged
         // eslint-disable-next-line no-console
@@ -18,13 +18,7 @@ export const usePerformanceMonitor = (name: string) => {
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
-<<<<<<< HEAD
-            name: name;,
-            duration: duration
-=======
-            name: name,
-            duration: duration;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+
           });
         }
       }

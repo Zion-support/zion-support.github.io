@@ -8,6 +8,6 @@ export const analyticsConfig = {
     formSubmit: 'form_submit',
     page: 'page',
     section: 'section',
-    action: 'action';
+
   }
 }

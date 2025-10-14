@@ -7,5 +7,4 @@ interface AdvancedLoadingStatesProps {
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ children }) => {
   return <>{children}</>;
 };
-
 export default AdvancedLoadingStates;

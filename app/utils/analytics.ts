@@ -1,8 +1,8 @@
 export const analytics = {
-  track: (event: string, _properties: Record<string, unknown> = {}) => {
+
   track: (event: string, properties: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', event, _properties);
+      window.gtag('event', event, properties)
     }
   },
   
@@ -10,23 +10,9 @@ export const analytics = {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_path: page
+
       });
-    }
-  },
-  
-  identify: (_userId: string, _traits: Record<string, unknown> = {}) => {
-  identify: (userId: string, traits: Record<string, unknown> = {}) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-<<<<<<< HEAD
-        user_id: _userId;,
-        custom_map: _traits
-=======
-        user_id: _userId,
-        custom_map: _traits;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
-      });
+>>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   }
-};
-}}
+}
