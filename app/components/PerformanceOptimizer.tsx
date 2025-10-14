@@ -17,7 +17,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical fonts
       const link = document.createElement('link');
       link.rel = 'preload;
-      link.href = '/fonts/inter.woff2;
+      link.href = '/fonts/inter.woff2';;
       link.as = 'font;
       link.type = 'font/woff2;
       link.crossOrigin = 'anonymous;

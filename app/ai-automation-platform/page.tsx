@@ -15,5 +15,5 @@ export default function Page() {
 
       </div>
     </React.Fragment>
-  );'
-'
+  );
+}

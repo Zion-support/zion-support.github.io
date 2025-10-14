@@ -1,5 +1,7 @@
 import { createContext, useContext, useState, useEffect   } from 'react';
-interface AnalyticsContextType {}
+interface AnalyticsContextType {
+  children: React.ReactNode;
+}
   trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void;
   trackPageView: "(pageNam,e: string) => void",setUser: "(userI,d: string", properties?: Record<string, any>) => void;
   isEnabled: "boolean"};
@@ -40,7 +42,9 @@ const  ({ children }) => {}
     isEnabled
   }
   return (
-    <div>Page content</div>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
   );
     <AnalyticsContext.Provider value="{value}">
       {children}

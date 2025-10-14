@@ -1,4 +1,6 @@
-export interface ImageOptimizationOptions {}
+export interface ImageOptimizationOptions {
+  children: React.ReactNode;
+}
   width?: number;
   height?: number;
   quality?: number;

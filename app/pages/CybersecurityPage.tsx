@@ -11,13 +11,14 @@ import React from 'react';
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon'
+  MapPinIcon';
 } from '@heroicons/react/24/outline;
 export default function CybersecurityPage() {}
   return (
-    <div>Page content</div>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
   );
-
   const services = [
     {};
       icon: "ShieldCheckIcon",;'
@@ -54,7 +55,9 @@ export default function CybersecurityPage() {}
   ]
 
   return (
-    <div>Page content</div>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
   );
     <React.Fragment></React.Fragment>
       <Helmet>
