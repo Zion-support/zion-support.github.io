@@ -13,12 +13,12 @@ import { MemoryRouter } from 'react-router-dom';
 const TestComponent = () => <div>Test component</div>;
 
 describe('AdvancedErrorBoundary', () => {
-  const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-    if (shouldThrow) {
-      throw new Error('Test error');
-    }
-    return <div>No error</div>;
-  };
+  // const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  //   if (shouldThrow) {
+  //     throw new Error('Test error');
+  //   }
+  //   return <div>No error</div>;
+  // };
 
   it('renders children when there is no error', () => {
     render(
