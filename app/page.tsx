@@ -1,4 +1,4 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -16,22 +16,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handlePhoneClick = () => {
-    // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'header_phone'
-      });
-    }
-  };
+  // Removed unused state and function to fix linting errors
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
