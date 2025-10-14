@@ -1,9 +1,38 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-;
-export default function servicesData() {;
-  return (;
-    <div className="min-h-screen bg-white>"      <Helmet>"        <title>Services Data.ts - Zion Tech Group</title>;
-        <meta name="description" content="Professional services data.ts services by Zion Tech Group." />"      </Helmet>;"      <div className="container mx-auto px-4 py-16>"        <div className="text-center>"          <h1 className="text-4xl font-bold text-gray-900 mb-8>"            Services Data.ts;"          </h1>;
-          <p className="text-xl text-gray-600 mb-8>"            Professional services data.ts solutions tailored to your business needs.;"          </p>;
-          <div className="grid md: grid-cols-2lggrid-cols-3gap-8mt-12""divclassName"bg-blue-50borderborder-blue-200rounded-lgp-6""h3className"text-lgfont-semiboldtext-blue-900mb-2""ExpertSolutions/h3pclassName"text-blue-700""Ourteamofexpertsdeliverscutting-edgeservicesdata.tssolutions./p/divdivclassName"bg-green-50borderborder-green-200rounded-lgp-6""h3className"text-lgfont-semiboldtext-green-900mb-2""CustomImplementation/h3pclassName"text-green-700""Tailoredservicesdata.tsimplementationsforyourspecificrequirements./p/divdivclassName"bg-purple-50borderborder-purple-200rounded-lgp-6""h3className"text-lgfont-semiboldtext-purple-900mb-2""24/7Support/h3pclassName"text-purple-700""Round-the-clocksupportforallyourservicesdata.tsneeds./p/div/divdivclassName"mt-12""buttonclassName"bg-blue-600text-whitepx-8py-3rounded-lghoverbg-blue-700transition-colors""GetStartedToday/button/div/div/div/div"}"
+export const servicesData = [
+  {
+    id: 1,
+    title: "AI Solutions",
+    description: "Advanced artificial intelligence solutions for your business needs",
+    icon: "🤖"
+  },
+  {
+    id: 2,
+    title: "IT Infrastructure",
+    description: "Robust and scalable IT infrastructure solutions",
+    icon: "🏗️"
+  },
+  {
+    id: 3,
+    title: "Cybersecurity",
+    description: "Comprehensive cybersecurity services to protect your business",
+    icon: "🔒"
+  },
+  {
+    id: 4,
+    title: "Cloud Services",
+    description: "Scalable cloud solutions for modern businesses",
+    icon: "☁️"
+  },
+  {
+    id: 5,
+    title: "Digital Transformation",
+    description: "Transform your business with cutting-edge digital solutions",
+    icon: "🚀"
+  },
+  {
+    id: 6,
+    title: "Consulting",
+    description: "Expert consulting services to guide your technology decisions",
+    icon: "💡"
+  }
+];
