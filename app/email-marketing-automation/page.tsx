@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const EmailMarketingAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Email Marketing Automation</title>
-        <meta name ="description" content="Professional email marketing automation solutions and services" />
-        <meta name ="keywords" content="email, marketing, automation" />
+        <meta
+          name="description"
+          content="Professional email marketing automation solutions and services"
+        />
+        <meta name="keywords" content="email, marketing, automation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Email Marketing Automation</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Email Marketing Automation
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional email marketing automation solutions and services
             </p>
@@ -50,3 +55,4 @@ const EmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default EmailMarketingAutomationPage;
+

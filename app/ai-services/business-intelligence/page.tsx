@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const BusinessIntelligencePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Business Intelligence</title>
-        <meta name ="description" content="Professional business intelligence solutions and services" />
-        <meta name ="keywords" content="business, intelligence" />
+        <meta
+          name="description"
+          content="Professional business intelligence solutions and services"
+        />
+        <meta name="keywords" content="business, intelligence" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Business Intelligence</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Business Intelligence
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional business intelligence solutions and services
             </p>
@@ -50,3 +55,4 @@ const BusinessIntelligencePage: React.FC = () => {
 };
 
 export default BusinessIntelligencePage;
+

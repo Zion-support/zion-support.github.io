@@ -1,64 +1,74 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
 // Function to fix 5G page component names
-function fix5GPages() {
-  const pattern = 'app/5g-*/page.tsx';
-  const files = glob.sync(pattern);
-  
-  console.log(`Found ${files.length} 5G pages to fix...`);
-  
-  for (const file of files) {
-    try {
-      let content = fs.readFileSync(file, 'utf8');
-      
-      // Fix component names that start with numbers
-      content = content.replace(/const 5g(\w+)Page: React\.FC = \(\) => \{/g, (match, pageName) => {
-        const properName = 'FiveG' + pageName.charAt(0).toUpperCase() + pageName.slice(1);
-        return `const ${properName}Page: React.FC = () => {`;
-      });
-      
-      // Fix export statements
-      content = content.replace(/export default 5g(\w+)Page;/g, (match, pageName) => {
-        const properName = 'FiveG' + pageName.charAt(0).toUpperCase() + pageName.slice(1);
-        return `export default ${properName}Page;`;
-      });
-      
-      // Fix titles to be properly capitalized
-      content = content.replace(/<title>5g ([^<]*)<\/title>/g, (match, title) => {
-        return `<title>5G ${title.charAt(0).toUpperCase() + title.slice(1)}</title>`;
-      });
-      
-      // Fix descriptions to be properly capitalized
-      content = content.replace(/content="Professional 5g ([^"]*)"/g, (match, desc) => {
-        return `content="Professional 5G ${desc.charAt(0).toUpperCase() + desc.slice(1)}"`;
-      });
-      
-      // Fix keywords to be properly capitalized
-      content = content.replace(/content="5g, ([^"]*)"/g, (match, keywords) => {
-        return `content="5G, ${keywords}"`;
-      });
-      
-      // Fix h1 titles to be properly capitalized
-      content = content.replace(/<h1 className="[^"]*">5g ([^<]*)<\/h1>/g, (match, title) => {
-        return match.replace('5g', '5G');
-      });
-      
-      // Fix p descriptions to be properly capitalized
-      content = content.replace(/<p className="[^"]*">Professional 5g ([^<]*)<\/p>/g, (match, desc) => {
-        return match.replace('5g', '5G');
-      });
-      
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-    } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
-    }
+function fix5GPage(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Get the page name from the directory
+    const pageName = path.basename(path.dirname(filePath));
+    const validName = pageName.replace(/^5g-/, 'FiveG').replace(/-/g, '');
+    const capitalizedName = validName.charAt(0).toUpperCase() + validName.slice(1) + 'Page';
+    
+    // Replace invalid component names
+    content = content.replace(/const \d+g[A-Za-z]+Page:/g, `const ${capitalizedName}:`);
+    content = content.replace(/export default \d+g[A-Za-z]+Page;/g, `export default ${capitalizedName};`);
+    
+    // Also fix any remaining 5G references in the component name
+    content = content.replace(/5g[A-Za-z]+Page/g, capitalizedName);
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed 5G page: ${filePath} -> ${capitalizedName}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  console.log('All 5G pages fixed!');
 }
 
-// Run the fix
-fix5GPages();
+// Find all 5G pages
+function find5GPages(dir) {
+  let files = [];
+  
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && item.startsWith('5g-')) {
+        const pageFile = path.join(fullPath, 'page.tsx');
+        if (fs.existsSync(pageFile)) {
+          files.push(pageFile);
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading directory ${dir}:`, error.message);
+  }
+  
+  return files;
+}
+
+// Main execution
+console.log('Fixing 5G pages...');
+
+const appDir = path.join(__dirname, 'app');
+const files = find5GPages(appDir);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of files) {
+  if (fix5GPage(file)) {
+    fixedCount++;
+  } else {
+    errorCount++;
+  }
+}
+
+console.log(`\nFixed ${fixedCount} 5G pages, ${errorCount} errors encountered.`);

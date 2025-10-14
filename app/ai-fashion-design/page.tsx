@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiFashionDesignPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Fashion Design</title>
-        <meta name ="description" content="Professional ai fashion design solutions and services" />
-        <meta name ="keywords" content="ai, fashion, design" />
+        <meta
+          name="description"
+          content="Professional ai fashion design solutions and services"
+        />
+        <meta name="keywords" content="ai, fashion, design" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Fashion Design</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Fashion Design
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai fashion design solutions and services
             </p>
@@ -50,3 +55,4 @@ const AiFashionDesignPage: React.FC = () => {
 };
 
 export default AiFashionDesignPage;
+

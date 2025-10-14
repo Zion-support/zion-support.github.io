@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ApiPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Api</title>
-        <meta name ="description" content="Professional api solutions and services" />
-        <meta name ="keywords" content="api" />
+        <meta
+          name="description"
+          content="Professional api solutions and services"
+        />
+        <meta name="keywords" content="api" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -50,3 +53,4 @@ const ApiPage: React.FC = () => {
 };
 
 export default ApiPage;
+

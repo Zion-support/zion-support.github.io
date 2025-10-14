@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const CybersecurityAdvancedPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Cybersecurity Advanced</title>
-        <meta name ="description" content="Professional cybersecurity advanced solutions and services" />
-        <meta name ="keywords" content="cybersecurity, advanced" />
+        <meta
+          name="description"
+          content="Professional cybersecurity advanced solutions and services"
+        />
+        <meta name="keywords" content="cybersecurity, advanced" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Cybersecurity Advanced</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Cybersecurity Advanced
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional cybersecurity advanced solutions and services
             </p>
@@ -50,3 +55,4 @@ const CybersecurityAdvancedPage: React.FC = () => {
 };
 
 export default CybersecurityAdvancedPage;
+

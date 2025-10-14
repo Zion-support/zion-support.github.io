@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiDocumentIntelligencePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Document Intelligence</title>
-        <meta name ="description" content="Professional ai document intelligence solutions and services" />
-        <meta name ="keywords" content="ai, document, intelligence" />
+        <meta
+          name="description"
+          content="Professional ai document intelligence solutions and services"
+        />
+        <meta name="keywords" content="ai, document, intelligence" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Document Intelligence</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Document Intelligence
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai document intelligence solutions and services
             </p>
@@ -50,3 +55,4 @@ const AiDocumentIntelligencePage: React.FC = () => {
 };
 
 export default AiDocumentIntelligencePage;
+

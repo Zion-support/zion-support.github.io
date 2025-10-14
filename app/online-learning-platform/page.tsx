@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const OnlineLearningPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Online Learning Platform</title>
-        <meta name ="description" content="Professional online learning platform solutions and services" />
-        <meta name ="keywords" content="online, learning, platform" />
+        <meta
+          name="description"
+          content="Professional online learning platform solutions and services"
+        />
+        <meta name="keywords" content="online, learning, platform" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Online Learning Platform</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Online Learning Platform
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional online learning platform solutions and services
             </p>
@@ -50,3 +55,4 @@ const OnlineLearningPlatformPage: React.FC = () => {
 };
 
 export default OnlineLearningPlatformPage;
+

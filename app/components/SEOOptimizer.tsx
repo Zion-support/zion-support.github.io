@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const SEOOptimizer: React.FC = () => {
   useEffect(() => {
@@ -6,49 +6,50 @@ const SEOOptimizer: React.FC = () => {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Leading provider of advanced AI and IT solutions, transforming businesses through cutting-edge technology.",
-      "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
-      "contactPoint": {
+      name: "Zion Tech Group",
+      description:
+        "Leading provider of advanced AI and IT solutions, transforming businesses through cutting-edge technology.",
+      url: "https://ziontechgroup.com",
+      logo: "https://ziontechgroup.com/logo.png",
+      contactPoint: {
         "@type": "ContactPoint",
-        "telephone": "+1-234-567-890",
-        "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
+        telephone: "+1-302-464-0950",
+        contactType: "customer service",
+        email: "kleber@ziontechgroup.com",
       },
-      "address": {
+      address: {
         "@type": "PostalAddress",
-        "streetAddress": "123 Tech Street",
-        "addressLocality": "San Francisco",
-        "addressRegion": "CA",
-        "postalCode": "94105",
-        "addressCountry": "US"
+        streetAddress: "364 E Main St STE 1008",
+        addressLocality: "Middletown",
+        addressRegion: "DE",
+        postalCode: "19709",
+        addressCountry: "US",
       },
-      "sameAs": [
+      sameAs: [
         "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup"
-      ]
+        "https://twitter.com/ziontechgroup",
+      ],
     };
 
     // Add structured data to page
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
 
     // Set up meta tags for better SEO
     const metaTags = [
-      { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'Zion Tech Group' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Zion Tech Group' },
-      { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'twitter:site', content: '@ziontechgroup' }
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "Zion Tech Group" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Zion Tech Group" },
+      { property: "twitter:card", content: "summary_large_image" },
+      { property: "twitter:site", content: "@ziontechgroup" },
     ];
 
-    metaTags.forEach(tag => {
-      const meta = document.createElement('meta');
+    metaTags.forEach((tag) => {
+      const meta = document.createElement("meta");
       Object.entries(tag).forEach(([key, value]) => {
         meta.setAttribute(key, value);
       });
@@ -58,9 +59,11 @@ const SEOOptimizer: React.FC = () => {
     // Cleanup function
     return () => {
       // Remove the script tag on cleanup
-      const scripts = document.querySelectorAll('script[type="application/ld+json"]');
-      scripts.forEach(script => {
-        if (script.textContent?.includes('Zion Tech Group')) {
+      const scripts = document.querySelectorAll(
+        'script[type="application/ld+json"]',
+      );
+      scripts.forEach((script) => {
+        if (script.textContent?.includes("Zion Tech Group")) {
           script.remove();
         }
       });

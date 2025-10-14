@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const FiveGSecurity: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>5G Security</title>
-        <meta name ="description" content="Professional 5G Security solutions and services" />
-        <meta name ="keywords" content="5G, security" />
+        <meta
+          name="description"
+          content="Professional 5G Security solutions and services"
+        />
+        <meta name="keywords" content="5G, security" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -49,4 +52,6 @@ const FiveGSecurity: React.FC = () => {
   );
 };
 
-export default FiveGSecurity;
+export default FiveGsecurityPage;
+
+

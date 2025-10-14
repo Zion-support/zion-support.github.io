@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ZionAiContentStudioProPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Zion Ai Content Studio Pro</title>
-        <meta name ="description" content="Professional zion ai content studio pro solutions and services" />
-        <meta name ="keywords" content="zion, ai, content, studio, pro" />
+        <meta
+          name="description"
+          content="Professional zion ai content studio pro solutions and services"
+        />
+        <meta name="keywords" content="zion, ai, content, studio, pro" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Zion Ai Content Studio Pro</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Zion Ai Content Studio Pro
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional zion ai content studio pro solutions and services
             </p>
@@ -50,3 +55,4 @@ const ZionAiContentStudioProPage: React.FC = () => {
 };
 
 export default ZionAiContentStudioProPage;
+

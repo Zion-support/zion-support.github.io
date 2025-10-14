@@ -1,5 +1,6 @@
-import React, { memo } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+import React, { memo, useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, Filter, Zap, Sparkles } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -12,136 +13,350 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const services = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Analytics Dashboard Pro",
+      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting for data-driven decisions.",
+      price: "$299/month",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Machine Learning Insights"],
+      link: "/ai-analytics-dashboard-pro",
+      category: "AI Services"
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI Code Assistant Pro",
+      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages and frameworks.",
+      price: "$199/month",
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support", "Code Review AI"],
+      link: "/ai-code-assistant-pro",
+      category: "AI Services"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Cloud Infrastructure",
+      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization for modern businesses.",
+      price: "$499/month",
+      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime", "Multi-cloud Support"],
+      link: "/ai-cloud-infrastructure",
+      category: "IT Services"
+    },
+    {
+      icon: <Wifi className="w-8 h-8" />,
+      title: "5G Implementation",
+      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity for smart infrastructure.",
+      price: "$999/month",
+      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring", "Smart City Solutions"],
+      link: "/5g-implementation",
+      category: "5G Solutions"
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Advanced Security Suite",
+      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
+      price: "$399/month",
+      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring", "Zero Trust Architecture"],
+      link: "/advanced-security-suite",
+      category: "IT Services"
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities for customer service.",
+      price: "$149/month",
+      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard", "Voice Recognition"],
+      link: "/ai-chatbot-enterprise",
+      category: "AI Services"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Content Generation Pro",
+      description: "Advanced AI-powered content creation for blogs, social media, marketing materials, and technical documentation.",
+      price: "$179/month",
+      features: ["Multi-format Content", "SEO Optimization", "Brand Voice Training", "Plagiarism Detection", "Multi-language Support"],
+      link: "/ai-content-generation-pro",
+      category: "Micro SAAS"
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
+      title: "AI API Management",
+      description: "Intelligent API gateway with AI-powered monitoring, security, and optimization for microservices architecture.",
+      price: "$249/month",
+      features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics Dashboard", "Auto-scaling"],
+      link: "/ai-api-management",
+      category: "IT Services"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "AI Blockchain Solutions",
+      description: "Blockchain integration with AI for smart contracts, DeFi protocols, and secure decentralized applications.",
+      price: "$599/month",
+      features: ["Smart Contracts", "DeFi Integration", "NFT Marketplace", "Security Auditing", "Cross-chain Support"],
+      link: "/ai-blockchain-solutions",
+      category: "Micro SAAS"
+    }
+  ];
+
+  const categories = ['All', 'AI Services', 'IT Services', '5G Solutions', 'Micro SAAS'];
+  
+  const filteredServices = selectedCategory === 'All' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  const stats = [
+    { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
+    { number: "150+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="container mx-auto px-4 py-20 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Advanced AI & IT Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your business with cutting-edge artificial intelligence, 
-                5G technology, and comprehensive IT services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+        <meta name="description" content="Leading provider of AI, IT, and 5G solutions. Transform your business with cutting-edge technology, micro SAAS services, and innovative digital solutions." />
+        <meta name="keywords" content="AI solutions, IT services, 5G technology, micro SAAS, cloud computing, cybersecurity, business automation" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
 
-        {/* Services Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive AI and IT solutions designed to accelerate your business growth
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-8 h-8 text-white" />
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{
+            backgroundImage: `
+              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+
+        {/* Floating Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
+          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-1000"></div>
+          <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping delay-2000"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-3000"></div>
+        </div>
+
+        <main className="relative z-10">
+          {/* Hero Section */}
+          <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div className="container mx-auto px-4 py-20 relative z-10">
+              <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8 backdrop-blur-sm shadow-lg shadow-cyan-500/10">
+                  <Zap className="w-4 h-4 mr-2 animate-pulse" />
+                  Trusted by 500+ Companies Worldwide
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Solutions</h3>
-                <p className="text-gray-600 mb-6">
-                  Advanced artificial intelligence services including machine learning, 
-                  natural language processing, and computer vision.
+                <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                    Advanced AI & IT
+                  </span>
+                  <br />
+                  <span className="text-white relative">
+                    Solutions
+                    <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-lg opacity-50"></div>
+                  </span>
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
+                  Transform your business with cutting-edge artificial intelligence, 
+                  5G technology, and comprehensive IT services. From micro SAAS solutions 
+                  to enterprise-grade platforms with futuristic innovation.
                 </p>
-                <button className="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive security solutions to protect your business from 
-                  cyber threats and ensure data integrity.
-                </p>
-                <button className="text-green-600 font-semibold hover:text-green-700 flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">5G Technology</h3>
-                <p className="text-gray-600 mb-6">
-                  Next-generation 5G implementation and optimization services 
-                  for ultra-fast connectivity and IoT solutions.
-                </p>
-                <button className="text-purple-600 font-semibold hover:text-purple-700 flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us today to discuss how our AI and IT solutions can accelerate your success.
-              </p>
-            </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
-                    <Phone className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                  <a
+                    href="tel:+13024640950"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                  >
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call +1 302 464 0950
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+                  >
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get Quote
+                  </a>
                 </div>
                 
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
-                    <Mail className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center group">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <div className="text-cyan-400">{stat.icon}</div>
+                      </div>
+                      <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-gray-400 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
+          </section>
+
+          {/* Services Section */}
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0">
+              <div className="absolute top-20 right-20 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute bottom-20 left-20 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+            
+            <div className="container mx-auto px-4 relative z-10">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6 backdrop-blur-sm">
+                  <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+                  Premium Micro SAAS Services
+                </div>
+                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                    Our Services
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                  Comprehensive AI, IT, and 5G solutions designed to accelerate your business growth. 
+                  From micro SAAS platforms to enterprise-grade systems with cutting-edge technology.
+                </p>
+              </div>
+
+              {/* Category Filter */}
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                      selectedCategory === category
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25'
+                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white border border-cyan-500/20'
+                    }`}
+                  >
+                    <Filter className="w-4 h-4 inline mr-2" />
+                    {category}
+                  </button>
+                ))}
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div 
+                    key={index} 
+                    className="group bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden"
+                  >
+                    {/* Animated background glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-xs font-medium text-cyan-400 backdrop-blur-sm">
+                        {service.category}
+                      </span>
+                    </div>
+                    
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                        <div className="text-white">{service.icon}</div>
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                        <div className="flex items-center text-yellow-400">
+                          <Star className="w-4 h-4 fill-current" />
+                          <Star className="w-4 h-4 fill-current" />
+                          <Star className="w-4 h-4 fill-current" />
+                          <Star className="w-4 h-4 fill-current" />
+                          <Star className="w-4 h-4 fill-current" />
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                      <a
+                        href={service.link}
+                        className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                      >
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="py-20 bg-gray-900">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Transform Your Business?
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Contact us today to discuss how our AI and IT solutions can accelerate your success.
+                </p>
+              </div>
+              
+              <div className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                      <Phone className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                    <p className="text-gray-300">+1 302 464 0950</p>
+                  </div>
+                  
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mb-4">
+                      <Mail className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  </div>
+                  
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                      <MapPin className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                    <p className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </>
   );
 };
 

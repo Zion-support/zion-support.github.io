@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const PropertyManagementAiPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Property Management Ai</title>
-        <meta name ="description" content="Professional property management ai solutions and services" />
-        <meta name ="keywords" content="property, management, ai" />
+        <meta
+          name="description"
+          content="Professional property management ai solutions and services"
+        />
+        <meta name="keywords" content="property, management, ai" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Property Management Ai</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Property Management Ai
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional property management ai solutions and services
             </p>
@@ -50,3 +55,4 @@ const PropertyManagementAiPage: React.FC = () => {
 };
 
 export default PropertyManagementAiPage;
+

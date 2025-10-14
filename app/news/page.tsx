@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const NewsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>News</title>
-        <meta name ="description" content="Professional news solutions and services" />
-        <meta name ="keywords" content="news" />
+        <meta
+          name="description"
+          content="Professional news solutions and services"
+        />
+        <meta name="keywords" content="news" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -50,3 +53,4 @@ const NewsPage: React.FC = () => {
 };
 
 export default NewsPage;
+

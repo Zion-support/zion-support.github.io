@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const CreateAdPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Create Ad</title>
-        <meta name ="description" content="Professional create ad solutions and services" />
-        <meta name ="keywords" content="create, ad" />
+        <meta
+          name="description"
+          content="Professional create ad solutions and services"
+        />
+        <meta name="keywords" content="create, ad" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -50,3 +53,4 @@ const CreateAdPage: React.FC = () => {
 };
 
 export default CreateAdPage;
+

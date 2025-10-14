@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const FiveGOptimization: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>5G Optimization</title>
-        <meta name ="description" content="Professional 5G Optimization solutions and services" />
-        <meta name ="keywords" content="5G, optimization" />
+        <meta
+          name="description"
+          content="Professional 5G Optimization solutions and services"
+        />
+        <meta name="keywords" content="5G, optimization" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">5G Optimization</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              5G Optimization
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional 5g optimization solutions and services
             </p>
@@ -49,4 +54,6 @@ const FiveGOptimization: React.FC = () => {
   );
 };
 
-export default FiveGOptimization;
+export default FiveGoptimizationPage;
+
+

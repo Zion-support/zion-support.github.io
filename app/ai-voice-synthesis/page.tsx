@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiVoiceSynthesisPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Voice Synthesis</title>
-        <meta name ="description" content="Professional ai voice synthesis solutions and services" />
-        <meta name ="keywords" content="ai, voice, synthesis" />
+        <meta
+          name="description"
+          content="Professional ai voice synthesis solutions and services"
+        />
+        <meta name="keywords" content="ai, voice, synthesis" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Voice Synthesis</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Voice Synthesis
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai voice synthesis solutions and services
             </p>
@@ -50,3 +55,4 @@ const AiVoiceSynthesisPage: React.FC = () => {
 };
 
 export default AiVoiceSynthesisPage;
+

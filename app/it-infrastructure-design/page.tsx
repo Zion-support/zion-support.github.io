@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ItInfrastructureDesignPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>It Infrastructure Design</title>
-        <meta name ="description" content="Professional it infrastructure design solutions and services" />
-        <meta name ="keywords" content="it, infrastructure, design" />
+        <meta
+          name="description"
+          content="Professional it infrastructure design solutions and services"
+        />
+        <meta name="keywords" content="it, infrastructure, design" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">It Infrastructure Design</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              It Infrastructure Design
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional it infrastructure design solutions and services
             </p>
@@ -50,3 +55,4 @@ const ItInfrastructureDesignPage: React.FC = () => {
 };
 
 export default ItInfrastructureDesignPage;
+
