@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9170
 import { Helmet } from 'react-helmet-async';
 
 const,

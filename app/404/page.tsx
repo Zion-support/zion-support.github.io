@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const NotFoundPage: React.FC = () => {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9170
     <>
       <Helmet>
         <title>404 - Zion Tech Group</title>

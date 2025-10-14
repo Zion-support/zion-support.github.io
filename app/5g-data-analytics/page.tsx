@@ -1,23 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const FiveGDataAnalyticsPage = () => {
-  const services = [
-    {
-      title: '5G Data Analytics Strategy',
-      description: 'Comprehensive 5g data analytics strategies tailored to your business needs.',
-    },
-    {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5g data analytics implementation.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5g data analytics technologies and best practices.',
-    },
-  ];
+import { Helmet } from 'react-helmet-async';
 
 const FiveGDataAnalyticsPage: React.FC = () => {
   return (

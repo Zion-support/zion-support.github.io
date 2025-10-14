@@ -53,23 +53,21 @@ export const,
     "automation",
     "business intelligence",
   ],
-  canonicalUrl: "https://zion.app",
-  ogImage: "https://zion.app/og-image.jpg",
-  ogType: "website",
-  twitterCard: "summary_large_image",
-  robots: "index, follow",
-  author: "Zion Tech Group",
-  publisher: "Zion Tech Group",
-  language: "en-US",
-  viewport: "width=device-width, initial-scale=1.0",
-  charset: "UTF-8",
-  ogTitle: "Zion Tech Group - Advanced AI and IT Solutions",
-  ogDescription:
-    "Leading provider of advanced AI and IT solutions for businesses worldwide.",
-  twitterTitle: "Zion Tech Group - Advanced AI and IT Solutions",
-  twitterDescription:
-    "Leading provider of advanced AI and IT solutions for businesses worldwide.",
-  twitterImage: "/images/og-image.jpg",
+  canonicalUrl: 'https://zion.app',
+  ogImage: 'https://zion.app/og-image.jpg',
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  robots: 'index, follow',
+  author: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  language: 'en-US',
+  viewport: 'width=device-width, initial-scale=1.0',
+  charset: 'UTF-8',
+  ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+  ogDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
+  twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+  twitterDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
+  twitterImage: '/images/og-image.jpg',
   geo: {
     latitude: "40.7128",
     longitude: "-74.0060",
@@ -89,11 +87,12 @@ export const,
   },
 };
 
-export const generateImageAlt = (imagePath: string, alt?: string)  => {
+
+export const generateImageAlt = (imagePath: string, alt?: string) => {
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
 }
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app')  => {
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 };
 

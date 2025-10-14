@@ -19,8 +19,10 @@ export const usePerformanceMonitor = () => {
             [entries[0].name]: entries[0].startTime
           }))
         }
-      })
-      observer.observe({ entryTypes: ['measure';, 'navigation'] })
+      });
+
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
+
       return () => {
         observer.disconnect()
       }

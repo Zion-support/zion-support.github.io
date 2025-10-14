@@ -1,23 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const FiveGUpgradePage = () => {
-  const services = [
-    {
-      title: '5G Upgrade Strategy',
-      description: 'Comprehensive 5g upgrade strategies tailored to your business needs.',
-    },
-    {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5g upgrade implementation.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5g upgrade technologies and best practices.',
-    },
-  ];
+import { Helmet } from 'react-helmet-async';
 
   return (
     <div className="min-h-screen bg-gray-50">

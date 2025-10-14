@@ -1,7 +1,8 @@
 export const seoConstants = {
-  siteName: 'Zion Tech Group',
+  defaultTitle: 'Zion Tech Group',
+  defaultDescription: 'Leading technology solutions provider',
+  defaultKeywords: 'technology, solutions, innovation',
   siteUrl: 'https://ziontechgroup.com',
   twitterHandle: '@ziontechgroup',
-  ogImage: '/og-image.jpg',
-  defaultKeywords: 'technology, solutions, innovation'
+  ogImage: '/og-image.jpg'
 }

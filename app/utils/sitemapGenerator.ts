@@ -15,8 +15,8 @@ ${pages.map(page => `  <url>
   generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => {
     return `User-agent: *
 Allow: /
-Sitemap: ${sitemapUrl}`
-    return sitemap
+
+Sitemap: ${sitemapUrl}`;
   }
 }
 </priority>

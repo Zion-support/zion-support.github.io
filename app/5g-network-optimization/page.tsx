@@ -1,23 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const FiveGNetworkOptimizationPage = () => {
-  const services = [
-    {
-      title: '5G Network Optimization Strategy',
-      description: 'Comprehensive 5g network optimization strategies tailored to your business needs.',
-    },
-    {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5g network optimization implementation.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5g network optimization technologies and best practices.',
-    },
-  ];
+import { Helmet } from 'react-helmet-async';
 
   return (
     <div className="min-h-screen bg-gray-50">

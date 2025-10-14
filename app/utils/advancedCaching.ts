@@ -1,11 +1,11 @@
-export constadvancedCaching= {
+export const advancedCaching = {
   setCache: (key: string, value: unknown, ttl: number = 3600) => {
-    const item= {
+    const item = {
       value,
       timestamp: Date.now(),
       ttl: ttl * 1000
-    }
-    localStorage.setItem(key, JSON.stringify(item))
+    };
+    localStorage.setItem(key, JSON.stringify(item));
   },
   
   getCache: (key: string) => {

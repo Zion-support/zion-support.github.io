@@ -9,13 +9,14 @@ interface SEOOptimizerProps {
   children?: React.ReactNode
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
-  title, 
-  description, 
-  keywords, 
-  type = 'website',
-  structuredData,
-  children 
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage: _ogImage,
+  ogType: _ogType = 'website',
+  twitterCard: _twitterCard = 'summary_large_image'
 }) => {
   return (
     <>

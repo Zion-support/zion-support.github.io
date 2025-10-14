@@ -12,11 +12,10 @@ import { AnalyticsProvider } from './app/contexts/AnalyticsProvider';
 // import ErrorBoundary from './app/components/ErrorBoundary';
 // import LoadingStates from './app/components/LoadingStates';
 
-// Lazy load main pages for better code splitting
-const HomePage = React.lazy(() => import('./app/page'));
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import MetaManager from './app/components/MetaManager';
+import EnhancedAnalytics from './app/components/EnhancedAnalytics';
+// import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Dynamic page loader for all other pages
 const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
@@ -79,8 +78,11 @@ const App: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-white text-xl">Loading application...</div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
+          <p className="text-white text-xl">Loading application...</p>
+        </div>
       </div>
     );
   }
@@ -88,14 +90,36 @@ const App: React.FC = () => {
   return (
     <div>
       <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Header />
-            <Navigation />
-            <main className="relative z-10 pt-20" id="main-content" role="main">
-              <RouterContent />
-            </main>
-            <Footer />
+        <AnalyticsProvider>
+          <div>
+            <div />
+            <div />
+            <MetaManager />
+            <PerformanceMonitor />
+            <EnhancedAnalytics />
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <Navigation />
+                <main className="relative z-10" id="main-content" role="main">
+                  <Suspense fallback={
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="animate-pulse bg-white/20 h-32 w-32 rounded-lg mx-auto mb-4"></div>
+                        <p className="text-white text-xl">Loading application...</p>
+                      </div>
+                    </div>
+                  }>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                  </Suspense>
+                </main>
+                <Footer />
+              </div>
+            </Router>
           </div>
         </Router>
       </HelmetProvider>

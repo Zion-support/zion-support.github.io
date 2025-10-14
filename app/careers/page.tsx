@@ -21,7 +21,21 @@
                   Round-the-clock support for all your needs.</p>
             </div>
 
-  )
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Clock, Users, Star, CheckCircle, Zap, Heart, Brain, Rocket } from 'lucide-react';
+
+interface JobPosition {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  posted: string;
+  description: string;
+  requirements: string[];
+  featured: boolean;
 }
 export default CareersPage
 </p>

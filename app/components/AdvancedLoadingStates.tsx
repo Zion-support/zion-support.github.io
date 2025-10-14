@@ -1,9 +1,48 @@
-import React, {use State, use Effect }from 'react' interface Loading State {is Loading: boolean progress: number message: string }const Advanced Loading States: React.FC = ( )=> {const [loading State, set Loading State ]= use State<Loading State> ({is Loading: false, progress: 0, message: 'Loading...' } )use Effect ( ( )=> {// Simulate loading states for different scenarios const simulate Loading = ( )=> {set Loading State ({is Loading: true, progress: 0, message: 'Initializing...' } )const interval = set Interval ( ( )=> {set Loading State (prev => {const new Progress = prev.progress + Math.random ( )* 20 let message = 'Loading...' if (new Progress < 30 )=> {message = 'Loading resources...' }else if (new Progress < 60 )=> {message = 'Processing data...' }else if (new Progress < 90 )=> {message = 'Finalizing...' }else {message = 'Almost done...' }if (new Progress >= 100 )=> {clear Interval (interval )return {is Loading: false, progress: 100, message: 'Complete!' } }return {...prev, progress: Math.min (new Progress, 100 ), message } } )}, 200 )return ( )=> clear Interval (interval )}// Only show loading in development if (process.env.NODE_ENV === 'development' )=> {const timeout = set Timeout (simulate Loading, 1000 )return ( )=> clear Timeout (timeout )} }, [ ])if (!loading State.is Loading )=> {return null }return (<div className="fixedinset 0 bg blackbg-opacity-50 flexitems-centerjustify-centerz-50"> <div className="bg whiterounded lgp-8 max-w-mdw-fullmx-4"> 
-          <div className="text-center">"> <div className="animate spinrounded fullh-12 w-12 border-b-2 border-blue-600 mx-automb-4">
-          </div> <h3 className="text-lg font-semiboldtext-gray-900 mb-2"> {loading State.message }</h3> <div className="w fullbg gray-200 rounded-fullh-2 mb-4"> <div className="bg blue 600 h-2 rounded-fulltransition-allduration-300"style= { {width: `$ {loading State.progress }%` } }>
-          </div> 
-          </div> <p className="text smtext gray-600"> {Math.round (loading State.progress )}% complete </p> 
-          
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Components</title>
+        <meta name="description" content="Professional components solutions and services" />
+        <meta name="keywords" content="components" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional components solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div> )}export default Advanced Loading States
