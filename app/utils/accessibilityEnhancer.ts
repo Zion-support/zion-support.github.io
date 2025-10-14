@@ -1,4 +1,4 @@
-'use client';'export const utilityFunction = () => {;
-} // Utility implementation; return true}';
-}
-;
+// Utility functions
+export const utilityFunction = () => {
+  return 'utility function';
+};

@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Footer</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-4 text-center">
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 

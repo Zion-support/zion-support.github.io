@@ -1,12 +1,17 @@
 import React from "react";
+import { AnalyticsProvider as AnalyticsContextProvider } from "../contexts/AnalyticsContext";
 
-const AnalyticsProvider = () => {
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AnalyticsProvider</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <AnalyticsContextProvider>
+      {children}
+    </AnalyticsContextProvider>
   );
 };
 
+export { AnalyticsProvider };
 export default AnalyticsProvider;

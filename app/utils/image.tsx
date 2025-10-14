@@ -1,5 +1,4 @@
-// image - Basic implementation;
-export default function image() {;
+// image - Basic implementation
+export default function image() {
   return null;
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;

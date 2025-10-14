@@ -1,5 +1,12 @@
-import React from 'react';'// main - Basic implementation'export default function main() {;
-  return null;
-  f7f852c0f7415181a1b362c4aa5a784585ad5828;
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from '../App';
+
+// Main entry point
+export default function main() {
+  const container = document.getElementById('root');
+  if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+  }
 }
-;
