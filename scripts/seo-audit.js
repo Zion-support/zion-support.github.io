@@ -5,21 +5,20 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/**
- * SEO audit script for Zion Tech Group website
- * This script checks for SEO best practices and generates recommendations
- */
-
+/**;
+ * SEO audit script for Zion Tech Group website;
+ * This script checks for SEO best practices and generates recommendations;
+ */;
 console.log('🔍 Starting SEO audit...');
 
-// Check HTML structure
+// Check HTML structure;
 function auditHTMLStructure() {
   console.log('📄 Auditing HTML structure...');
   
   const issues = [];
   const recommendations = [];
   
-  // Check for main HTML file
+  // Check for main HTML file;
   const indexPath = path.join(__dirname, '../dist/index.html');
   if (!fs.existsSync(indexPath)) {
     issues.push('Main index.html file not found');
@@ -28,19 +27,19 @@ function auditHTMLStructure() {
   
   const html = fs.readFileSync(indexPath, 'utf8');
   
-  // Check for essential meta tags
-  const metaTags = [
-    'title',
-    'description',
-    'viewport',
-    'robots',
-    'canonical'
+  // Check for essential meta tags;
+  const metaTags = [;
+    'title',;
+    'description',;
+    'viewport',;
+    'robots',;
+    'canonical';
   ];
   
   metaTags.forEach(tag => {
     if (!html.includes(`<meta name="${tag}"`) && !html.includes(`<title>`) && tag === 'title') {
       if (tag === 'title') {
-        if (!html.includes('<title>')) {
+        if (!html.includes('<////title>')) {
           issues.push(`Missing ${tag} tag`);
         }
       } else {
@@ -49,7 +48,7 @@ function auditHTMLStructure() {
     }
   });
   
-  // Check for Open Graph tags
+  // Check for Open Graph tags;
   const ogTags = ['og:title', 'og:description', 'og:image', 'og:url'];
   ogTags.forEach(tag => {
     if (!html.includes(`property="${tag}"`)) {
@@ -57,7 +56,7 @@ function auditHTMLStructure() {
     }
   });
   
-  // Check for Twitter Card tags
+  // Check for Twitter Card tags;
   const twitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
   twitterTags.forEach(tag => {
     if (!html.includes(`name="${tag}"`)) {
@@ -65,12 +64,12 @@ function auditHTMLStructure() {
     }
   });
   
-  // Check for structured data
+  // Check for structured data;
   if (!html.includes('application/ld+json')) {
     issues.push('Missing structured data (JSON-LD)');
   }
   
-  // Check for alt attributes on images
+  // Check for alt attributes on images;
   const imgTags = html.match(/<img[^>]*>/g) || [];
   imgTags.forEach(img => {
     if (!img.includes('alt=')) {
@@ -78,19 +77,19 @@ function auditHTMLStructure() {
     }
   });
   
-  // Check for heading hierarchy
+  // Check for heading hierarchy;
   const headings = html.match(/<h[1-6][^>]*>/g) || [];
   if (headings.length === 0) {
     issues.push('No heading tags found');
   }
   
-  // Check for internal links
+  // Check for internal links;
   const internalLinks = html.match(/href="[^"]*"/g) || [];
   if (internalLinks.length === 0) {
     recommendations.push('Consider adding internal links for better SEO');
   }
   
-  // Check for external links
+  // Check for external links;
   const externalLinks = html.match(/href="https?:\/\/[^"]*"/g) || [];
   if (externalLinks.length === 0) {
     recommendations.push('Consider adding external links to authoritative sources');
@@ -99,7 +98,7 @@ function auditHTMLStructure() {
   return { issues, recommendations };
 }
 
-// Check sitemap
+// Check sitemap;
 function auditSitemap() {
   console.log('🗺️ Auditing sitemap...');
   
@@ -114,7 +113,7 @@ function auditSitemap() {
   
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
   
-  // Check for essential sitemap elements
+  // Check for essential sitemap elements;
   if (!sitemap.includes('<urlset')) {
     issues.push('Sitemap missing urlset element');
   }
@@ -123,8 +122,8 @@ function auditSitemap() {
     issues.push('Sitemap missing url elements');
   }
   
-  // Count URLs
-  const urlCount = (sitemap.match(/<url>/g) || []).length;
+  // Count URLs;
+  const urlCount = (sitemap.match(/<////url>/g) || []).length;
   if (urlCount === 0) {
     issues.push('Sitemap contains no URLs');
   } else if (urlCount < 5) {
@@ -134,7 +133,7 @@ function auditSitemap() {
   return { issues, recommendations };
 }
 
-// Check robots.txt
+// Check robots.txt;
 function auditRobots() {
   console.log('🤖 Auditing robots.txt...');
   
@@ -164,7 +163,7 @@ function auditRobots() {
   return { issues, recommendations };
 }
 
-// Check performance metrics
+// Check performance metrics;
 function auditPerformance() {
   console.log('⚡ Auditing performance...');
   
@@ -185,7 +184,7 @@ function auditPerformance() {
       const sizeKB = stats.size / 1024;
       totalSize += stats.size;
       
-      if (sizeKB > 100) { // Files larger than 100KB
+      if (sizeKB > 100) { // Files larger than 100KB;
         largeFiles.push({ file, sizeKB: Math.round(sizeKB) });
       }
     }
@@ -204,45 +203,45 @@ function auditPerformance() {
   return { issues, recommendations };
 }
 
-// Generate SEO report
+// Generate SEO report;
 function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudit) {
   console.log('📊 Generating SEO report...');
   
-  const allIssues = [
-    ...htmlAudit.issues,
-    ...sitemapAudit.issues,
-    ...robotsAudit.issues,
-    ...performanceAudit.issues
+  const allIssues = [;
+    ...htmlAudit.issues,;
+    ...sitemapAudit.issues,;
+    ...robotsAudit.issues,;
+    ...performanceAudit.issues;
   ];
   
-  const allRecommendations = [
-    ...htmlAudit.recommendations,
-    ...sitemapAudit.recommendations,
-    ...robotsAudit.recommendations,
-    ...performanceAudit.recommendations
+  const allRecommendations = [;
+    ...htmlAudit.recommendations,;
+    ...sitemapAudit.recommendations,;
+    ...robotsAudit.recommendations,;
+    ...performanceAudit.recommendations;
   ];
   
   const report = {
-    timestamp: new Date().toISOString(),
+    timestamp: new Date().toISOString(),;
     summary: {
-      totalIssues: allIssues.length,
-      totalRecommendations: allRecommendations.length,
-      score: Math.max(0, 100 - (allIssues.length * 10))
-    },
+      totalIssues: allIssues.length,;
+      totalRecommendations: allRecommendations.length,;
+      score: Math.max(0, 100 - (allIssues.length * 10));
+    },;
     audits: {
-      html: htmlAudit,
-      sitemap: sitemapAudit,
-      robots: robotsAudit,
-      performance: performanceAudit
-    },
-    issues: allIssues,
-    recommendations: allRecommendations
+      html: htmlAudit,;
+      sitemap: sitemapAudit,;
+      robots: robotsAudit,;
+      performance: performanceAudit;
+    },;
+    issues: allIssues,;
+    recommendations: allRecommendations;
   };
   
-  // Write report
-  fs.writeFileSync(
-    path.join(__dirname, '../seo-audit-report.json'),
-    JSON.stringify(report, null, 2)
+  // Write report;
+  fs.writeFileSync(;
+    path.join(__dirname, '../seo-audit-report.json'),;
+    JSON.stringify(report, null, 2);
   );
   
   console.log('✅ SEO audit report generated');
@@ -253,7 +252,7 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
   return report;
 }
 
-// Main audit function
+// Main audit function;
 async function audit() {
   try {
     const htmlAudit = auditHTMLStructure();
@@ -281,5 +280,5 @@ async function audit() {
   }
 }
 
-// Run audit
+// Run audit;
 audit();

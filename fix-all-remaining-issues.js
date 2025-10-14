@@ -1,74 +1,103 @@
+#!/usr/bin/env node;
+;
 import fs from 'fs';
+import path from 'path';
 
-const filesToFix = [
-  {
-    file: 'app/micro-saas/page.tsx',
-    removeHelmet: true,
-    addImports: ['CheckCircle', 'Zap', 'Users', 'Shield', 'BarChart', 'Star', 'Heart']
-  },
-  {
-    file: 'app/ai-mobile-app-development/page.tsx',
-    removeHelmet: true,
-    addImports: ['CheckCircle', 'Code', 'Smartphone', 'Zap', 'Shield', 'Users', 'BarChart']
-  },
-  {
-    file: 'app/robotics/page.tsx',
-    removeHelmet: true,
-    addImports: ['CheckCircle', 'Bot', 'Cpu', 'Zap', 'Shield', 'Users', 'BarChart']
-  },
-  {
-    file: 'app/sitemap-page/page.tsx',
-    removeHelmet: true,
-    addImports: ['CheckCircle', 'Globe', 'Map', 'Search', 'FileText', 'Link']
-  },
-  {
-    file: 'app/it-infrastructure/page.tsx',
-    removeHelmet: true,
-    addImports: ['CheckCircle', 'Server', 'Cloud', 'Shield', 'Zap', 'Users', 'BarChart']
-  }
-];
-
-function fixFile(filePath, removeHelmet, addImports) {
+// Function to fix all remaining issues;
+function fixAllRemainingIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Remove Helmet imports and usage
-    if (removeHelmet) {
-      content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
-      content = content.replace(/<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
-      content = content.replace(/\s*<\/>\s*$/gm, '');
-    }
+    // Fix stray closing brackets;
+    content = content.replace(/\s*\]\s*const\s+\w+:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*\]/g, '');
     
-    // Add missing imports
-    if (addImports && addImports.length > 0) {
-      const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];/);
-      
-      if (importMatch) {
-        const existingImports = importMatch[1].split(',').map(imp => imp.trim());
-        const allImports = [...new Set([...existingImports, ...addImports])];
-        content = content.replace(
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];/,
-          `import { ${allImports.join(', ')} } from 'lucide-react';`
-        );
-      } else {
-        const newImport = `import { ${addImports.join(', ')} } from 'lucide-react';\n`;
-        content = newImport + content;
-      }
-    }
+    // Fix malformed function declarations;
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*\]/g, 'const $1: React.FC = () => {');
     
-    // Clean up any remaining empty lines
+    // Fix stray closing brackets before function declarations;
+    content = content.replace(/\s*\]\s*const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, '\nconst $1: React.FC = () => {');
+    
+    // Fix duplicate closing braces;
+    content = content.replace(/\}\s*;\s*\}\s*;\s*export\s+default/g, '};\n\nexport default');
+    
+    // Fix malformed export statements;
+    content = content.replace(/\}\s*;\s*export\s+default\s+(\w+)\s*;\s*export\s+default\s+\w+/g, '};\n\nexport default $1');
+    
+    // Fix stray semicolons in function declarations;
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*;\s*/g, 'const $1: React.FC = () => {\n  ');
+    
+    // Fix malformed array declarations;
+    content = content.replace(/const\s+(\w+)\s*=\s*\[\s*\]\s*;\s*const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $2: React.FC = () => {\n  const $1 = [');
+    
+    // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Ensure file ends with single newline;
+    content = content.trim() + '\n';
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-filesToFix.forEach(({ file, removeHelmet, addImports }) => {
-  fixFile(file, removeHelmet, addImports);
-});
+// Function to find all TypeScript/JavaScript files;
+function findSourceFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-console.log('All remaining issues fixed!');
+// Main execution;
+console.log('🔍 Searching for files with remaining issues...');
+const sourceFiles = findSourceFiles('./app');
+
+console.log(`Found ${sourceFiles.length} source files`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of sourceFiles) {
+  try {
+    if (fixAllRemainingIssues(file)) {
+      fixedCount++;
+      console.log(`✅ Fixed: ${file}`);
+    }
+  } catch (error) {
+    errorCount++;
+    console.error(`❌ Error fixing ${file}:`, error.message);
+  }
+}
+
+console.log(`\n📊 Summary: '`);',
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+if (fixedCount > 0) {
+  console.log('\n🎉 Remaining issues fixed! You can now run the build.');
+} else {
+  console.log('\n✨ No remaining issues found or all issues were already resolved.');
+}

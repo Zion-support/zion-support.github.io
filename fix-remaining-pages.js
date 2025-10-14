@@ -1,2 +1,2 @@
 // fix-remaining-pages.js - Under development;
-console.log('fix-remaining-pages.js loaded');'
+console.log('fix-remaining-pages.js loaded');';
