@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts automatically..."
+# Script to resolve merge conflicts by accepting main branch changes
+echo "Resolving merge conflicts by accepting main branch changes..."
 
 # Get list of conflicted files
 conflicted_files=$(git diff --name-only --diff-filter=U)
@@ -10,25 +11,20 @@ if [ -z "$conflicted_files" ]; then
     exit 0
 fi
 
-echo "Found conflicted files:"
-echo "$conflicted_files"
+echo "Found $(echo "$conflicted_files" | wc -l) conflicted files"
 
-# Resolve conflicts by choosing incoming changes (theirs)
+# Resolve conflicts by accepting main branch version
 for file in $conflicted_files; do
-    echo "Resolving conflicts in: $file"
-    
-    # Check if file exists
-    if [ -f "$file" ]; then
-        # Use git checkout to accept incoming changes
-        git checkout --theirs "$file"
-        git add "$file"
-        echo "Resolved: $file"
-    else
-        echo "File not found: $file"
-    fi
+    echo "Resolving conflict in: $file"
+    git checkout --theirs "$file"
+    git add "$file"
 done
 
-echo "All conflicts resolved. Adding all changes..."
-git add .
+echo "All conflicts resolved. Committing merge..."
+git commit -m "Resolve merge conflicts by accepting main branch changes
 
-echo "Merge conflicts resolution completed."
+- Resolved $(echo "$conflicted_files" | wc -l) conflicted files
+- Accepted main branch version for all conflicts
+- Ready for merge to main"
+
+echo "Merge conflicts resolved successfully!"
