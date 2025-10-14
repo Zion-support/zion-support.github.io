@@ -150,13 +150,10 @@ const PagePage = () => {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 
                 <div className="mb-4">
-
-                
-                <div className="mb-4">
                   <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
                   </span>
-
+                </div>
                 
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -180,7 +177,7 @@ const PagePage = () => {
                 >
                   Boost Sales Now
                 </a>
-
+              </div>
             ))}
           </div>
       </section>
@@ -201,7 +198,7 @@ const PagePage = () => {
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-
+              </div>
             ))}
           </div>
       </section>
@@ -237,6 +234,8 @@ const PagePage = () => {
               <div className="font-semibold text-gray-900">Emily Rodriguez</div>
               <div className="text-sm text-gray-500">Customer Success Manager, HomeDecor Plus</div>
             </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
@@ -259,7 +258,10 @@ const PagePage = () => {
             >
               ✉️ kleber@ziontechgroup.com
             </a>
-
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

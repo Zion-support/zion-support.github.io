@@ -281,7 +281,10 @@ const PagePage = () => {
             >
               ✉️ kleber@ziontechgroup.com
             </a>
-
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
