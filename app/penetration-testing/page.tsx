@@ -39,3 +39,4 @@ export default function PenetrationTestingPage() {
       </div>
     </div>
   )
+}

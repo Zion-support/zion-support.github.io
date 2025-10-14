@@ -17,7 +17,7 @@ const FiveGSolutionsPage = () => {
           </p>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
