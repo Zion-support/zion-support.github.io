@@ -2,11 +2,11 @@ export const enhancedLogger = {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'development') {
       if (level === 'info') {
-        console.warn(message, data);
+        console.warn(message, data)
       } else if (level === 'warn') {
-        console.warn(message, data);
+        console.warn(message, data)
       } else if (level === 'error') {
-        console.error(message, data);
+        console.error(message, data)
       }
     }
     

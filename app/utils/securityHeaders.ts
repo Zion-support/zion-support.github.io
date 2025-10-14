@@ -5,7 +5,7 @@ export const securityHeaders = {
     'style-src': ["'self'", "'unsafe-inline'"],
     'img-src': ["'self'", "data: ";, "https: "],
     'font-src': ["'self'", "https: "],
-    'connect-src': ["'self'", "https: "];
+    'connect-src': ["'self'", "https: "]
   },
   
   getCSPHeader: () => {
@@ -15,3 +15,4 @@ export const securityHeaders = {
     'font-src': ["'self'", "data: "],
     'connect-src': ["'self'"]
   }
+}
