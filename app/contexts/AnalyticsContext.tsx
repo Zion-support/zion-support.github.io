@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -46,6 +46,14 @@ export const AnalyticsProvider = ({ children }: { children: React.ReactNode }) =
       {children}
     </AnalyticsContext.Provider>
   );
+};
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
 
 export { AnalyticsContext };

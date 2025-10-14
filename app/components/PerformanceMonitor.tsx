@@ -1,10 +1,11 @@
 import React from "react";
 
+// PerformanceMonitor component
+
 const PerformanceMonitor = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PerformanceMonitor</h2>
-      <p>This component is under construction.</p>
+    <div className="performance-monitor">
+      {/* Performance monitoring logic */}
     </div>
   );
 };

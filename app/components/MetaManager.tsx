@@ -1,10 +1,13 @@
 import React from "react";
 
-const MetaManager = () => {
+interface MetaManagerProps {
+  children: React.ReactNode;
+}
+
+const MetaManager = ({ children }: MetaManagerProps) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">MetaManager</h2>
-      <p>This component is under construction.</p>
+    <div className="meta-manager">
+      {children}
     </div>
   );
 };

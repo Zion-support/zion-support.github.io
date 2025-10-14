@@ -1,10 +1,18 @@
 import React from "react";
 
-const SEOEnhancer = () => {
+interface SEOEnhancerProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  type?: string;
+  structuredData?: Record<string, unknown>;
+}
+
+const SEOEnhancer = ({ children }: SEOEnhancerProps) => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className="seo-enhancer">
+      {children}
     </div>
   );
 };
