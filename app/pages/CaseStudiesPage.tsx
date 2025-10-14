@@ -1,55 +1,145 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react'
 
-const PagesPage: React.FC = () => {
+
+
+
+const Case Studies Page: React.FC = () => {
+  const case Studies = 
+    {
+      title: 'E-commerce Platform A I Optimization'
+      client: 'Tech Retail Inc.'
+      industry: 'E-commerce'
+      challenge: 'Low conversion rates and high cart abandonment'
+      solution: 'Implemented A I-powered recommendation engine and personalized shopping experience'
+      results: 
+        { metric: 'Conversion Rate', value: '+45%', icon: Trending Up }
+        { metric: 'Cart Abandonment', value: '-30%', icon: Trending Up }
+        { metric: 'Customer Satisfaction', value: '+60%', icon: Users }
+        { metric: 'Implementation Time', value: '3 months', icon: Clock }]
+      description: 'We helped Tech Retail Inc. transform their e-commerce platform with A I-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'
+    }
+    {
+      title: 'Manufacturing Process Automation'
+      client: 'Auto Parts Manufacturing'
+      industry: 'Manufacturing'
+      challenge: 'Manual quality control processes causing delays and errors'
+      solution: 'Deployed computer vision and A I-powered quality control systems'
+      results: 
+        { metric: 'Quality Defects', value: '-80%', icon: Trending Up }
+        { metric: 'Production Speed', value: '+35%', icon: Trending Up }
+        { metric: 'Cost Savings', value: '$2.5 M', icon: Dollar Sign }
+        { metric: 'Implementation Time', value: '6 months', icon: Clock }]
+      description: 'Our A I-powered quality control system reduced defects by 80% while increasing production speed by 35%, saving the client $2.5 M annually.'
+    }
+    {
+      title: 'Healthcare Data Analytics Platform'
+      client: 'Med Center Health System'
+      industry: 'Healthcare'
+      challenge: 'Fragmented patient data and inefficient treatment planning'
+      solution: 'Built comprehensive A I analytics platform for patient data integration and predictive treatment recommendations'
+      results: 
+        { metric: 'Treatment Accuracy', value: '+55%', icon: Trending Up }
+        { metric: 'Patient Outcomes', value: '+40%', icon: Users }
+        { metric: 'Cost Reduction', value: '$1.8 M', icon: Dollar Sign }
+        { metric: 'Implementation Time', value: '8 months', icon: Clock }]
+      description: 'The A I analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8 M.'
+    }]
   return (
-    <>
+    <div className="min-h-screenbg-slate-900text-white">
       <Helmet>
-        <title>Pages</title>
-        <meta
-          name="description"
-          content="Professional pages solutions and services"
-        />
-        <meta name="keywords" content="pages" />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful A I and I T implementation case studies. See how we've helped businesses across industries achieve remarkable results." />
+        <meta name="keywords" content="case studies, A I implementation, I T solutions, success stories, business transformation, Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Pages</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional pages solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+
+      {/* Hero Section */}
+      <section className="relativ e py-20bg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900">
+        <div className="containermx-autopx-4text-center">
+          <h1 className="text -5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparent">
+            Success Stories
+          </h1>
+          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
+            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
+            with our AI and IT solutions.
+          </p>
+          </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-20">
+        <div className="containermx-autopx-4">
+          <div className="gridgrid-cols-1lg:grid-cols-2xl:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                  <div className="text-smtext-purple-400font-semiboldmb-2">{study.industry}</div>
+                  <h3 className="text-2xlfont-bold text-whitemb-2">{study.title}</h3>
+                  <div className="text-gray-400text-smmb-4">Client: {study.client}</div>
+                  </div>
+        </div>
+
+                <div className="mb-6">
+                  <h 4 className="text-whitefont-semiboldmb-2">Challenge</h4>
+                  <p className="text-gray-300text-smmb-4">{study.challenge}</p>
+                  
+                  <h 4 className="text-whitefont-semiboldmb-2">Solution</h4>
+                  <p className="text-gray-300text-smmb-4">{study.solution}</p>
+                  </div>
+
+                <div className="mb-6">
+                  <h 4 className="text-whitefont-semiboldmb-3">Results</h4>
+                  <div className="gridgrid-cols-2gap-3">
+                    {study.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="bg-slate-700rounded-lgp-3">
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+              <div className="flexitems-centerjustify-betweenmb-1">
+                          <span className="text-gray-300text-xs">{result.metric}</span>
+                          <result.icon className="w -4h-4 text-purple-400" />
+                          </div>
+                        <div className="text-whitefont-boldtext-lg">{result.value}</div>
+        </div>
+                    ))}
+  )
+                    </div>
+                  </div>
+
+                <p className="text-gray-300text-smmb-6">{study.description}</p>
+
+                <button className="w-ful l bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700transition-allduration-300flexitems-centerjustify-centergap-2">
+                  Read Full Case Study
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                </div>
+            ))}
+  )
             </div>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
+      </section>
 
-export default PagesPage;
+      {/* CTA Section */}
+      <section className="py-20bg-gradient-to-rfrom-purple-900/3 0to-cyan-900/3 0">
+        <div className="containermx-autopx-4text-center">
+          <h2 className="text-4xlmd:text-5xlfont-bold text-whitemb-6">
+            Ready to Create Your Success Story?
+          </h2>
+          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
+            Let&apos;s discuss how our AI and IT solutions can transform your business 
+            and deliver measurable results.
+          </p>
+          <div className="flexflex-colsm:flex-rowgap-4justify-center">
+            <button className="bg-gradient-to- r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-cyan-700 transition-allduration-300transformhover:scale-105">
+              Start Your Project
+            </button>
+            <button className="border -2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-900transition-allduration-300">
+              Schedule Consultation
+            </button>
+            </div>
+          </div>
+      </section>
+    </div>
+  )
+  }
+  )
+export default Case;; Studies Page

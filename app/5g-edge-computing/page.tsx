@@ -1,58 +1,61 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const FiveGEdgeComputingPage: React.FC = () => {
+const Page5gEdgeComputingPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert 5g Edge Computing Solutions',
+      description: 'Professional 5g edge computing services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored 5g edge computing implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your 5g edge computing needs.'
+    }
+  ];
+
+const FiveGEdgeComputing: React.FC = () => {
   return (
     <>
+      <div>
       <Helmet>
-        <title>5G Edge Computing</title>
-        <meta
-          name="description"
-          content="Cutting-edge 5G edge computing solutions."
-        />
-        <meta name="keywords" content="5G, edge, computing, solutions" />
+        <title>5g Edge Computing - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g edge computing solutions and services" />
+        <meta name="keywords" content="5g, edge, computing" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              5G Edge Computing
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Cutting-edge 5G edge computing solutions.
-            </p>
+            <h1 className="text-4xl font-bold text-white mb-8">5g edge computing</h1>
+<p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
+                <h3 className="text-lg font-semibold text-blue-900 mb-2  ">Expert Solutions
                 </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
+                <p className="text-blue-700   ">Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
+                <h3 className="text-lg font-semibold text-green-900 mb-2  ">Custom Implementation
                 </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
+                <p className="text-green-700   ">Tailored implementations for your specific requirements.
                 </p>
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
+                <h3 className="text-lg font-semibold text-purple-900 mb-2  ">24/7 Support
                 </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
+                <p className="text-purple-700   ">Round-the-clock support for all your needs.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </>
+</>
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page5gEdgeComputingPage;

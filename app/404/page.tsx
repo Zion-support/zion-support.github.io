@@ -1,25 +1,39 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const NotFoundPage: React.FC = () => {
+const Page404Page: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert 404 Solutions',
+      description: 'Professional 404 services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored 404 implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your 404 needs.'
+    }
+  ];
+
   return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9170
     <>
+      <div>
       <Helmet>
-        <title>404 - Page Not Found</title>
-        <meta
-          name="description"
-          content="The page you are looking for does not exist."
-        />
-        <meta name="keywords" content="404, not found, error" />
+        <title>4 0 4 - Zion Tech Group</title>
+        <meta name="description" content="Professional 4 0 4 solutions and services" />
+        <meta name="keywords" content="4 0 4" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              404 - Page Not Found
-            </h1>
+            <h1 className="text-4xl font-bold text-white mb-8">4 0 4</h1>
             <p className="text-xl text-gray-300 mb-8">
-              The page you are looking for does not exist.
+              Professional 4 0 4 solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -46,13 +60,10 @@ const NotFoundPage: React.FC = () => {
                   Round-the-clock support for all your needs.
                 </p>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </>
+</>
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page404Page;
