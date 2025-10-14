@@ -5,8 +5,8 @@ interface LoadingSpinnerProps {
   text?: string;
   fullScreen?: boolean;
   className?: string;
-  color?: 'primary' | 'secondary' | 'white';
-}
+  color?: 'primary' | 'secondary' | 'white'
+  }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
@@ -33,25 +33,24 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
       />
       {text && (
-        <p className="mt-2text-smtext-gray-3 0 0">
+        <p className="mt-2text-smtext-gray-30 0">
           {text}
         </p>
       )}
     </div>
   );
 
-  if (fullScreen) => {
+  if (fullScreen) {
     return (
-      <div className="fixe dinset-0bg-slate-9 0 0/8 0backdrop-blur-smflexitems-centerjustify-centerz-5 0">
-        <div className="bg-slate-8 0 0rounded-lgp-8shadow-xl">
+      <div className="fixedinset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-slate-800rounded-lg p-8 shadow-xl">
           {spinner}
-          </div>
         </div>
       </div>
-    );
+    )
   }
 
-  return spinner;
-};
+  return spinner
+  };
 
 export default LoadingSpinner;

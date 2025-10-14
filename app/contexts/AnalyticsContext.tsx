@@ -10,9 +10,9 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') => {
-      console.warn('Event tracked: ', eventName, properties);
-    }
+    if (process.env.NODE_ENV === 'development')  {
+      console.warn('Event tracked: ', eventName, properties)
+  }
     // Add your analytics tracking logic here
   }, []);
   const trackPageView = useCallback((pageName: string;, properties?: Record<string, unknown>) => {
@@ -33,11 +33,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   )
 export const useAnalytics = () => {
   const context = React.useContext(AnalyticsContext);
-  if (context === undefined) => {
-    throw new Error(',useAnalytics must be used within an AnalyticsProvider');
+  if (context === undefined)  {
+    throw new Error(',useAnalytics must be used within an AnalyticsProvider')
   }
-  return context;
-};
+  return context
+  };
 
 </AnalyticsContext>
 </string>

@@ -1,131 +1,148 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { glob } = require('glob');
+const glob = require('glob');
 
-// Function to fix common JSX syntax errors
+// Function to fix JSX syntax errors
 function fixJSXErrors(content) {
   let fixed = content;
   
-  // Fix semicolons in JSX attributes (e.g., className="md: grid-cols-2" -> className="md:grid-cols-2")
-  fixed = fixed.replace(/className="([^"]*)\s+([^"]*)"/g, 'className="$1$2"');
+  // Fix malformed class names (spaces in class names)
+  fixed = fixed.replace(/(className="[^"]*?)\s+([^"]*")/g, (match, before, after) => {
+    return before + after.replace(/\s+/g, ' ');
+  });
   
-  // Fix semicolons after JSX elements (e.g., </div>; -> </div>)
-  fixed = fixed.replace(/(<\/[^>]+>);/g, '$1');
+  // Fix specific malformed class patterns
+  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3$4"');
+  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3 $4$5"');
+  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)\s+(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3 $4 $5$6"');
   
-  // Fix semicolons in JSX attributes (e.g., hover: text-blue-800 -> hover:text-blue-800)
-  fixed = fixed.replace(/hover:\s+([a-zA-Z-]+)/g, 'hover:$1');
+  // Fix common malformed patterns
+  fixed = fixed.replace(/text-whit e/g, 'text-white');
+  fixed = fixed.replace(/font-boldtext-lgmb-6/g, 'font-bold text-lg mb-6');
+  fixed = fixed.replace(/bg-gradient-to-rfrom-purple-4 0 0to-cyan-4 0 0/g, 'bg-gradient-to-r from-purple-400 to-cyan-400');
+  fixed = fixed.replace(/bg-clip-texttext-transparent/g, 'bg-clip-text text-transparent');
+  fixed = fixed.replace(/text-purple-70 0/g, 'text-purple-700');
+  fixed = fixed.replace(/text-purple-90 0/g, 'text-purple-900');
+  fixed = fixed.replace(/text-gray-4 0 0/g, 'text-gray-400');
+  fixed = fixed.replace(/hover:text-whitetransition-colors/g, 'hover:text-white transition-colors');
+  fixed = fixed.replace(/flexitems-centergroup/g, 'flex items-center group');
+  fixed = fixed.replace(/w-4h-4mr-2group-hover:translate-x-1transition-transform/g, 'w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform');
+  fixed = fixed.replace(/space-y-3mb-8/g, 'space-y-3 mb-8');
+  fixed = fixed.replace(/mt -1 2/g, 'mt-12');
+  fixed = fixed.replace(/pt-8border-tborder-slate-7 0 0\/5 0/g, 'pt-8 border-t border-slate-700/50');
+  fixed = fixed.replace(/max-w-2xlmx-autotext-center/g, 'max-w-2xl mx-auto text-center');
+  fixed = fixed.replace(/text -2xl/g, 'text-2xl');
+  fixed = fixed.replace(/font-boldtext-whitemb-4/g, 'font-bold text-white mb-4');
+  fixed = fixed.replace(/text-gray-3 0 0mb-6text-lg/g, 'text-gray-300 mb-6 text-lg');
+  fixed = fixed.replace(/flexflex-colsm:flex-rowgap-4max-w-mdmx-auto/g, 'flex flex-col sm:flex-row gap-4 max-w-md mx-auto');
+  fixed = fixed.replace(/flex -1/g, 'flex-1');
+  fixed = fixed.replace(/px-4 py-3 bg-slate-8 0 0/g, 'px-4 py-3 bg-slate-800');
+  fixed = fixed.replace(/border border-slate-6 0 0/g, 'border border-slate-600');
+  fixed = fixed.replace(/rounded-lgtext-whiteplaceholder-gray-4 0 0/g, 'rounded-lg text-white placeholder-gray-400');
+  fixed = fixed.replace(/focus:outline-nonefocus:ring-2focus:ring-purple-5 0 0focus:border-transparent/g, 'focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent');
+  fixed = fixed.replace(/px -8/g, 'px-8');
+  fixed = fixed.replace(/py-3 bg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0/g, 'py-3 bg-gradient-to-r from-purple-600 to-cyan-600');
+  fixed = fixed.replace(/text-white rounded-lg hover:from-purple-7 0 0hover:to-cyan-7 0 0/g, 'text-white rounded-lg hover:from-purple-700 hover:to-cyan-700');
+  fixed = fixed.replace(/transition-allduration-3 0 0/g, 'transition-all duration-300');
+  fixed = fixed.replace(/flexitems-centerjustify-centerfont-semibold/g, 'flex items-center justify-center font-semibold');
+  fixed = fixed.replace(/w -4h-4 ml-2/g, 'w-4 h-4 ml-2');
+  fixed = fixed.replace(/mt -1 2 pt-8border-tborder-slate-7 0 0\/5 0flexflex-colmd:flex-rowjustify-betweenitems-center/g, 'mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center');
+  fixed = fixed.replace(/flexitems-centerspace-x-2text-gray-4 0 0mb-4md:mb-0/g, 'flex items-center space-x-2 text-gray-400 mb-4 md:mb-0');
+  fixed = fixed.replace(/w -4h-4 text-red-4 0 0/g, 'w-4 h-4 text-red-400');
+  fixed = fixed.replace(/flexspace-x-6/g, 'flex space-x-6');
+  fixed = fixed.replace(/text-gray-4 0 0hover:text-whitetransition-colorstext-sm/g, 'text-gray-400 hover:text-white transition-colors text-sm');
   
-  // Fix missing closing tags for common patterns
-  // Look for unclosed <p> tags
-  const pTagRegex = /<p\s+[^>]*>([^<]*(?:<[^/][^>]*>[^<]*)*?)(?=<[^/]|$)/g;
-  let match;
-  while ((match = pTagRegex.exec(fixed)) !== null) {
-    const fullMatch = match[0];
-    const content = match[1];
-    
-    // Check if this <p> tag is already closed
-    if (!fullMatch.includes('</p>')) {
-      // Find the next opening tag or end of content
-      const nextTagMatch = fixed.indexOf('<', match.index + fullMatch.length);
-      const endOfContent = fixed.indexOf('\n', match.index + fullMatch.length);
-      const nextBreak = Math.min(
-        nextTagMatch === -1 ? Infinity : nextTagMatch,
-        endOfContent === -1 ? Infinity : endOfContent
-      );
-      
-      if (nextBreak !== Infinity) {
-        const beforeNext = fixed.substring(0, nextBreak);
-        const afterNext = fixed.substring(nextBreak);
-        
-        // Insert closing </p> tag
-        fixed = beforeNext + '</p>' + afterNext;
-        
-        // Reset regex position
-        pTagRegex.lastIndex = 0;
-      }
-    }
-  }
-  
-  // Fix malformed grid classes
-  fixed = fixed.replace(/grid\s+md:\s+grid-cols/g, 'grid md:grid-cols');
-  
-  // Fix missing closing tags for div elements in specific patterns
-  // This is a more complex fix that looks for common patterns
-  const lines = fixed.split('\n');
-  const fixedLines = [];
-  const openTags = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmed = line.trim();
-    
-    // Track opening tags
-    const openTagMatch = trimmed.match(/<([a-zA-Z][a-zA-Z0-9]*)[^>]*>(?!.*<\/\1>)/);
-    if (openTagMatch) {
-      openTags.push({ tag: openTagMatch[1], line: i });
-    }
-    
-    // Track closing tags
-    const closeTagMatch = trimmed.match(/<\/([a-zA-Z][a-zA-Z0-9]*)>/);
-    if (closeTagMatch) {
-      const tagToClose = closeTagMatch[1];
-      const lastOpenIndex = openTags.findLastIndex(item => item.tag === tagToClose);
-      if (lastOpenIndex !== -1) {
-        openTags.splice(lastOpenIndex, 1);
-      }
-    }
-    
-    fixedLines.push(line);
-  }
-  
-  // Add missing closing tags at the end
-  while (openTags.length > 0) {
-    const { tag } = openTags.pop();
-    fixedLines.push(`</${tag}>`);
-  }
-  
-  return fixedLines.join('\n');
+  return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+// Function to fix unclosed JSX tags
+function fixUnclosedTags(content) {
+  let fixed = content;
+  
+  // Common patterns of unclosed tags
+  const patterns = [
+    // Fix h3 tags that should be closed
+    { 
+      regex: /<h3 className="[^"]*">\s*([^<]+)\s*<p className="[^"]*">/g, 
+      replacement: '<h3 className="$1">\n                </h3>\n                <p className="[^"]*">'
+    },
+    // Fix p tags that should be closed
+    { 
+      regex: /<p className="[^"]*">\s*([^<]+)\s*<\/div>/g, 
+      replacement: '<p className="[^"]*">\n                  $1\n                </p>'
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+  ];
+  
+  // Apply patterns
+  patterns.forEach(pattern => {
+    fixed = fixed.replace(pattern.regex, pattern.replacement);
+  });
+  
+  return fixed;
 }
 
-// Main execution
-async function main() {
-  const pattern = 'app/**/*.tsx';
-  const files = await glob(pattern, { cwd: process.cwd() });
+// Function to fix JavaScript/TypeScript syntax errors
+function fixJSSyntax(content) {
+  let fixed = content;
+  
+  // Fix arrow function syntax errors
+  fixed = fixed.replace(/if\s*\([^)]+\)\s*=>\s*{/g, (match) => {
+    return match.replace('=>', '');
+  });
+  
+  // Fix array syntax errors
+  fixed = fixed.replace(/const\s+\w+\s*=\s*\[\s*{/g, (match) => {
+    return match.replace(/\[\s*{/, '[\n    {');
+  });
+  
+  // Fix object syntax errors
+  fixed = fixed.replace(/{\s*title:\s*'[^']+',\s*description:\s*'[^']+',\s*;\s*}/g, (match) => {
+    return match.replace(',;', '');
+  });
+  
+  // Fix missing semicolons in object properties
+  fixed = fixed.replace(/,\s*;\s*}/g, '\n  }');
+  fixed = fixed.replace(/,\s*;\s*]/g, '\n  ]');
+  
+  return fixed;
+}
+
+// Main function to process files
+function processFiles() {
+  const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
   
   console.log(`Found ${files.length} TSX files to process...`);
   
-  let fixedCount = 0;
+  let processedCount = 0;
+  let errorCount = 0;
+  
   files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
+    try {
+      const filePath = path.join(__dirname, file);
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Apply fixes
+      content = fixJSXErrors(content);
+      content = fixUnclosedTags(content);
+      content = fixJSSyntax(content);
+      
+      // Write back the fixed content
+      fs.writeFileSync(filePath, content, 'utf8');
+      processedCount++;
+      
+      if (processedCount % 50 === 0) {
+        console.log(`Processed ${processedCount} files...`);
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+      errorCount++;
     }
   });
   
-  console.log(`Fixed ${fixedCount} files`);
+  console.log(`\nProcessing complete!`);
+  console.log(`Files processed: ${processedCount}`);
+  console.log(`Errors: ${errorCount}`);
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixJSXErrors, processFile };
+// Run the fix
+processFiles();
