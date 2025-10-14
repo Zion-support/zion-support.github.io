@@ -6,7 +6,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="App">
+        <div className=" App">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<HomePage />} />
@@ -19,3 +19,6 @@ function App() {
 }
 
 export default App;
+
+</Route>
+</Route>

@@ -90,3 +90,17 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 };
 
 export default MetaManager;
+</meta>
+</meta>
+</meta>
+</meta>
+</link>
+</meta>
+</MetaManagerProps>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</titl>

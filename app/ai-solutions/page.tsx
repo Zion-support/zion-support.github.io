@@ -10,29 +10,29 @@ const AiSolutionsPage: React.FC = () => {
         <meta name="description" content="Advanced AI solutions for your business needs" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className=" min-h-scre e n bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+        <div className=" contain e r mx-autopx-4py-16">
+          <div className=" text-centermb-16">
+            <h1 className=" text-5xlfont-boldtext-whitemb-6">
               AI Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className=" text- x ltext-gray-300mb-8">
               Transform your business with cutting-edge artificial intelligence
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Brain className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
-              <p className="text-gray-300">
+          <div className=" gridmd:grid-cols-2gap-8">
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/20">
+              <Brain className=" w -12h-12 text-blue-400mb-4" />
+              <h3 className=" text-xlfont-semiboldtext-whitemb-3">Machine Learning</h3>
+              <p className=" text-gray-300">
                 Custom ML models tailored to your specific business requirements.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Zap className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
-              <p className="text-gray-300">
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/20">
+              <Zap className=" w -12h-12 text-blue-400mb-4" />
+              <h3 className=" text-xlfont-semiboldtext-whitemb-3">Automation</h3>
+              <p className=" text-gray-300">
                 Intelligent automation solutions to streamline your operations.
               </p>
             </div>
@@ -44,3 +44,9 @@ const AiSolutionsPage: React.FC = () => {
 };
 
 export default AiSolutionsPage;
+</Zap>
+</Brain>
+</titl>
+</h>
+</h>
+</meta>

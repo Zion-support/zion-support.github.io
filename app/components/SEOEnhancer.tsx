@@ -49,3 +49,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 };
 
 export default SEOEnhancer;
+</meta>
+</meta>
+</meta>
+</meta>
+</link>
+</meta>
+</SEOEnhancerProps>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</titl>

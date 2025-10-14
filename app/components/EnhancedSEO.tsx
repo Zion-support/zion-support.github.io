@@ -36,3 +36,17 @@ canonicalUrl,
   );
 };
 export default EnhancedSEO;
+
+</meta>
+</meta>
+</meta>
+</meta>
+</link>
+</meta>
+</EnhancedSEOProps>
+</meta>
+</meta>
+</meta>
+</meta>
+</meta>
+</titl>

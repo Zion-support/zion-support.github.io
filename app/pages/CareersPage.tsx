@@ -4,38 +4,38 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
+    <div className="min-h-screenbg-gradient-to-brfrom-slate-900via-rose-900to-slate-900">
       <Helmet>
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
+      <div className=" contain e r mx-autopx-4py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
+        <div className=" text-centermb-16">
+          <h1 className=" text-5xlfont-boldtext-whitemb-6">
+            Join Our <span className="text-transparentbg-clip-textbg-gradient-to-rfrom-rose-400to-pink-400">Team</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
             Be part of a team that's shaping the future of AI and IT solutions.';
             Work on cutting-edge projects and make a real impact.;
           </p>
           </div>
         </div>
         {/* Why Work With Us */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className=" mb-16">
+          <h2 className="text-3xlfont-boldtext-whitetext-centermb-12">Why Work With Us?</h2>
+          <div className=" gridmd:grid-cols-2lg:grid-cols-4gap-8">
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon;
               return (
-                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
+                <div key={_index} className=" bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20text-center">
+                  </div><div className=" p -3bg-gradient-to-rfrom-rose-500to-pink-500rounded-lgw-fitmx-automb-4">
+                    <Icon className=" w -6h-6 text-white" />
                     </div>
         </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className=" text-xlfont-semiboldtext-whitemb-3">{benefit.title}</h3>
+                  <p className=" text-gray-300text-sm">{benefit.description}</p>
                   </div>
         </div>
               );
@@ -45,27 +45,27 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
         {/* Open Positions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
-          <div className="grid md:grid-cols-2 gap-6">
+        <div className=" mb-16">
+          <h2 className="text-3xlfont-boldtext-whitetext-centermb-12">Open Positions</h2>
+          <div className=" gridmd:grid-cols-2gap-6">
             {openPositions.map((position, _index) => (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                  <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+              <div key={_index} className=" bg-whit e/10 backdrop-blur-smrounded-xlp-6borderborder-white/20hover:border-white/40transition-allduration-300">
+                </div><div className=" flexjustify-betweenitems-startmb-4">
+                  <h3 className=" text-xlfont-semiboldtext-white">{position.title}</h3>
+                  <span className=" bg-gradient-to- rfrom-rose-500to-pink-500text-whitepx-3py-1rounded-fulltext-sm">
                     {position.type}
                   </span>
                   </div>
         </div>
-                <div className="flex items-center text-gray-400 mb-3">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  <span className="text-sm">{position.location}</span>
-                  <span className="mx-2">•</span>
-                  <span className="text-sm">{position.department}</span>
+                <div className=" flexitems-centertext-gray-400mb-3">
+                  <MapPin className=" w -4h-4 mr-2" />
+                  <span className=" text-sm">{position.location}</span>
+                  <span className=" mx-2">•</span>
+                  <span className=" text-sm">{position.department}</span>
                   </div>
         </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+                <p className=" text-gray-300mb-4">{position.description}</p>
+                <button className=" w-ful l bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2px-4rounded-lgfont-mediumhover:from-rose-600hover:to-pink-600transition-allduration-300">
                   Apply Now;
                 </button>
                 </div>
@@ -76,34 +76,34 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
         {/* Company Culture */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+        <div className=" bg-white/10backdrop-blur-smrounded-xlp-8borderborder-white/20mb-16">
+          <h2 className="text-3xlfont-boldtext-whitetext-centermb-8">Our Culture</h2>
+          <div className=" gridmd:grid-cols-3gap-8">
+            <div className=" text-center">
+              <div className=" p -4bg-gradient-to-rfrom-rose-500to-pink-500rounded-fullw-fitmx-automb-4">
+                <Users className=" w -8h-8 text-white" />
                 </div>
         </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>
-              <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>
+              <h3 className=" text-xlfont-semiboldtext-whitemb-3">Collaborative</h3>
+              <p className=" text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>
               </div>
         </div>
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+            <div className=" text-center">
+              <div className=" p -4bg-gradient-to-rfrom-rose-500to-pink-500rounded-fullw-fitmx-automb-4">
+                <Zap className=" w -8h-8 text-white" />
                 </div>
         </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>
-              <p className="text-gray-300">We encourage creative thinking and embrace new technologies to solve complex problems.</p>
+              <h3 className=" text-xlfont-semiboldtext-whitemb-3">Innovative</h3>
+              <p className=" text-gray-300">We encourage creative thinking and embrace new technologies to solve complex problems.</p>
               </div>
         </div>
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+            <div className=" text-center">
+              <div className=" p -4bg-gradient-to-rfrom-rose-500to-pink-500rounded-fullw-fitmx-automb-4">
+                <Target className=" w -8h-8 text-white" />
                 </div>
         </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>
-              <p className="text-gray-300">We focus on delivering real value to our clients and making a positive impact.</p>
+              <h3 className=" text-xlfont-semiboldtext-whitemb-3">Impact-Driven</h3>
+              <p className=" text-gray-300">We focus on delivering real value to our clients and making a positive impact.</p>
               </div>
         </div>
             </div>
@@ -111,13 +111,13 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300 mb-6">
+        <div className=" text-center">
+          <div className=" bg-whit e/10backdrop-blur-smrounded-xlp-8borderborder-white/20max-w-2xlmx-auto">
+            <h2 className=" text-2xlfont-boldtext-whitemb-4">Don't See Your Perfect Role?</h2>';
+            <p className=" text-gray-300mb-6">
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
             </p>
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+            <button className=" bg-gradient-to- r from-rose-500 to-pink-500 text-white px-8py-3rounded-lgfont-semiboldhover:from-rose-600hover:to-pink-600transition-allduration-300">
               Send Resume;
             </button>
             </div>
@@ -130,3 +130,25 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+
+</h>
+</Target>
+</Zap>
+</Users>
+</spa>
+</spa>
+</spa>
+</MapPin>
+</h>
+</Icon>
+</spa>
+</meta>
+</titl>
+</h>
+</h>
+</h>
+</h>
+</h>
+</h>
+</h>
+</meta>

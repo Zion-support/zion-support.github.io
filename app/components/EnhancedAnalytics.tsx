@@ -90,3 +90,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 };
 
 export default EnhancedAnalytics;
+</string>
+</EnhancedAnalyticsProps>
+</string>

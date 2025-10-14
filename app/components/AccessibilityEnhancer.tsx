@@ -84,36 +84,36 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return (
-    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
-      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
+    <div className=" accessibility-control s fixedbottom-4left-4z-50bg-slate-800p-4rounded-lgshadow-lg">
+      <h3 className=" text-whitefont-semiboldmb-3">Accessibility</h3>
       
-      <div className="space-y-3">
-        <label className="flex items-center space-x-2 text-white text-sm">
+      <div className=" space-y-3">
+        <label className="flexitems-centerspace-x-2text-whitetext-sm">
           <input
             type="checkbox"
             checked={isHighContrast}
             onChange={(e) => setIsHighContrast(e.target.checked)}
-            className="rounded"
+            className=" rounded"
           />
           <span>High Contrast</span>
         </label>
 
-        <label className="flex items-center space-x-2 text-white text-sm">
+        <label className="flexitems-centerspace-x-2text-whitetext-sm">
           <input
             type="checkbox"
             checked={isReducedMotion}
             onChange={(e) => setIsReducedMotion(e.target.checked)}
-            className="rounded"
+            className=" rounded"
           />
           <span>Reduce Motion</span>
         </label>
 
-        <div className="space-y-1">
-          <label className="text-white text-sm">Font Size</label>
+        <div className=" space-y-1">
+          <label className=" text-whitetext-sm">Font Size</label>
           <select
             value={fontSize}
             onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
+            className=" w-fullbg-slate-700text-whiteroundedpx-2py-1text-sm"
           >
             <option value="small">Small</option>
             <option value="normal">Normal</option>
@@ -128,3 +128,11 @@ const AccessibilityEnhancer: React.FC = () => {
 };
 
 export default AccessibilityEnhancer;
+</optio>
+</optio>
+</optio>
+</optio>
+</labe>
+</spa>
+</spa>
+</h>

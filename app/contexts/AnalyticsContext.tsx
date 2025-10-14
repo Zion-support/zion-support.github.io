@@ -38,3 +38,13 @@ export const useAnalytics = () => {
   }
   return context;
 };
+
+</AnalyticsContext>
+</string>
+</string>
+</string>
+</AnalyticsProviderProps>
+</AnalyticsContextType>
+</string>
+</string>
+</string>
