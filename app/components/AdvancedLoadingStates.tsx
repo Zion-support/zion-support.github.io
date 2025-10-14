@@ -69,16 +69,16 @@ const AdvancedLoadingStates: React.FC = () => {
   }
 
   return (
-    <div className="fixedinset-0bg-blackbg-opacity-5 0flexitems-centerjustify-centerz-5 0">
-      <div className="bg-whiterounded-lgp-8max-w-mdw-fullmx-4">
+    <div className="fixedinset-0 bg-blackbg-opacity-5 0flexitems-centerjustify-centerz-5 0">
+      <div className="bg-whiterounded-lgp-8 max-w-mdw-fullmx-4">
         <div className="text-center">
-          <div className="animate-spinrounded-fullh-1 2w-1 2border-b-2border-blue-6 0 0mx-automb-4"></div>
-          <h3 className="text-lgfont-semiboldtext-gray-90 0mb-2">
+          <div className="animate-spinrounded-fullh-1 2 w-1 2border-b-2border-blue-6 0 0mx-automb-4"></div>
+          <h3 className="text-lgfont-semiboldtext-gray-900 mb-2">
             {loadingState.message}
           </h3>
-          <div className="w-fullbg-gray-20 0rounded-fullh-2mb-4">
+          <div className="w-fullbg-gray-20 0 rounded-fullh-2mb-4">
             <div
-              className="bg-blue-60 0h-2rounded-fulltransition-all duration-300"
+              className="bg-blue-60 0 h-2rounded-fulltransition-all duration-300"
               style={{ width: `${loadingState.progress}%` }}
             ></div>
           </div>

@@ -5,30 +5,33 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const FiveGMonitoringPage = () => {
-  const services = []
+  const services = [
     {
       title: '5G Network Monitoring',
       description: 'Real-time monitoring and analysis of 5G network performance.'
     },
+    {
       title: 'Security Monitoring',
-      description: 'Advanced security monitoring and threat detection for 5G networks.',;
+      description: 'Advanced security monitoring and threat detection for 5G networks.',
+    },
+    {
       title: 'Team Training',
       description: 'Comprehensive training for 5G network monitoring and management.'
   }
   ]
   return (
-    <div className="min-h-screenbg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
 title="5G Monitoring Services - Zion Tech Group"
         description="Professional 5G monitoring services to ensure optimal network performance and security."
       />
       
       <div className="container mx-auto px-4 py-16">
-        <div className="text-centermb-16">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
+        <div className="text-center mb-16">
+          <h1 className="text-4 xlfont-bold text-gray-900 mb-6">
             5G Monitoring Services
           </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
             Monitor your 5G network performance with our advanced monitoring solutions.
           </p>
           </div>
@@ -37,21 +40,21 @@ title="5G Monitoring Services - Zion Tech Group"
           {services.map((service, index) => (
             <div key={index} className="bg-whiterounded-lgshadow-lgp-8">
               </div><div className="flexitems-centermb-4">
-                <CheckCircle className="h-8w-8 text-blue-6 0 0mr-3" />
-                <h3 className="text-xlfont-semiboldtext-gray-90 0">
+                <CheckCircle className="h-8 w-8 text-blue-6 0 0mr-3" />
+                <h3 className="text-xlfont-semiboldtext-gray-900">
                   {service.title}
                 </h3>
                 </div>
         </div>
-              <p className="text-gray-60 0mb-6">
+              <p className="text-gray-60 0 mb-6">
                 {service.description}
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flexitems-centertext-blue-60 0hover:text-blue-8 0 0font-medium";
+                className="inline-flexitems-centertext-blue-60 0 hover:text-blue-8 0 0font-medium";
               >
                 Learn More
-                <ArrowRight className="ml-2h-4w-4" />
+                <ArrowRight className="ml-2 h-4w-4" />
               </Link>
               </div>
         </div>
@@ -59,10 +62,10 @@ title="5G Monitoring Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-6 0 0hover:bg-blue-7 0 0";
+            className="inline-flex items-center px-8 py-3 border border-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-6 0 0 hover:bg-blue-7 0 0";
           >
             Get Started Today
-            <ArrowRight className="ml-2h-5w-5" />
+            <ArrowRight className="ml-2 h-5w-5" />
           </Link>
       </div>
   )
