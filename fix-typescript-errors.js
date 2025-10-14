@@ -1,99 +1,53 @@
-#!/usr/bin/env node;
-;
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
-// Function to fix TypeScript any types;
-function fixTypeScriptErrors(filePath) {
+// Find all page.tsx files in the app directory
+const pageFiles = glob.sync('app/**/page.tsx');
+
+console.log(`Found ${pageFiles.length} page files to fix`);
+
+pageFiles.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-}
-    // Fix any types in AnalyticsProvider;}
-    if (filePath.includes('AnalyticsProvider.tsx')) {}
-      content = content.replace(/function gtag\(\.\.\.args: any\[\]\)/g, 'function gtag(...args: 'unknown[])');',}
-      content = content.replace(/\(window as any\)\.gtag/g, '(window as unknown as { gtag: (...args: unknown[]) => void }).gtag');
-      content = content.replace(/\(window as any\)\.gtag/g, '(window as unknown as { gtag: (...args: unknown[]) => void }).gtag');
-      modified = true;
-    }
-
-    // Fix any types in sitemap.ts;
-    if (filePath.includes('sitemap.ts')) {}
-      content = content.replace(/any/g, 'unknown');}
-      modified = true;}
-    }
-
-    // Fix any types in app.types.ts;
-    if (filePath.includes('app.types.ts')) {}
-      content = content.replace(/any/g, 'unknown');}
-      modified = true;}
-    }
-
-    // Fix unused variables by prefixing with underscore;
-    content = content.replace(/\b(error|errorInfo|placeholder|Calendar|User|Tag|Target|Star|Zap|Shield|Users|Globe|Brain|Cpu|MessageSquare|Eye|Sparkles|ArrowRight|ArrowLeft|Search|BookOpen)\b(?="\s*[,)])/g," '_$1');
     
-    // Fix unescaped entities;
-    content = content.replace(/'/g, '&apos;');
-    content = content.replace(/"/g, '&quot;');
-
-    if (modified || content !="=" fs.readFileSync(filePath, 'utf8')) {}
-      fs.writeFileSync(filePath, content, 'utf8');}
-      console.log(`Fixed TypeScript errors in: ${filePath}`);
-      return true;
+    // Check if the file has the problematic pattern
+    if (content.includes('const page = React.lazy(() => import(\'./page\'));')) {
+      console.log(`Fixing circular import in ${filePath}`);
+      
+      // Replace the circular import with proper export
+      content = content.replace(
+        /const page = React\.lazy\(\(\) => import\('\.\/page'\)\);\nexport default page;/g,
+        'export default Page;'
+      );
+      
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed ${filePath}`);
     }
-
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript files;
-function findTypeScriptFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      }
-      if (stat.isDirectory()) {}
-        if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {}
-          traverse(fullPath);}
-        }
-      } else if (item.match(/\.(ts|tsx)$/)) {}
-        files.push(fullPath);}
-      }
+    // Fix implicit any errors by adding proper type annotations
+    if (content.includes('function Page()') && !content.includes('function Page(): JSX.Element')) {
+      content = content.replace(
+        /function Page\(\)/g,
+        'function Page(): JSX.Element'
+      );
+      fs.writeFileSync(filePath, content);
+      console.log(`Added return type to ${filePath}`);
     }
-  }
-  
-  traverse(dir);
-  return files;
-}
-
-// Main execution;
-function main() {
-  
-  console.log('Starting TypeScript error fixes...');
-  
-  const sourceFiles = findTypeScriptFiles(process.cwd());
-  let fixedCount = 0;
-  }
-  for (const file of sourceFiles) {}
-    if (fixTypeScriptErrors(file)) {}
-      fixedCount++;}
+    
+    // Remove unused Page variable declarations
+    if (content.includes('const Page =') && content.includes('export default Page;')) {
+      content = content.replace(
+        /const Page = [^;]+;\n/g,
+        ''
+      );
+      fs.writeFileSync(filePath, content);
+      console.log(`Removed unused Page variable in ${filePath}`);
     }
+    
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-  
-  console.log(`Fixed TypeScript errors in ${fixedCount} files`);
-  console.log('TypeScript error fixes completed!');
-}
+});
 
-if (import.meta.url ="==" `file://${process.argv[1]}`) {}
-  main();}
-}
-
-export { fixTypeScriptErrors, findTypeScriptFiles };
+console.log('TypeScript error fixes completed');

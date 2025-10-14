@@ -3,24 +3,26 @@ import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const Page = () => {
+
+
+function Page(): JSX.Element {
   const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Features',
-      description: 'Cutting-edge technology for maximum efficiency'
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime'
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists'
-    }
-  ];
+  {
+    "icon": "🔐",
+    "title": "Advanced Security",
+    "description": "State-of-the-art security measures for 5G networks."
+  },
+  {
+    "icon": "🛡️",
+    "title": "Threat Protection",
+    "description": "Comprehensive protection against cyber threats."
+  },
+  {
+    "icon": "🔍",
+    "title": "Security Monitoring",
+    "description": "Continuous monitoring and threat detection."
+  }
+];
 
   return (
     <>
@@ -116,5 +118,4 @@ const Page = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page;

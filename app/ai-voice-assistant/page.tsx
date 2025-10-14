@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-function Page() {
+function Page(): JSX.Element {
   return (
     <>
       <Helmet>
@@ -49,5 +49,4 @@ function Page() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page;
