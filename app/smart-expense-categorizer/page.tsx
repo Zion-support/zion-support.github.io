@@ -54,5 +54,9 @@ const SmartExpenseCategorizerPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default SmartExpenseCategorizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -54,5 +54,9 @@ const AiCustomerSupportBotPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AiCustomerSupportBotPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

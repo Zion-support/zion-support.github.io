@@ -54,5 +54,9 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AiEcommerceOptimizerProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

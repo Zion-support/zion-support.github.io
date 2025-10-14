@@ -54,5 +54,9 @@ const CybersecurityAdvancedPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default CybersecurityAdvancedPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

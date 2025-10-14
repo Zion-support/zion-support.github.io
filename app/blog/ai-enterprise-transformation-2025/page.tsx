@@ -55,5 +55,9 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AiEnterpriseTransformation2025Page;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

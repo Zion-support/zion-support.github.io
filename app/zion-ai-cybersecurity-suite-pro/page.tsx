@@ -55,5 +55,9 @@ const ZionAiCybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ZionAiCybersecuritySuiteProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

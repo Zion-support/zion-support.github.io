@@ -58,5 +58,9 @@ const ZionSmartInventoryOptimizerProPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ZionSmartInventoryOptimizerProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

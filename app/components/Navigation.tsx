@@ -20,6 +20,8 @@ const Navigation: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -111,10 +113,6 @@ const Navigation: React.FC = () => {
                   <div className="flex items-center space-x-3 text-sm text-gray-300">
                     <Mail className="w-4 h-4 text-cyan-400" />
                     <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-sm text-gray-300">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
-                    <span>Delaware, USA</span>
                   </div>
                 </div>
               </div>

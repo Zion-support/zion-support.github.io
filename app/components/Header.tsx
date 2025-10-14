@@ -28,48 +28,36 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
-      name: 'AI Services',
+      name: 'Services',
+      href: '/services',
+      icon: <Code className="w-4 h-4" />
+    },
+    {
+      name: 'AI Solutions',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', price: '$299/mo' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', price: '$199/mo' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: '$249/mo' },
-        { name: 'AI Automation Suite', href: '/ai-automation-suite', price: '$179/mo' },
-        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise', price: '$149/mo' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', price: '$129/mo' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision', price: '$399/mo' },
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: '$129/mo' }
+        { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Automation Suite', href: '/ai-automation-suite' },
+        { name: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+        { name: 'AI Database Solutions', href: '/ai-database-solutions' }
       ]
     },
     {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: <Code className="w-4 h-4" />,
-      dropdown: [
-        { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', price: '$499/mo' },
-        { name: 'Advanced Security Suite', href: '/advanced-security-suite', price: '$399/mo' },
-        { name: 'API Management', href: '/ai-api-management', price: '$199/mo' },
-        { name: 'Database Solutions', href: '/database-solutions', price: '$299/mo' },
-        { name: 'Performance Monitoring', href: '/performance-monitoring', price: '$149/mo' },
-        { name: 'DevOps Solutions', href: '/devops-solutions', price: '$249/mo' },
-        { name: 'Cloud Migration', href: '/cloud-migration', price: '$599/mo' },
-        { name: 'Data Analytics', href: '/data-analytics', price: '$199/mo' }
-      ]
-    },
-    {
-      name: '5G Solutions',
+      name: '5G Technology',
       href: '/5g-solutions',
       icon: <Wifi className="w-4 h-4" />,
       dropdown: [
-        { name: '5G Implementation', href: '/5g-implementation', price: '$999/mo' },
-        { name: '5G IoT Solutions', href: '/5g-iot-solutions', price: '$799/mo' },
-        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', price: '$899/mo' },
-        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', price: '$1299/mo' },
-        { name: '5G Edge Computing', href: '/5g-edge-computing', price: '$699/mo' },
-        { name: '5G Private Networks', href: '/5g-private-networks', price: '$1199/mo' },
-        { name: '5G Performance Optimization', href: '/5g-optimization', price: '$499/mo' },
-        { name: '5G Security Solutions', href: '/5g-security', price: '$599/mo' }
+        { name: '5G Implementation', href: '/5g-implementation' },
+        { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+        { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing' },
+        { name: '5G Private Networks', href: '/5g-private-networks' }
       ]
     },
     {
@@ -77,14 +65,25 @@ const Header: React.FC = () => {
       href: '/micro-saas',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
-        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', price: '$129/mo' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro', price: '$199/mo' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', price: '$159/mo' },
-        { name: 'AI 3D Generation', href: '/ai-3d-generation', price: '$179/mo' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', price: '$299/mo' },
-        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', price: '$99/mo' },
-        { name: 'AI Content Writer', href: '/ai-content-writer', price: '$79/mo' },
-        { name: 'AI API Manager', href: '/ai-api-manager', price: '$149/mo' }
+        { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
+        { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
+        { name: 'AI 3D Generation', href: '/ai-3d-generation' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '#',
+      icon: <Users className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Support', href: '/support' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' }
       ]
     },
     {
@@ -164,30 +163,20 @@ const Header: React.FC = () => {
 
                   {/* Dropdown Menu */}
                   {item.dropdown && (
-                    <div className={`absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
+                    <div className={`absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-2xl transition-all duration-300 ${
                       activeDropdown === item.name 
                         ? 'opacity-100 visible translate-y-0' 
                         : 'opacity-0 invisible translate-y-2'
                     }`}>
                       <div className="py-2">
-                        <div className="px-4 py-2 border-b border-cyan-500/20">
-                          <h3 className="text-sm font-semibold text-cyan-400">{item.name}</h3>
-                        </div>
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.href}
-                            className="flex items-center justify-between px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200 group"
+                            className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
                           >
-                            <div className="flex items-center space-x-3">
-                              <div className="w-2 h-2 bg-cyan-500 rounded-full group-hover:scale-150 transition-transform"></div>
-                              <span className="text-sm">{dropdownItem.name}</span>
-                            </div>
-                            {dropdownItem.price && (
-                              <span className="text-xs font-medium text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded">
-                                {dropdownItem.price}
-                              </span>
-                            )}
+                            <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
+                            <span className="text-sm">{dropdownItem.name}</span>
                           </Link>
                         ))}
                       </div>
@@ -199,13 +188,9 @@ const Header: React.FC = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
-                className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 neon-button"
-              >
-                <Phone className="w-4 h-4 mr-2 inline" />
+              <button className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Quote
-              </a>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -256,13 +241,9 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4 border-t border-cyan-500/20">
-                <a
-                  href="tel:+13024640950"
-                  className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center neon-button"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
+                <button className="w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300">
                   Get Quote
-                </a>
+                </button>
               </div>
             </div>
           </div>
