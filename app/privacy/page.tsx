@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const PrivacyPage = () => {
+export default function PrivacyPage() {
   return (
     <>
       <Helmet>
@@ -23,6 +23,4 @@ const PrivacyPage = () => {
       </div>
     </>
   );
-};
-
-export default PagePage;
+}
