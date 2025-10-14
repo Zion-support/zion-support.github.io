@@ -3,8 +3,8 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix all remaining syntax issues
-function fixFinalSyntax(filePath) {
+// Function to fix all stray quotes
+function fixStrayQuotes(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -12,23 +12,15 @@ function fixFinalSyntax(filePath) {
     // Fix all patterns
     const patterns = [
       // Fix stray quotes at end of export statements
-      { from: /export default \w+;'$/gm, to: (match) => match.replace("';", ';') },
-      { from: /export default \w+;'\s*'$/gm, to: (match) => match.replace(/;'.*$/, ';') },
+      { from: /export default \w+;'$/gm, to: 'export default $1;' },
+      { from: /export default \w+;'\s*'$/gm, to: 'export default $1;' },
       
-      // Fix stray quotes in array declarations
-      { from: /const \w+ = \['$/gm, to: (match) => match.replace("['", '[') },
-      
-      // Fix any remaining unterminated strings
-      { from: /'[^']*$/gm, to: (match) => {
-        if (match.includes('export') || match.includes('const') || match.includes('=')) {
-          return match.replace(/'$/, '');
-        }
-        return match;
-      }},
-      
-      // Fix any remaining stray quotes
+      // Fix any remaining stray quotes at end of lines
       { from: /';\s*'$/gm, to: ';' },
       { from: /';\s*'$/gm, to: ';' },
+      
+      // Fix stray quotes in comments
+      { from: /\/\/ Basic analytics tracking'$/gm, to: '// Basic analytics tracking' },
       
       // Clean up extra newlines and empty lines
       { from: /\n\s*\n\s*\n/g, to: '\n\n' },
@@ -84,7 +76,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Fixing final syntax issues...');
+console.log('Fixing all stray quotes...');
 
 const directories = ['./app', './src'];
 let totalFixed = 0;
@@ -95,7 +87,7 @@ for (const dir of directories) {
     console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
     
     for (const file of tsxFiles) {
-      if (fixFinalSyntax(file)) {
+      if (fixStrayQuotes(file)) {
         totalFixed++;
       }
     }

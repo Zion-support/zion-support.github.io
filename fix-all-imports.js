@@ -3,35 +3,34 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix all remaining syntax issues
-function fixFinalSyntax(filePath) {
+// Function to fix all import statements comprehensively
+function fixAllImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix all patterns
+    // Fix all import patterns
     const patterns = [
-      // Fix stray quotes at end of export statements
-      { from: /export default \w+;'$/gm, to: (match) => match.replace("';", ';') },
-      { from: /export default \w+;'\s*'$/gm, to: (match) => match.replace(/;'.*$/, ';') },
+      // Fix React import
+      { from: /import React from 'react;/g, to: "import React from 'react';" },
       
-      // Fix stray quotes in array declarations
-      { from: /const \w+ = \['$/gm, to: (match) => match.replace("['", '[') },
+      // Fix Helmet import variations
+      { from: /import { Helmet   } from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet } from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet} from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet  } from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      
+      // Fix any other unterminated imports
+      { from: /'react-helmet-async;/g, to: "'react-helmet-async';" },
+      { from: /'react;/g, to: "'react';" },
       
       // Fix any remaining unterminated strings
       { from: /'[^']*$/gm, to: (match) => {
-        if (match.includes('export') || match.includes('const') || match.includes('=')) {
-          return match.replace(/'$/, '');
+        if (match.includes('import') || match.includes('from')) {
+          return match + "'";
         }
         return match;
       }},
-      
-      // Fix any remaining stray quotes
-      { from: /';\s*'$/gm, to: ';' },
-      { from: /';\s*'$/gm, to: ';' },
-      
-      // Clean up extra newlines and empty lines
-      { from: /\n\s*\n\s*\n/g, to: '\n\n' },
     ];
 
     for (const pattern of patterns) {
@@ -42,12 +41,9 @@ function fixFinalSyntax(filePath) {
       }
     }
 
-    // Clean up the file
-    content = content.trim() + '\n';
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed imports: ${filePath}`);
       return true;
     }
   } catch (error) {
@@ -84,7 +80,7 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Fixing final syntax issues...');
+console.log('Fixing all import statements...');
 
 const directories = ['./app', './src'];
 let totalFixed = 0;
@@ -95,7 +91,7 @@ for (const dir of directories) {
     console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
     
     for (const file of tsxFiles) {
-      if (fixFinalSyntax(file)) {
+      if (fixAllImports(file)) {
         totalFixed++;
       }
     }
