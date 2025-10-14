@@ -14,7 +14,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonicalUrl,
-  ogImage
+  ogImage;
 }) => {
   return (
     <Helmet>

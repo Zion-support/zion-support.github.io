@@ -107,7 +107,7 @@ const SupportPage: React.FC = () => {
   const filteredFAQs = faqs.filter(fa q => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategor y ==='all' || faq.categor y === selectedCategory;
+    const matchesCategory = selectedCategor y === 'all' || faq.categor y === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
@@ -221,7 +221,7 @@ const SupportPage: React.FC = () => {
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
-                  <buttonton key ={category}
+                  <button key ={category}
                     onClic k ={() => setSelectedCategory(category)}
                     classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategor y === category
@@ -229,7 +229,7 @@ const SupportPage: React.FC = () => {
                         :'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
                   >
-                    {categor y ==='all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
+                    {categor y === 'all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
                 ))}
               </div>
@@ -238,7 +238,7 @@ const SupportPage: React.FC = () => {
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
                 <div key ={index} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
-                  <buttonton onClick ={() => toggleFAQ(index)}
+                  <button onClick ={() => toggleFAQ(index)}
                     classNam e ="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
@@ -279,7 +279,7 @@ const SupportPage: React.FC = () => {
                 <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
-                <buttonton className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   View Docs
                 </button>
               </div>
@@ -288,7 +288,7 @@ const SupportPage: React.FC = () => {
                 <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
-                <buttonton className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   Join Community
                 </button>
               </div>
@@ -297,7 +297,7 @@ const SupportPage: React.FC = () => {
                 <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
-                <buttonton className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                   Check Status
                 </button>
               </div>
@@ -314,11 +314,11 @@ const SupportPage: React.FC = () => {
                 Can&apos;t find what you&apos;re looking for? Our expert team is here to help with any questions or issues.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <buttonton className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Phone className="w-5 h-5" />
                   Call Support
                 </button>
-                <buttonton className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
                   Email Support
                 </button>

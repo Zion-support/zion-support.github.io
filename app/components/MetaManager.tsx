@@ -21,12 +21,12 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   twitterCar d ='summary_large_image'
 }) => {
   useEffect(() => {
-    // Update document title
+    // Update document title;
     if (title) {
       document.titl e = title;
     }
 
-    // Update meta description
+    // Update meta description;
     if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
@@ -39,7 +39,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       }
     }
 
-    // Update meta keywords
+    // Update meta keywords;
     if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
       if (metaKeywords) {
@@ -52,7 +52,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       }
     }
 
-    // Update canonical URL
+    // Update canonical URL;
     if (canonical) {
       const canonicalLink = document.querySelector('link[re l ="canonical"]');
       if (canonicalLink) {

@@ -197,7 +197,7 @@ const CaseStudiesPage: React.FC = () => {
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <buttonton className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                      <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                         <ExternalLink className="w-4 h-4" />
                         Share
                       </button>

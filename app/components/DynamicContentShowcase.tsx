@@ -64,25 +64,25 @@ const DynamicContentShowcase: React.FC = () => {
       company:'Tech Corp Inc.',
       role:'CTO',
       content:'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5
+      rating: 5;
     },{
       name:'Michael Chen',
       company:'Data Flow Systems',
       role:'CEO',
       content:'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
-      rating: 5
+      rating: 5;
     },{
       name:'Emily Rodriguez',
       company:'Innovate Lab',
       role:'Product Manager',
       content:'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
+      rating: 5;
     },{
       name:'David Kim',
       company:'Cloud First Solutions',
       role:'VP Engineering',
       content:'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-      rating: 5
+      rating: 5;
     }
   ];
 
@@ -96,11 +96,11 @@ const DynamicContentShowcase: React.FC = () => {
     return () => clearInterval(timer);
   },[isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = ($2): void => {
     setCurrent Index((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
+  const prevTestimonial = ($2): void => {
     setCurrent Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
@@ -119,17 +119,17 @@ const DynamicContentShowcase: React.FC = () => {
             Dynamic <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
+            Experience the power of our cutting-edge solutions with real-time demonstrations;
             and interactive showcases that bring your business to life.
           </p>
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
             <button ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
-              Start Demo
+              Start Demo;
             </butn>
             <button ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More
+              Learn More;
             </butn>
           </div>
         </div>
@@ -282,7 +282,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <span>Start Free Trial</span>
               </butn>
               <button ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
+                Schedule Demo;
               </butn>
             </div>
           </div>

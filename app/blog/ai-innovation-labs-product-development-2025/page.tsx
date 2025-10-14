@@ -1,14 +1,10 @@
 import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
-<<<<<<< HEAD
 
 const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
 
 
-=======
-const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
   return (
     <>
       <Helmet>

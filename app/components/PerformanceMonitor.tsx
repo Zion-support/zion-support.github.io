@@ -17,11 +17,11 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
 }
 
-const PerformanceMonitor = () => {
+const PerformanceMonitor = ($2): void => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
   useEffect(() => {
-    // Only run in production
+    // Only run in production;
     if (process.env.NODE_ENV !=='production') return;
 
     const currentMetrics: PerformanceMetric s ={};
@@ -79,18 +79,18 @@ const PerformanceMonitor = () => {
       setMetrics({ ...currentMetrics });
     }
 
-    // Send metrics after page load
-    const sendMetrics = () => {
+    // Send metrics after page load;
+    const sendMetrics = ($2): void => {
       if (Object.keys(currentMetrics).length > 0) {
-        // In a real application, you would send these metrics to your analytics service
+        // In a real application, you would send these metrics to your analytics service;
         console.warn('Performance Metrics:', currentMetrics);
       }
     };
 
-    // Send metrics when page is about to unload
+    // Send metrics when page is about to unload;
       window.addEventListener('beforeunload', sendMetrics);
 
-    // Cleanup observers
+    // Cleanup observers;
     return () => {
       lcpObserver.disconnect();
       fidObserver.disconnect();
@@ -100,14 +100,13 @@ const PerformanceMonitor = () => {
     };
   },[]);
 
-  // Don't render anything in production
+  // Don't render anything in production;
   if (process.env.NODE_EN V ==='production') {
     return null;
   }
 
-  // Development mode: show performance metrics
-
-    const getScoreColor = (value: number | undefined, thresholds:{ good: number; poor: number }) => {
+  // Development mode: show performance metrics;
+    const getScoreColor = ($2): void => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

@@ -151,9 +151,9 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <buttonton key ={category}
+                <button key ={category}
                   classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    categor y ==='All'
+                    categor y === 'All'
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
                       :'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}>
@@ -216,10 +216,10 @@ const MicroSaasPage: React.FC = () => {
                   </ul>
 
                   <div className="flex flex-col gap-3">
-                    <buttonton className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
+                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
                       Start Free Trial
                     </button>
-                    <buttonton className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
+                    <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
                       Learn More
                     </button>
                   </div>

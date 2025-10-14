@@ -10,7 +10,7 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 0,
     years: 0,
     countries: 0,
-    uptime: 0
+    uptime: 0;
   });
 
 
@@ -114,10 +114,10 @@ const ContentStatistics: React.FC = () => {
       satisfaction: 99,
       years: 15,
       countries: 50,
-      uptime: 99
+      uptime: 99;
     };
 
-    const duration = 3000; // 3 seconds
+    const duration = 3000; // 3 seconds;
     const steps = 60;
     const stepDuration = duration / steps;
 
@@ -148,7 +148,7 @@ const ContentStatistics: React.FC = () => {
         {/* Header */}
         <div className="text-centermb-16">
           <h2 className="text-3 xlmd:text-4 xl font-bold text-white mb-6">
-            Our <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Impact</span> inNumbers
+            Our <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Impact</span> inNumbers;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the measurable impact we&apos;ve made for businesses worldwide through our innovative AI and IT solutions.
@@ -260,7 +260,7 @@ const ContentStatistics: React.FC = () => {
                 <span>Get Started</span>
               </butn>
               <button ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                View Case Studies
+                View Case Studies;
               </butn>
             </div>
           </div>

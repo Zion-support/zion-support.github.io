@@ -130,10 +130,10 @@ const CareersPage: React.FC = () => {
               Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <buttonton className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                 View Open Positions
               </button>
-              <buttonton className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+              <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
                 Learn About Our Culture
               </button>
             </div>
@@ -209,10 +209,10 @@ const CareersPage: React.FC = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <buttonton className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 font-medium">
+                    <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 font-medium">
                       Apply Now
                     </button>
-                    <buttonton className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
+                    <button className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>
                   </div>
@@ -294,10 +294,10 @@ const CareersPage: React.FC = () => {
                 We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <buttonton className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                   Send Your Resume
                 </button>
-                <buttonton className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
                   Contact HR Team
                 </button>
               </div>

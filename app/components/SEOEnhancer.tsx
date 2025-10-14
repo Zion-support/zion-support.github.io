@@ -13,7 +13,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   description,
   keyword s =[],
   type='website',
-  structuredData
+  structuredData;
 }) => {
   return (
     <Helmet>
