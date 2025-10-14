@@ -16,7 +16,8 @@ export default tseslint.config(
       '*.config.mjs',
       '*.cjs',
       'api/**',
-      'scripts/**'
+      'scripts/**',
+      'validate-jsx.js'
     ]
   },
   js.configs.recommended,
@@ -42,9 +43,45 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
       "@typescript-eslint/no-explicit-any": "warn",
       "no-console": "warn"
+    }
+  },
+  {
+    files: ["public/sw.js"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.serviceworker,
+        self: "readonly",
+        caches: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        location: "readonly",
+        clients: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-console": "off"
+    }
+  },
+  {
+    files: ["jest.setup.js"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.jest,
+        global: "readonly",
+        console: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-console": "off"
     }
   }
 )

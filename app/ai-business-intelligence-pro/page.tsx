@@ -11,5 +11,98 @@ import { Link } from "react-router-dom";
 
 function AIBusinessIntelligencePro() {
   const features = [
-    
+    {
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that analyze your data to uncover hidden patterns and insights."
+    },
+    {
+      icon: BarChart3,
+      title: "Real-time Dashboards",
+      description: "Interactive dashboards that provide real-time visibility into your business performance and KPIs."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using sophisticated predictive modeling techniques."
+    },
+    {
+      icon: Target,
+      title: "Custom Reports",
+      description: "Tailored reporting solutions that deliver exactly the insights your business needs."
+    },
+    {
+      icon: Zap,
+      title: "Automated Insights",
+      description: "AI-driven automation that continuously monitors your data and alerts you to important changes."
+    },
+    {
+      icon: CheckCircle,
+      title: "Data Integration",
+      description: "Seamlessly connect and analyze data from multiple sources for comprehensive business intelligence."
+    }
+  ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+        <title>AI Business Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered business intelligence solutions for data-driven decision making and predictive analytics." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Business Intelligence Pro
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our advanced AI-powered business intelligence platform
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-white/5 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful AI-Driven Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Leverage cutting-edge AI technology to unlock the full potential of your business data
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+                <feature.icon className="h-12 w-12 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+const page = React.lazy(() => import('./page'));
+export default page;
