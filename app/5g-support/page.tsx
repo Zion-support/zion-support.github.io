@@ -1,5 +1,6 @@
-import { ArrowRight, CheckCircle } from 'lucide-react';
 
-const page = React.lazy(() => import('./page'));
-export default page;
+
+export default function Page() {
+  return <div>Page Content</div>;
+}
 
