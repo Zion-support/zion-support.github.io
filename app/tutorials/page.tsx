@@ -4,71 +4,71 @@ import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
-      title: "Getting Started with AI Development",
-      description: "Learn the fundamentals of AI development and machine learning concepts.",
-      duration: "2 hours",
-      level: "Beginner",
-      instructor: "Dr. Sarah Johnson",
+      title: "Getting Started with AI Development","
+      description: "Learn the fundamentals of AI development and machine learning concepts.","
+      duration: "2 hours","
+      level: "Beginner","
+      instructor: "Dr. Sarah Johnson","
       rating: 4.8,
       students: 1250,
-      thumbnail: "🤖"},
+      thumbnail: "🤖"},"
     {
       id: 2,
-      title: "Infrastructure Setup",
-      description: "Complete guide to setting up cloud infrastructure on AWS and Azure.",
-      duration: "3 hours",
-      level: "Intermediate",
-      instructor: "Michael Chen",
+      title: "Infrastructure Setup","
+      description: "Complete guide to setting up cloud infrastructure on AWS and Azure.","
+      duration: "3 hours","
+      level: "Intermediate","
+      instructor: "Michael Chen","
       rating: 4.9,
       students: 980,
-      thumbnail: "☁️"},
+      thumbnail: "☁️"},"
     {
       id: 3,
-      title: "Cybersecurity Fundamentals",
-      description: "Essential cybersecurity practices and threat protection strategies.",
-      duration: "4 hours",
-      level: "Beginner",
-      instructor: "Emily Rodriguez",
+      title: "Cybersecurity Fundamentals","
+      description: "Essential cybersecurity practices and threat protection strategies.","
+      duration: "4 hours","
+      level: "Beginner","
+      instructor: "Emily Rodriguez","
       rating: 4.7,
       students: 2100,
-      thumbnail: "🔒"},
+      thumbnail: "🔒"},"
     {
       id: 4,
-      title: "Advanced Machine Learning",
-      description: "Deep dive into advanced ML algorithms and neural networks.",
-      duration: "6 hours",
-      level: "Advanced",
-      instructor: "Dr. David Kim",
+      title: "Advanced Machine Learning","
+      description: "Deep dive into advanced ML algorithms and neural networks.","
+      duration: "6 hours","
+      level: "Advanced","
+      instructor: "Dr. David Kim","
       rating: 4.9,
       students: 750,
-      thumbnail: "🧠"},
+      thumbnail: "🧠"},"
     {
       id: 5,
-      title: "DevOps Best Practices",
-      description: "Learn modern DevOps practices and CI/CD pipeline implementation.",
-      duration: "5 hours",
-      level: "Intermediate",
-      instructor: "Lisa Wang",
+      title: "DevOps Best Practices","
+      description: "Learn modern DevOps practices and CI/CD pipeline implementation.","
+      duration: "5 hours","
+      level: "Intermediate","
+      instructor: "Lisa Wang","
       rating: 4.8,
       students: 1100,
-      thumbnail: "⚙️"},
+      thumbnail: "⚙️"},"
     {
       id: 6,
-      title: "Data Analytics with Python",
-      description: "Master data analysis and visualization using Python and popular libraries.",
-      duration: "4 hours",
-      level: "Intermediate",
-      instructor: "James Wilson",
+      title: "Data Analytics with Python","
+      description: "Master data analysis and visualization using Python and popular libraries.","
+      duration: "4 hours","
+      level: "Intermediate","
+      instructor: "James Wilson","
       rating: 4.6,
       students: 1650,
-      thumbnail: "📊"}
+      thumbnail: "📊"}"
   ]
-  const categories = [{ name: "All", count: 24 },
-    { name: "AI & ML", count: 8 },
-    { name: "Computing", count: 6 },
-    { name: "Cybersecurity", count: 4 },
-    { name: "DevOps", count: 3 },
-    { name: "Data Science", count: 3 }
+  const categories = [{ name: "All", count: 24 },"
+    { name: "AI & ML", count: 8 },"
+    { name: "Computing", count: 6 },"
+    { name: "Cybersecurity", count: 4 },"
+    { name: "DevOps", count: 3 },"
+    { name: "Data Science", count: 3 }"
   ]
   return (
     <>
@@ -138,7 +138,7 @@ const TutorialsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {tutorial.title}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}"
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -156,10 +156,10 @@ const TutorialsPage: React.FC = () => {
                 Browse All</button></div></div></section>{/* Categories */}
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, _index) => (
+            <div className="flex flex-wrap justify-center gap-4">{categories.map((category, _index) => ("
                 <button
                   key={_index}
-                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300">{category.name} ({category.count})
+                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300">{category.name} ({category.count})"
                 </button>
               ))}
             </div></div></section>{/* Tutorials Grid */}
@@ -167,16 +167,16 @@ const TutorialsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Featured Tutorials</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{tutorials.map((tutorial) => ("
                 <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">{tutorial.level}
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">{tutorial.level}"
                     </span>
                     <div className="flex items-center text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm">{tutorial.rating}</span></div></div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{tutorial.title}
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{tutorial.title}"
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -228,4 +228,4 @@ const TutorialsPage: React.FC = () => {
 export default TutorialsPage;
 };
 
-export default TutorialsPage;'
+export default TutorialsPage;''

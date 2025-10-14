@@ -13,7 +13,7 @@ const ContactPage: React.FC = () => {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business? Let's discuss your technology needs.
+              Ready to transform your business? Let's discuss your technology needs.'
             </p>
           </div>
           
@@ -41,27 +41,27 @@ const ContactPage: React.FC = () => {
               <form className="space-y-4">
                 <div>
                   <input
-                    type="text"
-                    placeholder="Your Name"
+                    type="text""
+                    placeholder="Your Name""
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                   />
                 </div>
                 <div>
                   <input
-                    type="email"
-                    placeholder="Your Email"
+                    type="email""
+                    placeholder="Your Email""
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                   />
                 </div>
                 <div>
                   <textarea
-                    placeholder="Your Message"
+                    placeholder="Your Message""
                     rows={4}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
                   ></textarea>
                 </div>
                 <button
-                  type="submit"
+                  type="submit""
                   className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
                 >
                   Send Message

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function NotFoundPage() {
+
   return (
     <>
       <Helmet>
@@ -14,7 +14,7 @@ export default function NotFoundPage() {
             404 - Page Not Found
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            The page you're looking for doesn't exist.
+            The page you're looking for doesn't exist.'
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">

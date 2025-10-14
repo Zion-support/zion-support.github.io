@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -12,14 +12,14 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline';'
 export default function AboutPage() {
+
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '25+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '4+', label: 'Years Experience' }
+    { number: '50+', label: 'Projects Completed' },'
+    { number: '25+', label: 'Happy Clients' },'
+    { number: '99%', label: 'Success Rate' },'
+    { number: '4+', label: 'Years Experience' }'
   ];
 
   return (
@@ -40,7 +40,7 @@ export default function AboutPage() {
               Empowering businesses through innovative technology solutions
             </p>
             <p className="text-lg text-gray-500 max-w-3xl mx-auto">
-              Founded in 2020, we've been at the forefront of digital transformation, 
+              Founded in 2020, we've been at the forefront of digital transformation,'
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.
             </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our solutions can help you achieve your goals.
+              Let's discuss how our solutions can help you achieve your goals.'
             </p>
             <a
               href="/contact"

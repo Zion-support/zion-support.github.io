@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
+import { Helmet } from 'react-helmet-async'use client'
 const LazyImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +66,7 @@ const LazyImage: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our lazy image';
+            Let's discuss how our lazy image';'
             services can help you achieve your goals.;
           </p>
           <a;
@@ -82,8 +81,7 @@ const LazyImage: React.FC = () => {
   );
 }
 export default LazyImage;
-import React, { useState, useRef, useEffect } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';'
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -96,8 +94,8 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = '',
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',
+  className = '','
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==','
   onLoad,
   onError
 }) => {
@@ -141,9 +139,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
           onLoad={handleLoad}
           onError={handleError}
           className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? 'opacity-100' : 'opacity-0''
           }`}
-          loading="lazy"
+          loading="lazy""
         />
       )}
       {!isLoaded && (
@@ -151,7 +149,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{
             backgroundImage: `url(${placeholder})`,
-            backgroundSize: 'cover',
+            backgroundSize: 'cover','
             backgroundPosition: 'center'
           }}
         />

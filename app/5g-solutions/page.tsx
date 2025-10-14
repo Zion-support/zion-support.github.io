@@ -4,22 +4,22 @@ import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,'
-      title: 'Ultra-Fast Speeds','
-      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps','
-      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']}
+      icon: Zap,
+      title: 'Ultra-Fast Speeds',
+      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
+      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
     },
     {
-      icon: Globe,'
-      title: 'Global Coverage','
-      description: 'Comprehensive 5G network coverage across multiple regions','
-      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']}
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Comprehensive 5G network coverage across multiple regions',
+      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
+      icon: Smartphone,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
       icon: Wifi,
@@ -27,46 +27,29 @@ const FiveGSolutionsPage: React.FC = () => {
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-'
-      title: 'IoT Connectivity','
-      description: 'Connect thousands of IoT devices with 5G technology','
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-}
     }
   ]
   const solutions = [
     {
 
-      title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
+      title: '5G Network Infrastructure',
+      description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-'
-      title: '5G Network Infrastructure','
-      description: 'Complete 5G network setup and optimization','
-      price: 'Starting at $50,000','
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']}
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-}
     }
   ];
-
-    }
-  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -130,7 +113,7 @@ title: 'IoT Connectivity',
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (}
+                    {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <Circle className="w-3 h-3 text-blue-400 mr-2" />
                         {benefit}
@@ -197,4 +180,4 @@ title: 'IoT Connectivity',
 export default FiveGSolutionsPage;
 };
 
-export default FiveGSolutionsPage;'
+export default FiveGSolutionsPage;''

@@ -9,7 +9,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
-    totalBlockingTime: 0,
+    totalBlockingTime: 0
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -17,24 +17,24 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Only run in development mode
-    if (process.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV !== 'development') {'
       return;
     }
 
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = window.performance.getEntriesByType('paint');
+      if (typeof window !== 'undefined' && window.performance) {'
+        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
+        const paint = window.performance.getEntriesByType('paint');'
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {
+            if (entry.entryType === 'largest-contentful-paint') {'
               setMetrics(prev => ({
                 ...prev,
                 largestContentfulPaint: Math.round(entry.startTime)
               }));
             }
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {'
               setMetrics(prev => ({
                 ...prev,
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
@@ -43,11 +43,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           });
         });
 
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] });
-
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] });'
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        
+        const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;'
         // Memory usage (if available)
         const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
         
@@ -55,7 +53,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
 
         // Calculate Total Blocking Time
-        const longTasks = window.performance.getEntriesByType('longtask');
+        const longTasks = window.performance.getEntriesByType('longtask');'
         const totalBlockingTime = longTasks.reduce((total, task) => {
           return total + (task.duration - 50); // 50ms is the threshold
         }, 0);
@@ -69,7 +67,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           largestContentfulPaint: 0, // Will be updated by observer
           cumulativeLayoutShift: 0, // Will be updated by observer
           firstInputDelay: 0, // Would need specific measurement
-          totalBlockingTime: Math.round(totalBlockingTime),
+          totalBlockingTime: Math.round(totalBlockingTime)
         });
 
         return () => observer.disconnect();
@@ -85,20 +83,20 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
         setIsVisible(!isVisible);
       }
-      if (event.ctrlKey && event.shiftKey && event.key === 'R') {
+      if (event.ctrlKey && event.shiftKey && event.key === 'R') {'
         setIsRecording(!isRecording);
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);'
+    return () => window.removeEventListener('keydown', handleKeyPress);'
   }, [isVisible, isRecording]);
 
-  // Don't render in production
-  if (process.env.NODE_ENV === 'production') {
+  // Don't render in production'
+  if (process.env.NODE_ENV === 'production') {'
     return null;
   }
 
@@ -107,9 +105,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   }
 
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
+    if (value <= thresholds.good) return 'text-green-400';'
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';'
+    return 'text-red-400';'
   };
 
   return (

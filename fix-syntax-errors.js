@@ -1,86 +1,142 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-function fixSyntaxErrors(filePath) {
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Common syntax error patterns and their fixes
+const fixes = [
+  // Fix unterminated string literals with trailing quotes
+  {
+    pattern: /'([^']*?)\n/g,
+    replacement: "'$1'\n"
+  },
+  // Fix unterminated string literals with trailing quotes in JSX
+  {
+    pattern: /"([^"]*?)\n/g,
+    replacement: '"$1"\n'
+  },
+  // Fix extra commas in object properties
+  {
+    pattern: /,\s*}/g,
+    replacement: '}'
+  },
+  // Fix extra commas in array properties
+  {
+    pattern: /,\s*]/g,
+    replacement: ']'
+  },
+  // Fix semicolons in object properties
+  {
+    pattern: /;\s*}/g,
+    replacement: '}'
+  },
+  // Fix semicolons in array properties
+  {
+    pattern: /;\s*]/g,
+    replacement: ']'
+  },
+  // Fix duplicate color properties
+  {
+    pattern: /color:\s*"[^"]*"\s*}\s*color:\s*"[^"]*"\s*}/g,
+    replacement: (match) => {
+      const colors = match.match(/"([^"]*)"/g);
+      return `color: ${colors[0]}}`;
+    }
+  },
+  // Fix malformed JSX closing tags
+  {
+    pattern: /<([^>]+)\s*>\s*<\/\1\s*>/g,
+    replacement: '<$1></$1>'
+  },
+  // Fix missing closing braces in objects
+  {
+    pattern: /(\w+):\s*"([^"]*)"\s*,\s*$/gm,
+    replacement: '$1: "$2",'
+  },
+  // Fix stray semicolons in JSX
+  {
+    pattern: /;\s*<\/[^>]+>/g,
+    replacement: '</$1>'
+  },
+  // Fix malformed function declarations
+  {
+    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
+    replacement: 'const $1 = () => {\n'
+  }
+];
+
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Fix missing closing tags and syntax issues
-    const originalContent = content;
-    // Fix missing closing div tags
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>/g, '<div key="$1" className="$2">');
-    // Fix malformed JSX attributes
-    content = content.replace(/className="\$1"/g, 'className="service-card"');
-    // Fix missing closing tags for common patterns
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>\s*<div/g, '<div key="$1" className="$2"><div');
-    // Fix missing semicolons and closing braces
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-    // Fix missing closing tags for React components
-    content = content.replace(/(<[A-Z]\w+[^>]*>)(?!.*<\/\1>)(?!.*\/>)/g, (match, tag) => {
-      const tagName = tag.match(/<(\w+)/)[1];
-}
-      return match + `</${tagName}>`;
+    let originalContent = content;
+    
+    // Apply all fixes
+    fixes.forEach(fix => {
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
     });
-    // Fix JSX fragment issues
-    content = content.replace(/<>\s*<\/>/g, '<></>');
-    // Fix missing closing parentheses in function calls
-    content = content.replace(/\(([^)]*)\s*$/gm, '($1)');
-    // Fix malformed object literals
-    content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n  $1\n}');
-    // Fix missing commas in object literals
-    content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    // Fix missing closing brackets
-    content = content.replace(/\[\s*([^\]]*)\s*$/gm, '[\n  $1\n]');
-    // Fix missing closing parentheses in JSX
-    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
+    
+    // Additional specific fixes for common patterns
+    content = content
+      // Fix unterminated strings at end of lines
+      .replace(/'([^']*?)\n/g, "'$1'\n")
+      .replace(/"([^"]*?)\n/g, '"$1"\n")
+      // Fix extra commas and semicolons
+      .replace(/,(\s*[}\]])/g, '$1')
+      .replace(/(\w+):\s*"([^"]*)"\s*;\s*}/g, '$1: "$2" }')
+      // Fix malformed JSX
+      .replace(/>\s*;\s*</g, '><')
+      .replace(/>\s*;\s*$/gm, '>')
+      // Fix duplicate properties
+      .replace(/(\w+):\s*"[^"]*"\s*}\s*\1:\s*"[^"]*"\s*}/g, (match) => {
+        const props = match.match(/(\w+):\s*"([^"]*)"/g);
+        return props[0] + ' }';
+      });
+    
     if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-}
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      modified = true;
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    return modified;
+    return false;
   } catch (error) {
-}
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-function findFilesWithSyntaxErrors(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
-        traverse(fullPath);
-}
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
-  files.push(fullPath);
-}
+
+function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript and JSX files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
+  
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    files.forEach(file => {
+      if (fixFile(file)) {
+        totalFixed++;
       }
-    }
-  }
-  traverse(dir);
-  return files;
+    });
+  });
+  
+  console.log(`Fixed ${totalFixed} files`);
 }
-// Main execution
-const projectRoot = process.cwd();
-console.log('Searching for files with syntax errors...');
-const filesToCheck = findFilesWithSyntaxErrors(projectRoot);
-console.log(`Checking ${filesToCheck.length} files for syntax errors`);
-let fixedCount = 0;
-for (const file of filesToCheck) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
+
+if (require.main === module) {
+  main();
 }
-  }
-}
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+module.exports = { fixFile, fixes };

@@ -12,57 +12,58 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline'
 export default function DocumentationPage() {
+
   const sections = [
     {
       icon: CodeBracketIcon,
-      title: 'API Documentation',
-      description: 'Comprehensive API reference for all our services and integrations.',
+      title: 'API Documentation','
+      description: 'Comprehensive API reference for all our services and integrations.','
       links: [
-        { name: 'Authentication', href: '/docs/api/authentication' },
-        { name: 'AI Services API', href: '/docs/api/ai-services' },
-        { name: 'Cloud Management API', href: '/docs/api/cloud-management' },
-        { name: 'Webhooks', href: '/docs/api/webhooks' }
+        { name: 'Authentication', href: '/docs/api/authentication' },'
+        { name: 'AI Services API', href: '/docs/api/ai-services' },'
+        { name: 'Cloud Management API', href: '/docs/api/cloud-management' },'
+        { name: 'Webhooks', href: '/docs/api/webhooks' }'
       ]
     },
     {
       icon: CogIcon,
-      title: 'Integration Guides',
-      description: 'Step-by-step guides for integrating our solutions with your systems.',
+      title: 'Integration Guides','
+      description: 'Step-by-step guides for integrating our solutions with your systems.','
       links: [
-        { name: 'Getting Started', href: '/docs/integration/getting-started' },
-        { name: 'SDK Installation', href: '/docs/integration/sdk' },
-        { name: 'Configuration', href: '/docs/integration/configuration' },
-        { name: 'Best Practices', href: '/docs/integration/best-practices' }
+        { name: 'Getting Started', href: '/docs/integration/getting-started' },'
+        { name: 'SDK Installation', href: '/docs/integration/sdk' },'
+        { name: 'Configuration', href: '/docs/integration/configuration' },'
+        { name: 'Best Practices', href: '/docs/integration/best-practices' }'
       ]
     },
     {
       icon: DocumentTextIcon,
-      title: 'User Guides',
-      description: 'Detailed user guides for all our products and services.',
+      title: 'User Guides','
+      description: 'Detailed user guides for all our products and services.','
       links: [
-        { name: 'AI Solutions Guide', href: '/docs/guides/ai-solutions' },
-        { name: 'Cloud Infrastructure', href: '/docs/guides/cloud-infrastructure' },
-        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },
-        { name: 'Micro SaaS Development', href: '/docs/guides/micro-saas' }
+        { name: 'AI Solutions Guide', href: '/docs/guides/ai-solutions' },'
+        { name: 'Cloud Infrastructure', href: '/docs/guides/cloud-infrastructure' },'
+        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },'
+        { name: 'Micro SaaS Development', href: '/docs/guides/micro-saas' }'
       ]
     },
     {
       icon: QuestionMarkCircleIcon,
-      title: 'Troubleshooting',
-      description: 'Common issues and solutions to help you resolve problems quickly.',
+      title: 'Troubleshooting','
+      description: 'Common issues and solutions to help you resolve problems quickly.','
       links: [
-        { name: 'FAQ', href: '/docs/troubleshooting/faq' },
-        { name: 'Error Codes', href: '/docs/troubleshooting/error-codes' },
-        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },
-        { name: 'Contact Support', href: '/support' }
+        { name: 'FAQ', href: '/docs/troubleshooting/faq' },'
+        { name: 'Error Codes', href: '/docs/troubleshooting/error-codes' },'
+        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },'
+        { name: 'Contact Support', href: '/support' }'
       ]
     }
   ]
   const quickStart = [
-    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },
-    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
-    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
+    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },'
+    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },'
+    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },'
+    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }'
   ]
   return (
     <>
@@ -97,14 +98,14 @@ export default function DocumentationPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
-                to="#quick-start" 
+                to="#quick-start" "
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
                 Quick Start Guide
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/support" 
+                to="/support" "
                 className="group border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
                 Get Support
@@ -200,12 +201,12 @@ export default function DocumentationPage() {
               <pre className="text-left text-green-400 overflow-x-auto">
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
-  apiKey: 'your-api-key',
+  apiKey: 'your-api-key','
   environment: 'production'
 })
 // Make an API call
 const response = await client.ai.generateText({
-  prompt: 'Hello, world!',
+  prompt: 'Hello, world!','
   maxTokens: 100
 })
 console.log(response.data);`}</code>
@@ -247,7 +248,7 @@ console.log(response.data);`}</code>
               Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Can't find what you're looking for? Our support team is here to help
+              Can't find what you're looking for? Our support team is here to help'
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -267,13 +268,13 @@ console.log(response.data);`}</code>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/support" 
+                to="/support" "
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
               >
                 Contact Support
               </Link>
               <Link 
-                to="/contact" 
+                to="/contact" "
                 className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               >
                 Get In Touch

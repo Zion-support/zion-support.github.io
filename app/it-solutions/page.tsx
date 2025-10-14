@@ -1,8 +1,8 @@
 
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Link } from 'react-router-dom';'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -22,147 +22,145 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline';'
 const ITSolutionsPage: React.FC = () => {
   const solutions = [
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
+      title: "Cloud Infrastructure","
+      description: "Scalable and secure cloud infrastructure solutions for modern businesses.","
       icon: CloudIcon,
       features: [
-        "Scalable architecture",
-        "High availability",
-        "Security compliance",
-        "Cost optimization",
-        "24/7 monitoring",
-        "Disaster recovery"
+        "Scalable architecture","
+        "High availability","
+        "Security compliance","
+        "Cost optimization","
+        "24/7 monitoring","
+        "Disaster recovery""
       ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Scalability", "Reliability", "Cost efficiency"],
-      useCases: ["Web hosting", "Data storage", "Application hosting"],
+      color: "from-blue-500 to-cyan-500","
+      price: "Starting at $1,500/month","
+      benefits: ["Scalability", "Reliability", "Cost efficiency"],"
+      useCases: ["Web hosting", "Data storage", "Application hosting"],"
       href: "/cloud-infrastructure"
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
+      title: "Cybersecurity Solutions","
+      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.","
       icon: ShieldCheckIcon,
       features: [
-        "Threat detection",
-        "Vulnerability assessment",
-        "Security monitoring",
-        "Incident response",
-        "Compliance management",
-        "Security training"
+        "Threat detection","
+        "Vulnerability assessment","
+        "Security monitoring","
+        "Incident response","
+        "Compliance management","
+        "Security training""
       ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],
-      useCases: ["Data protection", "Network security", "Compliance"],
+      color: "from-red-500 to-pink-500","
+      price: "Starting at $2,200/month","
+      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],"
+      useCases: ["Data protection", "Network security", "Compliance"],"
       href: "/cybersecurity"
     },
     {
-      title: "IT Consulting",
-      description: "Strategic IT consulting to help you make informed technology decisions.",
+      title: "IT Consulting","
+      description: "Strategic IT consulting to help you make informed technology decisions.","
       icon: LightBulbIcon,
       features: [
-        "Technology assessment",
-        "Strategic planning",
-        "Vendor selection",
-        "Implementation guidance",
-        "Change management",
-        "Training and support"
+        "Technology assessment","
+        "Strategic planning","
+        "Vendor selection","
+        "Implementation guidance","
+        "Change management","
+        "Training and support""
       ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $1,200/month",
-      benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
-      useCases: ["Technology planning", "Digital transformation", "System integration"],
+      color: "from-green-500 to-emerald-500","
+      price: "Starting at $1,200/month","
+      benefits: ["Expert guidance", "Cost savings", "Risk reduction"],"
+      useCases: ["Technology planning", "Digital transformation", "System integration"],"
       href: "/it-consulting"
     },
     {
-      title: "Network Solutions",
-      description: "Advanced networking solutions for reliable and secure connectivity.",
+      title: "Network Solutions","
+      description: "Advanced networking solutions for reliable and secure connectivity.","
       icon: GlobeAltIcon,
       features: [
-        "Network design",
-        "Security implementation",
-        "Performance optimization",
-        "Monitoring and maintenance",
-        "Disaster recovery",
-        "Remote access"
+        "Network design","
+        "Security implementation","
+        "Performance optimization","
+        "Monitoring and maintenance","
+        "Disaster recovery","
+        "Remote access""
       ],
-      color: "from-purple-500 to-indigo-500",
-      price: "Starting at $1,800/month",
-      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
-      useCases: ["Office networking", "Remote work", "Data centers"],
+      color: "from-purple-500 to-indigo-500","
+      price: "Starting at $1,800/month","
+      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],"
+      useCases: ["Office networking", "Remote work", "Data centers"],"
       href: "/network-solutions"
     },
     {
-      title: "Data Management",
-      description: "Comprehensive data management solutions for storage, processing, and analytics.",
+      title: "Data Management","
+      description: "Comprehensive data management solutions for storage, processing, and analytics.","
       icon: ChartBarIcon,
       features: [
-        "Data storage",
-        "Data processing",
-        "Analytics and reporting",
-        "Data security",
-        "Backup and recovery",
-        "Data governance"
+        "Data storage","
+        "Data processing","
+        "Analytics and reporting","
+        "Data security","
+        "Backup and recovery","
+        "Data governance""
       ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Better insights", "Data security", "Compliance"],
-      useCases: ["Business intelligence", "Data analytics", "Compliance"],
+      color: "from-orange-500 to-red-500","
+      price: "Starting at $2,000/month","
+      benefits: ["Better insights", "Data security", "Compliance"],"
+      useCases: ["Business intelligence", "Data analytics", "Compliance"],"
       href: "/data-management"
     },
     {
-      title: "IT Support",
-      description: "Comprehensive IT support services to keep your systems running smoothly.",
+      title: "IT Support","
+      description: "Comprehensive IT support services to keep your systems running smoothly.","
       icon: UserGroupIcon,
       features: [
-        "24/7 support",
-        "Remote assistance",
-        "System maintenance",
-        "Software updates",
-        "Hardware support",
-        "User training"
+        "24/7 support","
+        "Remote assistance","
+        "System maintenance","
+        "Software updates","
+        "Hardware support","
+        "User training""
       ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $1,000/month",
-      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
-      useCases: ["Help desk", "System maintenance", "User support"],
+      color: "from-cyan-500 to-blue-500","
+      price: "Starting at $1,000/month","
+      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
+      useCases: ["Help desk", "System maintenance", "User support"],"
       href: "/it-support"
     }
   ];
 
   const features = [
     {
-      title: "Expert Solutions",
-      description: "Our team of certified professionals delivers cutting-edge IT solutions.",
+      title: "Expert Solutions","
+      description: "Our team of certified professionals delivers cutting-edge IT solutions.","
       icon: CpuChipIcon
     },
     {
-      title: "Scalable Architecture",
-      description: "Solutions that grow with your business and adapt to changing needs.",
+      title: "Scalable Architecture","
+      description: "Solutions that grow with your business and adapt to changing needs.","
       icon: CloudIcon
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your systems are always running.",
+      title: "24/7 Support","
+      description: "Round-the-clock support to ensure your systems are always running.","
       icon: UserGroupIcon
     },
     {
-      title: "Security First",
-      description: "Security is built into every solution we deliver.",
+      title: "Security First","
+      description: "Security is built into every solution we deliver.","
       icon: ShieldCheckIcon
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
   return (
     <>
       <Helmet>
@@ -184,13 +182,13 @@ import { Helmet } from 'react-helmet-async';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact" "
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo" "
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -255,17 +253,17 @@ import { Helmet } from 'react-helmet-async';
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our IT solutions can help you achieve your business goals.
+              Let's discuss how our IT solutions can help you achieve your business goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact" "
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo" "
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -362,7 +360,7 @@ import { Helmet } from 'react-helmet-async';
                       Learn More <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                     <Link
-                      to="/contact"
+                      to="/contact""
                       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold"
                     >
                       Get Started
@@ -487,18 +485,18 @@ import { Helmet } from 'react-helmet-async';
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our IT solutions can enhance your business operations and security
+              Let's discuss how our IT solutions can enhance your business operations and security'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact"
+                to="/contact""
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 Get Free IT Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
-                to="/demo"
+                to="/demo""
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule IT Demo

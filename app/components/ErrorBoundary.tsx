@@ -1,7 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react';'
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';'
+import { Link } from 'react-router-dom';'
 interface Props {
   children: ReactNode;
 }
@@ -37,8 +36,8 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    if (process.env.NODE_ENV === 'development') {'
+      console.error('ErrorBoundary caught an error:', error, errorInfo);'
     }
 
     // In production, you might want to log this to an error reporting service
@@ -54,6 +53,7 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   render() {
+
     if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
@@ -67,10 +67,10 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.'
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && ('
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                   Error Details (Development Only)
@@ -101,7 +101,7 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
               
               <Link
-                to="/"
+                to="/""
                 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Home className="w-4 h-4" />
@@ -111,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
 
             <div className="mt-6 pt-6 border-t border-slate-700">
               <p className="text-sm text-gray-400">
-                If this problem persists, please{' '}
+                If this problem persists, please{' '}'
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
                 </Link>

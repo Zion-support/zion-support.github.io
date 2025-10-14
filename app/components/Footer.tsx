@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';'
+import { Link } from 'react-router-dom';'
 import { 
   CpuChipIcon,
   EnvelopeIcon,
@@ -7,78 +7,77 @@ import {
   MapPinIcon,
   ArrowRightIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+} from '@heroicons/react/24/outline';  ArrowRightIcon'
+} from '@heroicons/react/24/outline';'
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';'
   HeartIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline';'
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-
+} from '@heroicons/react/24/outline';'
+} from '@heroicons/react/24/outline';'
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';'
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: 'AI Solutions', href: '/ai-solutions' },'
+    { name: 'IT Solutions', href: '/it-solutions' },'
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },'
+    { name: 'Cybersecurity', href: '/cybersecurity' },'
+    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },'
+    { name: 'Digital Transformation', href: '/digital-transformation' },'
+    { name: '5G Solutions', href: '/5g-solutions' }'
   ];
 
   const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'About Us', href: '/about' },'
+    { name: 'Solutions', href: '/solutions' },'
+    { name: 'Pricing', href: '/pricing' },'
+    { name: 'Blog', href: '/blog' },'
+    { name: 'Careers', href: '/careers' },'
+    { name: 'Case Studies', href: '/case-studies' }'
   ];
 
   const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
+    { name: 'Contact', href: '/contact' },'
+    { name: 'Support', href: '/support' },'
+    { name: 'Tutorials', href: '/tutorials' },'
+    { name: 'Demo', href: '/demo' },'
+    { name: 'Documentation', href: '/docs' }'
   ];
 
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Privacy Policy', href: '/privacy' },'
+    { name: 'Terms of Service', href: '/terms' },'
+    { name: 'Cookie Policy', href: '/cookies' },'
+    { name: 'GDPR', href: '/gdpr' },'
+    { name: 'Security', href: '/security' },'
+    { name: 'Compliance', href: '/compliance' }'
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },'
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },'
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }'
   ];
   const footerLinks = {
     services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'AI Solutions', href: '/ai-solutions' },'
+      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
+      { name: 'Cybersecurity', href: '/cybersecurity' },'
+      { name: 'Digital Transformation', href: '/digital-transformation' }'
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' }
+      { name: 'About Us', href: '/about' },'
+      { name: 'Our Team', href: '/team' },'
+      { name: 'Careers', href: '/careers' },'
+      { name: 'Contact', href: '/contact' }'
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'FAQ', href: '/faq' }
+      { name: 'Blog', href: '/blog' },'
+      { name: 'Documentation', href: '/docs' },'
+      { name: 'Support', href: '/support' },'
+      { name: 'FAQ', href: '/faq' }'
     ]
   };
 
@@ -135,15 +134,15 @@ const Footer: React.FC = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank""
+                  rel="noopener noreferrer""
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.name}
                 >
-                  {social.icon === 'facebook' && '📘'}
-                  {social.icon === 'twitter' && '🐦'}
-                  {social.icon === 'linkedin' && '💼'}
-                  {social.icon === 'github' && '🐙'}
+                  {social.icon === 'facebook' && '📘'}'
+                  {social.icon === 'twitter' && '🐦'}'
+                  {social.icon === 'linkedin' && '💼'}'
+                  {social.icon === 'github' && '🐙'}'
                 </a>
               ))}            <div className="flex space-x-4">
               <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
@@ -164,9 +163,9 @@ const Footer: React.FC = () => {
               </a>
                   <span className="sr-only">{social.name}</span>
                   <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">
-                    {social.icon === 'linkedin' && <span className="text-xs">in</span>}
-                    {social.icon === 'twitter' && <span className="text-xs">t</span>}
-                    {social.icon === 'github' && <span className="text-xs">g</span>}
+                    {social.icon === 'linkedin' && <span className="text-xs">in</span>}'"
+                    {social.icon === 'twitter' && <span className="text-xs">t</span>}'"
+                    {social.icon === 'github' && <span className="text-xs">g</span>}'"
                   </div>
                 </a>
               ))}
@@ -289,8 +288,8 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
-                type="email"
-                placeholder="Enter your email"
+                type="email""
+                placeholder="Enter your email""
                 className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
               <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
@@ -366,8 +365,8 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved. Made with{' '}
-            <HeartIcon className="w-4 h-4 inline text-red-500" /> for our clients.
+            © {currentYear} Zion Tech Group. All rights reserved. Made with{' '}'
+            <HeartIcon className="w-4 h-4 inline text-red-500" /> for our clients."
           </p>
         </div>
       </div>

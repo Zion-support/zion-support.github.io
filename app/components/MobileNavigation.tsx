@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
+import { Helmet } from 'react-helmet-async'use client'
 const MobileNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -66,7 +65,7 @@ const MobileNavigation: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our mobile navigation';
+            Let's discuss how our mobile navigation';'
             services can help you achieve your goals.;
           </p>
           <a;
@@ -83,4 +82,4 @@ const MobileNavigation: React.FC = () => {
 export default MobileNavigation;
 };
 
-export default MobileNavigation;'
+export default MobileNavigation;''

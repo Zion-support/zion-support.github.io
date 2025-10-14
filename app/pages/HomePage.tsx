@@ -14,32 +14,32 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
-
+} from '@heroicons/react/24/outline';'
+import FuturisticBackground from '../components/FuturisticBackground';'
+import NeonButton from '../components/NeonButton';'
+import AnimatedCard from '../components/AnimatedCard';'
+import { services } from '../data/servicesData';'
 export default function HomePage() {
+
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Advanced AI and IT Solutions",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service"
+    "@context": "https://schema.org","
+    "@type": "Organization","
+    "name": "Zion Tech Group","
+    "description": "Advanced AI and IT Solutions","
+    "url": "https://ziontechgroup.com","
+    "logo": "https://ziontechgroup.com/logo.png","
+    "contactPoint": {"
+      "@type": "ContactPoint","
+      "telephone": "+1-555-0123","
+      "contactType": "customer service""
     }
   };
   return (
     <>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.""
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions""
         structuredData={structuredData}
       />
       
@@ -153,8 +153,8 @@ export default function HomePage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
-                With over 4 years of experience in cutting-edge technology solutions, '
-                we've helped businesses across various industries transform their operations 
+                With over 4 years of experience in cutting-edge technology solutions, ''
+                we've helped businesses across various industries transform their operations'
                 and achieve unprecedented growth.
               </p>
             </div>
@@ -196,8 +196,8 @@ export default function HomePage() {
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">'
-                Let's discuss how our technology solutions can drive your business forward
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">''"
+                Let's discuss how our technology solutions can drive your business forward'
               </p>
             </div>
             

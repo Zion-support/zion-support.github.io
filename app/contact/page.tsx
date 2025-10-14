@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
-export default function ContactPage()    {
+export default function ContactPage() {
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: '','
+    email: '','
+    company: '','
+    phone: '','
+    subject: '','
+    message: '''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -31,59 +32,58 @@ export default function ContactPage()    {
   const contactInfo = [
     {
 
-      icon: 'Phone',      title: 'Phone',
+      icon: 'Phone',      title: 'Phone','
     await new Promise(resolve => setTimeout(resolve, 1000))
     setIsSubmitted(true)
     setIsSubmitting(false)}
   const contactInfo = [
     {
 
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-'
-      icon: 'Phone','
       title: 'Phone','
       value: '+1 (555) 123-4567','
-      description: 'Mon-Fri 9AM-6PM EST'}
+      description: 'Mon-Fri 9AM-6PM EST'
+''
+      icon: 'Phone',''
+      title: 'Phone',''
+      value: '+1 (555) 123-4567',''
+      description: 'Mon-Fri 9AM-6PM EST'}'
     },
-    {'
-      icon: 'Email','
-      title: 'Email','
-      value: 'contact@ziontechgroup.com','
-      description: 'We respond within 24 hours'}
+    {''
+      icon: 'Email',''
+      title: 'Email',''
+      value: 'contact@ziontechgroup.com',''
+      description: 'We respond within 24 hours'}'
     },
-    {'
-      icon: 'Location','
-      title: 'Address','
-      value: '123 Tech Street, Suite 100','
-      description: 'San Francisco, CA 94105'}
+    {''
+      icon: 'Location',''
+      title: 'Address',''
+      value: '123 Tech Street, Suite 100',''
+      description: 'San Francisco, CA 94105'}'
     },
-    {'
-      icon: 'Clock',
-
+    {''
+      icon: 'Clock','
       description: '9:00 AM - 6:00 PM EST'
     }
   ]
   const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
-      description: '9:00 AM - 6:00 PM EST'}
-    }
-  ];
-
-  const subjects = ['
     'AI Services','
     'IT Services','
     'Services','
     'Micro SAAS','
     'Digital Transformation','
     '5G Implementation','
-    'Other'
+      description: '9:00 AM - 6:00 PM EST'}'
+    }
+  ];
+
+  const subjects = [''
+    'AI Services',''
+    'IT Services',''
+    'Services',''
+    'Micro SAAS',''
+    'Digital Transformation',''
+    '5G Implementation',''
+    'Other''
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -145,19 +145,19 @@ export default function ContactPage()    {
                 <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">'
-                Thank you for contacting us. We'll get back to you within 24 hours.
+              <p className="text-gray-300 mb-6">''"
+                Thank you for contacting us. We'll get back to you within 24 hours.'
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false)
                   setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
+                    name: '','
+                    email: '','
+                    company: '','
+                    phone: '','
+                    subject: '','
+                    message: '''
                   })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -172,14 +172,14 @@ export default function ContactPage()    {
                     Full Name *
                   </label>
                   <input
-                    type="text"
+                    type="text""
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your full name"
+                    placeholder="Your full name""
                   />
                 </div>
                 <div>
@@ -187,14 +187,14 @@ export default function ContactPage()    {
                     Email Address *
                   </label>
                   <input
-                    type="email"
+                    type="email""
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
+                    placeholder="your.email@company.com""
                   />
                 </div>
               </div>
@@ -205,13 +205,13 @@ export default function ContactPage()    {
                     Company
                   </label>
                   <input
-                    type="text"
+                    type="text""
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name"
+                    placeholder="Your company name""
                   />
                 </div>
                 <div>
@@ -219,13 +219,13 @@ export default function ContactPage()    {
                     Number
                   </label>
                   <input
-                    type="tel"
+                    type="tel""
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+1 (555) 123-4567""
                   />
                 </div>
               </div>
@@ -263,13 +263,13 @@ export default function ContactPage()    {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or how we can help you..."
+                  placeholder="Tell us about your project or how we can help you...""
                 />
               </div>
 
               <div className="text-center">
                 <button
-                  type="submit"
+                  type="submit""
                   disabled={isSubmitting}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >

@@ -1,78 +1,77 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, User } from 'lucide-react';
-
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Right, User } from 'lucide-react';'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const categories = [}
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
+    { id: "all", name: "All Posts", count: 12 },"
+    { id: "ai", name: "AI & Machine Learning", count: 5 },"
+    { id: "cybersecurity", name: "Cybersecurity", count: 3 },"
+    { id: "cloud", name: "Computing", count: 2 },"
+    { id: "development", name: "Development", count: 2 }"
   ]
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: 2024 Trends",
-      excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
-      author: "Sarah Johnson",
-      date: "2024-01-15",
-      category: "ai",
-      readTime: "5 min read",
-      image: "🤖"}
+      title: "The Future of AI in Business: 2024 Trends","
+      excerpt: "Explore the latest AI trends that are transforming businesses across industries.","
+      author: "Sarah Johnson","
+      date: "2024-01-15","
+      category: "ai","
+      readTime: "5 min read","
+      image: "🤖"}"
     },
     {
       id: 2,
-      title: "Cybersecurity Best Practices for 2024",
-      excerpt: "Learn essential cybersecurity practices to protect your business from threats.",
-      author: "Michael Chen",
-      date: "2024-01-12",
-      category: "cybersecurity",
-      readTime: "7 min read",
-      image: "🔒"}
+      title: "Cybersecurity Best Practices for 2024","
+      excerpt: "Learn essential cybersecurity practices to protect your business from threats.","
+      author: "Michael Chen","
+      date: "2024-01-12","
+      category: "cybersecurity","
+      readTime: "7 min read","
+      image: "🔒"}"
     },
     {
       id: 3,
-      title: "Migration: A Complete Guide",
-      excerpt: "Everything you need to know about migrating to the cloud successfully.",
-      author: "Emily Rodriguez",
-      date: "2024-01-10",
-      category: "cloud",
-      readTime: "10 min read",
-      image: "☁️"}
+      title: "Migration: A Complete Guide","
+      excerpt: "Everything you need to know about migrating to the cloud successfully.","
+      author: "Emily Rodriguez","
+      date: "2024-01-10","
+      category: "cloud","
+      readTime: "10 min read","
+      image: "☁️"}"
     },
     {
       id: 4,
-      title: "Scalable Applications with Modern Tech",
-      excerpt: "Discover the technologies and practices for building scalable applications.",
-      author: "David Kim",
-      date: "2024-01-08",
-      category: "development",
-      readTime: "8 min read",
-      image: "⚡"}
+      title: "Scalable Applications with Modern Tech","
+      excerpt: "Discover the technologies and practices for building scalable applications.","
+      author: "David Kim","
+      date: "2024-01-08","
+      category: "development","
+      readTime: "8 min read","
+      image: "⚡"}"
     },
     {
       id: 5,
-      title: "AI-Powered Analytics: Transforming Data Insights",
-      excerpt: "How AI is revolutionizing the way we analyze and interpret data.",
-      author: "Lisa Wang",
-      date: "2024-01-05",
-      category: "ai",
-      readTime: "6 min read",
-      image: "📊"}
+      title: "AI-Powered Analytics: Transforming Data Insights","
+      excerpt: "How AI is revolutionizing the way we analyze and interpret data.","
+      author: "Lisa Wang","
+      date: "2024-01-05","
+      category: "ai","
+      readTime: "6 min read","
+      image: "📊"}"
     },
     {
       id: 6,
-      title: "Zero Trust Architecture",
-      excerpt: "Implementing zero trust security for modern enterprise environments.",
-      author: "James Wilson",
-      date: "2024-01-03",
-      category: "cybersecurity",
-      readTime: "9 min read",
-      image: "🛡️"}
+      title: "Zero Trust Architecture","
+      excerpt: "Implementing zero trust security for modern enterprise environments.","
+      author: "James Wilson","
+      date: "2024-01-03","
+      category: "cybersecurity","
+      readTime: "9 min read","
+      image: "🛡️"}"
     }
   ]
   return (
@@ -125,7 +124,6 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-
                       <div className="w-4 h-4 mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
@@ -162,8 +160,8 @@ const BlogPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
-                type="email"
-                placeholder="Enter your email"
+                type="email""
+                placeholder="Enter your email""
                 className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
@@ -179,4 +177,4 @@ const BlogPage: React.FC = () => {
 export default BlogPage;
 };
 
-export default BlogPage;'
+export default BlogPage;''

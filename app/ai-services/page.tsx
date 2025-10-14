@@ -1,48 +1,47 @@
-import React from 'react';'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
-import FuturisticBackground from '../components/FuturisticBackground;
+import React from 'react';'react-helmet-async;'
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;'
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;'
+import FuturisticBackground from '../components/FuturisticBackground;'
 const AiServicesPage: React.FC = () => {
   const services = [{
-      icon: Brain,'
-      title: 'AI Consulting',';'
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';'
-      color: 'from-purple-500 to-pink-500'';}
+      icon: Brain,''
+      title: 'AI Consulting',';''
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';''
+      color: 'from-purple-500 to-pink-500';}'
     },
     {
-      icon: BarChart3,'
-      title: 'AI Analytics',';'
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';'
-      color: 'from-blue-500 to-cyan-500'';}
+      icon: BarChart3,''
+      title: 'AI Analytics',';''
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';''
+      color: 'from-blue-500 to-cyan-500';}'
     },
     {
-      icon: Zap,'
-      title: 'AI Automation',';'
-      description: 'Intelligent automation solutions to streamline your business processes.',';'
-      color: 'from-green-500 to-emerald-500'';}
+      icon: Zap,''
+      title: 'AI Automation',';''
+      description: 'Intelligent automation solutions to streamline your business processes.',';''
+      color: 'from-green-500 to-emerald-500';}'
     },
     {
-      icon: FileText,'
-      title: 'AI Content Generation',';'
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';'
-      color: 'from-orange-500 to-red-500'';}
+      icon: FileText,''
+      title: 'AI Content Generation',';''
+      description: 'AI-powered content creation for marketing, documentation, and communication.',';''
+      color: 'from-orange-500 to-red-500';}'
     },
     {
-      icon: MessageSquare,'
-      title: 'AI Customer Service',';'
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';'
-      color: 'from-indigo-500 to-purple-500'';}
+      icon: MessageSquare,''
+      title: 'AI Customer Service',';''
+      description: 'Intelligent chatbots and customer service solutions powered by AI.',';''
+      color: 'from-indigo-500 to-purple-500';}'
     },
     {
       icon: icon: Shield,
-      title: 'AI Security',';
-      description: 'AI-powered security solutions to protect your business and data.',';
-      color: 'from-cyan-500 to-blue-500'';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground';
-
+      title: 'AI Security',';'
+      description: 'AI-powered security solutions to protect your business and data.',';'
+      color: 'from-cyan-500 to-blue-500';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';'
+import FuturisticBackground from '../components/FuturisticBackground';'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
@@ -51,87 +50,87 @@ const AiServicesPage: React.FC = () => {
   const services = [
     {
       icon: Brain,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
+      title: 'AI Consulting','
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart3,
-      title: 'AI Analytics',
-      description: 'Advanced analytics solutions powered by AI to extract insights from your data.',
+      title: 'AI Analytics','
+      description: 'Advanced analytics solutions powered by AI to extract insights from your data.','
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
-      title: 'AI Automation',
-      description: 'Automate repetitive tasks and processes with intelligent AI solutions.',
+      title: 'AI Automation','
+      description: 'Automate repetitive tasks and processes with intelligent AI solutions.','
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: FileText,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality content at scale using advanced AI models.',
+      title: 'AI Content Generation','
+      description: 'Generate high-quality content at scale using advanced AI models.','
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,
-      title: 'AI Chatbots',
-      description: 'Intelligent chatbots and virtual assistants for customer support.',
+      title: 'AI Chatbots','
+      description: 'Intelligent chatbots and virtual assistants for customer support.','
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,
-      title: 'AI Security',
-      description: 'AI-powered security solutions to protect your business from threats.',
+      title: 'AI Security','
+      description: 'AI-powered security solutions to protect your business from threats.','
       color: 'from-red-500 to-pink-500'
     }
   ]
   const features = [
     {
-      title: 'Custom AI Solutions',
-      description: 'Tailored AI implementations designed specifically for your business needs.',
+      title: 'Custom AI Solutions','
+      description: 'Tailored AI implementations designed specifically for your business needs.','
       icon: '🤖'
     },
     {
-      title: 'Machine Learning Models',
-      description: 'Advanced ML models trained on your data for optimal performance.',
+      title: 'Machine Learning Models','
+      description: 'Advanced ML models trained on your data for optimal performance.','
       icon: '🧠'
     },
     {
-      title: 'Real-time Processing',
-      description: 'High-performance AI systems that process data in real-time.',
+      title: 'Real-time Processing','
+      description: 'High-performance AI systems that process data in real-time.','
       icon: '⚡'
     },
     {
-      title: 'Scalable Architecture',
-      description: 'AI solutions that grow with your business and handle increasing loads.',
+      title: 'Scalable Architecture','
+      description: 'AI solutions that grow with your business and handle increasing loads.','
       icon: '📈'
-      icon: Shield,'
-      title: 'AI Security',';'
-      description: 'AI-powered security solutions to protect your business and data.',';'
-      color: 'from-cyan-500 to-blue-500'';}
+      icon: Shield,''
+      title: 'AI Security',';''
+      description: 'AI-powered security solutions to protect your business and data.',';''
+      color: 'from-cyan-500 to-blue-500';}'
     }
   ];
 
   const testimonials = [{
-      name: "Dr. Sarah Johnson",
-      company: "MedTech Solutions",
-      role: "CTO",'
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';
+      name: "Dr. Sarah Johnson","
+      company: "MedTech Solutions","
+      role: "CTO",''"
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';'"
       rating: 5;}
     },
     {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "CEO",'
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';
+      name: "Michael Chen","
+      company: "E-commerce Plus","
+      role: "CEO",''"
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';'"
       rating: 5;}
     },
     {
-      name: "Emily Rodriguez",
-      company: "FinanceFlow",
-      role: "Head of Analytics",
-      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
+      name: "Emily Rodriguez","
+      company: "FinanceFlow","
+      role: "Head of Analytics","
+      content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.","
       rating: 5;}
     }
   ]
@@ -257,7 +256,7 @@ const AiServicesPage: React.FC = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI services can help you achieve your goals.
+              Let's discuss how our AI services can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">

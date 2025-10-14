@@ -6,7 +6,7 @@ interface LazyWrapperProps {
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
   children, 
-  fallback = <LoadingSpinner size="lg" text="Loading component..." /> }
+  fallback = <LoadingSpinner size="lg" text="Loading component..." /> }"
 }) => {
   return (}
     <Suspense fallback={fallback}>
@@ -29,4 +29,4 @@ export const withLazyLoading = <P extends object>(
 export default LazyWrapper;
 };
 
-export default LazyWrapper;'
+export default LazyWrapper;''

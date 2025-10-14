@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
+import { Helmet } from 'react-helmet-async'use client'
 const ServiceTemplate: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +66,7 @@ const ServiceTemplate: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our service template';
+            Let's discuss how our service template';'
             services can help you achieve your goals.;
           </p>
           <a;
@@ -84,4 +83,4 @@ const ServiceTemplate: React.FC = () => {
 export default ServiceTemplate;
 };
 
-export default ServiceTemplate;'
+export default ServiceTemplate;''

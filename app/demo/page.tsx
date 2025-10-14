@@ -1,34 +1,34 @@
-import React from 'react';'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
+import React from 'react';'react-helmet-async;'
+import { Play, Right, Circle, Star } from 'lucide-react;'
 const DemoPage: React.FC = () => {
-  const features = [{'
-      icon: 'Analytics',';'
-      title: 'AI-Powered Analytics',';'
-      description: 'See how our AI analyzes your data in real-time',';'
-      demo: 'Live Demo'';}
+  const features = [{''
+      icon: 'Analytics',';''
+      title: 'AI-Powered Analytics',';''
+      description: 'See how our AI analyzes your data in real-time',';''
+      demo: 'Live Demo';}'
     },
-    {'
-      icon: 'Security',';'
-      title: 'Advanced Security',';'
-      description: 'Experience our enterprise-grade security features',';'
-      demo: 'Demo'';}
+    {''
+      icon: 'Security',';''
+      title: 'Advanced Security',';''
+      description: 'Experience our enterprise-grade security features',';''
+      demo: 'Demo';}'
     },
-    {'
-      icon: 'Intelligence',';'
-      title: 'Business Intelligence',';'
-      description: 'Explore our comprehensive BI dashboard',';'
-      demo: 'BI Demo'';}
+    {''
+      icon: 'Intelligence',';''
+      title: 'Business Intelligence',';''
+      description: 'Explore our comprehensive BI dashboard',';''
+      demo: 'BI Demo';}'
     },
     {
-      icon: 'Collaboration',';
-      title: 'Team Collaboration',';
-      description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';    }
-    {'
       icon: 'Collaboration',';'
       title: 'Team Collaboration',';'
       description: 'See how teams work together seamlessly',';'
-      demo: 'Collaboration Demo'';}
+      demo: 'Collaboration Demo';    }'
+    {''
+      icon: 'Collaboration',';''
+      title: 'Team Collaboration',';''
+      description: 'See how teams work together seamlessly',';''
+      demo: 'Collaboration Demo';}'
     }
   ];
 
@@ -36,19 +36,19 @@ const DemoPage: React.FC = () => {
     }
   ]
   const testimonials = [{
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
+      name: "Sarah Johnson","
+      company: "TechCorp Inc.","
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","
       rating: 5},
     {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
+      name: "Michael Chen","
+      company: "DataFlow Systems","
+      content: "The live demonstration helped us understand the full potential of the AI solutions.","
       rating: 5},
     {
-      name: "Emily Rodriguez",
-      company: "InnovateLabs",
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
+      name: "Emily Rodriguez","
+      company: "InnovateLabs","
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.","
       rating: 5}
   ]
   return (
@@ -114,7 +114,7 @@ const DemoPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Watch Our Solutions in Action;
             </h2>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}"
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -134,7 +134,7 @@ const DemoPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Interactive Demos</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, _index) => {
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, _index) => {"
                 const Icon = feature.icon
                 return (
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
@@ -142,7 +142,7 @@ const DemoPage: React.FC = () => {
                       <Icon className="w-8 h-8 text-white" /></div>
                     <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
                     <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">{feature.demo}
+                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">{feature.demo}"
                     </button></div>
   )})}
             </div></div></section>{/* Demo Section */}
@@ -216,4 +216,4 @@ const DemoPage: React.FC = () => {
 export default DemoPage;
 };
 
-export default DemoPage;'
+export default DemoPage;''

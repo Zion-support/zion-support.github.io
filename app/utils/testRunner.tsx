@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async'
 /* global describe, test, expect, it, beforeEach */
 'use client'
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -53,10 +54,6 @@ export default function Page() {
     </div>
   );
 }
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+            </button></div></div></div></div>
   );}
-}'
+}''

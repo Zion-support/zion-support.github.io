@@ -1,5 +1,6 @@
 import React from 'react'
 export default function LegalDocumentManagerPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -11,9 +12,7 @@ export default function LegalDocumentManagerPage() {
     </div>
   );
 }
-        </p>;
-      </div>;
-    </div>;
+        </p></div></div>
   );}
 }
-'
+''

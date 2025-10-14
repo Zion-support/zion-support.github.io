@@ -18,7 +18,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: '''
     }
   }
     }}
@@ -26,7 +26,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,}
+      error}
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
@@ -37,13 +37,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     })
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)}
-
+    if (process.env.NODE_ENV === 'development') {'
+      console.error('Error caught by boundary:', error, errorInfo)}'
     // Call custom error handler
     this.props.onError?.(error, errorInfo)
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {'
       this.logErrorToService(error, errorInfo)}
   }
 
@@ -62,10 +61,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
-      '
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) {'
-      console.error('Failed to log error to service:', loggingError);}
+      ''
+      console.error('Error logged to service:', errorData);'
+    } catch (loggingError) {''
+      console.error('Failed to log error to service:', loggingError);}'
     }
   }
   private handleRetry = () => {
@@ -73,23 +72,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: '''
     });
   }
   private handleReload = () => {
     window.location.reload();
   }
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/';'
   }
     window.location.reload();}
   };
 
-  private handleGoHome = () => {'
-    window.location.href = '/';}
+  private handleGoHome = () => {''
+    window.location.href = '/';}'
   };
 
   render() {
+
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
@@ -108,17 +108,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {/* Error Icon */}
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
                 <svg 
-                  className="w-8 h-8 text-red-400" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
+                  className="w-8 h-8 text-red-400"
+                  fill="none" "
+                  stroke="currentColor" "
+                  viewBox="0 0 24 24""
+                  aria-hidden="true""
                 >
                   <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
+                    strokeLinecap="round" "
+                    strokeLinejoin="round" "
                     strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "
                   />
                 </svg>
               </div>
@@ -129,8 +129,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </h1>
 
               {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">'
-                We're sorry, but something unexpected happened. Our team has been notified 
+              <p className="text-gray-300 mb-6 leading-relaxed">''"
+                We're sorry, but something unexpected happened. Our team has been notified'
                 and is working to fix this issue.
               </p>
 
@@ -138,7 +138,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {this.state.errorId && (
                 <div className="bg-slate-700 rounded-lg p-3 mb-6">
                   <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">}
+                  <code className="text-xs text-cyan-400 font-mono break-all">}"
                     {this.state.errorId}
                   </code>
                 </div>
@@ -181,14 +181,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </div>
 
-              {/* Development Error Details */}'
-              {process.env.NODE_ENV === 'development' && this.state.error && (
+              {/* Development Error Details */}''
+              {process.env.NODE_ENV === 'development' && this.state.error && ('
                 <details className="mt-6 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
                     Error Details (Development)
                   </summary>
                   <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">}
+                    <div className="mb-2">}"
                       <strong>Error:</strong> {this.state.error.message}
                     </div>
                     <div className="mb-2">
@@ -200,7 +200,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     {this.state.errorInfo && (
                       <div>
                         <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">}
+                        <pre className="whitespace-pre-wrap mt-1">}"
                           {this.state.errorInfo.componentStack}
                         </pre>
                       </div>

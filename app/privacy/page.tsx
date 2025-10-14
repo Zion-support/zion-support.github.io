@@ -24,7 +24,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
         {/* Content Section */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}"
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -84,4 +84,4 @@ const PrivacyPage: React.FC = () => {
 export default PrivacyPage;
 };
 
-export default PrivacyPage;'
+export default PrivacyPage;''

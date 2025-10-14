@@ -1,6 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
+import { Helmet } from 'react-helmet-async'use client'
 const FuturisticCardEnhanced: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +66,7 @@ const FuturisticCardEnhanced: React.FC = () => {
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our futuristic card enhanced';
+            Let's discuss how our futuristic card enhanced';'
             services can help you achieve your goals.;
           </p>
           <a;
@@ -84,4 +83,4 @@ const FuturisticCardEnhanced: React.FC = () => {
 export default FuturisticCardEnhanced;
 };
 
-export default FuturisticCardEnhanced;'
+export default FuturisticCardEnhanced;''
