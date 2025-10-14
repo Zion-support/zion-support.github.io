@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+// import { Logger } from '../utils/logger';
 
 const AdvancedErrorBoundary = () => {
   return (
@@ -44,5 +45,8 @@ const AdvancedErrorBoundary = () => {
   );
 </div></div></h1></p></div></div></h3></p></div></h3></p></div></h3></p></div></div></h1></p></div></div></h3></p></div></h3></p></div></h3></p>};
 
+    return this.props.children;
+  }
+}
 
 "

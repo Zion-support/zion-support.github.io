@@ -49,7 +49,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
           <Link href={`/blog/${slug}`} className="hover:text-blue-600 transition-colors">
             {title}
-          </h3>
+          </Link>
+        </h3>
         
         <p>{excerpt}</p>
         </p>
@@ -63,6 +64,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             <div>
               <p>{author}</p>"
               <p className="text-sm text-gray-500">{publishedAt}</p>
+            </div>
           
           <Link
             href={`/blog/${slug}`}"
@@ -71,8 +73,10 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             Read more"
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </Link>
+            </svg>
+          </Link>
         </div>
+      </div>
     </article>
   );
 </div></div></div></div></div></Link></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path>};

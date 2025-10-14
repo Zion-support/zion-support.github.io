@@ -156,7 +156,8 @@ const CommunityPage: React.FC = () => {
     d:text-6xl font-bold text-white mb-6">
             Developer Community
           </h1>
-          <p>Connect with fellow developers, share your projects, get help, and learn from the community.</p>
+          <p className="text-xl text-gray-300 mb-12">
+            Connect with fellow developers, share your projects, get help, and learn from the community.
           </p>
           
           {/* Community Stats */}
@@ -167,6 +168,7 @@ const CommunityPage: React.FC = () => {
                 </div>"
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
                 <div className="text-gray-300">{stat.label}</div>
+              </div>
             ))}
           </div>
 
@@ -179,8 +181,10 @@ const CommunityPage: React.FC = () => {
     ",
     r:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Browse Discussions
-            </div>
-        </section>
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* Categories */}"
       <section className="py-16 px-4">"
@@ -200,9 +204,11 @@ const CommunityPage: React.FC = () => {
                 <p>{category.description}</p>"
                 <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors">
                   View Discussions
-                </div>
+                </button>
+              </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Recent Discussions */}"
@@ -212,14 +218,15 @@ const CommunityPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white">Recent Discussions</h2>"
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
               Start Discussion
-            </div>
+            </button>
+          </div>
           
           <div>{recentDiscussions.map((discussion) => (</div>"
               <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">"
                 <div className="flex items-start justify-between">"
                   <div className="flex-1">"
                     <div className="flex items-center space-x-3 mb-2">
-                      <span>
+                      <span className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">
                         {discussion.category}
                       </span>
                       {discussion.solved && ("
@@ -237,14 +244,20 @@ const CommunityPage: React.FC = () => {
                       <span>{discussion.replies} replies</span>
                       <span>{discussion.views} views</span>
                       <span>{discussion.lastActivity}</span>
-                    <div>{discussion.tags.map((tag, tagIndex) => (</div>
-                        <span>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {discussion.tags.map((tag, tagIndex) => (
+                        <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                           #{tag}
                         </span>
                       ))}
                     </div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Featured Projects */}"
@@ -270,18 +283,24 @@ const CommunityPage: React.FC = () => {
                       <span className="flex items-center">"
                         <MessageCircle className="w-4 h-4 mr-1" />
                         {project.comments}
-                      </div>
-                  <div>{project.tags.map((tag, tagIndex) => (</div>
-                      <span>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">
                         #{tag}
                       </span>
                     ))}
                   </div>"
                   <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition-colors">
                     View Project
-                  </div>
-            ))}
-          </div>
+                  </button>
+                </div>
+              </div>
+              ))}
+            </div>
+        </div>
       </section>
 
       {/* Join Community CTA */}"
@@ -300,8 +319,10 @@ const CommunityPage: React.FC = () => {
     ",
     r:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </div>
-        </section>
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 </div></div></div></div></div></div></div></div></div></button></button></button></button></button></span></div></Helmet></title></meta></meta></section></div></h1></div></div></div></stat></div></div></div></button></button></section></div></h2></div></div></div></div></category></div></h3></button></section></div></div></h2></button></div></div></div></div></div></span></span></Award></h3></div></span></span></span></span></div></span></section></div></h2></div></div></div></div></div></h3></div></span></div></span></Star></span></MessageCircle></div></span></button></section></div></h2></div></button></button></div></Helmet></title></meta></meta></section></div></h1></div></div></div></stat></div></div></div></button></button></section></div></h2></div></div></div></div></category></div></h3></button></section></div></div></h2></button></div></div></div></div></div></span></span></Award></h3></div></span></span></span></span></div></span></section></div></h2></div></div></div></div></div></h3></div></span></div></span></Star></span></MessageCircle></div></span></button></section></div></h2></div></button></button>};

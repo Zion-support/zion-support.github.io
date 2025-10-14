@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-const InnovationLabsPage: React.FC = () => {
 
+const InnovationLabsPage: React.FC = () => {
   return (
 
     <div className="min-h-screen bg-gray-50">"
       <div className="max-w-4xl mx-auto px-4 py-8">"
         <div className="bg-white rounded-lg shadow-lg p-8">"
           <div className="text-center mb-8">
-            <span>
+            <span className="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
               🚀 Innovation Lab
             </span>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -45,8 +45,9 @@ const InnovationLabsPage: React.FC = () => {
               <li><strong>Impact:</strong> $2B+ in new product revenue generated</ul>
 "
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
-            <p>Our AI Innovation Labs follow a systematic approach to product development that leverages 
-              cutting-edge AI technologies to accelerate every stage of the product lifecycle.</p>
+            <p className="text-gray-700 mb-6">
+              Our AI Innovation Labs follow a systematic approach to product development that leverages 
+              cutting-edge AI technologies to accelerate every stage of the product lifecycle.
             </p>
 "
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>"
@@ -98,8 +99,9 @@ const InnovationLabsPage: React.FC = () => {
               </div>
 "
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
-            <p>Ready to revolutionize your product development? Our AI Innovation Labs can help you 
-              achieve breakthrough results in product development speed, cost, and innovation.</p>
+            <p className="text-gray-700 mb-6">
+              Ready to revolutionize your product development? Our AI Innovation Labs can help you 
+              achieve breakthrough results in product development speed, cost, and innovation.
             </p>
 "
             <div className="bg-blue-50 p-6 rounded-lg text-center">"
@@ -115,7 +117,13 @@ const InnovationLabsPage: React.FC = () => {
                 <Link href="/services""
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
-                </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 </div></div></div></div></div></div></div></div></div></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></h3></ul></li></li></li></li></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></div></p></h2></p></div></h3></div></Link></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></h3></ul></li></li></li></li></h2></p></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></div></p></h2></p></div></h3></div></Link></Link>}
 

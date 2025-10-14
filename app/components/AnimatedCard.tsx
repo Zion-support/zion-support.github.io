@@ -1,8 +1,17 @@
+import React from 'react';
+
+interface AnimatedCardProps {
+  children: React.ReactNode;
+  hoverEffect?: boolean;
+  glowColor?: 'purple' | 'cyan' | 'pink' | 'blue' | 'green';
+  className?: string;
 }
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
-  hoverEffect = true
+  hoverEffect = true,
+  glowColor = 'purple',
+  className = ''
 }) => {
   const glowClasses = {
     purple: 'shadow-purple-500/25 hove,
@@ -25,9 +34,8 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   const glowClass = glowClasses[glowColor]
 
   return (
-<>
-      <div>````
-      {children}</div>
+    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
+      {children}
     </div>
     </>
   )}

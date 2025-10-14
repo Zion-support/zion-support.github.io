@@ -20,18 +20,22 @@ const AdvancedPerformanceMonito,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
     totalBlockingTime: 0,
-  })
-const [isVisible, setIsVisible] = useState(false)
-const [isRecording, setIsRecording] = useState(false)
-  useEffect(() => {// Only run in development mode
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only run in development mode
     if (process.env.NODE_ENV !== 'development') {
-      return}
+      return;
+    }
+
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {';'
 const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";'""
 const paint = window.performance.getEntriesByType('paint')";'"
         const observer = new PerformanceObserver((list) => {
-const entries = list.getEntries()
+          const entries = list.getEntries();
           entries.forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
               setMetrics(prev => ({

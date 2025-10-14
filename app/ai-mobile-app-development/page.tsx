@@ -11,7 +11,6 @@ const developmentProcess = ["
   { step: "5", title: "Launch & Support", description: "Deploy your app and provide ongoing maintenance and updates" }
 ];
 
-// Mobile services data
 const mobileServices = [
   {"
     icon: "📱","
@@ -87,7 +86,6 @@ const mobileServices = [
   }
 ];
 
-// Mobile features data
 const mobileFeatures = [
   {"
     icon: "🚀","
@@ -151,9 +149,10 @@ const PagePage = () => {
                 </div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>"
                 <p className="text-gray-600 text-sm">{step.description}</p>
-
+              </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Services Grid */}"
@@ -206,9 +205,10 @@ const PagePage = () => {
                 >
                   Start Building
                 </a>
-
+              </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Features Section */}"
@@ -229,9 +229,10 @@ const PagePage = () => {
                 <div className="text-4xl mb-4">{feature.icon}</div>"
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>"
                 <p className="text-gray-600">{feature.description}</p>
-
+              </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Success Stories */}"
@@ -267,6 +268,8 @@ const PagePage = () => {
               <div className="font-semibold text-gray-900">Robert Johnson</div>"
               <div className="text-sm text-gray-500">CTO, ServicePro</div>
             </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}"
@@ -291,7 +294,13 @@ const PagePage = () => {
             >
               ✉️ kleber@ziontechgroup.com
             </a>
-
+          </div>
+          <div className="mt-8 text-sm text-indigo-200">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 </></div></div></div></div></div></div></div></div></div></div></div></div></section></Helmet></title></meta></section></div></div></h1></p></section></div></div></h2></div></div></div></h3></section></div></div></h2></div></div></div></h3></div></div></span></ul></li></CheckCircle></div></h4></a></section></div></div></h2></div></div></div></h3></section></div></div></h2></div></div></div></div></div></div></div></div></div></div></div></div></div></section></div></h2></div></a></a></Helmet></title></meta></section></div></div></h1></p></section></div></div></h2></div></div></div></h3></section></div></div></h2></div></div></div></h3></div></div></span></ul></li></CheckCircle></div></h4></a></section></div></div></h2></div></div></div></h3></section></div></div></h2></div></div></div></div></div></div></div></div></div></div></div></div></div></section></div></h2></div></a></a>};
 

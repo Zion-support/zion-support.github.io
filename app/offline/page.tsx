@@ -1,10 +1,9 @@
 'use client';
 import React from "react";"
 import { Helmet } from "react-helmet-async";
-
-export default function Page() {
+const PagePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Offline - Zion Tech Group</title>"
         <meta name="description" content="Offline services and solutions from Zion Tech Group" />
@@ -18,6 +17,6 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 </Helmet></title></meta></div></div></h1></p></Helmet></title></meta></div></div></h1></p>}"

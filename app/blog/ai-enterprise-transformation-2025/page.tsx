@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-const EnterpriseTransformationPage: React.FC = () => {
 
+const EnterpriseTransformationPage: React.FC = () => {
   return (
 
     <div className="min-h-screen bg-gray-50">"
       <div className="max-w-4xl mx-auto px-4 py-8">"
         <div className="bg-white rounded-lg shadow-lg p-8">"
           <div className="text-center mb-8">
-            <span>
+            <span className="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium mb-4">
               💰 Success Story
             </span>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -69,7 +69,8 @@ const EnterpriseTransformationPage: React.FC = () => {
             <p className="text-gray-700 mb-6"><strong>Results:</strong> $8M in cost savings and 45% process automation achieved</p>
 "
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
-            <p>The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:</p>
+            <p className="text-gray-700 mb-6">
+              The transformation delivered measurable value across multiple dimensions. Here&apos;s the detailed breakdown:
             </p>
 "
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Direct Cost Savings</h3>"
@@ -81,8 +82,9 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• <strong>$5M:</strong> Reduced compliance and audit costs</ul>
 "
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>
-            <p>Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
-              Get started with a comprehensive assessment and personalized transformation roadmap.</p>
+            <p className="text-gray-700 mb-6">
+              Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
+              Get started with a comprehensive assessment and personalized transformation roadmap.
             </p>
 "
             <div className="bg-indigo-50 p-6 rounded-lg text-center">"
@@ -100,7 +102,13 @@ const EnterpriseTransformationPage: React.FC = () => {
     ",
     r:bg-indigo-50 transition-colors">
                   Explore AI Services
-                </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 </div></div></div></div></div></div></div></div></div></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></strong></h3></ul></li></li></li></li></strong></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></li></strong></h2></p></div></h3></div></Link></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></strong></h3></ul></li></li></li></li></strong></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></li></strong></h2></p></div></h3></div></Link></Link>}
 

@@ -1,8 +1,5 @@
-          This page is under development.</div>
-  )
-        </div>
-    );
-  }
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
   if (variant === 'cyber') {
     return (

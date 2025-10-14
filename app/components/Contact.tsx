@@ -6,11 +6,18 @@ import { EnvelopeIcon,
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: ,'
-    email: ,'
-    company: ,'
-    message: 
-  })
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -130,6 +137,8 @@ const Contact: React.FC = () => {
                   name="message
                   value={formData.message}
                   onChange={handleChange}
+                  rows={4}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   required
                   rows={6}"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: "ring-2 focus:ring-blue-500 focus:border-transparent"

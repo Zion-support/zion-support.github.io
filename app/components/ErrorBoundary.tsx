@@ -1,4 +1,14 @@
+import React, { Component, ReactNode } from 'react';
 
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -34,14 +44,6 @@ class ErrorBoundary extends Component<Props, State> {
       // Example: Sentry.captureException(error, { extra: errorInfo });
     }
   }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
 
   render() {
     if (this.state.hasError) {

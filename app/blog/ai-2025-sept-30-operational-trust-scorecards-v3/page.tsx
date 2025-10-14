@@ -1,8 +1,7 @@
 import React from 'react';
+
 const OperationalTrustScorecardsPage: React.FC = () => {
-
   return (
-
     <>
 
       <main className="min-h-screen bg-slate-950 text-white">"
@@ -63,7 +62,52 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               safety violations spike, auto-rollback to last known good state.</p>
             </div>
         </section>
-    </main>
+
+        <section className="py-12">
+          <div className="max-w-3xl mx-auto px-4 space-y-10">
+            <div>
+              <h2 className="text-2xl font-bold mb-3">Why Operational Trust</h2>
+              <p className="text-gray-300">
+                Enterprise AI fails without measurable trust. Scorecards unify
+                KPIs across reliability (accuracy, grounding, latency), safety
+                (policy adherence), cost (per task, per user), and value (business
+                outcomes) so leaders can make tradeoffs responsibly.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-3">Scorecard Structure</h2>
+              <ul className="list-disc pl-6 text-gray-300 space-y-2">
+                <li>
+                  <strong className="text-white">Reliability:</strong> pass rates,
+                  hallucination rate, grounding success, latency SLO.
+                </li>
+                <li>
+                  <strong className="text-white">Safety:</strong> policy blocks,
+                  red‑team strikes, jailbreak resistance, PII leaks.
+                </li>
+                <li>
+                  <strong className="text-white">Cost:</strong> per‑task spend,
+                  model tier mix, cache hit rate, budget headroom.
+                </li>
+                <li>
+                  <strong className="text-white">Value:</strong> conversion
+                  uplift, time saved, NPS changes, $ ROI.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-bold mb-3">Operational Guardrails</h2>
+              <p className="text-gray-300">
+                Tie each KPI to budgets and routing rules. If reliability falls,
+                route to safer tier; if cost exceeds budget, throttle usage; if
+                safety violations spike, auto-rollback to last known good state.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
     </>
   );
 </div></div></main></section></div></div></span></span></h1></p></section></div></div></h2></p></div></h2></ul></li></strong></li></strong></li></strong></li></strong></div></h2></p></main></section></div></div></span></span></h1></p></section></div></div></h2></p></div></h2></ul></li></strong></li></strong></li></strong></li></strong></div></h2></p>}

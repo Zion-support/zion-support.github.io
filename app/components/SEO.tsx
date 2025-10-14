@@ -1,7 +1,6 @@
-  title?: string
-  description?: string
-}
+import React from "react";
 
+const SEO = () => {
   return (
 <>    
       <title>{title}</title>
