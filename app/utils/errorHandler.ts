@@ -3,9 +3,7 @@ export const errorHandler = {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message,
-        fatal: false,
-        custom_map: context ? { context } : undefined
+
       });
     }
     
@@ -34,14 +32,10 @@ export const errorHandler = {
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  
   log: (_error: Error, _context?: Record<string, unknown>) => {
     // Error logging logic
-    console.error('Error logged:', _error, _context);
   },
-  
   report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', _error, _context);
   }
 };

@@ -30,7 +30,7 @@ export const enhancedAnalytics = {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_metric', {
         metric_name: metric,
-        value: value
+        metric_value: value
       });
     }
   }

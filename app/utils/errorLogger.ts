@@ -5,18 +5,19 @@ export const errorLogger = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-    };
+    }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
+      // Development logging disabled
+      // eslint-disable-next-line no-console
       console.error('Error logged: ', errorInfo);
     }
     
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: false,
-        custom_map: context
+        fatal: false
       });
     }
   }
