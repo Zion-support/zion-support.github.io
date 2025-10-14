@@ -1,10 +1,11 @@
 export const errorHandler = {
-  handle: (_error: Error, context?: string) => {
+  handle: (error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message,
-        context: context || 'unknown'
+        description: error.message,
+        fatal: false,
+        context: context
       });
     }
     
@@ -15,9 +16,8 @@ export const errorHandler = {
   },
   
   handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status = (error as any).response?.status;
+    const message = (error as any).response?.data?.message || (error as Error).message;
     
     switch (status) {
       case 400:
@@ -35,13 +35,13 @@ export const errorHandler = {
     }
   },
   
-  log: (_error: Error, _context?: Record<string, unknown>) => {
+  log: (error: Error, context?: Record<string, unknown>) => {
     // Error logging logic
-    console.error('Error logged:', _error, _context);
+    console.error('Error logged:', error, context);
   },
   
-  report: (_error: Error, _context?: Record<string, unknown>) => {
+  report: (error: Error, context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', _error, _context);
+    console.error('Error reported:', error, context);
   }
-};
+}
