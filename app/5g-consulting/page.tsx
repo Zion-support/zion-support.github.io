@@ -1,69 +1,74 @@
-import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
 
-const FiveGConsultingPage = () => {
+const Page5gConsultingPage: React.FC = () => {
   const services = [
     {
-      title: '5G Strategy Development',
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.',
+      title: 'Expert 5g Consulting Solutions',
+      description: 'Professional 5g consulting services tailored to your needs.'
     },
     {
-      title: 'Security Assessment',
-      description: 'Complete security evaluation for 5G network implementation.',
+      title: 'Custom Implementation',
+      description: 'Tailored 5g consulting implementations for your specific requirements.'
     },
     {
-      title: 'Team Training',
-      description: 'Expert training for your team on 5G technologies and best practices.',
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your 5g consulting needs.'
     }
   ];
+
   return (
-    <div className="min-h-screenbg-gray-50">
-      <EnhancedSEO 
-        title="5G Consulting Services - Zion Tech Group"
-        description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
-      />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-centermb-16">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
-            5G Consulting Services
-          </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
-            Expert guidance for your 5G transformation journey
-          </p>
-          </div>
-        </div>
-        <div className="gridmd:grid-cols-3 gap-8 mb-16">;
-          {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-60 0mb-4">
-                {service.description}
-              </p>
+    <>
+      <Helmet>
+        <title>5g Consulting - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g consulting solutions and services" />
+        <meta name="keywords" content="5g, consulting" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5g Consulting</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional 5g consulting solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
               <Link 
-                to="/contact" 
-                className="inline-flexitems-center text-blue-600 hover:text-blue-800 font-medium"
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               >
-                Learn More
-                <ArrowRight className="ml-2w-4 h-4" />
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
-          ))}
-        <div className="text-center">
-          <Link 
-            to="/contact" 
-            className="inline-flexitems-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-          >
-            Get Started
-            <ArrowRight className="ml-2w-5 h-5" />
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
-  )
-  };
-export default FiveGConsultingPage
+    </>
+  );
+};
+
+export default Page5gConsultingPage;

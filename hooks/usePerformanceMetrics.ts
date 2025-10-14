@@ -88,5 +88,5 @@ export const usePerformanceMetrics = () => {
     return () => observer.disconnect()
   }, [])
 
-  return metrics
-}
+  return metrics;
+};

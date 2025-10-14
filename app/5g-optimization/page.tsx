@@ -1,113 +1,74 @@
-import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
 
-const FiveGOptimizationPage: React.FC = () => {
+const Page5gOptimizationPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert 5g Optimization Solutions',
+      description: 'Professional 5g optimization services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored 5g optimization implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your 5g optimization needs.'
+    }
+  ];
+
   return (
-    <div className="min-h-screenbg-gray-50">
-      <EnhancedSEO 
-        title="5G Optimization Services | Zion Tech Group"
-        description="Expert 5G network optimization services to maximize performance, efficiency, and cost-effectiveness."
-        keywords="5G optimization, network optimization, performance tuning, 5G efficiency"
-      />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-rfrom-emerald-90 0to-teal-9 0 0text-whitepy-2 0">
-        <div className="containermx-autopx-4">
-          <div className="max-w-4xlmx-autotext-center">
-            <h1 className="text-4xlmd:text-6xlfont-boldmb-6">
-              5G Optimization Services
-            </h1>
-            <p className="text-xlmd:text-2xlmb-8text-emerald-10 0">
-              Maximize your 5G network performance with our expert optimization services
+    <>
+      <Helmet>
+        <title>5g Optimization - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g optimization solutions and services" />
+        <meta name="keywords" content="5g, optimization" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5g Optimization</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional 5g optimization solutions and services
             </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-emerald-6 0 0hover:bg-emerald-7 0 0text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
-            >
-              Optimize Now
-              <ArrowRight className="ml-2w-5h-5" />
-            </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
             </div>
-        </div>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </>
+  );
+};
 
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="containermx-autopx-4">
-          <div className="text-centermb-16">
-            <h2 className="text-3xlfont-boldtext-gray-90 0mb-6">
-              Our 5G Optimization Services
-            </h2>
-            <p className="text-xltext-gray-600 max-w-3xl mx-auto">
-              Comprehensive optimization solutions to enhance your 5G network performance
-            </p>
-            </div>
-        </div>
-
-          <div className="gridmd:grid-cols-3gap-8">
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
-                Network Performance Tuning
-              </h3>
-              <p className="text-gray-60 0">
-                Advanced performance optimization to maximize throughput and minimize latency
-              </p>
-              </div>
-        </div>
-
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
-                Coverage Optimization
-              </h3>
-              <p className="text-gray-60 0">
-                Strategic antenna placement and power optimization for maximum coverage
-              </p>
-              </div>
-        </div>
-
-            <div className="bg-whitep-8rounded-lgshadow-lg">
-              <CheckCircle className="w-1 2h-1 2 text-emerald-6 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-90 0mb-4">
-                Capacity Planning
-              </h3>
-              <p className="text-gray-60 0">
-                Intelligent capacity management to handle peak loads efficiently
-              </p>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-90 0text-whitepy-2 0">
-        <div className="containermx-autopx-4text-center">
-          <h2 className="text-3xlfont-boldmb-6">
-            Ready to Optimize Your 5G Network?
-          </h2>
-          <p className="text-xlmb-8text-gray-30 0">
-            Contact us today for a comprehensive 5G optimization assessment
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-emerald-6 0 0hover:bg-emerald-7 0 0text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
-          >
-            Get Started
-            <ArrowRight className="ml-2w-5h-5" />
-          </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-  };
-
-export default FiveGOptimizationPage;
+export default Page5gOptimizationPage;

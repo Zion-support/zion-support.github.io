@@ -1,53 +1,74 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart3, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AIBusinessIntelligenceProPage: React.FC = () => {
+const AiBusinessIntelligenceProPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert Ai Business Intelligence Pro Solutions',
+      description: 'Professional ai business intelligence pro services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored ai business intelligence pro implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your ai business intelligence pro needs.'
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Business Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered business intelligence solutions" />
+        <title>Ai Business Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai business intelligence pro solutions and services" />
+        <meta name="keywords" content="ai, business, intelligence, pro" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-5xlfont-boldtext-whitemb-6">
-              AI Business Intelligence Pro
-            </h1>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Ai Business Intelligence Pro</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your data into actionable insights with AI-powered business intelligence
+              Professional ai business intelligence pro solutions and services
             </p>
-          </div>
-          
-          <div className="gridmd:grid-cols-3gap-8">
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Brain className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">AI Analytics</h3>
-              <p className="text-gray-30 0">
-                Advanced AI algorithms for deep data analysis and insights.
-              </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
             </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <BarChart3 className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Real-time Dashboards</h3>
-              <p className="text-gray-30 0">
-                Live dashboards with real-time business metrics and KPIs.
-              </p>
-            </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <TrendingUp className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Predictive Analytics</h3>
-              <p className="text-gray-30 0">
-                Forecast trends and make data-driven decisions.
-              </p>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-  };
+  );
+};
 
-export default AIBusinessIntelligenceProPage;
+export default AiBusinessIntelligenceProPage;
