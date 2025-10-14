@@ -45,6 +45,8 @@ const AccessibilityEnhancer: React.FC = () => {
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
+    addAriaLandmarks();
 
     // Reduced motion mode
     if (isReducedMotion) {

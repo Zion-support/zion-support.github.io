@@ -2,14 +2,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';import { 
+import SEO from './components/SEO';
+import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  SignalIcon
 } from '@heroicons/react/24/outline';
 
 export default function HomePage()  {
@@ -32,16 +36,17 @@ export default function HomePage()  {
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
+        "telephone": "+1-302-464-0950",
         "contactType": "customer service",
-        "email": "info@ziontechgroup.com"
+        "email": "kleber@ziontechgroup.com"
       },
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup",
         "https://github.com/ziontechgroup"
-      ]    }
-  ];
+      ]
+    }
+  };
 
   const features = [
     '24/7 Expert Support',
@@ -315,27 +320,85 @@ export default function HomePage()  {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.href}
-                  className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 group-hover:text-purple-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              ))}
+              {/* AI Solutions */}
+              <Link
+                to="/ai-solutions"
+                className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-purple-500"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <CpuChipIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-purple-400 transition-colors">
+                  AI Solutions
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Advanced artificial intelligence services including machine learning, NLP, and predictive analytics.
+                </p>
+                <div className="mt-4 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              {/* IT Solutions */}
+              <Link
+                to="/it-solutions"
+                className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-blue-500"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <CpuChipIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-blue-400 transition-colors">
+                  IT Solutions
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Comprehensive IT services including infrastructure management, cloud migration, and cybersecurity.
+                </p>
+                <div className="mt-4 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              {/* Micro SaaS Solutions */}
+              <Link
+                to="/micro-saas-solutions"
+                className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-green-500"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <GlobeAltIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-green-400 transition-colors">
+                  Micro SaaS Solutions
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Custom micro SaaS applications designed to solve specific business challenges.
+                </p>
+                <div className="mt-4 flex items-center text-green-400 group-hover:text-green-300 transition-colors">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+
+              {/* Cybersecurity */}
+              <Link
+                to="/cybersecurity"
+                className="group bg-slate-800/50 p-8 rounded-xl hover:bg-slate-700/50 transition-all duration-300 transform hover:scale-105 border border-slate-700 hover:border-red-500"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <ShieldCheckIcon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 group-hover:text-red-400 transition-colors">
+                  Cybersecurity
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  Comprehensive security solutions to protect your digital assets and infrastructure.
+                </p>
+                <div className="mt-4 flex items-center text-red-400 group-hover:text-red-300 transition-colors">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
             </div>
           </div>
         </section>
