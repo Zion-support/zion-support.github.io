@@ -1,49 +1,50 @@
-import React from 'react';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const AIServicesPage: React.FC = () => {
-  const services = [{
-      icon: Brain,'
-      title: 'AI Strategy & Consulting',';'
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';'
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';}'
-    },
-    {
-      icon: Bot,'
-      title: 'Conversational AI',';'
-      description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',';'
-      features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']';}'
-    },
-    {
-      icon: BarChart3,'
-      title: 'Predictive Analytics',';'
-      description: 'Leverage machine learning to predict trends, behaviors, and outcomes for better decision making.',';'
-      features: ['Data Mining', 'Pattern Recognition', 'Forecasting Models', 'Real-time Insights']';}'
-    },
-    {
-      icon: Shield,'
-      title: 'AI Security Solutions',';'
-      description: 'Protect your AI systems and data with advanced security measures and compliance frameworks.',';'
-      features: ['Threat Detection', 'Data Privacy', 'Model Security', 'Compliance Management']';}'
-    },
-    {
-      icon: Zap,'
-      title: 'Process Automation',';'
-      description: 'Automate repetitive tasks and workflows using AI to increase efficiency and reduce costs.',';'
-      features: ['Workflow Automation', 'Document Processing', 'Data Entry Automation', 'Quality Control']';}'
-    },
-    {
-      icon: Target,'
-      title: 'Computer Vision',';'
-      description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',';'
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']';}'
-    }
-  ];
-
-
+export default function Page() {
   return (
-
+    <>
+      <Helmet>
+        <title>AIServicesPage - Zion Tech Group</title>
+        <meta name="description" content="Professional AIServicesPage solutions and services" />
+        <meta name="keywords" content="aiservicespage" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">AIServicesPage</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AIServicesPage solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-
-
+}

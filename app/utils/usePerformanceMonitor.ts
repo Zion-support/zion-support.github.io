@@ -1,36 +1,26 @@
-import { useEffect, useState } from 'react';'
-interface PerformanceMetrics {
-  loadTime: 'number;','
-  firstContentfulPaint: 'number;','
-  largestContentfulPaint: 'number;','
-  firstInputDelay: 'number;','
-  cumulativeLayoutShift: number;
-}
+import { useEffect, useRef } from 'react';
 
-export const usePerformanceMonitor = (): PerformanceMetrics => {
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-  });
+export const usePerformanceMonitor = (name: string) => {
+  const startTime = useRef<number>();
+  
   useEffect(() => {
-    const startTime = performance.now();
-    const measurePerformance = () => {
-      const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
-      setMetrics({
-        loadTime,
-        renderTime: performance.now() - startTime,
-        memoryUsage,
-      });
+    startTime.current = performance.now();
+    
+    return () => {
+      if (startTime.current) {
+        const endTime = performance.now();
+        const duration = endTime - startTime.current;
+        
+        console.log(`${name} took ${duration.toFixed(2)}ms`);
+        
+        // Send to analytics
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'performance_measurement', {
+            name: name,
+            duration: duration
+          });
+        }
+      }
     };
-    // Measure after component mount;
-    const timeoutId = setTimeout(measurePerformance, 100);
-    return () => clearTimeout(timeoutId);
-  }, []);
-  return metrics;
+  }, [name]);
 };
-
-export default usePerformanceMonitor;
-;

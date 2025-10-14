@@ -1,62 +1,50 @@
-import React, { useState, useEffect } from 'react';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMetrics {
-  cls: 'number | null;','
-  fcp: 'number | null;','
-  lcp: 'number | null;','
-  ttfb: 'number | null;','
-  loadTime: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-    loadTime: null;
-  });
-
-  useEffect(() => {
-    // Only run in development;
-    if (process.env.NODE_ENV !== 'development') {'
-      return;
-    }
-
-    // Simulate performance metrics for development;
-    const simulateMetrics = () => {
-      setMetrics({
-        cls: Math.random() * 0.1,
-        fcp: Math.random() * 1000 + 500,
-        lcp: Math.random() * 2000 + 1000,
-        ttfb: Math.random() * 500 + 200,
-        loadTime: Math.random() * 3000 + 1000;
-      });
-    };
-
-    // Simulate metrics after a delay;
-    const timer = setTimeout(simulateMetrics, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Don't render anything in production'
-  if (process.env.NODE_ENV === 'production') {'
-    return null;
-  }
-
+export default function Page() {
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">"
-      <h3 className="font-bold mb-2">Performance Metrics</h3>"
-      <div className="space-y-1 text-sm">"
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>'
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>'
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>'
+    <>
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Professional PerformanceMonitor solutions and services" />
+        <meta name="keywords" content="performancemonitor" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">PerformanceMonitor</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional PerformanceMonitor solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default PerformanceMonitor;
+}

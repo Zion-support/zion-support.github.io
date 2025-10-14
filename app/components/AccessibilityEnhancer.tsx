@@ -1,78 +1,50 @@
-import React, { useEffect } from 'react';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Skip to main content functionality;
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');'
-      skipLink.href = '#main-content';'
-      skipLink.textContent = 'Skip to main content';'
-      skipLink.className = 'sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';'','
-      skipLink.style.zIndex = '9999';'
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // High contrast mode toggle;
-    const addHighContrastToggle = () => {
-      const toggle = document.createElement('button');'
-      toggle.textContent = 'Toggle High Contrast';'
-      toggle.className = 'fixed bottom-4 right-4 bg-purple-600 text-white px-4 py-2 rounded z-50';'
-      toggle.onclick = () => {
-        document.body.classList.toggle('high-contrast');'
-      };
-      document.body.appendChild(toggle);
-    };
-
-    // Focus management;
-    const enhanceFocus = () => {
-      // Add focus indicators;
-      const style = document.createElement('style');'
-      style.textContent = `
-        *:focus {
-          outline: '2px solid #8b5cf6 !important;','
-          outline-offset: 2px !important;
-        }
-        .high-contrast {
-          filter: contrast(150%) brightness(1.2);
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Keyboard navigation enhancement;
-    const enhanceKeyboardNavigation = () => {
-      document.addEventListener('keydown', (e) => {'
-        if (e.key === 'Tab') {'
-          document.body.classList.add('keyboard-navigation');'
-        }
-      });
-
-      document.addEventListener('mousedown', () => {'
-        document.body.classList.remove('keyboard-navigation');'
-      });
-    };
-
-    // Initialize accessibility features;
-    addSkipLink();
-    addHighContrastToggle();
-    enhanceFocus();
-    enhanceKeyboardNavigation();
-
-    // Cleanup function;
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');'
-      if (skipLink) {
-        skipLink.remove();
-      }
-      
-      const toggle = document.querySelector('button[onclick*="high-contrast"]');'
-      if (toggle) {
-        toggle.remove();
-      }
-    };
-  }, []);
-
-  return null;
-};
-
-export default AccessibilityEnhancer;
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>AccessibilityEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional AccessibilityEnhancer solutions and services" />
+        <meta name="keywords" content="accessibilityenhancer" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">AccessibilityEnhancer</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AccessibilityEnhancer solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,93 +1,50 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-    title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';'
-  structuredData?: any}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.'
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group'
-  image = '/og-image.svg'
-  url = 'https: '//ziontechgroup.com'','
-  type = 'website'
-  structuredData;
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https://ziontechgroup.com","
-    "logo": "https://ziontechgroup.com/logo192.png","
-    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.","
-    "foundingDate": "2020","
-    "address": {"
-      "@type": "PostalAddress","
-      "addressCountry": "US"
-    },
-    "contactPoint": {"
-      "@type": "ContactPoint","
-      "telephone": "+1-555-0123","
-      "contactType": "customer service","
-      "email": "info@ziontechgroup.com"
-    },
-    "sameAs": ["
-      "https://linkedin.com/company/ziontechgroup","
-      "https://twitter.com/ziontechgroup","
-      "https: '//github.com/ziontechgroup"','
-    ],
-    "offers": {"
-      "@type": "AggregateOffer","
-      "offerCount": "50+","
-      "offers": ["
-        {
-          "@type": "Offer","
-          "name": "AI Solutions","
-          "description": "Advanced artificial intelligence solutions for businesses"
-        },
-        {
-          "@type": "Offer","
-          "name": "Cybersecurity Services","
-          "description": "Comprehensive cybersecurity solutions and consulting"
-        },
-        {
-          "@type": "Offer","
-          "name": "Cloud Infrastructure","
-          "description": "Scalable cloud infrastructure and migration services"
-        }
-      ]
-    }
-  }
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  const finalStructuredData = structuredData || defaultStructuredData;
+export default function Page() {
   return (
-    <Helmet></Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <meta property="og:title" content={title} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:image" content={image} />"
-      <meta property="og:url" content={url} />"
-      <meta property="og:type" content={type} />"
-      <meta name="twitter: 'card" content="summary_large_image" />"','
-      <meta name="twitter:title" content={title} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={image} />"
-      <link rel="canonical" href={url} />"
-      {structuredData && (
-        <script type="application/ld+json">"
-{JSON.stringify(structuredData)}
-        </script>
-)}
-    </Helmet>
-  )};
-
-export default SEOHead;
+    <>
+      <Helmet>
+        <title>SEOHead - Zion Tech Group</title>
+        <meta name="description" content="Professional SEOHead solutions and services" />
+        <meta name="keywords" content="seohead" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">SEOHead</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional SEOHead solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

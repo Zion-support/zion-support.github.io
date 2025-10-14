@@ -1,89 +1,50 @@
-import React from 'react';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
-      icon: Cloud,'
-      title: 'Cloud Migration',';'
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';'
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']';}'
-    },
-    {
-      icon: Server,'
-      title: 'Infrastructure as Code',';'
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.',';'
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']';}'
-    },
-    {
-      icon: Database,'
-      title: 'Database Solutions',';'
-      description: 'Optimize your database performance and scalability in the cloud environment.',';'
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']';}'
-    },
-    {
-      icon: Shield,'
-      title: 'Security & Compliance',';'
-      description: 'Implement robust security measures and ensure compliance with industry standards.',';'
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']';}'
-    },
-    {
-      icon: Zap,'
-      title: 'Auto-scaling',';'
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.',';'
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']';}'
-    },
-    {
-      icon: Globe,'
-      title: 'Multi-cloud Strategy',';'
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.',';'
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']';}'
-    }
-  ];
-
-
-const CloudInfrastructurePage: React.FC = () => {
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration','
-      description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.','
-      features: ['Assessment & Planning', 'Data Migration', 'Application Modernization', 'Testing & Validation']'
-    },
-    {
-      icon: Server,
-      title: 'Infrastructure as Code','
-      description: 'Automate infrastructure provisioning and management using modern DevOps practices.','
-      features: ['Terraform Templates', 'CI/CD Pipelines', 'Version Control', 'Automated Deployments']'
-    },
-    {
-      icon: Database,
-      title: 'Database Solutions','
-      description: 'Optimize your database performance and scalability in the cloud environment.','
-      features: ['Database Migration', 'Performance Tuning', 'Backup & Recovery', 'Monitoring & Alerting']'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance','
-      description: 'Implement robust security measures and ensure compliance with industry standards.','
-      features: ['Identity & Access Management', 'Data Encryption', 'Compliance Audits', 'Security Monitoring']'
-    },
-    {
-      icon: Zap,
-      title: 'Auto-scaling','
-      description: 'Automatically scale your resources based on demand to optimize costs and performance.','
-      features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-cloud Strategy','
-      description: 'Leverage multiple cloud providers for better resilience and vendor independence.','
-      features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']'
-    }
-  ];
-
+export default function Page() {
   return (
-
+    <>
+      <Helmet>
+        <title>CloudInfrastructurePage - Zion Tech Group</title>
+        <meta name="description" content="Professional CloudInfrastructurePage solutions and services" />
+        <meta name="keywords" content="cloudinfrastructurepage" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">CloudInfrastructurePage</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional CloudInfrastructurePage solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-
-
+}

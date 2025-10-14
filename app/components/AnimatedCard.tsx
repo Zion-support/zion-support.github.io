@@ -1,39 +1,50 @@
-import React from 'react;'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface AnimatedCardProps {
-  children: 'React.ReactNode;','
-  className?: string;
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';'
-  hoverEffect?: boolean}
-
-const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children,
-  className = ''
-  glowColor = 'purple'
-  hoverEffect = true;
-}) => {
-  const glowColors = {
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40','
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40','
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40','
-    green: 'shadow-green-500/25 hover:shadow-green-500/40','
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40','
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
-  };
-
-  const borderColors = {
-    purple: 'border-purple-500/30 hover:border-purple-500/60','
-    cyan: 'border-cyan-500/30 hover:border-cyan-500/60','
-    pink: 'border-pink-500/30 hover:border-pink-500/60','
-    green: 'border-green-500/30 hover:border-green-500/60','
-    blue: 'border-blue-500/30 hover:border-blue-500/60','
-    yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
-  };
-
+export default function Page() {
   return (
-    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}></div>
-      {children}
-    </div>
-  )};
-
-export default AnimatedCard;
+    <>
+      <Helmet>
+        <title>AnimatedCard - Zion Tech Group</title>
+        <meta name="description" content="Professional AnimatedCard solutions and services" />
+        <meta name="keywords" content="animatedcard" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">AnimatedCard</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AnimatedCard solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
