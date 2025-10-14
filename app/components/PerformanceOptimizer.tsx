@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
+  children?: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enableCodeSplitting?: boolean;
@@ -11,6 +12,7 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,
@@ -118,7 +120,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
