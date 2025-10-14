@@ -16,7 +16,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

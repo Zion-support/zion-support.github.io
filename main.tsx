@@ -1,5 +1,4 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
+// Main entry point - this file is not used in the current setup
 
 // main - Basic implementation
 export default function main() {
