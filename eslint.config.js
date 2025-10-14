@@ -81,7 +81,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ["public/sw.js"],
+    files: ['public/sw.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
