@@ -37,7 +37,8 @@ if ("serviceWorker" in navigator) {
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-          console.error('Service Worker registration failed');
+import React, { Suspense } from 'react';
+          console.warn('Service Worker registration failed');
         }
       });
   });

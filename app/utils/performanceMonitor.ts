@@ -32,6 +32,9 @@ export const performanceMonitor = {
       performance.measure(name, startMark, endMark)
       const measure = performance.getEntriesByName(name)[0]
       console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
+      if (process.env.NODE_ENV === 'development') {
+        console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
+      }
     }
   }
 }

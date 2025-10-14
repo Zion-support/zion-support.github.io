@@ -17,7 +17,9 @@ export default tseslint.config(
       '*.cjs',
       'api/**',
       'scripts/**',
-      'validate-jsx.js'
+      'validate-jsx.js',
+      'fix-lint-*.js',
+      'fix-numeric-components.js'
     ]
   },
   js.configs.recommended,

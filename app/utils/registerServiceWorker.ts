@@ -10,6 +10,7 @@ export const registerServiceWorker = () => {
         .catch(registrationError => {
           if (process.env.NODE_ENV === 'development') {
             console.error('SW registration failed: ', registrationError)
+            console.warn('SW registration failed: ', registrationError)
           }
         })
     })
