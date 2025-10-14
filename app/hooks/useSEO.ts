@@ -17,9 +17,6 @@ export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
       }
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords)
-      }
       
       document.title = title
-    }
   }, [title, description, keywords])
-}

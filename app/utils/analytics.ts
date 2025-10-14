@@ -6,7 +6,6 @@ export const analytics = {
   },
   
   page: (page: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_path: page
       });

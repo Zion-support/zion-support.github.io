@@ -31,8 +31,8 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </div>
-</>
+    </>
   );
-}
+};
 
 export default ContactPage;
