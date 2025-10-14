@@ -14,15 +14,15 @@ const Page = () => {
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
+      icon: <Smartphone className="w-8 h-8" />,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
-      icon: Wifi,
-
-
+      icon: <Wifi className="w-8 h-8" />,
+      title: 'Network Connectivity',
+      description: 'High-speed 5G network solutions for seamless connectivity'
     }
   ];
 
