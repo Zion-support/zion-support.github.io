@@ -346,8 +346,7 @@ export default function ITSolutionsPage()   {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -557,5 +556,4 @@ export default function ITSolutionsPage()   {
         </div>
       </section>
     </>
-  );
-}
+  )}

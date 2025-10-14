@@ -1,50 +1,44 @@
-import React from 'react';'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Play, Right, Circle, Star } from 'lucide-react';
 const DemoPage: React.FC = () => {
   const features = [{
       icon: 'Analytics',';
       title: 'AI-Powered Analytics',';
       description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';
-    },
+      demo: 'Live Demo''},
     {
       icon: 'Security',';
       title: 'Advanced Security',';
       description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';
-    },
+      demo: 'Demo''},
     {
       icon: 'Intelligence',';
       title: 'Business Intelligence',';
       description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';
-    },
+      demo: 'BI Demo''},
     {
       icon: 'Collaboration',';
       title: 'Team Collaboration',';
       description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';
-    }
+      demo: 'Collaboration Demo''}
   ];
 
   const testimonials = [{
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5;
-    },
+      rating: 5},
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5;
-    },
+      rating: 5},
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5;
-    }
+      rating: 5}
   ];
 
   return (
@@ -99,8 +93,7 @@ const DemoPage: React.FC = () => {
                       {feature.demo}
                     </button>;
                   </div>
-  );
-              })}
+  )})}
             </div>;
           </div>;
         </section>;
@@ -136,16 +129,14 @@ const DemoPage: React.FC = () => {
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                   </div>;
                   <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
                   <div>;
                     <p className="text-white font-semibold">{testimonial.name}</p>;
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>;
                   </div>;
-                </div>;
-              ))}
+                </div>))}
             </div>;
           </div>;
         </section>;
@@ -171,7 +162,6 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 
 export default DemoPage;

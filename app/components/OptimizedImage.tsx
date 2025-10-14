@@ -13,8 +13,7 @@ interface OptimizedImageProps {
   quality?: number;
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void}
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -42,8 +41,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
+          observer.disconnect()}
       },
       {
         threshold: 0.1,
@@ -52,36 +50,29 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
-  };
+    onLoad?.()};
 
   const handleError = () => {
     setIsError(true);
-    onError?.();
-  };
+    onError?.()};
 
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc;
-    }
+      return originalSrc}
     
     // For external images, return as-is
     if (originalSrc.startsWith('http')) {
-      return originalSrc;
-    }
+      return originalSrc}
     
     // For local images, you could implement WebP conversion here
-    return originalSrc;
-  };
+    return originalSrc};
 
   const optimizedSrc = getOptimizedSrc(src);
 
@@ -143,7 +134,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </div>
     </>
-  );
-};
+  )};
 
 export default OptimizedImage;

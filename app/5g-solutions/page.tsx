@@ -126,8 +126,7 @@ const FiveGSolutionsPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -181,7 +180,6 @@ const FiveGSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )};
 
 export default FiveGSolutionsPage;

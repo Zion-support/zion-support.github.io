@@ -19,8 +19,7 @@ export default function ContactPage()    {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,8 +29,7 @@ export default function ContactPage()    {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+    setIsSubmitting(false)};
 
   const contactInfo = [
     {
@@ -55,8 +53,8 @@ export default function ContactPage()    {
     },
     {
       icon: 'Clock',
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+      title: 'Business Hours',
+      value: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
@@ -113,8 +111,7 @@ export default function ContactPage()    {
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -145,8 +142,7 @@ export default function ContactPage()    {
                     phone: '',
                     subject: '',
                     message: ''
-                  });
-                }}
+                  })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Send Another Message
@@ -279,5 +275,4 @@ export default function ContactPage()    {
         </div>
       </section>
     </div>
-  );
-}
+  )}

@@ -172,7 +172,6 @@ const AIAutomationPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )};
 
 export default AIAutomationPlatform;

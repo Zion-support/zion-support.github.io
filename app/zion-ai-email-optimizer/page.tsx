@@ -9,6 +9,4 @@ export default function ZionAiEmailOptimizerPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

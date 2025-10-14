@@ -9,6 +9,4 @@ export default function AiNlpTextAnalysisPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

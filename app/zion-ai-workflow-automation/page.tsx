@@ -9,6 +9,4 @@ export default function ZionAiWorkflowAutomationPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

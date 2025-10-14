@@ -64,6 +64,4 @@ export default function ZionAIInventoryManager() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

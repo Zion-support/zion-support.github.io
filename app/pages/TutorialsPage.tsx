@@ -210,8 +210,7 @@ export default function TutorialsPage() {
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -329,5 +328,4 @@ export default function TutorialsPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

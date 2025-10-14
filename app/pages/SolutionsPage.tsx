@@ -306,8 +306,7 @@ export default function SolutionsPage() {
                     Learn More <ArrowRightIcon className="w-4 h-4" />
                   </Link>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -349,8 +348,7 @@ export default function SolutionsPage() {
                     ))}
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -441,5 +439,4 @@ export default function SolutionsPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

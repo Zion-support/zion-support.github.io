@@ -1,8 +1,7 @@
 import React from 'react';
 import { useEffect, Node } from 'react;
 interface PerformanceOptimizerProps {
-  children: Node;
-}
+  children: Node}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -11,10 +10,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');
-        }
-      });
-    };
+          img.setAttribute('loading', 'lazy')}
+      })};
 
     const optimizeFonts = () => {
       // Preload critical fonts;
@@ -24,23 +21,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.as = 'font';
       link.type = 'font/woff2';
       link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    };
+      document.head.appendChild(link)};
 
     const optimizeResources = () => {
       // Preload critical resources;
       const criticalResources = ['/css/critical.css',';
-        '/js/critical.js'';
-      ];
+        '/js/critical.js''];
 
       criticalResources.forEach((resource) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.css') ? 'style' : 'script';
-        document.head.appendChild(link);
-      });
-    };
+        document.head.appendChild(link)})};
 
     // Run optimizations;
     optimizeImages();
@@ -49,9 +42,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     // Cleanup function;
     return () => {
-      // Cleanup if needed;
-    };
-  }, []);
+      // Cleanup if needed}}, []);
 
   return <>{children}</>
 };

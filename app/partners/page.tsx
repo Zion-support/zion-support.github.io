@@ -1,44 +1,38 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom;
-import { Circle, Right, } from 'lucide-react;
+import { } from 'react-router-dom';
+import { Circle, Right, } from 'lucide-react';
 const PartnersPage: React.FC = () => {
   const partners = [{
       name: 'Microsoft',';
       logo: '🏢',';
       description: 'Strategic partnership for cloud and AI solutions',';
-      category: 'Technology'';
-    },
+      category: 'Technology''},
     {
       name: 'Amazon Web Services',';
       logo: '☁️',';
       description: 'infrastructure and AI services collaboration',';
-      category: ''';
-    },
+      category: '''},
     {
       name: 'Google ',';
       logo: '🔍',';
       description: 'AI and machine learning platform integration',';
-      category: 'AI/ML'';
-    },
+      category: 'AI/ML''},
     {
       name: 'IBM',';
       logo: '💼',';
       description: 'Enterprise AI solutions and consulting',';
-      category: 'Enterprise'';
-    },
+      category: 'Enterprise''},
     {
       name: 'Salesforce',';
       logo: '📊',';
       description: 'CRM and business intelligence integration',';
-      category: 'CRM'';
-    },
+      category: 'CRM''},
     {
       name: 'Oracle',';
       logo: '🗄️',';
       description: 'and enterprise application solutions',';
-      category: ''';
-    }
+      category: '''}
   ];
 
   const benefits = ['Access to cutting-edge technology',';
@@ -46,8 +40,7 @@ const PartnersPage: React.FC = () => {
     'Technical support and training',';
     'Co-marketing and co-selling programs',';
     'Priority access to new features',';
-    'Dedicated partner success manager'';
-  ];
+    'Dedicated partner success manager''];
 
   return (
     <>
@@ -96,8 +89,7 @@ const PartnersPage: React.FC = () => {
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>;
                     <p className="text-gray-300 text-sm">{partner.description}</p>;
                   </div>;
-                </div>;
-              ))}
+                </div>))}
             </div>;
           </div>;
         </section>;
@@ -114,8 +106,7 @@ const PartnersPage: React.FC = () => {
                     <Circle className="w-4 h-4 text-white" />;
                   </div>;
                   <span className="text-gray-300 font-medium">{benefit}</span>;
-                </div>;
-              ))}
+                </div>))}
             </div>;
           </div>;
         </section>;
@@ -141,7 +132,6 @@ const PartnersPage: React.FC = () => {
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 
 export default PartnersPage;

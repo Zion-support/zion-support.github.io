@@ -227,8 +227,7 @@ export default function DemoPage() {
                   <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -369,5 +368,4 @@ export default function DemoPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

@@ -180,8 +180,7 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            );
-          })}
+            )})}
         </div>
       </section>
 
@@ -216,7 +215,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )};
 
 export default ServicesPage;

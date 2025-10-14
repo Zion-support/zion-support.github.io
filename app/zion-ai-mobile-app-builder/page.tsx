@@ -9,6 +9,4 @@ export default function ZionAiMobileAppBuilderPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

@@ -3,8 +3,7 @@ export interface ImageOptimizationOptions {
   height?: number;
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  lazy?: boolean;
-}
+  lazy?: boolean}
 
 export const optimizeImage = (
   src: string,
@@ -21,14 +20,11 @@ export const optimizeImage = (
   if (format) params.set('f', format);
   if (lazy) params.set('lazy', 'true');
   const separator = src.includes('?') ? '&' : '?';
-  return `${src}${separator}${params.toString()}`;
-};
+  return `${src}${separator}${params.toString()}`};
 
 export const generateResponsiveImages = (
   src: string,
-  sizes: number[] = [320, 640, 768, 1024, 1280, 1920];
-): string => {
+  sizes: number[] = [320, 640, 768, 1024, 1280, 1920]): string => {
   return sizes;
     .map(size => `${optimizeImage(src, { width: size })} ${size}w`)
-    .join(', ');
-};
+    .join(', ')};

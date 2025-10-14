@@ -9,6 +9,4 @@ export default function CreateAdPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

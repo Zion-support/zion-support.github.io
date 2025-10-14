@@ -123,8 +123,7 @@ Empowering businesses through innovative technology solutions
                     {value.description}
                   </p>
                 </div>
-              );
-            })}
+              )})}
 </div>
         </div>
       </section>
@@ -219,5 +218,4 @@ Let's discuss how we can help transform your business with our innovative soluti
         </div>
       </section>
     </>
-  );
-}
+  )}

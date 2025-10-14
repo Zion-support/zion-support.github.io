@@ -9,6 +9,4 @@ export default function AiTimeSeriesForecastingPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

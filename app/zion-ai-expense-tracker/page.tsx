@@ -9,6 +9,4 @@ export default function ZionAiExpenseTrackerPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

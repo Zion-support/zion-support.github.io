@@ -30,14 +30,12 @@ export default function ContactPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted:', formData)};
 
   const contactMethods = [
     {
@@ -134,8 +132,7 @@ export default function ContactPage() {
                   <p className="text-lg font-semibold text-purple-300 mb-2">{method.details}</p>
                   <p className="text-gray-300">{method.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -385,5 +382,4 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

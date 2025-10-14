@@ -9,6 +9,4 @@ export default function ComponentsPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

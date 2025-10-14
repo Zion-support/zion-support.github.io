@@ -9,6 +9,4 @@ export default function ZionHrAssistantProPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

@@ -64,6 +64,4 @@ export default function ZionAIVoiceAssistantPro() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

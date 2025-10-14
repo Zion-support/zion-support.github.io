@@ -70,7 +70,6 @@ const PrivacyPage: React.FC = () => {
         </section>;
       </div>;
     </>
-  );
-};
+  )};
 
 export default PrivacyPage;

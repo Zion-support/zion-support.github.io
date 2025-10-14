@@ -8,7 +8,5 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           This component is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-};
+    </div>)};
 export default AdvancedPerformanceMonitor;

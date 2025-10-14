@@ -64,6 +64,4 @@ export default function ZionAISocialMediaManager() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

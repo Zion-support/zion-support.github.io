@@ -8,8 +8,7 @@ interface NeonButtonProps {
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent';
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
+  className?: string}
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
@@ -48,22 +47,19 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <Link to={to} className={`${classes} group`}>
         {content}
       </Link>
-    );
-  }
+    )}
 
   if (href) {
     return (
       <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">
         {content}
       </a>
-    );
-  }
+    )}
 
   return (
     <button onClick={onClick} className={`${classes} group`}>
       {content}
     </button>
-  );
-};
+  )};
 
 export default NeonButton;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -14,14 +14,11 @@ const Header: React.FC = () => {
       submenu: [{ name: 'AI Services', href: '/ai-services' },';
         { name: 'IT Services', href: '/it-services' },';
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
-    },
+        { name: 'Digital Transformation', href: '/digital-transformation' }']},
     { name: 'Solutions', href: '/solutions' },';
     { name: 'Case Studies', href: '/case-studies' },';
     { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
-  ];
+    { name: 'Contact', href: '/contact' }'];
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">;
@@ -38,7 +35,7 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">;
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">;
-                  <Link;
+                  <Link>
                     to={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors";
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
@@ -51,23 +48,20 @@ const Header: React.FC = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">;
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link>
                           key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700";
                         >;
                           {subItem.name}
-                        </Link>;
-                      ))}
-                    </div>;
-                  )}
-                </div>;
-              ))}
+                        </Link>))}
+                    </div>)}
+                </div>))}
             </div>;
           </div>;
           {/* CTA Button */}
           <div className="hidden md:block">;
-            <Link;
+            <Link>
               to="/contact";
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
             >;
@@ -76,7 +70,7 @@ const Header: React.FC = () => {
           </div>;
           {/* Mobile menu button */}
           <div className="md:hidden">;
-            <button;
+            <button>
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2";
             >;
@@ -90,7 +84,7 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
               {navigationItems.map((item) => (
                 <div key={item.name}>;
-                  <Link;
+                  <Link>
                     to={item.href}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
                     onClick={() => setIsOpen(false)}
@@ -100,21 +94,18 @@ const Header: React.FC = () => {
                   {item.submenu && (
                     <div className="ml-4 space-y-1">;
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link>
                           key={subItem.name}
                           to={subItem.href}
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm";
                           onClick={() => setIsOpen(false)}
                         >;
                           {subItem.name}
-                        </Link>;
-                      ))}
-                    </div>;
-                  )}
-                </div>;
-              ))}
+                        </Link>))}
+                    </div>)}
+                </div>))}
               <div className="pt-4">;
-                <Link;
+                <Link>
                   to="/contact";
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
                   onClick={() => setIsOpen(false)}
@@ -123,11 +114,8 @@ const Header: React.FC = () => {
                 </Link>;
               </div>;
             </div>;
-          </div>;
-        )}
+          </div>)}
       </div>;
-    </nav>;
-  );
-};
+    </nav>)};
 
 export default Header;

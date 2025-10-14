@@ -11,8 +11,7 @@ interface SEOProps {
   twitterCard?: string;
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean;
-}
+  noFollow?: boolean}
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -112,7 +111,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )};
 
 export default EnhancedSEO;

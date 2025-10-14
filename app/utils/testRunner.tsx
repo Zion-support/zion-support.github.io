@@ -50,6 +50,4 @@ export default function Page() {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

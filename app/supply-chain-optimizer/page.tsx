@@ -8,6 +8,4 @@ export default function SupplyChainOptimizerPage() {
           This page is under development.;
         </p>;
       </div>;
-    </div>;
-  );
-}
+    </div>)}

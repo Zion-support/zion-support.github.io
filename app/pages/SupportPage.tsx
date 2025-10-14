@@ -167,8 +167,7 @@ export default function SupportPage() {
                     <Icon className="w-5 h-5" />
                     <span>{category.name}</span>
                   </button>
-                );
-              })}
+                )})}
             </div>
           </div>
         </div>
@@ -212,8 +211,7 @@ export default function SupportPage() {
                     </div>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -354,5 +352,4 @@ export default function SupportPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

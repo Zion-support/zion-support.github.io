@@ -1,6 +1,10 @@
-import React from 'react';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+const content = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {
@@ -108,14 +112,14 @@ const AiServicesPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <div key={index} className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={\`w-16 h-16 bg-gradient-to-r \${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300\`}>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6">{service.description}</p>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-2 transition-transform duration-300">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <Right className="w-4 h-4 ml-2" />
                     </button>
                   </div>
                 ))}
@@ -171,4 +175,7 @@ const AiServicesPage: React.FC = () => {
   );
 };
 
-export default AiServicesPage;
+export default AiServicesPage;`;
+
+fs.writeFileSync('/workspace/app/ai-services/page.tsx', content, 'utf8');
+console.log('Fixed ai-services/page.tsx');

@@ -50,7 +50,7 @@ const FuturisticCardEnhanced: React.FC = () => {
               <p className="mb-6">;
                 Ready to transform your business with our futuristic card enhanced services?;
               </p>;
-              <a;
+              <a>
                 href="/contact";
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
@@ -70,7 +70,7 @@ const FuturisticCardEnhanced: React.FC = () => {
             Let's discuss how our futuristic card enhanced';
             services can help you achieve your goals.;
           </p>;
-          <a;
+          <a>
             href="/contact";
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
           >;
@@ -78,8 +78,6 @@ const FuturisticCardEnhanced: React.FC = () => {
           </a>;
         </div>;
       </section>;
-    </div>;
-  );
-};
+    </div>)};
 
 export default FuturisticCardEnhanced;

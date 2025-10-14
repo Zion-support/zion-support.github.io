@@ -12,8 +12,7 @@ interface SEOProps {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
-}
+  tags?: string[]}
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -118,7 +117,6 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  );
-};
+  )};
 
 export default SEO;

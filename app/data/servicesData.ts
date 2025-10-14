@@ -9,19 +9,16 @@ export interface Service {
   pricing: {
     basic: number;
     pro: number;
-    enterprise: number;
-  };
+    enterprise: number};
   benefits: string[];
   useCases: string[];
   technologies: string[];
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   href: string;
-  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
-}
+  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'}
 
 export const services: Service[] = [
   // AI Services
@@ -531,9 +528,7 @@ export const services: Service[] = [
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)};
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)};

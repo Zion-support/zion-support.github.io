@@ -358,8 +358,7 @@ export default function MicroSaaSSolutionsPage()   {
                     </Link>
                   </div>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -569,5 +568,4 @@ export default function MicroSaaSSolutionsPage()   {
         </div>
       </section>
     </>
-  );
-}
+  )}

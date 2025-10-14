@@ -3,8 +3,7 @@ import LoadingSpinner from './LoadingSpinner';
 
 interface LazyWrapperProps {
   children: React.ReactNode;
-  fallback?: React.ReactNode;
-}
+  fallback?: React.ReactNode}
 
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
   children, 
@@ -14,8 +13,7 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
-  );
-};
+  )};
 
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(
@@ -28,7 +26,6 @@ export const withLazyLoading = <P extends object>(
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />
     </LazyWrapper>
-  );
-};
+  )};
 
 export default LazyWrapper;

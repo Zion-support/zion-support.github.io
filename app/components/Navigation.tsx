@@ -38,10 +38,7 @@ const Navigation = () => {
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
-    },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+    }
   ];
 
   const isActive = (path: string) => {
@@ -146,8 +143,7 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-                );
-              })}
+                )})}
               <div className="pt-4 border-t border-slate-700">
                 <Link
                   to="/contact"
@@ -162,7 +158,6 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  );
-};
+  )};
 
 export default Navigation;

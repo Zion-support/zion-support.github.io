@@ -1,27 +1,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const benefits = [{
       icon: Heart,
       title: 'Health & Wellness',';
-      description: 'Comprehensive health insurance, mental health support, and wellness programs.'';
-    },
+      description: 'Comprehensive health insurance, mental health support, and wellness programs.''},
     {
       icon: Zap,
       title: 'Learning & Development',';
-      description: 'Continuous learning opportunities, conferences, and professional development budget.'';
-    },
+      description: 'Continuous learning opportunities, conferences, and professional development budget.''},
     {
       icon: Users,
       title: 'Collaborative Culture',';
-      description: 'Work with talented professionals in an inclusive and innovative environment.'';
-    },
+      description: 'Work with talented professionals in an inclusive and innovative environment.''},
     {
       icon: Target,
       title: 'Career Growth',';
-      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'';
-    }
+      description: 'Clear career paths, mentorship programs, and opportunities for advancement.''}
   ];
 
   const openPositions = [{
@@ -29,43 +25,37 @@ const CareersPage: React.FC = () => {
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Engineering',';
-      description: 'Lead AI model development and implementation for enterprise clients.'';
-    },
+      description: 'Lead AI model development and implementation for enterprise clients.''},
     {
       title: 'Cloud Solutions Architect',';
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Engineering',';
-      description: 'Design and implement scalable cloud infrastructure solutions.'';
-    },
+      description: 'Design and implement scalable cloud infrastructure solutions.''},
     {
       title: 'Cybersecurity Specialist',';
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Security',';
-      description: 'Protect client systems and data with advanced security measures.'';
-    },
+      description: 'Protect client systems and data with advanced security measures.''},
     {
       title: 'Product Manager',';
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Product',';
-      description: 'Drive product strategy and roadmap for our AI and IT solutions.'';
-    },
+      description: 'Drive product strategy and roadmap for our AI and IT solutions.''},
     {
       title: 'Sales Engineer',';
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Sales',';
-      description: 'Help clients understand and implement our technology solutions.'';
-    },
+      description: 'Help clients understand and implement our technology solutions.''},
     {
       title: 'UX/UI Designer',';
       location: 'Remote / Delaware',';
       type: 'Full-time',';
       department: 'Design',';
-      description: 'Create intuitive and engaging user experiences for our products.'';
-    }
+      description: 'Create intuitive and engaging user experiences for our products.''}
   ];
 
   return (
@@ -99,9 +89,7 @@ const CareersPage: React.FC = () => {
                   </div>;
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>;
                   <p className="text-gray-300 text-sm">{benefit.description}</p>;
-                </div>;
-              );
-            })}
+                </div>)})}
           </div>;
         </div>;
         {/* Open Positions */}
@@ -126,8 +114,7 @@ const CareersPage: React.FC = () => {
                 <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">;
                   Apply Now;
                 </button>;
-              </div>;
-            ))}
+              </div>))}
           </div>;
         </div>;
         {/* Company Culture */}
@@ -170,8 +157,6 @@ const CareersPage: React.FC = () => {
           </div>;
         </div>;
       </div>;
-    </div>;
-  );
-};
+    </div>)};
 
 export default CareersPage;
