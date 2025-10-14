@@ -20,7 +20,10 @@ const Careers Page: React.FC = () => {
           <h1 className="text-5 xlfont-boldtext-whitemb-6">
             Join Our <span className="text-transparentbg-clip-textbg-gradient-to-r from-rose-40 0 to-pink-4 0 0">Team</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+            Be part of a team that's shaping the future of AI and IT solutions.
+=======
             Be part of a team that's shaping the future of AI and IT solutions.';
             Work on cutting-edge projects and make a real impact.;
           </p>
@@ -107,9 +110,18 @@ const Careers Page: React.FC = () => {
         {/* CT A Section */}
   )
         <div className="text-center">
-          <div className="bg-white/1 0 backdrop-blur-smrounded-xlp-8borderborder-white/2 0max-w-2xlmx-auto">
-            <h2 className="text-2 xlfont-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-30 0 mb-6">
+<<<<<<< HEAD
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>
+            <p className="text-gray-300 mb-6">
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            </p>
+            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+              Send Resume
+=======
+          <div className="bg-white/10backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xlfont-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
+            <p className="text-gray-300mb-6">
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
             </p>
             <button className="bg-gradient-to-r from-rose-5 00 to-pink-5 00 text-white px-8 py-3rounded-lgfont-semiboldhover:from-rose-6 00hover:to-pink-6 0 0transition-all duration-300">

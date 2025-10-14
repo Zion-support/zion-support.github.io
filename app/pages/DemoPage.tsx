@@ -25,7 +25,7 @@ const Demo Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 export default DemoPage;

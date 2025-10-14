@@ -45,8 +45,8 @@ const About Page: React.FC = () => {
       <div>
       <Helmet>
         <title>About - Zion Tech Group</title>
-        <meta name="description" content="Professional about solutions and services" />
-        <meta name="keywords" content="about" />
+        <meta name="description" content="Learn about our company and mission" />
+        <meta name="keywords" content="about, company, mission" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -54,40 +54,21 @@ const About Page: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
         
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">About</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional about solutions and services
-            </p>
+            <h1 className="text-4xl font-bold text-white mb-8">About Us</h1>
+            <p className="text-xl text-gray-300 mb-8">Learn about our company and mission</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">Our Mission</h3>
+                <p className="text-blue-700">Delivering innovative technology solutions that drive business success.</p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">Our Vision</h3>
+                <p className="text-green-700">To be the leading technology partner for businesses worldwide.</p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">Our Values</h3>
+                <p className="text-purple-700">Innovation, integrity, and excellence in everything we do.</p>
+              </div>
             </div>
           </div>
 import React from 'react'; import { Helmet } from 'react-helmet-async'; const About Page: React.FC = ( )=> {return (
@@ -104,11 +85,8 @@ import React from 'react'; import { Helmet } from 'react-helmet-async'; const Ab
         </div>
 =======
       </div>
-    </div> 
-          </div> 
-          </div> 
-    </>
-  )
+</>
+  );
 }
-  )
-export default About;; Page
+
+export default AboutPage;

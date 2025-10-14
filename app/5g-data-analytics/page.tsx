@@ -67,7 +67,7 @@ const Page5gDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

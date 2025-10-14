@@ -51,7 +51,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetError }) => {
           </details>
         )}
       </div>
-    </div>
+</>
   );
 };
 

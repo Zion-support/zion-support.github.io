@@ -100,7 +100,7 @@ const ITServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we&apos;ve got you covered.
+            From infrastructure to cloud, we've got you covered.
           </p>
           </div>
       </section>
@@ -148,8 +148,8 @@ const ITServicesPage: React.FC = () => {
           <h2 className="text-4 xlmd:text-5xlfont-boldtext-whitemb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-            Let&apos;s discuss how our IT services can improve your business operations and security.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our IT services can improve your business operations and security.
           </p>
           <div className="flexflex-colsm:flex-rowgap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-6 00 to-purple-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-cyan-7 00 hover:to-purple-7 00transition-all duration-300transformhover:scale-1 0 5">

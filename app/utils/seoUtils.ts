@@ -30,7 +30,7 @@ export constseoUtils= {
   
   generateStructuredData: (data: any) => {
     return {
-      '@context': 'https: //schema.org',
+      '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',

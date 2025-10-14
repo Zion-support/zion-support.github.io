@@ -56,10 +56,6 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
             )}
           </div>
       </div>
-    </div> 
-          
-        </div>
-      </body>
-    </html>
+</>
   );
 }

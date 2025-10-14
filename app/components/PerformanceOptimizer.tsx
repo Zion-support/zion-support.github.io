@@ -1,52 +1,83 @@
-import React, { use Effect } from 'react'
+import React, { useEffect, useCallback } from 'react';
 
-
-const Performance Optimizer: React.FC = () => {
-  use Effect(() => {
-    // Performance optimization logic
-    const optimize Images = () => {
-      const images = document.query Selector All('img')
-      images.for Each((img) => {
-        if (!(img as any).loading) {
-          (img as any).loading = 'lazy'
-        }
-  )
-      })
-    }
-  )
-    const optimize Fonts = () => {
-      // Preload critical fonts
-      const font Preload = document.create Element('link')
-      font Preload.rel = 'preload'
-      font Preload.href = '/fonts/inter-var.woff2'
-      font Preload.as = 'font'
-      font Preload.type = 'font/woff2'
-      font Preload.cross Origin = 'anonymous'
-      document.head.append Child(font Preload)
-    }
-  )
-    const optimize Resources = () => {
-      // Add resource hints
-      const resource Hints = 
-      resource Hints.for Each((hint) => {
-        const link = document.create Element('link')
-        link.rel = hint.rel
-        link.href = hint.href
-        document.head.append Child(link)
-      })
-    }
-  )
-    // Run optimizations
-    optimize Images()
-    optimize Fonts()
-    optimize Resources()
-    // Cleanup function
-    return () => {
-      // Cleanup if needed
-    }
-  )
-  }, )
-  return null; // This component doesn't render anything
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
 }
-  )
-export default Performance;; Optimizer
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  // Preload critical resources
+  useEffect(() => {
+    // Preload critical fonts
+    const preloadFonts = () => {
+      const fontLinks = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
+      ];
+      
+      fontLinks.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Preload critical images
+    const preloadImages = () => {
+      const criticalImages = [
+        '/logo.svg',
+        '/hero-bg.jpg',
+        '/favicon.ico'
+      ];
+      
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    // Initialize performance optimizations
+    preloadFonts();
+    preloadImages();
+
+    // Set up performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance metric:', entry.name, entry.value);
+          }
+        });
+      });
+
+      try {
+        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      } catch (e) {
+        // Performance Observer not supported
+      }
+    }
+  }, []);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    if (typeof window !== 'undefined') {
+      window.requestAnimationFrame(() => {
+        // Scroll optimization logic can be added here
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [handleScroll]);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;

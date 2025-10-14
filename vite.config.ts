@@ -103,6 +103,7 @@ export default defineConfig({
           }
           // App chunks - split by feature
           if (id.includes('/app/')) {
+<<<<<<< HEAD
             // Split by page categories
             if (id.includes('/ai-') || id.includes('/5g-')) {
               return 'feature-pages';
@@ -111,6 +112,8 @@ export default defineConfig({
             if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
               return 'main-pages';
             }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e9f6
             return 'app';
           }
           return undefined;

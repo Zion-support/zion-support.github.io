@@ -6,32 +6,25 @@ interface Analytics Context Type {
   track Page View: (page Name: string, properties?: Record<string, unknown>) => void
   identify User: (user Id: string, properties?: Record<string, unknown>) => void
 }
-  )
-const Analytics Context = create Context<Analytics Context Type | undefined>(undefined)
-interface Analytics Provider Props {
-  children: React Node
-}
-  )
-export const Analytics Provider: React.FC<Analytics Provider Props> = ({ children }) => {
-  const track Event = (event Name: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_EN V === 'development') {
-      console.warn('Event tracked: ', event Name, properties)
-    }
-  )
-    // Add your analytics tracking logic here
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   )
   const track Page View = (page Name: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_EN V === 'development') {
       console.warn('Page view tracked: ', page Name, properties)
     }
-  )
-    // Add your page view tracking logic here
-  }
-  )
-  const identify User = (user Id: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_EN V === 'development') {
-      console.warn('User identified: ', user Id, properties)
+    // TODO: Implement actual analytics tracking
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page View:', pageName);
     }
   )
     // Add your user identification logic here

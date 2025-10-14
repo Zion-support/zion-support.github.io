@@ -60,9 +60,9 @@ const Case Studies Page: React.FC = () => {
           <h1 className="text-5 xl md:text-6xlfont-boldmb-6bg-gradient-to-r from-purple-400 to-cyan-400bg-clip-text text-transparent">
             Success Stories
           </h1>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
-            with our A I and I T solutions.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Discover how we've helped businesses across industries achieve remarkable results 
+            with our AI and IT solutions.
           </p>
           </div>
       </section>
@@ -123,8 +123,8 @@ const Case Studies Page: React.FC = () => {
           <h2 className="text-4 xlmd:text-5xlfont-boldtext-whitemb-6">
             Ready to Create Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
-            Let&apos;s discuss how our AI and IT solutions can transform your business 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our AI and IT solutions can transform your business 
             and deliver measurable results.
           </p>
           <div className="flexflex-colsm:flex-rowgap-4 justify-center">

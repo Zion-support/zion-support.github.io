@@ -1,10 +1,6 @@
           <h1 className="text-4 xlfont-bold text-gray-900 mb-6">
             5gSupport Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-            Professional services and solutions.
-          </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -71,6 +67,8 @@ const Page5gSupportPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
+=======
+<p className="text-xl text-gray-300 mb-8">Professional solutions and services</p>
           </div>
       </div>
     </>

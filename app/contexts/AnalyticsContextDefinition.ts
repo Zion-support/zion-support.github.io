@@ -2,8 +2,8 @@
 
 export interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
-  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
 export interface AnalyticsProviderProps {
@@ -15,3 +15,8 @@ export interface AnalyticsEvent {
   properties?: Record<string, unknown>;
   timestamp: number;
 }
+<<<<<<< HEAD
+=======
+
+export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e9f6

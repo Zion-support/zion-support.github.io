@@ -66,7 +66,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
           </details>
         )}
       </div>
-    </div>
+</>
   );
 };
 

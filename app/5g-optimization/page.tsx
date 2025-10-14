@@ -1,10 +1,6 @@
       <section className="bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4 xl mx-auto text-center">
-            <h1 className="text-4 xl md:text-6xl font-bold mb-6">
-              5G Optimization Services
-            </h1>
-            <p className="text-xl md:text-2 xl mb-8 text-emerald-100">
+ursor/fix-errors-and-merge-to-main-c17d
               Maximize your 5G network performance with our expert optimization services
             </p>
             <Link 

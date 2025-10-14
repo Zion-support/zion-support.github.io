@@ -1,7 +1,5 @@
-import React, { ReactNode, useCallback, createContext } from 'react';
-import { AnalyticsContextType } from './AnalyticsContextDefinition';
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+import React, { ReactNode, useCallback } from 'react';
+import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContextDefinition';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -14,9 +12,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
     // Add your analytics tracking logic here
   }, []);
-  
-  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
-    console.warn('Page view tracked:', pageName, properties);
+
+  const trackPageView = useCallback((page: string) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Page view tracked:', page);
+    }
     // Add your page view tracking logic here
   }, []);
   
@@ -27,7 +27,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('User set: ', userId, properties);
+      console.warn('User set:', userId, properties);
     }
     // Add your user setting logic here
   }, []);

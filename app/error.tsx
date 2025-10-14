@@ -28,8 +28,7 @@ const Error Page: React.FC = () => {
           </button>
         </div>
       </div>
-    </div> 
-    </>
+</>
   );
 };
 

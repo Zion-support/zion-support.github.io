@@ -66,7 +66,34 @@ const AiSolutionsPage: React.FC = () => {
               </Link>
             </div>
         </div>
-    </>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
+            Ready to Harness the Power of AI?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+          </p>
+          <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-rfrom-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your AI Journey
+            </Link>
+            <Link
+              to="/demo"
+              className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

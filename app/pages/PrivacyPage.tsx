@@ -25,7 +25,7 @@ const Privacy Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 export default PrivacyPage;
