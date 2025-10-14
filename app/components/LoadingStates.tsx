@@ -18,7 +18,6 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
     lg: 'w-12 h-12'
   };
 
-
   const getDefaultMessage = () => {
     switch (type) {
       case 'page':
