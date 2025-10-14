@@ -8,10 +8,7 @@ interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
 }
 
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-}
+// LayoutShift interface removed as it's not used
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
