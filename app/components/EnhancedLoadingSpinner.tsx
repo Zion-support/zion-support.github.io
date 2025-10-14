@@ -1,37 +1,31 @@
+'use client';
+import React from 'react';
 
-'use client';';';
-import React from 'react';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: string;
+  text?: string;
 }
+
+export default function EnhancedLoadingSpinner({ 
+  size = 'md', 
+  color = 'text-blue-600',
+  text = 'Loading...' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
+    <div className="flex flex-col items-center justify-center space-y-2">
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}></div>
+      {text && (
+        <p className={`text-sm ${color} animate-pulse`}>
+          {text}
         </p>
-
-      </div>
-    </>
+      )}
+    </div>
   );
 }
-        </p></div></div>
-  );}
-}
-
-

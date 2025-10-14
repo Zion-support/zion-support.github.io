@@ -45,12 +45,9 @@ export default function EnhancedAccessibility() {
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
-
-};
-
-export default EnhancedAccessibility;
+}
 
 

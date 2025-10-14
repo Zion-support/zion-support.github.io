@@ -1,37 +1,26 @@
+'use client';
+import React from 'react';
 
-'use client';';';
-import React from 'react';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
-
-      </div>
-    </>
-  );
-}
-        </p></div></div>
-  );}
+interface LoadingStateProps {
+  isLoading: boolean;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
+export default function EnhancedLoadingStates({ 
+  isLoading, 
+  children, 
+  fallback 
+}: LoadingStateProps) {
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[200px]">
+        {fallback || (
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        )}
+      </div>
+    );
+  }
 
+  return <>{children}</>;
+}

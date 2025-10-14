@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 
 
-const PagePage = () => {
-
+export default function Page() {
   return (
     <>
       <Helmet>

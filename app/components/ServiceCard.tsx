@@ -1,35 +1,44 @@
+'use client';
+import React from 'react';
 
-'use client';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  href?: string;
+  className?: string;
 }
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
-      </div>
+
+export default function ServiceCard({ 
+  title, 
+  description, 
+  icon, 
+  href, 
+  className = '' 
+}: ServiceCardProps) {
+  const CardContent = (
+    <div className={`bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 ${className}`}>
+      {icon && (
+        <div className="text-blue-600 mb-4">
+          {icon}
+        </div>
+      )}
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        {title}
+      </h3>
+      <p className="text-gray-600">
+        {description}
+      </p>
     </div>
   );
-}
-        </p></div></div>
-  );}
-}
 
+  if (href) {
+    return (
+      <a href={href} className="block">
+        {CardContent}
+      </a>
+    );
+  }
 
+  return CardContent;
+}
