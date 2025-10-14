@@ -15,7 +15,7 @@ interface ConsultationType {
 }
 
 const ConsultationPage: React.FC = () => {
-  const [selectedType, setSelectedType] = useState<string>('');
+  const [_selectedType, setSelectedType] = useState<string>('');
 
   const consultationTypes: ConsultationType[] = [
     {

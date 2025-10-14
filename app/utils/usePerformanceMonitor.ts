@@ -18,8 +18,26 @@ export const usePerformanceMonitor = (name: string) => {
         // Send to analytics
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
-
+            function_name: name,
+            duration: duration
           });
         }
+      }
     };
   }, [name]);
+  
+  return {
+    markStart: () => {
+      startTime.current = performance.now();
+    },
+    markEnd: () => {
+      if (startTime.current) {
+        const endTime = performance.now();
+        const duration = endTime - startTime.current;
+        console.log(`${name} took ${duration.toFixed(2)}ms`);
+        return duration;
+      }
+      return 0;
+    }
+  };
+};

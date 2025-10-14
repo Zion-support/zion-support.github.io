@@ -26,7 +26,7 @@ export const usePerformanceMonitor = (options: PerformanceMonitorOptions = {}) =
     enableUserTiming = true,
     enableNavigationTiming = true,
     enableMemoryInfo = true,
-    enableCustomMetrics = true,
+    enableCustomMetrics: _enableCustomMetrics = true,
     sampleRate = 1.0,
     batchSize = 10,
     flushInterval = 30000

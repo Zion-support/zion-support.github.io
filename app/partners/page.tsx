@@ -108,7 +108,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const getTierInfo = (tier: string) => {
+  const _getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
   };
 

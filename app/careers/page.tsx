@@ -135,7 +135,7 @@ const CareersPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We're looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
+              Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
@@ -286,7 +286,7 @@ const CareersPage: React.FC = () => {
                     <Rocket className="w-10 h-10 text-pink-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">Growth Mindset</h3>
-                  <p className="text-gray-300">We invest in our team's development and provide opportunities to learn and grow.</p>
+                  <p className="text-gray-300">We invest in our team&apos;s development and provide opportunities to learn and grow.</p>
                 </div>
               </div>
             </div>
@@ -298,10 +298,10 @@ const CareersPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">
-                Don't See Your Dream Job?
+                Don&apos;t See Your Dream Job?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We're always looking for exceptional talent. Send us your resume and let us know how you'd like to contribute to our mission.
+                We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
