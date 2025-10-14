@@ -1,479 +1,441 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
+  ServerIcon, 
   CloudIcon,
+  ShieldCheckIcon,
+  CogIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon,
   CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
+  ArrowRightIcon,
+  StarIcon,
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
   DocumentTextIcon,
-  LightBulbIcon
+  RocketLaunchIcon,
+  CpuChipIcon,
+  WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-const ITSolutionsPage: React.FC = () => {
-  const solutions = [
-=======
 export default function ITSolutionsPage() {
-  const itServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
-      icon: CloudIcon,
-      features: [
-        "Scalable architecture",
-        "High availability",
-        "Security compliance",
-        "Cost optimization",
-        "24/7 monitoring",
-        "Disaster recovery"
-      ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Scalability", "Reliability", "Cost efficiency"],
-      useCases: ["Web hosting", "Data storage", "Application hosting"],
-      href: "/cloud-infrastructure"
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Threat detection",
-        "Vulnerability assessment",
-        "Security monitoring",
-        "Incident response",
-        "Compliance management",
-        "Security training"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],
-      useCases: ["Data protection", "Network security", "Compliance"],
-      href: "/cybersecurity"
-    },
-    {
-      title: "IT Consulting",
-      description: "Strategic IT consulting to help you make informed technology decisions.",
-      icon: LightBulbIcon,
-      features: [
-        "Technology assessment",
-        "Strategic planning",
-        "Vendor selection",
-        "Implementation guidance",
-        "Change management",
-        "Training and support"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $1,200/month",
-      benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
-      useCases: ["Technology planning", "Digital transformation", "System integration"],
-      href: "/it-consulting"
-    },
-    {
-      title: "Network Solutions",
-      description: "Advanced networking solutions for reliable and secure connectivity.",
-      icon: GlobeAltIcon,
-      features: [
-        "Network design",
-        "Security implementation",
-        "Performance optimization",
-        "Monitoring and maintenance",
-        "Disaster recovery",
-        "Remote access"
-      ],
-      color: "from-purple-500 to-indigo-500",
-      price: "Starting at $1,800/month",
-      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
-      useCases: ["Office networking", "Remote work", "Data centers"],
-      href: "/network-solutions"
-    },
-    {
-      title: "Data Management",
-      description: "Comprehensive data management solutions for storage, processing, and analytics.",
-      icon: ChartBarIcon,
-      features: [
-        "Data storage",
-        "Data processing",
-        "Analytics and reporting",
-        "Data security",
-        "Backup and recovery",
-        "Data governance"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Better insights", "Data security", "Compliance"],
-      useCases: ["Business intelligence", "Data analytics", "Compliance"],
-      href: "/data-management"
-    },
-    {
-      title: "IT Support",
-      description: "Comprehensive IT support services to keep your systems running smoothly.",
-      icon: UserGroupIcon,
-      features: [
-        "24/7 support",
-        "Remote assistance",
-        "System maintenance",
-        "Software updates",
-        "Hardware support",
-        "User training"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $1,000/month",
-      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
-      useCases: ["Help desk", "System maintenance", "User support"],
-      href: "/it-support"
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "IT Solutions - Zion Tech Group",
+    "description": "Comprehensive IT solutions for businesses. Cloud infrastructure, cybersecurity, network management, and digital transformation services.",
+    "url": "https://ziontechgroup.com/it-solutions",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      }
     }
-  ];
-<<<<<<< HEAD
+  };
 
-  const features = [
+  const itServices = [
     {
-      title: "Expert Solutions",
-      description: "Our team of certified professionals delivers cutting-edge IT solutions.",
-      icon: CpuChipIcon
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure Solutions',
+      description: 'Complete cloud infrastructure setup, migration, and management with AWS, Azure, and Google Cloud Platform expertise.',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Auto-scaling',
+        'Load Balancing',
+        'Disaster Recovery',
+        'Cost Optimization',
+        'Security Hardening',
+        '24/7 Monitoring'
+      ],
+      pricing: {
+        starter: { price: 299, period: 'month', features: ['Basic setup', 'Email support', 'Standard monitoring'] },
+        professional: { price: 799, period: 'month', features: ['Advanced setup', 'Priority support', 'Custom monitoring', 'Migration assistance'] },
+        enterprise: { price: 1999, period: 'month', features: ['Full management', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: CloudIcon,
+      category: 'Cloud Computing',
+      marketPrice: '$299-1999/month',
+      link: '/cloud-infrastructure'
     },
     {
-      title: "Scalable Architecture",
-      description: "Solutions that grow with your business and adapt to changing needs.",
-      icon: CloudIcon
+      id: 'cybersecurity-suite',
+      title: 'Cybersecurity Suite',
+      description: 'Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, and security monitoring.',
+      features: [
+        'Threat Detection',
+        'Vulnerability Assessment',
+        'Security Monitoring',
+        'Incident Response',
+        'Compliance Management',
+        'Penetration Testing',
+        'Security Training',
+        'Risk Assessment'
+      ],
+      pricing: {
+        starter: { price: 199, period: 'month', features: ['Basic monitoring', 'Email alerts', 'Standard reports'] },
+        professional: { price: 599, period: 'month', features: ['Advanced monitoring', 'Real-time alerts', 'Custom reports', 'Incident response'] },
+        enterprise: { price: 1299, period: 'month', features: ['Full security suite', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: ShieldCheckIcon,
+      category: 'Cybersecurity',
+      marketPrice: '$199-1299/month',
+      link: '/cybersecurity-suite'
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your systems are always running.",
-      icon: UserGroupIcon
+      id: 'network-management',
+      title: 'Network Management Solutions',
+      description: 'Complete network infrastructure design, implementation, and management with advanced monitoring and optimization.',
+      features: [
+        'Network Design',
+        'Implementation',
+        'Performance Monitoring',
+        'Traffic Analysis',
+        'Bandwidth Management',
+        'Network Security',
+        'Remote Management',
+        'Troubleshooting'
+      ],
+      pricing: {
+        starter: { price: 149, period: 'month', features: ['Basic monitoring', 'Email support', 'Standard reports'] },
+        professional: { price: 399, period: 'month', features: ['Advanced monitoring', 'Priority support', 'Custom reports', 'Remote management'] },
+        enterprise: { price: 899, period: 'month', features: ['Full management', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: GlobeAltIcon,
+      category: 'Network Management',
+      marketPrice: '$149-899/month',
+      link: '/network-management'
     },
     {
-      title: "Security First",
-      description: "Security is built into every solution we deliver.",
-      icon: ShieldCheckIcon
+      id: 'data-center-solutions',
+      title: 'Data Center Solutions',
+      description: 'Complete data center design, implementation, and management with high availability and disaster recovery capabilities.',
+      features: [
+        'Data Center Design',
+        'Hardware Procurement',
+        'Installation & Setup',
+        'Power Management',
+        'Cooling Systems',
+        'Security Systems',
+        'Backup Solutions',
+        'Disaster Recovery'
+      ],
+      pricing: {
+        starter: { price: 499, period: 'month', features: ['Basic setup', 'Email support', 'Standard monitoring'] },
+        professional: { price: 1299, period: 'month', features: ['Advanced setup', 'Priority support', 'Custom monitoring', 'Migration assistance'] },
+        enterprise: { price: 2999, period: 'month', features: ['Full management', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: ServerIcon,
+      category: 'Data Center',
+      marketPrice: '$499-2999/month',
+      link: '/data-center-solutions'
+    },
+    {
+      id: 'it-support-services',
+      title: 'IT Support Services',
+      description: 'Comprehensive IT support and helpdesk services with 24/7 monitoring and rapid response times.',
+      features: [
+        '24/7 Helpdesk',
+        'Remote Support',
+        'On-site Support',
+        'Hardware Maintenance',
+        'Software Support',
+        'User Training',
+        'System Updates',
+        'Performance Optimization'
+      ],
+      pricing: {
+        starter: { price: 99, period: 'month', features: ['Email support', 'Basic troubleshooting', 'Standard response'] },
+        professional: { price: 299, period: 'month', features: ['Phone support', 'Advanced troubleshooting', 'Priority response', 'Remote support'] },
+        enterprise: { price: 699, period: 'month', features: ['24/7 support', 'Dedicated support', 'On-site support', 'Custom SLA'] }
+      },
+      icon: WrenchScrewdriverIcon,
+      category: 'IT Support',
+      marketPrice: '$99-699/month',
+      link: '/it-support-services'
+    },
+    {
+      id: 'digital-transformation',
+      title: 'Digital Transformation Services',
+      description: 'Complete digital transformation solutions to modernize your business processes and technology infrastructure.',
+      features: [
+        'Process Analysis',
+        'Technology Assessment',
+        'Digital Strategy',
+        'System Integration',
+        'Change Management',
+        'Training Programs',
+        'Performance Monitoring',
+        'Continuous Improvement'
+      ],
+      pricing: {
+        starter: { price: 399, period: 'month', features: ['Basic assessment', 'Email support', 'Standard implementation'] },
+        professional: { price: 999, period: 'month', features: ['Advanced assessment', 'Priority support', 'Custom implementation', 'Training programs'] },
+        enterprise: { price: 2499, period: 'month', features: ['Full transformation', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: RocketLaunchIcon,
+      category: 'Digital Transformation',
+      marketPrice: '$399-2499/month',
+      link: '/digital-transformation'
+    },
+    {
+      id: 'backup-disaster-recovery',
+      title: 'Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions to protect your critical business data and ensure business continuity.',
+      features: [
+        'Automated Backups',
+        'Disaster Recovery',
+        'Data Replication',
+        'Recovery Testing',
+        'Compliance Management',
+        'RTO/RPO Optimization',
+        'Cloud Backup',
+        'Recovery Planning'
+      ],
+      pricing: {
+        starter: { price: 149, period: 'month', features: ['Basic backup', 'Email support', 'Standard recovery'] },
+        professional: { price: 399, period: 'month', features: ['Advanced backup', 'Priority support', 'Fast recovery', 'Testing services'] },
+        enterprise: { price: 899, period: 'month', features: ['Full DR solution', 'Dedicated support', 'Custom solutions', 'White-label'] }
+      },
+      icon: ShieldCheckIcon,
+      category: 'Backup & Recovery',
+      marketPrice: '$149-899/month',
+      link: '/backup-disaster-recovery'
+    },
+    {
+      id: 'it-consulting',
+      title: 'IT Consulting Services',
+      description: 'Strategic IT consulting services to help you make informed technology decisions and optimize your IT infrastructure.',
+      features: [
+        'Technology Assessment',
+        'Strategic Planning',
+        'Vendor Evaluation',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Compliance Review',
+        'Technology Roadmap',
+        'Implementation Guidance'
+      ],
+      pricing: {
+        starter: { price: 199, period: 'hour', features: ['Basic consultation', 'Email support', 'Standard reports'] },
+        professional: { price: 299, period: 'hour', features: ['Advanced consultation', 'Priority support', 'Custom reports', 'Follow-up support'] },
+        enterprise: { price: 499, period: 'hour', features: ['Full consultation', 'Dedicated support', 'Custom solutions', 'Ongoing support'] }
+      },
+      icon: ChartBarIcon,
+      category: 'IT Consulting',
+      marketPrice: '$199-499/hour',
+      link: '/it-consulting'
     }
   ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
+
+  const categories = [
+    'Cloud Computing',
+    'Cybersecurity',
+    'Network Management',
+    'Data Center',
+    'IT Support',
+    'Digital Transformation',
+    'Backup & Recovery',
+    'IT Consulting'
+  ];
 
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
+        <meta name="description" content="Comprehensive IT solutions for businesses. Cloud infrastructure, cybersecurity, network management, and digital transformation services with competitive pricing." />
+        <meta name="keywords" content="IT solutions, cloud computing, cybersecurity, network management, IT support, digital transformation, IT consulting" />
+        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT solutions for businesses. Cloud infrastructure, cybersecurity, network management, and digital transformation services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
               IT Solutions
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to modernize your infrastructure, 
-              enhance security, and drive business growth.
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive IT solutions to modernize your infrastructure, enhance security, and drive digital transformation for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started
+                Get Started Today
               </Link>
               <Link 
                 to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Solutions Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our IT Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
-                    <solution.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <div className="mb-4">
-                    <p className="text-blue-600 font-semibold">{solution.price}</p>
-                  </div>
-                  <Link 
-                    to={solution.href}
-                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Our IT Solutions?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our IT solutions can help you achieve your business goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>
             </div>
           </div>
-        </section>
-=======
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, system integration, and technical support." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">IT Solutions</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT services to support and enhance your business technology infrastructure
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Infrastructure Management</h3>
-              <p className="text-gray-300 mb-6">Complete management of your IT infrastructure and systems.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">System Integration</h3>
-              <p className="text-gray-300 mb-6">Seamless integration of various systems and applications.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Technical Support</h3>
-              <p className="text-gray-300 mb-6">24/7 technical support and maintenance services.</p>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-      </div>
-=======
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions to power your business infrastructure
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From infrastructure management to cybersecurity, our expert IT solutions 
-              ensure your technology infrastructure is secure, scalable, and optimized for performance.
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* IT Services Grid */}
+      {/* IT Capabilities Overview */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {itServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  {/* Pricing */}
-                  <div className="mb-6">
-                    <span className="text-3xl font-bold text-green-400">{service.price}</span>
-                  </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+              IT Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions covering all aspects of technology infrastructure and digital transformation.
+            </p>
+          </div>
 
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                <CloudIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Cloud Computing</h3>
+              <p className="text-gray-300 text-sm">Complete cloud infrastructure solutions with AWS, Azure, and Google Cloud Platform expertise.</p>
+            </div>
 
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <ShieldCheckIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Cybersecurity</h3>
+              <p className="text-gray-300 text-sm">Advanced security solutions including threat detection, vulnerability assessment, and compliance management.</p>
+            </div>
 
-                  {/* Use Cases */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <GlobeAltIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Network Management</h3>
+              <p className="text-gray-300 text-sm">Complete network infrastructure design, implementation, and management with advanced monitoring.</p>
+            </div>
 
-                  <div className="flex gap-2">
-                    <Link
-                      to={service.href}
-                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10"
-                    >
-                      Learn More <ArrowRightIcon className="w-4 h-4" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                <RocketLaunchIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Digital Transformation</h3>
+              <p className="text-gray-300 text-sm">Complete digital transformation solutions to modernize your business processes and technology.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Our IT Solutions */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+      {/* Services Grid */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+              Our IT Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert IT services backed by years of experience and cutting-edge technology
+              Specialized IT solutions designed to address specific business technology needs with expert implementation and support.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ServerIcon className="w-10 h-10 text-white" />
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button className="px-6 py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+              All Categories
+            </button>
+            {categories.map((category) => (
+              <button key={category} className="px-6 py-2 bg-slate-700 text-gray-300 rounded-lg font-semibold hover:bg-slate-600 transition-colors">
+                {category}
+              </button>
+            ))}
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div key={service.id} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform floating">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm font-medium">
+                    {service.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
+                <p className="text-gray-300 mb-6">
+                  {service.description}
+                </p>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Pricing */}
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-gray-400">Starting from</span>
+                    <span className="text-2xl font-bold text-purple-400">
+                      ${service.pricing.starter.price}
+                      <span className="text-sm text-gray-400">/{service.pricing.starter.period}</span>
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Market Price: {service.marketPrice}
+                  </div>
+                </div>
+
+                <div className="flex gap-2">
+                  <Link 
+                    to={service.link}
+                    className="flex-1 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                  >
+                    Learn More
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="px-4 py-2 border border-purple-500 text-purple-300 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+                  >
+                    Contact
+                  </Link>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-              <p className="text-gray-300">
-                Certified IT professionals with extensive experience in enterprise infrastructure and cloud technologies.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ClockIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Round-the-clock monitoring and support to ensure your IT infrastructure runs smoothly at all times.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-300">
-                Bank-level security measures and compliance standards to protect your critical business data.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CogIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
-              <p className="text-gray-300">
-                Flexible IT solutions that grow with your business and adapt to changing requirements.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -482,104 +444,222 @@ import { Helmet } from 'react-helmet-async';
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
               Our IT Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A systematic approach to delivering reliable and efficient IT solutions
+              A proven methodology for successful IT implementation and deployment.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Assessment & Planning</h3>
-              <p className="text-gray-300">
-                We assess your current IT infrastructure and develop a comprehensive implementation plan.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-2">Assessment & Planning</h3>
+              <p className="text-gray-300">We assess your current IT infrastructure and create a comprehensive implementation plan.</p>
             </div>
+
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Design & Configuration</h3>
-              <p className="text-gray-300">
-                We design and configure your IT solutions according to best practices and your requirements.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-2">Design & Architecture</h3>
+              <p className="text-gray-300">We design the optimal IT solution architecture tailored to your specific requirements.</p>
             </div>
+
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Implementation & Testing</h3>
-              <p className="text-gray-300">
-                We implement the solutions and conduct thorough testing to ensure everything works perfectly.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-2">Implementation</h3>
+              <p className="text-gray-300">We implement the solution with minimal disruption to your business operations.</p>
             </div>
+
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Monitoring & Support</h3>
-              <p className="text-gray-300">
-                We provide ongoing monitoring, maintenance, and support to keep your systems running optimally.
-              </p>
+              <h3 className="text-xl font-bold text-white mb-2">Support & Optimization</h3>
+              <p className="text-gray-300">We provide ongoing support and continuously optimize your IT infrastructure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+              IT Solutions Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transparent, competitive pricing for IT solutions with no hidden fees. Choose the plan that fits your business needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-600">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter Plan</h3>
+              <div className="text-4xl font-bold text-purple-400 mb-6">
+                $99-499<span className="text-lg text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Basic IT services
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Email support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Standard monitoring
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Basic reporting
+                </li>
+              </ul>
+              <Link 
+                to="/contact"
+                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-600 to-cyan-600 p-8 rounded-xl border border-purple-500 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Plan</h3>
+              <div className="text-4xl font-bold text-white mb-6">
+                $399-1299<span className="text-lg text-gray-200">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                  Advanced IT services
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                  Priority support
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                  Advanced monitoring
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                  Custom reporting
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="w-5 h-5 text-green-300 mr-3" />
+                  Remote management
+                </li>
+              </ul>
+              <Link 
+                to="/contact"
+                className="w-full bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-600">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Plan</h3>
+              <div className="text-4xl font-bold text-purple-400 mb-6">
+                $1299-2999<span className="text-lg text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Full IT management
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Dedicated support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  Custom solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  White-label options
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  On-site support
+                </li>
+              </ul>
+              <Link 
+                to="/contact"
+                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              >
+                Contact Sales
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our IT solutions can enhance your business operations and security
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Get Free IT Consultation
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Schedule IT Demo
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12">
+            Contact us today to discuss your IT needs and get a customized solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your IT Transformation
+            </Link>
+            <Link
+              to="/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold">📞</span>
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-300">+1 302 464 0950</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
-              <div className="flex items-center gap-3">
-                <PhoneIcon className="w-6 h-6 text-purple-400" />
-                <span>+1-302-464-0950</span>
+            <div>
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold">✉️</span>
               </div>
-              <div className="flex items-center gap-3">
-                <EnvelopeIcon className="w-6 h-6 text-purple-400" />
-                <span>kleber@ziontechgroup.com</span>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <span className="text-white font-bold">📍</span>
               </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
       </section>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
     </>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-export default ITSolutionsPage;
-=======
-};
-
-export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89

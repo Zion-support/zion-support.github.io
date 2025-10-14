@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -11,21 +10,13 @@ import {
   AcademicCapIcon,
   PlayIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
   CpuChipIcon,
+  CloudIcon,
+  ShieldCheckIcon,
+  GlobeAltIcon,
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { XMarkIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 interface SidebarProps {
   isOpen: boolean;
@@ -33,8 +24,6 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
 
   const navigation = [
@@ -45,22 +34,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
-      submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { name: 'IT Solutions', href: '/it-solutions', icon: BriefcaseIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
@@ -68,155 +47,96 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
-  const additionalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
-    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
-    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-    { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
-    { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
-  ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
   };
-
-  const toggleSection = (sectionName: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionName) 
-        ? prev.filter(name => name !== sectionName)
-        : [...prev, sectionName]
-    );
-  };
-
-  const isExpanded = (sectionName: string) => {
-    return expandedSections.includes(sectionName);
-  };
-=======
-  if (!isOpen) return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
   if (!isOpen) return null;
 
   return (
-<<<<<<< HEAD
     <>
-      {/* Overlay */}
+      {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
       
       {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold text-gray-900">Navigation</h2>
+      <div className="fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 border-r border-slate-700 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
+        <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </div>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-md"
+            className="text-gray-400 hover:text-white lg:hidden"
           >
-            <XMarkIcon className="w-5 h-5" />
-          </button>
-        </div>
-        
-        <nav className="mt-4">
-          {navigation.map((item) => (
-            <div key={item.name}>
-              {item.submenu ? (
-                <div>
-                  <button
-                    onClick={() => toggleSection(item.name)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
-                  >
-                    <div className="flex items-center">
-                      <item.icon className="w-5 h-5 mr-3" />
-                      {item.name}
-                    </div>
-                    <ChevronDownIcon 
-                      className={`w-4 h-4 transition-transform ${
-                        isExpanded(item.name) ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  {isExpanded(item.name) && (
-                    <div className="pl-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className={`block px-4 py-2 text-sm transition-colors ${
-                            isActive(subItem.href)
-                              ? 'text-blue-600 bg-blue-50'
-                              : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                          }`}
-                          onClick={onClose}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  to={item.href}
-                  className={`flex items-center px-4 py-3 transition-colors ${
-                    isActive(item.href)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
-                  onClick={onClose}
-                >
-                  <item.icon className="w-5 h-5 mr-3" />
-                  {item.name}
-                </Link>
-              )}
-            </div>
-          ))}
-          
-          {/* Additional Links */}
-          <div className="border-t border-gray-200 mt-4 pt-4">
-            <h3 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
-              Additional
-            </h3>
-            {additionalLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className={`flex items-center px-4 py-2 text-sm transition-colors ${
-                  isActive(link.href)
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-                onClick={onClose}
-              >
-                <link.icon className="w-4 h-4 mr-3" />
-                {link.name}
-              </Link>
-            ))}
-          </div>
-=======
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
-          <span className="text-xl font-bold text-white">Menu</span>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-        <nav className="flex-1 p-4 space-y-2">
-          <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Home</Link>
-          <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">About</Link>
-          <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Services</Link>
-          <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Contact</Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
+        <nav className="mt-8 px-4">
+          <ul className="space-y-2">
+            {navigation.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.href}
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    isActive(item.href)
+                      ? 'bg-purple-600 text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                  }`}
+                  onClick={onClose}
+                >
+                  <item.icon className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </Link>
+                
+                {/* Submenu */}
+                {item.submenu && (
+                  <ul className="ml-8 mt-2 space-y-1">
+                    {item.submenu.map((subItem) => (
+                      <li key={subItem.name}>
+                        <Link
+                          to={subItem.href}
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                            isActive(subItem.href)
+                              ? 'text-purple-400 bg-slate-800'
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800'
+                          }`}
+                          onClick={onClose}
+                        >
+                          <subItem.icon className="w-4 h-4" />
+                          <span>{subItem.name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
         </nav>
+
+        {/* Contact Info */}
+        <div className="absolute bottom-4 left-4 right-4 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+          <h3 className="text-sm font-semibold text-white mb-2">Get in Touch</h3>
+          <div className="space-y-1 text-xs text-gray-300">
+            <div>+1 302 464 0950</div>
+            <div>kleber@ziontechgroup.com</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
