@@ -1,14 +1,34 @@
 import React from "react";
-const AdvancedLoadingStates: React.FC = () => {
+
+interface AdvancedLoadingStatesProps {
+  type?: string;
+  fullScreen?: boolean;
+  message?: string;
+}
+
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ 
+  fullScreen = false, 
+  message = "Loading..." 
+}) => {
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center z-50">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+          <p className="text-white text-lg">{message}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="p-4">
-      <h2 className="text-xl font-semibold text-white">
-        AdvancedLoadingStates
-      </h2>
-      <p className="text-gray-300">
-        This is the AdvancedLoadingStates component.
-      </p>
+      <div className="animate-pulse">
+        <div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+        <div className="h-4 bg-gray-300 rounded w-1/2"></div>
+      </div>
     </div>
   );
 };
+
 export default AdvancedLoadingStates;
