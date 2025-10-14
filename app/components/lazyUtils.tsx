@@ -1,14 +1,14 @@
-import React, { lazy, ComponentType, ComponentProps } from 'react';
+import React, { lazy, ComponentType } from 'react';
 import LazyWrapper from './LazyWrapper';
 
 // Higher-order component for lazy loading
-export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
+export function withLazyLoading<T extends ComponentType<any>>(
   Component: T,
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-  return (props: ComponentProps<T>) => (
+  return (props: any) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />
     </LazyWrapper>
@@ -16,13 +16,13 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
 }
 
 // Utility function to create lazy-loaded components
-export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
+export function createLazyComponent<T extends ComponentType<any>>(
   importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ) {
   const LazyComponent = lazy(importFunction);
   
-  return (props: ComponentProps<T>) => (
+  return (props: any) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />
     </LazyWrapper>
