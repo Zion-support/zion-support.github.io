@@ -4,22 +4,16 @@ import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 
 // Mock components for testing
-// const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-//   if (shouldThrow) {
-//     throw new Error('Test error');
-//   }
-//   return <div>Test content</div>;
-// };
+const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+  if (shouldThrow) {
+    throw new Error('Test error');
+  }
+  return <div>Test content</div>;
+};
 
 const TestComponent = () => <div>Test component</div>;
 
 describe('AdvancedErrorBoundary', () => {
-  // const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  //   if (shouldThrow) {
-  //     throw new Error('Test error');
-  //   }
-  //   return <div>No error</div>;
-  // };
 
   it('should catch errors and display fallback UI', () => {
     const { getByText } = render(
