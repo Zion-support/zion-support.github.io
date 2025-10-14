@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const page-optimized: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const page-optimized: React.FC = () => {
 };
 
 export default page-optimized;
+;

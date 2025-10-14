@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const FuturisticButton: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const FuturisticButton: React.FC = () => {
 };
 
 export default FuturisticButton;
+;

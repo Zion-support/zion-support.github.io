@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const CloudInfrastructurePage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const CloudInfrastructurePage: React.FC = () => {
 };
 
 export default CloudInfrastructurePage;
+;

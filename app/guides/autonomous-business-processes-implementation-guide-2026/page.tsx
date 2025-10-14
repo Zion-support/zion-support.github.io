@@ -1,35 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, CheckCircle, Zap, Target, BarChart, Brain, Cpu, Settings } from 'lucide-react';
-
+;
 export const metadata = {
   title: 'Autonomous Business Processes Implementation Guide 2026 - Complete Enterprise Automation',
   description: 'Master autonomous business processes with our comprehensive 2026 implementation guide. Transform your enterprise with AI-driven automation and intelligent workflows.',
   keywords: 'Autonomous Business Processes, Enterprise Automation, AI Workflows, Business Process Automation, 2026 Guide, Implementation Guide',
 };
-
+;
 export default function AutonomousBusinessProcessesImplementationGuide2026() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-gradient-to-r from-green-900 to-blue-900 text-white">
         <div className="max-w-6xl mx-auto px-4 py-12">
-          <Link
+          <Link;
             to="/"
             className="inline-flex items-center text-green-200 hover:text-white transition-colors mb-8"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" />;
             Back to Home
           </Link>
 
           <h1 className="text-5xl font-bold mb-6">🤖 Autonomous Business Processes Implementation Guide 2026</h1>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-green-100 mb-8">;
             Complete Enterprise Automation and Intelligent Workflow Implementation
           </p>
 
           <div className="flex flex-wrap gap-4">
             <span className="inline-flex items-center px-4 py-2 bg-green-500 text-white rounded-full text-sm font-semibold">
-              <CheckCircle className="w-4 h-4 mr-2" />
+              <CheckCircle className="w-4 h-4 mr-2" />;
               FREE GUIDE
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-blue-500 text-white rounded-full text-sm font-semibold">
@@ -37,7 +37,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               18-MONTH PLAN
             </span>
             <span className="inline-flex items-center px-4 py-2 bg-purple-500 text-white rounded-full text-sm font-semibold">
-              <BarChart className="w-4 h-4 mr-2" />
+              <BarChart className="w-4 h-4 mr-2" />;
               $5.2B PROVEN
             </span>
           </div>
@@ -49,10 +49,10 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
         {/* Executive Summary */}
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>
-          <p className="text-xl text-gray-600 mb-8">
-            This comprehensive guide provides a proven 18-month implementation strategy for
-            deploying autonomous business processes in your enterprise. Based on successful
-            deployments delivering $5.2B in enterprise value, this guide ensures maximum
+          <p className="text-xl text-gray-600 mb-8">;
+            This comprehensive guide provides a proven 18-month implementation strategy for;
+            deploying autonomous business processes in your enterprise. Based on successful;
+            deployments delivering $5.2B in enterprise value, this guide ensures maximum;
             automation and seamless integration.
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               </div>
 
               <div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
+                <h4 className="text-xl font-semibold text-gray-800 mb-4">;
                   Organizational Readiness
                 </h4>
                 <ul className="space-y-3">
@@ -125,14 +125,14 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                 <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
                   1
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900">;
                   Process Discovery & Analysis (Months 1-3)
                 </h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">;
                     Process Mining
                   </h4>
                   <ul className="space-y-2 text-gray-600">
@@ -161,14 +161,14 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                 <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
                   2
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900">;
                   Automation Design & Development (Months 4-9)
                 </h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">;
                     Process Design
                   </h4>
                   <ul className="space-y-2 text-gray-600">
@@ -197,14 +197,14 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                 <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
                   3
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900">;
                   Testing & Deployment (Months 10-12)
                 </h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">;
                     Testing & Validation
                   </h4>
                   <ul className="space-y-2 text-gray-600">
@@ -233,14 +233,14 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                 <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
                   4
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">
+                <h3 className="text-2xl font-semibold text-gray-900">;
                   Optimization & Scale (Months 13-18)
                 </h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">;
                     Continuous Improvement
                   </h4>
                   <ul className="space-y-2 text-gray-600">
@@ -252,7 +252,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">;
                     Enterprise Scaling
                   </h4>
                   <ul className="space-y-2 text-gray-600">
@@ -343,25 +343,25 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-green-900 to-blue-900 text-white p-12 rounded-lg text-center">
-          <h3 className="text-3xl font-bold mb-4">
+          <h3 className="text-3xl font-bold mb-4">;
             Ready to Transform Your Business with Autonomous Processes?
           </h3>
-          <p className="text-xl text-green-100 mb-8">
-            Join the leaders in autonomous business process implementation. Get your personalized
+          <p className="text-xl text-green-100 mb-8">;
+            Join the leaders in autonomous business process implementation. Get your personalized;
             implementation plan today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <Link ;
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-green-900 rounded-lg hover:bg-green-50 transition-colors font-semibold"
-            >
+            >;
               Get Your Implementation Plan
               <ArrowLeft className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link ;
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-semibold"
-            >
+            >;
               View Success Stories
               <ArrowLeft className="w-5 h-5 ml-2" />
             </Link>

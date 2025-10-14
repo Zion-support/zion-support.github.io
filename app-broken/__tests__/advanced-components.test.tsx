@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 export default function Page() {
   return (
@@ -9,16 +9,12 @@ export default function Page() {
   )};
 }
 // Mock components;
-const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
-  children: React.ReactNode; 
-  enableRetry?: boolean; 
-  onError?: any ;
-}) => {
+const AdvancedErrorBoundary = () => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
 
   React.useEffect(() => {
-    const handleError = (error: Error) => {
+    const handleError = () => {
       setHasError(true);
       setError(error);
       if (onError) {
@@ -41,8 +37,8 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
         <p>Oops! Something went wrong</p>
         {error && (
           <div></div>
-            <h3 style={{ fontStyle: 'italic' }}>{error.message}</h3>''
-            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)' }}>''
+<h3 style={{ fontStyle: 'italic',}}>{error.message}</h3>''
+            <pre style={{ padding: '0.5rem', backgroundColor: 'rgba(200, 200, 200, 0.5)',}}>''
               {error.stack}
             </pre>
           </div>
@@ -57,16 +53,16 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
     )};
   }
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 const TestComponent = () => <div>Test Component</div>;
-const ErrorComponent = () => {
+const ErrorComponent = () => {;
   throw new Error('Test error');'
 };
 
-describe('Advanced Components', () => {''
-  test('AdvancedErrorBoundary renders children when no error', () => {''
+describe('Advanced Components', () => {'';
+  test('AdvancedErrorBoundary renders children when no error', () => {'';
     render(
       <AdvancedErrorBoundary></AdvancedErrorBoundary>
         <TestComponent /></TestComponent>
@@ -75,34 +71,34 @@ describe('Advanced Components', () => {''
     expect(screen.getByText('Test Component')).toBeInTheDocument();'
   });
 
-  test('AdvancedErrorBoundary shows error UI when error occurs', () => {''
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});'
+  test('AdvancedErrorBoundary shows error UI when error occurs', () => {'';
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});';
     
     render(
       <AdvancedErrorBoundary></AdvancedErrorBoundary>
         <ErrorComponent /></ErrorComponent>
       </AdvancedErrorBoundary>
     );
-    
-    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();'
-    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();'
+    ;
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();';
+    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();';
     consoleSpy.mockRestore();
   });
 
-  test('SEOEnhancer works with HelmetProvider', () => {''
+  test('SEOEnhancer works with HelmetProvider', () => {'';
     const SEOEnhancer = () => (
       <Helmet></Helmet>
         <title>Test Title</title>
         <meta name="description" content="Test description" />""
       </Helmet>
     );
-
+;
     render(
       <HelmetProvider></HelmetProvider>
         <SEOEnhancer /></SEOEnhancer>
       </HelmetProvider>
     );
-    
+    ;
     expect(document.title).toBe('Test Title');'
   });
 });

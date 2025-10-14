@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const DigitalTransformationPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const DigitalTransformationPage: React.FC = () => {
 };
 
 export default DigitalTransformationPage;
+;

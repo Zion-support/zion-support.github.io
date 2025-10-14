@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const SupportPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+;

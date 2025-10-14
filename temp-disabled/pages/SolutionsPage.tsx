@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const SolutionsPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default SolutionsPage;
+;

@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const MetaManager = () => {
   return (
@@ -11,3 +11,4 @@ const MetaManager = () => {
 };
 
 export default MetaManager;
+;

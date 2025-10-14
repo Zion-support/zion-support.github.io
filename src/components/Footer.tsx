@@ -1,33 +1,29 @@
 
-    { name: "Cybersecurity", url: "/cybersecurity" }""
+    {name: "Cybersecurity", url: "/cybersecurity",}""
   ];
 const solutions = ["""
-    { name: "Quantum Computing", url: "/quantum-computing" },"""
-    { name: "Autonomous Systems", url: "/autonomous-systems" },"""
-    { name: "Blockchain Web3", url: "/blockchain-web3" },"""
-    { name: "IoT Edge Computing", url: "/iot-edge-computing" }""
-  ];
+    {name: "Quantum Computing", url: "/quantum-computing", }, """
+    {name: "Autonomous Systems", url: "/autonomous-systems", }, """
+    {name: "Blockchain Web3", url: "/blockchain-web3", }, """
+    {name: "IoT Edge Computing", url: "/iot-edge-computing", }""];
 const company = ["""
-    { name: "About Us", url: "/about" },"""
-    { name: "Team", url: "/team" },"""
-    { name: "Careers", url: "/careers" },"""
-    { name: "News", url: "/news" }""
-  ];
+    {name: "About Us", url: "/about", }, """
+    {name: "Team", url: "/team", }, """
+    {name: "Careers", url: "/careers", }, """
+    {name: "News", url: "/news", }""];
 const support = ["""
-    { name: "Documentation", url: "/documentation" },"""
-    { name: "Support", url: "/support" },"""
-    { name: "FAQ", url: "/faq" },"""
-    { name: "Contact", url: "/contact" }""
-  ];
+    {name: "Documentation", url: "/documentation", }, """
+    {name: "Support", url: "/support", }, """
+    {name: "FAQ", url: "/faq", }, """
+    {name: "Contact", url: "/contact", }""];
 const socialLinks = ["""
-    { name: "Facebook", icon: Facebook, url: "#" },"""
-    { name: "Twitter", icon: Twitter, url: "#" },"""
-    { name: "LinkedIn", icon: Linkedin, url: "#" },"""
-    { name: "Instagram", icon: Instagram, url: "#" },"""
-    { name: "YouTube", icon: Youtube, url: "#" },"""
-    { name: "GitHub", icon: Github, url: "#" }""
-  ]
-
+    {name: "Facebook", icon: Facebook, url: "#", }, """
+    {name: "Twitter", icon: Twitter, url: "#", }, """
+    {name: "LinkedIn", icon: Linkedin, url: "#", }, """
+    {name: "Instagram", icon: Instagram, url: "#", }, """
+    {name: "YouTube", icon: Youtube, url: "#", }, """
+    {name: "GitHub", icon: Github, url: "#", }""];
+;
   return ("""
 <>    <footer className="bg-gray-900 text-white">"""
       <div className="max-w-7xl mx-auto px-4 py-12"></div>"""
@@ -44,8 +40,8 @@ const socialLinks = ["""
                 </li>)}
               ))}
               <li></li>
-                <Link"""
-                  to="/services""""
+                <Link""";
+                  to="/services"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>""
                   >
                     {solution.name}
@@ -53,6 +49,6 @@ const socialLinks = ["""
                 </li>)
               ))}
               <li></li>
-                <Link"""
-                  to="/solutions""""
+                <Link""";
+                  to="/solutions"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>""

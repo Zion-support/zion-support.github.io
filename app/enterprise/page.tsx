@@ -1,5 +1,5 @@
-import React from "react";""
-import { Helmet    } from "react-helmet-async";""
+import React from "react";"";
+import { Helmet    } from "react-helmet-async";"";
 
 const PagePage = () => {
   return (
@@ -12,7 +12,7 @@ const PagePage = () => {
     </>
         <div className="text-center"></div>""
           <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
-          <p className="text-gray-300 text-lg"></p>""
+          <p className="text-gray-300 text-lg"></p>"";
             This page is under construction. Please check back later.
           </p>
         </div>
@@ -22,3 +22,4 @@ const PagePage = () => {
 };
 
 export default PagePage;
+;

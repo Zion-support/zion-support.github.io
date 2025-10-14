@@ -1,4 +1,4 @@
-export const reportError = (
+export const reportError = (;
   error: Error,
   context?: Record<string, unknown>,)
 ) => {
@@ -7,7 +7,7 @@ export const reportError = (
   // like Sentry, LogRocket, or Bugsnag;
 };
 export const initErrorReporting = () => {
-  // Initialize error reporting service"""
+  // Initialize error reporting service""";
   console.log("Error reporting initialized");""
 };
 """

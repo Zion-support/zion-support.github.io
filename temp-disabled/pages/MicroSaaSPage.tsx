@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const MicroSaaSPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const MicroSaaSPage: React.FC = () => {
 };
 
 export default MicroSaaSPage;
+;

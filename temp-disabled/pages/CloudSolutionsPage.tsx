@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const CloudSolutionsPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const CloudSolutionsPage: React.FC = () => {
 };
 
 export default CloudSolutionsPage;
+;

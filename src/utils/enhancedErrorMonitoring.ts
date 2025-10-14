@@ -1,5 +1,5 @@
-'use client';'
-import React from "react";"
+'use client';';
+import React from "react";";
 
 interface ErrorContext {
   userId?: string;
@@ -27,8 +27,8 @@ interface ErrorReport {
   message: string;
   stack?: string;
   context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';'
-  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';'
+  severity: 'low' | 'medium' | 'high' | 'critical';';
+  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';';
   resolved: boolean;
   occurrences: number;
   firstSeen: string;
@@ -42,8 +42,8 @@ class EnhancedErrorMonitoring {
   private userId?: string;
   private isOnline = true;
   private constructor() {
-    this.sessionId = this.generateSessionId()
-    this.initializeMonitoring()
+    this.sessionId = this.generateSessionId();
+    this.initializeMonitoring();
     this.setupNetworkMonitoring()
   }
   static getInstance(): EnhancedErrorMonitoring {
@@ -52,11 +52,11 @@ class EnhancedErrorMonitoring {
     }
     return EnhancedErrorMonitoring.instance;
   }
-  
+  ;
   private initializeMonitoring(): void {
     if (typeof window === 'undefined') return''
     // JavaScript errors;
-    window.addEventListener('error', (event) => {''
+    window.addEventListener('error', (event) => {'';
       this.handleError(event.error || new Error(event.message), {
         filename: event.filename,
         lineno: event.lineno,
@@ -65,16 +65,16 @@ class EnhancedErrorMonitoring {
       });
     })
     // Unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {''
-      this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {```
+    window.addEventListener('unhandledrejection', (event) => {'';
+      this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {```;
         reason: event.reason,
         category: 'promise'''
       });
     })
     // Resource loading errors;
-    window.addEventListener('error', (event) => {''
+    window.addEventListener('error', (event) => {'';
       if (event.target !== window) {
-        this.handleError(new Error(`Resource loading error: ${event.type}`), {```
+        this.handleError(new Error(`Resource loading error: ${event.type}`), {```;
           category: 'resource'''
         })
       }
@@ -84,14 +84,14 @@ class EnhancedErrorMonitoring {
     // Performance monitoring;
     this.setupPerformanceErrorMonitoring()
   }
-  
+  ;
   private setupNetworkErrorMonitoring(): void {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       try {
-        const response = await originalFetch.apply(window, args)
+        const response = await originalFetch.apply(window, args);
         if (!response.ok) {
-          this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {```
+          this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {```;
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
@@ -102,55 +102,55 @@ class EnhancedErrorMonitoring {
       } catch (error) {
         this.handleError(error as Error, {
           url: args[0] as string,
-          category: 'network'''
-        })
+category: 'network''',
+        });
         throw error;
       }
     }
   }
-  
+  ;
   private setupPerformanceErrorMonitoring(): void {
     // Monitor long tasks;
-    if ('PerformanceObserver' in window) {''
+    if ('PerformanceObserver' in window) {'';
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) { // Tasks longer than 50ms;
-            this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {```
+            this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {```;
               duration: entry.duration,
               startTime: entry.startTime,
               category: 'performance'''
             })
           }
         }
-      }).observe({ entryTypes: ['longtask'] })''
+      }).observe({entryTypes: ['longtask'],})''
       // Monitor memory leaks;
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'memory') {''
+          if (entry.entryType === 'memory') {'';
             const memoryInfo = (entry as any).memory;
             if (memoryInfo && memoryInfo.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB;
-              this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {```
+              this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {```;
                 memoryUsage: memoryInfo.usedJSHeapSize,
                 category: 'performance'''
               })
             }
           }
         }
-      }).observe({ entryTypes: ['memory'] })''
+      }).observe({entryTypes: ['memory'],})''
     }
   }
-  
+  ;
   private setupNetworkMonitoring(): void {
-    if (typeof window === 'undefined') return''
-    window.addEventListener('online', () => {''
+    if (typeof window === 'undefined') return'';
+    window.addEventListener('online', () => {'';
       this.isOnline = true;
       this.flushErrorQueue()
-    })
-    window.addEventListener('offline', () => {''
+    });
+    window.addEventListener('offline', () => {'';
       this.isOnline = false;
     })
   }
-  
+  ;
   handleError(error: Error, context: Partial<ErrorContext> = {}): void {
     const errorReport: ErrorReport = {
       id: this.generateErrorId(),
@@ -165,16 +165,16 @@ class EnhancedErrorMonitoring {
         ...context;
       },
       severity: this.calculateSeverity(error, context),
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',''
+      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript','';
       resolved: false,
       occurrences: 1,
       firstSeen: new Date().toISOString(),
       lastSeen: new Date().toISOString()
     }
     // Check if similar error already exists;
-    const existingError = this.findSimilarError(errorReport)
+    const existingError = this.findSimilarError(errorReport);
     if (existingError) {
-      existingError.occurrences++
+      existingError.occurrences++;
       existingError.lastSeen = new Date().toISOString()
     } else {
       this.errorQueue.push(errorReport)
@@ -189,39 +189,39 @@ class EnhancedErrorMonitoring {
     }
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {''
-      // console.error('Error captured:', errorReport)''
+// console.error('Error captured:', errorReport)'',
     }
   }
-  
+  ;
   private findSimilarError(newError: ErrorReport): ErrorReport | undefined {
-    return this.errorQueue.find(error => 
-      error.message === newError.message &&
-      error.context.url === newError.context.url &&
+    return this.errorQueue.find(error => ;
+      error.message === newError.message &&;
+      error.context.url === newError.context.url &&;
       error.category === newError.category;
     )
   }
-  
+  ;
   private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {''
     // Critical: Network errors, unhandled promise rejections;
-    if (context.category === 'network' || context.category === 'promise') {''
+    if (context.category === 'network' || context.category === 'promise') {'';
       return 'critical'''
     }
     // High: JavaScript errors in critical components;
-    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {''
+    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {'';
       return 'high'''
     }
     // Medium: Resource loading errors;
-    if (context.category === 'resource') {''
+    if (context.category === 'resource') {'';
       return 'medium'''
     }
     // Low: Other errors;
     return 'low'''
   }
-  
+  ;
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
-      await fetch('/api/errors', {''
-        method: 'POST',''
+      await fetch('/api/errors', {'';
+        method: 'POST','';
         headers: {
           'Content-Type': 'application/json'''
         },
@@ -231,66 +231,66 @@ class EnhancedErrorMonitoring {
       // If sending fails, keep in queue for retry;
       }
   }
-  
+  ;
   private async flushErrorQueue(): Promise<void> {
-    if (!this.isOnline) return
-    const errorsToSend = [...this.errorQueue]
-    this.errorQueue = []
+    if (!this.isOnline) return;
+    const errorsToSend = [...this.errorQueue];
+    this.errorQueue = [];
     for (const error of errorsToSend) {
       await this.sendErrorReport(error)
     }
   }
-  
+  ;
   private generateSessionId(): string {
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
   }
-  
+  ;
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
   }
-  
+  ;
   setUserId(userId: string): void {
     this.userId = userId;
   }
-  
+  ;
   getErrorStats(): {
     total: number,
-    bySeverity: Record<string, number></string>
-    byCategory: Record<string, number></string>
+    bySeverity: Record<string, number></string>;
+    byCategory: Record<string, number></string>;
     recent: ErrorReport[]
   } {
     const recent = this.errorQueue;
       .filter(error => Date.now() - new Date(error.lastSeen).getTime() < 24 * 60 * 60 * 1000) // Last 24 hours;
-      .sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime())
+      .sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime());
     const bySeverity = this.errorQueue.reduce((acc, error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>)
+    }, {} as Record<string, number>);
     const byCategory = this.errorQueue.reduce((acc, error) => {
       acc[error.category] = (acc[error.category] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>)
+    }, {} as Record<string, number>);
     return {
       total: this.errorQueue.length,
       bySeverity,
       byCategory,
-      recent: recent.slice(0, 10)
+recent: recent.slice(0, 10),
     }
   }
-  
+  ;
   clearResolvedErrors(): void {
     this.errorQueue = this.errorQueue.filter(error => !error.resolved)
   }
-  
+  ;
   markErrorResolved(errorId: string): void {
-    const error = this.errorQueue.find(e => e.id === errorId)
+    const error = this.errorQueue.find(e => e.id === errorId);
     if (error) {
       error.resolved = true;
     }
   }
-  
+  ;
   getErrorReport(): string {
-    const stats = this.getErrorStats()
+    const stats = this.getErrorStats();
     return ````
 # Error Monitoring Report;
 ## Summary;
@@ -301,7 +301,7 @@ ${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${
 ## By Category;
 ${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}'``'`
 ## Recent Errors;
-${stats.recent.map(error => ````
+${stats.recent.map(error => }````
 ### ${error.message}
 - Severity: ${error.severity}
 - Category: ${error.category}
@@ -313,5 +313,5 @@ ${stats.recent.map(error => ````
   }
 }
 // Export singleton instance;
-export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance()
+export const enhancedErrorMonitoring = EnhancedErrorMonitoring.getInstance();
 export default enhancedErrorMonitoring;

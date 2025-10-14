@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const AIServicesPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const AIServicesPage: React.FC = () => {
 };
 
 export default AIServicesPage;
+;

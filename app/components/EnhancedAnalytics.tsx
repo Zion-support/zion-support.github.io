@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const EnhancedAnalytics = () => {
   return (
@@ -11,3 +11,4 @@ const EnhancedAnalytics = () => {
 };
 
 export default EnhancedAnalytics;
+;

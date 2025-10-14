@@ -3,7 +3,7 @@
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     this.state = {
       hasError: false,
       error: null,
@@ -23,29 +23,29 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+return { hasError: true, error,};
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
     
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
     
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     this.props.onError?.(error, errorInfo);
     
-    // Log to external service in production
+    // Log to external service in production;
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to your error reporting service
-      // Example: Sentry.captureException(error, { extra: errorInfo });
+// Example: Sentry.captureException(error, { extra: errorInfo,});
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+this.setState({ hasError: false, error: undefined, errorInfo: undefined,});
   };
 
   handleGoHome = () => {
@@ -54,11 +54,11 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      // Default error UI
-      return (
+      // Default error UI;
+      return (;
                   Something went wrong;
                 </h1>
-                <p className="mt-2 text-sm text-gray-600">"""
+                <p className="mt-2 text-sm text-gray-600">""";
                   We're sorry, but something unexpected happened. Please try refreshing the page.'''
                 </p>
                 
@@ -76,16 +76,16 @@ class ErrorBoundary extends Component<Props, State> {
                 )
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"></div>"""
                   <button;
-                    onClick={() => window.location.reload()"""
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500""""
+                    onClick={() => window.location.reload()""";
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >"""
-                    <RefreshCw className="w-4 h-4 mr-2" />"""
+                    <RefreshCw className="w-4 h-4 mr-2" />""";
                     Refresh Page;
                   </button>
-                  <Link"""
-                    to="/"""""
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"">"""
-                    <Home className="w-4 h-4 mr-2" />"""
+                  <Link""";
+                    to="/"
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">"""
+                    <Home className="w-4 h-4 mr-2" />""";
                     Go Home;
                   </Link>
                 </div>

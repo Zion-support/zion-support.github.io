@@ -10,19 +10,19 @@ const FuturisticBackground = () => {
         {/* Animated Grid Lines */}
         <div className="absolute inset-0 opacity-20">""
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">""
-            {Array.from({ length: 144 }
-  </>
+            {Array.from({ length: 144,}
+  </>;
 );.map((_, i) => (
               <div;
                 key={i}
-                className="border border-purple-500/30 animate-pulse"""
+                className="border border-purple-500/30 animate-pulse"
                 style={{}}></div>
             ))
           </div>
         </div>
         
         <div className="absolute inset-0"></div>"
-          {Array.from({ length: 20 }).map((_, i) => (
+          {Array.from({ length: 20,}).map((_, i) => (
             <div;
               key={i}
               }}></div>
@@ -44,3 +44,4 @@ const FuturisticBackground = () => {
 };
 
 export default FuturisticBackground;
+;

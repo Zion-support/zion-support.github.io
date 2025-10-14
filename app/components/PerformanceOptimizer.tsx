@@ -1,8 +1,8 @@
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    // Performance optimization code'';'
+    // Performance optimization code'';';
 const optimizeImages = () => {;
-const images = document.querySelectorAll('img')'''
+const images = document.querySelectorAll('img')''';
       images.forEach((img) => {}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -19,7 +19,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Image optimization;
     if (enableImageOptimization) {
-      const images = document.querySelectorAll('img');'
+      const images = document.querySelectorAll('img');';
       images.forEach((img) => {
         if (!img.loading) {
           img.loading = 'lazy';'
@@ -33,47 +33,46 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
     }
-      link.rel = 'preload'''
-      link.href = '/fonts/inter.woff2'''
-      link.as = 'font'''
+      link.rel = 'preload''';
+      link.href = '/fonts/inter.woff2''';
+      link.as = 'font''';
       link.type = 'font/woff2'''
       ];
 
       prefetchLinks.forEach((href) => {
-        const existingLink = document.querySelector(`link[href="${href}"]`);``"`
-        if (!existingLink) {
-          const link = document.createElement('link');'
-          link.rel = 'prefetch';'
+        const existingLink = document.querySelector(`link[href="${href}" link = document.createElement('link');';
+          link.rel = 'prefetch';';
           link.href = href;
           document.head.appendChild(link);
         }
       });
     }
     // Run optimizations;
-    optimizeImages()
-    optimizeFonts()
+    optimizeImages();
+    optimizeFonts();
     optimizeResources()
     // Cleanup function;
-  return <>{children}</>
+  return <React.Fragment>{children}</React.Fragment>
 }
 export default PerformanceOptimizer;
-        const link = document.createElement('link')'''
-        link.rel = 'preload''''
+        const link = document.createElement('link')''';
+        link.rel = 'preload'''';
         link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script''''
+        link.as = resource.endsWith('.css') ? 'style' : 'script'''';
         document.head.appendChild(link)}
     // Run optimizations;
-    optimizeImages()
-    optimizeFonts()
+    optimizeImages();
+    optimizeFonts();
     optimizeResources()
     // Cleanup function return() => {
-      // Cleanup if needed}}, [])
-  return <>{children}</>
+      // Cleanup if needed}}, []);
+  return <React.Fragment>{children}</React.Fragment>
 }
 export default PerformanceOptimizer;
       // Cleanup if needed;}
-  }, [])
-  return <>{children}</>
+  }, []);
+  return <React.Fragment>{children}</React.Fragment>
 };
-
+;
 export default PerformanceOptimizer;
+;

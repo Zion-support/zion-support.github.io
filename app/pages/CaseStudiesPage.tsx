@@ -25,11 +25,11 @@ const CaseStudiesPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">"""
         {/* Hero Section */}
         <div className="text-center mb-16">"""
-          <h1 className="text-5xl font-bold text-white mb-6">"""
+          <h1 className="text-5xl font-bold text-white mb-6">""";
             Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Stories</span>"""
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"""
-            Discover how we"ve helped businesses across various industries transform"""
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""";
+            Discover how we"ve helped businesses across various industries transform""";
             their operations with cutting-edge AI and IT solutions.;
           </p>
         </div>
@@ -69,15 +69,15 @@ const CaseStudiesPage: React.FC = () => {
               </div>
             </div>
           )})
-        </div>
+        </div>;
               Let us help you achieve similar results with our proven AI and IT solutions.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
-              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">"""
+              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">""";
                 Start Your Project;
                 <ArrowRight className="w-5 h-5 ml-2" />"""
               </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"""
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">""";
                 View More Cases;
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -89,44 +89,44 @@ const CaseStudiesPage: React.FC = () => {
       <div className="min-h-screen bg-white">"""
         <div className="container mx-auto px-4 py-16">"""
           <div className="text-center">"""
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">"""
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">""";
               Case Studies;
             </h1>
-            <p className="text-xl text-gray-600 mb-8">"""
+            <p className="text-xl text-gray-600 mb-8">""";
               Discover how we've helped businesses transform with our AI and IT solutions.'''
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"""
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"""
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">"""
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">""";
                   AI Implementation;
                 </h3>
-                <p className="text-blue-700">"""
+                <p className="text-blue-700">""";
                   How we helped a Fortune 500 company implement AI solutions.
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">"""
-                <h3 className="text-lg font-semibold text-green-900 mb-2">"""
+                <h3 className="text-lg font-semibold text-green-900 mb-2">""";
                   Cloud Migration;
                 </h3>
-                <p className="text-green-700">"""
+                <p className="text-green-700">""";
                   Successful cloud infrastructure migration for a growing startup.
                 </p>
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"""
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">"""
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">""";
                   Cybersecurity;
                 </h3>
-                <p className="text-purple-700">"""
+                <p className="text-purple-700">""";
                   Comprehensive security overhaul for a financial services company.
                 </p>
               </div>
             </div>
             <div className="mt-12">"""
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"""
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">""";
                 View All Case Studies;
               </button>
             </div>
-          </div>
+          </div>;
 const CaseStudiesPage: React.FC = () => {
   return (
     <>
@@ -139,15 +139,15 @@ const CaseStudiesPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>"""
           <p className="text-gray-300">This page is under construction.</p>"""
         </div>
-      </div>
-    </div>;  )
+      </div>;
+    </div>;  );
 export default CaseStudiesPage;
     </div>
   )}
 export default CaseStudiesPage;
-"use client";"
+"use client";";
 
-import React from "react";"
+import React from "react";";
 
 export default function CaseStudiesPage() {
   return (

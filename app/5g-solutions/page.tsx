@@ -1,24 +1,39 @@
-'use client'''
-import React from "react";"
-import { Helmet     } from "react-helmet-async";"
+import React from 'react';
+import { Metadata } from 'next';
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: 'page - Zion Tech Group',
+  description: 'Advanced AI and IT solutions by Zion Tech Group',
+  keywords: 'AI, IT solutions, technology, innovation',
+};
+
+const pagePage: React.FC = () => {
   return (
-<>    <div></div>
-      <Helmet></Helmet>
-        <title>5g Solutions - Zion Tech Group</title>
-        <meta name="description" content="5g Solutions services and solutions from Zion Tech Group" /></meta>""
-      </Helmet>
-      
-      <div className="min-h-screen bg-white"></div>""
-    </>
-        <div className="container mx-auto px-4 py-20"></div>""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">5g Solutions</h1>""
-          <p className="text-xl text-gray-600"></p>""
-            This page is under development. Please check back soon for more information about our 5g solutions services.
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-6">page</h1>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-600 mb-6">
+            Discover our comprehensive page solutions designed to transform your business.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p className="text-gray-600">Description of feature 1</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p className="text-gray-600">Description of feature 2</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+              <p className="text-gray-600">Description of feature 3</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )};
-}
+  );
+};
+
+export default pagePage;

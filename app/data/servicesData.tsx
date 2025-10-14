@@ -1,5 +1,5 @@
-import React from "react";"
-import { Helmet     } from "react-helmet-async";"
+import React from "react";";
+import { Helmet     } from "react-helmet-async";";
 
 export default function Page() {
   return (
@@ -11,10 +11,10 @@ export default function Page() {
       <div className="container mx-auto px-4 py-16"></div>"""
     </>
         <div className="text-center"></div>"""
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>"";
             Services Data;
           </h1>"""
-          <p className="text-xl text-gray-600 mb-8"></p>""
+          <p className="text-xl text-gray-600 mb-8"></p>"";
             Professional data solutions tailored to your business needs.
           </p>"""
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"""
@@ -32,7 +32,7 @@ export default function Page() {
             </div>
           </div>"""
           <div className="mt-12"></div>"""
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>"";
               Get Started Today;
             </button>
           </div>

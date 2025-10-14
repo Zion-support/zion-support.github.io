@@ -5,7 +5,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
-
+;
 export default function RootLayout({
   children,
 }: {
@@ -21,17 +21,14 @@ export default function RootLayout({
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology',
-    contactPoint: {
+contactPoint: {,
       '@type': 'ContactPoint',
       telephone: '+1-302-600-9898',
       contactType: 'Customer Service',
       areaServed: 'US',
       availableLanguage: 'en',
     },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-    ],
+    sameAs: ['https://twitter.com/ziontechgroup', 'https://linkedin.com/company/ziontechgroup'],
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US',
@@ -42,11 +39,11 @@ export default function RootLayout({
       description: 'Enterprise AI solutions, digital transformation, and cloud services',
     },
   };
-
+;
   return (
     <html lang='en'>
       <head>
-        <script
+        <script;
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),

@@ -1,19 +1,15 @@
-import React from "react";"
+import React from "react";";
 import {}
-  3, 
+  3, ;
   Circle,
   Right,
-  } from "lucide-react";"
+  } from "lucide-react";";
 
 const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: <Circle className="w-6 h-6" />,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+  const services = [{
+      icon: <Circle className="w-6 h-6" />, title: 'AI Solutions', description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.', features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500',
-      category: 'AI Services'
+category: 'AI Services',
     },
     {
       icon: <Circle className="w-6 h-6" />,
@@ -21,7 +17,7 @@ const ServicesPage: React.FC = () => {
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
       features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps', 'Monitoring', 'Security'],
       price: 'Starting at $800',
-      category: 'Cloud Services'
+category: 'Cloud Services',
     },
     {
       icon: <Circle className="w-6 h-6" />,
@@ -29,7 +25,7 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive security solutions to protect your business from cyber threats.',
       features: ['Security Audit', 'Penetration Testing', 'Incident Response', 'Compliance', 'Training'],
       price: 'Starting at $1,200',
-      category: 'Security Services'
+category: 'Security Services',
     },
     {
       icon: <Circle className="w-6 h-6" />,
@@ -37,7 +33,7 @@ const ServicesPage: React.FC = () => {
       description: 'Transform your data into actionable insights with our analytics solutions.',
       features: ['Data Visualization', 'Business Intelligence', 'Reporting', 'Dashboard Creation', 'Data Mining'],
       price: 'Starting at $900',
-      category: 'Analytics Services'
+category: 'Analytics Services',
     },
     {
       icon: <Circle className="w-6 h-6" />,
@@ -45,7 +41,7 @@ const ServicesPage: React.FC = () => {
       description: 'Modern, responsive web applications built with cutting-edge technologies.',
       features: ['Frontend Development', 'Backend Development', 'API Integration', 'Database Design', 'Performance Optimization'],
       price: 'Starting at $1,000',
-      category: 'Development Services'
+category: 'Development Services',
     },
     {
       icon: <Circle className="w-6 h-6" />,
@@ -53,16 +49,16 @@ const ServicesPage: React.FC = () => {
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       features: ['iOS Development', 'Android Development', 'Cross-platform', 'UI/UX Design', 'App Store Optimization'],
       price: 'Starting at $1,300',
-      category: 'Mobile Services'
+category: 'Mobile Services',
     }
   ];
-
+;
 const ServicesPage: React.FC = () => {const services = [;
     // AI Services;
     {      ico,
-    n: title: 'AI Solutions,''
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,''
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],''
+    n: title: 'AI Solutions,'';
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,'';
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],'';
       price: Starting at $1,500;
       category: 'AI Services,''
       <Helmet></Helmet>
@@ -72,7 +68,7 @@ const ServicesPage: React.FC = () => {const services = [;
       <div className="container mx-auto px-4 py-20">""
         <div className="text-center mb-16">""
           <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>""
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">""
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"";
             Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
@@ -136,7 +132,7 @@ const ServicesPage: React.FC = () => {const services = [;
 
               <a;
                 href={service.path}
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"">"
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg">";
                 Learn More;
               </a>
             </div>

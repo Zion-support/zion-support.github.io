@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const EnhancedAccessibility: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const EnhancedAccessibility: React.FC = () => {
 };
 
 export default EnhancedAccessibility;
+;

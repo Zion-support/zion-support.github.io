@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const page: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const page: React.FC = () => {
 };
 
 export default page;
+;

@@ -1,13 +1,13 @@
-'use client';'
+'use client';';
 
-import { logger    } from "./logger";"
-import { performanceMonitoring    } from "./performanceMonitoring";"
+import { logger    } from "./logger";";
+import { performanceMonitoring    } from "./performanceMonitoring";";
 export enum CacheStorage {
-  Memory = 'memory',''
-  LocalStorage = 'localStorage',''
+  Memory="memory"
+  LocalStorage="localStorage"
   SessionStorage = 'sessionStorage'''
 }
-export interface CacheOptions {
+export interface CacheOptions {;
   ttl?: number; // Time to live in milliseconds;
   storage?: CacheStorage;
   compress?: boolean;
@@ -39,21 +39,21 @@ export class CacheManager {
     this.storage = config.storage || CacheStorage.Memory;
     this.startCleanup();
   }
-  
+  ;
   private startCleanup(): void {
-    if (typeof window === 'undefined') return;'
+    if (typeof window === 'undefined') return;';
     this.cleanupInterval = setInterval(() => {
       this.cleanup();
     }, 60 * 1000); // Run every minute;
   }
-  
+  ;
   stopCleanup(): void {
     if (this.cleanupInterval) {
       clearInterval(this.cleanupInterval);
       this.cleanupInterval = null;
     }
   }
-  
+  ;
   private cleanup(): void {
     const now = Date.now();
     // Clean memory cache;
@@ -63,11 +63,11 @@ export class CacheManager {
       }
     }
     // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {''
+    if (typeof window !== 'undefined' && window.localStorage) {'';
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('cache_')) {''
+        if (key && key.startsWith('cache_')) {'';
           try {
             const item = localStorage.getItem(key);
             if (item) {
@@ -85,29 +85,29 @@ export class CacheManager {
     }
     logger.debug('Cache cleanup completed');'
   }
-  
+  ;
   private isExpired(entry: CacheEntry<unknown>, now = Date.now()): boolean {
     if (entry.ttl === Infinity) return false;
     return now - entry.timestamp > entry.ttl;
   }
-  
+  ;
   private getStorageKey(key: string): string {
     return `cache_${key}`;```
   }
-  
-  set<T>(key: string, value: T, options: { ttl?: number } = {}): void {
+  ;
+  set<T>(key: string, value: T, options: {ttl?: number,} = {}): void {
     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
     const entry: CacheEntry<T> = {
       value,
       timestamp: Date.now(),
       ttl;
     };
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');``'`
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');``'`;
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.set(key, entry);
-    } else if (
-      this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.LocalStorage &&;
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       try {
@@ -117,9 +117,9 @@ export class CacheManager {
         // Fallback to memory cache;
         this.memoryCache.set(key, entry);
       }
-    } else if (
-      this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.SessionStorage &&;
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       try {
@@ -131,15 +131,15 @@ export class CacheManager {
       }
     }
   }
-  
+  ;
   get<T>(key: string): T | undefined {
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');``'`
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');``'`;
     let entry: CacheEntry<T> | null = null;
     if (this.storage === CacheStorage.Memory) {
       entry = (this.memoryCache.get(key) as CacheEntry<T> | undefined) || null;
-    } else if (
-      this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.LocalStorage &&;
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       try {
@@ -150,9 +150,9 @@ export class CacheManager {
       } catch (error) {
         logger.error('Failed to get localStorage cache', error as Error);'
       }
-    } else if (
-      this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.SessionStorage &&;
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       try {
@@ -166,81 +166,81 @@ export class CacheManager {
     }
     if (!entry) {
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');``'`
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');``'`;
       return undefined;
     }
     if (this.isExpired(entry)) {
       this.delete(key);
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');``'`
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');``'`;
       return undefined;
     }
     this.stats.hits++;
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');``'`
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');``'`;
     return entry.value;
   }
-  
+  ;
   has(key: string): boolean {
     return this.get(key) !== undefined;
   }
-  
+  ;
   delete(key: string): void {
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.delete(key);
-    } else if (
-      this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.LocalStorage &&;
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       localStorage.removeItem(this.getStorageKey(key));
-    } else if (
-      this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&''
+    } else if (;
+      this.storage === CacheStorage.SessionStorage &&;
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       sessionStorage.removeItem(this.getStorageKey(key));
     }
   }
-  
+  ;
   clear(): void {
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.clear();
     }
-    if (
-      this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&''
+    if (;
+      this.storage === CacheStorage.LocalStorage &&;
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('cache_')) {''
+        if (key && key.startsWith('cache_')) {'';
           keysToRemove.push(key);
         }
       }
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
-    if (
-      this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&''
+    if (;
+      this.storage === CacheStorage.SessionStorage &&;
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
-        if (key && key.startsWith('cache_')) {''
+        if (key && key.startsWith('cache_')) {'';
           keysToRemove.push(key);
         }
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
-    logger.info('Cache cleared', { storage: this.storage });'
+    logger.info('Cache cleared', {storage: this.storage,});'
   }
-  
-  getOrSet<T>(
+  ;
+  getOrSet<T>(;
     key: string,
     fn: () => T | Promise<T>,
-    options: { ttl?: number } = {}
+    options: {ttl?: number,} = {}
   ): T | Promise<T> {
     const cached = this.get<T>(key);
     if (cached !== undefined) {
@@ -260,11 +260,11 @@ export class CacheManager {
     this.set(key, value, options);
     return value;
   }
-  
-  async getOrSetAsync<T>(
+  ;
+  async getOrSetAsync<T>(;
     key: string,
     fn: () => Promise<T> | T,
-    options: { ttl?: number } = {}
+    options: {ttl?: number,} = {}
   ): Promise<T> {
     const cached = this.get<T>(key);
     if (cached !== undefined) {
@@ -273,12 +273,12 @@ export class CacheManager {
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');``'`
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');``'`;
     this.set(key, value, options);
     return value;
   }
-  
-  memoize<TArgs extends unknown[], TResult>(
+  ;
+  memoize<TArgs extends unknown[], TResult>(;
     fn: (...args: TArgs) => TResult,
     options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {
@@ -286,11 +286,11 @@ export class CacheManager {
     return (...args: TArgs): TResult => {
       const key = keyGenerator;
         ? keyGenerator(...args)
-        : `memoize_${fn.name}_${JSON.stringify(args)}`;```
+        : `memoize_${fn.name}_${JSON.stringify(args)}`;```;
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     };
   }
-  
+  ;
   getStatistics(): CacheStats {
     const total = this.stats.hits + this.stats.misses;
     return {
@@ -301,7 +301,7 @@ export class CacheManager {
       entries: this.memoryCache.size;
     };
   }
-  
+  ;
   getStats(): {
     memorySize: number;
     localStorageSize: number;
@@ -309,11 +309,11 @@ export class CacheManager {
   } {
     let localStorageSize = 0;
     let sessionStorageSize = 0;
-    if (typeof window !== 'undefined') {''
+    if (typeof window !== 'undefined') {'';
       if (window.localStorage) {
         for (let i = 0; i < localStorage.length; i++) {
           const key = localStorage.key(i);
-          if (key && key.startsWith('cache_')) {''
+          if (key && key.startsWith('cache_')) {'';
             localStorageSize++;
           }
         }
@@ -321,7 +321,7 @@ export class CacheManager {
       if (window.sessionStorage) {
         for (let i = 0; i < sessionStorage.length; i++) {
           const key = sessionStorage.key(i);
-          if (key && key.startsWith('cache_')) {''
+          if (key && key.startsWith('cache_')) {'';
             sessionStorageSize++;
           }
         }
@@ -336,3 +336,4 @@ export class CacheManager {
 }
 export const cacheManager = new CacheManager();
 export default CacheManager;
+;

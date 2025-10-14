@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
+;

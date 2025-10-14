@@ -1,9 +1,9 @@
-import React from "react";"
-import { Link    } from "react-router-dom";"
-import SEOHead from "../components/SEOHead";"
-import { ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
+import React from "react";";
+import { Link    } from "react-router-dom";";
+import SEOHead from "../components/SEOHead";";
+import { ArrowRightIcon, ;
+  ShieldCheckIcon, ;
+  CloudIcon, ;
   CpuChipIcon,
   ChartBarIcon,
   GlobeAltIcon,
@@ -13,36 +13,36 @@ import { ArrowRightIcon,
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon;
-   } from "@heroicons/react/24/outline";"
-import FuturisticBackground from "../components/FuturisticBackground";"
-import NeonButton from "../components/NeonButton";"
-import AnimatedCard from "../components/AnimatedCard";"
-import { services    } from "../data/servicesData";"
+   } from "@heroicons/react/24/outline";";
+import FuturisticBackground from "../components/FuturisticBackground";";
+import NeonButton from "../components/NeonButton";";
+import AnimatedCard from "../components/AnimatedCard";";
+import { services    } from "../data/servicesData";";
 
 export default function HomePage()  {
 
   const structuredData = {
 export default function HomePage() {
 const structuredData = {
-    "@context": "https://schema.org",""
-    "@type": "WebSite",""
-    "name": "Zion Tech Group",""
-    "url": "https://ziontechgroup.com",""
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",""
-    "potentialAction": {""
-      "@type": "SearchAction",""
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",""
+"@context": "https://schema.org","",
+"@type": "WebSite","",
+"name": "Zion Tech Group","",
+"url": "https://ziontechgroup.com","",
+"description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.","",
+"potentialAction": {"",
+"@type": "SearchAction","",
+"target": "https://ziontechgroup.com/search?q={search_term_string,}",""
       "query-input": "required name=search_term_string"""
     }
   };
-
+;
 const HomePage = () => {
   return (
 <>    <div></div>
       <SEOHead ;
-        title="Zion Tech Group - Advanced AI and IT Solutions"""
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."""
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"""
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         structuredData={structuredData}
       /></SEOHead>
       <FuturisticBackground /></FuturisticBackground>
@@ -52,7 +52,7 @@ const HomePage = () => {
           <div className="max-w-5xl mx-auto">""
             {/* Animated Title */}
             <div className="mb-8">""
-              <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">""
+              <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse">"";
                 Zion Tech Group;
               </h1>
               <div className="flex items-center justify-center gap-4 mb-4">""
@@ -63,20 +63,20 @@ const HomePage = () => {
     </>
             </div>
             
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">""
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">"";
               Advanced AI and IT Solutions for Modern Businesses;
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">""
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
+            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">"";
+              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, ;
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">""
-              <NeonButton to="/contact" variant="primary" size="lg">""
+              <NeonButton to="/contact" variant="primary" size="lg">"";
                 Get Started Today;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />""
               </NeonButton>
-              <NeonButton to="/services" variant="secondary" size="lg">""
+              <NeonButton to="/services" variant="secondary" size="lg">"";
                 Explore Services;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />""
               </NeonButton>
@@ -89,10 +89,10 @@ const HomePage = () => {
       <section className="py-20 relative">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">""
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">"";
               Our Featured Services;
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">""
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">"";
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
             </p>
           </div>
@@ -124,11 +124,11 @@ const HomePage = () => {
                 </div>
                 
                 <div className="flex flex-col gap-3">""
-                  <NeonButton to={service.href} variant="primary" size="sm">""
+                  <NeonButton to={service.href} variant="primary" size="sm">"";
                     Learn More;
                     <ArrowRightIcon className="w-4 h-4 ml-2" />""
                   </NeonButton>
-                  <NeonButton to="/contact" variant="secondary" size="sm">""
+                  <NeonButton to="/contact" variant="secondary" size="sm">"";
                     Get Quote;
                   </NeonButton>
                 </div>
@@ -137,7 +137,7 @@ const HomePage = () => {
           </div>
           
           <div className="text-center mt-12">""
-            <NeonButton to="/services" variant="primary" size="lg">""
+            <NeonButton to="/services" variant="primary" size="lg">"";
               View All Services;
               <ArrowRightIcon className="w-5 h-5 ml-2" />""
             </NeonButton>
@@ -151,12 +151,12 @@ const HomePage = () => {
         <div className="container mx-auto px-4 relative z-10">""
           <div className="max-w-6xl mx-auto">""
             <div className="text-center mb-16">""
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">""
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">"";
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">""
-                With over 4 years of experience in cutting-edge technology solutions, 
-                we've helped businesses across various industries transform their operations ''
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">"";
+                With over 4 years of experience in cutting-edge technology solutions, ;
+                we've helped businesses across various industries transform their operations '';
                 and achieve unprecedented growth.
               </p>
             </div>
@@ -180,7 +180,7 @@ const HomePage = () => {
             </div>
             
             <div className="text-center">""
-              <NeonButton to="/about" variant="primary" size="lg">""
+              <NeonButton to="/about" variant="primary" size="lg">"";
                 Learn More About Us;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />""
               </NeonButton>
@@ -195,10 +195,10 @@ const HomePage = () => {
         <div className="container mx-auto px-4 relative z-10">""
           <div className="max-w-6xl mx-auto">""
             <div className="text-center mb-16">""
-              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">""
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">"";
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">""
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">"";
                 Let's discuss how our technology solutions can drive your business forward''
               </p>
             </div>
@@ -225,11 +225,11 @@ const HomePage = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">""
-              <NeonButton to="/contact" variant="primary" size="lg">""
+              <NeonButton to="/contact" variant="primary" size="lg">"";
                 Get In Touch;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />""
               </NeonButton>
-              <NeonButton to="/demo" variant="secondary" size="lg">""
+              <NeonButton to="/demo" variant="secondary" size="lg">"";
                 Schedule Demo;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />""
               </NeonButton>

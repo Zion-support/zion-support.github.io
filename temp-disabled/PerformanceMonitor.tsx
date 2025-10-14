@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const PerformanceMonitor: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+;

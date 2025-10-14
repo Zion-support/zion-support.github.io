@@ -5,3 +5,4 @@ export const seodata = () => {
 };
 
 export default seodata;
+;

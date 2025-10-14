@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const TermsPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
+;

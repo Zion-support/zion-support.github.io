@@ -7,24 +7,24 @@
     description,
     image,
     url,
-    author: {
+author: {,
       '@type': 'Organization',
-      name: author
+name: author,
     },
     publisher: {
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      logo: {
+logo: {,
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'
+url: 'https://ziontechgroup.com/logo.png',
       }
     },
-    ...(publishedTime && { datePublished: publishedTime }),
-    ...(modifiedTime && { dateModified: modifiedTime }),
-    ...(section && { articleSection: section }),
-    ...(tags.length > 0 && { keywords: tags.join(', ') })
+    ...(publishedTime && {datePublished: publishedTime,}),
+    ...(modifiedTime && {dateModified: modifiedTime,}),
+    ...(section && {articleSection: section,}),
+    ...(tags.length > 0 && {keywords: tags.join(', '),})
   };
-
+;
   return (
   <>
     <Helmet></Helmet>

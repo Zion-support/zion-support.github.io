@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+;
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -28,7 +28,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
       {imageUrl && (
         <div className="aspect-w-16 aspect-h-9">
-          <img
+          <img;
             src={imageUrl}
             alt={title}
             className="w-full h-48 object-cover"
@@ -67,10 +67,10 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             </div>
           </div>
           
-          <Link
+          <Link;
             href={`/blog/${slug}`}
             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
-          >
+          >;
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

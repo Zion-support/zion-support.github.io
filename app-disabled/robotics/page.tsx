@@ -1,4 +1,4 @@
-import { Helmet    } from "react-helmet-async";"
+import { Helmet    } from "react-helmet-async";";
 import { Circle, Right,    } from "lucide-react";"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;"
       <Helmet></Helmet>
@@ -9,12 +9,12 @@ import { Circle, Right,    } from "lucide-react";"
         <div className="max-w-7xl mx-auto">;"
           <div className="text-center">;"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;"
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;"
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;";
                 Page;
               </span>;
               <br />;
               <span className="text-white">Solutions</span>;"
             </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;"
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;";
               Transform your business with our advanced page solutions.;
               Powered by cutting-edge AI technology and industry expertise.;

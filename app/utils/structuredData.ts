@@ -5,3 +5,4 @@ export const structureddata = () => {
 };
 
 export default structureddata;
+;

@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const DemoPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const DemoPage: React.FC = () => {
 };
 
 export default DemoPage;
+;

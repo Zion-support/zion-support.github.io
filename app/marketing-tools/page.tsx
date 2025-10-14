@@ -1,16 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-
+;
 const MarketingToolsPage: React.FC = () => {
-  const marketingTools = [
-    {
-      title: 'AI Content Generator',
-      price: '$199/month',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
+  const marketingTools = [{
+      title: 'AI Content Generator', price: '$199/month', description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.', features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
       icon: '✍️',
-      category: 'Content Creation'
+category: 'Content Creation',
     },
     {
       title: 'AI SEO Optimizer',
@@ -18,7 +14,7 @@ const MarketingToolsPage: React.FC = () => {
       description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.',
       features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
       icon: '🔍',
-      category: 'SEO'
+category: 'SEO',
     },
     {
       title: 'AI Social Media Manager',
@@ -26,7 +22,7 @@ const MarketingToolsPage: React.FC = () => {
       description: 'Automated social media management with intelligent posting and engagement optimization.',
       features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
       icon: '📱',
-      category: 'Social Media'
+category: 'Social Media',
     },
     {
       title: 'AI Email Marketing',
@@ -34,7 +30,7 @@ const MarketingToolsPage: React.FC = () => {
       description: 'Intelligent email marketing campaigns with personalization and automation capabilities.',
       features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
       icon: '📧',
-      category: 'Email Marketing'
+category: 'Email Marketing',
     },
     {
       title: 'AI Ad Campaign Manager',
@@ -42,7 +38,7 @@ const MarketingToolsPage: React.FC = () => {
       description: 'Automated ad campaign creation and optimization across multiple platforms.',
       features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
       icon: '📊',
-      category: 'Advertising'
+category: 'Advertising',
     },
     {
       title: 'AI Analytics Dashboard',
@@ -50,33 +46,16 @@ const MarketingToolsPage: React.FC = () => {
       description: 'Comprehensive marketing analytics with AI-powered insights and predictions.',
       features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
       icon: '📈',
-      category: 'Analytics'
+category: 'Analytics',
     }
   ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Increase ROI',
-      description: 'Average 250% increase in marketing ROI with AI-powered optimization'
-    },
-    {
-      icon: Clock,
-      title: 'Save Time',
-      description: 'Reduce marketing tasks by 80% with intelligent automation'
-    },
-    {
-      icon: Target,
-      title: 'Better Targeting',
-      description: 'Reach the right audience with AI-powered targeting and personalization'
-    },
-    {
-      icon: BarChart,
-      title: 'Data-Driven',
-      description: 'Make informed decisions with comprehensive analytics and insights'
-    }
-  ];
-
+;
+  const benefits = [{
+      icon: TrendingUp, title: 'Increase ROI', description: 'Average 250% increase in marketing ROI with AI-powered optimization', }, {
+      icon: Clock, title: 'Save Time', description: 'Reduce marketing tasks by 80% with intelligent automation', }, {
+      icon: Target, title: 'Better Targeting', description: 'Reach the right audience with AI-powered targeting and personalization', }, {
+      icon: BarChart, title: 'Data-Driven', description: 'Make informed decisions with comprehensive analytics and insights', }];
+;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -88,10 +67,10 @@ const MarketingToolsPage: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">;
             AI Marketing Tools
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
@@ -137,7 +116,7 @@ const MarketingToolsPage: React.FC = () => {
       {/* Marketing Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">;
             Our Marketing Tools
           </h2>
           
@@ -167,10 +146,10 @@ const MarketingToolsPage: React.FC = () => {
 
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                  <a;
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title,}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-                  >
+                  >;
                     Get Started
                   </a>
                 </div>
@@ -183,7 +162,7 @@ const MarketingToolsPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">;
             Why Choose Our Marketing Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -201,23 +180,23 @@ const MarketingToolsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8">;
             Get started with our AI marketing tools today and see the difference intelligent automation can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+            >;
               Call (302) 464-0950
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
+            >;
               Email Us
             </a>
           </div>
@@ -228,3 +207,4 @@ const MarketingToolsPage: React.FC = () => {
 };
 
 export default MarketingToolsPage;
+;

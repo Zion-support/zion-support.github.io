@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const FiveGSolutionsPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const FiveGSolutionsPage: React.FC = () => {
 };
 
 export default FiveGSolutionsPage;
+;

@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const ErrorBoundary: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const ErrorBoundary: React.FC = () => {
 };
 
 export default ErrorBoundary;
+;

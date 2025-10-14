@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const PrivacyPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
+;

@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const TeamPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
+;

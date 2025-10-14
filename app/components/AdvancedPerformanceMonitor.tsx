@@ -18,42 +18,42 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     totalBlockingTime: 0,
   });
 const [isVisible, setIsVisible] = useState(false);
-const [isRecording, setIsRecording] = useState(false)
+const [isRecording, setIsRecording] = useState(false);
   useEffect(() => {// Only run in development mode;
-    if (process.env.NODE_ENV !== 'development') {'''
+    if (process.env.NODE_ENV !== 'development') {''';
       return}
-    const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {';'
-const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";"'"
-const paint = window.performance.getEntriesByType('paint')";"'"
+    const measurePerformance = () => {;
+      if (typeof window !== 'undefined' && window.performance) {';';
+const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";"'";
+const paint = window.performance.getEntriesByType('paint')";"'";
         const observer = new PerformanceObserver((list) => {;
-const entries = list.getEntries()
+const entries = list.getEntries();
           entries.forEach((entry) => {
-            if (entry.entryType === 'largest-contentful-paint') {'''
+            if (entry.entryType === 'largest-contentful-paint') {''';
               setMetrics(prev => ({
-                ...prev,)
+                ...prev,);
                 largestContentfulPaint: Math.round(entry.startTime)
-              }))
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {'''
+              }));
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {''';
               setMetrics(prev => ({
-                ...prev,)
+                ...prev,);
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value;
               }))
           }
-        }"""
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";"'"
+        }""";
+        observer.observe({entryTypes: ['largest-contentful-paint', 'layout-shift'],})";"'";
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";"'"
         // Memory usage (if available);
 const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
         // Network latency;
 const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
-        // Calculate Total Blocking Time";"
-const longTasks = window.performance.getEntriesByType('longtask')";"'"
-        const totalBlockingTime = longTasks.reduce((total, task) => {
+        // Calculate Total Blocking Time";";
+const longTasks = window.performance.getEntriesByType('longtask')";"'";
+        const totalBlockingTime = longTasks.reduce((total, task) => {;
           return total + (task.duration - 50); // 50ms is the threshold;
-        }, 0)
-        setMetrics({)
+        }, 0);
+        setMetrics({);
           loadTime: Math.round(loadTime),
           renderTime: Math.round(firstContentfulPaint),
           memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB;
@@ -66,19 +66,19 @@ const longTasks = window.performance.getEntriesByType('longtask')";"'"
         }
         return () => observer.disconnect()
     // Measure after initial load;
-const timer = setTimeout(measurePerformance, 1000)
+const timer = setTimeout(measurePerformance, 1000);
     return () => clearTimeout(timer)
   }, [])
   // Toggle visibility with keyboard shortcut;
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
+    const handleKeyPress = () => {
   return (
 <>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>""
       <div className="flex items-center justify-between mb-4"></div>""
         <h3 className="text-lg font-semibold">Performance Monitor</h3>""
         <button;
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"""
+          className="text-gray-400 hover:text-white"
         >
           ×
         </button>
@@ -117,7 +117,7 @@ const timer = setTimeout(measurePerformance, 1000)
         <div className="flex justify-between"></div>""
           <span>CLS:</span>
           <span className="text-red-400"></span>""
-            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}''
+            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A',}''
           </span>
         </div>
         
@@ -131,23 +131,23 @@ const timer = setTimeout(measurePerformance, 1000)
 
       <div className="mt-4 flex gap-2"></div>""
         <button;
-          onClick={isRecording ? stopRecording : startRecording}
-          className={`px-3 py-1 rounded text-xs ${```
+          onClick={isRecording ? stopRecording : startRecording,}
+          className={`px-3 py-1 rounded text-xs ${```;
             isRecording;
               ? 'bg-red-600 hover:bg-red-700' ''
               : 'bg-green-600 hover:bg-green-700'''
           }`}></button>```
-          {isRecording ? 'Stop' : 'Record'}''
+          {isRecording ? 'Stop' : 'Record',}''
         </button>
         
         <button;
           onClick={exportMetrics}
-          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>""
+          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>"";
           Export;
         </button>
       </div>
 
-      <div className="mt-2 text-xs text-gray-400"></div>""
+      <div className="mt-2 text-xs text-gray-400"></div>"";
         Press Ctrl+Shift+P to toggle;
       </div>
     </div>
@@ -159,19 +159,19 @@ const timer = setTimeout(measurePerformance, 1000)
       <div className="space-y-2 text-xs">"""
         <div className="flex justify-between">"""
           <span className="text-gray-400">Load Time:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000,})}`}>````
             {metrics.loadTime}ms;
           </span>
         </div>
         <div className="flex justify-between">"""
           <span className="text-gray-400">FCP:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000,})}`}>````
             {metrics.firstContentfulPaint}ms;
           </span>
         </div>
         <div className="flex justify-between">"""
           <span className="text-gray-400">LCP:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000,})}`}>````
             {metrics.largestContentfulPaint}ms;
           </span>
         </div>
@@ -179,19 +179,19 @@ const timer = setTimeout(measurePerformance, 1000)
         </div>
         <div className="flex justify-between">"""
           <span className="text-gray-400">TBT:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600,})}`}>````
             {metrics.totalBlockingTime}ms;
           </span>
         </div>
         <div className="flex justify-between">"""
           <span className="text-gray-400">Memory:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100,})}`}>````
             {metrics.memoryUsage}MB;
           </span>
         </div>
         <div className="flex justify-between">"""
           <span className="text-gray-400">Network:</span>"""
-          <span className={`font-mono ${getScoreColor(metrics.networkLatency, { good: 500, needsImprovement: 1000 })}`}>````
+          <span className={`font-mono ${getScoreColor(metrics.networkLatency, { good: 500, needsImprovement: 1000,})}`}>````
             {metrics.networkLatency}ms;
           </span>
         </div>
@@ -208,5 +208,6 @@ export default AdvancedPerformanceMonitor;
     <div></div>
       <h2>AdvancedPerformanceMonitor</h2>
       <p>This component is under construction.</p>
-    </div>
+    </div>;
 export default AdvancedPerformanceMonitor;
+;

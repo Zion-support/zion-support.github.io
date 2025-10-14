@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const CybersecurityPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const CybersecurityPage: React.FC = () => {
 };
 
 export default CybersecurityPage;
+;

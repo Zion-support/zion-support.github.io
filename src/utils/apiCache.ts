@@ -1,6 +1,6 @@
-'use client';'
+'use client';';
 
-import { CacheManager, CacheStorage    } from "./cacheManager";"
+import { CacheManager, CacheStorage    } from "./cacheManager";";
 interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;
@@ -32,8 +32,8 @@ export class ApiCache {
       this.cleanupPendingRequests();
     }, 5 * 60 * 1000);
   }
-  
-  async fetch<T>(
+  ;
+  async fetch<T>(;
     url: string,
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
@@ -44,7 +44,7 @@ export class ApiCache {
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey) as T;
     }
-    // Check if there's a pending request''
+    // Check if there's a pending request'';
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
       const pending = this.pendingRequests.get(cacheKey);
       if (pending && Date.now() - pending.timestamp < 30000) {
@@ -53,7 +53,7 @@ export class ApiCache {
       }
     }
     // Create new request with retry logic;
-    const requestPromise = this.fetchWithRetry<T>(
+    const requestPromise = this.fetchWithRetry<T>(;
       url,
       options,
       mergedConfig.maxRetries,
@@ -63,7 +63,7 @@ export class ApiCache {
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
-        timestamp: Date.now()
+timestamp: Date.now(),
       });
     }
     try {
@@ -76,8 +76,8 @@ export class ApiCache {
       this.pendingRequests.delete(cacheKey);
     }
   }
-  
-  private async fetchWithRetry<T>(
+  ;
+  private async fetchWithRetry<T>(;
     url: string,
     options: RequestInit,
     maxRetries: number,
@@ -87,13 +87,13 @@ export class ApiCache {
     try {
       const response = await fetch(url, options);
       if (!response.ok) {
-        // Retry on 5xx errors and 429 (rate limit)
+        // Retry on 5xx errors and 429 (rate limit);
         if (
-          (response.status >= 500 || response.status === 429) &&
+          (response.status >= 500 || response.status === 429) &&;
           attempt < maxRetries;
         ) {
           await this.delay(retryDelay * attempt); // Exponential backoff;
-          return this.fetchWithRetry<T>(
+          return this.fetchWithRetry<T>(;
             url,
             options,
             maxRetries,
@@ -109,7 +109,7 @@ export class ApiCache {
       // Retry on network errors;
       if (attempt < maxRetries) {
         await this.delay(retryDelay * attempt);
-        return this.fetchWithRetry<T>(
+        return this.fetchWithRetry<T>(;
           url,
           options,
           maxRetries,
@@ -120,26 +120,26 @@ export class ApiCache {
       throw error;
     }
   }
-  
+  ;
   invalidate(pattern: string | RegExp): number {
     // Simple implementation - clear all cache;
     this.cache.clear();
     return 0;
   }
-  
+  ;
   clear(): void {
     this.cache.clear();
     this.pendingRequests.clear();
   }
-  
+  ;
   getStats() {
     return {
       ...this.cache.getStats(),
       pendingRequests: this.pendingRequests.size;
     };
   }
-  
-  async prefetch<T>(
+  ;
+  async prefetch<T>(;
     url: string,
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
@@ -150,17 +150,17 @@ export class ApiCache {
       // Silent fail for prefetch;
       }
   }
-  
+  ;
   private getCacheKey(url: string, options: RequestInit): string {
-    const method = options.method || 'GET';'
-    const body = options.body ? JSON.stringify(options.body) : '';'
+    const method = options.method || 'GET';';
+    const body = options.body ? JSON.stringify(options.body) : '';';
     return `${method}:${url}:${body}`;```
   }
-  
+  ;
   private delay(ms: number): Promise<void> {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
-  
+  ;
   private cleanupPendingRequests(): void {
     const now = Date.now();
     const timeout = 60000; // 1 minute;
@@ -179,7 +179,7 @@ export const defaultApiCache = new ApiCache({
   deduplicate: true;
 });
 
-export async function cachedFetch<T>(
+export async function cachedFetch<T>(;
   url: string,
   options?: RequestInit,
   cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
@@ -190,13 +190,13 @@ export async function cachedFetch<T>(
 export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
   const cache = new ApiCache();
   return {
-    get: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),'``'`
-    post: <T>(path: string, body: unknown, options?: RequestInit) =>
+    get: <T>(path: string, options?: RequestInit) =>;
+      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'GET',}),'``'`;
+    post: <T>(path: string, body: unknown, options?: RequestInit) =>;
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
         ...options,
-        method: 'POST',''
+        method: 'POST','';
         headers: {
           'Content-Type': 'application/json',''
           ...(defaultOptions.headers || {}),
@@ -204,11 +204,11 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
         },
         body: JSON.stringify(body)
       }),
-    put: <T>(path: string, body: unknown, options?: RequestInit) =>
+    put: <T>(path: string, body: unknown, options?: RequestInit) =>;
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
         ...options,
-        method: 'PUT',''
+        method: 'PUT','';
         headers: {
           'Content-Type': 'application/json',''
           ...(defaultOptions.headers || {}),
@@ -216,12 +216,12 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
         },
         body: JSON.stringify(body)
       }),
-    delete: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),'``'`
+    delete: <T>(path: string, options?: RequestInit) =>;
+      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'DELETE',}),'``'`;
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
     clear: () => cache.clear(),
     stats: () => cache.getStats(),
-    prefetch: <T>(path: string, options?: RequestInit) =>
+    prefetch: <T>(path: string, options?: RequestInit) =>;
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })```
   };
 }

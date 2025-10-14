@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const App_minimalPage = () => {
   return (
@@ -10,3 +10,4 @@ const App_minimalPage = () => {
 };
 
 export default AppMinimal;
+;

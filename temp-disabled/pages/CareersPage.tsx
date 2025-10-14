@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 const CareersPage: React.FC = () => {
   return (
@@ -11,3 +11,4 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+;

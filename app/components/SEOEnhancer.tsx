@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";";
 
 interface SEOEnhancerProps {
   title?: string;
@@ -10,9 +10,9 @@ interface SEOEnhancerProps {
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group',''
-  description = 'Leading provider of AI and IT solutions',''
-  keywords = ['AI', 'IT', 'technology', 'solutions'],''
+  title="Zion Tech Group"
+  description="Leading provider of AI and IT solutions"
+  keywords = ['AI', 'IT', 'technology', 'solutions'],'';
   image,
   url,
   type = 'website'''
@@ -35,3 +35,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 export default SEOEnhancer;
+;

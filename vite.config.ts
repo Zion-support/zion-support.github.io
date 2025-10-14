@@ -1,18 +1,18 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-
+;
 const resolve = path.resolve;
-
+;
 export default defineConfig({
-  plugins: [
+  plugins: [;
     react({
-      // Enable React Fast Refresh
+      // Enable React Fast Refresh;
       fastRefresh: true,
     }),
   ],
   resolve: {
-    alias: {
+alias: {,
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
     },
@@ -25,13 +25,13 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks;
           if (id.includes('node_modules')) {
             return 'vendor';
           }
         },
         assetFileNames: (assetInfo) => {
-          if (
+          if (;
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
@@ -48,15 +48,11 @@ export default defineConfig({
     port: 3000,
     open: false,
     cors: true,
-    hmr: {
+hmr: {,
       overlay: true,
     },
   },
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-    ],
+include: ['react', 'react-dom', 'react-router-dom'],
   },
 });

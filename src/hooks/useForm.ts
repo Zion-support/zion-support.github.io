@@ -5,14 +5,14 @@ import React from "react";"
  * Provides form state management and validation;
  */;
 import { useState, useCallback, ChangeEvent    } from "react";"
-// import { logger    } from "../utils/logger";"
+// import { logger    } from "../utils/logger";";
 import { ValidationRule,
   validateField,
   validateForm,
   isFormValid,
   getFormErrors,
   // ValidationResult as _ValidationResult;
-   } from "../utils/formValidation";"
+   } from "../utils/formValidation";";
 export interface UseFormConfig<T extends Record<string, unknown>>> {
   initialValues: T;
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>>;
@@ -72,12 +72,12 @@ const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {''
+      if (type === 'checkbox' && 'checked' in e.target) {'';
         fieldValue = (e.target as HTMLInputElement).checked;
       }
       setValues(prev => ({
         ...prev,
-        [fieldName]: fieldValue)
+[fieldName]: fieldValue),
       }));
       // Validate on change if enabled;
       if (validateOnChange && touched[fieldName]) {
@@ -102,7 +102,7 @@ const fieldName = e.target.name as keyof T;
     [validateOnBlur, validateSingleField]
   );
   // Handle form submission;
-const handleSubmit = useCallback()
+const handleSubmit = useCallback();
     async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       // Mark all fields as touched;
@@ -129,7 +129,7 @@ const isValid = validateAllFields();
 const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
     setValues(prev => ({
       ...prev,
-      [field]: value)
+[field]: value),
     }));
     if (validateOnChange && touched[field]) {
       setTimeout(() => validateSingleField(field), 0);
@@ -139,14 +139,14 @@ const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
 const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
     setErrors(prev => ({
       ...prev,
-      [field]: fieldErrors)
+[field]: fieldErrors),
     }));
   }, []);
   // Set field touched programmatically;
 const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
     setTouched(prev => ({
       ...prev,
-      [field]: isTouched)
+[field]: isTouched),
     }));
   }, []);
   // Reset form to initial values;
@@ -157,7 +157,7 @@ const resetForm = useCallback(() => {
     setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid;
-const isValid = Object.keys(errors).length === 0 || 
+const isValid = Object.keys(errors).length === 0 || ;
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {
     values,
