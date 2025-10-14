@@ -1,25 +1,15 @@
-<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
-<<<<<<< HEAD
       // Enable JSX runtime
       jsxRuntime: "automatic",
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     }),
   ],
   resolve: {
@@ -39,7 +29,6 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false,
     minify: "esbuild",
-<<<<<<< HEAD
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
@@ -50,45 +39,6 @@ export default defineConfig({
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true, // Better Safari compatibility
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    // Enhanced build optimizations
-=======
-    cssCodeSplit: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
@@ -97,7 +47,6 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-<<<<<<< HEAD
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
@@ -159,24 +108,6 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
-=======
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
-        },
-        assetFileNames: (assetInfo) => {
-          if (
-            assetInfo.name &&
-            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
-          ) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       },
     },
     // Enable tree shaking
@@ -184,14 +115,9 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-<<<<<<< HEAD
     open: true,
     host: true,
     // Enable HMR
-=======
-    open: false,
-    cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     hmr: {
       overlay: true,
     },
@@ -204,7 +130,6 @@ export default defineConfig({
   // Optimize dependencies
   optimizeDeps: {
     include: [
-<<<<<<< HEAD
       "react",
       "react-dom",
       "react-router-dom",
@@ -217,11 +142,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-=======
-      'react',
-      'react-dom',
-      'react-router-dom',
-    ],
-  },
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 });
