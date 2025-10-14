@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
+import { AnalyticsProvider } from './app/contexts/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import EnhancedSEO from './app/components/EnhancedSEO';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
@@ -23,6 +23,14 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import BlogPage from './app/pages/BlogPage';
+import DemoPage from './app/pages/DemoPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import PricingPage from './app/pages/PricingPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import SupportPage from './app/pages/SupportPage';
+import TermsPage from './app/pages/TermsPage';
+import TutorialsPage from './app/pages/TutorialsPage';
 
 // ErrorBoundary is imported from components
 
@@ -84,52 +92,43 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <AdvancedLoadingStates />;
+    return <AdvancedLoadingStates><div>Loading...</div></AdvancedLoadingStates>;
   }
 
   return (
     <HelmetProvider>
       <AnalyticsProvider>
-        <PerformanceMonitor>
-          <MetaManager
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-              type="website"
-              structuredData={{
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "description": "Leading provider of AI and IT solutions",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://ziontechgroup.com/images/logo.png",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-555-0123",
-                  "contactType": "customer service"
-                }
-              }}
-            />
-            <EnhancedAnalytics />
+        <MetaManager>
+          <EnhancedAnalytics>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <Navigation />
                 <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+                  <Suspense fallback={<AdvancedLoadingStates><div>Loading application...</div></AdvancedLoadingStates>}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/services" element={<ServicesPage />} />
                       <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/tutorials" element={<TutorialsPage />} />
                     </Routes>
                   </Suspense>
                 </main>
                 <Footer />
               </div>
             </Router>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </HelmetProvider>
+            </EnhancedAnalytics>
+            <PerformanceMonitor />
+          </MetaManager>
+      </AnalyticsProvider>
+    </HelmetProvider>
   );
 };
 

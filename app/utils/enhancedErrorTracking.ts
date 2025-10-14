@@ -1,10 +1,4 @@
 export const enhancedErrorTracking = {
-  trackError: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
-  trackError: (error: Error, context?: Record<string, unknown>) => {
-    // Error tracking logic
   trackError: (error: Error, context?: Record<string, any>) => {
     const errorInfo = {
       message: error.message,
@@ -15,25 +9,30 @@ export const enhancedErrorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
       console.error('Error tracked: ', errorInfo)
+    }
     
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-
+        description: error.message,
+        context: context
       })
+    }
   },
   
-  trackPerformanceError: (_error: Error, performanceData: unknown) => {
-    enhancedErrorTracking.trackError(_error, {
   trackPerformanceError: (error: Error, performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
-
+      performanceData: performanceData
     });
-  trackPerformanceError: (metric: string, value: number, threshold: number) => {
+  },
+  
+  trackPerformanceThreshold: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
       enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
         metric,
         value,
         threshold
-}}}}}}
+      })
+    }
+  }
+}
