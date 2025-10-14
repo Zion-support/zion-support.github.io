@@ -1,25 +1,38 @@
-import React, { ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/analytics-context';
+import React, { ReactNode, useCallback } from 'react';
+import { AnalyticsContext, AnalyticsContextType } from '../contexts/AnalyticsContext';
+
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
+
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
       console.warn('Analytics Event:', eventName, properties);
     }
     // TODO: Implement actual analytics tracking
-  };
-  const trackPageView = (pageName: string) => {
+  }, []);
+
+  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Page View:', pageName);
+      console.warn('Page View:', pageName, properties);
     }
     // TODO: Implement actual page view tracking
-  };
-  const value = {
+  }, []);
+
+  const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('User identified:', userId, properties);
+    }
+    // TODO: Implement actual user identification
+  }, []);
+
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
+    identifyUser,
   };
+
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
