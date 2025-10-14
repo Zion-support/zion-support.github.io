@@ -5,28 +5,9 @@ import {
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
-<<<<<<< HEAD
-  ArrowRightIcon,
-  HeartIcon
-<<<<<<< HEAD
-<<<<<<< HEAD
-} from '@heroicons/react/24/outline';  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
-} from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
