@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';import { 
+import { Helmet } from 'react-helmet-async';
+import { 
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -13,15 +14,7 @@ import { Helmet } from 'react-helmet-async';import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-    }
-  ];
-
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -31,12 +24,11 @@ return (    <>
 
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
@@ -148,6 +140,10 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -212,14 +208,6 @@ Let's discuss how we can help transform your business with our innovative soluti
           </div>
         </div>
       </section>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300">
-            We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation.
-          </p>
-        </div>
-      </div>
     </>
   );
 }

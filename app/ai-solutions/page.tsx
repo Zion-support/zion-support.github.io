@@ -19,7 +19,7 @@ import {
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
-  LightBulbIcon;
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{
@@ -31,13 +31,13 @@ export default function AISolutionsPage() {
         "A/B testing framework",
         "Model performance monitoring",
         "Automated retraining",
-        "Edge deployment";
+        "Edge deployment"
       ],
       color: "from-purple-500 to-pink-500",
       price: "Starting at $3,500/month",
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning";
+      href: "/ai-machine-learning"
     },
     {
       title: "Natural Language Processing",
@@ -48,13 +48,13 @@ export default function AISolutionsPage() {
         "Language translation",
         "Named entity recognition",
         "Text summarization",
-        "Conversational AI";
+        "Conversational AI",
       ],
       color: "from-blue-500 to-indigo-500",
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
-      href: "/ai-nlp";
+      href: "/ai-nlp",
     },
     {
       title: "Computer Vision",
@@ -65,13 +65,13 @@ export default function AISolutionsPage() {
         "Facial recognition",
         "OCR technology",
         "Video analysis",
-        "Quality inspection";
+        "Quality inspection",
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $2,800/month",
       benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
       useCases: ["Quality control", "Security monitoring", "Medical imaging"],
-      href: "/ai-computer-vision";
+      href: "/ai-computer-vision",
     },
     {
       title: "Predictive Analytics",
@@ -82,13 +82,13 @@ export default function AISolutionsPage() {
         "Sales forecasting",
         "Risk assessment",
         "Market trend analysis",
-        "Anomaly detection";
+        "Anomaly detection",
       ],
       color: "from-orange-500 to-red-500",
       price: "Starting at $2,500/month",
       benefits: ["90% forecast accuracy", "Real-time insights", "Automated alerts"],
       useCases: ["Sales forecasting", "Inventory management", "Risk management"],
-      href: "/ai-predictive-analytics";
+      href: "/ai-predictive-analytics",
     },
     {
       title: "AI Chatbots & Virtual Assistants",
@@ -99,13 +99,13 @@ export default function AISolutionsPage() {
         "Context awareness",
         "Integration capabilities",
         "Analytics dashboard",
-        "Custom training";
+        "Custom training",
       ],
       color: "from-cyan-500 to-blue-500",
       price: "Starting at $1,800/month",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
       useCases: ["Customer support", "Lead qualification", "Internal helpdesk"],
-      href: "/ai-chatbots";
+      href: "/ai-chatbots",
     },
     {
       title: "AI Content Generation",
@@ -116,13 +116,13 @@ export default function AISolutionsPage() {
         "Multi-language generation",
         "Brand voice consistency",
         "Content personalization",
-        "Performance analytics";
+        "Performance analytics",
       ],
       color: "from-rose-500 to-pink-500",
       price: "Starting at $1,200/month",
       benefits: ["80% time savings", "SEO optimized", "Consistent quality"],
       useCases: ["Blog content", "Marketing copy", "Product descriptions"],
-      href: "/ai-content-generation";
+      href: "/ai-content-generation",
     },
     {
       title: "AI Data Analytics",
@@ -133,13 +133,13 @@ export default function AISolutionsPage() {
         "Predictive insights",
         "Custom dashboards",
         "Real-time reporting",
-        "Data visualization";
+        "Data visualization",
       ],
       color: "from-teal-500 to-green-500",
       price: "Starting at $2,000/month",
       benefits: ["Real-time insights", "Automated analysis", "Custom dashboards"],
       useCases: ["Business intelligence", "Market research", "Performance tracking"],
-      href: "/ai-data-analytics";
+      href: "/ai-data-analytics",
     },
     {
       title: "AI Process Automation",
@@ -150,13 +150,13 @@ export default function AISolutionsPage() {
         "Data extraction",
         "Decision automation",
         "Integration management",
-        "Performance monitoring";
+        "Performance monitoring",
       ],
       color: "from-violet-500 to-purple-500",
       price: "Starting at $2,500/month",
       benefits: ["70% efficiency gain", "Error reduction", "Cost savings"],
       useCases: ["Document processing", "Workflow optimization", "Data entry"],
-      href: "/ai-process-automation";
+      href: "/ai-process-automation",
     },
     {
       title: "AI Recommendation Engines",
@@ -167,13 +167,13 @@ export default function AISolutionsPage() {
         "A/B testing",
         "Performance analytics",
         "Multi-algorithm support",
-        "Scalable architecture";
+        "Scalable architecture",
       ],
       color: "from-amber-500 to-orange-500",
       price: "Starting at $1,800/month",
       benefits: ["30% engagement increase", "Personalized experience", "Real-time updates"],
       useCases: ["E-commerce", "Content platforms", "Streaming services"],
-      href: "/ai-recommendation-engines";
+      href: "/ai-recommendation-engines",
     },
     {
       title: "AI Fraud Detection",
@@ -184,13 +184,13 @@ export default function AISolutionsPage() {
         "Risk scoring",
         "Automated alerts",
         "False positive reduction",
-        "Compliance reporting";
+        "Compliance reporting",
       ],
       color: "from-red-500 to-pink-500",
       price: "Starting at $3,200/month",
       benefits: ["99.9% accuracy", "Real-time detection", "Zero false positives"],
       useCases: ["Financial services", "E-commerce", "Insurance"],
-      href: "/ai-fraud-detection";
+      href: "/ai-fraud-detection",
     },
     {
       title: "AI Voice Recognition",
@@ -201,13 +201,13 @@ export default function AISolutionsPage() {
         "Multi-language support",
         "Noise cancellation",
         "Speaker identification",
-        "Real-time processing";
+        "Real-time processing",
       ],
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $1,500/month",
       benefits: ["95% accuracy", "Multi-language", "Real-time processing"],
       useCases: ["Voice assistants", "Transcription services", "Accessibility"],
-      href: "/ai-voice-recognition";
+      href: "/ai-voice-recognition",
     },
     {
       title: "AI Business Intelligence",
@@ -218,13 +218,13 @@ export default function AISolutionsPage() {
         "Competitive intelligence",
         "ROI optimization",
         "Trend forecasting",
-        "Executive dashboards";
+        "Executive dashboards",
       ],
       color: "from-emerald-500 to-teal-500",
       price: "Starting at $4,000/month",
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
-      href: "/ai-business-intelligence";
+      href: "/ai-business-intelligence",
     }
   ];
 const AISolutionsPage: React.FC = () => {
@@ -259,9 +259,7 @@ const AISolutionsPage: React.FC = () => {
             {aiServices.map((service, _index) => {
               const Icon = service.icon;
               return (
-                <div key={service.title}>
-                  className="$1"
-                >
+                <div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -304,17 +302,17 @@ const AISolutionsPage: React.FC = () => {
                     ))}
                   </ul>
                   <div className="flex gap-2">
-                    <Link;
+                    <Link
                       to={service.href}
-                      className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}';
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg"
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />
                     </Link>
-                    <Link;
-                      to="$1"
-                      className="$1"
+                    <Link
+                      to="/contact"
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-white hover:text-gray-300 font-semibold group-hover:gap-3 transition-all border border-gray-600 hover:border-gray-500 px-4 py-2 rounded-lg"
                     >
-                      Get Started;
+                      Get Started
                     </Link>
                   </div>
                 </div>

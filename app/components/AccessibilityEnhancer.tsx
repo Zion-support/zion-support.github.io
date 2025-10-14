@@ -45,6 +45,7 @@ const AccessibilityEnhancer: React.FC = () => {
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
 
     // Reduced motion mode
     if (isReducedMotion) {
@@ -106,7 +107,10 @@ const AccessibilityEnhancer: React.FC = () => {
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {
+      });
+      
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
 
@@ -114,7 +118,7 @@ const AccessibilityEnhancer: React.FC = () => {
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-    }
+    };
     // Add alt text to images without alt attributes
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');

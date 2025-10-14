@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';import { 
+import SEO from './components/SEO';
+import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -12,7 +13,7 @@ import SEO from './components/SEO';import {
   StarIcon
 } from '@heroicons/react/24/outline';
 
-export default function HomePage()  {
+export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -40,8 +41,9 @@ export default function HomePage()  {
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup",
         "https://github.com/ziontechgroup"
-      ]    }
-  ];
+      ]
+    }
+  };
 
   const features = [
     '24/7 Expert Support',
@@ -65,7 +67,8 @@ export default function HomePage()  {
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"      />
+        url="/"
+      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden particles">
@@ -245,18 +248,10 @@ export default function HomePage()  {
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-      </Helmet>
+            </div>
+          </div>
+        </section>
+      </div>
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}

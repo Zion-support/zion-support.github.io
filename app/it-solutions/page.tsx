@@ -245,10 +245,7 @@ export default function ITSolutionsPage()   {
       href: "/it-compliance"
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
