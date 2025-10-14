@@ -42,6 +42,10 @@ function HomePage() {
     }
   ];
 
+<<<<<<< HEAD
+=======
+function Page() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-38d5
   return (
     <>
       <Helmet>

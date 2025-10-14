@@ -14,8 +14,8 @@ const EnhancedHeader: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2"></Link>
             <div>
-    <span className="text-white font-bold text-lg">Z
-            <span className="text-white font-bold text-xl">Zion Tech Group
+    <span className="text-white font-bold text-lg">Z</span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8"></nav>
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>

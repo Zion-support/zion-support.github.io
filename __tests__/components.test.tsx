@@ -4,9 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 describe("Component Tests", () => {
   test("renders without crashing", () => {
     render(
-      <HelmetProvider>
-        <div>Test Component</div>
-      </HelmetProvider>
-    );
+      <HelmetProvider ></HelmetProvider>}
+        <div>Test Component</div>})
+      </HelmetProvider>)}
+    );}
   });
 });

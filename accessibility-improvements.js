@@ -1,5 +1,4 @@
-// accessibility-improvements - Basic implementation;
+// accessibility-improvements - Basic implementation
 export default function accessibilityImprovements() {
-  
-  return null
+  return null;
 }

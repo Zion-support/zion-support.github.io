@@ -51,6 +51,8 @@ import CareersPage from './app/pages/CareersPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
+import CookiesPage from './app/pages/CookiesPage';
+import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
@@ -125,19 +127,19 @@ function App() {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
-  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(console.log);
-    getFID(console.log);
-    getFCP(console.log);
-    getLCP(console.log);
-    getTTFB(console.log);
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    onCLS(console.log);
+    onFCP(console.log);
+    onLCP(console.log);
+    onTTFB(console.log);
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+        const navEntry = entry as PerformanceNavigationTiming;
+        console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
       }
     }
   });
@@ -177,15 +179,16 @@ if (typeof window !== 'undefined') {
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/cookies" element={<CookiesPage />} />
                     <Route path="/sitemap" element={<SitemapPage />} />
-                    <Route path="/micro-saas" element={<MicroSaasPage />} />
-                    <Route path="/it-services" element={<ItServicesPage />} />
-                    <Route path="/cloud-services" element={<CloudServicesPage />} />
+                    <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/cloud-services" element={<ServicesPage />} />
                     <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                     <Route path="/case-studies" element={<CaseStudiesPage />} />
                     <Route path="/careers" element={<CareersPage />} />
                     
                     {/* New Innovative Micro SAAS Services */}
+<<<<<<< HEAD
                     <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
@@ -194,6 +197,12 @@ if (typeof window !== 'undefined') {
                     {/* Advanced AI Services */}
                     <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
                     <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
+=======
+                    <Route path="/ai-powered-email-analyzer" element={<ZionAIEmailAnalyzerPage />} />
+                    <Route path="/smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
+                    <Route path="/ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                    <Route path="/smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-38d5
 
                     {/* Catch all route */}
                     <Route path="*" element={
