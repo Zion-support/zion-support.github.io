@@ -1,10 +1,5 @@
-import React, { createContext, useEffect } from 'react';
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-}
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+import React, { useEffect } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
