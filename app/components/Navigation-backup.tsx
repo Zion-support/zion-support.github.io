@@ -6,7 +6,19 @@ const NavigationBackup = () => {
       <h2 className="text-xl font-semibold mb-2">NavigationBackup</h2>
       <p>This component is under construction.</p>
     </div>
+<<<<<<< HEAD
+  ); }
+          This page is under development.</p></div></div>
+  )}
+        </p>;
+      </div>
+    </div>
+  );}
+}
+'
+=======
   );
 };
 
 export default NavigationBackup;
+>>>>>>> origin/main

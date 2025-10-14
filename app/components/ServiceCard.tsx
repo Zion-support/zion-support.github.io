@@ -6,7 +6,19 @@ const ServiceCard = () => {
       <h2 className="text-xl font-semibold mb-2">ServiceCard</h2>
       <p>This component is under construction.</p>
     </div>
+<<<<<<< HEAD
+  ); }
+          This page is under development.</p></div></div>
+  )}
+        </p>;
+      </div>
+    </div>
+  );}
+}
+'
+=======
   );
 };
 
 export default ServiceCard;
+>>>>>>> origin/main

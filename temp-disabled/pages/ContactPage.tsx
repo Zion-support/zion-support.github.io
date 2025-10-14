@@ -9,4 +9,9 @@ export default function ContactPage() {
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
+<<<<<<< HEAD:temp-disabled/pages/ContactPage.tsx
 }
+export default ContactPage;
+=======
+}
+>>>>>>> origin/main:app/pages/ContactPage.tsx

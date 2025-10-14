@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+const BlogPage: React.FC = () => { return (
+  <>
+      <Helmet></Helmet>
+=======
 "use client";
 
 import React from "react";
@@ -7,6 +14,7 @@ const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
+>>>>>>> origin/main
         <title>BlogPage - Zion Tech Group</title>
         <meta name="description" content="BlogPage - Zion Tech Group" />
       </Helmet>
@@ -16,8 +24,16 @@ const BlogPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
+<<<<<<< HEAD
+)
+    </>)
+  ); }
+}
+export default BlogPag;e;
+=======
     </React.Fragment>
   );
 };
 
 export default BlogPage;
+>>>>>>> origin/main
