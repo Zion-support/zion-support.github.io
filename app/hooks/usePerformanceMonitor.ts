@@ -24,6 +24,7 @@ export const usePerformanceMonitor = (): { isMonitoring: boolean; metrics: Perfo
 
       return () => observer.disconnect();
     }
+    return undefined;
   }, []);
 
   return { isMonitoring, metrics };
