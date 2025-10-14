@@ -85,11 +85,17 @@ const Footer: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Cookie Policy', href: '/cookies' }
   ];
 
   const socialLinks = [
@@ -197,8 +203,22 @@ const Footer: React.FC = () => {
             {/* Quick Links & Newsletter */}
             <div className="lg:col-span-1">
               <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-2 mb-6">
                 {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
+              <ul className="space-y-2 mb-8">
+                {legalLinks.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
@@ -275,15 +295,15 @@ const Footer: React.FC = () => {
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <Link to="/privacy" className="hover:text-cyan-400 transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="hover:text-cyan-400 transition-colors">
-                  Terms of Service
-                </Link>
-                <Link to="/cookies" className="hover:text-cyan-400 transition-colors">
-                  Cookie Policy
-                </Link>
+                {legalLinks.map((link) => (
+                  <Link 
+                    key={link.name}
+                    to={link.href} 
+                    className="hover:text-cyan-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

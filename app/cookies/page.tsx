@@ -5,40 +5,75 @@ const CookiesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cookies</title>
-        <meta name ="description" content="Professional cookies solutions and services" />
-        <meta name ="keywords" content="cookies" />
+        <title>Cookie Policy - Zion Tech Group</title>
+        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies and similar technologies on our website." />
+        <meta name="keywords" content="cookie policy, cookies, tracking, analytics, Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4 xlfont-bold text-white mb-8">Cookies</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Cookie Policy</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional cookies solutions and services
+              This Cookie Policy explains how Zion Tech Group uses cookies and similar technologies on our website.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
+            
+            <div className="max-w-4xl mx-auto text-left">
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20 mb-8">
+                <h2 className="text-2xl font-bold text-white mb-4">What Are Cookies?</h2>
+                <p className="text-gray-300">
+                  Cookies are small text files that are placed on your computer or mobile device when you visit 
+                  our website. They help us provide you with a better experience by remembering your preferences 
+                  and enabling certain functionality.
                 </p>
               </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
+
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20 mb-8">
+                <h2 className="text-2xl font-bold text-white mb-4">Types of Cookies We Use</h2>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>
+                    <p className="text-gray-300">
+                      These cookies are necessary for the website to function properly. They enable basic 
+                      functions like page navigation and access to secure areas of the website.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Analytics Cookies</h3>
+                    <p className="text-gray-300">
+                      These cookies help us understand how visitors interact with our website by collecting 
+                      and reporting information anonymously.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Functional Cookies</h3>
+                    <p className="text-gray-300">
+                      These cookies enable the website to provide enhanced functionality and personalization, 
+                      such as remembering your preferences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20 mb-8">
+                <h2 className="text-2xl font-bold text-white mb-4">Managing Cookies</h2>
+                <p className="text-gray-300 mb-4">
+                  You can control and/or delete cookies as you wish. You can delete all cookies that are 
+                  already on your computer and you can set most browsers to prevent them from being placed.
+                </p>
+                <p className="text-gray-300">
+                  However, if you do this, you may have to manually adjust some preferences every time you 
+                  visit a site and some services and functionalities may not work.
                 </p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
+
+              <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20">
+                <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
+                <p className="text-gray-300">
+                  If you have any questions about our use of cookies, please contact us:
+                </p>
+                <p className="text-cyan-400 mt-2">
+                  Email: privacy@ziontechgroup.com<br />
+                  Phone: +1 302 464 0950
                 </p>
               </div>
             </div>

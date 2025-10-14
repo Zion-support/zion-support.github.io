@@ -11,6 +11,14 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
+import AiServicesPage from './app/ai-services/page';
+import ItServicesPage from './app/it-services/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import MicroSaasPage from './app/micro-saas/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import CookiesPage from './app/cookies/page';
+import NotFoundPage from './app/404/page';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,6 +60,14 @@ const App: React.FC = () => {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/services" element={<ServicesPage />} />
                   <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/ai-services" element={<AiServicesPage />} />
+                  <Route path="/it-services" element={<ItServicesPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </Suspense>
             </main>

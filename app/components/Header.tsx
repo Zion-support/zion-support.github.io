@@ -28,6 +28,11 @@ const Header: React.FC = () => {
       icon: <Users className="w-4 h-4" />
     },
     {
+      name: 'Services',
+      href: '/services',
+      icon: <Settings className="w-4 h-4" />
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
