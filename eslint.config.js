@@ -1,96 +1,58 @@
-<<<<<<< HEAD
-import js from "@eslint/js";";
-import globals from "globals";";
-import reactHooks from "eslint-plugin-react-hooks";";
-import reactRefresh from "eslint-plugin-react-refresh";";
-import tseslint from "typescript-eslint";
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from 'typescript-eslint';
+
 export default tseslint.config(
   {
-    ignores: ["
-      "dist","
-      "app-broken/**","
-      "app-disabled/**","
-      "scripts/**","
-      "src/**","
-      "temp-broken/**","
-      "coverage/**","
-      "*.js","
-      "*.cjs",
+    ignores: [
+      'dist',
+      'app-broken/**',
+      'app-disabled/**',
+      'scripts/**',
+      'src/**',
+      'temp-broken/**',
+      'coverage/**',
+      '*.js',
+      '*.cjs',
     ],
   },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],"
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {"
-      ecmaVersion: "latest","
-      sourceType: "module",
-      globals: {
-        ...globals.browser,"
-        window: "readonly","
-        document: "readonly","
-        console: "readonly","
-        process: "readonly","
-        global: "readonly","
-        HTMLElement: "readonly","
-        Event: "readonly","
-        KeyboardEvent: "readonly","
-        MediaQueryListEvent: "readonly","
-        PerformanceObserver: "readonly","
-        PerformanceNavigationTiming: "readonly","
-        HTMLInputElement: "readonly","
-        HTMLTextAreaElement: "readonly","
-        HTMLSelectElement: "readonly","
-        setTimeout: "readonly","
-        clearTimeout: "readonly","
-        setInterval: "readonly","
-        clearInterval: "readonly","
-        performance: "readonly","
-        localStorage: "readonly","
-        sessionStorage: "readonly","
-        require: "readonly","
-        module: "readonly",";
-exports: "readonly","
-        fs: "readonly","
-        __dirname: "readonly",
-        // Jest globals"
-        describe: "readonly","
-        it: "readonly","
-        test: "readonly","
-        expect: "readonly","
-        beforeEach: "readonly","
-        afterEach: "readonly","
-        beforeAll: "readonly","
-        afterAll: "readonly","
-        jest: "readonly",
-      },
-=======
-import js from '@eslint/js';
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-
-export default [
-  js.configs.recommended,
-  {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      parser: typescriptParser,
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
-        // Browser globals
+        ...globals.browser,
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MediaQueryListEvent: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        performance: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        fs: 'readonly',
+        __dirname: 'readonly',
         // Jest globals
-        jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -99,55 +61,33 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        render: 'readonly',
-        screen: 'readonly',
-        // React Testing Library
-        Helmet: 'readonly',
-        HelmetProvider: 'readonly',
+        jest: 'readonly',
+      },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
-<<<<<<< HEAD
-    plugins: {"
-      "react-hooks": reactHooks,"
-      "react-refresh": reactRefresh,
+    plugins: {
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,"
-      "react-refresh/only-export-components": ["
-        "warn",
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
         {
           allowConstantExport: true,
-          allowExportNames: ["
-            "AnalyticsContext","
-            "useAnalytics","
-            "AnalyticsProvider",
+          allowExportNames: [
+            'AnalyticsContext',
+            'useAnalytics',
+            'AnalyticsProvider',
           ],
         },
       ],
     },
-  },)
-);
-"
-=======
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      'no-undef': 'off', // Turn off no-undef for TypeScript files
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
   },
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+);
