@@ -1,174 +1,215 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Link } from "react-router-dom";
 
-const PricingPage: React.FC = () => {
-  const pricingPlans = [
+export default function Pricing() {
+  const aiServicesPricing = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
+      name: "AI Analytics Dashboard",
+      price: "$299",
+      period: "/month",
+      description: "Advanced business intelligence with AI insights",
       features: [
-        'Basic AI Chatbot',
-        'Email Automation',
-        'Analytics Dashboard',
-        'Email Support',
-        '5GB Storage'
+        "Real-time Analytics Dashboard",
+        "Predictive Analytics",
+        "Custom Reports",
+        "API Integration",
+        "Email Support",
+        "Up to 5 data sources"
       ],
-      color: 'blue',
-      popular: false
+      popular: false,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
+      name: "AI Customer Support",
+      price: "$199",
+      period: "/month",
+      description: "Intelligent chatbots and automation",
       features: [
-        'Advanced AI Solutions',
-        'Custom Integrations',
-        'Priority Support',
-        'Advanced Analytics',
-        '50GB Storage',
-        'API Access',
-        'Custom Training'
+        "Multi-language Support",
+        "Sentiment Analysis",
+        "CRM Integration",
+        "Live Chat Handoff",
+        "Priority Support",
+        "Up to 10,000 conversations"
       ],
-      color: 'purple',
-      popular: true
+      popular: true,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations',
+      name: "AI Content Generation",
+      price: "$149",
+      period: "/month",
+      description: "AI-powered content creation at scale",
       features: [
-        'Custom AI Development',
-        'Dedicated Support Team',
-        'On-premise Deployment',
-        'Unlimited Storage',
-        'Custom Integrations',
-        '24/7 Support',
-        'SLA Guarantee'
+        "SEO Optimization",
+        "Brand Voice Training",
+        "Multi-format Output",
+        "Plagiarism Detection",
+        "Content Calendar",
+        "Up to 1,000 articles/month"
       ],
-      color: 'green',
-      popular: false
+      popular: false,
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
+  const microSaasPricing = [
+    {
+      name: "Zion Analytics Pro",
+      price: "$29",
+      period: "/month",
+      description: "Business intelligence platform",
+      features: [
+        "Real-time Dashboards",
+        "Predictive Analytics",
+        "Custom Reports",
+        "API Access",
+        "Email Support",
+        "Up to 5 data sources"
+      ],
+      popular: false,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      name: "Zion Security Shield",
+      price: "$49",
+      period: "/month",
+      description: "Advanced cybersecurity protection",
+      features: [
+        "Threat Detection",
+        "Real-time Monitoring",
+        "Vulnerability Scanning",
+        "Incident Response",
+        "Priority Support",
+        "Up to 10 users"
+      ],
+      popular: true,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      name: "Zion Cloud Vault",
+      price: "$9",
+      period: "/month",
+      description: "Secure cloud storage solution",
+      features: [
+        "1TB Storage",
+        "End-to-end Encryption",
+        "File Synchronization",
+        "Mobile Apps",
+        "Email Support",
+        "Up to 5 devices"
+      ],
+      popular: false,
+      color: "from-blue-500 to-cyan-500"
+    }
+  ];
+
+  const enterprisePricing = [
+    {
+      name: "AI Solutions Suite",
+      price: "Custom",
+      period: "",
+      description: "Complete AI transformation package",
+      features: [
+        "All AI Services Included",
+        "Custom Development",
+        "Dedicated Support Team",
+        "White-label Solutions",
+        "24/7 Phone Support",
+        "Unlimited Usage",
+        "Custom Integrations",
+        "SLA Guarantee"
+      ],
+      popular: false,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "IT Infrastructure",
+      price: "Custom",
+      period: "",
+      description: "Complete IT infrastructure management",
+      features: [
+        "Cloud Infrastructure",
+        "Cybersecurity Solutions",
+        "5G Implementation",
+        "Data Analytics",
+        "24/7 Monitoring",
+        "Disaster Recovery",
+        "Compliance Management",
+        "Custom SLA"
+      ],
+      popular: true,
+      color: "from-indigo-500 to-purple-500"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Do you offer free trials?",
+      answer: "Yes! All our services come with a 14-day free trial. No credit card required to get started."
+    },
+    {
+      question: "Can I change my plan anytime?",
+      answer: "Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately."
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise customers."
+    },
+    {
+      question: "Is there a setup fee?",
+      answer: "No setup fees for any of our services. You only pay the monthly subscription fee."
+    },
+    {
+      question: "Do you offer discounts for annual billing?",
+      answer: "Yes! Save 20% when you pay annually. Contact us for custom enterprise pricing."
+    },
+    {
+      question: "What happens if I exceed my plan limits?",
+      answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
+    }
+  ];
+
+const PagePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Flexible pricing plans for AI and IT solutions by Zion Tech Group." />
+
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Learn more about page" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Flexible Pricing Plans
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Cards */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
-                  plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-4">
-                    <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-600">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                    plan.popular
-                      ? 'bg-purple-600 hover:bg-purple-700 text-white'
-                      : 'bg-gray-900 hover:bg-gray-800 text-white'
-                  }`}
-                >
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1>Page</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
+"
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="space-y-8">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Can I change my plan anytime?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Is there a free trial available?
-                </h3>
-                <p className="text-gray-600">
-                  We offer a 14-day free trial for all plans. No credit card required to get started.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  What payment methods do you accept?
-                </h3>
-                <p className="text-gray-600">
-                  We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-                </p>
+        <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700"></div>"
+              <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>"
+              <p className="text-gray-300 mb-6">
+                This page is currently under development. We're working hard to bring you the best experience.
+              </p>
+              <div className="flex justify-center space-x-4">"
+                <a """
+                  href="/" """
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"""
+                >
+                  Go Home
+                </a>
+                <a """
+                  href="/contact" """
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"""
+                >
+                  Contact Us
+                </a>
               </div>
             </div>
           </div>
+
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default PricingPage;
+}
+"""

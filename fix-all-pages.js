@@ -1,43 +1,87 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix a malformed page
-function fixPage(filePath) {
+async function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let modified = false;
     
-    // Check if this looks like a malformed page
-    if (!content.includes('export default') || content.includes(');') || content.includes('};')) {
-      console.log(`Fixing malformed page: ${filePath}`);
-      
-      // Extract the component name from the file path
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page';
-      
-      // Create a simple, working page component
-      const fixedContent = `import React from 'react';
-
-export default function ${componentName}() {
+    // Extract page name from file path;
+    const pageName = filePath.split('/').pop().replace('.tsx', '').replace('.ts', '');
+    const displayName = pageName.split('-').map(word =>;
+      word.charAt(0).toUpperCase() + word.slice(1);
+    ).join(' ');
+    
+    // Fix common malformed page structure;
+    const patterns = [;
+      // Pattern 1: Basic malformed structure;
+      {
+        pattern: /const PagePage = \(\) => \{\s*return \(\s*<>\s*<//////Helmet>\s*<title>Page - Zion Tech Group<////\/title>\s*<meta name="description" content="Page - Zion Tech Group" \/>\s*<////\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>\s*<////\/>\s*<div className="text-center"><\/div>\s*<h1 className="text-4xl font-bold text-white mb-8">Page<////\/h1>\s*<p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>\s*\);\s*\};\s*export default PagePage;/g,;
+        replacement: `const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">${componentName.replace('Page', '')}</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
+    <>)
+      <//////div><Helmet>;
+        <////title>${displayName} - Zion Tech Group</title></div>;
+        <div><meta name="description" content="${displayName} - Zion Tech Group" />;
+      </Helmet></div>;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <////div className="container mx-auto px-4 py-16">;
+          <div className="text-center">;
+            <////h1 className="text-4xl font-bold text-white mb-8">${displayName}</h1>;
+            <////div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </////p></div>;
+          <////div></div>;
+        </////div></div>;
+      <////div></div>;
+    </////>;
   );
-}`;
-      
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+};
+
+export default PagePage;`;
+      },;
+      // Pattern 2: Missing closing tags;
+      {
+        pattern: /<>\s*<//////div className="container mx-auto px-4 py-16"><\/div>\s*<////\/>\s*<\/>\s*<////div className="text-center"><\/div>\s*<////h1 className="text-4xl font-bold text-white mb-8">([^<]*)<\/h1>\s*<////p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<////\/p>\s*<\/div>/g,;
+        replacement: `<////div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <div className="container mx-auto px-4 py-16">;
+          <////div className="text-center">;
+            <h1 className="text-4xl font-bold text-white mb-8">$1</////h1></div>;
+            <////div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </////p></div>;
+          <////div></div>;
+        </////div></div>;
+      <////div></div>`;
+      },;
+      // Pattern 3: Malformed JSX structure;
+      {
+        pattern: /<////>\s*</div[^>]*><\/div>\s*<\/>\s*<////\/>\s*<div[^>]*><\/div>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>\s*<////\/div>/g,;
+        replacement: `<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <////div className="container mx-auto px-4 py-16">;
+          <div className="text-center">;
+            <////h1 className="text-4xl font-bold text-white mb-8">$1</h1></div>;
+            <div><p className="text-gray-300 text-lg">;
+              This page is under construction. Please check back later.;
+            </p></div>;
+          <div></div>;
+        </div></div>;
+      </div>`;
+      }
+    ];
+    
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.pattern, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -47,45 +91,23 @@ export default function ${componentName}() {
   }
 }
 
-// Function to find all page files
-function findPageFiles(dir) {
-  const files = [];
+async function main() {
+  const patterns = [;
+    'app/**/page.tsx';
+  ];
   
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
-        if (ext === '.tsx' && item === 'page.tsx') {
-          files.push(fullPath);
-        }
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (await fixPageFile(file)) {
+        totalFixed++;
       }
     }
   }
   
-  scanDirectory(dir);
-  return files;
+  console.log(`\nTotal page files fixed: ${totalFixed}`);
 }
 
-// Main execution
-const workspaceDir = process.cwd();
-const files = findPageFiles(workspaceDir);
-
-console.log(`Found ${files.length} page files to check...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixPage(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed ${fixedCount} malformed pages.`);
+main().catch(console.error);

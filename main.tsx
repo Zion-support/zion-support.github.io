@@ -1,18 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 import './index.css';
 
-// Ensure React scheduler is properly initialized
+// Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
-  // Fix for React scheduler unstable_now error
+  // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
     window.performance = window.performance || {};
     window.performance.now = window.performance.now || (() => Date.now());
   }
 }
 
-const root = ReactDOM.createRoot(
+// Ensure scheduler is properly initialized
+if (typeof window !== 'undefined') {
+  // Fix for scheduler unstable_now error
+  if (!window.performance || !window.performance.now) {
+    window.performance = window.performance || {}
+    window.performance.now = window.performance.now || (() => Date.now())
+  }
+const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
 
@@ -33,5 +40,8 @@ if ("serviceWorker" in navigator) {
       .catch((registrationError) => {
         // Service worker registration failed
       });
-  });
+      .catch((registrationError) => {
+        // Service worker registration failed
+        console.log('Service worker registration failed:', registrationError)
+      });)
 }

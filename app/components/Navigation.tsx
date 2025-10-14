@@ -1,139 +1,225 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
+  Globe, 
+  Users, 
+  Code, 
+  Mail, 
+  Brain, 
+  Shield, 
+  Zap,
+  ChevronDown
+} from 'lucide-react';
 
-const Navigation: React.FC = () => {
+interface NavigationItem {
+  name: string;
+  path: string;
+  icon: React.ReactNode;
+  dropdown?: NavigationItem[];
+}
+
+interface NavigationProps {
+  onSidebarToggle: () => void;
+}
+
+const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
+  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
+  const location = useLocation();
+  
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      submenu: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud Solutions', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+  const toggleServices = useCallback(() => {
+    setIsServicesOpen(!isServicesOpen);
+  }, [isServicesOpen]);
+
+  const toggleMicroSaas = useCallback(() => {
+    setIsMicroSaasOpen(!isMicroSaasOpen);
+  }, [isMicroSaasOpen]);
+
+  const toggleItServices = useCallback(() => {
+    setIsItServicesOpen(!isItServicesOpen);
+  }, [isItServicesOpen]);
+
+  const toggle5GServices = useCallback(() => {
+    setIs5GServicesOpen(!is5GServicesOpen);
+  }, [is5GServicesOpen]);
+
+  const isActive = useCallback((path: string) => {
+    return location.pathname === path;
+  }, [location.pathname]);
+
+  const services = useMemo(() => [
+    {
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />,
+      dropdown: [
+        { name: 'AI Analytics', path: '/ai-analytics', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Document Processing', path: '/ai-document-processing', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Brain className="w-4 h-4" /> },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Brain className="w-4 h-4" /> }
       ]
     },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    {
+      name: 'IT Services',
+      path: '/services',
+      icon: <Shield className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Cloud Migration', path: '/cloud-migration', icon: <Shield className="w-4 h-4" /> },
+        { name: 'DevOps Services', path: '/devops-services', icon: <Shield className="w-4 h-4" /> },
+        { name: 'IT Consulting', path: '/it-consulting', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Network Security', path: '/network-security', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Software Development', path: '/software-development', icon: <Shield className="w-4 h-4" /> },
+        { name: 'System Integration', path: '/system-integration', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Web Development', path: '/web-development', icon: <Shield className="w-4 h-4" /> }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      path: '/micro-saas',
+      icon: <Zap className="w-4 h-4" />,
+      dropdown: [
+        { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <Zap className="w-4 h-4" /> },
+        { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Zap className="w-4 h-4" /> },
+        { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Zap className="w-4 h-4" /> },
+        { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Zap className="w-4 h-4" /> }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      icon: <Globe className="w-4 h-4" />,
+      dropdown: [
+        { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Private Networks', path: '/5g-private-networks', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Globe className="w-4 h-4" /> }
+      ]
+    }
   ];
 
+  const mainNavItems = [
+    { name: 'Home', path: '/', icon: <Globe className="w-4 h-4" /> },
+    { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Contact', path: '/contact', icon: <Mail className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <Code className="w-4 h-4" /> }
+  ];
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setIsServicesOpen(false);
+      setIsMicroSaasOpen(false);
+      setIsItServicesOpen(false);
+      setIs5GServicesOpen(false);
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-white">
-              Zion Tech Group
-            </Link>
-          </div>
+          <Link to="/" className="flex items-center space-x-2 text-white hover:text-purple-400 transition-colors">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    to={item.href}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    {item.name}
-                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
+          <div className="hidden lg:flex items-center space-x-8">
+            {mainNavItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-purple-400 bg-purple-500/10'
+                    : 'text-gray-300 hover:text-white hover:bg-slate-800'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-            >
-              Get Started
-            </Link>
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleServices}
+                className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-slate-800 transition-colors"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-md shadow-lg border border-purple-500/20">
+                  {services.map((service) => (
+                    <div key={service.name} className="p-2">
+                      <div className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white">
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </div>
+                      {service.dropdown && (
+                        <div className="ml-4 space-y-1">
+                          {service.dropdown.map((item) => (
+                            <Link
+                              key={item.name}
+                              to={item.path}
+                              className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
+                            >
+                              {item.icon}
+                              <span>{item.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
+              onClick={onSidebarToggle}
+              className="text-gray-300 hover:text-white p-2 rounded-md hover:bg-slate-800 transition-colors"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 space-y-1">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
-};
+});
+
+Navigation.displayName = 'Navigation';
 
 export default Navigation;

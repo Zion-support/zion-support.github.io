@@ -1,75 +1,44 @@
-const fs = require('fs');
-const path = require('path');
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'subscribers.json');
-
+// API endpoint for general subscription
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { email, name, preferences } = req.body || {};
+export default function handler(req, res) {
+  res.status(200).json({ message: 'API endpoint working' });
+}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Subscribe.js
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional subscribe.js services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
 
-  if (!email) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email is required' }));
-    return;
-  }
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+    if (!email) {
+      return res.status(400).json({ 
+        error: 'Email is required' 
+      });
     }
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reading existing subscribers:', error);
-    existing = [];
-  }
 
-  // Check if email already exists
-  const existingSubscriber = existing.find(sub => sub.email === email);
-  if (existingSubscriber) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
-    return;
-  }
-
-  const newSubscriber = {
-    id: Date.now().toString(),
-    email,
-    name: name || '',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: 'active'
-  };
-
-  existing.push(newSubscriber);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
-    }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error saving subscriber:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
+  )
 }

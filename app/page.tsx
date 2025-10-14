@@ -1,60 +1,85 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import SEO from './components/SEO'
+import { 
+  ArrowRightIcon, 
+  ShieldCheckIcon, 
+  CloudIcon, 
+  CpuChipIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon
+} from '@heroicons/react/24/outline'
 
-export default function Page() {
+const HomePage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group - Advanced AI and IT Solutions",
+    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.",
+    "url": "https://ziontechgroup.com",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo192.png",
+      "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
+      "foundingDate": "2020",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup"
+      ]
+    }
+  const services = [
+    {
+      icon: CpuChipIcon,
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
+      href: '/ai-solutions;
+    },
+    {
+      icon: CloudIcon,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
+      href: '/cloud-infrastructure;
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Cybersecurity',
+      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
+      href: '/cybersecurity;
+    },
+    {
+      icon: RocketLaunchIcon,
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business.',
+      href: '/digital-transformation;
+    }
+  ];
+  const features = [
+    '24/7 Expert Support',
+    'Custom Solutions',
+    'Scalable Architecture',
+    'Security First',
+    'Performance Optimized',
+    'Cost Effective;
+  ];
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional page solutions tailored to your business needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge page solutions.
-              </p>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
-              </h3>
-              <p className="text-green-700">
-                Tailored page implementations for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support
-              </h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your page needs.
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
