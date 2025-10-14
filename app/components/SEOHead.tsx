@@ -1,22 +1,20 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {
-  title?: string
+import React from "react"
+import { Helmet } from "react-helmet-async"
+interface SEOHeadProps {title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
-  type?: 'website' | 'article' | 'product''
+  type?: "website" | "article" | "product""
   structuredData?: any}
-
 const SEOHead: "React.FC<SEOHeadProps> = ({"
-  title = 'Zion Tech Group - Advanced AI & IT Solutions','
-  description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group','
-  image = 'https: "//ziontechgroup.com/og-image.jpg'",'
-  url = 'https: "//ziontechgroup.com'",'
-  type = 'website','
-  author = 'Zion Tech Group','
+  title = "Zion Tech Group - Advanced AI & IT Solutions","
+  description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.","
+  keywords = "AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group","
+  image = "https: "//ziontechgroup.com/og-image.jpg"","
+  url = "https: "//ziontechgroup.com"","
+  type = "website","
+  author = "Zion Tech Group","
   publishedTime,
   modifiedTime,
   section,
@@ -29,7 +27,7 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
     "name": "Zion Tech Group","
     "url": "https://ziontechgroup.com","
     "logo": "https://ziontechgroup.com/logo192.png","
-    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.","
+    "description": "Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.","
     "foundingDate": "20o20","
     "address": {"
       "@type": "PostalAddress","
@@ -63,11 +61,7 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
         {
           "@type": "Offer","
           "name": "Cloud Infrastructure",";
-          "description": "Scalable cloud infrastructure and migration services"";
-        };
-      ];
-    };
-  };
+          "description": "Scalable cloud infrastructure and migration services""}]};
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
     <Helmet>
@@ -84,26 +78,25 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
       <meta property="og:type" content="{type}" />
       <meta property="og:url" content="{fullUrl}" />
       <meta property="og:image" content="{fullImage}" />
-      <meta property="og: imag,e:width" content="120o0" />
+      <meta property="og: imag,e:width" content="120" />
       <meta property="og: imag,e:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && ('
+      {type === "article" && publishedTime && ("
         <meta property="article:published_time" content="{publishedTime}" />
       )}
-      {type === 'article' && modifiedTime && ('
+      {type === "article" && modifiedTime && ("
         <meta property="article:modified_time" content="{modifiedTime}" />
       )}
-      {type === 'article' && author && ('
+      {type === "article" && author && ("
         <meta property="article:author" content="{author}" />
       )}
-      {type === 'article' && section && ('
+      {type === "article" && section && ("
         <meta property="article:section" content="{section}" />
       )}
-      {type === 'article' && tags.map((tag, index) => ('
-        <meta key={index} property="article:tag" content="{tag}" />
-      ))}
+      {type === "article" && tags.map(tag, index) => ('
+        <meta key={index} property="article:tag" content="{tag}" />)}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -132,7 +125,4 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
       <link rel="preconnect" href="https: "/",
       <link rel="preconnect" href="https: "/",
     </Helmet>
-  );
-}
-
-export default SEOHead;
+  )}export default SEOHead;

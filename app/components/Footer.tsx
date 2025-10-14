@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <h3 className="text-white font-semibold mb-4">Company</h$1>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
@@ -16,7 +16,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <h3 className="text-white font-semibold mb-4">Services</h$1>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
@@ -24,7 +24,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
+            <h3 className="text-white font-semibold mb-4">Resources</h$1>
             <ul className="space-y-2">
               <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
               <li><Link to="/case-studies" className="text-gray-400 hover:text-white">Case Studies</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <h3 className="text-white font-semibold mb-4">Contact</h$1>
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
@@ -54,7 +54,5 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
+  )};
 export default Footer;

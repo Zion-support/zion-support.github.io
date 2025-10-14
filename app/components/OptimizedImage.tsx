@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface OptimizedImageProps {
-  src: "string",alt: "string"
+import React, { useState, useRef, useEffect } from "react"
+import { Helmet } from "react-helmet-async"
+interface OptimizedImageProps {src: "string",alt: "string"
   width?: number
   height?: number
   className?: string
@@ -9,72 +8,52 @@ interface OptimizedImageProps {
   placeholder?: string
   sizes?: string
   quality?: number
-  loading?: 'lazy' | 'eager''
+  loading?: "lazy" | "eager""
   onLoad?: () => void
   onError?: () => void}
-
 const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
   src,
   alt,
   width,
-  height,'';
-  className = '',';
-  priority = false,'';
-  placeholder = 'data: "image/svg+xml;base64",PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',''
-  sizes = '10o0vw','
-  quality = 85,''
-  loading = 'lazy','
+  height,"";
+  className = "",";
+  priority = false,"";
+  placeholder = "data: "image/svg+xml;base64",PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+",""
+  sizes = "10vw","
+  quality = 85,""
+  loading = "lazy","
   onLoad,
-  onError}
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
+  onError}) => {const [isLoaded, setIsLoaded] = useState(false)
   const [isError, setIsError] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const imgRef = useRef<HTMLImageElement>(null)
-  useEffect(() => {
+  useEffect() => {
     if (priority) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
+    const observer = new IntersectionObserver([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
-          observer.disconnect()}
-      },
+          observer.disconnect()},
       {
-        threshold: "0.1",''
-        rootMargin: "'50px'"}'
+        threshold: "0.1",""
+        rootMargin: ""50px""}"
       }
     )
     if (imgRef.current) {
       observer.observe(imgRef.current)};
     return () => observer.disconnect()}, [priority]);
-  const handleLoad = () => {;
-    setIsLoaded(true);
-    onLoad?.();
-  }
-  const handleError = () => {;
-    setIsError(true);
-    onError?.();
-  }
-    onLoad?.();}
-  };
-
-  const handleError = () => {;
-    setIsError(true);
-    onError?.();}
-  };
-
+  const handleLoad = () => {setIsLoaded(true);
+    onLoad?.()}const handleError = () => {setIsError(true);
+    onError?.()}onLoad?.()};
+  const handleError = () => {setIsError(true);
+    onError?.()};
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: "string) => {''",,b:')) {'"
+  const getOptimizedSrc = (originalSrc: "string) => {""",b:") {""
       return originalSrc}
-    
-    // For external images, return as-is''
-    if (originalSrc.startsWith('http')) {';
+    // For external images, return as-is""
+    if (originalSrc.startsWith("http") {";
       return originalSrc};
     // For local images, you could implement WebP conversion here;
-    return originalSrc;
-  }
-  const optimizedSrc = getOptimizedSrc(src);
-
+    return originalSrc}const optimizedSrc = getOptimizedSrc(src);
   return (
     <>
       {priority && (
@@ -85,25 +64,25 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
       <div
         ref={imgRef}
         className={`relative overflow-hidden ${className}`}
-        style={{ width, height }}
+        style={width, height}
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
           <div
-            className="absolute inset-0 bg-gray-20o0 animate-pulse flex items-center justify-center"}"
-            style={{ width, height }}
+            className="absolute inset-0 bg-gray-20 animate-pulse flex items-center justify-center"}"
+            style={width, height}
           >
-            <div className="text-gray-40o0 text-sm">Loading...</div>
+            <div className="text-gray-40 text-sm">Loading...</div>
           </div>
         )}
 
         {/* Error state */}
         {isError && (
           <div
-            className="absolute inset-0 bg-gray-10o0 flex items-center justify-center"}"
-            style={{ width, height }}
+            className="absolute inset-0 bg-gray-10 flex items-center justify-center"}"
+            style={width, height}
           >
-            <div className="text-gray-40o0 text-sm text-center">
+            <div className="text-gray-40 text-sm text-center">
               <div className="text-2xl mb-2">📷</div>
               <div>Image not available</div>
             </div>
@@ -121,21 +100,16 @@ const OptimizedImage: "React.FC<OptimizedImageProps> = ({"
             sizes={sizes}
             onLoad={handleLoad}
             onError={handleError}
-            className={`transition-opacity duration-30o0 ${''
-              isLoaded ? 'opacity-10o0' : 'opacity-0'}'
+            className={`transition-opacity duration-30 ${""
+              isLoaded ? "opacity-10" : "opacity-0"}"
             }`}
-            style={{''
-              width: "'10o0%'",''
-              height: "'10o0%'",''
-              objectFit: "'cover'"}'
-            }}
+            style={""
+              width: ""10%"",""
+              height: ""10%"",""
+              objectFit: ""cover""}"}`
           />
         )}
       </div>
     </>
-  );
-}
-export default OptimizedImage;
-};
-
-export default OptimizedImage;''
+  )}export default OptimizedImage};
+export default OptimizedImage;""

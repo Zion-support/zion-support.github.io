@@ -1,40 +1,36 @@
-import React from 'react';'react-helmet-async;'
-import { Play, Right, Circle, Star } from 'lucide-react;'
-const DemoPage: "React.FC = () => {"
-  const features = [{'';
-      icon: "'Analytics'",';''
-      title: "'AI-Powered Analytics'",';''
-      description: "'See how our AI analyzes your data in real-time'",';''
-      demo: "'Live Demo';"}'
+import React from "react";"react-helmet-async;"
+import { Play, Right, Circle, Star } from "lucide-react;"
+const DemoPage: React.FC = () => {"
+  const features = [{"";
+      icon: ""Analytics"",";""
+      title: ""AI-Powered Analytics"",";""
+      description: ""See how our AI analyzes your data in real-time"",";""
+      demo: ""Live Demo";"}"
     },
-    {''
-      icon: "'Security'",';''
-      title: "'Advanced Security'",';''
-      description: "'Experience our enterprise-grade security features'",';''
-      demo: "'Demo';"}'
+    {""
+      icon: ""Security"",";""
+      title: ""Advanced Security"",";""
+      description: ""Experience our enterprise-grade security features"",";""
+      demo: ""Demo";"}"
     },
-    {''
-      icon: "'Intelligence'",';''
-      title: "'Business Intelligence'",';''
-      description: "'Explore our comprehensive BI dashboard'",';''
-      demo: "'BI Demo';"}'
+    {""
+      icon: ""Intelligence"",";""
+      title: ""Business Intelligence"",";""
+      description: ""Explore our comprehensive BI dashboard"",";""
+      demo: ""BI Demo";"}"
     },
     {
-      icon: "'Collaboration'",';'
-      title: "'Team Collaboration'",';'
-      description: "'See how teams work together seamlessly'",';'
-      demo: "'Collaboration Demo';"}'
-    {''
-      icon: "'Collaboration'",';''
-      title: "'Team Collaboration'",';''
-      description: "'See how teams work together seamlessly'",';''
-      demo: "'Collaboration Demo';"}'
+      icon: ""Collaboration"",";"
+      title: ""Team Collaboration"",";"
+      description: ""See how teams work together seamlessly"",";"
+      demo: ""Collaboration Demo";"}"
+    {""
+      icon: ""Collaboration"",";""
+      title: ""Team Collaboration"",";""
+      description: ""See how teams work together seamlessly"",";""
+      demo: ""Collaboration Demo";"}"
     }
-  ];
-
-
-    }
-  ]
+  ]}]
   const testimonials = [{
       name: "Sarah Johnson","
       company: "TechCorp Inc.","
@@ -45,8 +41,7 @@ const DemoPage: "React.FC = () => {"
       company: "DataFlow Systems","
       content: "The live demonstration helped us understand the full potential of the AI solutions.","
       rating: 5},
-    {
-      name: "Emily Rodriguez","
+    {name: "Emily Rodriguez","
       company: "InnovateLabs","
       content: "The demo team was knowledgeable and answered all our questions thoroughly.","
       rating: 5}
@@ -58,26 +53,26 @@ const DemoPage: "React.FC = () => {"
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-90 via-purple-90 to-slate-90">
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
               See It In;
-              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-cyan-40 to-blue-50 bg-clip-text text-transparent">
                 Action;
               </span>
-            </h1>
-            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
+            </h$1>
+            <p className="text-xl text-gray-30 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos.;
               See how our technology can transform your business.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 shadow-lg shadow-cyan-50o0"/25">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-xl font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30 transform hover:scale-10o5 shadow-lg shadow-cyan-50"/25">
                 <Play className="w-5 h-5 mr-2 inline" />
                 Start Demo;
               </button>
-              <button className="px-8 py-4 border border-cyan-50o0"/30 text-cyan-40o0 rounded-xl font-semibold hover:bg-cyan-50o0"/10 transition-all duration-30o0">
+              <button className="px-8 py-4 border border-cyan-50"/30 text-cyan-40 rounded-xl font-semibold hover:bg-cyan-50"/10 transition-all duration-30">
                 Schedule Live Demo;
               </button>
             </div>
@@ -88,77 +83,76 @@ const DemoPage: "React.FC = () => {"
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Interactive Demos;
-            </h2>
-            <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">
-              {features.map((feature, _index) => {
+            </h$1>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map(feature, _index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={_index} className="bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70o0"/50 hover:border-cyan-50o0"/50 transition-all duration-30o0 group">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-50o0 to-blue-60o0 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">
+                  <div key={_index} className="bg-slate-80"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70"/50 hover:border-cyan-50"/50 transition-all duration-30 group">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-50 to-blue-60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
-                    <p className="text-gray-30o0 mb-4 text-center">{feature.description}</p>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0">
+                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h$1>
+                    <p className="text-gray-30 mb-4 text-center">{feature.description}</p>
+                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-lg font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30">
                       {feature.demo}
                     </button>
                   </div>
-  );
-              })}
+  )})}
             </div>
           </div>
         </section>
         {/* Demo Section */}
-        <section className="py-20 px-4 bg-slate-80o0"/30">
+        <section className="py-20 px-4 bg-slate-80"/30">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Watch Our Solutions in Action;
-            </h2>
-      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">{/* Hero Section */}"
+            </h$1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-90 via-purple-90 to-slate-90">{/* Hero Section */}"
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               See It In
-              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
-                Action</span></h1>
-            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
+              <span className="block bg-gradient-to-r from-cyan-40 to-blue-50 bg-clip-text text-transparent">
+                Action</span></h$1>
+            <p className="text-xl text-gray-30 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos.
               See how our technology can transform your business.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 shadow-lg shadow-cyan-50o0"/25">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-xl font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30 transform hover:scale-10o5 shadow-lg shadow-cyan-50"/25">
                 <Play className="w-5 h-5 mr-2 inline" />
                 Start Demo</button>
-              <button className="px-8 py-4 border border-cyan-50o0"/30 text-cyan-40o0 rounded-xl font-semibold hover:bg-cyan-50o0"/10 transition-all duration-30o0">
+              <button className="px-8 py-4 border border-cyan-50"/30 text-cyan-40 rounded-xl font-semibold hover:bg-cyan-50"/10 transition-all duration-30">
                 Schedule Live Demo</button></div></div></section>{/* Demo Features */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Interactive Demos</h2>
-            <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">{features.map((feature, _index) => {"
+              Interactive Demos</h$1>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map(feature, _index) => {"
                 const Icon = feature.icon
                 return (
-                  <div key={_index} className="bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70o0"/50 hover:border-cyan-50o0"/50 transition-all duration-30o0 group">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-50o0 to-blue-60o0 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30o0">
+                  <div key={_index} className="bg-slate-80"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70"/50 hover:border-cyan-50"/50 transition-all duration-30 group">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-50 to-blue-60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-30">
                       <Icon className="w-8 h-8 text-white" /></div>
-                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
-                    <p className="text-gray-30o0 mb-4 text-center">{feature.description}</p>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-lg font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0">{feature.demo}"
+                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h$1>
+                    <p className="text-gray-30 mb-4 text-center">{feature.description}</p>
+                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-lg font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30">{feature.demo}"
                     </button></div>
   )})}
             </div></div></section>{/* Demo Section */}
-        <section className="py-20 px-4 bg-slate-80o0"/30">
+        <section className="py-20 px-4 bg-slate-80"/30">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Watch Our Solutions in Action</h2>
-            <div className="relative bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-70o0"/50">
-              <div className="aspect-video bg-slate-70o0"/50 rounded-xl flex items-center justify-center">
+              Watch Our Solutions in Action</h$1>
+            <div className="relative bg-slate-80"/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-70"/50">
+              <div className="aspect-video bg-slate-70"/50 rounded-xl flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-60o0 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-50 to-blue-60 flex items-center justify-center mx-auto mb-4">
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
-                  <p className="text-gray-30o0 mb-4">See our AI solutions in action</p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0">
+                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h$1>
+                  <p className="text-gray-30 mb-4">See our AI solutions in action</p>
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-xl font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30">
                     Play </button>
                 </div>
               </div>
@@ -170,22 +164,20 @@ const DemoPage: "React.FC = () => {"
           <div className="max-w-7xl mx-auto">;
             <h2 className="text-4xl font-bold text-white text-center mb-16">;
               What Say About Our Demos;
-            </h2>
+            </h$1>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, _index) => (
-                <div key={_index} className="bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70o0"/50">
+              {testimonials.map(testimonial, _index) => (
+                <div key={_index} className="bg-slate-80"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70"/50">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-40o0 fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map(_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-40 fill-current" />)}
                   </div>
-                  <p className="text-gray-30o0 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-30 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-cyan-40o0 text-sm">{testimonial.company}</p>
+                    <p className="text-cyan-40 text-sm">{testimonial.company}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -194,16 +186,16 @@ const DemoPage: "React.FC = () => {"
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to See More?;
-            </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
+            </h$1>
+            <p className="text-xl text-gray-30 mb-8">
               Schedule a personalized demo with our experts to see how our solutions can work for your specific needs.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hover:to-blue-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 shadow-lg shadow-cyan-50o0"/25">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-50 to-blue-60 text-white rounded-xl font-semibold hover: from-cyan-60 hover:to-blue-70 transition-all duration-30 transform hover:scale-10o5 shadow-lg shadow-cyan-50"/25">
                 Schedule Live Demo;
                 <Right className="w-5 h-5 ml-2 inline" />
               </button>
-              <button className="px-8 py-4 border border-cyan-50o0"/30 text-cyan-40o0 rounded-xl font-semibold hover:bg-cyan-50o0"/10 transition-all duration-30o0">
+              <button className="px-8 py-4 border border-cyan-50"/30 text-cyan-40 rounded-xl font-semibold hover:bg-cyan-50"/10 transition-all duration-30">
                 Contact Sales;
               </button>
             </div>
@@ -211,9 +203,5 @@ const DemoPage: "React.FC = () => {"
         </section>
       </div>
     </>
-  );
-}
-export default DemoPage;
-};
-
-export default DemoPage;''
+  )}export default DemoPage};
+export default DemoPage;"'

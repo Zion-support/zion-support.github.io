@@ -6,64 +6,62 @@ import { glob } from 'glob';
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
-  let fixed = content;
+  // Fix malformed color classes (0o0 -> 0, 40o0 -> 400, etc.)
+  content = content.replace(/(\d+)o0/g, '$1');
   
-  // Fix malformed import statements with 'use client'
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  // Fix malformed import statements
+  content = content.replace(/import\s+{\s*Helmet\s*}\s+from\s+from\s+/g, 'import { Helmet } from ');
   
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {
-    if (!match.trim().endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
+  // Fix malformed string literals with extra quotes
+  content = content.replace(/'([^']*)'/g, '"$1"');
   
-  // Fix unterminated string literals in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {
-    if (rest.includes('"') && !rest.includes('",')) {
-      return `${key}: "${value}",`;
-    }
-    return match;
-  });
+  // Fix malformed object syntax with semicolons
+  content = content.replace(/{\s*;\s*/g, '{');
+  content = content.replace(/;\s*}\s*/g, '}');
+  content = content.replace(/,\s*;\s*/g, ',');
   
-  // Fix unterminated string literals with missing closing quotes
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {
-    if (!value.endsWith('"')) {
-      return `${key}: "${value}"`;
-    }
-    return match;
-  });
+  // Fix malformed JSX attributes
+  content = content.replace(/hover:\s+([a-zA-Z-]+)\s+hove,r:/g, 'hover:$1 hover:');
+  content = content.replace(/hove,r:/g, 'hover:');
   
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
+  // Fix malformed grid classes
+  content = content.replace(/md:\s+grid-cols/g, 'md:grid-cols');
+  content = content.replace(/l,g:/g, 'lg:');
   
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2></$1>');
+  // Fix malformed React.FC syntax
+  content = content.replace(/const\s+(\w+):\s*"React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
   
-  // Fix missing closing brackets in object literals
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*}(?=\s*[}\]])/g, '$1: "$2"\n  }');
+  // Fix malformed 'use client' directives
+  content = content.replace(/'use client'/g, '"use client"');
   
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {
-    if (!match.trim().endsWith(';')) {
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
+  // Fix malformed closing tags
+  content = content.replace(/<\/\s*section\s*>/g, '</section>');
+  content = content.replace(/<\/\s*div\s*>/g, '</div>');
   
-  return fixed;
+  // Fix malformed numeric literals
+  content = content.replace(/(\d+),0o0/g, '$1,000');
+  content = content.replace(/(\d+)o0/g, '$1');
+  
+  // Fix malformed JSX expressions
+  content = content.replace(/\{\s*feature\.icon\s*\}/g, '{feature.icon}');
+  
+  // Fix malformed className attributes
+  content = content.replace(/className="([^"]*)\/50([^"]*)"/g, 'className="$1/50$2"');
+  
+  // Fix malformed closing brackets
+  content = content.replace(/\]\s*;\s*$/gm, '];');
+  
+  return content;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const fixedContent = fixSyntaxErrors(content);
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -79,25 +77,29 @@ async function main() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    'api/**/*.js'
+    'app/**/*.jsx',
+    'app/**/*.js'
   ];
   
-  let totalFixed = 0;
+  let totalFiles = 0;
+  let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
+    totalFiles += files.length;
+    
     for (const file of files) {
       if (processFile(file)) {
-        totalFixed++;
+        fixedFiles++;
       }
     }
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+  main().catch(console.error);
 }
 
 export { fixSyntaxErrors, processFile };
