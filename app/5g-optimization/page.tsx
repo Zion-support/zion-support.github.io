@@ -24,7 +24,7 @@ const FiveGOptimizationPage: React.FC = () => {
             </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
+              className="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Optimize Now
               <ArrowRight className="ml-2 w-5 h-5" />

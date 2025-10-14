@@ -15,10 +15,10 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Home ;},
-    { name: 'About', href: '/about', icon: Users ;},
-    { name: 'Services', href: '/services', icon: Settings ;},
-    { name: 'Contact', href: '/contact', icon: Mail ;},
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
   return (
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
-            className="text-gray-400 hover: text-white lg:hidden";
+            className="text-gray-400 hover:text-white lg:hidden"
           >
             <X className="w-6 h-6" />
           </button>

@@ -3,7 +3,7 @@ export const advancedCaching = {
     const item = {
       value,
       timestamp: Date.now(),
-      ttl: ttl * 1000;
+      ttl: ttl * 1000
     };
     localStorage.setItem(key, JSON.stringify(item));
   },

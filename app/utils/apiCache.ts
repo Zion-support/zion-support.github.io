@@ -1,5 +1,5 @@
 export const apiCache = {
-  cache: new Map<string;, { data: unknown; timestamp: number; ttl: number ;}>(),
+  cache: new Map<string, { data: unknown; timestamp: number; ttl: number }>(),
   
   set: (key: string, data: unknown, ttl: number = 300000) => {
     apiCache.cache.set(key, {

@@ -62,7 +62,7 @@ title="5G Monitoring Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
