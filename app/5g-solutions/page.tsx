@@ -16,6 +16,6 @@ export default function FiveGSolutionsPage() {
           </p>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }

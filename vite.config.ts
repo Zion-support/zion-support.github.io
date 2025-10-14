@@ -3,13 +3,9 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-<<<<<<< HEAD
-  plugins: [react({
-=======
   plugins: [
     react({
       // Optimize JSX runtime
->>>>>>> feaefa73e38684732879a5a585c43b6a6650ba92
       jsxRuntime: 'automatic',
     }),
   ],

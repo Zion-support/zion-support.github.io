@@ -35,34 +35,13 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           <h2 className="text-lg font-semibold">Navigation</h2>
           <button
             onClick={onClose}
-<<<<<<< HEAD
-            className="p-2 rounded-md hover:bg-gray-100"
-          >
-            <X className="h-5 w-5" />
-=======
             className="p-2 hover:bg-gray-100 rounded-md"
           >
             <X className="w-5 h-5" />
->>>>>>> feaefa73e38684732879a5a585c43b6a6650ba92
           </button>
         </div>
 
         <nav className="mt-4">
-<<<<<<< HEAD
-          {navigationItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={item.name}
-                href={item.href}
-                className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-              >
-                <Icon className="h-5 w-5 mr-3" />
-                {item.name}
-              </a>
-            );
-          })}
-=======
           {navigationItems.map((item) => (
             <a
               key={item.name}
@@ -73,7 +52,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
               {item.name}
             </a>
           ))}
->>>>>>> feaefa73e38684732879a5a585c43b6a6650ba92
         </nav>
       </div>
     </>
