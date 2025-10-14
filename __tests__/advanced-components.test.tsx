@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
+import ErrorBoundary from '../app/components/ErrorBoundary';
 
 // Mock components for testing
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
@@ -13,12 +13,12 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 
 const TestComponent = () => <div>Test component</div>;
 
-describe('AdvancedErrorBoundary', () => {
+describe('ErrorBoundary', () => {
   it('should catch errors and display fallback UI', () => {
     const { getByText } = render(
-      <AdvancedErrorBoundary>
+      <ErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </AdvancedErrorBoundary>
+      </ErrorBoundary>
     );
     
     expect(getByText(/Something went wrong/)).toBeInTheDocument();
