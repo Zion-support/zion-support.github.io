@@ -85,7 +85,7 @@ const AIServicesPage: React.FC = () => {
       features: 
     }]
   return (
-    <div className="min-h-screenbg-slate-90 0 text-white">
+    <div className="min-h-screenbg-slate-900text-white">
       <Helmet>
         <title>A I Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive A I services including strategy consulting, machine learning, predictive analytics, and custom A I development solutions." />
@@ -93,12 +93,12 @@ const AIServicesPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-2 0 bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5 xl md:text-6xlfont-boldmb-6bg-gradient-to-r from-purple-400 to-cyan-400bg-clip-text text-transparent">
+      <section className="relativ e py-20bg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900">
+        <div className="containermx-autopx-4text-center">
+          <h1 className="text -5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparent">
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
             Transform your business with cutting-edge artificial intelligence solutions. 
             From strategy to implementation, we deliver A I that drives real results.
           </p>
@@ -107,23 +107,23 @@ const AIServicesPage: React.FC = () => {
 
       {/* Services Grid */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="gridgrid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        <div className="containermx-autopx-4">
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-8 00 rounded-xl p-8 borderborder-slate-7 00hover:border-purple-5 00transition-all duration-300hover:transformhover:scale-1 0 5">
-                </div><div className="w-1 6 h-1 6 bg-gradient-to-r from-purple-5 0 0 to-cyan-5 0 0rounded-lgflexitems-centerjustify-centermb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                  <service.icon className="w -8h-8 text-white" />
                   </div>
                 
-                <h3 className="text-2 xlfont-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-30 0 mb-6">{service.description}</p>
+                <h3 className="text-2xlfont-bold text-whitemb-4">{service.title}</h3>
+                <p className="text-gray-300mb-6">{service.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="text-white font-semiboldmb-3">Key Features</h4>
+                  <h 4 className="text-whitefont-semiboldmb-3">Key Features</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-30 0 text-smflexitems-center">
-                        <div className="w-2 h-2bg-purple-40 0rounded-fullmr-3"></div>
+                      <li key={featureIndex} className="text-gray-300text-smflexitems-center">
+                        <div className="w-2h-2bg-purple-400rounded-fullmr-3"></div>
                         {feature}
   )
                       </li>
@@ -132,7 +132,7 @@ const AIServicesPage: React.FC = () => {
                   </ul>
                   </div>
 
-                <button className="w-full bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white py-3 px-6rounded-lgfont-semiboldhover:from-purple-7 00hover:to-cyan-7 0 0transition-all duration-300">
+                <button className="w-ful l bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3px-6rounded-lgfont-semiboldhover:from-purple-700 hover:to-cyan-700transition-allduration-300">
                   Learn More
                 </button>
                 </div>
@@ -143,19 +143,19 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-9 0 0/3 0to-cyan-9 0 0/3 0">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4 xlmd:text-5xlfont-boldtext-whitemb-6">
+      <section className="py-20bg-gradient-to-rfrom-purple-900/3 0to-cyan-900/3 0">
+        <div className="containermx-autopx-4text-center">
+          <h2 className="text-4xlmd:text-5xlfont-bold text-whitemb-6">
             Ready to Harness the Power of AI?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI services can transform your business and give you a competitive edge.
+          <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
+            Let&apos;s discuss how our AI services can transform your business and give you a competitive edge.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-7 00 hover:to-cyan-7 00transition-all duration-300transformhover:scale-1 0 5">
+          <div className="flexflex-colsm:flex-rowgap-4justify-center">
+            <button className="bg-gradient-to- r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-700 hover:to-cyan-700 transition-allduration-300transformhover:scale-105">
               Start Your AI Journey
             </button>
-            <button className="border-2 border-white text-white px-8 py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0transition-all duration-300">
+            <button className="border -2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-900transition-allduration-300">
               Schedule Consultation
             </button>
             </div>

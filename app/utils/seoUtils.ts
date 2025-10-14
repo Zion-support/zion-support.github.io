@@ -6,7 +6,7 @@ export constseoUtils= {
     if (content.length <= max Length) return content
     return content.substring(0, max Length - 3) + '...'
   
-  generateDescription: (content: string, maxLength: number = 160) => {
+  generateDescription: (content: string, maxLength: number = 1 6 0) => {
     if (content.length <= maxLength) return content
     return content.substring(0, maxLength - 3) + '...'
   },

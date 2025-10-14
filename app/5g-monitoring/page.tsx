@@ -6,17 +6,14 @@ import { Link } from 'react-router-dom';
 const Page5gMonitoringPage: React.FC = () => {
   const services = [
     {
-      title: 'Expert 5g Monitoring Solutions',
-      description: 'Professional 5g monitoring services tailored to your needs.'
+      title: '5G Network Monitoring',
+      description: 'Real-time monitoring and analysis of 5G network performance.',
+    },,
+      title: 'Security Monitoring',
+      description: 'Advanced security monitoring and threat detection for 5G networks.',;
+      title: 'Team Training',
+      description: 'Comprehensive training for 5G network monitoring and management.',
     },
-    {
-      title: 'Custom Implementation',
-      description: 'Tailored 5g monitoring implementations for your specific requirements.'
-    },
-    {
-      title: '24/7 Support',
-      description: 'Round-the-clock support for all your 5g monitoring needs.'
-    }
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -48,15 +45,25 @@ const Page5gMonitoringPage: React.FC = () => {
                 {service.description}
               </p>
               <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+          ))}
+        <div className="text-center">
+          <Link 
+            to="/contact"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f4d
       </div>
     </>
   );

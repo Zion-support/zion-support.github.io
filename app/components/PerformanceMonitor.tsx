@@ -41,8 +41,7 @@ const PerformanceMonitor = () => {
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
-          performanceMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
-          setMetrics({ ...performanceMetrics });
+          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
         }
       });
     });
@@ -68,8 +67,7 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          performanceMetrics.fcp = entry.startTime;
-          setMetrics({ ...performanceMetrics });
+          metrics.fcp = entry.startTime;
         }
       });
     });
@@ -78,13 +76,12 @@ const PerformanceMonitor = () => {
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      performanceMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics({ ...performanceMetrics });
+      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
     }
 
     // Send metrics after page load
     const sendMetrics = () => {
-      if (Object.keys(performanceMetrics).length > 0) {
+      if (Object.keys(metrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
         console.log('Performance Metrics:', performanceMetrics);
       }
@@ -122,31 +119,31 @@ const PerformanceMonitor = () => {
       <div className="font-bold mb-2">Performance Metrics</div>
       <div className="space-y-1">
         <div className="flex justify-between">
-          <span>FCP:</span>
+          <span>FCP: </span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>LCP:</span>
+          <span>LCP: </span>
           <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>FID:</span>
+          <span>FID: </span>
           <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>CLS:</span>
+          <span>CLS: </span>
           <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>TTFB:</span>
+          <span>TTFB: </span>
           <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>

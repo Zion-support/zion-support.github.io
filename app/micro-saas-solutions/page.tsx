@@ -9,13 +9,13 @@
         <meta name="keywords" content="micro, saas, solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xlfont-boldtext-whitemb-6">
+            <h1 className="text-5xlfont-bold text-whitemb-6">
               Micro SaaS Solutions
             </h1>
-            <p className="text-xl text-gray-30 0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Scalable micro SaaS solutions tailored to your business needs
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -36,11 +36,19 @@
             <div className="w-fullh-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
           </div>
           
-
+          <div className="gridmd:grid-cols-2gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Rocket className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
+              <p className="text-gray-300">
+                Fast-track your SaaS product development with our expert team.
               </p>
-              <p className="text-lgtext-gray-400 mb-12 max-w-3xl mx-auto">
-                Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
-                optimize, and accelerate your business growth with cutting-edge AI technology.
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Target className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Targeted Solutions</h3>
+              <p className="text-gray-300">
+                Focused solutions for specific business challenges.
               </p>
               
               <div className="flexflex-col sm:flex-row gap-4 justify-center items-center mb-16">

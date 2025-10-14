@@ -1,134 +1,98 @@
-  // Fix missing closing tags and malformed JSX
-  // Pattern 1: Fix missing closing tags for common elements
-  const tagPatterns = [
-    { open: /<h3[^>]*>/g, close: '</h3>' },
-    { open: /<p[^>]*>/g, close: '</p>' },
-    { open: /<section[^>]*>/g, close: '</section>' },
-    { open: /<div[^>]*>/g, close: '</div>' },
-    { open: /<Router[^>]*>/g, close: '</Router>' },
-    { open: /<HelmetProvider[^>]*>/g, close: '</HelmetProvider>' }
-  ];
+#!/usr/bin/env node
 
-  // Fix malformed className attributes (missing spaces)
-  fixed = fixed.replace(/className="([^"]*?)([a-zA-Z])([a-zA-Z])/g, (match, prefix, char1, char2) => {
-    if (char1 === char1.toUpperCase() && char2 === char2.toLowerCase()) {
-      return `className="${prefix}${char1} ${char2}`;
-    }
-    return match;
-  });
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-  // Fix missing spaces in className attributes
-  fixed = fixed.replace(/className="([^"]*?)([a-zA-Z])([0-9])/g, 'className="$1$2 $3');
-  fixed = fixed.replace(/className="([^"]*?)([0-9])([a-zA-Z])/g, 'className="$1$2 $3');
+// Function to fix JSX syntax errors
+function fixJSXErrors(content) {
+  let fixed = content;
+
+  // Fix CSS class concatenation issues (missing spaces)
+  fixed = fixed.replace(/(\w+)(\d+)(\w+)/g, '$1 $2 $3');
+  fixed = fixed.replace(/(\w+)(\d+)(\s+)(\w+)/g, '$1 $2$3$4');
+  fixed = fixed.replace(/(\w+)(\d+)(\s+)(\w+)(\d+)/g, '$1 $2$3$4 $5');
   
-  // Fix malformed grid classes
-  fixed = fixed.replace(/grid-cols-(\d+)gap-/g, 'grid-cols-$1 gap-');
-  fixed = fixed.replace(/gap-(\d+)mt-/g, 'gap-$1 mt-');
-  
-  // Fix malformed padding/margin classes
-  fixed = fixed.replace(/px-(\d+)py-/g, 'px-$1 py-');
-  fixed = fixed.replace(/py-(\d+)px-/g, 'py-$1 px-');
-  fixed = fixed.replace(/p-(\d+)mt-/g, 'p-$1 mt-');
-  fixed = fixed.replace(/mt-(\d+)p-/g, 'mt-$1 p-');
-  
-  // Fix malformed text color classes
-  fixed = fixed.replace(/text-([a-zA-Z]+)(\d+)/g, 'text-$1-$2');
-  fixed = fixed.replace(/bg-([a-zA-Z]+)(\d+)/g, 'bg-$1-$2');
-  fixed = fixed.replace(/border-([a-zA-Z]+)(\d+)/g, 'border-$1-$2');
-  
-  // Fix malformed rounded classes
-  fixed = fixed.replace(/rounded-lgp-/g, 'rounded-lg p-');
-  fixed = fixed.replace(/rounded-lgp(\d+)/g, 'rounded-lg p$1');
-  
-  // Fix malformed font classes
-  fixed = fixed.replace(/font-boldtext-/g, 'font-bold text-');
-  fixed = fixed.replace(/font-semiboldtext-/g, 'font-semibold text-');
-  
-  // Fix malformed container classes
-  fixed = fixed.replace(/mx-autopx-/g, 'mx-auto px-');
-  fixed = fixed.replace(/mx-autopx-(\d+)py-/g, 'mx-auto px-$1 py-');
-  
-  // Fix malformed gradient classes
+  // Fix specific CSS class patterns
   fixed = fixed.replace(/from-slate-9\s+00via-purple-9\s+0\s+0to-slate-9\s+0\s+0/g, 'from-slate-900 via-purple-900 to-slate-900');
-  
-  // Fix malformed text classes
+  fixed = fixed.replace(/mx-autopx-4py-1\s+6/g, 'mx-auto px-4 py-16');
+  fixed = fixed.replace(/font-boldtext-white/g, 'font-bold text-white');
   fixed = fixed.replace(/text-gray-30\s+0/g, 'text-gray-300');
-  fixed = fixed.replace(/text-blue-90\s+0/g, 'text-blue-900');
-  fixed = fixed.replace(/text-green-90\s+0/g, 'text-green-900');
-  fixed = fixed.replace(/text-purple-90\s+0/g, 'text-purple-900');
+  fixed = fixed.replace(/grid-cols-3gap-8/g, 'grid-cols-3 gap-8');
+  fixed = fixed.replace(/mt-1\s+2/g, 'mt-12');
+  fixed = fixed.replace(/border-blue-20\s+0rounded-lgp-6/g, 'border-blue-200 rounded-lg p-6');
+  fixed = fixed.replace(/text-blue-90\s+0mb-2/g, 'text-blue-900 mb-2');
   fixed = fixed.replace(/text-blue-70\s+0/g, 'text-blue-700');
+  fixed = fixed.replace(/border-green-20\s+0rounded-lgp-6/g, 'border-green-200 rounded-lg p-6');
+  fixed = fixed.replace(/text-green-90\s+0mb-2/g, 'text-green-900 mb-2');
   fixed = fixed.replace(/text-green-70\s+0/g, 'text-green-700');
+  fixed = fixed.replace(/border-purple-20\s+0rounded-lgp-6/g, 'border-purple-200 rounded-lg p-6');
+  fixed = fixed.replace(/text-purple-90\s+0mb-2/g, 'text-purple-900 mb-2');
   fixed = fixed.replace(/text-purple-70\s+0/g, 'text-purple-700');
+  fixed = fixed.replace(/bg-whiterounded-lgshadow-lgp-8/g, 'bg-white rounded-lg shadow-lg p-8');
+  fixed = fixed.replace(/flexitems-centermb-4/g, 'flex items-center mb-4');
+  fixed = fixed.replace(/h\s+-8w-8/g, 'h-8 w-8');
+  fixed = fixed.replace(/text-blue-6\s+0\s+0mr-3/g, 'text-blue-600 mr-3');
+  fixed = fixed.replace(/text-xlfont-semiboldtext-gray-9\s+0\s+0/g, 'text-xl font-semibold text-gray-900');
+  fixed = fixed.replace(/text-gray-6\s+0\s+0mb-6/g, 'text-gray-600 mb-6');
+  fixed = fixed.replace(/inline-flexitems-centertext-blue-6\s+0\s+0hover:text-blue-8\s+0\s+0font-medium/g, 'inline-flex items-center text-blue-600 hover:text-blue-800 font-medium');
+  fixed = fixed.replace(/ml-2h-4w-4/g, 'ml-2 h-4 w-4');
+  fixed = fixed.replace(/inline-fle\s+x\s+items-center/g, 'inline-flex items-center');
+  fixed = fixed.replace(/px-8\s+py-3\s+border\s+border-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-6\s+0\s+0hover:bg-blue-7\s+0\s+0/g, 'px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700');
+  fixed = fixed.replace(/ml-2h-5w-5/g, 'ml-2 h-5 w-5');
+
+  // Fix missing closing tags and malformed JSX
+  fixed = fixed.replace(/<h3([^>]*)>\s*([^<]+)\s*<p/g, '<h3$1>$2</h3>\n                <p');
+  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<\/div>/g, '<p$1>$2</p>\n              </div>');
+  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<div/g, '<p$1>$2</p>\n              <div');
   
-  // Fix malformed border classes
-  fixed = fixed.replace(/border-blue-20\s+0/g, 'border-blue-200');
-  fixed = fixed.replace(/border-green-20\s+0/g, 'border-green-200');
-  fixed = fixed.replace(/border-purple-20\s+0/g, 'border-purple-200');
+  // Fix missing closing tags for h3 elements
+  fixed = fixed.replace(/<h3([^>]*)>\s*([^<]+)\s*<p/g, '<h3$1>$2</h3>\n                <p');
+  fixed = fixed.replace(/<h3([^>]*)>\s*([^<]+)\s*<\/div>/g, '<h3$1>$2</h3>\n              </div>');
   
-  // Fix malformed background classes
-  fixed = fixed.replace(/bg-blue-50\s+/g, 'bg-blue-50 ');
-  fixed = fixed.replace(/bg-green-50\s+/g, 'bg-green-50 ');
-  fixed = fixed.replace(/bg-purple-50\s+/g, 'bg-purple-50 ');
+  // Fix missing closing tags for p elements
+  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<\/div>/g, '<p$1>$2</p>\n              </div>');
+  fixed = fixed.replace(/<p([^>]*)>\s*([^<]+)\s*<div/g, '<p$1>$2</p>\n              <div');
   
-  // Fix missing closing tags by analyzing the structure
-  const lines = fixed.split('\n');
-  const fixedLines = [];
-  const tagStack = [];
+  // Fix missing closing tags for div elements
+  fixed = fixed.replace(/<div([^>]*)>\s*([^<]+)\s*<\/div>/g, '<div$1>$2</div>');
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmedLine = line.trim();
-    
-    // Check for opening tags
-    const openTagMatch = trimmedLine.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
-    if (openTagMatch && !trimmedLine.includes('/>')) {
-      const tagName = openTagMatch[1];
-      // Skip self-closing tags and script/style tags
-      if (!['img', 'br', 'hr', 'input', 'meta', 'link', 'script', 'style'].includes(tagName)) {
-        tagStack.push({ tag: tagName, line: i });
+  // Fix JSX fragment closing
+  fixed = fixed.replace(/<>\s*([^<]+)\s*<\/>/g, '<>\n      $1\n    </>');
+  
+  // Fix missing semicolons in object definitions
+  fixed = fixed.replace(/const\s+services\s*=\s*\[\s*\{/g, 'const services = [\n    {');
+  fixed = fixed.replace(/title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*;\s*\}/g, 'title: \'$1\',\n      description: \'$2\',\n    },');
+  fixed = fixed.replace(/title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*;\s*\}/g, 'title: \'$1\',\n      description: \'$2\',\n    },');
+  
+  // Fix function syntax
+  fixed = fixed.replace(/function\s+App\(\)\s*=>/g, 'function App() {');
+  fixed = fixed.replace(/const\s+FiveGModernizationPage\s*=\s*\(\)\s*=>/g, 'const FiveGModernizationPage = () => {');
+  
+  // Fix missing closing braces
+  fixed = fixed.replace(/return\s*\(\s*<div([^>]*)>\s*([^<]+)\s*<\/div>\s*\)\s*$/gm, 'return (\n    <div$1>\n      $2\n    </div>\n  );');
+  
+  // Fix duplicate imports
+  fixed = fixed.replace(/import\s+\{[^}]+\}\s+from\s+'[^']+';\s*import\s+\{[^}]+\}\s+from\s+'[^']+';/g, (match) => {
+    const lines = match.split('\n');
+    const uniqueImports = new Set();
+    lines.forEach(line => {
+      if (line.trim().startsWith('import')) {
+        uniqueImports.add(line.trim());
       }
-    }
-    
-    // Check for closing tags
-    const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
-    if (closeTagMatch) {
-      const tagName = closeTagMatch[1];
-      // Remove from stack
-      const lastIndex = tagStack.findLastIndex(item => item.tag === tagName);
-      if (lastIndex !== -1) {
-        tagStack.splice(lastIndex, 1);
-      }
-    }
-    
-    fixedLines.push(line);
-  }
+    });
+    return Array.from(uniqueImports).join('\n');
+  });
   
-  // Add missing closing tags
-  while (tagStack.length > 0) {
-    const { tag } = tagStack.pop();
-    fixedLines.push(`</${tag}>`);
-  }
+  // Fix missing closing tags in JSX
+  fixed = fixed.replace(/<section([^>]*)>\s*([^<]+)\s*$/gm, '<section$1>\n      $2\n    </section>');
   
-  fixed = fixedLines.join('\n');
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div([^>]*)>\s*<\/div><div([^>]*)>/g, '<div$1>\n              </div>\n              <div$2>');
   
-  // Fix specific malformed patterns
-  fixed = fixed.replace(/;\s*$/gm, '');
-  fixed = fixed.replace(/>\s*;\s*$/gm, '>');
-  
-  // Fix missing closing parentheses in JSX
-  const openParens = (fixed.match(/\(/g) || []).length;
-  const closeParens = (fixed.match(/\)/g) || []).length;
-  if (openParens > closeParens) {
-    const missingParens = openParens - closeParens;
-    fixed += ')'.repeat(missingParens);
-  }
-  
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*$/gm, '<>');
-  fixed = fixed.replace(/^\s*<\/>/gm, '</>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/\s*>/g, '');
+  // Fix missing closing tags for Router and HelmetProvider
+  fixed = fixed.replace(/<Router>\s*<div([^>]*)>\s*<Routes>\s*<Route[^>]*\/>\s*<Route[^>]*\/>\s*<\/Routes>\s*<\/div>\s*<\/div>\s*<\/Router>/g, 
+    '<Router>\n        <div$1>\n          <Routes>\n            <Route path="/" element={<HomePage />} />\n            <Route path="*" element={<HomePage />} />\n          </Routes>\n        </div>\n      </Router>');
   
   return fixed;
 }
@@ -137,10 +101,10 @@
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixJSXErrors(content);
+    const fixed = fixJSXErrors(content);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -151,27 +115,27 @@ function processFile(filePath) {
   }
 }
 
-// Main function
+// Main execution
 function main() {
-  console.log('Starting JSX error fixing...');
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts'
+  ];
   
-  // Get all TypeScript/JavaScript files in the app directory
-  const pattern = 'app/**/*.{ts,tsx,js,jsx}';
-  const files = glob.sync(pattern);
+  let totalFixed = 0;
   
-  let fixedCount = 0;
-  let totalFiles = files.length;
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { cwd: process.cwd() });
+    files.forEach(file => {
+      if (processFile(file)) {
+        totalFixed++;
+      }
+    });
+  });
   
-  console.log(`Found ${totalFiles} files to process`);
-  
-  for (const file of files) {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
-  console.log('JSX error fixing completed!');
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
 if (require.main === module) {

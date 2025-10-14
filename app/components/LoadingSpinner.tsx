@@ -34,15 +34,19 @@ const Loading Spinner: React.FC<Loading Spinner Props> = ({
   )
       />
       {text && (
-        <p className="mt-2 text-sm text-gray-600">{text}</p>
+        <p className="mt-2text-smtext-gray-300">
+          {text}
+        </p>
       )}
   )
     </div>
   )
   if (full Screen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">{spinner}</div>
+      <div className="fixe dinset-0bg-slate-900/8 0backdrop-blur-smflexitems-centerjustify-centerz-50">
+        <div className="bg-slate-800rounded-lgp-8shadow-xl">{spinner}
+          </div>
+        </div>
       </div>
     );
   }

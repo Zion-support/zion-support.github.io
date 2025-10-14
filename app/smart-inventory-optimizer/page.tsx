@@ -27,34 +27,35 @@ const SmartInventoryOptimizerPage: React.FC = () => {
         <meta name="description" content="Professional smart inventory optimizer solutions and services" />
         <meta name="keywords" content="smart, inventory, optimizer" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Smart Inventory Optimizer</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Smart inventory optimizer</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional smart inventory optimizer solutions and services
+              Professional Smart inventory optimizer solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+              <div className="bg-blue-50 border border-blue-200rounded-lgp-6">
+                <h3 className="text-lg font-semiboldtext-blue-900mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
                 </div>
-              ))}
+        </div>
+              <div className="bg-green-50 border border-green-200rounded-lgp-6">
+                <h3 className="text-lg font-semiboldtext-green-900mb-2">
+                  Custom Implementation
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+              </p><div className="bg-purple-50 border border-purple-200rounded-lgp-6">
+                <h3 className="text-lg font-semiboldtext-purple-900mb-2">
+                  24/7 Support
+                <p className="text-purple-700">Round-the-clock support for all your needs.
+              </p>
+              </div>
+        </div>
             </div>
             <div className="text-center mt-12">
               <Link 

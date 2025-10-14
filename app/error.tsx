@@ -12,10 +12,10 @@ const Error Page: React.FC = () => {
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
       </Helmet>
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 flexitems-centerjustify-center">
         <div className="text-center">
-          <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-            <AlertTriangle className="w-6 h-6 text-red-600" />
+          <h1 className="text-4xlfont-boldtext-gray-900mb-4">Something went wrong</h1>
+          <p className="text-gray-600">Please try again later.</p>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
           <p className="text-gray-600 mb-6">Please try again later.</p>

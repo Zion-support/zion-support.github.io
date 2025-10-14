@@ -18,18 +18,27 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { has Error: false }
   )
   }
-  )
-  static get Derived State From Error(error: Error): State {
-    return { has Error: true, error }
-  )
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true;, error };
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) => {
+    // Error logged
+  render() => {
+    if (this.state.hasError) => {
+      return (
+        <div className="min-h-screenflexitems-centerjustify-centerbg-slate-900">
+          <div className="text-center">
+            <h1 className="text-4xlfont-bold text-whitemb-4">Something went wrong</h1>
+            <p className="text-gray-300mb-8">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="$1">
+              Reload Page
+            </button>
+            </div>
+        </div>
+          </div>
+        </div>
+      );
     }
 
     // Call custom error handler if provided

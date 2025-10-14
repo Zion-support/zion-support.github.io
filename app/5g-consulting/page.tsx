@@ -39,10 +39,10 @@ const Page5gConsultingPage: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">;
           {services.map((service, index) => (
             <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3 className="text-xlfont-semiboldtext-gray-9 0 0mb-4">
+              <h3 className="text-xl font-semibold text-gray-900mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-6 0 0mb-4">
+              <p className="text-gray-600mb-4">
                 {service.description}
               </p>
               <Link 

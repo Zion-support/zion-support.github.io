@@ -14,11 +14,25 @@ export constapiInterceptor= {
   error: (error: unknown) => {
     if (error && typeof error === 'object' && 'response' in error) {
       const errorWithResponse = error as { response?: { status?: number } };
-      if (errorWithResponse.response?.status === 401) {
+      if (errorWithResponse.response?.status === 4 0 1) {
         // Handle unauthorized access
         localStorage.removeItem('authToken');
         window.location.href = '/login';
       }
+<<<<<<< HEAD
+=======
+  response: (response: any) => {
+    // Handle successful responses
+    return response
+  },
+  
+  error: (error: any) => {
+    // Handle errors
+    if (error.response?.status === 4 0 1) {
+      // Unauthorized - redirect to login
+      localStorage.removeItem('authToken')
+      window.location.href = '/login'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2f4d
     }
     return Promise.reject(error);
   }

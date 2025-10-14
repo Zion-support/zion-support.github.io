@@ -12,14 +12,14 @@ const Privacy Page: React.FC = () => {
         <meta name="description" content="Our privacy policy and data protection practices" />
         <meta name="keywords" content="privacy policy, data protection, privacy" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         <div className="container mx-auto px-4 py-16">
-        
           <div className="text-center">
-            <h1 className="text-4 xl font-bold text-white mb-8">Privacy Policy</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Our privacy policy and data protection practices
+            </p>
             <div className="text-gray-400">
-        
               <p>Privacy policy content coming soon...</p>
             </div>
           </div>

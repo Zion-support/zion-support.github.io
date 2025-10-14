@@ -28,46 +28,40 @@ const AiCybersecuritySuiteProPage: React.FC = () => {
         <meta name="keywords" content="ai, cybersecurity, suite, pro" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-5xlfont-boldtext-whitemb-6">
+            <h1 className="text-5xlfont-bold text-whitemb-6">
               AI Cybersecurity Suite Pro
             </h1>
-            <p className="text-xl text-gray-30 0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Protect your business with AI-powered cybersecurity solutions
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">
-                    {service.description}
-                  </p>
-                  <Link 
-                    to="/contact" 
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </div>
-              ))}
+          </div>
+          
+          <div className="gridmd:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Shield className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Threat Detection</h3>
+              <p className="text-gray-300">
+                AI-powered threat detection and prevention systems.
+              </p>
             </div>
-            <div className="text-center mt-12">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Lock className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
+              <p className="text-gray-300">
+                Advanced encryption and data protection mechanisms.
+              </p>
             </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Brain className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">AI Monitoring</h3>
+              <p className="text-gray-300">
+                Continuous AI monitoring and security analysis.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 </>
