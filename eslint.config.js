@@ -13,6 +13,7 @@ export default tseslint.config(
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
+      '.next/**',
       'node_modules/**',
       '*.config.js',
       '*.config.cjs',
