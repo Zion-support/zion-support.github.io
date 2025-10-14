@@ -264,10 +264,9 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-    </div>
+          </section>
+        </main>
+      </div>
     </>
   );
 };
