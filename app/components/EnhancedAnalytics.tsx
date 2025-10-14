@@ -72,7 +72,7 @@ const EnhancedAnalytics: React.FC = () => {
             trackEvent({
               action: 'FID',
               category: 'Performance',
-              value: (entry as any).processingStart - entry.startTime
+              value: (entry as PerformanceEventTiming).processingStart - entry.startTime
             });
           } else if (entry.entryType === 'layout-shift') {
             const layoutShift = entry as LayoutShift;

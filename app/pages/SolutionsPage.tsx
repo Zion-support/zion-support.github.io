@@ -1,16 +1,22 @@
-"use client;";
+"use client";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
-
- import { Helmet   } from "react-helmet-async";
-
-
- const SolutionsPage: React.FC = () = {} return (
-    
-      React.Fragment>Helme t<//titl e>SolutionsPage - Zion Tech Group<//meta nam e=description"conten t="SolutionsPage - Zion Tech Group /"<//div classNam e=min-h-screen bg-slate-900 text-white flex items-center justify-center" <div>>>>>SolutionsPage</h 1" <p classNam e=text-gray-300"This page is under construction.</di v<///di v") </React.Fragment
+const SolutionsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Solutions - Zion Tech Group</title>
+        <meta name="description" content="Solutions - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Solutions</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </React.Fragment>
   );
-    </
-  ) ); }"export default SolutionsPag;e";</h1>>>>>'
+};
 
-
-
+export default SolutionsPage;

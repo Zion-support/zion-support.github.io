@@ -3,12 +3,12 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock components for testing
-const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
-  if (shouldThrow) {
-    throw new Error('Test error');
-  }
-  return <div>Test content</div>;
-};
+// const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
+//   if (shouldThrow) {
+//     throw new Error('Test error');
+//   }
+//   return <div>Test content</div>;
+// };
 
 const TestComponent = () => <div>Test component</div>;
 
