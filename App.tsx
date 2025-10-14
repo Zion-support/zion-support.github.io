@@ -9,10 +9,6 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 // Page Components
 import HomePage from './app/page';
@@ -113,8 +109,6 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   
-<<<<<<< HEAD
-=======
                   {/* Additional Service Pages */}
                   <Route path="/cybersecurity" element={<CybersecurityPage />} />
                   <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
@@ -124,8 +118,6 @@ function App() {
                   {/* Additional Pages */}
                   <Route path="/team" element={<TeamPage />} />
                   <Route path="/docs" element={<DocumentationPage />} />
-                  
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -149,15 +141,6 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-<<<<<<< HEAD
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   );
 }
 
