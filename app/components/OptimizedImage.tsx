@@ -1,10 +1,12 @@
-import React from 'react';
-const OptimizedImage = () => {
+import React from 'react';const OptimizedImage = () => {
+
   return (
-    <div className="optimizedimage-component">
+
+    <div>
       <h2>OptimizedImage</h2>
       <p>This component is under construction.</p>
     </div>
   );
-};
+}
+
 export default OptimizedImage;
