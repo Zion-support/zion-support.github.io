@@ -1,6 +1,6 @@
-import React from "react"
-import fs from "fs"
-import path from "path"
+import React from "react
+import fs from "fs
+import path from "path
 // Function to fix malformed files
 function fixMalformedFiles(content) {
   // Remove malformed closing tags at the end

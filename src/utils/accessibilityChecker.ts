@@ -371,7 +371,7 @@ export class AccessibilityChecker {
    * @param element - Root element to check
    */
   private checkKeyboardAccess(element: Element): void {
-    // Check for interactive elements with tabindex="-1"
+    // Check for interactive elements with tabindex="-1
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {
       const tabindex = el.getAttribute('tabindex');

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react";
-import { Helmet } from 'react-helmet-async";
-export default function Wallet.js() {
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function Wallet() {
->>>>>>> origin/main
   return (
     <>
       <Helmet>
@@ -28,24 +18,6 @@ export default function Wallet() {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-20 px-4">"
-          <div className="max-w-6xl mx-auto">"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
-              <div className="bg-white p-6 rounded-lg shadow-lg">"
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>"
-                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>"
-=======
-        { /* Content Section */ }
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
-                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
->>>>>>> origin/main
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>"
@@ -59,17 +31,6 @@ export default function Wallet() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900">"
-          <div className="max-w-4xl mx-auto text-center">"
-            <h2 className="text-4xl font-bold text-white mb-6">"
-=======
-        { /* CTA Section */ }
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">"
@@ -82,75 +43,3 @@ export default function Wallet() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
-  );
-}
-=======
-export default function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-=======
-  const { address, type, name, userId } = req.body;
-
-const { address, type, name, userId } = req.body;
-  if (!address || !type) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Address and type are required' }));
-    return;
-  }
-
-  let wallets = [];
-let wallets = [];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
-  try {
-    // Add your API logic here
-    res.status(200).json({ success: true });
-  } catch (error) {
-    console.error("API Error:", error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-}
->>>>>>> origin/main
->>>>>>> origin/main
-=======
-
-  if (wallets.find(wallet => wallet.address === address)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
-    return;
-  }
-
-  const newWallet = {
-    id: Date.now().toString(),
-    address,
-    type,
-    name: name || '',
-    userId: userId || '',
-    status: 'active',
-    createdAt: new Date().toISOString()
-  };
-
-  try {
-    wallets.push(newWallet);
-    fs.writeFileSync(file, JSON.stringify(wallets, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Wallet added successfully' 
-
-    }));
-  } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
-res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-  }
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

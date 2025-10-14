@@ -1,5 +1,5 @@
-import fs from "fs"
-import { glob } from "glob"
+import fs from "fs
+import { glob } from "glob
 // Fix broken import statements
 function fixImports(content) {
   // Fix malformed import statements where quotes are missing

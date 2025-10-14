@@ -1,7 +1,7 @@
-import React from "react"
-import fs from "fs"
-import path from "path"
-import { glob } from "glob"
+import React from "react
+import fs from "fs
+import path from "path
+import { glob } from "glob
 // Common syntax fixes for merged files
 function fixSyntaxErrors(content) {
   // Fix JSX expressions that need one parent element

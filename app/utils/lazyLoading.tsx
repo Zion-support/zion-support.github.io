@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function LazyLoading() {
+export default function Page() {
   return (
     <div>
       <h1>LazyLoading</h1>

@@ -1,92 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react";
-import { Helmet } from 'react-helmet-async";
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {'
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
-const CareersPage: React.FC = () => {
-  const benefits = [{
-      icon: Heart,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, mental health support, and wellness programs.'
-    },
-    {
-      icon: Zap,
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities, conferences, and professional development budget.'';
-    },
-    {
-      icon: Users,
-      title: 'Collaborative Culture',';
-      description: 'Work with talented professionals in an inclusive and innovative environment.'';
-    },
-    {
-      icon: Target,
-      title: 'Career Growth',';
-      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'';
-    }
-  ];
-
-  const openPositions = [{
-      title: 'Senior AI Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Lead AI model development and implementation for enterprise clients.'';
-    },
-    {
-      title: 'Cloud Solutions Architect',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Design and implement scalable cloud infrastructure solutions.'';
-    },
-    {
-      title: 'Cybersecurity Specialist',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Security',';
-      description: 'Protect client systems and data with advanced security measures.'';
-    },
-    {
-      title: 'Product Manager',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Product',';
-      description: 'Drive product strategy and roadmap for our AI and IT solutions.'';
-    },
-    {
-      title: 'Sales Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Sales',';
-      description: 'Help clients understand and implement our technology solutions.'';
-    },
-    {
-      title: 'UX/UI Designer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Design',';
-      description: 'Create intuitive and engaging user experiences for our products.'';
-    }
-  ];
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">"
-=======
-"use client";
-
-import React from "react";
-
-export default function CareersPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
->>>>>>> origin/main
       <Helmet>
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />"
@@ -103,17 +14,6 @@ export default function CareersPage() {
             Work on cutting-edge projects and make a real impact.;
           </p>
         </div>
-<<<<<<< HEAD
-        {/* Why Work With Us */}
-        <div className="mb-16">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>"
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">"
-=======
-        { /* Why Work With Us */ }
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> origin/main
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon;
               return (
@@ -128,29 +28,6 @@ export default function CareersPage() {
             }
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Open Positions */}
-        <div className="mb-16">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>"
-          <div className="grid md:grid-cols-2 gap-6">"
-            {openPositions.map((position, _index) => (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">"
-                <div className="flex justify-between items-start mb-4">"
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>"
-                  <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">"
-                    {position.type}
-=======
-        { /* Open Positions */ }
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {openPositions.map((position, _index) => (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                  <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
-                    { position.type }
->>>>>>> origin/main
                   </span>
                 </div>
                 <div className="flex items-center text-gray-400 mb-3">"
@@ -167,23 +44,6 @@ export default function CareersPage() {
             ))
           </div>
         </div>
-<<<<<<< HEAD
-        {/* Company Culture */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">"
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>"
-          <div className="grid md:grid-cols-3 gap-8">"
-            <div className="text-center">"
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"
-                <Users className="w-8 h-8 text-white" />"
-=======
-        { /* Company Culture */ }
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
->>>>>>> origin/main
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>"
               <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>"
@@ -204,21 +64,6 @@ export default function CareersPage() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <div className="text-center">"
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
-            <h2 className="text-2xl font-bold text-white mb-4">Don"t See Your Perfect Role?</h2>"
-            <p className="text-gray-300 mb-6">"
-              We're always looking for talented individuals. Send us your resume and we"ll keep you in mind for future opportunities."
-=======
-        { /* CTA Section */ }
-        <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
->>>>>>> origin/main
             </p>
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">"
               Send Resume;
@@ -292,11 +137,9 @@ const CareersPage: React.FC = () => {
     </>
   )
 export default CareersPage;
-=======
     <div>
       <h1 className="text-4xl font-bold mb-8">CareersPage</h1>
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
 }
->>>>>>> origin/main
