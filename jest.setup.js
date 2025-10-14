@@ -1,20 +1,14 @@
-// Learn more: https://github.com/testing-library/jest-dom
-require("@testing-library/jest-dom");
+import '@testing-library/jest-dom';
 
-// Polyfills for Node.js environment";
-const { TextEncoder, TextDecoder } = require("util");
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-
-// Mock window.matchMedia"
-Object.defineProperty(window, "matchMedia", {
-  writable: true,)
-  value: jest.fn().mockImplementation((query) => ({
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
-    onchange: null,)
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -22,31 +16,60 @@ Object.defineProperty(window, "matchMedia", {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {;
-constructor() {}
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
-// Suppress console errors in tests;
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+  },
+});
+
+// Mock console methods to reduce noise in tests
 const originalError = console.error;
+const originalWarn = console.warn;
+
 beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if ("
-      typeof args[0] === "string" &&")
-      (args[0].includes("Warning: ReactDOM.render") ||"
-        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+  console.error = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
       return;
     }
     originalError.call(console, ...args);
-  });
+  };
+  
+  console.warn = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('componentWillReceiveProps')
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
 });
 
 afterAll(() => {
   console.error = originalError;
-});"
+  console.warn = originalWarn;
+});

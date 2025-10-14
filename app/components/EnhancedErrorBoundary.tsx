@@ -1,5 +1,5 @@
-errorId: string }
-import React, { Component, ErrorInfo, ReactNode } from 'react';';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 interface Props { children: ReactNode;
   fallback?: ReactNode;
@@ -10,35 +10,60 @@ interface State { hasError: boolean;
   errorInfo: ErrorInfo | null;
   errorId: string; }
 
-class EnhancedErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {
-    super(props);
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
 
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
-    try {;
-const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+}
 
-      };
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
 
-  private handleRetry = () => {
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
+      error,
+    });
 
-      errorId: ''
-)
+    // Call the onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a logging service
+      console.error('Production error:', error);
+    }
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -50,8 +75,8 @@ const errorData = {
       // Default error UI
       return (
 
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4"></div>"
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>
+          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+        <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center"></div>
               { /* Error Icon */ }"
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6"></div>
 
@@ -82,8 +107,8 @@ const errorData = {
               </p>
               { /* Error ID for support */ }
               { this.state.errorId && ("
-                <div className="bg-slate-700 rounded-lg p-3 mb-6"></div>"
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
+                <div className="bg-slate-700 rounded-lg p-3 mb-6">
+          <p className="text-sm text-gray-400 mb-1">Error ID:</p>"
                   <code className="text-xs text-cyan-400 font-mono break-all"> }
                     { this.state.errorId }
                   </code>
@@ -119,13 +144,13 @@ const errorData = {
               </div>
 
               { /* Support Information */ }"
-              <div className="mt-8 pt-6 border-t border-slate-700"></div>"
-                <p className="text-sm text-gray-400 mb-2">
+              <div className="mt-8 pt-6 border-t border-slate-700">
+          <p className="text-sm text-gray-400 mb-2">
 
                   Still having trouble? Contact our support team:
                 </p>"
-                <div className="text-sm text-cyan-400"></div>"
-                  <p>Email: kleber@ziontechgroup.com</p>
+                <div className="text-sm text-cyan-400">
+          <p>Email: kleber@ziontechgroup.com</p>
                   <p>Phone: +1-302-464-0950</p>
                 </div>
               </div>
@@ -136,8 +161,8 @@ const errorData = {
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">)
                     Error Details (Development)
                   </summary>"
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40"></div>"
-                    <div className="mb-2"></div> }
+                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
+        <div className="mb-2"></div> }
                       <strong>Error:</strong> { this.state.error.message }
 
                     </div>"
@@ -161,16 +186,36 @@ const errorData = {
                     )
                   </div>
                 </details>
-
+              )
+            </div>
+          </div>
+        </>
+      )
+    return this.props.children}
+export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary';
               )}
 
+const EnhancedErrorBoundaryPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="EnhancedErrorBoundary - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">EnhancedErrorBoundary</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
-      );
-    }
+  );
+}
 
     return this.props.children;
   }
 }
 ;
 export default EnhancedErrorBoundary;
-"
+

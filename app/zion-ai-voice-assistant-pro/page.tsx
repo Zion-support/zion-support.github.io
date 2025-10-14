@@ -1,22 +1,23 @@
-import SEOOptimizer from "../components/SEOOptimizer";
-;
-export default function ZionAIVoiceAssistantPro() {;
-const features = ["
-    "Natural language processing (NLP)","
-    "Multi-language support (50+ languages)","
-    "Voice recognition & synthesis","
-    "Context-aware conversations","
-    "Integration with 500+ apps","
-    "Custom voice training","
-    "Real-time transcription","
-    "Smart scheduling & reminders","
-    "Email & calendar management","
-    "Document creation & editing","
-    "Web search & research","
-    "Code generation & debugging","
-    "Customer service automation","
-    "Meeting transcription & summaries","
-    "Voice-controlled presentations","
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function ZionAIVoiceAssistantPro() {
+  const features = [
+    "Natural language processing (NLP)",
+    "Multi-language support (50+ languages)",
+    "Voice recognition & synthesis",
+    "Context-aware conversations",
+    "Integration with 500+ apps",
+    "Custom voice training",
+    "Real-time transcription",
+    "Smart scheduling & reminders",
+    "Email & calendar management",
+    "Document creation & editing",
+    "Web search & research",
+    "Code generation & debugging",
+    "Customer service automation",
+    "Meeting transcription & summaries",
+    "Voice-controlled presentations",
     "Multi-device synchronization"
   ];
 ;
@@ -138,23 +139,26 @@ const useCases = [
     }
   ];
 
-      </Helmet>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1>Home</h1>
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
+  );
+};
 
             </button>;
           </div>
         </div>
       </div>
     </div>
-  );}
+  );
+}
 }
 '
 "

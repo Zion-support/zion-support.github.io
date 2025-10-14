@@ -1,10 +1,9 @@
-import React from "react";
-;
+import React from "react";"
 const EnhancedSEOOptimizer = () => {
-  return ("
-    <div className="p-4"></div>"
-      <h2 className="text-xl font-semibold mb-2">EnhancedSEOOptimizer</h2>
+  return (
+    <div className=p-4></div>
+      <h2 className="text-xl font-semibold mb-2">EnhancedSEOOptimizer</h2>""
       <p>This component is under construction.</p>
     </div>
-")
+")""
 }

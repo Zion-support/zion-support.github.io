@@ -1,9 +1,14 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
-"
-  // const benefits = [""
-  //   "Reduce deployment time by 80%",""
-  //   "Eliminate 95% of manual DevOps tasks",""
-  //   "Improve system reliability by 99.9%",""
+
+export default function AiPoweredDevops() {
+  const features = [
+    "AI-powered automated testing and quality assurance",Intelligent deployment orchestration and rollback",Predictive infrastructure scaling and optimization",Automated security vulnerability detection and patching",AI-driven performance monitoring and alerting",Intelligent log analysis and anomaly detection",Automated code review and optimization suggestions",Smart resource allocation and cost optimization",AI-powered incident response and resolution",Automated compliance checking and reporting",Intelligent capacity planning and forecasting",AI-driven continuous integration and deployment"
+  ];
+
+  const benefits = [
+    "Reduce deployment time by 80%",Eliminate 95% of manual DevOps tasks",Improve system reliability by 99.9%",Cut infrastructure costs by 40%"
+  ];
   //   "Cut infrastructure costs by 40%"
   // ];
 ;
@@ -95,9 +100,9 @@ const capabilities = ["
   ];
 ;
 const HomePage = () => {"
-  return (""
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>"
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>"
         <title>Home - Zion Tech Group</title>""
         <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>"
@@ -109,13 +114,9 @@ const HomePage = () => {"
             This page is under construction. Please check back later.
           </p>
         </div>
-
-      </div>)
-    </div>)
+      </div>
+    </div>
   );
-
 };
-;
-export default HomePage;"
-"
-"'
+
+export default PagePage;
