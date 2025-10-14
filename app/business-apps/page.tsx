@@ -55,3 +55,8 @@ const BusinessAppsPage: React.FC = () => {
 };
 
 export default BusinessAppsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

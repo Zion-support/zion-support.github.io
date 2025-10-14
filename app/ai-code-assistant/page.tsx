@@ -55,3 +55,8 @@ const AiCodeAssistantPage: React.FC = () => {
 };
 
 export default AiCodeAssistantPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

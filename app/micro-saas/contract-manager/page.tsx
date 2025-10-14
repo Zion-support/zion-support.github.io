@@ -55,3 +55,8 @@ const ContractManagerPage: React.FC = () => {
 };
 
 export default ContractManagerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

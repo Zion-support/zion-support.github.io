@@ -55,3 +55,8 @@ const AiCustomerSupportBotPage: React.FC = () => {
 };
 
 export default AiCustomerSupportBotPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,3 +55,8 @@ const AiPredictiveAnalyticsPage: React.FC = () => {
 };
 
 export default AiPredictiveAnalyticsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

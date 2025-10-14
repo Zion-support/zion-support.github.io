@@ -54,4 +54,6 @@ const FiveGIotSolutionsPage: React.FC = () => {
   );
 };
 
-export default FiveGIotSolutionsPage;
+export default 5gIotSolutionsPage;
+
+

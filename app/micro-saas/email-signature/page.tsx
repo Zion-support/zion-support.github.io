@@ -55,3 +55,8 @@ const EmailSignaturePage: React.FC = () => {
 };
 
 export default EmailSignaturePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

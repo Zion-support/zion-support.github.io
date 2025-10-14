@@ -53,3 +53,8 @@ const NotFoundPage: React.FC = () => {
 };
 
 export default NotFoundPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

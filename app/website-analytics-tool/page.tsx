@@ -55,3 +55,8 @@ const WebsiteAnalyticsToolPage: React.FC = () => {
 };
 
 export default WebsiteAnalyticsToolPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

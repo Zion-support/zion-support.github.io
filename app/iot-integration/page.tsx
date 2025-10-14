@@ -55,3 +55,8 @@ const IotIntegrationPage: React.FC = () => {
 };
 
 export default IotIntegrationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

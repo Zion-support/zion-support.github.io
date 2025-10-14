@@ -55,3 +55,8 @@ const AiLeadScoringPage: React.FC = () => {
 };
 
 export default AiLeadScoringPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

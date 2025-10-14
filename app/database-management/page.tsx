@@ -55,3 +55,8 @@ const DatabaseManagementPage: React.FC = () => {
 };
 
 export default DatabaseManagementPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

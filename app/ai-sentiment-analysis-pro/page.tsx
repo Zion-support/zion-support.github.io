@@ -55,3 +55,8 @@ const AiSentimentAnalysisProPage: React.FC = () => {
 };
 
 export default AiSentimentAnalysisProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

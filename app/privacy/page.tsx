@@ -53,3 +53,8 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

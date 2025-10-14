@@ -55,3 +55,8 @@ const CloudInfrastructurePage: React.FC = () => {
 };
 
 export default CloudInfrastructurePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

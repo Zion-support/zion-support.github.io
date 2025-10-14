@@ -53,3 +53,8 @@ const DevopsPage: React.FC = () => {
 };
 
 export default DevopsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

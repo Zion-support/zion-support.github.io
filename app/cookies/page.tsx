@@ -53,3 +53,8 @@ const CookiesPage: React.FC = () => {
 };
 
 export default CookiesPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

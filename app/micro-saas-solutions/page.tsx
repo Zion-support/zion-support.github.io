@@ -55,3 +55,8 @@ const MicroSaasSolutionsPage: React.FC = () => {
 };
 
 export default MicroSaasSolutionsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

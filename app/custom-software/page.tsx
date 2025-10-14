@@ -55,3 +55,8 @@ const CustomSoftwarePage: React.FC = () => {
 };
 
 export default CustomSoftwarePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

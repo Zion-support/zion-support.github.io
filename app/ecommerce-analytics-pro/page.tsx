@@ -55,3 +55,8 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 };
 
 export default EcommerceAnalyticsProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

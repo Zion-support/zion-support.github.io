@@ -55,3 +55,8 @@ const InfrastructureManagementPage: React.FC = () => {
 };
 
 export default InfrastructureManagementPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

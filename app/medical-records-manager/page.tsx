@@ -55,3 +55,8 @@ const MedicalRecordsManagerPage: React.FC = () => {
 };
 
 export default MedicalRecordsManagerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

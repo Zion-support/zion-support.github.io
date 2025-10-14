@@ -55,3 +55,8 @@ const ComputerVisionPage: React.FC = () => {
 };
 
 export default ComputerVisionPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,3 +53,8 @@ const SupplyChainPage: React.FC = () => {
 };
 
 export default SupplyChainPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

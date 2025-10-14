@@ -55,3 +55,8 @@ const SmartContractSecurityAuditPage: React.FC = () => {
 };
 
 export default SmartContractSecurityAuditPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

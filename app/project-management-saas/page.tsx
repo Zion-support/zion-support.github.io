@@ -55,3 +55,8 @@ const ProjectManagementSaasPage: React.FC = () => {
 };
 
 export default ProjectManagementSaasPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

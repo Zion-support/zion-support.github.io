@@ -55,3 +55,8 @@ const AiMusicCompositionPage: React.FC = () => {
 };
 
 export default AiMusicCompositionPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

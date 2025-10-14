@@ -55,3 +55,8 @@ const AiDesignStudioPage: React.FC = () => {
 };
 
 export default AiDesignStudioPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

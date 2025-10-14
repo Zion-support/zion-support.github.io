@@ -55,3 +55,8 @@ const ZionAiProjectManagerProPage: React.FC = () => {
 };
 
 export default ZionAiProjectManagerProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

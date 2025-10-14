@@ -55,3 +55,8 @@ const AppointmentSchedulerPage: React.FC = () => {
 };
 
 export default AppointmentSchedulerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

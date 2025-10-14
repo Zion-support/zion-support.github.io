@@ -55,3 +55,8 @@ const AiVideoAnalysisPage: React.FC = () => {
 };
 
 export default AiVideoAnalysisPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

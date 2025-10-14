@@ -53,3 +53,8 @@ const SmartCitiesPage: React.FC = () => {
 };
 
 export default SmartCitiesPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

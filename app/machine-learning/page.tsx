@@ -55,3 +55,8 @@ const MachineLearningPage: React.FC = () => {
 };
 
 export default MachineLearningPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

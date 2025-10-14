@@ -55,3 +55,8 @@ const InventoryManagementPage: React.FC = () => {
 };
 
 export default InventoryManagementPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

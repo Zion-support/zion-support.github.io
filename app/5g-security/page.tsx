@@ -52,4 +52,6 @@ const FiveGSecurity: React.FC = () => {
   );
 };
 
-export default FiveGSecurity;
+export default 5gSecurityPage;
+
+

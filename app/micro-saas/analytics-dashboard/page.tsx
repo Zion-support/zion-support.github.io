@@ -55,3 +55,8 @@ const AnalyticsDashboardPage: React.FC = () => {
 };
 
 export default AnalyticsDashboardPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,3 +55,8 @@ const TermsOfServicePage: React.FC = () => {
 };
 
 export default TermsOfServicePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

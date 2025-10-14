@@ -81,14 +81,14 @@ export default defineConfig({
       output: {
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
-          if (id.includes("node_modules")) {
+          if (id.includes('node_modules')) {
             // React ecosystem
             if (
-              id.includes("react") ||
-              id.includes("react-dom") ||
-              id.includes("react-router")
+              id.includes('react') ||
+              id.includes('react-dom') ||
+              id.includes('react-router')
             ) {
-              return "react-vendor";
+              return 'react-vendor';
             }
             // UI libraries
             if (id.includes("lucide-react") || id.includes("framer-motion")) {

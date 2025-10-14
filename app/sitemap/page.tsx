@@ -53,3 +53,8 @@ const SitemapPage: React.FC = () => {
 };
 
 export default SitemapPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

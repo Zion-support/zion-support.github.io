@@ -55,3 +55,8 @@ const EnergyManagementPage: React.FC = () => {
 };
 
 export default EnergyManagementPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

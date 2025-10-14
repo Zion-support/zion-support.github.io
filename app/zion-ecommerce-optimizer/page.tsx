@@ -55,3 +55,8 @@ const ZionEcommerceOptimizerPage: React.FC = () => {
 };
 
 export default ZionEcommerceOptimizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

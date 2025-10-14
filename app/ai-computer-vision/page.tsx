@@ -55,3 +55,8 @@ const AiComputerVisionPage: React.FC = () => {
 };
 
 export default AiComputerVisionPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

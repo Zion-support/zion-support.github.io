@@ -55,3 +55,8 @@ const AiRealEstatePage: React.FC = () => {
 };
 
 export default AiRealEstatePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

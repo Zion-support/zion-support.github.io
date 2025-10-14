@@ -55,3 +55,8 @@ const ProcessAutomationPage: React.FC = () => {
 };
 
 export default ProcessAutomationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

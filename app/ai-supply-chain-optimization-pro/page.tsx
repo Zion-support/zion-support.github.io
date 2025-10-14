@@ -56,3 +56,8 @@ const AiSupplyChainOptimizationProPage: React.FC = () => {
 };
 
 export default AiSupplyChainOptimizationProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf
