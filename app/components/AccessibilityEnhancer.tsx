@@ -9,5 +9,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
-
-
