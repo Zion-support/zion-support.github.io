@@ -2,6 +2,7 @@ import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextContextType {
   // Add your context properties here
+  _placeholder?: never;
 }
 
 const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
