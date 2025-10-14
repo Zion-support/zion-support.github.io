@@ -1,32 +1,47 @@
-import React from 'react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Target, Rocket } from 'lucide-react';
 
+const MicroSaasSolutionsPage: React.FC = () => {
 
-';
-';
-';
-  return (';
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+  return (
+    <>
+      <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services with competitive pricing." /></meta>
-        <meta name="keywords" content="micro SaaS, AI tools, business automation, software solutions, SaaS pricing, business software" /></meta>
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" /></meta>
-        <meta property="og:description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services." /></meta>
-        <meta property="og:type" content="website" /></meta>
-        <meta property="og:url" content="https://ziontechgroup." /></meta>
-        <script)
-          type="application/ld+json")
-          dangerouslySetInnerHTML="{{" __html: JSON.stringify(structuredData) }}
-        /></script>
+        <meta name="description" content="Scalable micro SaaS solutions for modern businesses" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Scalable micro SaaS solutions tailored to your business needs
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Rocket className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
+              <p className="text-gray-300">
+                Fast-track your SaaS product development with our expert team.
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Target className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Targeted Solutions</h3>
+              <p className="text-gray-300">
+                Focused solutions for specific business challenges.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+    </>
+  );
+};
 
-
-
-'
+export default MicroSaasSolutionsPage;

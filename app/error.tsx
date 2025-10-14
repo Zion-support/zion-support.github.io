@@ -1,82 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
+
+const ErrorPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Error - Zion Tech Group</title>
-        <meta name="description" content="Professional error services by Zion Tech Group." />
+        <meta name="description" content="An error occurred" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
-            Error;
-          </h1>
-          <p className="text-xl text-gray-600 mb-8"></p>
-            Professional error solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
-                Expert Solutions;
-              </h3>
-              <p></p>
-                Our team of experts delivers cutting-edge error solutions.;
-              </p>
-            </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-green-900 mb-2"></h3>
-                Custom Implementation;
-              </h3>
-              <p></p>
-                Tailored error implementations for your specific requirements.;
-              </p>
-            </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
-                24/7 Support;
-              </h3>
-              <p></p>
-                Round-the-clock support for all your error needs.;
-              </p>
-            </div>
-          </div>
-          <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-              Get Started Today;
-            </button>
-          </div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+          <p className="text-gray-600">Please try again later.</p>
         </div>
       </div>
-    </div>;
-            Error</h1>
-          <p></p>
-            Professional error solutions tailored to your business needs.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
-                Expert Solutions</h3>
-              <p></p>
-                Our team of experts delivers cutting-edge error solutions.</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-green-900 mb-2"></h3>
-                Custom Implementation</h3>
-              <p></p>
-                Tailored error implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
-                24/7 Support</h3>
-              <p></p>
-                Round-the-clock support for all your error needs.</p></div></div>
-          <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>)
-              Get Started Today</button></div></div></div></div>)
-  )
-            </button>
-          </div>}
-        </div>}
-      </div>}
-    </div>}
-  );}'
-}'
-'
+    </>
+  );
+};
+
+export default ErrorPage;

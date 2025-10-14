@@ -3,122 +3,88 @@ import globals from "globals"
 import reactHooks from "eslint-plugin-react-hooks"
 import reactRefresh from "eslint-plugin-react-refresh"
 import tseslint from "typescript-eslint"
+
 export default tseslint.config(
   {
     ignores: [
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
-      'build/**',
       'node_modules/**',
       '*.config.js',
-      '*.config.ts',
-      'scripts/**',
-      'public/**',
+      '*.config.cjs',
+      '*.config.mjs',
       '*.cjs',
-      'jest.setup.js',
-      '*.js',
-      '*.cjs',
-      '*.mjs',
-      'add-*.js',
-      'advanced-*.js',
-      'aggressive-*.js',
-      'cleanup-*.js',
-      'comprehensive-*.js',
-      'fix-*.js',
-      'create-*.js',
-      'identify-*.js',
-      'merge-*.js',
-      'remove-*.js',
-      'simple-*.js',
-      'website-*.js',
-      '*.sh',
-      '*.py',
       'api/**',
-      'src/**',
-      'temp-broken/**',}
-      'utils/**',}]
-      'hooks/**'}]
-    ]}
+      'scripts/**',
+      'validate-jsx.js',
+      'fix-lint-*.js',
+      'fix-numeric-components.js'
+    ]
   },
-  {}
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],}
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      globals: {
-        ...globals.browser,
-        window: "readonly",
-        document: "readonly",
-        console: "readonly",
-        process: "readonly",
-        global: "readonly",
-        HTMLElement: "readonly",
-        Event: "readonly",
-        KeyboardEvent: "readonly",
-        MediaQueryListEvent: "readonly",
-        PerformanceObserver: "readonly",
-        PerformanceNavigationTiming: "readonly",
-        PerformanceEventTiming: "readonly",
-        HTMLInputElement: "readonly",
-        HTMLTextAreaElement: "readonly",
-        HTMLSelectElement: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly",
-        performance: "readonly",
-        localStorage: "readonly",
-        sessionStorage: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        fs: "readonly",
-        __dirname: "readonly",
-        // Jest globals;
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",}
-        beforeAll: "readonly",}
-        afterAll: "readonly",}
-        jest: "readonly",}
-      },
+      ecmaVersion: 2020,
+      globals: globals.browser,
       parserOptions: {
-        ecmaVersion: 'latest',}
-        sourceType: 'module',}
-        ecmaFeatures: {}
-          jsx: true}
+        ecmaFeatures: {
+          jsx: true
         }
       }
     },
-    plugins: {}
-      "react-hooks": reactHooks,}
-      "react-refresh": reactRefresh,}
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-empty-object-type': 'off',
-      'react/react-in-jsx-scope': 'off',
-<<<<<<< HEAD
-      'react/prop-types': 'off',
-      'no-console': 'off',
-      'react/no-unescaped-entities': 'off',
-      'no-undef': 'off'
-    },
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "no-console": ["warn", { "allow": ["warn", "error"] }]
+    }
   },
+  {
+    files: ["public/sw.js"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.serviceworker,
+        self: "readonly",
+        caches: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        location: "readonly",
+        clients: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-console": "off"
+    }
+  },
+  {
+    files: ["jest.setup.js"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.jest,
+        global: "readonly",
+        console: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly"
+      }
+    },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-console": "off",
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  }
 )
-=======
-      'react/prop-types': 'off',}
-      'no-console': 'off',}
-      'react/no-unescaped-entities': 'off',}
-      'no-undef': 'off'}
-    },)
-  },)
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1

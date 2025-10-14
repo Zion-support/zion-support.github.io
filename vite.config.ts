@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
-      fastRefresh: true
-    })
+      include: "**/*.{jsx,tsx}",
+    }),
   ],
   resolve: {
     alias: {
@@ -26,15 +26,67 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
+    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    // Enable compression
     reportCompressedSize: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
+      },
+      mangle: {
+        safari10: true, // Better Safari compatibility
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+    },
+    // Enhanced build optimizations
     rollupOptions: {
       output: {
         manualChunks: (id) => {
+          // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
+            }
+            // UI libraries
+            if (id.includes('lucide-react') || id.includes('framer-motion')) {
+              return 'ui-vendor';
+            }
+            // Other vendor libraries
             return 'vendor';
           }
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app';
+          }
+          return undefined;
         },
         assetFileNames: (assetInfo) => {
           if (

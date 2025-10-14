@@ -46,8 +46,8 @@ function addLazyLoading(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if this is a page component that should be lazy loaded
-    if (filePath.includes('/page.tsx') && !content.includes('React.lazy')) {
+    // Check if this is a page component that should be lazy loaded (exclude main page.tsx)
+    if (filePath.includes('/page.tsx') && !filePath.endsWith('/app/page.tsx') && !content.includes('React.lazy')) {
       // Add lazy loading wrapper if not already present
       if (content.includes('export default')) {
         const componentName = path.basename(filePath, '.tsx');

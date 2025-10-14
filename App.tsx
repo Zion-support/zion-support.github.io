@@ -1,112 +1,127 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { useEffect, Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
-// Simple placeholder components
-const HomePage = () => <div>Home Page</div>;
-const AboutPage = () => <div>About Page</div>;
-const ContactPage = () => <div>Contact Page</div>;
-const ServicesPage = () => <div>Services Page</div>;
-const PricingPage = () => <div>Pricing Page</div>;
-const BlogPage = () => <div>Blog Page</div>;
-const NotFoundPage = () => <div>404 - Page Not Found</div>;
+// Lazy load pages
+const HomePage = lazy(() => import('./app/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
+const AICybersecuritySuiteProPage = lazy(() => import('./app/ai-cybersecurity-suite-pro/page'));
+
+// Simple loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-white text-xl">Loading...</div>
+  </div>
+);
+
+// Simple error boundary
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-white text-xl">Something went wrong.</div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(prev => !prev);
-  };
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
-
   useEffect(() => {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
-  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(console.log);
-    getFID(console.log);
-    getFCP(console.log);
-    getLCP(console.log);
-    getTTFB(console.log);
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('TTFB:', metric);
+      }
+    });
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+        }
       }
     }
   });
   observer.observe({ entryTypes: ['navigation'] });
 }
 
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-slate-900">
-          <div className="flex">
-            {/* Sidebar */}
-            <div className={`w-64 bg-slate-800 text-white ${isSidebarOpen ? 'block' : 'hidden'}`}>
-              <div className="p-4">
-                <h2 className="text-xl font-bold">Zion Tech Group</h2>
-                <nav className="mt-4">
-                  <a href="/" className="block py-2 hover:text-blue-400">Home</a>
-                  <a href="/about" className="block py-2 hover:text-blue-400">About</a>
-                  <a href="/services" className="block py-2 hover:text-blue-400">Services</a>
-                  <a href="/contact" className="block py-2 hover:text-blue-400">Contact</a>
-                </nav>
-              </div>
-            </div>
-
-            {/* Main content */}
-            <div className="flex-1">
-              {/* Header */}
-              <header className="bg-slate-800 text-white p-4">
-                <div className="flex justify-between items-center">
-                  <h1 className="text-2xl font-bold">Zion Tech Group</h1>
-                  <button
-                    onClick={toggleSidebar}
-                    className="md:hidden text-white hover:text-blue-400"
-                  >
-                    Menu
-                  </button>
-                </div>
-              </header>
-
-              {/* Main content area */}
-              <main className="p-4">
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="*" element={<NotFoundPage />} />
-                </Routes>
-              </main>
-
-              {/* Footer */}
-              <footer className="bg-slate-800 text-white p-4 mt-auto">
-                <div className="text-center">
-                  <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-                </div>
-              </footer>
-            </div>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </Suspense>
           </div>
-        </div>
-      </Router>
-    </HelmetProvider>
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 

@@ -1,35 +1,29 @@
-import React from 'react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-  return (';
-    <React.Fragment></React>';
-      <Helmet></Helmet>';
-        <title>Blog - Zion Tech Group</title>';
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." /></meta>
-        <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation" /></meta>
-        <meta property="og:title" content="Blog - Zion Tech Group" /></meta>
-        <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." /></meta>
-        <meta property="og:type" content="website" /></meta>
-        <meta property="og:url" content="https://ziontechgroup.com/blog" /></meta>
+const BlogPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
+        <meta name="keywords" content="blog, tech insights, AI, IT solutions" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text"></h1>
-              Our Blog
-            </h1>
-            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Insights, trends, and expert knowledge on AI, cybersecurity, cloud computing, and digital transformation.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Latest insights and updates from our team
             </p>
+            <div className="text-gray-400">
+              <p>Blog posts coming soon...</p>
+            </div>
           </div>
         </div>
+      </div>
+    </>
+  );
+};
 
-)
-)
+export default BlogPage;
