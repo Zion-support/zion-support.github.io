@@ -6,7 +6,7 @@ export const useAnalytics = () => {const context = useContext(AnalyticsContext)
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}'
 =======
 import { useContext } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from '../contexts/AnalyticsContext';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
