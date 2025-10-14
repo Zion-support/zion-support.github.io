@@ -1,6 +1,5 @@
-export const enhancedErrorTracking = {
-  trackError: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo = {
+export const Enhancederrortracking={
+  trackError: (error: Error, context?: Record<string, unknown>) => { constErrorinfo = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().to ISOString(),
@@ -9,7 +8,7 @@ export const enhancedErrorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked: ', errorInfo);
+      console.error('errorTracked: ', errorInfo);
     }
     
     if (typeof window !== 'undefined' && window.gtag) {
@@ -22,7 +21,7 @@ export const enhancedErrorTracking = {
   
   trackPerformanceError: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
-      enhanced Error Tracking.track Error(new Error(`Performance threshold exceeded: ${metric}`), {
+      enhanced Error Tracking.track Error(new Error(`PerformanceThresholdExceeded: ${metric}`), {
         metric,
         value,
         threshold

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancer Props {
+interface Seoenhancerprops {
   title: string;
   description: string;
   keywords?: string[];
   type?: string;
   structured Data?: Record<string, unknown>;
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+constSeoenhancerpagePage: React.FC<Seoenhancerprops> = ({
   title,
   description,
   keywords = [],
-  type = 'website',
+  type= 'website',
   structured Data
 }) => {
   return (

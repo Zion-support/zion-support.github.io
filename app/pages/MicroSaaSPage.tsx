@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const MicroSaaSPage: React.FC = () => {
+constMicrosaaspagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Micro Saa S Solutions - Zion Tech Group</title>
         <meta name="description" content="Innovativemicro Saa S solutions for modern businesses" />
         <meta name="keywords" content="microsaas, saas solutions, software as a service" />

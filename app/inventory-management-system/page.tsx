@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Inventory Management System Page: React.FC = () => {
+constInventorymanagementsystempagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Inventory Management System</title>
         <meta name="description" content="Professional inventory management system solutions and services" />
         <meta name="keywords" content="inventory, management, system" />
@@ -16,7 +15,7 @@ const Inventory Management System Page: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional inventory management system solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions

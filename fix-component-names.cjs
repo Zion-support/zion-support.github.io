@@ -1,102 +1,148 @@
 const fs = require('fs');
-const { glob } = require('glob');
+const path = require('path');
+const glob = require('glob');
 
-async function fixFile(filePath) {
+// Function to convert a string to a valid component name
+function toValidComponentName(str) {
+  // Remove "Page" from the end if it exists
+  let name = str.replace(/\s*Page\s*$/, '');
+  
+  // Convert to PascalCase
+  name = name
+    .split(/[\s-]+/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+  
+  // Ensure it starts with a letter
+  if (!/^[a-zA-Z]/.test(name)) {
+    name = 'A' + name;
+  }
+  
+  // Add "Page" suffix
+  return name + 'Page';
+}
+
+// Function to convert a string to a valid interface name
+function toValidInterfaceName(str) {
+  // Convert to PascalCase
+  let name = str
+    .split(/[\s-]+/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
+  
+  // Ensure it starts with a letter
+  if (!/^[a-zA-Z]/.test(name)) {
+    name = 'A' + name;
+  }
+  
+  return name;
+}
+
+// Function to convert a string to a valid property name
+function toValidPropertyName(str) {
+  // Convert to camelCase
+  return str
+    .split(/[\s-]+/)
+    .map((word, index) => {
+      if (index === 0) {
+        return word.toLowerCase();
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join('');
+}
+
+// Function to fix component names and interfaces
+function fixComponentNames(content) {
+  // Fix malformed component declarations
+  content = content.replace(
+    /const\s+([^:]+):\s*React\.FC<([^>]+)>\s*=/g,
+    (match, componentName, interfaceName) => {
+      const validComponentName = toValidComponentName(componentName.trim());
+      const validInterfaceName = toValidInterfaceName(interfaceName.trim());
+      return `const ${validComponentName}: React.FC<${validInterfaceName}> =`;
+    }
+  );
+  
+  // Fix malformed interface names
+  content = content.replace(
+    /interface\s+([^{]+)\s*{/g,
+    (match, interfaceName) => {
+      const validName = toValidInterfaceName(interfaceName.trim());
+      return `interface ${validName} {`;
+    }
+  );
+  
+  // Fix malformed property names in interfaces
+  content = content.replace(
+    /(\w+)\s+(\w+)\s*\?:\s*(\w+);/g,
+    (match, first, second, type) => {
+      const validProp = toValidPropertyName(first + ' ' + second);
+      return `${validProp}?: ${type};`;
+    }
+  );
+  
+  // Fix malformed destructuring parameters
+  content = content.replace(
+    /{\s*(\w+)\s+(\w+)\s*=\s*([^,}]+)/g,
+    (match, first, second, value) => {
+      const validParam = toValidPropertyName(first + ' ' + second);
+      return `{ ${validParam} = ${value}`;
+    }
+  );
+  
+  // Fix specific malformed patterns
+  content = content.replace(/AccessibilityenhancerpagePage/g, 'AccessibilityEnhancerPage');
+  content = content.replace(/accessibilityenhancerprops/g, 'AccessibilityEnhancerProps');
+  content = content.replace(/enable keyboard Navigation/g, 'enableKeyboardNavigation');
+  content = content.replace(/enable Screen reader Support/g, 'enableScreenReaderSupport');
+  content = content.replace(/enable high Contrast/g, 'enableHighContrast');
+  content = content.replace(/enable focus Management/g, 'enableFocusManagement');
+  
+  // Fix other common patterns
+  content = content.replace(/enableKeyboardnavigation/g, 'enableKeyboardNavigation');
+  content = content.replace(/enable screenReadersupport/g, 'enableScreenReaderSupport');
+  content = content.replace(/enableHighcontrast/g, 'enableHighContrast');
+  content = content.replace(/enableFocusmanagement/g, 'enableFocusManagement');
+  
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixComponentNames(content);
     
-    // Fix component names with spaces in various contexts
-    content = content
-      // Fix const declarations with spaces
-      .replace(/const\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)\s*:/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `const ${cleanName}:`;
-      })
-      
-      // Fix function declarations with spaces
-      .replace(/function\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)\s*\(/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `function ${cleanName}(`;
-      })
-      
-      // Fix export default with spaces
-      .replace(/export\s+default\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `export default ${cleanName}`;
-      })
-      
-      // Fix JSX component names with spaces
-      .replace(/<([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `<${cleanName}`;
-      })
-      
-      // Fix closing JSX tags with spaces
-      .replace(/<\/([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)>/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `</${cleanName}>`;
-      })
-      
-      // Fix specific patterns like "Not Found Page" -> "NotFoundPage"
-      .replace(/Not\s+Found\s+Page/g, 'NotFoundPage')
-      .replace(/Five\s+G\s+Consulting\s+Page/g, 'FiveGConsultingPage')
-      .replace(/Five\s+G\s+Data\s+Analytics\s+Page/g, 'FiveGDataAnalyticsPage')
-      .replace(/Five\s+G\s+Deployment\s+Page/g, 'FiveGDeploymentPage')
-      .replace(/Five\s+G\s+Edge\s+Computing\s+Page/g, 'FiveGEdgeComputingPage')
-      .replace(/Five\s+G\s+Implementation\s+Page/g, 'FiveGImplementationPage')
-      .replace(/Five\s+G\s+Infrastructure\s+Page/g, 'FiveGInfrastructurePage')
-      .replace(/Five\s+G\s+Integration\s+Page/g, 'FiveGIntegrationPage')
-      .replace(/Five\s+G\s+IoT\s+Solutions\s+Page/g, 'FiveGIoTSolutionsPage')
-      .replace(/Five\s+G\s+Maintenance\s+Page/g, 'FiveGMaintenancePage')
-      .replace(/Five\s+G\s+Mobile\s+Applications\s+Page/g, 'FiveGMobileApplicationsPage')
-      .replace(/Five\s+G\s+Modernization\s+Page/g, 'FiveGModernizationPage')
-      .replace(/Five\s+G\s+Monitoring\s+Page/g, 'FiveGMonitoringPage')
-      .replace(/Five\s+G\s+Network\s+Infrastructure\s+Page/g, 'FiveGNetworkInfrastructurePage')
-      .replace(/Five\s+G\s+Network\s+Optimization\s+Page/g, 'FiveGNetworkOptimizationPage')
-      .replace(/Five\s+G\s+Optimization\s+Page/g, 'FiveGOptimizationPage')
-      .replace(/Five\s+G\s+Performance\s+Page/g, 'FiveGPerformancePage')
-      .replace(/Five\s+G\s+Private\s+Networks\s+Page/g, 'FiveGPrivateNetworksPage')
-      .replace(/Five\s+G\s+Reliability\s+Page/g, 'FiveGReliabilityPage')
-      .replace(/Five\s+G\s+Scalability\s+Page/g, 'FiveGScalabilityPage')
-      .replace(/Five\s+G\s+Security\s+Page/g, 'FiveGSecurityPage')
-      .replace(/Five\s+G\s+Smart\s+City\s+Solutions\s+Page/g, 'FiveGSmartCitySolutionsPage')
-      .replace(/Five\s+G\s+Solutions\s+Page/g, 'FiveGSolutionsPage')
-      .replace(/Five\s+G\s+Support\s+Page/g, 'FiveGSupportPage')
-      .replace(/Five\s+G\s+Testing\s+Page/g, 'FiveGTestingPage')
-      .replace(/Five\s+G\s+Training\s+Page/g, 'FiveGTrainingPage')
-      .replace(/Five\s+G\s+Transformation\s+Page/g, 'FiveGTransformationPage')
-      .replace(/Five\s+G\s+Upgrade\s+Page/g, 'FiveGUpgradePage');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  try {
-    const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-    
-    console.log(`Found ${files.length} files to process...`);
-    
-    let fixedCount = 0;
-    for (const file of files) {
-      if (await fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    console.log(`Fixed ${fixedCount} files.`);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
+// Main execution
+console.log('Starting component names fixes...');
 
-main();
+// Find all TypeScript/JSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to process...`);
+
+files.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (processFile(fullPath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalFiles} files.`);
+console.log('Component names fixes completed!');

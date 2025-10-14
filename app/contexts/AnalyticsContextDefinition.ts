@@ -1,14 +1,14 @@
-export interface AnalyticsContextType {
+export interface Analyticscontexttype {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
   identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
-export interface Analytics Provider Props {
-  children: React.React Node;
+export interface AnalyticsProviderProps {
+  children: React.ReactNode;
 }
 
-export interface Analytics Event {
+export interface Analyticsevent {
   name: string;
   properties?: Record<string, unknown>;
   timestamp: number;

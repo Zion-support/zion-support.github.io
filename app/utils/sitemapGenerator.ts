@@ -1,6 +1,5 @@
-export const sitemap Generator = {
-  generate: (pages: Array<{ path: string; last Modified?: string; priority?: number }>) => {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+export const Sitemapgenerator={
+  generate: (pages: Array<{ path: string; lastModified?: string; priority?: number }>) => { constSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlsetxmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
 ${pages.map(page => `  <url>
     <loc>https://ziontechgroup.com${page.path}</loc>

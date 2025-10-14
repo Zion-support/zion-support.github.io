@@ -4,18 +4,18 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
-interface FAQ {
+interface Faq {
   question: string;
   answer: string;
   category: string;
 }
 
-const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+constSupportpagePage: React.FC = () => {
+  const [searchterm,Setsearchterm] = useState('');
+  const [selectedcategory,Setselectedcategory] = useState('all');
+  const [expandedfaq,Setexpandedfaq] = useState<number | null>(null);
 
-  const resources = [
+  const Resources=[
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
@@ -36,7 +36,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const faqs: FAQ[] = [
+  constFaqs: Faq[] = [
     {
       question: 'How do I get started with your AI solutions?',
       answer: 'Contact our team for a free consultation where we&apos;ll assess your needs and recommend the best AI solutions for your business. We&apos;ll guide you through the entire process from planning to implementation.',
@@ -79,7 +79,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const supportChannels = [
+  const Supportchannels=[
     {
       name: 'Phone Support',
       description: 'Speak directly with our technical experts',
@@ -114,22 +114,20 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
+  const Categories=['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 
-  const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const Filteredfaqs=faqs.filter(faq => { constMatchessearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    const Matchescategory=selected Category=== 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const toggleFAQ = (index: number) => {
+  const Togglefaq=(index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
@@ -139,7 +137,7 @@ const SupportPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xlMd: text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Support</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
@@ -153,13 +151,13 @@ const SupportPage: React.FC = () => {
                 type="text"
                 placeholder="Search for help..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                on Change={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400Focus: outline-noneFocus:ring-2Focus:ring-purple-500"
               />
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1Md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">&lt; 2min</div>
                 <div className="text-gray-400">Average Response Time</div>
@@ -186,9 +184,9 @@ const SupportPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1Md: grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20Hover: border-purple-400 transition-all duration-300 text-center">
                   <div className={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
                     <channel.icon className="w-8 h-8" />
                   </div>
@@ -206,9 +204,9 @@ const SupportPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Support Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1Md: grid-cols-3 gap-8">
               {resources.map((resource, index) => (
-                <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
+                <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6Hover: border-cyan-400/50 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
                     <resource.icon className="w-6 h-6 text-slate-900" />
                   </div>
@@ -216,7 +214,7 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{resource.description}</p>
                   <a
                     href={resource.link}
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                    className="text-cyan-400Hover: text-cyan-300 transition-colors font-medium"
                   >
                     Access Resource →
                   </a>
@@ -236,16 +234,14 @@ const SupportPage: React.FC = () => {
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
-                  <button
-                    key={category}
+                  <button key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${ selectedCategory = == category
                         ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                        : 'bg-white/10 text-gray-300 hover: bg-white/20'
                     }`}
                   >
-                    {category === 'all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
+                    { category = == 'all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
                 ))}
               </div>
@@ -256,14 +252,14 @@ const SupportPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-betweenHover: bg-white/5 transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
+                    <div className={`transform transition-transform ${ expandedFAQ = == index ? 'rotate-180' : ''}`}>
                       <HelpCircle className="w-6 h-6 text-purple-400" />
                     </div>
                   </button>
-                  {expandedFAQ === index && (
+                  { expandedFAQ = == index && (
                     <div className="px-6 pb-6">
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
@@ -291,30 +287,30 @@ const SupportPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+            <div className="grid grid-cols-1Md: grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-centerHover:border-purple-400 transition-all duration-300">
                 <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300">
                   View Docs
                 </button>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-centerHover:border-purple-400 transition-all duration-300">
                 <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300">
                   Join Community
                 </button>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-centerHover:border-purple-400 transition-all duration-300">
                 <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300">
                   Check Status
                 </button>
               </div>
@@ -330,12 +326,12 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Can&apos;t find what you&apos;re looking for? Our expert team is here to help with any questions or issues.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-colSm: flex-row gap-4 justify-center">
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105">
                   <Phone className="w-5 h-5" />
                   Call Support
                 </button>
-                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
                   Email Support
                 </button>

@@ -1,9 +1,8 @@
-export const performance Monitor = {
-  measure Function: (name: string, fn: () => void) => {
-    const start = performance.now()
+export const Performancemonitor={
+  measureFunction: (name: string, fn: () => void) => { constStart = performance.now()
     fn()
-    const end = performance.now()
-    const duration = end - start
+    const End=performance.now()
+    const Duration=end - start
     
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
@@ -20,11 +19,10 @@ export const performance Monitor = {
     return duration
   },
   
-  measureAsync: async (name: string, fn: () => Promise<void>) => {
-    const start = performance.now()
+  measureAsync: async (name: string, fn: () => Promise<void>) => { constStart = performance.now()
     await fn()
-    const end = performance.now()
-    const duration = end - start
+    const End=performance.now()
+    const Duration=end - start
     
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.to Fixed(2)}ms`)
@@ -45,11 +43,11 @@ export const performance Monitor = {
     }
   },
   
-  measure Between: (start Mark: string, end Mark: string, name: string) => {
+  measureBetween: (startMark: string, endMark: string, name: string) => {
     try {
       performance.measure(name, startMark, endMark)
-      const measure = performance.getEntriesByName(name)[0]
-      const duration = measure.duration
+      const Measure=performance.getEntriesByName(name)[0]
+      const Duration=measure.duration
       
       if (process.env.NODE_ENV === 'development') {
         console.warn(`${name} took ${duration.toFixed(2)}ms`)

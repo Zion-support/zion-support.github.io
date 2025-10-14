@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-interface Performance Metrics {
+interface Performancemetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -8,37 +8,35 @@ interface Performance Metrics {
   ttfb?: number;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
+interface Performanceeventtimingextendsperformanceentry {
   processingStart?: number;
 }
 
-interface LayoutShift extends PerformanceEntry {
+interface Layoutshiftextendsperformanceentry {
   hadRecentInput: boolean;
   value: number;
 }
 
-const PerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+const Performancemonitor=() => {
+  const [metrics,Setmetrics] = useState<PerformanceMetrics>({});
 
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    const currentMetrics: PerformanceMetrics = {};
+    constCurrentmetrics: Performancemetrics = {};
 
     // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+    const Lcpobserver=new PerformanceObserver((list) => { constEntries = list.getEntries();
+      const Lastentry=entries[entries.length - 1];
       currentMetrics.lcp = lastEntry.startTime;
       setMetrics({ ...currentMetrics });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+    const Fidobserver=new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => { constFidentry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
           currentMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
           setMetrics({ ...currentMetrics });
@@ -48,10 +46,9 @@ const PerformanceMonitor = () => {
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
+    let Clsvalue=0;
+    const clsobserver = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => { constLayoutshiftentry = entry as LayoutShift;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
         }
@@ -62,7 +59,7 @@ const PerformanceMonitor = () => {
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const Fcpobserver=new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           currentMetrics.fcp = entry.startTime;
@@ -73,7 +70,7 @@ const PerformanceMonitor = () => {
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const Navigationentry=performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       currentMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       setMetrics({ ...currentMetrics });
@@ -83,12 +80,12 @@ const PerformanceMonitor = () => {
     const sendMetrics = () => {
       if (Object.keys(currentMetrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.warn('Performance Metrics:', currentMetrics);
+        console.warn('performanceMetrics: ', currentMetrics);
       }
     };
 
     // Send metrics when page is about to unload
-    window.add Event Listener('beforeunload', send Metrics);
+    window.addEventListener('beforeunload', sendMetrics);
 
     // Cleanup observers
     return () => {
@@ -105,9 +102,9 @@ const PerformanceMonitor = () => {
     return null;
   }
 
-  // Development mode: show performance metrics
+  // developmentMode: show performance metrics
 
-  const get Score Color = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+  const Getscorecolor=(value: number | undefined, thresholds: { good: number; poor: number }) => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PricingPage: React.FC = () => {
+constPricingpagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparentpricing for our AI and IT solutions" />
         <meta name="keywords" content="pricing,plans, cost, subscription" />

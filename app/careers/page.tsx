@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Zap, Heart, Brain, Rocket, Star, MapPin, Clock, Users, CheckCircle } from 'lucide-react';
 
-interface JobPosition {
+interface Jobposition {
   id: string;
   title: string;
   department: string;
@@ -17,8 +17,8 @@ interface JobPosition {
   featured: boolean;
 }
 
-const CareersPage: React.FC = () => {
-  const positions: JobPosition[] = [
+constCareerspagePage: React.FC = () => {
+  constPositions:Jobposition[] = [
     {
       id: '1',
       title: 'Senior AI Engineer',
@@ -93,43 +93,42 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const Benefits=[
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Competitive Salary',
       description: 'Above-market compensation with performance bonuses'
     },
     {
-      icon: <Heart className="w-8 h-8" />,
+      icon: <heart className="w-8 h-8" />,
       title: 'Health & Wellness',
       description: 'Comprehensive health, dental, and mental health coverage'
     },
     {
-      icon: <Brain className="w-8 h-8" />,
+      icon: <brain className="w-8 h-8" />,
       title: 'Learning & Development',
       description: 'Annual learning budget and conference attendance'
     },
     {
-      icon: <Rocket className="w-8 h-8" />,
+      icon: <rocket className="w-8 h-8" />,
       title: 'Career Growth',
       description: 'Clear promotion paths and mentorship programs'
     }
   ];
 
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
         <meta name="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
-        <link rel="canonical" href="https://ziontechgroup.com/careers" />
+        <Link Rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xlMd: text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Join Our Team
               </span>
@@ -137,8 +136,8 @@ const CareersPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-colSm: flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500Hover:from-purple-600Hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformHover:scale-105">
                 View Open Positions
               </button>
               <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
@@ -151,7 +150,7 @@ const CareersPage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1Md: grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-gray-300">Team Members</div>
@@ -174,10 +173,9 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Open Positions
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1Lg: grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div
-                  key={position.id}
+                <div key={position.id}
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}
@@ -219,10 +217,10 @@ const CareersPage: React.FC = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 font-medium">
+                    <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lgHover: from-purple-600Hover:to-cyan-600 transition-all duration-300 font-medium">
                       Apply Now
                     </button>
-                    <button className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
+                    <button className="px-6 py-2 border border-white/30 text-white rounded-lgHover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>
                   </div>
@@ -238,7 +236,7 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
               Why Join Zion Tech Group?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1Md: grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -264,7 +262,7 @@ const CareersPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1Md: grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-10 h-10 text-cyan-400" />
@@ -303,8 +301,8 @@ const CareersPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-colSm: flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-cyan-500Hover:from-purple-600Hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformHover:scale-105">
                   Send Your Resume
                 </button>
                 <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">

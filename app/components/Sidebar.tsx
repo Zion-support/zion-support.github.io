@@ -5,46 +5,45 @@ import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface Sidebar Props {
-  is Open: boolean;
-  on Close: () => void;
+interface Sidebarprops {
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> = [
+constSidebarpagePage: React.FC<Sidebarprops> = ({ isOpen, onClose }) => {
+  const navigationitems: Array<{Name:String;Href:String;Icon:React.componenttype<{Classname?:String}>}> = [
   ];
   return (
     <>
       {/* Overlay */}
       {is Open && (
         <div className="fixedinset-0 bg-black bg-opacity-50 z-40"
-          on Click={on Close}
+          onClick={ onClose }
         />
       )}
       {/* Sidebar */}
       <div className={`
         fixed top-0 left-0 h-full w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out z-50
         ${is Open ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:inset-0
+        lg:translate-x-0Lg: staticLg:inset-0
       `}>
         <div className="flex items-center justify-between p-4 border-b border-slate-700">
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
-            className="text-gray-300 hover:text-white"
+            className="text-gray-300 hover: text-white"
           >
             <X className="w-6 h-6" />
           </butn>
         </div>
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
-            {navigation Items.map((item) => {
-              const Icon = item.icon;
+            {navigation Items.map((item) => { constIcon = item.icon;
               return (
-                <likey={item.name}>
+                <li key={item.name}>
                   <Link to={item.href}
-                    on Click={on Close}
-                    className="flexitems-centertext-gray-300 hover:text-white py-2"
+                    onClick={ onClose }
+                    className="flexitems-centertext-gray-300 hover: text-white py-2"
                   >
                     <Icon className="w-5 h-5mr-3" />
                     {item.name}

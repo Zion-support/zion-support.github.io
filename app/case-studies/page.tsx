@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
-interface CaseStudy {
+interface Casestudy {
   id: string;
   title: string;
   client: string;
@@ -18,8 +18,8 @@ interface CaseStudy {
   team: string;
 }
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies: CaseStudy[] = [
+constCasestudiespagePage: React.FC = () => {
+  constCasestudies:Casestudy[] = [
     {
       id: '1',
       title: 'AI-Powered Customer Service Transformation',
@@ -124,7 +124,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const Stats=[
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
@@ -132,12 +132,11 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
-        <meta property="og:title" content="Case Studies - Zion Tech Group" />
+        <meta Property="og:title" content="Case Studies - Zion Tech Group" />
         <meta property="og:description" content="Success stories and client results from our AI and IT solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
@@ -147,7 +146,7 @@ const CaseStudiesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xlMd: text-6xl font-bold text-white mb-6">
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
@@ -155,7 +154,7 @@ const CaseStudiesPage: React.FC = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2Md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
@@ -172,9 +171,9 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1Lg: grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20Hover: border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -220,7 +219,7 @@ const CaseStudiesPage: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <Link
                         to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                        className="flex items-center gap-2 text-purple-400Hover: text-purple-300 transition-colors"
                       >
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4" />
@@ -247,17 +246,17 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-colSm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300"
                 >
                   Explore Our Services
                 </Link>

@@ -1,4 +1,4 @@
-export const analytics = {
+export const Analytics={
   track: (event: string, properties: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const TermsPage: React.FC = () => {
+constTermspagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Termsof service and usage policies" />
         <meta name="keywords" content="termsof service, terms, legal" />

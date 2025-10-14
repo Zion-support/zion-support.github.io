@@ -3,8 +3,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
+constContentpromotionbannerpagePage: React.FC = () => { constFeatures = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +26,7 @@ const ContentPromotionBanner: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const Benefits=[
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -38,7 +37,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Proven track record of success'
   ];
 
-  const stats = [
+  const Stats=[
     {
       icon: Users,
       value: '10,000+',
@@ -61,10 +60,10 @@ const ContentPromotionBanner: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7 xlmx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-centermb-16">
-          <h1 className="text-4 xlmd:text-6 xl font-bold text-white mb-6">
+          <h1 className="text-4Xlmd: text-6 xl font-bold text-white mb-6">
             Transform Your Business with <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
@@ -72,11 +71,11 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
           
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105">
               <Zap className="w-5 h-5" />
               Get Started Today
             </butn>
-            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </butn>
@@ -84,7 +83,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="gridgrid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
             <divkey={index} className="text-center">
               <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -98,9 +97,9 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+            <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-centerHover: border-purple-400 transition-all duration-300">
               <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <feature.icon className="w-8 h-8text-white" />
               </div>
@@ -119,10 +118,10 @@ const ContentPromotionBanner: React.FC = () => {
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <divkey={index} className="flexitems-startspace-x-3">
-                <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
+                <checkcircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -139,11 +138,11 @@ const ContentPromotionBanner: React.FC = () => {
               Join the future of business technology. Get started with our AI solutions today and see the difference.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semiboldHover: bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semiboldHover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </butn>
             </div>

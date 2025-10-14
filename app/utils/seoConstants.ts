@@ -1,4 +1,4 @@
-export const seoConstants = {
+export const Seoconstants={
   defaultTitle: 'Zion Tech Group',
   defaultDescription: 'Leading technology solutions provider',
   defaultKeywords: 'technology, solutions, innovation',

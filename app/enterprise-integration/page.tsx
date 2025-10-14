@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EnterpriseIntegrationPage: React.FC = () => {
+constEnterpriseintegrationpagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Enterprise Integration</title>
         <meta name="description" content="Professional enterprise integration solutions and services" />
         <meta name="keywords" content="enterprise, integration" />
@@ -16,7 +15,7 @@ const EnterpriseIntegrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional enterprise integration solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions

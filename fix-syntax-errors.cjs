@@ -1,85 +1,95 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
+// Function to convert a string to a valid component name
+function toValidComponentName(str) {
+  // Remove "Page" from the end if it exists
+  let name = str.replace(/\s*Page\s*$/, '');
   
-  // Fix 1: Remove spaces in CSS class names (e.g., "from-slate-9 00" -> "from-slate-900")
-  fixed = fixed.replace(/(\w+)-(\d+)\s+(\d+)/g, '$1-$2$3');
-  fixed = fixed.replace(/(\w+)-(\d+)\s+(\d+)\s+(\d+)/g, '$1-$2$3$4');
+  // Convert to PascalCase
+  name = name
+    .split(/[\s-]+/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
   
-  // Fix 2: Fix malformed CSS classes with spaces
-  fixed = fixed.replace(/(\w+)-(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/g, '$1-$2$3$4$5');
-  fixed = fixed.replace(/(\w+)-(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/g, '$1-$2$3$4$5$6');
-  
-  // Fix 3: Fix missing commas in arrays/objects
-  fixed = fixed.replace(/(\w+):\s*'([^']+)'\s*\n\s*{/g, '$1: \'$2\',\n    {');
-  fixed = fixed.replace(/(\w+):\s*"([^"]+)"\s*\n\s*{/g, '$1: "$2",\n    {');
-  
-  // Fix 4: Fix missing commas between object properties
-  fixed = fixed.replace(/(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g, '$1: \'$2\',\n    $3:');
-  fixed = fixed.replace(/(\w+):\s*"([^"]+)"\s*\n\s*(\w+):/g, '$1: "$2",\n    $3:');
-  
-  // Fix 5: Fix malformed regex patterns
-  fixed = fixed.replace(/className="\[[^"]*\]"/g, 'className=""');
-  
-  // Fix 6: Fix missing semicolons after statements
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*\n\s*{/g, '$1 = [\n    {');
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*{/g, '$1 = [\n    {');
-  
-  // Fix 7: Fix unclosed JSX tags (simplified approach)
-  // This is a complex fix that would need more sophisticated parsing
-  
-  // Fix 8: Fix malformed function declarations
-  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*=>\s*{/g, 'function $1() {');
-  
-  // Fix 9: Fix missing closing braces
-  const openBraces = (fixed.match(/{/g) || []).length;
-  const closeBraces = (fixed.match(/}/g) || []).length;
-  if (openBraces > closeBraces) {
-    fixed += '\n'.repeat(openBraces - closeBraces) + '}';
+  // Ensure it starts with a letter
+  if (!/^[a-zA-Z]/.test(name)) {
+    name = 'A' + name;
   }
   
-  // Fix 10: Fix malformed array syntax
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*\n\s*{/g, '$1 = [\n    {');
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*{/g, '$1 = [\n    {');
+  // Add "Page" suffix
+  return name + 'Page';
+}
+
+// Function to convert a string to a valid interface name
+function toValidInterfaceName(str) {
+  // Convert to PascalCase
+  let name = str
+    .split(/[\s-]+/)
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join('');
   
-  // Fix 11: Fix missing commas in array elements
-  fixed = fixed.replace(/}\s*\n\s*{/g, '},\n    {');
-  fixed = fixed.replace(/}\s*{/g, '},\n    {');
+  // Ensure it starts with a letter
+  if (!/^[a-zA-Z]/.test(name)) {
+    name = 'A' + name;
+  }
   
-  // Fix 12: Fix malformed CSS classes with multiple spaces
-  fixed = fixed.replace(/(\w+)-(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/g, '$1-$2$3$4$5$6$7');
+  return name;
+}
+
+// Function to fix component names in a file
+function fixComponentNames(content) {
+  // Fix component declarations like "const Five GEdge Computing Page: React.FC"
+  content = content.replace(
+    /const\s+([^:]+):\s*React\.FC/g,
+    (match, componentName) => {
+      const validName = toValidComponentName(componentName.trim());
+      return `const ${validName}: React.FC`;
+    }
+  );
   
-  // Fix 13: Fix malformed className attributes
-  fixed = fixed.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
-    const cleanPart1 = part1.replace(/\s+/g, '');
-    const cleanPart2 = part2.replace(/\s+/g, '');
-    return `className="${cleanPart1} ${cleanPart2}"`;
-  });
+  // Fix interface names like "interface Accessibility Enhancer Props"
+  content = content.replace(
+    /interface\s+([^{]+)\s*{/g,
+    (match, interfaceName) => {
+      const validName = toValidInterfaceName(interfaceName.trim());
+      return `interface ${validName} {`;
+    }
+  );
   
-  // Fix 14: Fix missing closing div tags
-  fixed = fixed.replace(/<div([^>]*)>(?![^<]*<\/div>)/g, (match, attributes) => {
-    if (match.includes('</div>')) return match;
-    return match + '</div>';
-  });
+  // Fix import statements like "use Effect" to "useEffect"
+  content = content.replace(/use\s+Effect/g, 'useEffect');
+  content = content.replace(/use\s+State/g, 'useState');
+  content = content.replace(/use\s+Callback/g, 'useCallback');
+  content = content.replace(/use\s+Memo/g, 'useMemo');
+  content = content.replace(/use\s+Ref/g, 'useRef');
+  content = content.replace(/use\s+Context/g, 'useContext');
+  content = content.replace(/use\s+Reducer/g, 'useReducer');
+  content = content.replace(/use\s+LayoutEffect/g, 'useLayoutEffect');
+  content = content.replace(/use\s+ImperativeHandle/g, 'useImperativeHandle');
+  content = content.replace(/use\s+DebugValue/g, 'useDebugValue');
   
-  // Fix 15: Fix malformed object properties
-  fixed = fixed.replace(/(\w+):\s*'([^']+)'\s*,\s*;(\s*\w+):/g, '$1: \'$2\',\n    $3:');
-  fixed = fixed.replace(/(\w+):\s*"([^"]+)"\s*,\s*;(\s*\w+):/g, '$1: "$2",\n    $3:');
+  // Fix property names in interfaces that have spaces
+  content = content.replace(
+    /(\w+)\s+(\w+)\s*\?:\s*(\w+);/g,
+    (match, first, second, type) => {
+      const validProp = first + second.charAt(0).toUpperCase() + second.slice(1);
+      return `${validProp}?: ${type};`;
+    }
+  );
   
-  return fixed;
+  return content;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const fixedContent = fixComponentNames(content);
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -90,34 +100,23 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find and process all TSX files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx')) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-  
-  return fixedCount;
-}
-
 // Main execution
 console.log('Starting syntax error fixes...');
-const appDir = path.join(__dirname, 'app');
-const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+
+// Find all TypeScript/JSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to process...`);
+
+files.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (processFile(fullPath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalFiles} files.`);
+console.log('Syntax error fixes completed!');

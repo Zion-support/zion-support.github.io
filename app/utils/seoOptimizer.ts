@@ -1,10 +1,9 @@
-export const seo Optimizer = {
-  optimize: (data: { title?: string; description?: string; keywords?: string }) => {
-    const optimized = { ...data }
+export const Seooptimizer={
+  optimize: (data: { title?: string; description?: string; keywords?: string }) => { constOptimized = { ...data }
     
     // Optimize title length
     if (optimized.title && optimized.title.length > 60) {
-      optimized.title = optimized.title.substring(0, 57) + '...'
+      optimized.title= optimized.title.substring(0, 57) + '...'
     }
     
     // Optimize description length
@@ -15,7 +14,7 @@ export const seo Optimizer = {
     return optimized
   },
   validate: (data: { title?: string; description?: string; keywords?: string }) => {
-    const errors: string[] = [];
+    constErrors: String[] = [];
     
     if (!data.title) errors.push('Title is required')
     if (!data.description) errors.push('Description is required')

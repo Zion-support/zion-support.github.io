@@ -1,5 +1,5 @@
 interface Config {
-  api Url: string;
+  apiUrl: string;
   environment: string;
   features: {
     analytics: boolean;
@@ -9,9 +9,9 @@ interface Config {
   [key: string]: unknown;
 }
 
-export const config Manager = {
+export const Configmanager={
   config: {
-    api Url: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
+    apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
     environment: process.env.NODE_ENV || 'development',
     features: {
       analytics: process.env.NODE_ENV === 'production',
@@ -22,16 +22,15 @@ export const config Manager = {
   
   get: (key: string) => {
     return key.split('.').reduce((obj: unknown, k: string) => {
-      if (obj && typeof obj === 'object' && k in obj) {
+      if (obj && typeof Obj=== 'object' && k in obj) {
         return (obj as Record<string, unknown>)[k];
       }
       return undefined;
     }, configManager.config);
   },
-  set: (key: string, value: unknown) => {
-    const keys = key.split('.');
-    const lastKey = keys.pop();
-    const target = keys.reduce((obj: Record<string, unknown>, k: string) => {
+  set: (key: string, value: unknown) => { constKeys = key.split('.');
+    const Lastkey=keys.pop();
+    const Target=keys.reduce((obj: Record<string, unknown>, k: string) => {
       if (!(k in obj)) {
         obj[k] = {};
       }

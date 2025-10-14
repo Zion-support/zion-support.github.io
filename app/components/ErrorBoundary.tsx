@@ -10,7 +10,7 @@ interface State {
   error?: Error;
 }
 
-class Error Boundary extends Component<Props, State> {
+className Error Boundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -29,7 +29,7 @@ class Error Boundary extends Component<Props, State> {
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <button 
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              className="px-6 py-3 bg-purple-600 text-white rounded-lgHover: bg-purple-700 transition-colors"
             >
               Reload Page
             </butn>

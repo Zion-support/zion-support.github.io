@@ -1,4 +1,4 @@
-interface EnhancedSEOData {
+interface Enhancedseodata {
   title: string;
   description: string;
   keywords: string;
@@ -8,8 +8,8 @@ interface EnhancedSEOData {
   twitterDescription: string;
 }
 
-export const seoEnhancer = {
-  enhance: (data: { title?: string; description?: string; keywords?: string }): EnhancedSEOData => {
+export const Seoenhancer={
+  enhance: (data: { title?: string; description?: string; keywords?: string }): EnhancedSEO Data=> {
     return {
       title: data.title || 'Zion Tech Group',
       description: data.description || 'Leading technology solutions provider',
@@ -20,36 +20,36 @@ export const seoEnhancer = {
       twitterDescription: data.description || 'Leading technology solutions provider'
     }
   },
-  set Meta Tags: (data: EnhancedSEOData) => {
+  setMetaTags: (data: EnhancedSEOData) => {
     if (typeof document !== 'undefined') {
-      document.title = data.title
+      document.title= data.title
       
-      const metaDescription = document.querySelector('meta[name="description"]')
+      const Metadescription=document.querySelector('meta[name="description"]')
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description)
       }
       
-      const metaKeywords = document.querySelector('meta[name="keywords"]')
+      const Metakeywords=document.querySelector('meta[name="keywords"]')
       if (metaKeywords) {
         metaKeywords.setAttribute('content', data.keywords)
       }
       
-      const ogTitle = document.querySelector('meta[property="og:title"]')
+      const Ogtitle=document.querySelector('meta[property="og:title"]')
       if (ogTitle) {
         ogTitle.setAttribute('content', data.ogTitle)
       }
       
-      const ogDescription = document.querySelector('meta[property="og:description"]')
+      const Ogdescription=document.querySelector('meta[property="og:description"]')
       if (ogDescription) {
         ogDescription.setAttribute('content', data.ogDescription)
       }
       
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]')
+      const Twittertitle=document.querySelector('meta[name="twitter:title"]')
       if (twitterTitle) {
         twitterTitle.setAttribute('content', data.twitterTitle)
       }
       
-      const twitterDescription = document.querySelector('meta[name="twitter:description"]')
+      const Twitterdescription=document.querySelector('meta[name="twitter:description"]')
       if (twitterDescription) {
         twitterDescription.setAttribute('content', data.twitterDescription)
       }

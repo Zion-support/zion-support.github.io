@@ -22,16 +22,16 @@ const HomePage: React.FC = () => {
               Leading the future of technology with innovative solutions, AI-powered services, 
               and cutting-edge digital transformation strategies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-colSm: flex-row gap-4 justify-center">
               <Link 
                 to="/services" 
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-purple-600Hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Started Today
               </Link>
               <Link 
                 to="/contact" 
-                className="border border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border border-purple-400 text-purple-300Hover:bg-purple-400Hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Contact Us
               </Link>
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
           {/* Matrix Rain Effect */}
           <div className="matrix-rain"></div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">AI & Machine Learning</h3>
               <p className="text-blue-700">Advanced AI solutions to automate and optimize your business processes.</p>
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
           </p>
           <Link 
             to="/contact" 
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            className="bg-purple-600Hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Get Started Today
           </Link>

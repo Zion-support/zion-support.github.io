@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
 
-export const use Performance Monitor = () => {
-  const [metrics, set Metrics] = use State<Record<string, number>>({});
+export const Useperformancemonitor=() => {
+  const [metrics,SetMetrics] = useState<Record<string, number>>({});
 
-  use Effect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new Performance Observer((list) => {
-        const entries = list.get Entries();
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) { constObserver = new Performance Observer((list) => {
+        const Entries=list.get Entries();
         if (entries.length > 0) {
           setMetrics((prev: Record<string, number>) => ({
             ...prev,

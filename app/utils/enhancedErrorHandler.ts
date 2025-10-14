@@ -1,6 +1,6 @@
-export const enhancedErrorHandler = {
+export const Enhancederrorhandler={
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred: ', error);
+    console.error('errorOccurred: ', error);
     
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
@@ -15,8 +15,7 @@ export const enhancedErrorHandler = {
     };
   },
   
-  handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { 
+  handleApiError: (error: unknown) => { constErrorwithresponse = error as { 
       response?: { 
         status?: number; 
         data?: { message?: string } 
@@ -27,39 +26,28 @@ export const enhancedErrorHandler = {
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
-      case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' };
-      case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
-      case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' };
-      case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' };
-      case 500:
-        return { message: 'Server error', code: 'SERVER_ERROR' };
+      case400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
+      case401: return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+      case403: return { message: 'Forbidden', code: 'FORBIDDEN' };
+      case404: return { message: 'Not found', code: 'NOT_FOUND' };
+      case500: return { message: 'Server error', code: 'SERVER_ERROR' };
       default:
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
   
-  getErrorMessage: (error: unknown) => {
-    const errorWithResponse = error as { 
+  getErrorMessage: (error: unknown) => { constErrorwithresponse = error as { 
       response?: { status?: number }; 
       message?: string 
     };
     
     if (errorWithResponse.response?.status) {
       switch (errorWithResponse.response.status) {
-        case 400:
-          return { message: 'Invalid request', code: 'BAD_REQUEST' };
-        case 401:
-          return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
-        case 403:
-          return { message: 'Forbidden', code: 'FORBIDDEN' };
-        case 404:
-          return { message: 'Not found', code: 'NOT_FOUND' };
-        case 500:
-          return { message: 'Server error', code: 'SERVER_ERROR' };
+        case400: return { message: 'Invalid request', code: 'BAD_REQUEST' };
+        case401: return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+        case403: return { message: 'Forbidden', code: 'FORBIDDEN' };
+        case404: return { message: 'Not found', code: 'NOT_FOUND' };
+        case500: return { message: 'Server error', code: 'SERVER_ERROR' };
         default:
           return { message: error With Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
       }

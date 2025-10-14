@@ -1,6 +1,5 @@
-export const errorHandlerEnhanced = {
-  handle: (error: Error, context?: Record<string, unknown>) => {
-    const error Info = {
+export const Errorhandlerenhanced={
+  handle: (error: Error, context?: Record<string, unknown>) => { constErrorinfo = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().to ISOString(),
@@ -9,7 +8,7 @@ export const errorHandlerEnhanced = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error handled: ', errorInfo)
+      console.error('errorHandled: ', errorInfo)
     }
     
     if (typeof window !== 'undefined') {
