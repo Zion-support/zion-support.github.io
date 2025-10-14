@@ -7,4 +7,8 @@ export interface AnalyticsContextType {
 export const defaultAnalyticsContext: AnalyticsContextType = {
   trackEvent: () => {},
   trackPageView: () => {},
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-71c6
