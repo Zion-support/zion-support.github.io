@@ -65,7 +65,10 @@ const ImprovedImage: React.FC = () => { return (
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  );,
+};
 
       { /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600>"

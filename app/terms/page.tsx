@@ -14,7 +14,7 @@ const TermsPage = () => {
           </p>
         </div>
       </div>
-    </div>)
+    </>
   );
 };
 export default TermsPage;"

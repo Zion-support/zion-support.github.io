@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -147,20 +147,13 @@ const ImprovedFooter = () => {
     { name: "Security", href: "/security"
   ], []);
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"
-          {/* Company Info */}
-          <div className="lg:col-span-2"
-            <div className="flex items-center space-x-2 mb-4"
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center"
-                <Brain className="w-5 h-5 text-white"
-              </div>
-              <span className="text-xl font-bold"
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md"
-              Leading the future of AI and IT solutions. We empower businesses with cutting-edge technology, 
-              intelligent automation, and innovative digital transformation services.
+    <footer className="bg-slate-900/50 backdrop-blur-sm border-t border-purple-500/20">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Leading provider of AI solutions, IT services, and digital transformation.
             </p>
             <div className="flex space-x-4"
               {socialLinks.map((link) => (
@@ -328,7 +321,6 @@ const legal = [
                 >
                   {link.label}
                 </Link>
->>>>>>> origin/main</div>
               ))}
             </div>
           </div>
@@ -360,19 +352,13 @@ const legal = [
                 <p className="text-sm text-gray-400"
                 <p className="text-white"
               </div>
-            </div>
-            <div className="flex items-center space-x-3"
-              <Phone className="w-5 h-5 text-cyan-400"
-              <div>
-                <p className="text-sm text-gray-400"
-                <p className="text-white"
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 text-purple-400 mr-2" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
-            </div>
-            <div className="flex items-center space-x-3"
-              <MapPin className="w-5 h-5 text-cyan-400"
-              <div>
-                <p className="text-sm text-gray-400"
-                <p className="text-white"
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 text-purple-400 mr-2" />
+                <span className="text-gray-300">New York, NY</span>
               </div>
               <span>+1-302-464-0950</span>
             </div>
@@ -386,7 +372,6 @@ const legal = [
             <div className="flex items-center>"
               <MapPinIcon className="w-5 h-5 mr-2 text-blue-400 />"
               <span className="text-gray-300>San Francisco, CA</span>"
->>>>>>> origin/main;
             </div>
           </div>
         </div>
@@ -434,15 +419,10 @@ const legal = [
         </div>
       </div>
     </footer>
-
   );
 });
 Footer.displayName = "Footer"
 
 export default Footer;
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
 "
->>>>>>> origin/main;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

@@ -5,4 +5,4 @@ import { Helmet } from "react-helmet-async";
 
         <meta name="description" content="Professional services by Zion Tech Group."
 "
-}
+export default Page;

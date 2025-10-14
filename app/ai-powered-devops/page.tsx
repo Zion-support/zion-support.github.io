@@ -227,6 +227,7 @@ export default function AiPoweredDevOps() {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
-}
+};
+export default PagePage;"

@@ -1,14 +1,13 @@
-import React from 'react'
-import { Loader2, Brain, Shield, Zap, Globe, BarChart3 } from "lucide-react";
-interface LoadingPageProps {
-  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global'
-  message?: string;
-  variant?: 'default' | 'futuristic' | 'minimal'
+import React from "react";
+
+interface LoadingSpinnerProps {
+  size?: "sm" | "md" | "lg";
+  color?: "primary" | "secondary" | "white";
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md'
-  className = ''
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = "md", 
+  color = "primary" 
 }) => {
   if (variant === 'minimal'
     return (
@@ -28,52 +27,37 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
   }
 
-  // Futuristic variant (default)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
 
-      <div className="relative z-10 text-center"
-        <div className="w-20 h-20 mx-auto mb-6 relative"
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-spin"
-          <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-            <Brain className="w-8 h-8 text-cyan-400"
-          </div>
-        </div>
-        
-        <h2 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          {message}
-        </h2>
-        
-        <p className="text-gray-300 mb-8 max-w-md mx-auto"
-          Initializing advanced AI systems and preparing your experience...
-        </p>
+interface LoadingPageProps {
+  message?: string;
+}
 
-        {/* Loading dots */}
-        <div className="flex justify-center space-x-2"
-          <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"
-          <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-100"
-          <div className="w-3 h-3 bg-blue-400 rounded-full animate-bounce delay-200"
-        </div>
+export const LoadingPage: React.FC<LoadingPageProps> = ({ message }) => {
+  const getDefaultMessage = () => {
+    const messages = [
+      "Loading amazing content...",
+      "Preparing your experience...",
+      "Almost ready...",
+      "Loading innovative solutions..."
+    ];
+    return messages[Math.floor(Math.random() * messages.length)];
+  };
 
-        {/* Feature icons */}
-        <div className="flex justify-center space-x-6 mt-8"
-          <div className="flex flex-col items-center space-y-2"
-            <Shield className="w-6 h-6 text-cyan-400 animate-pulse"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <Zap className="w-6 h-6 text-purple-400 animate-pulse delay-200"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <Globe className="w-6 h-6 text-blue-400 animate-pulse delay-400"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <BarChart3 className="w-6 h-6 text-green-400 animate-pulse delay-600"
-            <span className="text-xs text-gray-400"
-          </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+          <span className="text-white font-bold text-2xl">Z</span>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
+        <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>
+        <div className="flex justify-center space-x-2">
+          <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>
+          <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
+          <div className="w-2 h-2 bg-pink-500 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
         </div>
       </div>
     
@@ -141,7 +125,6 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
 
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
->>>>>>> origin/main;
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2>Zion Tech Group</h2>"
@@ -157,6 +140,10 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
     );
   }
 
+export const LoadingCard: React.FC<LoadingCardProps> = ({ 
+  message = "Loading...", 
+  showSpinner = true 
+}) => {
   return (
 "
     <div className="flex items-center justify-center p-4></div>"
@@ -196,6 +183,3 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
     </div>
   )}
 }''
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;

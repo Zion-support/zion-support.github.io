@@ -1,7 +1,7 @@
-
+import React from "react";"
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD;
+;
 import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer"
 
@@ -148,13 +148,6 @@ const useCases = [
         </div>
       </div>
     </div>
-
-            </button>;
-          </div>
-        </div>
-      </div>
-    </div>
-  );}
-}
-'
-"
+  );
+};
+export default PagePage;"

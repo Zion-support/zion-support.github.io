@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import React from 'react'
 
@@ -91,10 +91,10 @@ const CareersPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+    <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team of innovative professionals. Explore career opportunities in AI, cybersecurity, cloud computing, and technology solutions."
+        <meta name="description" content="Join our team and help shape the future of technology." />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16"
@@ -200,7 +200,6 @@ const CareersPage: React.FC = () => {
               <div className="flex justify-center space-x-4"
                 <a "
                   href="/" "
->>>>>>> origin/main;
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home;

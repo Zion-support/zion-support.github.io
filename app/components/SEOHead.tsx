@@ -16,4 +16,4 @@ structuredData;
 
   )
 "
-}}
+export default SEOHead;

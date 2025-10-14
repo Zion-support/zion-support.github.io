@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
-
   return (
     <Helmet></Helmet>
 
@@ -35,10 +34,8 @@ export default function Page() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>)
+    </>
   );
 }
-"

@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
 }
 
 export const usePerformanceMonitor = (): PerformanceMetrics => {

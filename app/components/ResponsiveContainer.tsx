@@ -27,4 +27,5 @@ export default ResponsiveContainer;
 export default ResponsiveContainer
 ;
 };
-export default ResponsiveContainer;'
+"
+export default ResponsiveContainer;

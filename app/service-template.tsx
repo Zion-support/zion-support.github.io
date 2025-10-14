@@ -128,5 +128,5 @@ export default ServiceTemplate;
 export default ServiceTemplate
 ;
 };
-export default ServiceTemplate;'
-"
+
+export default ServiceTemplatePage;"

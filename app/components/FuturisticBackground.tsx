@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React from "react";
 
 const FuturisticBackground = () => {
   return (
@@ -20,7 +20,6 @@ const FuturisticBackground = () => {
                   animationDuration: '3s''
                 }
                 }}
->>>>>>> origin/main;
               ></div>
             ))
           </div>
@@ -45,9 +44,8 @@ const FuturisticBackground = () => {
   )
 export default FuturisticBackground;
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-}
-
+  children: React.ReactNode;,
+},
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -155,13 +153,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10"
         {children}
       </div>
->>>>>>> origin/main;
     
     </div>
-  );
+);
 };
 export default FuturisticBackground;
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
 }

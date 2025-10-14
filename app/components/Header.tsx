@@ -209,6 +209,8 @@ const navigationItems = [{ name: "Home", href: "/" },';'"
       </div>
     </nav>
   );
+};
+
 export default Header;
                 <Link;
 "

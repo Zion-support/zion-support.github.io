@@ -30,4 +30,3 @@ export const defaultStructuredData = {
     "https://www.facebook.com/ziontechgroup"
   ]
 };
-"

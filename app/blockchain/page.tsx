@@ -1,3 +1,6 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
 export default function Page() {
 
               </p>
@@ -20,6 +23,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
-"
+    </>
+  );
 }

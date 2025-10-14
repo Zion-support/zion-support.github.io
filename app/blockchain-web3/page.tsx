@@ -107,7 +107,6 @@ export default function BlockchainWeb3Page() {;
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Build the future with our comprehensive blockchain and Web3 development services. 
                 From smart contracts to DApps, we bring your decentralized vision to life.
->>>>>>> origin/main;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to="/contact"
@@ -152,7 +151,6 @@ const HomePage = () => {
     
     </div>
   ); }
->>>>>>> origin/main;
             Page</h1>
           <p className="text-xl text-gray-600 mb-8>"
             Professional page solutions tailored to your business needs.</p>
@@ -182,7 +180,4 @@ const HomePage = () => {
       </div>
     </div>
   )}
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
 }

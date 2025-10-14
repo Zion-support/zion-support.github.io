@@ -158,16 +158,25 @@ const Icon = service.icon;"
                   </div>
 
                   {/* Benefits */}
-
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          {benefit}
                         </span>
-                      ))
+                      ))}
                     </div>
                   </div>
-
                   {/* Use Cases */}
-
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.useCases.map((useCase, useCaseIndex) => (
+                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
+                          {useCase}
                         </span>
-                      ))
+                      ))}
                     </div>
                   </div>"
 "
@@ -188,11 +197,10 @@ const Icon = service.icon;"
                   </div>
                 </div>
               )
-            }
-          </div>
+            })}
+          </div>9763
         </div>
       </section>
-
       {/* Why Choose Our AI Solutions */}
 
               Why Choose Our AI Solutions?"
@@ -236,12 +244,11 @@ const Icon = service.icon;"
               <h3 className="text-2xl font-bold text-white mb-4>Custom Solutions</h3>"
               <p className="text-gray-300>"
                 Tailored AI solutions designed specifically for your business needs and use cases.
-              </p>
+              </p>12520
             </div>
           </div>
         </div>
       </section>
-
       {/* AI Implementation Process */}
 
               Our AI Implementation Process"
@@ -285,12 +292,11 @@ const Icon = service.icon;"
               <h3 className="text-xl font-bold text-white mb-4>Deployment & Support</h3>"
               <p className="text-gray-300>"
                 We deploy your AI solution and provide ongoing support, monitoring, and optimization.
-              </p>
+              </p>15367
             </div>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 
               Let's discuss how our AI solutions can transform your business and drive innovation'"
@@ -323,9 +329,6 @@ const Icon = service.icon;"
             </div>
           </div>
         </div>
-
-      </section></>
-
       </section>
     </>
   );

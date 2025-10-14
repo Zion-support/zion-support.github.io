@@ -22,4 +22,3 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className, 
   );
 };
 export default AdvancedSEOOptimizer;
-"

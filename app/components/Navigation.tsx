@@ -1,5 +1,6 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -319,8 +320,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             </button>
           </div>
         </div>
-
-        {/* Mobile menu */}
+        
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-cyan-500/20>"
             <div className="flex flex-col space-y-2">
@@ -460,8 +460,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         )}
       </div>
     </nav>
-  )
-})
+  );
+};
 
 Navigation.displayName = 'Navigation'
 

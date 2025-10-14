@@ -1,6 +1,6 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import ReactDOM from 'react-dom/client';
+import App from '../App';
 
 const Main: React.FC = () => {
   return (

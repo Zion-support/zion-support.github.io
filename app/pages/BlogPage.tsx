@@ -24,3 +24,4 @@ const BlogPage: React.FC = () => {
 ;
 export default BlogPag;e;
 "
+export default BlogPage;

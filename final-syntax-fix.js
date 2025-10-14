@@ -66,10 +66,7 @@ function fixRemainingIssues(content) {
   });
   
   // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  
+  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  
   return fixed;
 }
 
@@ -126,3 +123,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { fixRemainingIssues, processFile };
+// final-syntax-fix.js - Under development;
+console.log('final-syntax-fix.js loaded');';

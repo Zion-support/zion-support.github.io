@@ -128,5 +128,5 @@ export default ErrorHandler;
 export default ErrorHandler
 ;
 };
-export default ErrorHandler;'
-"
+
+export default ErrorHandlerPage;"

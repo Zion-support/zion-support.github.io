@@ -220,13 +220,10 @@ const ZionAIAnalyticsProPage = () => {
     { number: "50+", label: "Data Sources Supported", icon: <Database className="w-6 h-6"
     { number: "24/7", label: "Real-Time Monitoring", icon: <Clock className="w-6 h-6"
   ];
->>>>>>> origin/main;
->>>>>>> origin/main
 ;
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> origin/main;
       <Helmet >
         <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title>
         <meta;
@@ -599,13 +596,5 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  )
-        <meta name="description" content="Professional services by Zion Tech Group."
-"
-}
   );
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
 }}}}}}}}}

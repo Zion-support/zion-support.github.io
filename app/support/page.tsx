@@ -47,8 +47,7 @@ icon: Phone,"
       question: "What if I need custom development?",';'
       answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.''; }
 
-    }
-  ];
+export default function Page() {
   return (
     <>
       <Helmet></Helmet>
@@ -232,8 +231,6 @@ const Icon = option.icon;
           </div>
         </div>
       </div>
-
-    </div>
+    </>
   );
 }
-"

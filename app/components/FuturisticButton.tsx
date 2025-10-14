@@ -75,14 +75,6 @@ const baseClasses = 'inline-flex items-center justify-center font-semibold round
 
     </button>)
   );
-export default FuturisticButton;
-"
-    >{icon && <span className="mr-2"
-      { children }
-
-    </button>
-  );
-export default FuturisticButton;
 };
 export default FuturisticButton;'
 import React from 'react'
@@ -93,7 +85,6 @@ interface FuturisticButtonProps {
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean;
->>>>>>> origin/main;
   className?: string;
 }
 

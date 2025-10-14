@@ -90,6 +90,8 @@ const Loading: React.FC = () => { return (
       </section>
     </div>)
   );
+};
+
 export default Loading;
                 We provide comprehensive loading;
                 solutions tailored to your specific needs and requirements.</p>"

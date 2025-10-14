@@ -204,8 +204,19 @@ export default function AITranslationServicePage() {;
                     Get Started;
                   </Link>
                 </div>
-              ))}
-            </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <FuturisticButton className="w-full">
+                  Get Started <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </FuturisticCard>
+            ))}
           </div>
         </div>
 
@@ -225,9 +236,8 @@ export default function AITranslationServicePage() {;
             </Link>
           </div>
         </div>
-      </div>
-    </Layout>
+      </ResponsiveContainer>
+    </div>
   );
 }
->>>>>>> origin/main;
 }}

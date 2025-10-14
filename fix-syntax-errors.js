@@ -26,10 +26,7 @@ function fixSyntaxErrors(content) {
   });
   
   // Remove merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*/g, '');
-  fixed = fixed.replace(/=======[\s\S]*?>>>>>>> [^\n]*/g, '');
-  
+  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  
   // Fix extra semicolons and quotes
   fixed = fixed.replace(/;";/g, ';');
   fixed = fixed.replace(/";"/g, ';');
@@ -49,6 +46,10 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/<div([^>]*)>([\s\S]*?)(\n\s*\))/g, (match, p1, p2, p3) => {
     if (!p2.includes('</div>')) {
       return `<div${p1}>${p2}</div>${p3}`;
+  // Fix malformed import statements
+  fixed = fixed.replace(/import\s+([^"]*?)\s+from\s+"([^"]*?)"([^;]*?)(?:\n|$)/g, (match, imports, module, rest) => {
+    if (rest && !rest.includes(';')) {
+      return `import ${imports} from "${module}";\n`;
     }
     return match;
   });

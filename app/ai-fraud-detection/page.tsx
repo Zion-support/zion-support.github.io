@@ -272,7 +272,7 @@ const benefits = [
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 export default AIFraudDetectionPage;"

@@ -124,30 +124,17 @@ const getOptimizedSrc = (originalSrc: string) => {''
               <div></div>Image not available</div>
             </div>
           </div>
-)
-        )}
-        { /* Actual image */ }
-        { isInView && !isError && (
-          <img }
-            src={ optimizedSrc }
-            alt={ alt }
-            width={ width }
-            height={ height }
-            loading={ loading }
-            sizes={ sizes }
-            onLoad={ handleLoad }
-            onError={ handleError }
-            className={`transition-opacity duration-300 ${'
-              isLoaded ? 'opacity-100' : 'opacity-0'}
-            }`}
-            style={{'"
-              width: "100%",'"
-              height: "100%",'"
-              objectFit: "cover" }
-            }}
-
-          />)
-        )
+          "
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">"
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>"
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
-"
+    </div>
+  );,
+};
+
+export default OptimizedImagePage;"

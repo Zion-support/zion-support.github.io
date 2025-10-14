@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap } from "lucide-react";
@@ -201,7 +201,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson","
   ]
     }
   ];
->>>>>>> origin/main;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
@@ -722,8 +721,4 @@ export default AIServicesPage;
   );
 };
 export default AIServicesPage;
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
->>>>>>> origin/main;
 }}}}}}

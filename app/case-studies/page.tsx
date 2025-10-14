@@ -20,8 +20,9 @@
               </Link>
             </div>
           </div>
-        </section>
+        </div>
       </div>
-    </>
+    </div>
   );
-}
+};
+export default PagePage;"

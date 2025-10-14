@@ -13,22 +13,22 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      '@': resolve(__dirname, './app'),
+      '@/components': resolve(__dirname, './app/components'),
+      '@/pages': resolve(__dirname, './app'),
+      '@/utils': resolve(__dirname, './utils'),
+      '@/types': resolve(__dirname, './types'),
+      '@/hooks': resolve(__dirname, './hooks'),
+      '@/config': resolve(__dirname, './config'),
+      '@/data': resolve(__dirname, './data'),
+      '@/content': resolve(__dirname, './content'),
     },
   },
   build: {
-    outDir: "dist",
+    outDir: 'dist',
     sourcemap: false,
-    minify: "esbuild",
-    target: "es2020",
+    minify: 'esbuild',
+    target: 'es2020',
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -75,27 +75,22 @@ export default defineConfig({
     },
     // Enhanced build optimizations;
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
         manualChunks: (id) => {
           // Core React libraries;
           if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+            return 'react-vendor';
           }
           // Router;
           if (id.includes('react-router')) {
-            return 'router'
+            return 'router';
           }
           // UI libraries;
           if (id.includes('framer-motion')) {
-            return 'animations'
+            return 'animations';
           }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'icons';
           }
           // SEO and meta;
           if (id.includes('react-helmet')) {
@@ -165,12 +160,12 @@ export default defineConfig({
   // Optimize dependencies;
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'react-helmet-async',
+      'framer-motion',
+      'lucide-react',
     ],
   },
   // CSS optimization;

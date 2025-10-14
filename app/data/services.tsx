@@ -35,6 +35,8 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </div>)
-  );
-}"
+    </div>
+  );,
+};
+
+export default ServicesPage;"

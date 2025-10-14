@@ -4,15 +4,14 @@ interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableFocusManagement?: boolean;,
+},
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ,
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
-  enableFocusManagement = true,
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
     // Skip to main content functionality;

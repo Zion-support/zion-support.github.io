@@ -14,6 +14,8 @@
   return (
     <>
       <Helmet>
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Scalable cloud solutions for modern businesses." />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>"
@@ -31,15 +33,7 @@
               </Link>
             </div>
           </div>
-        </section>
-
-                </div>
-              ))}
-            </div>
-          </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

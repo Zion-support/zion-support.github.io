@@ -24,3 +24,4 @@ const DemoPage: React.FC = () => {
 ;
 export default DemoPag;e;
 "
+export default DemoPage;

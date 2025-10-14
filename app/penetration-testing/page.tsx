@@ -1,5 +1,3 @@
-"use client";
-";
 import React from "react";
 export default function Page() {
   return (
@@ -8,4 +6,6 @@ export default function Page() {
       <p className="text-gray-300 text-lg>This page is under development.</p>"
     </div>)
   );
-}"
+};
+"
+export default Page;
