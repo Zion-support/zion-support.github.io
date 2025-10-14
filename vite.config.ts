@@ -107,6 +107,10 @@ export default defineConfig({
             if (id.includes('/ai-') || id.includes('/5g-')) {
               return 'feature-pages';
             }
+            // Main app pages
+            if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
+              return 'main-pages';
+            }
             return 'app';
           }
           return undefined;
@@ -134,7 +138,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "react-router-dom"],
+    include: ['react', 'react-dom', 'react-router-dom'],
     exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
   },
   esbuild: {
