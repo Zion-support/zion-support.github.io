@@ -1,10 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -15,7 +12,7 @@ interface State {
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
@@ -107,7 +104,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

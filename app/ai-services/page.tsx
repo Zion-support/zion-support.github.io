@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, BarChart3 } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 
 import React from 'react'
@@ -10,28 +10,32 @@ import FuturisticBackground from '../components/FuturisticBackground'
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: BarChart3,
       title: 'AI Analytics',
-      description: 'Advanced analytics solutions powered by AI to extract insights from your data.',
-      color: 'from-blue-500 to-cyan-500'
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform',
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],
+      href: '/ai-analytics'
     },
     {
-      icon: Zap,
       title: 'AI Automation',
-      description: 'Automate repetitive tasks and processes with intelligent AI solutions.',
-      color: 'from-green-500 to-emerald-500'
+      description: 'Streamline your business processes with intelligent automation solutions',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling'],
+      href: '/ai-automation'
     },
     {
-      icon: FileText,
+      title: 'AI Business Intelligence',
+      description: 'Make data-driven decisions with our comprehensive BI platform',
+      icon: <Brain className="w-8 h-8" />,
+      features: ['Data Visualization', 'KPI Tracking', 'Strategic Planning'],
+      href: '/ai-business-intelligence'
+    },
+    {
       title: 'AI Content Generation',
-      description: 'Generate high-quality content at scale using advanced AI models.',
-      color: 'from-orange-500 to-red-500'
+      description: 'Create engaging content at scale with our AI-powered content tools',
+      icon: <Globe className="w-8 h-8" />,
+      features: ['Content Creation', 'SEO Optimization', 'Multi-language Support'],
+      href: '/ai-content-generation'
     },
     {
       icon: MessageSquare,
@@ -95,35 +99,48 @@ const AiServicesPage: React.FC = () => {
               Transform your business with our comprehensive AI services designed to drive innovation and growth.
             </p>
           </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                    {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">
-                    {service.description}
-                  </p>
-                  <button className="flex items-center text-white hover:text-gray-300 transition-colors">
-                    Learn More
-                    <Right className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
-              ))}
-            </div>
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <FuturisticButton
+                  href={service.href}
+                  variant="outline"
+                  size="sm"
+                  className="w-full justify-center"
+                >
+                  Learn More
+                </FuturisticButton>
+              </div>
+            ))}
           </div>
-        </section>
+        </ResponsiveContainer>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

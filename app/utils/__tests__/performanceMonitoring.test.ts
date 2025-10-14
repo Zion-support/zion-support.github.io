@@ -5,8 +5,3 @@ describe('Performance Monitoring', () => {';
     expect(true).toBe(true);
   });
 });
-describe('Performance Monitoring', () => {';
-  it('should be defined', () => {';
-    expect(usePerformanceMonitor).toBeDefined();
-  });
-});

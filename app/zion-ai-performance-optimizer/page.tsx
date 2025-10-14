@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client'
 export default function ZionAIPerformanceOptimizer() {
   return (
@@ -35,8 +35,7 @@ export default function ZionAIPerformanceOptimizer() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Smart Integration</h3>
             <p className="text-gray-300 mb-4">
-              Seamless integration with your existing business systems.;
-            </p>
+              Seamless integration with your existing business systems.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• API integration</li>
               <li>• Data synchronization</li>
@@ -46,8 +45,7 @@ export default function ZionAIPerformanceOptimizer() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
             <p className="text-gray-300 mb-4">
-              Round-the-clock support for all your business needs.;
-            </p>
+              Round-the-clock support for all your business needs.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Expert support</li>
               <li>• Quick response</li>
@@ -83,7 +81,7 @@ export default function ZionAIPerformanceOptimizer() {
               Our AI experts are ready to help you implement cutting-edge solutions.;
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
-              Get Started Today;
+              Get Started Today,
             </button>
           </div>
         </div>

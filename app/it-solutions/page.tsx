@@ -3,170 +3,73 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
   CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
+  ShieldCheckIcon,
   CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon
+  ServerIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon
 } from '@heroicons/react/24/outline';
 
 const ITSolutionsPage: React.FC = () => {
-  const solutions = [
+  const services = [
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
       icon: CloudIcon,
-      features: [
-        "Scalable architecture",
-        "High availability",
-        "Security compliance",
-        "Cost optimization",
-        "24/7 monitoring",
-        "Disaster recovery"
-      ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Scalability", "Reliability", "Cost efficiency"],
-      useCases: ["Web hosting", "Data storage", "Application hosting"],
-      href: "/cloud-infrastructure"
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern businesses.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive cybersecurity solutions to protect your digital assets and data.",
       icon: ShieldCheckIcon,
-      features: [
-        "Threat detection",
-        "Vulnerability assessment",
-        "Security monitoring",
-        "Incident response",
-        "Compliance management",
-        "Security training"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],
-      useCases: ["Data protection", "Network security", "Compliance"],
-      href: "/cybersecurity"
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance Management', 'Incident Response']
     },
     {
-      title: "IT Consulting",
-      description: "Strategic IT consulting to help you make informed technology decisions.",
-      icon: LightBulbIcon,
-      features: [
-        "Technology assessment",
-        "Strategic planning",
-        "Vendor selection",
-        "Implementation guidance",
-        "Change management",
-        "Training and support"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $1,200/month",
-      benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
-      useCases: ["Technology planning", "Digital transformation", "System integration"],
-      href: "/it-consulting"
+      icon: CogIcon,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to optimize your technology investments.',
+      features: ['Technology Assessment', 'Digital Strategy', 'Process Optimization', 'Change Management']
     },
     {
-      title: "Network Solutions",
-      description: "Advanced networking solutions for reliable and secure connectivity.",
-      icon: GlobeAltIcon,
-      features: [
-        "Network design",
-        "Security implementation",
-        "Performance optimization",
-        "Monitoring and maintenance",
-        "Disaster recovery",
-        "Remote access"
-      ],
-      color: "from-purple-500 to-indigo-500",
-      price: "Starting at $1,800/month",
-      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
-      useCases: ["Office networking", "Remote work", "Data centers"],
-      href: "/network-solutions"
-    },
-    {
-      title: "Data Management",
-      description: "Comprehensive data management solutions for storage, processing, and analytics.",
-      icon: ChartBarIcon,
-      features: [
-        "Data storage",
-        "Data processing",
-        "Analytics and reporting",
-        "Data security",
-        "Backup and recovery",
-        "Data governance"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Better insights", "Data security", "Compliance"],
-      useCases: ["Business intelligence", "Data analytics", "Compliance"],
-      href: "/data-management"
-    },
-    {
-      title: "IT Support",
-      description: "Comprehensive IT support services to keep your systems running smoothly.",
-      icon: UserGroupIcon,
-      features: [
-        "24/7 support",
-        "Remote assistance",
-        "System maintenance",
-        "Software updates",
-        "Hardware support",
-        "User training"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $1,000/month",
-      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
-      useCases: ["Help desk", "System maintenance", "User support"],
-      href: "/it-support"
+      icon: ServerIcon,
+      title: 'Network Solutions',
+      description: 'Robust network infrastructure for reliable connectivity.',
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring']
     }
   ];
 
-  const features = [
-    {
-      title: "Expert Solutions",
-      description: "Our team of certified professionals delivers cutting-edge IT solutions.",
-      icon: CpuChipIcon
-    },
-    {
-      title: "Scalable Architecture",
-      description: "Solutions that grow with your business and adapt to changing needs.",
-      icon: CloudIcon
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your systems are always running.",
-      icon: UserGroupIcon
-    },
-    {
-      title: "Security First",
-      description: "Security is built into every solution we deliver.",
-      icon: ShieldCheckIcon
-    }
+  const benefits = [
+    'Reduced IT costs by up to 40%',
+    'Improved system reliability and uptime',
+    'Enhanced security posture',
+    'Scalable infrastructure for growth',
+    '24/7 expert support',
+    'Compliance with industry standards'
   ];
 
+  const stats = [
+    { number: '100+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
+  ];
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
+        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and software development. Expert IT services for modern businesses." />
+        <meta name="keywords" content="IT solutions, cloud computing, cybersecurity, network infrastructure, software development, IT consulting" />
+        <meta property="og:title" content="IT Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, network management, and software development." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/it-solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -177,99 +80,114 @@ const ITSolutionsPage: React.FC = () => {
               Comprehensive IT solutions designed to modernize your infrastructure, 
               enhance security, and drive business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Solutions Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our IT Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
-                    <solution.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <div className="mb-4">
-                    <p className="text-blue-600 font-semibold">{solution.price}</p>
-                  </div>
-                  <Link 
-                    to={solution.href}
-                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Services Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Our IT Services
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Why Choose Our IT Solutions?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
+                  <span className="text-gray-700">{benefit}</span>
                 </div>
-              ))}
+))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your IT Infrastructure?
+        <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Modernize Your IT Infrastructure?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our IT solutions can help you achieve your business goals.
+            <p className="text-lg text-gray-300 mb-8">
+              Let's discuss how our IT solutions can help you optimize your technology stack and achieve your business objectives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
               >
-                Contact Us
+                Get Started
               </Link>
               <Link 
                 to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
-                Schedule Demo
+                Learn More About Us
               </Link>
             </div>
           </div>
         </section>
+
+      </div>"""
+        <meta name=description content=Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses. />"""
+        <meta name=keywords content=IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security />""
+      </Helmet>
+
+      {/* Hero Section */}
+
+              IT Solutions
+            </h1>"""
+            <p className=text-xl text-gray-300 mb-8 leading-relaxed>
+              Comprehensive IT solutions to power your business infrastructure
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">"""
+              From infrastructure management to cybersecurity, our expert IT solutions 
+              ensure your technology infrastructure is secure, scalable, and optimized for performance.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

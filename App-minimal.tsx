@@ -10,9 +10,14 @@ function App() {
           <h1 className="text-4xl font-bold text-white text-center mb-8">
             Zion Tech Group
           </h1>
-          <p className="text-gray-300 text-center text-lg">
-            Advanced AI and IT Solutions
+          <p className="text-xl text-gray-300 text-center">
+            Advanced AI & IT Solutions
           </p>
+          <div className="mt-8 text-center">
+            <p className="text-gray-400">
+              Website is being updated. Please check back soon.
+            </p>
+          </div>
         </div>
       </div>
     </Router>

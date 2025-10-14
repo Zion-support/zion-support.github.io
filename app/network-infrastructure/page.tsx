@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client'
 export default function NetworkInfrastructure() {
   return (
@@ -35,8 +35,7 @@ export default function NetworkInfrastructure() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Network </h3>
             <p className="text-gray-300 mb-4">
-              Comprehensive security solutions to protect your network infrastructure.;
-            </p>
+              Comprehensive security solutions to protect your network infrastructure.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Firewall configuration</li>
               <li>• Intrusion detection</li>
@@ -46,8 +45,7 @@ export default function NetworkInfrastructure() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Network Monitoring</h3>
             <p className="text-gray-300 mb-4">
-              24/7 monitoring and management of your network infrastructure.;
-            </p>
+              24/7 monitoring and management of your network infrastructure.</p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Real-time monitoring</li>
               <li>• Performance optimization</li>

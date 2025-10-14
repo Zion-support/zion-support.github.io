@@ -72,7 +72,7 @@ const AISolutionsPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-white mb-6">
               AI Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence solutions. 
               From strategy to implementation, we help you harness the power of AI.
             </p>

@@ -1,75 +1,77 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { } from 'react-router-dom'
-import { Circle, Right, } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { } from 'react-router-dom;
+import { Circle, Right, } from 'lucide-react;
 const PartnersPage: React.FC = () => {
   const partners = [{
       name: 'Microsoft','
       logo: '🏢','
       description: 'Strategic partnership for cloud and AI solutions','
-      category: 'Technology''},
+      category: 'Technology''
+    },
     {
       name: 'Amazon Web Services','
       logo: '☁️','
       description: 'infrastructure and AI services collaboration','
-      category: '''},
+      category: '''
+    },
     {
       name: 'Google ','
       logo: '🔍','
       description: 'AI and machine learning platform integration','
-      category: 'AI/ML''},
+      category: 'AI/ML''
+    },
     {
       name: 'IBM','
       logo: '💼','
       description: 'Enterprise AI solutions and consulting','
-      category: 'Enterprise''},
+      category: 'Enterprise''
+    },
     {
       name: 'Salesforce','
       logo: '📊','
       description: 'CRM and business intelligence integration','
-      category: 'CRM''},
+      category: 'CRM''
+    },
     {
       name: 'Oracle','
       logo: '🗄️','
       description: 'and enterprise application solutions','
-      category: '''}
-  ]
+      category: '''
+    }
+  ];
+
   const benefits = ['Access to cutting-edge technology','
     'Joint go-to-market opportunities','
     'Technical support and training','
     'Co-marketing and co-selling programs','
     'Priority access to new features','
     'Dedicated partner success manager''
-  ]
+  ];
+
+const Partners = () => {
   return (
     <>
       <Helmet>
-        <title>Partners - Strategic Partnerships | Zion Tech Group</title>
-        <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
-        <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Our trusted partners and technology alliances." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Our;
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Partners;
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join our growing ecosystem of strategic partners and unlock new opportunities;
-              for growth and innovation.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                Become a Partner;
-                <Right className="w-5 h-5 ml-2 inline" />
-              </button>
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                Learn More;
-              </button>
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Partners
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Our trusted partners and technology alliances.
+              </p>
+              <Link to="/contact">
+                <FuturisticButton size="lg">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+              </Link>
             </div>
           </div>
         </section>

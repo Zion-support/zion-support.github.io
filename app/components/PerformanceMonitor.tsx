@@ -31,6 +31,7 @@ const PerformanceMonitor: React.FC = () => {
         ...prev,
         [metric.name]: metric.value
       }));
+    };
 
       // Send to analytics service
       if (typeof window !== 'undefined' && window.gtag) {
@@ -89,6 +90,13 @@ const PerformanceMonitor: React.FC = () => {
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
     return null;
+  }
+
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (!value) return 'text-gray-500';
+    if (value <= thresholds.good) return 'text-green-500';
+    if (value <= thresholds.poor) return 'text-yellow-500';
+    return 'text-red-500';
   }
 
   return (

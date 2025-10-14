@@ -32,6 +32,6 @@ const CaseStudiesPagePage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default CaseStudiesPagePage;

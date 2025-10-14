@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 'use client'
 export default function UtilsPage() {
   return (
@@ -7,6 +7,13 @@ export default function UtilsPage() {
         <h1 className="text-4xl font-bold mb-8">Utils</h1>
         <p className="text-gray-300 text-lg">
           This page is under development.;
+        </p>;
+      </div>;
+    </div>;
+  );
+}
+          This page is under development.</p></div></div>
+)}
         </p>
       </div>
     </div>

@@ -1,6 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -14,6 +20,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
+        // Add focus indicators for keyboard navigation
         document.body.classList.add('keyboard-navigation');
       }
     };
@@ -84,6 +91,6 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return null;
-};
+}
 
 export default AccessibilityEnhancer;

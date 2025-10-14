@@ -1,17 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
   ShieldCheckIcon,
   RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  SignalIcon,
   StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
+  HeartIcon,
+  HandThumbUpIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
 const AboutPage: React.FC = () => {
@@ -58,6 +62,33 @@ const AboutPage: React.FC = () => {
       name: 'Emily Davis',
       role: 'Head of Security',
       description: 'Cybersecurity expert with extensive enterprise experience.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in technology and business development.',
+      image: '/images/team/kleber-santos.jpg'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      description: 'Expert in AI and machine learning with a passion for innovation.',
+      image: '/images/team/sarah-johnson.jpg'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Head of Security',
+      description: 'Cybersecurity specialist ensuring our clients stay protected.',
+      image: '/images/team/michael-chen.jpg'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Lead Developer',
+      description: 'Full-stack developer creating robust and scalable solutions.',
+      image: '/images/team/emily-rodriguez.jpg'
     }
   ];
 

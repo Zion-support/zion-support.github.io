@@ -1,21 +1,22 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
+
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
   type?: 'website' | 'article' | 'product'
-  structuredData?: any}
+  structuredData?: any;
+}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group',
-  image = '/og-image.svg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
+  title = 'Zion Tech Group - Advanced AI and IT Solutions'
+  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.'
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group'
+  image = '/og-image.svg'
+  url = 'https://ziontechgroup.com'
+  type = 'website'
   structuredData
 }) => {
   const defaultStructuredData = {
@@ -68,62 +69,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta name="theme-color" content="#8b5cf6" />
-      <meta name="color-scheme" content="dark light" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:site" content="@ziontechgroup" />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="origin-when-cross-origin" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
+      {structuredData && (
+        <script type="application/ld+json">
+{JSON.stringify(structuredData)}
+        </script>
+)}
     </Helmet>
   );
 }
