@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -137,11 +134,9 @@ export default function AISolutionsPage() {
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
       href: "/ai-consulting"
     }
-<<<<<<< HEAD
   ];
+
 const AISolutionsPage: React.FC = () => {
-=======
-  ]
   const features = [
     {
       title: "Custom AI Solutions",
@@ -164,12 +159,10 @@ const AISolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />
         <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />
       </Helmet>
@@ -405,7 +398,6 @@ const AISolutionsPage: React.FC = () => {
   );
 }
 export default AISolutionsPage;
-=======
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />
       </Helmet>
@@ -503,4 +495,3 @@ export default AISolutionsPage;
       </div>
     </>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

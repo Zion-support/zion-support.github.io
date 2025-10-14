@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -12,9 +11,7 @@ import {
   CheckIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -217,11 +214,8 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );
 }
 export default ServicesPage;
-=======
   )}
 export default ServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

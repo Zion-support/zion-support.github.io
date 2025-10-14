@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'react-helmet-async;
 import { Play, Right, Circle, Star } from 'lucide-react;
 const DemoPage: React.FC = () => {
@@ -27,11 +26,8 @@ const DemoPage: React.FC = () => {
       demo: 'Collaboration Demo'';    }
   ];
 
-=======
-
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   const testimonials = [{
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
@@ -55,7 +51,6 @@ const DemoPage: React.FC = () => {
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -112,7 +107,6 @@ const DemoPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Watch Our Solutions in Action;
             </h2>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -149,12 +143,10 @@ const DemoPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
               Watch Our Solutions in Action</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
             <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
-<<<<<<< HEAD
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
@@ -215,7 +207,6 @@ const DemoPage: React.FC = () => {
   );
 }
 export default DemoPage;
-=======
                     <Play className="w-10 h-10 text-white ml-1" /></div>
                   <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
                   <p className="text-gray-300 mb-4">See our AI solutions in action</p>
@@ -251,4 +242,3 @@ export default DemoPage;
                 Contact Sales</button></div></div></section></div></>
   )}
 export default DemoPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

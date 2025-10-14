@@ -11,7 +11,6 @@ export default function NotFoundPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
-<<<<<<< HEAD
             404;
           </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -48,7 +47,6 @@ export default function NotFoundPage() {
     </>
   );
 }
-=======
             404</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional 404 solutions tailored to your business needs.</p>
@@ -69,4 +67,3 @@ export default function NotFoundPage() {
               <p className="text-purple-700">
                 Round-the-clock support for all your 404 needs.</p></div></div></div></div></>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

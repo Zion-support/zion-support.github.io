@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
+
+const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>
@@ -107,7 +108,6 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
     </div>;  );
 }
 export default CareersPage;
-=======
 
 const CareersPage: React.FC = () => {
   return (
@@ -164,4 +164,3 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

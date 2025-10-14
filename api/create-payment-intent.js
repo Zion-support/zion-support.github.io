@@ -25,13 +25,10 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-<<<<<<< HEAD
 
     const paymentIntent = {      id: 'pi_' + Math.random().toString(36).substr(2, 9),
-=======
     const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       status: 'requires_payment_method',
       amount: amount,
       currency: currency

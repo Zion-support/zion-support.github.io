@@ -16,17 +16,13 @@ export default function ContactPage()    {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-<<<<<<< HEAD
     });
   }
-=======
     })}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     // Simulate form submission
-<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitted(true);
@@ -36,7 +32,6 @@ export default function ContactPage()    {
     {
 
       icon: 'Phone',      title: 'Phone',
-=======
     await new Promise(resolve => setTimeout(resolve, 1000))
     setIsSubmitted(true)
     setIsSubmitting(false)}
@@ -44,7 +39,6 @@ export default function ContactPage()    {
     {
 
       title: 'Phone',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
     },
@@ -63,10 +57,7 @@ export default function ContactPage()    {
     {
       icon: 'Clock',
 
-<<<<<<< HEAD
-=======
       description: '9:00 AM - 6:00 PM EST'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   const subjects = [

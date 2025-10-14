@@ -11,7 +11,6 @@ export default function Page() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
-<<<<<<< HEAD
             PerformanceDashboard;
           </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -53,7 +52,6 @@ export default function Page() {
     </div>
   );
 }
-=======
             PerformanceDashboard</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional performancedashboard solutions tailored to your business needs.</p>
@@ -77,4 +75,3 @@ export default function Page() {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today</button></div></div></div></div>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

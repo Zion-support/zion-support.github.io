@@ -77,7 +77,6 @@ const TutorialsPage: React.FC = () => {
         <meta name="description" content="Master AI and IT skills with our comprehensive tutorials. Learn from experts with hands-on projects and real-world examples." />
         <meta name="keywords" content="tutorials, AI learning, IT training, machine learning, cloud computing, cybersecurity, online courses" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -139,7 +138,6 @@ const TutorialsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {tutorial.title}
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -179,12 +177,10 @@ const TutorialsPage: React.FC = () => {
                       <Star className="w-4 h-4 fill-current" />
                       <span className="ml-1 text-sm">{tutorial.rating}</span></div></div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{tutorial.title}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span className="flex items-center">
-<<<<<<< HEAD
                       <Clock className="w-4 h-4 mr-1" />
                       {tutorial.duration}
                     </span>
@@ -230,7 +226,6 @@ const TutorialsPage: React.FC = () => {
   );
 }
 export default TutorialsPage;
-=======
                       <Clock className="w-4 h-4 mr-1" />{tutorial.duration}
                     </span>
                     <span className="flex items-center">
@@ -256,4 +251,3 @@ export default TutorialsPage;
                 View All Tutorials</button></div></div></section></div></>
   )}
 export default TutorialsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

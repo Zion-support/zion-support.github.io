@@ -9,23 +9,20 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
-<<<<<<< HEAD
-    }
-// Focus management for keyboard navigation
+    };
+
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
-    }
+    };
+    
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
-    }
-    // Add focus indicators for keyboard navigation
-=======
     };
 
     // Add focus styles
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
@@ -43,7 +40,6 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
@@ -105,10 +101,8 @@ const AccessibilityEnhancer: React.FC = () => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
       const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {
-=======
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
         nav.setAttribute('role', 'navigation');
       }
 
@@ -131,7 +125,6 @@ const AccessibilityEnhancer: React.FC = () => {
     addFocusStyles();
     addAriaLandmarks();
     addAltText();
-<<<<<<< HEAD
 
     // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
@@ -151,11 +144,9 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 }
 export default AccessibilityEnhancer;
-=======
   }, []);
 
   return null;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

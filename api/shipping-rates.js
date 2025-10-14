@@ -16,12 +16,9 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
-<<<<<<< HEAD
   let rates = [];  try {
-=======
   let rates = [];
   try {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     const data = fs.readFileSync(file, 'utf8');
     rates = JSON.parse(data);
   } catch (error) {
@@ -54,10 +51,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
   }
 }

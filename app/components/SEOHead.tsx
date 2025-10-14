@@ -63,12 +63,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ]
     }
   }
-<<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData;
 
-=======
   const finalStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -128,11 +125,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
-<<<<<<< HEAD
   );
 }
 export default SEOHead;
-=======
   )}
 export default SEOHead
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
