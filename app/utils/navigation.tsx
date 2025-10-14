@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const NavigationComponent = () => {
@@ -10,3 +11,12 @@ const NavigationComponent = () => {
 };
 
 export default NavigationComponent;
+=======
+// Navigation utility
+
+
+// navigation - Basic implementation
+export default function navigation() {
+  return null;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

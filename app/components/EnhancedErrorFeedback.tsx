@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const EnhancedErrorFeedback: React.FC = () => {
@@ -10,3 +11,6 @@ const EnhancedErrorFeedback: React.FC = () => {
 };
 
 export default EnhancedErrorFeedback;
+=======
+"use client"
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

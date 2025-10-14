@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const LoadingStates: React.FC = () => {
@@ -9,4 +10,16 @@ const LoadingStates: React.FC = () => {
   );
 };
 
+=======
+import React from 'react';
+
+const LoadingStates = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+    </div>
+  );
+};
+
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 export default LoadingStates;

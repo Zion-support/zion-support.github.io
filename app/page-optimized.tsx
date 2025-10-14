@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const PageOptimized = () => {
@@ -10,3 +11,9 @@ const PageOptimized = () => {
 };
 
 export default PageOptimized;
+=======
+// page-optimized - Basic implementation
+export default function pageOptimized() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

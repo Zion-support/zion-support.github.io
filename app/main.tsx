@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -36,4 +37,12 @@ if ('serviceWorker' in navigator) {
         console.error('Service worker registration failed:', registrationError);
       });
   });
+=======
+// Main entry point
+
+
+// main - Basic implementation
+export default function main() {
+  return null;
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 }

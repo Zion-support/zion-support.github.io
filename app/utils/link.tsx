@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const LinkComponent = () => {
@@ -10,3 +11,9 @@ const LinkComponent = () => {
 };
 
 export default LinkComponent;
+=======
+// link - Basic implementation
+export default function link() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

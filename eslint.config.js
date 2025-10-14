@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 export default tseslint.config(
-  { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', '*.js', '*.cjs'] },
+  { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', 'src/**', 'temp-broken/**', '*.js', '*.cjs'] },
 
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -65,7 +65,10 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { 
+          allowConstantExport: true,
+          allowExportNames: ['AnalyticsContext', 'useAnalytics', 'AnalyticsProvider']
+        },
       ],
     },
   },

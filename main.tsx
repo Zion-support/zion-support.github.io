@@ -1,8 +1,8 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css';
 
+<<<<<<< HEAD
 // Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
@@ -37,3 +37,10 @@ if ('serviceWorker' in navigator) {
       });
     });
 }
+=======
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

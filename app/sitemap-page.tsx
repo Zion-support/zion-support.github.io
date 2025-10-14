@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const SitemapPage = () => {
@@ -10,3 +11,9 @@ const SitemapPage = () => {
 };
 
 export default SitemapPage;
+=======
+// sitemap-page - Basic implementation
+export default function sitemapPage() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

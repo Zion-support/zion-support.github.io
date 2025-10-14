@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ErrorBoundaryConfig = () => {
@@ -10,3 +11,9 @@ const ErrorBoundaryConfig = () => {
 };
 
 export default ErrorBoundaryConfig;
+=======
+// errorBoundaryConfig - Basic implementation
+export default function errorBoundaryConfig() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

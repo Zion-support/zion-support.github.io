@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ImageComponent = () => {
@@ -10,3 +11,9 @@ const ImageComponent = () => {
 };
 
 export default ImageComponent;
+=======
+// image - Basic implementation
+export default function image() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

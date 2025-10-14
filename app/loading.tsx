@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const LoadingPage = () => {
@@ -10,3 +11,9 @@ const LoadingPage = () => {
 };
 
 export default LoadingPage;
+=======
+// loading - Basic implementation
+export default function loading() {
+  return null;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

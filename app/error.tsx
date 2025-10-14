@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ErrorPage = () => {
@@ -10,3 +11,9 @@ const ErrorPage = () => {
 };
 
 export default ErrorPage;
+=======
+// error - Basic implementation
+export default function error() {
+  return null;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

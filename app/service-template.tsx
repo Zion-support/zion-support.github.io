@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const ServiceTemplate = () => {
@@ -10,3 +11,9 @@ const ServiceTemplate = () => {
 };
 
 export default ServiceTemplate;
+=======
+// service-template - Basic implementation
+export default function serviceTemplate() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

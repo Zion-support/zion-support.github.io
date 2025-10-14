@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -8,5 +9,18 @@ const AccessibilityEnhancer: React.FC = () => {
     </div>
   );
 };
+=======
+import React, { ReactNode } from 'react';
 
-export default AccessibilityEnhancer;
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+  return (
+    <div className="accessibilityenhancer">
+      {children}
+    </div>
+  );
+}

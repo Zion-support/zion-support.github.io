@@ -13,11 +13,17 @@ module.exports = {
     '^@/content/(.*)$': '<rootDir>/src/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.jest.json',
+      useESM: true
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)'
+    '<rootDir>/src/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',
@@ -25,15 +31,17 @@ module.exports = {
     '!src/**/*.stories.{ts,tsx}',
     '!src/**/index.{ts,tsx}'
   ],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov', 'html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/'
+  ],
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$))',
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
 };

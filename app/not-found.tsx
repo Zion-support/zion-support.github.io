@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const NotFoundPage = () => {
@@ -10,3 +11,9 @@ const NotFoundPage = () => {
 };
 
 export default NotFoundPage;
+=======
+// not-found - Basic implementation
+export default function notFound() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

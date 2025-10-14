@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 const LazyWrapper: React.FC = () => {
   return (
     <div>
@@ -8,5 +9,17 @@ const LazyWrapper: React.FC = () => {
     </div>
   );
 };
+=======
+interface LazyWrapperProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
-export default LazyWrapper;
+export default function LazyWrapper({ children, fallback }: LazyWrapperProps) {
+  return (
+    <React.Suspense fallback={fallback || <div>Loading...</div>}>
+      {children}
+    </React.Suspense>
+  );
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const Services = () => {
@@ -10,3 +11,9 @@ const Services = () => {
 };
 
 export default Services;
+=======
+// services - Basic implementation
+export default function services() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

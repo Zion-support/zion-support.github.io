@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const PageBackup = () => {
@@ -10,3 +11,9 @@ const PageBackup = () => {
 };
 
 export default PageBackup;
+=======
+// page-backup - Basic implementation
+export default function pageBackup() {
+  return null;
+};
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

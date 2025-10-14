@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -21,3 +22,9 @@ const TeamPage = () => {
 };
 
 export default TeamPage;
+=======
+// TeamPage - Basic implementation
+export default function TeamPage() {
+  return null;
+}
+>>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
