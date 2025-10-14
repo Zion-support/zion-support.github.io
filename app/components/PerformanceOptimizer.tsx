@@ -1,47 +1,56 @@
-import React from 'react';
-
-const PerformanceOptimizer: React.FC = () => {
-  return null; // This component doesn't render anything visible
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Performance optimization code
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-      });
-    };
-
+    // Preload critical resources
     const preloadCriticalResources = () => {
-      // Preload critical CSS and fonts
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/css/critical.css'
-      ];
+      // Preload fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontLink.as = 'style';
+      document.head.appendChild(fontLink);
 
-      criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'font';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
-        document.head.appendChild(link);
+      // Preload critical images
+      const criticalImages = [
+        // Add critical image URLs here
+      ];
+      
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
       });
     };
 
-    // Run optimizations
-    optimizeImages();
-    preloadCriticalResources();
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false;
+      
+      const updateScrollPosition = () => {
+        // Throttled scroll handling
+        ticking = false;
+      };
 
-    // Cleanup function
+      const requestTick = () => {
+        if (!ticking) {
+          requestAnimationFrame(updateScrollPosition);
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', requestTick, { passive: true });
+      
+      return () => {
+        window.removeEventListener('scroll', requestTick);
+      };
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    const cleanupScroll = optimizeScroll();
+
     return () => {
-      // Cleanup if needed
+      cleanupScroll();
     };
   }, []);
 
