@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';import { 
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -18,15 +14,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-=======
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   const values = [
     {
       icon: LightBulbIcon,
@@ -35,8 +23,8 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Reliability',
-      description: 'Our solutions are built with security and reliability as core principles.'
+      title: 'Security',
+      description: 'Security is at the core of everything we do, ensuring your data and systems are protected.'
     },
     {
       icon: UserGroupIcon,
@@ -46,8 +34,7 @@ const AboutPage: React.FC = () => {
     {
       icon: RocketLaunchIcon,
       title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from design to implementation.'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+      description: 'We strive for excellence in every project, delivering results that exceed expectations.'
     }
   ];
 
@@ -58,11 +45,39 @@ const AboutPage: React.FC = () => {
     { number: '4+', label: 'Years Experience' }
   ];
 
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in technology and business development.',
+      image: '/images/team/kleber-santos.jpg'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      description: 'Expert in AI and machine learning with a passion for innovation.',
+      image: '/images/team/sarah-johnson.jpg'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Head of Security',
+      description: 'Cybersecurity specialist ensuring our clients stay protected.',
+      image: '/images/team/michael-chen.jpg'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Lead Developer',
+      description: 'Full-stack developer creating robust and scalable solutions.',
+      image: '/images/team/emily-rodriguez.jpg'
+    }
+  ];
+
   return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're a leading provider of AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, Zion Tech Group, AI solutions, IT services" />
       </Helmet>
       
       <div className="min-h-screen bg-white">
@@ -72,20 +87,14 @@ const AboutPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Empowering businesses through innovative technology solutions
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
-              and cloud technologies to achieve unprecedented growth.            </p>
-=======
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company specializing in AI and IT solutions, 
-              dedicated to transforming businesses through innovative technology.
+              and cloud technologies to achieve unprecedented growth.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
           </div>
         </section>
 
@@ -105,8 +114,49 @@ Empowering businesses through innovative technology solutions
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Mission Section */}
         <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  To democratize access to cutting-edge technology solutions, enabling businesses 
+                  of all sizes to compete and thrive in the digital age. We believe that every 
+                  organization deserves access to world-class AI and IT solutions.
+                </p>
+                <p className="text-lg text-gray-600">
+                  Our commitment is to deliver innovative, secure, and scalable solutions that 
+                  drive real business value and sustainable growth for our clients.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <CheckCircleIcon className="w-5 h-5 mr-3" />
+                    <span>Proven track record of success</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircleIcon className="w-5 h-5 mr-3" />
+                    <span>Expert team of professionals</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircleIcon className="w-5 h-5 mr-3" />
+                    <span>Cutting-edge technology solutions</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircleIcon className="w-5 h-5 mr-3" />
+                    <span>24/7 support and maintenance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
               Our Values
@@ -125,49 +175,57 @@ Empowering businesses through innovative technology solutions
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300">
-            We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}
-export default AboutPage;
-=======
         </section>
 
-        {/* Mission Section */}
+        {/* Team Section */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Meet Our Team
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-lg text-center">
+                  <div className="w-24 h-24 mx-auto bg-gray-200 rounded-full mb-4 flex items-center justify-center">
+                    <UserGroupIcon className="w-12 h-12 text-gray-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {member.name}
+                  </h3>
+                  <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact CTA */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Our Mission
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Work With Us?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              To empower businesses with cutting-edge AI and IT solutions that drive growth, 
-              efficiency, and innovation. We believe technology should be accessible, 
-              reliable, and transformative.
+              Let's discuss how we can help transform your business with our innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Get in Touch
-              </button>
-              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                Learn More
-              </button>
+              </a>
+              <a 
+                href="/services" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                View Our Services
+              </a>
             </div>
           </div>
         </section>
       </div>
     </>
   );
-};
-
-export default AboutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}

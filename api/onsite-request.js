@@ -11,13 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  try {    const data = fs.readFileSync(file, 'utf8');
-=======
-  try {
-    const data = fs.readFileSync(file, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    const requests = JSON.parse(data);
+  try {    const data = fs.readFileSync(file, 'utf8');    const requests = JSON.parse(data);
     
     const newRequest = {
       id: Date.now().toString(),

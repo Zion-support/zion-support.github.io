@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-import { 
+import { Link } from 'react-router-dom';import { 
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -137,39 +130,11 @@ export default function AISolutionsPage() {
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
       href: "/ai-consulting"
     }
-<<<<<<< HEAD
   ];
-const AISolutionsPage: React.FC = () => {
-=======
-  ]
-  const features = [
-    {
-      title: "Custom AI Solutions",
-      description: "Tailored AI implementations designed specifically for your business needs and requirements.",
-      icon: CpuChipIcon
-    },
-    {
-      title: "Scalable Architecture",
-      description: "AI solutions that grow with your business and handle increasing data volumes and complexity.",
-      icon: CloudIcon
-    },
-    {
-      title: "Real-time Processing",
-      description: "High-performance AI systems that process data in real-time for immediate insights and actions.",
-      icon: RocketLaunchIcon
-    },
-    {
-      title: "Expert Support",
-      description: "Dedicated AI experts who provide ongoing support, monitoring, and optimization of your AI systems.",
-      icon: UserGroupIcon
-    }
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  return (
+const AISolutionsPage: React.FC = () => {  return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and more. Transform your business with cutting-edge artificial intelligence." />
         <meta name="keywords" content="AI solutions, machine learning, natural language processing, computer vision, predictive analytics, AI chatbots, artificial intelligence" />
       </Helmet>
@@ -405,102 +370,3 @@ const AISolutionsPage: React.FC = () => {
   );
 }
 export default AISolutionsPage;
-=======
-        <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
-        <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
-              From machine learning to computer vision, we deliver AI that drives real results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Our AI Solutions
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6 hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="mb-4">
-                    <p className="text-purple-400 font-semibold">{service.price}</p>
-                  </div>
-                  <Link 
-                    to={service.href}
-                    className="text-purple-400 hover:text-purple-300 font-medium flex items-center"
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-              Why Choose Our AI Solutions?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our AI solutions can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Schedule Consultation
-              </button>
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

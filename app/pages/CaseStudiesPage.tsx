@@ -1,201 +1,333 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [{
-      title: 'E-commerce Platform AI Optimization',';
-      client: 'TechRetail Inc.',';
-      industry: 'E-commerce',';
-      challenge: 'Low conversion rates and high cart abandonment',';
-      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',';
-      results: [{ metric: 'Conversion Rate', value: '+45%', icon: TrendingUp },';
-        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUp },';
-        { metric: 'Customer Satisfaction', value: '+60%', icon: Users },';
-        { metric: 'Implementation Time', value: '3 months', icon: Clock }';
-      ],
-      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'';
-    },
-    {
-      title: 'Manufacturing Process Automation',';
-      client: 'AutoParts Manufacturing',';
-      industry: 'Manufacturing',';
-      challenge: 'Manual quality control processes causing delays and errors',';
-      solution: 'Deployed computer vision and machine learning for automated quality inspection',';
-      results: [{ metric: 'Quality Defects', value: '-75%', icon: TrendingUp },';
-        { metric: 'Processing Speed', value: '+200%', icon: TrendingUp },';
-        { metric: 'Cost Savings', value: '$2.5M/year', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '4 months', icon: Clock }';
-      ],
-      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.'';
-    },
-    {
-      title: 'Healthcare Data Analytics Platform',';
-      client: 'MediCare Systems',';
-      industry: 'Healthcare',';
-      challenge: 'Fragmented patient data and inefficient treatment planning',';
-      solution: 'Built comprehensive data analytics platform with predictive modeling',';
-      results: [{ metric: 'Treatment Accuracy', value: '+40%', icon: TrendingUp },';
-        { metric: 'Patient Outcomes', value: '+35%', icon: Users },';
-        { metric: 'Cost Reduction', value: '$1.8M/year', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '6 months', icon: Clock }';
-      ],
-      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.'';
-    },
-    {
-      title: 'Financial Services Cloud Migration',';
-      client: 'SecureBank Ltd.',';
-      industry: 'Financial Services',';
-      challenge: 'Legacy systems limiting scalability and innovation',';
-      solution: 'Complete cloud migration with modern microservices architecture',';
-      results: [{ metric: 'System Performance', value: '+300%', icon: TrendingUp },';
-        { metric: 'Scalability', value: '10x', icon: TrendingUp },';
-        { metric: 'Operational Costs', value: '-40%', icon: DollarSign },';
-        { metric: 'Implementation Time', value: '8 months', icon: Clock }';
-      ],
-      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'';
-    }
-  ];
-const CaseStudiesPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
-      <Helmet>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
-        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Stories</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how we've helped businesses across various industries transform';
-            their operations with cutting-edge AI and IT solutions.;
-          </p>
-        </div>
-        {/* Case Studies Grid */}
-        <div className="space-y-12">
-          {caseStudies.map((study, _index) => (
-            <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Content */}
-                <div>
-                  <div className="flex items-center mb-4">
-                    <span className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-4">
-                      {study.industry}
-                    </span>
-                    <h3 className="text-2xl font-bold text-white">{study.title}</h3>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
-                    <p className="text-gray-300 mb-4">{study.description}</p>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</p>
-                  </div>
-                </div>
-                {/* Results */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {study.results.map((result, resultIndex) => {
-                      const Icon = result.icon;
-                      return (
-                        <div key={resultIndex} className="bg-white/5 rounded-lg p-4 text-center">
-                          <Icon className="w-8 h-8 text-violet-400 mx-auto mb-2" />
-                          <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
-                          <div className="text-sm text-gray-400">{result.metric}</div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Create Your Success Story?</h2>
-            <p className="text-gray-300 mb-6">
-              Let us help you achieve similar results with our proven AI and IT solutions.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
-                Start Your Project;
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                View More Cases;
-=======
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRightIcon,
+  TrendingUpIcon,
+  UserGroupIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  CheckCircleIcon,
+  StarIcon
+} from '@heroicons/react/24/outline';
 
 const CaseStudiesPage: React.FC = () => {
+  const caseStudies = [
+    {
+      title: 'E-commerce Platform AI Optimization',
+      client: 'TechRetail Inc.',
+      industry: 'E-commerce',
+      challenge: 'Low conversion rates and high cart abandonment',
+      solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
+      results: [
+        { metric: 'Conversion Rate', value: '+45%', icon: TrendingUpIcon },
+        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },
+        { metric: 'Customer Satisfaction', value: '+60%', icon: UserGroupIcon },
+        { metric: 'Implementation Time', value: '3 months', icon: ClockIcon }
+      ],
+      description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.',
+      image: '/images/case-studies/ecommerce-ai.jpg'
+    },
+    {
+      title: 'Manufacturing Process Automation',
+      client: 'AutoParts Manufacturing',
+      industry: 'Manufacturing',
+      challenge: 'Manual quality control processes causing delays and errors',
+      solution: 'Deployed computer vision and machine learning for automated quality inspection',
+      results: [
+        { metric: 'Quality Defects', value: '-75%', icon: TrendingUpIcon },
+        { metric: 'Processing Speed', value: '+200%', icon: TrendingUpIcon },
+        { metric: 'Cost Savings', value: '$2.5M/year', icon: CurrencyDollarIcon },
+        { metric: 'Implementation Time', value: '4 months', icon: ClockIcon }
+      ],
+      description: 'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line, dramatically reducing defects while increasing throughput.',
+      image: '/images/case-studies/manufacturing-ai.jpg'
+    },
+    {
+      title: 'Healthcare Data Analytics Platform',
+      client: 'MediCare Systems',
+      industry: 'Healthcare',
+      challenge: 'Fragmented patient data and inefficient treatment planning',
+      solution: 'Built comprehensive data analytics platform with predictive modeling',
+      results: [
+        { metric: 'Treatment Accuracy', value: '+40%', icon: TrendingUpIcon },
+        { metric: 'Patient Outcomes', value: '+35%', icon: UserGroupIcon },
+        { metric: 'Cost Reduction', value: '$1.8M/year', icon: CurrencyDollarIcon },
+        { metric: 'Implementation Time', value: '6 months', icon: ClockIcon }
+      ],
+      description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.',
+      image: '/images/case-studies/healthcare-analytics.jpg'
+    },
+    {
+      title: 'Financial Services Cloud Migration',
+      client: 'SecureBank Ltd.',
+      industry: 'Financial Services',
+      challenge: 'Legacy systems limiting scalability and innovation',
+      solution: 'Complete cloud migration with modern microservices architecture',
+      results: [
+        { metric: 'System Performance', value: '+300%', icon: TrendingUpIcon },
+        { metric: 'Scalability', value: '10x', icon: TrendingUpIcon },
+        { metric: 'Operational Costs', value: '-40%', icon: CurrencyDollarIcon },
+        { metric: 'Implementation Time', value: '8 months', icon: ClockIcon }
+      ],
+      description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.',
+      image: '/images/case-studies/cloud-migration.jpg'
+    },
+    {
+      title: 'Cybersecurity Threat Detection System',
+      client: 'GlobalTech Corp',
+      industry: 'Technology',
+      challenge: 'Increasing cyber threats and manual security monitoring',
+      solution: 'Implemented AI-powered threat detection and automated response system',
+      results: [
+        { metric: 'Threat Detection', value: '+90%', icon: TrendingUpIcon },
+        { metric: 'Response Time', value: '-85%', icon: ClockIcon },
+        { metric: 'False Positives', value: '-60%', icon: TrendingUpIcon },
+        { metric: 'Implementation Time', value: '5 months', icon: ClockIcon }
+      ],
+      description: 'GlobalTech Corp now has a robust cybersecurity system that automatically detects and responds to threats in real-time, significantly improving their security posture.',
+      image: '/images/case-studies/cybersecurity.jpg'
+    },
+    {
+      title: 'Micro SaaS Development Platform',
+      client: 'StartupHub Inc.',
+      industry: 'SaaS',
+      challenge: 'Need for rapid development and deployment of micro applications',
+      solution: 'Built custom micro SaaS development platform with automated deployment',
+      results: [
+        { metric: 'Development Speed', value: '+400%', icon: TrendingUpIcon },
+        { metric: 'Time to Market', value: '-70%', icon: ClockIcon },
+        { metric: 'Cost per App', value: '-80%', icon: CurrencyDollarIcon },
+        { metric: 'Implementation Time', value: '6 months', icon: ClockIcon }
+      ],
+      description: 'StartupHub Inc. can now rapidly develop and deploy micro SaaS applications, reducing time to market and development costs significantly.',
+      image: '/images/case-studies/micro-saas.jpg'
+    }
+  ];
+
+  const industries = [
+    { name: 'E-commerce', count: 15, icon: '🛒' },
+    { name: 'Manufacturing', count: 12, icon: '🏭' },
+    { name: 'Healthcare', count: 18, icon: '🏥' },
+    { name: 'Financial Services', count: 10, icon: '🏦' },
+    { name: 'Technology', count: 20, icon: '💻' },
+    { name: 'SaaS', count: 8, icon: '☁️' }
+  ];
+
+  const stats = [
+    { number: '100+', label: 'Successful Projects' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '95%', label: 'Client Satisfaction' },
+    { number: '4.9/5', label: 'Average Rating' }
+  ];
+
   return (
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful projects and case studies at Zion Tech Group." />
+        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
+        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation, client results" />
       </Helmet>
+      
       <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Case Studies
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Success Stories
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Discover how we've helped businesses transform with our AI and IT solutions.
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Discover how we've helped businesses across various industries transform 
+              their operations with cutting-edge AI and IT solutions.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  AI Implementation
-                </h3>
-                <p className="text-blue-700">
-                  How we helped a Fortune 500 company implement AI solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Cloud Migration
-                </h3>
-                <p className="text-green-700">
-                  Successful cloud infrastructure migration for a growing startup.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  Cybersecurity
-                </h3>
-                <p className="text-purple-700">
-                  Comprehensive security overhaul for a financial services company.
-                </p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View All Case Studies
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-              </button>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Industries Section */}
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Industries We Serve
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index) => (
+                <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="text-3xl mb-2">{industry.icon}</div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{industry.name}</h3>
+                  <p className="text-sm text-gray-600">{industry.count} projects</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Featured Case Studies
+            </h2>
+            <div className="space-y-16">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                  <div className="grid lg:grid-cols-2 gap-8">
+                    {/* Content */}
+                    <div className="p-8">
+                      <div className="flex items-center mb-4">
+                        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-4">
+                          {study.industry}
+                        </span>
+                        <h3 className="text-2xl font-bold text-gray-900">{study.title}</h3>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Client: {study.client}</h4>
+                        <p className="text-gray-600 mb-4">{study.description}</p>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Challenge</h4>
+                        <p className="text-gray-600">{study.challenge}</p>
+                      </div>
+                      
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">Solution</h4>
+                        <p className="text-gray-600">{study.solution}</p>
+                      </div>
+                    </div>
+
+                    {/* Results */}
+                    <div className="p-8 bg-gray-50">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-6">Results</h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {study.results.map((result, resultIndex) => (
+                          <div key={resultIndex} className="bg-white rounded-lg p-4 text-center shadow-sm">
+                            <result.icon className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                            <div className="text-2xl font-bold text-gray-900 mb-1">{result.value}</div>
+                            <div className="text-sm text-gray-600">{result.metric}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              What Our Clients Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">
+                  "Zion Tech Group transformed our e-commerce platform with AI solutions. 
+                  Our conversion rates increased by 45% and customer satisfaction improved dramatically."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                    <UserGroupIcon className="w-5 h-5 text-gray-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Sarah Johnson</h4>
+                    <p className="text-sm text-gray-600">CTO, TechRetail Inc.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">
+                  "The AI-powered quality control system revolutionized our manufacturing process. 
+                  We reduced defects by 75% while increasing throughput by 200%."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                    <UserGroupIcon className="w-5 h-5 text-gray-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Michael Chen</h4>
+                    <p className="text-sm text-gray-600">CEO, AutoParts Manufacturing</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">
+                  "The cloud migration was seamless and exceeded our expectations. 
+                  We achieved 300% performance improvement while reducing costs by 40%."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3">
+                    <UserGroupIcon className="w-5 h-5 text-gray-500" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Emily Rodriguez</h4>
+                    <p className="text-sm text-gray-600">CTO, SecureBank Ltd.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Create Your Success Story?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Let us help you achieve similar results with our proven AI and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center justify-center"
+              >
+                Start Your Project
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </Link>
+              <Link 
+                to="/services" 
+                className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              >
+                View Our Services
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-<<<<<<< HEAD
-    </div>;  );
-}
-export default CaseStudiesPage;
-=======
     </>
   );
 };
 
 export default CaseStudiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

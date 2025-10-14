@@ -22,10 +22,4 @@ const EnhancedFooter: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-export default EnhancedFooter;
+}export default EnhancedFooter;

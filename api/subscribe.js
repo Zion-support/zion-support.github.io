@@ -19,44 +19,7 @@ export default async function handler(req, res) {
   }
 
   let subscribers = [];
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  try {
-    const data = fs.readFileSync(file, 'utf8');
-    subscribers = JSON.parse(data);
-  } catch (error) {
-    console.error('Error reading existing subscribers:', error);
-  }
-
-  if (subscribers.find(sub => sub.email === email)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
-    return;
-  }
-
-  const newSubscriber = {
-    id: Date.now().toString(),
-    email,
-    name: name || '',
-    status: 'active',
-    subscribedAt: new Date().toISOString()
-  };
-
-  try {
-    subscribers.push(newSubscriber);
-    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-<<<<<<< HEAD
-      message: 'Successfully subscribed!'
-=======
-      message: 'Successfully subscribed to newsletter' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    }));
+      }));
   } catch (error) {
     console.error('Error saving subscriber:', error);
     res.setHeader('Content-Type', 'application/json');
