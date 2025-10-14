@@ -1,194 +1,271 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from "react";"
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusVisible: boolean;
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
 }
 
-export default function AccessibilityEnhancer() {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusVisible: false
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+}) => {
   useEffect(() => {
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
+    // Skip to main content functionality;
+    const addSkipLink = () => {
+      const skipLink = document.createElement('a');'
+      skipLink.href = '#main-content';'
+      skipLink.textContent = 'Skip to main content';'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';'
+      skipLink.style.cssText = ````
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      `;```
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
 
-    // Check for system preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
+    // Keyboard navigation enhancements;
+    const enhanceKeyboardNavigation = () => {
+      if (!enableKeyboardNavigation) return;
 
-    // Apply settings
-    applySettings(settings);
-  }, [settings]);
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Escape key to close modals/dropdowns;
+        if (e.key === 'Escape') {''
+          const activeElement = document.activeElement as HTMLElement;
+          if (activeElement && activeElement.blur) {
+            activeElement.blur();
+          }
+        }
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // High contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+        // Tab navigation improvements;
+        if (e.key === 'Tab') {''
+          document.body.classList.add('keyboard-navigation');'
+        }
+      };
 
-    // Large text
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
+      // Remove keyboard navigation class on mouse use;
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');'
+      };
 
-    // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      document.addEventListener('keydown', handleKeyDown);'
+      document.addEventListener('mousedown', handleMouseDown);'
 
-    // Focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  };
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);'
+        document.removeEventListener('mousedown', handleMouseDown);'
+      };
+    };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  };
+    // Focus management;
+    const enhanceFocusManagement = () => {
+      if (!enableFocusManagement) return () => {};
 
-  const togglePanel = () => {
-    setIsVisible(prev => !prev);
-  };
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select''"'"
+        );
+        const firstFocusableElement = focusableElements[0] as HTMLElement;
+        const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        const handleTabKey = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {''
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        };
+
+        element.addEventListener('keydown', handleTabKey);'
+        firstFocusableElement?.focus();
+
+        return () => {
+          element.removeEventListener('keydown', handleTabKey);'
+        };
+      };
+
+      };
+    };
+
+    // High contrast mode;
+    const enhanceHighContrast = () => {
+      if (!enableHighContrast) return () => {};
+
+      const addHighContrastStyles = () => {
+        const style = document.createElement('style');'
+        style.id = 'accessibility-high-contrast';'
+        style.textContent = ````
+          .high-contrast {
+            filter: contrast(150%) brightness(110%);
+          }
+          .high-contrast * {
+            border-color: currentColor !important;
+          }
+        `;```
+        document.head.appendChild(style);
+      };
+
+
+      return () => {
+        const existingStyle = document.getElementById('accessibility-high-contrast');'
+        if (existingStyle) {
+          existingStyle.remove();
+        }
+      };
+    };
+
+    const enhanceScreenReader = () => {
+      if (!enableScreenReader) return;
+
+      // Add ARIA landmarks;
+      const addLandmarks = () => {
+        const main = document.querySelector('main');'
+        if (main && !main.getAttribute('role')) {''
+          main.setAttribute('role', 'main');'
+        }
+
+        const nav = document.querySelector('nav');'
+        if (nav && !nav.getAttribute('role')) {''
+          nav.setAttribute('role', 'navigation');'
+        }
+
+        const header = document.querySelector('header');'
+        if (header && !header.getAttribute('role')) {''
+          header.setAttribute('role', 'banner');'
+        }
+
+        const footer = document.querySelector('footer');'
+        if (footer && !footer.getAttribute('role')) {''
+          footer.setAttribute('role', 'contentinfo');'
+        }
+      };
+
+      // Add live regions for dynamic content;
+      const addLiveRegions = () => {
+        let liveRegion = document.getElementById('live-region');'
+        if (!liveRegion) {
+          liveRegion = document.createElement('div');'
+          liveRegion.id = 'live-region';'
+          liveRegion.setAttribute('aria-live', 'polite');'
+          liveRegion.setAttribute('aria-atomic', 'true');'
+          liveRegion.className = 'sr-only';'
+          document.body.appendChild(liveRegion);
+        }
+      };
+
+      addLandmarks();
+      addLiveRegions();
+
+      return () => {
+        const liveRegion = document.getElementById('live-region');'
+        if (liveRegion) {
+          liveRegion.remove();
+        }
+      };
+    };
+
+    // Initialize all enhancements;
+    addSkipLink();
+    const cleanupKeyboard = enhanceKeyboardNavigation();
+    const cleanupFocus = enhanceFocusManagement();
+    const cleanupContrast = enhanceHighContrast();
+    const cleanupMotion = enhanceScreenReader();
+
+    return () => {
+      if (cleanupKeyboard) cleanupKeyboard();
+      if (cleanupFocus) cleanupFocus();
+      if (cleanupContrast) cleanupContrast();
+      if (cleanupMotion) cleanupMotion();
+    };
+  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
   return (
-    <>
-      {/* Toggle Button */}
-      <button
-        onClick={togglePanel}
-        className="fixed top-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
-        aria-label="Toggle accessibility settings"
-        title="Accessibility Settings"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-        </svg>
-      </button>
+    <div className="accessibility-enhanced">
+      {children}
+      <style>{````
+        
+        .keyboard-navigation *:focus {
+          outline: 2px solid #06b6d4;
+          outline-offset: 2px;
+        }
 
-      {/* Settings Panel */}
-      {isVisible && (
-        <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            Accessibility Settings
-          </h3>
-          
-          <div className="space-y-4">
-            <label className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                checked={settings.highContrast}
-                onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">High Contrast</span>
-            </label>
+        
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
 
-            <label className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                checked={settings.largeText}
-                onChange={(e) => updateSetting('largeText', e.target.checked)}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Large Text</span>
-            </label>
+        .sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: inherit;
+          margin: inherit;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
+        }
 
-            <label className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                checked={settings.reducedMotion}
-                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Reduce Motion</span>
-            </label>
-
-            <label className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                checked={settings.focusVisible}
-                onChange={(e) => updateSetting('focusVisible', e.target.checked)}
-                className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
-              />
-              <span className="text-sm text-gray-700">Enhanced Focus</span>
-            </label>
-          </div>
-
-          <button
-            onClick={togglePanel}
-            className="mt-4 w-full bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition-colors duration-200"
-          >
-            Close
-          </button>
-        </div>
-      )}
-
-      {/* CSS for accessibility features */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
+        
         .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
+          filter: contrast(150%) brightness(110%);
         }
-        
+
         .high-contrast * {
-          background-color: white !important;
-          color: black !important;
-          border-color: black !important;
+          border-color: currentColor !important;
         }
+
         
-        .large-text {
-          font-size: 1.25rem;
+        .focus-visible:focus-visible {
+          outline: 2px solid #06b6d4;
+          outline-offset: 2px;
         }
-        
-        .large-text h1 {
-          font-size: 3rem;
-        }
-        
-        .large-text h2 {
-          font-size: 2.5rem;
-        }
-        
-        .large-text h3 {
-          font-size: 2rem;
-        }
+
         
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
+
         
-        .focus-visible *:focus {
-          outline: 3px solid #3b82f6 !important;
-          outline-offset: 2px !important;
+        .large-text {
+          font-size: 1.2em;
+          line-height: 1.6;
         }
-        `
-      }} />
+
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text h4 { font-size: 1.5em; }
+        .large-text h5 { font-size: 1.25em; }
+        .large-text h6 { font-size: 1.1em; }
+      `}</style>```
     </>
   );
-}
+};
+
+export default AccessibilityEnhancer;

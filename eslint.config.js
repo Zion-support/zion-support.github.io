@@ -1,66 +1,65 @@
 import js from "@eslint/js";
-import globals from "globals";
+import typescript from "@typescript-eslint/eslint-plugin";
+import typescriptParser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
 
-export default tseslint.config(
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
+export default [
   {
+    ignores: ['app-broken/**', 'app-disabled/**', '__tests__/**', '**/*.test.tsx', '**/*.test.ts'],
+  },
+  js.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: {
-        ...globals.browser,
-        ...globals.node,
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        // Jest globals
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        render: 'readonly',
+        screen: 'readonly',
+        // React Testing Library
+        Helmet: 'readonly',
+        HelmetProvider: 'readonly',
       },
     },
     plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
     },
     rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true },
-      ],
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-undef': 'off', // Turn off no-undef for TypeScript files
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
     },
   },
-  {
-    ignores: [
-      "dist", 
-      "node_modules", 
-      "*.config.js",
-      "backup*/**",
-      "backup-problematic*/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "cleanup-*.cjs",
-      "comprehensive-*.cjs",
-      "fix-*.cjs",
-      "fix-*.js",
-      "create-*.cjs",
-      "create-*.js",
-      "scripts/**",
-      "src/**",
-      "utils/**",
-      "*.cjs",
-      "*.js",
-      "*.py",
-      "*.sh",
-      "*.md",
-      "*.txt",
-      "*.json",
-      "*.html",
-      "*.original",
-      "*.backup*",
-      "__tests__/**",
-      "api/**",
-      "analysis/**",
-      "ci-cd-reports/**",
-      "content/**",
-      "contracts/**"
-    ],
-  }
-);
+];
