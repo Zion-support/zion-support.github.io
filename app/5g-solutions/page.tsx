@@ -3,11 +3,9 @@ import { Helmet } from 'react-helmet-async';
 
 
 
-const PagePage = () => {
-
-  return ()
+export default function PagePage() {
+  return (
     <React.Fragment>
-        </React>
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
