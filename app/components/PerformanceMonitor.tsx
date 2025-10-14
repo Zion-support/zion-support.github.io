@@ -54,7 +54,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const measureFID = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: PerformanceEntry & { processingStart?: number; startTime: number }) => {
           if (entry.processingStart && entry.startTime) {
             metrics.fid = entry.processingStart - entry.startTime;
             onMetricsUpdate?.(metrics);
@@ -69,9 +69,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const measureCLS = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+        entries.forEach((entry: PerformanceEntry) => {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
             metrics.cls = clsValue;
             onMetricsUpdate?.(metrics);
           }

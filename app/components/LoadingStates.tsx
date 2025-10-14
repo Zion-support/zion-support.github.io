@@ -18,11 +18,6 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
     lg: 'w-12 h-12'
   };
 
-  const iconSizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
 
   const getDefaultMessage = () => {
     switch (type) {
