@@ -6,11 +6,12 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
-// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-// import EnhancedSEO from './app/components/EnhancedSEO';
-// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-// import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import EnhancedSEO from './app/components/EnhancedSEO';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import SEOOptimizer from './app/components/SEOEnhancer';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
