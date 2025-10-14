@@ -1,5 +1,12 @@
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+<<<<<<< HEAD
+import React from 'react';'
+{ createContext, useContext, useEffect, ReactNode } from 'react';
+interface AnalyticsContextType { track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void; }
+=======
 
 =======
 <<<<<<< HEAD
@@ -9,9 +16,13 @@ interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
+>>>>>>> origin/main
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+<<<<<<< HEAD
+interface AnalyticsProviderProps { children: ReactNode; }
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -21,6 +32,7 @@ import React, { ReactNode } from 'react';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
+>>>>>>> origin/main
 }
 
 <<<<<<< HEAD
@@ -96,16 +108,22 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       console.log('Analytics initialized');
     }
   }, []);
+<<<<<<< HEAD
+  const value: AnalyticsContextType = { track,
+    identify,
+    page; }
+=======
 
   const value: AnalyticsContextType = {
     track,
     identify,
+>>>>>>> origin/main
     page
   };
 
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      { children }
     </AnalyticsContext.Provider>
   );
 }

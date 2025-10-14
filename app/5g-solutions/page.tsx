@@ -1,7 +1,67 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
+<<<<<<< HEAD
+import React from 'react';'
+import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone } from 'lucide-react';
+const FiveGSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,'
+      title: "Ultra-Fast Speeds",'
+      description: "Experience lightning-fast 5G connectivity with speeds up to 10 Gbps",'
+      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']}
+    },
+    { icon: Globe,'
+      title: "Global Coverage",'
+      description: "Comprehensive 5G network coverage across multiple regions",'
+      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy'] }
+    },
+    { icon: Smartphone,'
+      title: "Mobile Optimization",'
+      description: "Optimized 5G solutions for mobile devices and applications",'
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility'] }
+    },
+    { icon: Wifi,
+      title: "IoT Connectivity",
+      description: "Connect thousands of IoT devices with 5G technology",
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+title: "IoT Connectivity",
+      description: "Connect thousands of IoT devices with 5G technology",
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+'
+      title: "IoT Connectivity",'
+      description: "Connect thousands of IoT devices with 5G technology",'
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions'] }
+    }
+  ]
+  const solutions = [
+    { title: "5G Network Infrastructure",      description: "Complete 5G network setup and optimization",
+      description: "Complete 5G network setup and optimization",
+      price: "Starting at $50,000",
+      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
+'
+      title: "5G Network Infrastructure",'
+      description: "Complete 5G network setup and optimization",'
+      price: "Starting at $50,000",'
+      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring'] }
+    },
+    { '
+      title: "5G Mobile Applications",'
+      description: "Custom mobile apps optimized for 5G networks",'
+      price: "Starting at $25,000",'
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support'] }
+    },
+    { '
+      title: "5G IoT Solutions",'
+      description: "IoT device connectivity and management platform",'
+      price: "Starting at $35,000",'
+      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture'] }
+    }
+  ];
+    }
+  ]
+=======
 <<<<<<< HEAD
 
 =======
@@ -68,6 +128,7 @@ const FiveGSolutionsPage: React.FC = () => {
 =======
   ];
 >>>>>>> origin/main
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -75,6 +136,9 @@ const FiveGSolutionsPage: React.FC = () => {
         <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
         <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
       </Helmet>
+<<<<<<< HEAD
+      { /* Hero Section */ }
+=======
 <<<<<<< HEAD
 
       {/* Hero Section */}
@@ -92,6 +156,7 @@ const FiveGSolutionsPage: React.FC = () => {
 >>>>>>> origin/main
 
       {/* Hero Section */}
+>>>>>>> origin/main
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/10 to-purple-50/10"></div>
         <div className="container mx-auto px-4 py-20">
@@ -116,6 +181,9 @@ const FiveGSolutionsPage: React.FC = () => {
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Get Started
               </button>
+<<<<<<< HEAD
+              <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
+=======
               <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
 =======
               <button className="bg-gradient-to-r from-blue-60 to-purple-60 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70 hover:to-purple-70 transition-all duration-30 flex items-center">
@@ -124,11 +192,20 @@ const FiveGSolutionsPage: React.FC = () => {
               </button>
               <button className="border border-blue-40 text-blue-40 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40 hover:text-white transition-all duration-30">
 >>>>>>> origin/main
+>>>>>>> origin/main
                 Learn More
               </button>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+      </section>
+      { /* Features Section */ }
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
 <<<<<<< HEAD
       </div>
 =======
@@ -140,6 +217,7 @@ const FiveGSolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> origin/main
               Why Choose Our 5G Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -185,10 +263,17 @@ const FiveGSolutionsPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
+<<<<<<< HEAD
+                    { feature.benefits.map((benefit, idx) => ( }
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <Circle className="w-3 h-3 text-blue-400 mr-2" />
+                        { benefit }
+=======
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-40">
                         <Circle className="w-3 h-3 text-blue-40 mr-2" />
                         {benefit}
+>>>>>>> origin/main
                       </li>
                     ))}
                   </ul>
@@ -198,9 +283,14 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* Solutions Section */ }
+      <section className="py-20 bg-slate-800/30">
+=======
 
       {/* Solutions Section */}
       <section className="py-20 bg-slate-80/30">
+>>>>>>> origin/main
         <div className="container mx-auto px-4">
 >>>>>>> origin/main
           <div className="text-center mb-16">
@@ -225,8 +315,12 @@ const FiveGSolutionsPage: React.FC = () => {
 =======
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<<<<<<< HEAD
+            { solutions.map((solution, index) => ( }
+=======
             {solutions.map((solution, index) => (
 <<<<<<< HEAD
+>>>>>>> origin/main
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
 =======
               <div key={index} className="bg-slate-8/50 backdrop-blur-sm rounded-xl p-8 border border-slate-70 hover:border-blue-50 transition-all duration-30">
@@ -234,6 +328,12 @@ const FiveGSolutionsPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
+<<<<<<< HEAD
+                  { solution.features.map((feature, idx) => ( }
+                    <li key={idx} className="flex items-center text-gray-400">
+                      <Circle className="w-4 h-4 text-blue-400 mr-3" />
+                      { feature }
+=======
                   {solution.features.map((feature, idx) => (
 <<<<<<< HEAD
                     <li key={idx} className="flex items-center text-gray-400">
@@ -244,6 +344,7 @@ const FiveGSolutionsPage: React.FC = () => {
 >>>>>>> origin/main
 >>>>>>> origin/main
                       {feature}
+>>>>>>> origin/main
                     </li>
                   ))}
                 </ul>
@@ -263,11 +364,17 @@ const FiveGSolutionsPage: React.FC = () => {
       </div>
 =======
       </section>
+<<<<<<< HEAD
+      { /* CTA Section */ }
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+=======
 >>>>>>> origin/main
 
       {/* CTA Section */}
       <div className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/main
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with 5G?
           </h2>
@@ -287,6 +394,8 @@ const FiveGSolutionsPage: React.FC = () => {
           <button className="bg-gradient-to-r from-blue-60 to-purple-60 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-70 hover:to-purple-70 transition-all duration-30">
             Get Started Today
           </button>
+<<<<<<< HEAD
+=======
 >>>>>>> origin/main
         </div>
       </div>
@@ -309,6 +418,7 @@ export default FiveGSolutionsPage
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
+>>>>>>> origin/main
         </div>
       </div>
     </div>

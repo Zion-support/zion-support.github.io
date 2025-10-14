@@ -18,13 +18,29 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className = ''
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+    sm: "w-4 h-4",
+    md: "w-6 h-6",
+    lg: "w-8 h-8",
+    xl: "w-12 h-12"
   };
 
   const colorClasses = {
+<<<<<<< HEAD
+    primary: "text-purple-600",
+    secondary: "text-cyan-600",
+    white: "text-white",
+    gray: "text-gray-400"
+  };
+
+  const spinner = (
+    <div className={`flex items-center justify-center ${className}`}>
+      <div className="flex flex-col items-center space-y-2">
+        <Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} />
+        {text && (
+          <p className="text-sm text-gray-600">{text}</p>
+        )}
+      </div>
+=======
     primary: 'text-purple-600',
     secondary: 'text-cyan-600',
     white: 'text-white',
@@ -47,12 +63,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="text-sm text-gray-600 mt-2">{text}</p>
       )}
+>>>>>>> origin/main
     </div>
   );
 
   if (fullScreen) {
     return (
+<<<<<<< HEAD
+      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+=======
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+>>>>>>> origin/main
         {spinner}
       </div>
     );
@@ -61,6 +82,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 };
 
+<<<<<<< HEAD
+export default LoadingSpinner;
+=======
 export default LoadingSpinner;
 =======
 import React from "react";
@@ -75,4 +99,5 @@ const LoadingSpinner = () => {
 };
 
 export default LoadingSpinner;
+>>>>>>> origin/main
 >>>>>>> origin/main

@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
 import React from 'react'
+>>>>>>> origin/main
 
 const FuturisticBackground = () => {
   return (
@@ -17,13 +21,20 @@ const FuturisticBackground = () => {
                 className="border border-purple-500/30 animate-pulse"
                 style={{
                   animationDelay: `${i * 0.1}s`,
+<<<<<<< HEAD
+                  animationDuration: "3s"
+=======
                   animationDuration: '3s'
+>>>>>>> origin/main
                 }}
               ></div>
             ))}
           </div>
         </div>
         
+<<<<<<< HEAD
+        {/* Floating Particles */}
+=======
         {/* Floating Neon Orbs */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -31,21 +42,43 @@ const FuturisticBackground = () => {
         <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl animate-pulse delay-3000"></div>
         
         {/* Animated Particles */}
+>>>>>>> origin/main
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <div
               key={i}
+<<<<<<< HEAD
+              className="absolute w-1 h-1 bg-purple-400 rounded-full animate-ping"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 2}s`
+=======
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
+>>>>>>> origin/main
               }}
             ></div>
           ))}
         </div>
         
+<<<<<<< HEAD
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl animate-pulse"></div>
+      </div>
+    </div>
+  );
+};
+
+export default FuturisticBackground;
+=======
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>
       </div>
@@ -183,4 +216,5 @@ const FuturisticBackground = () => {
 };
 
 export default FuturisticBackground;
+>>>>>>> origin/main
 >>>>>>> origin/main
