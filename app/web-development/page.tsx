@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+=======
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users, Phone } from 'lucide-react';
@@ -8,6 +16,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 import Analytics from '../components/Analytics';
+>>>>>>> origin/main
 
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [

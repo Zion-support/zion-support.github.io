@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+
+import { Helmet } from 'react-helmet-async';
+
+import { Users, Globe, Shield, Zap } from 'lucide-react';
+
+export default function Partners() {
+  const partners = [
+=======
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { } from 'react-router-dom'
@@ -9,6 +18,7 @@ const PartnersPage: React.FC = () => {
       logo: '🏢',''
       description: 'Strategic partnership for cloud and AI solutions',''
       category: 'Technology'},'
+>>>>>>> origin/main
     {
       name: 'Amazon Web Services',''
       logo: '☁️',''

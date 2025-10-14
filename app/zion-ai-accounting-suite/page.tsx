@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+
+import { Link } from 'react-router-dom';
+import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+=======
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 export default function ZionAiAccountingSuitePage() {
 =======
 "use client";
+>>>>>>> origin/main
 >>>>>>> origin/main
 
 import React from "react";

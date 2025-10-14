@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+
+import { Link } from 'react-router-dom';
+import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+=======
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 export default function ZionHrAssistantProPage() {
 =======
 "use client";
+>>>>>>> origin/main
 >>>>>>> origin/main
 
 import React from "react";

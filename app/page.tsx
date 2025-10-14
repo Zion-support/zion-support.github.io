@@ -90,6 +90,16 @@ const HomePage = () => {
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <EnhancedSEO
+        title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
+        description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
+        canonical="https://ziontechgroup.com"
+      />
+
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
@@ -124,6 +134,7 @@ const HomePage = () => {
               </Link>
             </div>
 =======
+>>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">

@@ -1,5 +1,10 @@
 <<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+>>>>>>> origin/main
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
@@ -7,14 +12,54 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+<<<<<<< HEAD
+=======
 =======
 import React, { ReactNode } from 'react';
+>>>>>>> origin/main
 >>>>>>> origin/main
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    // Initialize analytics
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, []);
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', eventName, properties);
+    }
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+        ...properties,
+      });
+    }
+  };
+
+  return (
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export const useAnalytics = () => {
+=======
 <<<<<<< HEAD
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
@@ -65,15 +110,20 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   );
 }
 export const useAnalytics = (): AnalyticsContextType => {
+>>>>>>> origin/main
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
+<<<<<<< HEAD
+};
+=======
 };
 export default AnalyticsProvider;
 =======
 export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   return <>{children}</>;
 }
+>>>>>>> origin/main
 >>>>>>> origin/main
