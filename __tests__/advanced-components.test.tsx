@@ -102,7 +102,7 @@ describe('AdvancedSEOOptimizer', () => {
         <AdvancedSEOOptimizer />
       </HelmetProvider>
     );
-    expect(screen.getByText('AdvancedSEOOptimizer')).toBeInTheDocument();
+    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
   });
 
   it('renders without setting document title', () => {
@@ -112,7 +112,7 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
     
-    expect(screen.getByText('AdvancedSEOOptimizer')).toBeInTheDocument();
+    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
   });
 
   it('renders structured data when enabled', async () => {
@@ -122,7 +122,7 @@ describe('AdvancedSEOOptimizer', () => {
       </HelmetProvider>
     );
     
-    expect(screen.getByText('AdvancedSEOOptimizer')).toBeInTheDocument();
+    expect(screen.getByText('Advanced SEO Optimizer')).toBeInTheDocument();
   });
 });
 

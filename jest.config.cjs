@@ -13,22 +13,11 @@ module.exports = {
     "^@/content/(.*)$": "<rootDir>/src/content/$1",
   },
   transform: {
-<<<<<<< HEAD
-    "^.+\\.(ts|tsx)$": [
-      "ts-jest",
-      {
-        tsconfig: "tsconfig.jest.json",
-        useESM: true,
-      },
-    ],
-    "^.+\\.(js|jsx)$": "babel-jest",
-=======
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.jest.json',
       useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
->>>>>>> improvements-and-test-fixes
   },
   testMatch: [
     "<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)",
