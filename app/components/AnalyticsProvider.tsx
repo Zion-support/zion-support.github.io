@@ -1,6 +1,4 @@
-import React, { createContext, ReactNode } from 'react';
-import { trackEvent, trackPageView } from '../utils/analytics';
-
+import React, { createContext, ReactNode } from 'react';'import { trackEvent, trackPageView } from '../utils/analytics';'
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;

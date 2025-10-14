@@ -1,8 +1,6 @@
-import React from 'react';
-const ContentStatistics = () => {
+import React from 'react';'const ContentStatistics = () => {
   return (
-    <div className="contentstatistics-component">
-      <h2>ContentStatistics</h2>
+    <div className="contentstatistics-component">"      <h2>ContentStatistics</h2>
       <p>This component is under construction.</p>
     </div>
   );

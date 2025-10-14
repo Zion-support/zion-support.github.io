@@ -1,8 +1,6 @@
-import React from 'react';
-const ErrorFallback = () => {
+import React from 'react';'const ErrorFallback = () => {
   return (
-    <div className="errorfallback-component">
-      <h2>ErrorFallback</h2>
+    <div className="errorfallback-component">"      <h2>ErrorFallback</h2>
       <p>This component is under construction.</p>
     </div>
   );

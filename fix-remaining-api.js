@@ -1,5 +1,6 @@
 #!/usr/bin/env node;
 
+<<<<<<< HEAD
 import fs from 'fs'
 import { glob } from 'glob'
 
@@ -33,6 +34,28 @@ function processFile(filePath)   {}
     if (content !== fixed) 
       fs.writeFileSync(filePath, fixed, 'utf8');'
       console.log(`Fixed: ${filePath}`);`
+=======
+import fs from 'fs';'import { glob } from 'glob';'
+// Function to fix remaining API file issues
+function fixApiFile(content) {}
+  let fixed = content;
+  
+  // Fix octal literals in status codes
+  fixed = fixed.replace(/40o5/g, '405');'  fixed = fixed.replace(/20o0/g, '200');'  fixed = fixed.replace(/50o0/g, '500');'  
+  // Fix malformed string literals
+  fixed = fixed.replace(/'Method not allowed'/g, "'Method not allowed'");"  fixed = fixed.replace(/'Internal server error'/g, "'Internal server error'");"  fixed = fixed.replace(/'true'/g, 'true');'  fixed = fixed.replace(/'false'/g, 'false');'  
+  // Fix malformed console.error calls
+  fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/g, "console.error('API Error:', error);");"  '  return fixed;
+}
+
+// Function to process a single file
+function processFile(filePath) {}
+  try {}
+    const content = fs.readFileSync(filePath, 'utf8');'    const fixed = fixApiFile(content);
+    
+    if (content !== fixed) {}
+      fs.writeFileSync(filePath, fixed, 'utf8');'      console.log(`Fixed: ${filePath}`);
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
       return true;
     }
     return false;
@@ -42,12 +65,20 @@ function processFile(filePath)   {}
   }
 }
 
+<<<<<<< HEAD
 // Main function;
 async function main()   {}
   const patterns = [;]
     'api/**/*.js'
   ];
   ;
+=======
+// Main function
+async function main() {}
+  const patterns = [;
+    'api/**/*.js';'  ];
+  
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
   let totalFixed = 0;
   ;
   for (const pattern of patterns) ;

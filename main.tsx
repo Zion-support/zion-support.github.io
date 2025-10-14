@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
+<<<<<<< HEAD
 // Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
@@ -34,4 +35,10 @@ if ('serviceWorker' in navigator) {
         console.error('Service worker failed:',Error);
       });
   });
+=======
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(<App />);
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
 }

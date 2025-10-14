@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useContext } from 'react';
 
 interface AnalyticsContextType {
@@ -13,5 +14,12 @@ export const useAnalytics = () => {
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
+=======
+'use client';'import { useContext } from 'react';'import { AnalyticsContext } from '../contexts/AnalyticsContext';'
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');'  }
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
   return context;
 };

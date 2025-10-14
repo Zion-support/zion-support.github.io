@@ -1,8 +1,6 @@
-import React from 'react';
-const Sidebar = () => {
+import React from 'react';'const Sidebar = () => {
   return (
-    <div className="sidebar-component">
-      <h2>Sidebar</h2>
+    <div className="sidebar-component">"      <h2>Sidebar</h2>
       <p>This component is under construction.</p>
     </div>
   );

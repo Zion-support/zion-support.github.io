@@ -1,5 +1,4 @@
-'use client';
-
+'use client';'
 export const Dynamicx = () => {
   // Implementation
   return true;

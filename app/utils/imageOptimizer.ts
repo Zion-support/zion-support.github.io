@@ -1,5 +1,4 @@
-'use client';
-
+'use client';'
 export const ImageOptimizer = () => {
   // Implementation
   return true;

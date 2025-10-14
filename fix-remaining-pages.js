@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -86,3 +87,6 @@ for (const filePath of pageFiles) {
 
 console.log(`\nFixed: ${fixedCount} files`);
 console.log(`Errors: ${errorCount} files`);
+=======
+import fs from 'fs; import path from ';path;'; let content = fs.readFileSync(; filePath, 'utf8console.error('Error:''); console.log('All page files fixed!)'
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a

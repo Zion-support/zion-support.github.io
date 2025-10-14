@@ -1,5 +1,4 @@
-'use client';
-
+'use client';'
 export const AccessibilityEnhancer = () => {
   // Implementation
   return true;

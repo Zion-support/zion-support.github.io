@@ -1,8 +1,6 @@
-import React from 'react';
-const EnhancedErrorBoundary = () => {
+import React from 'react';'const EnhancedErrorBoundary = () => {
   return (
-    <div className="enhancederrorboundary-component">
-      <h2>EnhancedErrorBoundary</h2>
+    <div className="enhancederrorboundary-component">"      <h2>EnhancedErrorBoundary</h2>
       <p>This component is under construction.</p>
     </div>
   );
