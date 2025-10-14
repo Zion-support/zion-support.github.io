@@ -1,65 +1,38 @@
-<<<<<<< HEAD
-import React from 'react'
-'use client''
-import React from 'react';
-"use client"
-export default function ZionAiAccountingSuitePage() {return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">"
-      <div className="container mx-auto px-4">"
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Accounting Suite</h1>"
-        <p className="text-gray-300 text-lg">"
-import EnhancedSEO from '../components/EnhancedSEO';
-          This page is under development.;
-        </p>
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-          This page is under development.</p></div></div>
-  )
-        </p>
-      </div>
-    </div>
-  )}
-''
->>>>>>> origin/main
-
-=======
->>>>>>> origin/main
-import React from "react";
+import React from "react";""
 ;
 export default function ZionAiAccountingSuitePage() {
   return (
-    <div></div>"
-      <h1 className="text-4xl font-bold mb-8">Zion Ai Accounting Suite</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>
-    </div>)
+<>    <div></div>"""
+      <h1 className="text-4xl font-bold mb-8">Zion Ai Accounting Suite</h1>"""
+      <p className="text-gray-300 text-lg">This page is under development.</p>""
+    </div>)}
+    </>
   );
 
 }
-"
+"""
 =======
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from "react";""
+import { Helmet    } from "react-helmet-async";""
 
 const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" />
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">
+      <div className="container mx-auto px-4 py-16"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
-  );
+  )};
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54ad
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
