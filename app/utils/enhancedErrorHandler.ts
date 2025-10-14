@@ -35,6 +35,7 @@ export const enhancedErrorHandler = {
       case 500:
         return { message: 'Server error', code: 'SERVER_ERROR' ;};
       default:
+<<<<<<< HEAD
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
   getErrorMessage: (error: any) => {
     if (error.response?.status) {
@@ -48,3 +49,31 @@ export const enhancedErrorHandler = {
     
     return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
 }}}}
+=======
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    }
+  },
+  
+  getErrorMessage: (error: unknown) => {
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
+    if (errorWithResponse.response?.status) {
+      switch (errorWithResponse.response.status) {
+        case 400:
+          return { message: 'Invalid request', code: 'BAD_REQUEST' };
+        case 401:
+          return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+        case 403:
+          return { message: 'Forbidden', code: 'FORBIDDEN' };
+        case 404:
+          return { message: 'Not found', code: 'NOT_FOUND' };
+        case 500:
+          return { message: 'Server error', code: 'SERVER_ERROR' };
+        default:
+          return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+      }
+    }
+    
+    return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+  }
+}
+>>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
