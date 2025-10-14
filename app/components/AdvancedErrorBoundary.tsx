@@ -1,50 +1,68 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-export default function Page() {
-  return (
-    <>
-      <Helmet>
-        <title>AdvancedErrorBoundary - Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedErrorBoundary solutions and services" />
-        <meta name="keywords" content="advancederrorboundary" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
+interface Props {
+  children: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-900 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">AdvancedErrorBoundary</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional AdvancedErrorBoundary solutions and services
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+            >
+              Refresh Page
+            </button>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-8 text-left">
+                <summary className="text-red-400 cursor-pointer">Error Details</summary>
+                <pre className="text-red-300 text-sm mt-2 whitespace-pre-wrap">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
-      </div>
-    </>
-  );
+      );
+    }
+
+    return this.props.children;
+  }
 }
+
+export default AdvancedErrorBoundary;

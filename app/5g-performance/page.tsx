@@ -5,6 +5,98 @@ import EnhancedSEO from '../components/EnhancedSEO';
 
 function FiveGPerformancePage() {
   const features = [
-    ;
+    {
+      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
+      title: "Performance Testing",
+      description: "Comprehensive 5G network performance testing to identify bottlenecks and optimization opportunities."
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-green-600" />,
+      title: "Speed Optimization",
+      description: "Advanced techniques to maximize 5G network speed and reduce latency for optimal user experience."
+    },
+    {
+      icon: <Users className="w-6 h-6 text-purple-600" />,
+      title: "Load Balancing",
+      description: "Intelligent load balancing solutions to distribute traffic efficiently across your 5G infrastructure."
+    }
+  ];
 
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <EnhancedSEO 
+        title="5G Performance Services | Zion Tech Group"
+        description="Expert 5G performance optimization services to maximize speed, reliability, and user experience."
+        keywords="5G performance, network speed, latency optimization, 5G testing"
+      />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-violet-900 to-purple-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              5G Performance Services
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-violet-100">
+              Achieve peak 5G performance with our expert testing and optimization services
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center bg-violet-600 hover:bg-violet-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+            >
+              Boost Performance
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
+              Our 5G Performance Solutions
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-violet-600 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Better 5G Performance?
+          </h2>
+          <p className="text-xl text-violet-100 mb-8">
+            Let us optimize your 5G network for maximum speed and reliability
+          </p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center bg-white text-violet-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Improve Performance
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default FiveGPerformancePage;

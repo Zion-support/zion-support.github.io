@@ -7,7 +7,7 @@ import { Target } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
+// import { Clock } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 function Page() {
@@ -87,5 +87,4 @@ function Page() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default Page;

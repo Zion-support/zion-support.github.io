@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+    onSidebarToggle();
+  };
   return (
     <nav className="bg-slate-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,37 +27,37 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Home
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 About
-              </a>
-              <a
-                href="/services"
+              </Link>
+              <Link
+                to="/services"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Services
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={onSidebarToggle}
+              onClick={handleToggle}
               className="text-gray-400 hover:text-white p-2 rounded-md transition-colors"
             >
               <Menu size={24} />

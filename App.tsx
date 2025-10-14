@@ -24,6 +24,8 @@ import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   useEffect(() => {
     // Performance monitoring
     if (typeof window !== 'undefined') {
@@ -32,13 +34,17 @@ function App() {
     }
   }, []);
 
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <AdvancedErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-slate-900 flex">
             <div className="flex-1 flex flex-col">
-              <Navigation />
+              <Navigation onSidebarToggle={handleSidebarToggle} />
               <main className="relative z-10 flex-1">
                 <Suspense fallback={<LoadingStates />}>
                   <Routes>
