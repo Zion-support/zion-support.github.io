@@ -294,6 +294,8 @@ const CommunityPage: React.FC = () => {
           </div>
         </section>
       </div>
+        </div>
+      </div>
     </>
   );
 };
