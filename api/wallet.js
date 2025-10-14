@@ -11,23 +11,14 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { address, type, name, userId } = req.body;
-
-=======
-const { address, type, name, userId } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
-<<<<<<< HEAD
   let wallets = [];
-=======
-let wallets = [];
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   try {
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
@@ -58,21 +49,11 @@ let wallets = [];
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      message: 'Wallet added successfully' 
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+      message: 'Wallet added successfully'
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
-
-=======
-res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }
