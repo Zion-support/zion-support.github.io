@@ -2,3 +2,4 @@
 export const accessibilityEnhancer = () => {
   // Utility implementation
 }
+;

@@ -1,14 +1,14 @@
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon?: string;
-  features: string[];
+  id: string
+  title: string
+  description: string
+  icon?: string
+  features: string[]
   pricing?: {
-    basic: number;
-    premium: number;
-    enterprise: number;
-  };
+    basic: number
+    premium: number
+    enterprise: number
+  }
 }
 
 export const services: Service[] = [
@@ -63,6 +63,5 @@ export const services: Service[] = [
       enterprise: 11999
     }
   }
-];
-
+]
 export default services;

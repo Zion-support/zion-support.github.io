@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ContactPage = () => {
   return (
     <React.Fragment>
@@ -43,17 +42,13 @@ const ContactPage = () => {
                 <form className="space-y-4">
                   <div>
                     <label className="block text-white mb-2">Name</label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                    />
+                    <input type="text"
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500" />
                   </div>
                   <div>
                     <label className="block text-white mb-2">Email</label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500"
-                    />
+                    <input type="email"
+                      className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-blue-500" />
                   </div>
                   <div>
                     <label className="block text-white mb-2">Message</label>
@@ -75,7 +70,5 @@ const ContactPage = () => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
-
+  )}
 export default ContactPage;

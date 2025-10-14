@@ -1,13 +1,12 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import React from "react"
+import { Helmet } from "react-helmet-async"
 export default function Page() {
   return (
     <React.Fragment>
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
-      </Helmet>;
+      </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-8">Test Simple</h1>
@@ -15,5 +14,5 @@ export default function Page() {
         </div>
       </div>
     </React.Fragment>
-  );
+  )
 }

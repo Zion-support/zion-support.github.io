@@ -47,7 +47,6 @@ const AboutPage = () => {
         </div>
       </div>
     </React.Fragment>
-  );
-};
+  )};
 
 export default AboutPage;

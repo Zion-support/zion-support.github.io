@@ -1,6 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
+import React from "react"
+import { Helmet } from "react-helmet-async"
 export default function Page() {
   return (
     <>
@@ -40,7 +39,7 @@ export default function Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-6 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                <feature.icon className="w-12 h-12 text-sky-600 mx-auto mb-4"/>
+                <feature .icon className="w-12 h-12 text-sky-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
@@ -89,4 +88,4 @@ export default function Page() {
   )
 }
 
-export default AiDocumentProcessorPage
+export default AiDocumentProcessorPage;

@@ -1,50 +1,41 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-
+import React, { createContext, useContext, ReactNode } from 'react'
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
+  trackPageView: (pageName: string) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     // Basic analytics tracking
-    console.log('Analytics Event:', eventName, properties);
-    
+    console.log('Analytics Event:', eventName, properties)
     // In a real implementation, you would send this to your analytics service
-    // Example: gtag('event', eventName, properties);
-  };
-
+    // Example: gtag('event', eventName, properties)
+  }
   const trackPageView = (pageName: string) => {
-    console.log('Page View:', pageName);
-    
+    console.log('Page View:', pageName)
     // In a real implementation, you would send this to your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_title: pageName });
-  };
-
+    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_title: pageName })
+  }
   const value = {
     trackEvent,
     trackPageView,
-  };
-
+  }
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
-};
-
+  )
+}
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const context = useContext(AnalyticsContext)
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')
+  };
+  return context
+}
 export default AnalyticsProvider;

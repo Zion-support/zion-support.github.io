@@ -1,22 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PagePage = () => {
+const Page = () => {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>5g Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g solutions services by Zion Tech Group." />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" - Zion Tech Group" />
       </Helmet>
-      
-      <div>
-        <div>
-          <h1>5G Solutions</h1>
-          <p>Professional 5G solutions services by Zion Tech Group.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-white mb-8"></h1>
+          <p className="text-gray-300 text-lg">This page is under development.</p>
         </div>
       </div>
-    </React.Fragment>
-  );
-};
+    </>
+  )}
 
-export default PagePage;
+export default Page;

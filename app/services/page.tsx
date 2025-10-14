@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ServicesPage = () => {
   const services = [
     {
@@ -32,9 +31,7 @@ const ServicesPage = () => {
       title: 'Micro SAAS',
       description: 'Custom software solutions and micro-SaaS development.',
       href: '/micro-saas'
-    }
-  ];
-
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -64,13 +61,13 @@ const ServicesPage = () => {
                     Learn More →
                   </a>
                 </div>
-              ))}
+              )
+  )}
             </div>
           </div>
         </div>
       </div>
     </React.Fragment>
-  );
-};
-
+  )
+}
 export default ServicesPage;

@@ -5,14 +5,12 @@ export const DEFAULT_SEO = {
   keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
   image: '/images/og-image.jpg',
   type: 'website',
-} as const;
-
+} as const
 export const META_TAGS = {
   AUTHOR: 'ZionTechGroup',
   ROBOTS: 'index, follow',
   VIEWPORT: 'width=device-width, initial-scale=1.0',
-} as const;
-
+} as const
 export const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -31,4 +29,4 @@ export const defaultStructuredData = {
     "https://twitter.com/ziontechgroup",
     "https://www.facebook.com/ziontechgroup"
   ]
-};
+}

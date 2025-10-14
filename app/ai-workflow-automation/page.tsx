@@ -11,5 +11,5 @@ export default function Page() {
         <div><h1>Page Title</h1><p>Page content goes here.</p></div>
       </div>
     </React.Fragment>
-  );
+  )
 }

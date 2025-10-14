@@ -1,10 +1,8 @@
-'use client';
-
-import React from 'react';
-
+'use client'
+import React from 'react'
 interface GlobalErrorProps {
-  error: Error & { digest?: string };
-  reset: () => void;
+  error: Error & { digest?: string }
+  reset: () => void
 }
 
 export default function GlobalError({ error, reset }: GlobalErrorProps) {

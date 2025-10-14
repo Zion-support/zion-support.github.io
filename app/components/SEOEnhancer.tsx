@@ -1,11 +1,9 @@
-import React, { ReactNode } from 'react';
-
+import React, { ReactNode } from 'react'
 interface SEOEnhancerProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
+  return <>{children}</>
+}
 export default SEOEnhancer;

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 const AdvancedLoadingStates: React.FC = () => {
   return (
     <div className="loading-container">
@@ -7,6 +6,5 @@ const AdvancedLoadingStates: React.FC = () => {
       {/* In a real implementation, this would include skeleton loaders, spinners, etc. */}
     </div>
   );
-};
-
+}
 export default AdvancedLoadingStates;

@@ -1,10 +1,9 @@
-'use client';
-
+'use client'
 interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-  className?: string;
+  title: string
+  description: string
+  icon?: React.ReactNode
+  className?: string
 }
 
 export default function ServiceCard({ title, description, icon, className = '' }: ServiceCardProps) {
@@ -14,9 +13,10 @@ export default function ServiceCard({ title, description, icon, className = '' }
         <div className="mb-4">
           {icon}
         </div>
-      )}
+  );
+}
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
-  );
+  )
 }

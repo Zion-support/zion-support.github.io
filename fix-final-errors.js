@@ -1,153 +1,149 @@
 #!/usr/bin/env node
 
-import fs from 'fs;'
-import path from 'path;'
+import fs from 'fs';
+import { glob } from 'glob';
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts, '.tsx', .js', '.jsx]) {'
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      if (!['node_modules, '.git', dist', 'build, '.next'].includes(file)) {
-        results = results.concat(findFiles(filePath, extensions));
-      }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
-    }
+// Function to fix final syntax errors
+function fixFinalErrors(content) {
+  let fixed = content;
+
+  // Fix malformed function declarations
+  fixed = fixed.replace(/export default function;\s*(\w+)\s*\(/g, 'export default function $1(');
+  fixed = fixed.replace(/export default function\s*(\w+)\s*\(/g, 'export default function $1(');
+
+  // Fix duplicate closing parentheses and semicolons
+  fixed = fixed.replace(/\s*\)\s*\)\s*;\s*}/g, '\n  );\n}');
+  fixed = fixed.replace(/\s*\)\s*;\s*};/g, '\n  );\n}');
+
+  // Fix malformed function declarations with semicolons
+  fixed = fixed.replace(/const (\w+) = \(\) => \{[\s\S]*?\}\s*;\s*export default (\w+);/g, 'const $1 = () => {\n  // Component content\n};\n\nexport default $1;');
+
+  // Fix missing function names
+  fixed = fixed.replace(/export default function\s*\(/g, 'export default function Component(');
+
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<React\.Fragment>[\s\S]*?<\/React\.Fragment>\s*\)\s*\)\s*;\s*};/g, (match) => {
+    return match.replace(/\s*\)\s*\)\s*;\s*};/, '\n  );\n}');
   });
-  
-  return results;
+
+  // Fix duplicate semicolons
+  fixed = fixed.replace(/;\s*;/g, ';');
+
+  // Fix malformed export statements
+  fixed = fixed.replace(/export default (\w+);\s*$/gm, 'export default $1;');
+
+  return fixed;
 }
 
-// Function to create a basic page component
-function createBasicPageComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page';
-  
-  return `import React from 'react';`
-import { Helmet } from 'react-helmet-async';
+// Function to fix specific file patterns
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    content = fixFinalErrors(content);
+    
+    // Additional file-specific fixes
+    if (filePath.includes('404.tsx')) {
+      content = `import React from "react";
 
-const ${componentName} = () => {
+export default function NotFound() {
   return (
-    <>
-      <Helmet>
-        <title>${componentName} - Zion Tech Group</title>
-        <meta name="description" content="${componentName} - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          
-        
-  );
-};
-
-export default ${componentName};`;`
-}
-
-// Function to create a basic component
-function createBasicComponent(filePath) {
-  const fileName = path.basename(filePath, path.extname(filePath));
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-  
-  return `import React from 'react';`
-
-const ${componentName} = () => {
-  return (
-    <div className="${componentName.toLowerCase()}-component">
-      <h2>${componentName}</h2>
-      <p>This component is under construction.</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+        <p className="text-xl text-gray-300 mb-8">Page not found</p>
+        <a href="/" className="text-blue-400 hover:text-blue-300">Go back home</a>
+      </div>
     </div>
   );
+}`;
+    }
+    
+    if (filePath.includes('about/page.tsx')) {
+      content = `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AboutPage = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation." />
+      </Helmet>
+      
+      <div className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              About Zion Tech Group
+            </h1>
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-xl text-gray-300 mb-6">
+                We are a leading technology solutions provider specializing in AI, 
+                cybersecurity, cloud infrastructure, and digital transformation.
+              </p>
+              <p className="text-lg text-gray-300 mb-6">
+                Our mission is to empower businesses with cutting-edge technology 
+                solutions that drive growth, enhance security, and transform operations.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-4">Our Vision</h2>
+                  <p className="text-gray-300">
+                    To be the world's most trusted technology partner, enabling 
+                    organizations to thrive in the digital age.
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-white mb-4">Our Values</h2>
+                  <ul className="text-gray-300 space-y-2">
+                    <li>• Innovation and Excellence</li>
+                    <li>• Security and Trust</li>
+                    <li>• Client Success</li>
+                    <li>• Continuous Learning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
 
-export default ${componentName};`;`
-}
-    // Fix malformed JSX return
-    if (fixed.includes('return (') && !fixed.includes('</div>')) {
-      fixed = fixed.replace(/return\s*\(\s*<div>([^<]*?)<\/div>\s*\);\s*<\/div>\s*<\/div>\s*\);/g, 'return (\n    <div>\n      $1\n    </div>\n  );')
-}
-  // Fix specific patterns that are causing issues
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'\/\/\s*([^']*?)'/g, 'import React from "react";\n// $1')
-  fixed = fixed.replace(/import\s+React\s+from\s+"react";"import\s+{\s*(\w+)\s*}\s+from\s+"([^"]*?)";'([^']*?)'/g, 'import React from "react";\nimport { $1 } from "$2";\n$3')
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<meta\s+name:\s*""([^"]*?)"\s+content:\s*"([^"]*?)"\s*\/>/g, '<meta name="$1" content="$2" />')
-  // Fix broken string literals
-  fixed = fixed.replace(/"([^"]*?)"\s*\+\s*"([^"]*?)"/g, '"$1$2"')
-  fixed = fixed.replace(/'([^']*?)'\s*\+\s*'([^']*?)'/g, "'$1$2'")
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className:\s*"([^"]*?)"/g, 'className="$1"')
-  fixed = fixed.replace(/name:\s*"([^"]*?)"/g, 'name="$1"')
-  fixed = fixed.replace(/content:\s*"([^"]*?)"/g, 'content="$1"')
-  // Fix broken JSX elements
-  fixed = fixed.replace(/<h1\s+className:\s*"([^"]*?)">([^<]*?)<\/h1>/g, '<h1 className="$1">$2</h1>')
-  fixed = fixed.replace(/<p\s+className:\s*"([^"]*?)">([^<]*?)<\/p>/g, '<p className="$1">$2</p>')
-  fixed = fixed.replace(/<div\s+className:\s*"([^"]*?)">([^<]*?)<\/div>/g, '<div className="$1">$2</div>')
-  return fixed
-}
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+export default AboutPage;`;
+    }
     
-    // Check if file is severely corrupted
-    const corruptionIndicators = [
-      /<,/,  // Malformed tags
-      /;+/,  // Multiple semicolons
-      /,\s*}/,  // Trailing commas
-      /{\s*,/,  // Leading commas
-      /import.*;+/,  // Malformed imports
-      /export.*;+/,  // Malformed exports
-    ];
-    
-    const isCorrupted = corruptionIndicators.some(pattern => pattern.test(content));
-    
-    if (isCorrupted) {
-      console.log(`Replacing corrupted file: ${filePath}`);`
-      
-      if (filePath.includes('/page.tsx') || filePath.includes(/page.js')) {'
-        fs.writeFileSync(filePath, createBasicPageComponent(filePath), utf8');'
-      } else if (filePath.includes(/components/')) {'
-        fs.writeFileSync(filePath, createBasicComponent(filePath), utf8');'
-      } else {
-        // For other files, create a basic structure
-        const fileName = path.basename(filePath, path.extname(filePath));
-        const basicContent = `// ${fileName} - Basic implementation`
-export default function ${fileName}() {
-  return null;
-}`;`
-        fs.writeFileSync(filePath, basicContent, utf8');'
-      }
-      
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);`
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution
-console.log(Starting final error fix...');'
+async function main() {
+  console.log('Starting final error fixes...');
 
-const files = findFiles(./app');'
-let fixedCount = 0;
+  // Get all TypeScript/TSX files
+  const files = await glob('app/**/*.{ts,tsx}');
 
-files.forEach(file => {
-  if (fixCorruptedFile(file)) {
-    fixedCount++;
-  }
-});
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
 
-console.log(`\nFixed ${fixedCount} files.`);`
-console.log(Final error fixing completed!');'
+  console.log(`Fixed ${fixedCount} files.`);
+}
+
+main().catch(console.error);

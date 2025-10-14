@@ -1,5 +1,4 @@
-import { Service } from './services';
-
+import { Service } from './services'
 export const servicesData: Service[] = [
   {
     id: 'ai-solutions',
@@ -52,6 +51,5 @@ export const servicesData: Service[] = [
       enterprise: 11999
     }
   }
-];
-
+]
 export default servicesData;

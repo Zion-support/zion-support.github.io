@@ -24,6 +24,5 @@ export const services = [
     description: 'Blockchain solutions and smart contract development',
     category: 'Blockchain'
   }
-];
-
+]
 export default services;

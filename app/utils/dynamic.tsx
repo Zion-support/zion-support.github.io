@@ -1,5 +1,5 @@
-'use client;'
-import React from 'react;'
+'use client';
+import React from 'react';
 export default function Component() {
   return (
     <div>Page content</div>
@@ -17,4 +17,5 @@ export default function Component() {
     </>
   )
         </p></div></div>
-  );};
+  );
+}
