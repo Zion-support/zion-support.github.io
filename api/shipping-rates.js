@@ -7,7 +7,7 @@ export default function handler(req, res) {
     // Add your API logic here
     res.status(200).json({ success: "true"});
   } catch (error) {
-    console.error('API Error: "'", error);
+    console.error('API Error:', error);
     res.status(405).json({ error: 'Internal server error' });
   }
 }

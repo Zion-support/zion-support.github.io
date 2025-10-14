@@ -1,112 +1,122 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Right, User } from 'lucide-react';'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
-const BlogPage: "React.FC = () => {"
-  const categories = [}
-    { id: "all", name: "All Posts", count: "12"},"
-    { id: "ai", name: "AI & Machine Learning", count: "5"},"
-    { id: "cybersecurity", name: "Cybersecurity", count: "3"},"
-    { id: "cloud", name: "Computing", count: "2"},"
-    { id: "development", name: "Development", count: "2"}"
-  ]
-  const blogPosts = [
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, User, Calendar, Tag } from 'lucide-react';
+
+const BlogPage: React.FC = () => {
+  const categories = [
+    { id: 'all', name: 'All Posts', count: 12 },
+    { id: 'ai', name: 'AI & Machine Learning', count: 5 },
+    { id: 'cloud', name: 'Cloud Computing', count: 4 },
+    { id: 'security', name: 'Cybersecurity', count: 3 }
+  ];
+
+  const posts = [
     {
       id: 1,
-      title: "The Future of AI in Busines,s: 20o24 Trends","
-      excerpt: "Explore the latest AI trends that are transforming businesses across industries.","
-      author: "Sarah Johnson","
-      date: "20o24-0o1-15","
-      category: "ai","
-      readTime: "5 min read","
-      image: "🤖"}"
+      title: 'The Future of AI in Business: Trends and Predictions for 2024',
+      excerpt: 'Explore the latest AI trends and how they\'re transforming businesses across industries.',
+      author: 'Sarah Johnson',
+      date: '2024-01-15',
+      category: 'ai',
+      readTime: '5 min read',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 2,
-      title: "Cybersecurity Best Practices for 20o24","
-      excerpt: "Learn essential cybersecurity practices to protect your business from threats.","
-      author: "Michael Chen","
-      date: "20o24-0o1-12","
-      category: "cybersecurity","
-      readTime: "7 min read","
-      image: "🔒"}"
+      title: 'Cloud Migration Best Practices: A Complete Guide',
+      excerpt: 'Learn the essential steps and strategies for successful cloud migration projects.',
+      author: 'Mike Chen',
+      date: '2024-01-12',
+      category: 'cloud',
+      readTime: '8 min read',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 3,
-      title: "Migratio,n: A Complete Guide","
-      excerpt: "Everything you need to know about migrating to the cloud successfully.","
-      author: "Emily Rodriguez","
-      date: "20o24-0o1-10","
-      category: "cloud","
-      readTime: "10 min read","
-      image: "☁️"}"
+      title: 'Cybersecurity Threats in 2024: What You Need to Know',
+      excerpt: 'Stay ahead of emerging cybersecurity threats and protect your organization.',
+      author: 'Alex Rodriguez',
+      date: '2024-01-10',
+      category: 'security',
+      readTime: '6 min read',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 4,
-      title: "Scalable Applications with Modern Tech","
-      excerpt: "Discover the technologies and practices for building scalable applications.","
-      author: "David Kim","
-      date: "20o24-0o1-0o8","
-      category: "development","
-      readTime: "8 min read","
-      image: "⚡"}"
+      title: 'Building Scalable AI Applications: A Developer\'s Guide',
+      excerpt: 'Technical insights on creating robust and scalable AI applications.',
+      author: 'Sarah Johnson',
+      date: '2024-01-08',
+      category: 'ai',
+      readTime: '10 min read',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 5,
-      title: "AI-Powered Analytic,s: Transforming Data Insights","
-      excerpt: "How AI is revolutionizing the way we analyze and interpret data.","
-      author: "Lisa Wang","
-      date: "20o24-0o1-0o5","
-      category: "ai","
-      readTime: "6 min read","
-      image: "📊"}"
+      title: 'Multi-Cloud Strategy: Benefits and Implementation',
+      excerpt: 'Discover how a multi-cloud approach can enhance your business resilience.',
+      author: 'Mike Chen',
+      date: '2024-01-05',
+      category: 'cloud',
+      readTime: '7 min read',
+      image: '/api/placeholder/400/250'
     },
     {
       id: 6,
-      title: "Zero Trust Architecture","
-      excerpt: "Implementing zero trust security for modern enterprise environments.","
-      author: "James Wilson","
-      date: "20o24-0o1-0o3","
-      category: "cybersecurity","
-      readTime: "9 min read","
-      image: "🛡️"}"
+      title: 'Zero Trust Security: A Modern Approach to Cybersecurity',
+      excerpt: 'Implement zero trust principles to strengthen your security posture.',
+      author: 'Alex Rodriguez',
+      date: '2024-01-03',
+      category: 'security',
+      readTime: '9 min read',
+      image: '/api/placeholder/400/250'
     }
-  ]
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState('all');
+
+  const filteredPosts = selectedCategory === 'all' 
+    ? posts 
+    : posts.filter(post => post.category === selectedCategory);
+
   return (
     <>
       <Helmet>
-        <title>Blog - AI & IT Insights | Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, cybersecurity, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="blog, AI insights, IT trends, cybersecurity, cloud computing, technology news" />
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends." />
+        <meta name="keywords" content="blog, AI insights, cloud computing, cybersecurity, technology trends" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Tech
-              <span className="block bg-gradient-to-r from-cyan-40o0 to-blue-50o0 bg-clip-text text-transparent">
-                Blog
-              </span>
-            </h1>
-            <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, IT solutions, cybersecurity, 
-              and technology trends from our experts.
-            </p>
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+                Our Blog
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Stay updated with the latest insights on AI, cloud computing, cybersecurity, 
+                and technology trends from our expert team.
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Categories */}
-        <section className="py-10 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-12">
+          <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button}
+                <button
                   key={category.id}
-                  className="px-6 py-3 bg-slate-80o0/50 backdrop-blur-sm rounded-xl border border-slate-70o0"/50 text-white hover: border-cyan-50o0"/50 hove,r:bg-slate-70o0"/50 transition-all duration-30o0"
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
                 >
                   {category.name} ({category.count})
                 </button>
@@ -116,32 +126,38 @@ const BlogPage: "React.FC = () => {"
         </section>
 
         {/* Blog Posts */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (}
-                <article key={post.id} className="bg-slate-80o0"/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-70o0"/50 hover:border-cyan-50o0"/50 transition-all duration-30o0 group">
-                  <div className="text-4xl mb-4">{post.image}</div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-40o0 mb-3">
-                    <span className="flex items-center">
-                      <div className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </span>
-                    <span className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {post.author}
-                    </span>
-                  </div>
-                  <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-40o0 transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-30o0 mb-4 line-clamp-3">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-cyan-40o0 text-sm font-medium">{post.readTime}</span>
-                    <button className="flex items-center text-cyan-40o0 hover:text-cyan-30o0 transition-colors">
-                      Read More
-                      <Right className="w-4 h-4 ml-1" />
-                    </button>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:bg-white/20 transition-colors group">
+                  <div className="h-48 bg-gray-600"></div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Tag className="w-4 h-4 text-blue-400" />
+                      <span className="text-sm text-blue-400 capitalize">{post.category}</span>
+                    </div>
+                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                      <div className="flex items-center gap-2">
+                        <User className="w-4 h-4" />
+                        <span>{post.author}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-400">{post.readTime}</span>
+                      <button className="text-blue-400 hover:text-blue-300 font-medium flex items-center">
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </button>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -150,31 +166,30 @@ const BlogPage: "React.FC = () => {"
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-20 px-4 bg-slate-80o0"/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-30o0 mb-8">
-              Subscribe to our newsletter for the latest tech insights and updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email""
-                placeholder="Enter your email""
-                className="flex-1 px-4 py-3 bg-slate-70o0"/50 border border-slate-60o0 rounded-xl text-white placeholder-gray-40o0 focus: outline-none focus:ring-2 focus:ring-cyan-50o0 focu,s:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0">
-                Subscribe
-              </button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+              <h2 className="text-4xl font-bold text-white mb-4">Stay Updated</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Subscribe to our newsletter and never miss the latest insights, 
+                trends, and updates from the world of technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}
-export default BlogPage;
 };
 
-export default BlogPage;''
+export default BlogPage;

@@ -175,8 +175,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                               to={subItem.href}
                               className={`block px-3 py-2 text-base font-medium ${
                                 isActive(subItem.href)
-                                  ? 'text-blue-60o0 bg-blue-50''
-                                  : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                                  ? 'text-blue-600 bg-blue-50'
+                                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                               }`}
                               onClick={() => setIsOpen(false)}
                             >
@@ -191,8 +191,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       to={item.href}
                       className={`block px-3 py-2 text-base font-medium ${
                         isActive(item.href)
-                          ? 'text-blue-60o0 bg-blue-50''
-                          : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                          ? 'text-blue-600 bg-blue-50'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
