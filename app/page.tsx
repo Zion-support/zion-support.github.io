@@ -1,16 +1,14 @@
-import React from 'react''
-import { Link } from 'react-router-dom''
-import { Helmet } from 'react-helmet-async''
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
-  ArrowRightIcon,
   GlobeAltIcon,
   SignalIcon,
-  BriefcaseIcon'
-} from '@heroicons/react/24/outline''
-import FuturisticBackground from './components/FuturisticBackground;
+  BriefcaseIcon
+} from '@heroicons/react/24/outline';
+import FuturisticBackground from './components/FuturisticBackground';
 
 const HomePage: React.FC = () => {
   const structuredData = {
