@@ -38,7 +38,7 @@ const ITSolutionsPage: React.FC = () => {
         "Disaster recovery""
       ],
       color: "from-blue-500 to-cyan-500","
-      price: "Starting at $1,500/month","
+      price: "Starting at ,500/month","
       benefits: ["Scalability", "Reliability", "Cost efficiency"],"
       useCases: ["Web hosting", "Data storage", "Application hosting"],"
       href: "/cloud-infrastructure"
@@ -74,7 +74,7 @@ const ITSolutionsPage: React.FC = () => {
         "Training and support""
       ],
       color: "from-green-500 to-emerald-500","
-      price: "Starting at $1,200/month","
+      price: "Starting at ,200/month","
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],"
       useCases: ["Technology planning", "Digital transformation", "System integration"],"
       href: "/it-consulting"
@@ -92,7 +92,7 @@ const ITSolutionsPage: React.FC = () => {
         "Remote access""
       ],
       color: "from-purple-500 to-indigo-500","
-      price: "Starting at $1,800/month","
+      price: "Starting at ,800/month","
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],"
       useCases: ["Office networking", "Remote work", "Data centers"],"
       href: "/network-solutions"
@@ -128,7 +128,7 @@ const ITSolutionsPage: React.FC = () => {
         "User training""
       ],
       color: "from-cyan-500 to-blue-500","
-      price: "Starting at $1,000/month","
+      price: "Starting at ,000/month","
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
       useCases: ["Help desk", "System maintenance", "User support"],"
       href: "/it-support"
@@ -139,23 +139,19 @@ const ITSolutionsPage: React.FC = () => {
     {
       title: "Expert Solutions","
       description: "Our team of certified professionals delivers cutting-edge IT solutions.","
-      icon: CpuChipIcon
-    },
+      icon: CpuChipIcon},
     {
       title: "Scalable Architecture","
       description: "Solutions that grow with your business and adapt to changing needs.","
-      icon: CloudIcon
-    },
+      icon: CloudIcon},
     {
       title: "24/7 Support","
       description: "Round-the-clock support to ensure your systems are always running.","
-      icon: UserGroupIcon
-    },
+      icon: UserGroupIcon},
     {
       title: "Security First","
       description: "Security is built into every solution we deliver.","
-      icon: ShieldCheckIcon
-    }
+      icon: ShieldCheckIcon}
   ];
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'

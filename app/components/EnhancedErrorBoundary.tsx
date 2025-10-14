@@ -1,16 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 interface Props {
   children: ReactNode
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void}
-
 interface State {
   hasError: boolean
   error: Error | null
   errorInfo: ErrorInfo | null
   errorId: string}
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
@@ -22,7 +20,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
     }}
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -30,7 +27,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -45,7 +41,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {'
       this.logErrorToService(error, errorInfo)}
   }
-
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error tracking service
     // like Sentry, LogRocket, or Bugsnag
@@ -94,7 +89,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback}
-
       // Default error UI
       return (
         <>
@@ -117,7 +111,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <path 
                     strokeLinecap="round" "
                     strokeLinejoin="round" "
-                    strokeWidth={2} 
+                    strokeWidth={2}
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "
                   />
                 </svg>
@@ -143,7 +137,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </code>
                 </div>
               )}
-
               {/* Action Buttons */}
               <div className="space-y-3">
                 <button
@@ -212,8 +205,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
         </>
       )}
-
     return this.props.children}
 }
-
 export default EnhancedErrorBoundary

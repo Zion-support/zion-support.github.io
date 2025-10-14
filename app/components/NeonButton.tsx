@@ -9,7 +9,6 @@ interface NeonButtonProps {
   size?: 'sm' | 'md' | 'lg';'
   className?: string;
 }
-
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
   to,
@@ -46,7 +45,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       </Link>
     );
   }
-
   if (href) {
     return (
       <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">
@@ -54,7 +52,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       </a>
     );
   }
-
   return (
     <button onClick={onClick} className={`${classes} group`}>
       {content}

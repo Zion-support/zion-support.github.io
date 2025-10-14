@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom';'
 interface Props {
   children: ReactNode;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -20,7 +18,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
@@ -28,7 +25,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -39,11 +35,9 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {'
       console.error('ErrorBoundary caught an error:', error, errorInfo);'
     }
-
     // In production, you might want to log this to an error reporting service
     // Example: logErrorToService(error, errorInfo);
   }
-
   handleReset = () => {
     this.setState({
       hasError: false,
@@ -90,7 +84,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleReset}
@@ -121,9 +114,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;

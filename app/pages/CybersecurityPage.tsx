@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO'
 import { 
   ShieldCheckIcon,
@@ -11,7 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 export default function CybersecurityPage() {
 
   const services = [

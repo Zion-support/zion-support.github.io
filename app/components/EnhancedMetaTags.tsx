@@ -17,14 +17,14 @@ contactPoint: {} '@type': 'ContactPoint',';,''
 telephone: '+1-302-464-0950',';,''
 contactType: 'customer service',';,''
 email: 'kleber@ziontechgroup.com','' },;,'
-sameAs: [ 'https://twitter.com/ziontechgroup','' 'https://linkedin.com/company/ziontechgroup','' 'https://github.com/ziontechgroup','' ], }; const articleStructuredData = ogType === 'article' ? {'};@context': 'https://schema.org','' '@type': 'Article',';,''
+sameAs: [ 'https://twitter.com/ziontechgroup','' 'https://linkedin.com/company/ziontechgroup','' 'https://github.com/ziontechgroup','' ]}; const articleStructuredData = ogType === 'article' ? {'};@context': 'https://schema.org','' '@type': 'Article',';,''
 headline: title,; description,;,
 author: {} '@type': 'Organization',';,''
-name: author, },;,
+name: author},;,
 publisher: {} '@type': 'Organization',';,''
 name: 'Zion Tech Group',';,''
 logo: {} '@type': 'ImageObject',';,''
-url: `${siteUrl}/images/logo.png`,`` }, },;,`
+url: `${siteUrl}/images/logo.png`,`` }},;,`
 datePublished: publishedTime,;,
 dateModified: modifiedTime || publishedTime,;,
 mainEntityOfPage: {} '@type': 'WebPage','' '@id': finalCanonical,'' },;,'

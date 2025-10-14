@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -8,7 +8,6 @@ interface SEOHeadProps {
   url?: string
   type?: 'website' | 'article' | 'product''
   structuredData?: any}
-
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions','
   description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
@@ -104,7 +103,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {type === 'article' && tags.map((tag, index) => ('
         <meta key={index} property="article:tag" content={tag} />
       ))}
-      
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
@@ -120,7 +118,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="msapplication-TileColor" content="#8b5cf6" />
@@ -134,5 +131,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     </Helmet>
   );
 }
-
 export default SEOHead;

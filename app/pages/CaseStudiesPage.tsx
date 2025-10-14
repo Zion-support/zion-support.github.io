@@ -1,6 +1,6 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;'
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [{
       title: 'E-commerce Platform AI Optimization',';'
@@ -36,7 +36,7 @@ const CaseStudiesPage: React.FC = () => {
       solution: 'Built comprehensive data analytics platform with predictive modeling',';'
       results: [{ metric: 'Treatment Accuracy', value: '+40%', icon: TrendingUp },';'
         { metric: 'Patient Outcomes', value: '+35%', icon: Users },';'
-        { metric: 'Cost Reduction', value: '$1.8M/year', icon: DollarSign },';'
+        { metric: 'Cost Reduction', value: '.8M/year', icon: DollarSign },';'
         { metric: 'Implementation Time', value: '6 months', icon: Clock }';'
       ],
       description: 'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.';'

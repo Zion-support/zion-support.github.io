@@ -4,13 +4,11 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;}
 }
-
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;}
 }
-
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation

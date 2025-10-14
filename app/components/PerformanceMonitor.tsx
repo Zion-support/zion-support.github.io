@@ -6,7 +6,6 @@ interface PerformanceMetrics {
   memoryUsage: number;
   networkLatency: number;
 }
-
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -22,7 +21,6 @@ const PerformanceMonitor: React.FC = () => {
     if (process.env.NODE_ENV !== 'development') {'
       return;
     }
-
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {'
         const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'

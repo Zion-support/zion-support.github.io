@@ -74,7 +74,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Custom training""
       ],
       color: "from-purple-500 to-pink-500","
-      price: "Starting at $149/month","
+      price: "Starting at 49/month","
       benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],"
       useCases: ["Customer service", "Lead qualification", "FAQ automation"],"
       href: "/micro-saas/ai-customer-support-chatbot"
@@ -92,7 +92,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Performance insights""
       ],
       color: "from-orange-500 to-red-500","
-      price: "Starting at $129/month","
+      price: "Starting at 29/month","
       benefits: ["Better organization", "Improved productivity", "Resource optimization"],"
       useCases: ["Project management", "Team coordination", "Task automation"],"
       href: "/micro-saas/ai-project-manager"
@@ -110,7 +110,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time tracking""
       ],
       color: "from-indigo-500 to-purple-500","
-      price: "Starting at $199/month","
+      price: "Starting at 99/month","
       benefits: ["Reduced waste", "Optimized stock", "Cost savings"],"
       useCases: ["Inventory management", "Supply chain", "Retail operations"],"
       href: "/micro-saas/ai-inventory-manager"
@@ -139,23 +139,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     {
       title: "AI-Powered Solutions","
       description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.","
-      icon: CpuChipIcon
-    },
+      icon: CpuChipIcon},
     {
       title: "Scalable Architecture","
       description: "Built to grow with your business, from startup to enterprise scale.","
-      icon: CloudIcon
-    },
+      icon: CloudIcon},
     {
       title: "Easy Integration","
       description: "Seamlessly integrate with your existing tools and workflows.","
-      icon: CogIcon
-    },
+      icon: CogIcon},
     {
       title: "24/7 Support","
       description: "Round-the-clock support to ensure your success.","
-      icon: UserGroupIcon
-    }
+      icon: UserGroupIcon}
   ];
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'

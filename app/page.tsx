@@ -93,7 +93,7 @@ const HomePage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <Link 
-                  key={index} 
+                  key={index}
                   to={service.href}
                   className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >

@@ -1,5 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'use client'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
 const : React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -49,8 +50,8 @@ const : React.FC = () => {
                 Ready to transform your business with our link services?;
               </p>
               <a;
-                href="$1"
-                className="$1"
+                href=""
+                className=""
               >
                 Contact Us;
               </a>
@@ -69,8 +70,8 @@ const : React.FC = () => {
             services can help you achieve your goals.;
           </p>
           <a;
-            href="$1"
-            className="$1"
+            href=""
+            className=""
           >
             Get Started Today;
           </a>

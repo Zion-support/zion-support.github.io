@@ -1,4 +1,4 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'
 import FuturisticCard from '../components/FuturisticCard'
@@ -15,21 +15,21 @@ const AIAutomationPlatform = () => {
       title: "Smart Decision Making","
       description: "AI-driven decision making for automated business processes","
       icon: <Brain className="w-6 h-6" />,"
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
       color: "from-green-500 to-emerald-500"}"
     },
     {
       title: "Process Optimization","
       description: "Continuously optimize processes using machine learning","
       icon: <Settings className="w-6 h-6" />,"
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
       color: "from-purple-500 to-pink-500"}"
     },
     {
       title: "Integration Hub","
       description: "Connect and automate across all your business systems","
       icon: <Zap className="w-6 h-6" />,"
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500",
       color: "from-orange-500 to-red-500"}"
     }
   ]

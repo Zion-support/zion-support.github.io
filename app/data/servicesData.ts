@@ -8,7 +8,7 @@ export interface Service {
   features: string[];
   pricing: {
     basic: number;
-    pro: number;
+    pro: number;,
     enterprise: number;}
   };
   benefits: string[];
@@ -22,7 +22,6 @@ export interface Service {
   href: string;
   glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';'
 }
-
 export const services: Service[] = [
   // AI Services
   {''

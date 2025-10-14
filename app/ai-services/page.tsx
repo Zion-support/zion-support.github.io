@@ -1,6 +1,6 @@
 import React from 'react';'react-helmet-async;'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;'
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;';
 import FuturisticBackground from '../components/FuturisticBackground;'
 const AiServicesPage: React.FC = () => {
   const services = [{
@@ -42,9 +42,9 @@ import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';'
 import FuturisticBackground from '../components/FuturisticBackground';'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground'
 const AiServicesPage: React.FC = () => {
   const services = [
@@ -89,22 +89,19 @@ const AiServicesPage: React.FC = () => {
     {
       title: 'Custom AI Solutions','
       description: 'Tailored AI implementations designed specifically for your business needs.','
-      icon: '🤖'
-    },
+      icon: '🤖'},
     {
       title: 'Machine Learning Models','
       description: 'Advanced ML models trained on your data for optimal performance.','
-      icon: '🧠'
-    },
+      icon: '🧠'},
     {
       title: 'Real-time Processing','
       description: 'High-performance AI systems that process data in real-time.','
-      icon: '⚡'
-    },
+      icon: '⚡'},
     {
       title: 'Scalable Architecture','
       description: 'AI solutions that grow with your business and handle increasing loads.','
-      icon: '📈'
+      icon: '📈',
       icon: Shield,''
       title: 'AI Security',';''
       description: 'AI-powered security solutions to protect your business and data.',';''

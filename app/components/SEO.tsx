@@ -1,5 +1,5 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title?: string
   description?: string
@@ -12,7 +12,6 @@ interface SEOProps {
   modifiedTime?: string
   section?: string
   tags?: string[]}
-
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions','
   description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.','

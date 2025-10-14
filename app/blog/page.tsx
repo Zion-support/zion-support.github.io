@@ -1,9 +1,9 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Right, User } from 'lucide-react';'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, User, Calendar } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const categories = [}
     { id: "all", name: "All Posts", count: 12 },"

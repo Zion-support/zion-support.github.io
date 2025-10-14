@@ -1,142 +1,87 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-
-// Common syntax error patterns and their fixes
-const fixes = [
-  // Fix unterminated string literals with trailing quotes
-  {
-    pattern: /'([^']*?)\n/g,
-    replacement: "'$1'\n"
-  },
-  // Fix unterminated string literals with trailing quotes in JSX
-  {
-    pattern: /"([^"]*?)\n/g,
-    replacement: '"$1"\n'
-  },
-  // Fix extra commas in object properties
-  {
-    pattern: /,\s*}/g,
-    replacement: '}'
-  },
-  // Fix extra commas in array properties
-  {
-    pattern: /,\s*]/g,
-    replacement: ']'
-  },
-  // Fix semicolons in object properties
-  {
-    pattern: /;\s*}/g,
-    replacement: '}'
-  },
-  // Fix semicolons in array properties
-  {
-    pattern: /;\s*]/g,
-    replacement: ']'
-  },
-  // Fix duplicate color properties
-  {
-    pattern: /color:\s*"[^"]*"\s*}\s*color:\s*"[^"]*"\s*}/g,
-    replacement: (match) => {
-      const colors = match.match(/"([^"]*)"/g);
-      return `color: ${colors[0]}}`;
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix malformed import statements with 'use client'
+  fixed = fixed.replace(/from 'react-helmet-async'use client'/g, "from 'react-helmet-async';\n'use client'");
+  fixed = fixed.replace(/from 'react-helmet-async'use client/g, "from 'react-helmet-async';\n'use client'");
+  
+  // Fix missing semicolons after import statements
+  fixed = fixed.replace(/import React from 'react'(\s*)$/gm, "import React from 'react';$1");
+  fixed = fixed.replace(/import {[^}]+} from '[^']+'(\s*)$/gm, (match, whitespace) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
     }
-  },
-  // Fix malformed JSX closing tags
-  {
-    pattern: /<([^>]+)\s*>\s*<\/\1\s*>/g,
-    replacement: '<$1></$1>'
-  },
-  // Fix missing closing braces in objects
-  {
-    pattern: /(\w+):\s*"([^"]*)"\s*,\s*$/gm,
-    replacement: '$1: "$2",'
-  },
-  // Fix stray semicolons in JSX
-  {
-    pattern: /;\s*<\/[^>]+>/g,
-    replacement: '</$1>'
-  },
-  // Fix malformed function declarations
-  {
-    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
-    replacement: 'const $1 = () => {\n'
-  }
-];
+    return match;
+  });
+  
+  // Fix unterminated string literals in object properties
+  fixed = fixed.replace(/title: "([^"]*)"(\s*)$/gm, 'title: "$1",$2');
+  fixed = fixed.replace(/description: "([^"]*)"(\s*)$/gm, 'description: "$1",$2');
+  fixed = fixed.replace(/icon: ([^,}]+)(\s*)$/gm, 'icon: $1,$2');
+  fixed = fixed.replace(/color: "([^"]*)"(\s*)$/gm, 'color: "$1",$2');
+  
+  // Fix missing commas in object properties
+  fixed = fixed.replace(/}\s*$/gm, '},$1');
+  fixed = fixed.replace(/,\s*}/g, '}');
+  fixed = fixed.replace(/,\s*]/g, ']');
+  
+  // Fix unterminated JSX attributes
+  fixed = fixed.replace(/className="([^"]*)"(\s*)$/gm, 'className="$1"$2');
+  
+  // Fix missing closing tags
+  fixed = fixed.replace(/<div([^>]*)>(\s*)$/gm, '<div$1>$2');
+  
+  // Fix malformed JSX fragments
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/<\/>\s*$/gm, '</>');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Apply all fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-    });
-    
-    // Additional specific fixes for common patterns
-    content = content
-      // Fix unterminated strings at end of lines
-      .replace(/'([^']*?)\n/g, "'$1'\n")
-      .replace(/"([^"]*?)\n/g, '"$1"\n")
-      // Fix extra commas and semicolons
-      .replace(/,(\s*[}\]])/g, '$1')
-      .replace(/(\w+):\s*"([^"]*)"\s*;\s*}/g, '$1: "$2" }')
-      // Fix malformed JSX
-      .replace(/>\s*;\s*</g, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix duplicate properties
-      .replace(/(\w+):\s*"[^"]*"\s*}\s*\1:\s*"[^"]*"\s*}/g, (match) => {
-        const props = match.match(/(\w+):\s*"([^"]*)"/g);
-        return props[0] + ' }';
-      });
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and JSX files
+// Main function
+async function main() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    'api/**/*.js',
-    'components/**/*.tsx',
-    'components/**/*.ts'
+    'api/**/*.js'
   ];
   
   let totalFixed = 0;
   
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
-      if (fixFile(file)) {
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
+    
+    for (const file of files) {
+      if (processFile(file)) {
         totalFixed++;
       }
-    });
-  });
+    }
+  }
   
-  console.log(`Fixed ${totalFixed} files`);
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixFile, fixes };
+main();

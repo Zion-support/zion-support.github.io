@@ -1,5 +1,5 @@
 import React from 'react';'react-helmet-async;'
-import { Play, Right, Circle, Star } from 'lucide-react;'
+import { Play, Right, Circle, Star } from 'lucide-react;';
 const DemoPage: React.FC = () => {
   const features = [{''
       icon: 'Analytics',';''

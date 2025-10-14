@@ -5,7 +5,6 @@ interface AnimatedCardProps {
   glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';'
   hoverEffect?: boolean;
 }
-
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
   className = '','
@@ -50,5 +49,4 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     </div>
   );
 }
-
 export default AnimatedCard;
