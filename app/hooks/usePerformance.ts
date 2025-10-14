@@ -1,11 +1,4 @@
-import { useState, useEffect } from 'react';
+'use client';';';
+// usePerformance utility; export const usePerformance = () => {}; // Implementation; return true;}
 
-export const usePerformance = () => {
-  const [state, setState] = useState(null);
-  
-  useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
-};
+}; export default usePerformance;

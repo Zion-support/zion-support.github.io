@@ -1,10 +1,19 @@
 import React from 'react';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Sidebar</h2>
-      <p className="text-gray-600">Sidebar component is under development.</p>
+    <div className={`sidebar-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">Sidebar</h3>
+          <p className="text-gray-600">This is the Sidebar component.</p>
+        </div>
+      )}
     </div>
   );
 };

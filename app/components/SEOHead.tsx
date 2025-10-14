@@ -1,10 +1,19 @@
 import React from 'react';
 
-const SEOHead: React.FC = () => {
+interface SEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">S E O Head</h2>
-      <p className="text-gray-600">S E O Head component is under development.</p>
+    <div className={`seohead-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">SEOHead</h3>
+          <p className="text-gray-600">This is the SEOHead component.</p>
+        </div>
+      )}
     </div>
   );
 };

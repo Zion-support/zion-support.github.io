@@ -1,4 +1,4 @@
-// accessibilityEnhancer utility
-export const accessibilityEnhancer = () => {
-  // Utility implementation
+'use client';';';
+export const utilityFunction = () => {}; // Utility implementation; return true;}
+
 };

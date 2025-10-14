@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 // Minimal working App component
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
           </p>
           <div className="mt-8 text-center">
             <p className="text-gray-400">
-              Website is being updated. Please check back soon.
+              Welcome to our minimal app version
             </p>
           </div>
         </div>

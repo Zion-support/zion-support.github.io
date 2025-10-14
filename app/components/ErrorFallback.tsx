@@ -1,10 +1,19 @@
 import React from 'react';
 
-const ErrorFallback: React.FC = () => {
+interface ErrorFallbackProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Error Fallback</h2>
-      <p className="text-gray-600">Error Fallback component is under development.</p>
+    <div className={`errorfallback-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">ErrorFallback</h3>
+          <p className="text-gray-600">This is the ErrorFallback component.</p>
+        </div>
+      )}
     </div>
   );
 };

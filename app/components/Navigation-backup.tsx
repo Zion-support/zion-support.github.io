@@ -1,12 +1,21 @@
 import React from 'react';
 
-const NavigationBackup: React.FC = () => {
+interface Navigation-backupProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Navigation-backup: React.FC<Navigation-backupProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Navigation-backup</h2>
-      <p className="text-gray-600">Navigation-backup component is under development.</p>
+    <div className={`navigation-backup-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">Navigation-backup</h3>
+          <p className="text-gray-600">This is the Navigation-backup component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default NavigationBackup;
+export default Navigation-backup;

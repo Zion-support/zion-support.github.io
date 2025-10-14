@@ -1,10 +1,19 @@
 import React from 'react';
 
-const WebVitalsTracker: React.FC = () => {
+interface WebVitalsTrackerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Web Vitals Tracker</h2>
-      <p className="text-gray-600">Web Vitals Tracker component is under development.</p>
+    <div className={`webvitalstracker-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">WebVitalsTracker</h3>
+          <p className="text-gray-600">This is the WebVitalsTracker component.</p>
+        </div>
+      )}
     </div>
   );
 };

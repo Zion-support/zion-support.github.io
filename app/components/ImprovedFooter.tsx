@@ -1,10 +1,19 @@
 import React from 'react';
 
-const ImprovedFooter: React.FC = () => {
+interface ImprovedFooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ImprovedFooter: React.FC<ImprovedFooterProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Improved Footer</h2>
-      <p className="text-gray-600">Improved Footer component is under development.</p>
+    <div className={`improvedfooter-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">ImprovedFooter</h3>
+          <p className="text-gray-600">This is the ImprovedFooter component.</p>
+        </div>
+      )}
     </div>
   );
 };

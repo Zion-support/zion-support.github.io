@@ -1,10 +1,19 @@
 import React from 'react';
 
-const FuturisticButtonEnhanced: React.FC = () => {
+interface FuturisticButtonEnhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Futuristic Button Enhanced</h2>
-      <p className="text-gray-600">Futuristic Button Enhanced component is under development.</p>
+    <div className={`futuristicbuttonenhanced-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">FuturisticButtonEnhanced</h3>
+          <p className="text-gray-600">This is the FuturisticButtonEnhanced component.</p>
+        </div>
+      )}
     </div>
   );
 };

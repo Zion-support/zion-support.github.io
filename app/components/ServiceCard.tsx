@@ -1,10 +1,19 @@
 import React from 'react';
 
-const ServiceCard: React.FC = () => {
+interface ServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Card</h2>
-      <p className="text-gray-600">Service Card component is under development.</p>
+    <div className={`servicecard-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">ServiceCard</h3>
+          <p className="text-gray-600">This is the ServiceCard component.</p>
+        </div>
+      )}
     </div>
   );
 };

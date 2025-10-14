@@ -1,4 +1,5 @@
-// testRunner.tsx utility
-export const testRunner = () => {
-  // Utility implementation
-};
+// testRunner - Basic implementation
+export default function testRunner() {
+  return null;
+
+}

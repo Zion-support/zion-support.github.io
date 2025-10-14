@@ -1,10 +1,19 @@
 import React from 'react';
 
-const ResponsiveGrid: React.FC = () => {
+interface ResponsiveGridProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Responsive Grid</h2>
-      <p className="text-gray-600">Responsive Grid component is under development.</p>
+    <div className={`responsivegrid-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">ResponsiveGrid</h3>
+          <p className="text-gray-600">This is the ResponsiveGrid component.</p>
+        </div>
+      )}
     </div>
   );
 };

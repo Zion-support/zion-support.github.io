@@ -1,10 +1,19 @@
 import React from 'react';
 
-const NeonButton: React.FC = () => {
+interface NeonButtonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const NeonButton: React.FC<NeonButtonProps> = ({ className = '', children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Neon Button</h2>
-      <p className="text-gray-600">Neon Button component is under development.</p>
+    <div className={`neonbutton-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">NeonButton</h3>
+          <p className="text-gray-600">This is the NeonButton component.</p>
+        </div>
+      )}
     </div>
   );
 };
