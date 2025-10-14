@@ -61,7 +61,7 @@ const fixUnusedImports = (filePath) => {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused imports: ${filePath}`);
+      console.warn(`Fixed unused imports: ${filePath}`);
       return true;
     }
     return false;
@@ -72,7 +72,7 @@ const fixUnusedImports = (filePath) => {
 };
 
 // Main execution
-console.log('Fixing remaining unused imports...');
+console.warn('Fixing remaining unused imports...');
 const tsxFiles = findTsxFiles();
 let fixedCount = 0;
 
@@ -82,4 +82,4 @@ tsxFiles.forEach(file => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files with unused imports.`);
+console.warn(`Fixed ${fixedCount} files with unused imports.`);

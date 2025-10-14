@@ -32,7 +32,7 @@ const fixUnusedReactImports = (filePath) => {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused React import: ${filePath}`);
+      console.warn(`Fixed unused React import: ${filePath}`);
       return true;
     }
     return false;
@@ -58,7 +58,7 @@ const fixUnusedHelmetImports = (filePath) => {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed unused Helmet import: ${filePath}`);
+      console.warn(`Fixed unused Helmet import: ${filePath}`);
       return true;
     }
     return false;
@@ -69,7 +69,7 @@ const fixUnusedHelmetImports = (filePath) => {
 };
 
 // Main execution
-console.log('Fixing unused imports...');
+console.warn('Fixing unused imports...');
 const tsxFiles = findTsxFiles();
 let fixedCount = 0;
 
@@ -82,4 +82,4 @@ tsxFiles.forEach(file => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files with unused imports.`);
+console.warn(`Fixed ${fixedCount} files with unused imports.`);

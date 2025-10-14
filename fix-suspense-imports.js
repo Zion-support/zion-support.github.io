@@ -45,7 +45,7 @@ const fixSuspenseImports = (filePath) => {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.warn(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -56,7 +56,7 @@ const fixSuspenseImports = (filePath) => {
 };
 
 // Main execution
-console.log('Fixing unused Suspense imports...');
+console.warn('Fixing unused Suspense imports...');
 const tsxFiles = findTsxFiles();
 let fixedCount = 0;
 
@@ -66,4 +66,4 @@ tsxFiles.forEach(file => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files with unused Suspense imports.`);
+console.warn(`Fixed ${fixedCount} files with unused Suspense imports.`);

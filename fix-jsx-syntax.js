@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import { glob } from 'glob';
 
 // Common JSX syntax fixes
@@ -92,7 +91,7 @@ function fixFile(filePath) {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.warn(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -105,7 +104,7 @@ function fixFile(filePath) {
 // Find all TypeScript/JavaScript files in the app directory
 const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-console.log(`Found ${files.length} files to process...`);
+console.warn(`Found ${files.length} files to process...`);
 
 let fixedCount = 0;
 files.forEach(file => {
@@ -114,4 +113,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`Fixed ${fixedCount} files.`);
+console.warn(`Fixed ${fixedCount} files.`);
