@@ -88,7 +88,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.submenu ? (
                     <div className="relative group">
                       <button
-                        className="text-gray-70o0 hover:text-blue-60o0 px-3 py-2 text-sm font-medium flex items-center"
+                        className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
@@ -105,7 +105,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-70o0 hover:bg-gray-10o0"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               {subItem.name}
                             </Link>
@@ -142,7 +142,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-70o0 hover: text-blue-60o0 focus:outline-none focu,s:text-blue-60o0"
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -163,7 +163,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <div>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-70o0 hover: text-blue-60o0 hove,r:bg-gray-50"
+                        className="w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                       >
                         {item.name}
                       </button>
@@ -175,8 +175,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                               to={subItem.href}
                               className={`block px-3 py-2 text-base font-medium ${
                                 isActive(subItem.href)
-                                  ? 'text-blue-60o0 bg-blue-50''
-                                  : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                                  ? 'text-blue-600 bg-blue-50'
+                                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                               }`}
                               onClick={() => setIsOpen(false)}
                             >
@@ -191,8 +191,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       to={item.href}
                       className={`block px-3 py-2 text-base font-medium ${
                         isActive(item.href)
-                          ? 'text-blue-60o0 bg-blue-50''
-                          : 'text-gray-70o0 hover: "text-blue-60o0 hove,r:bg-gray-50''"
+                          ? 'text-blue-600 bg-blue-50'
+                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }`}
                       onClick={() => setIsOpen(false)}
                     >

@@ -20,3 +20,11 @@ export const LoadingSpinner = ({ size = 'md' }) => {
     <div className={`animate-spin rounded-full border-b-2 border-blue-500 ${sizes[size]}`}></div>
   );
 };
+
+// Default export for backward compatibility
+const LoadingStates = {
+  LoadingPage,
+  LoadingSpinner
+};
+
+export default LoadingStates;
