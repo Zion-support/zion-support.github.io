@@ -1,10 +1,4 @@
 export const enhancedErrorTracking = {
-  trackError: (_error: Error, context?: Record<string, unknown>) => {
-    const ErrorInfo = {
-      message: _error.message,
-      stack: _error.stack,
-  trackError: (error: Error, context?: Record<string, unknown>) => {
-    // Error tracking logic
   trackError: (error: Error, context?: Record<string, any>) => {
     const errorInfo = {
       message: error.message,
@@ -15,13 +9,16 @@ export const enhancedErrorTracking = {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      // Development logging disabled
       console.error('Error tracked: ', errorInfo)
+    }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
+        description: error.message,
+        fatal: false,
+        context: context
       })
+    }
   },
   
   trackPerformanceError: (error: Error, _performanceData: unknown) => {
@@ -36,4 +33,7 @@ export const enhancedErrorTracking = {
         metric,
         value,
         threshold
-}}}}}}
+      })
+    }
+  }
+}

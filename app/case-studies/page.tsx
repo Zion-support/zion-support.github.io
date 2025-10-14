@@ -151,7 +151,7 @@ const CaseStudiesPage: React.FC = () => {
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
+              Discover how we&apos;ve helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
             </p>
 
             {/* Stats */}
@@ -245,7 +245,7 @@ const CaseStudiesPage: React.FC = () => {
                 Ready to Write Your Success Story?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how we can help transform your business with our AI and IT solutions.
+                Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useCallback, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
 interface AdvancedPerformanceOptimizerProps {
@@ -18,7 +18,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true,
+  enableCodeSplitting: _enableCodeSplitting = true,
   enableServiceWorker = true,
   enableResourceHints = true,
   enableCriticalCSS = true,
@@ -77,7 +77,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
             const componentName = component.getAttribute('data-lazy-component');
             if (componentName) {
               // Load component dynamically
-              import(`../components/${componentName}.tsx`).then((module) => {
+              import(`../components/${componentName}.tsx`).then((_module) => {
                 component.innerHTML = '';
                 // Render component
                 componentObserver.unobserve(component);
