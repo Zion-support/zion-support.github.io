@@ -18,6 +18,14 @@ import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
+// Page components
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
+
+function App() {
+  return (
     <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
@@ -42,35 +50,32 @@ import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
                   }
                 }}
               >
-                <MetaManager>
-                  <PerformanceMonitor onMetricsUpdate={() => {}} />
-                  <EnhancedAnalytics>
-                    <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <Navigation />
-                        <main className="relative z-10" id="main-content" role="main">
-                          <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
-                            <Routes>
-                              <Route path="/" element={<HomePage />} />
-                              <Route path="/about" element={<AboutPage />} />
-                              <Route path="/services" element={<ServicesPage />} />
-                              <Route path="/contact" element={<ContactPage />} />
-                            </Routes>
-                          </Suspense>
-                        </main>
-                        <Footer />
-                      </div>
-                    </Router>
-                  </EnhancedAnalytics>
-                </MetaManager>
+                <MetaManager />
+                <PerformanceMonitor onMetricsUpdate={() => {}} />
+                <EnhancedAnalytics />
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <Navigation />
+                    <main className="relative z-10" id="main-content" role="main">
+                      <Suspense fallback={<AdvancedLoadingStates />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </div>
+                </Router>
               </SEOEnhancer>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
- f7f852c0f7415181a1b362c4aa5a784585ad5828
   );
-};
+}
 
 export default App;

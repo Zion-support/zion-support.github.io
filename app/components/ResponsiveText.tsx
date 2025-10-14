@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function ResponsiveTextPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -14,4 +13,4 @@ export default function ResponsiveTextPage() {
     </div>
   );
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;
+;

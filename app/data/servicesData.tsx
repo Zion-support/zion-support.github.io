@@ -1,11 +1,17 @@
-import React from "react"
-export default function ServicesDataPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">ServicesData</h1>
-          <p className="text-gray-300 text-xl mb-8">
-            Learn more about servicesdata
-  )
-}
+export const servicesData = {
+  ai: {
+    title: "AI Solutions",
+    description: "Advanced artificial intelligence and machine learning solutions",
+    features: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+  },
+  it: {
+    title: "IT Services",
+    description: "Comprehensive IT infrastructure and support services",
+    features: ["Infrastructure Management", "Technical Support", "System Integration"]
+  },
+  cloud: {
+    title: "Cloud Solutions",
+    description: "Scalable cloud infrastructure and migration services",
+    features: ["Cloud Migration", "Infrastructure as Code", "DevOps"]
+  }
+};

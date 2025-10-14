@@ -1,27 +1,21 @@
 import React, { Component, ReactNode } from "react";
-
 interface Props {
   children: ReactNode;
 }
-
 interface State {
   hasError: boolean;
 }
-
 export default class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(): State {
     return { hasError: true };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error("Error caught by boundary:", error, errorInfo);
   }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -37,8 +31,7 @@ export default class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;
+;

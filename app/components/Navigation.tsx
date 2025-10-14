@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
 export default function Navigation() {
   return (
     <nav className="bg-slate-900 shadow-lg">
@@ -25,4 +24,4 @@ export default function Navigation() {
     </nav>
   );
 }
-f7f852c0f7415181a1b362c4aa5a784585ad5828;
+;

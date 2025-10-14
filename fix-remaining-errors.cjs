@@ -1,88 +1,74 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 
-// Function to fix remaining corrupted files
-function fixRemainingErrors(filePath) {
+async function fixRemainingErrors() {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    // Find all TypeScript and JavaScript files
+    const files = await glob('**/*.{ts,tsx,js,jsx}', { 
+      cwd: __dirname,
+      ignore: ['node_modules/**', 'dist/**', '.next/**']
+    });
+    
+    console.log(`Found ${files.length} files to check`);
 
-    // Check if file has severe corruption patterns
-    if (
-      content.includes("';';") ||
-      content.includes('";";') ||
-      content.includes('";"</div>')
-    ) {
-      // Extract the page name from the path
-      const pathParts = filePath.split("/");
-      const fileName = pathParts[pathParts.length - 2] || "Page";
-      const pageName = fileName
-        .replace(/-/g, " ")
-        .replace(/\b\w/g, (l) => l.toUpperCase());
-
-      // Create a clean page component
-      const cleanContent = `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Page() {
-  return (
-    <>
-      <Helmet>
-        <title>${pageName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${pageName.toLowerCase()} services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-      </div>
-    </>
-  );
-}`;
-
-      fs.writeFileSync(filePath, cleanContent);
-      console.log(`Fixed corrupted file: ${filePath}`);
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find and fix all remaining corrupted files
-function fixAllRemainingErrors() {
-  const appDir = path.join(__dirname, "app");
-  let fixedCount = 0;
-  let errorCount = 0;
-
-  function walkDir(dir) {
-    const files = fs.readdirSync(dir);
-
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-
-      if (stat.isDirectory()) {
-        walkDir(filePath);
-      } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-        if (fixRemainingErrors(filePath)) {
-          fixedCount++;
-        } else {
-          errorCount++;
+    for (const filePath of files) {
+      try {
+        const fullPath = path.join(__dirname, filePath);
+        let content = fs.readFileSync(fullPath, 'utf8');
+        let modified = false;
+        
+        // Skip if no issues found
+        if (!content.includes('f7f852c0f7415181a1b362c4aa5a784585ad5828') && 
+            !content.includes('Expected an assignment or function call') &&
+            !content.includes('Parsing error')) {
+          continue;
         }
+        
+        // Remove stray hash strings
+        if (content.includes('f7f852c0f7415181a1b362c4aa5a784585ad5828')) {
+          content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
+          modified = true;
+        }
+        
+        // Fix common parsing errors
+        content = content.replace(/;\s*$/gm, ''); // Remove trailing semicolons
+        content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove excessive newlines
+        content = content.replace(/\s+$/gm, ''); // Remove trailing whitespace
+        
+        // Fix specific patterns
+        content = content.replace(/\}\s*;\s*$/gm, '}'); // Remove semicolons after closing braces
+        content = content.replace(/\}\s*f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '}'); // Remove hash after braces
+        
+        // Fix numeric literal issues (like "5g-solutions")
+        content = content.replace(/(\d+)([a-zA-Z])/g, '$1-$2'); // Add hyphen between number and letter
+        
+        // Fix JSX parsing errors
+        content = content.replace(/<div[^>]*>\s*$/gm, '<div>'); // Simplify div tags
+        content = content.replace(/<\/div>\s*$/gm, '</div>'); // Clean up closing div tags
+        
+        // Remove unused imports (basic cleanup)
+        if (filePath.includes('contexts/AnalyticsContext.tsx')) {
+          content = content.replace(/import React, { useContext, ReactNode } from 'react';/, 'import React from "react";');
+        }
+        
+        if (filePath.includes('main.tsx')) {
+          content = content.replace(/import { createRoot } from 'react-dom\/client';/, 'import React from "react";');
+        }
+        
+        if (modified) {
+          fs.writeFileSync(fullPath, content);
+          console.log(`Fixed ${filePath}`);
+        }
+      } catch (error) {
+        console.error(`Error fixing ${filePath}:`, error.message);
       }
     }
+
+    console.log('Remaining errors fix completed');
+  } catch (error) {
+    console.error('Error:', error.message);
   }
-
-  walkDir(appDir);
-
-  console.log(`\nFixed ${fixedCount} remaining corrupted files`);
-  console.log(`Errors in ${errorCount} files`);
 }
 
-// Run the fix
-fixAllRemainingErrors();
+fixRemainingErrors();

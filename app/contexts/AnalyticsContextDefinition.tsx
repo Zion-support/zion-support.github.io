@@ -1,10 +1,5 @@
 
-import React from 'react';
-
-
-        </div>
-      </div>
-    </div>
-  );
+export interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
 }
- f7f852c0f7415181a1b362c4aa5a784585ad5828
