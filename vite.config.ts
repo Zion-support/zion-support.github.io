@@ -68,6 +68,7 @@ export default defineConfig({
     // Enhanced build optimizations
     rollupOptions: {
       output: {
+        manualChunks: (id: string) => {
         manualChunks: (id) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
@@ -82,6 +83,11 @@ export default defineConfig({
             // Other vendor libraries
             return 'vendor';
           }
+          return undefined;
+        }
+      }
+    }
+  }
           // App chunks
           if (id.includes('/app/')) {
             return 'app';

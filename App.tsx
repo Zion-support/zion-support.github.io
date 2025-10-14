@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import React, { Suspense } from 'react';
@@ -35,11 +35,13 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
 import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
@@ -61,6 +63,7 @@ import React, { Suspense } from 'react';
 }
 
 function App() {
+import React, { Suspense } from 'react';
   useEffect(() => {
 // Performance monitoring
 if (typeof window !== 'undefined') {
@@ -101,9 +104,6 @@ import React, { Suspense } from 'react';
         }
       }
     }
-  });
-  observer.observe({ entryTypes: ['navigation'] });
-}
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.warn('Zion Tech Group App initialized');

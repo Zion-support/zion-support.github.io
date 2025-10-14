@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import React, { createContext, ReactNode, useCallback } from 'react'
 
 interface AnalyticsContextType {
@@ -48,6 +49,7 @@ import React, { Suspense } from 'react';
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+import React, { Suspense } from 'react';
 import React, { Suspense } from 'react';
   )
 }

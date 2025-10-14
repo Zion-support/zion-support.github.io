@@ -19,6 +19,11 @@ export interface Service {
   icon: string
 }
 
+export interface AnalyticsEvent {
+  action: string
+  category: string
+  label?: string
+  value?: number
 export interface ContactForm {
   name: string
   email: string

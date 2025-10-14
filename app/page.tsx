@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Brain } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -116,5 +117,4 @@ function HomePage() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default HomePage;
