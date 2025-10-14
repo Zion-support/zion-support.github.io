@@ -1,26 +1,16 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
 interface Props {
   children: ReactNode;
 }
-
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 error: Error | null;
   errorInfo: ErrorInfo | null;  error: Error | null;
-=======
   error: Error | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   errorInfo: ErrorInfo | null;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -30,7 +20,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     }
   }
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
@@ -38,71 +27,54 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo: null
     }
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     if (this.props.onError) {
       this.props.onError(error, errorInfo);    this.setState({
       error,
       errorInfo
     });
 // Log error to console in development    if (process.env.NODE_ENV === 'development') {
-=======
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-
     // In production, you might want to log this to an error reporting service
     // Example: logErrorToService(error, errorInfo);
   }
-
   handleReset = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null
     });
-<<<<<<< HEAD
   }
-=======
   };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
 <AlertTriangle className="w-8 h-8 text-red-400" />              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
@@ -122,7 +94,6 @@ Error Details (Development Only)                </summary>
                 </div>
               </details>
             )}
-
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleRetry}
@@ -131,7 +102,6 @@ Error Details (Development Only)                </summary>
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
               <Link
                 to="/"
 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"              >
@@ -139,29 +109,24 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                 Go Home
               </Link>
             </div>
-
             <div className="mt-6 pt-6 border-t border-slate-700">
               <p className="text-sm text-gray-400">
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
                 </Link>
-=======
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
               <AlertTriangle className="w-6 h-6 text-red-600" />
             </div>
-            
             <div className="text-center">
               <h1 className="text-lg font-medium text-gray-900 mb-2">
                 Something went wrong
               </h1>
               <p className="text-sm text-gray-500 mb-6">
                 We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </p>
-              
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mb-4 text-left">
                   <summary className="cursor-pointer text-sm text-gray-600 hover:text-gray-800">
@@ -173,7 +138,6 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                   </pre>
                 </details>
               )}
-              
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleReset}
@@ -182,7 +146,6 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again
                 </button>
-                
                 <Link
                   to="/"
                   className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -190,23 +153,18 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                   <Home className="w-4 h-4 mr-2" />
                   Go Home
                 </Link>
-=======
   error?: Error;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   };
-
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Uncaught error:', error, errorInfo);
   }
-
   public render() {
     if (this.state.hasError) {
       return (
@@ -229,16 +187,13 @@ class ErrorBoundary extends Component<Props, State> {
                 >
                   Try again
                 </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
               </div>
             </div>
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;

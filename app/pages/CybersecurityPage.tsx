@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -48,19 +47,15 @@ export default function CybersecurityPage() {
     { name: 'PCI DSS', status: 'Compliant' },
     { name: 'NIST', status: 'Compliant' }
   ]
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const CybersecurityPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
         <title>CybersecurityPage - Zion Tech Group</title>
         <meta name="description" content="CybersecurityPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CybersecurityPage</h1>
@@ -68,11 +63,7 @@ const CybersecurityPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
   );
 };
-
 export default CybersecurityPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

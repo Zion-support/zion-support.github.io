@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';import { 
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -18,23 +14,16 @@ import {
   EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline';
-
-<<<<<<< HEAD
 export default function AboutPage()    {
 return (    <>
-=======
 import { Helmet } from 'react-helmet-async';
-
 const AboutPage: React.FC = () => {
   return (
     <>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
       </Helmet>
-<<<<<<< HEAD
-=======
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -56,24 +45,20 @@ const AboutPage: React.FC = () => {
       icon: RocketLaunchIcon,
       title: 'Excellence',
       description: 'We strive for excellence in everything we do, from design to implementation.'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ];
-
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
     { number: '99%', label: 'Success Rate' },
     { number: '4+', label: 'Years Experience' }
   ];
-
   return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission and team" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -81,7 +66,6 @@ const AboutPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h1>
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
 Empowering businesses through innovative technology solutions
             </p>
@@ -89,15 +73,12 @@ Empowering businesses through innovative technology solutions
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.            </p>
-=======
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are a leading technology company specializing in AI and IT solutions, 
               dedicated to transforming businesses through innovative technology.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -113,7 +94,6 @@ Empowering businesses through innovative technology solutions
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -133,8 +113,6 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
-=======
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -146,7 +124,6 @@ Empowering businesses through innovative technology solutions
               cloud infrastructure, and digital transformation services.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
@@ -183,7 +160,6 @@ Empowering businesses through innovative technology solutions
               </ul>
             </div>
           </div>
-          
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-8">Ready to Work With Us?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -196,11 +172,8 @@ Empowering businesses through innovative technology solutions
             >
               Get In Touch
             </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
           </div>
-<<<<<<< HEAD
         </div>
-<<<<<<< HEAD
       </section>
       <div className="min-h-screen bg-slate-900 text-white p-8">
         <div className="max-w-4xl mx-auto">
@@ -214,9 +187,7 @@ Empowering businesses through innovative technology solutions
   );
 }
 export default AboutPage;
-=======
         </section>
-
         {/* Mission Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -239,12 +210,8 @@ export default AboutPage;
           </div>
         </section>
       </div>
-=======
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     </>
   );
 };
-
 export default AboutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

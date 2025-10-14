@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
 const ITServicesPage: React.FC = () => {
   const services = [{
@@ -98,8 +96,6 @@ const ITServicesPage: React.FC = () => {
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Request Quote;
-=======
-
 const ITServicesPage: React.FC = () => {
   return (
     <>
@@ -145,12 +141,9 @@ const ITServicesPage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </button>
             </div>
           </div>
-=======
-
 const ITServicesPage: React.FC = () => {
   return (
     <>
@@ -158,22 +151,16 @@ const ITServicesPage: React.FC = () => {
         <title>ITServicesPage - Zion Tech Group</title>
         <meta name="description" content="ITServicesPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>
           <p className="text-gray-300">This page is under construction.</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
         </div>
       </div>
-<<<<<<< HEAD
     </div>;  );
 }
 export default ITServicesPage;
-=======
     </>
   );
 };
-
 export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

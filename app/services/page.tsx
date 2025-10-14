@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React from 'react';'
 import { Link } from 'react-router-dom';'
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 import EnhancedSEO from '../components/EnhancedSEO';
 import { 
   CpuChipIcon,
@@ -21,9 +14,7 @@ import {
   CheckIcon,
   StarIcon;'}
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {'
@@ -110,13 +101,11 @@ const ServicesPage: React.FC = () => {
         canonicalUrl="/services"
         ogImage="/api/placeholder/1200/630"
       />
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
@@ -132,7 +121,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Categories */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -144,15 +132,11 @@ const ServicesPage: React.FC = () => {
               Explore our comprehensive range of technology services designed to meet your business needs
             </p>
           </div>
-
           {serviceCategories.map((category, categoryIndex) => {
-<<<<<<< HEAD
             const Icon = category.icon
             return (
-=======
             const Icon = category.icon;
             return (}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
               <div key={categoryIndex} className="mb-20">
                 <div className="flex items-center mb-12">
                   <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}>
@@ -160,7 +144,6 @@ const ServicesPage: React.FC = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-white">{category.title}</h3>
                 </div>
-
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (}
                     <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
@@ -172,11 +155,9 @@ const ServicesPage: React.FC = () => {
                           {service.price}
                         </span>
                       </div>
-                      
                       <p className="text-gray-300 mb-6 leading-relaxed">
                         {service.description}
                       </p>
-
                       <ul className="space-y-2 mb-6">
                         {service.features.map((feature, featureIndex) => (}
                           <li key={featureIndex} className="flex items-center text-gray-300">
@@ -185,7 +166,6 @@ const ServicesPage: React.FC = () => {
                           </li>
                         ))}
                       </ul>
-
                       <Link 
                         to="/contact" 
                         className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
@@ -199,7 +179,6 @@ const ServicesPage: React.FC = () => {
             )})}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -210,7 +189,6 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-12">'
               Let's discuss your project requirements and find the perfect solution for your business
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
@@ -231,17 +209,10 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default ServicesPage;
-=======
   )}
 export default ServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default ServicesPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

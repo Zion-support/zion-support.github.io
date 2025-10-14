@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
-=======
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">
@@ -16,7 +13,6 @@ export default function Page() {
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-<<<<<<< HEAD
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -51,7 +47,6 @@ export default function Page() {
           <div className="mt-12">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today;
-<<<<<<< HEAD
             </button>
           </div>
         </div>
@@ -59,7 +54,6 @@ export default function Page() {
     </div>
   );
 }
-=======
           <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional navigation solutions tailored to your business needs.</p>
@@ -83,8 +77,6 @@ export default function Page() {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today</button></div></div></div></div>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
             </button>;
           </div>;
         </div>;
@@ -92,4 +84,3 @@ export default function Page() {
     </div>;
   );}
 }'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

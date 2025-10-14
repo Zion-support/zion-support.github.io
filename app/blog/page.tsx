@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, User } from 'lucide-react';
-=======
 import React from 'react';'
 import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, User, Calendar } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const BlogPage: React.FC = () => {
   const categories = [}
     { id: "all", name: "All Posts", count: 12 },
@@ -90,7 +83,6 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, cybersecurity, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="blog, AI insights, IT trends, cybersecurity, cloud computing, technology news" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -107,7 +99,6 @@ const BlogPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Categories */}
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
@@ -123,7 +114,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Blog Posts */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -133,11 +123,7 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-
-<<<<<<< HEAD
                       <div className="w-4 h-4 mr-1" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -161,7 +147,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Newsletter Signup */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -185,17 +170,10 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default BlogPage;
-=======
   )}
 export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default BlogPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

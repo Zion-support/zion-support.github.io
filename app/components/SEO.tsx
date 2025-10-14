@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -13,7 +12,6 @@ interface SEOProps {
   modifiedTime?: string
   section?: string
   tags?: string[]}
-=======
   title?: string;
   description?: string;
   keywords?: string;
@@ -21,8 +19,6 @@ interface SEOProps {
   url?: string;
   type?: 'website' | 'article' | 'profile';
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
@@ -31,7 +27,6 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website'
 }) => {
-<<<<<<< HEAD
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
@@ -60,41 +55,29 @@ const SEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup'
     ]
   }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      
       {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
     </Helmet>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default SEO;
-=======
   )}
 export default SEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default SEO;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

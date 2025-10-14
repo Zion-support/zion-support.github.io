@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -13,7 +12,6 @@ const LazyImage: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
             Lazy Image;
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -23,19 +21,16 @@ const LazyImage: React.FC = () => {
         </div>
       </section>
       {/* Content Section */}
-=======
             Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional lazy image services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
                 We provide comprehensive lazy image;
                 solutions tailored to your specific needs and requirements.;
               </p>
@@ -91,7 +86,6 @@ const LazyImage: React.FC = () => {
   );
 }
 export default LazyImage;
-=======
                 We provide comprehensive lazy image
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -125,10 +119,7 @@ export default LazyImage;
             Get Started Today</a></div></section></div>
   )}
 export default LazyImage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 import React, { useState, useRef, useEffect } from 'react';
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -137,7 +128,6 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -149,7 +139,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -160,23 +149,18 @@ const LazyImage: React.FC<LazyImageProps> = ({
       },
       { threshold: 0.1 }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     onError?.();
   };
-
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {isInView && (
@@ -204,6 +188,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-
 export default LazyImage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

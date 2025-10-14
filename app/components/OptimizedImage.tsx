@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface OptimizedImageProps {
@@ -14,10 +13,8 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager'
   onLoad?: () => void
   onError?: () => void}
-=======
 import React, { useState, useRef, useEffect } from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -32,8 +29,6 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;}
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -57,14 +52,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-<<<<<<< HEAD
           setIsInView(true)
           observer.disconnect()}
-=======
           setIsInView(true);
           observer.disconnect();}
         }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       },
       {
         threshold: 0.1,'
@@ -72,73 +64,48 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       }
     )
     if (imgRef.current) {
-<<<<<<< HEAD
       observer.observe(imgRef.current)}
-=======
       observer.observe(imgRef.current);}
     }
-
     return () => observer.disconnect();
   }, [priority]);
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
     return () => observer.disconnect()}, [priority])
   const handleLoad = () => {
-<<<<<<< HEAD
     setIsLoaded(true);
-<<<<<<< HEAD
     onLoad?.();
   }
   const handleError = () => {
     setIsError(true);
     onError?.();
   }
-=======
     setIsLoaded(true)
     onLoad?.()}
   const handleError = () => {
     setIsError(true)
     onError?.()}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
     onLoad?.();}
   };
-
   const handleError = () => {
     setIsError(true);
     onError?.();}
   };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {'
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-<<<<<<< HEAD
       return originalSrc}
-=======
       return originalSrc;}
     }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-    
     // For external images, return as-is'
     if (originalSrc.startsWith('http')) {
-<<<<<<< HEAD
       return originalSrc}
-=======
       return originalSrc;}
     }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-    
     // For local images, you could implement WebP conversion here
-<<<<<<< HEAD
     return originalSrc;
   }
   const optimizedSrc = getOptimizedSrc(src);
-
-=======
     return originalSrc}
   const optimizedSrc = getOptimizedSrc(src)
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       {priority && (
@@ -160,7 +127,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <div className="text-gray-400 text-sm">Loading...</div>
           </div>
         )}
-
         {/* Error state */}
         {isError && (
           <div
@@ -173,7 +139,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             </div>
           </div>
         )}
-
         {/* Actual image */}
         {isInView && !isError && (
           <img}
@@ -197,17 +162,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </div>
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default OptimizedImage;
-=======
   )}
 export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
-
 export default OptimizedImage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

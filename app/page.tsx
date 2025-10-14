@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 'use client';
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -15,10 +11,7 @@ import {
   ArrowRightIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-
-<<<<<<< HEAD
 const HomePage: React.FC = () => {
-=======
 export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -49,8 +42,6 @@ export default function HomePage() {
       ]
     }
   };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   const services = [
     {
       icon: CpuChipIcon,
@@ -77,7 +68,6 @@ export default function HomePage() {
       href: '/digital-transformation'
     }
   ];
-
   const features = [
     '24/7 Expert Support',
     'Custom Solutions',
@@ -86,23 +76,19 @@ export default function HomePage() {
     'Performance Optimized',
     'Cost Effective'
   ];
-
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Transform Your Business with AI & IT Solutions
-=======
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
@@ -118,25 +104,21 @@ export default function HomePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
         </div>
-        
         {/* Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
         <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
               Zion Tech Group
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               We deliver cutting-edge artificial intelligence and information technology solutions 
@@ -157,9 +139,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -188,7 +168,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -205,7 +184,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -229,10 +207,8 @@ export default function HomePage() {
                 About Us
               </Link>
             </div>
-=======
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -244,7 +220,6 @@ export default function HomePage() {
               Comprehensive technology solutions designed to accelerate your business growth
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
@@ -263,7 +238,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -274,9 +248,7 @@ export default function HomePage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional results through innovative technology and expert guidance.
             </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
@@ -287,7 +259,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -299,7 +270,6 @@ export default function HomePage() {
               Numbers that speak to our commitment to excellence and client success
             </p>
           </div>
-          
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -314,7 +284,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -342,10 +311,6 @@ export default function HomePage() {
       </section>
     </>
   );
-<<<<<<< HEAD
 };
-
 export default HomePage;
-=======
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

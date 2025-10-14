@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -27,12 +23,8 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline'
-=======
 } from '@heroicons/react/24/outline';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 export default function AISolutionsPage() {
   const aiServices = [
     {
@@ -65,17 +57,14 @@ export default function AISolutionsPage() {
         "Text summarization",
         "Conversational AI"
       ],
-<<<<<<< HEAD
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $2,800/month",
       benefits: ["Multi-language support", "Real-time processing", "High accuracy"],
       useCases: ["Customer support", "Content analysis", "Language translation"],
-=======
       color: "from-blue-500 to-indigo-500",
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       href: "/ai-nlp"
     },
     {
@@ -83,30 +72,24 @@ export default function AISolutionsPage() {
       description: "Advanced computer vision solutions for image recognition, object detection, and visual analytics.",
       icon: EyeIcon,
       features: [
-<<<<<<< HEAD
-=======
         "Object detection",
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
         "Image classification",
         "Object detection",
         "Facial recognition",
         "OCR (Optical Character Recognition)",
         "Video analysis",
-<<<<<<< HEAD
         "Real-time processing"
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $4,200/month",
       benefits: ["High accuracy", "Real-time processing", "Custom models"],
       useCases: ["Quality control", "Security systems", "Medical imaging"],
-=======
         "Quality inspection"
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $2,800/month",
       benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
       useCases: ["Quality control", "Security monitoring", "Medical imaging"],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       href: "/ai-computer-vision"
     },
     {
@@ -114,7 +97,6 @@ export default function AISolutionsPage() {
       description: "Data-driven predictions and forecasting using advanced machine learning algorithms and statistical models.",
       icon: ChartBarIcon,
       features: [
-<<<<<<< HEAD
         "Time series forecasting",
         "Demand prediction",
         "Risk assessment",
@@ -163,7 +145,6 @@ export default function AISolutionsPage() {
       benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
       href: "/ai-consulting"
-=======
         "Demand forecasting",
         "Customer churn prediction",
         "Sales forecasting",
@@ -320,16 +301,9 @@ export default function AISolutionsPage() {
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
     }
-<<<<<<< HEAD
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const AISolutionsPage: React.FC = () => {
-=======
   ]
   const features = [
     {
@@ -353,20 +327,12 @@ const AISolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
   return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -384,7 +350,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -400,12 +365,10 @@ const AISolutionsPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
                   {/* Pricing */}
                   <div className="mb-6">
                     <span className="text-3xl font-bold text-green-400">{service.price}</span>
                   </div>
-
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
@@ -418,7 +381,6 @@ const AISolutionsPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
@@ -430,7 +392,6 @@ const AISolutionsPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   {/* Use Cases */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
@@ -442,7 +403,6 @@ const AISolutionsPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="flex gap-2">
                     <Link
                       to={service.href}
@@ -463,7 +423,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our AI Solutions */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -515,7 +474,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Implementation Process */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -567,7 +525,6 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -606,10 +563,7 @@ const AISolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>;    </>
-=======
-      
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center mb-16">
@@ -618,18 +572,15 @@ const AISolutionsPage: React.FC = () => {
               Harness the power of artificial intelligence to transform your business operations
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Machine Learning</h3>
               <p className="text-gray-300 mb-6">Custom ML models tailored to your specific business needs and data.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Natural Language Processing</h3>
               <p className="text-gray-300 mb-6">Advanced NLP solutions for text analysis and language understanding.</p>
             </div>
-            
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold mb-4">Predictive Analytics</h3>
               <p className="text-gray-300 mb-6">Data-driven insights and predictions to guide business decisions.</p>
@@ -638,19 +589,14 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
       </section>
     </>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
   );
 }
 export default AISolutionsPage;
-=======
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -672,7 +618,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -701,7 +646,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
           <div className="max-w-7xl mx-auto">
@@ -721,7 +665,6 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -744,4 +687,3 @@ export default AISolutionsPage;
       </div>
     </>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

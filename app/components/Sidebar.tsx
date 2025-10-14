@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -21,22 +20,16 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { XMarkIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
-
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -71,7 +64,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
-
   const additionalLinks = [
     { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
     { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
@@ -79,11 +71,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
   ];
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
@@ -91,25 +81,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, sectionName]
     );
   };
-
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName);
   };
-=======
   if (!isOpen) return null;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
   if (!isOpen) return null;
-
   return (
-<<<<<<< HEAD
     <>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40"
         onClick={onClose}
       />
-      
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
         <div className="flex items-center justify-between p-4 border-b">
@@ -121,7 +104,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <XMarkIcon className="w-5 h-5" />
           </button>
         </div>
-        
         <nav className="mt-4">
           {navigation.map((item) => (
             <div key={item.name}>
@@ -176,7 +158,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               )}
             </div>
           ))}
-          
           {/* Additional Links */}
           <div className="border-t border-gray-200 mt-4 pt-4">
             <h3 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
@@ -198,7 +179,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             ))}
           </div>
-=======
     <div className="fixed inset-0 z-50 md:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="relative flex flex-col w-64 h-full bg-slate-900">
@@ -213,11 +193,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">About</Link>
           <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Services</Link>
           <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded">Contact</Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
         </nav>
       </div>
     </div>
   );
 };
-
 export default Sidebar;
