@@ -137,7 +137,8 @@ class HealthCheckService {
       };
     }
     try {
-      const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+      const memoryInfo = (performance as any).memory;
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -152,9 +153,9 @@ class HealthCheckService {
         status,
         message,
         details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
+          used: memoryInfo.usedJSHeapSize,
+          total: memoryInfo.totalJSHeapSize,
+          limit: memoryInfo.jsHeapSizeLimit,
           usedPercent
         }
       }
@@ -171,7 +172,7 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
+      const report = (performanceMonitor as any).getReport ? performanceMonitor.getReport() : { summary: { poor: 0, needsImprovement: 0, good: 0 } }
       const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`

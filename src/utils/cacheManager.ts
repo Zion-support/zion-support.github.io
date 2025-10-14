@@ -128,7 +128,7 @@ export class CacheManager {
       try {
         localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
       } catch (error) {
-        logger.error('Failed to set localStorage cache', error);
+        logger.error('Failed to set localStorage cache', { error });
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
@@ -140,7 +140,7 @@ export class CacheManager {
       try {
         sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
       } catch (error) {
-        logger.error('Failed to set sessionStorage cache', error);
+        logger.error('Failed to set sessionStorage cache', { error });
         // Fallback to memory cache
         this.memoryCache.set(key, entry);
       }
@@ -165,7 +165,7 @@ export class CacheManager {
           entry = JSON.parse(item) as CacheEntry<T>;
         }
       } catch (error) {
-        logger.error('Failed to get localStorage cache', error);
+        logger.error('Failed to get localStorage cache', error as Error);
       }
     } else if (
       this.storage === CacheStorage.SessionStorage &&
@@ -257,7 +257,7 @@ export class CacheManager {
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
     }
-    logger.info('Cache cleared', 'CacheManager', { storage: this.storage });
+    logger.info('Cache cleared', { storage: this.storage });
   }
   /**
    * Get or set with function (handles both sync and async)

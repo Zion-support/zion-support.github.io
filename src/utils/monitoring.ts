@@ -55,7 +55,7 @@ class MonitoringService {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime;
+            this.metrics.fid = ((entry as any).processingStart || 0) - entry.startTime;
             this.reportMetric('fid', this.metrics.fid);
           });
         });
@@ -66,7 +66,7 @@ class MonitoringService {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
@@ -109,7 +109,7 @@ class MonitoringService {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
+          entries.forEach((entry: PerformanceEntry) => {
             if (entry.duration > 1000) {
               // console.warn('Slow resource detected:', {
               //   name: entry.name,
