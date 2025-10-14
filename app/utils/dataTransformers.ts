@@ -6,6 +6,7 @@ export const dataTransformers = {
         id: itemObj.id || index,
         ...itemObj
       }
+
     })
   },
   
@@ -33,4 +34,5 @@ export const dataTransformers = {
 
     }))
   }
+
 }

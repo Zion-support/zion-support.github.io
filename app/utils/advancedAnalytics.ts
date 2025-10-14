@@ -5,12 +5,14 @@ export const advancedAnalytics = {
         page_path: page
       })
     }
+
   },
   
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', eventName, parameters)
     }
+
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
@@ -20,6 +22,7 @@ export const advancedAnalytics = {
         currency: currency
       })
     }
+
   },
   
   setUserProperties: (properties: Record<string, unknown>) => {
@@ -28,5 +31,7 @@ export const advancedAnalytics = {
         custom_map: properties
       })
     }
+
   }
+
 }

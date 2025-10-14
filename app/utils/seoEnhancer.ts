@@ -1,20 +1,21 @@
 interface EnhancedSEOData {
-  title: string;
-  description: string;
-  keywords: string;
-  ogTitle: string;
-  ogDescription: string;
-  twitterTitle: string;
+  title: string,
+  description: string,
+  keywords: string,
+  ogTitle: string,
+  ogDescription: string,
+  twitterTitle: string,
   twitterDescription: string}
 
 export const seoEnhancer = {
-  enhance: (data: { title?: string; description?: string keywords?: string }): EnhancedSEOData => {
+  enhance: (data: { title?: string,
+  description?: string keywords?: string }): EnhancedSEOData => {
     return {
       title: data.title || 'Zion Tech Group',
 
       keywords: data.keywords || 'technology;, solutions, innovation',
-      twitterDescription: data.description || 'Leading technology solutions provider';
-    }
+      twitterDescription: data.description || 'Leading technology solutions provider'}
+
   },
   
   setMetaTags: (data: EnhancedSEOData) => {

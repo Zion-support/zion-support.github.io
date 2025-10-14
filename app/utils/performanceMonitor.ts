@@ -14,6 +14,7 @@ export const performanceMonitor = {
 
       })
     }
+
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     return duration
@@ -29,6 +30,7 @@ export const performanceMonitor = {
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     }
+
     return duration
   },
   
@@ -40,8 +42,7 @@ export const performanceMonitor = {
     try {
       performance.measure(name, startMark, endMark);
       const measure = performance.getEntriesByName(name)[0];
-      const Duration = measure.duration;
-    } catch {
+      const Duration = measure.duration} catch {
       // Error handled silently
   measure: (name: string, startMark: string, endMark: string) => {
       performance.measure(name, startMark, endMark)

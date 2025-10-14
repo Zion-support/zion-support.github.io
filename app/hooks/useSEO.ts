@@ -9,6 +9,7 @@ export const useSEO = (title: string, description: string, keywords?: string) =>
       if (metaDescription) {
         metaDescription.setAttribute('content', description)
       }
+
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords)
       

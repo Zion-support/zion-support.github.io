@@ -5,6 +5,7 @@ export const analyticsTracker = {
 
       })
     }
+
   },
   
   trackClick: (element: string, location: string) => {
@@ -12,6 +13,7 @@ export const analyticsTracker = {
 
       })
     }
+
   },
   
   trackFormSubmit: (formName: string, success: boolean) => {
@@ -19,6 +21,7 @@ export const analyticsTracker = {
 
       })
     }
+
   },
   
   trackConversion: (conversionId: string, value?: number) => {
@@ -26,5 +29,7 @@ export const analyticsTracker = {
 
       })
     }
+
   }
+
 }

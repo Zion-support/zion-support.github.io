@@ -4,8 +4,7 @@ export const securityHeaders = {
     'script-src': ["'self'", "'unsafe-inline'"],
     'style-src': ["'self'", "'unsafe-inline'"],
 
-    'connect-src': ["'self'", "https: "];
-  },
+    'connect-src': ["'self'", "https: "]},
   
   getCSPHeader: () => {
     return Object.entries(securityHeaders.csp)
