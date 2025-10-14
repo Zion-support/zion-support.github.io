@@ -1,30 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
-        </Routes>
-      </Router>
-    </HelmetProvider>
-import React from 'react';'
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
-{ HelmetProvider } from 'react-helmet-async';
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>;
-      <Router>;
-        <Routes>;}
-          <Route path="/" element={<div>Home Page</div>} />;
-        </Routes>;
-      </Router>;
-    </HelmetProvider>;
-  );
-}
-};
-export default App;
-export default App;
-'
+import React from 'react'; import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; import { HelmetProvider } from 'react-helmet-async'; const App: React.FC = () => {} return ( <HelmetProvide r><//Route r><//Route s><//Routepat h="/" elemen t={<di v>Home Page</di v>} />""" </Route s><///Route r><///HelmetProvide r> import React from 'react'; import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';'
+{ HelmetProvider } from 'react-helmet-async'; const App: React.FC = () => {} return ( <HelmetProvide r><//Route r><//Route s>} <Routepat h="/" elemen t={<di v>Home Page</di v>} />"" </Route s><///Route r><///HelmetProvide r> ); }"'
+}; export default App; export default App;'''
+'"'""'"'

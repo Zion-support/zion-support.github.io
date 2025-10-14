@@ -1,243 +1,32 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
-interface State {
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  errorId: string}
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-import { Helmet } from 'react-helmet-async';
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;}
+import React, { Component, ErrorInfo, ReactNode } from 'react''; import { Helmet } from 'react-helmet-async''; interface Props {} children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void}'
+interface State {} hasError: boolean;,
+error: Error | null;,
+errorInfo: ErrorInfo | null;,
+errorId: string}
+import React, { Component, ErrorInfo, ReactNode } from 'react'; import { Helmet } from 'react-helmet-async'; interface Props {} children: ReactNode; fallback?: ReactNode; onError?: (error: Error, errorInfo: ErrorInfo) => void;}'
 }
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;}
+interface State {} hasError: boolean;,
+error: Error | null;,
+errorInfo: ErrorInfo | null;,
+errorId: string;}
 }
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    }
-      errorInfo: null,'
-      errorId: ''}
-    };
-  }
-    }}
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,}
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
-  }
-    }}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)}
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)}
-      errorInfo}
-    });
-    // Log error to console in development'
-    if (process.env.NODE_ENV === 'development') {'
-      console.error('Error caught by boundary:', error, errorInfo);}
-    }
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-    // Log error to external service in production'
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);}
-    }
-  }
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error tracking service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      }
-        url: window.location.href}
-      };
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
-      '
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) {'
-      console.error('Failed to log error to service:', loggingError);}
-    }
-      // errorTrackingService.captureException(error, { extra: errorData })
-      console.error('Error logged to service:', errorData)} catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError)}
-  }
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-      errorInfo: null,'
-      errorId: ''}
-    });
-  }
-  private handleReload = () => {
-    window.location.reload();
-  }
-  private handleGoHome = () => {
-    window.location.href = '/';
-  }
-    })}
-  private handleReload = () => {
-    window.location.reload()}
-  private handleGoHome = () => {
-    window.location.href = '/'}
-    window.location.reload();}
-  };
-  private handleGoHome = () => {'
-    window.location.href = '/';}
-  };
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback}
-        return this.props.fallback;}
-      }
-      // Default error UI
-      return (
-        <>
-          <Helmet>
-            <title>Error - Zion Tech Group</title>
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-              {/* Error Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-                <svg 
-                  className="w-8 h-8 text-red-400" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
-                  />
-                </svg>
-              </div>
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-              {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">'
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix this issue.
-              </p>
-              {/* Error ID for support */}
-              {this.state.errorId && (
-                <div className="bg-slate-700 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">}
-                    {this.state.errorId}
-                  </code>
-                </div>
-              )}
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                >
-                  Try Again
-                </button>
-                <div className="flex space-x-3">
-                  <button
-                    onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Go Home
-                  </button>
-                  <button
-                    onClick={this.handleReload}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Reload Page
-                  </button>
-                </div>
-              </div>
-              {/* Support Information */}
-              <div className="mt-8 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-2">
-                  Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</p>
-                </div>
-              </div>
-              {/* Development Error Details */}'
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                    Error Details (Development)
-                  </summary>
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">}
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    <div className="mb-2">
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">}
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
-            </div>
-          </div>
-        </>
-      )}
-    return this.props.children}
+class EnhancedErrorBoundary extends Component<Props, Stat e> {} constructor(props: Props) {} super(props); this.state = {} hasError: false,;,
+error: null,;,
+errorInfo: null,;,
+errorId: '''' } errorInfo: null,'';,''
+errorId: ''}'' }; } }} static getDerivedStateFromError(error: Error): Partial<Stat e> {} return {} hasError: true,; error,} errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}``` } } }} componentDidCatch(error: Error, errorInfo: ErrorInfo) {} this.setState({} error,; errorInfo }) // Log error to console in development; if (process.env.NODE_ENV === 'development') {'}' console.error('Error caught by boundary:', error, errorInfo)}'' // Call custom error handler; this.props.onError?.(error, errorInfo) // Log error to external service in production; if (process.env.NODE_ENV === 'production') {'}' this.logErrorToService(error, errorInfo)} errorInfo} }); // Log error to console in development''; if (process.env.NODE_ENV === 'development') {''}' console.error('Error caught by boundary:', error, errorInfo);}'' } // Call custom error handler; this.props.onError?.(error, errorInfo); // Log error to external service in production''; if (process.env.NODE_ENV === 'production') {'}' this.logErrorToService(error, errorInfo);} } } private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {} // In a real application, you would send this to an error tracking service // like Sentry, LogRocket, or Bugsnag; try {} const errorData = {}; message: error.message,;,'`
+stack: error.stack,;,
+componentStack: errorInfo.componentStack,;,
+errorId: this.state.errorId,;,
+timestamp: new Date().toISOString(),;,
+userAgent: navigator.userAgent,;,
+url: window.location.href } url: window.location.href} }; // Example: Send to error tracking service // errorTrackingService.captureException(error, { extra: errorData });; console.error('Error logged to service:', errorData); } catch (loggingError) {''}' console.error('Failed to log error to service:', loggingError);}'' } // errorTrackingService.captureException(error, { extra: errorData }); console.error('Error logged to service:', errorData)} catch (loggingError) {'}' console.error('Failed to log error to service:', loggingError)}'' } private handleRetry = () => {} this.setState({} hasError: false,;,'
+error: null,;,
+errorInfo: null,;,
+errorId: ''';,''
+errorInfo: null,'';,''
+errorId: ''}'' }); } private handleReload = () => {} window.location.reload(); } private handleGoHome = () => {} window.location.href = '/'; } })} private handleReload = () => {} window.location.reload()} private handleGoHome = () => {} window.location.href = '/'}'; window.location.reload();} }; private handleGoHome = () => {''}' window.location.href = '/';}'' }; render() {} if (this.state.hasError) {} // Custom fallback UI; if (this.props.fallback) {} return this.props.fallback} return this.props.fallback;} } // Default error UI; return ( <>Helme t><//titl e>Error - Zion Tech Group</titl e><//meta nam e="robots" conten t="noindex, nofollow" />"" </Helme t><//div classNam e="min-h-screen flex items-center justify-center bg-slate-900 px-4">"" <div classNam e="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">"" {/* Error Icon */} <div classNam e="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">"" <svg classNam e="w-8 h-8 text-red-400"> fil l="none" "; strok e="currentColor" "; viewBo x="0 0 24 24""; aria-hidde n="true""" ><//path; strokeLineca p="round" "; strokeLinejoi n="round" "; strokeWidt h={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" "" /><///sv g><///di v> {/* Error Title */} <h1 classNam e="text-2xl font-bold text-white mb-4">"; Oops! Something went wrong </h 1> {/* Error Message */} <p classNam e="text-gray-300 mb-6 leading-relaxed">''";'
+We're sorry, but something unexpected happened. Our team has been notified '; and is working to fix this issue. </p> {/* Error ID for support */} {this.state.errorId && (} <div classNam e="bg-slate-700 rounded-lg p-3 mb-6">"" <p classNam e="text-sm text-gray-400 mb-1">Error ID:</p>"" <code classNam e="text-xs text-cyan-400 font-mono break-all">}"" {this.state.errorId} </cod e><///di v> )} {/* Action Buttons */} <div classNam e="space-y-3">"" <button onClic k={this.handleRetry} classNam e="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800">" > Try Again </butto n><//div classNam e="flex space-x-3">"" <button onClic k={this.handleGoHome} classNam e="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800">" > Go Home </butto n><//button onClic k={this.handleReload} classNam e="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800">" > Reload Page </butto n><///di v><///di v> {/* Support Information */} <div classNam e="mt-8 pt-6 border-t border-slate-700">"" <p classNam e="text-sm text-gray-400 mb-2">"; Still having trouble? Contact our support team: </p><//div classNam e="text-sm text-cyan-400">"" <p>Email: kleber@ziontechgroup.com</p><//p>Phone: +1-302-464-0950</p><///di v><///di v> {/* Development Error Details */}''' {process.env.NODE_ENV === 'development' && this.state.error && ('}' <details classNam e="mt-6 text-left">"" <summary classNam e="text-sm text-gray-400 cursor-pointer hover:text-white">"; Error Details (Development) </summar y><//div classNam e="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">"" <div classNam e="mb-2">}"" <stron g>Error:</stron g> {this.state.error.message} </di v><//div classNam e="mb-2">"" <stron g>Stack:</stron g><//pre classNam e="whitespace-pre-wrap mt-1">"" {this.state.error.stack} </pr e><///di v> {this.state.errorInfo && (} <di v><//stron g>Component Stack:</stron g><//pre classNam e="whitespace-pre-wrap mt-1">}"" {this.state.errorInfo.componentStack} </pr e><///di v> )} </di v><///detail s> )} </di v><///di v><///> )} return this.props.children}"'
 }
-export default EnhancedErrorBoundary
-export default EnhancedErrorBoundary;'
+export default EnhancedErrorBoundary; export default EnhancedErrorBoundary;''
+'"`"'`"'`

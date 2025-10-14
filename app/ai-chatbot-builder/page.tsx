@@ -1,45 +1,4 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';
-export default function AiChatbotBuilder() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Chatbot Builder;
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI chatbot builder solutions by Zion Tech Group;
-          </p>
-        </div>
-            AI Chatbot Builder</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI chatbot builder solutions by Zion Tech Group</p></div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.;
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+import React from 'react''; import { Helmet } from 'react-helmet-async''; import React from 'react'; import { Helmet } from 'react-helmet-async'; export default function AiChatbotBuilder() {} return ( <div classNam e="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">"" <Helme t><//titl e>AI Chatbot Builder - Zion Tech Group</titl e><//meta nam e="description" conten t="Advanced AI chatbot builder solutions by Zion Tech Group" />"" </Helme t><//div classNam e="container mx-auto px-4 py-16">"" <div classNam e="text-center">"" <h1 classNam e="text-4xl font-bold text-gray-900 mb-4">"; AI Chatbot Builder; </h 1><//p classNam e="text-xl text-gray-600 mb-8">"; Advanced AI chatbot builder solutions by Zion Tech Group; </p><///di v> AI Chatbot Builder</h 1><//p classNam e="text-xl text-gray-600 mb-8">"; Advanced AI chatbot builder solutions by Zion Tech Group</p><///di v><//div classNam e="max-w-4xl mx-auto">"" <div classNam e="bg-white rounded-lg shadow-md p-8">"" <h2 classNam e="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h 2>"" <p classNam e="text-gray-600">"; This page is under development. Please check back later for updates.; </p><///di v><///di v><///di v><///di v> ); } This page is under development. Please check back later for updates.</p><///di v><///di v><///di v><///di v> )} </p><///di v><///di v><///di v><///di v> );}"'
 }
-              This page is under development. Please check back later for updates.</p></div></div></div></div>
-  )}
-            </p>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );}
-}
-'
+''''
+'""'"'
