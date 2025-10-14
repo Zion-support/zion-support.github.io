@@ -1,5 +1,7 @@
-import React from 'react;'const AdvancedSEOOptimizer_new = () => {
+import React from 'react';const AdvancedSEOOptimizer_new = () => {
+
   return (
+
     <div>
       <h2>AdvancedSEOOptimizer_new</h2>
       <p>This component is under construction.</p>
