@@ -8,9 +8,9 @@
     ]
   }
   return (
-<>    <Helmet></Helmet>
+<>    <Helmet>
       <title>{title}</title>
-  )};
+  );
 };
 
 export default SEO;

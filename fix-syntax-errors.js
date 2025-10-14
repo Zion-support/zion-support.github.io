@@ -1,104 +1,109 @@
-const fs = require('fs');'
-const path = require('path');'
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// List of files with common syntax errors that need fixing;
-const filesToFix = [
-  'app/ai-3d-generation/page.tsx',''
-  'app/ai-automation-suite/page.tsx',''
-  'app/ai-automation/page.tsx',''
-  'app/ai-chatbot-builder/page.tsx',''
-  'app/ai-content-creation/page.tsx',''
-  'app/ai-content-generation/page.tsx',''
-  'app/ai-content-writer/page.tsx',''
-  'app/ai-customer-support-chatbot/page.tsx',''
-  'app/ai-customer-support/page.tsx',''
-  'app/ai-cybersecurity/page.tsx',''
-  'app/ai-data-visualization/page.tsx',''
-  'app/ai-document-processor/page.tsx',''
-  'app/ai-ecommerce-solutions/page.tsx',''
-  'app/ai-education-platform/page.tsx',''
-  'app/ai-fintech-solutions/page.tsx',''
-  'app/ai-healthcare/page.tsx',''
-  'app/ai-marketing/page.tsx',''
-  'app/ai-mobile-app-builder/page.tsx',''
-  'app/ai-mobile-builder/page.tsx',''
-  'app/ai-predictive-analytics/page.tsx',''
-  'app/ai-project-management/page.tsx',''
-  'app/ai-recommendation-engine/page.tsx',''
-  'app/ai-sales-automation/page.tsx',''
-  'app/ai-solutions/page.tsx',''
-  'app/ai-voice-assistant/page.tsx',''
-  'app/ai-workflow-automation/page.tsx',''
-  'app/analytics-tools/page.tsx',''
-  'app/api-docs/page.tsx',''
-  'app/autonomous-systems/page.tsx',''
-  'app/business-intelligence/page.tsx',''
-  'app/cloud-solutions/page.tsx',''
-  'app/cloud-services/page.tsx',''
-  'app/contact/page.tsx',''
-  'app/cookies/page.tsx',''
-  'app/custom-software/page.tsx',''
-  'app/cybersecurity/page.tsx',''
-  'app/database-management/page.tsx',''
-  'app/demo/page.tsx',''
-  'app/enterprise/page.tsx',''
-  'app/error.tsx',''
-  'app/gdpr/page.tsx',''
-  'app/global-error.tsx',''
-  'app/iot-edge-computing/page.tsx',''
-  'app/iot-edge/page.tsx',''
-  'app/it-micro-saas/page.tsx',''
-  'app/it-solutions/page.tsx',''
-  'app/legal-document-manager/page.tsx',''
-  'app/loading.tsx',''
-  'app/medical-records-manager/page.tsx'''
-];
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(content) {
+  // Fix triple quotes in 'use client' directive
+  content = content.replace(/'use client''''/g, "'use client';");
+  content = content.replace(/'use client''/g, "'use client';");
+  
+  // Fix import statements with extra quotes
+  content = content.replace(/import\s+([^;]+);""/g, 'import $1;');
+  content = content.replace(/import\s+([^;]+);"/g, 'import $1;');
+  
+  // Fix JSX closing tags with extra quotes
+  content = content.replace(/<\/[^>]+>""/g, (match) => match.replace('""', ''));
+  content = content.replace(/<\/[^>]+>"/g, (match) => match.replace('"', ''));
+  
+  // Fix JSX attributes with extra quotes
+  content = content.replace(/className="([^"]+)""/g, 'className="$1"');
+  content = content.replace(/className="([^"]+)"'/g, 'className="$1"');
+  
+  // Fix malformed JSX structure
+  content = content.replace(/<>    <div><\/div>/g, '<>');
+  content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
+  content = content.replace(/<\/Helmet>/g, '</Helmet>');
+  
+  // Fix function return statements
+  content = content.replace(/  \)\};/g, '  );');
+  content = content.replace(/  \)\};/g, '  );');
+  
+  // Fix malformed JSX fragments
+  content = content.replace(/<>\s*<div><\/div>/g, '<>');
+  content = content.replace(/<>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
+  
+  // Fix extra semicolons in JSX
+  content = content.replace(/;\s*""/g, '');
+  content = content.replace(/;\s*"/g, '');
+  
+  // Fix malformed closing tags
+  content = content.replace(/<\/[^>]+>\s*<\/[^>]+>/g, (match) => {
+    const tags = match.match(/<\/[^>]+>/g);
+    return tags[tags.length - 1];
+  });
+  
+  // Fix extra closing divs and fragments
+  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  content = content.replace(/<\/div>\s*<\/div>/g, '</div>');
+  
+  // Fix malformed JSX structure patterns
+  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
+  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>/g, '<>\n      <Helmet>');
+  
+  // Fix extra closing fragments
+  content = content.replace(/<\/>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</>');
+  content = content.replace(/<\/>\s*<\/div>\s*<\/div>/g, '</>');
+  content = content.replace(/<\/>\s*<\/div>/g, '</>');
+  
+  return content;
+}
 
-// Template for a basic page component;
-const pageTemplate = (title, description) => `import React from "react";``"`
-import { Helmet    } from "react-helmet-async";"
-
-export default function ${title.replace(/[^a-zA-Z0-9]/g, '')}Page() {''
-  return (
-<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
-      <Helmet></Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />""
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">""
-        <div className="text-center">""
-          <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>""
-          <p className="text-gray-300 text-lg">""
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-    </>
-      </div>
-    </div>
-  )};
-}`;```
-
-// Fix files;
-filesToFix.forEach(filePath => {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    const dir = path.dirname(fullPath);
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
     
-    // Create directory if it doesn't exist''
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    
-    // Extract title from file path;
-    const title = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());'
-    const description = `Professional ${title.toLowerCase()} services by Zion Tech Group.`;```
-    
-    // Write the fixed content;
-    fs.writeFileSync(fullPath, pageTemplate(title, description));
-    console.log(`Fixed: ${filePath}`);```
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);```
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Syntax error fixing completed!');'
+// Main function to process all TSX files
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**'] 
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    }
+  }
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+}
+
+main();

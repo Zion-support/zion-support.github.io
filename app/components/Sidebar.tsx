@@ -53,15 +53,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
   if (!isOpen) return null;
 
   return (
-<>    <div className="fixed inset-0 z-50 md:hidden">"""
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"""
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">"""
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">"""
-          <span className="text-xl font-bold text-white">Menu</span>"""
+<>    <div>"""</div>
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
+      <div>"""</div>
+        <div>"""</div>
+          <span>Menu</span>
           <button onClick={onClose} className="text-gray-400 hover:text-white">"""
             <XMarkIcon className="w-6 h-6" />"""
-          </button>
-        </div>
+          </div>
     </>
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">"""
           {navigation.map((link) => (
@@ -70,9 +69,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                 <div></div>
                   <button;
                     onClick={() => toggleExpanded(link.name)
-                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded""""
+                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"""
                   >
-                    <div className="flex items-center">"""
+                    <div>"""</div>
                       <link.icon className="w-5 h-5 mr-3" />"""
                       {link.name}
                     </div>
@@ -80,11 +79,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                       className={`w-4 h-4 transition-transform ${````
                         expandedItems.includes(link.name) ? 'rotate-180' : '''''
                       }`} ````
-                    /></ChevronDownIcon>
-                  </button>
+                    /></button>
                   {expandedItems.includes(link.name) && (
-                    <div className="ml-4 mt-2 space-y-1">"""
-                      {link.submenu.map((subLink) => (
+                    <div>"""
+                      {link.submenu.map((subLink) => (</div>
                         <Link;
                           key={subLink.name}
                           to={subLink.href}
@@ -103,10 +101,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                 </div>
               ) : (
                 <Link;
-                </Link></Link>
+                </Link>
               )
-            </div>
-        </nav>
+            </nav>
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');'
@@ -259,12 +256,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === '');'
 
   if (!isOpen) return null;
-import React from "react";"
+import React from "react";
 
   return (
     <div className={`bg-slate-800 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-16'} ${className}`}>
-      <div className="flex items-center justify-between p-4 border-b border-slate-700">
-        {isOpen && (
+      <div>{isOpen && (</div>
           <h2 className="text-xl font-bold">Zion Tech Group</h2>
         )}
         <button
@@ -276,6 +272,4 @@ import React from "react";"
           ) : (
             <ChevronRightIcon className="w-5 h-5" />
           )}
-        </button>
-      </div>
-    </div>
+        </div>

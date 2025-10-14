@@ -58,15 +58,15 @@ class ErrorBoundary extends Component<Props, State> {
       return (
                   Something went wrong;
                 </h1>
-                <p className="mt-2 text-sm text-gray-600">"""
-                  We're sorry, but something unexpected happened. Please try refreshing the page.'''
+                <p>"""
+                  We're sorry, but something unexpected happened. Please try refreshing the page.'''</p>
                 </p>
                 
                 {process.env.NODE_ENV === 'development' && this.state.error && ('''
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">"""
-                    <h3 className="text-sm font-medium text-red-800">Error Details:</h3>"""
-                    <pre className="mt-2 text-xs text-red-700 overflow-auto">"""
-                      {this.state.error.toString()
+                  <div>"""</div>
+                    <h3 className="text-sm font-medium text-red-800">Error Details:</h3>
+                    <p>"""
+                      {this.state.error.toString()</p>
                     </pre>
                     {this.state.errorInfo && (
                         {this.state.errorInfo.componentStack}
@@ -74,24 +74,20 @@ class ErrorBoundary extends Component<Props, State> {
                     )
                   </div>
                 )
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"></div>"""
+                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"></div>
                   <button;
                     onClick={() => window.location.reload()"""
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500""""
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"""
                   >"""
                     <RefreshCw className="w-4 h-4 mr-2" />"""
                     Refresh Page;
                   </button>
                   <Link"""
                     to="/"""""
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"">"""
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">"""
                     <Home className="w-4 h-4 mr-2" />"""
                     Go Home;
-                  </Link>
-                </div>
-            </div>
-          </div>
-        <div className="p-4"></div>""
-          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>""
-          <p>Please refresh the page and try again.</p>
-        </div>
+                  </div>
+        <div className="p-4"></div>
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</div>

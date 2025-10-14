@@ -30,7 +30,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         href={href}
         className={classes}
         target="_blank""""
-        rel="noopener noreferrer""></a>""
+        rel="noopener noreferrer""></a>
         {children}
       </a>
     )}

@@ -54,7 +54,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
     ...(tags.length > 0 && { keywords: tags.join(', ') }),'''
   } : null;
   return (
-<>    <Helmet></Helmet>
+<>    <Helmet>
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       <meta name="description" content={description} />"""

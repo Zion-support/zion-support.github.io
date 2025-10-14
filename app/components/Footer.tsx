@@ -1,6 +1,6 @@
-import React from "react";"
-import { Link    } from "react-router-dom";"
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from "lucide-react";"
+import React from "react";
+import { Link    } from "react-router-dom";
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -85,148 +85,125 @@ const Footer = () => {
   return (
 <>    <footer className="bg-slate-900 text-white">""
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">""
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">""
-          {/* Company Info */}
-          <div className="lg:col-span-1">""
-            <div className="flex items-center space-x-2 mb-6">""
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">""
-                <span className="text-white font-bold text-lg">Z</span>""
-              </div>
+      <div>""</div>
+        <div>""
+          {/* Company Info */}</div>
+          <div>""</div>
+            <div>""</div>
+              <div>""</div>
+                <span className="text-white font-bold text-lg">Z</div>
     </>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>""
-            </div>
-            <p className="text-gray-400 mb-6 max-w-sm">""
-              Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.
+              <span className="text-white font-bold text-xl">Zion Tech Group</div>
+            <p>""
+              Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.</p>
             </p>
-            <div className="space-y-3">""
-              <div className="flex items-center text-gray-400">""
+            <div>""</div>
+              <div>""</div>
                 <Mail className="w-4 h-4 mr-3" />""
-                <span>contact@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center text-gray-400">""
+                <span>contact@ziontechgroup.com</div>
+              <div>""</div>
                 <Phone className="w-4 h-4 mr-3" />""
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center text-gray-400">""
+                <span>+1 (555) 123-4567</div>
+              <div>""</div>
                 <MapPin className="w-4 h-4 mr-3" />""
-                <span>San Francisco, CA</span>
-              </div>
-            </div>
-          </div>
+                <span>San Francisco, CA</div>
 
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
-            <div key={index} className="lg:col-span-1">""
-              <div className="flex items-center mb-6">""
-                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>```
-                  {category.icon}
+            <div>""</div>
+              <div>""</div>
+                <div>```
+                  {category.icon}</div>
                 </div>
-                <h3 className="text-lg font-semibold text-white">{category.title}</h3>""
-              </div>
+                <h3 className="text-lg font-semibold text-white">{category.title}</div>
               <ul className="space-y-3">""
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex}></li>
                     <Link;
                       to={link.href}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"">"
+                      className="text-gray-400 hover:text-white transition-colors text-sm">"
                       {link.label}
-                    </Link>
-                  </li>
+                    </li>
                 )})}
-              </ul>
-            </div>
+              </div>
           ))}
         </div>
 
         {/* Additional Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">""
+        <div>""</div>
           <div></div>
-            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>""
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-3">""
               {companyLinks.map((link, index) => (
                 <li key={index}></li>
                   <Link;
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"">"
+                    className="text-gray-400 hover:text-white transition-colors text-sm">"
                     {link.label}
-                  </Link>
-                </li>
+                  </li>
               ))}
-            </ul>
-          </div>
+            </div>
           <div></div>
-            <h4 className="text-lg font-semibold text-white mb-4">Support</h4>""
+            <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
             <ul className="space-y-3">""
               {supportLinks.map((link, index) => (
                 <li key={index}></li>
                   <Link;
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"">"
+                    className="text-gray-400 hover:text-white transition-colors text-sm">"
                     {link.label}
-                  </Link>
-                </li>
+                  </li>
               ))}
-            </ul>
-          </div>
+            </div>
           <div></div>
-            <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>""
+            <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
             <ul className="space-y-3">""
               {legalLinks.map((link, index) => (
                 <li key={index}></li>
                   <Link;
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"">"
+                    className="text-gray-400 hover:text-white transition-colors text-sm">"
                     {link.label}
-                  </Link>
-                </li>
+                  </li>
               ))}
-            </ul>
-          </div>
-        </div>
+            </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-slate-700">""
-          <div className="max-w-md mx-auto text-center">""
-            <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>""
-            <p className="text-gray-400 mb-6">Get the latest news and updates from Zion Tech Group.</p>""
-            <div className="flex">""
+        <div>""</div>
+          <div>""</div>
+            <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+            <p>Get the latest news and updates from Zion Tech Group.</p>
+            <div>""</div>
               <input;
                 type="email"""
                 placeholder="Enter your email"""
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"""
+                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500""
               /></input>
               <button className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-r-lg transition-colors flex items-center">""
                 Subscribe;
                 <ArrowRight className="w-4 h-4 ml-2" />""
-              </button>
-            </div>
-          </div>
-        </div>
+              </div>
 
       {/* Bottom Footer */}
-      <div className="bg-slate-800 border-t border-slate-700">""
-        <div className="container mx-auto px-4 py-6">""
-          <div className="flex flex-col md:flex-row items-center justify-between">""
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">""
-              © {currentYear} Zion Tech Group. All rights reserved.
+      <div>""</div>
+        <div>""</div>
+          <div>""</div>
+            <div>""
+              © {currentYear} Zion Tech Group. All rights reserved.</div>
             </div>
-            <div className="flex items-center space-x-6">""
-              {socialLinks.map((social, index) => (
+            <div>""
+              {socialLinks.map((social, index) => (</div>
                 <a;
                   key={index}
                   href={social.href}
                   target="_blank"""
                   rel="noopener noreferrer"""
-                  className="text-gray-400 hover:text-white transition-colors"""
+                  className="text-gray-400 hover:text-white transition-colors""
                   aria-label={social.label}></a>
                   {social.icon}
                 </a>
               ))}
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 };

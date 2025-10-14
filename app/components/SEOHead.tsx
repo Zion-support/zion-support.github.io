@@ -27,7 +27,7 @@
 
   return (
   <>
-    <Helmet></Helmet>
+    <Helmet>
       <title>{title}</title>
       {structuredData && (
         <script type="application/ld+json">""
