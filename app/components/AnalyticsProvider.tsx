@@ -14,7 +14,7 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') => {
+    if (process.env.NODE_ENV === 'development') {
       console.warn('Event tracked: ', eventName, properties);
     }
     // Add your analytics tracking logic here
@@ -49,7 +49,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-  if (context === undefined) => {
+  if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
