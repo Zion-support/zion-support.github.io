@@ -1,49 +1,52 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 interface EnhancedAnalyticsProps {
+  
   eventName?: string;
   eventProperties?: Record<string, unknown>;
+
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
+const,
+  EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   eventName,
-  eventProperties
-}) => {
-  useEffect(() => {
-    // Enhanced analytics tracking
-    const trackEvent = (event: string, properties?: Record<string, unknown>) => {
+  eventProperties;
+})  => {
+  useEffect(()  => {
+    // Enhanced analytics tracking;
+const trackEvent = (event: string, properties?: Record<string, unknown>)  => {
       if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
         (window as unknown as { gtag: (command: string, event: string, config: Record<string, unknown>) => void }).gtag('event', event,{
           event_category:'Enhanced Analytics',
-          ...properties
+          ...properties;
         });
       }
     };
 
-    // Track page view
-    const trackPageView = () => {
+    // Track page view;
+const trackPageView = ()  => {
       if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
         (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config','GA_MEASUREMENT_ID',{
           page_title: document.title,
-          page_location: window.location.href
+          page_location: window.location.href;
         });
       }
     };
 
-    // Track user engagement
-      const trackEngagement = () => {
+    // Track user engagement;
+const trackEngagement = ()  => {
         let startTime = Date.now();
         let maxScrollDepth = 0;
       let isActive = true;
 
-      const trackScroll = () => {
+      const trackScroll = ()  => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
         );
         maxScrollDept h = Math.max(maxScrollDepth, scrollDepth);
       };
 
-      const trackVisibility = () => {
+      const trackVisibility = ()  => {
         isActiv e = !document.hidden;
         if (isActive) {
           startTim e = Date.now();
@@ -51,7 +54,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           const timeSpent = Date.now() - startTime;
           trackEvent('time_on_page',{
             time_spent: timeSpent,
-            max_scroll_depth: maxScrollDepth
+            max_scroll_depth: maxScrollDepth;
           });
         }
       };
@@ -59,34 +62,34 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       window.addEventListener('scroll', trackScroll);
       document.addEventListener('visibilitychange', trackVisibility);
 
-      // Track when user leaves page
-      window.addEventListener('beforeunload', () => {
+      // Track when user leaves page;
+window.addEventListener('beforeunload', ()  => {
         const timeSpent = Date.now() - startTime;
         trackEvent('page_exit',{
           time_spent: timeSpent,
-          max_scroll_depth: maxScrollDepth
+          max_scroll_depth: maxScrollDepth;
         });
       });
 
-      return () => {
+      return ()  => {
         window.removeEventListener('scroll', trackScroll);
         document.removeEventListener('visibilitychange', trackVisibility);
       };
     };
 
-    // Initialize tracking
-    trackPageView();
+    // Initialize tracking;
+trackPageView();
     const cleanup = trackEngagement();
 
-    // Track custom event if provided
-    if (eventName) {
+    // Track custom event if provided;
+if (eventName) {
       trackEvent(eventName, eventProperties);
     }
 
     return cleanup;
   },[eventName, eventProperties]);
 
-  return null; // This component doesn't render anything
+  return null; // This component doesn't render anything;
 };
 
 export default EnhancedAnalytics;

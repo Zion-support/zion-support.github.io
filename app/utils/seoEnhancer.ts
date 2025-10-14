@@ -1,4 +1,5 @@
 interface EnhancedSEOData {
+  
   title: string;
   description: string;
   keywords: string;
@@ -6,10 +7,11 @@ interface EnhancedSEOData {
   ogDescription: string;
   twitterTitle: string;
   twitterDescription: string;
+
 }
 
 export const seoEnhancer ={
-  enhance: (data:{ title?: string; description?: string; keywords?: string }): EnhancedSEODat a => {
+  enhance: (data:{ title?: string; description?: string; keywords?: string }): EnhancedSEODat a  => {
     return {
       title: data.title || 'Zion Tech Group',
       description: data.description || 'Leading technology solutions provider',
@@ -20,11 +22,11 @@ export const seoEnhancer ={
       twitterDescription: data.description || 'Leading technology solutions provider'
     }
   },
-  setMeta Tags: (data: EnhancedSEOData) => {
+  setMeta,
+  Tags: (data: EnhancedSEOData)  => {
     if (typeof document !=='undefined') {
-      document.titl e = data.title
-      
-      const metaDescription = document.querySelector('meta[name="description"]')
+      document.titl e = data.title;
+const metaDescription = document.querySelector('meta[name="description"]')
       if (metaDescription) {
         metaDescription.setAttribute('content', data.description)
       }

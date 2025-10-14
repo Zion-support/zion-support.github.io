@@ -6,19 +6,23 @@ import { Star, CheckCircle, Zap, Users, TrendingUp  } from 'lucide-react';
 import { Link  } from 'react-router-dom';
 
 interface MicroSaasProduct {
+  
   id: string;
   icon: string;
   title: string;
   description: string;
-  features: string[];
+  features: string[];;
   price: string;
   users: string;
   popular: boolean;
   category: string;
+
 }
 
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts: MicroSaasProduct[] =[
+const,
+  MicroSaasPage: React.FC = () => {
+  const,
+  microSaasProducts: MicroSaasProduct[] =[
     {
       id:'1',
       icon:'📊',
@@ -124,14 +128,16 @@ const MicroSaasPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
+            <h1 className="text-4xl,
+  md:text-6xl font-bold text-white mb-6">
+              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2,
+  md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
                 <div key ={index} classNam e ="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -151,11 +157,12 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <buttonton key ={category}
+                <button key ={category}
                   classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     categor y ==='All'
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      :'bg-white/10 text-gray-300 hover:bg-white/20'
+                      :'bg-white/10 text-gray-300,
+  hover:bg-white/20'
                   }`}>
                   {category}
                 </button>
@@ -174,11 +181,13 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1,
+  md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
                 <div key ={product.id}
                   classNam e ={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    product.popular
+                    product.popular;
                       ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
                       :'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
@@ -186,7 +195,7 @@ const MicroSaasPage: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -216,11 +225,15 @@ const MicroSaasPage: React.FC = () => {
                   </ul>
 
                   <div className="flex flex-col gap-3">
-                    <buttonton className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
-                      Start Free Trial
+                    <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white,
+  hover:from-purple-600,
+  hover:to-blue-600 transform,
+  hover:scale-105">
+                      Start Free Trial;
                     </button>
-                    <buttonton className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
-                      Learn More
+                    <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20,
+  hover:bg-white/20">
+                      Learn More;
                     </button>
                   </div>
                 </div>
@@ -240,7 +253,9 @@ const MicroSaasPage: React.FC = () => {
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1,
+  md:grid-cols-2,
+  lg:grid-cols-4 gap-6">
                 {benefits.map((benefit, index) => (
                   <div key ={index} classNam e ="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
@@ -262,7 +277,8 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1,
+  md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">1</span>
@@ -299,15 +315,20 @@ const MicroSaasPage: React.FC = () => {
                 Choose the micro SaaS solution that fits your business needs. 
                 Start with a free trial and scale as you grow.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col,
+  sm:flex-row gap-4 justify-center">
                 <Link to ="/contact"
-                  classNam e ="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  classNam e ="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold,
+  hover:from-purple-600,
+  hover:to-blue-600 transition-all duration-300 transform,
+  hover:scale-105">
                   <Zap className="w-5 h-5" />
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
                 <Link to ="/pricing"
-                  classNam e ="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  View All Plans
+                  classNam e ="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20,
+  hover:bg-white/20 transition-all duration-300">
+                  View All Plans;
                 </Link>
               </div>
             </div>

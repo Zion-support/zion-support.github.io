@@ -2,20 +2,23 @@ import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
+  
   title: string;
   description: string;
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
+
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+const,
+  EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
   keywords,
   canonicalUrl,
-  ogImage
-}) => {
+  ogImage;
+})  => {
   return (
     <Helmet>
       <title>{title}</title>

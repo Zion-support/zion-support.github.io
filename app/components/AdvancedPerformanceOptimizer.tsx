@@ -1,9 +1,10 @@
 'use client';
 
-import React,{ useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor  } from '../hooks/usePerformanceMonitor';
 
 interface AdvancedPerformanceOptimizerProps {
+  
   enableImage Optimization?: boolean;
   enableLazy Loading?: boolean;
   enablePreloading?: boolean;
@@ -12,9 +13,11 @@ interface AdvancedPerformanceOptimizerProps {
   enableResource Hints?: boolean;
   enableCritical CSS?: boolean;
   enableBundle Analysis?: boolean;
+
 }
 
-const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
+const,
+  AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
   enableImageOptimizatio n = true,
   enableLazyLoadin g = true,
   enablePreloadin g = true,
@@ -22,18 +25,18 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableServiceWorke r = true,
   enableResourceHint s = true,
   enableCriticalCS S = true,
-  enableBundleAnalysi s = true
-}) => {
+  enableBundleAnalysi s = true;
+})  => {
   usePerformanceMonitor();
 
-  // Image optimization
-  useEffect(() => {
+  // Image optimization;
+useEffect(()  => {
     if (!enableImage Optimization || typeof window ==='undefined') return;
 
-    const optimizeImages = () => {
+    const optimizeImages = ()  => {
       const images = document.querySelector All('img[data-src]');
-      const imageObserver = newIntersection Observer((entries) => {
-        entries.forEach((entry) => {
+      const imageObserver = newIntersection Observer((entries)  => {
+        entries.forEach((entry)  => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImage Element;
             const src = img.getAttribute('data-src');
@@ -46,42 +49,42 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         });
       },{
         rootMargin:'50 px 0 px',
-        threshold: 0.01
+        threshold: 0.01;
       });
 
       images.forEach((img) => imageObserver.observe(img));
     };
 
-    // Run after DOM is ready
-    if (document.readyStat e ==='loading') {
+    // Run after DOM is ready;
+if (document.readyStat e ==='loading') {
       document.addEvent Listener('DOMContent Loaded', optimizeImages);
     } else {
       optimizeImages();
     }
 
-    return () => {
+    return ()  => {
       document.removeEvent Listener('DOMContent Loaded', optimizeImages);
     };
   },[enableImage Optimization]);
 
-  // Lazy loading for components
-  useEffect(() => {
+  // Lazy loading for components;
+useEffect(()  => {
     if (!enableLazy Loading || typeof window ==='undefined') return;
 
-    const lazyLoad Components = () => {
+    const lazyLoad Components = ()  => {
       const components = document.querySelector All('[data-lazy-component]');
-      const componentObserver = newIntersection Observer((entries) => {
-        entries.forEach((entry) => {
+      const componentObserver = newIntersection Observer((entries)  => {
+        entries.forEach((entry)  => {
           if (entry.isIntersecting) {
             const component = entry.target as HTMLElement;
             const component = component.getAttribute('data-lazy-component');
             if (componentName) {
-              // Load component dynamically
-              import(`../components/${componentName}.tsx`).then((_module) => {
+              // Load component dynamically;
+import(`../components/${componentName}.tsx`).then((_module)  => {
                 component.innerHTM L ='';
-                // Render component
-                componentObserver.unobserve(component);
-              }).catch((error) => {
+                // Render component;
+componentObserver.unobserve(component);
+              }).catch((error)  => {
                 console.warn(`Failed to load component ${componentName}:`, error);
               });
             }
@@ -89,7 +92,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         });
       },{
         rootMargin:'100 px 0 px',
-        threshold: 0.1
+        threshold: 0.1;
       });
 
       components.forEach((component) => componentObserver.observe(component));
@@ -101,22 +104,22 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       lazyLoad Components();
     }
 
-    return () => {
+    return ()  => {
       document.removeEvent Listener('DOMContent Loaded', lazyLoad Components);
     };
   },[enableLazy Loading]);
 
-  // Resource preloading
-  useEffect(() => {
+  // Resource preloading;
+useEffect(()  => {
     if (!enablePreloading || typeof window ==='undefined') return;
 
-    const preloadCritical Resources = () => {
-      // Preload critical fonts
-      const fontPreloads =[
+    const preloadCritical Resources = ()  => {
+      // Preload critical fonts;
+const fontPreloads =[
     { href:'/fonts/inter-var.woff2', as:'font', type:'font/woff2', crossorigin:'anonymous' },{ href:'/fonts/inter-var.woff', as:'font', type:'font/woff', crossorigin:'anonymous' }
       ];
 
-      fontPreloads.forEach((font) => {
+      fontPreloads.forEach((font)  => {
         const link = document.createElement('link');
         link.re l ='preload';
         link.hre f = font.href;
@@ -126,12 +129,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         document.head.appendChild(link);
       });
 
-      // Preload critical images
-      const imagePreloads =[
+      // Preload critical images;
+const imagePreloads =[
         '/images/hero-bg.webp','/images/logo.webp','/images/og-image.webp'
       ];
 
-      imagePreloads.forEach((src) => {
+      imagePreloads.forEach((src)  => {
         const link = document.createElement('link');
         link.re l ='preload';
         link.hre f = src;
@@ -139,12 +142,12 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         document.head.appendChild(link);
       });
 
-      // Preload critical scripts
-      const scriptPreloads =[
+      // Preload critical scripts;
+const scriptPreloads =[
         '/assets/vendor-react.js','/assets/vendor-ui.js'
       ];
 
-      scriptPreloads.forEach((src) => {
+      scriptPreloads.forEach((src)  => {
         const link = document.createElement('link');
         link.re l ='modulepreload';
         link.hre f = src;
@@ -155,21 +158,25 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     preloadCritical Resources();
   },[enablePreloading]);
 
-  // Service Worker registration
-  useEffect(() => {
+  // Service Worker registration;
+useEffect(()  => {
     if (!enableService Worker || typeof window ==='undefined') return;
 
-    const registerService Worker = async () => {
+    const registerService Worker = async ()  => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-          console.warn('Service Worker registered successfully:', registration);
+          console.warn('Service Worker registered,
+  successfully:', registration);
           
-          // Service worker registered successfully
-          console.warn('Service Worker scope:', registration.scope);
+          // Service worker registered successfully;
+console.warn('Service Worker,
+  scope:', registration.scope);
         } catch (error) {
-          console.warn('Service Worker registration failed:', error);
-          console.warn('Service Worker error details:', error instanceofError ? error.message :'Unknown error');
+          console.warn('Service Worker registration,
+  failed:', error);
+          console.warn('Service Worker error,
+  details:', error instanceofError ? error.message :'Unknown error');
         }
       }
     };
@@ -177,29 +184,29 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     registerServiceWorker();
   },[enableServiceWorker]);
 
-  // Resource hints
-  useEffect(() => {
+  // Resource hints;
+useEffect(()  => {
     if (!enableResource Hints || typeof window ==='undefined') return;
 
-    const addResource Hints = () => {
-      // DNS prefetch for external domains
-      const dnsPrefetch Domains =[
+    const addResource Hints = ()  => {
+      // DNS prefetch for external domains;
+const dnsPrefetch Domains =[
         'fonts.googleapis.com','fonts.gstatic.com','www.google-analytics.com','www.googletagmanager.com'
       ];
 
-      dnsPrefetch Domains.forEach((domain) => {
+      dnsPrefetch Domains.forEach((domain)  => {
         const link = document.createElement('link');
         link.re l ='dns-prefetch';
         link.hre f = `//${domain}`;
         document.head.appendChild(link);
       });
 
-      // Preconnect to critical origins
-      const preconnectOrigins =[
+      // Preconnect to critical origins;
+const preconnectOrigins =[
         'https://fonts.googleapis.com','https://fonts.gstatic.com'
       ];
 
-      preconnectOrigins.forEach((origin) => {
+      preconnectOrigins.forEach((origin)  => {
         const link = document.createElement('link');
         link.re l ='preconnect';
         link.hre f = origin;
@@ -211,13 +218,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     addResource Hints();
   },[enableResource Hints]);
 
-  // Critical CSS inlining
-  useEffect(() => {
+  // Critical CSS inlining;
+useEffect(()  => {
     if (!enableCritical CSS || typeof window ==='undefined') return;
 
-    const inlineCritical CSS = () => {
-      // Check if critical CSS is already inlined
-      if (document.querySelector('#critical-css')) return;
+    const inlineCritical CSS = ()  => {
+      // Check if critical CSS is already inlined;
+if (document.querySelector('#critical-css')) return;
 
       const critical CSS = `
         /* Critical CSS for above-the-fold content */
@@ -235,26 +242,27 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     inlineCritical CSS();
   },[enableCritical CSS]);
 
-  // Bundle analysis and optimization
-  useEffect(() => {
+  // Bundle analysis and optimization;
+useEffect(()  => {
     if (!enableBundle Analysis || typeof window ==='undefined') return;
 
-    const analyzeBundle = () => {
-      // Track bundle size
-      const scripts = Array.from(document.scripts);
-      const totalScript Size = scripts.reduce((total, script) => {
+    const analyzeBundle = ()  => {
+      // Track bundle size;
+const scripts = Array.from(document.scripts);
+      const totalScript Size = scripts.reduce((total, script)  => {
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
-      console.warn('Bundle analysis:',{ 
+      console.warn('Bundle,
+  analysis:',{ 
         scriptCount: scripts.length,
         totalSize: totalScriptSize,
-        averageSize: totalScriptSize / scripts.length
+        averageSize: totalScriptSize / scripts.length;
       });
 
-      // Track resource loading times
-      const resources = performance.getEntries By Type('resource');
-      const resourceMetrics = resources.reduce((acc, resource) => {
+      // Track resource loading times;
+const resources = performance.getEntries By Type('resource');
+      const resourceMetrics = resources.reduce((acc, resource)  => {
         const type = resource.name.split('.').pop() || 'unknown';
         if (!acc[type]) acc[type] ={ count: 0, totalSize: 0, totalTime: 0 };
         acc[type].count++;
@@ -263,28 +271,30 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return acc;
       },{} asRecord<string,{ count: number; totalSize: number; totalTime: number }>);
 
-      console.warn('Resource metrics:', resourceMetrics);
+      console.warn('Resource,
+  metrics:', resourceMetrics);
     };
 
-    // Run analysis after page load
-    window.addEventListener('load', analyzeBundle);
+    // Run analysis after page load;
+window.addEventListener('load', analyzeBundle);
     return () => window.removeEventListener('load', analyzeBundle);
   },[enableBundleAnalysis]);
 
-  // Memoized performance optimizations
-  const performanceOptimizations = useMemo(() => ({
-    // Debounce scroll events
-    debounceScroll: (callback: () => void, delay: numbe r = 16) => {
-      let timeoutId: Node JS.Timeout;
-      return () => {
+  // Memoized performance optimizations;
+const performanceOptimizations = useMemo(() => ({
+    // Debounce scroll events,
+  debounceScroll: (callback: () => void, delay: numbe r = 16)  => {
+      let,
+  timeoutId: Node JS.Timeout;
+      return ()  => {
         clearTimeout(timeoutId);
         timeoutI d = setTimeout(callback, delay);
       };
     },
-    // Throttle resize events
-    throttleResize: (callback: () => void, delay: numbe r = 100) => {
+    // Throttle resize events,
+  throttleResize: (callback: () => void, delay: numbe r = 100)  => {
       let lastCall = 0;
-      return () => {
+      return ()  => {
         const now = Date.now();
         if (now - lastCall >= delay) {
           lastCal l = now;
@@ -292,27 +302,27 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         }
       };
     },
-    // Optimize animations
-    optimizeAnimations: () => {
+    // Optimize animations,
+  optimizeAnimations: ()  => {
       const elements = document.querySelector All('[data-animate]');
-      elements.forEach((element) => {
+      elements.forEach((element)  => {
         const htmlElement = element as HTMLElement;
         htmlElement.style.willChang e ='transform, opacity';
       });
     }
   }),[]);
 
-  // Apply performance optimizations
-  useEffect(() => {
-    const debouncedScroll = performanceOptimizations.debounceScroll(() => {
-      // Handle scroll optimizations
-      const scrolled = window.scroll Y > 100;
+  // Apply performance optimizations;
+useEffect(()  => {
+    const debouncedScroll = performanceOptimizations.debounceScroll(()  => {
+      // Handle scroll optimizations;
+const scrolled = window.scroll Y > 100;
       document.body.classList.toggle('scrolled', scrolled);
     });
 
-    const throttledResize = performanceOptimizations.throttleResize(() => {
-      // Handle resize optimizations
-      const isMobile = window.innerWidth <768; document.body.classList.toggle('mobile', isMobile);
+    const throttledResize = performanceOptimizations.throttleResize(()  => {
+      // Handle resize optimizations;
+const isMobile = window.innerWidth <768; document.body.classList.toggle('mobile', isMobile);
     });
 
     window.addEvent Listener('scroll', debouncedScroll,{ passive: true });
@@ -320,7 +330,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
     performanceOptimizations.optimizeAnimations();
 
-    return () => {
+    return ()  => {
       window.removeEvent Listener('scroll', debouncedScroll);
       window.removeEvent Listener('resize', throttledResize);
     };

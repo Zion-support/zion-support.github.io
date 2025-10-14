@@ -5,6 +5,7 @@ import { Helmet  } from 'react-helmet-async';
 import { Zap, Heart, Brain, Rocket, Star, MapPin, Clock, Users, CheckCircle  } from 'lucide-react';
 
 interface JobPosition {
+  
   id: string;
   title: string;
   department: string;
@@ -13,12 +14,15 @@ interface JobPosition {
   experience: string;
   posted: string;
   description: string;
-  requirements: string[];
+  requirements: string[];;
   featured: boolean;
+
 }
 
-const CareersPage: React.FC = () => {
-  const positions: JobPosition[] =[
+const,
+  CareersPage: React.FC = () => {
+  const,
+  positions: JobPosition[] =[
     {
       id:'1',
       title:'Senior AI Engineer',
@@ -29,7 +33,7 @@ const CareersPage: React.FC = () => {
       posted:'2 days ago',
       description:'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements:['PhD inComputer Science or related field','5+ years ML/AI experience','Expert inPython, TensorFlow, PyTorch'],
-      featured: true
+      featured: true;
     },{
       id:'2',
       title:'Quantum Computing Researcher',
@@ -40,7 +44,7 @@ const CareersPage: React.FC = () => {
       posted:'1 week ago',
       description:'Research and develop quantum algorithms and applications for real-world problems.',
       requirements:['PhD inPhysics orComputer Science','Quantum computing experience','Strong mathematical background'],
-      featured: true
+      featured: true;
     },{
       id:'3',
       title:'DevOps Engineer',
@@ -51,7 +55,7 @@ const CareersPage: React.FC = () => {
       posted:'3 days ago',
       description:'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
       requirements:['AWS/Azure/GCP certification','Kubernetes experience','Infrastructure asCode'],
-      featured: false
+      featured: false;
     },{
       id:'4',
       title:'UX Designer',
@@ -62,7 +66,7 @@ const CareersPage: React.FC = () => {
       posted:'5 days ago',
       description:'Create intuitive user experiences for complex AI and technology products.',
       requirements:['Portfolio of AI/tech products','Figma expertise','User research experience'],
-      featured: false
+      featured: false;
     },{
       id:'5',
       title:'Data Scientist',
@@ -73,7 +77,7 @@ const CareersPage: React.FC = () => {
       posted:'1 week ago',
       description:'Analyze complex datasets and build predictive models for business insights.',
       requirements:['Masters inData Science','Python/R expertise','Statistical modeling'],
-      featured: false
+      featured: false;
     },{
       id:'6',
       title:'Product Manager',
@@ -84,7 +88,7 @@ const CareersPage: React.FC = () => {
       posted:'4 days ago',
       description:'Lead product strategy and development for AI-powered enterprise solutions.',
       requirements:['Technical background','Product management experience','AI/ML knowledge'],
-      featured: false
+      featured: false;
     }
   ];
 
@@ -121,20 +125,26 @@ const CareersPage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl,
+  md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Join Our Team
+                Join Our Team;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <buttonton className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                View Open Positions
+            <div className="flex flex-col,
+  sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500,
+  hover:from-purple-600,
+  hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform,
+  hover:scale-105">
+                View Open Positions;
               </button>
-              <buttonton className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
-                Learn About Our Culture
+              <button className="border border-white/30 text-white,
+  hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                Learn About Our Culture;
               </button>
             </div>
           </div>
@@ -143,7 +153,8 @@ const CareersPage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1,
+  md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
                 <div className="text-gray-300">Team Members</div>
@@ -164,9 +175,10 @@ const CareersPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Open Positions
+              Open Positions;
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1,
+  lg:grid-cols-2 gap-8">
               {positions.map((position) => (
                 <div key ={position.id}
                   classNam e ={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
@@ -209,11 +221,14 @@ const CareersPage: React.FC = () => {
                   </div>
 
                   <div className="flex gap-3">
-                    <buttonton className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 font-medium">
-                      Apply Now
+                    <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg,
+  hover:from-purple-600,
+  hover:to-cyan-600 transition-all duration-300 font-medium">
+                      Apply Now;
                     </button>
-                    <buttonton className="px-6 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More
+                    <button className="px-6 py-2 border border-white/30 text-white rounded-lg,
+  hover:bg-white/10 transition-all duration-300">
+                      Learn More;
                     </button>
                   </div>
                 </div>
@@ -228,7 +243,9 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
               Why Join Zion Tech Group?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1,
+  md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key ={index} classNam e ="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -254,7 +271,8 @@ const CareersPage: React.FC = () => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1,
+  md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-10 h-10 text-cyan-400" />
@@ -293,12 +311,17 @@ const CareersPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <buttonton className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                  Send Your Resume
+              <div className="flex flex-col,
+  sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-cyan-500,
+  hover:from-purple-600,
+  hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform,
+  hover:scale-105">
+                  Send Your Resume;
                 </button>
-                <buttonton className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
-                  Contact HR Team
+                <button className="border border-white/30 text-white,
+  hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                  Contact HR Team;
                 </button>
               </div>
             </div>

@@ -8,13 +8,14 @@ interface SEOEnhancer Props {
   type?: string;
   structuredData?: Record<string, unknown>;
 }
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+const,
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
   keyword s =[],
   type='website',
-  structuredData
-}) => {
+  structuredData;
+})  => {
   return (
     <Helmet>
       <title>{title}</title>

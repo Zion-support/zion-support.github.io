@@ -1,41 +1,44 @@
 interface SEOConfig {
-  title: string
-  description: string
-  keywords: string[]
-  canonicalUrl: string
-  ogImage: string
-  ogType: string
-  twitterCard: string
-  robots: string
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]
-  viewport?: string
-  charset?: string
-  publisher?: string
-  language?: string
-  ogTitle?: string
-  ogDescription?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
-  geo?: {
-    latitude?: string
-    longitude?: string
-    region?: string
-    placename?: string
-  }
+  
+  title: string,
+  description: string,
+  keywords: string[];
+  canonicalUrl: string,
+  ogImage: string,
+  ogType: string,
+  twitterCard: string,
+  robots: string;
+author?: string;
+publishedTime?: string;
+modifiedTime?: string;
+section?: string;
+tags?: string[]
+  viewport?: string;
+charset?: string;
+publisher?: string;
+language?: string;
+ogTitle?: string;
+ogDescription?: string;
+twitterTitle?: string;
+twitterDescription?: string;
+twitterImage?: string;
+geo?: {
+    latitude?: string;
+longitude?: string;
+region?: string;
+placename?: string;
+  
+}
   alternate?: Array<{
-    href: string
-    hreflang: string
+    href: string,
+  hreflang: string;
   }>
-  structuredData?: unknown
-  structuredData?: Record<string, unknown>
+  structuredData?: unknown;
+structuredData?: Record<string, unknown>
 }
 
-export const defaultSEOConfig: SEOConfig = {
+export const,
+  defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
   keywords: [
@@ -85,11 +88,11 @@ export const defaultSEOConfig: SEOConfig = {
 }
 
 
-export const generateImageAlt = (imagePath: string, alt?: string) => {
+export const generateImageAlt = (imagePath: string, alt?: string)  => {
   return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
 }
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app')  => {
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 };
 
@@ -98,7 +101,7 @@ export const defaultMeta = {
   charset: 'UTF-8'
 }
 
-export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
+export const generateSEOTags = (config: Partial<SEOConfig> = {})  => {
   const seoConfig = { ...defaultSEOConfig, ...config }
   
   return {
@@ -111,17 +114,17 @@ export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
       description: seoConfig.ogDescription || seoConfig.description,
       url: seoConfig.canonicalUrl,
       type: seoConfig.ogType,
-      image: seoConfig.ogImage
+      image: seoConfig.ogImage;
     },
     twitter: {
       card: seoConfig.twitterCard,
       title: seoConfig.twitterTitle || seoConfig.title,
       description: seoConfig.twitterDescription || seoConfig.description,
-      image: seoConfig.twitterImage || seoConfig.ogImage
+      image: seoConfig.twitterImage || seoConfig.ogImage;
     },
     robots: seoConfig.robots,
     author: seoConfig.author,
     publisher: seoConfig.publisher,
-    language: seoConfig.language
+    language: seoConfig.language;
   }
 }

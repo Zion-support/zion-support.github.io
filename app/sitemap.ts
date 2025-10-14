@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-<<<<<<< HEAD
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
@@ -22,19 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-    },
-=======
-      lastModified: newDate(),
-      changeFrequency:'yearly',
-      priority: 1},{
-      url: `${baseUrl}/ai-solutions`,
-      lastModified: newDate(),
-      changeFrequency:'monthly',
-      priority: 0.8},{
-      url: `${baseUrl}/it-solutions`,
-      lastModified: newDate(),
-      changeFrequency:'monthly',
-      priority: 0.8},
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
-  ];
+    },  ];
 }

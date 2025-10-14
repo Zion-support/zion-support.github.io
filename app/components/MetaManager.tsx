@@ -1,7 +1,8 @@
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet  } from 'react-helmet-async';
 
 interface MetaManagerProps {
+  
   title?: string;
   description?: string;
   keywords?: string;
@@ -9,9 +10,11 @@ interface MetaManagerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+
 }
 
-const MetaManager: React.FC<MetaManagerProps> = ({
+const,
+  MetaManager: React.FC<MetaManagerProps> = ({
   title,
   description,
   keywords,
@@ -19,15 +22,15 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   ogImage,
   ogTyp e ='website',
   twitterCar d ='summary_large_image'
-}) => {
-  useEffect(() => {
-    // Update document title
-    if (title) {
+})  => {
+  useEffect(()  => {
+    // Update document title;
+if (title) {
       document.titl e = title;
     }
 
-    // Update meta description
-    if (description) {
+    // Update meta description;
+if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', description);
@@ -39,8 +42,8 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       }
     }
 
-    // Update meta keywords
-    if (keywords) {
+    // Update meta keywords;
+if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
       if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
@@ -52,8 +55,8 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       }
     }
 
-    // Update canonical URL
-    if (canonical) {
+    // Update canonical URL;
+if (canonical) {
       const canonicalLink = document.querySelector('link[re l ="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
