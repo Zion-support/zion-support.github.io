@@ -120,7 +120,6 @@ const AccessibilityEnhancer: React.FC = () => {
             <option value="large">Large</option>
             <option value="extra-large">Extra Large</option>
           </select>
-          </div>
         </div>
       </div>
     </div>
