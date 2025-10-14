@@ -1,6 +1,5 @@
-'use client';
 import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import { AnalyticsContext } from '../contexts/AnalyticsContext.types';
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
