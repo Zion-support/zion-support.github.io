@@ -2,7 +2,7 @@
 require('@testing-library/jest-dom');
 const React = require('react');
 
-// Polyfill for TextEncoder/TextDecoder
+// Polyfill TextEncoder for Node.js environment
 const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
