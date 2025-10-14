@@ -43,7 +43,7 @@ const fixUnusedHelmetImports = (content) => {
 // Fix unused page variables
 const fixUnusedPageVariables = (content) => {
   // Remove unused page parameter in function signatures
-  const pageParamRegex = /\(page: any\) => \{/g;
+  const pageParamRegex = /\(page: unknown\) => \{/g;
   if (content.match(pageParamRegex) && !content.includes('page.')) {
     return content.replace(pageParamRegex, '() => {');
   }
@@ -100,12 +100,12 @@ const fixUnusedIconImports = (content) => {
 const fixAnyTypes = (content) => {
   if (content.includes('AnalyticsContext')) {
     return content
-      .replace(/trackEvent: \(event: any\) => void/g, 'trackEvent: (event: string) => void')
-      .replace(/trackPageView: \(page: any\) => void/g, 'trackPageView: (page: string) => void')
-      .replace(/trackConversion: \(conversion: any\) => void/g, 'trackConversion: (conversion: string) => void')
-      .replace(/setUserProperties: \(properties: any\) => void/g, 'setUserProperties: (properties: Record<string, unknown>) => void')
-      .replace(/setUserId: \(id: any\) => void/g, 'setUserId: (id: string) => void')
-      .replace(/setUserAttributes: \(attributes: any\) => void/g, 'setUserAttributes: (attributes: Record<string, unknown>) => void');
+      .replace(/trackEvent: \(event: unknown\) => void/g, 'trackEvent: (event: string) => void')
+      .replace(/trackPageView: \(page: unknown\) => void/g, 'trackPageView: (page: string) => void')
+      .replace(/trackConversion: \(conversion: unknown\) => void/g, 'trackConversion: (conversion: string) => void')
+      .replace(/setUserProperties: \(properties: unknown\) => void/g, 'setUserProperties: (properties: Record<string, unknown>) => void')
+      .replace(/setUserId: \(id: unknown\) => void/g, 'setUserId: (id: string) => void')
+      .replace(/setUserAttributes: \(attributes: unknown\) => void/g, 'setUserAttributes: (attributes: Record<string, unknown>) => void');
   }
   return content;
 };
@@ -131,7 +131,7 @@ const processFile = (filePath) => {
     }
     
     return false;
-  } catch (error) {
+  } catch (_error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -156,7 +156,7 @@ const main = () => {
   console.log('\nRunning lint check...');
   try {
     execSync('npm run lint', { stdio: 'inherit' });
-  } catch (error) {
+  } catch (_error) {
     console.log('Lint completed with warnings');
   }
 };

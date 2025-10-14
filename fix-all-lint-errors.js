@@ -71,8 +71,8 @@ const fixLintIssues = (content, filePath) => {
   }
   
   // Fix function parameters with unused page
-  if (newContent.includes('(page: any) => {') && !newContent.includes('page.')) {
-    newContent = newContent.replace(/\(page: any\) => \{/g, '() => {');
+  if (newContent.includes('(page: unknown) => {') && !newContent.includes('page.')) {
+    newContent = newContent.replace(/\(page: unknown\) => \{/g, '() => {');
   }
   
   // Fix any types in AnalyticsContext
@@ -107,7 +107,7 @@ const processFile = (filePath) => {
     }
     
     return false;
-  } catch (error) {
+  } catch (_error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -132,7 +132,7 @@ const main = () => {
   console.log('\nRunning lint check...');
   try {
     execSync('npm run lint', { stdio: 'inherit' });
-  } catch (error) {
+  } catch (_error) {
     console.log('Lint completed with warnings');
   }
 };
