@@ -14,7 +14,8 @@ export default {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.jest.json'
+      tsconfig: 'tsconfig.jest.json',
+      useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
@@ -30,11 +31,6 @@ export default {
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   preset: 'ts-jest'
 };
