@@ -1,15 +1,8 @@
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import React, { Suspense } from 'react';
 import EnhancedSEO from '../components/EnhancedSEO'
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const FiveGMigrationPage = () => {
   const services = [
     {
@@ -29,7 +22,6 @@ const FiveGMigrationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Migration Services - Zion Tech Group"
         description="Expert 5G migration services to transition your business to next-generation wireless technology."
       />
@@ -77,12 +69,8 @@ import React, { Suspense } from 'react';
           </Link>
         </div>
       </div>
-import React, { Suspense } from 'react';
     </div>
   )
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGMigrationPage

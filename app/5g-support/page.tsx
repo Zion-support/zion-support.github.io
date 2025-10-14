@@ -1,12 +1,4 @@
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 
 const FiveGSupportPage: React.FC = () => {
   return (
@@ -24,9 +16,5 @@ const FiveGSupportPage: React.FC = () => {
     </div>
   );
 }
-import React, { Suspense } from 'react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGSupportPage;
