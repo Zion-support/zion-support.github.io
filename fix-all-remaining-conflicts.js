@@ -1,2 +1,2 @@
-import fs from 'fs; import path from 'path; import { execSync } from 'child_process; #!/usr/bin// Fixed regex; console.log( 'Starting comprehensive merge conflict resolution...'';'
-); const output = execSync('';)'''
+import child_process from 'child_process'; #!/usr/bin// Fixed regex console.log( 'Starting comprehensive merge conflict resolution...''''
+) const output = execSync('';)''''

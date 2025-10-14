@@ -1,10 +1,9 @@
-'use client';'use client';'
-'use client';'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
-import { 
-  CpuChipIcon,
+'use client''use client'''
+'use client'''
+import React from 'react';''
+import { Helmet  } from 'react-helmet-async';''
+import { Link  } from 'react-router-dom';''
+import { CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
   ChartBarIcon,
@@ -21,204 +20,202 @@ import {
   EyeIcon,
   ChatBubbleLeftRightIcon,;
   DocumentTextIcon,;
-  LightBulbIcon;
-} from '@heroicons/react/24/outline';'
-const MicroSaaSSolutionsPage: "React.FC = () => {"
+  LightBulbIcon } from '@heroicons/react/24/outline';''
+const MicroSaaSSolutionsPage: "React.FC = () => {""
   const solutions = [
     {
-      title: "AI-Powered Analytics Dashboard","
-      description: "Comprehensive analytics solution with AI-driven insights and real-time data visualization.","
-      icon: "ChartBarIcon",
+      title: "AI-Powered Analytics Dashboard",""
+      description: "Comprehensive analytics solution with AI-driven insights and real-time data visualization.",""
+      icon: "ChartBarIcon","
       features: [
-        "Real-time data processing","
-        "AI-powered insights","
-        "Custom dashboards","
-        "Automated reporting","
-        "Data export capabilities","
-        "Multi-user access""
+        "Real-time data processing",""
+        "AI-powered insights",""
+        "Custom dashboards",""
+        "Automated reporting",""
+        "Data export capabilities",""
+        "Multi-user access"""
       ],
-      color: "from-blue-50o0 to-cyan-50o0","
-      price: "Starting at $99/month","
-      benefits: ["Increased efficiency", "Better decision making", "Cost savings"],"
-      useCases: ["Business intelligence", "Performance tracking", "Data analysis"],"
-      href: "/micro-saas/analytics-dashboard"
+      color: "from-blue-50o0 to-cyan-50o0",""
+      price: "Starting at $99/month",""
+      benefits: ["Increased efficiency", "Better decision making", "Cost savings"],""
+      useCases: ["Business intelligence", "Performance tracking", "Data analysis"],""
+      href: "/micro-saas/analytics-dashboard""
     },
     {
-      title: "AI Content Generator","
-      description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.","
-      icon: "DocumentTextIcon",
+      title: "AI Content Generator",""
+      description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.",""
+      icon: "DocumentTextIcon","
       features: [
-        "AI content generation","
-        "Multiple content types","
-        "SEO optimization","
-        "Brand voice consistency","
-        "Content scheduling","
-        "Performance analytics""
+        "AI content generation",""
+        "Multiple content types",""
+        "SEO optimization",""
+        "Brand voice consistency",""
+        "Content scheduling",""
+        "Performance analytics"""
       ],
-      color: "from-green-50o0 to-emerald-50o0","
-      price: "Starting at $79/month","
-      benefits: ["Time savings", "Consistent quality", "SEO optimization"],"
-      useCases: ["Content marketing", "Social media", "Blog management"],"
-      href: "/micro-saas/content-generator"
+      color: "from-green-50o0 to-emerald-50o0",""
+      price: "Starting at $79/month",""
+      benefits: ["Time savings", "Consistent quality", "SEO optimization"],""
+      useCases: ["Content marketing", "Social media", "Blog management"],""
+      href: "/micro-saas/content-generator""
     },
     {
-      title: "AI Customer Support Chatbot","
-      description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.","
-      icon: "ChatBubbleLeftRightIcon",
+      title: "AI Customer Support Chatbot",""
+      description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.",""
+      icon: "ChatBubbleLeftRightIcon","
       features: [
-        "Natural language processing","
-        "24/7 availability","
-        "Multi-language support","
-        "Integration capabilities","
-        "Analytics dashboard","
-        "Custom training""
+        "Natural language processing",""
+        "24/7 availability",""
+        "Multi-language support",""
+        "Integration capabilities",""
+        "Analytics dashboard",""
+        "Custom training"""
       ],
-      color: "from-purple-50o0 to-pink-50o0","
-      price: "Starting at $149/month","
-      benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],"
-      useCases: ["Customer service", "Lead qualification", "FAQ automation"],"
-      href: "/micro-saas/ai-customer-support-chatbot"
+      color: "from-purple-50o0 to-pink-50o0",""
+      price: "Starting at $149/month",""
+      benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],""
+      useCases: ["Customer service", "Lead qualification", "FAQ automation"],""
+      href: "/micro-saas/ai-customer-support-chatbot""
     },
     {
-      title: "AI Project Manager","
-      description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.","
-      icon: "CogIcon",
+      title: "AI Project Manager",""
+      description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.",""
+      icon: "CogIcon","
       features: [
-        "AI task optimization","
-        "Team collaboration","
-        "Progress tracking","
-        "Resource management","
-        "Automated scheduling","
-        "Performance insights""
+        "AI task optimization",""
+        "Team collaboration",""
+        "Progress tracking",""
+        "Resource management",""
+        "Automated scheduling",""
+        "Performance insights"""
       ],
-      color: "from-orange-50o0 to-red-50o0","
-      price: "Starting at $129/month","
-      benefits: ["Better organization", "Improved productivity", "Resource optimization"],"
-      useCases: ["Project management", "Team coordination", "Task automation"],"
-      href: "/micro-saas/ai-project-manager"
+      color: "from-orange-50o0 to-red-50o0",""
+      price: "Starting at $129/month",""
+      benefits: ["Better organization", "Improved productivity", "Resource optimization"],""
+      useCases: ["Project management", "Team coordination", "Task automation"],""
+      href: "/micro-saas/ai-project-manager""
     },
     {
-      title: "AI Inventory Manager","
-      description: "Smart inventory management system with predictive analytics and automated reordering capabilities.","
-      icon: "EyeIcon",
+      title: "AI Inventory Manager",""
+      description: "Smart inventory management system with predictive analytics and automated reordering capabilities.",""
+      icon: "EyeIcon","
       features: [
-        "Predictive analytics","
-        "Automated reordering","
-        "Stock optimization","
-        "Multi-location support","
-        "Integration APIs","
-        "Real-time tracking""
+        "Predictive analytics",""
+        "Automated reordering",""
+        "Stock optimization",""
+        "Multi-location support",""
+        "Integration APIs",""
+        "Real-time tracking"""
       ],
-      color: "from-indigo-50o0 to-purple-50o0","
-      price: "Starting at $199/month","
-      benefits: ["Reduced waste", "Optimized stock", "Cost savings"],"
-      useCases: ["Inventory management", "Supply chain", "Retail operations"],"
-      href: "/micro-saas/ai-inventory-manager"
+      color: "from-indigo-50o0 to-purple-50o0",""
+      price: "Starting at $199/month",""
+      benefits: ["Reduced waste", "Optimized stock", "Cost savings"],""
+      useCases: ["Inventory management", "Supply chain", "Retail operations"],""
+      href: "/micro-saas/ai-inventory-manager""
     },
     {
-      title: "AI Expense Tracker","
-      description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.","
-      icon: "CurrencyDollarIcon",
+      title: "AI Expense Tracker",""
+      description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.",""
+      icon: "CurrencyDollarIcon","
       features: [
-        "Automated categorization","
-        "Receipt processing","
-        "Expense reporting","
-        "Budget tracking","
-        "Tax preparation","
-        "Multi-currency support""
+        "Automated categorization",""
+        "Receipt processing",""
+        "Expense reporting",""
+        "Budget tracking",""
+        "Tax preparation",""
+        "Multi-currency support"""
       ],
-      color: "from-cyan-50o0 to-blue-50o0","
-      price: "Starting at $59/month","
-      benefits: ["Time savings", "Better tracking", "Tax compliance"],"
-      useCases: ["Expense management", "Financial tracking", "Tax preparation"],";
-      href: "/micro-saas/ai-expense-tracker";
+      color: "from-cyan-50o0 to-blue-50o0",""
+      price: "Starting at $59/month",""
+      benefits: ["Time savings", "Better tracking", "Tax compliance"],""
+      useCases: ["Expense management", "Financial tracking", "Tax preparation"],";"
+      href: "/micro-saas/ai-expense-tracker";"
   };
   ];
-
   const features = [
     {
-      title: "AI-Powered Solutions","
-      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.","
-      icon: "CpuChipIcon"
+      title: "AI-Powered Solutions",""
+      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.",""
+      icon: "CpuChipIcon""
     },
     {
-      title: "Scalable Architecture","
-      description: "Built to grow with your business, from startup to enterprise scale.","
-      icon: "CloudIcon"
+      title: "Scalable Architecture",""
+      description: "Built to grow with your business, from startup to enterprise scale.",""
+      icon: "CloudIcon""
     },
     {
-      title: "Easy Integration","
-      description: "Seamlessly integrate with your existing tools and workflows.","
-      icon: "CogIcon"
+      title: "Easy Integration",""
+      description: "Seamlessly integrate with your existing tools and workflows.",""
+      icon: "CogIcon""
     },
     {
-      title: "24/7 Support","
-      description: "Round-the-clock support to ensure your success.",";
-      icon: "UserGroupIcon;"
+      title: "24/7 Support",""
+      description: "Round-the-clock support to ensure your success.",";"
+      icon: "UserGroupIcon""
     };
   ];
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';''
+import { Helmet  } from 'react-helmet-async';''
+import React from 'react';''
+import { Helmet  } from 'react-helmet-async';''
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
-        <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
+        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />"
+        <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />"
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">"
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
-              Micro SaaS Solutions
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">"
+          <div className="max-w-6xl mx-auto text-center">"
+            <h1 className="text-5xl font-bold text-gray-90o0 mb-6">"
+              Micro SaaS Solutions;
             </h1>
-            <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive suite of micro SaaS solutions designed to streamline 
+            <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">"
+              Discover our comprehensive suite of micro SaaS solutions designed to streamline;
               your business operations and boost productivity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to=""/contact" "
-                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <Link;
+                to=""/contact" ""
+                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors""
               >
-                Get Started
+                Get Started;
               </Link>
-              <Link 
-                to=""/demo" "
-                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              <Link;
+                to=""/demo" ""
+                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors""
               >
-                View Demo
+                View Demo;
               </Link>
             </div>
           </div>
         </section>
 
         {/* Solutions Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
-              Our Micro SaaS Solutions
+        <section className="py-20 px-4">"
+          <div className="max-w-6xl mx-auto">"
+            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">"
+              Our Micro SaaS Solutions;
             </h2>
-            <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">"
               {solutions.map((solution, index) => (
-                <div key={index} className="bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow">"
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
-                    <solution.icon className="w-6 h-6 text-white" />
+                    <solution.icon className="w-6 h-6 text-white" />"
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{solution.title}</h3>
-                  <p className="text-gray-60o0 mb-4">{solution.description}</p>
-                  <div className="mb-4">
-                    <p className="text-blue-60o0 font-semibold">{solution.price}</p>
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{solution.title}</h3>"
+                  <p className="text-gray-60o0 mb-4">{solution.description}</p>"
+                  <div className="mb-4">"
+                    <p className="text-blue-60o0 font-semibold">{solution.price}</p>"
                   </div>
-                  <Link 
+                  <Link;
                     to={solution.href}
-                    className="text-blue-60o0 hover:text-blue-70o0 font-medium flex items-center"
+                    className="text-blue-60o0 hover:text-blue-70o0 font-medium flex items-center""
                   >
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
+                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />"
                   </Link>
                 </div>
               ))}
@@ -227,19 +224,19 @@ import { Helmet } from 'react-helmet-async';'
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
+        <section className="py-20 px-4 bg-gray-50">"
+          <div className="max-w-6xl mx-auto">"
+            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">"
               Why Choose Our Micro SaaS Solutions?
             </h2>
-            <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">
+            <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">"
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="text-center">"
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mb-4">"
+                    <feature.icon className="w-8 h-8 text-white" />"
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{feature.title}</h3>
-                  <p className="text-gray-60o0">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{feature.title}</h3>"
+                  <p className="text-gray-60o0">{feature.description}</p>"
                 </div>
               ))}
             </div>
@@ -247,47 +244,47 @@ import { Helmet } from 'react-helmet-async';'
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
+        <section className="py-20 px-4">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">"
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-gray-60o0 mb-8">
-              Let's discuss how our micro SaaS solutions can help you achieve your goals.'
+            <p className="text-lg text-gray-60o0 mb-8">"
+              Let's discuss how our micro SaaS solutions can help you achieve your goals.''
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to=""/contact" "
-                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <Link;
+                to=""/contact" ""
+                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors""
               >
-                Contact Us
+                Contact Us;
               </Link>
-              <Link 
-                to=""/demo" "
-                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+              <Link;
+                to=""/demo" ""
+                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors""
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>
         </section>
       </div>
-        <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions." />
-        <meta name="keywords" content="micro SaaS, software solutions, AI analytics, content management, customer support, business automation" />
+        <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions." />"
+        <meta name="keywords" content="micro SaaS, software solutions, AI analytics, content management, customer support, business automation" />"
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
-              Micro SaaS Solutions
+      <section className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">"
+        <div className="container mx-auto px-4">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">"
+              Micro SaaS Solutions;
             </h1>
-            <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">
-              Innovative micro SaaS products designed to solve specific business challenges
+            <p className="text-xl text-gray-30o0 mb-8 leading-relaxed">"
+              Innovative micro SaaS products designed to solve specific business challenges;
             </p>
-            <p className="text-lg text-gray-40o0 max-w-3xl mx-auto">
-              From AI-powered analytics to automated customer support, our micro SaaS solutions 
+            <p className="text-lg text-gray-40o0 max-w-3xl mx-auto">"
+              From AI-powered analytics to automated customer support, our micro SaaS solutions;
               provide powerful, cost-effective tools to accelerate your business growth.
             </p>
           </div>
@@ -295,49 +292,49 @@ import { Helmet } from 'react-helmet-async';'
       </section>
 
       {/* Micro SaaS Products Grid */}
-      <section className="py-20 bg-slate-90o0">
-        <div className="container mx-auto px-4">
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-90o0">"
+        <div className="container mx-auto px-4">"
+          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">"
             {microSaaSProducts.map((product, index) => {
               const Icon = product.icon;
               return (
-                <div key={product.title} className="group bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-8 rounded-xl border border-slate-60o0 hover:border-purple-50o0 transition-all duration-30o0 hover-lift hover-glow glass-dark">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover: "scale-110 transition-transform floating`"}>
-                    <Icon className="w-8 h-8 text-white" />
+                <div key={product.title} className="group bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-8 rounded-xl border border-slate-60o0 hover:border-purple-50o0 transition-all duration-30o0 hover-lift hover-glow glass-dark">"
+                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover: "scale-110 transition-transform floating`"}>"
+                    <Icon className="w-8 h-8 text-white" />"
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{product.title}</h3>
-                  <p className="text-gray-30o0 mb-6 leading-relaxed">
+                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{product.title}</h3>"
+                  <p className="text-gray-30o0 mb-6 leading-relaxed">"
                     {product.description}
                   </p>
                   
                   {/* Pricing */}
-                  <div className="mb-6">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-bold text-green-40o0">{product.price}</span>
-                      <span className="text-gray-40o0">/month</span>
+                  <div className="mb-6">"
+                    <div className="flex items-baseline gap-2">"
+                      <span className="text-3xl font-bold text-green-40o0">{product.price}</span>"
+                      <span className="text-gray-40o0">/month</span>"
                     </div>
-                    <div className="text-sm text-gray-40o0">
+                    <div className="text-sm text-gray-40o0">"
                       Setup fee: {product.setupFee}
                     </div>
                   </div>
 
                   {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>",
+                  <div className="mb-6">"
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>","
                       {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-30o0">
-                          <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                        <li key={featureIndex} className="flex items-center text-gray-30o0">"
+                          <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />"
+                          <span className="text-sm">{feature}</span>"
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Benefits: "</h4>",
+                  <div className="mb-6">"
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Benefits: "</h4>","
                       {product.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="text-xs bg-green-90o0"/30 text-green-30o0 px-2 py-1 rounded-full">
+                        <span key={benefitIndex} className="text-xs bg-green-90o0"/30 text-green-30o0 px-2 py-1 rounded-full">"
                           {benefit}
                         </span>
                       ))}
@@ -345,28 +342,28 @@ import { Helmet } from 'react-helmet-async';'
                   </div>
 
                   {/* Use Cases */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Perfect for: "</h4>",
+                  <div className="mb-6">"
+                    <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Perfect for: "</h4>","
                       {product.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="text-xs bg-blue-90o0"/30 text-blue-30o0 px-2 py-1 rounded-full">
+                        <span key={useCaseIndex} className="text-xs bg-blue-90o0"/30 text-blue-30o0 px-2 py-1 rounded-full">"
                           {useCase}
                         </span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex gap-2">
-                    <Link
+                  <div className="flex gap-2">"
+                    <Link;
                       to={product.href}
-                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-40o0 hover: text-purple-30o0 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hove,r:bg-purple-40o0"/10"
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-40o0 hover: text-purple-30o0 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hove,r:bg-purple-40o0"/10""
                     >
-                      Learn More <ArrowRightIcon className="w-4 h-4" />
+                      Learn More <ArrowRightIcon className="w-4 h-4" />"
                     </Link>
-                    <Link
-                      to=""/contact""
-                      className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg hover: from-purple-70o0 hove,r:to-cyan-70o0 transition-all duration-30o0 font-semibold"
+                    <Link;
+                      to=""/contact"""
+                      className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-4 py-2 rounded-lg hover: from-purple-70o0 hove,r:to-cyan-70o0 transition-all duration-30o0 font-semibold""
                     >
-                      Get Started
+                      Get Started;
                     </Link>
                   </div>
                 </div>
@@ -377,50 +374,50 @@ import { Helmet } from 'react-helmet-async';'
       </section>
 
       {/* Why Choose Our Micro SaaS */}
-      <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">"
+        <div className="container mx-auto px-4">"
+          <div className="text-center mb-16">"
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
               Why Choose Our Micro SaaS Solutions?
             </h2>
-            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
-              Built for modern businesses with cutting-edge technology and user-friendly interfaces
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">"
+              Built for modern businesses with cutting-edge technology and user-friendly interfaces;
             </p>
           </div>
-          <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CpuChipIcon className="w-10 h-10 text-white" />
+          <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8 max-w-6xl mx-auto">"
+            <div className="text-center">"
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">"
+                <CpuChipIcon className="w-10 h-10 text-white" />"
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
-              <p className="text-gray-30o0">
+              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>"
+              <p className="text-gray-30o0">"
                 Advanced AI and machine learning capabilities built into every solution for maximum efficiency.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ClockIcon className="w-10 h-10 text-white" />
+            <div className="text-center">"
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">"
+                <ClockIcon className="w-10 h-10 text-white" />"
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Quick Setup</h3>
-              <p className="text-gray-30o0">
+              <h3 className="text-2xl font-bold text-white mb-4">Quick Setup</h3>"
+              <p className="text-gray-30o0">"
                 Get up and running in minutes with our streamlined onboarding and setup process.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
+            <div className="text-center">"
+              <div className="w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">"
+                <ShieldCheckIcon className="w-10 h-10 text-white" />"
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Secure & Reliable</h3>
-              <p className="text-gray-30o0">
+              <h3 className="text-2xl font-bold text-white mb-4">Secure & Reliable</h3>"
+              <p className="text-gray-30o0">"
                 Enterprise-grade security and 99.9% uptime guarantee for peace of mind.
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CogIcon className="w-10 h-10 text-white" />
+            <div className="text-center">"
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">"
+                <CogIcon className="w-10 h-10 text-white" />"
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Customizable</h3>
-              <p className="text-gray-30o0">
+              <h3 className="text-2xl font-bold text-white mb-4">Customizable</h3>"
+              <p className="text-gray-30o0">"
                 Tailor each solution to your specific business needs with flexible configuration options.
               </p>
             </div>
@@ -429,38 +426,38 @@ import { Helmet } from 'react-helmet-async';'
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-90o0">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+      <section className="py-20 bg-slate-90o0">"
+        <div className="container mx-auto px-4">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">"
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-30o0 mb-12">
-              Let's discuss which micro SaaS solution is perfect for your business needs'
+            <p className="text-xl text-gray-30o0 mb-12">"
+              Let's discuss which micro SaaS solution is perfect for your business needs''
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to=""/contact""
-                className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 flex items-center justify-center gap-2"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
+              <Link;
+                to=""/contact"""
+                className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 flex items-center justify-center gap-2""
               >
-                Get Free Consultation
-                <ArrowRightIcon className="w-5 h-5" />
+                Get Free Consultation;
+                <ArrowRightIcon className="w-5 h-5" />"
               </Link>
-              <Link
-                to=""/demo""
-                className="border-2 border-purple-40o0 text-purple-30o0 px-8 py-4 rounded-lg font-semibold hover: bg-purple-40o0 hove,r:text-white transition-all duration-30o0 flex items-center justify-center gap-2"
+              <Link;
+                to=""/demo"""
+                className="border-2 border-purple-40o0 text-purple-30o0 px-8 py-4 rounded-lg font-semibold hover: bg-purple-40o0 hove,r:text-white transition-all duration-30o0 flex items-center justify-center gap-2""
               >
-                Schedule Demo
-                <ArrowRightIcon className="w-5 h-5" />
+                Schedule Demo;
+                <ArrowRightIcon className="w-5 h-5" />"
               </Link>
             </div>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-30o0">
-              <div className="flex items-center gap-3">
-                <PhoneIcon className="w-6 h-6 text-purple-40o0" />
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-30o0">"
+              <div className="flex items-center gap-3">"
+                <PhoneIcon className="w-6 h-6 text-purple-40o0" />"
                 <span>+1-30o2-464-0o950</span>
               </div>
-              <div className="flex items-center gap-3">
-                <EnvelopeIcon className="w-6 h-6 text-purple-40o0" />
+              <div className="flex items-center gap-3">"
+                <EnvelopeIcon className="w-6 h-6 text-purple-40o0" />"
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>

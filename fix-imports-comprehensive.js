@@ -2,26 +2,41 @@
 
 import fs from 'fs';
 import path from 'path';
-console.log('🔧 Fixing import statements...');
+console.log('🔧 Comprehensive import statement fix...');
 function fixImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    // Fix import statements with extra quotes and semicolons
+    // Fix common import patterns
     const fixes = [
-      // Fix import statements with extra quotes
-      { pattern: /import\s+.*from\s+['"]([^'"]*?)''/g, replacement: "import $1 from '$1'" },
-      { pattern: /import\s+.*from\s+['"]([^'"]*?)";/g, replacement: "import $1 from '$1';" },
-      { pattern: /import\s+.*from\s+['"]([^'"]*?)';/g, replacement: "import $1 from '$1';" },
-      // Fix export statements
-      { pattern: /export\s+.*from\s+['"]([^'"]*?)''/g, replacement: "export $1 from '$1'" },
-      { pattern: /export\s+.*from\s+['"]([^'"]*?)";/g, replacement: "export $1 from '$1';" },
-      // Fix other common syntax issues
+      // Fix React imports
+      { pattern: /import\s+react\s+from\s+['"]react['"]?/gi, replacement: "import React from 'react'" },
+      { pattern: /import\s+React\s+from\s+['"]react['"];?/gi, replacement: "import React from 'react';" },
+      
+      // Fix React Router imports
+      { pattern: /import\s+react-router-dom\s+from\s+['"]react-router-dom['"]?/gi, replacement: "import { BrowserRouter as Router, Routes, Route, Link  } from 'react-router-dom'" },
+      
+      // Fix other common imports
+      { pattern: /import\s+(\w+)\s+from\s+['"]([^'"]+)['"]?/g, replacement: "import $1 from '$2'" },
+      
+      // Fix destructuring imports
+      { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]?/g, replacement: "import { $1  } from '$2'" },
+      
+      // Fix default exports
+      { pattern: /export\s+default\s+(\w+)?/g, replacement: "export default $1" },
+      
+      // Fix function declarations
+      { pattern: /function\s+(\w+)\s*\(\s*\)\s*{/g, replacement: "function $1() {" },
+      
+      // Fix JSX syntax
+      { pattern: /<(\w+)([^>]*?)>\s*<\/\1>/g, replacement: '<$1$2></$1>' },
+      
+      // Fix semicolons
       { pattern: /\s*$/gm, replacement: '' },
-      { pattern: /,\s*$/gm, replacement: ',' },
-      // Fix malformed JSX
-      { pattern: /<([^>]*?)\$1([^>]*?)>/g, replacement: '<$2>' },
-      { pattern: /className="\$1"/g, replacement: 'className="flex items-center"' },
+      
+      // Fix comments
+      { pattern: /\/\/\s*([^]+)/g, replacement: '// $1' },
+      
       // Fix merge conflict markers
       { pattern: /
       { pattern: /
