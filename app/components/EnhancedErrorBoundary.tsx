@@ -142,7 +142,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </p>
                 <div className="text-sm text-cyan-400"></div>
                   <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</div>
+                  <p>Phone: +1-302-464-0950</p>
 
               {/* Development Error Details */}'''
               { process.env.NODE_ENV === 'development' && this.state.error && ("'"'"

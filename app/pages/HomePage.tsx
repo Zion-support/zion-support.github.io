@@ -98,21 +98,21 @@ const HomePage = () => {
                 <div>""</div>
                   <div className="text-6xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</div>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
                 
                 <div>""
                   {service.features.slice(0, 4).map((feature, featureIndex) => (</div>
                     <div>""</div>
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"></div>
-                      <span className="text-sm">{feature}</div>
+                      <span className="text-sm">{feature}</span>
                   )})}
                 </div>
                 
                 <div>""</div>
                   <div>""</div>
                     <span>${service.pricing.basic}</span>
-                    <span className="text-gray-400 text-sm ml-2">/month</div>
-                  <p className="text-gray-400 text-sm text-center mt-1">Starting from</div>
+                    <span className="text-gray-400 text-sm ml-2">/month</span>
+                  <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
                 
                 <div>""</div>
                   <NeonButton to={service.href} variant="primary" size="sm">""

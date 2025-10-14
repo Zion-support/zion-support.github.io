@@ -16,7 +16,8 @@
   ];
 const CaseStudiesPage: React.FC = () => {
   return (
-<>    <div>"""</div>
+<>
+      <div>"""</div>
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />"""
@@ -36,13 +37,13 @@ const CaseStudiesPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white">{study.title}</div>
                   <div>"""</div>
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
-                    <p className="text-gray-300 mb-4">{study.description}</div>
+                    <p className="text-gray-300 mb-4">{study.description}</p>
                   <div>"""</div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</div>
+                    <p className="text-gray-300">{study.challenge}</p>
                   <div>"""</div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</div>
+                    <p className="text-gray-300">{study.solution}</p>
                 { /* Results */ }
                 <div></div>
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
@@ -122,7 +123,7 @@ const CaseStudiesPage: React.FC = () => {
     </>
         <div>"""</div>
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
-          <p className="text-gray-300">This page is under construction.</div>;  )
+          <p className="text-gray-300">This page is under construction.</p>;  )
 export default CaseStudiesPage;
     </div>
   )}
@@ -134,6 +135,6 @@ export default function CaseStudiesPage() {
   return (
 <>
       <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</div>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
   );
 }

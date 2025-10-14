@@ -113,13 +113,13 @@ const MarketingToolsPage: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</div>
+                <span className="text-white font-medium">+1 302 464 0950</span>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</div>
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</div>
+                <span className="text-white font-medium">Middletown, DE</span>
         </section>
 
       {/* Marketing Tools Grid */}
@@ -156,7 +156,7 @@ const MarketingToolsPage: React.FC = () => {
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started
-                  </div>
+                  </a>
             ))}
           </div>
       </section>
@@ -171,7 +171,7 @@ const MarketingToolsPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</div>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
             ))}
           </div>
       </section>
@@ -193,7 +193,7 @@ const MarketingToolsPage: React.FC = () => {
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
               Email Us
-            </div>
+            </a>
         </section>
     </div>
   );

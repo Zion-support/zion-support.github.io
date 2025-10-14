@@ -18,7 +18,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   type = 'website'''
 }) => {
   return (
-<>    <div className="seo-enhancer"></div>
+<>
+      <div className="seo-enhancer"></div>
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (

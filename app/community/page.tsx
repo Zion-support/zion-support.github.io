@@ -189,7 +189,7 @@ const CommunityPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
-                    <p className="text-sm text-gray-500">{category.posts} posts</div>
+                    <p className="text-sm text-gray-500">{category.posts} posts</p>
                 <p>{category.description}</p>
                 <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors">
                   View Discussions
@@ -229,7 +229,7 @@ const CommunityPage: React.FC = () => {
                       <span>by {discussion.author}</span>
                       <span>{discussion.replies} replies</span>
                       <span>{discussion.views} views</span>
-                      <span>{discussion.lastActivity}</div>
+                      <span>{discussion.lastActivity}</span>
                     <div>{discussion.tags.map((tag, tagIndex) => (</div>
                         <span>
                           #{tag}

@@ -91,22 +91,22 @@ const Footer = () => {
           <div>""</div>
             <div>""</div>
               <div>""</div>
-                <span className="text-white font-bold text-lg">Z</div>
+                <span className="text-white font-bold text-lg">Z</span>
     </>
-              <span className="text-white font-bold text-xl">Zion Tech Group</div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
             <p>""
               Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.</p>
             </p>
             <div>""</div>
               <div>""</div>
                 <Mail className="w-4 h-4 mr-3" />""
-                <span>contact@ziontechgroup.com</div>
+                <span>contact@ziontechgroup.com</span>
               <div>""</div>
                 <Phone className="w-4 h-4 mr-3" />""
-                <span>+1 (555) 123-4567</div>
+                <span>+1 (555) 123-4567</span>
               <div>""</div>
                 <MapPin className="w-4 h-4 mr-3" />""
-                <span>San Francisco, CA</div>
+                <span>San Francisco, CA</span>
 
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (

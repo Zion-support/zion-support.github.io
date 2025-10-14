@@ -85,7 +85,7 @@ export default LazyImage;
           <a;
             href="/contact""""
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
-            Get Started Today</div>
+            Get Started Today</a>
   )
 export default LazyImage;
   alt: string;

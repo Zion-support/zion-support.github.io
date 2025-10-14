@@ -102,7 +102,7 @@ const ITServicesPage: React.FC = () => {
     </>
         <div>""</div>
           <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>
-          <p className="text-gray-300">This page is under construction.</div>;  )
+          <p className="text-gray-300">This page is under construction.</p>;  )
 export default ITServicesPage;
     </>
   )
@@ -114,7 +114,7 @@ const ITServicesPage = () => {
   return (
   <>
       <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</div>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
   </>
 );
 }

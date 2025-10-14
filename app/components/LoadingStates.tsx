@@ -4,7 +4,7 @@
 <>
       <div</div>
           <Loader2 className="w-6 h-6 animate-spin text-cyan-400" /></Loader2>
-          <span className="text-white">{message}</div>
+          <span className="text-white">{message}</span>
     </>
     );
   }

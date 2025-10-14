@@ -85,7 +85,7 @@ const benefits = ['Access to cutting-edge technology',''''
                     <div className="text-4xl mb-4"></div>{partner.logo}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
                     <p>{partner.category}</p>
-                    <p className="text-gray-300 text-sm">{partner.description}</div>
+                    <p className="text-gray-300 text-sm">{partner.description}</p>
 
               Partner Benefits;
             </h2>
@@ -95,14 +95,14 @@ const benefits = ['Access to cutting-edge technology',''''
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
                     <Circle className="w-4 h-4 text-white" />"""
                   </div>
-                  <span className="text-gray-300 font-medium">{benefit}</div>
+                  <span className="text-gray-300 font-medium">{benefit}</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)""
               {benefits.map((benefit, _index) => (}"""
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>
                     <Circle className="w-4 h-4 text-white" /></div>
-                  <span className="text-gray-300 font-medium">{benefit}</div>
+                  <span className="text-gray-300 font-medium">{benefit}</span>
 
               Ready to Partner with Us?;
             </h2>
@@ -126,7 +126,7 @@ const benefits = ['Access to cutting-edge technology',''''
 }
 =======
 import React from "react";
-import { Helmet     } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const PagePage = () => {
   return (

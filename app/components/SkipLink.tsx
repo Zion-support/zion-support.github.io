@@ -48,4 +48,4 @@
               <a;
                 href="/contact"""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">""
-                Contact Us</div></section>
+                Contact Us</a></section>

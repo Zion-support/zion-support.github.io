@@ -32,7 +32,7 @@ import { Helmet    } from "react-helmet-async";
                 <div>{step.step}</div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</div>
+                <p className="text-gray-600 text-sm">{step.description}</p>
             ))}
           </div>
       </section>
@@ -55,12 +55,12 @@ import { Helmet    } from "react-helmet-async";
                 
                 <div className="mb-4">
                   <span>{service.price}</span>
-                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</div>
+                  <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 
                 <div className="mb-4">
                   <span className="inline-block bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
-                  </div>
+                  </span>
                 
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
@@ -83,7 +83,7 @@ import { Helmet    } from "react-helmet-async";
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
                   Start Building
-                </div>
+                </a>
             ))}
           </div>
       </section>
@@ -103,7 +103,7 @@ import { Helmet    } from "react-helmet-async";
                 <div>{feature.icon}</div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</div>
+                <p className="text-gray-600">{feature.description}</p>
             ))}
           </div>
       </section>
@@ -155,9 +155,9 @@ import { Helmet    } from "react-helmet-async";
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               ✉️ kleber@ziontechgroup.com
-            </div>
+            </a>
           <div className="mt-8 text-sm text-indigo-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</div>
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         </section>
     </div>
   );

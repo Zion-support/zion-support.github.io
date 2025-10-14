@@ -85,7 +85,8 @@ const PerformanceMonitor: React.FC = () => {
       }
     // Wait for page load;
   return (
-<>    <div>"""</div>
+<>
+      <div>"""</div>
       <button></button>
         Performance;
       </button>

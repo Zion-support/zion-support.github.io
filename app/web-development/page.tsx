@@ -68,7 +68,7 @@ import { Helmet    } from "react-helmet-async";
           </h2>
           <div>{technologies.map((tech, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-slate-800/70 transition-all duration-300">
-                <span className="text-white font-medium">{tech}</div>
+                <span className="text-white font-medium">{tech}</span>
             ))}
           </div>
       </section>
@@ -82,24 +82,24 @@ import { Helmet    } from "react-helmet-async";
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</div>
+                <span className="text-2xl font-bold text-white">1</span>
               <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-gray-300">We analyze your requirements and create a detailed project plan.</div>
+              <p className="text-gray-300">We analyze your requirements and create a detailed project plan.</p>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</div>
+                <span className="text-2xl font-bold text-white">2</span>
               <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
-              <p className="text-gray-300">We create wireframes and mockups for your approval.</div>
+              <p className="text-gray-300">We create wireframes and mockups for your approval.</p>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</div>
+                <span className="text-2xl font-bold text-white">3</span>
               <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
-              <p className="text-gray-300">We build your application using modern technologies and best practices.</div>
+              <p className="text-gray-300">We build your application using modern technologies and best practices.</p>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4</div>
+                <span className="text-2xl font-bold text-white">4</span>
               <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
-              <p className="text-gray-300">We deploy your application and provide ongoing support.</div>
+              <p className="text-gray-300">We deploy your application and provide ongoing support.</p>
       </section>
 
       {/* CTA Section */}

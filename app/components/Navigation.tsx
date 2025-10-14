@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Services</a>
-          <a href="/contact" className="hover:text-gray-300">Contact</div>
+          <a href="/contact" className="hover:text-gray-300">Contact</a>
       </nav>
   );
 };

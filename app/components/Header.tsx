@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           {/* Logo */}</div>
           <Link to="/" className="flex items-center space-x-2">""
             <div>""</div>
-              <span className="text-white font-bold text-lg">Z</div>
+              <span className="text-white font-bold text-lg">Z</span>
     </>
             <span className="text-white font-bold text-xl">Zion Tech Group</Link>
 

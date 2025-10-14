@@ -95,13 +95,13 @@ const About: React.FC = () => {
               <div>""</div>
                 <div>""</div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Innovation-driven approach</div>
+                  <span>Innovation-driven approach</span>
                 <div>""</div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Client-focused solutions</div>
+                  <span>Client-focused solutions</span>
                 <div>""</div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
-                  <span>Sustainable growth strategies</div>
+                  <span>Sustainable growth strategies</span>
 
         {/* Values Section */}
         <div>""</div>

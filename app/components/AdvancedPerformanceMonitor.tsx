@@ -149,32 +149,32 @@ const timer = setTimeout(measurePerformance, 1000)
           <span>Load Time:</span>
           <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}`}>````
             {metrics.loadTime}ms;
-          </div>
+          </span>
         <div>"""</div>
           <span>FCP:</span>
           <span className={`font-mono ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>````
             {metrics.firstContentfulPaint}ms;
-          </div>
+          </span>
         <div>"""</div>
           <span>LCP:</span>
           <span className={`font-mono ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>````
             {metrics.largestContentfulPaint}ms;
-          </div>
+          </span>
         <div>"""</div>
           <span>TBT:</span>
           <span className={`font-mono ${getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600 })}`}>````
             {metrics.totalBlockingTime}ms;
-          </div>
+          </span>
         <div>"""</div>
           <span>Memory:</span>
           <span className={`font-mono ${getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}`}>````
             {metrics.memoryUsage}MB;
-          </div>
+          </span>
         <div>"""</div>
           <span>Network:</span>
           <span className={`font-mono ${getScoreColor(metrics.networkLatency, { good: 500, needsImprovement: 1000 })}`}>````
             {metrics.networkLatency}ms;
-          </div>
+          </span>
       <div>"""</div>
         <div>Ctrl+Shift+P: Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
@@ -185,5 +185,5 @@ export default AdvancedPerformanceMonitor;
   return (
     <div></div>
       <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</div>
+      <p>This component is under construction.</p>
 export default AdvancedPerformanceMonitor;

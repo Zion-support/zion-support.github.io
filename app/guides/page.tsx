@@ -110,13 +110,13 @@ const GuidesPage: React.FC = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
-                      <p className="text-gray-300 text-sm mb-3">{guide.description}</div>
+                      <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
                     <span>{guide.category}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
-                    </div>
+                    </span>
                   
                   <div className="flex items-center justify-between">
                     <span>{guide.duration}</span>
