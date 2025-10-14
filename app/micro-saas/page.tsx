@@ -151,11 +151,11 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button key ={category}
-                  classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    categor y === 'All'
+                <button key={category}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    category === 'All'
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                      :'bg-white/10 text-gray-300 hover:bg-white/20'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}>
                   {category}
                 </button>

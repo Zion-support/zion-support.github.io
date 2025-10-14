@@ -104,23 +104,23 @@ const SupportPage: React.FC = () => {
 
   const categories =['all','general','support','implementation','training','security','integration','scaling','development'];
 
-  const filteredFAQs = faqs.filter(fa q => {
+  const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategor y === 'all' || faq.categor y === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
   const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFA Q === index ? null : index);
+    setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
   return (
     <>
       <Helmet>
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name ="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
-        <meta name ="keywords" content="technical support, IT support, AI support, customer service, help desk" />
+        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
+        <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -221,15 +221,15 @@ const SupportPage: React.FC = () => {
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
-                  <button key ={category}
-                    onClic k ={() => setSelectedCategory(category)}
-                    classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategor y === category
+                  <button key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category
                         ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-                        :'bg-white/10 text-gray-300 hover:bg-white/20'
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
                   >
-                    {categor y === 'all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
+                    {category === 'all' ? 'All Questions' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </button>
                 ))}
               </div>
@@ -237,16 +237,16 @@ const SupportPage: React.FC = () => {
 
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
-                <div key ={index} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
-                  <button onClick ={() => toggleFAQ(index)}
-                    classNam e ="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+                  <button onClick={() => toggleFAQ(index)}
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    <div className ={`transform transition-transform ${expandedFA Q === index ? 'rotate-180' :''}`}>
+                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
                       <HelpCircle className="w-6 h-6 text-purple-400" />
                     </div>
                   </button>
-                  {expandedFA Q === index && (
+                  {expandedFAQ === index && (
                     <div className="px-6 pb-6">
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
@@ -255,7 +255,7 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
 
-            {filteredFAQs.lengt h === 0 && (
+            {filteredFAQs.length === 0 && (
               <div className="text-center py-12">
                 <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <p className="text-gray-400 text-lg">No questions found matching your search criteria.</p>
