@@ -271,4 +271,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default AppPage;
