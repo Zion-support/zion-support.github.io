@@ -29,4 +29,10 @@ export default [
       "no-console": "off"
     },
   },
+  {
+    files: ["**/*.cjs"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off"
+    }
+  }
 ];

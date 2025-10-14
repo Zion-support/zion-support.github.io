@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
@@ -66,4 +65,5 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+const page = React.lazy(() => import('./page'));
+export default page;
