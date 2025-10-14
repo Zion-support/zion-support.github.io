@@ -116,3 +116,4 @@ const Page = (): React.JSX.Element => {
   );
 };
 
+export default Page;

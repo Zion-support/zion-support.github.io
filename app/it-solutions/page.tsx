@@ -1,3 +1,4 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 function ITSolutionsPage() {
@@ -17,6 +18,5 @@ function ITSolutionsPage() {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ITSolutionsPage;
 
