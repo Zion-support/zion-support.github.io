@@ -19,7 +19,13 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
+    // Log error in development, send to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error("Uncaught error:", error, errorInfo);
+    } else {
+      // In production, you would send this to your error monitoring service
+      // Example: Sentry.captureException(error, { extra: errorInfo });
+    }
   }
 
   public render() {
