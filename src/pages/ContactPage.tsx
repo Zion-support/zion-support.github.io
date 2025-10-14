@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 const ContactPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions." />
       </Helmet>
@@ -18,15 +19,22 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold">Email</h3>
                     <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
-                      info@ziontechgroup.com;
+                      info@ziontechgroup.com
                     </a>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold"></h3>
-)
-                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">)
-                      +1 (234) 567-890;
+                    <h3 className="text-lg font-semibold">Phone</h3>
+                    <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">
+                      +1 (234) 567-890
                     </a>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold">Address</h3>
+                    <p className="text-gray-300">
+                      123 Tech Street<br />
+                      Innovation District<br />
+                      New York, NY 10001
+                    </p>
                   </div>
                 </div>
               </div>
@@ -35,46 +43,45 @@ const ContactPage: React.FC = () => {
                 <form className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name;
+                      Name
                     </label>
-                    <input;
-                      type="$1"
-                      id="$1"
-                      name="$1"
-                      className="service-card"
-                      required;
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full bg-gray-700 text-white px-4 py-2 rounded-md border border-gray-600 focus:border-blue-500 focus:outline-none"
+                      required
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email;
+                      Email
                     </label>
-                    <input;
-                      type="$1"
-                      id="$1"
-                      name="$1"
-                      className="service-card"
-                      required;
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full bg-gray-700 text-white px-4 py-2 rounded-md border border-gray-600 focus:border-blue-500 focus:outline-none"
+                      required
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message;
+                      Message
                     </label>
-                    <textarea;
-                      id="$1"
-                      name="$1"
-}
+                    <textarea
+                      id="message"
+                      name="message"
                       rows={4}
-                      className="service-card"
-                      required;
+                      className="w-full bg-gray-700 text-white px-4 py-2 rounded-md border border-gray-600 focus:border-blue-500 focus:outline-none"
+                      required
                     ></textarea>
                   </div>
-                  <button;
-                    type="$1"
-                    className="service-card"
+                  <button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
                   >
-                    Send Message;
+                    Send Message
                   </button>
                 </form>
               </div>
@@ -84,5 +91,6 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-}
-export default ContactPag;e;
+};
+
+export default ContactPage;
