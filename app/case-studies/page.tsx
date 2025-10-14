@@ -1,14 +1,7 @@
-"use client";
+import { ArrowRight, Award, CheckCircle, ExternalLink, TrendingUp, Users } from 'lucide-react';
 
-import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from 'lucide-react';
-import { ExternalLink } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
 
 interface CaseStudy {
   id: string;
@@ -331,8 +324,4 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

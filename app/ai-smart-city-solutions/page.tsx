@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSmartCitySolutionsPage: React.FC = () => {
+const AiSmartCitySolutionsPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSmartCitySolutionsPage: React.FC = () => {
 };
 
 export default AiSmartCitySolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

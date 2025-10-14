@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ServicesAdvertisingPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ServicesAdvertisingPage: React.FC = () => {
 };
 
 export default ServicesAdvertisingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

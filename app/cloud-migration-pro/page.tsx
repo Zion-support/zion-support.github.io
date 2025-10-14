@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CloudMigrationProPage: React.FC = () => {
@@ -55,8 +55,4 @@ const CloudMigrationProPage: React.FC = () => {
 };
 
 export default CloudMigrationProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

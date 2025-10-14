@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiPoweredEmailAnalyzerPage: React.FC = () => {
+const AiPoweredEmailAnalyzerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
 };
 
 export default AiPoweredEmailAnalyzerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

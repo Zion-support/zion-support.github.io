@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiApiManagerPage: React.FC = () => {
+const AiAiApiManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiApiManagerPage: React.FC = () => {
   );
 };
 
-export default ZionAiApiManagerPage;
-<<<<<<< HEAD
-=======
+export default AiAiApiManagerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

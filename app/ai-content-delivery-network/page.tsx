@@ -1,7 +1,8 @@
-import React from "react";
+import { Network } from 'lucide-react';
+
 import { Helmet } from "react-helmet-async";
 
-const AiContentDeliveryNetworkPage: React.FC = () => {
+const AiContentDeliveryNetworkPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +56,4 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
 };
 
 export default AiContentDeliveryNetworkPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

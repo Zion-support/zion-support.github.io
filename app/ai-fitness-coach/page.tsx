@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiFitnessCoachPage: React.FC = () => {
+const AiFitnessCoachPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiFitnessCoachPage: React.FC = () => {
 };
 
 export default AiFitnessCoachPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

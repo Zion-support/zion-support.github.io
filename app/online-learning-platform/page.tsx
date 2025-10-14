@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const OnlineLearningPlatformPage: React.FC = () => {
@@ -55,8 +55,4 @@ const OnlineLearningPlatformPage: React.FC = () => {
 };
 
 export default OnlineLearningPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,8 +1,6 @@
-"use client";
+import { CheckCircle, Filter, Star, TrendingUp, Users, Zap } from 'lucide-react';
 
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Star, CheckCircle, Zap, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface MicroSaasProduct {
@@ -443,8 +441,4 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

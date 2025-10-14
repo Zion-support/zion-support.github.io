@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiLogoDesignerPage: React.FC = () => {
+const AiLogoDesignerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiLogoDesignerPage: React.FC = () => {
 };
 
 export default AiLogoDesignerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiMeetingAssistantPage: React.FC = () => {
+const AiAiMeetingAssistantPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiMeetingAssistantPage: React.FC = () => {
   );
 };
 
-export default ZionAiMeetingAssistantPage;
-<<<<<<< HEAD
-=======
+export default AiAiMeetingAssistantPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

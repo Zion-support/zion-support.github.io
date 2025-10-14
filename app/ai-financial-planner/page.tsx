@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiFinancialPlannerPage: React.FC = () => {
+const AiFinancialPlannerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiFinancialPlannerPage: React.FC = () => {
 };
 
 export default AiFinancialPlannerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

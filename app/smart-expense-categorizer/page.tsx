@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SmartExpenseCategorizerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SmartExpenseCategorizerPage: React.FC = () => {
 };
 
 export default SmartExpenseCategorizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

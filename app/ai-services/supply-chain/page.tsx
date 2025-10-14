@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const SupplyChainPage: React.FC = () => {
+const AiChainPage = () => {
   return (
     <>
       <Helmet>
@@ -52,9 +52,5 @@ const SupplyChainPage: React.FC = () => {
   );
 };
 
-export default SupplyChainPage;
-<<<<<<< HEAD
-=======
+export default AiChainPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

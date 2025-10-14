@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiMeetingTranscriberPage: React.FC = () => {
+const AiAiMeetingTranscriberPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiMeetingTranscriberPage: React.FC = () => {
   );
 };
 
-export default ZionAiMeetingTranscriberPage;
-<<<<<<< HEAD
-=======
+export default AiAiMeetingTranscriberPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

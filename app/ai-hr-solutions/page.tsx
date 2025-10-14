@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiHrSolutionsPage: React.FC = () => {
+const AiHrSolutionsPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiHrSolutionsPage: React.FC = () => {
 };
 
 export default AiHrSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiInventoryManagerPage: React.FC = () => {
+const AiAiInventoryManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiInventoryManagerPage: React.FC = () => {
   );
 };
 
-export default ZionAiInventoryManagerPage;
-<<<<<<< HEAD
-=======
+export default AiAiInventoryManagerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

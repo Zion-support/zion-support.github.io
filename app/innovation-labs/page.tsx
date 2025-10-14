@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const InnovationLabsPage: React.FC = () => {
@@ -55,8 +55,4 @@ const InnovationLabsPage: React.FC = () => {
 };
 
 export default InnovationLabsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

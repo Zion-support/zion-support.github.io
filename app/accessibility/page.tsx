@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const AccessibilityPage: React.FC = () => {
@@ -55,8 +55,4 @@ const AccessibilityPage: React.FC = () => {
 };
 
 export default AccessibilityPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

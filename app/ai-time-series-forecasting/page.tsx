@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiTimeSeriesForecastingPage: React.FC = () => {
+const AiTimeSeriesForecastingPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
 };
 
 export default AiTimeSeriesForecastingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+import { Server } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const ServerManagementPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ServerManagementPage: React.FC = () => {
 };
 
 export default ServerManagementPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

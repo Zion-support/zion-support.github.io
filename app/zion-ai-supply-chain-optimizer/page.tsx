@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiSupplyChainOptimizerPage: React.FC = () => {
+const AiAiSupplyChainOptimizerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   );
 };
 
-export default ZionAiSupplyChainOptimizerPage;
-<<<<<<< HEAD
-=======
+export default AiAiSupplyChainOptimizerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

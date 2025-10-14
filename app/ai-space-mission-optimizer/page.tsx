@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSpaceMissionOptimizerPage: React.FC = () => {
+const AiSpaceMissionOptimizerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {
 };
 
 export default AiSpaceMissionOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

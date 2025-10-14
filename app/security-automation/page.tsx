@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SecurityAutomationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SecurityAutomationPage: React.FC = () => {
 };
 
 export default SecurityAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

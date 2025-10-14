@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const WhitepapersPage: React.FC = () => {
@@ -53,8 +53,4 @@ const WhitepapersPage: React.FC = () => {
 };
 
 export default WhitepapersPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

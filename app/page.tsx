@@ -1,5 +1,5 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { ArrowRight, Award, Brain, CheckCircle, Clock, Cloud, Code, Mail, MapPin, Network, Phone, Shield, Star, TrendingUp, Users, Wifi } from 'lucide-react';
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -270,7 +270,5 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-
-export default AppPage;
 
 export default HomePage;

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiMarketingAutomationProPage: React.FC = () => {
+const AiAiMarketingAutomationProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,9 +55,5 @@ const ZionAiMarketingAutomationProPage: React.FC = () => {
   );
 };
 
-export default ZionAiMarketingAutomationProPage;
-<<<<<<< HEAD
-=======
+export default AiAiMarketingAutomationProPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

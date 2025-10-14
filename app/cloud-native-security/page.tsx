@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CloudNativeSecurityPage: React.FC = () => {
@@ -55,8 +55,4 @@ const CloudNativeSecurityPage: React.FC = () => {
 };
 
 export default CloudNativeSecurityPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

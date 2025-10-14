@@ -1,16 +1,6 @@
-"use client";
+import { Brain, CheckCircle, Clock, Heart, MapPin, Rocket, Star, Users, Zap } from 'lucide-react';
 
-import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Zap } from 'lucide-react';
-import { Heart } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Rocket } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
 
 interface JobPosition {
   id: string;
@@ -398,8 +388,4 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

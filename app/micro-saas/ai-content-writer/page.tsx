@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiContentWriterPage: React.FC = () => {
+const AiContentWriterPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiContentWriterPage: React.FC = () => {
 };
 
 export default AiContentWriterPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

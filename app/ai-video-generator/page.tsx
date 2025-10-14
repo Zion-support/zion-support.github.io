@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiVideoGeneratorPage: React.FC = () => {
+const AiVideoGeneratorPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiVideoGeneratorPage: React.FC = () => {
 };
 
 export default AiVideoGeneratorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

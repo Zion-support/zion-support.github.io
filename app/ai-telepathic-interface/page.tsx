@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiTelepathicInterfacePage: React.FC = () => {
+const AiTelepathicInterfacePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiTelepathicInterfacePage: React.FC = () => {
 };
 
 export default AiTelepathicInterfacePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

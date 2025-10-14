@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiNeuralInterfacePage: React.FC = () => {
+const AiAiNeuralInterfacePage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiNeuralInterfacePage: React.FC = () => {
   );
 };
 
-export default ZionAiNeuralInterfacePage;
-<<<<<<< HEAD
-=======
+export default AiAiNeuralInterfacePage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

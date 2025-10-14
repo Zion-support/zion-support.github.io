@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiMeetingAssistantPage: React.FC = () => {
+const AiMeetingAssistantPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiMeetingAssistantPage: React.FC = () => {
 };
 
 export default AiMeetingAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

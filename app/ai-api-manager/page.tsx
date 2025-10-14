@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiApiManagerPage: React.FC = () => {
+const AiApiManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiApiManagerPage: React.FC = () => {
 };
 
 export default AiApiManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

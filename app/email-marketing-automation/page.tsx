@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EmailMarketingAutomationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default EmailMarketingAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

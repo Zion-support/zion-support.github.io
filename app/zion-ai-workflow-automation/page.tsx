@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiWorkflowAutomationPage: React.FC = () => {
+const AiAiWorkflowAutomationPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionAiWorkflowAutomationPage;
-<<<<<<< HEAD
-=======
+export default AiAiWorkflowAutomationPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

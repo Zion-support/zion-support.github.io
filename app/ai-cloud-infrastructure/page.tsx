@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiCloudInfrastructurePage: React.FC = () => {
+const AiCloudInfrastructurePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 
 export default AiCloudInfrastructurePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

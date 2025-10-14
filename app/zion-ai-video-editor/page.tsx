@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiVideoEditorPage: React.FC = () => {
+const AiAiVideoEditorPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiVideoEditorPage: React.FC = () => {
   );
 };
 
-export default ZionAiVideoEditorPage;
-<<<<<<< HEAD
-=======
+export default AiAiVideoEditorPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

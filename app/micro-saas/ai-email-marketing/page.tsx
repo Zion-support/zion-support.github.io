@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiEmailMarketingPage: React.FC = () => {
+const AiEmailMarketingPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiEmailMarketingPage: React.FC = () => {
 };
 
 export default AiEmailMarketingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

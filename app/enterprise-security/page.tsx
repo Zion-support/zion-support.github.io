@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EnterpriseSecurityPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EnterpriseSecurityPage: React.FC = () => {
 };
 
 export default EnterpriseSecurityPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

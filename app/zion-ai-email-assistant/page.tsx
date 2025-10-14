@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiEmailAssistantPage: React.FC = () => {
+const AiAiEmailAssistantPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiEmailAssistantPage: React.FC = () => {
   );
 };
 
-export default ZionAiEmailAssistantPage;
-<<<<<<< HEAD
-=======
+export default AiAiEmailAssistantPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

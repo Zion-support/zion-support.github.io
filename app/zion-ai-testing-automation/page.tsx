@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiTestingAutomationPage: React.FC = () => {
+const AiAiTestingAutomationPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiTestingAutomationPage: React.FC = () => {
   );
 };
 
-export default ZionAiTestingAutomationPage;
-<<<<<<< HEAD
-=======
+export default AiAiTestingAutomationPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const BlockchainIntegrationServicesPage: React.FC = () => {
@@ -56,8 +56,4 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 };
 
 export default BlockchainIntegrationServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

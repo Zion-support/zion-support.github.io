@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const HealthPage: React.FC = () => {
@@ -53,8 +53,4 @@ const HealthPage: React.FC = () => {
 };
 
 export default HealthPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

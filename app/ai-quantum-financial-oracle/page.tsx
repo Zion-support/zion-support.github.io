@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiQuantumFinancialOraclePage: React.FC = () => {
+const AiQuantumFinancialOraclePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
 };
 
 export default AiQuantumFinancialOraclePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

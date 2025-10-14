@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiInventoryManagerPage: React.FC = () => {
+const AiInventoryManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiInventoryManagerPage: React.FC = () => {
 };
 
 export default AiInventoryManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

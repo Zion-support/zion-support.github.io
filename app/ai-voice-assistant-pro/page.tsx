@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiVoiceAssistantProPage: React.FC = () => {
+const AiVoiceAssistantProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiVoiceAssistantProPage: React.FC = () => {
 };
 
 export default AiVoiceAssistantProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SmartInventoryOptimizerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SmartInventoryOptimizerPage: React.FC = () => {
 };
 
 export default SmartInventoryOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

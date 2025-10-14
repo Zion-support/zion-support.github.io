@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const IotEdgeComputingPage: React.FC = () => {
@@ -55,8 +55,4 @@ const IotEdgeComputingPage: React.FC = () => {
 };
 
 export default IotEdgeComputingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

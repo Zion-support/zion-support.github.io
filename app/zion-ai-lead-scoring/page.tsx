@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiLeadScoringPage: React.FC = () => {
+const AiAiLeadScoringPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiLeadScoringPage: React.FC = () => {
   );
 };
 
-export default ZionAiLeadScoringPage;
-<<<<<<< HEAD
-=======
+export default AiAiLeadScoringPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

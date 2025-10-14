@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionChatAiPage: React.FC = () => {
@@ -53,8 +53,4 @@ const ZionChatAiPage: React.FC = () => {
 };
 
 export default ZionChatAiPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

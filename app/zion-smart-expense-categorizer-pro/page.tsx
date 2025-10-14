@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionSmartExpenseCategorizerProPage: React.FC = () => {
@@ -59,8 +59,4 @@ const ZionSmartExpenseCategorizerProPage: React.FC = () => {
 };
 
 export default ZionSmartExpenseCategorizerProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

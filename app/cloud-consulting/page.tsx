@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CloudConsultingPage: React.FC = () => {
@@ -55,8 +55,4 @@ const CloudConsultingPage: React.FC = () => {
 };
 
 export default CloudConsultingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

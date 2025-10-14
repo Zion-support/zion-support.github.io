@@ -1,6 +1,5 @@
-import React from 'react';
+import { ArrowRight, CheckCircle, Database, Server, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Database, Server, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 const DatabaseSolutionsPage: React.FC = () => {
   const features = [
@@ -150,7 +149,5 @@ const DatabaseSolutionsPage: React.FC = () => {
     </>
   );
 };
-
-export default DatabaseSolutionsPage;
 
 export default DatabaseSolutionsPage;

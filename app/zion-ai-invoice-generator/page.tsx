@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiInvoiceGeneratorPage: React.FC = () => {
+const AiAiInvoiceGeneratorPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiInvoiceGeneratorPage: React.FC = () => {
   );
 };
 
-export default ZionAiInvoiceGeneratorPage;
-<<<<<<< HEAD
-=======
+export default AiAiInvoiceGeneratorPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

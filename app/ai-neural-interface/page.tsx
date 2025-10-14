@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiNeuralInterfacePage: React.FC = () => {
+const AiNeuralInterfacePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiNeuralInterfacePage: React.FC = () => {
 };
 
 export default AiNeuralInterfacePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

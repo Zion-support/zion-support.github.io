@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const DataEngineeringPage: React.FC = () => {
@@ -55,8 +55,4 @@ const DataEngineeringPage: React.FC = () => {
 };
 
 export default DataEngineeringPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

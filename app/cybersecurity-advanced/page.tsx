@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CybersecurityAdvancedPage: React.FC = () => {
@@ -55,8 +55,4 @@ const CybersecurityAdvancedPage: React.FC = () => {
 };
 
 export default CybersecurityAdvancedPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const FiveGMigration: React.FC = () => {
+const FiveGMigrationPage = () => {
   return (
     <>
       <Helmet>
@@ -52,6 +52,5 @@ const FiveGMigration: React.FC = () => {
   );
 };
 
-export default 5gMigrationPage;
-
+export default FiveGMigrationPage;
 

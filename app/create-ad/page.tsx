@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CreateAdPage: React.FC = () => {
@@ -53,8 +53,4 @@ const CreateAdPage: React.FC = () => {
 };
 
 export default CreateAdPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

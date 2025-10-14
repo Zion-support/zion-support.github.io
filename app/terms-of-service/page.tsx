@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const TermsOfServicePage: React.FC = () => {
@@ -55,8 +55,4 @@ const TermsOfServicePage: React.FC = () => {
 };
 
 export default TermsOfServicePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

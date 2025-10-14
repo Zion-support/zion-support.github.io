@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiPredictiveMaintenancePage: React.FC = () => {
+const AiAiPredictiveMaintenancePage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiPredictiveMaintenancePage: React.FC = () => {
   );
 };
 
-export default ZionAiPredictiveMaintenancePage;
-<<<<<<< HEAD
-=======
+export default AiAiPredictiveMaintenancePage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

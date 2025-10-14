@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const TestSimplePage: React.FC = () => {
@@ -53,8 +53,4 @@ const TestSimplePage: React.FC = () => {
 };
 
 export default TestSimplePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

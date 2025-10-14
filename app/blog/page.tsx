@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const BlogPage: React.FC = () => {
@@ -53,8 +53,4 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

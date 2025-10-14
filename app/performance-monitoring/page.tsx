@@ -1,6 +1,5 @@
-import React from 'react';
+import { Activity, AlertTriangle, ArrowRight, BarChart3, CheckCircle, Database, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Activity, BarChart3, AlertTriangle, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 
 const PerformanceMonitoringPage: React.FC = () => {
   const features = [
@@ -150,7 +149,5 @@ const PerformanceMonitoringPage: React.FC = () => {
     </>
   );
 };
-
-export default PerformanceMonitoringPage;
 
 export default PerformanceMonitoringPage;

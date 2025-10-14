@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ContractManagerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ContractManagerPage: React.FC = () => {
 };
 
 export default ContractManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

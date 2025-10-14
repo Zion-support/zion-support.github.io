@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ApiDevelopmentAdvancedPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ApiDevelopmentAdvancedPage: React.FC = () => {
 };
 
 export default ApiDevelopmentAdvancedPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

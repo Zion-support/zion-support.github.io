@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const PropertyManagementAiPage: React.FC = () => {
@@ -55,8 +55,4 @@ const PropertyManagementAiPage: React.FC = () => {
 };
 
 export default PropertyManagementAiPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

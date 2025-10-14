@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiQuantumComputingSimulatorPage: React.FC = () => {
+const AiQuantumComputingSimulatorPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiQuantumComputingSimulatorPage: React.FC = () => {
 };
 
 export default AiQuantumComputingSimulatorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

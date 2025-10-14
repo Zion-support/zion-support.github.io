@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiChatbotBuilderPage: React.FC = () => {
+const AiAiChatbotBuilderPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiChatbotBuilderPage: React.FC = () => {
   );
 };
 
-export default ZionAiChatbotBuilderPage;
-<<<<<<< HEAD
-=======
+export default AiAiChatbotBuilderPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

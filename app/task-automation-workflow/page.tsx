@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const TaskAutomationWorkflowPage: React.FC = () => {
@@ -55,8 +55,4 @@ const TaskAutomationWorkflowPage: React.FC = () => {
 };
 
 export default TaskAutomationWorkflowPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

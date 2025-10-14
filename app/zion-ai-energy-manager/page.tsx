@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiEnergyManagerPage: React.FC = () => {
+const AiAiEnergyManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiEnergyManagerPage: React.FC = () => {
   );
 };
 
-export default ZionAiEnergyManagerPage;
-<<<<<<< HEAD
-=======
+export default AiAiEnergyManagerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

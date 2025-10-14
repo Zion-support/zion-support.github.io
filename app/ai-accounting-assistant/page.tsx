@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiAccountingAssistantPage: React.FC = () => {
+const AiAccountingAssistantPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiAccountingAssistantPage: React.FC = () => {
 };
 
 export default AiAccountingAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSmartContractAuditorPage: React.FC = () => {
+const AiSmartContractAuditorPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSmartContractAuditorPage: React.FC = () => {
 };
 
 export default AiSmartContractAuditorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

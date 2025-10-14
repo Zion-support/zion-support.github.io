@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CookiePolicyPage: React.FC = () => {
@@ -55,8 +55,4 @@ const CookiePolicyPage: React.FC = () => {
 };
 
 export default CookiePolicyPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

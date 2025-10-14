@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const DevopsSolutionsPage: React.FC = () => {
@@ -55,8 +55,4 @@ const DevopsSolutionsPage: React.FC = () => {
 };
 
 export default DevopsSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

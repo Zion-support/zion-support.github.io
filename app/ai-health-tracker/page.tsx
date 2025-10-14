@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiHealthTrackerPage: React.FC = () => {
+const AiHealthTrackerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiHealthTrackerPage: React.FC = () => {
 };
 
 export default AiHealthTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

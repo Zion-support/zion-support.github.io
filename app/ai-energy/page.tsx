@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiEnergyPage: React.FC = () => {
+const AiEnergyPage = () => {
   return (
     <>
       <Helmet>
@@ -53,8 +53,4 @@ const AiEnergyPage: React.FC = () => {
 };
 
 export default AiEnergyPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

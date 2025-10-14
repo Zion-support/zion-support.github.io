@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiContractAnalyzerPage: React.FC = () => {
+const AiAiContractAnalyzerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiContractAnalyzerPage: React.FC = () => {
   );
 };
 
-export default ZionAiContractAnalyzerPage;
-<<<<<<< HEAD
-=======
+export default AiAiContractAnalyzerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

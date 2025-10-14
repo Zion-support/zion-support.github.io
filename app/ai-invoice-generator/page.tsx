@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiInvoiceGeneratorPage: React.FC = () => {
+const AiInvoiceGeneratorPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiInvoiceGeneratorPage: React.FC = () => {
 };
 
 export default AiInvoiceGeneratorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

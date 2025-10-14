@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiQualityAssurancePage: React.FC = () => {
+const AiQualityAssurancePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiQualityAssurancePage: React.FC = () => {
 };
 
 export default AiQualityAssurancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiExpenseTrackerPage: React.FC = () => {
+const AiExpenseTrackerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiExpenseTrackerPage: React.FC = () => {
 };
 
 export default AiExpenseTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

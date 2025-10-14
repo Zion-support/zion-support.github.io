@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiMeetingTranscriberPage: React.FC = () => {
+const AiMeetingTranscriberPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiMeetingTranscriberPage: React.FC = () => {
 };
 
 export default AiMeetingTranscriberPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

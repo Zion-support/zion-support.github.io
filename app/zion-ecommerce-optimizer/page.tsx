@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionEcommerceOptimizerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ZionEcommerceOptimizerPage: React.FC = () => {
 };
 
 export default ZionEcommerceOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

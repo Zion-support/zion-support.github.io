@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const QuantumAiPage: React.FC = () => {
@@ -53,8 +53,4 @@ const QuantumAiPage: React.FC = () => {
 };
 
 export default QuantumAiPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

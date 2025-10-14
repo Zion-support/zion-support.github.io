@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiNlpPage: React.FC = () => {
+const AiNlpPage = () => {
   return (
     <>
       <Helmet>
@@ -53,8 +53,4 @@ const AiNlpPage: React.FC = () => {
 };
 
 export default AiNlpPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ManagedServicesPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ManagedServicesPage: React.FC = () => {
 };
 
 export default ManagedServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

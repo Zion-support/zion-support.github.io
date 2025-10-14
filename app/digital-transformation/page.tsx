@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const DigitalTransformationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const DigitalTransformationPage: React.FC = () => {
 };
 
 export default DigitalTransformationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

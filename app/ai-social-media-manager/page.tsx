@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiSocialMediaManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSocialMediaManagerPage: React.FC = () => {
 };
 
 export default AiSocialMediaManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

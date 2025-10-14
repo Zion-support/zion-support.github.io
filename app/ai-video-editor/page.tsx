@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiVideoEditorPage: React.FC = () => {
+const AiVideoEditorPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiVideoEditorPage: React.FC = () => {
 };
 
 export default AiVideoEditorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiLeadScoringPage: React.FC = () => {
+const AiLeadScoringPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiLeadScoringPage: React.FC = () => {
 };
 
 export default AiLeadScoringPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

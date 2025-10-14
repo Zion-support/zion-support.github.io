@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const StatusPage: React.FC = () => {
@@ -53,8 +53,4 @@ const StatusPage: React.FC = () => {
 };
 
 export default StatusPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

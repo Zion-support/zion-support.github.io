@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ContentGeneratorPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ContentGeneratorPage: React.FC = () => {
 };
 
 export default ContentGeneratorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

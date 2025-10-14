@@ -1,40 +1,27 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Code, 
-  Zap, 
-  Shield, 
   Globe, 
-  Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
   Terminal,
   GitBranch,
   Bug,
   FileText,
   Cpu,
-  Database,
   Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Database
 } from 'lucide-react';
 
-const AiCodeAssistantProPage: React.FC = () => {
+const AiCodeAssistantProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 
@@ -517,5 +504,4 @@ const AiCodeAssistantProPage: React.FC = () => {
 };
 
 export default AiCodeAssistantProPage;
-
 

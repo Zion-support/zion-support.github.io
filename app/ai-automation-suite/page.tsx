@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiAutomationSuitePage: React.FC = () => {
+const AiAutomationSuitePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiAutomationSuitePage: React.FC = () => {
 };
 
 export default AiAutomationSuitePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EdgeComputingPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EdgeComputingPage: React.FC = () => {
 };
 
 export default EdgeComputingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

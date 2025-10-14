@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionSocialSchedulerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ZionSocialSchedulerPage: React.FC = () => {
 };
 
 export default ZionSocialSchedulerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

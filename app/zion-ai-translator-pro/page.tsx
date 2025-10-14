@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiTranslatorProPage: React.FC = () => {
+const AiAiTranslatorProPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiTranslatorProPage: React.FC = () => {
   );
 };
 
-export default ZionAiTranslatorProPage;
-<<<<<<< HEAD
-=======
+export default AiAiTranslatorProPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+import { Network } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const NetworkInfrastructurePage: React.FC = () => {
@@ -55,8 +55,4 @@ const NetworkInfrastructurePage: React.FC = () => {
 };
 
 export default NetworkInfrastructurePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

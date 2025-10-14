@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiBlockchainSolutionsPage: React.FC = () => {
+const AiBlockchainSolutionsPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiBlockchainSolutionsPage: React.FC = () => {
 };
 
 export default AiBlockchainSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

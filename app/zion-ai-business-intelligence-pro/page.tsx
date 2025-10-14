@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiBusinessIntelligenceProPage: React.FC = () => {
+const AiAiBusinessIntelligenceProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,9 +55,5 @@ const ZionAiBusinessIntelligenceProPage: React.FC = () => {
   );
 };
 
-export default ZionAiBusinessIntelligenceProPage;
-<<<<<<< HEAD
-=======
+export default AiAiBusinessIntelligenceProPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

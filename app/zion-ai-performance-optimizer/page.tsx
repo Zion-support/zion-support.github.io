@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiPerformanceOptimizerPage: React.FC = () => {
+const AiAiPerformanceOptimizerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiPerformanceOptimizerPage: React.FC = () => {
   );
 };
 
-export default ZionAiPerformanceOptimizerPage;
-<<<<<<< HEAD
-=======
+export default AiAiPerformanceOptimizerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

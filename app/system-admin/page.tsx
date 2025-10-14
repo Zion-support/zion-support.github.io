@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SystemAdminPage: React.FC = () => {
@@ -53,8 +53,4 @@ const SystemAdminPage: React.FC = () => {
 };
 
 export default SystemAdminPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

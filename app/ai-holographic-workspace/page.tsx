@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiHolographicWorkspacePage: React.FC = () => {
+const AiHolographicWorkspacePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiHolographicWorkspacePage: React.FC = () => {
 };
 
 export default AiHolographicWorkspacePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

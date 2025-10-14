@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiMobileAppBuilderPage: React.FC = () => {
+const AiMobileAppBuilderPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiMobileAppBuilderPage: React.FC = () => {
 };
 
 export default AiMobileAppBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

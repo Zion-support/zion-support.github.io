@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiEnergyGridManagementProPage: React.FC = () => {
+const AiEnergyGridManagementProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiEnergyGridManagementProPage: React.FC = () => {
 };
 
 export default AiEnergyGridManagementProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const InventoryManagementSaasPage: React.FC = () => {
@@ -55,8 +55,4 @@ const InventoryManagementSaasPage: React.FC = () => {
 };
 
 export default InventoryManagementSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

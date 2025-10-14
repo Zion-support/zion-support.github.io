@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiTaskManagerPage: React.FC = () => {
+const AiTaskManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiTaskManagerPage: React.FC = () => {
 };
 
 export default AiTaskManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

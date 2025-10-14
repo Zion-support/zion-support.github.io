@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiRecommendationEnginePage: React.FC = () => {
+const AiRecommendationEnginePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiRecommendationEnginePage: React.FC = () => {
 };
 
 export default AiRecommendationEnginePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

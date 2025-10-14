@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ItMicroSaasPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ItMicroSaasPage: React.FC = () => {
 };
 
 export default ItMicroSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

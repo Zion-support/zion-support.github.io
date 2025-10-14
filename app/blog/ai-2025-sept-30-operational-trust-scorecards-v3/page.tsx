@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
+const Ai2025Sept30OperationalTrustScorecardsV3Page = () => {
   return (
     <>
       <Helmet>
@@ -59,8 +59,4 @@ const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
 };
 
 export default Ai2025Sept30OperationalTrustScorecardsV3Page;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

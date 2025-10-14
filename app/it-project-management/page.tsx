@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ItProjectManagementPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ItProjectManagementPage: React.FC = () => {
 };
 
 export default ItProjectManagementPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

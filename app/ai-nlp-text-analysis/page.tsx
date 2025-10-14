@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiNlpTextAnalysisPage: React.FC = () => {
+const AiNlpTextAnalysisPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiNlpTextAnalysisPage: React.FC = () => {
 };
 
 export default AiNlpTextAnalysisPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

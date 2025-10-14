@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const FinancialItPage: React.FC = () => {
@@ -53,8 +53,4 @@ const FinancialItPage: React.FC = () => {
 };
 
 export default FinancialItPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

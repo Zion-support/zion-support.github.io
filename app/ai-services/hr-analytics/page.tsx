@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const HrAnalyticsPage: React.FC = () => {
+const AiAnalyticsPage = () => {
   return (
     <>
       <Helmet>
@@ -52,9 +52,5 @@ const HrAnalyticsPage: React.FC = () => {
   );
 };
 
-export default HrAnalyticsPage;
-<<<<<<< HEAD
-=======
+export default AiAnalyticsPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

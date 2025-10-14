@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiDataCleanerPage: React.FC = () => {
+const AiAiDataCleanerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiDataCleanerPage: React.FC = () => {
   );
 };
 
-export default ZionAiDataCleanerPage;
-<<<<<<< HEAD
-=======
+export default AiAiDataCleanerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

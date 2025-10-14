@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const FraudDetectionPage: React.FC = () => {
+const AiDetectionPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const FraudDetectionPage: React.FC = () => {
   );
 };
 
-export default FraudDetectionPage;
-<<<<<<< HEAD
-=======
+export default AiDetectionPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

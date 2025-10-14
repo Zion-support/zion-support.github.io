@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiFraudDetectorPage: React.FC = () => {
+const AiAiFraudDetectorPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiFraudDetectorPage: React.FC = () => {
   );
 };
 
-export default ZionAiFraudDetectorPage;
-<<<<<<< HEAD
-=======
+export default AiAiFraudDetectorPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

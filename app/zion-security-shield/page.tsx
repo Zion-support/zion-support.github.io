@@ -1,4 +1,4 @@
-import React from "react";
+import { Shield } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const ZionSecurityShieldPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ZionSecurityShieldPage: React.FC = () => {
 };
 
 export default ZionSecurityShieldPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

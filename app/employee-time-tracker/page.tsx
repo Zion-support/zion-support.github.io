@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EmployeeTimeTrackerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EmployeeTimeTrackerPage: React.FC = () => {
 };
 
 export default EmployeeTimeTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiChatbotBuilderPage: React.FC = () => {
+const AiChatbotBuilderPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiChatbotBuilderPage: React.FC = () => {
 };
 
 export default AiChatbotBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

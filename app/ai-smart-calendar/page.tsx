@@ -1,7 +1,8 @@
-import React from "react";
+import { Calendar } from 'lucide-react';
+
 import { Helmet } from "react-helmet-async";
 
-const AiSmartCalendarPage: React.FC = () => {
+const AiSmartCalendarPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +56,4 @@ const AiSmartCalendarPage: React.FC = () => {
 };
 
 export default AiSmartCalendarPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

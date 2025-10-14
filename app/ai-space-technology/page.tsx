@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSpaceTechnologyPage: React.FC = () => {
+const AiSpaceTechnologyPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSpaceTechnologyPage: React.FC = () => {
 };
 
 export default AiSpaceTechnologyPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

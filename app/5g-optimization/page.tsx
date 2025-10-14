@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const FiveGOptimization: React.FC = () => {
+const FiveGOptimizationPage = () => {
   return (
     <>
       <Helmet>
@@ -54,6 +54,5 @@ const FiveGOptimization: React.FC = () => {
   );
 };
 
-export default 5gOptimizationPage;
-
+export default FiveGOptimizationPage;
 

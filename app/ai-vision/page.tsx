@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiVisionPage: React.FC = () => {
+const AiVisionPage = () => {
   return (
     <>
       <Helmet>
@@ -53,8 +53,4 @@ const AiVisionPage: React.FC = () => {
 };
 
 export default AiVisionPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

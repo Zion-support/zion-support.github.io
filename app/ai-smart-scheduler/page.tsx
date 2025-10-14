@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSmartSchedulerPage: React.FC = () => {
+const AiSmartSchedulerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSmartSchedulerPage: React.FC = () => {
 };
 
 export default AiSmartSchedulerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

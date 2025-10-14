@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const LeadScoringPage: React.FC = () => {
@@ -53,8 +53,4 @@ const LeadScoringPage: React.FC = () => {
 };
 
 export default LeadScoringPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SmartCitiesPage: React.FC = () => {
@@ -53,8 +53,4 @@ const SmartCitiesPage: React.FC = () => {
 };
 
 export default SmartCitiesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

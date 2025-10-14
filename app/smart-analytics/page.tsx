@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SmartAnalyticsPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SmartAnalyticsPage: React.FC = () => {
 };
 
 export default SmartAnalyticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

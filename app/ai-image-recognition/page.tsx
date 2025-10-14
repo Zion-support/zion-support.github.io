@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiImageRecognitionPage: React.FC = () => {
+const AiImageRecognitionPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiImageRecognitionPage: React.FC = () => {
 };
 
 export default AiImageRecognitionPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

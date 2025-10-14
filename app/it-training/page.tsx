@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ItTrainingPage: React.FC = () => {
@@ -53,8 +53,4 @@ const ItTrainingPage: React.FC = () => {
 };
 
 export default ItTrainingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiFintechPage: React.FC = () => {
+const AiFintechPage = () => {
   return (
     <>
       <Helmet>
@@ -53,8 +53,4 @@ const AiFintechPage: React.FC = () => {
 };
 
 export default AiFintechPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

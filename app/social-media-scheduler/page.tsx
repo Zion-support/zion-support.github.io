@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SocialMediaSchedulerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SocialMediaSchedulerPage: React.FC = () => {
 };
 
 export default SocialMediaSchedulerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

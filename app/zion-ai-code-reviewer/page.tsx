@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ZionAiCodeReviewerPage: React.FC = () => {
+const AiAiCodeReviewerPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ZionAiCodeReviewerPage: React.FC = () => {
   );
 };
 
-export default ZionAiCodeReviewerPage;
-<<<<<<< HEAD
-=======
+export default AiAiCodeReviewerPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

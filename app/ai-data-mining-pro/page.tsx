@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiDataMiningProPage: React.FC = () => {
+const AiDataMiningProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiDataMiningProPage: React.FC = () => {
 };
 
 export default AiDataMiningProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

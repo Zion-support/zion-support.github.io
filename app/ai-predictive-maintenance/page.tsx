@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiPredictiveMaintenancePage: React.FC = () => {
+const AiPredictiveMaintenancePage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiPredictiveMaintenancePage: React.FC = () => {
 };
 
 export default AiPredictiveMaintenancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

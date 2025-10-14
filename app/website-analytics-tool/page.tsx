@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const WebsiteAnalyticsToolPage: React.FC = () => {
@@ -55,8 +55,4 @@ const WebsiteAnalyticsToolPage: React.FC = () => {
 };
 
 export default WebsiteAnalyticsToolPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

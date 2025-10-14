@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSeoOptimizerPage: React.FC = () => {
+const AiSeoOptimizerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSeoOptimizerPage: React.FC = () => {
 };
 
 export default AiSeoOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const PrivacyPage: React.FC = () => {
@@ -53,8 +53,4 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+import { Database } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const DatabaseManagementPage: React.FC = () => {
@@ -55,8 +55,4 @@ const DatabaseManagementPage: React.FC = () => {
 };
 
 export default DatabaseManagementPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

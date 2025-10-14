@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SocialManagerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SocialManagerPage: React.FC = () => {
 };
 
 export default SocialManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

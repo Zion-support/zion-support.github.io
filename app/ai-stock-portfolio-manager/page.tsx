@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiStockPortfolioManagerPage: React.FC = () => {
+const AiStockPortfolioManagerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiStockPortfolioManagerPage: React.FC = () => {
 };
 
 export default AiStockPortfolioManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

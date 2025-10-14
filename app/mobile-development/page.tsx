@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const MobileDevelopmentPage: React.FC = () => {
@@ -55,8 +55,4 @@ const MobileDevelopmentPage: React.FC = () => {
 };
 
 export default MobileDevelopmentPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

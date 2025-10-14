@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionCustomerSatisfactionMonitorPage: React.FC = () => {
@@ -56,8 +56,4 @@ const ZionCustomerSatisfactionMonitorPage: React.FC = () => {
 };
 
 export default ZionCustomerSatisfactionMonitorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

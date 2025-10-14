@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiPoweredDevopsPage: React.FC = () => {
+const AiPoweredDevopsPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiPoweredDevopsPage: React.FC = () => {
 };
 
 export default AiPoweredDevopsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

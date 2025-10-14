@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiInfrastructureMonitoringPage: React.FC = () => {
+const AiInfrastructureMonitoringPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
 };
 
 export default AiInfrastructureMonitoringPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

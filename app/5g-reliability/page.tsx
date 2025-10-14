@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const FiveGReliability: React.FC = () => {
+const FiveGReliabilityPage = () => {
   return (
     <>
       <Helmet>
@@ -54,6 +54,5 @@ const FiveGReliability: React.FC = () => {
   );
 };
 
-export default 5gReliabilityPage;
-
+export default FiveGReliabilityPage;
 

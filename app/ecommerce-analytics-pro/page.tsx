@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EcommerceAnalyticsProPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 };
 
 export default EcommerceAnalyticsProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

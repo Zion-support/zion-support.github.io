@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiSentimentAnalyzerPage: React.FC = () => {
+const AiSentimentAnalyzerPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiSentimentAnalyzerPage: React.FC = () => {
 };
 
 export default AiSentimentAnalyzerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

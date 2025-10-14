@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const IntelligentEmailInfrastructurePage: React.FC = () => {
@@ -56,8 +56,4 @@ const IntelligentEmailInfrastructurePage: React.FC = () => {
 };
 
 export default IntelligentEmailInfrastructurePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,35 +1,23 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Zap, 
-  Shield, 
   Globe, 
-  Brain, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
+  Activity,
+  Shield,
+  Brain,
   Target,
-  PieChart,
-  LineChart,
-  Activity
+  Zap
 } from 'lucide-react';
 
-const AiAnalyticsDashboardProPage: React.FC = () => {
+const AiAnalyticsDashboardProPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   // const [activeTab, setActiveTab] = useState('overview');
 
@@ -403,5 +391,4 @@ const AiAnalyticsDashboardProPage: React.FC = () => {
 };
 
 export default AiAnalyticsDashboardProPage;
-
 

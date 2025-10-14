@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiVoiceCloningStudioPage: React.FC = () => {
+const AiVoiceCloningStudioPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiVoiceCloningStudioPage: React.FC = () => {
 };
 
 export default AiVoiceCloningStudioPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

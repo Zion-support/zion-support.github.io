@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CookiesPage: React.FC = () => {
@@ -53,8 +53,4 @@ const CookiesPage: React.FC = () => {
 };
 
 export default CookiesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const CommunityPage: React.FC = () => {
@@ -53,8 +53,4 @@ const CommunityPage: React.FC = () => {
 };
 
 export default CommunityPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiTranslationServicesPage: React.FC = () => {
+const AiTranslationServicesPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiTranslationServicesPage: React.FC = () => {
 };
 
 export default AiTranslationServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

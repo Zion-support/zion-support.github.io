@@ -1,16 +1,7 @@
-"use client";
+import { BookOpen, Clock, Filter, HelpCircle, Mail, MessageCircle, Phone, Search, Users, Zap } from 'lucide-react';
 
-import React, { useState } from "react";
+import React, { useState, useEffect, memo, lazy, Suspense } from 'react';
 import { Helmet } from "react-helmet-async";
-import { Phone } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { MessageCircle } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { HelpCircle } from 'lucide-react';
-import { BookOpen } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Zap } from 'lucide-react';
 
 interface FAQ {
   question: string;
@@ -446,8 +437,4 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

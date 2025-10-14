@@ -1,4 +1,4 @@
-import React from "react";
+import { Database } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 
 const IntelligentDatabaseMigrationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const IntelligentDatabaseMigrationPage: React.FC = () => {
 };
 
 export default IntelligentDatabaseMigrationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

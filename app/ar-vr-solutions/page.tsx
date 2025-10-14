@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ArVrSolutionsPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ArVrSolutionsPage: React.FC = () => {
 };
 
 export default ArVrSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

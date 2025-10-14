@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiBusinessIntelligenceProPage: React.FC = () => {
+const AiBusinessIntelligenceProPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiBusinessIntelligenceProPage: React.FC = () => {
 };
 
 export default AiBusinessIntelligenceProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

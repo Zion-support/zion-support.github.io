@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const OfflinePage: React.FC = () => {
@@ -53,8 +53,4 @@ const OfflinePage: React.FC = () => {
 };
 
 export default OfflinePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

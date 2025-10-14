@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts by keeping the HEAD version
+Script to fix merge conflicts in TypeScript/JSX files
 """
 import os
 import re
@@ -16,51 +16,61 @@ def fix_merge_conflicts(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
         
-        # Remove merge conflict markers and keep HEAD version
-        # Pattern to match from <<<<<<< HEAD to ======= (keep this part)
-        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+\n'
-        content = re.sub(pattern1, r'\1\n', content, flags=re.DOTALL)
+        # Pattern to match merge conflict blocks
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
         
-        # Pattern to match from ======= to >>>>>>> (remove this part)
-        pattern2 = r'=======\n.*?\n>>>>>>> [^\n]+\n'
-        content = re.sub(pattern2, '', content, flags=re.DOTALL)
+        def resolve_conflict(match):
+            head_content = match.group(1).strip()
+            other_content = match.group(2).strip()
+            
+            # If one side is empty or just comments, prefer the non-empty side
+            if not head_content or head_content.startswith('//') and not other_content.startswith('//'):
+                return other_content + '\n' if other_content else ''
+            elif not other_content or other_content.startswith('//') and not head_content.startswith('//'):
+                return head_content + '\n' if head_content else ''
+            else:
+                # If both have content, prefer HEAD (usually the current branch)
+                return head_content + '\n' if head_content else ''
         
-        # Clean up any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n', '', content)
-        content = re.sub(r'=======\n', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+        # Remove merge conflict markers
+        fixed_content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
         
-        # Write the cleaned content back
+        # Clean up any remaining merge conflict markers
+        fixed_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', fixed_content, flags=re.DOTALL)
+        fixed_content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', fixed_content, flags=re.DOTALL)
+        
+        # Write the fixed content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(fixed_content)
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all merge conflicts"""
-    # Find all TypeScript/JavaScript files
+    """Main function to process all TypeScript/JSX files"""
+    # Find all TypeScript/JSX files in the app directory
     patterns = [
-        '/workspace/**/*.tsx',
-        '/workspace/**/*.ts',
-        '/workspace/**/*.jsx',
-        '/workspace/**/*.js'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.jsx',
+        'app/**/*.js'
     ]
     
+    files_processed = 0
     files_fixed = 0
-    total_files = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
+            files_processed += 1
             if fix_merge_conflicts(file_path):
                 files_fixed += 1
     
-    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const SeoOptimizerPage: React.FC = () => {
@@ -55,8 +55,4 @@ const SeoOptimizerPage: React.FC = () => {
 };
 
 export default SeoOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

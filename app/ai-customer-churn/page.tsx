@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const AiCustomerChurnPage: React.FC = () => {
+const AiCustomerChurnPage = () => {
   return (
     <>
       <Helmet>
@@ -55,8 +55,4 @@ const AiCustomerChurnPage: React.FC = () => {
 };
 
 export default AiCustomerChurnPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

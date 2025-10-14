@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const EmailMarketingPage: React.FC = () => {
@@ -55,8 +55,4 @@ const EmailMarketingPage: React.FC = () => {
 };
 
 export default EmailMarketingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

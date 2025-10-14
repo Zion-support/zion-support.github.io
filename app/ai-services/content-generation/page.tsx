@@ -1,7 +1,7 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
-const ContentGenerationPage: React.FC = () => {
+const AiGenerationPage = () => {
   return (
     <>
       <Helmet>
@@ -54,9 +54,5 @@ const ContentGenerationPage: React.FC = () => {
   );
 };
 
-export default ContentGenerationPage;
-<<<<<<< HEAD
-=======
+export default AiGenerationPage;
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

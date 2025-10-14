@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const ZionEmailAutomationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const ZionEmailAutomationPage: React.FC = () => {
 };
 
 export default ZionEmailAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

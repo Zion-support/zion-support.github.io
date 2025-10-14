@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const PerformanceOptimizationPage: React.FC = () => {
@@ -55,8 +55,4 @@ const PerformanceOptimizationPage: React.FC = () => {
 };
 
 export default PerformanceOptimizationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

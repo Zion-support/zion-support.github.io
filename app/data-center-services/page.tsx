@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const DataCenterServicesPage: React.FC = () => {
@@ -55,8 +55,4 @@ const DataCenterServicesPage: React.FC = () => {
 };
 
 export default DataCenterServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

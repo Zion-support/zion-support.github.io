@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Helmet } from "react-helmet-async";
 
 const TeamPage: React.FC = () => {
@@ -53,8 +53,4 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf
