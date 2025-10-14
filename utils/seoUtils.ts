@@ -51,7 +51,6 @@ export const defaultSEOConfig: SEOConfig = {
     'business intelligence'
   ],
   canonicalUrl: 'https://zion.app',
-  ogImage: '/images/og-image.jpg',
   ogImage: 'https://zion.app/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
@@ -124,31 +123,3 @@ export const defaultMeta = {
   viewport: 'width=device-width, initial-scale=1',
   charset: 'UTF-8'
 };
-
-export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
-  const seoConfig = { ...defaultSEOConfig, ...config }
-  
-  return {
-    title: seoConfig.title,
-    description: seoConfig.description,
-    keywords: seoConfig.keywords.join(', '),
-    canonical: seoConfig.canonicalUrl,
-    openGraph: {
-      title: seoConfig.ogTitle || seoConfig.title,
-      description: seoConfig.ogDescription || seoConfig.description,
-      url: seoConfig.canonicalUrl,
-      type: seoConfig.ogType,
-      image: seoConfig.ogImage
-    },
-    twitter: {
-      card: seoConfig.twitterCard,
-      title: seoConfig.twitterTitle || seoConfig.title,
-      description: seoConfig.twitterDescription || seoConfig.description,
-      image: seoConfig.twitterImage || seoConfig.ogImage
-    },
-    robots: seoConfig.robots,
-    author: seoConfig.author,
-    publisher: seoConfig.publisher,
-    language: seoConfig.language
-  }
-}

@@ -1,16 +1,12 @@
 import { useState, useEffect } from 'react'
 
 export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  })
+  const [metrics, setMetrics] = useState<Record<string, number>>({})
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
+      return
+    }
 
     // First Contentful Paint
     new PerformanceObserver((list) => {
@@ -60,32 +56,6 @@ export const usePerformanceMetrics = () => {
         setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }))
       }
     }).observe({ entryTypes: ['navigation'] })
-  const [metrics, setMetrics] = useState<Record<string, number>>({})
-
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return
-    }
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries()
-      entries.forEach(entry => {
-        if (entry.entryType === 'paint') {
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
-          if (fcpEntry) {
-            setMetrics((prev: Record<string, number>) => ({ ...prev, fcp: fcpEntry.startTime }))
-          }
-        }
-      })
-    })
-
-    observer.observe({ entryTypes: ['paint'] })
-    observer.observe({ entryTypes: ['largest-contentful-paint'] })
-    observer.observe({ entryTypes: ['first-input'] })
-    observer.observe({ entryTypes: ['layout-shift'] })
-    observer.observe({ entryTypes: ['navigation'] })
-
-    return () => observer.disconnect()
   }, [])
 
   return metrics;

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -16,22 +15,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState('medium');
-
-  useEffect(() => {
-    const root = document.documentElement;
-    
-=======
-
-const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
 
   useEffect(() => {
     const root = document.documentElement;
-
->>>>>>> 1881d73c152406db9416c36d1387e62ee2cf2636
     // High contrast mode
     if (isHighContrast) {
       root.classList.add('high-contrast');
@@ -48,8 +35,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
     // Font size adjustment
     root.style.fontSize = fontSize === 'small' ? '14px' : 
-<<<<<<< HEAD
-                         fontSize === 'medium' ? '16px' : 
+                         fontSize === 'normal' ? '16px' : 
                          fontSize === 'large' ? '18px' : '20px';
 
     // Keyboard navigation enhancements
@@ -168,104 +154,11 @@ const AccessibilityEnhancer: React.FC = () => {
           <label className="text-sm text-gray-700">Font Size</label>
           <select
             value={fontSize}
-            onChange={(e) => setFontSize(e.target.value)}
+            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large' | 'extra-large')}
             className="w-full px-3 py-1 border border-gray-300 rounded text-sm"
           >
             <option value="small">Small</option>
-            <option value="medium">Medium</option>
-=======
-                         fontSize === 'normal' ? '16px' : 
-                         fontSize === 'large' ? '18px' : '20px';
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const main = document.querySelector('main');
-        if (main) {
-          (main as HTMLElement).focus();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Add ARIA landmarks
-  useEffect(() => {
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    addAriaLandmarks();
-  }, []);
-
-  // Add alt text to images without alt attributes
-  useEffect(() => {
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
-        }
-      });
-    };
-
-    addAltText();
-  }, []);
-
-  return (
-    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
-      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
-      
-      <div className="space-y-3">
-        <label className="flex items-center space-x-2 text-white">
-          <input
-            type="checkbox"
-            checked={isHighContrast}
-            onChange={(e) => setIsHighContrast(e.target.checked)}
-            className="rounded"
-          />
-          <span>High Contrast</span>
-        </label>
-        
-        <label className="flex items-center space-x-2 text-white">
-          <input
-            type="checkbox"
-            checked={isReducedMotion}
-            onChange={(e) => setIsReducedMotion(e.target.checked)}
-            className="rounded"
-          />
-          <span>Reduce Motion</span>
-        </label>
-        
-        <div className="space-y-2">
-          <label className="text-white text-sm">Font Size</label>
-          <select
-            value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-full p-2 rounded bg-slate-700 text-white"
-          >
-            <option value="small">Small</option>
             <option value="normal">Normal</option>
->>>>>>> 1881d73c152406db9416c36d1387e62ee2cf2636
             <option value="large">Large</option>
             <option value="extra-large">Extra Large</option>
           </select>
