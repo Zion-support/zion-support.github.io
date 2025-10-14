@@ -28,6 +28,6 @@ export function createLazyComponent<T extends ComponentType<any>>(
       <LazyComponent {...(props as any)} />
     </Suspense>
   );
-  WrappedComponent.displayName = `createLazyComponent(${Component.displayName || Component.name})`;
+  WrappedComponent.displayName = `createLazyComponent(${LazyComponent.name || 'Component'})`;
   return WrappedComponent;
 }

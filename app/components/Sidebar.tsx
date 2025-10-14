@@ -11,8 +11,6 @@ import {
   CogIcon,
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
-  CakeIcon,
-  MapIcon,
   CloudIcon,
   CpuChipIcon,
   GlobeAltIcon,

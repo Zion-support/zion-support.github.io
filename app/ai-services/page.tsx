@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Globe } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
 
-const AIServicesPage: React.FC = () => {  const stats = [
+const AIServicesPage: React.FC = () => {
+  const stats = [
     { icon: <Brain className="w-8 h-8 text-cyan-400" />, value: "500+", label: "AI Models Deployed" },
     { icon: <Shield className="w-8 h-8 text-cyan-400" />, value: "99.9%", label: "Security Uptime" },
     { icon: <Zap className="w-8 h-8 text-cyan-400" />, value: "50%", label: "Efficiency Gain" },
@@ -57,7 +58,8 @@ const AIServicesPage: React.FC = () => {  const stats = [
     "Improve customer satisfaction scores",
     "Accelerate time-to-market for new products",
     "Enhance decision-making with data insights",
-    "Scale operations without proportional cost increases"  ];
+    "Scale operations without proportional cost increases"
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -67,7 +69,7 @@ const AIServicesPage: React.FC = () => {  const stats = [
         keywords="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI cybersecurity, business AI solutions"
         canonical="https://ziontechgroup.com/ai-services"
       />
-            <FuturisticBackground />
+      <FuturisticBackground />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -157,7 +159,8 @@ const AIServicesPage: React.FC = () => {  const stats = [
         </div>
       </section>
 
-      {/* Benefits Section */}      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -174,13 +177,16 @@ const AIServicesPage: React.FC = () => {  const stats = [
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
                     <ArrowRight className="w-4 h-4 text-white" />
-                  </div>                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-gray-300">
-                  {step.description}
-                </p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    Benefit {index + 1}
+                  </h3>
+                  <p className="text-gray-300">
+                    {benefit}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -199,10 +205,11 @@ const AIServicesPage: React.FC = () => {  const stats = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>Start Your AI Journey</span>
-              <ArrowRight className="w-5 h-5" />            </Link>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
             <Link 
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -213,7 +220,8 @@ const AIServicesPage: React.FC = () => {  const stats = [
         </div>
       </section>
 
-      <Footer />    </div>
+      <Footer />
+    </div>
   );
 };
 

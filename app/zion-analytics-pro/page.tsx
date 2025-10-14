@@ -1,4 +1,5 @@
-import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Database, Eye, Download, Upload, Search, Filter, Bell, MessageSquare, Calendar, PieChart, LineChart, BarChart, Activity, AlertTriangle, CheckCircle2, XCircle, Info, ExternalLink, Mail, Phone, MapPin, Play, Download as DownloadIcon, Upload as UploadIcon, Settings, Lock, RefreshCw, Globe, Smartphone, Target, FileText, Code, Brain, Database as DatabaseIcon } from "lucide-react";import { Helmet } from "react-helmet-async";
+import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, PieChart, Mail, Phone, MapPin, Play, FileText, Bell } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAnalyticsPro() {
@@ -266,14 +267,16 @@ export default function ZionAnalyticsPro() {
                         <span>{benefit}</span>
                       </div>
                     ))}
-                  </div>                </div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">          <div className="max-w-7xl mx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
@@ -281,7 +284,8 @@ export default function ZionAnalyticsPro() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include our core features.              </p>
+                Choose the plan that fits your business needs. All plans include our core features.
+              </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -291,12 +295,14 @@ export default function ZionAnalyticsPro() {
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular 
                       ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25' 
-                      : 'border-white/20 hover:border-blue-500/30'                  }`}
+                      : 'border-white/20 hover:border-blue-500/30'
+                  }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">                        Most Popular
-                      </div>
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
                     </div>
                   )}
                   
@@ -327,7 +333,8 @@ export default function ZionAnalyticsPro() {
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               ))}
             </div>
@@ -357,7 +364,7 @@ export default function ZionAnalyticsPro() {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
                       {testimonial.avatar}
@@ -365,21 +372,24 @@ export default function ZionAnalyticsPro() {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>                  </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Contact Information Section */}        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Contact Information Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to start your free trial or schedule a personalized demo.              </p>
+                Contact us today to start your free trial or schedule a personalized demo.
+              </p>
               
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -408,13 +418,15 @@ export default function ZionAnalyticsPro() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"                >
+                  className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+                >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"                >
+                  className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                >
                   Schedule Demo
                 </Link>
               </div>

@@ -148,23 +148,103 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
               <XMarkIcon className="w-6 h-6 text-white" />
             </button>          </div>
           
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your systems run smoothly at all times.
-            </p>
-          </div>
-          
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
-            <p className="text-gray-300">
-              Track record of delivering successful projects and exceeding client expectations.
-            </p>
+          {/* Navigation Content */}
+          <div className="flex-1 overflow-y-auto px-6 py-4">
+            {/* Main Links */}
+            <div className="space-y-2 mb-8">
+              {mainLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                      isActive(link.href)
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                        : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span className="font-medium">{link.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Service Sections */}
+            {serviceSections.map((section) => {
+              const Icon = section.icon;
+              const isExpanded = expandedSections.includes(section.key);
+              
+              return (
+                <div key={section.key} className="mb-6">
+                  <button
+                    onClick={() => toggleSection(section.key)}
+                    className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-white transition-colors"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <Icon className="w-5 h-5" />
+                      <span className="font-medium">{section.title}</span>
+                    </div>
+                    <ChevronDownIcon className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {isExpanded && (
+                    <div className="ml-8 space-y-1 mt-2">
+                      {section.links.map((link) => {
+                        const LinkIcon = link.icon;
+                        return (
+                          <Link
+                            key={link.name}
+                            to={link.href}
+                            className={`flex items-center space-x-3 px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
+                              isActive(link.href)
+                                ? 'bg-slate-700 text-cyan-400'
+                                : 'text-gray-400 hover:bg-slate-700 hover:text-white'
+                            }`}
+                            onClick={onClose}
+                          >
+                            <LinkIcon className="w-4 h-4" />
+                            <span>{link.name}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+
+            {/* Additional Links */}
+            <div className="space-y-2 mb-8">
+              <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                Additional
+              </div>
+              {additionalLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg text-sm transition-all duration-200 ${
+                      isActive(link.href)
+                        ? 'bg-slate-700 text-cyan-400'
+                        : 'text-gray-400 hover:bg-slate-700 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{link.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default ImprovedSidebarPage;
+export default ImprovedSidebar;
