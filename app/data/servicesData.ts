@@ -16,7 +16,7 @@ export const servicesData: ServiceData[] = [
   {
     id: 'ai-solutions',
     name: 'AI Solutions',
-    description: 'Advanced artificial intelligence solutions for your business',
+    description: 'Advanced AI and machine learning solutions',
     category: 'AI',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
@@ -27,11 +27,11 @@ export const servicesData: ServiceData[] = [
     icon: 'robot'
   },
   {
-    id: 'cybersecurity',
-    name: 'Cybersecurity',
-    description: 'Comprehensive cybersecurity solutions to protect your business',
-    category: 'Security',
-    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response'],
+    id: 'cloud-solutions',
+    name: 'Cloud Solutions',
+    description: 'Scalable cloud infrastructure and services',
+    category: 'Cloud',
+    features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps'],
     pricing: {
       starter: 2000,
       professional: 5000,

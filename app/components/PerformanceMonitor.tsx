@@ -37,8 +37,7 @@ const PerformanceMonitor = () => {
 
     // Measure First Input Delay (FID)
     const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
+      list.getEntries().forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
           currentMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
@@ -51,22 +50,20 @@ const PerformanceMonitor = () => {
     // Measure Cumulative Layout Shift (CLS)
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
+      list.getEntries().forEach((entry) => {
         const layoutShiftEntry = entry as LayoutShift;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
-          currentMetrics.cls = clsValue;
-          setMetrics({ ...currentMetrics });
         }
       });
+      currentMetrics.cls = clsValue;
+      setMetrics({ ...currentMetrics });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
+      list.getEntries().forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           currentMetrics.fcp = entry.startTime;
           setMetrics({ ...currentMetrics });
@@ -86,7 +83,7 @@ const PerformanceMonitor = () => {
     const sendMetrics = () => {
       if (Object.keys(currentMetrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.warn('Performance Metrics:', currentMetrics);
+        console.log('Performance Metrics:', currentMetrics);
       }
     };
 
