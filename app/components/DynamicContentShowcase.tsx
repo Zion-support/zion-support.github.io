@@ -132,23 +132,23 @@ const DynamicContentShowcase: React.FC = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div className="b g-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7 xlmx-auto text-center">
-          <h1 className="text-4 xlmd:text-6 xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
+      <section className="p y-20 px-4">
+        <div className="m ax-w-7 xlmx-auto text-center">
+          <h1 className="t ext-4 xlmd:text-6 xl font-bold text-white mb-6">
+            Dynamic <span className="t ext-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
+          <p className="t ext-xl text-gray-300 max-w-3 xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
-          <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+          <div className="f lexflex-colsm:flex-row gap-4 justify-center">
+            <but ton className="i nline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo
             </butn>
-            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <but ton className="i nline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </butn>
@@ -157,34 +157,34 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7 xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-3 xlfont-bold text-white mb-6">
+      <section className="p y-16 px-4">
+        <div className="m ax-w-7 xlmx-auto">
+          <div className="t ext-centermb-16">
+            <h2 className="t ext-3 xlfont-bold text-white mb-6">
               Why Choose Our Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+            <p className="t ext-xl text-gray-300 max-w-3 xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="g ridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flexitems-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
-                  <feature.icon className="w-8 h-8text-white" />
+              <divkey={index} className="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div className="f lexitems-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+                  <feature.icon className="w-8 h-8t ext-white" />
                 </div>
-                <h3 className="text-xlfont-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="t ext-xlfont-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <p className="t ext-gray-300 mb-6">{feature.description}</p>
                 
                 {feature.stats && (
-                  <div className="gridgrid-cols-3 gap-4">
+                  <div className="g ridgrid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
-                      <divkey={statIndex} className="text-center">
-                        <div className="text-lgfont-boldtext-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
+                      <divkey={statIndex} className="t ext-center">
+                        <div className="t ext-lgfont-boldtext-white">{stat.value}</div>
+                        <div className="t ext-gray-400 text-xs">{stat.label}</div>
                       </div>
                     ))}
                   </div>
@@ -196,64 +196,64 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="p y-16 px-4">
+        <div className="m ax-w-6xl mx-auto">
+          <div className="t ext-center mb-16">
+            <h2 className="t ext-3xl font-bold text-white mb-6">What Our Customers Say</h2>
+            <p className="t ext-xl text-gray-300 max-w-3xl mx-auto">
               Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their experience.
             </p>
           </div>
 
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-12 border border-white/20">
-              <div className="text-center">
-                <div className="flexjustify-centermb-6">
+          <div className="r elative">
+            <div className="b g-white/10 backdrop-blur-lg rounded-2 xl p-12 border border-white/20">
+              <div className="t ext-center">
+                <div className="f lexjustify-centermb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Starkey={i} className="w-6 h-6text-yellow-400 fill-current" />
+                    <Starkey={i} className="w-6 h-6t ext-yellow-400 fill-current" />
                   ))}
                 </div>
                 
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                <blockquote className="t ext-xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   &ldquo;{currentTestimonial.content}&rdquo;
                 </blockquote>
                 
-                <div className="flexitems-centerjustify-center gap-4">
-                  <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8text-white" />
+                <div className="f lexitems-centerjustify-center gap-4">
+                  <div className="w-16 h-16b g-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <Users className="w-8 h-8t ext-white" />
                   </div>
-                  <div className="text-left">
-                    <div className="text-lgfont-semiboldtext-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
+                  <div className="t ext-left">
+                    <div className="t ext-lgfont-semiboldtext-white">{currentTestimonial.name}</div>
+                    <div className="t ext-gray-400">{currentTestimonial.role}</div>
+                    <div className="t ext-purple-400 text-sm">{currentTestimonial.company}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Navigation Controls */}
-            <div className="flexitems-centerjustify-center gap-4 mt-8">
+            <div className="f lexitems-centerjustify-center gap-4 mt-8">
               <but tononClick={prevTestimonial}
-                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+                className="p-3 b g-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </butn>
               
               <but tononClick={togglePlay Pause}
-                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+                className="p-3 b g-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </butn>
               
               <but tononClick={nextTestimonial}
-                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+                className="p-3 b g-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronRight className="w-6 h-6" />
               </butn>
             </div>
 
             {/* Dots Indicator */}
-            <div className="flexjustify-centermt-6 space-x-2">
+            <div className="f lexjustify-centermt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <but tonkey={index}
                   onClick={() => setCurrent Index(index)}
@@ -268,21 +268,21 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7 xlmx-auto">
-          <div className="text-centermb-16">
-            <h2 className="text-3 xlfont-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
+      <section className="p y-16 px-4">
+        <div className="m ax-w-7 xlmx-auto">
+          <div className="t ext-centermb-16">
+            <h2 className="t ext-3 xlfont-bold text-white mb-6">Comprehensive Benefits</h2>
+            <p className="t ext-xl text-gray-300 max-w-3 xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20">
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="b g-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20">
+            <div className="g ridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <divkey={index} className="flexitems-startspace-x-3">
-                  <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
+                <divkey={index} className="f lexitems-startspace-x-3">
+                  <CheckCircle className="w-5 h-5t ext-green-400 flex-shrink-0 mt-1" />
+                  <span className="t ext-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
@@ -291,21 +291,21 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4 xlmx-auto text-center">
-          <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-12">
-            <h2 className="text-3 xlfont-bold text-white mb-6">
+      <section className="p y-16 px-4">
+        <div className="m ax-w-4 xlmx-auto text-center">
+          <div className="b g-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-12">
+            <h2 className="t ext-3 xlfont-bold text-white mb-6">
               Ready toExperience theFuture?
             </h2>
-            <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
+            <p className="t ext-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
-            <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <div className="f lexflex-colsm:flex-row gap-4 justify-center">
+              <but ton className="b g-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <but ton className="b order-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </butn>
             </div>

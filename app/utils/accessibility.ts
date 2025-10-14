@@ -7,7 +7,7 @@ export const accessibilityUtils = {
     document.body.insertBefore(skipLink, document.body.firstChild);
   },
   trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelector All(
+    const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
@@ -29,9 +29,9 @@ export const accessibilityUtils = {
       }
     };
     
-    element.addEvent Listener('keydown', handleTab Key);
+    element.addEventListener('keydown', handleTab Key);
     return () => {
-      element.removeEvent Listener('keydown', handleTab Key);
+      element.removeEventListener('keydown', handleTab Key);
     };
   },
   addAria Labels: (element: HTMLElement, label: string) => {

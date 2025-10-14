@@ -3,11 +3,11 @@ export const seoUtils = {
     return `${pageTitle} | ${siteName}`
   },
   generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= maxLength) return content
+    if (content.length <= maxLength) return content;
     return content.substring(0, maxLength - 3) + '...'
   
   generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= maxLength) return content
+    if (content.length <= maxLength) return content;
     return content.substring(0, maxLength - 3) + '...'
   },
   

@@ -8,11 +8,11 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
-interface PerformanceEventTiming extends PerformanceEntry {
+interface PerformanceEventTimingextendsPerformanceEntry {
   processingStart?: number;
 }
 
-interface LayoutShift extends PerformanceEntry {
+interface LayoutShiftextendsPerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
@@ -90,7 +90,7 @@ const PerformanceMonitor = () => {
     // Send metrics when page is about to unload
       window.addEventListener('beforeunload', sendMetrics);
 
-    // Cleanup observers
+    // Cleanup observers;
     return () => {
       lcpObserver.disconnect();
       fidObserver.disconnect();

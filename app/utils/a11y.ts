@@ -14,7 +14,7 @@ export const accessibilityUtils = {
     }, 1000);
   },
   getFocusable Elements: (container: HTMLElement) => {
-    return container.querySelector All(
+    return container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
   }

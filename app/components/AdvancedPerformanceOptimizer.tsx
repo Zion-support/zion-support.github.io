@@ -3,15 +3,15 @@
 import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
-interfaceAdvanced Performance Optimizer Props {
-  enableImage Optimization?: boolean;
-  enableLazy Loading?: boolean;
+interface AdvancedPerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCode Splitting?: boolean;
-  enableService Worker?: boolean;
-  enableResource Hints?: boolean;
-  enableCritical CSS?: boolean;
-  enableBundle Analysis?: boolean;
+  enableCodeSplitting?: boolean;
+  enableServiceWorker?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableBundleAnalysis?: boolean;
 }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
@@ -28,14 +28,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   // Image optimization
   useEffect(() => {
-    if (!enableImage Optimization || typeof window === 'undefined') return;
+    if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const optimizeImages = () => {
-      const images = document.querySelector All('img[data-src]');
-      const imageObserver = newIntersection Observer((entries) => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImage Element;
+            const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
             if (src) {
               img.src = src;
@@ -54,27 +54,27 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
     // Run after DOM is ready
     if (document.readyState === 'loading') {
-      document.addEvent Listener('DOMContent Loaded', optimizeImages);
+      document.addEventListener('DOMContent Loaded', optimizeImages);
     } else {
       optimizeImages();
     }
 
     return () => {
-      document.removeEvent Listener('DOMContent Loaded', optimizeImages);
+      document.removeEventListener('DOMContent Loaded', optimizeImages);
     };
-  }, [enableImage Optimization]);
+  }, [enableImageOptimization]);
 
   // Lazy loading for components
   useEffect(() => {
-    if (!enableLazy Loading || typeof window === 'undefined') return;
+    if (!enableLazyLoading || typeof window === 'undefined') return;
 
-    const lazyLoad Components = () => {
-      const components = document.querySelector All('[data-lazy-component]');
-      const componentObserver = newIntersection Observer((entries) => {
+    const lazyLoadComponents = () => {
+      const components = document.querySelectorAll('[data-lazy-component]');
+      const componentObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const component = entry.target as HTMLElement;
-            const component= component.getAttribute('data-lazy-component');
+            const componentName = component.getAttribute('data-lazy-component');
             if (componentName) {
               // Load component dynamically
               import(`../components/${componentName}.tsx`).then((_module) => {
@@ -96,21 +96,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     };
 
     if (document.readyState === 'loading') {
-      document.addEvent Listener('DOMContent Loaded', lazyLoad Components);
+      document.addEventListener('DOMContentLoaded', lazyLoadComponents);
     } else {
-      lazyLoad Components();
+      lazyLoadComponents();
     }
 
     return () => {
-      document.removeEvent Listener('DOMContent Loaded', lazyLoad Components);
+      document.removeEventListener('DOMContentLoaded', lazyLoadComponents);
     };
-  }, [enableLazy Loading]);
+  }, [enableLazyLoading]);
 
   // Resource preloading
   useEffect(() => {
     if (!enablePreloading || typeof window === 'undefined') return;
 
-    const preloadCritical Resources = () => {
+    const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontPreloads = [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
@@ -156,14 +156,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       });
     };
 
-    preloadCritical Resources();
+    preloadCriticalResources();
   }, [enablePreloading]);
 
   // Service Worker registration
   useEffect(() => {
-    if (!enableService Worker || typeof window === 'undefined') return;
+    if (!enableServiceWorker || typeof window === 'undefined') return;
 
-    const registerService Worker = async () => {
+    const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
@@ -173,7 +173,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           console.warn('Service Worker scope:', registration.scope);
         } catch (error) {
           console.warn('Service Worker registration failed:', error);
-          console.warn('Service Worker error details:', error instanceofError ? error.message : 'Unknown error');
+          console.warn('Service Worker error details:', error instanceof Error ? error.message : 'Unknown error');
         }
       }
     };
@@ -183,18 +183,18 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
   // Resource hints
   useEffect(() => {
-    if (!enableResource Hints || typeof window === 'undefined') return;
+    if (!enableResourceHints || typeof window === 'undefined') return;
 
-    const addResource Hints = () => {
+    const addResourceHints = () => {
       // DNS prefetch for external domains
-      const dnsPrefetch Domains = [
+      const dnsPrefetchDomains = [
         'fonts.googleapis.com',
         'fonts.gstatic.com',
         'www.google-analytics.com',
         'www.googletagmanager.com'
       ];
 
-      dnsPrefetch Domains.forEach((domain) => {
+      dnsPrefetchDomains.forEach((domain) => {
         const link = document.createElement('link');
         link.rel = 'dns-prefetch';
         link.href = `//${domain}`;
@@ -216,18 +216,18 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       });
     };
 
-    addResource Hints();
-  }, [enableResource Hints]);
+    addResourceHints();
+  }, [enableResourceHints]);
 
   // Critical CSS inlining
   useEffect(() => {
-    if (!enableCritical CSS || typeof window === 'undefined') return;
+    if (!enableCriticalCSS || typeof window === 'undefined') return;
 
-    const inlineCritical CSS = () => {
+    const inlineCriticalCSS = () => {
       // Check if critical CSS is already inlined
       if (document.querySelector('#critical-css')) return;
 
-      const critical CSS = `
+      const criticalCSS = `
         /* Critical CSS for above-the-fold content */
         .hero-section { min-height: 100 vh; }
         .navigation { position: fixed; top: 0; width: 100%; z-index: 50; }
@@ -236,21 +236,21 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       const style = document.createElement('style');
       style.id = 'critical-css';
-      style.textContent = critical CSS;
+      style.textContent = criticalCSS;
       document.head.insertBefore(style, document.head.firstChild);
     };
 
-    inlineCritical CSS();
-  }, [enableCritical CSS]);
+    inlineCriticalCSS();
+  }, [enableCriticalCSS]);
 
   // Bundle analysis and optimization
   useEffect(() => {
-    if (!enableBundle Analysis || typeof window === 'undefined') return;
+    if (!enableBundleAnalysis || typeof window === 'undefined') return;
 
     const analyzeBundle = () => {
       // Track bundle size
       const scripts = Array.from(document.scripts);
-      const totalScript Size = scripts.reduce((total, script) => {
+      const totalScriptSize = scripts.reduce((total, script) => {
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
@@ -261,7 +261,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       });
 
       // Track resource loading times
-      const resources = performance.getEntries By Type('resource');
+      const resources = performance.getEntriesByType('resource');
       const resourceMetrics = resources.reduce((acc, resource) => {
         const type = resource.name.split('.').pop() || 'unknown';
         if (!acc[type]) acc[type] = { count: 0, totalSize: 0, totalTime: 0 };
@@ -302,7 +302,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     },
     // Optimize animations
     optimizeAnimations: () => {
-      const elements = document.querySelector All('[data-animate]');
+      const elements = document.querySelectorAll('[data-animate]');
       elements.forEach((element) => {
         const htmlElement = element as HTMLElement;
         htmlElement.style.willChange = 'transform, opacity';
@@ -324,14 +324,14 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       document.body.classList.toggle('mobile', isMobile);
     });
 
-    window.addEvent Listener('scroll', debouncedScroll, { passive: true });
-    window.addEvent Listener('resize', throttledResize, { passive: true });
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+    window.addEventListener('resize', throttledResize, { passive: true });
 
     performanceOptimizations.optimizeAnimations();
 
     return () => {
-      window.removeEvent Listener('scroll', debouncedScroll);
-      window.removeEvent Listener('resize', throttledResize);
+      window.removeEventListener('scroll', debouncedScroll);
+      window.removeEventListener('resize', throttledResize);
     };
   }, [performanceOptimizations]);
 

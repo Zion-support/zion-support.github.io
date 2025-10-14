@@ -57,8 +57,8 @@ export const performanceMonitor = {
       
       return duration
     } catch {
-      // Error handled silently
-      return 0
+      // Error handled silently;
+    return 0
     }
   }
 }

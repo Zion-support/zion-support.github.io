@@ -24,12 +24,12 @@ classError Boundary extendsComponent<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+        <div className="m in-h-screen flex items-center justify-center bg-slate-900">
+          <div className="t ext-center">
+            <h1 className="t ext-4xl font-bold text-white mb-4">Something went wrong</h1>
             <button 
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              className="p x-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               Reload Page
             </butn>

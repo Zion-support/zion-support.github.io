@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail } from 'lucide-react';
 
-export default function AboutPage() {
+const AboutPage: React.FC = () => {
   // Team members data (for future use)
   // const teamMembers = [
   //   {
@@ -67,9 +67,6 @@ export default function AboutPage() {
   //   { number: "99.9%", label: "Uptime Guarantee" },
   //   { number: "24/7", label: "Support Available" }
   // ];
->>>>>>> 637011ddd746d60b1c14efdab42f1946adbc808e
-
-const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -78,15 +75,15 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-autopx-4 py-16">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">About</h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional about solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 borderborder-blue-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-blue-900 mb-2">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
@@ -101,8 +98,8 @@ const AboutPage: React.FC = () => {
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50 borderborder-purple-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-purple-900 mb-2">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support
                 </h3>
                 <p className="text-purple-700">
