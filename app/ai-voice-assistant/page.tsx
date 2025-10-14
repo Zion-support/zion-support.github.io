@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const AiVoiceAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Voice Assistant</title>
-        <meta name="description" content="Professional ai voice assistant solutions and services" />
-        <meta name="keywords" content="ai, voice, assistant" />
+        <meta name ="description" content="Professional ai voice assistant solutions and services" />
+        <meta name ="keywords" content="ai, voice, assistant" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

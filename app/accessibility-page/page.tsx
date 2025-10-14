@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const AccessibilityPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Accessibility Page</title>
-        <meta name="description" content="Professional accessibility page solutions and services" />
-        <meta name="keywords" content="accessibility, page" />
+        <meta name ="description" content="Professional accessibility page solutions and services" />
+        <meta name ="keywords" content="accessibility, page" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

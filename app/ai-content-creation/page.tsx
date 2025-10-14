@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const AiContentCreationPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Content Creation</title>
-        <meta name="description" content="Professional ai content creation solutions and services" />
-        <meta name="keywords" content="ai, content, creation" />
+        <meta name ="description" content="Professional ai content creation solutions and services" />
+        <meta name ="keywords" content="ai, content, creation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

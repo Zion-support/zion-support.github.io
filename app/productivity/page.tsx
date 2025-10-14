@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const ProductivityPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Productivity</title>
-        <meta name="description" content="Professional productivity solutions and services" />
-        <meta name="keywords" content="productivity" />
+        <meta name ="description" content="Professional productivity solutions and services" />
+        <meta name ="keywords" content="productivity" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

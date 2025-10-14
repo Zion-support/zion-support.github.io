@@ -1,13 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const Ai3DGenerationPage: React.FC = () => {
+=======
+const Ai3DGeneration: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-897f
   return (
     <>
       <Helmet>
         <title>Ai 3d Generation</title>
-        <meta name="description" content="Professional ai 3d generation solutions and services" />
-        <meta name="keywords" content="ai, 3d, generation" />
+        <meta name ="description" content="Professional ai 3d generation solutions and services" />
+        <meta name ="keywords" content="ai, 3d, generation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

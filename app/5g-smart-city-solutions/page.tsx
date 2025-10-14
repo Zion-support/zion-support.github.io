@@ -1,12 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const FiveGSmartCitySolutionsPage: React.FC = () => {  return (
+=======
+const FiveGSmartCitySolutions: React.FC = () => {
+  return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-897f
     <>
       <Helmet>
         <title>5G Smart City Solutions</title>
-        <meta name="description" content="Professional 5G Smart city solutions solutions and services" />
-        <meta name="keywords" content="5G, smart, city, solutions" />
+        <meta name ="description" content="Professional 5G Smart city solutions solutions and services" />
+        <meta name ="keywords" content="5G, smart, city, solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

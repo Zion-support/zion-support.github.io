@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const AiSocialMediaSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Social Media Scheduler</title>
-        <meta name="description" content="Professional ai social media scheduler solutions and services" />
-        <meta name="keywords" content="ai, social, media, scheduler" />
+        <meta name ="description" content="Professional ai social media scheduler solutions and services" />
+        <meta name ="keywords" content="ai, social, media, scheduler" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

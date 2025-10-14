@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const AiBusinessIntelligencePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Business Intelligence</title>
-        <meta name="description" content="Professional ai business intelligence solutions and services" />
-        <meta name="keywords" content="ai, business, intelligence" />
+        <meta name ="description" content="Professional ai business intelligence solutions and services" />
+        <meta name ="keywords" content="ai, business, intelligence" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

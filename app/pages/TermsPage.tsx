@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const TermsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Terms ofService - Zion Tech Group</title>
-        <meta name="description" content="Termsof service and usage policies" />
-        <meta name="keywords" content="termsof service, terms, legal" />
+        <meta name ="description" content="Termsof service and usage policies" />
+        <meta name ="keywords" content="termsof service, terms, legal" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-autopx-4 py-16">
