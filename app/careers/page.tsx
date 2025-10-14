@@ -114,7 +114,7 @@ const CareersPage: React.FC = () => {
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name ="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
         <meta name ="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
-        <link rel="canonical" hre f ="https://ziontechgroup.com/careers" />
+        <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -169,7 +169,7 @@ const CareersPage: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
                 <div key ={position.id}
-                  classNam e ={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' :'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {position.featured && (
@@ -230,7 +230,7 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key ={index} classNam e ="text-center group">
+                <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>

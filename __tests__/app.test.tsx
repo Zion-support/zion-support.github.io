@@ -21,7 +21,7 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByText('Advanced AI & IT Solutions')).toBeInTheDocument();
   });
   
   it('renders navigation links', () => {
