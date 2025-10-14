@@ -20,27 +20,28 @@ const FiveGMaintenancePage = () => {
   ]
 
   return (
-    <div className="min-h-screenbg-gray-50">
+    <>
+      <div className="min-h-screenbg-gray-50"></div>
       <EnhancedSEO 
 title="5G Maintenance Services - Zion Tech Group"
         description="Professional 5G maintenance services to keep your network running optimally."
       />
       
-      <div className="containermx-auto px-4 py-16">
-        <div className="text-centermb-16">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
+      <div className="containermx-auto px-4py-16"></div>
+        <div className="text-centermb-16"></div>
+          <h1 className="text-4xlfont-bold text-gray-900mb-6">
             5G Maintenance Services
           </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
+          <p className="text-xltext-gray-600 max-w-3xlmx-auto">
             Keep your 5G network running smoothly with our comprehensive maintenance services.
           </p>
         </div>
 
-        <div className="gridmd:grid-cols-3 gap-8 mb-16">
+        <div className="gridmd:grid-cols-3 gap-8mb-16"></div>
           {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lg shadow-lg p-8">
-              <div className="flexitems-center mb-4">
-                <CheckCircle className="h-8w-8 text-blue-600 mr-3" />
+            <div key={index} className="bg-whiterounded-lg shadow-lgp-8"></div>
+              <div className="flexitems-center mb-4"></div>
+                <CheckCircle className="h-8w-8 text-blue-600mr-3" />
                 <h3 className="text-xlfont-semibold text-gray-900">
                   {service.title}
                 </h3>
@@ -50,7 +51,7 @@ title="5G Maintenance Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flexitems-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flexitems-center text-blue-600hover:text-blue-800font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2h-4 w-4" />
@@ -59,10 +60,10 @@ title="5G Maintenance Services - Zion Tech Group"
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center"></div>
           <Link 
             to="/contact"
-            className="inline-flexitems-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+            className="inline-flexitems-center px-8py-3borderborder-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-600hover:bg-blue-700"
           >
             Get Started Today
             <ArrowRight className="ml-2h-5 w-5" />

@@ -16,7 +16,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   structuredData
 }) => {
   return (
-    <Helmet>
+    <>
+      <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}

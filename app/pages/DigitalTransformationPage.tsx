@@ -43,7 +43,8 @@ const DigitalTransformationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screenbg-slate-90 0text-white">
+    <>
+      <div className="min-h-screenbg-slate-900text-white"></div>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
         <meta name="description" content="Comprehensive digital transformation services including process automation, change management, and strategic planning." />
@@ -51,9 +52,9 @@ const DigitalTransformationPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relativepy-20bg-gradient-to-brfrom-slate-9 00via-green-9 0 0to-slate-9 0 0">
-        <div className="containermx-autopx-4text-center">
-          <h1 className="text-5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-green-4 0 0to-cyan-4 0 0bg-clip-text text-transparent">
+      <section className="relativepy-20bg-gradient-to-brfrom-slate-900via-green-900to-slate-900">
+        <div className="containermx-autopx-4text-center"></div>
+          <h1 className="text-5xl md:text-6xlfont-boldmb-6bg-gradient-to-rfrom-green-400to-cyan-400bg-clip-texttext-transparent">
             Digital Transformation
           </h1>
           <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
@@ -66,24 +67,24 @@ const DigitalTransformationPage: React.FC = () => {
 
       {/* Services Grid */}
       <section className="py-20">
-        <div className="containermx-autopx-4">
-          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8">
+        <div className="containermx-autopx-4"></div>
+          <div className="gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8"></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-8 00 rounded-xl p-8borderborder-slate-7 00hover:border-green-5 00transition-all duration-300hover:transformhover:scale-1 0 5">
-                </div><div className="w-1 6 h-1 6 bg-gradient-to-rfrom-green-5 0 0to-cyan-5 0 0rounded-lgflexitems-centerjustify-centermb-6">
+              <div key={index} className="bg-slate-800 rounded-xlp-8borderborder-slate-700hover:border-green-500transition-allduration-300hover:transformhover:scale-105">
+                </div><div className="w-16 h-16bg-gradient-to-rfrom-green-500to-cyan-500rounded-lgflexitems-centerjustify-centermb-6"></div>
                   <service.icon className="w-8h-8 text-white" />
                   </div>
         </div>
                 
-                <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-30 0mb-6">{service.description}</p>
+                <h3 className="text-2xlfont-bold text-whitemb-4">{service.title}</h3>
+                <p className="text-gray-300mb-6">{service.description}</p>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-whitefont-semiboldmb-3">Key Features</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-30 0text-smflexitems-center">
-                        <CheckCircle className="w-4h-4text-green-40 0mr-3flex-shrink-0" />
+                      <li key={featureIndex} className="text-gray-300text-smflexitems-center">
+                        <CheckCircle className="w-4h-4text-green-400mr-3flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -91,7 +92,7 @@ const DigitalTransformationPage: React.FC = () => {
                   </div>
         </div>
 
-                <button className="w-full bg-gradient-to-r from-green-6 00 to-cyan-6 00 text-white py-3px-6rounded-lgfont-semiboldhover:from-green-7 00hover:to-cyan-7 0 0transition-all duration-300">
+                <button className="w-full bg-gradient-to-rfrom-green-600to-cyan-600text-whitepy-3px-6rounded-lgfont-semiboldhover:from-green-700hover:to-cyan-700transition-allduration-300">
                   Learn More
                 </button>
                 </div>
@@ -104,19 +105,19 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20bg-gradient-to-rfrom-green-9 0 0/3 0to-cyan-9 0 0/3 0">
-        <div className="containermx-autopx-4text-center">
+      <section className="py-20bg-gradient-to-rfrom-green-900/30to-cyan-900/30">
+        <div className="containermx-autopx-4text-center"></div>
           <h2 className="text-4xlmd:text-5xlfont-boldtext-whitemb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300mb-8max-w-3xlmx-auto">
             Let&apos;s discuss how our digital transformation services can modernize your operations and drive growth.
           </p>
-          <div className="flexflex-colsm:flex-rowgap-4justify-center">
-            <button className="bg-gradient-to-r from-green-6 00 to-cyan-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-green-7 00hover:to-cyan-7 00transition-all duration-300transformhover:scale-1 0 5">
+          <div className="flexflex-colsm:flex-rowgap-4justify-center"></div>
+            <button className="bg-gradient-to-r from-green-600to-cyan-600text-whitepx-8py-4rounded-lgfont-semiboldhover:from-green-700hover:to-cyan-700transition-allduration-300transformhover:scale-105">
               Start Your Transformation
             </button>
-            <button className="border-2 border-white text-white px-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0transition-all duration-300">
+            <button className="border-2 border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-900transition-allduration-300">
               Schedule Consultation
             </button>
             </div>

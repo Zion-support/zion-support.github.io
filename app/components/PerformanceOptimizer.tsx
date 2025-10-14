@@ -45,8 +45,7 @@ const PerformanceOptimizer: React.FC = () => {
     optimizeFonts();
     optimizeResources();
 
-    // Cleanup function
-    return () => {
+    // Cleanup function return() {
       // Cleanup if needed
     };
   }, []);

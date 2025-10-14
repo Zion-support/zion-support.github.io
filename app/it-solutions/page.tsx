@@ -10,29 +10,29 @@ const ItSolutionsPage: React.FC = () => {
         <meta name="description" content="Comprehensive IT solutions for modern businesses" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
-        <div className="containermx-auto px-4 py-1 6">
-          <div className="text-centermb-1 6">
-            <h1 className="text-5xlfont-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
+        <div className="containermx-auto px-4py-16"></div>
+          <div className="text-centermb-16"></div>
+            <h1 className="text-5xlfont-bold text-whitemb-6">
               IT Solutions
             </h1>
-            <p className="text-xltext-gray-3 0 0 mb-8">
+            <p className="text-xltext-gray-300mb-8">
               Comprehensive IT services to power your digital transformation
             </p>
           </div>
           
-          <div className="gridmd:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/2 0">
-              <Server className="w-12 h-1 2 text-blue-4 0 0 mb-4" />
-              <h3 className="text-xlfont-semibold text-white mb-3">Infrastructure</h3>
-              <p className="text-gray-30 0">
+          <div className="gridmd:grid-cols-2 gap-8"></div>
+            <div className="bg-white/10 backdrop-blur-smrounded-lgp-6borderborder-white/20"></div>
+              <Server className="w-12 h-12text-blue-400mb-4" />
+              <h3 className="text-xlfont-semibold text-whitemb-3">Infrastructure</h3>
+              <p className="text-gray-300">
                 Robust IT infrastructure solutions for scalable growth.
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/2 0">
-              <Cloud className="w-12 h-1 2 text-blue-4 0 0 mb-4" />
-              <h3 className="text-xlfont-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-30 0">
+            <div className="bg-white/10 backdrop-blur-smrounded-lgp-6borderborder-white/20"></div>
+              <Cloud className="w-12 h-12text-blue-400mb-4" />
+              <h3 className="text-xlfont-semibold text-whitemb-3">Cloud Services</h3>
+              <p className="text-gray-300">
                 Secure and scalable cloud computing solutions.
               </p>
             </div>

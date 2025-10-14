@@ -4,9 +4,10 @@ import HomePage from './page';
 
 function App() {
   return (
-    <HelmetProvider>
+    <>
+      <HelmetProvider>
       <Router>
-        <div className="App">
+        <div className="App"></div>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<HomePage />} />
@@ -14,7 +15,7 @@ function App() {
         </div>
       </Router>
     </HelmetProvider>
-  )
-  }
+  );
+}
 
 export default App;

@@ -48,27 +48,27 @@ function HomePage() {
         <meta name="twitter:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <link rel="canonical" href="https://zion.app" />
       </Helmet>
-      <div className="min-h-screenbg-slate-9 0 0 text-white">
+      <div className="min-h-screen bg-slate-900text-white">
         {/* Hero Section */}
-        <div className="containermx-auto px-4 py-2 0">
-          <div className="text-centermb-1 6">
-            <h1 className="text-6xlfont-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
+        <div className="container mx-autopx-4py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-6xl font-boldmb-6bg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparent">
               Zion Tech Group
             </h1>
-            <p className="text-2xltext-gray-3 0 0 max-w-4xl mx-auto mb-8">
+            <p className="text-2xl text-gray-300max-w-4xlmx-automb-8">
               Advanced AI and IT Solutions for the Digital Future
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-colsm:flex-rowgap-4justify-center">
               <Link 
                 to="/services" 
-                className="inline-flexitems-center bg-gradient-to-r from-purple-6 00 to-cyan-6 00 hover:from-purple-7 00 hover:to-cyan-7 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+                className="inline-flex items-centerbg-gradient-to-rfrom-purple-600to-cyan-600hover:from-purple-700hover:to-cyan-700text-whitefont-boldpy-4px-8rounded-lgtransition-allduration-300"
               >
                 Explore Our Services
-                <ArrowRight className="ml-2w-5 h-5" />
+                <ArrowRight className="ml-2 w-5h-5" />
               </Link>
               <Link 
                 to="/contact" 
-                className="inline-flexitems-center border-2 border-purple-5 00 hover:bg-purple-5 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+                className="inline-flex items-centerborder-2border-purple-500hover:bg-purple-500text-whitefont-boldpy-4px-8rounded-lgtransition-allduration-300"
               >
                 Get Started
               </Link>
@@ -76,38 +76,38 @@ function HomePage() {
           </div>
 
           {/* Features Grid */}
-          <div className="gridmd:grid-cols-2 lg:grid-cols-3 gap-8 mb-1 6">
+          <div className="grid md:grid-cols-2lg:grid-cols-3gap-8mb-16">
             {features.map((feature, index) => (
               <div 
                 key={index} 
-                className="bg-slate-800p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+                className="bg-slate-800 p-6rounded-lgborderborder-slate-700hover:border-purple-500transition-allduration-300transformhover:scale-105hover:shadow-lghover:shadow-purple-500/20"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <feature.icon className="w-12h-12 text-purple-400 mb-4" />
-                <h3 className="text-xlfont-semibold mb-3">{feature.title}</h3>
+                <feature.icon className="w-12 h-12text-purple-400mb-4" />
+                <h3 className="text-xl font-semiboldmb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
 
           {/* CTA Section */}
-          <div className="text-centerbg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
-            <h2 className="text-3xlfont-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-xltext-gray-300 mb-8">
+          <div className="text-center bg-gradient-to-rfrom-purple-900/50to-cyan-900/50p-12rounded-lg">
+            <h2 className="text-3xl font-boldmb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300mb-8">
               Let our experts help you implement cutting-edge solutions
             </p>
             <Link 
               to="/contact" 
-              className="inline-flexitems-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              className="inline-flex items-centerbg-gradient-to-rfrom-purple-600to-cyan-600hover:from-purple-700hover:to-cyan-700text-whitefont-boldpy-4px-8rounded-lgtransition-allduration-300"
             >
               Contact Us Today
-              <ArrowRight className="ml-2w-5 h-5" />
+              <ArrowRight className="ml-2 w-5h-5" />
             </Link>
           </div>
         </div>
       </div>
     </>
-  )
-  }
+  );
+};
 
 export default HomePage;
