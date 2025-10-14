@@ -1,8 +1,8 @@
-import React from 'react';
-'use client';
+import React from 'react'
+
       {/* Content Section */}
-import React from  from 'react';
-'use client'{/* Content Section */}'
+import React from 'react'
+{/* Content Section */}'
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">

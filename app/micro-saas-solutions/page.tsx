@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -16,7 +16,7 @@ import {
   ClockIcon,
   UserGroupIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function MicroSaaSSolutionsPage() {
   const microSaaSProducts = [

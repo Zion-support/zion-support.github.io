@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   ArrowRightIcon, 
   CloudIcon, 
@@ -10,7 +10,7 @@ import {
   ChartBarIcon,
   PhoneIcon,
   EnvelopeIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function CloudSolutionsPage() {
   const services = [

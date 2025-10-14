@@ -4,7 +4,7 @@ import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } f
 import FuturisticBackground from '../components/FuturisticBackground;'
 const AiServicesPage: "React.FC = () => {"
   const services = [{;
-      icon: "Brain",'';
+      icon: "Brain",''
       title: "'AI Consulting'",';''
       description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",';''
       color: "'from-purple-50o0 to-pink-50o0';"}'
@@ -102,9 +102,9 @@ const AiServicesPage: "React.FC = () => {"
       icon: "'⚡'"
     },;
     {;
-      title: "'Scalable Architecture'",';
-      description: "'AI solutions that grow with your business and handle increasing loads.'",';
-      icon: "'📈';",icon: "Shield",'';
+      title: "'Scalable Architecture'",'
+      description: "'AI solutions that grow with your business and handle increasing loads.'",'
+      icon: "'📈';",icon: "Shield",''
       title: "'AI Security'",';''
       description: "'AI-powered security solutions to protect your business and data.'",';''
       color: "'from-cyan-50o0 to-blue-50o0';"}'

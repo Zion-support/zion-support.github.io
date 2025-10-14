@@ -46,9 +46,9 @@ const EnhancedSEO: "React.FC<SEOProps> = ({"
       contactType: "'customer service'",''
       email: "'kleber@ziontechgroup.com'"}'
     },
-    sameAs: ['';
-      'https: "//www.linkedin.com/company/zion-tech-group'",'';
-      'https: "//github.com/ziontechgroup'",'';
+    sameAs: [''
+      'https: "//www.linkedin.com/company/zion-tech-group'",''
+      'https: "//github.com/ziontechgroup'",''
       'https: "//twitter.com/ziontechgroup'';"
     ];
   };

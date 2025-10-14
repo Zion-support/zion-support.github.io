@@ -76,7 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   }
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/'
   }
     window.location.reload();}
   };

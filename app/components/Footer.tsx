@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
   ArrowRightIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

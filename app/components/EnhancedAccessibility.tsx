@@ -14,20 +14,20 @@ const EnhancedAccessibility: "React.FC = () => {"
     // Enhanced accessibility features
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50'
       skipLink.style.cssText = `
         position: "absolute;",top: "-40px;",left: "6px;",background: "#8b5cf6;",color: "white;",padding: "8px;",
         border-radius: "4px;",,transition: "top 0.3s;"
       `;
       
       skipLink.addEventListener('focus', () => {'
-        skipLink.style.top = '6px';
+        skipLink.style.top = '6px'
       });
       
       skipLink.addEventListener('blur', () => {'
-        skipLink.style.top = '-40px';
+        skipLink.style.top = '-40px'
       });
       
       document.body.insertBefore(skipLink, document.body.firstChild);
@@ -81,13 +81,13 @@ const EnhancedAccessibility: "React.FC = () => {"
     mediaQuery.addEventListener('change', handleChange);
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation;
-      document.addEventListener('keydown', (e) => {';
-        if (e.key === 'Tab') {';
+      document.addEventListener('keydown', (e) => {'
+        if (e.key === 'Tab') {'
           document.body.classList.add('keyboard-navigation');
         }
       });
 
-      document.addEventListener('mousedown', () => {';
+      document.addEventListener('mousedown', () => {'
         document.body.classList.remove('keyboard-navigation');
       });
     }
@@ -188,7 +188,7 @@ const EnhancedAccessibility: "React.FC = () => {"
     `
     document.head.appendChild(style)
     return () => {;
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')';
+      const existingStyle = document.getElementById('enhanced-accessibility-styles')'
       if (existingStyle) {;
         existingStyle.remove();
       }
@@ -284,7 +284,7 @@ export default EnhancedAccessibility;
   useEffect(() => {
     const handleKeyDown = (event: "KeyboardEvent) => {";
       // Alt + M: "Skip to main content;"
-      if (event.altKey && event.key === 'm') {';
+      if (event.altKey && event.key === 'm') {'
         event.preventDefault();
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
@@ -296,19 +296,19 @@ export default EnhancedAccessibility;
       // Alt + H: "Go to home"
       if (event.altKey && event.key === 'h') {'
         event.preventDefault();
-        window.location.href = '/';
+        window.location.href = '/'
       }
 
       // Alt + C: "Go to contact"
       if (event.altKey && event.key === 'c') {'
         event.preventDefault();
-        window.location.href = '/contact';
+        window.location.href = '/contact'
       }
 
       // Alt + S: "Go to services"
       if (event.altKey && event.key === 's') {'
         event.preventDefault();
-        window.location.href = '/services';
+        window.location.href = '/services'
       }
 
       // Ctrl + Plus: "Increase font size"

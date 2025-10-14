@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   CheckCircleIcon,
   ExclamationTriangleIcon,
@@ -8,7 +8,7 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function StatusPage() {
   const services = [
@@ -98,15 +98,15 @@ export default function StatusPage() {
   const getStatusColor = (status) => {
     switch (status) {
       case 'operational':
-        return 'text-green-400';
+        return 'text-green-400'
       case 'degraded':
-        return 'text-yellow-400';
+        return 'text-yellow-400'
       case 'outage':
-        return 'text-red-400';
+        return 'text-red-400'
       case 'maintenance':
-        return 'text-blue-400';
+        return 'text-blue-400'
       default:
-        return 'text-green-400';
+        return 'text-green-400'
     }
   };
 

@@ -1,7 +1,7 @@
 import React from 'react';'react-helmet-async;'
 import { Play, Right, Circle, Star } from 'lucide-react;'
 const DemoPage: "React.FC = () => {"
-  const features = [{'';
+  const features = [{''
       icon: "'Analytics'",';''
       title: "'AI-Powered Analytics'",';''
       description: "'See how our AI analyzes your data in real-time'",';''

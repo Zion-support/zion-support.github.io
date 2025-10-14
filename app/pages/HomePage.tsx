@@ -14,11 +14,11 @@ import {
     RocketLaunchIcon,
     SparklesIcon,
     BoltIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from '../components/FuturisticBackground'
+import NeonButton from '../components/NeonButton'
+import AnimatedCard from '../components/AnimatedCard'
+import { services } from '../data/servicesData'
 export default function HomePage() {
 
   const structuredData = {

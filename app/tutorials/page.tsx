@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
-const TutorialsPage: "React.FC = () => {"
+const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
       title: "Getting Started with AI Development","

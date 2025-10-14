@@ -1,34 +1,32 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Right, User } from 'lucide-react';'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
-const BlogPage: "React.FC = () => {"
-  const categories = [}
-    { id: "all", name: "All Posts", count: "12"},"
-    { id: "ai", name: "AI & Machine Learning", count: "5"},"
-    { id: "cybersecurity", name: "Cybersecurity", count: "3"},"
-    { id: "cloud", name: "Computing", count: "2"},"
-    { id: "development", name: "Development", count: "2"}"
-  ]
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, User, Calendar } from 'lucide-react';
+
+const BlogPage: React.FC = () => {
+  const categories = [
+    { id: "all", name: "All Posts", count: "12" },
+    { id: "ai", name: "AI & Machine Learning", count: "5" },
+    { id: "cybersecurity", name: "Cybersecurity", count: "3" },
+    { id: "cloud", name: "Cloud Computing", count: "2" },
+    { id: "development", name: "Development", count: "2" }
+  ];
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Busines,s: 20o24 Trends","
+        title: "The Future of AI in Business: 2024 Trends",
       excerpt: "Explore the latest AI trends that are transforming businesses across industries.","
       author: "Sarah Johnson","
-      date: "20o24-0o1-15","
+      date: "2024-01-15","
       category: "ai","
       readTime: "5 min read","
       image: "🤖"}"
     },
     {
       id: 2,
-      title: "Cybersecurity Best Practices for 20o24","
+      title: "Cybersecurity Best Practices for 2024","
       excerpt: "Learn essential cybersecurity practices to protect your business from threats.","
       author: "Michael Chen","
-      date: "20o24-0o1-12","
+      date: "2024-01-12","
       category: "cybersecurity","
       readTime: "7 min read","
       image: "🔒"}"
@@ -38,7 +36,7 @@ const BlogPage: "React.FC = () => {"
       title: "Migratio,n: A Complete Guide","
       excerpt: "Everything you need to know about migrating to the cloud successfully.","
       author: "Emily Rodriguez","
-      date: "20o24-0o1-10","
+      date: "2024-01-10","
       category: "cloud","
       readTime: "10 min read","
       image: "☁️"}"
@@ -48,7 +46,7 @@ const BlogPage: "React.FC = () => {"
       title: "Scalable Applications with Modern Tech","
       excerpt: "Discover the technologies and practices for building scalable applications.","
       author: "David Kim","
-      date: "20o24-0o1-0o8","
+      date: "2024-01-0o8","
       category: "development","
       readTime: "8 min read","
       image: "⚡"}"
@@ -58,7 +56,7 @@ const BlogPage: "React.FC = () => {"
       title: "AI-Powered Analytic,s: Transforming Data Insights","
       excerpt: "How AI is revolutionizing the way we analyze and interpret data.","
       author: "Lisa Wang","
-      date: "20o24-0o1-0o5","
+      date: "2024-01-0o5","
       category: "ai","
       readTime: "6 min read","
       image: "📊"}"
@@ -68,7 +66,7 @@ const BlogPage: "React.FC = () => {"
       title: "Zero Trust Architecture","
       excerpt: "Implementing zero trust security for modern enterprise environments.","
       author: "James Wilson","
-      date: "20o24-0o1-0o3","
+      date: "2024-01-0o3","
       category: "cybersecurity","
       readTime: "9 min read","
       image: "🛡️"}"

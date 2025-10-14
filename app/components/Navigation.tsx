@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -15,7 +15,7 @@ import {
   CurrencyDollarIcon,
   CogIcon,
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

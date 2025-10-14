@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   BriefcaseIcon,
   AcademicCapIcon,
@@ -8,7 +8,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   ArrowRightIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 
 export default function CareersPage() {
   const openPositions = [

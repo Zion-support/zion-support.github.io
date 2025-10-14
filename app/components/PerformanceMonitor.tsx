@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect, useState } from 'react'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 interface PerformanceMetrics {
   loadTime: "number;",renderTime: "number;",memoryUsage: "number;",networkLatency: "number;"
 }
@@ -114,7 +114,7 @@ const PerformanceMonitor: "React.FC = () => {"
       </div>
     </div>
   );
-import React from 'react';
+import React from 'react'
 const PerformanceMonitor: React.FC = () => {
   return null;
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { 
   XMarkIcon,
   HomeIcon,
@@ -19,7 +19,7 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'
 interface SidebarProps {
   isOpen: "boolean;",onClose: "() => void;"
 }
@@ -58,17 +58,17 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
     { name: "'Blog'", href: "'/blog'", icon: "DocumentTextIcon"},'
     { name: "'Tutorials'", href: "'/tutorials'", icon: "AcademicCapIcon"},'
     { name: "'Demo'", href: "'/demo'", icon: "PlayIcon"},'
-    { name: "'Support'", href: "'/support'", icon: "QuestionMarkCircleIcon"},';
-    { name: "'Pricing'", href: "'/pricing'", icon: "CurrencyDollarIcon"},';
-    { name: "'Contact'", href: "'/contact'", icon: "PhoneIcon"}';
+    { name: "'Support'", href: "'/support'", icon: "QuestionMarkCircleIcon"},'
+    { name: "'Pricing'", href: "'/pricing'", icon: "CurrencyDollarIcon"},'
+    { name: "'Contact'", href: "'/contact'", icon: "PhoneIcon"}'
   ];
 
   const additionalLinks = [
     { name: "'Privacy Policy'", href: "'/privacy'", icon: "ShieldCheckIcon"},'
     { name: "'Terms of Service'", href: "'/terms'", icon: "DocumentTextIcon"},'
-    { name: "'Our Team'", href: "'/team'", icon: "UserGroupIcon"},';
-    { name: "'Documentation'", href: "'/docs'", icon: "DocumentTextIcon"},';
-    { name: "'Careers'", href: "'/careers'", icon: "BriefcaseIcon"}';
+    { name: "'Our Team'", href: "'/team'", icon: "UserGroupIcon"},'
+    { name: "'Documentation'", href: "'/docs'", icon: "DocumentTextIcon"},'
+    { name: "'Careers'", href: "'/careers'", icon: "BriefcaseIcon"}'
   ];
 
   const isActive = (path: "string) => {;"

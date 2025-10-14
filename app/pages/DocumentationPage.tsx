@@ -206,7 +206,7 @@ const client = new ZionTechClient({
 });
 // Make an API call;
 const response = await client.ai.generateText({;
-  prompt: "'Hello", world!',';
+  prompt: "'Hello", world!','
   maxTokens: "10o0;"
 });
 console.log(response.data);`}</code>

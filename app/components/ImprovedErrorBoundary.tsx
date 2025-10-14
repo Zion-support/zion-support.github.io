@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from  from 'react-helmet-async';
-'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+
 const ImprovedErrorBoundary: "React.FC = () => {"
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +67,7 @@ const ImprovedErrorBoundary: "React.FC = () => {"
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our improved error boundary';
+            Let's discuss how our improved error boundary'
             services can help you achieve your goals.;
           </p>
           <a;

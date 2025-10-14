@@ -4,64 +4,63 @@ import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
 export default function ContactPage() {
 
   const [formData, setFormData] = useState({
-    name: "''",'
-    email: "''",'
-    company: "''",'
-    phone: "''",'
-    subject: "''",'
-    message: "'''"
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: ""
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleChange = (e: "React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;"
-    setFormData({;
-      ...formData,;
-      [e.target.name]: e.target.value;
-    });
-  }
-    })}
-  const handleSubmit = async (e: "React.FormEvent) => {"
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 10o00));
+  const [isSubmitted, setIsSubmitted] = useState(false)
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+      setFormData({
+        ...formData,
+        [e.target.name]: e.target.value
+      })
+    }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000))
     
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    setIsSubmitted(true)
+    setIsSubmitting(false)
   }
   const contactInfo = [
     {
 
-      icon: "'Phone'",      title: "'Phone'",'
-    await new Promise(resolve => setTimeout(resolve, 10o00))
+      icon: "'Phone'",      title: "'Phone'",
+    await new Promise(resolve => setTimeout(resolve, 1000))
     setIsSubmitted(true)
     setIsSubmitting(false)}
   const contactInfo = [
     {
 
-      title: "'Phone'",'
-      value: "'+1 (555) 123-4567'",'
+      title: "'Phone'",
+      value: "'+1 (555) 123-4567'",
       description: "'Mon-Fri 9AM-6PM EST'"
 ''
-      icon: "'Phone'",''
-      title: "'Phone'",''
-      value: "'+1 (555) 123-4567'",''
+      icon: "'Phone'",'
+      title: "'Phone'",'
+      value: "'+1 (555) 123-4567'",'
       description: "'Mon-Fri 9AM-6PM EST'"}'
     },
     {''
-      icon: "'Email'",''
-      title: "'Email'",''
-      value: "'contact@ziontechgroup.com'",''
+      icon: "'Email'",'
+      title: "'Email'",'
+      value: "'contact@ziontechgroup.com'",'
       description: "'We respond within 24 hours'"}'
     },
     {''
-      icon: "'Location'",''
-      title: "'Address'",''
+      icon: "'Location'",'
+      title: "'Address'",'
       value: "'123 Tech Street", Suite 10o0',''
       description: "'San Francisco", CA 9410o5'}'
     },
     {''
-      icon: "'Clock'",'
+      icon: "'Clock'",
       description: "'9:0o0 AM - ,6:0o0 PM EST'"
   }
   ]
@@ -71,10 +70,10 @@ export default function ContactPage() {
     'Services','
     'Micro SAAS','
     'Digital Transformation','
-    '5G Implementation',';
-      description: "'9:0o0 AM - ,6:0o0 PM EST'"}';
-    };
-  ];
+    '5G Implementation','
+      description: "'9:0o0 AM - ,6:0o0 PM EST'"}'
+    }
+  ]
 
   const subjects = [''
     'AI Services',''
@@ -127,7 +126,7 @@ export default function ContactPage() {
                   <p className="text-cyan-40o0 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-40o0 text-sm">{info.description}</p>
                 </div>
-              )})}
+              )})
           </div>
         </div>
       </section>
@@ -152,13 +151,13 @@ export default function ContactPage() {
                 onClick={() => {
                   setIsSubmitted(false)
                   setFormData({
-                    name: "''",'
-                    email: "''",'
-                    company: "''",'
-                    phone: "''",'
-                    subject: "''",'
-                    message: "'''"
-                  })}}
+                    name: "",
+                    email: "",
+                    company: "",
+                    phone: "",
+                    subject: "",
+                    message: ""
+                  })}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o0 text-white rounded-xl font-semibold hover: from-cyan-60o0 hove,r:to-blue-70o0 transition-all duration-30o0"
               >
                 Send Another Message
@@ -289,6 +288,6 @@ export default function ContactPage() {
             </form>
           )}
         </div>
-      </section>;
-    </div>;
-  )};
+      </section>
+    </div>
+  )}

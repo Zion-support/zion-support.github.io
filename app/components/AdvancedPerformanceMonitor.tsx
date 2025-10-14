@@ -83,7 +83,7 @@ const AdvancedPerformanceMonitor: "React.FC = () => {"
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: "KeyboardEvent) => {;"
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {';
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
         setIsVisible(!isVisible);
       }
       if (event.ctrlKey && event.shiftKey && event.key === 'R') {'
@@ -105,9 +105,9 @@ const AdvancedPerformanceMonitor: "React.FC = () => {"
   }
 
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
+    if (value <= thresholds.good) return 'text-green-400'
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400'
+    return 'text-red-400'
   };
 
   return (

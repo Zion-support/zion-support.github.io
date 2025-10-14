@@ -20,8 +20,8 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script')';
-      script.type = 'application/ld+json'';
+      const script = document.createElement('script')'
+      script.type = 'application/ld+json''
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
       return () => {;
@@ -37,24 +37,24 @@ const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"
     { name: 'keywords', content: keywords.join(', ') },';''
     { name: 'author', content: 'Zion Tech Group' },';''
     { name: 'robots', content: '_index, follow' },';''
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },';
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },'
     // Open Graph tags;''
     { property: 'og:title', content: title },';''
     { property: 'og:description', content: description },';''
     { property: 'og:image', content: image },';''
     { property: 'og:url', content: url },';''
     { property: 'og:type', content: type },';''
-    { property: 'og:site_name', content: 'Zion Tech Group' },';
+    { property: 'og:site_name', content: 'Zion Tech Group' },'
     // Twitter d tags;''
     { name: 'twitter:card', content: 'summary_large_image' },';''
     { name: 'twitter:title', content: title },';''
     { name: 'twitter:description', content: description },';''
-    { name: 'twitter:image', content: image },';
+    { name: 'twitter:image', content: image },'
     // Additional SEO tags;''
     { name: 'theme-color', content: '#0066cc' },';''
     { name: 'msapplication-TileColor', content: '#0066cc' },';''
     { name: 'apple-mobile-web-app-capable', content: 'yes' },';''
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'
   ];
           document.head.removeChild(script)}
       }}

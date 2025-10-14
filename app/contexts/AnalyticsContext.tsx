@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, useEffect } from  from 'react';
-'use client'
+import { createContext, useContext, useState, useEffect } from 'react'
+
 interface AnalyticsContextType {
   trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void
   trackPageView: "(pageNam,e: string) => void",setUser: "(userI,d: string", properties?: Record<string, any>) => void
