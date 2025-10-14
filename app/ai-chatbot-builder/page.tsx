@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -21,3 +22,10 @@ const HomePage = () => {
 };
 
 export default HomePage;
+=======
+'use client';
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10

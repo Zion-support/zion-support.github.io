@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -15,9 +16,23 @@ const HomePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
+=======
+'use client';
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default HomePage;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
