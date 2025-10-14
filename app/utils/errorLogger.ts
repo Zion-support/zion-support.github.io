@@ -8,7 +8,7 @@ export const errorLogger ={
     }
     
     // Log to console in development
-    if (process.env.NODE_EN V ==='development') {
+    if (process.env.NODE_ENV ==='development') {
       console.error('Error logged:', errorInfo)
     }
     

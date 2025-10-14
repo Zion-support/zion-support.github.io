@@ -101,7 +101,7 @@ const PerformanceMonitor = () => {
   },[]);
 
   // Don't render anything in production
-  if (process.env.NODE_EN V ==='production') {
+  if (process.env.NODE_ENV ==='production') {
     return null;
   }
 

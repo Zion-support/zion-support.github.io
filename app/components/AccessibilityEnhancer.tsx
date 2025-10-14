@@ -10,10 +10,10 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigatio n = true,
-  enableScreenReaderSuppor t = true,
-  enableHighContras t = true,
-  enableFocusManagemen t = true
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
     const root = document.documentElement;
@@ -37,7 +37,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.ke y ==='Tab' && event.shiftKey && event.altKey) {
+        if (event.key === 'Tab' && event.shiftKey && event.altKey) {
           event.preventDefault();
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
@@ -46,8 +46,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      document.addEvent Listener('keydown', handleKey Down);
-      return () => document.removeEvent Listener('keydown', handleKey Down);
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
   },[enableKeyboardNavigation, enableHighContrast]);
 
@@ -58,8 +58,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const announcement = document.createElement('div');
         announcement.setAttribute('aria-live','polite');
         announcement.setAttribute('aria-atomic','true');
-        announcement.classNam e ='sr-only';
-        announcement.textConten t = message;
+        announcement.className ='sr-only';
+        announcement.textContent = message;
         document.body.appendChild(announcement);
         
         setTimeout(() => {
@@ -71,8 +71,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.type==='childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] asElement;
-            if (addedNode && addedNode.nodeTyp e === Node.ELEMENT_NODE) {
+            const addedNode = mutation.addedNodes[0] as Element;
+            if (addedNode && addedNode.nodeType === Node.ELEMENT_NODE) {
               const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
               if (heading) {
                 announceToScreenReader(`Page updated: ${heading.textContent}`);
@@ -95,21 +95,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableFocusManagement) {
       // Focus management for modals and dropdowns
       const manageFocus = (event: FocusEvent) => {
-        const target = event.target asElement;
+        const target = event.target as Element;
         if (target && target.closest('[role="dialog"],[role="menu"],[role="listbox"]')) {
           const focusableElements = target.closest('[role="dialog"],[role="menu"],[role="listbox"]')?.querySelectorAll(
-            'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
+            'button,[href], input, select, textarea,[tabindex]:not([tabindex ="-1"])'
           );
           
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
-            if (event.ke y ==='Tab') {
-              if (event.shiftKey && targe t === firstElement) {
+            if (event.key ==='Tab') {
+              if (event.shiftKey && target === firstElement) {
                 event.preventDefault();
                 lastElement.focus();
-              } else if (!event.shiftKey && targe t === lastElement) {
+              } else if (!event.shiftKey && target === lastElement) {
                 event.preventDefault();
                 firstElement.focus();
               }

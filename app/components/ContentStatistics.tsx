@@ -30,7 +30,7 @@ const ContentStatistics: React.FC = () => {
       color:'text-purple-400',
       description:'Successful implementations'
     },{
-      icon: Trending Up,
+      icon: TrendingUp,
       value: counters.satisfaction,
       label:'Client Satisfaction',
       suffix:'%',
@@ -156,16 +156,16 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Statistics Grid */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
+            <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className ={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
               </div>
               <div className ={`text-4 xl font-bold ${stat.color} mb-2`}>
                 {stat.value.toLocale String()}{stat.suffix}
               </div>
-              <div className="text-lgfont-semiboldtext-white mb-2">{stat.label}</div>
+              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
           ))}
@@ -180,9 +180,9 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+              <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="w-12 h-12bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6text-white" />
                 </div>
@@ -192,7 +192,7 @@ const ContentStatistics: React.FC = () => {
                 <p className="text-gray-300 text-smmb-4">{feature.description}</p>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
-                    <divke y ={statIndex} classNam e ="flexitems-centertext-xs text-gray-400">
+                    <divke y ={statIndex} className ="flexitems-centertext-xs text-gray-400">
                       <CheckCircle className="w-3 h-3text-green-400 mr-2 flex-shrink-0" />
                       {stat}
                     </div>
@@ -206,20 +206,20 @@ const ContentStatistics: React.FC = () => {
         {/* Achievements Section */}
         <div className="mb-16">
           <div className="text-centermb-12">
-            <h3 className="text-2 xlfont-bold text-white mb-4">Key Achievements</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <achievement.icon className="w-8 h-8text-white" />
+              <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3 xlfont-bold text-white mb-2">{achievement.value}</div>
-                <div className="text-lgfont-semiboldtext-white mb-2">{achievement.title}</div>
+                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
               </div>
             ))}
@@ -229,16 +229,16 @@ const ContentStatistics: React.FC = () => {
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 mb-16">
           <div className="text-centermb-8">
-            <h3 className="text-2 xlfont-bold text-white mb-4">Comprehensive Benefits</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <divke y ={index} classNam e ="flexitems-startspace-x-3">
-                <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
+              <divke y ={index} className ="flexitems-startspace-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}

@@ -5,7 +5,7 @@ export const performanceMonitor ={
     const end = performance.now()
     const duration = end - start
     
-    if (process.env.NODE_EN V ==='development') {
+    if (process.env.NODE_ENV ==='development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     }
     
@@ -26,7 +26,7 @@ export const performanceMonitor ={
     const end = performance.now()
     const duration = end - start
     
-    if (process.env.NODE_EN V ==='development') {
+    if (process.env.NODE_ENV ==='development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     }
     
@@ -51,7 +51,7 @@ export const performanceMonitor ={
       const measure = performance.getEntriesByName(name)[0]
       const duration = measure.duration
       
-      if (process.env.NODE_EN V ==='development') {
+      if (process.env.NODE_ENV ==='development') {
         console.warn(`${name} took ${duration.toFixed(2)}ms`)
       }
       

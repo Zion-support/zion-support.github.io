@@ -6,5 +6,5 @@ export const envConfig ={
     seo: process.env.NEXT_PUBLIC_SEO_ENABLE D ==='true',
     performance: process.env.NEXT_PUBLIC_PERFORMANCE_ENABLE D ==='true'
   },
-  debug: process.env.NODE_EN V ==='development'
+  debug: process.env.NODE_ENV ==='development'
 }

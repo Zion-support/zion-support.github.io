@@ -1,10 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 
 export const ContentPromotionBanner: React.FC = () => {
   return null; // This component doesn't render anything visible
 };
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp  } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -39,7 +37,7 @@ const ContentPromotionBanner: React.FC = () => {
       label:'Happy Customers',
       description:'Businesses trust our solutions'
     },{
-      icon: Trending Up,
+      icon: TrendingUp,
       value:'99.9%',
       label:'Uptime',
       description:'Reliable service guarantee'
@@ -76,11 +74,11 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="gridgrid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
-            <divke y ={index} classNam e ="text-center">
-              <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <stat.icon className="w-8 h-8text-white" />
+            <divke y ={index} className ="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
               <div className="text-3 xlfont-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -90,11 +88,11 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-              <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <feature.icon className="w-8 h-8text-white" />
+            <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <feature.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lgfont-boldtext-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -111,10 +109,10 @@ const ContentPromotionBanner: React.FC = () => {
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <divke y ={index} classNam e ="flexitems-startspace-x-3">
-                <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
+              <divke y ={index} className ="flexitems-startspace-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -147,4 +145,3 @@ const ContentPromotionBanner: React.FC = () => {
 };
 
 export default ContentPromotionBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-897f

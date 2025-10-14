@@ -16,7 +16,7 @@ export const apiInterceptor ={
       if (errorWith Response.response?.statu s === 401) {
         // Handle unauthorized access
         localStorage.removeItem('authToken');
-        window.location.hre f ='/login';
+        window.location.href ='/login';
       }
     }
     returnPromise.reject(error);

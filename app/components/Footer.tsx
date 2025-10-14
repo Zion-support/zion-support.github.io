@@ -1,12 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-4 text-center">
         <p>&copy; 2024 Zion Tech. All rights reserved.</p>
-=======
 import { Link  } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight  } from 'lucide-react';
 
@@ -31,7 +29,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7 xlmx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -45,13 +43,13 @@ const Footer: React.FC = () => {
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="https://github.com/ziontechgroup" classNam e ="text-gray-400 hover:text-white transition-colors" targe t ="_blank" re l ="noopener noreferrer">
+              <a href="https://github.com/ziontechgroup" className ="text-gray-400 hover:text-white transition-colors" target ="_blank" re l ="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" classNam e ="text-gray-400 hover:text-white transition-colors" targe t ="_blank" re l ="noopener noreferrer">
+              <a href="https://linkedin.com/company/ziontechgroup" className ="text-gray-400 hover:text-white transition-colors" target ="_blank" re l ="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" classNam e ="text-gray-400 hover:text-white transition-colors" targe t ="_blank" re l ="noopener noreferrer">
+              <a href="https://twitter.com/ziontechgroup" className ="text-gray-400 hover:text-white transition-colors" target ="_blank" re l ="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -63,7 +61,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key ={index}>
-                  <Link to ={link.path} classNam e ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
+                  <Link to ={link.path} className ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {link.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -78,7 +76,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {services.slice(0, 6).map((service, index) => (
                 <li key ={index}>
-                  <Link to ={service.path} classNam e ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
+                  <Link to ={service.path} className ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
                     <ArrowRight className="w-3 h-3ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -94,7 +92,7 @@ const Footer: React.FC = () => {
               {resources.map((resource, index) => (
                 <li key ={index}>
                   <Link to ={resource.path} 
-                    classNam e ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
+                    className ="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {resource.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -106,7 +104,7 @@ const Footer: React.FC = () => {
 
         {/* Contact Info Section */}
         <div className="bg-gray-800/50 rounded-lgp-6 mb-8">
-          <div className="gridgrid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flexitems-centerspace-x-3">
               <div className="bg-blue-600/20 p-2rounded-lg">
                 <Mail className="w-5 h-5text-blue-400" />
@@ -118,7 +116,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="flexitems-centerspace-x-3">
               <div className="bg-green-600/20 p-2rounded-lg">
-                <Phone className="w-5 h-5text-green-400" />
+                <Phone className="w-5 h-5 text-green-400" />
               </div>
               <div>
                 <p className="text-smtext-gray-400">Phone</p>
@@ -145,7 +143,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input type ="email"
                 placeholde r ="Enter your email"
-                classNam e ="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className ="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
@@ -164,7 +162,7 @@ const Footer: React.FC = () => {
               </p>
                 <div className="flex space-x-6">
                   {legal.map((item, index) => (
-                    <Link key ={index} t o ={item.path} classNam e ="text-gray-400 hover:text-white transition-colors text-sm">
+                    <Link key ={index} t o ={item.path} className ="text-gray-400 hover:text-white transition-colors text-sm">
                     {item.name}
                   </Link>
                 ))}
@@ -177,7 +175,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
       </div>
     </footer>
   );

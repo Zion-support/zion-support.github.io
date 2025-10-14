@@ -6,7 +6,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-<<<<<<< HEAD
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
@@ -23,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-=======
       lastModified: newDate(),
       changeFrequency:'yearly',
       priority: 1},{
@@ -35,6 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: newDate(),
       changeFrequency:'monthly',
       priority: 0.8},
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
   ];
 }

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   return null; // This component doesn't render anything visible
-=======
 import React,{ useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
@@ -55,7 +53,6 @@ const PerformanceOptimizer: React.FC = () => {
   },[]);
 
   return null; // This component doesn't render anything
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 };
 
 export default PerformanceOptimizer;

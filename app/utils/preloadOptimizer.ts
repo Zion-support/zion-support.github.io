@@ -1,9 +1,9 @@
 export const preloadOptimizer ={
   preload: (href: string, as: string) => {
     const link = document.createElement('link');
-    link.re l ='preload';
-    link.hre f = href;
-    link.a s = as;
+    link.rel ='preload';
+    link.href = href;
+    link.as = as;
     document.head.appendChild(link);
   },
   preloadScript: (src: string) => {

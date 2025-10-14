@@ -1,6 +1,6 @@
 export const enhancedLogger ={
   log: (level:'info' | 'warn' | 'error', message: string, data?: unknown) => {
-    if (process.env.NODE_EN V ==='development') {
+    if (process.env.NODE_ENV ==='development') {
       if (leve l ==='info') {
         console.warn(message, data);
       } else if (leve l ==='warn') {
@@ -10,7 +10,7 @@ export const enhancedLogger ={
       }
     }
     
-    if (process.env.NODE_EN V ==='production') {
+    if (process.env.NODE_ENV ==='production') {
       // Implementation would depend on the logging service
       console.warn('Log entry:',{
         level,

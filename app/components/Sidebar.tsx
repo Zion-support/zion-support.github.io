@@ -18,7 +18,7 @@ constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Overlay */}
       {isOpen && (
         <div className="fixedinset-0 bg-black bg-opacity-50 z-40"
-          onClic k ={onClose}
+          onClick ={onClose}
         />
       )}
       {/* Sidebar */}
@@ -30,8 +30,8 @@ constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       `}>
         <div className="flex items-center justify-between p-4 border-b border-slate-700">
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
-          <buttonton onClick ={onClose}
-            classNam e ="text-gray-300 hover:text-white">
+          <button onClick ={onClose}
+            className ="text-gray-300 hover:text-white">
             <X className="w-6 h-6" />
           </butn>
         </div>
@@ -42,8 +42,8 @@ constSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               return (
                 <like y ={item.name}>
                   <Link to ={item.href}
-                    onClic k ={onClose}
-                    classNam e ="flexitems-centertext-gray-300 hover:text-white py-2">
+                    onClick ={onClose}
+                    className ="flexitems-centertext-gray-300 hover:text-white py-2">
                     <Icon className="w-5 h-5mr-3" />
                     {item.name}
                   </Link>

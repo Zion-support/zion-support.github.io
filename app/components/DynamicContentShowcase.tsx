@@ -147,11 +147,11 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+              <divke y ={index} className ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="flexitems-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
-                  <feature.icon className="w-8 h-8text-white" />
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xlfont-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
@@ -161,7 +161,7 @@ const DynamicContentShowcase: React.FC = () => {
                 {feature.stats && (
                   <div className="gridgrid-cols-3 gap-4">
                     {feature.stats.map((stat, statIndex) => (
-                      <divke y ={statIndex} classNam e ="text-center">
+                      <divke y ={statIndex} className ="text-center">
                         <div className="text-lgfont-boldtext-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
@@ -189,7 +189,7 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="text-center">
                 <div className="flexjustify-centermb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Starke y ={i} classNam e ="w-6 h-6text-yellow-400 fill-current" />
+                    <Starke y ={i} className ="w-6 h-6text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
@@ -198,11 +198,11 @@ const DynamicContentShowcase: React.FC = () => {
                 </blockquote>
                 
                 <div className="flexitems-centerjustify-center gap-4">
-                  <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <Users className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-left">
-                    <div className="text-lgfont-semiboldtext-white">{currentTestimonial.name}</div>
+                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
                     <div className="text-gray-400">{currentTestimonial.role}</div>
                     <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
                   </div>
@@ -213,17 +213,17 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Navigation Controls */}
             <div className="flexitems-centerjustify-center gap-4 mt-8">
               <button tononClick ={prevTestimonial}
-                classNam e ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronLeft className="w-6 h-6" />
               </butn>
               
               <button tononClick ={togglePlay Pause}
-                classNam e ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </butn>
               
               <button tononClick ={nextTestimonial}
-                classNam e ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
+                className ="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200">
                 <ChevronRight className="w-6 h-6" />
               </butn>
             </div>
@@ -232,9 +232,9 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flexjustify-centermt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <button tonkey ={index}
-                  onClic k ={() => setCurrent Index(index)}
-                  classNam e ={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    inde x === currentIndex ? 'bg-purple-400' :'bg-white/30'
+                  onClick ={() => setCurrent Index(index)}
+                  className ={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === currentIndex ? 'bg-purple-400' :'bg-white/30'
                   }`}
                 />
               ))}
@@ -254,10 +254,10 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20">
-            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <divke y ={index} classNam e ="flexitems-startspace-x-3">
-                  <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
+                <divke y ={index} className ="flexitems-startspace-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}

@@ -4,7 +4,6 @@ import { Link  } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail  } from 'lucide-react';
 
 // Team members data (for future use)
-<<<<<<< HEAD
 // const teamMembers = [
 //   {
 //     name: "Sarah Chen",
@@ -33,7 +32,6 @@ import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight,
 //     expertise: "5G Technology & IoT",
 //     image: "/images/team/david-kim.jpg",
 //     bio: "Telecommunications expert with extensive experience in 5G implementation."
-=======
 // const teamMembers =[
 //   {
 //     name:"Sarah Chen",
@@ -62,12 +60,10 @@ import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight,
 //     expertise:"5G Technology & IoT",
 //     image:"/images/team/david-kim.jpg",
 //     bio:"Telecommunications expert with extensive experience in 5G implementation."
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 //   }
 // ];
 
 // Company values (for future use)
-<<<<<<< HEAD
 // const values = [
 //   {
 //     icon: <Brain className="w-8 h-8" />,
@@ -88,7 +84,6 @@ import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight,
 //     icon: <Award className="w-8 h-8" />,
 //     title: "Excellence",
 //     description: "We maintain the highest standards of quality in everything we do, from code to customer service."
-=======
 // const values =[
 //   {
 //     icon: <Brain className="w-8 h-8" />,
@@ -109,24 +104,20 @@ import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight,
 //     icon: <Award className="w-8 h-8" />,
 //     title:"Excellence",
 //     description:"We maintain the highest standards of quality in everything we do, from code to customer service."
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 //   }
 // ];
 
 // Company stats (for future use)
-<<<<<<< HEAD
 // const stats = [
 //   { number: "500+", label: "Projects Completed" },
 //   { number: "150+", label: "Happy Clients" },
 //   { number: "99.9%", label: "Uptime Guarantee" },
 //   { number: "24/7", label: "Support Available" }
-=======
 // const stats =[
 //   { number:"500+", label:"Projects Completed" },
 //   { number:"150+", label:"Happy Clients" },
 //   { number:"99.9%", label:"Uptime Guarantee" },
 //   { number:"24/7", label:"Support Available" }
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 // ];
 
 const AboutPage: React.FC = () => {

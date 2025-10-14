@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const SEOOptimizer: React.FC = () => {
   return null; // This component doesn't render anything visible
-=======
 import React,{ useEffect } from 'react';
 
 interface SEOOptimizerProps {
@@ -72,7 +70,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   },[title, description, keywords, canonical]);
 
   return null; // This component doesn't render anything
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 };
 
 export default SEOOptimizer;

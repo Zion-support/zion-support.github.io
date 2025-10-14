@@ -59,8 +59,8 @@ const MetaManager: React.FC<MetaManagerProps> = ({
         canonicalLink.setAttribute('href', canonical);
       } else {
         const link = document.createElement('link');
-        link.re l ='canonical';
-        link.hre f = canonical;
+        link.rel ='canonical';
+        link.href = canonical;
         document.head.appendChild(link);
       }
     }
@@ -71,7 +71,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       {title && <title>{title}</title>}
         {description && <meta name ="description" content={description} />}
         {keywords && <meta name ="keywords" content={keywords} />}
-        {canonical && <link rel="canonical" hre f ={canonical} />}
+        {canonical && <link rel="canonical" href ={canonical} />}
       
       {/* Open Graph */}
       <meta property ="og:type" content={ogType} />
