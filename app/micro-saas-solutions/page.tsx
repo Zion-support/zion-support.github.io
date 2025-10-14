@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-'use client';'use client';
-=======
 'use client';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -16,237 +12,352 @@ import {
   RocketLaunchIcon,
   ArrowRightIcon,
   CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   UserGroupIcon,
-  CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon
+  ClipboardDocumentListIcon,
+  ShoppingCartIcon,
+  BanknotesIcon,
+  ShareIcon,
+  EnvelopeIcon,
+  ArchiveBoxIcon,
+  BuildingOfficeIcon,
+  AcademicCapIcon
 } from '@heroicons/react/24/outline';
 
 const MicroSaaSSolutionsPage: React.FC = () => {
-  const solutions = [
+  const microSaasServices = [
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Comprehensive analytics solution with AI-driven insights and real-time data visualization.",
+      id: 'ai-content-generator',
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials.',
+      icon: CpuChipIcon,
+      price: '$29/month',
+      features: [
+        'AI-powered blog post generation',
+        'Social media content creation',
+        'SEO-optimized content',
+        'Multi-language support',
+        'Brand voice customization',
+        'Content calendar management'
+      ],
+      category: 'Content & Marketing',
+      color: 'from-purple-500 to-pink-500',
+      href: '/ai-content-generator',
+      popular: true
+    },
+    {
+      id: 'smart-analytics-dashboard',
+      title: 'Smart Analytics Dashboard',
+      description: 'Real-time business intelligence and analytics platform with AI-powered insights.',
       icon: ChartBarIcon,
+      price: '$49/month',
       features: [
-        "Real-time data processing",
-        "AI-powered insights",
-        "Custom dashboards",
-        "Automated reporting",
-        "Data export capabilities",
-        "Multi-user access"
+        'Real-time data visualization',
+        'AI-powered insights and predictions',
+        'Custom dashboard builder',
+        'Multi-source data integration',
+        'Automated reporting',
+        'Mobile-responsive design'
       ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $99/month",
-      benefits: ["Increased efficiency", "Better decision making", "Cost savings"],
-      useCases: ["Business intelligence", "Performance tracking", "Data analysis"],
-      href: "/micro-saas/analytics-dashboard"
+      category: 'Analytics & BI',
+      color: 'from-cyan-500 to-blue-500',
+      href: '/smart-analytics-dashboard',
+      popular: false
     },
     {
-      title: "AI Content Generator",
-      description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.",
-      icon: DocumentTextIcon,
+      id: 'automated-customer-support',
+      title: 'Automated Customer Support',
+      description: 'AI-powered chatbot and customer support automation platform.',
+      icon: GlobeAltIcon,
+      price: '$39/month',
       features: [
-        "AI content generation",
-        "Multiple content types",
-        "SEO optimization",
-        "Brand voice consistency",
-        "Content scheduling",
-        "Performance analytics"
+        'Intelligent chatbot builder',
+        'Multi-channel support',
+        'Ticket management system',
+        'Knowledge base integration',
+        'Sentiment analysis',
+        'Performance analytics'
       ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $79/month",
-      benefits: ["Time savings", "Consistent quality", "SEO optimization"],
-      useCases: ["Content marketing", "Social media", "Blog management"],
-      href: "/micro-saas/content-generator"
+      category: 'Customer Service',
+      color: 'from-green-500 to-emerald-500',
+      href: '/automated-customer-support',
+      popular: true
     },
     {
-      title: "AI Customer Support Chatbot",
-      description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.",
-      icon: ChatBubbleLeftRightIcon,
+      id: 'project-management-suite',
+      title: 'Project Management Suite',
+      description: 'Comprehensive project management and team collaboration platform.',
+      icon: ClipboardDocumentListIcon,
+      price: '$19/month',
       features: [
-        "Natural language processing",
-        "24/7 availability",
-        "Multi-language support",
-        "Integration capabilities",
-        "Analytics dashboard",
-        "Custom training"
+        'Task and project tracking',
+        'Team collaboration tools',
+        'Time tracking and reporting',
+        'File sharing and storage',
+        'Gantt charts and timelines',
+        'Integration with popular tools'
       ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $149/month",
-      benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],
-      useCases: ["Customer service", "Lead qualification", "FAQ automation"],
-      href: "/micro-saas/ai-customer-support-chatbot"
+      category: 'Productivity',
+      color: 'from-yellow-500 to-orange-500',
+      href: '/project-management-suite',
+      popular: false
     },
     {
-      title: "AI Project Manager",
-      description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.",
-      icon: CogIcon,
+      id: 'e-commerce-automation',
+      title: 'E-commerce Automation',
+      description: 'Complete e-commerce automation platform for online stores.',
+      icon: ShoppingCartIcon,
+      price: '$59/month',
       features: [
-        "AI task optimization",
-        "Team collaboration",
-        "Progress tracking",
-        "Resource management",
-        "Automated scheduling",
-        "Performance insights"
+        'Inventory management',
+        'Order processing automation',
+        'Customer relationship management',
+        'Payment gateway integration',
+        'Shipping and logistics',
+        'Analytics and reporting'
       ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $129/month",
-      benefits: ["Better organization", "Improved productivity", "Resource optimization"],
-      useCases: ["Project management", "Team coordination", "Task automation"],
-      href: "/micro-saas/ai-project-manager"
+      category: 'E-commerce',
+      color: 'from-pink-500 to-rose-500',
+      href: '/e-commerce-automation',
+      popular: true
     },
     {
-      title: "AI Inventory Manager",
-      description: "Smart inventory management system with predictive analytics and automated reordering capabilities.",
-      icon: EyeIcon,
+      id: 'hr-management-system',
+      title: 'HR Management System',
+      description: 'Comprehensive human resources management and employee engagement platform.',
+      icon: UserGroupIcon,
+      price: '$35/month',
       features: [
-        "Predictive analytics",
-        "Automated reordering",
-        "Stock optimization",
-        "Multi-location support",
-        "Integration APIs",
-        "Real-time tracking"
+        'Employee database management',
+        'Payroll processing',
+        'Performance tracking',
+        'Leave management',
+        'Recruitment tools',
+        'Employee self-service portal'
       ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $199/month",
-      benefits: ["Reduced waste", "Optimized stock", "Cost savings"],
-      useCases: ["Inventory management", "Supply chain", "Retail operations"],
-      href: "/micro-saas/ai-inventory-manager"
+      category: 'Human Resources',
+      color: 'from-indigo-500 to-purple-500',
+      href: '/hr-management-system',
+      popular: false
     },
     {
-      title: "AI Expense Tracker",
-      description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.",
-      icon: CurrencyDollarIcon,
+      id: 'financial-tracking-tool',
+      title: 'Financial Tracking Tool',
+      description: 'Advanced financial management and accounting software for small businesses.',
+      icon: BanknotesIcon,
+      price: '$45/month',
       features: [
-        "Automated categorization",
-        "Receipt processing",
-        "Expense reporting",
-        "Budget tracking",
-        "Tax preparation",
-        "Multi-currency support"
+        'Expense tracking and categorization',
+        'Invoice generation and management',
+        'Tax preparation assistance',
+        'Financial reporting',
+        'Budget planning tools',
+        'Multi-currency support'
       ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $59/month",
-      benefits: ["Time savings", "Better tracking", "Tax compliance"],
-      useCases: ["Expense management", "Financial tracking", "Tax preparation"],
-      href: "/micro-saas/ai-expense-tracker"
+      category: 'Finance',
+      color: 'from-green-500 to-teal-500',
+      href: '/financial-tracking-tool',
+      popular: false
+    },
+    {
+      id: 'social-media-scheduler',
+      title: 'Social Media Scheduler',
+      description: 'AI-powered social media management and scheduling platform.',
+      icon: ShareIcon,
+      price: '$25/month',
+      features: [
+        'Multi-platform posting',
+        'Content calendar management',
+        'AI-powered hashtag suggestions',
+        'Analytics and insights',
+        'Team collaboration',
+        'Automated posting'
+      ],
+      category: 'Social Media',
+      color: 'from-blue-500 to-cyan-500',
+      href: '/social-media-scheduler',
+      popular: true
+    },
+    {
+      id: 'email-marketing-automation',
+      title: 'Email Marketing Automation',
+      description: 'Advanced email marketing platform with automation and personalization.',
+      icon: EnvelopeIcon,
+      price: '$39/month',
+      features: [
+        'Drag-and-drop email builder',
+        'Automated email sequences',
+        'Segmentation and targeting',
+        'A/B testing tools',
+        'Analytics and reporting',
+        'Integration with CRM systems'
+      ],
+      category: 'Marketing',
+      color: 'from-red-500 to-pink-500',
+      href: '/email-marketing-automation',
+      popular: false
+    },
+    {
+      id: 'inventory-management',
+      title: 'Inventory Management System',
+      description: 'Smart inventory tracking and management solution for businesses.',
+      icon: ArchiveBoxIcon,
+      price: '$29/month',
+      features: [
+        'Real-time inventory tracking',
+        'Automated reorder points',
+        'Barcode scanning support',
+        'Multi-location management',
+        'Supplier management',
+        'Cost tracking and analysis'
+      ],
+      category: 'Inventory',
+      color: 'from-orange-500 to-red-500',
+      href: '/inventory-management',
+      popular: false
+    },
+    {
+      id: 'crm-customer-relationship',
+      title: 'CRM - Customer Relationship',
+      description: 'Comprehensive customer relationship management platform.',
+      icon: BuildingOfficeIcon,
+      price: '$49/month',
+      features: [
+        'Contact and lead management',
+        'Sales pipeline tracking',
+        'Communication history',
+        'Task and follow-up management',
+        'Reporting and analytics',
+        'Integration with email and phone'
+      ],
+      category: 'CRM',
+      color: 'from-purple-500 to-indigo-500',
+      href: '/crm-customer-relationship',
+      popular: true
+    },
+    {
+      id: 'learning-management-system',
+      title: 'Learning Management System',
+      description: 'Online learning platform for training and education.',
+      icon: AcademicCapIcon,
+      price: '$35/month',
+      features: [
+        'Course creation and management',
+        'Student progress tracking',
+        'Quiz and assessment tools',
+        'Video and multimedia support',
+        'Certification management',
+        'Mobile learning app'
+      ],
+      category: 'Education',
+      color: 'from-teal-500 to-green-500',
+      href: '/learning-management-system',
+      popular: false
     }
   ];
-
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.",
-      icon: CpuChipIcon
-    },
-    {
-      title: "Scalable Architecture",
-      description: "Built to grow with your business, from startup to enterprise scale.",
-      icon: CloudIcon
-    },
-    {
-      title: "Easy Integration",
-      description: "Seamlessly integrate with your existing tools and workflows.",
-      icon: CogIcon
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: UserGroupIcon
-    }
-  ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
-        <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
+        <meta name="description" content="Discover our comprehensive collection of micro SaaS solutions designed to solve specific business challenges. From AI-powered tools to productivity platforms." />
+        <meta name="keywords" content="micro saas, saas solutions, business software, productivity tools, AI tools, automation software" />
+        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Discover our comprehensive collection of micro SaaS solutions designed to solve specific business challenges." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive suite of micro SaaS solutions designed to streamline 
-              your business operations and boost productivity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                View Demo
-              </Link>
+        <section className="relative overflow-hidden py-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive collection of micro SaaS solutions designed to solve specific business challenges with powerful, focused tools.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  to="/pricing"
+                  className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Solutions Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our Micro SaaS Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
-                    <solution.icon className="w-6 h-6 text-white" />
+        {/* Services Grid */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">
+                Our <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our extensive collection of specialized tools designed to enhance your business operations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasServices.map((service) => (
+                <div key={service.id} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 relative">
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
+                  
                   <div className="mb-4">
-                    <p className="text-blue-600 font-semibold">{solution.price}</p>
+                    <span className="text-sm text-purple-400 font-semibold">{service.category}</span>
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
                   </div>
-                  <Link 
-                    to={solution.href}
-                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Our Micro SaaS Solutions?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="w-8 h-8 text-white" />
+                  <div className="mb-6">
+                    <div className="text-3xl font-bold text-white mb-2">{service.price}</div>
+                    <div className="text-gray-400 text-sm">per month</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircleIcon className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-col gap-2">
+                    <Link
+                      to={service.href}
+                      className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 text-center"
+                    >
+                      Learn More
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="w-full border border-purple-400 text-purple-300 py-3 px-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 text-center"
+                    >
+                      Contact Sales
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -254,26 +365,26 @@ import { Helmet } from 'react-helmet-async';
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Business?
+        <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+          <div className="max-w-4xl mx-auto text-center px-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Need a Custom Solution?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our micro SaaS solutions can help you achieve your goals.
+            <p className="text-lg text-gray-300 mb-8">
+              We can create a custom micro SaaS solution tailored to your specific business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                Contact Us
+                Request Custom Solution
               </Link>
               <Link 
-                to="/demo" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                to="/about" 
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                Schedule Demo
+                Learn More About Us
               </Link>
             </div>
           </div>
@@ -281,11 +392,6 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default MicroSaaSSolutionsPage;
-=======
 };
 
 export default MicroSaaSSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
