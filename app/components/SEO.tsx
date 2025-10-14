@@ -1,20 +1,14 @@
-import React from 'react';
+import React from "react";
 
-
-const SEO = () => {
-
+export default function SEO() {
   return (
-    div>
-      <h2>SEO</h2>
-  );
-  );
-      <p>This component is under construction.</p>
-      {title && <p>Title: {title}</p>};
-      {description && <p>Description: {description}</p>};
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8">SEO</h1>
+        <p className="text-gray-300 text-lg">
+          Content for SEO component.
+        </p>
+      </div>
     </div>
   );
-};
-export default SEO;
-
-
-
+}

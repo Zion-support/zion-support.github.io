@@ -1,85 +1,49 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from "lucide-react";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const services = [
-    { name: "AI Solutions", href: "/ai-solutions" },
-    { name: "Cybersecurity", href: "/cybersecurity" },
-    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
-    { name: "Digital Transformation", href: "/digital-transformation" },
-    { name: "IT Services", href: "/it-services" },
-    { name: "Micro SAAS", href: "/micro-saas" };
-  ];
-
+export default function Footer() {
   return (
-    footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gray-800 text-gray-300 py-8">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400">
-              Leading provider of AI-powered IT solutions and digital transformation services.
+            <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-sm">
+              Leading provider of AI and IT solutions. Transform your business with cutting-edge technology.
             </p>
           </div>
-          
           <div>
-            <h4 className="text-md font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link to={service.href} className="text-gray-400 hover:text-white">
-                    {service.name};
-                  </Link>
-                </li>
-  ))};
+            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/ai-services" className="hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-solutions" className="hover:text-white transition-colors">IT Solutions</Link></li>
+              <li><Link to="/cloud-solutions" className="hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
-          
           <div>
-            <h4 className="text-md font-semibold mb-4">Contact</h4>
-            <div className="space-y-2">
-              <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2"/>
-                <span className="text-gray-400">contact@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center">
-                </Mail><Phone className="h-4 w-4 mr-2"/>
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center">
-                </Phone><MapPin className="h-4 w-4 mr-2"/>
-                <span className="text-gray-400">New York, NY</span>
-              </div>
-            </div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="hover:text-white transition-colors">Team</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+            </ul>
           </div>
-          
           <div>
-            <h4 className="text-md font-semibold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                </MapPin><Github className="h-5 w-5"/>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                </Github><Twitter className="h-5 w-5"/>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                </Twitter><Linkedin className="h-5 w-5"/>
-              </a>
-            </div>
+            <h4 className="text-lg font-semibold text-white mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/whitepapers" className="hover:text-white transition-colors">Whitepapers</Link></li>
+              <li><Link to="/support" className="hover:text-white transition-colors">Support</Link></li>
+            </ul>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;</Linkedin>
+}

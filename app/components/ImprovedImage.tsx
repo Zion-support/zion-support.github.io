@@ -1,17 +1,14 @@
-import React from 'react';
+import React from "react";
 
-
-const ImprovedImage = () => {
-
+export default function ImprovedImage() {
   return (
-    div>
-      <h2>ImprovedImage</h2>
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8">ImprovedImage</h1>
+        <p className="text-gray-300 text-lg">
+          Content for ImprovedImage component.
+        </p>
+      </div>
+    </div>
   );
-  );
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
-  );
-};
-export default ImprovedImage;
-
-
+}

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../src/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../src/components/AdvancedPerformanceMonitor';
@@ -13,14 +13,9 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   return <div>Test content</div>;
 };
 
-// Test component for error boundary tests
-const TestComponent = () => <div>Test component</div>;
-
-// Mock onError callback
+// Mock onError callback - used in tests
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const onError = jest.fn();
-
-// Mock helmet context
-const helmetContext = {};
 
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
@@ -82,7 +77,7 @@ describe('AdvancedErrorBoundary', () => {
     let shouldThrow = true;
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
-    const { rerender } = render(
+    render(
       <MemoryRouter>
         <AdvancedErrorBoundary enableRetry={true}>
           <TestComponent />
@@ -232,7 +227,7 @@ describe('AdvancedPerformanceMonitor', () => {
     });
 
     // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as any;
+    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver;
   });
 
   afterEach(() => {

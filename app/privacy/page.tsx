@@ -1,26 +1,21 @@
 import React from "react";
-
-
-
 import { Helmet } from "react-helmet-async";
 
-
-const PrivacyPage = () => {
-
+export default function Page() {
   return (
-    div>
+    <React.Fragment>
       <Helmet>
-
-  );
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description"content="Zion Tech Group privacy policy and data protection information." />      </Helmet>            <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>          <div>            <p className="text-gray-300 text-lg mb-6">"This privacy policy is under construction. Please check back later for our complete privacy policy.            </p>            <p className="text-gray-300">"              For any privacy-related questions, please contact us at kleber@ziontechgroup.com            </p>          </div>
+        <title>Privacy - Zion Tech Group</title>
+        <meta name="description" content="Professional privacy services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold text-white mb-8">Privacy</h1>
+          <p className="text-gray-300 text-lg">
+            Professional privacy services tailored to your business needs.
+          </p>
         </div>
       </div>
+    </React.Fragment>
   );
-};
-export default PagePage;</div>
-
-
-
+}
