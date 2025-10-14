@@ -2,8 +2,8 @@ import React from 'react;'const EnhancedPerformanceMonitor = () => {
   return (
     <div>
       <h2>EnhancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-    </div>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
   );
 }
 

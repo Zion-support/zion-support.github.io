@@ -2,9 +2,9 @@ import React from 'react;'const AdvancedPerformanceMonitor = () => {
   return (
     <div>
       <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
 
-    </div>
+  
   );
 }
 
