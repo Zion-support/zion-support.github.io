@@ -1258,8 +1258,4 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default MicroSaasSolutionsPage;
-=======
 export default MicroSaaSSolutionsPage;
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f

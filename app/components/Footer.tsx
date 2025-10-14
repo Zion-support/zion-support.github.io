@@ -9,7 +9,6 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },

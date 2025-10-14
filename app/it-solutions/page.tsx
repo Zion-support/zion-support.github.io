@@ -132,13 +132,11 @@ export default function ITSolutionsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cybersecurity, cloud solutions, and system integration services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cybersecurity, cloud solutions, system integration, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -260,4 +258,3 @@ export default ItSolutionsPage;
     </div>
   );
 }
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f

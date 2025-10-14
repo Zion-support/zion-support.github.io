@@ -172,49 +172,11 @@ export default function AISolutionsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and automation services." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI automation, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Transform your business with cutting-edge artificial intelligence
-            </p>
-          </div>
-          
-          <div className="grid md: grid-cols-2 gap-8">;
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Brain className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
-              <p className="text-gray-300">
-                Custom ML models tailored to your specific business requirements.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Zap className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Automation</h3>
-              <p className="text-gray-300">
-                Intelligent automation solutions to streamline your operations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default AiSolutionsPage;
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -279,7 +241,7 @@ export default AiSolutionsPage;
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -300,4 +262,3 @@ export default AiSolutionsPage;
     </div>
   );
 }
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f

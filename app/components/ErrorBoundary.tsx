@@ -11,14 +11,14 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false ;};
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true;, error };
+    return { hasError: true, error };
   }
 
-componentDidCatch(_error: Error;, _errorInfo: ErrorInfo) {
+componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged
   }
 
@@ -28,10 +28,10 @@ componentDidCatch(_error: Error;, _errorInfo: ErrorInfo) {
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <p className="text-gray-300 mb-8">We&apos;re sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover: from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300";
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"
             >
               Reload Page
             </button>
