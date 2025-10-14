@@ -4,11 +4,8 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 export default tseslint.config(
-<<<<<<< HEAD
-  { ignores: ['dist', 'app-broken/**', 'app-disabled/**'] },
-=======
   { ignores: ['dist', 'app-broken/**', 'app-disabled/**', 'scripts/**', '*.js', '*.cjs'] },
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],

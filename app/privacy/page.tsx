@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const PrivacyPage: React.FC = () => {return (} <div className="min-h-screen bg-white">" <Helmet> </div> </div> )}'
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -32,4 +27,4 @@ const PrivacyPage = () => {
 };
 
 export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+

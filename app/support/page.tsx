@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async' </div> </div> )
-}'
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -27,4 +22,4 @@ const PagePage = () => {
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+

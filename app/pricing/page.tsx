@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react' </div> </div> )
-}
-export default PricingPage'
-=======
 import React from 'react';';';
 import { Helmet } from 'react-helmet-async';';';
 export default function Pricing() {
@@ -21,4 +16,4 @@ export default function Pricing() {
     </React.Fragment>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+

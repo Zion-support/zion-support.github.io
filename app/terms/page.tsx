@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const TermsPage: React.FC = () => {return (} <div className="min-h-screen bg-white">" <Helmet> </div> </div> )}'
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -32,4 +27,4 @@ const TermsPage = () => {
 };
 
 export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+

@@ -3,14 +3,23 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
 
-const root = createRoot(document.getElementById('root')!);
+// Ensure scheduler is properly initialized
+if (typeof window !== 'undefined') {
+  // Fix for scheduler unstable_now error
+  if (!window.performance || !window.performance.now) {
+    window.performance = window.performance || {};
+    window.performance.now = window.performance.now || (() => Date.now());
+  }
+}
+
+const root = createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-<<<<<<< HEAD
-);
-=======
 );
 
 // Register service worker for PWA functionality
@@ -28,4 +37,3 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
