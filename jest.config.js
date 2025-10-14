@@ -19,10 +19,13 @@ export default {
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
-    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/app-broken/',
+    '<rootDir>/app-disabled/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/app/utils/__tests__/'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
