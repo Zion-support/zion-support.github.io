@@ -129,6 +129,9 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
+        <div className="p-4"></div>
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }
