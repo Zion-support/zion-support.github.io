@@ -1,7 +1,7 @@
 import React, { lazy, ComponentType, Suspense } from 'react';
 
 // Higher-order component for lazy loading
-export function withLazyLoading<T extends ComponentType<unknown>>(
+export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
   Component: T,
   fallback?: React.ReactNode,
 ) {
@@ -17,7 +17,7 @@ export function withLazyLoading<T extends ComponentType<unknown>>(
 }
 
 // Utility function to create lazy-loaded components
-export function createLazyComponent<T extends ComponentType<unknown>>(
+export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode,
 ) {

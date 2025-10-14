@@ -1,8 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { CpuChipIcon, ShieldCheckIcon, CloudIcon, ArrowRightIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
-
+import { ArrowRightIcon, ShieldCheckIcon, CloudIcon, CpuChipIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const ServicesPage = () => {

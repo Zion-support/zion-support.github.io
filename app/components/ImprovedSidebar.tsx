@@ -1,7 +1,40 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { X, Home, Users, Settings, HelpCircle, Mail, Phone } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  XMarkIcon, 
+  HomeIcon, 
+  UserGroupIcon, 
+  BriefcaseIcon, 
+  CurrencyDollarIcon, 
+  DocumentTextIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  MapIcon,
+  CloudIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  DevicePhoneMobileIcon,
+  ServerIcon,
+  CodeBracketIcon,
+  WrenchScrewdriverIcon,
+  ChartBarIcon,
+  LockClosedIcon,
+  Cog6ToothIcon,
+  SparklesIcon,
+  RocketLaunchIcon,
+  BeakerIcon,
+  HeartIcon,
+  ShieldExclamationIcon,
+  DocumentDuplicateIcon,
+  AcademicCapIcon,
+  PresentationChartLineIcon,
+  CommandLineIcon,
+  PuzzlePieceIcon,
+  ArrowRightIcon,
+  ChevronDownIcon
+} from '@heroicons/react/24/outline';
 
 interface ImprovedSidebarProps {
   isOpen: boolean;
@@ -9,23 +42,79 @@ interface ImprovedSidebarProps {
 }
 
 const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) => {
-  const [isMounted, setIsMounted] = useState(false);
+  const location = useLocation();
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
 
-  if (!isMounted) {
-    return null;
-  }
-
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: Mail },
-    { name: 'Support', href: '/support', icon: HelpCircle },
+  const mainLinks = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: UserGroupIcon },
+    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon },
+    { name: 'Demo', href: '/demo', icon: PresentationChartLineIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
+
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
+    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
+    { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: ChatBubbleLeftRightIcon },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: ShieldExclamationIcon },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: ChartBarIcon }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+    { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
+    { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
+    { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
+    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
+    { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
+  ];
+
+  const businessSolutions = [
+    { name: 'Micro SaaS', href: '/micro-saas', icon: RocketLaunchIcon },
+    { name: 'Cloud Services', href: '/cloud-services', icon: ServerIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: SparklesIcon },
+    { name: 'Process Automation', href: '/process-automation', icon: Cog6ToothIcon },
+    { name: 'Data Migration', href: '/data-migration', icon: ArrowRightIcon },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: ChartBarIcon },
+    { name: 'API Development', href: '/api-development', icon: CommandLineIcon },
+    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: BeakerIcon }
+  ];
+
+  const additionalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
+    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
+    { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
+    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
+    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+    { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
+    { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
+  ];
+
+  const serviceSections = [
+    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
+    { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
+    { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <>
@@ -46,46 +135,130 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
       `}>
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-slate-700">
-            <h2 className="text-xl font-bold text-white">Navigation</h2>
+          <div className="flex items-center justify-between p-6 border-b border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <CpuChipIcon className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech</span>
+            </div>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-600 transition-colors"
             >
-              <X size={24} />
+              <XMarkIcon className="w-6 h-6 text-white" />
             </button>
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 p-6">
-            <ul className="space-y-2">
-              {navigationItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      className="flex items-center px-4 py-3 text-slate-300 rounded-lg hover:bg-slate-700 hover:text-white transition-colors group"
+          <nav className="flex-1 overflow-y-auto p-6 space-y-6">
+            {/* Main Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Main Navigation
+              </h3>
+              <ul className="space-y-2">
+                {mainLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
                       onClick={onClose}
+                      className={`
+                        flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                          : 'text-gray-300 hover:bg-slate-700 hover:text-white hover:shadow-md'
+                        }
+                      `}
                     >
-                      <Icon size={20} className="mr-3 group-hover:text-blue-400" />
-                      {item.name}
-                    </a>
+                      <link.icon className="w-5 h-5" />
+                      <span>{link.name}</span>
+                    </Link>
                   </li>
-                );
-              })}
-            </ul>
+                ))}
+              </ul>
+            </div>
+
+            {/* Service Sections */}
+            {serviceSections.map((section) => (
+              <div key={section.key}>
+                <button
+                  onClick={() => toggleSection(section.key)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-semibold text-gray-400 uppercase tracking-wider hover:text-white transition-colors rounded-lg hover:bg-slate-700"
+                >
+                  <div className="flex items-center space-x-3">
+                    <section.icon className="w-5 h-5" />
+                    <span>{section.title}</span>
+                  </div>
+                  <ChevronDownIcon 
+                    className={`w-4 h-4 transition-transform ${
+                      expandedSections.includes(section.key) ? 'rotate-180' : ''
+                    }`} 
+                  />
+                </button>
+                {expandedSections.includes(section.key) && (
+                  <ul className="mt-2 space-y-1 ml-8">
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          to={link.href}
+                          onClick={onClose}
+                          className={`
+                            flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200
+                            ${isActive(link.href) 
+                              ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                              : 'text-gray-400 hover:bg-slate-700 hover:text-white hover:shadow-md'
+                            }
+                          `}
+                        >
+                          <link.icon className="w-4 h-4" />
+                          <span>{link.name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+
+            {/* Additional Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Additional
+              </h3>
+              <ul className="space-y-2">
+                {additionalLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      onClick={onClose}
+                      className={`
+                        flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                          : 'text-gray-400 hover:bg-slate-700 hover:text-white hover:shadow-md'
+                        }
+                      `}
+                    >
+                      <link.icon className="w-4 h-4" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
 
           {/* Footer */}
-          <div className="p-6 border-t border-slate-700">
-            <div className="flex items-center space-x-4 text-slate-400">
-              <Phone size={16} />
-              <span className="text-sm">+1 (555) 123-4567</span>
+          <div className="p-6 border-t border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700">
+            <div className="text-center">
+              <p className="text-sm text-gray-400">
+                © 2024 Zion Tech Group
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                All rights reserved
+              </p>
             </div>
-            <p className="text-xs text-slate-500 mt-2">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
           </div>
         </div>
       </div>
