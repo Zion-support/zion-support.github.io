@@ -1,92 +1,66 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts by choosing the HEAD version
+Script to resolve merge conflicts by keeping the most recent version (after )
 """
 import os
 import re
 import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a single file by choosing HEAD version"""
+    """Resolve merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Pattern to match merge conflict markers
-        conflict_pattern = r'\n(.*?)\n\n(.*?)\n        
-        def replace_conflict(match):
-            head_content = match.group(1)
-            return head_content
+        # Check if file has merge conflicts
+        if '' not in content:
+            return False
         
-        # Replace all conflicts with HEAD version
-        resolved_content = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
+        # Split by merge conflict markers
+        parts = re.split(r'.*?\n(.*?)\n\n(.*?)\n        
+        if len(parts) < 2:
+            return False
         
-        # Also handle cases where there might be multiple conflict markers in one block
-        # Remove any remaining  and         resolved_content = re.sub(r'.*?\n', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'        
+        # Keep the first part (before first conflict) and the parts after  (most recent)
+        resolved_content = parts[0]
+        
+        for i in range(1, len(parts), 2):
+            if i + 1 < len(parts):
+                # Keep the part after  (most recent version)
+                resolved_content += parts[i + 1]
+        
         # Write the resolved content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)
         
-        print(f"Resolved conflicts in: {file_path}")
+        print(f"Resolved merge conflicts in: {file_path}")
         return True
         
     except Exception as e:
-        print(f"Error resolving conflicts in {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to resolve all merge conflicts"""
-    # Find all files with merge conflicts
-    file_patterns = [
+    """Main function to resolve merge conflicts in all files"""
+    # Find all TypeScript/JavaScript files in the app directory
+    patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
         'app/**/*.js',
-        'app/**/*.jsx',
-        '*.tsx',
-        '*.ts',
-        '*.js',
-        '*.jsx'
+        'app/**/*.jsx'
     ]
     
-    files_with_conflicts = []
+    files_processed = 0
+    files_resolved = 0
     
-    for pattern in file_patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '' in content:
-                        files_with_conflicts.append(file_path)
-            except:
-                continue
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            files_processed += 1
+            if resolve_merge_conflicts(file_path):
+                files_resolved += 1
     
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    resolved_count = 0
-    for file_path in files_with_conflicts:
-        if resolve_merge_conflicts(file_path):
-            resolved_count += 1
-    
-    print(f"Successfully resolved conflicts in {resolved_count} files")
-    
-    # Verify no conflicts remain
-    remaining_conflicts = 0
-    for file_path in files_with_conflicts:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '' in content:
-                    remaining_conflicts += 1
-                    print(f"Warning: {file_path} still has unresolved conflicts")
-        except:
-            continue
-    
-    if remaining_conflicts == 0:
-        print("All merge conflicts have been resolved!")
-    else:
-        print(f"Warning: {remaining_conflicts} files still have unresolved conflicts")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Resolved merge conflicts in {files_resolved} files")
 
 if __name__ == "__main__":
     main()

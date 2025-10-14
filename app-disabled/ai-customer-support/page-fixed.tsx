@@ -57,7 +57,7 @@ return(<.Fragment>)
       <Footer />
 
   );
-};
+}
 
 export default PageFixedPage;
 </div></div></div></div></div></section></section></h1>

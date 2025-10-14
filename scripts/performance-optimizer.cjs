@@ -1,284 +1,185 @@
-const fs = require('fs');';
-const _path = require('_path');';
-const { execSync } = require('child_process');';
-// Performance optimization script;
-function optimizePerformance() {
-  global.console.log('🚀 Starting comprehensive performance optimization...');';
+const fs = require('fs');
+const path = require('path');
+
+console.log('Starting performance optimization...');
+
+// Function to optimize imports in a file
+function optimizeImports(filePath) {
   try {
-    // 1. Optimize HTML _files;
-    optimizeHTML();
-    
-    // 2. Optimize CSS _files;
-    optimizeCSS();
-    
-    // 3. Optimize JavaScript _files;
-    optimizeJavaScript();
-    
-    // 4. Optimize images;
-    optimizeImages();
-    
-    // 5. Generate critical CSS;
-    generateCriticalCSS();
-    
-    // 6. Optimize fonts;
-    optimizeFonts();
-    
-    // 7. Generate performance report;
-    generatePerformanceReport();
-    
-    global.console.log('✅ Performance optimization completed successfully!');';
-  } catch (_error) {
-    global.console._error('❌ Performance optimization failed:', _error.message);';
-    process.exit(1);
-  }
-}
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-function optimizeHTML() {
-  global.console.log('📄 Optimizing HTML _files...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const htmlFiles = findFiles(distPath, '.html');';
-  htmlFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');';
-    // Remove unnecessary whitespace;
-    content = content.replace(/>\s+</g, '><');';
-    // Remove comments (except important ones)
-    content = content.replace(/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/g, '');';
-    // Optimize meta tags;
-    content = content.replace(/\s+/g, ' ');';
-    // Add preload hints for critical resources;
-    if (content.includes('<head>')) {';
-      const preloadHints = `;
-    <!-- Preload critical resources -->;
-    <link rel="preload" href="/assets/css/index.css" as="style">;
-    <link rel="preload" href="/assets/js/index.js" as="script">;
-    <link rel="preload" href="/assets/js/vendor.js" as="script">`;
+    // Optimize Lucide React imports - use individual imports instead of large destructured imports
+    const lucideImportRegex = /import\s+{([^}]+)}\s+from\s+['"]lucide-react['"];?/g;
+    const lucideMatches = [...content.matchAll(lucideImportRegex)];
+
+    for (const match of lucideMatches) {
+      const fullImport = match[0];
+      const importList = match[1];
       
-      content = content.replace('<head>', `<head>${preloadHints}`);';
-    }
-    
-    fs.writeFileSync(file, content);
-  });
-  
-  global.console.log(`✅ Optimized ${htmlFiles.length} HTML _files`);
-}
-
-function optimizeCSS() {
-  global.console.log('🎨 Optimizing CSS _files...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const cssFiles = findFiles(distPath, '.css');';
-  cssFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');';
-    // Remove unnecessary whitespace;
-    content = content.replace(/\s+/g, ' ');';
-    // Remove comments;
-    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
-    // Remove empty rules;
-    content = content.replace(/[^{}]+{\s*}/g, '');';
-    // Optimize selectors;
-    content = content.replace(/\s*{\s*/g, '{');';
-    content = content.replace(/;\s*/g, ';');';
-    content = content.replace(/}\s*/g, '}');';
-    fs.writeFileSync(file, content);
-  });
-  
-  global.console.log(`✅ Optimized ${cssFiles.length} CSS _files`);
-}
-
-function optimizeJavaScript() {
-  global.console.log('⚡ Optimizing JavaScript _files...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const jsFiles = findFiles(distPath, '.js');';
-  jsFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');';
-    // Remove global.console.log statements in production;
-    if (process.env.NODE_ENV === 'production') {';
-      content = content.replace(/console\.(log|debug|info|warn|_error)\([^)]*\);?/g, '');';
-    }
-    
-    // Remove unnecessary whitespace;
-    content = content.replace(/\s+/g, ' ');';
-    // Remove comments;
-    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
-    content = content.replace(/\/\/.*$/gm, '');';
-    fs.writeFileSync(file, content);
-  });
-  
-  global.console.log(`✅ Optimized ${jsFiles.length} JavaScript _files`);
-}
-
-function optimizeImages() {
-  global.console.log('🖼️ Optimizing images...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const imageFiles = findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']);';
-  imageFiles.forEach(file => {
-    try {
-      // Use sharp for image optimization if available;
-      if (require.resolve('sharp')) {';
-        const sharp = require('sharp');';
-        const input = sharp(file);
+      // Split the imports and clean them
+      const imports = importList.split(',').map(imp => imp.trim()).filter(imp => imp);
+      
+      if (imports.length > 5) {
+        // If more than 5 imports, convert to individual imports for better tree shaking
+        const individualImports = imports.map(imp => {
+          const importName = imp.split(' as ')[0].trim();
+          return `import { ${importName} } from 'lucide-react';`;
+        }).join('\n');
         
-        // Get image metadata;
-        input.metadata().then(metadata => {
-          if (metadata.format === 'png' || metadata.format === 'jpeg') {';
-            // Optimize based on file size;
-            if (metadata.size > 100000) { // 100KB;
-              return input;
-                .resize(metadata.width > 1920 ? 1920 : metadata.width)
-                .jpeg({ quality: 85, progressive: true })
-                .png({ compressionLevel: 9 })
-                .toFile(file);
-            }
-          }
-        });
+        content = content.replace(fullImport, individualImports);
+        modified = true;
       }
-    } catch (_error) {
-      // Sharp not available, skip optimization;
-      global.console.log(`⚠️ Skipping image optimization for ${file} (sharp not available)`);
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Optimized imports in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+}
+
+// Function to add lazy loading to components
+function addLazyLoading(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if this is a page component that should be lazy loaded
+    if (filePath.includes('/page.tsx') && !content.includes('React.lazy')) {
+      // Add lazy loading wrapper if not already present
+      if (content.includes('export default')) {
+        const componentName = path.basename(filePath, '.tsx');
+        const lazyWrapper = `const ${componentName} = React.lazy(() => import('./${componentName}'));\nexport default ${componentName};`;
+        
+        // Replace the export with lazy wrapper
+        content = content.replace(/export default function \w+\(\) {[\s\S]*?^}/m, (match) => {
+          const functionName = match.match(/export default function (\w+)\(\)/)?.[1];
+          if (functionName) {
+            return `function ${functionName}() {${match.split('{')[1]}`;
+          }
+          return match;
+        });
+        
+        content = content.replace(/export default \w+;/, lazyWrapper);
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Added lazy loading to: ${filePath}`);
+      }
+    }
+  } catch (error) {
+    console.error(`Error adding lazy loading to ${filePath}:`, error.message);
+  }
+}
+
+// Function to optimize images
+function optimizeImages() {
+  const publicDir = path.join(__dirname, '..', 'public');
+  const imagesDir = path.join(publicDir, 'images');
+  
+  if (fs.existsSync(imagesDir)) {
+    console.log('Found images directory, consider optimizing images for web');
+    console.log('Recommendations:');
+    console.log('- Convert images to WebP format');
+    console.log('- Compress images to reduce file size');
+    console.log('- Use responsive images with srcset');
+  }
+}
+
+// Function to add performance monitoring
+function addPerformanceMonitoring() {
+  const performanceScript = `
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  // Monitor Core Web Vitals
+  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    getCLS(console.log);
+    getFID(console.log);
+    getFCP(console.log);
+    getLCP(console.log);
+    getTTFB(console.log);
+  });
+
+  // Monitor bundle size
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+      }
     }
   });
-  
-  global.console.log(`✅ Optimized ${imageFiles.length} image _files`);
+  observer.observe({ entryTypes: ['navigation'] });
 }
+`;
 
-function generateCriticalCSS() {
-  global.console.log('🎯 Generating critical CSS...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const cssFiles = findFiles(distPath, '.css');';
-  if (cssFiles.length > 0) {
-    const mainCSS = cssFiles.find(file => file.includes('index')) || cssFiles[0];';
-    let content = fs.readFileSync(mainCSS, 'utf8');';
-    // Extract critical CSS (above-the-fold styles)
-    const criticalCSS = extractCriticalCSS(content);
-    
-    // Write critical CSS to a separate file;
-    const criticalPath = _path.join(distPath, 'critical.css');';
-    fs.writeFileSync(criticalPath, criticalCSS);
-    
-    global.console.log('✅ Generated critical CSS');';
+  const appFile = path.join(__dirname, '..', 'App.tsx');
+  if (fs.existsSync(appFile)) {
+    let content = fs.readFileSync(appFile, 'utf8');
+    if (!content.includes('Performance monitoring')) {
+      content = content.replace('useEffect(() => {', `useEffect(() => {${performanceScript}`);
+      fs.writeFileSync(appFile, content, 'utf8');
+      console.log('Added performance monitoring to App.tsx');
+    }
   }
 }
 
-function extractCriticalCSS(css) {
-  // Extract critical CSS rules (simplified version)
-  const criticalSelectors = [;
-    'body', 'html', '#root', '.loading', '.spinner',';
-    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',';
-    'p', 'a', 'button', 'input', 'form',';
-    '.container', '.header', '.nav', '.main', '.footer'';
-  ];
-  
-  const rules = css.match(/([^{}]+)\s*{[^{}]*}/g) || [];
-  const criticalRules = rules.filter(rule => {
-    return criticalSelectors.some(selector =>;
-      rule.includes(selector)
-    );
-  });
-  
-  return criticalRules.join('\n');';
-}
-
-function optimizeFonts() {
-  global.console.log('🔤 Optimizing fonts...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const fontFiles = findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']);';
-  // Add font-display: swap to CSS;
-  const cssFiles = findFiles(distPath, '.css');';
-  cssFiles.forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');';
-    // Add font-display: swap to @font-face rules;
-    content = content.replace(
-      /@font-face\s*{([^}]*)}/g,
-      (match, declarations) => {
-        if (!declarations.includes('font-display')) {';
-          return `@font-face {${declarations}font-display: swap;}`;
+// Function to create optimized bundle configuration
+function createBundleConfig() {
+  const bundleConfig = {
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true
+          }
         }
-        return match;
       }
-    );
-    
-    fs.writeFileSync(file, content);
-  });
-  
-  global.console.log(`✅ Optimized ${fontFiles.length} font _files`);
-}
-
-function generatePerformanceReport() {
-  global.console.log('📊 Generating performance report...');';
-  const distPath = _path.join(process.cwd(), 'dist');';
-  const report = {
-    timestamp: new Date().toISOString(),
-    buildSize: getDirectorySize(distPath),
-    fileCounts: {
-      html: findFiles(distPath, '.html').length,';
-      css: findFiles(distPath, '.css').length,';
-      js: findFiles(distPath, '.js').length,';
-      images: findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']).length,';
-      fonts: findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']).length,';
-    },
-    optimizations: [;
-      'HTML minification',';
-      'CSS optimization',';
-      'JavaScript minification',';
-      'Image optimization',';
-      'Critical CSS generation',';
-      'Font optimization'';
-    ];
+    }
   };
-  
-  const reportPath = _path.join(distPath, 'performance-report.json');';
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  
-  global.console.log(`✅ Performance report generated: ${reportPath}`);
-  global.console.log(`📈 Build size: ${(report.buildSize / 1024 / 1024).toFixed(2)} MB`);
+
+  const configPath = path.join(__dirname, '..', 'bundle.config.json');
+  fs.writeFileSync(configPath, JSON.stringify(bundleConfig, null, 2));
+  console.log('Created bundle optimization config');
 }
 
-function findFiles(dir, extensions) {
-  const _files = [];
-  const extArray = Array.isArray(extensions) ? extensions : [extensions];
+// Main optimization function
+function optimizeProject() {
+  console.log('Optimizing project performance...');
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  // Process all TypeScript/JavaScript files
+  function processDirectory(dir) {
+    const files = fs.readdirSync(dir);
     
-    items.forEach(item => {
-      const fullPath = _path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
       
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = _path.extname(item).toLowerCase();
-        if (extArray.includes(ext)) {
-          _files.push(fullPath);
-        }
+      if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'dist') {
+        processDirectory(filePath);
+      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+        optimizeImports(filePath);
+        addLazyLoading(filePath);
       }
-    });
+    }
   }
+
+  // Run optimizations
+  processDirectory(path.join(__dirname, '..', 'app'));
+  optimizeImages();
+  addPerformanceMonitoring();
+  createBundleConfig();
   
-  traverse(dir);
-  return _files;
+  console.log('Performance optimization completed successfully!');
 }
 
-function getDirectorySize(dir) {
-  let size = 0;
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    items.forEach(item => {
-      const fullPath = _path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else {
-        size += stat.size;
-      }
-    });
-  }
-  
-  traverse(dir);
-  return size;
-}
-
-// Run optimization;
-optimizePerformance();
+// Run the optimization
+optimizeProject();

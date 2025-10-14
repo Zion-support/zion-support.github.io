@@ -191,9 +191,9 @@ message: ']
                   <textarea
                     id="message"
                     name="message"
-                    value = { formData.message };
-                    onChange = { handleChange };
-                    rows = { 5 };
+                    value = { formData.message }
+                    onChange = { handleChange }
+                    rows = { 5 }
 
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
@@ -203,7 +203,7 @@ message: ']
 
                 <button
                   type="submit"
-                  disabled = { isSubmitting };
+                  disabled = { isSubmitting }
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
     d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
@@ -270,8 +270,8 @@ message: ']
   );
 
 )]
-    };
+    }
 
-};
+}
 
 export default ContactPage;}

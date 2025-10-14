@@ -125,19 +125,19 @@ export const generateImageAlt = (imagePath: string, alt: string) => {
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {';
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
-};
+}
 
 export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
-  const baseUrl = 'https://zion.app';
-  return `<?xml version="1.0" encoding="UTF-8"?>;
+  const baseUrl = 'https://zion.app'
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
-  ${pages.map(page => `;
-    <url>;
-      <loc>${baseUrl}${page.path}</loc>;
-      <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>';
-      <priority>${page.priority || 0.5}</priority>;
-    </url>;
-  `).join('')}';
+  ${pages.map(page => `
+    <url>
+      <loc>${baseUrl}${page.path}</loc>
+      <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>'
+      <priority>${page.priority || 0.5}</priority>
+    </url>4605;
+  `).join('')}'
 </urlset>`;
 };
 

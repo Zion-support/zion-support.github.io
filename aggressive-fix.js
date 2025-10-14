@@ -59,7 +59,7 @@ export default function ${serviceName}() {
     { label: 'Success Rate', value: '98%' },
     { label: 'Client Satisfaction', value: '99%' },
     { label: 'Years Experience', value: '5+' }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

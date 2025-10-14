@@ -55,6 +55,8 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "app/components-broken/**",
+    "app/pages-broken/**"
   ]
 }

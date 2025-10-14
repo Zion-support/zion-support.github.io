@@ -9,7 +9,7 @@ jest.mock('framer-motion', () => ({
 const mockProps = {
   src: 'https://example.com/test.jpg',
   alt: 'Test image',
-};
+}
 describe('OptimizedImage Component', () => {
   it('renders with default props', () => {
     render(<OptimizedImage {...mockProps} />);

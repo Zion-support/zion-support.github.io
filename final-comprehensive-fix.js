@@ -13,21 +13,18 @@ function fixFileComprehensively(filePath) {
     const originalContent = content;
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    
+    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
     // Fix unterminated string literals
     content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
     content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<>/g, '<>')
+    content = content.replace(/<\/>/g, '</>992')
+    content = content.replace(/<Helmet>/g, '<Helmet>')
+    content = content.replace(/<\/Helmet>/g, '</Helmet>1096')
+    content = content.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>')
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix unterminated string constants
@@ -35,12 +32,12 @@ function fixFileComprehensively(filePath) {
     content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
     
     // Fix malformed function declarations
-    content = content.replace(/export default function ([^ {]+)\s*{/g, 'export default function $1  {');
+    content = content.replace(/export default function ([^ {]+)\s*{/g, 'export default function $1  {')
     
     // Fix missing closing parentheses and brackets
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
+    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\)/g, 'return (\n    <>\n$1\n    </>\n  );');
     content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
+    content = content.replace(/\s*<\/>/g, '\n    </>1972');
     
     // Fix test file issues by commenting out problematic lines
     if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
@@ -58,7 +55,7 @@ function fixFileComprehensively(filePath) {
     
     // Fix specific syntax errors
     content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
+    content = content.replace(/\s*<\/>/g, '\n    </>2782');
     content = content.replace(/;\s*\);/g, '\n  );');
     
     // Fix malformed JSX in broken/disabled files
@@ -66,7 +63,7 @@ function fixFileComprehensively(filePath) {
       // For broken/disabled files, try to create a minimal valid structure
       if (content.includes('import React from') && !content.includes('export default')) {
         content = content.replace(/import React[^;]+;/g, '');
-        content = `import React from 'react';\n\nexport default function Page()  {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
+        content = `import React from 'react'\n\nexport default function Page()  {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`
       }
     }
     
@@ -114,11 +111,11 @@ function findProblematicFiles(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || 
-              content.includes('=======') ||
+          if (content.includes('') || 
+              content.includes('') ||
               content.includes('>>>>>>>') ||
               content.includes('import React from \'react;') ||
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
+              content.includes('import { Helmet } from \'react-helmet-async') ||
               content.includes('<>') ||
               content.includes('</>') ||
               content.includes('Unterminated string') ||
@@ -126,52 +123,48 @@ function findProblematicFiles(dir) {
               content.includes('Identifier \'React\' has already been declared')) {
             files.push(fullPath);
           }
-        } catch (err) {
-          // Skip files that can't be read
+        } catch (err) { // Skip files that can't be read }'';
+}
         }
       }
     }
   }
-  
   searchDirectory(dir);
   return files;
 }
-
-// Main execution
-async function main() {
-  console.log('🔍 Finding all problematic files...');
-  const problematicFiles = findProblematicFiles('.');
-  console.log(`Found ${problematicFiles.length} problematic files`);
-  
+// Main execution;
+async function main() { console.log('🔍 Finding all problematic files...');';
+  const problematicFiles = findProblematicFiles('.'); }'';
+}
+  console.log(`Found ${problematicFiles.length} problematic files`);```;
   let fixedCount = 0;
-  
   for (const file of problematicFiles) {
-    if (fixFileComprehensively(file)) {
+  if (fixFileComprehensively(file)) {
       fixedCount++;
+}
+}
     }
   }
-  
-  console.log(`✅ Fixed ${fixedCount} files`);
-  
-  // Run a quick lint check
-  console.log('🔍 Running final validation...');
-  try {
-    execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' });
-    console.log('✅ Linting passed!');
-  } catch (error) {
-    console.log('⚠️  Some linting issues remain, but major problems should be resolved');
-  }
-  
-  // Try to build the project
-  console.log('🔍 Testing build...');
-  try {
-    execSync('pnpm run build', { stdio: 'pipe' });
-    console.log('✅ Build successful!');
-  } catch (error) {
-    console.log('⚠️  Build issues remain, but syntax errors should be resolved');
-  }
-  
-  console.log('🎉 Final comprehensive error fixing process completed!');
+  console.log(`✅ Fixed ${fixedCount} files`);```;
+  // Run a quick lint check;
+  console.log('🔍 Running final validation...');';
+  try {}
 }
-
+    execSync('pnpm run lint --max-warnings 50', { stdio: "pipe" });"'";
+    console.log('✅ Linting passed!');';
+  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }'';
+}
+  }
+  // Try to build the project;
+  console.log('🔍 Testing build...');';
+  try {}
+}
+    execSync('pnpm run build', { stdio: "pipe" });"'";
+    console.log('✅ Build successful!');';
+  } catch (error) { console.log('⚠️  Build issues remain, but syntax errors should be resolved'); }'';
+}
+  }
+  console.log('🎉 Final comprehensive error fixing process completed!');';
+}
 main().catch(console.error);
+main().catch(console.error);`"'`"'`"''"``'"`;

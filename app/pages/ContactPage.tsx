@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -5,25 +7,22 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   ClockIcon,
-  ChatBubbleLeftRightIcon,
   ArrowRightIcon,
-  CheckCircleIcon,
-  UserIcon,
-  BuildingOfficeIcon,
-  CalendarIcon
+  CheckIcon
 } from '@heroicons/react/24/outline';
 
-export default function ContactPage() {
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
-    phone: '',
     company: '',
-    subject: '',
-    message: '',
-    service: ''
+    phone: '',
+    service: '',
+    message: ''
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -33,352 +32,276 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
-  const contactMethods = [
+  const contactInfo = [
     {
       icon: PhoneIcon,
-      title: "Phone",
-      details: "+1-302-464-0950",
-      description: "Call us for immediate assistance",
-      color: "from-purple-500 to-pink-500"
+      title: 'Phone',
+      details: '+1-302-464-0950',
+      description: 'Available 24/7'
     },
     {
       icon: EnvelopeIcon,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us a detailed message",
-      color: "from-cyan-500 to-blue-500"
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Quick response guaranteed'
     },
     {
       icon: MapPinIcon,
-      title: "Office",
-      details: "364 E Main St STE 1008",
-      description: "Middletown, DE 19709",
-      color: "from-green-500 to-emerald-500"
+      title: 'Address',
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
     },
     {
       icon: ClockIcon,
-      title: "Business Hours",
-      details: "Monday - Friday",
-      description: "9:00 AM - 6:00 PM EST",
-      color: "from-yellow-500 to-orange-500"
+      title: 'Business Hours',
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM',
+      description: 'Weekend support available'
     }
-  ];
+  };
 
   const services = [
-    "AI Solutions",
-    "Cybersecurity",
-    "Cloud Infrastructure",
-    "Digital Transformation",
-    "Micro SaaS",
-    "5G Solutions",
-    "General Inquiry"
+    'AI Solutions',
+    'Cybersecurity',
+    'Cloud Infrastructure',
+    'Micro SaaS Solutions',
+    '5G Technology',
+    'IT Services',
+    'Digital Transformation',
+    'Consulting'
   ];
 
   return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT solution needs. Contact our experts for consultation and support." />
-        <meta name="keywords" content="contact, AI consultation, IT support, business inquiry, customer service" />
+        <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI solutions, cybersecurity, cloud infrastructure, and IT services. We're here to help transform your business." />
+        <meta name="keywords" content="contact, AI solutions contact, cybersecurity contact, cloud infrastructure contact, IT services contact" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with our AI and IT solutions?
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Ready to Transform Your Business?
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Our team of experts is here to help you succeed. Contact us today for a free consultation 
-              and discover how we can accelerate your digital transformation.
+            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+              Let's discuss how our technology solutions can help you achieve your business goals. 
+              We're here to answer your questions and provide expert guidance.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Methods */}
+      {/* Contact Form & Info */}
       <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Contact Information
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the most convenient way to reach us
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {contactMethods.map((method, index) => {
-              const Icon = method.icon;
-              return (
-                <div 
-                  key={method.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 p-8 text-center"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-slate-800 rounded-xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+                  <p className="text-gray-300 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                  <button
+                    onClick={() => {
+                      setIsSubmitted(false);
+                      setFormData({
+                        name: '',
+                        email: '',
+                        company: '',
+                        phone: '',
+                        service: '',
+                        message: ''
+                      });
+                    }}
+                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="your@email.com"
+                      />
+                    </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-4">{method.title}</h3>
-                  <p className="text-lg font-semibold text-purple-300 mb-2">{method.details}</p>
-                  <p className="text-gray-300">{method.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Send Us a Message
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Fill out the form below and we'll get back to you within 24 hours
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-semibold mb-2">
-                      First Name <span className="text-red-400">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Enter your first name"
-                    />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
                   </div>
+                  
                   <div>
-                    <label className="block text-white font-semibold mb-2">
-                      Last Name <span className="text-red-400">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Enter your last name"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-semibold mb-2">
-                      Email Address <span className="text-red-400">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Enter your phone number"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white font-semibold mb-2">Company</label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Enter your company name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white font-semibold mb-2">
-                      Service Interest <span className="text-red-400">*</span>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      Service Interest
                     </label>
                     <select
+                      id="service"
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>{service}</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-white font-semibold mb-2">Subject</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Enter the subject of your message"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-white font-semibold mb-2">
-                    Message <span className="text-red-400">*</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Tell us about your project or requirements"
-                  ></textarea>
-                </div>
-
-                <div className="text-center">
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
+                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="Tell us about your project or how we can help..."
+                    />
+                  </div>
+                  
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2 mx-auto"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
-                    Send Message
-                    <ArrowRightIcon className="w-5 h-5" />
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {!isSubmitting && <ArrowRightIcon className="w-5 h-5" />}
                   </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Contact Us */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Contact Us?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Here's what you can expect when you reach out to our team
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircleIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Free Consultation</h3>
-              <p className="text-gray-300">
-                Get a free, no-obligation consultation to discuss your needs and explore potential solutions.
-              </p>
+                </form>
+              )}
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <UserIcon className="w-8 h-8 text-white" />
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
+                <p className="text-gray-300 mb-8">
+                  Get in touch with us through any of the following methods. We're here to help 
+                  you find the right technology solutions for your business.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Guidance</h3>
-              <p className="text-gray-300">
-                Work with our experienced team of AI and IT professionals who understand your industry.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BuildingOfficeIcon className="w-8 h-8 text-white" />
+              
+              <div className="space-y-6">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                      <p className="text-gray-300 text-lg">{info.details}</p>
+                      <p className="text-gray-400 text-sm">{info.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
-              <p className="text-gray-300">
-                Receive tailored solutions designed specifically for your business requirements and goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Actions */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Need Immediate Assistance?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Choose the option that works best for you
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <ChatBubbleLeftRightIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Live Chat</h3>
-                <p className="text-gray-300 mb-6">Get instant answers to your questions</p>
-                <button className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors">
-                  Start Chat
-                </button>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <CalendarIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Schedule Call</h3>
-                <p className="text-gray-300 mb-6">Book a time that works for you</p>
-                <button className="w-full bg-cyan-600 text-white py-3 px-6 rounded-lg hover:bg-cyan-700 transition-colors">
-                  Book Now
-                </button>
-              </div>
-
-              <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <PhoneIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Call Now</h3>
-                <p className="text-gray-300 mb-6">Speak directly with our team</p>
-                <a 
-                  href="tel:+13024640950"
-                  className="w-full bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors block"
-                >
-                  +1-302-464-0950
-                </a>
+              
+              <div className="bg-slate-800 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                    24/7 Expert Support
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Cutting-edge Technology
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Proven Track Record
+                  </li>
+                  <li className="flex items-center text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
+                    Custom Solutions
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -386,4 +309,6 @@ export default function ContactPage() {
       </section>
     </>
   );
-}
+};
+
+export default ContactPage;

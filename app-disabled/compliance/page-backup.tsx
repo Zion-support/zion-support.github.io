@@ -57,7 +57,7 @@ return(<.Fragment>)
       <Footer />
 
   );
-};
+}
 
 export default PageBackupPage;
 </div></div></div></div></div></section></section></h1>
