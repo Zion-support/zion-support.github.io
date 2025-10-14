@@ -21,12 +21,8 @@ describe("HomePage", () => {
         </BrowserRouter>
       </HelmetProvider>,
     );
-<<<<<<< HEAD
-    expect(screen.getByText('Advanced AI & IT')).toBeInTheDocument();
-    expect(screen.getByText('Solutions')).toBeInTheDocument();
-=======
-    expect(screen.getByText("Advanced AI & IT Solutions")).toBeInTheDocument();
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
+    expect(screen.getByText("Advanced AI & IT")).toBeInTheDocument();
+    expect(screen.getByText("Solutions")).toBeInTheDocument();
   });
 
   it("renders navigation links", () => {
@@ -37,10 +33,6 @@ describe("HomePage", () => {
         </BrowserRouter>
       </HelmetProvider>,
     );
-<<<<<<< HEAD
-    expect(screen.getByText('Call +1 302 464 0950')).toBeInTheDocument();
-=======
-    expect(screen.getByText("Get Started")).toBeInTheDocument();
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
+    expect(screen.getByText("Call +1 302 464 0950")).toBeInTheDocument();
   });
 });
