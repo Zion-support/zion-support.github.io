@@ -23,5 +23,4 @@ const EnhancedFooter: React.FC = () => {
     </div>
   );
 };
-
 export default EnhancedFooter;

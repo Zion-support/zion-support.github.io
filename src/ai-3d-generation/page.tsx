@@ -1,17 +1,31 @@
 import React from 'react';
-export default function Component; PagePage() {
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function PagePage() {
   return (
-  <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Page</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.;
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional page services by Zion Tech Group.
+          </p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+          </Link>
+        </div>
       </div>
-)
-)
-    </div>)
+    </div>
   );
-}
-}
 }

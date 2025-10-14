@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 const BlogPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group." />
       </Helmet>
@@ -21,39 +22,29 @@ const BlogPage: React.FC = () => {
                   </div>
                   <h2 className="text-xl font-semibold mb-3">The Future of AI in Business</h2>
                   <p className="text-gray-300 mb-4">
-                    Exploring how artificial intelligence is transforming modern business operations.;
+                    Explore how artificial intelligence is transforming modern business operations.
                   </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-blue-400">Read More</span>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">
-                      Read Article;
-                    </button>
-                  </div>
+                  <a href="#" className="text-blue-400 hover:text-blue-300">Read more →</a>
                 </article>
-              </div>
-            </section>
-            <section>
-              <h2 className="text-2xl font-semibold mb-6">Stay Updated</h2>
-              <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter for the latest insights and updates.;
-              </p>
-              <div className="flex space-x-4">
-                <input;
-                  type="$1"
-                  placeholder="$1"
-                  className="service-card"
-                />
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">
-                  Subscribe;
-                </button>
+                <article className="bg-gray-800 p-6 rounded-lg">
+                  <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+                    <span>January 10, 2024</span>
+                    <span>•</span>
+                    <span>Cloud Computing</span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-3">Cloud Migration Best Practices</h2>
+                  <p className="text-gray-300 mb-4">
+                    Learn the essential steps for a successful cloud migration strategy.
+                  </p>
+                  <a href="#" className="text-blue-400 hover:text-blue-300">Read more →</a>
+                </article>
               </div>
             </section>
           </div>
         </div>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default BlogPag;e;
+};
+
+export default BlogPage;

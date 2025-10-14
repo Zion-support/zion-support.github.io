@@ -1,5 +1,6 @@
-const fs = require(;fs''; const _path = require('_path''; ''; ''; ''; ''; ''; ''; ''; ''; ''; ''; ''; ''; let content = fs.readFileSync(filePath, 'utf8'';'
-); console.error('Error:'';)'' .replace(/<>([^<]*?)(?!<\/>)/g, ''; if (content.includes('`') && content.includes('`'` '${'}''`
-) '';)'; return `{${content.replace(/`/g, '').replace('`}'` /\$\{/g, '{'';}''`
-); console.log('JSX fixes completed'';)'''
-}'`'`'`
+const fs = require(;fsconst _path = require('_pathlet content = fs.readFileSync(filePath, 'utf8''
+); console.error('Error:).replace(/<>([^<]*?)(?!<\/>)/g, if (content.includes('`') && content.includes('`'` '${'}``
+) )' return `{${content.replace(/`/g, ).replace('`}'` /\$\{/g, '``}`
+); console.log('JSX fixes completed)''
+}'`'`'``
+})))

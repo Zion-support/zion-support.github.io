@@ -68,12 +68,13 @@
   }
 }
 
-<<<<<<< HEAD
 /* Focus styles for accessibility */
 @layer utilities {
   .focus-visible {
     @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-=======
+  }
+}
+
 /* Accessibility Enhancements */
 .sr-only {
   position: absolute;
@@ -172,7 +173,6 @@
   .cyber-card {
     border: 1px solid black !important;
     background: white !important;
->>>>>>> 2e5e52a4eac9cfecef52ec8f7193a2474fdee36e
   }
   
   .skip-link,

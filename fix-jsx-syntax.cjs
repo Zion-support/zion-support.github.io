@@ -1,49 +1,41 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Find all .tsx files in the app directory
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+// List of files with errors
+const filesToFix = [
+  'app/ai-data-analytics-pro/page.tsx',
+  'app/ai-financial-analysis/page.tsx',
+  'app/ai-hr-recruitment-pro/page.tsx',
+  'app/ai-image-recognition-pro/page.tsx',
+  'app/ai-supply-chain-optimizer/page.tsx',
+  'app/ai-translation-service/page.tsx',
+  'app/cloud-infrastructure-management/page.tsx'
+];
 
-console.log(`Found ${files.length} files to process`);
-
-files.forEach(file => {
-  const filePath = path.join(__dirname, file);
-  
-  try {
+// Fix each file
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common JSX syntax errors
-    // Remove semicolons after JSX elements
-    content = content.replace(/;\s*>/g, '>');
-    content = content.replace(/;\s*<\//g, '</');
-    content = content.replace(/;\s*{/g, '{');
-    content = content.replace(/;\s*}/g, '}');
+    // Fix malformed Link tags - remove the extra } and > characters
+    content = content.replace(
+      /className="[^"]*w-5 h-5">\s*}\s*>\s*([^<]*)\s*<\/Link>/g,
+      'className="[^"]*">$1</Link>'
+    );
     
-    // Fix unterminated strings in imports
-    content = content.replace(/from\s+['"]([^'"]*);/g, 'from \'$1\';');
+    // Fix the specific pattern with w-5 h-5 and extra characters
+    content = content.replace(
+      /className="([^"]*)w-5 h-5">\s*}\s*>\s*([^<]*)\s*<\/Link>/g,
+      'className="$1">$2</Link>'
+    );
     
-    // Fix missing quotes in imports
-    content = content.replace(/from\s+([^'";\s]+);/g, 'from \'$1\';');
+    // Fix any remaining malformed patterns
+    content = content.replace(/>\s*}\s*>/g, '>');
+    content = content.replace(/>\s*}\s*$/gm, '>');
     
-    // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
-    // Fix common syntax issues
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/\s+;/g, '');
-    
-    // Fix 'use client' directive placement
-    content = content.replace(/'use client';\s*import/g, "import\n'use client'");
-    
-    // Write the fixed content back
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${file}`);
-    
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.log(`Fixed ${filePath}`);
   }
 });
 
-console.log('JSX syntax fixing completed');
+console.log('All files fixed!');

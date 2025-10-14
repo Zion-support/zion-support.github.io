@@ -5,8 +5,6 @@ import path from 'path';
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
     }),
@@ -31,37 +29,36 @@ export default defineConfig({
           // Vendor chunks
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
+              return 'vendor-react'
             }
             if (id.includes('react-router')) {
-              return 'vendor-router';
+              return 'vendor-router'
             }
             if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons';
+              return 'vendor-icons'
             }
             if (id.includes('framer-motion')) {
-              return 'vendor-motion';
+              return 'vendor-motion'
             }
             if (id.includes('react-helmet')) {
-              return 'vendor-helmet';
+              return 'vendor-helmet'
             }
-            return 'vendor-other';
+            return 'vendor-other'
           }
           // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
-            return 'pages';
+            return 'pages'
           }
           if (id.includes('/app/components/')) {
-            return 'components';
+            return 'components'
           }
+          return undefined
         },
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+          if (assetInfo.name && /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
             return `assets/images/[name]-[hash][extname]`;
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+          if (assetInfo.name && /\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
             return `assets/fonts/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
@@ -72,8 +69,6 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
-    // Enable tree shaking
-    treeshake: true,
   },
   server: {
     port: 3000,
@@ -112,4 +107,4 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
-});
+})

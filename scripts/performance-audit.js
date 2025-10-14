@@ -1,3 +1,3 @@
 const performanceAudit = () => {
-  console.log('Performance audit completed'';)
+  console.log('Performance audit completed'')''}'
 }
