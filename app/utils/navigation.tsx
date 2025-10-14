@@ -1,6 +1,10 @@
-// Navigation utility
+import React from 'react';
 
-// navigation - Basic implementation
-export default function navigation() {
-  return null;
+export default function Navigation() {
+  return (
+    <div>
+      <h1>Navigation</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 }

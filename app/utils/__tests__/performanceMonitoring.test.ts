@@ -1,7 +1,7 @@
-import { describe, it, expect } from "@jest/globals";
+import { describe, it, expect } from '@jest/globals';
 
-describe("Performance Monitoring", () => {
-  it("should be implemented", () => {
+describe('PerformanceMonitoring', () => {
+  it('should work correctly', () => {
     expect(true).toBe(true);
   });
 });

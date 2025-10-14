@@ -1,6 +1,7 @@
-'use client'
+// AccessibilityEnhancer utility
+export const accessibilityenhancer = () => {
+  // Implementation here
+  console.log('AccessibilityEnhancer utility called');
+};
 
-export const utilityFunction = () => {
-  // Utility implementation
-  return true
-}
+export default accessibilityenhancer;

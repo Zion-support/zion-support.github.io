@@ -1,4 +1,10 @@
-// serviceTemplate - Basic implementation
-export default function serviceTemplate() {
-  return null
+import React from 'react';
+
+export default function ServiceTemplate() {
+  return (
+    <div>
+      <h1>ServiceTemplate</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
 }

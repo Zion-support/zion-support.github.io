@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function services() {
+export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

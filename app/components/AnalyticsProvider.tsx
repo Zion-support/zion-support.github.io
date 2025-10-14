@@ -1,15 +1,9 @@
-import React from "react";
+import React, { ReactNode } from 'react';
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
-  return (
-    <div className="analytics-provider">
-      {children}
-    </div>
-  );
-};
-
-export default AnalyticsProvider;
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  return <>{children}</>;
+}

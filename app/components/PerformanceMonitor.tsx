@@ -1,13 +1,17 @@
-import React from "react";
+import React from 'react';
 
-// PerformanceMonitor component
+interface PerformanceMonitorProps {
+  onMetricsUpdate: (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => void;
+}
 
-const PerformanceMonitor = () => {
-  return (
-    <div className="performance-monitor">
-      {/* Performance monitoring logic */}
-    </div>
-  );
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
+  return null;
 };
 
 export default PerformanceMonitor;
