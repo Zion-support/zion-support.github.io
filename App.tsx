@@ -49,7 +49,11 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
           Try again
         </button>
         <button
-          onClick={() => window.location.href = '/'}
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              window.location.href = '/';
+            }
+          }}
           className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
         >
           Go home
