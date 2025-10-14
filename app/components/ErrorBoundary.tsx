@@ -69,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -129,6 +129,9 @@ class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
+        <div className="p-4"></div>
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }

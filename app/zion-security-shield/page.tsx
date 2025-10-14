@@ -1,192 +1,18 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
-export default function ZionSecurityShield() {
-  const features = [
-    {
-      title: "Real-time Threat Detection",
-      description: "Advanced AI-powered monitoring that detects and responds to security threats in real-time across your entire infrastructure.",
-      icon: <Eye className="w-6 h-6" />,
-      benefits: ["24/7 Monitoring", "Instant Alerts", "Threat Intelligence", "Automated Response"]
-    },
-    {
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security scanning to identify vulnerabilities in your systems, applications, and network infrastructure.",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefits: ["Automated Scanning", "Risk Prioritization", "Remediation Guidance", "Compliance Reports"]
-    },
-    {
-      title: "Endpoint Protection",
-      description: "Advanced endpoint security that protects all your devices from malware, ransomware, and other cyber threats.",
-      icon: <Lock className="w-6 h-6" />,
-      benefits: ["Malware Protection", "Ransomware Defense", "Device Management", "Policy Enforcement"]
-    },
-    {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOC 2, and other regulatory requirements.",
-      icon: <CheckCircle className="w-6 h-6" />,
-      benefits: ["Regulatory Compliance", "Automated Reports", "Audit Trails", "Policy Templates"]
-    }
-  ];
-
-  const securityServices = [
-    {
-      title: "Security Monitoring",
-      description: "24/7 monitoring of your network, systems, and applications for potential security threats.",
-      price: "Starting at $99/month"
-    },
-    {
-      title: "Vulnerability Scanning",
-      description: "Regular security assessments to identify and prioritize vulnerabilities in your infrastructure.",
-      price: "Starting at $149/month"
-    },
-    {
-      title: "Incident Response",
-      description: "Rapid response and containment services when security incidents occur.",
-      price: "Starting at $199/month"
-    },
-    {
-      title: "Security Training",
-      description: "Employee security awareness training and phishing simulation programs.",
-      price: "Starting at $79/month"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$149",
-      period: "/month",
-      description: "Basic security monitoring for small businesses",
-      features: [
-        "Real-time threat detection",
-        "Basic vulnerability scanning",
-        "Email support",
-        "Monthly security reports",
-        "Up to 10 endpoints"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Advanced security for growing businesses",
-      features: [
-        "Advanced threat detection",
-        "Comprehensive vulnerability scanning",
-        "24/7 monitoring",
-        "Priority support",
-        "Up to 50 endpoints",
-        "Compliance reporting",
-        "Incident response"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "Complete security solution for large organizations",
-      features: [
-        "AI-powered threat detection",
-        "Continuous vulnerability scanning",
-        "Dedicated security team",
-        "24/7 phone support",
-        "Unlimited endpoints",
-        "Custom compliance reports",
-        "Advanced incident response",
-        "Security training included"
-      ],
-      popular: false
-    }
-  ];
-
-  const complianceStandards = [
-    { name: "GDPR", description: "General Data Protection Regulation" },
-    { name: "HIPAA", description: "Health Insurance Portability and Accountability Act" },
-    { name: "SOC 2", description: "Service Organization Control 2" },
-    { name: "PCI DSS", description: "Payment Card Industry Data Security Standard" },
-    { name: "ISO 27001", description: "Information Security Management" },
-    { name: "NIST", description: "National Institute of Standards and Technology" }
-  ];
-
+const Page = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Security Shield - AI-Powered Cybersecurity | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Zion Security Shield - Advanced AI-powered cybersecurity monitoring and threat detection for small to medium businesses. Protect your digital assets with 24/7 security monitoring and automated incident response."
-        />
-        <meta
-          name="keywords"
-          content="cybersecurity, threat detection, security monitoring, vulnerability assessment, endpoint protection, compliance management, AI security"
-        />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" - Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-block mb-6">
-              <div className="flex items-center justify-center space-x-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full px-4 py-2 border border-red-500/30">
-                <Shield className="w-4 h-4 text-red-400" />
-                <span className="text-red-300 text-sm font-semibold">Micro SAAS Solution</span>
-              </div>
-            </div>
-            
-            <div className="inline-block">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-                Zion Security
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 animate-pulse">
-                  {" "}Shield
-                </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
-            </div>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered cybersecurity monitoring and threat detection designed for small to medium businesses. 
-              Protect your digital assets with 24/7 security monitoring and automated incident response.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-              >
-                View Demo
-              </Link>
-            </div>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Threat Detection Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">&lt;1min</div>
-                <div className="text-gray-300">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-300">Monitoring</div>
-              </div>
-            </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8"></h1>
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </section>
 
@@ -420,7 +246,8 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </>
   );
-}
+};
+
+export default Page;

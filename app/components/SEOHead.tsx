@@ -5,16 +5,6 @@ interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
   canonical?: string;
   alternateHreflang?: Array<{ hreflang: string; href: string }>;
   canonicalUrl?: string;
@@ -23,19 +13,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  noindex = false,
-  nofollow = false,
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Leading provider of AI, blockchain, and cutting-edge technology solutions for businesses worldwide.',
+  keywords = 'AI, artificial intelligence, blockchain, technology, software development',
   canonical,
   alternateHreflang = [],
   canonicalUrl = 'https://ziontechgroup.com',
