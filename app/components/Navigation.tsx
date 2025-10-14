@@ -62,6 +62,7 @@ const Navigation: React.FC = () => {
         <h1 className="text-xl font-bold">Zion Tech Group</h1>"
         <div className="space-x-4"></div>"
     </>
+<<<<<<< HEAD
           <a href="/" className="hover:text-gray-300">Home</a>"
           <a href="/about" className="hover:text-gray-300">About</a>"
           <a href="/services" className="hover:text-gray-300">Services</a>"
@@ -71,3 +72,13 @@ const Navigation: React.FC = () => {
     </nav>
   )}
 }
+=======
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="/contact" className="hover:text-gray-300">Contact</a>
+      </nav>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a

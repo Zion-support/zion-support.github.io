@@ -18,7 +18,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   type = 'website
 }) => {
   return (
+<<<<<<< HEAD
 <>"
+=======
+<>
+      <div className="seo-enhancer"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (

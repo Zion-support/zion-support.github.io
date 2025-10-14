@@ -14,7 +14,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             </span>
             <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
               Sep    30, 2025
-            </div>
+            </span>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>

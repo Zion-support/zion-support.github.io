@@ -15,6 +15,7 @@
     }
   ]
 const CaseStudiesPage: React.FC = () => {
+<<<<<<< HEAD
   return ("
 <>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
@@ -34,6 +35,25 @@ const CaseStudiesPage: React.FC = () => {
             their operations with cutting-edge AI and IT solutions.
           </p>
         </div>
+=======
+  return (
+<>
+      <div>"""</div>
+      <Helmet>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />"""
+        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />"""
+      </Helmet>
+      <div>"""
+        {/* Hero Section */}</div>
+        <div>"""</div>
+          <h1 className="text-5xl font-bold text-white mb-6">"""
+            Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Stories</h1>
+          <p>"""
+            Discover how we"ve helped businesses across various industries transform"""
+            their operations with cutting-edge AI and IT solutions.;</p>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
     </>
                     </span>"
                     <h3 className="text-2xl font-bold text-white">{study.title}</h3>
@@ -41,6 +61,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
                     <p className="text-gray-300 mb-4">{study.description}</p>
+<<<<<<< HEAD
                   </div>"
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
@@ -51,6 +72,14 @@ const CaseStudiesPage: React.FC = () => {
                     <p className="text-gray-300">{study.solution}</p>
                   </div>
                 </div>
+=======
+                  <div>"""</div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
+                    <p className="text-gray-300">{study.challenge}</p>
+                  <div>"""</div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
+                    <p className="text-gray-300">{study.solution}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
                 { /* Results */ }
                 <div></div>"
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
@@ -139,11 +168,16 @@ const CaseStudiesPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
+<<<<<<< HEAD
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
     </div>;  )
 export default CaseStudiesPage
+=======
+          <p className="text-gray-300">This page is under construction.</p>;  )
+export default CaseStudiesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
     </div>
   )}
 export default CaseStudiesPage
@@ -153,10 +187,17 @@ import React from "react
 
 export default function CaseStudiesPage() {
   return (
+<<<<<<< HEAD
 <>"
       <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>"
       <p className="text-gray-300 text-lg">This page is under development.</p>"
     </div>
   )}
+=======
+<>
+      <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
 }
 '"

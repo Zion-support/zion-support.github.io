@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 // Analytics utility functions
 declare global {
   interface Window {
     gtag?: (..._args: unknown[]) => void;
   }
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
 
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   // Basic analytics tracking

@@ -79,6 +79,7 @@ const Footer = () => {
   return (
 <>    <footer className="bg-slate-900 text-white">"
       {/* Main Footer Content */}
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">"
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">"
           {/* Company Info */}
@@ -108,6 +109,30 @@ const Footer = () => {
               </div>
             </div>
           </div>
+=======
+      <div>""</div>
+        <div>""
+          {/* Company Info */}</div>
+          <div>""</div>
+            <div>""</div>
+              <div>""</div>
+                <span className="text-white font-bold text-lg">Z</span>
+    </>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            <p>""
+              Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.</p>
+            </p>
+            <div>""</div>
+              <div>""</div>
+                <Mail className="w-4 h-4 mr-3" />""
+                <span>contact@ziontechgroup.com</span>
+              <div>""</div>
+                <Phone className="w-4 h-4 mr-3" />""
+                <span>+1 (555) 123-4567</span>
+              <div>""</div>
+                <MapPin className="w-4 h-4 mr-3" />""
+                <span>San Francisco, CA</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
 
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (

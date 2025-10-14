@@ -10,4 +10,8 @@ const App_minimalPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default App_minimalPage;
+=======
+export default App_minimalPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a

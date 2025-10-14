@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Logger - Basic implementation;
 export default function Logger() {
   return null;
@@ -15,3 +16,6 @@ export const Logger={error: (message: string, error?: unknown) => {
   }
 };
  (Fix all linting errors and merge conflicts)
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a

@@ -8,6 +8,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
@@ -62,3 +63,13 @@ export const useAnalytics = () => {
   }
   return context;
 };
+=======
+
+        page_location: window.location.href,
+        ...properties;
+=======
+    page;
+  };
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a

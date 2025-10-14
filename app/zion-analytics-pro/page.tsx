@@ -134,12 +134,10 @@ export default function ZionAnalyticsPro() {
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your data into actionable insights with Zion Analytics Pro. Real-time dashboards, predictive analytics, and automated reporting for modern businesses."
-        />
+          content="Transform your data into actionable insights with Zion Analytics Pro. Real-time dashboards, predictive analytics, and automated reporting for modern businesses." />
         <meta
           name="keywords"
-          content="business intelligence, analytics, data visualization, predictive analytics, real-time dashboards, reporting, AI analytics, data insights"
-        />
+          content="business intelligence, analytics, data visualization, predictive analytics, real-time dashboards, reporting, AI analytics, data insights" />
       </Helmet>
 
       <div>{/* Animated Background */}</div>
@@ -154,7 +152,7 @@ export default function ZionAnalyticsPro() {
               <div>
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
                   <BarChart3 className="w-4 h-4 text-blue-400 mr-2" />
-                  <span className="text-blue-400 text-sm font-medium">Most Popular Analytics Platform</div>
+                  <span className="text-blue-400 text-sm font-medium">Most Popular Analytics Platform</span>
                 
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Zion Analytics
@@ -196,14 +194,14 @@ export default function ZionAnalyticsPro() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">Live Dashboard Preview</h3>
-                    <p className="text-gray-300">See your data in action</div>
+                    <p className="text-gray-300">See your data in action</p>
                   
                   {/* Mock Dashboard */}
                   <div className="space-y-4">
                     <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <span>Revenue</span>
-                        <span className="text-green-400 text-sm">+12.5%</div>
+                        <span className="text-green-400 text-sm">+12.5%</span>
                       <div className="text-2xl font-bold text-white">$125,430</div>
                     
                     <div className="grid grid-cols-2 gap-4">
@@ -217,7 +215,7 @@ export default function ZionAnalyticsPro() {
                     <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <span>Active Sessions</span>
-                        <span className="text-yellow-400 text-sm">Live</div>
+                        <span className="text-yellow-400 text-sm">Live</span>
                       <div className="text-2xl font-bold text-white">1,234</div>
           </section>
 
@@ -247,7 +245,7 @@ export default function ZionAnalyticsPro() {
                   <div>{feature.benefits.map((benefit, idx) => (</div>
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{benefit}</div>
+                        <span>{benefit}</span>
                     ))}
                   </div>
               ))}
@@ -270,20 +268,20 @@ export default function ZionAnalyticsPro() {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
-                      </div>
+                      </span>
                   )}
                   
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
                       <span>{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</div>
-                    <p className="text-gray-300 mt-2">{plan.description}</div>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <p className="text-gray-300 mt-2">{plan.description}</p>
                   
                   <div>{plan.features.map((feature, idx) => (</div>
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</div>
+                        <span>{feature}</span>
                     ))}
                   </div>
                   
@@ -349,13 +347,13 @@ export default function ZionAnalyticsPro() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-blue-400">kleber@ziontechgroup.com</div>
+                  <p className="text-blue-400">kleber@ziontechgroup.com</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-blue-400">+1 302 464 0950</div>
+                  <p className="text-blue-400">+1 302 464 0950</p>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <MapPin className="w-6 h-6 text-white" />

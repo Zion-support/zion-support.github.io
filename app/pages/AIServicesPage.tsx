@@ -104,6 +104,7 @@ const AIServicesPage: React.FC = () => {
 const AIServicesPage: React.FC = () => {
   return (
     <>
+<<<<<<< HEAD
       <Helmet></Helmet>
         <title>AIServicesPage - Zion Tech Group</title>"
         <meta name="description" content="AIServicesPage - Zion Tech Group" />"
@@ -116,6 +117,18 @@ const AIServicesPage: React.FC = () => {
       </div>
     </div>;  )
 export default AIServicesPage
+=======
+      <Helmet>
+        <title>AIServicesPage - Zion Tech Group</title>
+        <meta name="description" content="AIServicesPage - Zion Tech Group" />""
+      </Helmet>
+      <div>""</div>
+    </>
+        <div>""</div>
+          <h1 className="text-4xl font-bold mb-4">AIServicesPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>;  )
+export default AIServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
     </>
   )
 export default AIServicesPage
@@ -125,11 +138,19 @@ import React from "react
 
 const AIServicesPage = () => {
   return (
+<<<<<<< HEAD
   <>"
       <h1 className="text-4xl font-bold mb-8">AIServicesPage</h1>"
       <p className="text-gray-300 text-lg">This page is under development.</p>"
     </div>
     </>
 )
+=======
+  <>
+      <h1 className="text-4xl font-bold mb-8">AIServicesPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+  </>
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
 }
 "

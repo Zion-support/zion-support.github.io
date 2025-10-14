@@ -12,9 +12,13 @@ const AppPage = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">App</h1>
+<<<<<<< HEAD
             <p className="text-gray-300 text-lg">
               This page is under construction. Please check back later.
             </p>
+=======
+            <p>This page is under construction. Please check back later.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
           </div>
         </div>
       </div>

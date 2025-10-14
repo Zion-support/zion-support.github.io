@@ -19,6 +19,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
+<<<<<<< HEAD
   height,
   className = '',
   priority = false,
@@ -26,6 +27,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   sizes = '100vw',
   quality = 85,
   loading = 'lazy',
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-da9a
   onLoad,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
