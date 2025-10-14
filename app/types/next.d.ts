@@ -1,12 +1,6 @@
-// Next.js type definitions
-declare module 'next' {}''  interface NextConfig {// Add properties here}
-    // Add any custom Next.js configuration types here
+declare module 'next' {
+  interface NextPageProps {
+    params: { [key: string]: string };
+    searchParams: { [key: string]: string | string[] | undefined };
   }
 }
-
-// Export a default configuration object;
-const nextConfig={};
-  // Configuration options
-};
-;
-export default nextConfig;

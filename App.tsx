@@ -1,95 +1,64 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
-// Components
-import Footer from './app/components/Footer';
-import Navigation from './app/components/Navigation';
-import LoadingStates from './app/components/LoadingStates';
-
-// Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/services/page';
-import BlogPage from './app/pages/BlogPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-      <div className="text-center">
-        <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mb-4">
-          <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-          </svg>
-        </div>
-        <h2 className="text-lg font-medium text-gray-900 mb-2">Something went wrong</h2>
-        <p className="text-sm text-gray-500 mb-4">
-          {error.message || 'An unexpected error occurred'}
-        </p>
-        <button
-          onClick={resetErrorBoundary}
-          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          Try again
-        </button>
-      </div>
-    </div>
-  </div>
-);
-
-const App: React.FC = () => {
+// Main App component
+function App() {
   return (
-    <HelmetProvider>
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Router>
-          <div className="min-h-screen flex flex-col">
-            <Navigation />
-            <main className="flex-grow">
-              <Suspense fallback={<LoadingStates />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-gray-900 mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
-                        <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                          Go Home
-                        </a>
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
+    <Router>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Helmet>
+          <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+          <meta name="description" content="Professional AI and IT solutions by Zion Tech Group. Advanced technology services for modern businesses." />
+        </Helmet>
+        
+        <div className="container mx-auto px-4 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced AI & IT Solutions
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-4xl mx-auto">
+              <h2 className="text-2xl font-semibold text-white mb-4">
+                Welcome to Zion Tech Group
+              </h2>
+              <p className="text-gray-200 mb-6">
+                We provide cutting-edge AI and IT solutions to help businesses thrive in the digital age.
+              </p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div className="bg-blue-500/20 border border-blue-400/30 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-blue-200 mb-2">
+                    AI Solutions
+                  </h3>
+                  <p className="text-blue-100 text-sm">
+                    Advanced artificial intelligence solutions for automation and optimization.
+                  </p>
+                </div>
+                <div className="bg-green-500/20 border border-green-400/30 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-green-200 mb-2">
+                    IT Services
+                  </h3>
+                  <p className="text-green-100 text-sm">
+                    Comprehensive IT infrastructure and support services.
+                  </p>
+                </div>
+                <div className="bg-purple-500/20 border border-purple-400/30 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-purple-200 mb-2">
+                    Cloud Solutions
+                  </h3>
+                  <p className="text-purple-100 text-sm">
+                    Scalable cloud infrastructure and migration services.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+        </div>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;

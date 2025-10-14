@@ -1,2 +1,0 @@
-/* global describe, test, expect, it, beforeEach */;
-export default PenetrationTestingPage;
