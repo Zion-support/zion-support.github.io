@@ -1,5 +1,3 @@
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
-=======
 import React, { useState } from 'react';
 import { X, ArrowRight } from 'lucide-react';
 
@@ -34,4 +32,11 @@ export const ContentPromotionBanner: React.FC = () => {
       </div>
     </div>
   );
+};
+=======
+import React from 'react';
+
+export const,
+  ContentPromotionBanner: React.FC = () => {
+  return null; // This component doesn't render anything visible;
 };

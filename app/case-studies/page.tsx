@@ -11,20 +11,24 @@ import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 
 interface CaseStudy {
+  
   id: string;
   title: string;
   client: string;
   industry: string;
   challenge: string;
   solution: string;
-  results: string[];
+  results: string[];;
   image: string;
   duration: string;
   team: string;
+
 }
 
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies: CaseStudy[] = [
+const,
+  CaseStudiesPage: React.FC = () => {
+  const,
+  caseStudies: CaseStudy[] =[
     {
       id: "1",
       title: "AI-Powered Customer Service Transformation",
@@ -178,11 +182,9 @@ const CaseStudiesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Stories
-              </span>
+            <h1 className="text-4xl,
+  md:text-6xl font-bold text-white mb-6">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Discover how we&apos;ve helped businesses across industries
@@ -190,7 +192,8 @@ const CaseStudiesPage: React.FC = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2,
+  md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
@@ -209,9 +212,11 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1,
+  lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div key ={study.id} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20,
+  hover:border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -272,13 +277,15 @@ const CaseStudiesPage: React.FC = () => {
 
                     <div className="flex items-center justify-between">
                       <Link to ={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
-                        Read Full Case Study
+                        classNam e ="flex items-center gap-2 text-purple-400,
+  hover:text-purple-300 transition-colors">
+                        Read Full Case Study;
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                      <button className="flex items-center gap-2 text-gray-400,
+  hover:text-white transition-colors">
                         <ExternalLink className="w-4 h-4" />
-                        Share
+                        Share;
                       </button>
                     </div>
                   </div>
@@ -299,15 +306,20 @@ const CaseStudiesPage: React.FC = () => {
                 Let&apos;s discuss how we can help transform your business with
                 our AI and IT solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col,
+  sm:flex-row gap-4 justify-center">
                 <Link to ="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  Start Your Project
+                  classNam e ="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold,
+  hover:from-purple-600,
+  hover:to-blue-600 transition-all duration-300 transform,
+  hover:scale-105">
+                  Start Your Project;
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link to ="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  Explore Our Services
+                  classNam e ="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20,
+  hover:bg-white/20 transition-all duration-300">
+                  Explore Our Services;
                 </Link>
               </div>
             </div>

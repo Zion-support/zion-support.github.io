@@ -1,33 +1,8 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
-const SEOOptimizer: React.FC = () => {
-  useEffect(() => {
-    // SEO optimization strategies
-    const optimizeSEO = () => {
-      // Add structured data
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "description": "Leading provider of advanced AI and IT solutions",
-        "url": "https://ziontech.com",
-        "logo": "https://ziontech.com/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-555-123-4567",
-          "contactType": "customer service"
-        },
-        "sameAs": [
-          "https://twitter.com/ziontech",
-          "https://linkedin.com/company/ziontech"
-        ]
-      };
-
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
-};
+const,
+  SEOOptimizer: React.FC = () => {
+  return null; // This component doesn't render anything visible};
 
 export default SEOOptimizer;
 =======

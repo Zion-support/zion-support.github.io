@@ -1,11 +1,13 @@
 interface Config {
+  
   apiUrl: string;
   environment: string;
   features:{
     analytics: boolean;
     seo: boolean;
     performance: boolean;
-  };[key: string]: unknown;
+  
+};[key: string]: unknown;
 }
 
 export const configManager ={
@@ -18,18 +20,18 @@ export const configManager ={
       performance: true}
   } asConfig,
   
-  get: (key: string) => {
-    return key.split('.').reduce((obj: unknown, k: string) => {
+  get: (key: string)  => {
+    return key.split('.').reduce((obj: unknown, k: string)  => {
       if (obj && typeof obj ==='object' && k in obj) {
         return (obj asRecord<string, unknown>)[k];
       }
       return undefined;
     }, configManager.config);
   },
-  set: (key: string, value: unknown) => {
+  set: (key: string, value: unknown)  => {
     const keys = key.split('.');
     const lastKey = keys.pop();
-    const target = keys.reduce((obj: Record<string, unknown>, k: string) => {
+    const target = keys.reduce((obj: Record<string, unknown>, k: string)  => {
       if (!(k in obj)) {
         obj[k] ={};
       }

@@ -30,18 +30,37 @@ import { Helmet } from 'react-helmet-async';
 //     role: "Head of Engineering",
 //     expertise: "5G Technology & IoT",
 //     image: "/images/team/david-kim.jpg",
-//     bio: "Telecommunications expert with extensive experience in 5G implementation."
-//   }
+//     bio: "Telecommunications expert with extensive experience in 5G implementation."//   }
 // ];
 
-<<<<<<< HEAD
+// Company values (for future use)
+// const values = [
+//   {
+//     icon: <Brain className="w-8 h-8" />,
+//     title: "Innovation First",
+//     description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions."
+//   },
+//   {
+//     icon: <Shield className="w-8 h-8" />,
+//     title: "Security & Trust",
+//     description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures."
+//   },
+//   {
+//     icon: <Users className="w-8 h-8" />,
+//     title: "Client Success",
+//     description: "Our success is measured by our clients' success. We're committed to delivering exceptional results."
+//   },
+//   {
+//     icon: <Award className="w-8 h-8" />,
+//     title: "Excellence",
+//     description: "We maintain the highest standards of quality in everything we do, from code to customer service."//   }
+// ];
+
 // Company stats (for future use)
 // const stats = [
 //   { number: "500+", label: "Projects Completed" },
 //   { number: "150+", label: "Happy Clients" },
 //   { number: "99.9%", label: "Uptime Guarantee" },
-//   { number: "24/7", label: "Support Available" }
-=======
 // ];
 =======
   // Company stats (for future use)
@@ -51,9 +70,12 @@ import { Helmet } from 'react-helmet-async';
   //   { number: "99.9%", label: "Uptime Guarantee" },
   //   { number: "24/7", label: "Support Available" }
   // ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ea81
+=======
+//   { number: "24/7", label: "Support Available" }// ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-443a
 
-const AboutPage: React.FC = () => {
+const,
+  AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -70,12 +92,14 @@ const AboutPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">About</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional about solutions and services
+              Professional about solutions and services;
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid,
+  md:grid-cols-2,
+  lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
+                  Expert Solutions;
                 </h3>
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
@@ -83,7 +107,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
+                  Custom Implementation;
                 </h3>
                 <p className="text-green-700">
                   Tailored implementations for your specific requirements.
@@ -91,7 +115,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
+                  24/7 Support;
                 </h3>
                 <p className="text-purple-700">
                   Round-the-clock support for all your needs.

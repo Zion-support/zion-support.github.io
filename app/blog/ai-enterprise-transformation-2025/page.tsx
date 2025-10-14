@@ -2,9 +2,10 @@ import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
 
-const AiEnterpriseTransformation2025Page: React.FC = () => {
-<<<<<<< HEAD
 =======
+const,
+  AiEnterpriseTransformation2025Page: React.FC = () => {
+
   return (
     <>
       <Helmet>
@@ -17,12 +18,14 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Ai Enterprise Transformation 2025</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional ai enterprise transformation 2025 solutions and services
+              Professional ai enterprise transformation 2025 solutions and services;
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid,
+  md:grid-cols-2,
+  lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
+                  Expert Solutions;
                 </h3>
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
@@ -30,7 +33,7 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
+                  Custom Implementation;
                 </h3>
                 <p className="text-green-700">
                   Tailored implementations for your specific requirements.
@@ -38,7 +41,7 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
+                  24/7 Support;
                 </h3>
                 <p className="text-purple-700">
                   Round-the-clock support for all your needs.

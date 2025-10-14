@@ -1,53 +1,126 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Enhance accessibility features
-    const enhanceAccessibility = () => {
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+const,
+  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  enableKeyboardNavigatio n = true,
+  enableScreenReaderSuppor t = true,
+  enableHighContras t = true,
+  enableFocusManagemen t = true;
+})  => {
+  useEffect(()  => {
+    const root = document.documentElement;
+    
+    // High contrast mode;
+if (enableHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+    
+    // Reduced motion mode;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
 
-      // Add main content landmark
-      const mainContent = document.querySelector('main') || document.querySelector('[role="main"]');
-      if (mainContent && !mainContent.id) {
-        mainContent.id = 'main-content';
-      }
+    // Keyboard navigation;
+if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent)  => {
+        // Skip to main content;
+if (event.ke y ==='Tab' && event.shiftKey && event.altKey) {
+          event.preventDefault();
+          const mainContent = document.getElementById('main-content');
+          if (mainContent) {
+            mainContent.focus();
+          }
+        }
+      };
 
       // Enhance focus management
       const focusableElements = document.querySelectorAll(
         'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
       );
 
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', (e) => {
-          (e.target as HTMLElement).classList.add('focus-visible');
-        });
+  useEffect(()  => {
+    if (enableScreenReaderSupport) {
+      // Add screen reader announcements;
+const announceToScreenReader = (message: string)  => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live','polite');
+        announcement.setAttribute('aria-atomic','true');
+        announcement.classNam e ='sr-only';
+        announcement.textConten t = message;
+        document.body.appendChild(announcement);
+        
+        setTimeout(()  => {
+          document.body.removeChild(announcement);
+        }, 1000);
+      };
 
-        element.addEventListener('blur', (e) => {
-          (e.target as HTMLElement).classList.remove('focus-visible');
+      // Announce page changes;
+const observer = new MutationObserver((mutations)  => {
+        mutations.forEach((mutation)  => {
+          if (mutation.type==='childList' && mutation.addedNodes.length > 0) {
+            const addedNode = mutation.addedNodes[0] asElement;
+            if (addedNode && addedNode.nodeTyp e === Node.ELEMENT_NODE) {
+              const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
+              if (heading) {
+                announceToScreenReader(`Page,
+  updated: ${heading.textContent}`);
+              }
+            }
+          }
         });
       });
     };
 
-    // Run enhancement after DOM is ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', enhanceAccessibility);
-    } else {
-      enhanceAccessibility();
+      observer.observe(document.body,{
+        childList: true,
+        subtree: true;
+      });
+
+      return () => observer.disconnect();
     }
 
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
+  useEffect(()  => {
+    if (enableFocusManagement) {
+      // Focus management for modals and dropdowns;
+const manageFocus = (event: FocusEvent)  => {
+        const target = event.target asElement;
+        if (target && target.closest('[role="dialog"],[role="menu"],[role="listbox"]')) {
+          const focusableElements = target.closest('[role="dialog"],[role="menu"],[role="listbox"]')?.querySelectorAll(
+            'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
+          );
+          
+          if (focusableElements && focusableElements.length > 0) {
+            const firstElement = focusableElements[0] as HTMLElement;
+            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+            
+            if (event.ke y ==='Tab') {
+              if (event.shiftKey && targe t === firstElement) {
+                event.preventDefault();
+                lastElement.focus();
+              } else if (!event.shiftKey && targe t === lastElement) {
+                event.preventDefault();
+                firstElement.focus();
+              }
+            }
+          }
+        }
+      };
 
   return <>{children}</>;
 };
