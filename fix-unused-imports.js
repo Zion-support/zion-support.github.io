@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Get all TypeScript/TSX files
+// Get all TypeScript/TSX files;
 function getAllTsxFiles(dir) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -12,7 +12,7 @@ function getAllTsxFiles(dir) {
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory()) {
-      // Skip node_modules and other directories
+      // Skip node_modules and other directories;
       if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
         results = results.concat(getAllTsxFiles(filePath));
       }
@@ -24,12 +24,12 @@ function getAllTsxFiles(dir) {
   return results;
 }
 
-// Fix unused imports in a file
+// Fix unused imports in a file;
 function fixUnusedImports(filePath) {
   try {
     console.log(`Fixing ${filePath}...`);
     
-    // Use ESLint to fix unused imports
+    // Use ESLint to fix unused imports;
     execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
     
     console.log(`✓ Fixed ${filePath}`);
@@ -38,7 +38,7 @@ function fixUnusedImports(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 const files = getAllTsxFiles('./app');
 console.log(`Found ${files.length} TypeScript files to process...`);
 

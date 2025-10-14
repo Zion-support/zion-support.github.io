@@ -1,45 +1,28 @@
 export interface Service {
-  id: string;,
-
+  id: string;
   title: string,
-        description: string;,
+        description: string;
+  shortDescription: string;
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
+  icon: string;
+  features: string[];
+  pricing: {
+    basic: number;
+    pro: number;
+    enterprise: number};
+  benefits: string[];
+  useCases: string[];
+  technologies: string[];
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;}
+  };
 
-  shortDescription: string;,
-
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';,
-
-  icon: string;,
-
-  features: string[];,
-
-  pricing: {,
-
-    basic: number;,
-
-    pro: number;,
-
-    enterprise: number,
-  }
-  benefits: string[];,
-
-  useCases: string[];,
-
-  technologies: string[];,
-
-  contactInfo: {,
-
-    phone: string;,
-
-    email: string;,
-
-    website: string,
-  }
-  href: string,
 }
 
 export const services: Service[] = [
-  {,
-
+  {
     id: 'ai-solutions',
     title: 'AI Solutions',
     description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.',
@@ -54,8 +37,7 @@ export const services: Service[] = [
       'AI Chatbots',
       'Automated Decision Making;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 5000,
       pro: 15000,
       enterprise: 50000
@@ -85,8 +67,7 @@ export const services: Service[] = [
       'Pandas',
       'NumPy;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'ai@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-solutions;
@@ -109,12 +90,12 @@ export const services: Service[] = [
       'Incident Response',
       'Security Training;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 3000,
       pro: 10000,
       enterprise: 30000;
-    },
+    ,
+  },
     benefits: [
 
       'Enhanced Security',
@@ -141,8 +122,7 @@ export const services: Service[] = [
       'WAF',
       'DLP;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'security@ziontechgroup.com',
       website: 'https://ziontechgroup.com/cybersecurity;
@@ -165,8 +145,7 @@ export const services: Service[] = [
       'Auto-scaling',
       'Disaster Recovery;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 2000,
       pro: 8000,
       enterprise: 25000
@@ -196,8 +175,7 @@ export const services: Service[] = [
       'Terraform',
       'Ansible;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'cloud@ziontechgroup.com',
       website: 'https://ziontechgroup.com/cloud-infrastructure;
@@ -219,8 +197,7 @@ export const services: Service[] = [
       'Digital Strategy',
       'Technology Adoption;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 10000,
       pro: 30000,
       enterprise: 100000
@@ -250,8 +227,7 @@ export const services: Service[] = [
       'Mobile Solutions',
       'IoT Integration;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'transformation@ziontechgroup.com',
       website: 'https://ziontechgroup.com/digital-transformation;
@@ -273,8 +249,7 @@ export const services: Service[] = [
       'Edge Computing',
       'Network Slicing;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 15000,
       pro: 50000,
       enterprise: 150000
@@ -304,8 +279,7 @@ export const services: Service[] = [
       'SDN/NFV',
       'AI/ML;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: '5g@ziontechgroup.com',
       website: 'https://ziontechgroup.com/5g-solutions;
@@ -327,8 +301,7 @@ export const services: Service[] = [
       'Multi-tenancy',
       'Analytics Dashboard;
     ],
-    pricing: {,
-
+    pricing: {
       basic: 8000,
       pro: 25000,
       enterprise: 75000
@@ -358,8 +331,7 @@ export const services: Service[] = [
       'Kubernetes',
       'Stripe API;
     ],
-    contactInfo: {,
-
+    contactInfo: {
       phone: '+1-302-464-0950',
       email: 'saas@ziontechgroup.com',
       website: 'https://ziontechgroup.com/micro-saas-solutions;
@@ -369,9 +341,7 @@ export const services: Service[] = [
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)};
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)};

@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix final syntax errors
+// Function to fix final syntax errors;
 function fixFinalSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix malformed array declarations
+    // Fix malformed array declarations;
     content = content.replace(/const\s+data\s*=\s*\[\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {
       const titleMatch = match.match(/'([^']*)',\s*;\s*client:\s*'([^']*)',\s*;\s*industry:\s*'([^']*)',/);
       if (titleMatch) {
@@ -22,7 +22,7 @@ function fixFinalSyntaxErrors(filePath) {
       return match;
     });
     
-    // Fix malformed object properties
+    // Fix malformed object properties;
     content = content.replace(/title:\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {
       const titleMatch = match.match(/title:\s*'([^']*)',\s*;\s*client:\s*'([^']*)',\s*;\s*industry:\s*'([^']*)',/);
       if (titleMatch) {
@@ -33,28 +33,28 @@ function fixFinalSyntaxErrors(filePath) {
       return match;
     });
     
-    // Fix malformed function declarations
+    // Fix malformed function declarations;
     content = content.replace(/const\s+ComponentName\s*=\s*\(\s*\)\s*=>\s*{/g, 'const ComponentName = () => {');
     
-    // Fix malformed return statements
+    // Fix malformed return statements;
     content = content.replace(/return\s*\(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>');
     
-    // Fix malformed JSX closing tags
+    // Fix malformed JSX closing tags;
     content = content.replace(/<\/>\s*\)\s*;\s*}\s*export\s+default/g, '</>\n  );\n};\n\nexport default');
     
-    // Fix stray semicolons in object properties
-    content = content.replace(/;\s*client:/g, ',\n        client:');
-    content = content.replace(/;\s*industry:/g, ',\n        industry:');
-    content = content.replace(/;\s*description:/g, ',\n        description:');
-    content = content.replace(/;\s*results:/g, ',\n        results:');
+    // Fix stray semicolons in object properties;
+    content = content.replace(/;\s*client:/g, ',\n        client: ');'
+    content = content.replace(/;\s*industry:/g, ',\n        industry: ');'
+    content = content.replace(/;\s*description:/g, ',\n        description: ');'
+    content = content.replace(/;\s*results:/g, ',\n        results: ');'
     
-    // Fix malformed array syntax
-    content = content.replace(/\[\s*'[^']*',\s*;\s*client:/g, '[\n      {\n        title: \'$1\',\n        client:');
+    // Fix malformed array syntax;
+    content = content.replace(/\[\s*'[^']*',\s*;\s*client:/g, '[\n      {\n        title: \'$1\',\n        client: ');'
     
-    // Clean up multiple consecutive empty lines
+    // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Ensure file ends with single newline
+    // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
@@ -69,7 +69,7 @@ function fixFinalSyntaxErrors(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -92,7 +92,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with final syntax errors...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -113,7 +113,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

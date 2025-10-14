@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors;
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix duplicate export statements
+    // Fix duplicate export statements;
     const exportRegex = /export\s+default\s+\w+;\s*export\s+default\s+\w+/g;
     if (exportRegex.test(content)) {
       content = content.replace(exportRegex, (match) => {
@@ -19,30 +19,30 @@ function fixSyntaxErrors(filePath) {
       modified = true;
     }
     
-    // Fix stray closing parentheses and braces
+    // Fix stray closing parentheses and braces;
     content = content.replace(/\s*\)\s*\}\s*export\s+default/g, '\nexport default');
     content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\nexport default');
     
-    // Fix malformed JSX closing tags
+    // Fix malformed JSX closing tags;
     content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\n};\n\nexport default');
     
-    // Fix duplicate closing braces
+    // Fix duplicate closing braces;
     content = content.replace(/\}\s*\}\s*export\s+default/g, '\n};\n\nexport default');
     
-    // Fix stray closing parentheses
+    // Fix stray closing parentheses;
     content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\n};\n\nexport default');
     
-    // Fix missing semicolons after function declarations
+    // Fix missing semicolons after function declarations;
     content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default/g, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
     
-    // Fix malformed function declarations
+    // Fix malformed function declarations;
     content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default\s+\w+/g, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
     
-    // Remove duplicate export statements at the end
+    // Remove duplicate export statements at the end;
     const lines = content.split('\n');
     const exportLines = lines.filter(line => line.trim().startsWith('export default'));
     if (exportLines.length > 1) {
-      // Keep only the last export statement
+      // Keep only the last export statement;
       const lastExportIndex = lines.lastIndexOf(exportLines[exportLines.length - 1]);
       const filteredLines = lines.filter((line, index) => {
         if (line.trim().startsWith('export default') && index !== lastExportIndex) {
@@ -54,13 +54,13 @@ function fixSyntaxErrors(filePath) {
       modified = true;
     }
     
-    // Fix missing closing braces in function declarations
+    // Fix missing closing braces in function declarations;
     content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
     
-    // Clean up multiple consecutive empty lines
+    // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Ensure file ends with single newline
+    // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
@@ -75,7 +75,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -98,7 +98,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with syntax errors...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -119,7 +119,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -56,21 +56,21 @@ const keepFiles = [
   'eslint.config.js'
 ];
 
-// Directories to keep
+// Directories to keep;
 const keepDirs = [
   'node_modules',
   '.git',
   'src'
 ];
 
-// Function to check if a file should be kept
+// Function to check if a file should be kept;
 function shouldKeepFile(filePath) {
-  // Check if it's in the keep list
+  // Check if it's in the keep list;
   if (keepFiles.includes(filePath)) {
     return true;
   }
   
-  // Check if it's in a keep directory
+  // Check if it's in a keep directory;
   for (const dir of keepDirs) {
     if (filePath.startsWith(dir + '/')) {
       return true;
@@ -80,11 +80,11 @@ function shouldKeepFile(filePath) {
   return false;
 }
 
-// Function to delete all corrupted files
+// Function to delete all corrupted files;
 async function finalCleanup() {
   console.log('Performing final cleanup...');
   
-  // Find all TypeScript and TSX files
+  // Find all TypeScript and TSX files;
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
@@ -115,7 +115,7 @@ async function finalCleanup() {
   console.log(`Deleted ${deletedCount} corrupted files`);
 }
 
-// Main execution
+// Main execution;
 async function main() {
   await finalCleanup();
   console.log('Final cleanup completed!');

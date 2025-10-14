@@ -1,73 +1,73 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files with unused imports
-const filesToFix = [
-  'app/ai-customer-sentiment-tracker/page.tsx',
-  'app/ai-powered-devops/page.tsx',
-  'app/ai-quantum-computing/page.tsx',
-  'app/ai-quantum-financial-oracle/page.tsx',
-  'app/ai-sentiment-analysis-pro/page.tsx',
-  'app/ai-services/page.tsx',
-  'app/ai-space-mission-optimizer/page.tsx'
-];
-
-// Common unused imports to remove
-const unusedImports = [
-  'Link', 'Shield', 'Globe', 'Star', 'Users', 'Award', 'Clock', 'Zap', 'Brain',
-  'Frown', 'Database', 'PieChart', 'Target', 'TrendingUp', 'Cpu', 'Mic', 'Layers',
-  'Box', 'Search', 'Settings', 'Sparkles', 'Smartphone', 'Lock', 'Calendar',
-  'Filter', 'Download', 'Upload', 'Share', 'Bell', 'Heart', 'ThumbsUp', 'Wifi',
-  'Battery', 'Camera', 'Headphones', 'Video', 'Music', 'BookOpen', 'Lightbulb',
-  'Puzzle', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Wallet', 'Banknote',
-  'Coins', 'Gift', 'Tag', 'Percent', 'Calculator', 'Activity', 'Grid', 'List',
-  'Map', 'Compass', 'Navigation', 'Globe2', 'WifiOff', 'Signal', 'Bluetooth',
-  'Usb', 'HardDrive', 'MemoryStick', 'Printer', 'Scanner', 'Fax', 'Voicemail',
-  'Headset', 'Speaker', 'Volume2', 'VolumeX', 'Play', 'Pause', 'Stop', 'SkipBack',
-  'SkipForward', 'RotateCcw', 'RotateCw', 'Shuffle', 'Repeat', 'Repeat1',
-  'Shuffle2', 'Maximize', 'Minimize', 'Square', 'Circle', 'Triangle', 'Hexagon',
-  'Octagon', 'Diamond', 'Moon', 'Sun', 'Sunrise', 'Sunset', 'CloudRain',
-  'CloudSnow', 'CloudLightning', 'Wind', 'Droplets', 'Thermometer', 'Gauge',
-  'Timer', 'Stopwatch', 'Hourglass', 'DollarSign', 'Eye', 'Rocket', 'MessageSquare',
-  'Smile', 'LineChart', 'ArrowRight', 'MapPin', 'BarChart3'
-];
-
-function fixFile(filePath) {
+// Function to remove unused imports from a file
+function fixUnusedImports(filePath) {
   try {
-    const fullPath = path.join(__dirname, filePath);
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
-    // Remove unused imports from lucide-react
-    const importRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-    
-    content = content.replace(importRegex, (match, imports) => {
-      const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {
-        const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-        return !unusedImports.includes(cleanImp);
-      });
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Find all import statements
+    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
+    const matches = [...content.matchAll(importRegex)];
+
+    for (const match of matches) {
+      const fullImport = match[0];
+      const importList = match[1];
       
-      if (usedImports.length === 0) {
-        return ''; // Remove entire import if no imports are used
+      // Split the imports and clean them
+      const imports = importList.split(',').map(imp => imp.trim());
+      const usedImports = [];
+      
+      // Check which imports are actually used in the file
+      for (const imp of imports) {
+        const importName = imp.split(' as ')[0].trim();
+        // Skip default imports and check if the import is used
+        if (importName && importName !== 'default' && content.includes(importName)) {
+          usedImports.push(imp);
+        }
       }
       
-      return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-    });
-    
-    // Remove unused Link imports
-    content = content.replace(/import\s*{\s*Link\s*}\s*from\s*['"]react-router-dom['"];?\n?/g, '');
-    
-    // Remove unused variables
-    content = content.replace(/const\s+benefits\s*=\s*[^;]+;/g, '');
-    
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+      // If we have unused imports, replace the import statement
+      if (usedImports.length !== imports.length) {
+        if (usedImports.length === 0) {
+          // Remove the entire import line if no imports are used
+          content = content.replace(fullImport + '\n', '');
+        } else {
+          // Replace with only used imports
+          const newImport = fullImport.replace(importList, usedImports.join(', '));
+          content = content.replace(fullImport, newImport);
+        }
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed unused imports in: ${filePath}`);
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixFile);
+// Function to recursively find and process all TypeScript/JavaScript files
+function processDirectory(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && file !== 'dist') {
+      processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      fixUnusedImports(filePath);
+    }
+  }
+}
 
-console.log('Unused imports fixed!');
+// Start processing from the current directory
+console.log('Starting to fix unused imports...');
+processDirectory('.');
+console.log('Finished fixing unused imports!');

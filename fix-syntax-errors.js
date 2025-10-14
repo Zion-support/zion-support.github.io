@@ -1,109 +1,121 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors;
 function fixSyntaxErrors(content) {
   let fixed = content;
   
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\n\s*)(\w+):/g, '$1: $2,\n$3$4:');
-  
-  // Fix missing commas in arrays
-  fixed = fixed.replace(/(\w+)\s*(\n\s*)(\w+):/g, '$1,\n$2$3:');
-  
-  // Fix semicolons in JSX text content
-  fixed = fixed.replace(/(<[^>]+>)\s*([^<]+);\s*(<\/[^>]+>)/g, '$1$2$3');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*);\s*"/g, 'className="$1"');
-  
-  // Fix missing closing tags
-  fixed = fixed.replace(/<(\w+)([^>]*)>\s*([^<]+)\s*;\s*<\/\1>/g, '<$1$2>$3</$1>');
-  
-  // Fix duplicate content (remove everything after the first closing brace of a function)
-  const functionMatch = fixed.match(/(export\s+default\s+function[^{]+\{[^}]+})/s);
-  if (functionMatch) {
-    const functionEnd = fixed.indexOf('}', functionMatch.index + functionMatch[0].length);
-    if (functionEnd !== -1) {
-      const afterFunction = fixed.substring(functionEnd + 1);
-      if (afterFunction.trim().length > 0) {
-        // Keep only the function and remove everything after
-        fixed = fixed.substring(0, functionEnd + 1) + '\n}';
-      }
+  // Fix unterminated string literals - add missing quotes;
+  fixed = fixed.replace(/([^\\])(['"])([^'"]*?)(\n|$)/g, (match, before, quote, text, newline) => {
+    if (text.trim() && !text.includes(quote)) {
+      return before + quote + text + quote + newline;
     }
-  }
+    return match;
+  });
   
-  // Fix missing semicolons in object properties
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\n\s*)(\w+):/g, '$1: $2,\n$3$4:');
+  // Fix malformed object properties - add missing commas;
+  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*)['"]\s*(\n\s*[^,}\s])/g, '$1: \'$2\',$3');
   
-  // Fix malformed grid classes
-  fixed = fixed.replace(/grid md:\s*grid-cols/g, 'grid md:grid-cols');
+  // Fix missing commas in arrays and objects;
+  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*)['"]\s*(\n\s*[^,}\s])/g, '$1: \'$2\',$3');
   
-  // Fix missing closing parentheses in JSX
-  fixed = fixed.replace(/(<[^>]+>)\s*([^<]+)\s*;\s*(<\/[^>]+>)/g, '$1$2$3');
+  // Fix unterminated JSX attributes;
+  fixed = fixed.replace(/(\w+)=['"]([^'"]*?)(\n|$)/g, (match, attr, value, newline) => {
+    if (value.trim() && !value.includes('"') && !value.includes("'")) {
+      return attr + '="' + value + '"' + newline;
+    }
+    return match;
+  });
   
-  // Fix duplicate closing tags
-  fixed = fixed.replace(/(<\/[^>]+>)\s*<\/[^>]+>/g, '$1');
+  // Fix missing closing tags - basic pattern matching;
+  fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, (match, tag, attrs) => {
+    return match + `</${tag}>`;
+  });
   
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*<\/>/g, '<></>');
+  // Fix malformed imports;
+  fixed = fixed.replace(/import\s+{\s*([^}]*?)\s*}\s*from\s*['"]([^'"]*)['"];?\s*$/gm, (match, imports, module) => {
+    const cleanImports = imports.replace(/[,\s]+$/, '').replace(/,\s*$/, '');
+    return `import { ${cleanImports} } from '${module}';`;
+  });
   
-  // Fix missing closing braces
-  const openBraces = (fixed.match(/\{/g) || []).length;
-  const closeBraces = (fixed.match(/\}/g) || []).length;
-  if (openBraces > closeBraces) {
-    fixed += '\n}'.repeat(openBraces - closeBraces);
+  // Fix missing semicolons;
+  fixed = fixed.replace(/(\w+)\s*$/gm, (match) => {
+    if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}')) {
+      return match + ';';
+    }
+    return match;
+  });
+  
+  return fixed;
+}
+
+// Function to fix specific file patterns;
+function fixFilePatterns(filePath, content) {
+  let fixed = content;
+  
+  // Fix common React component issues;
+  if (filePath.includes('.tsx') || filePath.includes('.jsx')) {
+    // Fix missing React import;
+    if (!fixed.includes('import React') && fixed.includes('React.FC')) {
+      fixed = "import React from 'react';\n" + fixed;
+    }
+    
+    // Fix missing closing tags in JSX;
+    fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, (match, tag, attrs) => {
+      if (!match.includes('</')) {
+        return match + `</${tag}>`;
+      }
+      return match;
+    });
   }
   
   return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
+// Main function to process files;
+async function processFiles() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
+    'app/**/*.jsx',
+    'app/**/*.js'
   ];
   
-  let totalFixed = 0;
+  let totalFiles = 0;
+  let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
+    
     for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+      try {
+        const filePath = path.resolve(file);
+        const content = fs.readFileSync(filePath, 'utf8');
+        
+        totalFiles++;
+        
+        // Skip if file is already valid (basic check)
+        if (content.includes('export default') || content.includes('export {')) {
+          let fixed = fixSyntaxErrors(content);
+          fixed = fixFilePatterns(file, fixed);
+          
+          if (fixed !== content) {
+            fs.writeFileSync(filePath, fixed, 'utf8');
+            fixedFiles++;
+            console.log(`Fixed: ${file}`);
+          }
+        }
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
       }
     }
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixSyntaxErrors, processFile };
+// Run the fix;
+processFiles().catch(console.error);

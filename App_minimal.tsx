@@ -1,26 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-
+import React from 'react';'
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
+{ HelmetProvider } from 'react-helmet-async';'
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+    <HelmetProvider></HelmetProvider>
+      <Router></Router>
+        <Routes></Routes>
+          <Route path="/' element={<div>Home Page</div>} />'
+        </Routes>
       </Router>
     </HelmetProvider>
-  );
-};
+  )};
+ursor/fix-errors-and-merge-to-main-94a7
 
 export default App;

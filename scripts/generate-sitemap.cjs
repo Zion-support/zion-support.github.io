@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define all the routes in your application
+// Define all routes for the sitemap
 const routes = [
   '/',
   '/about',
@@ -10,90 +10,183 @@ const routes = [
   '/ai-services',
   '/micro-saas',
   '/5g-solutions',
-  '/pricing',
   '/blog',
-  '/tutorials',
   '/demo',
   '/support',
   '/privacy',
   '/terms',
+  '/cookies',
+  '/sitemap',
+  // AI Services
   '/ai-analytics',
-  '/ai-automation-platform',
-  '/ai-climate-prediction-engine',
-  '/ai-customer-sentiment-tracker',
-  '/ai-data-analytics-pro',
-  '/ai-financial-analysis',
-  '/ai-healthcare-diagnostics',
-  '/ai-holographic-workspace',
-  '/ai-hr-recruitment-pro',
-  '/ai-image-recognition-pro',
-  '/ai-powered-devops',
-  '/ai-powered-email-analyzer',
-  '/ai-quantum-computing',
-  '/ai-supply-chain-optimizer',
-  '/ai-translation-service',
-  '/zion-analytics',
-  '/zion-ai-platform',
+  '/ai-automation',
+  '/ai-business-intelligence',
+  '/ai-content-generation',
+  '/ai-customer-service',
+  '/ai-data-analytics',
+  '/ai-email-automation',
+  '/ai-fraud-detection',
+  '/ai-healthcare',
+  '/ai-marketing',
+  '/ai-predictive-analytics',
+  '/ai-project-management',
+  '/ai-recommendation-engine',
+  '/ai-sales-automation',
+  '/ai-workflow-automation',
+  '/ai-chatbot-builder',
+  '/ai-code-assistant',
+  '/ai-design-studio',
+  '/ai-computer-vision',
+  '/ai-conversational-ai',
+  '/ai-crm',
+  '/ai-customer-insights',
+  '/ai-data-visualization',
+  '/ai-devops-automation',
+  '/ai-document-intelligence',
+  // IT Services
+  '/it-services',
+  '/cloud-services',
+  '/cloud-infrastructure',
+  '/cybersecurity',
+  '/cybersecurity-solutions',
+  '/custom-development',
+  '/web-development',
+  '/mobile-development',
+  '/database-management',
+  '/cloud-consulting',
+  '/data-center-solutions',
+  '/disaster-recovery',
+  '/it-support',
+  '/managed-services',
+  '/security-audit',
+  '/technology-consulting',
+  // Micro SAAS Services
+  '/zion-analytics-pro',
   '/zion-security-shield',
-  '/5g-network-optimization',
-  '/5g-infrastructure',
-  '/cloud-infrastructure-management',
-  '/cloud-migration-pro',
-  '/blockchain-web3',
-  '/project-management-saas',
-  '/customer-relationship-saas',
-  '/inventory-management-saas',
-  '/financial-management-saas',
-  '/employee-management-saas',
-  '/social-media-management-saas',
-  '/email-marketing-saas',
-  '/website-builder-saas',
-  '/task-management-saas',
-  '/smart-home-saas',
-  '/ai-powered-chatbot-saas'
+  '/zion-cloud-vault',
+  '/zion-content-studio',
+  '/zion-ai-video-generator',
+  '/zion-ai-invoice-generator',
+  '/zion-ai-customer-insights',
+  '/zion-ai-email-analyzer',
+  '/zion-smart-inventory-optimizer',
+  '/zion-ai-customer-sentiment-tracker',
+  '/zion-smart-expense-categorizer',
+  '/zion-ai-voice-assistant-pro',
+  '/zion-ai-code-reviewer',
+  '/zion-ai-social-media-manager',
+  '/zion-ai-contract-analyzer',
+  '/zion-ai-performance-optimizer',
+  '/zion-ai-customer-churn-predictor',
+  '/zion-ai-supply-chain-optimizer',
+  '/zion-ai-financial-forecaster',
+  '/zion-ai-content-moderator',
+  '/zion-ai-translator-pro',
+  '/zion-ai-data-cleaner',
+  '/zion-ai-task-scheduler',
+  '/zion-ai-customer-support-pro',
+  // 5G Solutions
+  '/5g-implementation',
+  '/5g-edge-computing',
+  '/5g-iot-solutions',
+  '/5g-smart-city-solutions',
+  '/5g-private-networks',
+  '/5g-data-analytics',
+  '/5g-mobile-applications',
+  '/5g-network-infrastructure',
+  // New AI Services
+  '/ai-voice-cloning-studio',
+  '/ai-quantum-financial-oracle',
+  '/ai-space-mission-optimizer',
+  // New IT Services
+  '/quantum-computing-solutions',
+  // New Micro SAAS Services
+  '/zion-ai-neural-interface'
 ];
 
-// Generate sitemap.xml
+// Generate sitemap XML
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString();
+  const currentDate = new Date().toISOString().split('T')[0];
   
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(route => `  <url>
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${route === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  routes.forEach(route => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${baseUrl}${route}</loc>\n`;
+    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
+    sitemap += '    <changefreq>weekly</changefreq>\n';
+    sitemap += '    <priority>0.8</priority>\n';
+    sitemap += '  </url>\n';
+  });
+  
+  sitemap += '</urlset>';
+  
+  return sitemap;
+};
 
-  // Write sitemap to public directory
-  const publicDir = path.join(__dirname, '..', 'public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+// Write sitemap to public directory
+const writeSitemap = () => {
+  try {
+    const sitemap = generateSitemap();
+    const publicDir = path.join(__dirname, '..', 'public');
+    const sitemapPath = path.join(publicDir, 'sitemap.xml');
+    
+    // Ensure public directory exists
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(sitemapPath, sitemap, 'utf8');
+    console.log('✅ Sitemap generated successfully at:', sitemapPath);
+    console.log(`📊 Total URLs: ${routes.length}`);
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error.message);
+    process.exit(1);
   }
-  
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
 };
 
 // Generate robots.txt
-const generateRobots = () => {
-  const robots = `User-agent: *
+const generateRobotsTxt = () => {
+  const robotsTxt = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml`;
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-  const publicDir = path.join(__dirname, '..', 'public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /ai-services
+Allow: /micro-saas
+Allow: /5g-solutions
+Allow: /blog
+`;
+
+  try {
+    const publicDir = path.join(__dirname, '..', 'public');
+    const robotsPath = path.join(publicDir, 'robots.txt');
+    fs.writeFileSync(robotsPath, robotsTxt, 'utf8');
+    console.log('✅ Robots.txt generated successfully at:', robotsPath);
+  } catch (error) {
+    console.error('❌ Error generating robots.txt:', error.message);
   }
-  
-  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robots);
-  console.log('Robots.txt generated successfully!');
 };
 
-// Run the generators
-generateSitemap();
-generateRobots();
+// Main execution
+console.log('🚀 Generating sitemap and robots.txt...');
+writeSitemap();
+generateRobotsTxt();
+console.log('✨ SEO files generation completed!');

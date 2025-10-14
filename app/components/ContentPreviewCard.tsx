@@ -1,40 +1,32 @@
 import React from "react";
 
 interface ContentPreviewCardProps {
-  id: string;,
-
-  title: string;,
-
-  excerpt: string;,
-
-  author: string;,
-
-  publishedAt: string;,
-
-  readTime: string;,
-
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
   category: string;
-  imageUrl?: string;,
-
   slug: string;
+  imageUrl?: string;
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({,
-
-  id: _id,
+const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   title,
   excerpt,
   author,
-  publishedAt,
+  date,
   readTime,
   category,
-  imageUrl,
-  slug
+  slug,
+  imageUrl
 }) => {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">ContentPreviewCard</h2>
-      <p>This component is under development.</p>)</div></div></div></ContentPreviewCardProps></div></div></span></h3></div></div></div></svg></ContentPreviewCardProps></div></div></span></h3></div></div></div></svg>};
+      <p>This component is under development.</p>
+    </div>
+  );
+</div></div></div></div></div></Link></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path>};
 
-export default ContentPreviewCard</div>
-</ContentPreviewCardProps>
+export default ContentPreviewCard;

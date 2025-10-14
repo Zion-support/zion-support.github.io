@@ -1,108 +1,62 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';'
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  cls: 'number | null;','
+  fcp: 'number | null;','
+  lcp: 'number | null;','
+  ttfb: 'number | null;','
+  loadTime: number | null;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    loadTime: null;
+  });
+
   useEffect(() => {
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      // Monitor Core Web Vitals
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-      }
+    // Only run in development;
+    if (process.env.NODE_ENV !== 'development') {'
+      return;
+    }
+
+    // Simulate performance metrics for development;
+    const simulateMetrics = () => {
+      setMetrics({
+        cls: Math.random() * 0.1,
+        fcp: Math.random() * 1000 + 500,
+        lcp: Math.random() * 2000 + 1000,
+        ttfb: Math.random() * 500 + 200,
+        loadTime: Math.random() * 3000 + 1000;
+      });
     };
 
-    // Measure after initial load
-    const timer = setTimeout(measurePerformance, 1000);
+    // Simulate metrics after a delay;
+    const timer = setTimeout(simulateMetrics, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // Toggle visibility with keyboard shortcut
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        setIsVisible(!isVisible);
-      }
-    };
-
-    monitorPerformance();
-  }, []);
-
-  // Don't render in production
-  if (process.env.NODE_ENV === 'production') {
+  // Don't render anything in production'
+  if (process.env.NODE_ENV === 'production') {'
     return null;
   }
 
-  if (!isVisible) {
-    return (
-      <div className="fixed bottom-4 right-4 z-50">
-        <button
-          onClick={() => setIsVisible(true)}
-          className="bg-slate-800 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-700 transition-colors"
-        >
-          Performance
-        </button>
-    );
-  }
-
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
-        >
-          ✕
-        </button>
-      
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between">
-          <span className="text-gray-400">Load Time:</span>
-          <span className={`font-mono ${metrics.loadTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.loadTime}ms
-          </span>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Render Time:</span>
-          <span className={`font-mono ${metrics.renderTime > 100 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.renderTime}ms
-          </span>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Memory:</span>
-          <span className={`font-mono ${metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.memoryUsage}MB
-          </span>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-400">Network:</span>
-          <span className={`font-mono ${metrics.networkLatency > 500 ? 'text-red-400' : 'text-green-400'}`}>
-            {metrics.networkLatency}ms
-          </span>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">Press Ctrl+Shift+P to toggle</div>
-      </div>);
-};
-
-export default PerformanceMonitor</div>
-        </div>
-        </div>
-      </div>
+    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">"
+      <h3 className="font-bold mb-2">Performance Metrics</h3>"
+      <div className="space-y-1 text-sm">"
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>'
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>'
+        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>'
       </div>
     </div>
-      </div>
-</PerformanceMonitorProps>
+  );
+};
+
+export default PerformanceMonitor;

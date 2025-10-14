@@ -44,9 +44,31 @@ const originalContent = content;
           console.log(`Fixed: ${filePath}`)```
 } catch (error) {
         console.error(`Error processing ${filePath}:`, error.message)```;
+ursor/fix-errors-and-merge-to-main-94a7
 }
+
+// Main execution
+async function main() {
+  console.log('Starting fix for malformed files...');
+
+  // Get all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+
+  let totalFixed = 0;
+  let filesProcessed = 0;
+
+  files.forEach(file => {
+    if (processFile(file)) {
+      totalFixed++;
+    }
+    filesProcessed++;
+  });
+
+  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
+  console.log('Malformed files fix completed!');
 }
 // Process the app directory"
 console.log("Starting malformed file fixes...")"
 processFiles("./app")"
 console.log("Malformed file fixes completed!")"
+ursor/fix-errors-and-merge-to-main-94a7

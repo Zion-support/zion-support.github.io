@@ -82,7 +82,7 @@ const filesWithConflicts = findFilesWithConflicts('.')'';
     } else {
       errorCount++;
 }
-  console.log(`\n📊 Summary:`)```;
+  console.log(`\n📊 Summary: '`)```;',
   console.log(`✅ Successfully fixed: ${successCount} files`)```;
   console.log(`❌ Failed to fix: ${errorCount} files`)```;
   if (successCount > 0) {

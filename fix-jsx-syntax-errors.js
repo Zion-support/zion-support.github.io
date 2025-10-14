@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
 console.log('🔧 Fixing JSX syntax errors...');
 
-// Function to recursively find all files
+// Function to recursively find all files;
 function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -24,19 +24,19 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
   return files;
 }
 
-// Function to fix JSX syntax errors
+// Function to fix JSX syntax errors;
 function fixJSXSyntax(content) {
-  // Fix missing closing tags for Helmet
+  // Fix missing closing tags for Helmet;
   content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
     return `<Helmet${attrs}></Helmet>`;
   });
   
-  // Fix missing closing tags for div
+  // Fix missing closing tags for div;
   content = content.replace(/<div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {
     return `<div${attrs}></div>`;
   });
   
-  // Fix JSX fragments
+  // Fix JSX fragments;
   content = content.replace(/<>([^<//////]*?)<([^>]*?)>/g, (match, p1, p2) => {
     if (p1.trim() && !p1.includes('</')) {
       return `<>${p1}<///////${p2}>`;
@@ -44,22 +44,22 @@ function fixJSXSyntax(content) {
     return match;
   });
   
-  // Fix missing closing tags for Suspense
+  // Fix missing closing tags for Suspense;
   content = content.replace(/<Suspense([^>]*?)>(?![\s\S]*?<\/Suspense>)/g, (match, attrs) => {
     return `<Suspense${attrs}></Suspense>`;
   });
   
-  // Fix missing closing tags for AccessibilityEnhancer
+  // Fix missing closing tags for AccessibilityEnhancer;
   content = content.replace(/<AccessibilityEnhancer([^>]*?)>(?![\s\S]*?<\/AccessibilityEnhancer>)/g, (match, attrs) => {
     return `<AccessibilityEnhancer${attrs}></AccessibilityEnhancer>`;
   });
   
-  // Fix missing closing tags for EnhancedErrorBoundary
+  // Fix missing closing tags for EnhancedErrorBoundary;
   content = content.replace(/<EnhancedErrorBoundary([^>]*?)>(?![\s\S]*?<\/EnhancedErrorBoundary>)/g, (match, attrs) => {
     return `<EnhancedErrorBoundary${attrs}></EnhancedErrorBoundary>`;
   });
   
-  // Fix malformed JSX expressions
+  // Fix malformed JSX expressions;
   content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {
     if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {
       return `<////${p1}>${p2}</${p3}>`;
@@ -67,7 +67,7 @@ function fixJSXSyntax(content) {
     return match;
   });
   
-  // Fix missing semicolons after imports
+  // Fix missing semicolons after imports;
   content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
     if (!match.endsWith(';')) {
       return match + ';';
@@ -75,7 +75,7 @@ function fixJSXSyntax(content) {
     return match;
   });
   
-  // Fix missing semicolons after variable declarations
+  // Fix missing semicolons after variable declarations;
   content = content.replace(/const\s+\w+\s*=.*?$/gm, (match) => {
     if (!match.endsWith(';') && !match.includes('{') && !match.includes('}')) {
       return match + ';';
@@ -83,7 +83,7 @@ function fixJSXSyntax(content) {
     return match;
   });
   
-  // Fix missing semicolons after function declarations
+  // Fix missing semicolons after function declarations;
   content = content.replace(/function\s+\w+\([^)]*\)\s*{[^}]*}$/gm, (match) => {
     if (!match.endsWith(';')) {
       return match + ';';
@@ -94,13 +94,13 @@ function fixJSXSyntax(content) {
   return content;
 }
 
-// Function to fix specific file issues
+// Function to fix specific file issues;
 function fixFileSpecificIssues(filePath, content) {
   const fileName = path.basename(filePath);
   
-  // Fix App.tsx specific issues
+  // Fix App.tsx specific issues;
   if (fileName === 'App.tsx') {
-    // Fix missing closing tags
+    // Fix missing closing tags;
     content = content.replace(/<Suspense([^>]*?)>(?![\s\S]*?<\/Suspense>)/g, (match, attrs) => {
       return `<Suspense${attrs}></Suspense>`;
     });
@@ -114,14 +114,14 @@ function fixFileSpecificIssues(filePath, content) {
     });
   }
   
-  // Fix page.tsx files
+  // Fix page.tsx files;
   if (fileName.endsWith('page.tsx')) {
-    // Fix missing Helmet closing tags
+    // Fix missing Helmet closing tags;
     content = content.replace(/<////Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
       return `<Helmet${attrs}></Helmet>`;
     });
     
-    // Fix missing div closing tags
+    // Fix missing div closing tags;
     content = content.replace(/<////div([^>]*?)>(?![\s\S]*?<\/div>)/g, (match, attrs) => {
       return `<div${attrs}></div>`;
     });
@@ -130,7 +130,7 @@ function fixFileSpecificIssues(filePath, content) {
   return content;
 }
 
-// Main function
+// Main function;
 function main() {
   try {
     const files = getAllFiles('/workspace');
@@ -144,13 +144,13 @@ function main() {
         let content = fs.readFileSync(filePath, 'utf8');
         const originalContent = content;
         
-        // Fix JSX syntax errors
+        // Fix JSX syntax errors;
         content = fixJSXSyntax(content);
         
-        // Fix file-specific issues
+        // Fix file-specific issues;
         content = fixFileSpecificIssues(filePath, content);
         
-        // Only write if content changed
+        // Only write if content changed;
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content, 'utf8');
           fixedCount++;
@@ -168,7 +168,7 @@ function main() {
     console.log(`❌ Errors: ${errorCount} files`);
     
   } catch (error) {
-    console.error('❌ Fatal error:', error.message);
+    console.error('❌ Fatal error: ', error.message);'
     process.exit(1);
   }
 }

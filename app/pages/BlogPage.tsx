@@ -1,35 +1,40 @@
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CalendarIcon,
-  UserIcon,
-  TagIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
 
-export default function BlogPage() {
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of AI in Business: Trends and Predictions for 2024',
-      excerpt: 'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
-      author: 'Zion Tech Team',
-      date: '2024-01-15',
-      category: 'AI & Machine Learning',
-      readTime: '5 min read',
-      image: '/api/placeholder/600/300',
-      slug: 'future-ai-business-trends-2024'
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Best Practices for Small and Medium Businesses',
-      excerpt: 'Essential cybersecurity strategies to protect your business from evolving threats and data breaches.',
-      author: 'Security Team',
-      date: '2024-01-10',
-      category: 'Cybersecurity',
-      readTime: '7 min read',
-      image: '/api/placeholder/600/300',
-      slug: 'cybersecurity-best-practices-smb'
-    }
-}
+const BlogPage: React.FC = () => {
+  return (
+    <React.Fragment></React>
+      <Helmet></Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts.' />'
+        <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation' />'
+        <meta property="og: 'title" content="Blog - Zion Tech Group" />','
+        <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends.' />'
+        <meta property="og: 'type" content="website" />','
+        <meta property="og: 'url" content="https://ziontechgroup.com/blog" />','
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden'></section>'
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20'></div>'
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid'></div>'
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center'></div>'
+          <div className="max-w-4xl mx-auto'></div>'
+            <h1 className="text-6xl md: 'text-7xl font-bold mb-6 gradient-text neon-text">','
+              Our Blog;
+            </h1>
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'></p>'
+              Insights, trends, and expert knowledge on AI, cybersecurity, cloud computing, and digital transformation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </React.Fragment>
+  );
+};
+
+export default BlogPage;

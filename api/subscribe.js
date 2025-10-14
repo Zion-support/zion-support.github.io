@@ -25,4 +25,27 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
+
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    status: 'active',
+    subscribedAt: new Date().toISOString()
+  };
+
+  try {
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Successfully subscribed!'
+    }));
+  } catch (error) {
+    console.error('Error writing subscribers:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(500).end(JSON.stringify({ error: 'Internal server error' }));
+  }
 }

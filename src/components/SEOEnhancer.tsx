@@ -1,6 +1,39 @@
-import React from "react"";"
-import { Helmet } from "react-helmet-async";""
-export default function SEOEnhancer() {}
+import React from 'react';
+import { Node  } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+interface SEOEnhancerProps {
+  title: string;
+  description: string;
+  keywords: string[];
+  noIndex?: boolean;
+  structuredData?: unknown;
+  children?: Node;
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title,
+  description,
+  keywords,
+  noIndex = false,
+  structuredData,
+  children;
+}) => {
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading AI and IT solutions provider",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service";
+    }
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
     <div></div>
       <Helmet></Helmet>

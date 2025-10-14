@@ -1,5 +1,5 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -10,22 +10,22 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔧 Starting comprehensive remaining error fix...');
 
-// Function to create a clean, working page component
+// Function to create a clean, working page component;
 function createCleanPageComponent(pageName, title, description) {
   return `import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const ${pageName} = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description} - Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
         </div>
@@ -37,7 +37,7 @@ const ${pageName} = () => {
 export default ${pageName};`;
 }
 
-// Function to fix a file by replacing it with a clean version
+// Function to fix a file by replacing it with a clean version;
 function fixFileWithCleanVersion(filePath) {
   try {
     const fileName = path.basename(filePath, '.tsx');
@@ -54,7 +54,7 @@ function fixFileWithCleanVersion(filePath) {
   }
 }
 
-// Function to check if a file has serious syntax errors
+// Function to check if a file has serious syntax errors;
 function hasSeriousErrors(content) {
   const errorPatterns = [
     /|    /const.*=.*\(\)\s*=>\s*\(\s*"/,
@@ -85,7 +85,7 @@ function hasSeriousErrors(content) {
   return errorPatterns.some(pattern => pattern.test(content));
 }
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -101,7 +101,7 @@ function processFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
   
@@ -131,7 +131,7 @@ async function main() {
   return files;
 }
 
-// Main execution
+// Main execution;
 try {
   const appDir = path.join(__dirname, 'app');
   const files = findFiles(appDir);
@@ -147,7 +147,7 @@ try {
   
   console.log(`🎉 Fixed ${fixedCount} files!`);
   
-  // Run type check to see remaining errors
+  // Run type check to see remaining errors;
   console.log('🔍 Running type check...');
   try {
     execSync('npm run type-check', { stdio: 'pipe' });
@@ -157,6 +157,6 @@ try {
   }
   
 } catch (error) {
-  console.error('❌ Error:', error.message);
+  console.error('❌ Error: ', error.message);'
   process.exit(1);
 }

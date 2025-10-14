@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
 console.log('🔧 Fixing page files...');
 
-// Function to recursively find all page files
+// Function to recursively find all page files;
 function getAllPageFiles(dir) {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -24,7 +24,7 @@ function getAllPageFiles(dir) {
   return files;
 }
 
-// Function to create a proper page template
+// Function to create a proper page template;
 function createPageTemplate(filePath) {
   const fileName = path.basename(path.dirname(filePath));
   const title = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -36,14 +36,14 @@ import { Helmet } from "react-helmet-async";
 export default function Page() {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} services and solutions from Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
+      <div className="min-h-screen bg-white"></div>
+        <div className="container mx-auto px-4 py-20"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600"></p>
             This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function Page() {
 `;
 }
 
-// Main function
+// Main function;
 function main() {
   try {
     const files = getAllPageFiles('/workspace/app');
@@ -80,7 +80,7 @@ function main() {
     console.log(`❌ Errors: ${errorCount} files`);
     
   } catch (error) {
-    console.error('❌ Fatal error:', error.message);
+    console.error('❌ Fatal error: ', error.message);'
     process.exit(1);
   }
 }

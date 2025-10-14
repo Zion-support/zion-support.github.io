@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: [
+    ignores: '[',
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
@@ -76,7 +76,7 @@ export default tseslint.config(
         exports: "readonly",
         fs: "readonly",
         __dirname: "readonly",
-        // Jest globals
+        // Jest globals;
         describe: "readonly",
         it: "readonly",
         test: "readonly",
@@ -91,7 +91,7 @@ export default tseslint.config(
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
+          jsx: true;
         }
       },
       globals: {
