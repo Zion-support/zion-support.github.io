@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-28e9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b6c8
 
 // Team members data (for future use)
 // const teamMembers = [
@@ -72,7 +72,6 @@ import { Helmet } from 'react-helmet-async';
   // ];
 =======
 //   { number: "24/7", label: "Support Available" }// ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-443a
 
 const,
   AboutPage: React.FC = () => {
@@ -94,12 +93,10 @@ const,
             <p className="text-xl text-gray-300 mb-8">
               Professional about solutions and services;
             </p>
-            <div className="grid,
-  md:grid-cols-2,
-  lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions;
+                  Expert Solutions
                 </h3>
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
@@ -115,7 +112,7 @@ const,
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support;
+                  24/7 Support
                 </h3>
                 <p className="text-purple-700">
                   Round-the-clock support for all your needs.

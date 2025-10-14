@@ -1,5 +1,6 @@
-import React, { Suspense, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react';import Navigation from './components/Navigation';
+import React, { memo } from 'react';
+import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -41,7 +42,7 @@ return (
       <SEOOptimizer />
       <PerformanceOptimizer />
       
-      <Navigation onSidebarToggle ={()  => {}} />
+      <Navigation />
       
       <main className="relative">
         {/* Hero Section */}
