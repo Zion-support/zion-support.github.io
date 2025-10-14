@@ -16,11 +16,6 @@ const PricingPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default PricingPage;
-=======
-  )}
-export default PricingPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

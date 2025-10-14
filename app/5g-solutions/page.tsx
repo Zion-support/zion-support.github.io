@@ -24,22 +24,15 @@ const FiveGSolutionsPage: React.FC = () => {
     {
       icon: Wifi,
 
-<<<<<<< HEAD
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   const solutions = [
     {
 
-<<<<<<< HEAD
       title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
-=======
-      description: 'Complete 5G network setup and optimization',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
     },
@@ -54,10 +47,6 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   return (
@@ -185,11 +174,6 @@ const FiveGSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
 export default FiveGSolutionsPage;
-=======
-  )}
-export default FiveGSolutionsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -1,21 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix extra semicolons in object properties
-  content = content.replace(/',;/g, "',");
-  content = content.replace(/';/g, "';");
-  content = content.replace(/",;/g, '",');
-  content = content.replace(/";/g, '";');
-  
-  // Fix missing closing quotes in strings
-  content = content.replace(/from 'lucide-react;/g, "from 'lucide-react';");
-  
-  // Fix other common issues
-  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
-  
-  return content;
+// Function to fix import statements with missing quotes
+function fixImports(content) {
+  // Fix import statements that are missing closing quotes
+  return content.replace(/from 'lucide-react;/g, "from 'lucide-react';");
 }
 
 // Function to process a single file
@@ -23,9 +12,9 @@ function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes("',;") || content.includes("';") || content.includes('",;') || content.includes('";')) {
+    if (content.includes("from 'lucide-react;")) {
       console.log(`Processing: ${filePath}`);
-      const fixedContent = fixSyntaxErrors(content);
+      const fixedContent = fixImports(content);
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`✓ Fixed: ${filePath}`);
       return true;
@@ -68,7 +57,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
 }
 
 // Main execution
-console.log('Starting syntax error fix...');
+console.log('Starting import fix...');
 const files = findFiles('./app');
 let fixedCount = 0;
 let totalCount = 0;
@@ -80,7 +69,7 @@ for (const file of files) {
   }
 }
 
-console.log(`\nSyntax fix complete!`);
+console.log(`\nImport fix complete!`);
 console.log(`Files processed: ${totalCount}`);
 console.log(`Files fixed: ${fixedCount}`);
 console.log(`Files without issues: ${totalCount - fixedCount}`);

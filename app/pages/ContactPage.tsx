@@ -16,11 +16,6 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default ContactPage;
-=======
-  )}
-export default ContactPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

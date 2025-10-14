@@ -12,12 +12,8 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
     <Suspense fallback={fallback}>
       {children}
     </Suspense>
-<<<<<<< HEAD
   );
 }
-=======
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(
   Component: ComponentType<P>,
@@ -28,11 +24,6 @@ export const withLazyLoading = <P extends object>(
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />
     </LazyWrapper>
-<<<<<<< HEAD
   );
 }
 export default LazyWrapper;
-=======
-  )}
-export default LazyWrapper
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

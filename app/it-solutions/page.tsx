@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -161,11 +158,8 @@ const ITSolutionsPage: React.FC = () => {
       icon: ShieldCheckIcon
     }
   ];
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
@@ -280,11 +274,5 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default ITSolutionsPage;
-=======
-};
-
-export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

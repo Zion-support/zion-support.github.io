@@ -1,21 +1,36 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix extra semicolons in object properties
-  content = content.replace(/',;/g, "',");
-  content = content.replace(/';/g, "';");
-  content = content.replace(/",;/g, '",');
-  content = content.replace(/";/g, '";');
+// Function to resolve merge conflicts by keeping the HEAD version
+function resolveMergeConflicts(content) {
+  const lines = content.split('\n');
+  const resolvedLines = [];
+  let skipUntilEnd = false;
   
-  // Fix missing closing quotes in strings
-  content = content.replace(/from 'lucide-react;/g, "from 'lucide-react';");
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    if (line.startsWith('<<<<<<< HEAD')) {
+      skipUntilEnd = false;
+      continue;
+    }
+    
+    if (line.startsWith('=======')) {
+      skipUntilEnd = true;
+      continue;
+    }
+    
+    if (line.startsWith('>>>>>>>')) {
+      skipUntilEnd = false;
+      continue;
+    }
+    
+    if (!skipUntilEnd) {
+      resolvedLines.push(line);
+    }
+  }
   
-  // Fix other common issues
-  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
-  
-  return content;
+  return resolvedLines.join('\n');
 }
 
 // Function to process a single file
@@ -23,10 +38,10 @@ function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes("',;") || content.includes("';") || content.includes('",;') || content.includes('";')) {
+    if (content.includes('<<<<<<< HEAD')) {
       console.log(`Processing: ${filePath}`);
-      const fixedContent = fixSyntaxErrors(content);
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      const resolvedContent = resolveMergeConflicts(content);
+      fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`✓ Fixed: ${filePath}`);
       return true;
     }
@@ -68,7 +83,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
 }
 
 // Main execution
-console.log('Starting syntax error fix...');
+console.log('Starting merge conflict resolution...');
 const files = findFiles('./app');
 let fixedCount = 0;
 let totalCount = 0;
@@ -80,7 +95,7 @@ for (const file of files) {
   }
 }
 
-console.log(`\nSyntax fix complete!`);
+console.log(`\nResolution complete!`);
 console.log(`Files processed: ${totalCount}`);
 console.log(`Files fixed: ${fixedCount}`);
-console.log(`Files without issues: ${totalCount - fixedCount}`);
+console.log(`Files without conflicts: ${totalCount - fixedCount}`);
