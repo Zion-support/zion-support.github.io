@@ -2,16 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  ogType?: string;
-  twitterCard?: string;
+  canonicalUrl?: string;  ogUrl?: string;
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
@@ -71,7 +65,20 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:description" content={twitterDescription || description} />
       <meta name="twitter:image" content={twitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" /> cursor/analyze-improve-and-deploy-application-c573
+      
+      {/* Article Specific Meta Tags */}
+      {publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          <meta property="article:author" content={author} />
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
       
       {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />

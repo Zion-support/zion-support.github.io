@@ -1,5 +1,4 @@
-'use client'
-import { useEffect, useState } from 'react'
+import React from 'react';
 
 interface PerformanceMetrics {
   loadTime: number | null
@@ -232,11 +231,8 @@ const AdvancedPerformanceMonitor = () => {
           </div>
         )}
       </div>
-    )
-  }
-
-  return null
+    </div>
+  );
 }
-
+          This component is under development.</p></div></div>
 export default AdvancedPerformanceMonitor
-

@@ -106,10 +106,6 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -138,7 +134,7 @@ const Page = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

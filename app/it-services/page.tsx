@@ -44,7 +44,35 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
-  ];
+  ]
+
+  const stats = [
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Server className="w-6 h-6 text-cyan-400" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-emerald-400" /> },
+    { number: '500+', label: 'Projects Completed', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '50+', label: 'Expert Engineers', icon: <Users className="w-6 h-6 text-orange-400" /> }
+  ]
+
+  const testimonials = [
+    {
+      name: 'John Smith',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group\'s IT services have been exceptional. Their cloud migration was seamless and our systems have never been more secure and efficient.',
+      rating: 5
+    },
+    {
+      name: 'Maria Garcia',
+      company: 'Financial Services',
+      content: 'The cybersecurity solutions they implemented have given us complete peace of mind. Our data is protected and our compliance requirements are fully met.',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      company: 'E-commerce Platform',
+      content: 'Their API development and integration services helped us connect all our systems seamlessly. The performance improvements have been remarkable.',
+      rating: 5
+    }
+  ]
 
   return (
     <>

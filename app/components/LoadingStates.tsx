@@ -128,26 +128,23 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
       {Array.from({ length: lines }).map((_, index) => (
         <div
           key={index}
-          className={`h-4 bg-gray-700 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
+          className="h-4 bg-gray-700 rounded mb-2"
+          style={{ width: `${Math.random() * 40 + 60}%` }}
         />
       ))}
     </div>
   );
 };
 
-export const CardSkeleton: React.FC = () => {
+export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
-      <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
-      <div className="h-6 bg-gray-700 rounded mb-3"></div>
-      <div className="space-y-2 mb-4">
-        <div className="h-4 bg-gray-700 rounded"></div>
-        <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-      </div>
-      <div className="h-8 bg-gray-700 rounded w-1/3"></div>
-    </div>
+    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
   );
 };
 

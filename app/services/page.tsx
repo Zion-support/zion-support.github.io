@@ -44,8 +44,7 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO 
@@ -83,7 +82,15 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+)
+          {serviceCategories.map((category, categoryIndex) => {;
+const Icon = category.icon
+            return (
+"
+              <div key={categoryIndex} className="mb-20">
+        <div className="flex items-center mb-12"></div>
+                  <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
+                    <Icon className={`w-8 h-8 ${category.color}`} />
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -106,10 +113,10 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+)});
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -136,8 +143,8 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   );
 };

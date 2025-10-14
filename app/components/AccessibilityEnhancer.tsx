@@ -8,7 +8,7 @@ interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
   enableHighContrast = true,
   enableReducedMotion = true,
@@ -172,11 +172,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Cleanup function
     return () => {
-      cleanupFunctions.forEach(cleanup => cleanup());
+      observer.disconnect();
     };
-  }, [enableHighContrast, enableReducedMotion, enableFocusManagement, enableKeyboardNavigation]);
+  }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default AccessibilityEnhancer;

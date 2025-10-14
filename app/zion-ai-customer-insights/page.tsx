@@ -83,7 +83,51 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+              Zion AI Customer Insights
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your customer data into actionable insights with AI-powered analytics. 
+            Predict behavior, prevent churn, and deliver personalized experiences that drive growth.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <FuturisticButton
+              href="#pricing"
+              variant="primary"
+              size="lg"
+              icon={<Brain className="w-5 h-5" />}
+            >
+              Start Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="#demo"
+              variant="outline"
+              size="lg"
+              icon={<BarChart3 className="w-5 h-5" />}
+            >
+              View Demo
+            </FuturisticButton>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {metrics.map((metric, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {metric.icon}
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>
+                <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
+              </div>
+            ))} cursor/analyze-improve-and-deploy-application-c573
+          </div>
+        </ResponsiveContainer>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

@@ -47,7 +47,7 @@ function fixUnusedImports(filePath) {
       console.log(`Fixed unused imports in: ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 

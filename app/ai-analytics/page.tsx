@@ -135,9 +135,9 @@ const Page = () => {
                 View All Services
               </Link>
             </div>
-          </div>
-        </section>
-      </div>
+          </section>
+        </div>
+      </ResponsiveContainer>
     </>
   );
 };

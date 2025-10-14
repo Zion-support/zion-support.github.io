@@ -44,6 +44,15 @@ const Page = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
+  ]
+  const subjects = [
+    'AI Services'
+    'IT Services'
+    'Services'
+    'Micro SAAS'
+    'Digital Transformation'
+    '5G Implementation'
+    'Other'
   ];
 
   return (
@@ -108,8 +117,6 @@ const Page = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">

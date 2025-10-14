@@ -1,164 +1,135 @@
 #!/usr/bin/env node
 
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to create a proper page structure
-function createProperPageStructure(pageName, title, description) {
-  return `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ${pageName}() {
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
-}
-
-// Function to generate a valid function name from directory name
-function generateValidFunctionName(dirName) {
-  // Handle special cases for numbers at the start
-  if (dirName.startsWith("5g-")) {
-    return (
-      "FiveG" +
-      dirName
-        .substring(3)
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join("") +
-      "Page"
-    );
-  }
-
-  // Handle other cases
-  return (
-    dirName
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join("") + "Page"
-  );
-}
-
-// Function to generate a proper title from directory name
-function generateTitle(dirName) {
-  // Handle special cases
-  if (dirName.startsWith("5g-")) {
-    return (
-      "5G " +
-      dirName
-        .substring(3)
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-    );
-  }
-
-  return dirName
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix JSX errors in a file
+function fixJSXErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Extract page name from file path
-    const pathParts = filePath.split("/");
-    const fileName = pathParts[pathParts.length - 2]; // Get directory name
-    const pageName = generateValidFunctionName(fileName);
-    const title = generateTitle(fileName);
-    const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
+    // Fix duplicate min-h-screen div wrappers
+    const duplicateWrapperRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/g;
+    if (duplicateWrapperRegex.test(content)) {
+      content = content.replace(duplicateWrapperRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+      modified = true;
+    }
 
-    // Check if file is corrupted or has parsing errors
-    const hasParsingErrors =
-      content.includes("export default function") &&
-      (content.split("export default function").length > 2 ||
-        content.includes("5GDataAnalyticsPage") ||
-        content.includes("5GEdgeComputingPage") ||
-        content.includes("5GImplementationPage") ||
-        content.includes("5GIotSolutionsPage") ||
-        content.includes("5GMobileApplicationsPage") ||
-        content.includes("5GNetworkInfrastructurePage") ||
-        content.includes("5GPrivateNetworksPage") ||
-        content.includes("5GSmartCitySolutionsPage") ||
-        content.includes("5GSolutionsPage") ||
-        content.includes("Identifier expected") ||
-        content.includes("JSX expressions must have one parent element") ||
-        (content.includes("JSX element") &&
-          content.includes("has no corresponding closing tag")));
+    // Fix missing closing div tags
+    const missingClosingDivRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
+    if (missingClosingDivRegex.test(content)) {
+      content = content.replace(missingClosingDivRegex, (match) => {
+        return match.replace(
+          /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/,
+          '</div>\n        </div>\n      </div>'
+        );
+      });
+      modified = true;
+    }
 
-    if (hasParsingErrors) {
-      const newContent = createProperPageStructure(
-        pageName,
-        title,
-        description,
-      );
-      fs.writeFileSync(filePath, newContent);
-      }
+    // Fix incomplete JSX structure - missing closing tags
+    const incompleteJSXRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
+    if (incompleteJSXRegex.test(content)) {
+      content = content.replace(incompleteJSXRegex, (match) => {
+        return match.replace(
+          /<\/div>\s*<\/div>\s*<\/>/,
+          '</div>\n        </div>\n      </div>\n    </>'
+        );
+      });
+      modified = true;
+    }
+
+    // Fix missing closing div for container
+    const missingContainerClosingRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
+    if (missingContainerClosingRegex.test(content)) {
+      content = content.replace(missingContainerClosingRegex, (match) => {
+        return match.replace(
+          /<\/div>\s*<\/div>\s*<\/>/,
+          '</div>\n        </div>\n      </div>\n    </>'
+        );
+      });
+      modified = true;
+    }
+
+    // Fix specific pattern: missing closing div for min-h-screen wrapper
+    const missingMinHeightClosingRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
+    if (missingMinHeightClosingRegex.test(content)) {
+      content = content.replace(missingMinHeightClosingRegex, (match) => {
+        return match.replace(
+          /<\/div>\s*<\/div>\s*<\/>/,
+          '</div>\n        </div>\n      </div>\n    </>'
+        );
+      });
+      modified = true;
+    }
+
+    // Fix extra closing divs
+    const extraClosingDivsRegex = /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/g;
+    if (extraClosingDivsRegex.test(content)) {
+      content = content.replace(extraClosingDivsRegex, '</div>\n        </div>\n      </div>\n    </>\n  );\n};');
+      modified = true;
+    }
+
+    // Fix missing closing div for container in specific pattern
+    const containerPatternRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
+    if (containerPatternRegex.test(content)) {
+      content = content.replace(containerPatternRegex, (match) => {
+        return match.replace(
+          /<div className="container mx-auto px-4 py-16">/,
+          '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">'
+        ).replace(
+          /<\/div>\s*<\/div>\s*<\/>/,
+          '</div>\n        </div>\n      </div>\n    </>'
+        );
+      });
+      modified = true;
+    }
+
+    // Clean up any remaining malformed structure
+    const malformedStructureRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">/g;
+    if (malformedStructureRegex.test(content)) {
+      content = content.replace(malformedStructureRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    }
-}
-
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        traverse(fullPath);
-      } else if (item.endsWith(".tsx") && !item.includes(".original")) {
-        files.push(fullPath);
-      }
-    }
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-
-  traverse(dir);
-  return files;
 }
 
 // Main execution
-const appDir = path.join(__dirname, "app");
-const tsxFiles = findTsxFiles(appDir);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  processFile(file);
-  fixedCount++;
+async function main() {
+  console.log('Starting JSX error fixes v2...');
+  
+  // Find all page.tsx files
+  const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
+  
+  let fixedCount = 0;
+  
+  for (const file of pageFiles) {
+    if (fixJSXErrors(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`Fixed JSX errors in ${fixedCount} files`);
+  
+  // Also fix the main App.tsx file
+  if (fixJSXErrors('app/App.tsx')) {
+    fixedCount++;
+    console.log('Fixed App.tsx');
+  }
+  
+  console.log(`Total files fixed: ${fixedCount}`);
 }
 
+main().catch(console.error);

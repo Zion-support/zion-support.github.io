@@ -17,29 +17,45 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
     };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  retryCount: number;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  private retryTimeoutId: NodeJS.Timeout | null = null;
+
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
-      errorInfo: null,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      error
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
     });
-    
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -77,8 +93,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }));
   };
 
-  handleReload = () => {
-    window.location.reload();
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
@@ -138,8 +154,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <button
-                onClick={this.handleRetry}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+                onClick={() => window.location.reload()}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />
                 Try Again
@@ -191,6 +207,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
+    })}
+  private handleReload = () => {
+    window.location.reload()}
+  private handleGoHome = () => {
+    window.location.href = '/'}
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
 
 export default EnhancedErrorBoundary;
+
+            <div className="mt-6 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team.</p>
+              <p className="mt-2">
+                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
+              </p>
+            </div>

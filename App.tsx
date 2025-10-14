@@ -2,8 +2,6 @@ import React, { Suspense, useEffect, useState, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
-import "./app/styles/futuristic-enhanced.css";
-import "./app/styles/futuristic-advanced.css";
 import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -14,12 +12,14 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
+import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
+import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -143,9 +143,33 @@ if (typeof window !== 'undefined') {
 
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        const criticalImages = [
+          '/images/hero-bg.jpg',
+          '/images/logo.png',
+        ];
+        
+        criticalImages.forEach(src => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = src;
+          document.head.appendChild(link);
+        });
+      };
+
+      preloadCriticalResources();
     }
   }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <GlobalErrorBoundary>

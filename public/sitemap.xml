@@ -49,6 +49,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/pricing</loc>
+    <lastmod>2025-10-13T12:22:24.346Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ziontechgroup.com/demo</loc>
     <lastmod>2025-10-14</lastmod>
     <changefreq>weekly</changefreq>

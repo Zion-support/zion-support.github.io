@@ -18,60 +18,22 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
-
-    // Load web-vitals library dynamically
-    const loadWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        // Measure Core Web Vitals
-        getCLS((metric) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }));
-          console.log('CLS:', metric);
-        });
-
-        getFID((metric) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }));
-          console.log('FID:', metric);
-        });
-
-        getFCP((metric) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          console.log('FCP:', metric);
-        });
-
-        getLCP((metric) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          console.log('LCP:', metric);
-        });
-
-        getTTFB((metric) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          console.log('TTFB:', metric);
-        });
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
-    };
-
-    loadWebVitals();
-
-    // Monitor memory usage if available
-    const monitorMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
         });
       }
     };
 
-    // Monitor memory every 30 seconds
-    const memoryInterval = setInterval(monitorMemory, 30000);
+    // Measure after initial load
+    const timer = setTimeout(measurePerformance, 1000);
 
     // Monitor page load performance
     const measurePageLoad = () => {
@@ -115,111 +77,30 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-  const formatMetric = useCallback((value: number | undefined, unit: string = 'ms') => {
-    if (value === undefined || value === null) return 'N/A';
-    if (unit === '') return value.toFixed(4);
-    return `${value.toFixed(0)}${unit}`;
+  // Toggle visibility with keyboard shortcut
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+        setIsVisible(!isVisible);
+      }
+    };
+
+    monitorPerformance();
   }, []);
 
-  const updateMetrics = useCallback(() => {
-    const newMetrics: PerformanceMetrics = {};
+  // Don't render in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
-    // Load time
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      if (loadTime > 0) newMetrics.loadTime = loadTime;
-    }
-
-    // Memory usage (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory && memory.usedJSHeapSize) {
-        newMetrics.memoryUsage = memory.usedJSHeapSize / (1024 * 1024); // Convert to MB
-      }
-    }
-
-    setMetrics(prev => ({ ...prev, ...newMetrics }));
-  }, []);
-
-  useEffect(() => {
-    // Collect Core Web Vitals
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value }));
-    });
-
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, interactionToNextPaint: metric.value }));
-    });
-
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value }));
-    });
-
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value }));
-    });
-
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, timeToFirstByte: metric.value }));
-    });
-
-    // Initial metrics collection
-    updateMetrics();
-
-    // Update metrics periodically
-    const interval = setInterval(updateMetrics, 5000);
-
-    // Keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyPress);
-
-    return () => {
-      clearInterval(interval);
-      document.removeEventListener('keydown', handleKeyPress);
-    };
-  }, [updateMetrics]);
-
-  // Send metrics to analytics (if needed)
-  useEffect(() => {
-    const sendMetrics = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          custom_map: {
-            cls: metrics.cumulativeLayoutShift,
-            inp: metrics.interactionToNextPaint,
-            fcp: metrics.firstContentfulPaint,
-            lcp: metrics.largestContentfulPaint,
-            ttfb: metrics.timeToFirstByte,
-          },
-        });
-      }
-    };
-
-    // Send metrics after a delay to ensure all are collected
-    const timeoutId = setTimeout(sendMetrics, 5000);
-    return () => clearTimeout(timeoutId);
-  }, [metrics]);
-
-  if (!isVisible) return null;
-
-  return (
-    <div className="fixed bottom-4 left-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg shadow-lg p-4 min-w-80 z-50">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-white">Performance Metrics</h3>
+  if (!isVisible) {
+    return (
+      <div className="fixed bottom-4 right-4 z-50">
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="Close performance monitor"
+          onClick={() => setIsVisible(true)}
+          className="bg-slate-800 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-slate-700 transition-colors"
         >
-          ×
+          Performance
         </button>
       </div>
       
