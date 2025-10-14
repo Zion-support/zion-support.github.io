@@ -5,27 +5,10 @@ export const enhancedErrorTracking = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-    };
-    
+    }
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', errorInfo);
-    }
-    
-    // Send to analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_parameters: context
-      });
-    }
-  },
-  
-  trackPerformanceError: (error: Error, performanceData: any) => {
-    enhancedErrorTracking.trackError(error, {
-      performance: performanceData,
+    if (process.env.NODE_ENV === 'development'
+      console.error('Error tracked:'
+    if (typeof window !== 'undefined'
+      window.gtag('event', 'exception'
       error_type: 'performance'
-    });
-  }
-};

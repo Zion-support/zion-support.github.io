@@ -1,22 +1,6 @@
 export const preloadOptimizer = {
   preload: (href: string, as: string) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = href;
-    link.as = as;
-    document.head.appendChild(link);
-  },
-  
-  preloadImage: (src: string) => {
-    const img = new Image();
-    img.src = src;
-  },
-  
-  preloadScript: (src: string) => {
-    preloadOptimizer.preload(src, 'script');
-  },
-  
-  preloadStyle: (href: string) => {
-    preloadOptimizer.preload(href, 'style');
-  }
-};
+    const link = document.createElement('link'
+    link.rel = 'preload'
+    preloadOptimizer.preload(src, 'script'
+    preloadOptimizer.preload(href, 'style'

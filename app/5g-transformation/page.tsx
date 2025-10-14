@@ -1,10 +1,10 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-function FiveGTransformationPage() {
-  const features = [
-    ;
-
-
+import React from 'react'
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+      title: '5G Transformation Strategy'
+      description: 'Comprehensive 5G transformation strategies tailored to your business needs.'
+      title: 'Security Assessment'
+      description: 'Complete security evaluation for 5G transformation implementation.'
+      title: 'Expert Support'
+      description: 'Professional support for your 5G transformation journey.'

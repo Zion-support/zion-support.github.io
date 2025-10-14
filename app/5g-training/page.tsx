@@ -1,10 +1,10 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-function FiveGTrainingPage() {
-  const features = [
-    ;
-
-
+import React from 'react'
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+      title: '5G Training Strategy'
+      description: 'Comprehensive 5G training strategies tailored to your business needs.'
+      title: 'Security Assessment'
+      description: 'Complete security evaluation for 5G training implementation.'
+      title: 'Expert Support'
+      description: 'Professional support for your 5G training journey.'

@@ -1,1 +1,1 @@
-import { Circle, Right, } from 'lucide-react';
+import { Circle, Right, } from 'lucide-react'
