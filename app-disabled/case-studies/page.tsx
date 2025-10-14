@@ -204,7 +204,7 @@ import { Right, Star, } from 'lucide-react';
                     </button>
                   </div>
                 </div>
-<div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
+<div className={index % 2 === 1 ? 'lg:col-start-1' : '}>
                   <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
                     <div className="text-center text-white">
                       <div className="text-6xl font-bold mb-4">{study.results.roi}</div>

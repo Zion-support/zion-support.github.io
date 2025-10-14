@@ -13,21 +13,21 @@ const BlogPage: React.FC = () => {
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',';
       author: 'Zion Tech Team',';
       date: '2024-01-15',';
-      readTime: '5 min read'';
+      readTime: '5 min read';
     },
     {
       title: 'Migration Best Practices',';
       excerpt: 'Essential strategies for successful cloud migration and optimization.',';
       author: 'Zion Tech Team',';
       date: '2024-01-10',';
-      readTime: '7 min read'';
+      readTime: '7 min read';
     },
     {
       title: 'Cybersecurity Trends 2024',';
       excerpt: 'Latest trends and threats in cybersecurity and how to protect your business.',';
       author: 'Zion Tech Team',';
       date: '2024-01-05',';
-      readTime: '6 min read'';
+      readTime: '6 min read';
     }
   ];
 
@@ -37,7 +37,7 @@ const categories = ['All Posts',';
     'Cybersecurity',';
     'Computing',';
     'Data Analytics',';
-    'Business Strategy'';
+    'Business Strategy';
   ];
 'use client';
 const BlogPage: React.FC = () => {

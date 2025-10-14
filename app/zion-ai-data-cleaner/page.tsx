@@ -6,27 +6,11 @@ import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAIEmailAnalyzer() {
   const features = [
-    "AI-powered email sentiment analysis",
-    "Automated email categorization",
-    "Spam detection and filtering",
-    "Email performance analytics",
-    "Smart reply suggestions",
-    "Email thread analysis",
-    "Attachment scanning",
-    "Email security monitoring",
-    "Custom email rules",
-    "Integration with major email providers",
-    "Real-time notifications",
-    "Detailed reporting dashboard"
+    "AI-powered email sentiment analysis",Automated email categorization",Spam detection and filtering",Email performance analytics",Smart reply suggestions",Email thread analysis",Attachment scanning",Email security monitoring",Custom email rules",Integration with major email providers",Real-time notifications",Detailed reporting dashboard"
   ];
 
   const benefits = [
-    "Improve email productivity by 40%",
-    "Reduce spam by 95%",
-    "Enhance email security",
-    "Better email organization",
-    "Faster response times",
-    "Improved customer satisfaction"
+    "Improve email productivity by 40%",Reduce spam by 95%",Enhance email security",Better email organization",Faster response times",Improved customer satisfaction"
   ];
 
   const pricing = [
@@ -35,7 +19,7 @@ export default function ZionAIEmailAnalyzer() {
       price: "$19",
       period: "month",
       description: "Perfect for individuals",
-      features: ["Up to 1,000 emails/month", "Basic analysis", "Email support", "1 user"],
+      features: ["Up to 1,000 emails/month",Basic analysis",Email support",1 user"],
       popular: false
     },
     {
@@ -43,7 +27,7 @@ export default function ZionAIEmailAnalyzer() {
       price: "$49",
       period: "month",
       description: "Ideal for small teams",
-      features: ["Up to 10,000 emails/month", "Advanced analytics", "Priority support", "5 users", "Custom rules"],
+      features: ["Up to 10,000 emails/month",Advanced analytics",Priority support",5 users",Custom rules"],
       popular: true
     },
     {
@@ -51,7 +35,7 @@ export default function ZionAIEmailAnalyzer() {
       price: "$99",
       period: "month",
       description: "For large organizations",
-      features: ["Unlimited emails", "Full AI features", "24/7 support", "Unlimited users", "Custom integration"],
+      features: ["Unlimited emails",Full AI features",24/7 support",Unlimited users",Custom integration"],
       popular: false
     }
   ];
@@ -147,7 +131,7 @@ export default function ZionAIEmailAnalyzer() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
             {benefits.map((benefit, index) => (
               <div
                 key={index}
@@ -182,8 +166,7 @@ export default function ZionAIEmailAnalyzer() {
                 className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular 
                     ? 'border-cyan-500/50 shadow-cyan-500/25' 
-                    : 'border-white/20 hover:border-cyan-500/30'
-                }`}
+                    : 'border-white/20 hover:border-cyan-500/30}`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
@@ -216,8 +199,7 @@ export default function ZionAIEmailAnalyzer() {
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                  }`}
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900}`}
                 >
                   Get Started
                 </Link>
@@ -247,10 +229,10 @@ export default function ZionAIEmailAnalyzer() {
             </Link>
             <Link
               to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className=border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105
             >
               Schedule Demo
-              <Video className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Video className=w-5 h-5 ml-2 group-hover:scale-110 transition-transform />
             </Link>
           </div>
         </div>

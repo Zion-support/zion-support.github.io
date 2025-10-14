@@ -6,12 +6,12 @@ const validateEmail = (email: string) => ({
 
 const validateName = (name: string) => ({
   isValid: /^[a-zA-Z\s\-']+$/.test(name) && name.length >= 2,
-  error: ''
+  error: '
 });
 
 const validatePhone = (phone: string) => ({
   isValid: /^[+]?[1-9][\d]{0,15}$/.test(phone.replace(/[\s\-()]/g, '')),
-  error: ''
+  error: '
 });
 
 const validateURL = (url: string) => ({
@@ -28,7 +28,7 @@ describe('Validation Functions', () => {
     });
 
     test('rejects invalid email formats', () => {
-      expect(validateEmail('').isValid).toBe(false);
+      expect(validateEmail(').isValid).toBe(false);
       expect(validateEmail('invalid-email').isValid).toBe(false);
       expect(validateEmail('@example.com').isValid).toBe(false);
       expect(validateEmail('test@').isValid).toBe(false);
@@ -43,7 +43,7 @@ describe('Validation Functions', () => {
     });
 
     test('rejects invalid name formats', () => {
-      expect(validateName('').isValid).toBe(false);
+      expect(validateName(').isValid).toBe(false);
       expect(validateName('A').isValid).toBe(false);
       expect(validateName('John123').isValid).toBe(false);
       expect(validateName('John@Doe').isValid).toBe(false);
@@ -58,7 +58,7 @@ describe('Validation Functions', () => {
     });
 
     test('rejects invalid phone formats', () => {
-      expect(validatePhone('').isValid).toBe(false);
+      expect(validatePhone(').isValid).toBe(false);
       expect(validatePhone('123').isValid).toBe(false);
       expect(validatePhone('abc-def-ghij').isValid).toBe(false);
     });
@@ -71,7 +71,7 @@ describe('Validation Functions', () => {
     });
 
     test('rejects invalid URL formats', () => {
-      expect(validateURL('').isValid).toBe(false);
+      expect(validateURL(').isValid).toBe(false);
       expect(validateURL('not-a-url').isValid).toBe(false);
       expect(validateURL('ftp://example.com').isValid).toBe(false);
     });

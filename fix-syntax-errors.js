@@ -2,83 +2,114 @@
 
 import fs from 'fs';
 import path from 'path';
-
-// Function to recursively find all files with syntax errors
-function findFilesWithSyntaxErrors(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && !file.includes('app-broken') && !file.includes('app-disabled')) {
-      findFilesWithSyntaxErrors(filePath, fileList);
-    } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx'))) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      // Check for common syntax errors
-      if (content.includes(')' expected') || 
-          content.includes('Unterminated string') || 
-          content.includes('Unexpected token') ||
-          content.includes('describe') && content.includes('test') && content.includes('expect') ||
-          content.includes('; expected')) {
-        fileList.push(filePath);
-      }
-    }
-  });
-  
-  return fileList;
-}
+import { glob } from 'glob';
 
 // Function to fix common syntax errors
-function fixSyntaxErrors(filePath) {
-  console.log(`Fixing syntax errors in: ${filePath}`);
+function fixSyntaxErrors(content) {
+  // Fix triple quotes
+  content = content.replace(/'''/g, "'");
+  content = content.replace(/"""/g, '"');
   
-  let content = fs.readFileSync(filePath, 'utf8');
+  // Fix malformed function declarations
+  content = content.replace(/export default function (\w+)\(\) \{\}/g, 'export default function $1() {');
   
-  // Fix unterminated string literals
-  content = content.replace(/'([^']*)$/gm, "'$1'");
-  content = content.replace(/"([^"]*)$/gm, '"$1"');
+  // Fix malformed try-catch blocks
+  content = content.replace(/try \{\}/g, 'try {');
+  content = content.replace(/catch \(error\) \{\}/g, 'catch (error) {');
   
-  // Fix missing closing parentheses
-  content = content.replace(/\(([^)]*)$/gm, '($1)');
+  // Fix malformed arrow functions
+  content = content.replace(/const (\w+) = \(([^)]*)\) => \{\}/g, 'const $1 = ($2) => {');
   
-  // Fix missing semicolons
-  content = content.replace(/([^;}])\n/g, '$1;\n');
+  // Fix malformed object literals
+  content = content.replace(/\{\}/g, '{}');
   
-  // Fix test files that have global variables declared
-  if (filePath.includes('test') || filePath.includes('spec')) {
-    // Remove duplicate global variable declarations
-    content = content.replace(/const\s+(describe|test|expect|it|beforeEach|afterEach)\s*=/g, '// $&');
-  }
+  // Fix malformed JSX attributes
+  content = content.replace(/className="([^"]*)"\s*"""/g, 'className="$1"');
+  content = content.replace(/content="([^"]*)"\s*"""/g, 'content="$1"');
   
-  // Fix JSX syntax errors
-  content = content.replace(/<([^>]*)$/gm, '<$1>');
+  // Fix malformed string literals
+  content = content.replace(/'([^']*)''/g, "'$1'");
+  content = content.replace(/"([^"]*)""/g, '"$1"');
   
-  // Fix missing closing braces
-  content = content.replace(/\{([^}]*)$/gm, '{$1}');
+  // Fix malformed imports
+  content = content.replace(/import React from 'react''/g, "import React from 'react'");
+  content = content.replace(/import \{ ([^}]+) \} from '([^']+)''/g, "import { $1 } from '$2'");
   
-  fs.writeFileSync(filePath, content);
+  // Fix malformed 'use client' directives
+  content = content.replace(/'use client''/g, "'use client'");
+  
+  // Fix malformed return statements
+  content = content.replace(/return \(\s*<>\s*"""/g, 'return (\n    <>\n      ');
+  
+  // Fix malformed JSX closing tags
+  content = content.replace(/<\/>\s*"""/g, '</>\n    );');
+  
+  // Fix malformed function calls
+  content = content.replace(/console\.error\('([^']*)'\);''/g, "console.error('$1');");
+  content = content.replace(/res\.setHeader\('([^']*)', '([^']*)'\);''/g, "res.setHeader('$1', '$2');");
+  content = content.replace(/res\.end\(([^)]+)\);''/g, 'res.end($1);');
+  
+  // Fix malformed object properties
+  content = content.replace(/error: '([^']*)' \}\}\}/g, "error: '$1' }");
+  
+  // Fix malformed JSON.stringify
+  content = content.replace(/JSON\.stringify\(\{ error: '([^']*)' \}\)\}/g, "JSON.stringify({ error: '$1' })");
+  
+  // Fix malformed closing braces
+  content = content.replace(/\}\s*\}\s*\}/g, '}');
+  
+  // Fix malformed semicolons
+  content = content.replace(/;\s*''/g, ';');
+  
+  return content;
 }
 
-// Main execution
-try {
-  console.log('Searching for files with syntax errors...');
-  const errorFiles = findFilesWithSyntaxErrors('.');
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js',
+    'app-broken/**/*.tsx',
+    'app-broken/**/*.ts',
+    'app-disabled/**/*.tsx',
+    'app-disabled/**/*.ts'
+  ];
   
-  console.log(`Found ${errorFiles.length} files with potential syntax errors:`);
-  errorFiles.forEach(file => console.log(`  - ${file}`));
+  let totalFixed = 0;
   
-  if (errorFiles.length === 0) {
-    console.log('No syntax errors found!');
-    process.exit(0);
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    files.forEach(file => {
+      if (processFile(file)) {
+        totalFixed++;
+      }
+    });
   }
   
-  console.log('\nFixing syntax errors...');
-  errorFiles.forEach(fixSyntaxErrors);
-  
-  console.log('\nSyntax errors have been fixed!');
-  
-} catch (error) {
-  console.error('Error fixing syntax errors:', error.message);
-  process.exit(1);
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { fixSyntaxErrors, processFile };

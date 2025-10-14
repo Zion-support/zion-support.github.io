@@ -3,8 +3,8 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix JSX syntax errors
-function fixJSXSyntax(content) {
+// Function to fix final JSX syntax errors
+function fixFinalJSX(content) {
   // Fix malformed JSX attributes with trailing quotes
   content = content.replace(/className="([^"]*)"\s*"/g, 'className="$1"');
   content = content.replace(/content="([^"]*)"\s*"/g, 'content="$1"');
@@ -27,6 +27,8 @@ function fixJSXSyntax(content) {
   content = content.replace(/<\/button>\s*"/g, '</button>');
   content = content.replace(/<\/a>\s*"/g, '</a>');
   content = content.replace(/<\/img>\s*"/g, '</img>');
+  content = content.replace(/<\/ul>\s*"/g, '</ul>');
+  content = content.replace(/<\/li>\s*"/g, '</li>');
   
   // Fix malformed JSX opening tags
   content = content.replace(/<div className="([^"]*)"\s*"/g, '<div className="$1"');
@@ -38,6 +40,8 @@ function fixJSXSyntax(content) {
   content = content.replace(/<span className="([^"]*)"\s*"/g, '<span className="$1"');
   content = content.replace(/<button className="([^"]*)"\s*"/g, '<button className="$1"');
   content = content.replace(/<a className="([^"]*)"\s*"/g, '<a className="$1"');
+  content = content.replace(/<ul className="([^"]*)"\s*"/g, '<ul className="$1"');
+  content = content.replace(/<li className="([^"]*)"\s*"/g, '<li className="$1"');
   
   // Fix malformed self-closing tags
   content = content.replace(/<img([^>]*)\s*"/g, '<img$1');
@@ -90,6 +94,20 @@ function fixJSXSyntax(content) {
   // Fix malformed closing brackets
   content = content.replace(/\]\s*"/g, ']');
   
+  // Fix malformed map functions
+  content = content.replace(/\.map\(([^)]*)\)\s*"/g, '.map($1)');
+  
+  // Fix malformed arrow functions
+  content = content.replace(/=>\s*\(\s*"/g, '=> (');
+  content = content.replace(/=>\s*\{\s*"/g, '=> {');
+  
+  // Fix malformed return statements
+  content = content.replace(/return\s*\(\s*"/g, 'return (');
+  
+  // Fix malformed closing parentheses in JSX
+  content = content.replace(/\)\s*\)\s*"/g, '))');
+  content = content.replace(/\)\s*\}\s*"/g, ')}');
+  
   return content;
 }
 
@@ -97,7 +115,7 @@ function fixJSXSyntax(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixJSXSyntax(content);
+    const fixedContent = fixFinalJSX(content);
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
@@ -115,7 +133,8 @@ function processFile(filePath) {
 async function main() {
   const patterns = [
     'app/**/*.tsx',
-    'app/**/*.ts'
+    'app/**/*.ts',
+    'api/**/*.js'
   ];
   
   let totalFixed = 0;
@@ -136,4 +155,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixJSXSyntax, processFile };
+export { fixFinalJSX, processFile };

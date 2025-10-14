@@ -6,25 +6,11 @@ import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
   const features = [
-    "Quantum machine learning algorithms for complex optimization",
-    "Quantum simulation for drug discovery and materials science",
-    "Quantum cryptography for ultra-secure communications",
-    "Quantum annealing for combinatorial optimization problems",
-    "Quantum neural networks for pattern recognition",
-    "Quantum error correction and fault tolerance",
-    "Hybrid quantum-classical computing workflows",
-    "Quantum cloud access with real quantum hardware",
-    "Advanced quantum algorithm development",
-    "Quantum state preparation and manipulation",
-    "Quantum entanglement and teleportation protocols",
-    "Custom quantum circuit design and optimization"
+    "Quantum machine learning algorithms for complex optimization",Quantum simulation for drug discovery and materials science",Quantum cryptography for ultra-secure communications",Quantum annealing for combinatorial optimization problems",Quantum neural networks for pattern recognition",Quantum error correction and fault tolerance",Hybrid quantum-classical computing workflows",Quantum cloud access with real quantum hardware",Advanced quantum algorithm development",Quantum state preparation and manipulation",Quantum entanglement and teleportation protocols",Custom quantum circuit design and optimization"
   ];
 
   const benefits = [
-    "Solve problems 1000x faster than classical computers",
-    "Breakthrough discoveries in science and medicine",
-    "Unbreakable quantum encryption for data security",
-    "Revolutionary optimization for complex systems"
+    "Solve problems 1000x faster than classical computers",Breakthrough discoveries in science and medicine",Unbreakable quantum encryption for data security",Revolutionary optimization for complex systems"
   ];
 
   const pricingPlans = [
@@ -34,13 +20,7 @@ export default function AiQuantumComputing() {
       period: "/month",
       description: "Perfect for academic research and small-scale quantum experiments",
       features: [
-        "Up to 100 quantum circuit executions",
-        "Basic quantum algorithms library",
-        "Quantum simulator access",
-        "Email support",
-        "Basic documentation",
-        "5 user accounts",
-        "Standard quantum gates"
+        "Up to 100 quantum circuit executions",Basic quantum algorithms library",Quantum simulator access",Email support",Basic documentation",5 user accounts",Standard quantum gates"
       ],
       popular: false
     },
@@ -50,16 +30,7 @@ export default function AiQuantumComputing() {
       period: "/month",
       description: "Ideal for large organizations and commercial quantum applications",
       features: [
-        "Up to 1,000 quantum circuit executions",
-        "Advanced quantum algorithms library",
-        "Real quantum hardware access",
-        "Priority support",
-        "Advanced documentation",
-        "25 user accounts",
-        "Custom quantum gates",
-        "API access",
-        "Quantum error correction",
-        "Dedicated quantum resources"
+        "Up to 1,000 quantum circuit executions",Advanced quantum algorithms library",Real quantum hardware access",Priority support",Advanced documentation",25 user accounts",Custom quantum gates",API access",Quantum error correction",Dedicated quantum resources"
       ],
       popular: true
     },
@@ -69,18 +40,7 @@ export default function AiQuantumComputing() {
       period: "/month",
       description: "For quantum research institutions and cutting-edge applications",
       features: [
-        "Unlimited quantum circuit executions",
-        "Complete quantum algorithms library",
-        "Exclusive quantum hardware access",
-        "24/7 dedicated support",
-        "Custom quantum development",
-        "Unlimited user accounts",
-        "Custom quantum processors",
-        "Advanced API access",
-        "Quantum entanglement protocols",
-        "Dedicated quantum scientists",
-        "White-label quantum solutions",
-        "On-premise quantum deployment"
+        "Unlimited quantum circuit executions",Complete quantum algorithms library",Exclusive quantum hardware access",24/7 dedicated support",Custom quantum development",Unlimited user accounts",Custom quantum processors",Advanced API access",Quantum entanglement protocols",Dedicated quantum scientists",White-label quantum solutions",On-premise quantum deployment"
       ],
       popular: false
     }
@@ -163,7 +123,7 @@ export default function AiQuantumComputing() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -174,7 +134,7 @@ export default function AiQuantumComputing() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Quantum Computing
+                {"}Quantum Computing
               </span>
             </h1>
             
@@ -316,8 +276,7 @@ export default function AiQuantumComputing() {
                 <div
                   key={index}
                   className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400' : ''
-                  }`}
+                    plan.popular ? 'ring-2 ring-cyan-400' :}`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -350,8 +309,7 @@ export default function AiQuantumComputing() {
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900}`}
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -385,7 +343,7 @@ export default function AiQuantumComputing() {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
                       {testimonial.avatar}
@@ -447,10 +405,10 @@ export default function AiQuantumComputing() {
               </Link>
               <Link
                 to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                className=border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105
               >
                 Quantum Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Monitor className=w-5 h-5 ml-2 group-hover:scale-110 transition-transform />
               </Link>
             </div>
           </div>

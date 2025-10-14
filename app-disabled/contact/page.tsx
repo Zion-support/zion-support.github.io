@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',    email: ',
+    name: ',    email: ',
     company: ',
     phone: ',
     service: ',
@@ -14,7 +14,7 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(i
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
     setFormData(prev => ({
-    message: '';)
+    message: ';)
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -140,7 +140,7 @@ message: ']
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
-                      <option value="">Select a service</option>
+                      <option value=">Select a service</option>
                       <option value="ai-solutions">AI Solutions</option>
                       <option value="it-services">IT Services</option>
                       <option value="cloud-migration">Migration</option>

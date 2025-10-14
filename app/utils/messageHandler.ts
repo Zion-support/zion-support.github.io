@@ -1,5 +1,5 @@
 // messageHandler utility
-export const messageHandler = () => {}
+export const messageHandler = () => {
   // Implementation
   return true
 }
