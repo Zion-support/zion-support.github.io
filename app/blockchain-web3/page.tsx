@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const BlockchainWeb3Page: React.FC = () => {
-=======
-constBlockchain Web 3 Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -20,7 +16,7 @@ constBlockchain Web 3 Page: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional blockchain web3 solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="gridmd:grid-cols-2lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions

@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const FiveGPrivateNetworks: React.FC = () => {
-=======
-const FiveGPrivateNetworksPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
-  return (
+const FiveGPrivateNetworksPage: React.FC = () => {  return (
     <>
       <Helmet>
         <title>5G Private Networks</title>
@@ -53,4 +48,4 @@ const FiveGPrivateNetworksPage: React.FC = () => {
   );
 };
 
-export default FiveGPrivateNetworks;
+export default FiveGPrivateNetworksPage;

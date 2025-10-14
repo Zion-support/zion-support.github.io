@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
+
 const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
-=======
-constAi Innovation Labs Product Development 2025 Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
+
+
   return (
     <>
       <Helmet>
@@ -53,4 +52,4 @@ constAi Innovation Labs Product Development 2025 Page: React.FC = () => {
   );
 };
 
-export default AiInnovationLabsProductDevelopment2025Page;
+export default AiInnovationLabsProductDevelopment2025PagePage;

@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {
-=======
-constAi 20252026 Mega Trends Breakthrough Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
@@ -53,4 +49,4 @@ constAi 20252026 Mega Trends Breakthrough Page: React.FC = () => {
   );
 };
 
-export default Ai20252026MegaTrendsBreakthroughPage;
+export default Ai20252026MegaTrendsBreakthroughPagePage;
