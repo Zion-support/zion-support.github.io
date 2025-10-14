@@ -5,11 +5,9 @@ import { MemoryRouter } from 'react-router-dom';
 import ErrorBoundary from '../app/components/ErrorBoundary';
 
 // Mock components that might not exist
-jest.mock('../app/components/AdvancedPerformanceMonitor', () => {
-  return function MockAdvancedPerformanceMonitor() {
-    return <div>Advanced Performance Monitor</div>;
-  };
-});
+const MockAdvancedPerformanceMonitor = () => {
+  return <div>Advanced Performance Monitor</div>;
+};
 
 describe('ErrorBoundary', () => {
   const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {

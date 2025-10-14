@@ -1,12 +1,26 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+name: "Sarah Johnson",""""
+      company: "TechCorp Inc.",""""
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","""
+      rating: 5},
+    {"""
+      name: "Michael Chen",""""
+      company: "DataFlow Systems",""""
+      content: "The live demonstration helped us understand the full potential of the AI solutions.","""
+      rating: 5},
+"""
+    { name: "Emily Rodriguez","""
+      company: "InnovateLabs","""
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.",""
+      rating: 5 }
 
-const PagePage = () => {
-  return (
+  ]
+
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" />
+
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -18,6 +32,4 @@ const PagePage = () => {
       </div>
     </div>
   );
-};
-
-export default PagePage;
+"""

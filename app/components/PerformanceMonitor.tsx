@@ -1,33 +1,43 @@
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null
-  });
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceMonitorPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="PerformanceMonitor - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">PerformanceMonitor</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+        <div className="space-y-1">
+          {metrics?.fcp && (
+            <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.lcp && (
+            <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.fid && (
+            <div>FID: {metrics.fid.toFixed(2)}ms</div>
+          )}
+          {metrics?.cls && (
+            <div>CLS: {metrics.cls.toFixed(4)}</div>
+          )}
+          {metrics?.ttfb && (
+            <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+};
 
-  useEffect(() => {
-    const measurePerformance = () => {
-      // Measure page load time
-      if (performance.timing) {
-        const timing = performance.timing;
-        const loadTime = timing.loadEventEnd - timing.navigationStart;
-        setMetrics(prev => ({ ...prev, loadTime }));
-      }
-
-      // Measure Core Web Vitals
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcp) {
-            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
-          }
-        });
+export default PerformanceMonitor;
     ttfb: null,
     loadTime: null
   }
@@ -50,9 +60,23 @@ const PerformanceMonitor: React.FC = () => {
         loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
       }
     // Wait for page load
+    if (document.readyState === 'complete') {'
+      getPerformanceMetrics()
+    } else {window.addEventListener('load', getPerformanceMetrics)"}"
+    return () => {window.removeEventListener('load', getPerformanceMetrics)"}"
+  }, [])
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {if (value === null) return "text-gray-500"
+    if (value <= thresholds.good) return "text-green-500"
+    if (value <= thresholds.poor) return "text-yellow-500"
+    return 'text-red-500'"}"
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {'
+    return null}
   return (
     <div className="fixed bottom-4 right-4 z-50">"
       <button
+        onClick={() => setIsVisible(!isVisible)
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors""
       >
         Performance
       </button>
@@ -94,6 +118,22 @@ const PerformanceMonitor: React.FC = () => {
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
+        setIsVisible(!isVisible)
+    window.addEventListener('keydown', handleKeyPress)";
+    return () => window.removeEventListener('keydown', handleKeyPress)";
+  }, [isVisible])
+  // Don't render in production'
+  if (process.env.NODE_ENV === 'production') {'
+    return null}
+  if (!isVisible) {return null}
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-xs">"
+      <div className="flex items-center justify-between mb-3">"
+        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>"
+        <button
+          onClick={() => setIsVisible(false)
+          className="text-gray-400 hover:text-white text-xs""
       }
     };
 
@@ -108,18 +148,70 @@ const PerformanceMonitor: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [isVisible]);
+  // Don't render in production
+  if (process.env.NODE_ENV === 'production') { return null; }
+  if (!isVisible) { return null; }
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button
+          onClick={ () => setIsVisible(false) }
+          className="text-gray-400 hover:text-white text-xs"
         >
           ×
         </button>
       </div>
+
+      <div className="space-y-2 text-sm">
+        <div className="flex justify-between"></div>
+          <span>Load Time:</span>"
+          <span className="text-cyan-400">
+            {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        "
+        <div className="flex justify-between"></div>
+          <span>FCP:</span>"
+          <span className="text-green-400">
+            {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        "
+        <div className="flex justify-between"></div>
+          <span>LCP:</span>"
+          <span className="text-yellow-400">
+            {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        "
+        <div className="flex justify-between"></div>
+          <span>FID:</span>"
+          <span className="text-orange-400">
+            {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}
+          </span>
+        </div>
+        "
+        <div className="flex justify-between"></div>
+          <span>CLS:</span>"
+          <span className="text-red-400">
+            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
+          </span>
+        </div>
+      </div>
+"
+      <div className="mt-2 text-xs text-gray-400"></div>
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
+  );
+
 export default PerformanceMonitor;
       )
     </div>
+  )
+export default PerformanceMonitor;
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitorPage;

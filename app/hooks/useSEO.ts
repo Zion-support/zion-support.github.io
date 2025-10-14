@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
@@ -16,4 +17,4 @@ export const useSEO = (structuredData?: unknown) => {
     }
     return undefined;
   }, [structuredData]);
-};
+}

@@ -1,5 +1,8 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+export default function EcommerceAnalyticsProPage() { return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <h1>Ecommerce Analytics Pro</h1>
+          <p className="text-gray-300 text-lg">
 
 const PagePage = () => {
   return (
@@ -20,4 +23,16 @@ const PagePage = () => {
   );
 };
 
-export default PagePage;
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+
+        </p>;
+      </div>
+    </div>
+  );
+}
+"

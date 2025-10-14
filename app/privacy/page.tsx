@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
+;
 const PrivacyPage = () => {
-  return (
+  return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -10,14 +10,14 @@ const PrivacyPage = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-          <p className="text-gray-300 text-lg">
+          <h1>Privacy Policy</h1>
+          <p>
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
   );
+  );
 };
-
 export default PrivacyPage;
