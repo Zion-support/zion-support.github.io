@@ -1,8 +1,6 @@
-import React from 'react';
-const AdDashboard = () => {
+import React from 'react';'const AdDashboard = () => {
   return (
-    <div className="addashboard-component">
-      <h2>AdDashboard</h2>
+    <div className="addashboard-component">"      <h2>AdDashboard</h2>
       <p>This component is under construction.</p>
     </div>
   );
