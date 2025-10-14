@@ -67,7 +67,8 @@ const HomePage: React.FC = () => {
               <p className="text-purple-700">Complete digital transformation strategies to modernize your business.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">
