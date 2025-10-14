@@ -2,23 +2,23 @@ export const advancedAnalytics = {
   trackPageView: (_page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+        page_path: _page
       })
     }
   },
   
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
-      })
+  trackEvent: (eventName: string, parameters: Record<string, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters)
     }
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+        send_to: conversionId,
+        value: value,
+        currency: currency
       })
     }
   },
@@ -26,7 +26,7 @@ export const advancedAnalytics = {
   setUserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-
+        custom_map: properties
       })
     }
   }
