@@ -1,48 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Shield, 
-  Brain, 
-<<<<<<< HEAD
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  AlertTriangle,
-  Eye,
-  Key,
-  Fingerprint,
-  Search,
-  Activity
-} from "lucide-react";
+import { ArrowRight, Shield, Brain, Star, Users, Award, Zap, Globe, Mail, Phone, Database, Lock, Cpu, Sparkles, Target, Calendar, FileText, Clock, AlertTriangle, Eye, Fingerprint, Search } from "lucide-react";
 
 export default function ZionSecurityShieldPro() {
   const features = [
@@ -91,7 +49,6 @@ export default function ZionSecurityShieldPro() {
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
   ];
 
-=======
   Zap, 
   Lock, 
   Clock, 
@@ -153,12 +110,10 @@ const ZionSecurityShieldProPage = () => {
     }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
   const pricingPlans = [
     {
       name: "Essential",
       price: "$499",
-<<<<<<< HEAD
       period: "month",
       description: "Core security features for small to medium businesses",
       features: [
@@ -167,7 +122,6 @@ const ZionSecurityShieldProPage = () => {
         "Firewall management",
         "Standard support",
         "Up to 50 users"
-=======
       period: "per month",
       description: "Perfect for small businesses looking for comprehensive security",
       features: [
@@ -177,13 +131,11 @@ const ZionSecurityShieldProPage = () => {
         "Standard compliance reports",
         "24/7 monitoring",
         "Email support"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       ],
       popular: false
     },
     {
       name: "Professional",
-<<<<<<< HEAD
       price: "$799",
       period: "month",
       description: "Advanced security features for growing businesses",
@@ -195,7 +147,6 @@ const ZionSecurityShieldProPage = () => {
         "Priority support",
         "Up to 200 users",
         "Mobile app access"
-=======
       price: "$999",
       period: "per month",
       description: "Ideal for growing businesses with advanced security needs",
@@ -207,13 +158,11 @@ const ZionSecurityShieldProPage = () => {
         "Priority support",
         "API access",
         "Custom integrations"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       ],
       popular: true
     },
     {
       name: "Enterprise",
-<<<<<<< HEAD
       price: "$1299",
       period: "month",
       description: "Complete security solution for large organizations",
@@ -226,7 +175,6 @@ const ZionSecurityShieldProPage = () => {
         "Unlimited users",
         "White-label options",
         "On-premise deployment"
-=======
       price: "$1999",
       period: "per month",
       description: "Complete security solution for large organizations",
@@ -238,7 +186,6 @@ const ZionSecurityShieldProPage = () => {
         "White-label options",
         "On-premise deployment",
         "Custom security policies"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       ],
       popular: false
     }
@@ -246,7 +193,6 @@ const ZionSecurityShieldProPage = () => {
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "David Martinez",
       company: "Financial Services Corp",
       role: "CISO",
@@ -283,7 +229,6 @@ const ZionSecurityShieldProPage = () => {
         <meta
           name="keywords"
           content="cybersecurity, AI security, threat detection, automated response, 24/7 monitoring, compliance reporting, vulnerability assessment, multi-factor authentication"
-=======
       name: "David Kim",
       company: "Financial Services Inc.",
       role: "CISO",
@@ -338,12 +283,10 @@ const ZionSecurityShieldProPage = () => {
         <meta
           name="keywords"
           content="cybersecurity, AI security, threat detection, compliance, data protection, security monitoring, incident response, enterprise security"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-security-shield-pro" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
@@ -655,7 +598,6 @@ const ZionSecurityShieldProPage = () => {
     </>
   );
 }
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -936,4 +878,3 @@ const ZionSecurityShieldProPage = () => {
 };
 
 export default ZionSecurityShieldProPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

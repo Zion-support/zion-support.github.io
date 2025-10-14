@@ -1,30 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  Play, 
-  Download, 
-  Upload, 
-  Settings, 
-  Sparkles, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Video,
-  Image,
-  Music,
-  Palette,
-  Clock,
-  Users,
-  Award,
-  Shield,
-  Globe,
-  BarChart3
-} from 'lucide-react';
+import { Play, Download, Settings, Sparkles, Zap, Star, CheckCircle, ArrowRight, Video, Image, Music, Palette, Clock, Users, Award, Shield, Globe, BarChart3 } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Play, Download, Star, CheckCircle, Users, Clock, Zap, Video, Image, Music, Sparkles, BarChart3, Globe, Headphones, Mic, Palette, Layers, Star as StarIcon, Mail, Phone, MapPin, Award, Shield, Settings, Phone as PhoneIcon, Play as PlayIcon, Star as StarIconIcon } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticBackground from '../components/FuturisticBackground';
 
 const ZionAiVideoGenerator = () => {
   const features = [
@@ -51,13 +33,6 @@ const ZionAiVideoGenerator = () => {
       description: "Maintain consistent branding across all videos with automatic logo placement and color schemes",
       icon: <Palette className="w-6 h-6" />,
       stats: "100% brand compliance"
-=======
-import { ArrowRight, Play, Download, Share, Star, CheckCircle, Users, Clock, Zap, Video, Image, Music, Sparkles, Target, BarChart3, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail, Phone, MapPin, Award, TrendingUp, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
 
 const ZionAIVideoGeneratorPage: React.FC = () => {
   const features = [
@@ -96,7 +71,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       description: "Access to royalty-free music library and sound effects for your videos",
       icon: <Music className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
     }
   ];
 
@@ -104,7 +78,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
     {
       name: "Starter",
       price: "$29",
-<<<<<<< HEAD
       period: "/month",
       description: "Perfect for small businesses and content creators",
       features: [
@@ -175,7 +148,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       description: "Generate professional videos for internal communications and external presentations",
       icon: <Award className="w-8 h-8" />,
       examples: ["Company updates", "Investor presentations", "Team announcements", "Recruitment videos"]
-=======
       period: "per month",
       description: "Perfect for individuals and small businesses",
       features: [
@@ -225,23 +197,19 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Sarah Chen",
       company: "Digital Marketing Pro",
       role: "Marketing Director",
       content: "Zion AI Video Generator has revolutionized our content creation process. We've increased our video output by 300% while reducing production time by 80%.",
-=======
       name: "Sarah Johnson",
       company: "Digital Marketing Agency",
       role: "Creative Director",
       content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce professional videos 10x faster than before.",
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
       rating: 5,
       avatar: "SC"
     },
@@ -254,17 +222,14 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       avatar: "MR"
     },
     {
-<<<<<<< HEAD
       name: "Emily Johnson",
       company: "StartupXYZ",
       role: "Founder",
       content: "As a startup, we needed professional videos without the budget. This tool gave us enterprise-quality content at a fraction of the cost.",
-=======
       name: "Emily Rodriguez",
       company: "Social Media Influencer",
       role: "Content Creator",
       content: "This tool has saved me countless hours. I can create engaging video content for all my social media platforms in minutes.",
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
       rating: 5,
       avatar: "EJ"
     }
@@ -280,7 +245,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Zion AI Video Generator - AI-Powered Video Creation Platform | Zion Tech Group</title>
         <meta name="description" content="Create professional videos in minutes with Zion AI Video Generator. AI-powered script generation, voice synthesis, and smart editing. Start your free trial today!" />
         <meta name="keywords" content="AI video generator, video creation, automated video, voice synthesis, video editing, content creation, marketing videos" />
@@ -347,7 +311,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white mb-2">10x</div>
               <div className="text-gray-300 text-sm">Faster Creation</div>
-=======
         <title>Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
           name="description"
@@ -417,13 +380,11 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
             </div>
           </div>
         </ResponsiveContainer>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -559,7 +520,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 </FuturisticButton>
               </FuturisticCard>
             ))}
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -651,12 +611,10 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
           </div>
         </ResponsiveContainer>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -667,7 +625,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See what our customers say about Zion AI Video Generator
             </p>
-=======
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -703,7 +660,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -735,7 +691,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         </ResponsiveContainer>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <ResponsiveContainer>
@@ -745,7 +700,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join thousands of content creators who are already using Zion AI Video Generator to produce professional videos in minutes.
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -754,7 +708,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join thousands of content creators, marketers, and businesses using Zion AI Video Generator to create professional videos in minutes.
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
             </p>
             
             {/* Contact Information */}
@@ -784,22 +737,18 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-<<<<<<< HEAD
                 href="#signup"
                 variant="primary"
                 size="lg"
                 icon={<Play className="w-5 h-5" />}
-=======
                 href="/contact"
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
               >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-<<<<<<< HEAD
                 href="/contact"
                 variant="outline"
                 size="lg"
@@ -811,7 +760,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             
             <div className="mt-8 text-sm text-gray-400">
               <p>14-day free trial • No credit card required • Cancel anytime</p>
-=======
                 href="/services"
                 variant="outline"
                 size="lg"
@@ -819,7 +767,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
               >
                 View All Services
               </FuturisticButton>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
             </div>
           </div>
         </ResponsiveContainer>
@@ -828,8 +775,5 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ZionAiVideoGenerator;
-=======
 export default ZionAIVideoGeneratorPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573

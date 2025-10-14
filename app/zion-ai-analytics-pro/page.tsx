@@ -1,43 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-<<<<<<< HEAD
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock
-} from "lucide-react";
+import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock } from "lucide-react";
 
 export default function ZionAiAnalyticsPro() {
   const features = [
@@ -76,7 +39,6 @@ export default function ZionAiAnalyticsPro() {
       description: "Rebrand our analytics platform as your own with complete white-label customization options for agencies and resellers.",
       icon: <Settings className="w-8 h-8" />,
       benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"]
-=======
   Zap, 
   Shield, 
   Clock, 
@@ -133,7 +95,6 @@ const ZionAIAnalyticsProPage = () => {
       description: "Bank-level security with end-to-end encryption, SSO, and compliance with industry standards.",
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-pink-500"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
     }
   ];
 
@@ -141,7 +102,6 @@ const ZionAIAnalyticsProPage = () => {
     {
       name: "Starter",
       price: "$299",
-<<<<<<< HEAD
       period: "month",
       description: "Perfect for small businesses getting started with analytics",
       features: [
@@ -150,7 +110,6 @@ const ZionAIAnalyticsProPage = () => {
         "Standard reports",
         "Email support",
         "1 user account"
-=======
       period: "per month",
       description: "Perfect for small businesses getting started with analytics",
       features: [
@@ -159,14 +118,12 @@ const ZionAIAnalyticsProPage = () => {
         "Standard support",
         "Monthly reports",
         "Email notifications"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       ],
       popular: false
     },
     {
       name: "Professional",
       price: "$599",
-<<<<<<< HEAD
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
@@ -177,7 +134,6 @@ const ZionAIAnalyticsProPage = () => {
         "Up to 10 user accounts",
         "API access",
         "Mobile apps"
-=======
       period: "per month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
@@ -187,14 +143,12 @@ const ZionAIAnalyticsProPage = () => {
         "Real-time alerts",
         "Priority support",
         "API access"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       ],
       popular: true
     },
     {
       name: "Enterprise",
       price: "$999",
-<<<<<<< HEAD
       period: "month",
       description: "Complete solution for large organizations",
       features: [
@@ -204,7 +158,6 @@ const ZionAIAnalyticsProPage = () => {
         "24/7 dedicated support",
         "Unlimited user accounts",
         "White-label options",
-=======
       period: "per month",
       description: "Complete solution for large organizations",
       features: [
@@ -212,7 +165,6 @@ const ZionAIAnalyticsProPage = () => {
         "Advanced AI modeling",
         "White-label options",
         "Dedicated support",
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
         "Custom integrations",
         "On-premise deployment"
       ],
@@ -225,11 +177,8 @@ const ZionAIAnalyticsProPage = () => {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
       role: "CEO",
-<<<<<<< HEAD
       content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence.",
-=======
       content: "Zion AI Analytics Pro transformed our data analysis. We've increased our decision-making speed by 300% and identified new revenue opportunities worth $2M annually.",
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       rating: 5,
       avatar: "SJ"
     },
@@ -237,11 +186,8 @@ const ZionAIAnalyticsProPage = () => {
       name: "Michael Chen",
       company: "E-commerce Solutions",
       role: "CTO",
-<<<<<<< HEAD
       content: "The predictive analytics feature helped us increase our sales by 40% in just 3 months. The ROI was immediate and substantial.",
-=======
       content: "The predictive modeling capabilities are incredible. We can now forecast sales with 95% accuracy and optimize our inventory accordingly.",
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       rating: 5,
       avatar: "MC"
     },
@@ -249,18 +195,14 @@ const ZionAIAnalyticsProPage = () => {
       name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
       role: "Operations Director",
-<<<<<<< HEAD
       content: "The real-time dashboards give us instant visibility into campaign performance. Our team productivity increased by 60%.",
-=======
       content: "The custom dashboard builder saved us months of development time. We can now create client reports in minutes instead of hours.",
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       rating: 5,
       avatar: "ER"
     }
   ];
 
   const stats = [
-<<<<<<< HEAD
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6" /> },
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6" /> },
@@ -278,7 +220,6 @@ const ZionAIAnalyticsProPage = () => {
         <meta
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, real-time dashboards, data visualization, business reporting, AI insights, data analytics platform"
-=======
     { number: "300%", label: "Faster Decision Making", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "95%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "50+", label: "Data Sources Supported", icon: <Database className="w-6 h-6" /> },
@@ -296,12 +237,10 @@ const ZionAIAnalyticsProPage = () => {
         <meta
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, data visualization, dashboard, machine learning, business insights, data analysis"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-analytics-pro" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -612,7 +551,6 @@ const ZionAIAnalyticsProPage = () => {
     </>
   );
 }
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -865,4 +803,3 @@ const ZionAIAnalyticsProPage = () => {
 };
 
 export default ZionAIAnalyticsProPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

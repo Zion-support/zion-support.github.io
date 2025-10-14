@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 interface FuturisticBackgroundProps {
   children?: React.ReactNode;
@@ -28,19 +28,25 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       
       // Draw some animated elements
       const time = Date.now() * 0.001;
-      const centerX = canvas.width / 2;
-      const centerY = canvas.height / 2;
       
-      // Animated circles
-      for (let i = 0; i < 5; i++) {
-        const angle = time + i * Math.PI / 2.5;
-        const radius = 50 + i * 30;
-        const x = centerX + Math.cos(angle) * radius;
-        const y = centerY + Math.sin(angle) * radius;
+      // Gradient background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, 'rgba(15, 23, 42, 0.8)');
+      gradient.addColorStop(0.5, 'rgba(88, 28, 135, 0.6)');
+      gradient.addColorStop(1, 'rgba(15, 23, 42, 0.8)');
+      
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Animated particles
+      for (let i = 0; i < 50; i++) {
+        const x = (Math.sin(time + i) * canvas.width / 2) + canvas.width / 2;
+        const y = (Math.cos(time * 0.5 + i) * canvas.height / 2) + canvas.height / 2;
+        const size = Math.sin(time + i) * 2 + 2;
         
         ctx.beginPath();
-        ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.3 - i * 0.05})`;
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(6, 182, 212, ${0.3 + Math.sin(time + i) * 0.2})`;
         ctx.fill();
       }
       
@@ -53,50 +59,23 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
-<<<<<<< HEAD
-=======
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
-<<<<<<< HEAD
+      {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
+        className="absolute inset-0 w-full h-full"
         style={{ zIndex: -1 }}
       />
-      {children}
-=======
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-        
-        {/* Radial gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        
-        {/* Floating particles effect */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400/20 rounded-full animate-ping"></div>
-          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/30 rounded-full animate-ping animation-delay-1000"></div>
-          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400/25 rounded-full animate-ping animation-delay-2000"></div>
-        </div>
-      </div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80" />
       
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     </div>
   );
 };

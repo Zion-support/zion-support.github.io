@@ -1,30 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  Brain, 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Target, 
-  MessageSquare, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Eye,
-  Heart,
-  ShoppingCart,
-  Clock,
-  Award,
-  Shield,
-  Globe,
-  Zap,
-  PieChart,
-  Activity
-} from 'lucide-react';
+import { Brain, BarChart3, Users, TrendingUp, Target, MessageSquare, Star, CheckCircle, ArrowRight, Eye, Heart, Clock, Award, Shield, Globe, Zap } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Eye, BarChart3, CheckCircle, Star, Users, Clock, Zap, Brain, TrendingUp, Target, MessageSquare, Heart, Award, Globe, Star as StarIcon, Mail, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Phone as PhoneIcon, Star as StarIconIcon } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticBackground from '../components/FuturisticBackground';
 
 const ZionAiCustomerInsights = () => {
   const features = [
@@ -51,13 +33,6 @@ const ZionAiCustomerInsights = () => {
       description: "Connect with 100+ platforms including social media, email, chat, and CRM systems",
       icon: <Globe className="w-6 h-6" />,
       stats: "100+ integrations"
-=======
-import { ArrowRight, Eye, BarChart3, CheckCircle, Star, Users, Clock, Zap, Brain, TrendingUp, Target, MessageSquare, Heart, ThumbsUp, Award, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
 
 const ZionAICustomerInsightsPage: React.FC = () => {
   const features = [
@@ -96,14 +71,12 @@ const ZionAICustomerInsightsPage: React.FC = () => {
       description: "Get instant insights and alerts about customer behavior changes",
       icon: <Zap className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-<<<<<<< HEAD
       price: "$49",
       period: "/month",
       description: "Perfect for small businesses getting started with customer insights",
@@ -175,7 +148,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
       description: "Create highly targeted campaigns based on deep customer insights and behavioral patterns",
       icon: <MessageSquare className="w-8 h-8" />,
       metrics: ["3x higher engagement", "2x conversion rates", "35% increase in ROI"]
-=======
       price: "$39",
       period: "per month",
       description: "Perfect for small businesses starting with customer analytics",
@@ -225,13 +197,11 @@ const ZionAICustomerInsightsPage: React.FC = () => {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: "Jennifer Martinez",
       company: "RetailMax",
       role: "VP of Customer Experience",
@@ -262,7 +232,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
     { number: "50M+", label: "Customer Profiles Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "99.2%", label: "Sentiment Analysis Accuracy", icon: <Award className="w-6 h-6" /> },
     { number: "30%", label: "Average Churn Reduction", icon: <TrendingUp className="w-6 h-6" /> }
-=======
       name: "Rachel Green",
       company: "E-commerce Platform",
       role: "Customer Success Manager",
@@ -293,13 +262,11 @@ const ZionAICustomerInsightsPage: React.FC = () => {
     { number: "35%", label: "Conversion Increase", icon: <Target className="w-6 h-6" /> },
     { number: "95%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "24/7", label: "Real-time Monitoring", icon: <Clock className="w-6 h-6" /> }
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into actionable insights with Zion AI Customer Insights. Predictive analytics, sentiment analysis, and automated recommendations. Start your free trial!" />
         <meta name="keywords" content="customer insights, AI analytics, sentiment analysis, predictive analytics, customer behavior, churn prediction, customer experience" />
@@ -360,7 +327,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
               </div>
             ))}
-=======
         <title>Zion AI Customer Insights - Advanced Customer Analytics & Sentiment Analysis | Zion Tech Group</title>
         <meta
           name="description"
@@ -431,12 +397,10 @@ const ZionAICustomerInsightsPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
           </div>
         </ResponsiveContainer>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -626,7 +590,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join hundreds of companies using AI-powered insights to understand their customers better and drive business growth.
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -767,7 +730,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join thousands of businesses using Zion AI Customer Insights to drive customer loyalty and growth.
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
             </p>
             
             {/* Contact Information */}
@@ -797,22 +759,18 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-<<<<<<< HEAD
                 href="#signup"
                 variant="primary"
                 size="lg"
                 icon={<Brain className="w-5 h-5" />}
-=======
                 href="/contact"
                 variant="primary"
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
               >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-<<<<<<< HEAD
                 href="/contact"
                 variant="outline"
                 size="lg"
@@ -824,7 +782,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
             
             <div className="mt-8 text-sm text-gray-400">
               <p>14-day free trial • No credit card required • Cancel anytime</p>
-=======
                 href="/services"
                 variant="outline"
                 size="lg"
@@ -832,7 +789,6 @@ const ZionAICustomerInsightsPage: React.FC = () => {
               >
                 View All Services
               </FuturisticButton>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
             </div>
           </div>
         </ResponsiveContainer>
@@ -841,8 +797,5 @@ const ZionAICustomerInsightsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ZionAiCustomerInsights;
-=======
 export default ZionAICustomerInsightsPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573

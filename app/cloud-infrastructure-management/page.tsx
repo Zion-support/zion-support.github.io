@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import {
-  Cloud,
-  Shield,
-  TrendingUp,
-  Server,
-  Zap,
-  BarChart3,
-  ArrowRight,
-} from "lucide-react";
+
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3,  } from "lucide-react";
 import Layout from "../layout";
 
 export default function CloudInfrastructureManagement() {
@@ -53,7 +44,6 @@ export default function CloudInfrastructureManagement() {
 
   const managementFeatures = [
     {
-=======
       category: 'Infrastructure Management',
       items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
     },
@@ -161,4 +151,3 @@ export default function CloudInfrastructureManagement() {
         'White-label options',
         'Real-time reports',
         'Custom integrations'
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

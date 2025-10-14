@@ -1,23 +1,19 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactNode } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-=======
+  fcp: number | null;
   lcp: number | null;
   fid: number | null;
   cls: number | null;
-  fcp: number | null;
   ttfb: number | null;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  children: ReactNode;
+  showDetails?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showDetails = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -33,190 +29,94 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime } as PerformanceMetrics));
+              setMetrics(prev => ({
+                ...prev,
+                fcp: entry.startTime
+              }));
             }
-          }
-          
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              setMetrics(prev => ({ 
-                ...prev, 
-                cls: (prev?.cls || 0) + (entry as any).value 
-              } as PerformanceMetrics));
-            }
+          } else if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => ({
+              ...prev,
+              lcp: entry.startTime
+            }));
+          } else if (entry.entryType === 'first-input') {
+            setMetrics(prev => ({
+              ...prev,
+              fid: (entry as any).processingStart - entry.startTime
+            }));
+          } else if (entry.entryType === 'layout-shift') {
+            setMetrics(prev => ({
+              ...prev,
+              cls: (prev?.cls || 0) + (entry as any).value
+            }));
           }
         }
       });
 
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-      // Measure TTFB
+      // Get TTFB
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        } as PerformanceMetrics));
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart
+        }));
       }
 
-      // Show performance monitor after 3 seconds
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 3000);
-
-      return () => {
-        observer.disconnect();
-      };
+      return () => observer.disconnect();
     };
 
     const cleanup = measurePerformance();
-    return cleanup;
+
+    // Show performance monitor after 2 seconds
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 2000);
+
+    return () => {
+      if (cleanup) cleanup();
+      clearTimeout(timer);
+    };
   }, []);
 
-  if (!isVisible || !metrics) {
-    return null;
+  if (!isVisible || !showDetails) {
+    return <>{children}</>;
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
-    return 'Poor';
-  };
-
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-cyan-400 font-semibold">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="Close performance monitor"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
-          </span>
+    <>
+      {children}
+      <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm rounded-lg p-4 text-white text-xs font-mono border border-cyan-500/20 z-50">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-cyan-400 font-semibold">Performance Monitor</span>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white"
+          >
+            ×
+          </button>
         </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
-          </span>
+        <div className="space-y-1">
+          {metrics?.fcp && (
+            <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.lcp && (
+            <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+          )}
+          {metrics?.fid && (
+            <div>FID: {metrics.fid.toFixed(2)}ms</div>
+          )}
+          {metrics?.cls && (
+            <div>CLS: {metrics.cls.toFixed(4)}</div>
+          )}
+          {metrics?.ttfb && (
+            <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
+          )}
         </div>
       </div>
-      
-      <div className="mt-2 pt-2 border-t border-gray-600">
-        <div className="text-xs text-gray-400">
-          Overall: {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React, { useEffect, ReactNode } from 'react';
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  useEffect(() => {
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      // Monitor Core Web Vitals
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-      }
-
-      // Monitor resource loading
-      if ('performance' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              console.log('Navigation timing:', entry);
-            } else if (entry.entryType === 'resource') {
-              console.log('Resource timing:', entry);
-            }
-          }
-        });
-
-        observer.observe({ entryTypes: ['navigation', 'resource'] });
-      }
-
-      // Monitor memory usage
-      if ('memory' in performance) {
-        const logMemoryUsage = () => {
-          console.log('Memory usage:', {
-            used: Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024),
-            total: Math.round((performance as any).memory.totalJSHeapSize / 1024 / 1024),
-            limit: Math.round((performance as any).memory.jsHeapSizeLimit / 1024 / 1024)
-          });
-        };
-
-        setInterval(logMemoryUsage, 30000); // Log every 30 seconds
-      }
-    };
-
-    monitorPerformance();
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

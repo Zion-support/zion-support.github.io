@@ -1,70 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-<<<<<<< HEAD
-=======
-  Zap, 
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-  BarChart3, 
-  Cloud, 
-  Users, 
-  Mail, 
-<<<<<<< HEAD
-  Smartphone, 
-  Globe, 
-  Zap, 
-  Target, 
-  Calendar, 
-  FileText, 
-  Database, 
-  Settings, 
-  Monitor, 
-  Lock, 
-  Server, 
-  Cpu, 
-  Network, 
-  HardDrive, 
-  Phone, 
-  Laptop, 
-  Headphones, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  Rocket, 
-  Sparkles,
-  TrendingUp,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  Code,
-  Bot,
-  Wifi,
-  Cpu as Processor,
-  Database as DataIcon,
-  FileText as DocumentIcon,
-  Mail as EmailIcon,
-  Globe as WebIcon,
-  Smartphone as MobileIcon,
-  Monitor as DesktopIcon,
-  Headphones as SupportIcon,
-  Settings as ConfigIcon,
-  Lock as SecurityIcon,
-  Server as ServerIcon,
-  Network as NetworkIcon,
-  HardDrive as StorageIcon,
-  Zap as LightningIcon,
-  Target as MarketingIcon,
-  Calendar as ScheduleIcon,
-  Users as TeamIcon,
-  BarChart3 as AnalyticsIcon,
-  Cloud as CloudIcon,
-  Brain as AIIcon,
-  Shield as ProtectionIcon
-} from "lucide-react";
+import { ArrowRight, Shield, Cloud, Users, Mail, Globe, Zap, Target, Calendar, Database, Monitor, Cpu, Phone, CheckCircle, Star, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Clock, Code, Cpu as Processor, Database as DataIcon, Mail as EmailIcon, Globe as WebIcon, Smartphone as MobileIcon, Monitor as DesktopIcon, Zap as LightningIcon, Target as MarketingIcon, Calendar as ScheduleIcon, Users as TeamIcon, BarChart3 as AnalyticsIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from "lucide-react";
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -427,7 +363,6 @@ export default function MicroSaasServices() {
         <meta
           name="keywords"
           content="micro SAAS, AI analytics, cybersecurity, cloud storage, CRM, marketing automation, project management, email management, inventory management, customer analytics, financial management, content creation, DevOps automation"
-=======
   Clock, 
   Globe, 
   Target, 
@@ -623,12 +558,10 @@ const MicroSaaSServicesPage = () => {
         <meta
           name="keywords"
           content="micro SAAS, AI analytics, business intelligence, CRM, marketing automation, project management, cloud storage, cybersecurity, business solutions"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
         />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-services" />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -878,7 +811,6 @@ const MicroSaaSServicesPage = () => {
     </>
   );
 }
-=======
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -1118,4 +1050,3 @@ const MicroSaaSServicesPage = () => {
 };
 
 export default MicroSaaSServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

@@ -1,32 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+export default AIServices;
+export default AIServicesPage;
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-<<<<<<< HEAD
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Users, 
-  Target, 
-  Globe, 
-  ArrowRight, 
-  Star, 
-  CheckCircle,
-  Video,
-  MessageSquare,
-  TrendingUp,
-  Database,
-  Eye,
-  Settings,
-  Award,
-  Clock
-} from 'lucide-react';
+import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, BarChart3 } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticBackground from '../components/FuturisticBackground';
 
 const AIServices = () => {
   const aiServices = [
@@ -163,7 +146,6 @@ const AIServices = () => {
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> }
-=======
   BarChart3, 
   Shield, 
   Zap, 
@@ -178,20 +160,11 @@ const AIServices = () => {
   Award,
   Globe
 } from 'lucide-react';
-=======
-import React from 'react';
-import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Award, BarChart3 } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
       title: 'AI Analytics',
-<<<<<<< HEAD
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/ai-analytics',
@@ -231,7 +204,6 @@ const AIServicesPage: React.FC = () => {
       icon: <TrendingUp className="w-8 h-8" />,
       path: '/ai-marketing',
       features: ['Campaign optimization', 'Audience targeting', 'ROI analysis']
-=======
       description: 'Transform your data into actionable insights with our advanced AI analytics platform',
       icon: <BarChart3 className="w-8 h-8" />,
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports'],
@@ -271,9 +243,7 @@ const AIServicesPage: React.FC = () => {
       icon: <Shield className="w-8 h-8" />,
       features: ['Threat Detection', 'Risk Assessment', 'Incident Response'],
       href: '/ai-cybersecurity'
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     }
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
   ];
 
   const stats = [
@@ -284,10 +254,8 @@ const AIServicesPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>AI Services - Advanced Artificial Intelligence Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our comprehensive AI services. Machine learning, natural language processing, computer vision, and predictive analytics solutions for modern enterprises." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, predictive analytics, AI automation, business intelligence" />
@@ -310,7 +278,6 @@ const AIServicesPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
               AI Services
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions"
@@ -331,12 +298,10 @@ const AIServicesPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI-Powered Solutions
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             Transform your business with our comprehensive AI services. From machine learning and natural language processing 
             to computer vision and predictive analytics, we provide cutting-edge AI solutions that drive real results.
           </p>
@@ -369,7 +334,6 @@ const AIServicesPage: React.FC = () => {
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-=======
             Transform your business with cutting-edge artificial intelligence. 
             From analytics to automation, we provide comprehensive AI solutions that drive real results.
           </p>
@@ -456,12 +420,10 @@ const AIServicesPage: React.FC = () => {
                 >
                   Learn More
                 </FuturisticButton>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
               </div>
             ))}
           </div>
         </ResponsiveContainer>
-<<<<<<< HEAD
       </section>
 
       {/* AI Capabilities Section */}
@@ -638,7 +600,6 @@ const AIServicesPage: React.FC = () => {
             <div className="mt-8 text-sm text-gray-400">
               <p>Free consultation • Custom AI solutions • 24/7 support</p>
             </div>
-=======
       </section>
 
       {/* CTA Section */}
@@ -668,7 +629,6 @@ const AIServicesPage: React.FC = () => {
             >
               Schedule a Demo
             </FuturisticButton>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
           </div>
         </ResponsiveContainer>
       </section>
@@ -676,9 +636,6 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AIServices;
-=======
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive AI services including analytics, automation, content generation, and more. Transform your business with cutting-edge AI solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, analytics, content generation" />
@@ -801,10 +758,3 @@ export default AIServices;
   );
 };
 
-export default AIServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
-export default AIServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -29,10 +28,9 @@ export default function DevOpsServices() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Server, Cloud, Zap, Shield, BarChart3, Users, ArrowRight } from 'lucide-react';
+import { Code, Server, Cloud, Zap, Shield, BarChart3, ArrowRight } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const DevOpsServicesPage = () => {
@@ -171,7 +169,6 @@ const DevOpsServicesPage = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       </div>
     </>
   );

@@ -1,10 +1,11 @@
-export default {
+module.exports = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
     "^@/components/(.*)$": "<rootDir>/app/components/$1",
     "^@/content/(.*)$": "<rootDir>/content/$1",
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
@@ -21,6 +22,8 @@ export default {
   ],
   testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
   transformIgnorePatterns: [
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
+    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion|react-lazy-load-image-component))",
   ],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json"],
+  testTimeout: 10000,
 };

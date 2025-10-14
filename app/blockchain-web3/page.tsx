@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
 import Layout from '../layout';
       category: 'Blockchain Development',
       items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-chain Solutions']
@@ -211,4 +209,3 @@ import Layout from '../layout';
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

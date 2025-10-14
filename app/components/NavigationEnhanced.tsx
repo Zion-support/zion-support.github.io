@@ -1,30 +1,6 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Zap, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Code, 
-  Brain, 
-  BarChart3, 
-  Star, 
-  ArrowRight, 
-  Globe, 
-  Cpu, 
-  Link as LinkIcon, 
-  Sidebar as SidebarIcon,
-  Video,
-  Users,
-  Target,
-  Settings,
-  Search,
-  Bell,
-  User
-} from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Link as LinkIcon, Sidebar as SidebarIcon, Video, Users, Search } from "lucide-react";
 import FuturisticButton from './FuturisticButton'
 
 interface NavigationEnhancedProps {

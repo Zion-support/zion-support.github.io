@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+import { Languages, Target, CheckCircle } from "lucide-react";
 import Layout from '../layout';
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
@@ -233,4 +231,3 @@ import Layout from '../layout';
     </Layout>
   );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

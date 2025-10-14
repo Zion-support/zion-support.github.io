@@ -44,7 +44,7 @@ describe('ErrorBoundary', () => {
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
-    expect(screen.getByText('Try Again')).toBeInTheDocument();
+    expect(screen.getByText('Refresh Page')).toBeInTheDocument();
     expect(screen.getByText('Go Home')).toBeInTheDocument();
   });
 
@@ -57,9 +57,9 @@ describe('ErrorBoundary', () => {
       </BrowserRouter>
     );
 
-    const tryAgainButton = screen.getByText('Try Again');
-    expect(tryAgainButton).toBeInTheDocument();
-    expect(tryAgainButton).toBeEnabled();
+    const refreshButton = screen.getByText('Refresh Page');
+    expect(refreshButton).toBeInTheDocument();
+    expect(refreshButton).toBeEnabled();
   });
 
   it('renders custom fallback when provided', () => {

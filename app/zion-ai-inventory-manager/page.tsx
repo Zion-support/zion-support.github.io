@@ -1,20 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings } from 'lucide-react';
+import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe, Settings } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
-import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Package, Target, Settings } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { ArrowRight, BarChart3, Shield, Zap, Globe, Star, Users, CheckCircle, TrendingUp, Clock, Package, Target, Settings } from "lucide-react";
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
 
 const ZionAIInventoryManager = () => {
   const features = [
     {
-<<<<<<< HEAD
       title: "AI-Powered Demand Forecasting",
       description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
       icon: <TrendingUp className="w-6 h-6" />,
@@ -144,7 +139,6 @@ const ZionAIInventoryManager = () => {
         title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
         description="Revolutionary AI-powered inventory management system with demand forecasting, real-time tracking, and automated reorder points. Reduce stockouts by 60% and save costs."
         keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
-=======
       title: "Smart Inventory Tracking",
       description: "AI-powered inventory tracking with real-time updates and alerts",
       icon: <Package className="w-6 h-6" />,
@@ -185,12 +179,10 @@ const ZionAIInventoryManager = () => {
         title="Zion AI Inventory Manager - Smart Inventory Management | Zion Tech Group"
         description="Optimize your inventory with AI-powered management. Smart tracking, predictive analytics, and automated reordering for modern businesses."
         keywords="inventory management, AI inventory, stock management, predictive analytics, automated reordering, inventory optimization"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
         canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
       />
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -240,7 +232,6 @@ const ZionAIInventoryManager = () => {
             </div>
           </div>
         </div>
-=======
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -283,12 +274,10 @@ const ZionAIInventoryManager = () => {
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -456,7 +445,6 @@ const ZionAIInventoryManager = () => {
             </Link>
           </div>
         </div>
-=======
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -541,7 +529,6 @@ const ZionAIInventoryManager = () => {
             </div>
           </div>
         </ResponsiveContainer>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
       </section>
     </div>
   );
