@@ -40,7 +40,7 @@ const entries = list.getEntries();
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value;
               }))
           }
-        }""";
+        }"
         observer.observe({entryTypes: ['largest-contentful-paint', 'layout-shift'],})";"'";
         const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";"'"
@@ -142,12 +142,12 @@ const timer = setTimeout(measurePerformance, 1000);
         
         <button;
           onClick={exportMetrics}
-          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>"";
+          className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-xs"></button>
           Export;
         </button>
       </div>
 
-      <div className="mt-2 text-xs text-gray-400"></div>"";
+      <div className="mt-2 text-xs text-gray-400"></div>
         Press Ctrl+Shift+P to toggle;
       </div>
     </div>

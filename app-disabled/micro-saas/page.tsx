@@ -156,7 +156,7 @@ import { Right, Circle, Star,    } from "lucide-react";";
           <div className="max-w-7xl mx-auto>""
             <div className="text-center mb-16>""
               <h2 className="text-3xl font-bold text-white mb-6>Our Micro SaaS Products</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>"";
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
                 Choose from our collection of specialized business tools designed to solve specific challenges.
               </p>
             </div>
@@ -186,7 +186,7 @@ product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700
           <div className="max-w-7xl mx-auto>""
             <div className="text-center mb-16>""
               <h2 className="text-3xl font-bold text-white mb-6>Why Choose Our Micro SaaS Solutions?</h2>""
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto>"";
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto>
                 Weve designed our micro SaaS products to be simple, powerful, and accessible to businesses of all sizes.
               </p>
             </div>
@@ -200,7 +200,7 @@ product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105"
                 >
-                  <className="w-5 h-5 />"";
+                  <className="w-5 h-5 />
                   Start Free Trial;
                 </div>
                 <to="/pricing"

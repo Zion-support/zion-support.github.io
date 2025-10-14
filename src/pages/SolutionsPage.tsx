@@ -74,12 +74,12 @@
                 Contact us today to discuss your specific requirements.
               </p>""
               <div className="flex justify-center space-x-4"></div>"
-                <a"";
+                <a
                   href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"></a>";
                   Contact Us;
                 </a>
-                <a"";
+                <a
                   href="/demo"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"></a>";
                   Request Demo;

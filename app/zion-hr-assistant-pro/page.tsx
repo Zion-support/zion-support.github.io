@@ -1,4 +1,4 @@
-import React from "react";""
+import React from "react"
 ;
 export default function ZionHrAssistantProPage() {
   return (
@@ -10,5 +10,5 @@ export default function ZionHrAssistantProPage() {
   );
 ;
 }
-""";
+"
  cursor/fix-errors-and-merge-to-main-54ad;

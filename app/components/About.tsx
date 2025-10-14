@@ -35,10 +35,10 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">""
           {/* Content */}
           <div></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"";
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               About Zion Tech Group;
             </h2>
-            <p className="text-xl text-gray-600 mb-8">"";
+            <p className="text-xl text-gray-600 mb-8">
               We are a leading technology company specializing in AI and IT solutions. ;
               Our mission is to empower businesses with innovative technology that drives ;
               growth, efficiency, and success.
@@ -48,7 +48,7 @@ const About: React.FC = () => {
               <div className="flex items-start">""
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />""
                 <p className="text-gray-600">""
-                  <strong className="text-gray-900">Expert Team:</strong> Our team consists of "";
+                  <strong className="text-gray-900">Expert Team:</strong> Our team consists of 
                   highly skilled professionals with deep expertise in AI, cloud computing, ;
                   and enterprise software development.
                 </p>
@@ -57,7 +57,7 @@ const About: React.FC = () => {
               <div className="flex items-start">""
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />""
                 <p className="text-gray-600">""
-                  <strong className="text-gray-900">Proven Track Record:</strong> We have "";
+                  <strong className="text-gray-900">Proven Track Record:</strong> We have 
                   successfully delivered hundreds of projects for clients across various ;
                   industries and company sizes.
                 </p>
@@ -65,7 +65,7 @@ const About: React.FC = () => {
               <div className="flex items-start">""
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />""
                 <p className="text-gray-600">""
-                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We "";
+                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We 
                   leverage the latest technologies and best practices to deliver ;
                   innovative solutions that give our clients a competitive advantage.
                 </p>
@@ -90,7 +90,7 @@ const About: React.FC = () => {
           <div className="relative">""
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">""
               <h3 className="text-2xl font-bold mb-4">Our Mission</h3>""
-              <p className="text-lg mb-6 opacity-90">"";
+              <p className="text-lg mb-6 opacity-90">
                 To democratize access to advanced technology and AI solutions, ;
                 enabling businesses of all sizes to compete and thrive in the ;
                 digital economy.
@@ -116,7 +116,7 @@ const About: React.FC = () => {
 
         {/* Values Section */}
         <div className="mt-20">""
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">"";
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Our Core Values;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""

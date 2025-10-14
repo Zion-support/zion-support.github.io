@@ -21,5 +21,5 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
   )};
 };
 
-export default SidebarNavigation;
-"""
+export default SidebarNavigation"
+;

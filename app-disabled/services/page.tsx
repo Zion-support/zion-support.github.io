@@ -68,7 +68,7 @@ const ServicesPage: React.FC = () => {const services = [;
       <div className="container mx-auto px-4 py-20">""
         <div className="text-center mb-16">""
           <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>""
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"";
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>

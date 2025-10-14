@@ -21,14 +21,14 @@ const Hero: React.FC = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
         <div className="max-w-4xl mx-auto">""
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"";
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Transform Your Business with;
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"";
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               AI & Technology;
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">"";
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Leading provider of AI and IT solutions, empowering businesses to scale, ;
             innovate, and succeed in the digital age.
           </p>

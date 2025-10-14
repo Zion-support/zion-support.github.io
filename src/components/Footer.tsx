@@ -40,7 +40,7 @@ const socialLinks = ["""
                 </li>)}
               ))}
               <li></li>
-                <Link""";
+                <Link"
                   to="/services"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>""
                   >
@@ -49,6 +49,6 @@ const socialLinks = ["""
                 </li>)
               ))}
               <li></li>
-                <Link""";
+                <Link"
                   to="/solutions"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"></Link>""

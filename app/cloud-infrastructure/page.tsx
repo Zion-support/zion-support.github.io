@@ -9,7 +9,7 @@ const HomePage = () => {
     </>
         <div className="text-center"></div>"""
           <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"""
-          <p className="text-gray-300 text-lg"></p>"";
+          <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
 
@@ -17,7 +17,6 @@ const HomePage = () => {
       </div>
     </div>
 )}
-  );
-"""
+  )"
 }
  cursor/fix-errors-and-merge-to-main-54ad;

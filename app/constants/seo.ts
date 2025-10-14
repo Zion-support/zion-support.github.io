@@ -23,7 +23,7 @@ export const defaultStructuredData = {
   "contactPoint": {""
     "@type": "ContactPoint",""
     "telephone": "+1-555-0123",""
-    "contactType": "customer service","";
+    "contactType": "customer service",;
     "availableLanguage": "English;"
   },
   "sameAs": [""
@@ -31,5 +31,4 @@ export const defaultStructuredData = {
     "https://twitter.com/ziontechgroup",""
     "https://www.facebook.com/ziontechgroup;"
   ]
-};
-"""
+}"

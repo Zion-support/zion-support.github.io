@@ -14,4 +14,5 @@ const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className
   )};
 };
 ;
-export default AdvancedLoadingStates;""
+export default AdvancedLoadingStates
+;

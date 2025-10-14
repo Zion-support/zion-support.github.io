@@ -36,8 +36,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
     { name: "Home", href: "/", icon: HomeIcon },""
     {name: "About", href: "/about", icon: InformationCircleIcon,},""
     { ;
-      name: "Services", "";
-      href: "/services", "";
+      name: "Services", 
+      href: "/services", 
       icon: BriefcaseIcon,
       submenu: [
       ]
@@ -129,7 +129,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'ai-services','';
       title: 'AI Services','';
-      icon: <Brain className="w-5 h-5" />,"";
+      icon: <Brain className="w-5 h-5" />,
       color: 'from-blue-500 to-cyan-500','';
       href: '/ai-services','';
       items: [
@@ -162,7 +162,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'it-services','';
       title: 'IT Services','';
-      icon: <Shield className="w-5 h-5" />,"";
+      icon: <Shield className="w-5 h-5" />,
       color: 'from-green-500 to-emerald-500','';
       href: '/services','';
       items: [{ label: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> }, '"'"
@@ -182,7 +182,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'micro-saas','';
       title: 'Micro SAAS','';
-      icon: <Zap className="w-5 h-5" />,"";
+      icon: <Zap className="w-5 h-5" />,
       color: 'from-purple-500 to-pink-500','';
       href: '/micro-saas','';
       items: [{ label: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> }, '"'"
@@ -212,7 +212,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: '5g-solutions','';
       title: '5G Solutions','';
-      icon: <Globe className="w-5 h-5" />,"";
+      icon: <Globe className="w-5 h-5" />,
       color: 'from-orange-500 to-red-500','';
       href: '/5g-solutions','';
       items: [{ label: '5G Data Analytics', href: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }, '"'"

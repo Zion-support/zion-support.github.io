@@ -268,7 +268,7 @@ const style = el.getAttribute('style');';
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '2.1.1',)'';
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,```;
-          element: el.tagName.toLowerCase(),""";
+          element: el.tagName.toLowerCase(),"
           fix: 'Remove tabindex="-1" tabindex="0"',"'"'";
           codeExample: '<button tabindex="0">Accessible button</button>''"'"
         });

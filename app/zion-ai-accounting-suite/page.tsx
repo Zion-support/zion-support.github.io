@@ -1,4 +1,4 @@
-import React from "react";""
+import React from "react"
 ;
 export default function ZionAiAccountingSuitePage() {
   return (
@@ -10,5 +10,5 @@ export default function ZionAiAccountingSuitePage() {
   );
 ;
 }
-""";
+"
  cursor/fix-errors-and-merge-to-main-54ad;

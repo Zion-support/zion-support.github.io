@@ -14,4 +14,5 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
   )};
 };
 ;
-export default Navigation;""
+export default Navigation
+;

@@ -9,7 +9,7 @@ interface SEOEnhancerProps {}
   url?: string;
   type?: string;
   structuredData?: unknown}
-const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}""";
+const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"}"
   title="Zion Tech Group - Advanced AI and IT Solutions"
   description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
   keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],''''''';

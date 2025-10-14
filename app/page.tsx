@@ -1,11 +1,11 @@
-import React from "react";"";
-import { Helmet    } from "react-helmet-async";"";
-import Hero from "./components/Hero";"";
-import Services from "./components/Services";"";
-import About from "./components/About";"";
-import Contact from "./components/Contact";"";
-import Footer from "./components/Footer";"";
-
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+;
 const HomePage = () => {
   return (
 <>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""

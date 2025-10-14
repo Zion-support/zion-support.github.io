@@ -4,7 +4,7 @@ export default function SEOEnhancer() {
     <div></div>
       <Helmet></Helmet>
         <title>SEO Enhancer - Zion Tech Group</title>
-        <meta"";
+        <meta
           name="description"
           content="Professional SEO enhancement services by Zion Tech Group."
         /></meta>

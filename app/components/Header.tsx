@@ -10,8 +10,8 @@ const Header: React.FC = () => {
     { name: "Home", href: "/" },""
     {name: "About", href: "/about",},""
     {
-      name: "Services","";
-      href: "/services","";
+      name: "Services",
+      href: "/services",
       submenu: [
         { name: "AI Services", href: "/ai-services" },""
         {name: "IT Services", href: "/it-services",},""

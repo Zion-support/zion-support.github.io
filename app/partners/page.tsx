@@ -51,22 +51,22 @@ const benefits = ['Access to cutting-edge technology', ''''
         { /* Hero Section */ }"""
         <section className="relative py-20 px-4">"""
           <div className="max-w-7xl mx-auto text-center"></div>"""
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>"";
-              Our;""
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">""";
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
+              Our
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"
                 Partners;
               </span>
             </h1>"""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">""";
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Join our growing ecosystem of strategic partners and unlock new opportunities;
               for growth and innovation.;
             </p>"""
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""""
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">""";
-                Become a Partner;""
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
+                Become a Partner
                 <Right className="w-5 h-5 ml-2 inline" />"""
               </button>"""
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">""";
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
                 Learn More;
               </button>
             </div>
@@ -76,7 +76,7 @@ const benefits = ['Access to cutting-edge technology', ''''
         { /* Partners Grid */ }"""
         <section className="py-20 px-4">"""
           <div className="max-w-7xl mx-auto"></div>"""
-            <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>"";
+            <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
               Strategic Partners;
             </h2>"""
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")}""
@@ -113,15 +113,15 @@ const benefits = ['Access to cutting-edge technology', ''''
 
               Ready to Partner with Us?;
             </h2>"""
-            <p className="text-xl text-gray-300 mb-8">""";
+            <p className="text-xl text-gray-300 mb-8">"
               Join our partner ecosystem and unlock new opportunities for growth and innovation.;
             </p>"""
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""""
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">""";
-                Apply Now;""
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
+                Apply Now
                 <Right className="w-5 h-5 ml-2 inline" />"""
               </button>"""
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">""";
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">"
                 Contact Us;
               </button>
             </div>

@@ -5,7 +5,7 @@
   useEffect(() => {
     // Enhanced accessibility features;
     const addSkipLinks = () => {;
-import React, { useEffect, useState } from "react";"";
+import React, { useEffect, useState } from "react";
 const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -19,9 +19,9 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     const applyAccessibilityEnhancements = () => {
       // Add skip links;
       const skipLink = document.createElement('a')";"'";
-      skipLink.href = "#main-content""";
-      skipLink.textContent = "Skip to main content""";
-      skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50""";
+      skipLink.href = "#main-content"
+      skipLink.textContent = "Skip to main content"
+      skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50"
       skipLink.style.cssText = `````;
         position: absolute;
         top: -40px;

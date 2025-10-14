@@ -57,10 +57,10 @@ const Contact: React.FC = () => {
 <>    <section className="py-20 bg-white">""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
         <div className="text-center mb-16">""
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">"";
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In Touch;
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"";
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our solutions '';
             can help you achieve your goals.
           </p>
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-6">""
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">""
                 <div></div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">"";
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
                   </label>
                   <input;
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
                   /></input>
                 </div>
                 <div></div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">"";
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
                   <input;
@@ -105,7 +105,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div></div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">"";
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company;
                 </label>
                 <input;
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
               </div>
               
               <div></div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">"";
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
                 </label>
                 <textarea;
@@ -146,10 +146,10 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <div className="space-y-8">""
             <div></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">"";
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Information;
               </h3>
-              <p className="text-gray-600 mb-8">"";
+              <p className="text-gray-600 mb-8">
                 We're here to help! Reach out to us through any of the channels below, '';
                 and we'll get back to you as soon as possible.''
               </p>
@@ -180,16 +180,16 @@ const Contact: React.FC = () => {
 
             {/* Additional Info */}
             <div className="bg-gray-50 rounded-lg p-6">""
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">"";
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">
                 Why Choose Us?
               </h4>
               <ul className="space-y-2 text-gray-600">""
                 <li className="flex items-center">""
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"";
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Free initial consultation;
                 </li>
                 <li className="flex items-center">""
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"";
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Customized solutions;
                 </li>
                 <li className="flex items-center">""
@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                   24/7 support available;
                 </li>
                 <li className="flex items-center">""
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>"";
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Proven track record;
                 </li>
               </ul>
