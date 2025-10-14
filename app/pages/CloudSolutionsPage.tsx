@@ -41,7 +41,7 @@ export default function CloudSolutionsPage() {
     { name: 'Amazon Web Services (AWS)', logo: 'AWS' },'
     { name: 'Microsoft Azure', logo: 'Azure' },'
     { name: 'Google Cloud Platform', logo: 'GCP' },'
-    { name: 'IBM Cloud', logo: 'IBM' },'
+    { name: 'IBM Cloud', logo: 'IBM' },';
     { name: 'Oracle Cloud', logo: 'Oracle' },';
     { name: 'DigitalOcean', logo: 'DO' }';
   ];

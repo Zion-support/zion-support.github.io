@@ -173,14 +173,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children}
 export default EnhancedErrorBoundary;
 export default EnhancedErrorBoundary;
-              )}
-        </div>
-      );`
-    }``
-    return this.props.children;```
-  }````
-}`````
-;``````
-export default EnhancedErrorBoundary;```````
->>>>>>> origin/main;````````
- origin/main;`````````
+              )}`
+        </div>``
+      );```
+    }````
+    return this.props.children;`````
+  }``````
+}```````
+;````````
+export default EnhancedErrorBoundary;`````````
+>>>>>>> origin/main;``````````
+ origin/main;```````````

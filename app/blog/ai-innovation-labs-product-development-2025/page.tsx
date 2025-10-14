@@ -83,17 +83,17 @@ const InnovationLabsPage: React.FC = () => {
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
 │   └── Custom AI Models
-├── Development Tools
-│   ├── GitHub Copilot
-│   ├── AI Code Generation`
-│   └── Automated Testing``
-├── Data & Analytics```
-│   ├── Real-time Data Processing````
-│   ├── Predictive Analytics`````
-│   └── Market Intelligence``````
-└── Infrastructure```````
-    ├── Cloud-native Architecture````````
-    ├── Kubernetes & Docker`````````
+├── Development Tools`
+│   ├── GitHub Copilot``
+│   ├── AI Code Generation```
+│   └── Automated Testing````
+├── Data & Analytics`````
+│   ├── Real-time Data Processing``````
+│   ├── Predictive Analytics```````
+│   └── Market Intelligence````````
+└── Infrastructure`````````
+    ├── Cloud-native Architecture``````````
+    ├── Kubernetes & Docker```````````
     └── CI/CD Automation`}
               </pre>
             </div>
@@ -114,14 +114,14 @@ const InnovationLabsPage: React.FC = () => {
                 </Link>
                 <Link href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">;
-                  Explore AI Services
-                </Link>
-              </div>`
-            </div>``
-          </div>```
-        </div>````
-      </div>`````
-    </div>``````
-  );```````
-}````````
-export default InnovationLabsPage;`````````
+                  Explore AI Services`
+                </Link>``
+              </div>```
+            </div>````
+          </div>`````
+        </div>``````
+      </div>```````
+    </div>````````
+  );`````````
+}``````````
+export default InnovationLabsPage;```````````

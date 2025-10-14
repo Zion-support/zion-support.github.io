@@ -60,14 +60,14 @@ export default PerformanceOptimizer;
     // Run optimizations;
     optimizeImages();
     optimizeFonts();
-    optimizeResources()
-    // Cleanup function return() => {
-      // Cleanup if needed}}, []);`
-  return <React.Fragment>{children}</React.Fragment>``
-}```
-export default PerformanceOptimizer;````
-      // Cleanup if needed;}`````
-  }, []);``````
-  return <React.Fragment>{children}</React.Fragment>```````
-};````````
-export default PerformanceOptimizer;`````````
+    optimizeResources()`
+    // Cleanup function return() => {``
+      // Cleanup if needed}}, []);```
+  return <React.Fragment>{children}</React.Fragment>````
+}`````
+export default PerformanceOptimizer;``````
+      // Cleanup if needed;}```````
+  }, []);````````
+  return <React.Fragment>{children}</React.Fragment>`````````
+};``````````
+export default PerformanceOptimizer;```````````

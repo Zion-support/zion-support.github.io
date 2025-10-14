@@ -75,17 +75,17 @@ const GuidesPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {guides.map((guide, index) => (
                 <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <guide.icon className="w-6 h-6 text-cyan-400" />`
-                    </div>``
-                    <div className="flex-1">```
-                      <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>````
-                      <p>{guide.description}</p>`````
-                    </div>``````
-                  </div>```````
-                  <div className="flex items-center justify-between mb-4">````````
-                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>`````````
+                  <div className="flex items-start space-x-4 mb-4">`
+                    <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">``
+                      <guide.icon className="w-6 h-6 text-cyan-400" />```
+                    </div>````
+                    <div className="flex-1">`````
+                      <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>``````
+                      <p>{guide.description}</p>```````
+                    </div>````````
+                  </div>`````````
+                  <div className="flex items-center justify-between mb-4">``````````
+                    <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>```````````
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
@@ -156,14 +156,14 @@ const GuidesPage: React.FC = () => {
               <Link;
                 to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >;
-                View Our Services
-              </Link>`
-            </div>``
-          </section>```
-        </main>````
-      </div>`````
-    </>``````
-  );```````
-};````````
-export default GuidesPage;`````````
+              >;`
+                View Our Services``
+              </Link>```
+            </div>````
+          </section>`````
+        </main>``````
+      </div>```````
+    </>````````
+  );`````````
+};``````````
+export default GuidesPage;```````````

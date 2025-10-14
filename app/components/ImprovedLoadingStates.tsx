@@ -14,7 +14,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'w-12 h-12'
   };
   return (
-    <div className={`flex items-center justify-center ${className}`}></div>`````````
+    <div className={`flex items-center justify-center ${className}`}></div>```````````
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} /></Loader2>
     </div>
   );
@@ -64,23 +64,23 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
       <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>"
       <p>{description}</p>"
     </div>
-  );
-};
-interface SkeletonLoaderProps {`
-  lines?: number;``
-  className?: string;```
-}````
-export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({`````
-  lines = 3,``````
-  className =```````
-}) => {````````
-  return (`````````
-    <div className={`animate-pulse ${className}`}></div>``````
-      {Array.from({ length: lines }).map((_, index) => (```````
-        <div;````````
-          key={index}`````````
-          className={`h-4 bg-white/10 rounded mb-2 ${````````
-            index === lines - 1 ? 'w-3/4' : 'w-full'`````````
+  );`
+};``
+interface SkeletonLoaderProps {```
+  lines?: number;````
+  className?: string;`````
+}``````
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({```````
+  lines = 3,````````
+  className =`````````
+}) => {``````````
+  return (```````````
+    <div className={`animate-pulse ${className}`}></div>````````
+      {Array.from({ length: lines }).map((_, index) => (`````````
+        <div;``````````
+          key={index}```````````
+          className={`h-4 bg-white/10 rounded mb-2 ${``````````
+            index === lines - 1 ? 'w-3/4' : 'w-full'```````````
           }`}
         /></div>
       ))}
@@ -101,14 +101,14 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
       <div className="text-center max-w-md mx-auto px-6">"
         <div className="mb-6">"
           <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-            {getServiceIcon(serviceName)}
-          </div>
-        </div>`
-        <LoadingSpinner size="lg" />"``
-        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>"```
-        <p>Preparing your personalized experience...</p>"````
-      </div>`````
-    </div>``````
-  );```````
-};````````
-export default LoadingPage;`````````
+            {getServiceIcon(serviceName)}`
+          </div>``
+        </div>```
+        <LoadingSpinner size="lg" />"````
+        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>"`````
+        <p>Preparing your personalized experience...</p>"``````
+      </div>```````
+    </div>````````
+  );`````````
+};``````````
+export default LoadingPage;```````````

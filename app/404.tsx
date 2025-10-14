@@ -9,5 +9,6 @@ const NotFound: React.FC<NotFoundProps> = ({ className = '' }) => {
       <p>This is the 404 component.</p>
     </div>
   );
-};`
-export default NotFound;``
+};
+
+export default NotFound;

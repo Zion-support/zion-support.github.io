@@ -14,7 +14,7 @@ export default function Page() {
           <h1>Terms</h1>
           <p className="text-xl text-gray-600"></p>
             This page is under development. Please check back soon for more information about our terms services.
-          </p>
+          </p>;
         </div>;
       </div>;
     </div>;

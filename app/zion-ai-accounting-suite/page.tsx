@@ -3,7 +3,7 @@ import React from 'react';
 export default function ZionAiAccountingSuitePage() {
   return (
 <>    <div></div>"
-      <h1>Zion Ai Accounting Suite</h1>"
+      <h1>Zion Ai Accounting Suite</h1>";
       <p>This page is under development.</p>;
     </div>)};
     </>;

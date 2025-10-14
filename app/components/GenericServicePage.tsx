@@ -33,15 +33,15 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
         <meta name="description" content={description} />"
         <meta;
           name="keywords"
-          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}`
-        /></meta>``
-      </Helmet>```
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"````
-        <main className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','`````
-          {/* Hero Section */}``````
-          <section className="text-center py-16">"```````
-            <div className="flex justify-center mb-8">"````````
-              <div;`````````
+          content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}```
+        /></meta>````
+      </Helmet>`````
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"``````
+        <main className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','```````
+          {/* Hero Section */}````````
+          <section className="text-center py-16">"`````````
+            <div className="flex justify-center mb-8">"``````````
+              <div;```````````
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
               ></div>
                 <Icon className="w-12 h-12 text-white" />"
@@ -183,14 +183,14 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 href="mailto: 'kleber@ziontechgroup.com"','
               ></a>
                 <Mail className="w-5 h-5 mr-2" />"
-                Email Us;
-              </a>
-            </div>`
-          </section>``
-        </main>```
-      </div>````
-    </>`````
-  );``````
-};```````
-export default GenericServicePage;````````
-`````````
+                Email Us;`
+              </a>``
+            </div>```
+          </section>````
+        </main>`````
+      </div>``````
+    </>```````
+  );````````
+};`````````
+export default GenericServicePage;``````````
+```````````

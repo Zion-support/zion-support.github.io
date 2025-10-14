@@ -144,14 +144,14 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
               {this.state.errorId && (
                 <p>"
                   Error ID: {this.state.errorId}
-                </p>
-              )}
-            </div>`
-          </div>``
-        </div>```
-      );````
-    }`````
-    return this.props.children;``````
-  }```````
-}````````
-export default ComprehensiveErrorBoundary;`````````
+                </p>`
+              )}``
+            </div>```
+          </div>````
+        </div>`````
+      );``````
+    }```````
+    return this.props.children;````````
+  }`````````
+}``````````
+export default ComprehensiveErrorBoundary;```````````

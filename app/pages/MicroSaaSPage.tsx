@@ -41,7 +41,7 @@ export default function MicroSaaSPage() {
     { name: 'E-commerce', description: 'Online retail solutions' },'
     { name: 'Healthcare', description: 'Medical practice management' },'
     { name: 'Finance', description: 'Financial services tools' },'
-    { name: 'Education', description: 'Learning management systems' },'
+    { name: 'Education', description: 'Learning management systems' },';
     { name: 'Real Estate', description: 'Property management tools' },';
     { name: 'Manufacturing', description: 'Production optimization' }';
   ];

@@ -159,14 +159,14 @@ const AISentimentAnalysisPro = () => {
                 size="lg"
                 icon={<Target className="w-5 h-5" />}"
               >
-                View Pricing;
-              </FuturisticButton>
-            </div>`
-          </div>``
-        </ResponsiveContainer>```
-      </section>````
-    </div>`````
-  );``````
-};```````
-export default AISentimentAnalysisPro;````````
-`````````
+                View Pricing;`
+              </FuturisticButton>``
+            </div>```
+          </div>````
+        </ResponsiveContainer>`````
+      </section>``````
+    </div>```````
+  );````````
+};`````````
+export default AISentimentAnalysisPro;``````````
+```````````

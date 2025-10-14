@@ -2,7 +2,7 @@ import lucide-react from 'lucide-react';
 export default function OptimizedLoading() {
   return (
     <div className="optimized-loading-container">"
-      <div className="loading-content">"
+      <div className="loading-content">";
         <div className="spinner"></div>";
         <p>Loading...</p>;
       </div>;

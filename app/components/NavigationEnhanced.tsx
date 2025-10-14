@@ -212,36 +212,36 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               <Link;
                 key={item.name}
                 to={item.path}
-                className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${````````
-                  location.pathname === item.path ? 'text-cyan-400' : 'text-white'`````````
-                }`}```````
-              ></Link>````````
-                {item.name}`````````
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${````````
-                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'`````````
-                }`}></span>
-              </Link>`
-            ))}``
-            {/* AI Services Dropdown */}```
-            <div className="relative">"````
-              <button;`````
-                onClick={toggleAiServices}``````
-                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','```````
-              ></button>````````
-                <span>AI Services</span>`````````
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : }`} />'
-              </button>
-              {isAiServicesOpen && (`
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">"``
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">"```
-                    <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services</h3>"````
-                  </div>`````
-                  {aiServices.map((service) => (``````
-                    <Link;```````
-                      key={service.name}````````
-                      to={service.path}`````````
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${````````
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : `````````
+                className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${``````````
+                  location.pathname === item.path ? 'text-cyan-400' : 'text-white'```````````
+                }`}`````````
+              ></Link>``````````
+                {item.name}```````````
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${``````````
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'```````````
+                }`}></span>``
+              </Link>```
+            ))}````
+            {/* AI Services Dropdown */}`````
+            <div className="relative">"``````
+              <button;```````
+                onClick={toggleAiServices}````````
+                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','`````````
+              ></button>``````````
+                <span>AI Services</span>```````````
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : }`} />'`
+              </button>``
+              {isAiServicesOpen && (```
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">"````
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">"`````
+                    <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">AI Services</h3>"``````
+                  </div>```````
+                  {aiServices.map((service) => (````````
+                    <Link;`````````
+                      key={service.name}``````````
+                      to={service.path}```````````
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${``````````
+                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ```````````
                       }`}
                       onClick={() => setIsAiServicesOpen(false)}
                     >
@@ -258,17 +258,17 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                         )}
                       </div>
                     </Link>
-                  ))}
-                </div>
-              )}`
-            </div>``
-            {/* IT Services Dropdown */}```
-            <div className="relative">"````
-              <button;`````
-                onClick={toggleItServices}``````
-                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','```````
-              ></button>````````
-                <span>IT Services</span>`````````
+                  ))}`
+                </div>``
+              )}```
+            </div>````
+            {/* IT Services Dropdown */}`````
+            <div className="relative">"``````
+              <button;```````
+                onClick={toggleItServices}````````
+                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','`````````
+              ></button>``````````
+                <span>IT Services</span>```````````
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : }`} />'
               </button>
               {isItServicesOpen && (
@@ -288,30 +288,30 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                       </div>
                       <span className="font-medium">{service.name}</span>"
                     </Link>
-                  ))}
-                </div>
-              )}`
-            </div>``
-            {/* Micro SAAS Dropdown */}```
-            <div className="relative">"````
-              <button;`````
-                onClick={toggleMicroSaas}``````
-                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','```````
-              ></button>````````
-                <span>Micro SAAS</span>`````````
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : }`} />'
-              </button>
-              {isMicroSaasOpen && (`
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">"``
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">"```
-                    <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>"````
-                  </div>`````
-                  {microSaasServices.map((service) => (``````
-                    <Link;```````
-                      key={service.name}````````
-                      to={service.path}`````````
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${````````
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : `````````
+                  ))}`
+                </div>``
+              )}```
+            </div>````
+            {/* Micro SAAS Dropdown */}`````
+            <div className="relative">"``````
+              <button;```````
+                onClick={toggleMicroSaas}````````
+                className="flex items-center space-x-1 hover: 'text-cyan-400 transition-all duration-300 font-medium group"','`````````
+              ></button>``````````
+                <span>Micro SAAS</span>```````````
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : }`} />'`
+              </button>``
+              {isMicroSaasOpen && (```
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">"````
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">"`````
+                    <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>"``````
+                  </div>```````
+                  {microSaasServices.map((service) => (````````
+                    <Link;`````````
+                      key={service.name}``````````
+                      to={service.path}```````````
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${``````````
+                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ```````````
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
                     >
@@ -363,34 +363,34 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus: 'outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"','
               />
-            </div>
-          </div>
-        )}`
-        {/* Mobile menu */}``
-        {isOpen && (```
-          <div className="lg: 'hidden py-4 border-t border-cyan-500/20">"','````
-            <div className="flex flex-col space-y-2">"`````
-              {mainNavItems.map((item) => (``````
-                <Link;```````
-                  key={item.name}````````
-                  to={item.path}`````````
-                  className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${``````
-                    location.pathname === item.path ;```````
-                      ? 'bg-cyan-500/20 text-cyan-400'````````
-                      : 'hover:bg-cyan-500/10 hover:text-cyan-400'`````````
+            </div>`
+          </div>``
+        )}```
+        {/* Mobile menu */}````
+        {isOpen && (`````
+          <div className="lg: 'hidden py-4 border-t border-cyan-500/20">"','``````
+            <div className="flex flex-col space-y-2">"```````
+              {mainNavItems.map((item) => (````````
+                <Link;`````````
+                  key={item.name}``````````
+                  to={item.path}```````````
+                  className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${````````
+                    location.pathname === item.path ;`````````
+                      ? 'bg-cyan-500/20 text-cyan-400'``````````
+                      : 'hover:bg-cyan-500/10 hover:text-cyan-400'```````````
                   }`}
                   onClick={toggleMenu}
-                ></Link>
-                  {item.name}
-                </Link>`
-              ))}``
-              {/* Mobile AI Services */}```
-              <div></div>````
-                <button;`````
-                  onClick={toggleAiServices}``````
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"','```````
-                ></button>````````
-                  <span>AI Services</span>`````````
+                ></Link>`
+                  {item.name}``
+                </Link>```
+              ))}````
+              {/* Mobile AI Services */}`````
+              <div></div>``````
+                <button;```````
+                  onClick={toggleAiServices}````````
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"','`````````
+                ></button>``````````
+                  <span>AI Services</span>```````````
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : }`} />'
                 </button>
                 {isAiServicesOpen && (
@@ -409,17 +409,17 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}"
                       </Link>
-                    ))}
-                  </div>
-                )}`
-              </div>``
-              {/* Mobile IT Services */}```
-              <div></div>````
-                <button;`````
-                  onClick={toggleItServices}``````
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"','```````
-                ></button>````````
-                  <span>IT Services</span>`````````
+                    ))}`
+                  </div>``
+                )}```
+              </div>````
+              {/* Mobile IT Services */}`````
+              <div></div>``````
+                <button;```````
+                  onClick={toggleItServices}````````
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"','`````````
+                ></button>``````````
+                  <span>IT Services</span>```````````
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : }`} />'
                 </button>
                 {isItServicesOpen && (
@@ -437,17 +437,17 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                         {service.icon}
                         <span>{service.name}</span>
                       </Link>
-                    ))}
-                  </div>
-                )}`
-              </div>``
-              {/* Mobile Micro SAAS */}```
-              <div></div>````
-                <button;`````
-                  onClick={toggleMicroSaas}``````
-                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"','```````
-                ></button>````````
-                  <span>Micro SAAS</span>`````````
+                    ))}`
+                  </div>``
+                )}```
+              </div>````
+              {/* Mobile Micro SAAS */}`````
+              <div></div>``````
+                <button;```````
+                  onClick={toggleMicroSaas}````````
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover: 'bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"','`````````
+                ></button>``````````
+                  <span>Micro SAAS</span>```````````
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : }`} />'
                 </button>
                 {isMicroSaasOpen && (
@@ -478,14 +478,14 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 onClick={toggleMenu}
               ></FuturisticButton>
                 <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />"
-              </FuturisticButton>
-            </div>`
-          </div>``
-        )}```
-      </div>````
-    </nav>`````
-  )``````
-})```````
-NavigationEnhanced.displayName = 'NavigationEnhanced'````````
-export default NavigationEnhanced;`````````
+                <ArrowRight className="w-4 h-4" />"`
+              </FuturisticButton>``
+            </div>```
+          </div>````
+        )}`````
+      </div>``````
+    </nav>```````
+  )````````
+})`````````
+NavigationEnhanced.displayName = 'NavigationEnhanced'``````````
+export default NavigationEnhanced;```````````

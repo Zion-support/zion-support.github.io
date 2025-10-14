@@ -2,7 +2,7 @@ import lucide-react from 'lucide-react';
 export default function FuturisticGlow() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet></Helmet>;
         <title>Futuristic Glow - Zion Tech Group</title>;
       </Helmet>;
       <div className="futuristic-glow-container">";

@@ -37,13 +37,13 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}```````
-    };````
-  }`````
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {``````
-    this.setState({```````
-      error,````````
-      errorInfo,`````````
+errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}`````````
+    };``````
+  }```````
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {````````
+    this.setState({`````````
+      error,``````````
+      errorInfo,```````````
 errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}````
     });
     // Log error to console in development;
@@ -149,14 +149,14 @@ export default ImprovedErrorBoundary;
                 Ready to transform your business with our improved error boundary services?</p>
               <a;
             Ready to Get Started?</h2></a>
-          <p>"
-            Let's discuss how our improved error boundary;
-            services can help you achieve your goals.</p>`
-          <a;``
-            href="/contact"```
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"````
-            Get Started Today</a></div></section></div>`````
-  );``````
-export default ImprovedErrorBoundary;```````
-};````````
-export default ImprovedErrorBoundaryPage;`````````
+          <p>"`
+            Let's discuss how our improved error boundary;``
+            services can help you achieve your goals.</p>```
+          <a;````
+            href="/contact"`````
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"``````
+            Get Started Today</a></div></section></div>```````
+  );````````
+export default ImprovedErrorBoundary;`````````
+};``````````
+export default ImprovedErrorBoundaryPage;```````````

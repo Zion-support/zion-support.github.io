@@ -197,14 +197,14 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.label}></a>
-                  {social.icon}
-                </a>
-              ))}`
-            </div>``
-          </div>```
-        </div>````
-      </div>`````
-    </footer>``````
-  );```````
-};````````
-export default Footer;`````````
+                  {social.icon}`
+                </a>``
+              ))}```
+            </div>````
+          </div>`````
+        </div>``````
+      </div>```````
+    </footer>````````
+  );`````````
+};``````````
+export default Footer;```````````

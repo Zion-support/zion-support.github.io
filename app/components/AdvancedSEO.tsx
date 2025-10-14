@@ -135,26 +135,26 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       "@type": "WebPage","
       "@id": fullCanonical"
     },
-    "articleSection": section,"
-    "keywords": tags.join(', '),'
-    "wordCount": readingTime ? readingTime * 200 : undefined"`
-  } : null;``
-  return (```
-    <Helmet></Helmet>````
-      {/* Basic Meta Tags */}`````
-      <title>{fullTitle}</title>``````
-      <meta name="description" content={description} />"```````
-      {keywords && <meta name="keywords" content={keywords} />}"````````
-      <meta name="language" content={lang} />"`````````
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'`
-      <link rel="canonical" href={fullCanonical} />"``
-      {/* Author and Publishing */}```
-      <meta name="author" content={author} />"````
-      {publishedTime && <meta name="article:published_time" content={publishedTime} />}"`````
-      {modifiedTime && <meta name="article:modified_time" content={modifiedTime} />}"``````
-      {section && <meta name="article:section" content={section} />}"```````
-      {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}'````````
-      {readingTime && <meta name="twitter:label1" content="Reading time" />}"`````````
+    "articleSection": section,"`
+    "keywords": tags.join(', '),'``
+    "wordCount": readingTime ? readingTime * 200 : undefined"```
+  } : null;````
+  return (`````
+    <Helmet></Helmet>``````
+      {/* Basic Meta Tags */}```````
+      <title>{fullTitle}</title>````````
+      <meta name="description" content={description} />"`````````
+      {keywords && <meta name="keywords" content={keywords} />}"``````````
+      <meta name="language" content={lang} />"```````````
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'```
+      <link rel="canonical" href={fullCanonical} />"````
+      {/* Author and Publishing */}`````
+      <meta name="author" content={author} />"``````
+      {publishedTime && <meta name="article:published_time" content={publishedTime} />}"```````
+      {modifiedTime && <meta name="article:modified_time" content={modifiedTime} />}"````````
+      {section && <meta name="article:section" content={section} />}"`````````
+      {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}'``````````
+      {readingTime && <meta name="twitter:label1" content="Reading time" />}"```````````
       {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}"
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={ogType} />"
@@ -228,14 +228,14 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
             },
             {
               "@type": "ListItem","
-              "position": 2,"
-              "name": title,"
-              "item": fullCanonical"`
-            }``
-          ]```
-        })}````
-      </script>`````
-    </Helmet>``````
-  );```````
-};````````
-export default AdvancedSEO;`````````
+              "position": 2,"`
+              "name": title,"``
+              "item": fullCanonical"```
+            }````
+          ]`````
+        })}``````
+      </script>```````
+    </Helmet>````````
+  );`````````
+};``````````
+export default AdvancedSEO;```````````

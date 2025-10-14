@@ -88,26 +88,26 @@ const errorReport: ErrorReport = {,
   };
   private getUserId = (): string | null => {
     // Try to get user ID from localStorage or other sources;
-    try {
-      return localStorage.getItem('userId') || null;
-    } catch {`
-      return null;``
-    }```
-  };````
-  private getSessionId = (): string => {`````
-    // Generate or retrieve session ID;``````
-    try {```````
-      let sessionId = sessionStorage.getItem('sessionId');````````
-      if (!sessionId) {`````````
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;`````
-        sessionStorage.setItem('sessionId', sessionId);``````
-      }```````
-      return sessionId;````````
-    } catch {`````````
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;``````
-    }```````
-  };````````
-  private generateErrorId = (): string => {`````````
+    try {`
+      return localStorage.getItem('userId') || null;``
+    } catch {```
+      return null;````
+    }`````
+  };``````
+  private getSessionId = (): string => {```````
+    // Generate or retrieve session ID;````````
+    try {`````````
+      let sessionId = sessionStorage.getItem('sessionId');``````````
+      if (!sessionId) {```````````
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;```````
+        sessionStorage.setItem('sessionId', sessionId);````````
+      }`````````
+      return sessionId;``````````
+    } catch {```````````
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;````````
+    }`````````
+  };``````````
+  private generateErrorId = (): string => {```````````
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
   private sendErrorReport = async (errorReport: ErrorReport) => {
@@ -244,14 +244,14 @@ const errorReport: ErrorReport = {,
                   >;
                     kleber@ziontechgroup.com
                   </a>
-                </p>
-              </div>
-            </div>`
-          </div>``
-        </div>```
-      );````
-    }`````
-    return this.props.children;``````
-  }```````
-}````````
-export default AdvancedErrorBoundary;`````````
+                </p>`
+              </div>``
+            </div>```
+          </div>````
+        </div>`````
+      );``````
+    }```````
+    return this.props.children;````````
+  }`````````
+}``````````
+export default AdvancedErrorBoundary;```````````

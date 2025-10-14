@@ -37,17 +37,17 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;'
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
-  const fullTwitterTitle = twitterTitle || fullOgTitle;
-  const fullTwitterDescription = twitterDescription || fullOgDescription;
-  const fullTwitterImage = twitterImage || ogImage;`
-  const fullOgUrl = ogUrl || canonicalUrl;``
-  return (```
-    <Helmet></Helmet>````
-      {/* Basic Meta Tags */}`````
-      <title>{fullTitle}</title>``````
-      <meta name="description" content={description} />"```````
-      <meta name="keywords" content={keywords} />"````````
-      <meta name="author" content="Zion Tech Group" />"`````````
+  const fullTwitterTitle = twitterTitle || fullOgTitle;`
+  const fullTwitterDescription = twitterDescription || fullOgDescription;``
+  const fullTwitterImage = twitterImage || ogImage;```
+  const fullOgUrl = ogUrl || canonicalUrl;````
+  return (`````
+    <Helmet></Helmet>``````
+      {/* Basic Meta Tags */}```````
+      <title>{fullTitle}</title>````````
+      <meta name="description" content={description} />"`````````
+      <meta name="keywords" content={keywords} />"``````````
+      <meta name="author" content="Zion Tech Group" />"```````````
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />'
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
       <meta name="theme-color" content="#06b6d4" />"
@@ -120,14 +120,14 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
               "contactType": "customer service","
               "email": "kleber@ziontechgroup.com"
             },
-            "sameAs": ["
-              "https://twitter.com/ziontechgroup","
-              "https: '//linkedin.com/company/ziontechgroup"','`
-            ]``
-          })}```
-        </script>````
-      )}`````
-    </Helmet>``````
-  );```````
-};````````
-export default ImprovedSEO;`````````
+            "sameAs": ["`
+              "https://twitter.com/ziontechgroup","``
+              "https: '//linkedin.com/company/ziontechgroup"','```
+            ]````
+          })}`````
+        </script>``````
+      )}```````
+    </Helmet>````````
+  );`````````
+};``````````
+export default ImprovedSEO;```````````

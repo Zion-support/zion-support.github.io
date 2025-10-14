@@ -149,7 +149,7 @@ export default CaseStudiesPage;
 import React from 'react';
 export default function CaseStudiesPage() {
   return (
-<>    <div></div>
+<>    <div></div>;
       <h1>CaseStudiesPage</h1>;
       <p>This page is under development.</p>;
     </div>;

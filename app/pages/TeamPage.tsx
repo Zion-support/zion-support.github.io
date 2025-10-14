@@ -13,7 +13,7 @@ export default function TeamPage() {
   const team = [
     {
       name: 'Kleber Santos','
-      role: 'CEO & Founder','
+      role: 'CEO & Founder',';
       bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',';
       image: '/images/team/kleber-santos.jpg',';
       linkedin: 'https://linkedin.com/in/kleber-santos',';
