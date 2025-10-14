@@ -1,188 +1,122 @@
-import React, { useEffect, useRef } from 'react';
-
-interface FuturisticBackgroundEnhancedProps {
-  children: React.ReactNode;
-  variant?: 'cyber-grid' | 'holographic' | 'quantum' | 'matrix' | 'neural';
-  intensity?: 'low' | 'medium' | 'high';
-  color?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'rainbow';
-}
-
-const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> = ({
-  children,
-  variant = 'cyber-grid',
-  intensity = 'medium',
-  color = 'rainbow'
-}) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Particle system for quantum effect
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      alpha: number;
-      life: number;
-    }> = [];
-
-    const colors = {
-      purple: '#8b5cf6',
-      cyan: '#06b6d4',
-      pink: '#ec4899',
-      green: '#10b981',
-      blue: '#3b82f6',
-      rainbow: ['#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b']
-    };
-
-    const getColor = () => {
-      if (color === 'rainbow') {
-        return colors.rainbow[Math.floor(Math.random() * colors.rainbow.length)];
-      }
-      return colors[color as keyof typeof colors];
-    };
-
-    const createParticle = () => {
-      return {
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        color: getColor(),
-        alpha: Math.random() * 0.8 + 0.2,
-        life: 1
-      };
-    };
-
-    // Initialize particles
-    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(createParticle());
-    }
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life -= 0.01;
-
-        if (particle.life <= 0 || particle.x < 0 || particle.x > canvas.width || particle.y < 0 || particle.y > canvas.height) {
-          particles[index] = createParticle();
-        }
-
-        ctx.save();
-        ctx.globalAlpha = particle.alpha * particle.life;
-        ctx.fillStyle = particle.color;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      });
-
-      // Draw connections between nearby particles
-      particles.forEach((particle, i) => {
-        particles.slice(i + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 150) {
-            ctx.save();
-            ctx.globalAlpha = (1 - distance / 150) * 0.2;
-            ctx.strokeStyle = particle.color;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.stroke();
-            ctx.restore();
-          }
-        });
-      });
-
-      // Add variant-specific effects
-      if (variant === 'matrix') {
-        // Matrix rain effect
-        ctx.fillStyle = '#10b981';
-        ctx.font = '14px monospace';
-        for (let i = 0; i < 50; i++) {
-          const x = (i * canvas.width / 50) + Math.sin(Date.now() * 0.001 + i) * 10;
-          const y = (Date.now() * 0.1 + i * 20) % canvas.height;
-          ctx.fillText(String.fromCharCode(0x30A0 + Math.random() * 96), x, y);
-        }
-      } else if (variant === 'neural') {
-        // Neural network connections
-        ctx.strokeStyle = '#8b5cf6';
-        ctx.lineWidth = 1;
-        particles.forEach((particle, i) => {
-          if (i % 3 === 0) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(canvas.width / 2, canvas.height / 2);
-            ctx.stroke();
-          }
-        });
-      }
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [variant, intensity, color]);
-
-  const getBackgroundClass = () => {
-    const baseClass = 'relative min-h-screen';
-    const variantClass = {
-      'cyber-grid': 'cyber-grid-enhanced',
-      'holographic': 'holographic-matrix',
-      'quantum': 'quantum-particles',
-      'matrix': 'data-stream',
-      'neural': 'neural-network-bg'
-    }[variant];
-
-    return `${baseClass} ${variantClass}`;
-  };
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+const FuturisticBackgroundEnhanced: React.FC = () => {
   return (
-    <div className={getBackgroundClass()}>
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
-  );
-};
+    <div className="min-h-screen bg-white">;
+      <Helmet>
+        <title>Futuristic Background Enhanced - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic background enhanced services by Zion Tech Group." />
+      </Helmet> }
+      { /* Hero Section */ }"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Futuristic Background Enhanced</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional futuristic background enhanced services;
+            designed to help your business grow and succeed.</p>
+        </div>
+      </section>
+      { /* Content Section */ }
+            Futuristic Background Enhanced</h1>"""
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"""
+            Professional futuristic background enhanced services
 
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
+      <section className="py-16 px-4">"
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive futuristic background enhanced;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our futuristic background enhanced services?</p>
+              <a;
+                href="$1"
+                className="$1"
+              >
+                Contact Us,
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
+
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our futuristic background enhanced 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+export default FuturisticBackgroundEnhanced;
+                We provide comprehensive futuristic background enhanced
+                solutions tailored to your specific needs and requirements.</p>"""
+              <ul className="space-y-3">""""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Custom solutions</li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation</li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support</li></ul></div>"""
+            <div className=bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white></div>"""
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
+              <p className="mb-6">"""
+                Ready to transform your business with our futuristic background enhanced services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our futuristic background enhanced;
+            services can help you achieve your goals.</p>
+          <a"""
+            href="/contact"""""
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
+            Get Started Today</a></div></section></div>
+)}
+export default FuturisticBackgroundEnhanced
+}
 export default FuturisticBackgroundEnhanced;

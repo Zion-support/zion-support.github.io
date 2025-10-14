@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
@@ -21,8 +20,6 @@ import {
   Eye,
   Settings
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiBusinessIntelligencePro = () => {

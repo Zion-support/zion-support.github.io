@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Mic, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, MessageSquare, Volume2, Headphones, Phone } from 'lucide-react';
+import { ArrowRight, Mic, Globe, CheckCircle, Clock, MessageSquare, Headphones } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';

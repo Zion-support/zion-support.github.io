@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   Satellite, 
@@ -7,17 +6,10 @@ import {
   Zap, 
   Target, 
   CheckCircle, 
-  ArrowRight,
-  Cpu,
   Globe,
-  Clock,
-  Users,
   Award,
-  Star,
   Activity,
-  PieChart,
   Navigation,
-  MapPin,
   Gauge
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

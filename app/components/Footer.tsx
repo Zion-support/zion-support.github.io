@@ -51,6 +51,27 @@ const Footer: React.FC = () => {
                 <Globe className="w-5 h-5" />
               </a>
             </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <span className="sr-only">{social.name}</span>
+                  <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">
+                    {social.icon === 'linkedin' && <span className="text-xs">in</span>}
+                    {social.icon === 'twitter' && <span className="text-xs">t</span>}
+                    {social.icon === 'github' && <span className="text-xs">g</span>}
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Services */}
