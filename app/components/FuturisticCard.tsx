@@ -1,22 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-interface FuturisticCardProps {} children: React.ReactNode className?: string' variant?: 'default' | 'glow' | 'gradient'
-}
-const FuturisticCard: React.FC<FuturisticCardProps> = ({} children,'' className = ',' variant = 'default'
-}) => {''} const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm' const variantClasses = {} default: 'bg-white/10',' glow: 'bg-white/10 shadow-lg shadow-blue-500/20',' gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20' } return ( <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>` {children} </div> )
-}
-export default FuturisticCard'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const FuturisticCard = () => {
+export default function FuturisticCard() {
   return (
-    <div className="futuristiccard-component">
-      <h2>FuturisticCard</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>FuturisticCard - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristiccard services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              FuturisticCard
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional futuristiccard services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default FuturisticCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

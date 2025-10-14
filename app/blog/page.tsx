@@ -1,50 +1,51 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const BlogPage: React.FC = () => {
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights, trends, and updates from Zion Tech Group on AI, technology, and business solutions." />
-        <meta name="keywords" content="blog, AI insights, technology trends, business solutions, Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Blog
+              Page
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Latest insights, trends, and updates from Zion Tech Group on AI, technology, and business solutions.
+            <p className="text-xl text-gray-600 mb-8">
+              Professional page services by Zion Tech Group.
             </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
           </div>
-=======
-const PagePage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
         </div>
       </div>
     </>
   );
-};
-
-<<<<<<< HEAD
-export default BlogPage;
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

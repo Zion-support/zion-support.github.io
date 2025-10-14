@@ -1,21 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-export default function Page() {
+
+export default function GlobalErrorBoundary() {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>GlobalErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional globalerrorboundary services by Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Page
+              GlobalErrorBoundary
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional page services by Zion Tech Group.
+              Professional globalerrorboundary services by Zion Tech Group.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -49,16 +49,3 @@ export default function Page() {
     </>
   );
 }
-=======
-
-const GlobalErrorBoundary = () => {
-  return (
-    <div className="globalerrorboundary-component">
-      <h2>GlobalErrorBoundary</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default GlobalErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

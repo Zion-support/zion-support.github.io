@@ -1,21 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {} title?: string description?: string keywords?: string image?: string url?: string;' type?: 'website' | 'article' | 'product'' structuredData?: any}
-const SEOHead: "React.FC<SEOHeadProps> = ({"'"} title = 'Zion Tech Group - Advanced AI & IT Solutions',' description = 'Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.',' keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group',' image = 'https: "// ziontechgroup.com/og-image.jpg'",'"'" url = 'https: "//ziontechgroup.com'",'"'" type = 'website',' author = 'Zion Tech Group',' publishedTime, modifiedTime, section, tags = [], structuredData}) => {} const defaultStructuredData = {} "@context": "https://schema.org"," "@type": "Organization"," "name": "Zion Tech Group"," "url": "https://ziontechgroup.com"," "logo": "https://ziontechgroup.com/logo192.png"," "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services."," "foundingDate": "20o20"," "address": {"} "@type": "PostalAddress"," "addressCountry": "US"" }, "contactPoint": {"} "@type": "ContactPoint"," "telephone": "+1-555-0o123"," "contactType": "customer service"," "email": "info@ziontechgroup.com"" }, "sameAs": ["] "https://linkedin.com/company/ziontechgroup"," "https://twitter.com/ziontechgroup"," "https://github.com/ziontechgroup"" ], "offers": {"} "@type": "AggregateOffer"," "offerCount": "50+"," "offers": ["] {} "@type": "Offer"," "name": "AI Solutions"," "description": "Advanced artificial intelligence solutions for businesses"" }, {} "@type": "Offer"," "name": "Cybersecurity Services"," "description": "Comprehensive cybersecurity solutions and consulting"" }, {} "@type": "Offer"," "name": "Cloud Infrastructure"," "description": "Scalable cloud infrastructure and migration services"" } ] } } const finalStructuredData = structuredData || defaultStructuredData return ( <Helmet> {/* Basic Meta Tags */} <title>{fullTitle}</title> <meta name="description" content="{description}" />" <meta name="keywords" content="{keywords}" />" <meta name="author" content="{author}" />" <meta name="robots" content="index, follow" />" <meta name="viewport" content="width=device-width, initial-scale=1.0" />" {/* Open Graph */} <meta property="og:title" content="{fullTitle}" />" <meta property="og:description" content="{description}" />" <meta property="og:type" content="{type}" />" <meta property="og:url" content="{fullUrl}" />" <meta property="og:image" content="{fullImage}" />" <meta property="og: imag,e:width" content="1200" />" <meta property="og: imag,e:height" content="630" />" <meta property="og:site_name" content="Zion Tech Group" />" <meta property="og:locale" content="en_US" />" {/* Article specific meta tags */}'' {type === 'article' && publishedTime && ('} <meta property="article:published_time" content="{publishedTime}" />" )}'' {type === 'article' && modifiedTime && ('} <meta property="article:modified_time" content="{modifiedTime}" />" )}'' {type === 'article' && author && ('} <meta property="article:author" content="{author}" />" )}'' {type === 'article' && section && ('} <meta property="article:section" content="{section}" />" )}'' {type === 'article' && tags.map((tag, index) => ('} <meta key={index} property="article:tag" content="{tag}" />" ))} {/* Twitter */} <meta name="twitter:card" content="summary_large_image" />" <meta name="twitter:title" content="{fullTitle}" />" <meta name="twitter:description" content="{description}" />" <meta name="twitter:image" content="{fullImage}" />" <meta name="twitter:site" content="@ziontechgroup" />" <meta name="twitter:creator" content="@ziontechgroup" />" {/* Canonical URL */} <link rel="canonical" href="{fullUrl}" />" {/* Structured Data */} {structuredData && (} <script type="application"/ld+json">" {JSON.stringify(structuredData)} </script> )} {/* Additional SEO Meta Tags */} <meta name="theme-color" content="#8b5cf6" />" <meta name="msapplication-TileColor" content="#8b5cf6" />" <meta name="apple-mobile-web-app-capable" content="yes" />" <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />" <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />" {/* Preconnect to external domains for performance */} <link rel="preconnect" href="https: "/"," <link rel="preconnect" href="https: "/"," <link rel="preconnect" href="https: "/"," </Helmet> )
-}
-export default SEOHead'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const SEOHead = () => {
+export default function SEOHead() {
   return (
-    <div className="seohead-component">
-      <h2>SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>SEOHead - Zion Tech Group</title>
+        <meta name="description" content="Professional seohead services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              SEOHead
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional seohead services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

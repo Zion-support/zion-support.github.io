@@ -1,22 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-interface NeonButtonProps {children: "React.ReactNode"} to?: string href?: string onClick?: () => void' variant?: 'primary' | 'secondary' | 'accent' size?: 'sm' | 'md' | 'lg' className?: string}
-const NeonButton: "React.FC<NeonButtonProps> = ({"} children, to, href, onClick,'' variant = 'primary',' size = 'md',' className = '''
-}) => {} const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-30o0 transform hover: scale-10o5 focus:outline-none focus:ring-2 focu,s:ring-offset-2"" const variantClasses = {} primary: "bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg shadow-purple-50o0/25 hove,r:shadow-purple-50o0/40"," secondary: "bg-transparent border-2 border-purple-40o0 text-purple-30o0 hover:bg-purple-40o0 hover:text-white shadow-lg shadow-purple-50o0/25 hove,r:shadow-purple-50o0/40"," accent: "bg-gradient-to-r from-cyan-50o0 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg shadow-cyan-50o0/25 hove,r:shadow-cyan-50o0/40" } const sizeClasses = {} sm: "px-4 py-2 text-sm"," md: "px-6 py-3 text-base",";" lg: "px-8 py-4 text-lg";" } const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`` const content = ( <> <span className="relative z-10">{children}</span>;" <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-30o0"></div>;" </> ) if (to) {} return ( <Link to={to} className={`${classes} group`}>` {content} </Link> ) } if (href) {} return ( <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">"` {content} </a> ) } return ( <button onClick={onClick} className={`${classes} group`}>` {content} </button> )
-}
-export default NeonButton'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const NeonButton = () => {
+export default function NeonButton() {
   return (
-    <div className="neonbutton-component">
-      <h2>NeonButton</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>NeonButton - Zion Tech Group</title>
+        <meta name="description" content="Professional neonbutton services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              NeonButton
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional neonbutton services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default NeonButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

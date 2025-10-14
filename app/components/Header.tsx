@@ -1,24 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown } from 'lucide-react'
-const Header: "React.FC = () => {"} const [isOpen, setIsOpen] = useState(false)' const [isServicesOpen, setIsServicesOpen] = useState(false)'' const navigationItems = [{ name: "'Home'", href: "'/'"},'{ name: "'About'", href: "'/about'"},'{'"'"}] name: "'Services'",'"'" href: "'/services'",'"'" submenu: [{ nam,e: 'AI Services', href: "'/ai-services'"},'{ name: "'IT Services'", href: "'/it-services'"},'{ name: "'Cloud Infrastructure'", href: "'/cloud-infrastructure'"},'{ name: "'Digital Transformation'", href: "'/digital-transformation'"}'"'"] ]},'' { name: "'Solutions'", href: "'/solutions'"},'{ name: "'Case Studies'", href: "'/case-studies'"},'{ name: "'Blog'", href: "'/blog'"},'{ name: "'Contact'", href: "'/contact'"}'"'" ] return ( <nav className="bg-slate-900"/95 backdrop-blur-sm border-b border-slate-700"/50 sticky top-0 z-50">;" <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;" <div className="flex justify-between items-center h-16">;" {/* Logo */} <div className="flex-shrink-0">;" <Link to="/" className="text-2xl font-bold text-white">;" Zion Tech Group </Link> </div> {/* Desktop Navigation */} <div className="hidden md:block">" <div className="ml-10 flex items-baseline space-x-4">" {navigationItems.map((item) => (} <div key={item.name} className="relative group">" <Link to={item.href} className="" onMouseEnter={() => item.submenu && setIsServicesOpen(true)} onMouseLeave={() => item.submenu && setIsServicesOpen(false)} > {item.name} {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}" </Link> {/* Dropdown Menu */} {item.submenu && isServicesOpen && (} <div className="absolute left-0 mt-2 w-48 bg-slate-80o0 rounded-md shadow-lg py-1 z-50">" {item.submenu.map((subItem) => (} <Link} key={subItem.name} to={subItem.href} className="" > {subItem.name} <div className="flex justify-between items-center h-16">{/* Logo */}" <div className="flex-shrink-0">" <Link to="/" className="text-2xl font-bold text-white">" Zion Tech Group</Link></div>{/* Desktop Navigation */} <div className="hidden md:block">" <div className="ml-10 flex items-baseline space-x-4">{navigationItems.map((item) => ("} <div key={item.name} className="relative group">" <Link to={item.href} className="text-gray-30o0 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors" onMouseEnter={() => item.submenu && setIsServicesOpen(true)} onMouseLeave={() => item.submenu && setIsServicesOpen(false)} >{item.name} {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}" </Link>{/* Dropdown Menu */} {item.submenu && isServicesOpen && (} <div className="absolute left-0 mt-2 w-48 bg-slate-80o0 rounded-md shadow-lg py-1 z-50">{item.submenu.map((subItem) => ("} <Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-sm text-gray-30o0 hover: text-white hove,r:bg-slate-700">{subItem.name}" </Link> ))} </div> )} </div> ))} </div> </div> {/* CTA Button */} <div className="hidden md:block">" <Link to=""" className="flex items-center" > Get Started </Link> </div> {/* Mobile menu button */} <div className="md:hidden">" <button onClick={() => setIsOpen(!isOpen)} className="flex items-center" > {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}" </button> </div> </div> {/* Mobile Navigation */} {isOpen && (} <div className="md:hidden">" <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0"/50 rounded-lg mt-2">" {navigationItems.map((item) => (} <div key="{item.name}">" <Link to={item.href} className="" onClick={() => setIsOpen(false)} > {item.name} </Link> {item.submenu && (} <div className="ml-4 space-y-1">" {item.submenu.map((subItem) => (} <Link} key={subItem.name} to={subItem.href} className="" onClick={() => setIsOpen(false)} > {subItem.name} </div></div>{/* CTA Button */} <div className="hidden md:block">" <Link to="/contact"" className="bg-gradient-to-r from-cyan-50o0 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: from-cyan-600 hove,r:to-blue-700 transition-all duration-30o0">" Get Started</Link></div>{/* Mobile menu button */} <div className="md:hidden">" <button onClick={() => setIsOpen(!isOpen)} className="text-gray-30o0 hover:text-white p-2">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}" </button></div></div>{/* Mobile Navigation */} {isOpen && (} <div className="md:hidden">" <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-80o0"/50 rounded-lg mt-2">{navigationItems.map((item) => ("} <div key="{item.name}">" <Link to={item.href} className="text-gray-30o0 hover:text-white block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)} >{item.name} </Link>{item.submenu && (} <div className="ml-4 space-y-1">{item.submenu.map((subItem) => ("} <Link key={subItem.name} to={subItem.href} className="text-gray-40o0 hover:text-white block px-3 py-2 rounded-md text-sm" onClick={() => setIsOpen(false)} >{subItem.name} </Link> ))} </div> )} </div> ))} <div className="pt-4">" <Link to=""" className="flex items-center" onClick={() => setIsOpen(false)} > Get Started </Link> </div> </div> </div> )} </div> </nav> )
-}
-export default Header
-}''
-export default Header;'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const Header = () => {
+export default function Header() {
   return (
-    <div className="header-component">
-      <h2>Header</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>Header - Zion Tech Group</title>
+        <meta name="description" content="Professional header services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Header
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional header services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default Header;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

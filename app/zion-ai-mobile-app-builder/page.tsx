@@ -1,21 +1,21 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function ZionAiMobileAppBuilderPage() {
+
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title>ZionAiMobileAppBuilderPage - Zion Tech Group</title>
-        <meta name="description" content="Professional zionaimobileappbuilderpage services by Zion Tech Group." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              ZionAiMobileAppBuilderPage
+              Page
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional zionaimobileappbuilderpage services by Zion Tech Group.
+              Professional page services by Zion Tech Group.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -45,42 +45,7 @@ export default function ZionAiMobileAppBuilderPage() {
             </div>
           </div>
         </div>
-=======
-'use client';';';
-import React from 'react';';';
-export default function ZionAiMobileAppBuilderPage() {}
-  return (
-    <div>Page content</div>
-  );
-}
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Mobile App Builder</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
-        </p></div></div>
-  );}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

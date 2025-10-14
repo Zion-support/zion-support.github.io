@@ -1,22 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-import { /* icons will be added individually */ } from 'lucide-react'
-interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl'} text?: string fullScreen?: boolean className?: string}
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({''} size = 'md',' text, fullScreen = false, className = ''
-}) => {} const sizeClasses = {''} sm: 'w-4 h-4',' md: 'w-6 h-6',' lg: 'w-8 h-8',' xl: 'w-12 h-12' } const spinner = ( <div className={`flex items-center justify-center ${className}`}>` <div className="flex flex-col items-center space-y-2">" <Loader2 className={`animate-spin text-blue-600 ${sizeClasses[size]}`} />` {text && (} <p className="text-sm text-gray-600">{text}</p>" )} </div> </div> ) if (fullScreen) {} return ( <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">" {spinner} </div> ) } return spinner
-}
-export default LoadingSpinner'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const LoadingSpinner = () => {
+export default function LoadingSpinner() {
   return (
-    <div className="loadingspinner-component">
-      <h2>LoadingSpinner</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>LoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Professional loadingspinner services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              LoadingSpinner
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional loadingspinner services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}

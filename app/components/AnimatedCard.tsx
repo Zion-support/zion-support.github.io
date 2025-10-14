@@ -1,20 +1,51 @@
-<<<<<<< HEAD
-import React from 'react'
-interface AnimatedCardProps {children: "React.ReactNode"} className?: string' glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' hoverEffect?: boolean}
-const AnimatedCard: "React.FC<AnimatedCardProps> = ({"} children,'' className = ','' glowColor = 'purple',' hoverEffect = true}) => {} const glowColors = {''} purple: "'shadow-purple-50o0/25 hove,r:shadow-purple-50o0/40'",'"'" cyan: "'shadow-cyan-50o0/25 hove,r:shadow-cyan-50o0/40'",'"'" pink: "'shadow-pink-50o0/25 hove,r:shadow-pink-50o0/40'",'"'" green: "'shadow-green-50o0/25 hove,r:shadow-green-50o0/40'",'"'" blue: "'shadow-blue-50o0/25 hove,r:shadow-blue-50o0/40'",'"'" yellow: "'shadow-yellow-50o0/25 hove,r:shadow-yellow-50o0/40'"'" } const borderColors = {''} purple: "'border-purple-50o0/30 hove,r:border-purple-50o0/60'",'"'" cyan: "'border-cyan-50o0/30 hove,r:border-cyan-50o0/60'",'"'" pink: "'border-pink-50o0/30 hove,r:border-pink-50o0/60'",'"'" green: "'border-green-50o0/30 hove,r:border-green-50o0/60'",'"'" blue: "'border-blue-50o0/30 hove,r:border-blue-50o0/60'",'"'" yellow: "'border-yellow-50o0/30 hove,r:border-yellow-50o0/60'"'" } return ( <div className={``} relative bg-gradient-to-br from-slate-80o0/80 to-slate-700/80 backdrop-blur-sm border border-slate-600/50'' rounded-xl p-6 transition-all duration-30o0'}' ${hoverEffect ? 'hover: "transform hover:scale-10o5 hove,r:-translate-y-1' : '"}'"'" ${glowColors[glowColor]} ${borderColors[glowColor]} ${className} `}` > {/* Animated border gradient */} <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-50o0"/20 via-cyan-50o0"/20 to-purple-50o0"/20 opacity-0 group-hover:opacity-10o0 transition-opacity duration-30o0"></div>" {/* Content */} <div className="relative z-10">" {children} </div> </div> )
-}
-export default AnimatedCard'
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const AnimatedCard = () => {
+export default function AnimatedCard() {
   return (
-    <div className="animatedcard-component">
-      <h2>AnimatedCard</h2>
-      <p>This component is under construction.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>AnimatedCard - Zion Tech Group</title>
+        <meta name="description" content="Professional animatedcard services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              AnimatedCard
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional animatedcard services by Zion Tech Group.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default AnimatedCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
+}
