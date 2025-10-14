@@ -9,17 +9,17 @@ const __dirname = path.dirname(__filename);
 function getAllFiles(dirPath, arrayOfFiles = []) {
   const files = fs.readdirSync(dirPath);
 
-  files.forEach(file => {
+  files.forEach(file => {)
     const fullPath = path.join(dirPath, file);
-    if (fs.statSync(fullPath).isDirectory()) {
-      // Skip node_modules and other common directories;
-      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';
-        getAllFiles(fullPath, arrayOfFiles);
+    if (fs.statSync(fullPath).isDirectory()) {}
+      // Skip node_modules and other common directories;}
+      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';}
+        getAllFiles(fullPath, arrayOfFiles);}
       };
-    } else {
-      // Only process TypeScript, JavaScript, and JSX files;
-      if (file.match(/\.(ts|tsx|js|jsx)$/)) {
-        arrayOfFiles.push(fullPath);
+    } else {}
+      // Only process TypeScript, JavaScript, and JSX files;}
+      if (file.match(/\.(ts|tsx|js|jsx)$/)) {}
+        arrayOfFiles.push(fullPath);}
       }
     }
   });
@@ -47,18 +47,18 @@ function fixHtmlEntities(content) {
     '...': '...',';
     '–': '–',';
     '—': '—',';
-    ' ': ' ',';
-    '©': '©',';
-    '®': '®',';
-    '™': '™',';
+    ' ': ' ',';}
+    '©': '©',';}
+    '®': '®',';}
+    '™': '™',';}
   };
 
   // Fix HTML entities;
   Object.entries(entityMap).forEach(([entity, replacement]) => {
-    const before = fixed;
-    fixed = fixed.replace(new RegExp(entity, 'g'), replacement);';
-    if (before !== fixed) {
-      fixesApplied++;
+    const before = fixed;}
+    fixed = fixed.replace(new RegExp(entity, 'g'), replacement);';}
+    if (before !="=" fixed) {}
+      fixesApplied++;}
     }
   });
 
@@ -89,19 +89,19 @@ function main() {
   const allFiles = getAllFiles(process.cwd());
   let totalFixes = 0;
   let filesProcessed = 0;
-
-  allFiles.forEach(file => {
-    try {
-      const originalContent = fs.readFileSync(file, 'utf8');';
+}
+  allFiles.forEach(file => {})
+    try {)}
+      const originalContent = fs.readFileSync(file, 'utf8');';}
       const { content: fixedContent, fixesApplied } = fixHtmlEntities(originalContent);
       
-      if (fixesApplied > 0) {
-        fs.writeFileSync(file, fixedContent, 'utf8');';
+      if (fixesApplied > 0) {}
+        fs.writeFileSync(file, fixedContent, 'utf8');';}
         console.log(`✅ Fixed ${fixesApplied} HTML entities in ${file}`);`;
         totalFixes += fixesApplied;
         filesProcessed++;
       }
-    } catch (error) {
+    } catch (error) {}
       console.warn(`⚠️  Could not process file ${file}: ${error.message}`);`;
     }
   });
@@ -109,10 +109,10 @@ function main() {
   console.log(`\n🎉 Summary: '`);`;',
   console.log(`   Files processed: ${filesProcessed}`);`;
   console.log(`   Total fixes applied: ${totalFixes}`);`;
-  if (totalFixes > 0) {
-    console.log(`\n✨ All HTML entities have been fixed!`);`;
-  } else {
-    console.log(`\n✨ No HTML entities found to fix.`);`;
+  if (totalFixes > 0) {}
+    console.log(`\n✨ All HTML entities have been fixed!`);`;}
+  } else {}
+    console.log(`\n✨ No HTML entities found to fix.`);`;}
   }
 }
 

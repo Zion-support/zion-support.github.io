@@ -23,10 +23,10 @@ export default function SEOEnhancer() {
           </div>
         </section>
       </div>
-    </div>
-  </>
-);
-  )
+    </div>)}
+  </>)}
+);}
+  )}
 }
 ""
 ;
