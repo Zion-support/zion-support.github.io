@@ -29,6 +29,7 @@ const FiveGSolutionsPage: React.FC = () => {
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
     }
   ];
+  
   const solutions = [
     {
       title: '5G Network Infrastructure',
