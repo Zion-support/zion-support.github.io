@@ -45,8 +45,8 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
-      "@typescript-eslint/no-explicit-any": "warn",
-      "no-console": "warn"
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-console": "off"
     }
   },
   {

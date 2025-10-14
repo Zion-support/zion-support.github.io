@@ -61,25 +61,25 @@ function App() {
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
         onCLS((metric) => {
           if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
+             
             console.log('CLS:', metric);
           }
         });
         onFCP((metric) => {
           if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
+             
             console.log('FCP:', metric);
           }
         });
         onLCP((metric) => {
           if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
+             
             console.log('LCP:', metric);
           }
         });
         onTTFB((metric) => {
           if (process.env.NODE_ENV === 'development') {
-            // eslint-disable-next-line no-console
+             
             console.log('TTFB:', metric);
           }
         });
@@ -91,7 +91,7 @@ function App() {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
+               
               console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
             }
           }
@@ -104,7 +104,7 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
+       
       console.log('Zion Tech Group App initialized');
     }
   }, []);

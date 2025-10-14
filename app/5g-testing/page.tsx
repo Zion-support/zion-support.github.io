@@ -117,3 +117,7 @@ function FiveGTestingPage() {
 };
 
 
+
+
+const page = React.lazy(() => import('./page'));
+export default page;

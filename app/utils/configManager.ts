@@ -24,7 +24,7 @@ export const configManager = {
     return key.split('.').reduce((obj, k) => obj?.[k], configManager.config);
   },
   
-  set: (key: string, value: any) => {
+  set: (key: string, value: unknown) => {
     const keys = key.split('.');
     const lastKey = keys.pop();
     const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config);
