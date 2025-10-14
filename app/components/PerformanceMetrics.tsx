@@ -1,23 +1,24 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 export default function Page() {
+  
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    
+    <div>
+    <Helmet />
         <title>PerformanceMetrics - Zion Tech Group</title>
-        <meta name="description" content="Professional performancemetrics services by Zion Tech Group." /></meta>
+        <meta />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
-            PerformanceMetrics;
-          </h1>
-          <p className="text-xl text-gray-600 mb-8"></p>
+      <div>
+    <div />
+          <h1>PerformanceMetrics;
+          </h1></h1>
+          <p />
             Professional performancemetrics solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
+          <div>
+    <div />
+              <h3 />
                 Expert Solutions;
               </h3>;
               <p className="text-blue-700">;
@@ -40,15 +41,15 @@ export default function Page() {
                 Round-the-clock support for all your performancemetrics needs.;
               </p>;
             </div>
-          </div>
-          <div className="mt-12">;
+  </div>
+  <div className="mt-12">;
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
               Get Started Today;
             </button>;
           </div>
+          </div>
         </div>
       </div>
-    </div>
   );}'
 }'
 '

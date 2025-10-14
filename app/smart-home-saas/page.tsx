@@ -1,26 +1,26 @@
 import ResponsiveContainer from '../components/ResponsiveContainer;
 const SmartHomeSAAS = () => {
   return (
-    <></>
-      <Helmet></Helmet>
+    
+    <div>
+      <Helmet />
         <title>Smart Home SAAS - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive smart home management and automation platform." /></meta>
+        <meta />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20"></section>
-          <ResponsiveContainer></ResponsiveContainer>
-            <div className="text-center"></div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
-                Smart Home SAAS
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+      <div>
+    <section />
+          <ResponsiveContainer />
+            <div>
+    <h1>Smart Home SAAS
+              </h1></h1>
+              <p />
                 Comprehensive smart home management and automation platform.
               </p>
-              <Link to="/contact"></Link>
-                <FuturisticButton size="lg"></FuturisticButton>
+              <Link />
+                <FuturisticButton />
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+                  <ArrowRight />
                 </FuturisticButton>
               </Link>
             </div>
@@ -32,4 +32,3 @@ const SmartHomeSAAS = () => {
 };
 
 export default SmartHomeSAAS;
-'

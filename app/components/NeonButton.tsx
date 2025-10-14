@@ -1,11 +1,11 @@
-import React from 'react''
+import React from 'react';
 import { Link } from 'react-router-dom;
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
   href?: string'
   onClick?: () => void;''
-  variant?: 'primary' | 'secondary' | 'accent''
+  variant?: 'primary' | 'secondary' | 'accent';
   size?: 'sm' | 'md' | 'lg';
   className?: string}
 
@@ -15,8 +15,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   to,
   href,
   onClick,'
-  variant = 'primary''
-  size = 'md''
+  variant = 'primary';
+  size = 'md';
   className = ''
 }) => {'
   const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
@@ -36,35 +36,32 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   const content = (
-    <></>
+    <div>
       <span className="relative z-10">{children}</span>
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+      <div />
     </>
   )
   if (to) {
     return (
-      <Link to={to} className={`${classes} group`}></Link>
+    
+      <Link />
         {content}
       </Link>
     )}
 
   if (href) {
     return (
-      <a
-        href={href;
-        className={classes;
-        target="_blank"
-        rel="noopener noreferrer"
-      ></a>
+    
+      <a />
         {children}
       </a>
     )}
 
   return (
-    <button onClick={onClick} className={`${classes} group`}></button>
+    
+    <button />
       {content}
     </button>
   )};
 
 export default NeonButton;
-'

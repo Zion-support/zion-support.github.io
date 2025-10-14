@@ -1,4 +1,4 @@
-import React from 'react''
+import React from 'react';
 import { Brain, Zap, Shield, Globe } from 'lucide-react;
 interface LoadingProps {
   message?: string'
@@ -35,18 +35,14 @@ const Loading: React.FC<LoadingProps> = ({
   const CurrentIcon = icons[currentIcon];
 
   return (
-    <div 
-      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"
-      role="status"
-      aria-live="polite"
-      aria-label="Loading content"
-    ></div>
-      <div className="text-center"></div>
+    
+    <div>
+    <div />
         {/* Animated Icon */}
-        <div className={`${sizeClasses[size]} mx-auto mb-6 relative`}></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-pulse"></div>
-          <div className="relative bg-slate-900 rounded-full flex items-center justify-center h-full w-full"></div>
-            <CurrentIcon className={`${iconSizeClasses[size]} text-cyan-400 animate-spin`} /></CurrentIcon>
+        <div>
+    <div />
+          <div>
+    <CurrentIcon />
           </div>
         </div>
       </section>;
@@ -56,10 +52,9 @@ const Loading: React.FC<LoadingProps> = ({
             Let's discuss how our loading';
             services can help you achieve your goals.;
           </p>;
-          <a></a>
+          <a />
             href="/contact";
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
-          >;
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">;
             Get Started Today;
           </a>;
         </div>
@@ -68,21 +63,17 @@ const Loading: React.FC<LoadingProps> = ({
   );
 };
 
-      { /* CTA Section */ }"""
-      <section className="py-16 px-4 bg-blue-600">"""
-        <div className=max-w-4xl mx-auto text-center></div>
-          <h2 className="text-3xl font-bold text-white mb-6">""
+      { /* CTA Section */ }'';
+      <section className="py-16 px-4 bg-blue-600'>';">
+    <h2 className="text-3xl font-bold text-white mb-6'>';
 
             Ready to Get Started?;
           </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
+          <p />
             Let&apos;s discuss how our loading 
             services can help you achieve your goals.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          ></a>
+          <a />
             Get Started Today;
           </a>
         </div>
@@ -92,34 +83,34 @@ const Loading: React.FC<LoadingProps> = ({
 }
                 We provide comprehensive loading
                 solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3"></ul>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+              <ul />
+                <li />
+                  <span />
                   Custom solutions</li>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                <li />
+                  <span />
                   Expert consultation</li>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                <li />
+                  <span />
                   Ongoing support</li></ul></div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6"></p>
+            <div>
+    <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p />
                 Ready to transform your business with our loading services?</p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"></a>
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+              <a />
+                Contact Us</a></div>
+        </div>
+      </div>
+      </section>{/* CTA Section */}
+      <section>
+        <div>
+    <h2 />
             Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8"></p>'
+          <p />'
             Let's discuss how our loading'
             services can help you achieve your goals.</p>
-          <a"
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"></a>
-            Get Started Today</a></div></section></div>
+          <a />
+            Get Started Today</a></div>
+      </section></div>
 export default Loading
 '

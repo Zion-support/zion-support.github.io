@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { render, screen } from '@testing-library/react'
 import OptimizedImage from '../../app/components/OptimizedImage'
 // Mock framer-motion
@@ -18,7 +18,7 @@ describe('OptimizedImage Component', () => {
     expect(image).toHaveAttribute('src', 'https://example.com/test.jpg')
   })
   it('renders with custom className', () => {
-    render(<OptimizedImage {...mockProps} className="custom-class" />)
+    render(<OptimizedImage {...mockProps} className="custom-class">)
     const image = screen.getByAltText('Test image')
     expect(image).toBeInTheDocument()
     // The className is applied to the wrapper div, not the img element

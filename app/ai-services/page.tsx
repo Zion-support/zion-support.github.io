@@ -1,42 +1,48 @@
 
-import React from 'react''
+import React from 'react';
 import { Brain, BarChart3, Zap, FileText, MessageSquare, Shield, Users, TrendingUp, CheckCircle } from 'lucide-react;
 
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
-      title: 'AI Consulting','
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
+          title: 'AI Consulting','
+          description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'
+  },'
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart3,'
-      title: 'AI Analytics','
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.','
+          title: 'AI Analytics','
+          description: 'Advanced analytics solutions powered by machine learning and AI algorithms.'
+  },'
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,'
-      title: 'AI Automation','
-      description: 'Intelligent automation solutions to streamline your business processes.','
+          title: 'AI Automation','
+          description: 'Intelligent automation solutions to streamline your business processes.'
+  },'
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: FileText,'
-      title: 'AI Content Generation','
-      description: 'AI-powered content creation for marketing, documentation, and communication.','
+          title: 'AI Content Generation','
+          description: 'AI-powered content creation for marketing, documentation, and communication.'
+  },'
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,'
-      title: 'AI Customer Service','
-      description: 'Intelligent chatbots and customer service solutions powered by AI.','
+          title: 'AI Customer Service','
+          description: 'Intelligent chatbots and customer service solutions powered by AI.'
+  },'
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,'
-      title: 'AI Security','
-      description: 'Advanced AI-powered security solutions to protect your digital assets.','
+          title: 'AI Security','
+          description: 'Advanced AI-powered security solutions to protect your digital assets.'
+  },'
       color: 'from-red-500 to-pink-500'
     }
   ];
@@ -66,12 +72,13 @@ const AiServicesPage: React.FC = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+    
+    <div>
+    <Helmet />
         <title>AI Services - Comprehensive AI Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." /></meta>
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare" /></meta>
-        <meta name="canonical" content="https://ziontechgroup." /></meta>
+        <meta />
+        <meta />
+        <meta />
       </Helmet>
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
@@ -91,19 +98,19 @@ const AiServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
                   Get Started;
-                  <Right className="w-5 h-5 ml-2 inline" />;
+                  <Right className="w-5 h-5 ml-2 inline">;
                 </button>;
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                   Learn More;
                 </button>;
               </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md"></div>
-              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+  </div>
+  <div>
+    <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
               <p>Description of feature 2</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md"></div>
-              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+            <div>
+    <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
               <p>Description of feature 3</p>
             </div>
           </div>
@@ -113,7 +120,4 @@ const AiServicesPage: React.FC = () => {
   );
 };
 '
-const page = React.lazy(() => import('./page'));
-export default page;
-
-'
+const page = React.lazy(() => import('./page'))

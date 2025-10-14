@@ -1,102 +1,76 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Common patterns to fix
-const fixes = [
-  // Fix unterminated string literals with single quotes
-  {
-    pattern: /'([^']*),'/g,
-    replacement: "'$1'"
-  },
-  // Fix malformed object properties
-  {
-    pattern: /(\w+),'(\w+)',/g,
-    replacement: "$1: '$2',"
-  },
-  // Fix missing commas in object literals
-  {
-    pattern: /'(\w+)','(\w+)',/g,
-    replacement: "'$1', '$2',"
-  },
-  // Fix numeric literal issues
-  {
-    pattern: /(\d+),'(\w+)',/g,
-    replacement: "$1, '$2',"
-  },
-  // Fix JSX fragment closing issues
-  {
-    pattern: /<>\s*$/gm,
-    replacement: "<>"
-  },
-  // Fix missing closing tags
-  {
-    pattern: /<(\w+)([^>]*)>\s*$/gm,
-    replacement: "<$1$2></$1>"
-  },
-  // Remove git branch names from code
-  {
-    pattern: /[a-z0-9-]+\/[a-z0-9-]+-[a-z0-9-]+/g,
-    replacement: ""
-  },
-  // Fix empty object properties
-  {
-    pattern: /{\s*}/g,
-    replacement: "{}"
-  }
-];
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix unterminated string literals with extra quotes
+  fixed = fixed.replace(/from\s+['';]([^';']+)[';']';/g, "from '$1';");
+  fixed = fixed.replace(/from\s+['';]([^';']+)[';`]"/g, "from '$1';");
+  fixed = fixed.replace(/import\s+([^'';\s]+)\s+from\s+[';']([^';']+)[';']';/g, "import $1 from '$2';");
+  fixed = fixed.replace(/import\s+([^'';\s]+)\s+from\s+[';']([^';']+)[';`]"/g, "import $1 from '$2';");
+  
+  // Fix unterminated string literals in general
+  fixed = fixed.replace(/['';]([^';'\n]*?)[';']';/g, "'$1';");
+  fixed = fixed.replace(/['';]([^';'\n]*?)[';`]'/g, ';$1';");
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<(\w+)><\/\1>/g, '<$1 />');
+  fixed = fixed.replace(/<(\w+)><\/\1><\/\1>/g, '<$1 />');
+  
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div[^>]*><\/div>\s*<(\w+)/g, '<div>\n    <$1');
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<(\w+)/g, '</div>\n  </div>\n  <$1');
+  
+  // Fix unterminated comments
+  fixed = fixed.replace(/\/\*([^*]|\*[^/])*$/gm, '');
+  fixed = fixed.replace(/\/\/.*$/gm, (match) => match.replace(/'$/, ';'));
+  
+  // Fix export statements
+  fixed = fixed.replace(/export default (\w+)'/g, 'export default $1;');
+  fixed = fixed.replace(/export default (\w+)"/g, 'export default $1;');
+  
+  // Fix use client directive
+  fixed = fixed.replace(/?/g, '');
+  fixed = fixed.replace(/?/g, '');
+  fixed = fixed.replace(/?/g, '');
+  
+  // Fix broken JSX attributes
+  fixed = fixed.replace(/className="([^">]*?)>/g, 'className="$1">');
+  
+  // Fix malformed function declarations
+  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {\n  ');
+  
+  // Fix broken return statements
+  fixed = fixed.replace(/return\s*\(\s*$/gm, 'return (\n    ');
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  console.log('Starting syntax error fixes...');
+// Main function
+function main() {
   
-  // Find all TypeScript and JSX files
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-  
-  console.log(`\nFixed ${totalFixed} files`);
-}
-
-main().catch(console.error);
-
-export { fixFile, fixes };
+    '**

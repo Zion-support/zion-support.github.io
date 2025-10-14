@@ -44,63 +44,64 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({'
   const fullOgUrl = ogUrl || canonicalUrl;
 
   return (
-    <Helmet></Helmet>
+    
+    <Helmet />
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} /></meta>
-      <meta name="keywords" content={keywords} /></meta>
-      <meta name="author" content="Zion Tech Group" /></meta>'
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-      <meta name="theme-color" content="#06b6d4" /></meta>
+      <meta />
+      <meta />
+      <meta />'
+      <meta />
+      <meta />
+      <meta />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}"
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content="website" /></meta>
-      <meta property="og:title" content={fullOgTitle} /></meta>
-      <meta property="og:description" content={fullOgDescription} /></meta>
-      <meta property="og:image" content={ogImage} /></meta>
-      <meta property="og:image:width" content="1200" /></meta>
-      <meta property="og:image:height" content="630" /></meta>
-      <meta property="og:image:alt" content={fullOgTitle} /></meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {fullOgUrl && <meta property="og:url" content={fullOgUrl} />}
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>
-      <meta property="og:locale" content="en_US" /></meta>
+      <meta />
+      <meta />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} /></meta>
-      <meta name="twitter:title" content={fullTwitterTitle} /></meta>
-      <meta name="twitter:description" content={fullTwitterDescription} /></meta>
-      <meta name="twitter:image" content={fullTwitterImage} /></meta>
-      <meta name="twitter:image:alt" content={fullTwitterTitle} /></meta>
-      <meta name="twitter:site" content="@ziontechgroup" /></meta>
-      <meta name="twitter:creator" content="@ziontechgroup" /></meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {/* Additional SEO Meta Tags */}
-      <meta name="format-detection" content="telephone=no" /></meta>
-      <meta name="mobile-web-app-capable" content="yes" /></meta>
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
       {/* Favicon and Icons */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="manifest" href="/manifest.json" /></link>
+      <link />
+      <link />
+      <link />
+      <link />
+      <link />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+      <link />
+      <link />
       {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" /></link>
+      <link />
+      <link />
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json"></script>
+        <script />
           {JSON.stringify(structuredData)}
         </script>
       )}
       {/* Default Organization Structured Data */}
       {!structuredData && (
-        <script type="application/ld+json"></script>
+        <script />
           {JSON.stringify({
             "@context": "https://schema.org","
             "@type": "Organization","
@@ -133,4 +134,4 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({'
   );
 };
 
-export default ImprovedSEO'
+export default ImprovedSEO;

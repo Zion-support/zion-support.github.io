@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react''
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async;
 import { PhoneIcon,
   EnvelopeIcon,
@@ -39,27 +39,31 @@ const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: PhoneIcon,'
-      title: 'Phone','
+          title: 'Phone','
       details: '+1-302-464-0950','
-      description: 'Available 24/7'
+          description: 'Available 24/7'
+  }
     },
     {
       icon: EnvelopeIcon,'
-      title: 'Email','
+          title: 'Email','
       details: 'kleber@ziontechgroup.com','
-      description: 'Quick response guaranteed'
+          description: 'Quick response guaranteed'
+  }
     },
     {
       icon: MapPinIcon,'
-      title: 'Address','
+          title: 'Address','
       details: '364 E Main St STE 1008','
-      description: 'Middletown, DE 19709'
+          description: 'Middletown, DE 19709'
+  }
     },
     {
       icon: ClockIcon,'
-      title: 'Business Hours','
+          title: 'Business Hours','
       details: 'Monday - Friday: 9:00 AM - 6:00 PM','
-      description: 'Weekend support available'
+          description: 'Weekend support available'
+  }
     }
   };
 
@@ -74,27 +78,26 @@ const ContactPage: React.FC = () => {
     'Consulting'
   ];
   return (
-    <></>
-      <Helmet></Helmet>
+    
+    <div>
+      <Helmet />
         <title>Contact Us - Zion Tech Group</title>'
-        <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI solutions, cybersecurity, cloud infrastructure, and IT services. We're here to help transform your business." /></meta>
-        <meta name="keywords" content="contact, AI solutions contact, cybersecurity contact, cloud infrastructure contact, IT services contact" /></meta>
+        <meta />
+        <meta />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-              Get In Touch
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
+      <section>
+        <div>
+    <div />
+  </div>
+  <div>
+    <div />
+            <h1>Get In Touch
+            </h1></h1>
+            <p />
               Ready to Transform Your Business?
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>'
+            <p />'
               Let's discuss how our technology solutions can help you achieve your business goals. '
               We're here to answer your questions and provide expert guidance.
             </p>
@@ -102,17 +105,17 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
       {/* Contact Form & Info */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="grid lg:grid-cols-2 gap-12"></div>
+      <section>
+        <div>
+    <div />
             {/* Contact Form */}
-            <div className="bg-slate-800 rounded-xl p-8"></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+            <div>
+    <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
               
               {isSubmitted ? (
-                <div className="text-center py-12"></div>
-                  <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <CheckIcon className="w-8 h-8 text-white" /></CheckIcon>
+                <div>
+    <div />
+                    <CheckIcon />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>'
                   <p className="text-gray-300 mb-6">Thank you for contacting us. We'll get back to you within 24 hours.</p>
@@ -128,90 +131,47 @@ const ContactPage: React.FC = () => {
                         message: ''
                       });
                     }}
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300"','
-                  >
+                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300">
                     Send Another Message;
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6"></form>
-                  <div className="grid md:grid-cols-2 gap-6"></div>
-                    <div></div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                <form />
+                  <div>
+    <div />
+                      <label />
                         Full Name *
                       </label>
-                      <input;
-                        type="text"
-                        id="name"
-                        name="name"
-value={formData.name;
-                        onChange={handleInputChange;
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                        placeholder="Your full name"
-                      /></input>
+                      <input />
                     </div>
                     
-                    <div></div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                    <div />
+                      <label />
                         Email Address *
                       </label>
-                      <input;
-                        type="email"
-                        id="email"
-                        name="email"
-value={formData.email;
-                        onChange={handleInputChange;
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                        placeholder="your@email.com"
-                      /></input>
+                      <input />
                     </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-6"></div>
-                    <div></div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
+  </div>
+  <div>
+    <div />
+                      <label />
                         Company
                       </label>
-                      <input;
-                        type="text"
-                        id="company"
-                        name="company"
-value={formData.company;
-                        onChange={handleInputChange;
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                        placeholder="Your company name"
-                      /></input>
+                      <input />
                     </div>
                     
-                    <div></div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                    <div />
+                      <label />
                         Phone Number
                       </label>
-                      <input;
-                        type="tel"
-                        id="phone"
-                        name="phone"
-value={formData.phone;
-                        onChange={handleInputChange;
-                        className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                        placeholder="+1 (555) 123-4567"
-                      /></input>
+                      <input />
                     </div>
-                  </div>
-                  
-                  <div></div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
+  </div>
+  <div />
+                    <label />
                       Service Interest
                     </label>
-                    <select;
-                      id="service"
-                      name="service"
-value={formData.service;
-                      onChange={handleInputChange;
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    ></select>
+                    <select />
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
                         <option key={index} value={service}>{service}</option>
@@ -219,49 +179,36 @@ value={formData.service;
                     </select>
                   </div>
                   
-                  <div></div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                  <div />
+                    <label />
                       Message *
                     </label>
-                    <textarea;
-                      id="message"
-                      name="message"
-value={formData.message;
-                      onChange={handleInputChange;
-                      required
-                      rows={6;
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Tell us about your project or how we can help..."
-                    /></textarea>
+                    <textarea />
                   </div>
-                  <button;
-                    type="submit"
-disabled={isSubmitting;
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  ></button>'
+                  <button />'
                     {isSubmitting ? 'Sending...' : 'Send Message'}
-                    {!isSubmitting && <ArrowRightIcon className="w-5 h-5" />}
+                    {!isSubmitting && <ArrowRightIcon className="w-5 h-5">}
                   </button>
                 </form>
               )}
             </div>
             {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div></div>
+            <div>
+    <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p className="text-gray-300 mb-8"></p>'
+                <p />'
                   Get in touch with us through any of the following methods. We're here to help 
                   you find the right technology solutions for your business.
                 </p>
               </div>
               
-              <div className="space-y-6"></div>
+              <div />
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                      <info.icon className="w-6 h-6 text-white" /></info>
+                  <div>
+    <div />
+                      <info />
                     </div>
-                    <div></div>
+                    <div />
                       <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
                       <p className="text-gray-300 text-lg">{info.details}</p>
                       <p className="text-gray-400 text-sm">{info.description}</p>
@@ -270,34 +217,33 @@ disabled={isSubmitting;
                 ))}
               </div>
               
-              <div className="bg-slate-800 rounded-xl p-6"></div>
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-                <ul className="space-y-3"></ul>
-                  <li className="flex items-center text-gray-300"></li>
-                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
+              <div>
+    <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <ul />
+                  <li />
+                    <CheckIcon />
                     24/7 Expert Support
                   </li>
-                  <li className="flex items-center text-gray-300"></li>
-                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
+                  <li />
+                    <CheckIcon />
                     Cutting-edge Technology
                   </li>
-                  <li className="flex items-center text-gray-300"></li>
-                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
+                  <li />
+                    <CheckIcon />
                     Proven Track Record
                   </li>
-                  <li className="flex items-center text-gray-300"></li>
-                    <CheckIcon className="w-5 h-5 text-green-400 mr-3" /></CheckIcon>
+                  <li />
+                    <CheckIcon />
                     Custom Solutions
                   </li>
                 </ul>
               </div>
-            </div>
           </div>
         </div>
+      </div>
       </section>
     </>
   );
 };
 
 export default ContactPage;
-'

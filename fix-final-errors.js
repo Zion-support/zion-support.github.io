@@ -1,37 +1,34 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix common JSX and syntax errors
+// Function to fix final syntax errors
 function fixFinalErrors(content) {
   let fixed = content;
   
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div><\/div>\s*<(\w+)/g, '<div>\n      <$1');
+  fixed = fixed.replace(/<\/div>\s*<div className="min-h-screen/g, '</div>\n      <div className="min-h-screen');
+  
+  // Fix malformed section tags
+  fixed = fixed.replace(/<section[^>]*><\/section>\s*<div>/g, '<section>\n        <div>');
+  fixed = fixed.replace(/<\/div>\s*<\/section>/g, '</div>\n      </section>');
+  
+  // Fix malformed h1 tags
+  fixed = fixed.replace(/<h1[^>]*><\/h1>\s*([^<]+)/g, '<h1>$1</h1>');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>\n        </div>\n      </div>');
+  
+  // Fix empty JSX elements
+  fixed = fixed.replace(/<(\w+)[^>]*><\/\1>/g, '<$1 />');
+  
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*<div>\s*<EnhancedSEO[^>]*><\/EnhancedSEO>\s*<div[^>]*>/g, 'return (\n    <div>\n      <EnhancedSEO');
+  
   // Fix missing closing tags
-  fixed = fixed.replace(/<\/section>\s*<\/div>\s*<\/section>/g, '</div>\n        </section>');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/onClick=\{([^}]+);/g, 'onClick={$1}');
-  
-  // Fix missing semicolons in imports
-  fixed = fixed.replace(/import React from 'react'$/gm, "import React from 'react';");
-  
-  // Fix missing closing braces in objects
-  fixed = fixed.replace(/(\w+):\s*<(\w+)\s+className="[^"]*"\s*\/>,\s*$/gm, '$1: <$2 className="w-6 h-6" />,');
-  
-  // Fix unterminated strings
-  fixed = fixed.replace(/(\w+):\s*'([^']*),'\s*$/gm, '$1: \'$2\'');
-  fixed = fixed.replace(/(\w+):\s*"([^"]*),"\s*$/gm, '$1: "$2"');
-  
-  // Fix missing closing parentheses in function calls
-  fixed = fixed.replace(/(\w+)\s*\(\s*([^)]*)\s*$/gm, (match, func, args) => {
-    if (args.trim().endsWith(',')) {
-      return `${func}(${args.trim().slice(0, -1)})`;
-    }
-    return match;
-  });
-  
-  // Fix JSX fragment issues
-  fixed = fixed.replace(/<>\s*$/gm, '<>');
-  fixed = fixed.replace(/<\/>\s*$/gm, '</>');
+  fixed = fixed.replace(/<div[^>]*>\s*<section[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>/g, '<div>\n      <section>\n        <div>\n          <h1>$1</h1>');
   
   return fixed;
 }
@@ -55,32 +52,27 @@ function processFile(filePath) {
 }
 
 // Main function
-async function main() {
+function main() {
   const patterns = [
     'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
+    'app/**/*.ts'
   ];
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
+  let totalFixed = 0;
   
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      totalFiles++;
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, {
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '.next/**']
+    });
+    
+    files.forEach(file => {
       if (processFile(file)) {
-        fixedFiles++;
+        totalFixed++;
       }
-    }
-  }
+    });
+  });
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { fixFinalErrors, processFile };
+main();

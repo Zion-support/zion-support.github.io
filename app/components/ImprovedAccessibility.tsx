@@ -83,7 +83,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content'
+      // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.altKey) {
         event.preventDefault()'
         const mainContent = document.getElementById('main-content');
@@ -93,13 +93,13 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }
       }
 
-      // Toggle accessibility panel'
+      // Toggle accessibility panel;
       if (event.key === 'Tab' && event.altKey && event.ctrlKey) {
         event.preventDefault();
         setIsVisible(!isVisible);
       }
 
-      // Focus visible'
+      // Focus visible;
       if (event.key === 'Tab') {
         setSettings(prev => ({ ...prev, focusVisible: true }));
       }
@@ -138,37 +138,33 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     });
   };
   return (
-    <></>
+    
+    <div />
       {children}
       
       {/* Accessibility Toggle Button */}
       <button;
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
-        title="Accessibility Settings"
-        aria-label="Open accessibility settings"
-      >
-        <Eye className="w-5 h-5" /></Eye>
+        className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors">
+        <Eye />
       </button>
       {/* Accessibility Panel */}
       {isVisible && (
-        <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"></div>
-          <div className="flex items-center justify-between mb-4"></div>
+        <div>
+    <div />
             <h3 className="text-lg font-semibold">Accessibility Settings</h3>
             <button
               onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover: 'text-white"','
-              aria-label="Close accessibility settings"
-            >
+              className="text-gray-400 hover: 'text-white">
               ×
             </button>
           </div>
 
-          <div className="space-y-4"></div>
+          <div />
             {/* High Contrast */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Eye className="w-4 h-4" /></Eye>
+            <div>
+    <div />
+                <Eye />
                 <span className="text-sm">High Contrast</span>
               </div>
               <button'
@@ -178,18 +174,14 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}'
                 aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${'
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                /></div>
+                <div />
               </button>
             </div>
 
             {/* Large Text */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Type className="w-4 h-4" /></Type>
+            <div>
+    <div />
+                <Type />
                 <span className="text-sm">Large Text</span>
               </div>
               <button'
@@ -199,18 +191,14 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}'
                 aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${'
-                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                /></div>
+                <div />
               </button>
             </div>
 
             {/* Reduced Motion */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <MousePointer className="w-4 h-4" /></MousePointer>
+            <div>
+    <div />
+                <MousePointer />
                 <span className="text-sm">Reduced Motion</span>
               </div>
               <button'
@@ -220,18 +208,14 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}'
                 aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${'
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                /></div>
+                <div />
               </button>
             </div>
 
             {/* Screen Reader */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+            <div>
+    <div />
+                {settings.screenReader ? <Volume2 className="w-4 h-4"> : <VolumeX className="w-4 h-4">}
                 <span className="text-sm">Screen Reader</span>
               </div>
               <button'
@@ -241,18 +225,14 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}'
                 aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${'
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                /></div>
+                <div />
               </button>
             </div>
 
             {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between"></div>
-              <div className="flex items-center gap-2"></div>
-                <Keyboard className="w-4 h-4" /></Keyboard>
+            <div>
+    <div />
+                <Keyboard />
                 <span className="text-sm">Keyboard Navigation</span>
               </div>
               <button'
@@ -262,31 +242,26 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}'
                 aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${'
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                /></div>
+                <div />
               </button>
             </div>
           </div>
           {/* Keyboard Shortcuts */}
-          <div className="mt-6 pt-4 border-t border-white/10"></div>
-            <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
-            <div className="text-xs text-gray-400 space-y-1"></div>
-              <p>Alt + Shift + Tab: Skip to main content</p>
+          <div>
+    <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
+            <div>
+    <p>Alt + Shift + Tab: Skip to main content</p>
               <p>Alt + Ctrl + Tab: Toggle this panel</p>
               <p>Tab: Navigate elements</p>
               <p>Enter/Space: Activate elements</p>
             </div>
-          </div>
         </div>
+      </div>
       )}
       {/* Skip to main content link */}
       <a;
         href="#main-content"
-        className="sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"','
-        onClick={(e) => {
+        className="sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"> {
           e.preventDefault()'
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
@@ -358,4 +333,4 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   );
 };
 
-export default ImprovedAccessibility'
+export default ImprovedAccessibility;

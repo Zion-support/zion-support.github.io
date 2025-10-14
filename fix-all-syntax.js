@@ -72,7 +72,7 @@ filesToCheck.forEach(filePath => {
     content = content.replace(/if \(typeof window !== 'undefined'\) \{';/g, "if (typeof window !== 'undefined') {");
     
     // 15. Fix malformed object properties;
-    content = content.replace(/window\.performance = window\.performance \|\| \{\}/g, 'window.performance = window.performance || {};;');
+    content = content.replace(/window\.performance = window\.performance \|\| \{\}/g, 'window.performance = window.performance || {};');
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);

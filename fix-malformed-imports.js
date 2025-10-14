@@ -1,4 +1,4 @@
-import fs from "fs";"
+import fs from 'fs';"
 import { glob    } from "glob";"
 // Find all page.tsx files
 const pageFiles = await glob('app/**/page.tsx');'
@@ -9,9 +9,9 @@ for (const filePath of pageFiles) {
     let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false
     // Fix malformed import statements
-const malformedImportRegex = /import React from "react";use client'/g;'"
+const malformedImportRegex = /import React from 'react';use client'/g;';
     if (malformedImportRegex.test(content)) {
-      content = content.replace(malformedImportRegex, "'use client'\nimport React from "react";);"'"
+      content = content.replace(malformedImportRegex, "'\nimport React from 'react';);';
       modified = true
     }
 
@@ -23,7 +23,7 @@ const extraCharsRegex = /}\s*<\/p><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;'
     }
 
     // Fix malformed ending with extra closing tags
-const extraTagsRegex = /}\s*<////\/p><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;'
+const extraTagsRegex = /}\s*<////\/p><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;
     if (extraTagsRegex.test(content)) {
       content = content.replace(extraTagsRegex, '}\n  ););'
       modified = true
@@ -46,4 +46,4 @@ const cleanSyntaxRegex = /}\s*\);\s*}\s*}\s*''\s*$/gm;'
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);"``"`
+console.log(`Fixed ${fixedCount} files');';`

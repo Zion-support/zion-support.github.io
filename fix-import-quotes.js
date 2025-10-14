@@ -10,7 +10,7 @@ function fixImportQuotes(content) {
     return match.replace(/;\s*$/, ";)
   })
   // Fix missing quotes around module names"
-  content = content.replace(/from\s+([a-zA-Z0-9-]+);/g, 'from "$1";)'"'"
+  content = content.replace(/from\s+([a-zA-Z0-9-]+);/g, 'from "$1';)';';
   // Fix unterminated string literals in imports
   content = content.replace(")
     /import\s+([^;]+);([^"]*)$/gm,"
@@ -55,5 +55,5 @@ const stat = fs.statSync(fullPath)
 // Main execution"
 console.log("Starting import quote fixes...")";"
 const fixedCount = processDirectory("./app")
-console.log(`Fixed ${fixedCount} files.`)``"`
+console.log(`Fixed ${fixedCount} files.')';`
 }}}

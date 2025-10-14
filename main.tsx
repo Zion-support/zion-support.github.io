@@ -1,10 +1,10 @@
 
-import React from 'react''
-import { createRoot } from 'react-dom/client''
-import App from './App''
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 import './index.css;
 
-// Ensure scheduler is properly initialized'
+// Ensure scheduler is properly initialized;
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
@@ -22,7 +22,7 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode></React>
-    <App></App>
+    <App />
   </React.StrictMode>
 );
 

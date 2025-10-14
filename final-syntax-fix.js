@@ -8,7 +8,7 @@ const finalFixes = [
   // Fix unterminated string literals
   {
     pattern: /'([^']*);'/g,
-    replacement: "'$1'"
+    replacement: "'$1';
   },
   // Fix malformed import statements
   {
@@ -68,27 +68,8 @@ function fixFile(filePath) {
 }
 
 async function main() {
+  
   const patterns = [
     '*.tsx',
     '*.ts',
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-  
-  console.log(`\nFixed ${totalFixed} files with final syntax corrections`);
-}
-
-main().catch(console.error);
+    'app/**

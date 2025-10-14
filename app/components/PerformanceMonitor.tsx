@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> origin/main;
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    // Only run in development'
+    // Only run in development;
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
@@ -42,20 +42,20 @@ const PerformanceMonitor: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 '
-  // Don't render anything in production'
+  // Don't render anything in production;
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Only run in browser;
-    if (typeof window === 'undefined') return'"
+    if (typeof window === 'undefined') return';
     // Get performance metrics;
     const getPerformanceMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'";
-      const paintEntries = performance.getEntriesByType('paint')'";
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')'";
-      const lcp = performance.getEntriesByType('largest-contentful-paint')'";
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming';
+      const paintEntries = performance.getEntriesByType('paint')';
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')';
+      const lcp = performance.getEntriesByType('largest-contentful-paint')';
       setMetrics({
         cls: 0, // Would need to be calculated with observer;
         inp: 0, // Would need to be calculated with observer;
@@ -66,18 +66,18 @@ const PerformanceMonitor: React.FC = () => {
       }
     // Wait for page load;
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs"></div>
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1 text-sm"></div>'
+    
+    <div>
+    <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div />'
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>'
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>'
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>'
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>'
         <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
+        </div>
       </div>
-    </div>
   );
 };
 
 export default PerformanceMonitor;
-'

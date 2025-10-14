@@ -1,4 +1,4 @@
-import React from 'react''
+import React from 'react';
 import { Helmet } from 'react-helmet-async;
 interface SEOHeadProps {
   title?: string;
@@ -10,11 +10,11 @@ interface SEOHeadProps {
   structuredData?: any}
 
 const SEOHead: React.FC<SEOHeadProps> = ({'
-  title = 'Zion Tech Group - Advanced AI and IT Solutions''
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.''
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group''
-  image = '/og-image.svg''
-  url = 'https://ziontechgroup.com''
+  title = 'Zion Tech Group - Advanced AI and IT Solutions';
+  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.';
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group';
+  image = '/og-image.svg';
+  url = 'https://ziontechgroup.com';
   type = 'website'
   structuredData
 }) => {
@@ -43,22 +43,23 @@ url: 'https://ziontechgroup.com/logo.png',
     ...(tags.length > 0 && {keywords: tags.join(', '),})
   };
   return (
-    <Helmet></Helmet>
+    
+    <Helmet />
       <title>{title}</title>
-      <meta name="description" content={description} /></meta>
-      <meta name="keywords" content={keywords} /></meta>
-      <meta property="og:title" content={title} /></meta>
-      <meta property="og:description" content={description} /></meta>
-      <meta property="og:image" content={image} /></meta>
-      <meta property="og:url" content={url} /></meta>
-      <meta property="og:type" content={type} /></meta>
-      <meta name="twitter:card" content="summary_large_image" /></meta>
-      <meta name="twitter:title" content={title} /></meta>
-      <meta name="twitter:description" content={description} /></meta>
-      <meta name="twitter:image" content={image} /></meta>
-      <link rel="canonical" href={url} /></link>
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <meta />
+      <link />
       {structuredData && (
-        <script type="application/ld+json"></script>
+        <script />
 {JSON.stringify(structuredData)}
         </script>
 )}
@@ -66,4 +67,3 @@ url: 'https://ziontechgroup.com/logo.png',
   )};
 
 export default SEOHead;
-'

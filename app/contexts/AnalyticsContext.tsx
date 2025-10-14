@@ -1,5 +1,5 @@
-{ createContext, useContext, useState, useEffect } from 'react''
-'use client';
+{ createContext, useContext, useState, useEffect } from 'react';
+';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void,
@@ -21,11 +21,11 @@ setIsEnabled(true)}, [])
     setIsEnabled(true)}, []);
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     if (!isEnabled) return;
-    // Track event logic here'
+    // Track event logic here;
     console.log('Analytics Event:', eventName, properties)};
   const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
-    // Track page view logic here'
+    // Track page view logic here;
     console.log('Page View:', pageName)};
   const setUser = (newUserId: string, properties?: Record<string, any>) => {
     setUserId(newUserId)'
@@ -38,7 +38,8 @@ setIsEnabled(true)}, [])
   }
     isEnabled,}
   return (
-    <AnalyticsContext.Provider value={value}></AnalyticsContext>
+    
+    <AnalyticsContext />
       {children}
     </AnalyticsContext.Provider>)};
 export { AnalyticsContext };

@@ -1,23 +1,26 @@
 import React from 'react;
 
 const DemoPage: React.FC = () => {
-  const features = [{''
-      icon: 'Analytics'''
-      title: 'AI-Powered Analytics'''
-      description: 'See how our AI analyzes your data in real-time'''
-      demo: 'Live Demo'';}
+  const features = [{';
+      icon: 'Analytics';
+      title: 'AI-Powered Analytics';
+          description: 'See how our AI analyzes your data in real-time'
+  };
+      demo: 'Live Demo';}
     },'
     {''
-      icon: 'Security'''
-      title: 'Advanced Security'''
-      description: 'Experience our enterprise-grade security features'''
-      demo: 'Demo'';}
+      icon: 'Security';
+      title: 'Advanced Security';
+          description: 'Experience our enterprise-grade security features'
+  };
+      demo: 'Demo';}
     },'
     {''
-      icon: 'Intelligence'''
-      title: 'Business Intelligence'''
-      description: 'Explore our comprehensive BI dashboard'''
-      demo: 'BI Demo'';}
+      icon: 'Intelligence';
+      title: 'Business Intelligence';
+          description: 'Explore our comprehensive BI dashboard'
+  };
+      demo: 'BI Demo';}
     },
 
 
@@ -42,13 +45,10 @@ const DemoPage: React.FC = () => {
   ];
 
   return (
-    <></>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    
+    <div>
+      <EnhancedSEO />
+      <div />
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -64,7 +64,7 @@ const DemoPage: React.FC = () => {
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
-                <Play className="w-5 h-5 mr-2 inline" />;
+                <Play className="w-5 h-5 mr-2 inline">;
                 Start Demo;
               </button>;
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
@@ -72,7 +72,7 @@ const DemoPage: React.FC = () => {
               </button>;
             </div>
           </div>
-        </section>;
+      </section>;
         {/* Demo Features */}
         <section className="py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -85,7 +85,7 @@ const DemoPage: React.FC = () => {
                 return (}
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
-                      <Icon className="w-8 h-8 text-white" />;
+                      <Icon className="w-8 h-8 text-white">;
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>;
                     <p className="text-gray-300 mb-4 text-center">{feature.description}</p>;
@@ -97,7 +97,7 @@ const DemoPage: React.FC = () => {
               })}
             </div>
           </div>
-        </section>;
+      </section>;
         {/* Demo Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
           <div className="max-w-6xl mx-auto">;
@@ -108,17 +108,17 @@ const DemoPage: React.FC = () => {
               <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">;
                 <div className="text-center">;
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">;
-                    <Play className="w-10 h-10 text-white ml-1" />;
+                    <Play className="w-10 h-10 text-white ml-1">;
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>;
                   <p className="text-gray-300 mb-4">See our AI solutions in action</p>;
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
                     Play </button>;
                 </div>
-              </div>
-            </div>
           </div>
-        </section>;
+        </div>
+      </div>
+      </section>;
         {/* Testimonials */}
         <section className="py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -130,7 +130,7 @@ const DemoPage: React.FC = () => {
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial.rating)].map((_, i) => (}
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current">;
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
@@ -142,7 +142,7 @@ const DemoPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>;
+      </section>;
         {/* CTA Section */}
         <section className="py-20 px-4">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -155,27 +155,24 @@ const DemoPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
                 Schedule Live Demo;
-                <Right className="w-5 h-5 ml-2 inline" />;
+                <Right className="w-5 h-5 ml-2 inline">;
               </button>;
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                 Contact Sales;
               </button>;
             </div>
           </div>
-        </section>;
+      </section>;
       </div>
     </>
-        <div className="text-center"></div>
-          <h1>Page</h1>
-          <p className="text-gray-300 text-lg"></p>
+        <div>
+    <h1>Page</h1>
+          <p />
             This page is under construction. Please check back later.
           </p>
         </div>
+        </div>
       </div>
-    </div>
   )};
 '
-const page = React.lazy(() => import('./page'));
-export default page;
-
-'
+const page = React.lazy(() => import('./page'))

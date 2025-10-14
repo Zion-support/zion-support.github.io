@@ -1,4 +1,4 @@
-import React from 'react''
+import React from 'react';
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react;
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
@@ -66,30 +66,30 @@ const TutorialsPage: React.FC = () => {
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,'
-      title: 'Advanced Features','
-      description: 'Cutting-edge technology for maximum efficiency'
+      icon: <CheckCircle className="w-8 h-8" />'
+          title: 'Advanced Features','
+          description: 'Cutting-edge technology for maximum efficiency'
+  }
     },
     {
-      icon: <Shield className="w-8 h-8" />,'
-      title: 'Secure & Reliable','
-      description: 'Enterprise-grade security and 99.9% uptime'
+      icon: <Shield className="w-8 h-8" />'
+          title: 'Secure & Reliable','
+          description: 'Enterprise-grade security and 99.9% uptime'
+  }
     },
     {
-      icon: <Users className="w-8 h-8" />,'
-      title: 'Expert Support','
-      description: '24/7 support from our team of specialists'
+      icon: <Users className="w-8 h-8" />'
+          title: 'Expert Support','
+          description: '24/7 support from our team of specialists'
+  }
     }
   ];
 
   return (
-    <></>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    
+    <div>
+      <EnhancedSEO />
+      <div />
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -105,7 +105,7 @@ const Page = () => {
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
-                <Play className="w-5 h-5 mr-2 inline" />;
+                <Play className="w-5 h-5 mr-2 inline">;
                 Start Learning;
               </button>;
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
@@ -113,22 +113,21 @@ const Page = () => {
               </button>;
             </div>
           </div>
-        </section>;
+      </section>;
         {/* Categories */}
         <section className="py-10 px-4">;
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button></button>
+                <button />
                   key={_index}
-                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
-                >;
+                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300">;
                   {category.name} ({category.count})
                 </button>;
               ))}
             </div>
           </div>
-        </section>;
+      </section>;
         {/* Tutorials Grid */}
         <section className="py-20 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -144,21 +143,21 @@ const Page = () => {
                       {tutorial.level;
                     </span>;
                     <div className="flex items-center text-yellow-400">;
-                      <Star className="w-4 h-4 fill-current" />;
+                      <Star className="w-4 h-4 fill-current">;
                       <span className="ml-1 text-sm">{tutorial.rating}</span>;
                     </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
+  </div>
+  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
                     {tutorial.title;
                   </h3>;
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>;
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">;
                     <span className="flex items-center">;
-                      <Clock className="w-4 h-4 mr-1" />;
+                      <Clock className="w-4 h-4 mr-1">;
                       {tutorial.duration;
                     </span>;
                     <span className="flex items-center">;
-                      <User className="w-4 h-4 mr-1" />;
+                      <User className="w-4 h-4 mr-1">;
                       {tutorial.students} students;
                     </span>;
                   </div>
@@ -166,14 +165,14 @@ const Page = () => {
                     <span className="text-cyan-400 text-sm font-medium">{tutorial.instructor}</span>;
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
                       Start Tutorial;
-                      <Right className="w-4 h-4 ml-1" />;
+                      <Right className="w-4 h-4 ml-1">;
                     </button>;
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>;
+      </section>;
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -186,27 +185,24 @@ const Page = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
                 Get Started Free;
-                <Right className="w-5 h-5 ml-2 inline" />;
+                <Right className="w-5 h-5 ml-2 inline">;
               </button>;
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                 View All Tutorials;
               </button>;
             </div>
           </div>
-        </section>;
+      </section>;
       </div>
     </>
-        <div className="text-center"></div>
-          <h1>Page</h1>
-          <p className="text-gray-300 text-lg"></p>
+        <div>
+    <h1>Page</h1>
+          <p />
             This page is under construction. Please check back later.
           </p>
         </div>
+        </div>
       </div>
-    </div>
   )};
 '
-const page = React.lazy(() => import('./page'));
-export default page;
-
-'
+const page = React.lazy(() => import('./page'))

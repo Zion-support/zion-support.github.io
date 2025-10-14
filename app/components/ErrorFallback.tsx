@@ -1,19 +1,19 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 const ErrorFallback: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    
+    <div>
+    <Helmet />
         <title>Error Fallback - Zion Tech Group</title>
-        <meta name="description" content="Professional error fallback services by Zion Tech Group." /></meta>
+        <meta />
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
-        <div className="max-w-6xl mx-auto text-center"></div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
-            Error Fallback;
-          </h1>"
+      <section>
+        <div>
+    <h1>Error Fallback;
+          </h1></h1>"
           <p>"
             Professional error fallback services;
             designed to help your business grow and succeed.;
@@ -22,46 +22,46 @@ const ErrorFallback: React.FC = () => {
       </section>;
       {/* Content Section */}
             Error Fallback</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+          <p />
             Professional error fallback services
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
-      <section className="py-16 px-4"></section>
-        <div className="max-w-6xl mx-auto"></div>
-          <div className="grid md:grid-cols-2 gap-12 items-center"></div>
-            <div></div>
+            designed to help your business grow and succeed.</p></div>
+      </section>{/* Content Section */}
+      <section>
+        <div>
+    <div />
+            <div />
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6"></p>
+              <p />
                 We provide comprehensive error fallback;
                 solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3"></ul>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+              <ul />
+                <li />
+                  <span />
                   Custom solutions;
                 </li>"
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li />
+                  <span />"
                   Expert consultation;
                 </li>"
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                <li />
+                  <span />"
                   Ongoing support;
                 </li>
               </ul>
             </div>"
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+            <div>
+    <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p>"
                 Ready to transform your business with our error fallback services?;
               </p>;
-              <a></a>
+              <a />
                 href="/contact";
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
-              >;
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">;
                 Contact Us;
               </a>
             </div>
-          </div>
         </div>
+      </div>
       </section>;
             Ready to Get Started?;
           </h2>;
@@ -69,10 +69,9 @@ const ErrorFallback: React.FC = () => {
             Let's discuss how our error fallback';
             services can help you achieve your goals.;
           </p>;
-          <a></a>
+          <a />
             href="/contact";
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
-          >;
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">;
             Get Started Today;
           </a>;
         </div>
@@ -81,21 +80,17 @@ const ErrorFallback: React.FC = () => {
   );
 };
 
-      { /* CTA Section */ }"""
-      <section className="py-16 px-4 bg-blue-600">"""
-        <div className=max-w-4xl mx-auto text-center></div>
-          <h2 className="text-3xl font-bold text-white mb-6">""
+      { /* CTA Section */ }'';
+      <section className="py-16 px-4 bg-blue-600'>';">
+    <h2 className="text-3xl font-bold text-white mb-6'>';
 
             Ready to Get Started?;
           </h2>
-          <p className="text-xl text-blue-100 mb-8"></p>
+          <p />
             Let&apos;s discuss how our error fallback 
             services can help you achieve your goals.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          ></a>
+          <a />
             Get Started Today;
           </a>
         </div>
@@ -105,34 +100,34 @@ const ErrorFallback: React.FC = () => {
 }
                 We provide comprehensive error fallback
                 solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3"></ul>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+              <ul />
+                <li />
+                  <span />
                   Custom solutions</li>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                <li />
+                  <span />
                   Expert consultation</li>
-                <li className="flex items-center"></li>
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                <li />
+                  <span />
                   Ongoing support</li></ul></div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6"></p>
+            <div>
+    <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p />
                 Ready to transform your business with our error fallback services?</p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"></a>
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl font-bold text-white mb-6"></h2>
+              <a />
+                Contact Us</a></div>
+        </div>
+      </div>
+      </section>{/* CTA Section */}
+      <section>
+        <div>
+    <h2 />
             Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8"></p>'
+          <p />'
             Let's discuss how our error fallback'
             services can help you achieve your goals.</p>
-          <a"
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"></a>
-            Get Started Today</a></div></section></div>
+          <a />
+            Get Started Today</a></div>
+      </section></div>
 export default ErrorFallback
 '

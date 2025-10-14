@@ -9,10 +9,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload critical fonts'
+      // Preload critical fonts;
       const fontLink = document.createElement('link')'
-      fontLink.rel = 'preload''
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap''
+      fontLink.rel = 'preload';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
@@ -20,7 +20,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalImages = ['
         '/logo.svg','
         '/og-image.svg','
-        '/api/placeholder/1200/630', // Hero image'
+        '/api/placeholder/1200/630', // Hero image;
         '/api/placeholder/800/600',  // Service images
       ];
 
@@ -37,13 +37,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const optimizeImages = () => {'
       const images = document.querySelectorAll('img')'
       images.forEach((img) => {''
-        if (!img.hasAttribute('loading')) {''
+        if (!img.hasAttribute('loading')) {';
           img.setAttribute('loading', 'lazy');}
         }
       });
     };
 '
-        if (!img.hasAttribute('loading')) {''
+        if (!img.hasAttribute('loading')) {';
           img.setAttribute('loading', 'lazy')'
 { useEffect, Node } from 'react';
 interface PerformanceOptimizerProps {
@@ -59,19 +59,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 img.setAttribute('loading', 'lazy')}
       });
     const optimizeFonts = () => {'
-      // Preload critical fonts''
-      const link = document.createElement('link')''
-      link.rel = 'preload''
-      link.href = '/fonts/inter.woff2''
-      link.as = 'font''
-      link.type = 'font/woff2''
+      // Preload critical fonts';
+      const link = document.createElement('link')';
+      link.rel = 'preload';
+      link.href = '/fonts/inter.woff2';
+      link.as = 'font';
+      link.type = 'font/woff2';
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link)};
 
     const optimizeResources = () => {'
-      // Preload critical resources''
-      const criticalResources = ['/css/critical.css'''
-        '/js/critical.js'';
+      // Preload critical resources';
+      const criticalResources = ['/css/critical.css';
+        '/js/critical.js';
       ];
 
       criticalResources.forEach((resource) => {'
@@ -160,7 +160,7 @@ img.setAttribute('loading', 'lazy')}
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
           
-          // Add animation classes when element comes into view'
+          // Add animation classes when element comes into view;
           element.classList.add('animate-fade-in');
           
           // Unobserve after animation
@@ -169,7 +169,7 @@ img.setAttribute('loading', 'lazy')}
       });
     }, observerOptions);
 
-    // Observe elements with data-lazy attribute'
+    // Observe elements with data-lazy attribute;
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach(el => observer.observe(el));
 
@@ -182,9 +182,9 @@ img.setAttribute('loading', 'lazy')}
 
     // DNS prefetch for external resources
     const dnsPrefetchDomains = ['
-      '//fonts.googleapis.com','
-      '//fonts.gstatic.com','
-      '//www.google-analytics.com'
+      '//fonts.googleapis.com',;
+      '//fonts.gstatic.com',;
+      '//www.google-analytics.com;
     ];
 
     dnsPrefetchDomains.forEach(domain => {'
@@ -209,7 +209,8 @@ img.setAttribute('loading', 'lazy')}
   }, [isOptimized]);
 
   return (
-    <></>
+    
+    <div />
       {children}
       
       {/* Performance monitoring styles */}
@@ -270,4 +271,3 @@ img.setAttribute('loading', 'lazy')}
 };
 
 export default PerformanceOptimizer;
-'

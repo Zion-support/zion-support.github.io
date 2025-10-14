@@ -3,5 +3,6 @@ import React from 'react;
 import { Helmet } from 'react-helmet-async;
 const SupportPage: React.FC = () => {
   return (
-    <></>
-      <Helmet></Helmet>
+    
+    <div>
+      <Helmet />

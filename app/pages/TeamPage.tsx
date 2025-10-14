@@ -7,17 +7,18 @@ import { UserGroupIcon,
   StarIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,'
+  EnvelopeIcon,';
   MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function TeamPage() {
+  
   const team = [
     {'
       name: 'Kleber Santos','
       role: 'CEO & Founder','
       bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/kleber_santos;
     },
     {'
@@ -25,7 +26,7 @@ export default function TeamPage() {
       role: 'CTO','
       bio: 'Expert in cloud architecture and cybersecurity with a passion for innovation.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/sarah_johnson;
     },
     {'
@@ -33,7 +34,7 @@ export default function TeamPage() {
       role: 'Lead AI Engineer','
       bio: 'Machine learning specialist focused on developing cutting-edge AI solutions.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/michael_chen;
     },
     {'
@@ -41,7 +42,7 @@ export default function TeamPage() {
       role: 'Head of Design','
       bio: 'Creative director with expertise in user experience and interface design.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/emily_rodriguez;
     },
     {'
@@ -49,7 +50,7 @@ export default function TeamPage() {
       role: 'DevOps Engineer','
       bio: 'Infrastructure specialist ensuring scalable and reliable cloud solutions.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/david_kim;
     },
     {'
@@ -57,42 +58,47 @@ export default function TeamPage() {
       role: 'Project Manager','
       bio: 'Experienced project manager ensuring timely delivery of complex solutions.','
       image: '/images/.jpg','
-      linkedin: 'https://linkedin.com/','
+      linkedin: 'https://linkedin.com/',;
       twitter: 'https://twitter.com/lisa_wang;
     }
   ]
   const values = [
     {
       icon: StarIcon,'
-      title: 'Excellence','
-      description: 'We strive for excellence in everything we do, delivering the highest quality solutions.;
+          title: 'Excellence','
+          description: 'We strive for excellence in everything we do, delivering the highest quality solutions.;
     },
-    {
+    {'
+  },
       icon: UserGroupIcon,'
-      title: 'Collaboration','
-      description: 'We believe in the power of teamwork and collaboration to achieve great results.;
+          title: 'Collaboration','
+          description: 'We believe in the power of teamwork and collaboration to achieve great results.;
     },
-    {
+    {'
+  },
       icon: AcademicCapIcon,'
-      title: 'Innovation','
-      description: 'We continuously innovate and stay ahead of technology trends.;
+          title: 'Innovation','
+          description: 'We continuously innovate and stay ahead of technology trends.;
     },
-    {
+    {'
+  },
       icon: BriefcaseIcon,'
-      title: 'Integrity','
-      description: 'We maintain the highest ethical standards in all our business practices.;
-    }
+          title: 'Integrity','
+          description: 'We maintain the highest ethical standards in all our business practices.;
+    }'
+  },
   ]'
 import { Helmet } from 'react-helmet-async;
 const TeamPage: React.FC = () => {
   return (
-    <></>
-      <Helmet></Helmet>
+    
+    <div>
+      <Helmet />
         <title>TeamPage - Zion Tech Group</title>
-        <meta name="description" content="TeamPage - Zion Tech Group" /></meta>
+        <meta />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
+      <div>
+    <div />
           <h1 className="text-4xl font-bold mb-4">TeamPage</h1>
           <p className="text-gray-300">This page is under construction.</p>
         </div>

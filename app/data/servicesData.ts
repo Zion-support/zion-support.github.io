@@ -4,7 +4,7 @@ export interface Service {
         description: string;
 
   shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | "IoT"'"'";
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';';
   icon: string;
   features: string[];
   pricing: {
@@ -22,8 +22,9 @@ export interface Service {
 export const services: Service[] = [
   {
     id: 'ai-solutions',';
-    title: 'AI Solutions',';
-    description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.',';
+        title: 'AI Solutions',';
+        description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.'
+  },';
     shortDescription: 'Advanced AI solutions for business transformation',';
     category: 'AI',';
     icon: 'CpuChipIcon',';
@@ -125,8 +126,9 @@ export const services: Service[] = [
   },
   {
     id: 'digital-transformation',';
-    title: 'Digital Transformation',';
-    description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.',';
+        title: 'Digital Transformation',';
+        description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.'
+  },';
     shortDescription: 'Complete digital transformation services',';
     category: 'IT',';
     icon: 'RocketLaunchIcon',';
@@ -169,8 +171,9 @@ export const services: Service[] = [
   },
   {
     id: '5g-solutions',';
-    title: '5G Solutions',';
-    description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.',';
+        title: '5G Solutions',';
+        description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.'
+  },';
     shortDescription: 'Next-generation 5G solutions',';
     category: '5G',';
     icon: 'SignalIcon',';
@@ -213,8 +216,9 @@ export const services: Service[] = [
   },
   {
     id: 'micro-saas',';
-    title: 'Micro SaaS Solutions',';
-    description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.',';
+        title: 'Micro SaaS Solutions',';
+        description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.'
+  },';
     shortDescription: 'Custom micro SaaS solutions',';
     category: 'SaaS',';
     icon: 'GlobeAltIcon',';

@@ -1,4 +1,4 @@
-import fs from "fs";"
+import fs from 'fs';"
 import { glob    } from "glob";"
 // Find all page.tsx files
 const pageFiles = await glob('app/**/page.tsx');'
@@ -44,7 +44,7 @@ for (const filePath of pageFiles) {
     }
 
     // Ensure proper export statement
-    if (!content.includes('export default') && content.includes('function')) {''
+    if (!content.includes('export default') && content.includes('function')) {';
       const functionName = content.match(/function (\w+)/)?.[1] || 'Page';'
       content = content.trim() + `\n\nexport default ${functionName};`;```
       modified = true

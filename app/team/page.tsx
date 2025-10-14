@@ -2,13 +2,14 @@ import React from 'react;
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react"'
+import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO;
 
 export default function TeamPage() {
+  
   const teamMembers = [
     {
-      name: "Dr. Kleber Santos",
+      name: ';Dr. Kleber Santos",
       role: "CEO & Founder",
       expertise: "AI & Machine Learning",
       bio: "Visionary leader with 15+ years in AI and technology innovation. PhD in Computer Science from MIT, former Google AI researcher.",
@@ -19,7 +20,7 @@ export default function TeamPage() {
         email: "kleber@ziontechgroup.com"
       },
       achievements: ["AI Research Pioneer", "Tech Innovation Award 2023", "Forbes 30 Under 30"],
-      icon: <Brain className="w-6 h-6" /></Brain>
+      icon: <Brain />
     },
     {
       name: "Sarah Chen",
@@ -33,7 +34,7 @@ export default function TeamPage() {
         email: "sarah@ziontechgroup.com"
       },
       achievements: ["Cloud Architecture Expert", "DevOps Innovation Award", "Open Source Contributor"],
-      icon: <Globe className="w-6 h-6" /></Globe>
+      icon: <Globe />
     },
     {
       name: "Michael Rodriguez",
@@ -47,7 +48,7 @@ export default function TeamPage() {
         email: "michael@ziontechgroup.com"
       },
       achievements: ["Cybersecurity Expert", "Security Innovation Award", "CISSP Certified"],
-      icon: <Shield className="w-6 h-6" /></Shield>
+      icon: <Shield />
     },
     {
       name: "Emily Johnson",
@@ -61,7 +62,7 @@ export default function TeamPage() {
         email: "emily@ziontechgroup.com"
       },
       achievements: ["AI Research Leader", "ML Innovation Award", "Published Researcher"],
-      icon: <Brain className="w-6 h-6" /></Brain>
+      icon: <Brain />
     },
     {
       name: "David Kim",
@@ -75,7 +76,7 @@ export default function TeamPage() {
         email: "david@ziontechgroup.com"
       },
       achievements: ["Product Strategy Expert", "UX Innovation Award", "Tech Product Leader"],
-      icon: <BarChart3 className="w-6 h-6" /></BarChart3>
+      icon: <BarChart3 />
     },
     {
       name: "Lisa Wang",
@@ -89,70 +90,63 @@ export default function TeamPage() {
         email: "lisa@ziontechgroup.com"
       },
       achievements: ["Engineering Leader", "Software Architecture Expert", "Open Source Maintainer"],
-      icon: <Zap className="w-6 h-6" /></Zap>
+      icon: <Zap />
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6" /> },
-    { number: "15+", label: "Years Average Experience", icon: <Award className="w-6 h-6" /> },
-    { number: "25+", label: "PhD Holders", icon: <Brain className="w-6 h-6" /> },
-    { number: "100+", label: "Certifications", icon: <CheckCircle className="w-6 h-6" /> }
+    { number: "50+", label: "Team Members", icon: <Users className="w-6 h-6"> },
+    { number: "15+", label: "Years Average Experience", icon: <Award className="w-6 h-6"> },
+    { number: "25+", label: "PhD Holders", icon: <Brain className="w-6 h-6"> },
+    { number: "100+", label: "Certifications", icon: <CheckCircle className="w-6 h-6"> }
   ];
 
   const values = [
     {
       title: "Innovation First",'
       description: "We constantly push the boundaries of what's possible with technology",
-      icon: <Brain className="w-8 h-8" /></Brain>
+      icon: <Brain />
     },
     {
       title: "Collaboration",
       description: "We believe the best solutions come from diverse teams working together",
-      icon: <Users className="w-8 h-8" /></Users>
+      icon: <Users />
     },
     {
       title: "Excellence",
       description: "We strive for the highest quality in everything we deliver",
-      icon: <Award className="w-8 h-8" /></Award>
+      icon: <Award />
     },
     {
       title: "Continuous Learning",
       description: "We stay ahead by constantly learning and adapting to new technologies",
-      icon: <Clock className="w-8 h-8" /></Clock>
+      icon: <Clock />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <EnhancedSEO
-        title="Our Team - Zion Tech Group | Expert Technology Professionals"
-        description="Meet the expert team behind Zion Tech Group. Our diverse group of AI researchers, engineers, and technology leaders driving innovation."
-        keywords="team, experts, AI researchers, engineers, technology leaders, cybersecurity experts, cloud architects"
-        canonical="https://ziontechgroup.com/team"
-      /></EnhancedSEO>
+    
+    <div>
+    <EnhancedSEO />
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-            Meet Our
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
-              {" "}Expert Team
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
+      <section>
+        <div>
+    <h1>Meet Our
+             <span>{" "}Expert Team
+            </span></h1>
+          <p />
             Our diverse team of AI researchers, engineers, and technology leaders is dedicated to pushing the boundaries of innovation and delivering exceptional solutions.
           </p>
         </div>
-</section>
+      </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+      <section>
+        <div>
+    <div />
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group"></div>
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+              <div>
+    <div />
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -164,56 +158,53 @@ export default function TeamPage() {
       </section>
 
       {/* Team Members */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
+      <section>
+        <div>
+    <div />
+            <h2 />
+              <span />
                 Leadership Team
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p />
               Meet the visionary leaders driving innovation and excellence at Zion Tech Group.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          <div />
             {teamMembers.map((member, index) => (
-              <div
-                key={index;
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-              ></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10"></div>
+              <div>
+    <div />
+                <div />
                   {/* Profile Image */}
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform duration-300"></div>'
-                    {member.name.split(' ').map(n => n[0]).join('')}
+                  <div />'
+                    {member.name.split(' ').map(n => n[0]).join(';)}
                   </div>
                   
                   {/* Member Info */}
-                  <div className="text-center mb-4"></div>
-                    <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-cyan-300 transition-colors"></h3>
+                  <div>
+    <h3 />
                       {member.name}
                     </h3>
                     <p className="text-cyan-400 font-medium mb-2">{member.role}</p>
-                    <div className="flex items-center justify-center space-x-2 mb-3"></div>
+                    <div />
                       {member.icon}
                       <span className="text-gray-300 text-sm">{member.expertise}</span>
                     </div>
                   </div>
                   
                   {/* Bio */}
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4"></p>
+                  <p />
                     {member.bio}
                   </p>
                   
                   {/* Achievements */}
-                  <div className="mb-4"></div>
-                    <h4 className="text-white font-medium mb-2 text-sm">Key Achievements:</h4>
-                    <div className="space-y-1"></div>
+                  <div>
+    <h4 className="text-white font-medium mb-2 text-sm">Key Achievements:</h4>
+                    <div />
                       {member.achievements.map((achievement, idx) => (
-                        <div key={idx} className="flex items-center space-x-2"></div>
-                          <Star className="w-3 h-3 text-yellow-400" /></Star>
+                        <div>
+    <Star />
                           <span className="text-gray-300 text-xs">{achievement}</span>
                         </div>
                       ))}
@@ -221,82 +212,61 @@ export default function TeamPage() {
                   </div>
                   
                   {/* Social Links */}
-                  <div className="flex justify-center space-x-4"></div>
+                  <div />
                     {member.social.linkedin && (
-                      <a
-                        href={member.social.linkedin;
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
-                      ></a>
-                        <Linkedin className="w-4 h-4" /></Linkedin>
+                      <a />
+                        <Linkedin />
                       </a>
                     )}
                     {member.social.github && (
-                      <a
-                        href={member.social.github;
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
-                      ></a>
-                        <Github className="w-4 h-4" /></Github>
+                      <a />
+                        <Github />
                       </a>
                     )}
                     {member.social.twitter && (
-                      <a
-                        href={member.social.twitter;
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
-                      ></a>
-                        <Twitter className="w-4 h-4" /></Twitter>
+                      <a />
+                        <Twitter />
                       </a>
                     )}
                     {member.social.email && (
-                      <a
-                        href={`mailto:${member.social.email}`}
-                        className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
-                      ></a>
-                        <Mail className="w-4 h-4" /></Mail>
+                      <a />
+                        <Mail />
                       </a>
                     )}
                   </div>
-                </div>
-              </div>
+        </div>
+      </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
+      <section>
+        <div>
+    <div />
+            <h2 />
+              <span />
                 Our Values
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p />
               The principles that guide our team and shape our approach to technology and innovation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div />
             {values.map((value, index) => (
-              <div
-                key={index;
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
-              ></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10"></div>
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>
+              <div>
+    <div />
+                <div>
+    <div />
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
+                  <h3 />
                     {value.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed"></p>
+                  <p />
                     {value.description}
                   </p>
                 </div>
@@ -307,32 +277,26 @@ export default function TeamPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+      <section>
+        <div>
+    <div />
+            <h2 />
               Join Our Team
             </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>'
+            <p />'
               Ready to be part of the future of technology? We're always looking for talented individuals to join our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
-                to="/careers"
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              ></Link>
+            <div>
+    <Link />
                 View Open Positions
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+                <ArrowRight />
               </Link>
-              <Link
-                to="/contact"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-              ></Link>
+              <Link />
                 Get in Touch
               </Link>
             </div>
-          </div>
         </div>
+      </div>
       </section>
     </div>
   );

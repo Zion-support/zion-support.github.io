@@ -1,18 +1,19 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 export default function Page() {
+  
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    
+    <div>
+    <Helmet />
         <title>AdvancedPerformanceOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional advancedperformanceoptimizer services by Zion Tech Group." /></meta>
+        <meta />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
-            AdvancedPerformanceOptimizer;
-          </h1>;
+      <div>
+    <div />
+          <h1>AdvancedPerformanceOptimizer;
+          </h1></h1>;
           <p className="text-xl text-gray-600 mb-8">;
             Professional advancedperformanceoptimizer solutions tailored to your business needs.;
           </p>;
@@ -41,15 +42,15 @@ export default function Page() {
                 Round-the-clock support for all your advancedperformanceoptimizer needs.;
               </p>;
             </div>
-          </div>
-          <div className="mt-12">;
+  </div>
+  <div className="mt-12">;
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
               Get Started Today;
             </button>;
           </div>
+          </div>
         </div>
       </div>
-    </div>
   );}'
 }'
 
