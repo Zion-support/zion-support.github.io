@@ -8,7 +8,7 @@ interface LazyWrapperProps {
 export default function LazyWrapper({ children, fallback }: LazyWrapperProps) {
   return (
     <div>
-      {children}
+      {fallback || children}
     </div>
   );
 }
