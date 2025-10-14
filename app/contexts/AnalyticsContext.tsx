@@ -1,13 +1,14 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
-interface AnalyticsContextContextType {
-  // Add your context properties here
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
 }
 
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
+  const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
   }
@@ -20,12 +21,17 @@ interface AnalyticsContextProviderProps {
 
 export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
   const value = {
-    // Add your context values here
+    trackEvent: (event: string, properties?: Record<string, unknown>) => {
+      console.log('Analytics Event:', event, properties);
+    },
+    trackPageView: (page: string) => {
+      console.log('Page View:', page);
+    }
   };
 
   return (
-    <AnalyticsContextContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContextContext.Provider>
+    </AnalyticsContext.Provider>
   );
 };

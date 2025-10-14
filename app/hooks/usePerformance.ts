@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export const useUsePerformance = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+export const usePerformance = () => {
+  const [data] = useState(null);
+  const [loading] = useState(false);
+  const [error] = useState(null);
 
   useEffect(() => {
     // Add your hook logic here
