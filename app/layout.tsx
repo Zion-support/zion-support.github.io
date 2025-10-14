@@ -45,5 +45,27 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
+      <body>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceMonitor>
+              <AccessibilityEnhancer>
+                <PWAInstaller>
+                  <PerformanceOptimizer>
+                    {children}
+                  </PerformanceOptimizer>
+                </PWAInstaller>
+              </AccessibilityEnhancer>
+            </PerformanceMonitor>
+          </AnalyticsProvider>
+        </GlobalErrorBoundary>
+      </body>
+    </html>
   );
 }
