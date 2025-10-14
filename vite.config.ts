@@ -26,10 +26,16 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Increased threshold to reduce warnings
+    assetsInlineLimit: 2048, // Reduced for better chunking
     // Enable compression
     reportCompressedSize: true,
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
+    // Enable tree shaking
+    treeshake: {
+      moduleSideEffects: false,
+    },
     // Optimize for production
     terserOptions: {
       compress: {
@@ -71,19 +77,35 @@ export default defineConfig({
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            // React core (smaller chunk)
+            if (id.includes('react/') || id.includes('react-dom/')) {
+              return 'react-core';
+            }
+            // React router (separate chunk)
+            if (id.includes('react-router')) {
+              return 'react-router';
             }
             // UI libraries
             if (id.includes('lucide-react') || id.includes('framer-motion')) {
               return 'ui-vendor';
             }
+            // Large libraries
+            if (id.includes('recharts') || id.includes('gray-matter')) {
+              return 'large-vendor';
+            }
             // Other vendor libraries
             return 'vendor';
           }
-          // App chunks
+          // App chunks - split by feature
           if (id.includes('/app/')) {
+            // Split by page categories
+            if (id.includes('/ai-') || id.includes('/5g-')) {
+              return 'feature-pages';
+            }
+            // Main app pages
+            if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
+              return 'main-pages';
+            }
             return 'app';
           }
           return undefined;
@@ -112,5 +134,12 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
+  },
+  esbuild: {
+    // Remove console logs in production
+    drop: ['console', 'debugger'],
+    // Target modern browsers
+    target: 'es2020',
   },
 });
