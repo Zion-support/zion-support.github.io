@@ -2,13 +2,11 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
-import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
 import { LoadingPage } from './app/components/EnhancedLoadingStates';
-import AdvancedPerformanceEnhancer from './app/components/AdvancedPerformanceEnhancer';
 import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
 import EnhancedSEOOptimizer from './app/components/EnhancedSEOOptimizer';
 import EnhancedAccessibilityManager from './app/components/EnhancedAccessibilityManager';
@@ -90,7 +88,6 @@ const App: React.FC = () => {
             <AnalyticsProvider />
             <PerformanceMonitor />
             <WebVitalsTracker />
-            <AdvancedPerformanceEnhancer />
             <AdvancedPerformanceOptimizer />
             <EnhancedSEOOptimizer />
             <EnhancedAccessibilityManager />
