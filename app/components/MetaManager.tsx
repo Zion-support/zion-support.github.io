@@ -1,11 +1,5 @@
 import React, { useEffect } from 'react';
-
-
-
 import { Helmet } from 'react-helmet-async';
-
-
-
 
 interface MetaManagerProps {
   title?: string;
@@ -19,8 +13,10 @@ interface MetaManagerProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-};
-const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Advanced AI & IT Solutions",
+}
+
+const MetaManager: React.FC<MetaManagerProps> = ({ 
+  title = "Zion Tech Group - Advanced AI & IT Solutions",
   description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
   keywords = ["AI solutions", "IT services", "cybersecurity", "cloud computing", "digital transformation"],
   image = "https://ziontechgroup.com/og-image.jpg",
@@ -31,7 +27,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
   modifiedTime,
   section,
   tags = []
- }) => {
+}) => {
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -42,7 +38,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
-    };
+    }
     canonical.setAttribute('href', url);
 
     // Add structured data
@@ -61,9 +57,9 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
         "logo": {
           "@type": "ImageObject",
           "url": "https://ziontechgroup.com/logo.svg"
-        };
+        }
       },
-      ...(type === "article"&& {
+      ...(type === "article" && {
         "datePublished": publishedTime,
         "dateModified": modifiedTime,
         "articleSection": section,
@@ -75,7 +71,8 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
       existingScript.remove();
-    };
+    }
+    
     // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -99,7 +96,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
             "position": 2,
             "name": section || "Article",
             "item": url
-          };
+          }
         ]
       };
 
@@ -107,29 +104,28 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
       breadcrumbScript.type = 'application/ld+json';
       breadcrumbScript.text = JSON.stringify(breadcrumbData);
       document.head.appendChild(breadcrumbScript);
-    };
+    }
+
     return () => {
       // Cleanup
       if (existingScript) {
         existingScript.remove();
-      };
+      }
     };
   }, [title, description, url, image, type, author, publishedTime, modifiedTime, section, tags]);
 
   return (
-    /MetaManagerProps></MetaManagerProps><Helmet>
-      {/* Basic Meta Tags */};
+    <Helmet>
+      {/* Basic Meta Tags */}
       <title>{title}</title>
-  );
-  );
-      <meta name="description"content={description} />
+      <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Open Graph Tags */};
-      <meta property="og:title"content={title} />
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -137,33 +133,41 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Article specific meta tags */};
-      {type === "article"&& (
-        <><meta property="article:author" content={author} />
+      {/* Article specific meta tags */}
+      {type === "article" && (
+        <>
+          <meta property="article:author" content={author} />
           <meta property="article:section" content={section} />
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />};
-          {modifiedTime && <meta property="article:modified_time"content={modifiedTime} />};
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           {tags.map((tag, index) => (
-            <meta key={index} property="article:tag"content={tag} />
-          ))}</>
-      )};
-      {/* Twitter Card Tags */};
-      <meta name="twitter:card"content="summary_large_image" />
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Tags */};
-      <link rel="canonical"href={url} />
+      {/* Additional SEO Tags */}
+      <link rel="canonical" href={url} />
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="msapplication-TileColor" content="#8b5cf6" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
-      {/* Preconnect to external domains */};
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" /></Helmet>
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+    </Helmet>
+  );
+};
+
+export default MetaManager;

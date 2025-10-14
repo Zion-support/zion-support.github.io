@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-
-"interface ResponsiveContainerProps {}"children: 
-  c,lassName ?  : string
-
-const ResponsiveContainer: React.FC<Props> = ({ children  }) => {};
+const ResponsiveContainer = () => {
   return (
-    div>Page content</div>
+    <div>
+      <h2>ResponsiveContainer</h2>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+    </div>
   );
-  );
-  );</Props>
+};
+
+export default ResponsiveContainer;

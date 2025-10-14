@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet-async";
 
 const ServicesPage = () => {
   return (
-    div>
+    <div>
       <Helmet>
         <title>Services - Zion Tech Group</title>
-        <meta name="description"content="Professional IT services by Zion Tech Group." />
+        <meta name="description" content="Professional IT services by Zion Tech Group." />
       </Helmet>
       <div>
         <div>

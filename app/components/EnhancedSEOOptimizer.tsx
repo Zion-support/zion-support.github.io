@@ -1,17 +1,12 @@
 import React from 'react';
 
-
 const EnhancedSEOOptimizer = () => {
-
   return (
-    div>
+    <div>
       <h2>EnhancedSEOOptimizer</h2>
-  );
-  );
       <p className="text-gray-300 text-lg">This component is under construction.</p>
-  
+    </div>
   );
 };
+
 export default EnhancedSEOOptimizer;
-
-
