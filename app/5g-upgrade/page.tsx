@@ -1,4 +1,5 @@
 import React from 'react';
+import React, { Suspense } from 'react';
 
 const FiveGUpgradePage: React.FC = () => {
   return (
