@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { X, Home, Users, Settings, BarChart3, FileText, Mail, Phone, MapPin, Brain, ChevronDownIcon } from "lucide-react";
+import { X, Home, Users, Settings, BarChart3, Mail, Phone, MapPin, Brain } from "lucide-react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,19 +8,19 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  // const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
-  const toggleExpanded = (itemName: string) => {
-    setExpandedItems(prev => 
-      prev.includes(itemName) 
-        ? prev.filter(item => item !== itemName)
-        : [...prev, itemName]
-    );
-  };
+  // const toggleExpanded = (itemName: string) => {
+  //   setExpandedItems(prev => 
+  //     prev.includes(itemName) 
+  //       ? prev.filter(item => item !== itemName)
+  //       : [...prev, itemName]
+  //   );
+  // };
 
-  const isActive = (href: string) => {
-    return window.location.pathname === href;
-  };
+  // const isActive = (href: string) => {
+  //   return window.location.pathname === href;
+  // };
 
   const mainNavItems = [
     { name: 'Home', href: '/', icon: Home },

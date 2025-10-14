@@ -29,7 +29,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-slate-900 flex items-center justify-center">
           <div className="text-center text-white">
             <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
-            <p className="text-gray-300 mb-4">We're sorry for the inconvenience.</p>
+            <p className="text-gray-300 mb-4">We&apos;re sorry for the inconvenience.</p>
             <button
               onClick={() => window.location.reload()}
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded"

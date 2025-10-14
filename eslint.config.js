@@ -3,10 +3,12 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+
 export default [
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
+    ignores: ['dist/**', 'node_modules/**', 'build/**', '.next/**'],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -49,6 +51,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-undef': 'off', // Turn off no-undef for TypeScript files
+      '@typescript-eslint/no-empty-object-type': 'off',
     },
     settings: {
       react: {

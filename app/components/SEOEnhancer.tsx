@@ -11,9 +11,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group',
   description = 'Leading provider of AI and IT solutions',
   keywords = ['AI', 'IT', 'technology', 'solutions'],
-  image,
-  url,
-  type = 'website'
+  // image,
+  // url,
+  // type = 'website'
 }) => {
   return (
     <div className="seo-enhancer">
