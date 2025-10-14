@@ -25,3 +25,4 @@ export const usePerformanceMonitor = (name: string) => {
       }
     };
   }, [name]);
+};

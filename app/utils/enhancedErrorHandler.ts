@@ -1,14 +1,12 @@
 export const enhancedErrorHandler = {
-  handleError: (_error: Error, context?: string) => {
-    // Log to external service
-    if (typeof window !== 'undefined' && window.gtag) {
-  handleError: (error: Error, context?: string) => {
-    console.error('Error occurred: ', error)
+  handleError: (error: Error, _context?: string) => {
+    console.error('Error occurred: ', error);
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
-      })
+        description: error.message,
+        fatal: false
+      });
     }
     
     return {
@@ -37,15 +35,26 @@ export const enhancedErrorHandler = {
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
     }
   },
-  getErrorMessage: (error: any) => {
-    if (error.response?.status) {
-      switch (error.response.status) {
-          return { message: 'Invalid request', code: 'BAD_REQUEST' ;}
-          return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;}
-          return { message: 'Forbidden', code: 'FORBIDDEN' ;}
-          return { message: 'Not found', code: 'NOT_FOUND' ;}
-          return { message: 'Server error', code: 'SERVER_ERROR' ;}
-          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}
+  
+  getErrorMessage: (error: unknown) => {
+    const errorWithResponse = error as { response?: { status?: number }; message?: string };
+    if (errorWithResponse.response?.status) {
+      switch (errorWithResponse.response.status) {
+        case 400:
+          return { message: 'Invalid request', code: 'BAD_REQUEST' };
+        case 401:
+          return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+        case 403:
+          return { message: 'Forbidden', code: 'FORBIDDEN' };
+        case 404:
+          return { message: 'Not found', code: 'NOT_FOUND' };
+        case 500:
+          return { message: 'Server error', code: 'SERVER_ERROR' };
+        default:
+          return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+      }
+    }
     
-    return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
-}}}}
+    return { message: errorWithResponse.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+  }
+};

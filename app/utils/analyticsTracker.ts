@@ -11,7 +11,7 @@ export const analyticsTracker = {
   trackClick: (element: string, location: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'click', {
-        element: element,
+        element_name: element,
         location: location
       });
     }

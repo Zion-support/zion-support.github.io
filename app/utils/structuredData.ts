@@ -8,13 +8,12 @@ export const structuredData = {
   },
   
   website: {
-    '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com'
   },
   
   generate: (type: 'organization' | 'website') => {
-    return structuredData[type]
+    return structuredData[type];
   }
 };
