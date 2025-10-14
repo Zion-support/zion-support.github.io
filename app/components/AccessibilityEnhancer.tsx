@@ -1,50 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
+
   useEffect(() => {
-    // Skip to main content functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.zIndex = '9999';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+    const root = document.documentElement;
+
+    // High contrast mode
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
     }
-// Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    }
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    }
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
 
     // Reduced motion mode
     if (isReducedMotion) {
@@ -67,46 +36,27 @@ const AccessibilityEnhancer: React.FC = () => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
+        const main = document.querySelector('main');
+        if (main) {
+          (main as HTMLElement).focus();
         }
       }
+    };
 
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Focus management
+  // Add ARIA landmarks
   useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
       }
-    }
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    }
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
 
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');      if (nav && !nav.getAttribute('role')) {
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
 
@@ -114,8 +64,13 @@ const AccessibilityEnhancer: React.FC = () => {
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-    }
-    // Add alt text to images without alt attributes
+    };
+
+    addAriaLandmarks();
+  }, []);
+
+  // Add alt text to images without alt attributes
+  useEffect(() => {
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
@@ -123,28 +78,52 @@ const AccessibilityEnhancer: React.FC = () => {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
       });
-    }
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
+    };
+
     addAltText();
-
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    }
   }, []);
 
-return null;
-import React from 'react';
+  return (
+    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
+      
+      <div className="space-y-3">
+        <label className="flex items-center space-x-2 text-white text-sm">
+          <input
+            type="checkbox"
+            checked={isHighContrast}
+            onChange={(e) => setIsHighContrast(e.target.checked)}
+            className="rounded"
+          />
+          <span>High Contrast</span>
+        </label>
 
-const AccessibilityEnhancer: React.FC = () => {
-  return null;
-}
+        <label className="flex items-center space-x-2 text-white text-sm">
+          <input
+            type="checkbox"
+            checked={isReducedMotion}
+            onChange={(e) => setIsReducedMotion(e.target.checked)}
+            className="rounded"
+          />
+          <span>Reduce Motion</span>
+        </label>
+
+        <div className="space-y-1">
+          <label className="text-white text-sm">Font Size</label>
+          <select
+            value={fontSize}
+            onChange={(e) => setFontSize(e.target.value as any)}
+            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
+          >
+            <option value="small">Small</option>
+            <option value="normal">Normal</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default AccessibilityEnhancer;
