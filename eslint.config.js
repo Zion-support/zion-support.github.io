@@ -49,6 +49,23 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        PerformanceEventTiming: 'readonly',
+        performance: 'readonly',
+        process: 'readonly'
       }
     },
     plugins: {
@@ -64,7 +81,8 @@ export default [
       '@typescript-eslint/no-explicit-any': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-console': 'off'
+      'no-console': 'off',
+      'react/no-unescaped-entities': 'off'
     },
     settings: {
       react: {
