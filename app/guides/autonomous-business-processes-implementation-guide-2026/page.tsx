@@ -58,5 +58,6 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AutonomousBusinessProcessesImplementationGuide2026Page;
+
+

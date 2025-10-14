@@ -54,5 +54,6 @@ const EnterpriseSecurityPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default EnterpriseSecurityPage;
+
+

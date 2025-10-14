@@ -21,12 +21,8 @@ describe("HomePage", () => {
         </BrowserRouter>
       </HelmetProvider>,
     );
-<<<<<<< HEAD
     expect(screen.getByText('Advanced AI & IT')).toBeInTheDocument();
     expect(screen.getByText('Solutions')).toBeInTheDocument();
-=======
-    expect(screen.getByText("Advanced AI & IT Solutions")).toBeInTheDocument();
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
   });
 
   it("renders navigation links", () => {

@@ -55,5 +55,6 @@ const CloudInfrastructureManagementPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default CloudInfrastructureManagementPage;
+
+

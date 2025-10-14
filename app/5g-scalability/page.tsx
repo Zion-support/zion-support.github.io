@@ -54,5 +54,6 @@ const FiveGScalability: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default 5gScalabilityPage;
+
+
