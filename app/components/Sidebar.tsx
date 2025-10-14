@@ -11,17 +11,16 @@ import {
   CogIcon,
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
-  CookieIcon,
-  SitemapIcon,
+  CakeIcon,
+  MapIcon,
   CloudIcon,
   CpuChipIcon,
   GlobeAltIcon,
   DevicePhoneMobileIcon,
-  DatabaseIcon,
+  CircleStackIcon,
   CodeBracketIcon,
   WrenchScrewdriverIcon,
   ChartBarIcon,
-  BrainIcon,
   LockClosedIcon,
   ServerIcon,
   Cog6ToothIcon,
@@ -68,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
-    { name: 'AI Services', href: '/ai-services', icon: BrainIcon },
+    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
     { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
     { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
     { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
@@ -82,7 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
     { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
     { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-    { name: 'Database Management', href: '/database-management', icon: DatabaseIcon },
+    { name: 'Database Management', href: '/database-management', icon: CircleStackIcon },
     { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
     { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
     { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
@@ -102,8 +101,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const additionalLinks = [
     { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
     { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
-    { name: 'Cookie Policy', href: '/cookies', icon: CookieIcon },
-    { name: 'Sitemap', href: '/sitemap', icon: SitemapIcon },
+    { name: 'Cookie Policy', href: '/cookies', icon: CakeIcon },
+    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
     { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
@@ -111,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   ];
 
   const serviceSections = [
-    { title: 'AI Services', links: aiServices, icon: BrainIcon, key: 'ai' },
+    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
     { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
     { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
   ];
