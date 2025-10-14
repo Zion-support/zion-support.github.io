@@ -13,7 +13,7 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Welcome to Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
   
   it('renders navigation links', () => {
