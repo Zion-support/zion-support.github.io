@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'AI Services',
+      title: 'AI Solutions',
       icon: <Brain className="w-5 h-5 text-cyan-400" />,
       services: [
         { name: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
       ]
     },
     {
-      title: '5G Solutions',
+      title: '5G Technology',
       icon: <Wifi className="w-5 h-5 text-green-400" />,
       services: [
         { name: '5G Implementation', href: '/5g-implementation' },
