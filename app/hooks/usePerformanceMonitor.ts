@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({});
+  const [metrics] = useState({});
 
   useEffect(() => {
     // Performance monitoring logic
