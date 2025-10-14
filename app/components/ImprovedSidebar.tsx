@@ -6,7 +6,34 @@ import {
   UserGroupIcon, 
   BriefcaseIcon, 
   CurrencyDollarIcon, 
-  ChatBubbleLeftRightIcon
+  DocumentTextIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  MapIcon,
+  CloudIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  DevicePhoneMobileIcon,
+  ServerIcon,
+  CodeBracketIcon,
+  WrenchScrewdriverIcon,
+  ChartBarIcon,
+  LockClosedIcon,
+  Cog6ToothIcon,
+  SparklesIcon,
+  RocketLaunchIcon,
+  BeakerIcon,
+  HeartIcon,
+  ShieldExclamationIcon,
+  DocumentDuplicateIcon,
+  AcademicCapIcon,
+  PresentationChartLineIcon,
+  CommandLineIcon,
+  PuzzlePieceIcon,
+  ArrowRightIcon,
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
 interface ImprovedSidebarProps {
@@ -16,53 +43,78 @@ interface ImprovedSidebarProps {
 
 const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
-  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleExpanded = (item: string) => {
-    setExpandedItems(prev => 
-      prev.includes(item) 
-        ? prev.filter(i => i !== item)
-        : [...prev, item]
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
     );
   };
 
-  const navigationItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: HomeIcon,
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: UserGroupIcon,
-    },
-    {
-      name: 'Services',
-      href: '/services',
-      icon: BriefcaseIcon,
-      children: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { name: 'IT Consulting', href: '/it-consulting' },
-      ]
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: ChatBubbleLeftRightIcon,
-    },
-    {
-      name: 'Pricing',
-      href: '/pricing',
-      icon: CurrencyDollarIcon,
-    },
+  const mainLinks = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: UserGroupIcon },
+    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon },
+    { name: 'Demo', href: '/demo', icon: PresentationChartLineIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
   ];
 
-  const isActive = (href: string) => {
-    return location.pathname === href;
-  };
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
+    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
+    { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: ChatBubbleLeftRightIcon },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: ShieldExclamationIcon },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: ChartBarIcon }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+    { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
+    { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
+    { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
+    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
+    { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
+  ];
+
+  const businessSolutions = [
+    { name: 'Micro SaaS', href: '/micro-saas', icon: RocketLaunchIcon },
+    { name: 'Cloud Services', href: '/cloud-services', icon: ServerIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: SparklesIcon },
+    { name: 'Process Automation', href: '/process-automation', icon: Cog6ToothIcon },
+    { name: 'Data Migration', href: '/data-migration', icon: ArrowRightIcon },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: ChartBarIcon },
+    { name: 'API Development', href: '/api-development', icon: CommandLineIcon },
+    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: BeakerIcon }
+  ];
+
+  const additionalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
+    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
+    { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
+    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
+    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+    { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
+    { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
+  ];
+
+  const serviceSections = [
+    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
+    { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
+    { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <>
@@ -76,93 +128,139 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
 
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-64 bg-slate-900 border-r border-slate-700 z-50 transform transition-transform duration-300 ease-in-out
+        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 
+        transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:z-auto
+        shadow-2xl border-r border-slate-700
       `}>
-        <div className="flex items-center justify-between h-16 px-4 border-b border-slate-700">
-          <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
-          <button
-            onClick={onClose}
-            className="lg:hidden text-gray-400 hover:text-white"
-          >
-            <XMarkIcon className="w-6 h-6" />
-          </button>
-        </div>
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <CpuChipIcon className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech</span>
+            </div>
+            <button
+              onClick={onClose}
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-600 transition-colors"
+            >
+              <XMarkIcon className="w-6 h-6 text-white" />
+            </button>
+          </div>
 
-        <nav className="mt-4 px-4">
-          <ul className="space-y-2">
-            {navigationItems.map((item) => (
-              <li key={item.name}>
-                {item.children ? (
-                  <div>
-                    <button
-                      onClick={() => toggleExpanded(item.name)}
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto p-6 space-y-6">
+            {/* Main Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Main Navigation
+              </h3>
+              <ul className="space-y-2">
+                {mainLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      onClick={onClose}
                       className={`
-                        w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                        ${isActive(item.href) 
-                          ? 'bg-cyan-600 text-white' 
-                          : 'text-gray-300 hover:bg-slate-800 hover:text-white'
+                        flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                          : 'text-gray-300 hover:bg-slate-700 hover:text-white hover:shadow-md'
                         }
                       `}
                     >
-                      <div className="flex items-center">
-                        <item.icon className="w-5 h-5 mr-3" />
-                        {item.name}
-                      </div>
-                      <svg
-                        className={`w-4 h-4 transition-transform ${
-                          expandedItems.includes(item.name) ? 'rotate-180' : ''
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    {expandedItems.includes(item.name) && (
-                      <ul className="mt-2 ml-6 space-y-1">
-                        {item.children.map((child) => (
-                          <li key={child.name}>
-                            <Link
-                              to={child.href}
-                              className={`
-                                block px-3 py-2 text-sm rounded-lg transition-colors
-                                ${isActive(child.href)
-                                  ? 'bg-cyan-600 text-white'
-                                  : 'text-gray-400 hover:bg-slate-800 hover:text-white'
-                                }
-                              `}
-                              onClick={onClose}
-                            >
-                              {child.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                      <link.icon className="w-5 h-5" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Service Sections */}
+            {serviceSections.map((section) => (
+              <div key={section.key}>
+                <button
+                  onClick={() => toggleSection(section.key)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-semibold text-gray-400 uppercase tracking-wider hover:text-white transition-colors rounded-lg hover:bg-slate-700"
+                >
+                  <div className="flex items-center space-x-3">
+                    <section.icon className="w-5 h-5" />
+                    <span>{section.title}</span>
                   </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`
-                      flex items-center px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                      ${isActive(item.href)
-                        ? 'bg-cyan-600 text-white'
-                        : 'text-gray-300 hover:bg-slate-800 hover:text-white'
-                      }
-                    `}
-                    onClick={onClose}
-                  >
-                    <item.icon className="w-5 h-5 mr-3" />
-                    {item.name}
-                  </Link>
+                  <ChevronDownIcon 
+                    className={`w-4 h-4 transition-transform ${
+                      expandedSections.includes(section.key) ? 'rotate-180' : ''
+                    }`} 
+                  />
+                </button>
+                {expandedSections.includes(section.key) && (
+                  <ul className="mt-2 space-y-1 ml-8">
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          to={link.href}
+                          onClick={onClose}
+                          className={`
+                            flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200
+                            ${isActive(link.href) 
+                              ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                              : 'text-gray-400 hover:bg-slate-700 hover:text-white hover:shadow-md'
+                            }
+                          `}
+                        >
+                          <link.icon className="w-4 h-4" />
+                          <span>{link.name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
-              </li>
+              </div>
             ))}
-          </ul>
-        </nav>
+
+            {/* Additional Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Additional
+              </h3>
+              <ul className="space-y-2">
+                {additionalLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      onClick={onClose}
+                      className={`
+                        flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg' 
+                          : 'text-gray-400 hover:bg-slate-700 hover:text-white hover:shadow-md'
+                        }
+                      `}
+                    >
+                      <link.icon className="w-4 h-4" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+
+          {/* Footer */}
+          <div className="p-6 border-t border-slate-700 bg-gradient-to-r from-slate-800 to-slate-700">
+            <div className="text-center">
+              <p className="text-sm text-gray-400">
+                © 2024 Zion Tech Group
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
