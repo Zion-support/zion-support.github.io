@@ -1,7 +1,7 @@
+
 // Services utility functions
 export const services = () => {
   // Implementation
-  return true;
-};
-
+  return true
+}
 export default services;

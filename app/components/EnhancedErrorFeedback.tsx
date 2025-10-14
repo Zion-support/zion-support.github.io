@@ -1,13 +1,10 @@
-import React from 'react';
-
+import React from 'react'
 interface EnhancedErrorFeedbackProps {
-  className?: string;
+  className?: string
 }
-
 export default function EnhancedErrorFeedback({ className = '' }: EnhancedErrorFeedbackProps) {
   return (
-    <div className={`${className}`}>
-      <h2>Enhanced Error Feedback</h2>
+    <div className={`${className}`}>`      <h2>Enhanced Error Feedback</h2>
       <p>Component content goes here.</p>
     </div>
   );
