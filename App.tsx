@@ -53,8 +53,6 @@ import CareersPage from './app/pages/CareersPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
-import CookiesPage from './app/pages/CookiesPage';
-import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
@@ -179,7 +177,6 @@ if (typeof window !== 'undefined') {
                     <Route path="/support" element={<SupportPage />} />
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
-<<<<<<< HEAD
                     <Route path="/cookies" element={<CookiesPage />} />
                     <Route path="/sitemap" element={<SitemapPage />} />
                     <Route path="/micro-saas" element={<MicroSaaSPage />} />
