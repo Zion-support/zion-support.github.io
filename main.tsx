@@ -12,7 +12,12 @@ if (typeof window !== 'undefined') {
   }
 }
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
+}
+
+const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
@@ -21,17 +26,20 @@ root.render(
 );
 
 // Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register('/sw.js')
-      .then(() => {
-        // Service worker registered successfully
-        console.log('Service worker registered successfully');
+      .register("/sw.js")
+import React, { Suspense } from 'react';
+      .then((_registration) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Service Worker registered successfully');
+        }
       })
-      .catch((Error) => {
-        // Service worker failed
-        console.error('Service worker failed:',Error);
+      .catch((_error) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Service Worker registration failed');
+        }
       });
   });
 }

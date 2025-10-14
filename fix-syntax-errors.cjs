@@ -4,131 +4,114 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Common patterns to fix
-const fixes = [
-  // Fix malformed import statements
-  {
-    pattern: /import React from  from 'react';/g,
-    replacement: "import React from 'react';"
-  },
-  {
-    pattern: /import React from 'react';'use client'/g,
-    replacement: "import React from 'react';\n'use client'"
-  },
-  {
-    pattern: /import React from 'react';'react-helmet-async';/g,
-    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-  },
-  
-  // Fix malformed strings with extra quotes
-  {
-    pattern: /title: "([^"]*)"",/g,
-    replacement: 'title: "$1",'
-  },
-  {
-    pattern: /description: "([^"]*)"",/g,
-    replacement: 'description: "$1",'
-  },
-  {
-    pattern: /color: "([^"]*)"",/g,
-    replacement: 'color: "$1",'
-  },
-  
-  // Fix duplicate properties
-  {
-    pattern: /color: "([^"]*)",\s*color: "([^"]*)",/g,
-    replacement: 'color: "$1",'
-  },
-  
-  // Fix malformed JSX closing tags
-  {
-    pattern: /}\s*<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix malformed function endings
-  {
-    pattern: /}\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<\/>\s*$/gm,
-    replacement: ''
-  },
-  
-  // Fix unterminated string literals
-  {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"\n'
-  },
-  
-  // Fix missing semicolons in imports
-  {
-    pattern: /import ([^;]+)\n/g,
-    replacement: 'import $1;\n'
-  },
-  
-  // Fix malformed export statements
-  {
-    pattern: /export default function ([^{]+)\s*{\s*}\s*$/gm,
-    replacement: 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}'
-  }
-];
+// Find all TypeScript and JavaScript files
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { 
+  ignore: ['node_modules/**', 'dist/**', 'app-broken/**', 'app-disabled/**'] 
+});
 
-// Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
+console.log(`Found ${files.length} files to process...`);
 
-let fixedCount = 0;
-let errorCount = 0;
-
-console.log(`Found ${files.length} TypeScript files to check...`);
+let fixedFiles = 0;
 
 files.forEach(file => {
   try {
     let content = fs.readFileSync(file, 'utf8');
     let originalContent = content;
     
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
+    // Fix common syntax errors
+    
+    // Fix missing semicolons after interface properties
+    content = content.replace(/(\w+):\s*([^;,\n}]+)(?=\s*[,\n}])/g, (match, prop, value) => {
+      if (!value.includes(';') && !value.includes('{') && !value.includes('(')) {
+        return `${prop}: ${value};`;
+      }
+      return match;
     });
     
-    // Additional specific fixes
-    // Fix common malformed patterns
-    content = content.replace(/}\s*\);\s*}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*\);\s*}\s*}\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*$/gm, '}');
+    // Fix duplicate interface properties
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    const seenProps = new Set();
+    let inInterface = false;
     
-    // Fix malformed JSX
-    content = content.replace(/<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '');
+    lines.forEach((line, index) => {
+      const trimmedLine = line.trim();
+      
+      if (trimmedLine.startsWith('interface ') || trimmedLine.startsWith('type ')) {
+        inInterface = true;
+        seenProps.clear();
+        cleanedLines.push(line);
+        return;
+      }
+      
+      if (inInterface && trimmedLine === '}') {
+        inInterface = false;
+        cleanedLines.push(line);
+        return;
+      }
+      
+      if (inInterface && trimmedLine.includes(':')) {
+        const propMatch = trimmedLine.match(/^(\w+):/);
+        if (propMatch) {
+          const propName = propMatch[1];
+          if (seenProps.has(propName)) {
+            // Skip duplicate property
+            return;
+          }
+          seenProps.add(propName);
+        }
+      }
+      
+      cleanedLines.push(line);
+    });
     
-    // Fix duplicate closing braces
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}');
+    content = cleanedLines.join('\n');
     
     // Fix malformed function declarations
-    content = content.replace(/const ([^=]+) = \(\) => {\s*}\s*$/gm, 'const $1 = () => {\n  return (\n    <div>Page under development</div>\n  );\n};');
+    content = content.replace(/export\s+function\s+(\w+)\s*\([^)]*\)\s*{\s*export\s+const\s+\1/g, 'export const $1');
     
-    // Fix malformed export statements
-    content = content.replace(/export default function ([^{]+)\s*{\s*}\s*$/gm, 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}');
+    // Fix duplicate export statements
+    const exportLines = content.split('\n').filter(line => line.trim().startsWith('export '));
+    const uniqueExports = new Set();
+    const finalLines = [];
     
-    // Clean up extra whitespace
+    content.split('\n').forEach(line => {
+      if (line.trim().startsWith('export ')) {
+        const exportContent = line.trim();
+        if (!uniqueExports.has(exportContent)) {
+          uniqueExports.add(exportContent);
+          finalLines.push(line);
+        }
+      } else {
+        finalLines.push(line);
+      }
+    });
+    
+    content = finalLines.join('\n');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+    }
+    
+    // Fix malformed JSX
+    content = content.replace(/<(\w+)\s*([^>]*?)\s*>\s*<\/\1>\s*<(\w+)\s*([^>]*?)\s*>/g, '<$1 $2></$1>\n<$3 $4>');
+    
+    // Clean up multiple empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim() + '\n';
     
     if (content !== originalContent) {
       fs.writeFileSync(file, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
+      console.log(`Fixed syntax in: ${file}`);
+      fixedFiles++;
     }
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
   }
 });
 
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+console.log(`Fixed syntax in ${fixedFiles} files.`);

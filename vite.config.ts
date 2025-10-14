@@ -2,107 +2,121 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
+const resolve = path.resolve;
+
 export default defineConfig({
-  plugins: [react({
-      jsxRuntime: 'automatic',
+  plugins: [
+    react({
+      // Enable React Fast Refresh
+      include: "**/*.{jsx,tsx}",
     }),
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './'),
-      '@app': path.resolve(__dirname, './app'),
-      '@components': path.resolve(__dirname, './app/components'),
-      '@utils': path.resolve(__dirname, './utils'),
+      '@': resolve(__dirname, './src'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
-    outDir: 'dist',
-    target: 'esnext',
-    minify: 'esbuild',
-    sourcemap: process.env.NODE_ENV === 'development',
+    outDir: "dist",
+    sourcemap: false,
+    minify: "esbuild",
     cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
+    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
+      },
+      mangle: {
+        safari10: true, // Better Safari compatibility
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+    },
+    // Enhanced build optimizations
     rollupOptions: {
       output: {
+        manualChunks: (id: string) => {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react'
+            // React ecosystem
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'react-vendor';
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router'
+            // UI libraries
+            if (id.includes('lucide-react') || id.includes('framer-motion')) {
+              return 'ui-vendor';
             }
-            if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons'
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-motion'
-            }
-            if (id.includes('react-helmet')) {
-              return 'vendor-helmet'
-            }
-            return 'vendor-other'
+            // Other vendor libraries
+            return 'vendor';
           }
-          // Page chunks for better code splitting
-          if (id.includes('/app/pages/')) {
-            return 'pages'
+          return undefined;
+        }
+      }
+    }
+  }
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app';
           }
-          if (id.includes('/app/components/')) {
-            return 'components'
-          }
-          return undefined
+          return undefined;
         },
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name && /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
             return `assets/images/[name]-[hash][extname]`;
-          }
-          if (assetInfo.name && /\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
   },
   server: {
     port: 3000,
-    open: false, // Disable auto-open for CI/CD
+    open: false,
     cors: true,
     hmr: {
       overlay: true,
     },
   },
-  preview: {
-    port: 4173,
-    open: false,
-  },
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'react-helmet-async',
-      '@heroicons/react/24/outline',
-      'lucide-react',
-      'framer-motion',
-    ],
-    exclude: ['@vite/client', '@vite/env'],
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
-  esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    target: 'esnext',
-  },
-  // Performance optimizations
-  define: {
-    __VUE_OPTIONS_API__: false,
-    __VUE_PROD_DEVTOOLS__: false,
-  },
-  // CSS optimizations
-  css: {
-    devSourcemap: true,
-  },
-})
+});

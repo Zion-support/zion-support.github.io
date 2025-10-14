@@ -1,19 +1,26 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 
-export const useSEO = (structuredData?: unknown) => {
+export const useSEO = (title: string;, description: string;, keywords: string) => {
+export const useSEO = (title: string;, description: string;, keywords?: string) => {
   useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
+    if (typeof document !== 'undefined') {
+      const metaDescription = document.querySelector('meta[name="description"]')
+      const metaKeywords = document.querySelector('meta[name="keywords"]')
+      
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description)
+      }
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords)
+      }
+      
+      if (metaKeywords) {
+      if (metaKeywords && keywords) {
+        metaKeywords.setAttribute('content', keywords)
+      }
+      
+      document.title = title
     }
-    return undefined;
-  }, [structuredData]);
-};
+  }, [title, description, keywords])
+}
+}}

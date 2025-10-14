@@ -1,10 +1,24 @@
-import { createContext } from 'react';
-
 export interface AnalyticsContextType {
+  trackEvent: (_eventName: string, _properties?: Record<string, unknown>) => void;
+  trackPageView: (page: string) => void;
+  setUser: (_userId: string, _properties?: Record<string, unknown>) => void;
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
+  trackPageView: (page: string) => void;
   setUser: (userId: string, properties?: Record<string, unknown>) => void;
-  isEnabled: boolean;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
+  trackPageView: (page: string) => void
+  setUser: (userId: string, properties?: Record<string, unknown>) => void
 }
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+export interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export interface AnalyticsEvent {
+  name: string;
+  properties?: Record<string, unknown>;
+  timestamp: number;
+  name: string;
+  properties?: Record<string, unknown>
+  timestamp: number;
+}

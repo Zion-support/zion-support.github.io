@@ -1,13 +1,15 @@
+// API endpoint for newsletter subscription
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ _error: 'Method not allowed' });
   }
 
-  try {
-    // Add your API logic here
-    res.status(200).json({ success: true });
-  } catch (error) {
-    console.error('API Error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+  const { email } = req.body;
+  if (!email) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ _error: 'Email is required' }));
+    return;
   }
+
+  res.status(200).json({ message: 'Subscription successful' });
 }

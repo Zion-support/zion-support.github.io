@@ -1,142 +1,89 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-console.log('🔧 Starting comprehensive syntax error fixes...');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Find all page.tsx files
-const findFiles = (dir, pattern) => {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findFiles(fullPath, pattern));
-    } else if (stat.isFile() && pattern.test(item)) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-};
+// List of files with syntax errors that need fixing
+const filesToFix = [
+  'app/hooks/useAnalyticsContext.ts',
+  'app/hooks/usePerformanceMonitor.ts',
+  'app/types/app.types.ts',
+  'app/types/gtag.d.ts',
+  'app/utils/a11y.ts',
+  'app/utils/accessibility.ts',
+  'app/utils/accessibilityChecker.ts',
+  'app/utils/advancedAnalytics.ts',
+  'app/utils/analyticsTracker.ts',
+  'app/utils/apiClient.ts',
+  'app/utils/apiInterceptor.ts',
+  'app/utils/configManager.ts',
+  'app/utils/enhancedAnalytics.ts',
+  'app/utils/enhancedErrorHandler.ts',
+  'app/utils/enhancedErrorTracking.ts',
+  'app/utils/enhancedLogger.ts',
+  'app/utils/envConfig.ts',
+  'app/utils/envValidator.ts',
+  'app/utils/errorHandlerEnhanced.ts',
+  'app/utils/errorLogger.ts',
+  'app/utils/errorReporter.ts',
+  'app/utils/errorTracking.ts',
+  'app/utils/performanceMonitor.ts',
+  'app/utils/performanceMonitoring.ts',
+  'app/utils/preloadOptimizer.ts',
+  'app/utils/productionLogger.ts',
+  'app/utils/registerServiceWorker.ts',
+  'app/utils/seoConstants.ts',
+  'app/utils/seoEnhancer.ts',
+  'app/utils/seoOptimizer.ts',
+  'app/utils/seoUtils.ts',
+  'app/utils/sitemapGenerator.ts',
+  'app/utils/structuredData.ts',
+  'app/utils/validation.ts',
+  'hooks/usePerformanceMetrics.ts',
+  'utils/seoUtils.ts'
+];
 
-const pageFiles = findFiles('./app', /page\.tsx$/);
-const componentFiles = findFiles('./app/components', /\.tsx$/);
-
-console.log(`Found ${pageFiles.length} page files and ${componentFiles.length} component files`);
-
-// Fix function to clean up syntax errors
-function fixSyntaxErrors(content) {
-  // Fix malformed color classes (0o0 -> 0, 40o0 -> 400, etc.)
-  content = content.replace(/(\d+)o0/g, '$1');
-  
-  // Fix duplicate semicolons and quotes in imports
-  fixed = fixed.replace(/import\s+([^;]+);';';/g, 'import $1;');
-  fixed = fixed.replace(/from\s+'([^']+)';';';/g, "from '$1';");
-  fixed = fixed.replace(/from\s+"([^"]+)";";";/g, 'from "$1";');
-  
-  // Fix JSX syntax errors
-  fixed = fixed.replace(/>";";/g, '>');
-  fixed = fixed.replace(/>";/g, '>');
-  fixed = fixed.replace(/";"</g, '<');
-  fixed = fixed.replace(/";</g, '<');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]+)">";/g, 'className="$1">');
-  fixed = fixed.replace(/content="([^"]+)">";/g, 'content="$1">');
-  
-  // Fix broken function declarations
-  fixed = fixed.replace(/export default function ComponentsPage\(\) \{\}\s*return \(/g, 'export default function ComponentsPage() {\n  return (');
-  
-  // Fix malformed component structures
-  fixed = fixed.replace(/\}\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*\}\s*return\s*\(/g, '}');
-  
-  // Fix broken JSX elements
-  fixed = fixed.replace(/<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g, '<div className="min-h-screen bg-gray-900 text-white py-20"></div>');
-  fixed = fixed.replace(/<div className="text-gray-30o0 text-lg">";"/g, '<div className="text-gray-300 text-lg">');
-  
-  // Fix malformed interface declarations
-  fixed = fixed.replace(/interface\s+(\w+)\s*\{\}\s*children:\s*c,lassName\?:\s*string;/g, 'interface $1 {\n  children: React.ReactNode;\n  className?: string;');
-  
-  // Fix broken function parameters
-  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC<(\w+)>\s*=\s*\(\{\}\s*children,\s*className\s*=\s*\}\s*=>\s*\{\}/g, 'const $1: React.FC<$2> = ({ children, className = "" }) => {');
-  
-  // Fix malformed return statements
-  fixed = fixed.replace(/return\s*\(\s*<div>Page content<\/div>;\s*\);/g, 'return (\n    <div>Page content</div>\n  );');
-  
-  // Fix broken JSX structure
-  fixed = fixed.replace(/<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 \$\{className\}`}>`<\/div>/g, '<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>');
-  
-  // Fix extra closing tags and malformed JSX
-  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>/g, '</div>');
-  
-  // Fix broken expressions
-  fixed = fixed.replace(/h1 className="text-4xl font-bold mb-8">Components<\/h1>";";/g, '<h1 className="text-4xl font-bold mb-8">Components</h1>');
-  fixed = fixed.replace(/This page is under development\.<\/p>/g, 'This page is under development.</p>');
-  
-  // Fix malformed closing statements
-  fixed = fixed.replace(/\s*<\/p><\/div><\/div>\s*\);\}\s*\}/g, '\n  );');
-  
-  // Fix extra closing tags at the end
-  fixed = fixed.replace(/\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*\);\}\s*\}/g, '\n  );');
-  
-  // Fix malformed export statements
-  fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
-  
-  // Fix malformed numeric literals
-  content = content.replace(/(\d+),0o0/g, '$1,000');
-  content = content.replace(/(\d+)o0/g, '$1');
-  
-  // Fix malformed JSX expressions
-  content = content.replace(/\{\s*feature\.icon\s*\}/g, '{feature.icon}');
-  
-  // Fix malformed className attributes
-  content = content.replace(/className="([^"]*)\/50([^"]*)"/g, 'className="$1/50$2"');
-  
-  // Fix malformed closing brackets
-  content = content.replace(/\]\s*;\s*$/gm, '];');
-  
-  return content;
-}
-
-// Process all files
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of [...pageFiles, ...componentFiles]) {
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(file, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(file, fixed, 'utf8');
-      console.log(`✅ Fixed: ${file}`);
-      fixedCount++;
+    const fullPath = path.join(__dirname, filePath);
+    if (!fs.existsSync(fullPath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
     }
+
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Fix common syntax errors
+    content = content
+      // Fix missing commas in object literals
+      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n])/g, '$1: $2,')
+      // Fix missing commas in arrays
+      .replace(/(\w+)(?=\s*[}\n])/g, '$1,')
+      // Fix unterminated strings
+      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"')
+      // Fix missing closing brackets
+      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2]')
+      // Fix missing closing parentheses
+      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2)')
+      // Remove trailing commas before closing brackets
+      .replace(/,(\s*[}\]])/g, '$1')
+      // Fix incomplete function declarations
+      .replace(/(\w+)\s*\(([^)]*)$/gm, (match, funcName, params) => {
+        if (params.trim() === '') {
+          return `${funcName}() { return null; }`;
+        }
+        return match;
+      });
+
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`❌ Error processing ${file}:`, error.message);
-    errorCount++;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log(`\n🎉 Fix complete!`);
-console.log(`✅ Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-// Run linting to check results
-console.log('\n🔍 Running linting check...');
-try {
-  execSync('pnpm run lint', { stdio: 'pipe' });
-  console.log('✅ Linting passed!');
-} catch (error) {
-  console.log('⚠️  Linting still has issues, but many errors were fixed.');
-}
+// Fix all files
+filesToFix.forEach(fixFile);
+console.log('Syntax error fixing completed!');

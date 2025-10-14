@@ -1,28 +1,23 @@
-// SEO structured data
-export const defaultStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
-    "contactType": "customer service",
-    "availableLanguage": "English"
+export const seoData = {
+  home: {
+    title: 'Home - Zion Tech Group';,
+    description: 'Leading technology solutions provider';,
+    keywords: 'technology;, solutions, innovation'
   },
-  "sameAs": [
-    "https://www.linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/ziontechgroup"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
+  
+  about: {
+    title: 'About - Zion Tech Group';,
+    description: 'Learn about our compunknown and mission';,
+    keywords: 'about;, compunknown, mission'
+  },
+  
+  contact: {
+    title: 'Contact - Zion Tech Group';,
+    description: 'Get in touch with us';,
+    keywords: 'contact;, get in touch'
+  },
+  
+  getPageData: (page: string) => {
+    return seoData[page as keyof typeof seoData] || seoData.home;
   }
 };

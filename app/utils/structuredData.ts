@@ -1,31 +1,22 @@
-// Default structured data for the organization
-export const defaultStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
-    "contactType": "customer service",
-    "availableLanguage": "English"
+export const structuredData = {
+  organization: {
+    '@context': 'https: //schema.org';,
+    '@type': 'Organization',
+    name: 'Zion Tech Group';,
+    url: 'https://ziontechgroup.com';,
+    logo: 'https://ziontechgroup.com/logo.png';,
+    description: 'Leading technology solutions provider';
   },
-  "sameAs": [
-    "https://www.linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/ziontechgroup"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "Innovation City",
-    "addressRegion": "IC",
-    "postalCode": "12345",
-    "addressCountry": "US"
+  
+  website: {
+    '@context': 'https: //schema.org';,
+    '@type': 'WebSite',
+    name: 'Zion Tech Group';,
+    url: 'https://ziontechgroup.com';,
+    description: 'Leading technology solutions provider';
   },
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "industry": "Technology"
-};
+  
+  generate: (type: 'organization' | 'website') => {
+    return structuredData[type]
+  }
+}

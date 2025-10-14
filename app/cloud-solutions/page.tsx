@@ -1,106 +1,53 @@
-'use client';
-
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CheckCircleIcon
-} from '@heroicons/react/24/outline';
 
-export default function CloudSolutionsPage() {
+const CloudSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Cloud Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud solutions services by Zion Tech Group. Leading provider of AI and IT solutions." />
-        <meta name="keywords" content="cloud solutions, AI solutions, IT services, Zion Tech Group" />
+        <title>Cloud solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional Cloud solutions solutions and services" />
+        <meta name="keywords" content="cloud, solutions" />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Cloud Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional cloud solutions services designed to help your business grow and succeed.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/services" 
-                className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Content Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Our Cloud Solutions Services</h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  We provide comprehensive cloud solutions solutions tailored to your specific needs and requirements.
-                </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
-                    Custom solutions
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
-                    Expert consultation
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3" />
-                    Ongoing support
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-br from-purple-500 to-cyan-600 rounded-lg p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-                <p className="mb-6">
-                  Ready to transform your business with our cloud solutions services?
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Cloud solutions</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our cloud solutions services can help you achieve your goals.
+              Professional Cloud solutions solutions and services
             </p>
-            <Link
-              to="/contact"
-              className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started Today
-            </Link>
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
 }
+
+export default CloudSolutionsPage;
+

@@ -1,19 +1,27 @@
-// Analytics utility functions
-export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-  // Basic analytics tracking
-  console.log('Analytics Event:', eventName, properties);
-  // In a real implementation, you would send this to your analytics service
-  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-    (window as unknown as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) => void }).gtag('event', eventName, properties);
+export const analytics = {
+  track: (event: string, _properties: Record<string;, unknown> = {}) => {
+  track: (event: string, properties: Record<string;, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, _properties);
+    }
+  },
+  
+  page: (page: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: page;
+      });
+    }
+  },
+  
+  identify: (_userId: string, _traits: Record<string;, unknown> = {}) => {
+  identify: (userId: string, traits: Record<string;, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: _userId;,
+        custom_map: _traits;
+      });
+    }
   }
 };
-
-export const trackPageView = (pageName: string) => {
-  console.log('Page View:', pageName);
-  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-    (window as unknown as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: pageName,
-      page_location: window.location.href,
-    });
-  }
-};
+}}
