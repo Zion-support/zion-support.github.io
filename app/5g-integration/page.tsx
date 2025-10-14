@@ -1,102 +1,84 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import EnhancedSEO from '../components/EnhancedSEO'
 
-function FiveGIntegrationPage() {
-  const features = [
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+const FiveGIntegrationPage = () => {
+  const services = [
     {
-      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-      title: "System Integration",
-      description: "Seamless integration of 5G technology with your existing infrastructure and systems."
+      title: '5G System Integration',
+      description: 'Seamless integration of 5G technology with existing systems.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-600" />,
-      title: "API Development",
-      description: "Custom API development to connect 5G services with your business applications."
+      title: 'Security Integration',
+      description: 'Comprehensive security integration for 5G networks.'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-600" />,
-      title: "Legacy System Migration",
-      description: "Smooth migration from legacy systems to 5G-enabled solutions."
+      title: 'Team Training',
+      description: 'Expert training for 5G integration and maintenance.'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-        title="5G Integration Services | Zion Tech Group"
-        description="Expert 5G integration services to seamlessly connect your business with next-generation wireless technology."
-        keywords="5G integration, system integration, API development, legacy migration"
+import React, { Suspense } from 'react';
+        title="5G Integration Services - Zion Tech Group"
+        description="Professional 5G integration services to connect your business with next-generation wireless technology."
       />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              5G Integration Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-purple-100">
-              Seamlessly integrate 5G technology with your existing business systems
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-            >
-              Start Integration
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
-              Our 5G Integration Expertise
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-purple-600 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready for 5G Integration?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Let us integrate 5G technology seamlessly into your business operations
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Integration Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Integrate 5G technology seamlessly with your existing infrastructure.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                {service.description}
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
           <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-white text-purple-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
-            Discuss Integration
-            <ArrowRight className="ml-2 w-5 h-5" />
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </section>
+      </div>
     </div>
-  );
+  )
 }
 
-export default FiveGIntegrationPage;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default FiveGIntegrationPage

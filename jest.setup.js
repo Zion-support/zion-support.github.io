@@ -1,9 +1,20 @@
-require('@testing-library/jest-dom');
-const React = require('react');
+import '@testing-library/jest-dom';
+import React from 'react';
+
+// Polyfill for TextEncoder/TextDecoder
+import { TextEncoder, TextDecoder } from 'util';
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock react-router-dom
+global.jest = {
+  mock: jest.mock,
+  requireActual: jest.requireActual,
+  fn: jest.fn
+};
 
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
 
   return {
     ...actual,
@@ -35,10 +46,11 @@ jest.mock('react-router-dom', () => {
       });
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null
+    RouterProvider: () => null
   };
 });
 
+// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   observe() {}
@@ -48,6 +60,13 @@ global.IntersectionObserver = class IntersectionObserver {
 
 // Suppress console errors in tests
 const originalError = console.error;
+global.beforeAll = (fn) => {
+  fn();
+};
+global.afterAll = (fn) => {
+  fn();
+};
+
 beforeAll(() => {
   console.error = (...args) => {
     if (

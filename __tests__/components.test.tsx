@@ -1,13 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense } from 'react';
 
-describe("Component Tests", () => {
-  test("renders without crashing", () => {
-    render(
-      <HelmetProvider>
-        <div>Test Component</div>
-      </HelmetProvider>
-    );
+import { render } from '@testing-library/react';
+
+describe('Components', () => {
+  it('should render without crashing', () => {
+    const { container } = render(<div>Test component</div>);
+    expect(container).toBeInTheDocument();
   });
 });

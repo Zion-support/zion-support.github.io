@@ -1,36 +1,115 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useEffect, Suspense, lazy, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import LoadingStates from './app/components/LoadingStates';
-import HomePage from './app/page';
-import PerformanceMonitoring from './app/components/PerformanceMonitoring';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import AdvancedErrorBoundary from './app/components/AdvancedErrorBoundary';
+import React, { Suspense } from 'react';
 
-// Import only existing pages
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CareersPage from './app/pages/CareersPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import DocumentationPage from './app/pages/DocumentationPage';
-import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
+// Lazy load pages
+const HomePage = lazy(() => import('./app/page'));
+const AISolutionsPage = lazy(() => import('./app/ai-solutions/page'));
+const ITSolutionsPage = lazy(() => import('./app/it-solutions/page'));
+const MicroSaaSSolutionsPage = lazy(() => import('./app/micro-saas-solutions/page'));
+const AIBusinessIntelligenceProPage = lazy(() => import('./app/ai-business-intelligence-pro/page'));
+const AICybersecuritySuiteProPage = lazy(() => import('./app/ai-cybersecurity-suite-pro/page'));
+
+// Simple loading component
+const LoadingSpinner = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-white text-xl">Loading...</div>
+  </div>
+);
+
+// Simple error boundary
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-white text-xl">Something went wrong.</div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
   useEffect(() => {
-    // Performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      console.log('Zion Tech Group App initialized');
+import React, { Suspense } from 'react';
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  // Monitor Core Web Vitals
+import React, { Suspense } from 'react';
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+        console.warn('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('TTFB:', metric);
+      }
+    });
+  });
+
+  // Monitor bundle size
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+        }
+      }
+    }
+
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+      console.warn('Zion Tech Group App initialized');
     }
   }, []);
 
@@ -39,40 +118,26 @@ function App() {
   };
 
   return (
-    <AdvancedErrorBoundary>
+    <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-slate-900 flex">
-            <div className="flex-1 flex flex-col">
-              <Navigation onSidebarToggle={handleSidebarToggle} />
-              <main className="relative z-10 flex-1">
-                <Suspense fallback={<LoadingStates />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/careers" element={<CareersPage />} />
-                    <Route path="/case-studies" element={<CaseStudiesPage />} />
-                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                    <Route path="/documentation" element={<DocumentationPage />} />
-                    <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                    <Route path="/team" element={<TeamPage />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-              <PerformanceMonitoring />
-              <AccessibilityEnhancer />
-            </div>
+import React, { Suspense } from 'react';
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                <Route path="/ai-cybersecurity-suite-pro" element={<AICybersecuritySuiteProPage />} />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </Suspense>
           </div>
         </Router>
       </HelmetProvider>
-    </AdvancedErrorBoundary>
+    </ErrorBoundary>
   );
 }
 

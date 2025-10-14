@@ -1,31 +1,33 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
-interface PerformanceMetrics {
-  [key: string]: number;
-}
-
-export const usePerformanceMonitor = (): { isMonitoring: boolean; metrics: PerformanceMetrics } => {
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<any>({})
+  const [metrics, setMetrics] = useState<Record<string, number>>({})
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      setIsMonitoring(true);
-      
       const observer = new PerformanceObserver((list) => {
-        const newMetrics: PerformanceMetrics = {};
-        for (const entry of list.getEntries()) {
-          newMetrics[entry.name] = entry.startTime;
+        const entries = list.getEntries()
+        if (entries.length > 0) {
+          setMetrics(prev => ({
+          setMetrics((prev: any) => ({
+            ...prev,
+            [entries[0].name]: entries[0].duration
+          }))
         }
-        setMetrics(prev => ({ ...prev, ...newMetrics }));
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation'] });
-
-      return () => observer.disconnect();
+        setMetrics((prev: Record<string, number>) => ({
+          ...prev,
+          [entries[0].name]: entries[0].startTime
+        }))
+      })
+      
+      observer.observe({ entryTypes: ['measure', 'navigation'] })
+      
+      return () => observer.disconnect()
     }
-    return undefined;
-  }, []);
+    
+    return undefined
+  }, [])
 
-  return { isMonitoring, metrics };
-};
+  return metrics
+}

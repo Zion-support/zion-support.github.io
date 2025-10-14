@@ -4,18 +4,20 @@ export const sitemapGenerator = {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>https://ziontechgroup.com${page.path}</loc>
+    <loc>${page.path}</loc>
     ${page.lastModified ? `<lastmod>${page.lastModified}</lastmod>` : ''}
     ${page.priority ? `<priority>${page.priority}</priority>` : ''}
   </url>`).join('\n')}
-</urlset>`;
+</urlset>`
     
-    return sitemap;
+    return sitemap
   },
   
   generateRobotsTxt: (sitemapUrl: string = 'https://ziontechgroup.com/sitemap.xml') => {
     return `User-agent: *
 Allow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${sitemapUrl}`
+    return sitemap
   }
-};
+}

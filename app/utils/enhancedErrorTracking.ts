@@ -5,27 +5,29 @@ export const enhancedErrorTracking = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-    };
+    }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', errorInfo);
+      console.error('Error tracked:', errorInfo)
     }
     
-    // Send to analytics
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        custom_parameters: context
-      });
+        error_type: 'performance'
+      })
     }
   },
   
-  trackPerformanceError: (error: Error, performanceData: any) => {
-    enhancedErrorTracking.trackError(error, {
-      performance: performanceData,
-      error_type: 'performance'
-    });
+  trackPerformanceError: (metric: string, value: number, threshold: number) => {
+    if (value > threshold) {
+      enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {
+        metric,
+        value,
+        threshold
+      })
+    }
   }
-};
+}

@@ -1,102 +1,84 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import EnhancedSEO from '../components/EnhancedSEO'
 
-function FiveGModernizationPage() {
-  const features = [
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+const FiveGModernizationPage = () => {
+  const services = [
     {
-      icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-      title: "Infrastructure Modernization",
-      description: "Complete modernization of your network infrastructure to support 5G technology."
+      title: '5G Network Modernization',
+      description: 'Complete modernization of legacy networks to 5G technology.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-600" />,
-      title: "Security Enhancement",
-      description: "Advanced security measures to protect your modernized 5G network infrastructure."
+      title: 'Security Modernization',
+      description: 'Upgrade security infrastructure to support 5G requirements.'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-600" />,
-      title: "Future-Proof Solutions",
-      description: "Modernization solutions designed to adapt to future 5G advancements and requirements."
+      title: 'Team Training',
+      description: 'Comprehensive training for modernized 5G network operations.'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-        title="5G Modernization Services | Zion Tech Group"
-        description="Transform your infrastructure with our comprehensive 5G modernization services for future-ready technology."
-        keywords="5G modernization, infrastructure upgrade, network modernization, 5G transformation"
+import React, { Suspense } from 'react';
+        title="5G Modernization Services - Zion Tech Group"
+        description="Professional 5G modernization services to upgrade your network infrastructure."
       />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-900 to-blue-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              5G Modernization Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-teal-100">
-              Modernize your infrastructure with cutting-edge 5G technology solutions
-            </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center bg-teal-600 hover:bg-teal-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-            >
-              Start Modernization
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
-              Our 5G Modernization Approach
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-teal-600 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Modernize with 5G?
-          </h2>
-          <p className="text-xl text-teal-100 mb-8">
-            Transform your infrastructure with our comprehensive 5G modernization services
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Modernization Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Modernize your network infrastructure with cutting-edge 5G technology.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-8">
+              <div className="flex items-center mb-4">
+                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                {service.description}
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
           <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-white text-teal-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+            to="/contact"
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
-            Plan Modernization
-            <ArrowRight className="ml-2 w-5 h-5" />
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </section>
+      </div>
     </div>
-  );
+  )
 }
 
-export default FiveGModernizationPage;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default FiveGModernizationPage

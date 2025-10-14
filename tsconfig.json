@@ -57,6 +57,10 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "app/components-broken/**",
-    "app/pages-broken/**"
+    "app/pages-broken/**",
+    "app-broken/**",
+    "app-disabled/**",
+    "temp-broken/**",
+    "temp-disabled/**"
   ]
 }

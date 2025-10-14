@@ -1,48 +1,57 @@
-import React, { createContext, ReactNode } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { createContext, ReactNode, useCallback } from 'react'
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (_eventName: string, _properties?: Record<string, unknown>) => {
-    // Analytics tracking implementation
-    // In production, this would send data to analytics service
-    // console.log('Event tracked:', eventName, properties);
-  };
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Event tracked:', eventName, properties)
+    }
+    // Add your analytics tracking logic here
+  }, [])
 
-  const trackPageView = (_pageName: string, _properties?: Record<string, unknown>) => {
-    // Page view tracking implementation
-    // In production, this would send data to analytics service
-    // console.log('Page view tracked:', pageName, properties);
-  };
+  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Page view tracked:', pageName, properties)
+    }
+    // Add your page view tracking logic here
+  }, [])
 
-  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
-    // User identification implementation
-    // In production, this would send data to analytics service
-    // console.log('User identified:', userId, traits);
-  };
+  const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+import React, { Suspense } from 'react';
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('User identified:', userId, properties)
+    }
+    // Add your user identification logic here
+  }, [])
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
     trackPageView,
-    identify,
-  };
+    identifyUser
+  }
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
-};
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+  )
+}
 
-export { AnalyticsContext };
-export default AnalyticsProvider;
+export { AnalyticsContext }
