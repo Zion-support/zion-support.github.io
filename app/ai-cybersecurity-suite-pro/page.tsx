@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
-import { Shield, Brain, Lock, AlertTriangle, Zap, CheckCircle, Star, ArrowRight, Users, Target, Database, Clock, Eye } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { Shield } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 function AICybersecuritySuitePro() {
   const features = [
@@ -68,4 +72,5 @@ function AICybersecuritySuitePro() {
   );
 }
 
-export default AICybersecuritySuitePro;
+const page = React.lazy(() => import('./page'));
+export default page;

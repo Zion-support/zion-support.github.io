@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Zap, Users, Target, Server, Cloud } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Server } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 function Page() {
   const features = [
@@ -68,4 +72,5 @@ function Page() {
   );
 }
 
-export default Page;
+const page = React.lazy(() => import('./page'));
+export default page;

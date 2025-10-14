@@ -6,8 +6,6 @@ import { TrendingUp } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from "react-router-dom";
 
 function AIBusinessIntelligencePro() {
   const features = [
@@ -74,4 +72,5 @@ function AIBusinessIntelligencePro() {
   );
 }
 
-export default AIBusinessIntelligencePro;
+const page = React.lazy(() => import('./page'));
+export default page;
