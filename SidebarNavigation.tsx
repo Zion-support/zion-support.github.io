@@ -1,6 +1,11 @@
 import React from 'react';
 import { User, X } from 'lucide-react';
 
+interface SidebarNavigationProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const navigationItems = [
   { name: 'Home', href: '/' },
   { name: 'Profile', href: '/profile' },

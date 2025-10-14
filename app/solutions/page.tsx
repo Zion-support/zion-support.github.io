@@ -1,11 +1,8 @@
-'use client'
-
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import {
-  CheckCircleIcon
-} from '@heroicons/react/24/outline'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export default function SolutionsPage() {
   return (
@@ -26,16 +23,10 @@ export default function SolutionsPage() {
               Professional solutions services designed to help your business grow and succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors"
-              >
+              <Link to="/contact" className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-colors">
                 Get Started
               </Link>
-              <Link
-                to="/services"
-                className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors"
-              >
+              <Link to="/services" className="border border-purple-600 text-purple-400 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors">
                 Learn More
               </Link>
             </div>
@@ -47,9 +38,7 @@ export default function SolutionsPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6">
-                  Our Solutions Services
-                </h2>
+                <h2 className="text-3xl font-bold text-white mb-6">Our Solutions Services</h2>
                 <p className="text-lg text-gray-300 mb-6">
                   We provide comprehensive solutions tailored to your specific needs and requirements.
                 </p>
@@ -73,10 +62,7 @@ export default function SolutionsPage() {
                 <p className="mb-6">
                   Ready to transform your business with our solutions services?
                 </p>
-                <Link
-                  to="/contact"
-                  className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-                >
+                <Link to="/contact" className="inline-block bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                   Contact Us
                 </Link>
               </div>
@@ -103,5 +89,5 @@ export default function SolutionsPage() {
         </section>
       </div>
     </>
-  )
+  );
 }

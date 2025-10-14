@@ -2,16 +2,16 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const PrivacyPage: React.FC = () => {
+const Privacy: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>PrivacyPage - Zion Tech Group</title>
-        <meta name="description" content="PrivacyPage - Zion Tech Group" />
+        <title>Privacy - Zion Tech Group</title>
+        <meta name="description" content="Privacy - Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div>
-          <h1 className="text-4xl font-bold mb-4">PrivacyPage</h1>
+          <h1 className="text-4xl font-bold mb-4">Privacy</h1>
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
@@ -19,4 +19,4 @@ const PrivacyPage: React.FC = () => {
   );
 };
 
-export default PrivacyPage;
+export default Privacy;

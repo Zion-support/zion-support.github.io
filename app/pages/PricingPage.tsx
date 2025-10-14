@@ -2,16 +2,16 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const PricingPage: React.FC = () => {
+const Pricing: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>PricingPage - Zion Tech Group</title>
-        <meta name="description" content="PricingPage - Zion Tech Group" />
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Pricing - Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div>
-          <h1 className="text-4xl font-bold mb-4">PricingPage</h1>
+          <h1 className="text-4xl font-bold mb-4">Pricing</h1>
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
@@ -19,4 +19,4 @@ const PricingPage: React.FC = () => {
   );
 };
 
-export default PricingPage;
+export default Pricing;

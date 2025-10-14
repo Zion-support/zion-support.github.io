@@ -1,11 +1,7 @@
 import React from 'react';
 
 const App: React.FC = () => {
-  return (
-    <div>
-      <h1>Minimal App</h1>
-    </div>
-  );
+  return <div>Minimal App</div>;
 };
 
 export default App;

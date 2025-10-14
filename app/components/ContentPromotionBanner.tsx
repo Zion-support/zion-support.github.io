@@ -6,10 +6,10 @@ export default function ContentPromotionBanner() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">
-            ContentPromotionBanner
+            Content Promotion Banner
           </h1>
           <p className="text-gray-300 text-xl mb-8">
-            Learn more about contentpromotionbanner
+            Learn more about content promotion banner
           </p>
         </div>
       </div>
