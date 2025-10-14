@@ -3,15 +3,15 @@
 import React, { useEffect, useMemo } from 'react';
 import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
-interfaceAdvanced Performance Optimizer Props {
-  enableImage Optimization?: boolean;
-  enableLazy Loading?: boolean;
+interface AdvancedPerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCode Splitting?: boolean;
-  enableService Worker?: boolean;
-  enableResource Hints?: boolean;
-  enableCritical CSS?: boolean;
-  enableBundle Analysis?: boolean;
+  enableCodeSplitting?: boolean;
+  enableServiceWorker?: boolean;
+  enableResourceHints?: boolean;
+  enableCriticalCSS?: boolean;
+  enableBundleAnalysis?: boolean;
 }
 
 const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> = ({
