@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEOHead = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEOHead</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEOHead.
-      </p>
-    </div>
-  );
-=======
 import React from 'react';
 interface SEOHeadProps {
   title?: string;
@@ -28,10 +15,8 @@ interface SEOHeadProps {
   nofollow?: boolean;
   canonical?: string;
   alternateHreflang?: Array<{ hreflang: string; href: string }>;
-=======
   canonicalUrl?: string;
   ogImage?: string;
->>>>>>> origin/main
   structuredData?: object;
 }
 
@@ -102,12 +87,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       addressCountry: 'US',
     }
   };
-
-  return (
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
-}) => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}

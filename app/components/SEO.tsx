@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEO = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEO.
-      </p>
-    </div>
-  );
-};
-
-export default SEO;
-=======
 'use client';
 
 /**
@@ -22,6 +6,7 @@ export default SEO;
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
   title?: string;
@@ -70,11 +55,11 @@ export const SEO: React.FC<SEOProps> = ({
   publishDate,
   modifiedDate,
   canonical,
-  noIndex = false,
+  _noIndex = false,
   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
+  _alternateLocales = [],
 }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
@@ -121,8 +106,27 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    );
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
+    </Helmet>
+  );
 };
 
 export default SEO;
->>>>>>> origin/cursor/resolve-all-prs-and-merge
