@@ -51,4 +51,3 @@ const FiveGSmartCitySolutionsPage: React.FC = () => {
 
 export default FiveGSmartCitySolutionsPage;
 
->>>>>>> main

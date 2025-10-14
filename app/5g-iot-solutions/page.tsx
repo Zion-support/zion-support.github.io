@@ -51,4 +51,3 @@ const FiveGIotSolutionsPage: React.FC = () => {
 
 export default FiveGIotSolutionsPage;
 
->>>>>>> main

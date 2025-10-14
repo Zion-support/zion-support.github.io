@@ -195,11 +195,11 @@ corruptedFiles.forEach(filePath => {
       }
       
       fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+      // console.log(`Fixed: ${filePath}`);
+    } catch {
+      // console.error(`Error fixing ${filePath}:`, error.message);
     }
   }
 });
 
-console.log('Fixed all corrupted 5G pages!');
+// console.log('Fixed all corrupted 5G pages!');

@@ -51,4 +51,3 @@ const FiveGNetworkInfrastructurePage: React.FC = () => {
 
 export default FiveGNetworkInfrastructurePage;
 
->>>>>>> main
