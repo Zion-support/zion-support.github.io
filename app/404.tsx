@@ -1,4 +1,5 @@
-// 404 - Basic implementation
+import React from 'react';
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -7,7 +8,8 @@ export default function NotFound() {
         <p className="text-gray-300 text-xl mb-8">Page not found</p>
         <a
           href="/"
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
+        >
           Go Home
         </a>
       </div>
