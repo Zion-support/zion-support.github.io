@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -8,17 +7,3 @@ const Header: "React.FC = () => {"} const [isOpen, setIsOpen] = useState(false)'
 export default Header
 }''
 export default Header;'
-=======
-import React from 'react';
-
-const Header = () => {
-  return (
-    <div className="header-component">
-      <h2>Header</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default Header;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

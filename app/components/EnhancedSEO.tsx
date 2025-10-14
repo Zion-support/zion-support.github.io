@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {} title: "string",description: "string" keywords?: string canonicalUrl?: string ogImage?: string ogType?: string twitterCard?: string structuredData?: object noIndex?: boolean noFollow?: boolean}
@@ -7,17 +6,3 @@ const EnhancedSEO: "React.FC<SEOProps> = ({"} title,' description,'' keywords = 
 export default EnhancedSEO
 }''
 export default EnhancedSEO;'
-=======
-import React from 'react';
-
-const EnhancedSEO = () => {
-  return (
-    <div className="enhancedseo-component">
-      <h2>EnhancedSEO</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default EnhancedSEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

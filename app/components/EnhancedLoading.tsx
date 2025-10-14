@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,17 +6,3 @@ const EnhancedLoading: "React.FC = () => {"} return ( <div className="min-h-scre
 export default EnhancedLoading
 };''
 export default EnhancedLoading'
-=======
-import React from 'react';
-
-const EnhancedLoading = () => {
-  return (
-    <div className="enhancedloading-component">
-      <h2>EnhancedLoading</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default EnhancedLoading;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

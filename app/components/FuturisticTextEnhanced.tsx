@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,17 +6,3 @@ const FuturisticTextEnhanced: "React.FC = () => {"} return ( <div className="min
 export default FuturisticTextEnhanced
 };''
 export default FuturisticTextEnhanced'
-=======
-import React from 'react';
-
-const FuturisticTextEnhanced = () => {
-  return (
-    <div className="futuristictextenhanced-component">
-      <h2>FuturisticTextEnhanced</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default FuturisticTextEnhanced;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

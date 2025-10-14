@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,9 +6,3 @@ const MicroSaasServices: "React.FC = () => {"} return ( <div className="min-h-sc
 export default MicroSaasServices
 }'
 export default MicroSaasServices;''
-=======
-// microSaasServices - Basic implementation
-export default function microSaasServices() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

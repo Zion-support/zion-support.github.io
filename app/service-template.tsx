@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,9 +6,3 @@ const ServiceTemplate: "React.FC = () => {"} return ( <div className="min-h-scre
 export default ServiceTemplate
 }'
 export default ServiceTemplate;''
-=======
-// service-template - Basic implementation
-export default function service-template() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

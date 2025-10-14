@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
 
@@ -32,14 +31,11 @@ const HomePage: React.FC = () => {
     { number: '50+', label: 'Team Members' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 
 const PagePage = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation." />
         <meta name="keywords" content="AI solutions, IT services, digital transformation, automation, technology consulting" />
@@ -133,22 +129,3 @@ const PagePage = () => {
 };
 
 export default HomePage;
-=======
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

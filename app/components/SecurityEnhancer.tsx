@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
@@ -49,16 +48,3 @@ export default function Page() {
     </>
   );
 }
-=======
-
-const SecurityEnhancer = () => {
-  return (
-    <div className="securityenhancer-component">
-      <h2>SecurityEnhancer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default SecurityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

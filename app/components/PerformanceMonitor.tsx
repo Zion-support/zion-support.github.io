@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import web-vitals from 'web-vitals'
 interface PerformanceMetrics {} loadTime: "number",renderTime: "number",memoryUsage: "number",networkLatency: "number"
@@ -9,17 +8,3 @@ const PerformanceMonitor: React.FC = () => {return null}
 export default PerformanceMonitor
 }
 export default PerformanceMonitor'
-=======
-import React from 'react';
-
-const PerformanceMonitor = () => {
-  return (
-    <div className="performancemonitor-component">
-      <h2>PerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

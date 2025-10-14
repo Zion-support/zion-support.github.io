@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,17 +6,3 @@ const StructuredData: "React.FC = () => {"} return ( <div className="min-h-scree
 export default StructuredData
 };''
 export default StructuredData'
-=======
-import React from 'react';
-
-const StructuredData = () => {
-  return (
-    <div className="structureddata-component">
-      <h2>StructuredData</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default StructuredData;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

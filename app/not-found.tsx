@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,9 +6,3 @@ const NotFound: "React.FC = () => {"} return ( <div className="min-h-screen bg-w
 export default NotFound
 }'
 export default NotFound;''
-=======
-// not-found - Basic implementation
-export default function not-found() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

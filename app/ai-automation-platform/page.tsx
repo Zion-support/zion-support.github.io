@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Workflow, Brain, Settings, Zap, ArrowRight, Play, Circle } from 'lucide-react';
@@ -39,14 +38,9 @@ const AIAutomationPlatform: React.FC = () => {
     'Scalable workflows',
     'Cost reduction'
   ];
-=======
-import React from 'react';';';
-import { Helmet } from 'react-helmet-async';';';
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 
 export default function Page() {
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Automation Platform - Intelligent Process Automation | Zion Tech Group</title>
@@ -158,19 +152,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-=======
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Automation Platform - Zion Tech Group</title>
-        <meta name="description" content="Professional ai automation platform services by Zion Tech Group." />";";
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";";
-        <div className="text-center">";";
-          <h1 className="text-4xl font-bold text-white mb-4">Ai Automation Platform</h1>";";
-          <p className="text-gray-300">Coming soon...</p>";";
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
       </div>
-    </React.Fragment>
+    </>
   );
 }

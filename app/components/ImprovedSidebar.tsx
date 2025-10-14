@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,17 +6,3 @@ const ImprovedSidebar: "React.FC = () => {"} return ( <div className="min-h-scre
 export default ImprovedSidebar
 };''
 export default ImprovedSidebar'
-=======
-import React from 'react';
-
-const ImprovedSidebar = () => {
-  return (
-    <div className="improvedsidebar-component">
-      <h2>ImprovedSidebar</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default ImprovedSidebar;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

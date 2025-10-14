@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Service {
   id: "string",title: "string",description: "string",shortDescription: "string",category: "'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT''",icon: "string",features: "string[]",pricing: {,basic: "number",pro: "number",enterprise: "number""'
   }
@@ -1075,9 +1074,3 @@ export const getServicesByCategory = (category: "Service['category']) => {'""'
 export const getServiceById = (id: "string) => {""
   return services.find(service => service.id === id)}
 }''
-=======
-// servicesData - Basic implementation
-export default function servicesData() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

@@ -33,9 +33,6 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 function fixMergeConflicts(content) {
   // Remove merge conflict markers and keep the HEAD version
   let fixed = content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1')
-    .replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1')
-    .replace(/<<<<<<< [^\n]+\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
   
   return fixed;
 }
@@ -47,20 +44,20 @@ function fixSyntaxErrors(content) {
   // Fix unterminated string literals
   fixed = fixed.replace(/(['"`])([^'"`]*?)(\n|$)/g, (match, quote, str, newline) => {
     if (str.includes(quote)) return match;
-    return quote + str + quote + ';' + newline;
+    return quote + str + quote + ' + newline;
   });
   
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+[^=]+=\s*[^;]+(\n|$)/g, (match, decl, newline) => {
-    if (match.trim().endsWith(';')) return match;
-    return match.trim() + ';' + newline;
+    if (match.trim().endsWith(')) return match;
+    return match.trim() + ' + newline;
   });
   
   // Fix missing commas in object literals
   fixed = fixed.replace(/(\w+):\s*[^,}\n]+(\n\s*[^,}])/g, '$1: $2,');
   
   // Fix JSX fragments
-  fixed = fixed.replace(/<>([\s\S]*?)<\/>/g, '<React.Fragment>$1</React.Fragment>');
+  fixed = fixed.replace(/<>([\s\S]*?)<\/>/g, '<>$1</>');
   
   // Fix missing React import
   if (fixed.includes('React.') && !fixed.includes("import React")) {

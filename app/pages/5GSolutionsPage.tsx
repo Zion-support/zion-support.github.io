@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function 5GSolutionsPage() {
@@ -48,9 +47,4 @@ export default function 5GSolutionsPage() {
       </div>
     </>
   );
-=======
-// 5GSolutionsPage - Basic implementation
-export default function 5GSolutionsPage() {
-  return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 }

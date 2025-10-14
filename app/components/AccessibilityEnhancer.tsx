@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -98,17 +97,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [isHighContrast, isReducedMotion, fontSize]);
 
   return null;
-=======
-import React from 'react';
-
-const AccessibilityEnhancer = () => {
-  return (
-    <div className="accessibilityenhancer-component">
-      <h2>AccessibilityEnhancer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 };
 
 export default AccessibilityEnhancer;

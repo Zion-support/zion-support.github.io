@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
@@ -126,13 +125,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 
 const AdvancedPerformanceMonitor = () => {
   return (
-<<<<<<< HEAD
     <div className="fixed top-4 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <h3 className="text-lg font-bold mb-4">Performance Monitor</h3>
       <div className="space-y-2 text-sm">
@@ -141,11 +136,6 @@ const AdvancedPerformanceMonitor = () => {
         <div>Memory: <span className="text-blue-400">{metrics.memoryUsage}MB</span></div>
         <div>Network: <span className="text-blue-400">{metrics.networkLatency}ms</span></div>
       </div>
-=======
-    <div className="advancedperformancemonitor-component">
-      <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
     </div>
   );
 };

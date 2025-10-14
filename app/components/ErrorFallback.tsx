@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,17 +6,3 @@ const ErrorFallback: "React.FC = () => {"} return ( <div className="min-h-screen
 export default ErrorFallback
 };''
 export default ErrorFallback'
-=======
-import React from 'react';
-
-const ErrorFallback = () => {
-  return (
-    <div className="errorfallback-component">
-      <h2>ErrorFallback</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default ErrorFallback;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

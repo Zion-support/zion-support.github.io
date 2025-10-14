@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,9 +6,3 @@ const Services: "React.FC = () => {"} return ( <div className="min-h-screen bg-w
 export default Services
 }'
 export default Services;''
-=======
-// services - Basic implementation
-export default function services() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

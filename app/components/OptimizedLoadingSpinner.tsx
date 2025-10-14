@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
@@ -49,16 +48,3 @@ export default function Page() {
     </>
   );
 }
-=======
-
-const OptimizedLoadingSpinner = () => {
-  return (
-    <div className="optimizedloadingspinner-component">
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default OptimizedLoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

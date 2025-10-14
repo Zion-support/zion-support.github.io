@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client'
@@ -7,9 +6,3 @@ const ErrorHandler: "React.FC = () => {"} return ( <div className="min-h-screen 
 export default ErrorHandler
 }'
 export default ErrorHandler;''
-=======
-// errorHandler - Basic implementation
-export default function errorHandler() {
-  return null;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

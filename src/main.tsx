@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import react-helmet-async from 'react-helmet-async';
-=======
-<<<<<<< HEAD
 import { createRoot } from 'react-dom/client';
 import App from './App';
 
@@ -17,10 +14,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
-=======
-import { Helmet } from 'react-helmet-async';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 const Main: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">"
@@ -104,10 +97,4 @@ const Main: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 export default Main;
-=======
-
-export default Main;
->>>>>>> cursor/fix-errors-and-merge-to-main-ca79
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

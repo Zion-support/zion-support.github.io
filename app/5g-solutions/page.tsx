@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Zap, Globe, Smartphone, Wifi, ArrowRight, Circle } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -51,8 +50,6 @@ const FiveGSolutionsPage: React.FC = () => {
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
 
 const PagePage = () => {
   return (

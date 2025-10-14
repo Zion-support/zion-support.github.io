@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
@@ -49,16 +48,3 @@ export default function Page() {
     </>
   );
 }
-=======
-
-const NewsletterSignup = () => {
-  return (
-    <div className="newslettersignup-component">
-      <h2>NewsletterSignup</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default NewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
