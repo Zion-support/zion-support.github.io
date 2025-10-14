@@ -1,15 +1,11 @@
 import React from "react";
-import { cn } from '../utils/cn';
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  className?: string;
-}
 
-const FuturisticText: React.FC<FuturisticTextProps> = ({ children, className }) => {
+const FuturisticText: React.FC = () => {
   return (
-    <span className={cn("text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400", className)}>
-      {children}
-    </span>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">FuturisticText</h2>
+      <p>This component is under development.</p>
+    </div>
   );
 };
 

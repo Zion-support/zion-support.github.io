@@ -1,247 +1,161 @@
 #!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';
-';
-console.log('🔧 Starting comprehensive merge conflict resolution...');
-;
-// Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {
-  ;
-  try {';
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-;
-    // Check if file has merge conflict markers';
-    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {;
-      return false; // No conflicts to resolve;
-}
-}
-    }
-;
-    console.log(`📝 Processing: ${filePath}`);
-;
-    // Split by merge conflict markers';
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = null;
-    let currentSection = [];
-    let hasValidContent = false;
-;
-    for (let i = 0; i < lines.length; i++) {
-  ;
-      const line = lines[i];
-      ';
-      if (line.trim().startsWith('<<<<<<<')) {;
-        inConflict = true;';
-        conflictType = 'ours';
-        currentSection = [];
-        hasValidContent = false;
-        continue;
-}
-      }
-      ';
-      if (line.trim().startsWith('')) {
-  ';
-        if (inConflict && conflictType === 'ours') {;
-          // Check if our section has valid content';
-          const ourContent = currentSection.join('\n').trim();';
-          if (ourContent && !ourContent.includes('<<<<<<<') && !ourContent.includes('') && !ourContent.includes('>>>>>>>')) {;
-            hasValidContent = true;
-}
-          }';
-          conflictType = 'theirs';
-          currentSection = [];
-        }
-        continue;
-      }
-      ';
-      if (line.trim().startsWith('>>>>>>>')) {
-  ;
-        if (inConflict) {;
-          if (hasValidContent) {;
-            // Use our content;
-            resolvedLines.push(...currentSection);
-}
-          } else {
-  ;
-            // Use their content if ours is invalid';
-            const theirContent = currentSection.join('\n').trim();';
-            if (theirContent && !theirContent.includes('<<<<<<<') && !theirContent.includes('') && !theirContent.includes('>>>>>>>')) {;
-              resolvedLines.push(...currentSection);
-}
-            }
-          }
-          inConflict = false;
-          conflictType = null;
-          currentSection = [];
-          hasValidContent = false;
-        }
-        continue;
-      }
-;
-      if (inConflict) {
-  ;
-        currentSection.push(line);
-}
-      } else {
-  ;
-        resolvedLines.push(line);
-}
+import fs from "fs";";
+import path from "path";";
+import { fileURLToPath     } from "url";";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to recursively find all files;
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach(file => {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Skip node_modules and other common directories;
+      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {'';
+        getAllFiles(fullPath, arrayOfFiles);
+      };
+    } else {
+      // Only process TypeScript, JavaScript, and JSX files;
+      if (file.match(/\.(ts|tsx|js|jsx)$/)) {
+        arrayOfFiles.push(fullPath);
       }
     }
-;
-    // Clean up any remaining issues';
-    let resolvedContent = resolvedLines.join('\n');
-;
-    // Remove any remaining conflict markers';
-    resolvedContent = resolvedContent.replace(/^<<<<<<<.*$/gm, '');';
-    resolvedContent = resolvedContent.replace(/^.*$/gm, '');';
-    resolvedContent = resolvedContent.replace(/^>>>>>>>.*$/gm, '');
-;
-    // Clean up multiple empty lines';
-    resolvedContent = resolvedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-;
-    // Fix common syntax issues';
-    resolvedContent = resolvedContent.replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '');';
-    resolvedContent = resolvedContent.replace(/export\s+{\s*}\s*;?\s*\n/g, '');
-;
-    // Fix malformed JSX';
-    resolvedContent = resolvedContent.replace(/<([^>]+)>\s*<\/\1>/g, '');';
-    resolvedContent = resolvedContent.replace(/<([^>]+)>\s*<\/\1>\s*<\/\1>/g, '');
-;
-    // Fix unclosed tags';
-    resolvedContent = resolvedContent.replace(/<([^>]+)>\s*$/gm, '');
-;
-    // Fix malformed imports;
-    resolvedContent = resolvedContent.replace(/import\s+[^;]*;\s*$/gm, (match) => {
-  ';
+  });
+
+  return arrayOfFiles;
 }
-}
-      if (match.includes('{') && !match.includes('}')) {
-  ';
-}
-        return match.replace('{', '').replace('}', '');
+
+// Function to resolve merge conflicts;
+function resolveMergeConflicts(content) {
+  const lines = content.split('\n');';
+  const resolvedLines = [];
+  let i = 0;
+  let conflictCount = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    
+        i++;
+      };
+      // Skip the separator line;
+      if (i < lines.length) {
+        i++;
       }
-      return match;
-    });
-;
-    // Write the resolved content;
-    if (resolvedContent !== originalContent) {
-  ';
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-}
-      console.log(`✅ Resolved conflicts in: ${filePath}`);
-      return true;
-    }
-;
-    return false;
-  } catch (error) {
-  ;
-}
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-;
-// Function to find all files with merge conflicts;
-function findFilesWithConflicts(dir) {
-  ;
-  const files = [];
-;
-  function traverse(currentDir) {;
-    const items = fs.readdirSync(currentDir);
-;
-    for (const item of items) {;
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-;
-      if (stat.isDirectory()) {;
-        // Skip node_modules and other irrelevant directories';
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {;
-          traverse(fullPath);
-}
-}
-        }
-      } else if (stat.isFile()) {
-  ;
-        // Check for TypeScript/JavaScript/JSX files;
-        if (/\.(ts|tsx|js|jsx)$/.test(item)) {;
-          try {';
-            const content = fs.readFileSync(fullPath, 'utf8');';
-            if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {;
-              files.push(fullPath);
-}
-            }
-          } catch (error) {
-  ';
-            // Skip files that can't be read;
-}
-          }
-        }
+      // Skip until we find the end marker;
+        // Keep the "incoming" changes (after         resolvedLines.push(lines[i]);
+        i++;
       }
+      // Skip the end marker;
+      if (i < lines.length) {
+        i++;
+      }
+    } else {
+      resolvedLines.push(line);
+      i++;
     }
   }
-;
-  traverse(dir);
-  return files;
+
+  return {
+    content: resolvedLines.join('\n'),'';
+    conflictsResolved: conflictCount;
+  };
 }
-;
-// Main execution;
-try {
-  ;
-  const workspaceDir = process.cwd();
+
+// Function to fix common syntax issues;
+function fixSyntaxIssues(content) {
+  let fixed = content;
+  let fixesApplied = 0;
+
+  // Fix common JSX issues;
+  const fixes = [;
+    // Fix unclosed JSX tags;
+    { pattern: /<(\w+)([^>]*?)(?<////!\s)\s*>/g, replacement: '<$1$2>' },'';
+    // Fix missing closing tags (basic cases);
+    { pattern: /<////(\w+)([^>]*?)>\s*$/gm, replacement: '<$1$2></$1>' },'';
+    // Fix malformed quotes;
+    { pattern: /"/g, replacement: '"' },'"'";
+    { pattern: /'/g, replacement: "'" },'"'";
+    // Fix common React issues;
+    { pattern: /className=/g, replacement: 'className=' },'';
+    { pattern: /onClick=/g, replacement: 'onClick=' },'';
+    // Fix import statements;
+    { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, replacement: 'import { $1     } from "$2"; },'"'";
+    // Fix export statements;
+    { pattern: /export\s+default\s+([^;]+);?/g, replacement: 'export default $1; },'';
+    // Fix function declarations;
+    { pattern: /function\s+(\w+)\s*\(/g, replacement: 'function $1(' },'';
+    // Fix arrow functions;
+    { pattern: /const\s+(\w+)\s*=\s*\(/g, replacement: 'const $1 = (' },'';
+    // Fix missing semicolons;
+    { pattern: /(\w+)\s*$/gm, replacement: '$1; },'';
+    // Fix React component issues;
+    { pattern: /React\.FC/g, replacement: 'React.FC' },'';
+    { pattern: /React\.Component/g, replacement: 'React.Component' },'';
+  ];
+
+  fixes.forEach(fix => {
+    const before = fixed;
+    fixed = fixed.replace(fix.pattern, fix.replacement);
+    if (before !== fixed) {
+      fixesApplied++;
+    }
+  });
+
+  return { content: fixed, fixesApplied };
 }
-  console.log(`🔍 Scanning for merge conflicts in: ${workspaceDir}`);
-;
-  const conflictedFiles = findFilesWithConflicts(workspaceDir);
-  console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
-;
-  let resolvedCount = 0;
-  let errorCount = 0;
-;
-  for (const file of conflictedFiles) {
-  ;
-    try {;
-      if (resolveMergeConflicts(file)) {;
-        resolvedCount++;
-}
+
+// Main function;
+function main() {
+  console.log('🔍 Scanning for files with merge conflicts...');';
+  const allFiles = getAllFiles(process.cwd());
+  const filesWithConflicts = [];
+  let totalConflicts = 0;
+  let totalFixes = 0;
+
+  // First pass: identify files with conflicts;
+  allFiles.forEach(file => {
+    try {
+      const content = fs.readFileSync(file, 'utf8');';
+        filesWithConflicts.push(file);
+      };
+    } catch (error) {
+      console.warn(`⚠️  Could not read file ${file}: ${error.message}`);```;
+    }
+  });
+
+  console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`);```;
+  // Second pass: resolve conflicts;
+  filesWithConflicts.forEach(file => {
+    try {
+      const originalContent = fs.readFileSync(file, 'utf8');';
+      const { content: resolvedContent, conflictsResolved } = resolveMergeConflicts(originalContent);
+      const { content: finalContent, fixesApplied } = fixSyntaxIssues(resolvedContent);
+      
+      if (conflictsResolved > 0 || fixesApplied > 0) {
+        fs.writeFileSync(file, finalContent, 'utf8');';
+        console.log(`✅ Fixed ${conflictsResolved} conflicts and ${fixesApplied} syntax issues in ${file}`);```;
+        totalConflicts += conflictsResolved;
+        totalFixes += fixesApplied;
       }
     } catch (error) {
-  ;
-}
-      console.error(`❌ Failed to resolve ${file}:`, error.message);
-      errorCount++;
+      console.error(`❌ Error processing ${file}: ${error.message}`);```;
     }
-  }
-;
-  console.log(`\n📈 Resolution Summary:`);
-  console.log(`✅ Successfully resolved: ${resolvedCount} files`);
-  console.log(`❌ Failed to resolve: ${errorCount} files`);
-  console.log(`📊 Total processed: ${conflictedFiles.length} files`);
-;
-  // Run a quick check to see if there are any remaining conflicts;
-  const remainingConflicts = findFilesWithConflicts(workspaceDir);
-  if (remainingConflicts.length > 0) {
-  ;
-}
-    console.log(`\n⚠️  ${remainingConflicts.length} files still have conflicts:`);
-    remainingConflicts.slice(0, 10).forEach(file => console.log(`   - ${file}`));
-    if (remainingConflicts.length > 10) {
-  ;
-}
-      console.log(`   ... and ${remainingConflicts.length - 10} more`);
-    }
+  });
+
+  console.log(`\n🎉 Summary:`);```;
+  console.log(`   Files processed: ${filesWithConflicts.length}`);```;
+  console.log(`   Merge conflicts resolved: ${totalConflicts}`);```;
+  console.log(`   Syntax fixes applied: ${totalFixes}`);```;
+  if (totalConflicts > 0 || totalFixes > 0) {
+    console.log(`\n✨ All merge conflicts and syntax issues have been resolved!`);```;
   } else {
-  ;
-    console.log(`\n🎉 All merge conflicts have been resolved!`);
-}
+    console.log(`\n✨ No issues found to fix.`);```;
   }
-;
-} catch (error) {
-  ';
-  console.error('❌ Script failed:', error.message);
-  process.exit(1);
 }
-}'"
+
+// Run the script;
+main();
+
+export { resolveMergeConflicts, fixSyntaxIssues };

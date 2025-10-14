@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 
-export const useUseAnalyticsContext = () => {
-  const [data] = useState(null);
-  const [loading] = useState(false);
-  const [error] = useState(null);
-    useEffect(() => {
+export const useAnalyticsContext = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
     // Add your hook logic here
   }, []);
-  
+
   return {
     data,
     loading,
     error,
-    // Add your hook methods here
+    setData,
+    setLoading,
+    setError,
   };
 };

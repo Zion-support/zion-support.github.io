@@ -3,8 +3,7 @@ import React, { lazy, ComponentType, Suspense } from 'react';
 // Higher-order component for lazy loading
 export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
   Component: T,
-  fallback?: React.ReactNode,
-) {
+  fallback?: React.ReactNode) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
   const WrappedComponent = (props: Record<string, unknown>) => (
@@ -12,15 +11,16 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
       <LazyComponent {...props} />
     </Suspense>
   );
-  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
+  
+  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
+  
   return WrappedComponent;
 }
 
 // Utility function to create lazy-loaded components
 export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunction: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode,
-) {
+  fallback?: React.ReactNode) {
   const LazyComponent = lazy(importFunction);
   
   const WrappedComponent = (props: Record<string, unknown>) => (
