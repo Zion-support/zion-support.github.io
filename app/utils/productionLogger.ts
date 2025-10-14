@@ -15,8 +15,6 @@ export const productionLogger = {
         console.warn(message, data);
       } else if (level === 'error') {
         console.error(message, data);
-      } else {
-        console.warn(message, data);
       }
     }
   },

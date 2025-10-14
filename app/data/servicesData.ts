@@ -8,7 +8,7 @@ export interface ServiceData {
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  }
   icon: string;
 }
 
@@ -18,7 +18,7 @@ export const servicesData: ServiceData[] = [
     name: 'AI Solutions',
     description: 'Advanced artificial intelligence solutions for your business',
     category: 'AI',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
       starter: 1000,
       professional: 2500,
@@ -27,11 +27,11 @@ export const servicesData: ServiceData[] = [
     icon: 'robot'
   },
   {
-    id: 'cloud-solutions',
-    name: 'Cloud Solutions',
-    description: 'Scalable cloud infrastructure and services',
-    category: 'Cloud',
-    features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps', 'Monitoring'],
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Comprehensive cybersecurity solutions to protect your business',
+    category: 'Security',
+    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response'],
     pricing: {
       starter: 2000,
       professional: 5000,

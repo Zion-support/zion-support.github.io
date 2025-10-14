@@ -6,11 +6,11 @@ export const preloadOptimizer = {
     link.as = as;
     document.head.appendChild(link);
   },
-
+  
   preloadScript: (src: string) => {
     preloadOptimizer.preload(src, 'script');
   },
-
+  
   preloadStyle: (href: string) => {
     preloadOptimizer.preload(href, 'style');
   }
