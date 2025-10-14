@@ -20,7 +20,7 @@ const problematicFiles = [
   "app/consultation/page.tsx
   "app/contact/page.tsx
 ]
-const pageTemplate = (title, description) => `import React from "react
+const pageTemplate = (title, description) => `import React from "react";
 import { Helmet } from "react-helmet-async
 export default function Page() {
   return (

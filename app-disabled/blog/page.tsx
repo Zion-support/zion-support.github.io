@@ -6,7 +6,6 @@ import Footer from '../components/Footer;
 export default function Blog() {
 interface BlogPost {
   id: number;  title: string;
-
 const BlogPage: React.FC = () => {
   const blogPosts = [{
       title: 'The Future of AI in Business',';
@@ -30,7 +29,6 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read'';
     }
   ];
-
 const categories = ['All Posts',';
     'AI & Machine Learning',';
     'Quantum Computing',';
@@ -135,7 +133,6 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center gap-4 mb-3">;
                     <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">;
                       {categories.find(c => c.name === post.category)?.label}
-
                     </span>;
                   </div>;
                 </div>;
@@ -309,7 +306,6 @@ const BlogPage: React.FC = () => {
           </div>;
         </section>;
       )}
-
       {/* Blog Posts Grid */}
       <section className="py-16 px-4">;
         <div className="max-w-7xl mx-auto">;
@@ -368,5 +364,4 @@ const BlogPage: React.FC = () => {
     </div>;
   );
 };
-
 export default BlogPage;

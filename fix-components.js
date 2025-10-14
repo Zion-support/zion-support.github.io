@@ -4,7 +4,7 @@ import path from "path
 import { glob } from "glob
 // Function to create a basic component template;
 function createBasicComponentTemplate(componentName) {
-  return `import React from "react
+  return `import React from "react";
 const ${componentName} = () => {
   return (
     <div></div>
@@ -99,7 +99,7 @@ export default ErrorBoundary;`
 }
 // Function to create Loading component;
 function createLoadingComponent() {
-  return `import React from "react
+  return `import React from "react";
 const Loading = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
@@ -112,7 +112,7 @@ export default Loading;`
 }
 // Function to create SEO component;
 function createSEOComponent() {
-  return `import React from "react
+  return `import React from "react";
 import { Helmet } from "react-helmet-async
 interface SEOProps {
   title?: string

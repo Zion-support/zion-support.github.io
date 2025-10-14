@@ -379,7 +379,6 @@ const sizes =
 };``
     case 'Navigation.tsx':'
       return `import React, { useState } from 'react'`;
-import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 const Navigation = ({ onMenuClick }) => {;}
   const [isOpen, setIsOpen] = useState(false);
@@ -456,7 +455,6 @@ const PerformanceMonitor = () => {}
 export default PerformanceMonitor;``
     case 'Sidebar.tsx':'
       return `import React from 'react'`;
-import { Link } from 'react-router-dom';
 import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
 const Sidebar = ({ isOpen, onClose }) => {}
   const navigation = [

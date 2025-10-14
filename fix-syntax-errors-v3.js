@@ -78,7 +78,7 @@ function rewriteProblematicFile(content, filePath) {
       'import React from "react"; import { Helmet } from react-helmet-async; const PagePage = () =>{ return (</div>',)
     )
   ) {
-    return `import React from "react
+    return `import React from "react";
 import { Helmet } from "react-helmet-async
 const PagePage = () => {
   return (
@@ -97,7 +97,7 @@ export default PagePage;`
 }
   // For Footer component
   if (filePath.includes("Footer.tsx")) {
-    return `import React from "react
+    return `import React from "react";
 import { Link } from "react-router-dom
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from "lucide-react
 const Footer = () => {;
@@ -167,8 +167,7 @@ export default Footer;`
 }
   // For 5G implementation page
   if (filePath.includes("5g-implementation/page.tsx")) {
-    return `import React from "react
-import { Helmet } from "react-helmet-async
+    return `import React from "react";
 export default function Page() {
   return (
     <React.Fragment></React>

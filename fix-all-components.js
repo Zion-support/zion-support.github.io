@@ -2,7 +2,7 @@
 import fs from "fs
 import { glob } from "glob
 // Simple component template
-const componentTemplate = (name) => `import React from "react
+const componentTemplate = (name) => `import React from "react";
 export default function ${name}() {
   return (
     <div></div>

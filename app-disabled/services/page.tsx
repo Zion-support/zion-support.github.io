@@ -4,9 +4,7 @@ import { }
   Circle,
   Right,
   } from 'lucide-react';
-
 ;
-
 const ServicesPage: React.FC = () => {const services = [;
     // AI Services
     {      ico,
@@ -26,7 +24,6 @@ const ServicesPage: React.FC = () => {const services = [;
             Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -47,15 +44,12 @@ const ServicesPage: React.FC = () => {const services = [;
                   </li>
                 ))}
               </ul>
-
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
                 {service.title}
               </h3>
-              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
@@ -64,7 +58,6 @@ const ServicesPage: React.FC = () => {const services = [;
                   )}
                 </div>
               </div>
-
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
                 <ul className="space-y-2">
@@ -81,7 +74,6 @@ const ServicesPage: React.FC = () => {const services = [;
                   )}
                 </ul>
               </div>
-
               <a
                 href={service.path}
                 className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"

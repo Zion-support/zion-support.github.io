@@ -29,7 +29,6 @@ export default function fix-remaining-corrupted.js() {
                   24/7 Support
                 <p className="text-purple-700">
                   Round-the-clock support for all your needs.
-
     </>)
   )
 }

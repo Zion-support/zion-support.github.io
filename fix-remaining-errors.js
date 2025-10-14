@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 ;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Files that still have parsing errors;
 const filesToFix = [
   'App_minimal.tsx',
@@ -72,44 +71,33 @@ const filesToFix = [
   'public/sw.js',
   'vite-env.d.ts'
 ];
-
 // Function to fix a single file;
 function fixFile(filePath) {
   try {;
 const fullPath = path.join(__dirname, filePath);
-    
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
       return;
     }
-
     let content = fs.readFileSync(fullPath, 'utf8');
-    
     // Remove corrupted content
     content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
-    
     // Fix unterminated string literals
     content = content.replace(/"([^"]*)$/gm, '"')
     content = content.replace(/'([^']*)$/gm'")
     content = content.replace(/`([^`]*)$/gm, '`');
-    
     // Fix malformed imports
     content = content.replace(/import\s+([^;]+);\s*$/gm, 'import $1;');
-    
     // Fix malformed exports
     content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
-    
     // Fix malformed function declarations
-
     content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
-    
     // Fix malformed JSX
     if (content.includes('export default function') && !content.includes('return (')) {;
 const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
       if (functionMatch) {;
 const functionName = functionMatch[1];
         const pageName = functionName.replace('Page', '');
-        
         // Create proper JSX structure;
 const jsxContent = `  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -121,28 +109,23 @@ const jsxContent = `  return (
       </div>
     </div>
   );`;
-        
         content = content.replace()
           /export default function \w+\s*\(\s*\)\s*\{[\s\S]*?\};?\s*$/,
           `export default function ${functionName}() {\n${jsxContent}\n}`
         );
       }
     }
-    
     // Fix specific patterns for different file types
     if (filePath.endsWith('.d.ts')) {
       // Fix TypeScript declaration files
       content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
-
     }
-    
     if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
       // Fix test files
       content = content.replace(/describe\s+([^{]+);\s*$/gm, 'describe $1 {');
       content = content.replace(/it\s+([^{]+);\s*$/gm, 'it $1 {');
       content = content.replace(/test\s+([^{]+);\s*$/gm, 'test $1 {');
     }
-    
     // Fix common syntax issues
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
@@ -151,32 +134,25 @@ const jsxContent = `  return (
     content = content.replace(/;\s*"/g, ' "')
     content = content.replace(/;\s*'/g '")
     content = content.replace(/;\s*`/g, ' `');
-    
     // Fix object syntax
     content = content.replace(/\{\s*;\s*/g, '{\n  ');
     content = content.replace(/;\s*\}/g, '\n}');
     content = content.replace(/;\s*,/g, ',');
-    
     // Fix array syntax
     content = content.replace(/\[\s*;\s*/g, '[\n  ');
     content = content.replace(/;\s*\]/g, '\n]');
-    
     // Clean up multiple newlines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
     // Ensure proper file ending
     if (!content.trim().endsWith('}') && !content.trim().endsWith(';')) {
       content = content.trim() + '\n';
     }
-    
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
-    
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Fix all files
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
