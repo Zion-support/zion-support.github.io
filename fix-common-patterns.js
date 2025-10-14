@@ -9,22 +9,12 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Fix malformed import statements - the main issue
+    // Fix the most common patterns causing errors
+    
+    // Fix malformed import statements with missing quotes
     content = content
-      // Fix imports with missing quotes
       .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';")
-      .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';")
-      
-      // Fix specific common import patterns
-      .replace(/import\s+react\s+from\s+['"]react['"];?/g, "import React from 'react';")
-      .replace(/import\s+React\s+from\s+['"]react['"];?/g, "import React from 'react';")
-      .replace(/import\s+Helmet\s+from\s+['"]react-helmet-async['"];?/g, "import { Helmet } from 'react-helmet-async';")
-      .replace(/import\s+ResponsiveContainer\s+from\s+['"]\.\.\/components\/ResponsiveContainer['"];?/g, "import ResponsiveContainer from '../components/ResponsiveContainer';")
-      .replace(/import\s+Link\s+from\s+['"]react-router-dom['"];?/g, "import { Link } from 'react-router-dom';")
-      .replace(/import\s+useState\s+from\s+['"]react['"];?/g, "import { useState } from 'react';")
-      .replace(/import\s+useEffect\s+from\s+['"]react['"];?/g, "import { useEffect } from 'react';")
-      .replace(/import\s+useCallback\s+from\s+['"]react['"];?/g, "import { useCallback } from 'react';")
-      .replace(/import\s+useMemo\s+from\s+['"]react['"];?/g, "import { useMemo } from 'react';");
+      .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';");
     
     // Fix missing default values in function parameters
     content = content
@@ -159,7 +149,7 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  console.log('Starting import error fixes...');
+  console.log('Starting common pattern fixes...');
   
   // Find all TypeScript and JSX files
   const patterns = [
@@ -185,7 +175,7 @@ async function main() {
   }
   
   console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files`);
-  console.log('Import error fixes completed!');
+  console.log('Common pattern fixes completed!');
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

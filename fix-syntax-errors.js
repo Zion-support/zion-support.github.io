@@ -1,87 +1,142 @@
-#!/usr/bin/env node;
-;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix common syntax errors;
-function fixSyntaxErrors(content) {
-  let fixed = content;
+// Common syntax error patterns to fix
+const fixes = [
+  // Fix unterminated string literals with extra quotes
+  { pattern: /import\s+.*?from\s+['"](.*?)['"];['"];?/g, replacement: "import $1 from '$1';" },
+  { pattern: /import\s+.*?from\s+['"](.*?)['"];['"]/g, replacement: "import $1 from '$1';" },
+  { pattern: /import\s+.*?from\s+['"](.*?)['"];['"]/g, replacement: "import $1 from '$1';" },
   
-  // Fix unterminated string literals - add missing quotes;
-  fixed = fixed.replace(/([^\\])(['"])([^'"]*?)(\n|$)/g, (match, before, quote, text, newline) => {
-    if (text.trim() && !text.includes(quote)) {
-      return before + quote + text + quote + newline;
-    }
-    return match;
-  });
+  // Fix extra quotes in JSX
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: "className={`$1`}" },
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: "className={`$1`}" },
   
-  // Fix malformed object properties - add missing commas;
-  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*)['"]\s*(\n\s*[^,}\s])/g, '$1: \'$2\',$3');
+  // Fix malformed JSX fragments
+  { pattern: /<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*""[\s]*<\/>/g, replacement: "<><div></div></>" },
+  { pattern: /<>[\s]*<div[^>]*>[\s]*""[\s]*<\/div>[\s]*<\/>/g, replacement: "<><div></div></>" },
   
-  // Fix missing commas in arrays and objects;
-  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*)['"]\s*(\n\s*[^,}\s])/g, '$1: \'$2\',$3');
+  // Fix extra quotes in strings
+  { pattern: /""/g, replacement: "" },
+  { pattern: /''/g, replacement: "" },
+  { pattern: /";"/g, replacement: ";" },
+  { pattern: /';'/g, replacement: ";" },
   
-  // Fix unterminated JSX attributes;
-  fixed = fixed.replace(/(\w+)=['"]([^'"]*?)(\n|$)/g, (match, attr, value, newline) => {
-    if (value.trim() && !value.includes('"') && !value.includes("'")) {
-      return attr + '="' + value + '"' + newline;
-    }
-    return match;
-  });
+  // Fix malformed interface names
+  { pattern: /interface\s+404\s*{/g, replacement: "interface NotFoundProps {" },
+  { pattern: /const\s+404:/g, replacement: "const NotFound:" },
   
-  // Fix missing closing tags - basic pattern matching;
-  fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, (match, tag, attrs) => {
-    return match + `</${tag}>`;
-  });
+  // Fix malformed JSX closing tags
+  { pattern: /<Helmet><\/Helmet>/g, replacement: "<Helmet></Helmet>" },
+  { pattern: /<title>([^<]+)<\/title>/g, replacement: "<title>$1</title>" },
+  { pattern: /<meta\s+name="([^"]+)"\s+content="([^"]+)"\s*\/>/g, replacement: '<meta name="$1" content="$2" />' },
   
-  // Fix malformed imports;
-  fixed = fixed.replace(/import\s+{\s*([^}]*?)\s*}\s*from\s*['"]([^'"]*)['"];?\s*$/gm, (match, imports, module) => {
-    const cleanImports = imports.replace(/[,\s]+$/, '').replace(/,\s*$/, '');
-    return `import { ${cleanImports} } from '${module}';`;
-  });
+  // Fix unterminated string literals in imports
+  { pattern: /import\s+([^;]+);['"]/g, replacement: "import $1;" },
+  { pattern: /import\s+([^;]+);['"]/g, replacement: "import $1;" },
   
-  // Fix missing semicolons;
-  fixed = fixed.replace(/(\w+)\s*$/gm, (match) => {
-    if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}')) {
-      return match + ';';
-    }
-    return match;
-  });
+  // Fix malformed function declarations
+  { pattern: /const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*{[\s]*};[\s]*};/g, replacement: "const $1 = () => {\n  return null;\n};" },
   
-  return fixed;
-}
+  // Fix extra semicolons
+  { pattern: /;;/g, replacement: ";" },
+  { pattern: /;[\s]*;/g, replacement: ";" },
+  
+  // Fix malformed JSX attributes
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: "className={`$1`}" },
+  
+  // Fix unterminated template literals
+  { pattern: /`([^`]*)$/gm, replacement: "`$1`" },
+  
+  // Fix malformed JSX expressions
+  { pattern: /{`([^`]+)`}/g, replacement: "{`$1`}" },
+  
+  // Fix extra quotes in JSX text
+  { pattern: /<h1[^>]*>([^<]+)<\/h1>/g, replacement: "<h1>$1</h1>" },
+  { pattern: /<p[^>]*>([^<]+)<\/p>/g, replacement: "<p>$1</p>" },
+  
+  // Fix malformed closing tags
+  { pattern: /<\/div>[\s]*""[\s]*<\/div>/g, replacement: "</div></div>" },
+  { pattern: /<\/section>[\s]*""[\s]*<\/section>/g, replacement: "</section></section>" },
+  
+  // Fix extra quotes in attribute values
+  { pattern: /="([^"]+)""/g, replacement: '="$1"' },
+  { pattern: /='([^']+)''/g, replacement: "='$1'" },
+  
+  // Fix malformed object literals
+  { pattern: /{[\s]*}/g, replacement: "{}" },
+  
+  // Fix extra whitespace and newlines
+  { pattern: /\n\s*\n\s*\n/g, replacement: "\n\n" },
+  { pattern: /[\s]+$/gm, replacement: "" },
+];
 
-// Function to fix specific file patterns;
-function fixFilePatterns(filePath, content) {
-  let fixed = content;
-  
-  // Fix common React component issues;
-  if (filePath.includes('.tsx') || filePath.includes('.jsx')) {
-    // Fix missing React import;
-    if (!fixed.includes('import React') && fixed.includes('React.FC')) {
-      fixed = "import React from 'react';\n" + fixed;
-    }
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    // Fix missing closing tags in JSX;
-    fixed = fixed.replace(/<(\w+)([^>]*)>\s*$/gm, (match, tag, attrs) => {
-      if (!match.includes('</')) {
-        return match + `</${tag}>`;
-      }
-      return match;
+    // Apply all fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
     });
+    
+    // Additional specific fixes for common patterns
+    content = content
+      // Fix unterminated string literals by finding and closing them
+      .replace(/import\s+([^;]+);['"]/g, (match, importPart) => {
+        const cleanImport = importPart.replace(/['"]/g, '');
+        return `import ${cleanImport};`;
+      })
+      // Fix malformed JSX
+      .replace(/<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*""[\s]*<\/>/g, '<><div></div></>')
+      // Fix extra quotes in strings
+      .replace(/""/g, '')
+      .replace(/''/g, '')
+      // Fix malformed function declarations
+      .replace(/const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*{[\s]*};[\s]*};/g, 'const $1 = () => {\n  return null;\n};')
+      // Fix interface names that start with numbers
+      .replace(/interface\s+404\s*{/g, 'interface NotFoundProps {')
+      .replace(/const\s+404:/g, 'const NotFound:')
+      // Fix malformed JSX closing tags
+      .replace(/<Helmet><\/Helmet>/g, '<Helmet></Helmet>')
+      // Fix extra semicolons
+      .replace(/;;/g, ';')
+      // Fix malformed template literals
+      .replace(/`([^`]*)$/gm, '`$1`')
+      // Fix extra quotes in JSX attributes
+      .replace(/="([^"]+)""/g, '="$1"')
+      .replace(/='([^']+)''/g, "='$1'")
+      // Clean up extra whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .replace(/[\s]+$/gm, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  return fixed;
 }
 
-// Main function to process files;
-async function processFiles() {
+async function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript and JSX files
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    'app/**/*.jsx',
-    'app/**/*.js'
+    '*.tsx',
+    '*.ts',
+    '__tests__/**/*.tsx',
+    '__tests__/**/*.ts'
   ];
   
   let totalFiles = 0;
@@ -89,33 +144,20 @@ async function processFiles() {
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    
     for (const file of files) {
-      try {
-        const filePath = path.resolve(file);
-        const content = fs.readFileSync(filePath, 'utf8');
-        
-        totalFiles++;
-        
-        // Skip if file is already valid (basic check)
-        if (content.includes('export default') || content.includes('export {')) {
-          let fixed = fixSyntaxErrors(content);
-          fixed = fixFilePatterns(file, fixed);
-          
-          if (fixed !== content) {
-            fs.writeFileSync(filePath, fixed, 'utf8');
-            fixedFiles++;
-            console.log(`Fixed: ${file}`);
-          }
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+      totalFiles++;
+      if (fixFile(file)) {
+        fixedFiles++;
       }
     }
   }
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+  console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files`);
+  console.log('Syntax error fixes completed!');
 }
 
-// Run the fix;
-processFiles().catch(console.error);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { fixFile, fixes };

@@ -1,6 +1,6 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
-import SEO from '../components/SEO;'
+import React from react;
+import { Link } from react-router-dom;
+import SEO from '../components/SEO;
 import { GlobeAltIcon,
   CpuChipIcon,
   ChartBarIcon,
@@ -9,7 +9,7 @@ import { GlobeAltIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';' } from '@heroicons/react/24/outline;';'
+  MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function MicroSaaSPage() {
   const services = [
     {
@@ -41,11 +41,11 @@ export default function MicroSaaSPage() {
     { name: 'E-commerce', description: 'Online retail solutions' },'
     { name: 'Healthcare', description: 'Medical practice management' },'
     { name: 'Finance', description: 'Financial services tools' },'
-    { name: 'Education', description: 'Learning management systems' },'
-    { name: 'Real Estate', description: 'Property management tools' },'
-    { name: 'Manufacturing', description: 'Production optimization' }'
-  ]
-import { Helmet } from 'react-helmet-async';'
+    { name: 'Education', description: 'Learning management systems' },';
+    { name: 'Real Estate', description: 'Property management tools' },';
+    { name: 'Manufacturing', description: 'Production optimization' }';
+  ];
+import react-helmet-async from 'react-helmet-async';
 const MicroSaaSPage: React.FC = () => {
   return (
     <>
@@ -55,8 +55,8 @@ const MicroSaaSPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
         <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
+          <h1>MicroSaaSPage</h1>"
+          <p>This page is under construction.</p>"
         </div>
       </div>
     </>

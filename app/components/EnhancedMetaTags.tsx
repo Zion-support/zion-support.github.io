@@ -22,41 +22,42 @@ ogImage="https://ziontechgroup.com/images/og-image.jpg",
   author="Zion Tech Group"
   tags = [],
 }) => {},
-    sameAs: ['https://twitter.com/ziontechgroup', '''
-      'https://linkedin.com/company/ziontechgroup', '''
-      'https://github.com/ziontechgroup', '''],
+    sameAs: ['https://twitter.com/ziontechgroup', '
+      'https://linkedin.com/company/ziontechgroup', '
+      'https://github.com/ziontechgroup', '],
     headline: title,
     description,
     author: {
-      '@type': 'Organization',''';
+      '@type': 'Organization',';
       name: author,
     },
     publisher: {
       logo: {
-        '@type': 'ImageObject',''';
+        '@type': 'ImageObject',';
         url: `${siteUrl}/images/logo.png`,````
       },
     },
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     mainEntityOfPage: {
-'@type': 'WebPage',''',
-'@id': finalCanonical,''',
+'@type': 'WebPage',',
+'@id': finalCanonical,',
     },
     image: finalOgImage,
     ...(section && {articleSection: section,}),
-    ...(tags.length > 0 && {keywords: tags.join(', '),}),'''
+    ...(tags.length > 0 && {keywords: tags.join(', '),}),'
   } : null;
   return (
 <>    <Helmet></Helmet>
       { /* Basic Meta Tags */ }
-      <title>{title}</title>
-      <meta name="description" content={description} />"""
-      <meta name="keywords" content={keywords} />"""
-      <meta name="author" content={author} />"""
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow",} />"""
-      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow",} />"
-      ;
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />"""
-        )})
+      <title>{title}</title>`
+      <meta name="description" content={description} />"``
+      <meta name="keywords" content={keywords} />"```
+      <meta name="author" content={author} />"````
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow",} />"`````
+      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow",} />"``````
+      ;```````
+        tags.map((tag, index) => (````````
+          <meta key={index} property="article:tag" content={tag} />"`````````
+        )})``````````
+```````````

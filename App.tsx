@@ -21,7 +21,6 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import WebVitalsTracker from './app/components/WebVitalsTracker';
 import FuturisticBackground from './app/components/FuturisticBackground';
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -36,7 +35,6 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-
 // Additional service pages
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
@@ -48,7 +46,6 @@ const CustomDevelopmentPage = React.lazy(() => import('./app/custom-software/pag
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
 const DatabaseManagementPage = React.lazy(() => import('./app/database-management/page'));
-
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -106,5 +103,4 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
-
 export default App;
