@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
+import { cn } from '../utils/cn';
 
 interface FuturisticTextProps {
+  children: React.ReactNode;
   className?: string;
-  children?: React.ReactNode;
 }
 
-export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
+const FuturisticText: React.FC<FuturisticTextProps> = ({ children, className }) => {
   return (
-    <div className={`futuristic-text ${className}`} {...props}>
+    <span className={cn("text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400", className)}>
       {children}
-    </div>
+    </span>
   );
-}
+};
+
+export default FuturisticText;

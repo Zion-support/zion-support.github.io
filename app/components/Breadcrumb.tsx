@@ -1,31 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-interface BreadcrumbProps {
-  items: Array<{
-    label: string;
-    href?: string;
-  }>;
-  className?: string;
-}
-
-export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
+import React from "react";
+const Breadcrumb = () => {
   return (
-    <nav className={`breadcrumb ${className}`} aria-label="Breadcrumb">
-      <ol className="flex space-x-2">
-        {items.map((item, index) => (
-          <li key={index} className="flex items-center">
-            {index > 0 && <span className="mx-2">/</span>}
-            {item.href ? (
-              <Link to={item.href} className="text-blue-600 hover:text-blue-800">
-                {item.label}
-              </Link>
-            ) : (
-              <span className="text-gray-500">{item.label}</span>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Breadcrumb</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Breadcrumb.
+      </p>
+    </div>
   );
-}
+};
+export default Breadcrumb;

@@ -1,6 +1,37 @@
-import { createContext } from 'react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+import React, { createContext, useContext, ReactNode } from 'react';
+
+interface AnalyticsContextContextType {
+  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
+  trackPageView: (_page: string) => void;
 }
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+
+export const useAnalyticsContext = () => {
+  const context = useContext(AnalyticsContextContext);
+  if (!context) {
+    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
+  }
+  return context;
+};
+
+interface AnalyticsContextProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
+  const value = {
+    trackEvent: (_event: string, _properties?: Record<string, unknown>) => {
+      console.log('Analytics event:', _event, _properties);
+    },
+    trackPageView: (_page: string) => {
+      console.log('Page view:', _page);
+    }
+  };
+
+  return (
+    <AnalyticsContextContext.Provider value={value}>
+      {children}
+    </AnalyticsContextContext.Provider>
+  );
+};

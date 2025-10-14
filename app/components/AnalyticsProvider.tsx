@@ -1,29 +1,12 @@
-import React, { useEffect, ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    console.log('Analytics initialized');
-  }, []);
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
-  };
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
+import React from "react";
+const AnalyticsProvider = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">AnalyticsProvider</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for AnalyticsProvider.
+      </p>
+    </div>
   );
 };
 export default AnalyticsProvider;

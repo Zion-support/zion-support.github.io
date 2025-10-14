@@ -1,14 +1,12 @@
-import React from 'react';
-
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-}
-
-export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
+import React from "react";
+const AdvancedPerformanceMonitor = () => {
   return (
-    <div className={`advanced-performance-monitor ${className}`}>
-      <h3>Performance Monitor</h3>
-      <p>Advanced performance monitoring component</p>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">AdvancedPerformanceMonitor</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for AdvancedPerformanceMonitor.
+      </p>
     </div>
   );
-}
+};
+export default AdvancedPerformanceMonitor;

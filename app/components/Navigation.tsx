@@ -1,27 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
-export default function Navigation() {
-  return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-          <div className="space-x-6">
-            <Link to="/about" className="text-gray-600 hover:text-gray-800">
-              About
-            </Link>
-            <Link to="/services" className="text-gray-600 hover:text-gray-800">
-              Services
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </Link>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
+interface NavigationProps {
+  onSidebarToggle: () => void;
 }
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Navigation</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Navigation.
+      </p>
+      <button onClick={onSidebarToggle} className="bg-blue-500 text-white px-4 py-2 rounded">
+        Toggle Sidebar
+      </button>
+    </div>
+  );
+};
+
+export default Navigation;
