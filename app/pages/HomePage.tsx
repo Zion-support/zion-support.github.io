@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEOHead from '../components/SEOHead'
-=======
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import SEOHead from '../components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -19,43 +13,27 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
   SparklesIcon,
-<<<<<<< HEAD
   BoltIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
-=======
-  BoltIcon;'}
-} from '@heroicons/react/24/outline';'
-import FuturisticBackground from '../components/FuturisticBackground';'
-import NeonButton from '../components/NeonButton';'
-import AnimatedCard from '../components/AnimatedCard';'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import { services } from '../data/servicesData';
 
-export default function HomePage()  {
-
-  const structuredData = {    "@context": "https://schema.org",
-=======
-} from '@heroicons/react/24/outline'
-import FuturisticBackground from '../components/FuturisticBackground'
-import NeonButton from '../components/NeonButton'
-import AnimatedCard from '../components/AnimatedCard'
-import { services } from '../data/servicesData'
+export default function HomePage() {
+  const structuredData = {
     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "Zion Tech Group",
+    "description": "Advanced AI and IT Solutions",
     "url": "https://ziontechgroup.com",
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
-    "potentialAction": {
-      "@type": "SearchAction",}
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-0123",
+      "contactType": "customer service"
     }
-  }
+  };
   return (
     <>
       <SEOHead 
@@ -118,7 +96,7 @@ import { services } from '../data/servicesData'
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredServices.map((service, index) => (}
+            {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">{service.icon}</div>
@@ -127,7 +105,7 @@ import { services } from '../data/servicesData'
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                  {service.features.slice(0, 4).map((feature, featureIndex) => (}
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"></div>
                       <span className="text-sm">{feature}</span>
@@ -258,9 +236,4 @@ import { services } from '../data/servicesData'
         </div>
       </section>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-}'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

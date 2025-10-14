@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -28,13 +24,8 @@ import {
   LightBulbIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
 const ITSolutionsPage: React.FC = () => {
   const solutions = [
-=======
-export default function ITSolutionsPage() {
-  const itServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
     {
       title: "Cloud Infrastructure",
       description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
@@ -144,7 +135,6 @@ export default function ITSolutionsPage() {
       href: "/it-support"
     }
   ];
-<<<<<<< HEAD
 
   const features = [
     {
@@ -168,24 +158,15 @@ export default function ITSolutionsPage() {
       icon: ShieldCheckIcon
     }
   ];
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
       </Helmet>
@@ -292,39 +273,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-=======
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, system integration, and technical support." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">IT Solutions</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT services to support and enhance your business technology infrastructure
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Infrastructure Management</h3>
-              <p className="text-gray-300 mb-6">Complete management of your IT infrastructure and systems.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">System Integration</h3>
-              <p className="text-gray-300 mb-6">Seamless integration of various systems and applications.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Technical Support</h3>
-              <p className="text-gray-300 mb-6">24/7 technical support and maintenance services.</p>
-            </div>
-          </div>
-        </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       </div>
-=======
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses." />
         <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security" />
       </Helmet>
@@ -569,17 +518,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
     </>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 export default ITSolutionsPage;
-=======
-};
-
-export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89

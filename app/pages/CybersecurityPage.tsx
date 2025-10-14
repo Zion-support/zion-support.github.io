@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -48,12 +47,6 @@ export default function CybersecurityPage() {
     { name: 'PCI DSS', status: 'Compliant' },
     { name: 'NIST', status: 'Compliant' }
   ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const CybersecurityPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -68,11 +61,4 @@ const CybersecurityPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-};
-
-export default CybersecurityPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface Props {
@@ -11,23 +10,6 @@ interface State {
   error: Error | null
   errorInfo: ErrorInfo | null
   errorId: string}
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';'
-import { Helmet } from 'react-helmet-async';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;}
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;}
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -35,37 +17,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-<<<<<<< HEAD
       errorInfo: null,
       errorId: ''
-<<<<<<< HEAD
     }
-=======
-      errorInfo: null,'
-      errorId: ''}
-    };
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   }
-=======
     }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,}
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
   }
-=======
-    }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-<<<<<<< HEAD
       errorInfo
     })
     // Log error to console in development
@@ -77,23 +45,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo)}
-=======
-      errorInfo}
-    });
-
-    // Log error to console in development'
-    if (process.env.NODE_ENV === 'development') {'
-      console.error('Error caught by boundary:', error, errorInfo);}
-    }
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
-
-    // Log error to external service in production'
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);}
-    }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -107,57 +58,30 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         errorId: this.state.errorId,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-<<<<<<< HEAD
         url: window.location.href
       }
-=======
-        url: window.location.href}
-      };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       // Example: Send to error tracking service
-<<<<<<< HEAD
       // errorTrackingService.captureException(error, { extra: errorData });
       '
       console.error('Error logged to service:', errorData);
     } catch (loggingError) {'
       console.error('Failed to log error to service:', loggingError);}
     }
-=======
-      // errorTrackingService.captureException(error, { extra: errorData })
-      console.error('Error logged to service:', errorData)} catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   }
   private handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
-<<<<<<< HEAD
       errorInfo: null,
       errorId: ''
-<<<<<<< HEAD
-=======
-      errorInfo: null,'
-      errorId: ''}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     });
   }
   private handleReload = () => {
-<<<<<<< HEAD
     window.location.reload();
   }
   private handleGoHome = () => {
     window.location.href = '/';
   }
-=======
-    })}
-  private handleReload = () => {
-    window.location.reload()}
-  private handleGoHome = () => {
-    window.location.href = '/'}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
     window.location.reload();}
   };
 
@@ -165,17 +89,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';}
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-<<<<<<< HEAD
         return this.props.fallback}
-=======
-        return this.props.fallback;}
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
       // Default error UI
       return (
@@ -298,8 +216,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return this.props.children}
 }
 
-<<<<<<< HEAD
 export default EnhancedErrorBoundary
-=======
-export default EnhancedErrorBoundary;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

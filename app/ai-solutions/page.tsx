@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -27,12 +20,7 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline'
-=======
-} from '@heroicons/react/24/outline';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
 export default function AISolutionsPage() {
   const aiServices = [
     {
@@ -65,17 +53,10 @@ export default function AISolutionsPage() {
         "Text summarization",
         "Conversational AI"
       ],
-<<<<<<< HEAD
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $2,800/month",
       benefits: ["Multi-language support", "Real-time processing", "High accuracy"],
       useCases: ["Customer support", "Content analysis", "Language translation"],
-=======
-      color: "from-blue-500 to-indigo-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
-      useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       href: "/ai-nlp"
     },
     {
@@ -83,30 +64,17 @@ export default function AISolutionsPage() {
       description: "Advanced computer vision solutions for image recognition, object detection, and visual analytics.",
       icon: EyeIcon,
       features: [
-<<<<<<< HEAD
-=======
-        "Object detection",
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
         "Image classification",
         "Object detection",
         "Facial recognition",
         "OCR (Optical Character Recognition)",
         "Video analysis",
-<<<<<<< HEAD
         "Real-time processing"
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $4,200/month",
       benefits: ["High accuracy", "Real-time processing", "Custom models"],
       useCases: ["Quality control", "Security systems", "Medical imaging"],
-=======
-        "Quality inspection"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,800/month",
-      benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
-      useCases: ["Quality control", "Security monitoring", "Medical imaging"],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       href: "/ai-computer-vision"
     },
     {
@@ -114,7 +82,6 @@ export default function AISolutionsPage() {
       description: "Data-driven predictions and forecasting using advanced machine learning algorithms and statistical models.",
       icon: ChartBarIcon,
       features: [
-<<<<<<< HEAD
         "Time series forecasting",
         "Demand prediction",
         "Risk assessment",
@@ -163,173 +130,9 @@ export default function AISolutionsPage() {
       benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
       href: "/ai-consulting"
-=======
-        "Demand forecasting",
-        "Customer churn prediction",
-        "Sales forecasting",
-        "Risk assessment",
-        "Market trend analysis",
-        "Anomaly detection"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $2,500/month",
-      benefits: ["90% forecast accuracy", "Real-time insights", "Automated alerts"],
-      useCases: ["Sales forecasting", "Inventory management", "Risk management"],
-      href: "/ai-predictive-analytics"
-    },
-    {
-      title: "AI Chatbots & Virtual Assistants",
-      description: "Intelligent conversational AI solutions for customer service, sales, and internal operations.",
-      icon: ChatBubbleLeftRightIcon,
-      features: [
-        "Natural conversations",
-        "Multi-channel support",
-        "Context awareness",
-        "Integration capabilities",
-        "Analytics dashboard",
-        "Custom training"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $1,800/month",
-      benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
-      useCases: ["Customer support", "Lead qualification", "Internal helpdesk"],
-      href: "/ai-chatbots"
-    },
-    {
-      title: "AI Content Generation",
-      description: "AI-powered content creation tools for automated writing, optimization, and personalization.",
-      icon: DocumentTextIcon,
-      features: [
-        "Automated content creation",
-        "SEO optimization",
-        "Multi-language generation",
-        "Brand voice consistency",
-        "Content personalization",
-        "Performance analytics"
-      ],
-      color: "from-rose-500 to-pink-500",
-      price: "Starting at $1,200/month",
-      benefits: ["80% time savings", "SEO optimized", "Consistent quality"],
-      useCases: ["Blog content", "Marketing copy", "Product descriptions"],
-      href: "/ai-content-generation"
-    },
-    {
-      title: "AI Data Analytics",
-      description: "Advanced AI-powered analytics for extracting insights from complex datasets and driving data-driven decisions.",
-      icon: ChartBarIcon,
-      features: [
-        "Automated data analysis",
-        "Pattern recognition",
-        "Predictive insights",
-        "Custom dashboards",
-        "Real-time reporting",
-        "Data visualization"
-      ],
-      color: "from-teal-500 to-green-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Real-time insights", "Automated analysis", "Custom dashboards"],
-      useCases: ["Business intelligence", "Market research", "Performance tracking"],
-      href: "/ai-data-analytics"
-    },
-    {
-      title: "AI Process Automation",
-      description: "Intelligent process automation using AI to streamline workflows and eliminate manual tasks.",
-      icon: CogIcon,
-      features: [
-        "Workflow automation",
-        "Document processing",
-        "Data extraction",
-        "Decision automation",
-        "Integration management",
-        "Performance monitoring"
-      ],
-      color: "from-violet-500 to-purple-500",
-      price: "Starting at $2,500/month",
-      benefits: ["70% efficiency gain", "Error reduction", "Cost savings"],
-      useCases: ["Document processing", "Workflow optimization", "Data entry"],
-      href: "/ai-process-automation"
-    },
-    {
-      title: "AI Recommendation Engines",
-      description: "Smart recommendation systems powered by AI to personalize user experiences and increase engagement.",
-      icon: LightBulbIcon,
-      features: [
-        "Personalized recommendations",
-        "Real-time processing",
-        "A/B testing",
-        "Performance analytics",
-        "Multi-algorithm support",
-        "Scalable architecture"
-      ],
-      color: "from-amber-500 to-orange-500",
-      price: "Starting at $1,800/month",
-      benefits: ["30% engagement increase", "Personalized experience", "Real-time updates"],
-      useCases: ["E-commerce", "Content platforms", "Streaming services"],
-      href: "/ai-recommendation-engines"
-    },
-    {
-      title: "AI Fraud Detection",
-      description: "Advanced AI-powered fraud detection systems for real-time threat identification and prevention.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Real-time fraud detection",
-        "Behavioral analysis",
-        "Risk scoring",
-        "Automated alerts",
-        "False positive reduction",
-        "Compliance reporting"
-      ],
-      color: "from-red-500 to-pink-500",
-      price: "Starting at $3,200/month",
-      benefits: ["99.9% accuracy", "Real-time detection", "Zero false positives"],
-      useCases: ["Financial services", "E-commerce", "Insurance"],
-      href: "/ai-fraud-detection"
-    },
-    {
-      title: "AI Voice Recognition",
-      description: "Advanced voice recognition and speech processing solutions for voice commands and transcription.",
-      icon: ChatBubbleLeftRightIcon,
-      features: [
-        "Speech-to-text conversion",
-        "Voice commands",
-        "Multi-language support",
-        "Noise cancellation",
-        "Speaker identification",
-        "Real-time processing"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $1,500/month",
-      benefits: ["95% accuracy", "Multi-language", "Real-time processing"],
-      useCases: ["Voice assistants", "Transcription services", "Accessibility"],
-      href: "/ai-voice-recognition"
-    },
-    {
-      title: "AI Business Intelligence",
-      description: "Comprehensive AI-powered business intelligence solutions for strategic decision making and insights.",
-      icon: ChartBarIcon,
-      features: [
-        "Strategic insights",
-        "Market analysis",
-        "Competitive intelligence",
-        "ROI optimization",
-        "Trend forecasting",
-        "Executive dashboards"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      price: "Starting at $4,000/month",
-      benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
-      useCases: ["Strategic planning", "Market analysis", "Competitive research"],
-      href: "/ai-business-intelligence"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
     }
-<<<<<<< HEAD
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const AISolutionsPage: React.FC = () => {
-=======
   ]
   const features = [
     {
@@ -353,20 +156,12 @@ const AISolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
   return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -606,47 +401,12 @@ const AISolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>;    </>
-=======
-      
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">AI Solutions</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Harness the power of artificial intelligence to transform your business operations
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Machine Learning</h3>
-              <p className="text-gray-300 mb-6">Custom ML models tailored to your specific business needs and data.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Natural Language Processing</h3>
-              <p className="text-gray-300 mb-6">Advanced NLP solutions for text analysis and language understanding.</p>
-            </div>
-            
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Predictive Analytics</h3>
-              <p className="text-gray-300 mb-6">Data-driven insights and predictions to guide business decisions.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-=======
       </section>
     </>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e89
   );
 }
 export default AISolutionsPage;
-=======
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />
       </Helmet>
@@ -744,4 +504,3 @@ export default AISolutionsPage;
       </div>
     </>
   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -85,12 +84,6 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.'
     }
   ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const TeamPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -105,11 +98,4 @@ const TeamPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-};
-
-export default TeamPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

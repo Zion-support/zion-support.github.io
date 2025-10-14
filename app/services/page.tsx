@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-import React from 'react';'
-import { Link } from 'react-router-dom';'
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 import EnhancedSEO from '../components/EnhancedSEO';
 import { 
   CpuChipIcon,
@@ -21,9 +12,7 @@ import {
   CheckIcon,
   StarIcon;'}
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {'
@@ -146,13 +135,8 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {serviceCategories.map((category, categoryIndex) => {
-<<<<<<< HEAD
             const Icon = category.icon
             return (
-=======
-            const Icon = category.icon;
-            return (}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
               <div key={categoryIndex} className="mb-20">
                 <div className="flex items-center mb-12">
                   <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}>
@@ -231,17 +215,9 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default ServicesPage;
-=======
-  )}
-export default ServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
 export default ServicesPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

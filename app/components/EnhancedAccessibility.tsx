@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'react
 interface EnhancedAccessibilityProps {
   children: Node}
@@ -14,27 +13,6 @@ const EnhancedAccessibility: React.FC = () => {
   useEffect(() => {
     // Enhanced accessibility features
     const addSkipLinks = () => {
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState } from 'react';
-
-const EnhancedAccessibility: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
-
-    // Apply accessibility enhancements
-    const applyAccessibilityEnhancements = () => {
-      // Add skip links
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
@@ -61,15 +39,7 @@ const EnhancedAccessibility: React.FC = () => {
       });
       
       document.body.insertBefore(skipLink, document.body.firstChild);
-<<<<<<< HEAD
     }
-=======
-      const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-      document.body.insertBefore(skipLink, document.body.firstChild)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     const enhanceFocusManagement = () => {
       // Add focus indicators
       const style = document.createElement('style')
@@ -77,7 +47,6 @@ const EnhancedAccessibility: React.FC = () => {
         *:focus {
           outline: 2px solid #06b6d4 !important
           outline-offset: 2px !important}
-=======
 
       // Add ARIA landmarks
       const main = document.querySelector('main');
@@ -94,9 +63,7 @@ const EnhancedAccessibility: React.FC = () => {
           outline-offset: 2px !important;
         }
         
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
         .sr-only {
-<<<<<<< HEAD
           position: absolute;
           width: 1px;
           height: 1px;
@@ -120,21 +87,7 @@ const EnhancedAccessibility: React.FC = () => {
         }
       `;
       document.head.appendChild(style);
-<<<<<<< HEAD
     }
-=======
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0}
-      `
-      document.head.appendChild(style)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements
       const buttons = document.querySelectorAll('button:not([aria-label])')
@@ -147,7 +100,6 @@ const EnhancedAccessibility: React.FC = () => {
     // Listen for system preference changes
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const handleChange = () => {
-<<<<<<< HEAD
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }));
     }
     mediaQuery.addEventListener('change', handleChange);
@@ -169,39 +121,12 @@ const EnhancedAccessibility: React.FC = () => {
     enhanceFocusManagement();
     addAriaLabels();
     setupKeyboardNavigation();
-=======
-    };
-
-    applyAccessibilityEnhancements();
-
-    // Listen for preference changes
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
-    };
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-
-    motionMediaQuery.addEventListener('change', handleMotionChange);
-    contrastMediaQuery.addEventListener('change', handleContrastChange);
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
     return () => {
-<<<<<<< HEAD
       // Cleanup if needed;
     }
-=======
-      motionMediaQuery.removeEventListener('change', handleMotionChange);
-      contrastMediaQuery.removeEventListener('change', handleContrastChange);
-    };
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   }, []);
 
-=======
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))}
     mediaQuery.addEventListener('change', handleChange)
     const setupKeyboardNavigation = () => {
@@ -220,9 +145,7 @@ const EnhancedAccessibility: React.FC = () => {
     // Cleanup
     return () => {
       // Cleanup if needed}}, [])
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   useEffect(() => {
-<<<<<<< HEAD
     applyAccessibilitySettings(settings)
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
@@ -239,7 +162,6 @@ const EnhancedAccessibility: React.FC = () => {
 
     // Apply reduced motion
     if (settings.reducedMotion) {
-<<<<<<< HEAD
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -254,17 +176,6 @@ const EnhancedAccessibility: React.FC = () => {
   const toggleVisibility = () => {
     setIsVisible(prev => !prev);
   }
-=======
-      root.classList.add('reduced-motion')} else {
-      root.classList.remove('reduced-motion')}
-  }
-  const toggleHighContrast = () => {
-    setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
-  const setFontSize = (size: AccessibilitySettings['fontSize']) => {
-    setSettings(prev => ({ ...prev, fontSize: size }))}
-  const toggleVisibility = () => {
-    setIsVisible(prev => !prev)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   // Add CSS for accessibility features
   useEffect(() => {
     const style = document.createElement('style')
@@ -327,16 +238,11 @@ const EnhancedAccessibility: React.FC = () => {
     return () => {
       const existingStyle = document.getElementById('enhanced-accessibility-styles')
       if (existingStyle) {
-<<<<<<< HEAD
         existingStyle.remove();
       }
     }
   }, []);
 
-=======
-        existingStyle.remove()}
-    }}, [])
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       <button
@@ -401,15 +307,9 @@ const EnhancedAccessibility: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default EnhancedAccessibility;
-=======
-  )}
-export default EnhancedAccessibility
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
     // Apply high contrast mode
     if (isHighContrast) {
       document.documentElement.style.setProperty('--tw-bg-opacity', '1');
@@ -486,4 +386,3 @@ export default EnhancedAccessibility
 };
 
 export default EnhancedAccessibility;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

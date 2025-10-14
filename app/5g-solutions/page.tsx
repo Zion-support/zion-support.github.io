@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'
-=======
-import React from 'react';'
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -29,56 +23,31 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
-<<<<<<< HEAD
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 '
       title: 'IoT Connectivity','
       description: 'Connect thousands of IoT devices with 5G technology','
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
     }
   ]
   const solutions = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
-<<<<<<< HEAD
       title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
-=======
-      description: 'Complete 5G network setup and optimization',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-=======
 '
       title: '5G Network Infrastructure','
       description: 'Complete 5G network setup and optimization','
       price: 'Starting at $50,000','
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     },
     {'
       title: '5G Mobile Applications','
@@ -91,22 +60,11 @@ title: 'IoT Connectivity',
       description: 'IoT device connectivity and management platform','
       price: 'Starting at $35,000','
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   return (
@@ -163,13 +121,8 @@ title: 'IoT Connectivity',
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-<<<<<<< HEAD
               const IconComponent = feature.icon
               return (
-=======
-              const IconComponent = feature.icon;
-              return (}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
@@ -239,17 +192,9 @@ title: 'IoT Connectivity',
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
 export default FiveGSolutionsPage;
-=======
-  )}
-export default FiveGSolutionsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
 export default FiveGSolutionsPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

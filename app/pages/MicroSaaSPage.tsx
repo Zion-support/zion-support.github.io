@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -48,12 +47,6 @@ export default function MicroSaaSPage() {
     { name: 'Real Estate', description: 'Property management tools' },
     { name: 'Manufacturing', description: 'Production optimization' }
   ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const MicroSaaSPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -68,11 +61,4 @@ const MicroSaaSPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-};
-
-export default MicroSaaSPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

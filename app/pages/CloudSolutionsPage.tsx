@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -48,12 +47,6 @@ export default function CloudSolutionsPage() {
     { name: 'Oracle Cloud', logo: 'Oracle' },
     { name: 'DigitalOcean', logo: 'DO' }
   ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const CloudSolutionsPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -68,11 +61,4 @@ const CloudSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-};
-
-export default CloudSolutionsPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

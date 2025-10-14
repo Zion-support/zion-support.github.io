@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -13,36 +12,9 @@ const Header: React.FC = () => {
       ]},
     { name: 'Solutions', href: '/solutions' },'{ name: 'Case Studies', href: '/case-studies' },'{ name: 'Blog', href: '/blog' },'{ name: 'Contact', href: '/contact' }'
   ]
-=======
-import React from 'react';'
-{ useState } from 'react';'
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
-const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-'}
-  const navigationItems = [{ name: 'Home', href: '/' },';'
-    { name: 'About', href: '/about' },';
-    { '
-      name: 'Services',';'
-      href: '/services',';'}
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';'
-        { name: 'IT Services', href: '/it-services' },';'
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';'
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
-    },'
-    { name: 'Solutions', href: '/solutions' },';'
-    { name: 'Case Studies', href: '/case-studies' },';'
-    { name: 'Blog', href: '/blog' },';'
-    { name: 'Contact', href: '/contact' }';
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -51,17 +23,10 @@ const Header: React.FC = () => {
             </Link>
           </div>
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-=======
-          <div className="hidden md:block">;
-            <div className="ml-10 flex items-baseline space-x-4">;
-              {navigationItems.map((item) => (}
-                <div key={item.name} className="relative group">;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   <Link;
                     to={item.href}
                     className="$1"
@@ -81,7 +46,6 @@ const Header: React.FC = () => {
                           className="$1"
                         >
                           {subItem.name}
-=======
         <div className="flex justify-between items-center h-16">{/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-white">
@@ -103,14 +67,12 @@ const Header: React.FC = () => {
                           key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">{subItem.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                         </Link>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
             </div>
           </div>
           {/* CTA Button */}
@@ -134,17 +96,10 @@ const Header: React.FC = () => {
         </div>
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-=======
-          <div className="md:hidden">;
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;
-              {navigationItems.map((item) => (}
-                <div key={item.name}>;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
                   <Link;
                     to={item.href}
                     className="$1"
@@ -162,7 +117,6 @@ const Header: React.FC = () => {
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-=======
             </div></div>{/* CTA Button */}
           <div className="hidden md:block">
             <Link
@@ -191,7 +145,6 @@ const Header: React.FC = () => {
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
                           onClick={() => setIsOpen(false)}
                         >{subItem.name}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                         </Link>
                       ))}
                     </div>
@@ -199,7 +152,6 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4">
-<<<<<<< HEAD
                 <Link;
                   to="$1"
                   className="$1"
@@ -214,23 +166,8 @@ const Header: React.FC = () => {
       </div>
     </nav>
   );
-<<<<<<< HEAD
 }
 export default Header;
-=======
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started</Link></div></div></div>
-        )}
-      </div></nav>
-  )}
-export default Header
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
 export default Header;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

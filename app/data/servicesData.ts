@@ -19,13 +19,8 @@ export interface Service {
     email: string;
     website: string;}
   };
-<<<<<<< HEAD
   href: string;
   glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';
-=======
-  href: string;'
-  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 }
 
 export const services: Service[] = [

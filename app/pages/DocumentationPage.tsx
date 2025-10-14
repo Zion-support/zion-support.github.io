@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -65,12 +64,6 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const DocumentationPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
@@ -83,7 +76,6 @@ const DocumentationPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-4">DocumentationPage</h1>
           <p className="text-gray-300">This page is under construction.</p>
         </div>
-<<<<<<< HEAD
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -292,11 +284,3 @@ console.log(response.data);`}</code>
       </section>
     </>
   )}
-=======
-      </div>
-    </>
-  );
-};
-
-export default DocumentationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

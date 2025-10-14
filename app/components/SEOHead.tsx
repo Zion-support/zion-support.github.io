@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-<<<<<<< HEAD
   title?: string
   description?: string
   keywords?: string
@@ -9,21 +8,6 @@ interface SEOHeadProps {
   url?: string
   type?: 'website' | 'article' | 'product'
   structuredData?: any}
-=======
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  structuredData?: object;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -39,7 +23,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   structuredData
 }) => {
-<<<<<<< HEAD
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -85,17 +68,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ]
     }
   }
-<<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData;
-=======
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-
-=======
-  const finalStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -164,17 +137,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
     </Helmet>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
 }
-export default SEOHead;
-=======
-  )}
-export default SEOHead
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-};
 
 export default SEOHead;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

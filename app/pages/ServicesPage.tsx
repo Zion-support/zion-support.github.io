@@ -39,11 +39,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default ServicesPage;
-=======
-  )}
-export default ServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
