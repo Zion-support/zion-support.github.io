@@ -7,10 +7,12 @@ import fs from 'fs;
   '';
   '';
   '';
-  console.error('Error:'';
+  console.error(
+  'Error:'';
     let content = fs.readFileSync(filePath, 'utf8'';
     if (content.includes('';
         '';
         '';
 console.log('Fixing Zion AI pages structure...'';
-console.log('Done!'';
+)
+console.log('Done!'';)

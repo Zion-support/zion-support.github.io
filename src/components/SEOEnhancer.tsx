@@ -1,67 +1,62 @@
 import React from 'react';
-import { Node } from 'react;
 import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  noIndex?: boolean;
-  structuredData?: unknown;
-  children?: Node;
-}
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title,
-  description,
-  keywords,
-  noIndex = false,
-  structuredData,
-  children;
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading AI and IT solutions provider",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service";
-    }
-  }
-  const finalStructuredData = structuredData || defaultStructuredData;
-
+export default function SEOEnhancer() {
   return (
-    <.Fragment>
+    <>
       <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />';
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        {/* Twitter d Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(finalStructuredData)}
-      {children}
+        <title>SEOEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional seoenhancer services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              SEOEnhancer
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional seoenhancer services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
-export default SEOEnhancer;

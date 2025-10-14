@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const PrivacyPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>PrivacyPage - Zion Tech Group</title>
         <meta name="description" content="PrivacyPage - Zion Tech Group" />
       </Helmet>
@@ -14,12 +14,9 @@ const PrivacyPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
+)
+    </>)
   );
 }
-export default PrivacyPage;
-=======
-  )}
-export default PrivacyPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}
+export default PrivacyPag;e;

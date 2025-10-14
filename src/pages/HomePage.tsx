@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Page: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta;
           name="$1"
@@ -22,13 +22,13 @@ const Page: React.FC = () => {
             <div className="flex justify-center space-x-4">
               <a;
                 href="$1"
-                className="$1"
+                className="service-card"
               >
                 Get Started;
               </a>
               <a;
                 href="$1"
-                className="$1"
+                className="service-card"
               >
                 Our Solutions;
               </a>
@@ -64,14 +64,16 @@ const Page: React.FC = () => {
             </p>
             <a;
               href="$1"
-              className="$1"
+              className="service-card"
             >
               Contact Us;
             </a>
           </section>
         </main>
       </div>
-    </>
+)
+    </>)
   );
 }
-export default Page;
+}
+export default Pag;e;

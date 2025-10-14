@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function FixCorruptedPages.js() {
+export default function FixRemainingCorrupted.js() {
   return (
     <>
       <Helmet>
-        <title>Fix Corrupted Pages.js - Zion Tech Group</title>
-        <meta name="description" content="Professional fix corrupted pages.js services by Zion Tech Group." />
+        <title>Fix Remaining Corrupted.js - Zion Tech Group</title>
+        <meta name="description" content="Professional fix remaining corrupted.js services by Zion Tech Group." />
       </Helmet>
       
       <div className="min-h-screen bg-white">
@@ -14,10 +14,10 @@ export default function FixCorruptedPages.js() {
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Fix Corrupted Pages.js
+              Fix Remaining Corrupted.js
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional fix corrupted pages.js services by Zion Tech Group.
+              Professional fix remaining corrupted.js services by Zion Tech Group.
             </p>
           </div>
         </section>

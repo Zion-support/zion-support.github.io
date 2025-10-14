@@ -46,28 +46,29 @@ const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-
   useEffect(() => {
     // Initialize app;
     const initApp = async () => {
       try {
         // Add any initialization logic here;
         setIsInitialized(true);
+}
       } catch (_error) {
-        console._error(&apos;Failed to initialize app:&apos;, _error);
+  console._error(&apos;Failed to initialize app:&apos;, _error);
         setIsInitialized(true); // Still show the app even if initialization fails;
+}
       }
     }
     initApp();
   }, []);
-
   if (!isInitialized) {
-    return <LoadingSpinner />
+  return <LoadingSpinner /></LoadingSpinner>
+}
   }
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           </>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+          <Suspense fallback={<LoadingSpinner /></Suspense>}>
+            <Routes></Routes>
               {/* Main Pages */}
               <Route path="/" element={<Page />} />
               {/* Company Pages */}
@@ -115,5 +116,5 @@ const App: React.FC = () => {
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
-          <Footer />
+          <Footer /></Footer>
         </div>

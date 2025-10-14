@@ -1,7 +1,7 @@
-export default function AiSalesAutomation() {
+export default function Component; AiSalesAutomation() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-      <Helmet>
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <Helmet></Helmet>
         <title>AiSalesAutomation - Zion Tech Group</title>
         <meta name="description" content="Advanced aisalesautomation solutions" />
       </Helmet>
@@ -14,6 +14,10 @@ export default function AiSalesAutomation() {
             Discover our comprehensive aisalesautomation solutions designed to transform your business;
           </p>;
       </div>;
-    </div>;
+)
+)
+    </div>;)
   );
+}
+}
 }

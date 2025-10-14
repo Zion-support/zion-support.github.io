@@ -1,18 +1,17 @@
 import { Helmet } from 'react-helmet-async';
-import { Circle, Right, } from 'lucide-react';
-
-      description: 'Worldwide deployment and support for international businesses',}}
+import { Circle, Right, } from 'lucide-react';,
+  description: 'Worldwide deployment and support for international businesses',}}
   ]
   ];];];
 const benefits = [
-    'Proven track record of success'
+  'Proven track record of success'
+]
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-
+      <Helmet /></Helmet>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
@@ -29,3 +28,5 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
+)
+)

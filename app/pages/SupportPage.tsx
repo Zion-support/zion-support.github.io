@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const SupportPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>SupportPage - Zion Tech Group</title>
         <meta name="description" content="SupportPage - Zion Tech Group" />
       </Helmet>
@@ -14,12 +14,9 @@ const SupportPage: React.FC = () => {
           <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
+)
+    </>)
   );
 }
-export default SupportPage;
-=======
-  )}
-export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}
+export default SupportPag;e;
