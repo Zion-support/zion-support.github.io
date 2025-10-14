@@ -14,7 +14,8 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             </span>
             <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
               Sep    30, 2025
-            </div>
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
@@ -23,6 +24,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             scorecard.    Prevent    regressions with budgets, gates, and instant
             rollback.</p>
           </div>
+        </div>
       </section>
 
       <section className="py-12">
@@ -53,7 +55,8 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               <li>
                 <strong className="text-white">Value   :</strong> conversion
                 uplift, time saved, NPS changes, $ ROI.
-              </ul>
+              </li>
+            </ul>
           </div>
 
           <div>
@@ -69,5 +72,3 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 }
 
 export default OperationalTrustScorecardsPage;
-
-</li>

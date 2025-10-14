@@ -152,6 +152,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Services Grid */}
@@ -162,7 +163,7 @@ const PagePage = () => {
               Our Mobile Development Services
             </h2>
             <p>Comprehensive AI-powered mobile app development and support services</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {mobileServices.map((service, index) => (
@@ -207,6 +208,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Features Section */}
@@ -217,7 +219,7 @@ const PagePage = () => {
               Why Choose Our Mobile Development?
             </h2>
             <p>Advanced AI technology with expert mobile development expertise</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {mobileFeatures.map((feature, index) => (
@@ -228,6 +230,7 @@ const PagePage = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Success Stories */}
@@ -238,7 +241,7 @@ const PagePage = () => {
               Success Stories
             </h2>
             <p>Real results from our mobile app development clients</p>
-            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
@@ -261,6 +264,8 @@ const PagePage = () => {
               <div className="font-semibold text-gray-900">Robert Johnson</div>
               <div className="text-sm text-gray-500">CTO, ServicePro</div>
             </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
