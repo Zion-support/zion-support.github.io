@@ -33,13 +33,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false };
   }
 
-import React, { Suspense } from 'react';
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-import React, { Suspense } from 'react';
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -64,11 +62,9 @@ function App() {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
-import React, { Suspense } from 'react';
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
     onCLS((metric) => {
       if (process.env.NODE_ENV === 'development') {
-import React, { Suspense } from 'react';
         console.warn('CLS:', metric);
       }
     });
@@ -93,8 +89,6 @@ import React, { Suspense } from 'react';
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
         if (process.env.NODE_ENV === 'development') {
           console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
