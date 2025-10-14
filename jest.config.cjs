@@ -1,16 +1,7 @@
 module.exports = {
   testEnvironment: 'jsdom',
-<<<<<<< HEAD
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-=======
-<<<<<<< HEAD
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-=======
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
->>>>>>> cursor/fix-errors-and-merge-to-main-e238
   moduleNameMapper: {
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^@/pages/(.*)$': '<rootDir>/src/pages/$1',

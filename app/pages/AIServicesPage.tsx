@@ -6,7 +6,5 @@ export default function AIServicesPage() {
         <h1 className="text-4xl font-bold text-white mb-8">AIServicesPage</h1>
         <p className="text-gray-300 text-lg">This page is under construction.</p>
       </div>
-    </div>
-  );
+    </div>);
 }
-
