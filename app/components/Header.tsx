@@ -1,10 +1,11 @@
 import React from "react";
 
-const Header = () => {
+type HeaderProps = Record<string, unknown>;
+
+const Header: React.FC<HeaderProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">Header</h2>
-      <p>This component is under construction.</p>
+    <div className="header">
+      {/* Component content */}
     </div>
   );
 };

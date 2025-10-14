@@ -1,10 +1,11 @@
 import React from "react";
 
-const LoadingSpinner = () => {
+type LoadingSpinnerProps = Record<string, unknown>;
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LoadingSpinner</h2>
-      <p>This component is under construction.</p>
+    <div className="loadingspinner" data-testid="loading-spinner">
+      {/* Component content */}
     </div>
   );
 };

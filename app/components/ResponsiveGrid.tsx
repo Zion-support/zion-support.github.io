@@ -1,10 +1,11 @@
 import React from "react";
 
-const ResponsiveGrid = () => {
+type ResponsiveGridProps = Record<string, unknown>;
+
+const ResponsiveGrid: React.FC<ResponsiveGridProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ResponsiveGrid</h2>
-      <p>This component is under construction.</p>
+    <div className="responsivegrid">
+      {/* Component content */}
     </div>
   );
 };

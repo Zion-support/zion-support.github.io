@@ -1,10 +1,11 @@
 import React from "react";
 
-const ResponsiveContainer = () => {
+type ResponsiveContainerProps = Record<string, unknown>;
+
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ResponsiveContainer</h2>
-      <p>This component is under construction.</p>
+    <div className="responsivecontainer">
+      {/* Component content */}
     </div>
   );
 };

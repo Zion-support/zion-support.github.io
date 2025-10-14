@@ -1,11 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface AccessibilityEnhancerProps {
-  children: ReactNode;
-}
+type AccessibilityEnhancerProps = Record<string, unknown>;
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
+  return (
+    <div className="accessibilityenhancer">
+      {/* Component content */}
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;

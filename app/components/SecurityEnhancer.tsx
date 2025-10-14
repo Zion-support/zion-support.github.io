@@ -1,10 +1,11 @@
 import React from "react";
 
-const SecurityEnhancer = () => {
+type SecurityEnhancerProps = Record<string, unknown>;
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SecurityEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className="securityenhancer">
+      {/* Component content */}
     </div>
   );
 };

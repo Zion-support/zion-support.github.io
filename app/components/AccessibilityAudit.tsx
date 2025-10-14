@@ -1,10 +1,11 @@
 import React from "react";
 
-const AccessibilityAudit = () => {
+type AccessibilityAuditProps = Record<string, unknown>;
+
+const AccessibilityAudit: React.FC<AccessibilityAuditProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AccessibilityAudit</h2>
-      <p>This component is under construction.</p>
+    <div className="accessibilityaudit">
+      {/* Component content */}
     </div>
   );
 };

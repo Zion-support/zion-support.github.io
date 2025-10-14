@@ -1,11 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface MetaManagerProps {
-  children: ReactNode;
-}
+type MetaManagerProps = Record<string, unknown>;
 
-const MetaManager: React.FC<MetaManagerProps> = ({ children }) => {
-  return <>{children}</>;
+const MetaManager: React.FC<MetaManagerProps> = () => {
+  return (
+    <div className="metamanager">
+      {/* Component content */}
+    </div>
+  );
 };
 
 export default MetaManager;

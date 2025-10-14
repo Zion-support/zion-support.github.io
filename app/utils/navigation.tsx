@@ -1,5 +1,4 @@
-// navigationx utility
-export const navigationx = () => {
-  // Implementation here
+// navigation - Basic implementation
+export default function Navigation() {
   return null;
-};
+}

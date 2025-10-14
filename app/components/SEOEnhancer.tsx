@@ -1,16 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface SEOEnhancerProps {
-  children: ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  type?: string;
-  structuredData?: Record<string, unknown>;
-}
+type SEOEnhancerProps = Record<string, unknown>;
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
+const SEOEnhancer: React.FC<SEOEnhancerProps> = () => {
+  return (
+    <div className="seoenhancer">
+      {/* Component content */}
+    </div>
+  );
 };
 
 export default SEOEnhancer;

@@ -1,10 +1,11 @@
 import React from "react";
 
-const PerformanceEnhancer = () => {
+type PerformanceEnhancerProps = Record<string, unknown>;
+
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PerformanceEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className="performanceenhancer">
+      {/* Component content */}
     </div>
   );
 };

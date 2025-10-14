@@ -1,10 +1,11 @@
 import React from "react";
 
-const FuturisticTextEnhanced = () => {
+type FuturisticTextEnhancedProps = Record<string, unknown>;
+
+const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">FuturisticTextEnhanced</h2>
-      <p>This component is under construction.</p>
+    <div className="futuristictextenhanced">
+      {/* Component content */}
     </div>
   );
 };

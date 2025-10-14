@@ -1,10 +1,11 @@
 import React from "react";
 
-const ImprovedFooter = () => {
+type ImprovedFooterProps = Record<string, unknown>;
+
+const ImprovedFooter: React.FC<ImprovedFooterProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ImprovedFooter</h2>
-      <p>This component is under construction.</p>
+    <div className="improvedfooter">
+      {/* Component content */}
     </div>
   );
 };

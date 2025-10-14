@@ -1,10 +1,11 @@
 import React from "react";
 
-const FuturisticServiceCard = () => {
+type FuturisticServiceCardProps = Record<string, unknown>;
+
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">FuturisticServiceCard</h2>
-      <p>This component is under construction.</p>
+    <div className="futuristicservicecard">
+      {/* Component content */}
     </div>
   );
 };

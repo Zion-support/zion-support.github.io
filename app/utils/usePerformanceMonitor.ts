@@ -1,4 +1,4 @@
-// UsePerformanceMonitor - Basic implementation
-export default function UsePerformanceMonitor() {
-  return null;
-}
+// Utility functions
+export const utilityFunction = () => {
+  // Implementation
+};

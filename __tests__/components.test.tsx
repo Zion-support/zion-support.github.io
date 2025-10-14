@@ -6,7 +6,7 @@ import SEOEnhancer from "../app/components/SEOEnhancer";
 describe("Component Tests", () => {
   test("LoadingSpinner renders correctly", () => {
     render(<LoadingSpinner />);
-    expect(screen.getByText("LoadingSpinner")).toBeInTheDocument();
+    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
   });
   test("SEOEnhancer renders without crashing", () => {
     render(

@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdvertisingBanner = () => {
+type AdvertisingBannerProps = Record<string, unknown>;
+
+const AdvertisingBanner: React.FC<AdvertisingBannerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdvertisingBanner</h2>
-      <p>This component is under construction.</p>
+    <div className="advertisingbanner">
+      {/* Component content */}
     </div>
   );
 };

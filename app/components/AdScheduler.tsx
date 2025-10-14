@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdScheduler = () => {
+type AdSchedulerProps = Record<string, unknown>;
+
+const AdScheduler: React.FC<AdSchedulerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdScheduler</h2>
-      <p>This component is under construction.</p>
+    <div className="adscheduler">
+      {/* Component content */}
     </div>
   );
 };

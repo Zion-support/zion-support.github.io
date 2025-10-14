@@ -1,10 +1,11 @@
 import React from "react";
 
-const FuturisticBackground = () => {
+type FuturisticBackgroundProps = Record<string, unknown>;
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">FuturisticBackground</h2>
-      <p>This component is under construction.</p>
+    <div className="futuristicbackground">
+      {/* Component content */}
     </div>
   );
 };

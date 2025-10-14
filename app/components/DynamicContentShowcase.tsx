@@ -1,10 +1,11 @@
 import React from "react";
 
-const DynamicContentShowcase = () => {
+type DynamicContentShowcaseProps = Record<string, unknown>;
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">DynamicContentShowcase</h2>
-      <p>This component is under construction.</p>
+    <div className="dynamiccontentshowcase">
+      {/* Component content */}
     </div>
   );
 };

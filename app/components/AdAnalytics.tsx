@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdAnalytics = () => {
+type AdAnalyticsProps = Record<string, unknown>;
+
+const AdAnalytics: React.FC<AdAnalyticsProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdAnalytics</h2>
-      <p>This component is under construction.</p>
+    <div className="adanalytics">
+      {/* Component content */}
     </div>
   );
 };

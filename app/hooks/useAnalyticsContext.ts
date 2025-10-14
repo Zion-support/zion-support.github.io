@@ -1,2 +1,12 @@
-import { useAnalytics as useAnalyticsHook } from "../contexts/AnalyticsContext";
-export const useAnalytics = useAnalyticsHook;
+import { useState, useEffect } from 'react';
+
+export const useAnalyticsContext = () => {
+  const [data, setData] = useState<Record<string, unknown> | null>(null);
+  
+  useEffect(() => {
+    // Hook logic
+    setData({});
+  }, []);
+  
+  return { data };
+};

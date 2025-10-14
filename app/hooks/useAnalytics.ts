@@ -1,12 +1,12 @@
-import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import { useState, useEffect } from 'react';
 
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+  const [data, setData] = useState<Record<string, unknown> | null>(null);
   
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
+  useEffect(() => {
+    // Hook logic
+    setData({});
+  }, []);
   
-  return context;
+  return { data };
 };

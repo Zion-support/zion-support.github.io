@@ -1,10 +1,11 @@
 import React from "react";
 
-const ImprovedNavigation = () => {
+type ImprovedNavigationProps = Record<string, unknown>;
+
+const ImprovedNavigation: React.FC<ImprovedNavigationProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
-      <p>This component is under construction.</p>
+    <div className="improvednavigation">
+      {/* Component content */}
     </div>
   );
 };
