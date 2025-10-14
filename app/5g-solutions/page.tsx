@@ -1,16 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function PagePage() {
+export default function FiveGSolutionsPage() {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description" content="PagePage - Zion Tech Group" />
+        <title>5G Solutions - Zion Tech Group</title>
+        <meta name="description" content="5G Solutions - Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">5G Solutions</h1>
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
@@ -18,5 +18,4 @@ export default function PagePage() {
       </div>
     </>
   );
-};
-export default PagePage;
+}

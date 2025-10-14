@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 const TermsPage = () => {
   return (
     <>
@@ -16,7 +17,10 @@ const TermsPage = () => {
             </p>
             <p className="text-gray-300">
               For any legal questions, please contact us at kleber@ziontechgroup.com
-            </div>
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
