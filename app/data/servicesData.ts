@@ -71,6 +71,141 @@ export const services: Service[] = [
     glowColor: 'purple'
   },
   {
+    id: 'ai-code-assistant-pro',
+    title: 'AI Code Assistant Pro',
+    description: 'Intelligent code generation and assistance platform that helps developers write better code faster with AI-powered suggestions, debugging, and optimization.',
+    shortDescription: 'AI-powered coding assistant for developers',
+    category: 'AI',
+    icon: '💻',
+    features: [
+      'Code Generation & Completion',
+      'Bug Detection & Fixing',
+      'Code Review & Optimization',
+      'Multi-language Support',
+      'Documentation Generation',
+      'Test Case Creation',
+      'Security Vulnerability Scanning',
+      'Performance Analysis'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 499,
+      enterprise: 1299
+    },
+    benefits: [
+      'Increase coding speed by 40%',
+      'Reduce bugs and errors',
+      'Improve code quality',
+      'Automated testing',
+      'Better documentation'
+    ],
+    useCases: [
+      'Software Development',
+      'Code Review',
+      'Bug Fixing',
+      'Documentation',
+      'Testing'
+    ],
+    technologies: ['GPT-4', 'Codex', 'Python', 'JavaScript', 'TypeScript', 'GitHub'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-code-assistant-pro'
+    },
+    href: '/ai-code-assistant-pro',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'ai-marketing-automation',
+    title: 'AI Marketing Automation Suite',
+    description: 'Comprehensive AI-powered marketing automation platform that personalizes customer experiences, optimizes campaigns, and drives conversions.',
+    shortDescription: 'AI-driven marketing automation for better conversions',
+    category: 'AI',
+    icon: '📈',
+    features: [
+      'Personalized Email Campaigns',
+      'Behavioral Targeting',
+      'Predictive Analytics',
+      'A/B Testing Automation',
+      'Lead Scoring',
+      'Customer Journey Mapping',
+      'Social Media Automation',
+      'ROI Optimization'
+    ],
+    pricing: {
+      basic: 399,
+      pro: 899,
+      enterprise: 2499
+    },
+    benefits: [
+      'Increase conversion rates by 35%',
+      'Reduce marketing costs by 50%',
+      'Personalized customer experiences',
+      'Automated campaign optimization',
+      'Better lead qualification'
+    ],
+    useCases: [
+      'Email Marketing',
+      'Social Media Management',
+      'Lead Nurturing',
+      'Customer Retention',
+      'Campaign Optimization'
+    ],
+    technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'MongoDB', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-marketing-automation'
+    },
+    href: '/ai-marketing-automation',
+    glowColor: 'pink'
+  },
+  {
+    id: 'ai-cybersecurity-monitor-pro',
+    title: 'AI Cybersecurity Monitor Pro',
+    description: 'Advanced AI-powered cybersecurity monitoring system that detects threats in real-time, analyzes patterns, and provides automated incident response.',
+    shortDescription: 'AI-powered cybersecurity threat detection and response',
+    category: 'AI',
+    icon: '🔒',
+    features: [
+      'Real-time Threat Detection',
+      'Behavioral Analysis',
+      'Automated Incident Response',
+      'Threat Intelligence Integration',
+      'Anomaly Detection',
+      'Security Orchestration',
+      'Compliance Monitoring',
+      '24/7 AI Monitoring'
+    ],
+    pricing: {
+      basic: 799,
+      pro: 1999,
+      enterprise: 4999
+    },
+    benefits: [
+      'Detect threats 10x faster',
+      'Reduce false positives by 80%',
+      'Automated response to incidents',
+      'Continuous monitoring',
+      'Better compliance reporting'
+    ],
+    useCases: [
+      'Threat Detection',
+      'Incident Response',
+      'Compliance Management',
+      'Security Monitoring',
+      'Risk Assessment'
+    ],
+    technologies: ['Machine Learning', 'SIEM', 'SOAR', 'Python', 'Elasticsearch', 'Kafka'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-cybersecurity-monitor-pro'
+    },
+    href: '/ai-cybersecurity-monitor-pro',
+    glowColor: 'purple'
+  },
+  {
     id: 'ai-content-generation-pro',
     title: 'AI Content Generation Pro',
     description: 'Revolutionary AI-powered content creation platform that generates high-quality articles, marketing copy, social media posts, and technical documentation.',
@@ -208,6 +343,231 @@ export const services: Service[] = [
     glowColor: 'blue'
   },
   {
+    id: 'social-media-scheduler',
+    title: 'Social Media Scheduler Pro',
+    description: 'Advanced social media management platform that allows businesses to schedule, analyze, and optimize their social media presence across all major platforms.',
+    shortDescription: 'Complete social media management and scheduling platform',
+    category: 'SaaS',
+    icon: '📱',
+    features: [
+      'Multi-platform Scheduling',
+      'Content Calendar',
+      'Analytics & Insights',
+      'Hashtag Research',
+      'Auto-posting',
+      'Team Collaboration',
+      'Content Library',
+      'Competitor Analysis'
+    ],
+    pricing: {
+      basic: 49,
+      pro: 149,
+      enterprise: 399
+    },
+    benefits: [
+      'Save 10+ hours per week',
+      'Increase engagement by 60%',
+      'Better content planning',
+      'Detailed analytics',
+      'Team coordination'
+    ],
+    useCases: [
+      'Social Media Marketing',
+      'Content Planning',
+      'Brand Management',
+      'Community Building',
+      'Influencer Marketing'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Social APIs', 'Redis', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/social-media-scheduler'
+    },
+    href: '/social-media-scheduler',
+    glowColor: 'pink'
+  },
+  {
+    id: 'email-marketing-automation',
+    title: 'Email Marketing Automation',
+    description: 'Powerful email marketing platform with advanced automation, segmentation, and analytics to help businesses grow their email lists and increase conversions.',
+    shortDescription: 'Advanced email marketing with automation and analytics',
+    category: 'SaaS',
+    icon: '📧',
+    features: [
+      'Drag & Drop Email Builder',
+      'Advanced Automation Workflows',
+      'List Segmentation',
+      'A/B Testing',
+      'Analytics & Reporting',
+      'Landing Page Builder',
+      'Lead Magnets',
+      'Integration with 100+ tools'
+    ],
+    pricing: {
+      basic: 79,
+      pro: 199,
+      enterprise: 599
+    },
+    benefits: [
+      'Increase email open rates by 40%',
+      'Automate lead nurturing',
+      'Better subscriber segmentation',
+      'Detailed performance analytics',
+      'Easy integration'
+    ],
+    useCases: [
+      'Lead Nurturing',
+      'Customer Retention',
+      'Product Launches',
+      'Newsletter Management',
+      'E-commerce Marketing'
+    ],
+    technologies: ['React', 'Node.js', 'MongoDB', 'SendGrid', 'Stripe', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/email-marketing-automation'
+    },
+    href: '/email-marketing-automation',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'invoicing-billing-saas',
+    title: 'Invoicing & Billing SaaS',
+    description: 'Complete invoicing and billing solution for freelancers, agencies, and small businesses with automated invoicing, payment processing, and financial reporting.',
+    shortDescription: 'Complete invoicing and billing solution for businesses',
+    category: 'SaaS',
+    icon: '💰',
+    features: [
+      'Professional Invoice Templates',
+      'Automated Recurring Billing',
+      'Payment Processing',
+      'Expense Tracking',
+      'Financial Reporting',
+      'Client Portal',
+      'Tax Calculations',
+      'Multi-currency Support'
+    ],
+    pricing: {
+      basic: 29,
+      pro: 79,
+      enterprise: 199
+    },
+    benefits: [
+      'Get paid 50% faster',
+      'Reduce billing errors',
+      'Automated payment reminders',
+      'Professional invoices',
+      'Better cash flow management'
+    ],
+    useCases: [
+      'Freelancer Billing',
+      'Agency Management',
+      'Small Business Invoicing',
+      'Subscription Billing',
+      'Project-based Billing'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'PDF Generation', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/invoicing-billing-saas'
+    },
+    href: '/invoicing-billing-saas',
+    glowColor: 'green'
+  },
+  {
+    id: 'team-communication-saas',
+    title: 'Team Communication SaaS',
+    description: 'Modern team communication platform with chat, video calls, file sharing, and project collaboration tools designed for remote and hybrid teams.',
+    shortDescription: 'Complete team communication and collaboration platform',
+    category: 'SaaS',
+    icon: '💬',
+    features: [
+      'Real-time Messaging',
+      'Video & Voice Calls',
+      'File Sharing & Storage',
+      'Screen Sharing',
+      'Project Channels',
+      'Task Management',
+      'Mobile Apps',
+      'Integration Hub'
+    ],
+    pricing: {
+      basic: 99,
+      pro: 249,
+      enterprise: 599
+    },
+    benefits: [
+      'Improve team collaboration',
+      'Reduce email overload',
+      'Better project visibility',
+      'Seamless communication',
+      'Mobile accessibility'
+    ],
+    useCases: [
+      'Remote Team Management',
+      'Project Collaboration',
+      'Client Communication',
+      'Internal Messaging',
+      'Team Meetings'
+    ],
+    technologies: ['React', 'Node.js', 'Socket.io', 'WebRTC', 'MongoDB', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/team-communication-saas'
+    },
+    href: '/team-communication-saas',
+    glowColor: 'blue'
+  },
+  {
+    id: 'analytics-dashboard-saas',
+    title: 'Analytics Dashboard SaaS',
+    description: 'Comprehensive business analytics platform that aggregates data from multiple sources and provides real-time insights, custom dashboards, and automated reporting.',
+    shortDescription: 'Business intelligence and analytics dashboard platform',
+    category: 'SaaS',
+    icon: '📊',
+    features: [
+      'Custom Dashboard Builder',
+      'Real-time Data Visualization',
+      'Multi-source Data Integration',
+      'Automated Reports',
+      'KPI Tracking',
+      'Alert System',
+      'White-label Options',
+      'API Access'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 499,
+      enterprise: 1299
+    },
+    benefits: [
+      'Make data-driven decisions',
+      'Save 20+ hours on reporting',
+      'Real-time insights',
+      'Custom dashboards',
+      'Automated alerts'
+    ],
+    useCases: [
+      'Business Intelligence',
+      'Performance Monitoring',
+      'Client Reporting',
+      'KPI Tracking',
+      'Data Visualization'
+    ],
+    technologies: ['React', 'D3.js', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/analytics-dashboard-saas'
+    },
+    href: '/analytics-dashboard-saas',
+    glowColor: 'yellow'
+  },
+  {
     id: 'crm-saas-platform',
     title: 'CRM SaaS Platform',
     description: 'Advanced Customer Relationship Management platform with lead tracking, sales pipeline management, and customer communication tools.',
@@ -342,6 +702,231 @@ export const services: Service[] = [
       website: 'https://ziontechgroup.com/cloud-migration-service'
     },
     href: '/cloud-migration-service',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'devops-automation-service',
+    title: 'DevOps Automation Service',
+    description: 'Complete DevOps transformation service that automates deployment pipelines, infrastructure management, and monitoring for faster, more reliable software delivery.',
+    shortDescription: 'Complete DevOps automation and CI/CD pipeline setup',
+    category: 'IT',
+    icon: '⚙️',
+    features: [
+      'CI/CD Pipeline Setup',
+      'Infrastructure as Code',
+      'Automated Testing',
+      'Container Orchestration',
+      'Monitoring & Alerting',
+      'Security Scanning',
+      'Performance Optimization',
+      '24/7 Support'
+    ],
+    pricing: {
+      basic: 8000,
+      pro: 20000,
+      enterprise: 60000
+    },
+    benefits: [
+      'Deploy 10x faster',
+      'Reduce deployment failures by 90%',
+      'Automated infrastructure management',
+      'Better monitoring and alerting',
+      'Improved team productivity'
+    ],
+    useCases: [
+      'Software Development',
+      'Application Deployment',
+      'Infrastructure Management',
+      'Quality Assurance',
+      'Performance Monitoring'
+    ],
+    technologies: ['Docker', 'Kubernetes', 'Jenkins', 'GitLab CI', 'Terraform', 'Prometheus'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/devops-automation-service'
+    },
+    href: '/devops-automation-service',
+    glowColor: 'green'
+  },
+  {
+    id: 'database-optimization-service',
+    title: 'Database Optimization Service',
+    description: 'Comprehensive database performance optimization service that improves query performance, reduces costs, and ensures high availability for your critical data.',
+    shortDescription: 'Database performance optimization and management service',
+    category: 'IT',
+    icon: '🗄️',
+    features: [
+      'Performance Analysis',
+      'Query Optimization',
+      'Index Optimization',
+      'Database Tuning',
+      'Backup & Recovery Setup',
+      'High Availability Configuration',
+      'Security Hardening',
+      'Monitoring & Alerting'
+    ],
+    pricing: {
+      basic: 3000,
+      pro: 8000,
+      enterprise: 25000
+    },
+    benefits: [
+      'Improve query performance by 80%',
+      'Reduce database costs by 50%',
+      'Better data security',
+      'High availability setup',
+      'Automated monitoring'
+    ],
+    useCases: [
+      'Database Performance',
+      'Data Management',
+      'Backup & Recovery',
+      'Security Compliance',
+      'Scalability Planning'
+    ],
+    technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/database-optimization-service'
+    },
+    href: '/database-optimization-service',
+    glowColor: 'blue'
+  },
+  {
+    id: 'api-development-service',
+    title: 'API Development Service',
+    description: 'Complete API development and management service that creates secure, scalable, and well-documented APIs for your applications and third-party integrations.',
+    shortDescription: 'Custom API development and management service',
+    category: 'IT',
+    icon: '🔌',
+    features: [
+      'RESTful API Development',
+      'GraphQL API Design',
+      'API Documentation',
+      'Rate Limiting & Throttling',
+      'Authentication & Authorization',
+      'API Testing & Validation',
+      'Monitoring & Analytics',
+      'Version Management'
+    ],
+    pricing: {
+      basic: 5000,
+      pro: 12000,
+      enterprise: 35000
+    },
+    benefits: [
+      'Secure and scalable APIs',
+      'Better third-party integrations',
+      'Comprehensive documentation',
+      'API monitoring and analytics',
+      'Faster development cycles'
+    ],
+    useCases: [
+      'Application Integration',
+      'Third-party Services',
+      'Mobile App Backend',
+      'Microservices Architecture',
+      'Data Exchange'
+    ],
+    technologies: ['Node.js', 'Python', 'Express', 'FastAPI', 'PostgreSQL', 'Redis'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/api-development-service'
+    },
+    href: '/api-development-service',
+    glowColor: 'purple'
+  },
+  {
+    id: 'mobile-app-development',
+    title: 'Mobile App Development',
+    description: 'Complete mobile application development service for iOS and Android platforms with modern technologies, beautiful UI/UX, and robust backend integration.',
+    shortDescription: 'Native and cross-platform mobile app development',
+    category: 'IT',
+    icon: '📱',
+    features: [
+      'Native iOS & Android Apps',
+      'Cross-platform Development',
+      'UI/UX Design',
+      'Backend Integration',
+      'Push Notifications',
+      'Offline Functionality',
+      'App Store Optimization',
+      'Maintenance & Support'
+    ],
+    pricing: {
+      basic: 15000,
+      pro: 35000,
+      enterprise: 75000
+    },
+    benefits: [
+      'Professional mobile apps',
+      'Cross-platform compatibility',
+      'Beautiful user interface',
+      'Robust backend integration',
+      'App store optimization'
+    ],
+    useCases: [
+      'Business Applications',
+      'E-commerce Apps',
+      'Social Media Apps',
+      'Productivity Tools',
+      'Gaming Applications'
+    ],
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'Firebase'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/mobile-app-development'
+    },
+    href: '/mobile-app-development',
+    glowColor: 'pink'
+  },
+  {
+    id: 'web-application-development',
+    title: 'Web Application Development',
+    description: 'Modern web application development service using cutting-edge technologies to create fast, secure, and scalable web applications for businesses.',
+    shortDescription: 'Modern web application development with latest technologies',
+    category: 'IT',
+    icon: '🌐',
+    features: [
+      'Responsive Web Design',
+      'Progressive Web Apps (PWA)',
+      'Single Page Applications',
+      'Server-side Rendering',
+      'API Integration',
+      'Database Design',
+      'Security Implementation',
+      'Performance Optimization'
+    ],
+    pricing: {
+      basic: 8000,
+      pro: 20000,
+      enterprise: 50000
+    },
+    benefits: [
+      'Modern, responsive web apps',
+      'Fast loading times',
+      'Mobile-friendly design',
+      'SEO optimization',
+      'Scalable architecture'
+    ],
+    useCases: [
+      'Business Websites',
+      'E-commerce Platforms',
+      'Web Applications',
+      'Portals & Dashboards',
+      'Content Management Systems'
+    ],
+    technologies: ['React', 'Next.js', 'Vue.js', 'Node.js', 'PostgreSQL', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/web-application-development'
+    },
+    href: '/web-application-development',
     glowColor: 'cyan'
   },
   {

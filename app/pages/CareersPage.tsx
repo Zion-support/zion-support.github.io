@@ -1,10 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const benefits = [{
       icon: Heart,
-      title: 'Health & Wellness',';
+      title: 'Health & Wellness',
       description: 'Comprehensive health insurance, mental health support, and wellness programs.'';
     },
     {
