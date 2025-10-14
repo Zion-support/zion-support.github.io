@@ -21,10 +21,12 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
-    {icon: Wifi,
+    {
+      icon: Wifi,
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']}
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+    }
   ];
   const solutions = [
     {
@@ -39,10 +41,12 @@ const FiveGSolutionsPage: React.FC = () => {
       price: 'Starting at $25,000',
       features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {title: '5G IoT Solutions',
+    {
+      title: '5G IoT Solutions',
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
-      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']}
+      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
+    }
   ];
   return (
     <>

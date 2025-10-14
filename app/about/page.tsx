@@ -3,12 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import {
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
   RocketLaunchIcon,
   CheckCircleIcon,
-  UsersIcon,
-  GlobeAltIcon,
-  ChartBarIcon
+  UsersIcon
 } from '@heroicons/react/24/outline';
 const AboutPage: React.FC = () => {
   return (
