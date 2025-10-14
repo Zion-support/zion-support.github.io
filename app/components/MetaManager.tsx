@@ -22,14 +22,14 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 }) => {
   useEffect(() => {
     // Update document title
-    if (title) => {
+    if (title) {
       document.title = title;
     }
 
     // Update meta description
-    if (description) => {
+      if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) => {
+        if (metaDescription) {
         metaDescription.setAttribute('content', description);
       } else {
         const meta = document.createElement('meta');
@@ -40,9 +40,9 @@ const MetaManager: React.FC<MetaManagerProps> = ({
     }
 
     // Update meta keywords
-    if (keywords) => {
+      if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) => {
+        if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
       } else {
         const meta = document.createElement('meta');

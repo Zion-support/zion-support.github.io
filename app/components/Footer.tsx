@@ -104,8 +104,6 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
-            </div>
-        </div>
           </div>
         </div>
 
@@ -128,10 +126,7 @@ const Footer: React.FC = () => {
                 Subscribe
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
 
