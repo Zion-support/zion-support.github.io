@@ -39,6 +39,7 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import CookiesPage from './app/pages/CookiesPage';
 // TODO: Add lazy imports for components when they are created
 
 // New Innovative Micro SAAS Services
@@ -59,18 +60,41 @@ function App() {
     if (typeof window !== 'undefined') {
       // Monitor Core Web Vitals
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS(() => {});
-        onFCP(() => {});
-        onLCP(() => {});
-        onTTFB(() => {});
+        onCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            // eslint-disable-next-line no-console
+            console.log('TTFB:', metric);
+          }
+        });
       });
 
       // Monitor bundle size
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            // Performance monitoring - no console output needed
-            // const navEntry = entry as PerformanceNavigationTiming;
+            const navEntry = entry as PerformanceNavigationTiming;
+            if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
+              console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
+            }
           }
         }
       });
@@ -80,6 +104,10 @@ function App() {
 
   useEffect(() => {
     // Initialize performance monitoring
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.log('Zion Tech Group App initialized');
+    }
   }, []);
 
   return (
