@@ -1,3 +1,1 @@
-import React from 'react'
-import { render } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
+// Test file for components

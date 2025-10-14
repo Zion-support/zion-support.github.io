@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = useState<any>({})
+  const [metrics, setMetrics] = useState<Record<string, number>>({})
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -14,7 +14,7 @@ export const usePerformanceMetrics = () => {
         if (entry.entryType === 'paint') {
           const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
           if (fcpEntry) {
-            setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }))
+            setMetrics((prev: Record<string, number>) => ({ ...prev, fcp: fcpEntry.startTime }))
           }
         }
       })

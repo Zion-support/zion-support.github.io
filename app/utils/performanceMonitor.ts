@@ -1,5 +1,5 @@
 export const performanceMonitor = {
-  measure: (name: string, fn: () => void) => {
+  measureFunction: (name: string, fn: () => void) => {
     const start = performance.now()
     fn()
     const end = performance.now()
