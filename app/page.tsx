@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
+import { ArrowRight, Star, Users, Award, Zap } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const features = [
