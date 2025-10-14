@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   }
   
   try {
-    const { amount, currency = 'usd', metadata = {} } = req.body;
+    const { amount, currency = 'usd' } = req.body;
 
     if (!amount || amount <= 0) {
       return res.status(400).json({ error: 'Valid amount is required' });

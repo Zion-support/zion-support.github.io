@@ -10,11 +10,11 @@ export const useSEO = (structuredData?: unknown) => {
       document.head.appendChild(script);
       
       return () => {
-        if (document.head.contains(script)) {
+        if (document.head.contains(script); {
           document.head.removeChild(script);
         }
       };
     }
     return undefined;
   }, [structuredData]);
-};
+};"

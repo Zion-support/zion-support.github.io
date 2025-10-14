@@ -6,10 +6,13 @@ import { glob } from 'glob';
 const fixes = [;
   // Fix merge conflict markers;
   {
-    pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,;
-    replacement: '';
+    pattern: /[\s\S]*?    replacement: '';
   },;
   // Fix malformed JSX structure in page components;
+    pattern: /
+    replacement: ''
+  },
+  // Fix malformed JSX structure in page components
   {
     pattern: /const PagePage = \(\) => \{\s*return \(\s*<>\s*<//Helmet>\s*<////title>([^<]*) - Zion Tech Group<\/title>\s*<////meta name="description" content="([^"]*)" \/>\s*<\/Helmet>\s*<////div className="container mx-auto px-4 py-16"><\/div>\s*<////\/>\s*<\/>\s*<////div className="text-center"><\/div>\s*<////h1 className="text-4xl font-bold text-white mb-8">([^<]*)<\/h1>\s*<////p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<////\/p>\s*<\/div>\s*\);\s*\};\s*export default PagePage;/g,;
     replacement: `const PagePage = () => {

@@ -1,12 +1,12 @@
 'use client';
-import React from "react";
+import React from "react";"
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+const Page = () => {
   return (
     <>
       <Helmet>
-        <title>Blockchain Web3 - Zion Tech Group</title>
+        <title>Blockchain Web3 - Zion Tech Group</title>"
         <meta name="description" content="Blockchain Web3 services and solutions from Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-white">

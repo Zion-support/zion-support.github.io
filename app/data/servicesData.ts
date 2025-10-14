@@ -1,4 +1,4 @@
-  title: string;
+  title: "string;
   description: string;
   shortDescription: string;
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | "IoT"'"'";
@@ -6,14 +6,18 @@
   features: string[];
   pricing: {
     basic: number;
-    pro: number;
-    enterprise: number}
-  benefits: string[];
+    pr",
+    o: number;
+    enterpris,
+    e: number}
+  benefits: "string[];
   useCases: string[];
   technologies: string[];
   contactInfo: {phone: string;
-    email: string;
-    website: string}
+    emai",
+    l: string;
+    websit,
+    e: string}
   href: string;
 }
 
@@ -290,3 +294,4 @@ export default function servicesData() {;
   return null;
 };
 ;
+"

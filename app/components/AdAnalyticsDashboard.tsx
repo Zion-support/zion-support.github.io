@@ -7,6 +7,6 @@ const AdAnalyticsDashboard: React.FC = () => {
       <p>This component is under development.</p>
     </div>
   );
-};
+</div></div></h1></p></div></div></h3></p></div></h3></p></div></h3></p></div></div></h1></p></div></div></h3></p></div></h3></p></div></h3></p>};
 
 export default AdAnalyticsDashboard;

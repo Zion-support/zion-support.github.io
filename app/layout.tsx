@@ -1,10 +1,4 @@
 import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AnalyticsProvider from './components/AnalyticsProvider';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PWAInstaller from './components/PWAInstaller';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import GlobalErrorBoundary from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
   children,;
@@ -66,4 +60,5 @@ export default function RootLayout({
         </////body></div>;
     </////html>;
   );
-}
+</html></head></script></body></GlobalErrorBoundary></PerformanceMonitor></AnalyticsProvider></AccessibilityEnhancer></PWAInstaller></PerformanceOptimizer></html></head></script></body></GlobalErrorBoundary></PerformanceMonitor></AnalyticsProvider></AccessibilityEnhancer></PWAInstaller></PerformanceOptimizer>}
+"

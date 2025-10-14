@@ -7,6 +7,7 @@ const ContentNewsletterSignup: React.FC = () => {
       <p>This component is under development.</p>
     </div>
   );
-};
+</div></div></button></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight></section></div></div></h2></section></div></div></h2></form></div></Mail></input></button></div></ArrowRight>};
 
 export default ContentNewsletterSignup;
+"

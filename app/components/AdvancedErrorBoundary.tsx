@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+// import { Logger } from '../utils/logger';
 
 const AdvancedErrorBoundary: React.FC = () => {
   return (

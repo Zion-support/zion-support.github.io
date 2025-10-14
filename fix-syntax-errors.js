@@ -33,7 +33,6 @@ function fixFile(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-da9a;
       console.log(`Fixed: ${filePath}`);
     }
   } catch (error) {

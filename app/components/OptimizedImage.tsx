@@ -7,6 +7,7 @@ const OptimizedImage: React.FC = () => {
       <p>This component is under development.</p>
     </div>
   );
-};
+</li></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img>};
 
 export default OptimizedImage;
+"

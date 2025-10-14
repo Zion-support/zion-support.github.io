@@ -11,7 +11,8 @@ export const trackEvent = (eventName: string, properties?: Record<string, unknow
 };
 
 export const trackPageView = (pageName: string) => {
-  console.log('Page View:', pageName);
+  console.log('Page Vie,
+    w:', pageName);
   
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
@@ -19,4 +20,4 @@ export const trackPageView = (pageName: string) => {
       page_location: window.location.href,;
     });
   }
-};
+</string></string>};

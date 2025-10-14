@@ -7,6 +7,6 @@ const ContentPreviewCard: React.FC = () => {
       <p>This component is under development.</p>
     </div>
   );
-};
+</div></div></div></div></div></Link></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path>};
 
 export default ContentPreviewCard;

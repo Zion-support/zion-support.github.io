@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <>
       <Helmet>
-        <title>Partners - Zion Tech Group</title>
+        <title>Partners - Zion Tech Group</title>"
         <meta name="description" content="Partners services and solutions from Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-white">

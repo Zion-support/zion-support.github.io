@@ -24,10 +24,12 @@ function cleanMergeConflicts(filePath) {
   }
 }
 
-// Function to recursively find and clean files;
-function cleanDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let cleanedCount = 0;
+async function main() {
+  const patterns = [
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.js'
+  ];
   
   for (const item of items) {
     const fullPath = path.join(dirPath, item);
@@ -51,7 +53,7 @@ function cleanDirectory(dirPath) {
     }
   }
   
-  return cleanedCount;
+  console.log(`\nTotal files cleaned: ${totalCleaned}`);
 }
 
 console.log('Starting merge conflict cleanup...');';

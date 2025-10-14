@@ -7,7 +7,7 @@ export default function Page() {
       <////div><p>This component is under development.</////p>)};
     </>;
   );
-};
+</h1></h1>};
 
 export default LazyLoadingPage;
 </////p></div>;

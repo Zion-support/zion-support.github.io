@@ -42,7 +42,7 @@ function fixSyntaxErrors(content, filePath) {
     // Remove merge conflict markers and keep the HEAD version;
     fixed = fixed.replace(/\n?/g, '');
     fixed = fixed.replace(/\n?/g, '');
-    fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
+    fixed = fixed.replace(/
     changes++;
   }
 

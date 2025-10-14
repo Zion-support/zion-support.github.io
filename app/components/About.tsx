@@ -7,6 +7,6 @@ const About: React.FC = () => {
       <p>This component is under development.</p>
     </div>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;
