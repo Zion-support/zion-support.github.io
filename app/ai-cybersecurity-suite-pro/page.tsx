@@ -56,5 +56,5 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+const page = React.lazy(() => import('./page'));
+export default page;
