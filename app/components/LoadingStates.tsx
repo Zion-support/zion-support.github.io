@@ -9,8 +9,8 @@ export const LoadingPage = () => (
   </div>
 );
 
-export const LoadingSpinner = ({ size = 'md' }) => {
-  const sizes = {
+export const LoadingSpinner = ({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) => {
+  const sizes: Record<'sm' | 'md' | 'lg', string> = {
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12'

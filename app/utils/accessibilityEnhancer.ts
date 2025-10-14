@@ -1,3 +1,4 @@
-
-export const utilityFunction = () => {}; // Utility implementation; return true;}
+// accessibilityEnhancer utility
+export const accessibilityEnhancer = () => {
+  // Utility implementation
 };

@@ -3,9 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
-  CloudIcon, 
   RocketLaunchIcon,
-  CheckCircleIcon,
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
@@ -26,7 +24,7 @@ export default function Page() {
     {
       title: 'Scalable Solutions',
       description: 'Solutions that grow with your business needs',
-      icon: CloudIcon,
+      icon: ArrowRightIcon,
       color: 'from-purple-500 to-pink-500'
     },
     {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Play, User, Star, Circle, Clock } from 'lucide-react';
+import { ArrowRight, Play, User, Star} from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [
@@ -100,7 +100,7 @@ const TutorialsPage: React.FC = () => {
                     {tutorial.students} students
                   </div>
                   <div className="flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
+                    <div className="w-4 h-4 mr-1" />
                     {tutorial.duration}
                   </div>
                 </div>

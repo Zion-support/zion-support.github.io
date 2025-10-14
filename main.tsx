@@ -27,13 +27,13 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-      .then((registration) => {
+      .then(() => {
         // Service worker registered successfully
         console.log('Service worker registered successfully');
       })
-      .catch((registrationError) => {
-        // Service worker registration failed
-        console.error('Service worker registration failed:', registrationError);
+      .catch((Error) => {
+        // Service worker failed
+        console.error('Service worker failed:',Error);
       });
   });
 }
