@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ErrorBoundary: React.FC = () => {
-  return (
-    <div>
-      <h2>ErrorBoundary</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-=======
 import React, { Component, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
 interface State {
   hasError: boolean;
@@ -37,7 +25,7 @@ export default class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return (
+      return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-red-50">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>

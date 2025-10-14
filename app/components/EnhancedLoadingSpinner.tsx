@@ -1,24 +1,29 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedLoadingSpinner: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedLoadingSpinner</h2>
-      <p>Component implementation coming soon.</p>
-=======
 import React from 'react';
 
-export default function EnhancedLoadingSpinnerPage() {
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">EnhancedLoadingSpinner</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about enhancedloadingspinner</p>
-        </div>
+    <div className={`flex justify-center items-center ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} border-2 border-cyan-500 border-t-transparent rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      >
+        <span className="sr-only">Loading...</span>
       </div>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
     </div>
   );
 };

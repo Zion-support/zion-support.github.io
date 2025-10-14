@@ -1,39 +1,41 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const ConsultationPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Consultation Page - Zion Tech Group</title>
-        <meta name="description" content="Consultation Page - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Consultation Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ConsultationPage() {
+export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Learn more about page" />
+      </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Consultation</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about consultation</p>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about page</p>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
+              <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
+              <p className="text-gray-300 mb-6">
+                This page is currently under development. We're working hard to bring you the best experience.
+              </p>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="/" 
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default ConsultationPage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

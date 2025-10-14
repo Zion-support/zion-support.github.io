@@ -1,55 +1,43 @@
-<<<<<<< HEAD
-import React from "react";
-=======
-import React, { createContext, useContext } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
 
 interface AnalyticsContextType {
   trackEvent: (event: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (page: string) => void;
+  trackPage: (page: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-<<<<<<< HEAD
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default AnalyticsProvider;
-=======
-export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (event: string, properties?: Record<string, unknown>) => {
     // Analytics tracking implementation
     console.log('Analytics Event:', event, properties);
   };
 
-  const trackPageView = (page: string) => {
-    // Page view tracking implementation
-    console.log('Page View:', page);
+  const trackPage = (page: string) => {
+    // Page tracking implementation
+    console.log('Analytics Page:', page);
   };
 
-  const contextValue = {
+  const value = {
     trackEvent,
-    trackPageView,
+    trackPage,
   };
 
   return (
-    <AnalyticsContext.Provider value={contextValue}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
-}
+};
 
-export function useAnalytics() {
+export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
-}
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+};

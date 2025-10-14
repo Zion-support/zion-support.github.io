@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEOEnhancer: React.FC = () => {
-  return (
-    <div>
-      <h2>SEOEnhancer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default SEOEnhancer;
-=======
 import React, { ReactNode } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
   children: ReactNode;
@@ -23,20 +10,35 @@ interface SEOEnhancerProps {
   structuredData?: Record<string, unknown>;
 }
 
-export default function SEOEnhancer({ 
-  children, 
-  title, 
-  description, 
-  keywords, 
-  type, 
-  structuredData 
-}: SEOEnhancerProps) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _ = { title, description, keywords, type, structuredData }; // Parameters will be used in future implementation
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  children,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology.',
+  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation'],
+  type = 'website',
+  structuredData
+}) => {
   return (
-    <div className="seoenhancer">
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(', ')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content={type} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
+      </Helmet>
       {children}
-    </div>
+    </>
   );
-}
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
+};
+
+export default SEOEnhancer;
