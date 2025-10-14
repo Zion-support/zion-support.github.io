@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PagePage: React.FC = () => {
+import React, { Suspense } from 'react';
+const ZionAiCybersecuritySuiteProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +50,6 @@ const PagePage: React.FC = () => {
   );
 }
 
-export default PagePage;
+import React, { Suspense } from 'react';
+export default ZionAiCybersecuritySuiteProPage;
 

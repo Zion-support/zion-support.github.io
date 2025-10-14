@@ -23,6 +23,7 @@ export const apiClient = {
   },
   
   post(endpoint: string, data: Record<string, unknown>) {
+  post(endpoint: string, data: unknown) {
     return this.request(endpoint, {
       method: 'POST',
       body: JSON.stringify(data)
@@ -30,6 +31,7 @@ export const apiClient = {
   },
   
   put(endpoint: string, data: Record<string, unknown>) {
+  put(endpoint: string, data: unknown) {
     return this.request(endpoint, {
       method: 'PUT',
       body: JSON.stringify(data)
