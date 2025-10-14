@@ -1,14 +1,7 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React, { Suspense } from 'react';
+import { Brain, Shield, Zap, Users, Target, ArrowRight, Cpu, ShieldCheck, Cloud, BarChart3, Globe } from 'lucide-react';
 import PerformanceMonitor from './components/PerformanceMonitor';
 
 function HomePage() {
@@ -98,14 +91,14 @@ function HomePage() {
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
               >
                 Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 to="/services" 
                 className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
               >
                 Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -128,7 +121,7 @@ function HomePage() {
             {/* AI Solutions */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating cyber-glow">
-                <CpuChipIcon className="w-8 h-8 text-white" />
+                <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">AI Solutions</h3>
               <p className="text-gray-300 mb-6">
@@ -136,14 +129,14 @@ function HomePage() {
                 natural language processing, and predictive analytics.
               </p>
               <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Cybersecurity */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <ShieldCheckIcon className="w-8 h-8 text-white" />
+                <ShieldCheck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Cybersecurity</h3>
               <p className="text-gray-300 mb-6">
@@ -151,14 +144,14 @@ function HomePage() {
                 data, and infrastructure from evolving threats.
               </p>
               <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Cloud Infrastructure */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <CloudIcon className="w-8 h-8 text-white" />
+                <Cloud className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Cloud Infrastructure</h3>
               <p className="text-gray-300 mb-6">
@@ -166,14 +159,14 @@ function HomePage() {
                 performance and reduce operational costs.
               </p>
               <Link to="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Digital Transformation */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <ChartBarIcon className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Digital Transformation</h3>
               <p className="text-gray-300 mb-6">
@@ -181,14 +174,14 @@ function HomePage() {
                 processes and enhance customer experiences.
               </p>
               <Link to="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Micro SaaS */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <GlobeAltIcon className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Micro SaaS</h3>
               <p className="text-gray-300 mb-6">
@@ -196,14 +189,14 @@ function HomePage() {
                 challenges with scalable, cost-effective applications.
               </p>
               <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
             {/* 5G Solutions */}
             <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <GlobeAltIcon className="w-8 h-8 text-white" />
+                <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4 holographic-text">5G Solutions</h3>
               <p className="text-gray-300 mb-6">
@@ -211,7 +204,7 @@ function HomePage() {
                 IoT applications, and ultra-low latency services.
               </p>
               <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                Learn More <ArrowRightIcon className="w-4 h-4" />
+                Learn More <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

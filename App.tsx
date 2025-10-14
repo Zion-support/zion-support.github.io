@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy, useState } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -32,22 +32,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
-=======
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
->>>>>>> 36f53afe595353e822638a76ccd9bfa4cbbfb462
   static getDerivedStateFromError(): ErrorBoundaryState {
     return { hasError: true };
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-<<<<<<< HEAD
-=======
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
->>>>>>> 36f53afe595353e822638a76ccd9bfa4cbbfb462
     // Log error to monitoring service in production
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
@@ -68,61 +57,54 @@ import React, { Suspense } from 'react';
 }
 
 function App() {
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
   useEffect(() => {
-import React, { Suspense } from 'react';
-// Performance monitoring
-if (typeof window !== 'undefined') {
-  // Monitor Core Web Vitals
-  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('CLS:', metric);
-      }
-    });
-    onFCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('FCP:', metric);
-      }
-    });
-    onLCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('LCP:', metric);
-      }
-    });
-    onTTFB((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.warn('TTFB:', metric);
-      }
-    });
-  });
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('TTFB:', metric);
+          }
+        });
+      });
 
-  // Monitor bundle size
-  const observer = new PerformanceObserver((list) => {
-    for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
-        if (process.env.NODE_ENV === 'development') {
-          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+      // Monitor bundle size
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+            }
+          }
         }
-      }
-    }
+      });
 
-    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-import React, { Suspense } from 'react';
-      console.warn('Zion Tech Group App initialized');
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+        console.warn('Zion Tech Group App initialized');
+      }
     }
   }, []);
-
-  const handleSidebarToggle = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-import React, { Suspense } from 'react';
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
