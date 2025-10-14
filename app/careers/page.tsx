@@ -112,13 +112,8 @@ const CareersPage: React.FC = () => {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-<<<<<<< HEAD
-        <meta name ="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
-        <meta name ="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
-=======
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
         <meta name="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 

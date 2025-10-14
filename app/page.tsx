@@ -1,12 +1,5 @@
 import React, { memo } from 'react';
 import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
-<<<<<<< HEAD
-// import Navigation from './components/Navigation';
-// import Footer from './components/Footer';
-// import PerformanceOptimizer from './components/PerformanceOptimizer';
-// import SEOOptimizer from './components/SEOOptimizer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -22,13 +15,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      {/* <SEOOptimizer />
-      <PerformanceOptimizer /> */}
-      
-      {/* <Navigation onSidebarToggle={() => {}} /> */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
       
       <main className="relative">
         {/* Hero Section */}
@@ -155,11 +141,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-<<<<<<< HEAD
-      
-      {/* <Footer /> */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
     </div>
   );
 };

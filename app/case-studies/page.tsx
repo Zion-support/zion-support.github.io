@@ -192,11 +192,7 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-<<<<<<< HEAD
-                      <Link to ={`/case-studies/${study.id}`}
-=======
                       <Link to={`/case-studies/${study.id}`}
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                         className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4" />
@@ -224,20 +220,12 @@ const CaseStudiesPage: React.FC = () => {
                 Let&apos;s discuss how we can help transform your business with our AI and IT solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-                <Link to ="/contact"
-=======
                 <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-<<<<<<< HEAD
-                <Link to ="/services"
-=======
                 <Link to="/services"
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   Explore Our Services
                 </Link>

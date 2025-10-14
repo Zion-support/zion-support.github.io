@@ -1,56 +1,79 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
 
 // Main Pages
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
+const PricingPage = lazy(() => import('./pricing/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
+const BlogPage = lazy(() => import('./blog/page'));
+const TeamPage = lazy(() => import('./team/page'));
 const CareersPage = lazy(() => import('./careers/page'));
-const SupportPage = lazy(() => import('./support/page'));
-const MicroSAASPage = lazy(() => import('./micro-saas/page'));
-<<<<<<< HEAD
+const PrivacyPage = lazy(() => import('./privacy/page'));
+const TermsPage = lazy(() => import('./terms/page'));
+const CookiesPage = lazy(() => import('./cookies/page'));
 const DemoPage = lazy(() => import('./demo/page'));
+const SupportPage = lazy(() => import('./support/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
+const NewsPage = lazy(() => import('./news/page'));
+const PressPage = lazy(() => import('./press/page'));
+const PartnersPage = lazy(() => import('./partners/page'));
 const DocsPage = lazy(() => import('./docs/page'));
-const CommunityPage = lazy(() => import('./community/page'));
-const CompliancePage = lazy(() => import('./compliance/page'));
-const CookiePolicyPage = lazy(() => import('./cookie-policy/page'));
-const CustomDevelopmentPage = lazy(() => import('./custom-development/page'));
-const CustomSoftwarePage = lazy(() => import('./custom-software/page'));
-const DataAnalyticsPage = lazy(() => import('./data-analytics/page'));
-const DataCenterPage = lazy(() => import('./data-center/page'));
+const ApiPage = lazy(() => import('./api/page'));
+const TutorialsPage = lazy(() => import('./tutorials/page'));
+const WebinarsPage = lazy(() => import('./webinars/page'));
+const WhitepapersPage = lazy(() => import('./whitepapers/page'));
+const AccessibilityPage = lazy(() => import('./accessibility/page'));
+const SecurityPage = lazy(() => import('./security/page'));
+const SitemapPage = lazy(() => import('./sitemap/page'));
+
+// AI Services
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIAnalyticsDashboardProPage = lazy(() => import('./ai-analytics-dashboard-pro/page'));
+const AICybersecuritySuiteProPage = lazy(() => import('./ai-cybersecurity-suite-pro/page'));
+const AIContentGenerationProPage = lazy(() => import('./ai-content-generation-pro/page'));
+const AICustomerSupportChatbotPage = lazy(() => import('./ai-customer-support-chatbot/page'));
+const AICodeAssistantProPage = lazy(() => import('./ai-code-assistant-pro/page'));
+const AIBusinessIntelligenceProPage = lazy(() => import('./ai-business-intelligence-pro/page'));
+const AIAutomationPlatformPage = lazy(() => import('./ai-automation-platform/page'));
+const AIDataAnalyticsProPage = lazy(() => import('./ai-data-analytics-pro/page'));
+const AIMarketingAutomationPage = lazy(() => import('./ai-marketing-automation/page'));
+const AIHRRecruitmentProPage = lazy(() => import('./ai-hr-recruitment-pro/page'));
+const AIFinancialAnalysisPage = lazy(() => import('./ai-financial-analysis/page'));
+const AISupplyChainOptimizerPage = lazy(() => import('./ai-supply-chain-optimizer/page'));
+const AIVoiceAssistantProPage = lazy(() => import('./ai-voice-assistant-pro/page'));
+const AIImageRecognitionProPage = lazy(() => import('./ai-image-recognition-pro/page'));
+const AIPredictiveMaintenancePage = lazy(() => import('./ai-predictive-maintenance/page'));
+const AISentimentAnalysisProPage = lazy(() => import('./ai-sentiment-analysis-pro/page'));
+const AIRecommendationEnginePage = lazy(() => import('./ai-recommendation-engine/page'));
+const AIFraudDetectionProPage = lazy(() => import('./ai-fraud-detection-pro/page'));
+const AILanguageTranslationPage = lazy(() => import('./ai-language-translation/page'));
+const AIChatbotEnterprisePage = lazy(() => import('./ai-chatbot-enterprise/page'));
+const AIDataMiningProPage = lazy(() => import('./ai-data-mining-pro/page'));
+const AIVideoAnalysisPage = lazy(() => import('./ai-video-analysis/page'));
+const AITimeSeriesForecastingPage = lazy(() => import('./ai-time-series-forecasting/page'));
+const AINLPTextAnalysisPage = lazy(() => import('./ai-nlp-text-analysis/page'));
+
+// IT Services
+const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
+const BlockchainDevelopmentPage = lazy(() => import('./blockchain-development/page'));
+const IoTSolutionsPage = lazy(() => import('./iot-solutions/page'));
+const ARVRDevelopmentPage = lazy(() => import('./ar-vr-development/page'));
+const DevOpsSolutionsPage = lazy(() => import('./devops-solutions/page'));
+const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
+const WebDevelopmentPage = lazy(() => import('./web-development/page'));
+const ITSupportPage = lazy(() => import('./it-support/page'));
+const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
+const ITConsultingPage = lazy(() => import('./it-consulting/page'));
+const CybersecurityAuditPage = lazy(() => import('./cybersecurity-audit/page'));
 const DataCenterServicesPage = lazy(() => import('./data-center-services/page'));
-const DataCenterSolutionsPage = lazy(() => import('./data-center-solutions/page'));
-const DataEngineeringPage = lazy(() => import('./data-engineering/page'));
-const DataProtectionPage = lazy(() => import('./data-protection/page'));
-const DataVisualizationPage = lazy(() => import('./data-visualization/page'));
-const DatabasePage = lazy(() => import('./database/page'));
-const DatabaseManagementPage = lazy(() => import('./database-management/page'));
-const DatabaseServicesPage = lazy(() => import('./database-services/page'));
-const DevopsPage = lazy(() => import('./devops/page'));
-const DevopsAdvancedPage = lazy(() => import('./devops-advanced/page'));
-const DevopsCicdPage = lazy(() => import('./devops-cicd/page'));
-const DevopsServicesPage = lazy(() => import('./devops-services/page'));
-const DevopsSolutionsPage = lazy(() => import('./devops-solutions/page'));
-const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
-const DisasterRecoveryPage = lazy(() => import('./disaster-recovery/page'));
-const ECommerceDevelopmentPage = lazy(() => import('./e-commerce-development/page'));
-const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
-const EmailMarketingAutomationPage = lazy(() => import('./email-marketing-automation/page'));
-const EmailMarketingPlatformPage = lazy(() => import('./email-marketing-platform/page'));
-const EmailMarketingSaasPage = lazy(() => import('./email-marketing-saas/page'));
-const EmailOptimizerPage = lazy(() => import('./email-optimizer/page'));
-=======
+const AssetManagementPage = lazy(() => import('./asset-management/page'));
+
+// Micro SAAS
+const MicroSAASPage = lazy(() => import('./micro-saas/page'));
 const ZionAnalyticsProPage = lazy(() => import('./zion-analytics-pro/page'));
 const ZionSecurityShieldPage = lazy(() => import('./zion-security-shield/page'));
 const ZionCloudVaultPage = lazy(() => import('./zion-cloud-vault/page'));
@@ -84,72 +107,18 @@ const FiveGNetworkInfrastructurePage = lazy(() => import('./5g-network-infrastru
 const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page'));
 const FiveGSmartCitySolutionsPage = lazy(() => import('./5g-smart-city-solutions/page'));
 const FiveGSolutionsPage = lazy(() => import('./5g-solutions/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
 
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-<<<<<<< HEAD
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-          <Suspense fallback={<LoadingSpinner />}>
-=======
         <Suspense fallback={<div>Loading...</div>}>
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
-<<<<<<< HEAD
-                <Route path="/case-studies" element={<CaseStudiesPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/micro-saas" element={<MicroSAASPage />} />
-                <Route path="/demo" element={<DemoPage />} />
-                <Route path="/consultation" element={<ConsultationPage />} />
-                <Route path="/docs" element={<DocsPage />} />
-                <Route path="/community" element={<CommunityPage />} />
-                <Route path="/compliance" element={<CompliancePage />} />
-                <Route path="/cookie-policy" element={<CookiePolicyPage />} />
-                <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-                <Route path="/custom-software" element={<CustomSoftwarePage />} />
-                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                <Route path="/data-center" element={<DataCenterPage />} />
-                <Route path="/data-center-services" element={<DataCenterServicesPage />} />
-                <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
-                <Route path="/data-engineering" element={<DataEngineeringPage />} />
-                <Route path="/data-protection" element={<DataProtectionPage />} />
-                <Route path="/data-visualization" element={<DataVisualizationPage />} />
-                <Route path="/database" element={<DatabasePage />} />
-                <Route path="/database-management" element={<DatabaseManagementPage />} />
-                <Route path="/database-services" element={<DatabaseServicesPage />} />
-                <Route path="/devops" element={<DevopsPage />} />
-                <Route path="/devops-advanced" element={<DevopsAdvancedPage />} />
-                <Route path="/devops-cicd" element={<DevopsCicdPage />} />
-                <Route path="/devops-services" element={<DevopsServicesPage />} />
-                <Route path="/devops-solutions" element={<DevopsSolutionsPage />} />
-                <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
-                <Route path="/e-commerce-development" element={<ECommerceDevelopmentPage />} />
-                <Route path="/edge-computing" element={<EdgeComputingPage />} />
-                <Route path="/email-marketing-automation" element={<EmailMarketingAutomationPage />} />
-                <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
-                <Route path="/email-marketing-saas" element={<EmailMarketingSaasPage />} />
-                <Route path="/email-optimizer" element={<EmailOptimizerPage />} />
-                
-                {/* AI Services - Add more as needed */}
-                <Route path="/ai-services" element={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">AI Services - Coming Soon</div></div>} />
-                
-                {/* 404 Page */}
-                <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Page Not Found</div></div>} />
-              </Routes>
-            </Suspense>
-        </ErrorBoundary>
-=======
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
                 <Route path="/blog" element={<BlogPage />} />
@@ -252,7 +221,6 @@ const App: React.FC = () => {
                 <Route path ="/5g-solutions" element={<FiveGSolutionsPage />} />
               </Routes>
         </Suspense>
->>>>>>> cursor/fix-errors-and-merge-to-main-57fa
       </BrowserRouter>
     </HelmetProvider>
   );
