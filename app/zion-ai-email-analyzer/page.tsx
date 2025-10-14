@@ -1,88 +1,88 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, BarChart3, Users, Brain, TrendingUp, Target, Award, Mail, Phone, Globe, Eye, Zap, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Mail, Brain, Zap, Shield, TrendingUp, Target, Award, Phone, Globe, Eye, BarChart3, Users } from 'lucide-react';
 import EnhancedSEO from '../../components/EnhancedSEO';
 import FuturisticCard from '../../components/FuturisticCard';
 import FuturisticButton from '../../components/FuturisticButton';
 import ResponsiveContainer from '../../components/ResponsiveContainer';
 import ResponsiveGrid from '../../components/ResponsiveGrid';
 
-const ZionAICustomerInsightsPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Customer Analytics",
-      description: "Deep insights into customer behavior, preferences, and purchasing patterns using advanced AI",
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, tone, and effectiveness using advanced natural language processing",
       icon: <Brain className="w-8 h-8" />,
       details: [
-        "Behavioral pattern analysis",
-        "Purchase prediction models",
-        "Customer segmentation",
-        "Lifetime value calculation"
+        "Sentiment analysis",
+        "Tone detection",
+        "Readability scoring",
+        "Engagement prediction"
       ]
     },
     {
-      title: "Real-Time Sentiment Analysis",
-      description: "Monitor customer sentiment across all channels and touchpoints in real-time",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Smart Email Optimization",
+      description: "Get AI-powered suggestions to improve your email performance and deliverability",
+      icon: <Zap className="w-8 h-8" />,
       details: [
-        "Social media monitoring",
-        "Review sentiment tracking",
-        "Email sentiment analysis",
-        "Support ticket analysis"
+        "Subject line optimization",
+        "Content improvement suggestions",
+        "Send time optimization",
+        "A/B testing recommendations"
       ]
     },
     {
-      title: "Predictive Customer Intelligence",
-      description: "Anticipate customer needs and behaviors before they happen",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Advanced Security Scanning",
+      description: "Detect phishing attempts, malware, and security threats in your email communications",
+      icon: <Shield className="w-8 h-8" />,
       details: [
-        "Churn prediction",
-        "Upselling opportunities",
-        "Optimal engagement timing",
-        "Personalized recommendations"
+        "Phishing detection",
+        "Malware scanning",
+        "Suspicious link analysis",
+        "Threat intelligence"
       ]
     }
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses getting started with customer insights",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 1,000 customers",
-        "Basic analytics dashboard",
+        "Up to 1,000 emails per month",
+        "Basic analysis features",
         "Email support",
-        "Standard reports",
-        "Social media monitoring",
-        "Basic segmentation"
+        "Standard security scanning",
+        "Basic optimization tips",
+        "Email templates"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Business",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing businesses with complex customer data",
+      description: "Ideal for small to medium businesses",
       features: [
-        "Up to 10,000 customers",
-        "Advanced AI analytics",
+        "Up to 10,000 emails per month",
+        "Advanced AI analysis",
         "Priority support",
-        "Custom dashboards",
-        "Multi-channel monitoring",
-        "Predictive insights",
+        "Advanced security features",
+        "Team collaboration",
+        "Custom templates",
         "API integration",
-        "Team collaboration"
+        "Detailed analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "/month",
-      description: "For large organizations with extensive customer data",
+      description: "For large organizations with high email volume",
       features: [
-        "Unlimited customers",
+        "Unlimited emails",
         "Full AI suite",
         "24/7 phone support",
         "White-label solution",
@@ -97,90 +97,90 @@ const ZionAICustomerInsightsPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "E-commerce Platform",
-      role: "Head of Marketing",
-      content: "The AI customer insights have transformed our marketing strategy. We've increased customer retention by 45% and improved our conversion rates by 60%.",
+      name: "Alex Thompson",
+      company: "Marketing Agency",
+      role: "Email Marketing Manager",
+      content: "The AI email analyzer has improved our open rates by 40% and click-through rates by 60%. The optimization suggestions are incredibly accurate.",
       rating: 5,
-      avatar: "JA"
+      avatar: "AT"
     },
     {
-      name: "Robert Chen",
+      name: "Sarah Kim",
+      company: "E-commerce Store",
+      role: "Customer Success Manager",
+      content: "The security scanning has caught several phishing attempts that would have compromised our customer data. It's an essential tool for our business.",
+      rating: 5,
+      avatar: "SK"
+    },
+    {
+      name: "Michael Rodriguez",
       company: "SaaS Company",
-      role: "VP of Customer Success",
-      content: "The predictive analytics help us identify at-risk customers before they churn. We've reduced churn by 35% and increased upsells by 50%.",
+      role: "VP of Marketing",
+      content: "The sentiment analysis helps us understand customer feedback better. We've improved our customer satisfaction scores by 35%.",
       rating: 5,
-      avatar: "RC"
-    },
-    {
-      name: "Maria Garcia",
-      company: "Retail Chain",
-      role: "Customer Experience Director",
-      content: "The real-time sentiment analysis across all our channels gives us immediate insights into customer satisfaction. Our NPS score has improved by 40 points.",
-      rating: 5,
-      avatar: "MG"
+      avatar: "MR"
     }
   ];
 
   const stats = [
-    { label: "Customers Analyzed", value: "10M+", icon: <Users className="w-6 h-6" /> },
-    { label: "Insights Generated", value: "1B+", icon: <Brain className="w-6 h-6" /> },
-    { label: "Retention Improvement", value: "45%", icon: <TrendingUp className="w-6 h-6" /> },
-    { label: "Customer Satisfaction", value: "98%", icon: <Award className="w-6 h-6" /> }
+    { label: "Emails Analyzed", value: "50M+", icon: <Mail className="w-6 h-6" /> },
+    { label: "Threats Detected", value: "1M+", icon: <Shield className="w-6 h-6" /> },
+    { label: "Open Rate Improvement", value: "40%", icon: <TrendingUp className="w-6 h-6" /> },
+    { label: "User Satisfaction", value: "97%", icon: <Award className="w-6 h-6" /> }
   ];
 
-  const useCases = [
+  const benefits = [
     {
-      title: "E-commerce Optimization",
-      description: "Increase conversion rates and average order value with personalized product recommendations",
-      icon: <Target className="w-6 h-6" />
+      title: "Improved Email Performance",
+      description: "Increase open rates, click-through rates, and conversions with AI-powered optimization",
+      icon: <TrendingUp className="w-6 h-6" />
     },
     {
-      title: "SaaS Customer Success",
-      description: "Reduce churn and increase expansion revenue with predictive customer health scoring",
+      title: "Enhanced Security",
+      description: "Protect your organization from phishing, malware, and other email-based threats",
       icon: <Shield className="w-6 h-6" />
     },
     {
-      title: "Marketing Personalization",
-      description: "Create highly targeted campaigns based on deep customer behavior insights",
-      icon: <Zap className="w-6 h-6" />
+      title: "Better Communication",
+      description: "Improve email tone, clarity, and effectiveness with AI-powered suggestions",
+      icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Customer Support",
-      description: "Improve response times and satisfaction with sentiment analysis and priority scoring",
-      icon: <Users className="w-6 h-6" />
+      title: "Time Savings",
+      description: "Automate email analysis and get instant insights to improve your communication",
+      icon: <Zap className="w-6 h-6" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Customer Insights - Advanced Customer Analytics with AI | Zion Tech Group"
-        description="Unlock deep customer insights with AI-powered analytics, sentiment analysis, and predictive intelligence. Transform customer data into actionable business strategies."
-        keywords="AI customer insights, customer analytics, sentiment analysis, predictive analytics, customer intelligence, behavioral analytics, customer segmentation"
+        title="Zion AI Email Analyzer - Smart Email Analysis with AI | Zion Tech Group"
+        description="Analyze, optimize, and secure your emails with AI-powered insights. Improve email performance, detect threats, and enhance communication effectiveness."
+        keywords="AI email analyzer, email analysis, email optimization, email security, phishing detection, email performance, email intelligence"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-              <Brain className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <Mail className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">AI-Powered Email Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion AI Customer Insights
+              Zion AI Email Analyzer
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Unlock the full potential of your customer data with AI-powered analytics, 
-              sentiment analysis, and predictive intelligence. Make data-driven decisions that drive growth.
+              Transform your email communication with AI-powered analysis, optimization, and security. 
+              Improve performance, detect threats, and enhance your email effectiveness.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <FuturisticButton
                 href="#pricing"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -188,9 +188,9 @@ const ZionAICustomerInsightsPage = () => {
               <FuturisticButton
                 href="#demo"
                 variant="outline"
-                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white"
               >
-                <BarChart3 className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2" />
                 View Demo
               </FuturisticButton>
             </div>
@@ -199,8 +199,8 @@ const ZionAICustomerInsightsPage = () => {
             <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-                    <div className="text-purple-400">{stat.icon}</div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center">
+                    <div className="text-orange-400">{stat.icon}</div>
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -211,29 +211,29 @@ const ZionAICustomerInsightsPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
+              Why Choose AI Email Analysis?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover how AI customer insights can transform your business
+              Unlock the full potential of your email communication
             </p>
           </div>
 
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {benefits.map((benefit, index) => (
               <FuturisticCard key={index} className="p-6 text-center">
-                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center text-white">
-                  {useCase.icon}
+                <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white">
+                  {benefit.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">
-                  {useCase.title}
+                  {benefit.title}
                 </h3>
                 <p className="text-gray-300 text-sm">
-                  {useCase.description}
+                  {benefit.description}
                 </p>
               </FuturisticCard>
             ))}
@@ -249,14 +249,14 @@ const ZionAICustomerInsightsPage = () => {
               Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful AI capabilities to unlock deep customer insights
+              Powerful AI capabilities to enhance your email communication
             </p>
           </div>
 
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FuturisticCard key={index} className="p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center text-white">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center text-white">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
@@ -287,16 +287,16 @@ const ZionAICustomerInsightsPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your customer insights as your business grows
+              Scale your email analysis as your needs grow
             </p>
           </div>
 
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
-              <FuturisticCard key={index} className={`p-8 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
+              <FuturisticCard key={index} className={`p-8 relative ${plan.popular ? 'ring-2 ring-orange-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -322,7 +322,7 @@ const ZionAICustomerInsightsPage = () => {
 
                 <FuturisticButton
                   href="/contact"
-                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700' : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'}`}
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700' : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white'}`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -338,10 +338,10 @@ const ZionAICustomerInsightsPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Success Stories
+              What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See how businesses are transforming with AI customer insights
+              Join thousands of users improving their email communication with AI
             </p>
           </div>
 
@@ -349,7 +349,7 @@ const ZionAICustomerInsightsPage = () => {
             {testimonials.map((testimonial, index) => (
               <FuturisticCard key={index} className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -378,16 +378,16 @@ const ZionAICustomerInsightsPage = () => {
         <ResponsiveContainer>
           <FuturisticCard className="text-center p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Unlock Your Customer Insights?
+              Ready to Transform Your Email Communication?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start your free trial today and discover the power of AI-driven customer intelligence. 
+              Start your free trial today and experience the power of AI email analysis. 
               No credit card required.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -395,9 +395,9 @@ const ZionAICustomerInsightsPage = () => {
               <FuturisticButton
                 href="/demo"
                 variant="outline"
-                className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white"
               >
-                <BarChart3 className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2" />
                 View Demo
               </FuturisticButton>
             </div>
@@ -426,4 +426,4 @@ const ZionAICustomerInsightsPage = () => {
   );
 };
 
-export default ZionAICustomerInsightsPage;
+export default ZionAIEmailAnalyzerPage;
