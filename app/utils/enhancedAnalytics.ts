@@ -4,7 +4,7 @@ export const enhancedAnalytics = {
       window.gtag('event', 'page_view', {
         page_title: title,
         page_location: page
-      });
+      })
     }
   },
   
@@ -13,7 +13,7 @@ export const enhancedAnalytics = {
       window.gtag('event', action, {
         event_category: category,
         event_label: label
-      });
+      })
     }
   },
   
@@ -22,7 +22,7 @@ export const enhancedAnalytics = {
       window.gtag('event', 'user_engagement', {
         engagement_type: engagementType,
         value: value
-      });
+      })
     }
   },
   
@@ -30,8 +30,8 @@ export const enhancedAnalytics = {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_metric', {
         metric_name: metric,
-        metric_value: value
-      });
+        value: value
+      })
     }
   }
-};
+}

@@ -4,7 +4,7 @@ export const analyticsTracker = {
       window.gtag('event', 'page_view', {
         page_title: title,
         page_location: page
-      });
+      })
     }
   },
   
@@ -13,7 +13,7 @@ export const analyticsTracker = {
       window.gtag('event', 'click', {
         element_name: element,
         location: location
-      });
+      })
     }
   },
   
@@ -22,7 +22,7 @@ export const analyticsTracker = {
       window.gtag('event', 'form_submit', {
         form_name: formName,
         success: success
-      });
+      })
     }
   },
   
@@ -31,7 +31,7 @@ export const analyticsTracker = {
       window.gtag('event', 'conversion', {
         conversion_id: conversionId,
         value: value
-      });
+      })
     }
   }
-};
+}

@@ -18,42 +18,42 @@ export const seoEnhancer = {
       ogDescription: data.description || 'Leading technology solutions provider',
       twitterTitle: data.title || 'Zion Tech Group',
       twitterDescription: data.description || 'Leading technology solutions provider'
-    };
+    }
   },
   
   setMetaTags: (data: EnhancedSEOData) => {
     if (typeof document !== 'undefined') {
-      document.title = data.title;
+      document.title = data.title
       
-      const metaDescription = document.querySelector('meta[name="description"]');
+      const metaDescription = document.querySelector('meta[name="description"]')
       if (metaDescription) {
-        metaDescription.setAttribute('content', data.description);
+        metaDescription.setAttribute('content', data.description)
       }
       
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      const metaKeywords = document.querySelector('meta[name="keywords"]')
       if (metaKeywords) {
-        metaKeywords.setAttribute('content', data.keywords);
+        metaKeywords.setAttribute('content', data.keywords)
       }
       
-      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]')
       if (ogTitle) {
-        ogTitle.setAttribute('content', data.ogTitle);
+        ogTitle.setAttribute('content', data.ogTitle)
       }
       
-      const ogDescription = document.querySelector('meta[property="og:description"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]')
       if (ogDescription) {
-        ogDescription.setAttribute('content', data.ogDescription);
+        ogDescription.setAttribute('content', data.ogDescription)
       }
       
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]')
       if (twitterTitle) {
-        twitterTitle.setAttribute('content', data.twitterTitle);
+        twitterTitle.setAttribute('content', data.twitterTitle)
       }
       
-      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+      const twitterDescription = document.querySelector('meta[name="twitter:description"]')
       if (twitterDescription) {
-        twitterDescription.setAttribute('content', data.twitterDescription);
+        twitterDescription.setAttribute('content', data.twitterDescription)
       }
     }
   }
-};
+}

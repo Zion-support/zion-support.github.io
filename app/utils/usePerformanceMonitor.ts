@@ -19,10 +19,10 @@ export const usePerformanceMonitor = (name: string) => {
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'performance_measurement', {
             metric_name: name,
-            metric_value: duration
+            value: duration
           });
         }
       }
     };
   }, [name]);
-};
+}
