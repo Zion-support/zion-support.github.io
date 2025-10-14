@@ -62,15 +62,26 @@ function App() {
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    const logMetric = (metric: unknown) => {
+    onCLS((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('Web Vital:', metric);
+        console.warn('CLS:', metric);
       }
-    };
-    onCLS(logMetric);
-    onFCP(logMetric);
-    onLCP(logMetric);
-    onTTFB(logMetric);
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('TTFB:', metric);
+      }
+    });
   });
 
   // Monitor bundle size
