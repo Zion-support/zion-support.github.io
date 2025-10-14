@@ -44,5 +44,4 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
 export default AISolutionsPage;
