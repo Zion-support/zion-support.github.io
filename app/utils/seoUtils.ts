@@ -30,8 +30,6 @@ export const seoUtils = {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading technology solutions provider',
       ...data
     }
