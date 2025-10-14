@@ -74,6 +74,8 @@ export default [
         setInterval: 'readonly',
         clearInterval: 'readonly',
         performance: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',

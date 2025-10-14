@@ -1,26 +1,29 @@
 import React from 'react';
-import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
+
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { 
-      name: 'Services',';
-      href: '/services',';
-      submenu: [{ name: 'AI Services', href: '/ai-services' },';
-        { name: 'IT Services', href: '/it-services' },';
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },';
-        { name: 'Digital Transformation', href: '/digital-transformation' }';
-      ];
+      name: 'Services',
+      href: '/services',
+      submenu: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
+      ]
     },
-    { name: 'Solutions', href: '/solutions' },';
-    { name: 'Case Studies', href: '/case-studies' },';
-    { name: 'Blog', href: '/blog' },';
-    { name: 'Contact', href: '/contact' }';
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -30,7 +33,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-white">
-              Zion Tech Group;
+              Zion Tech Group
             </Link>
           </div>
           {/* Desktop Navigation */}
@@ -38,9 +41,9 @@ const Header: React.FC = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link;
+                  <Link
                     to={item.href}
-                    className="$1"
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
@@ -51,10 +54,10 @@ const Header: React.FC = () => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="$1"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
                           {subItem.name}
                         </Link>
@@ -67,18 +70,18 @@ const Header: React.FC = () => {
           </div>
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link;
-              to="$1"
-              className="$1"
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Get Started;
+              Get Started
             </Link>
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button;
+            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="$1"
+              className="text-gray-300 hover:text-white p-2 rounded-md"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -90,9 +93,9 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <Link;
+                  <Link
                     to={item.href}
-                    className="$1"
+                    className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700 rounded-md"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -100,10 +103,10 @@ const Header: React.FC = () => {
                   {item.submenu && (
                     <div className="ml-4 space-y-1">
                       {item.submenu.map((subItem) => (
-                        <Link;
+                        <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="$1"
+                          className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700 rounded-md"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -114,12 +117,12 @@ const Header: React.FC = () => {
                 </div>
               ))}
               <div className="pt-4">
-                <Link;
-                  to="$1"
-                  className="$1"
+                <Link
+                  to="/contact"
+                  className="block w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-md text-center font-medium hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
-                  Get Started;
+                  Get Started
                 </Link>
               </div>
             </div>

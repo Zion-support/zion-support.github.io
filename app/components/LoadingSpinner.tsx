@@ -10,13 +10,10 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-text = 'Loading...',
+  text = 'Loading...',
   fullScreen = false,
-  className = ''
-  color = 'primary',
-  text,
-  fullScreen = false,
-  className = ''
+  className = '',
+  color = 'primary'
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
