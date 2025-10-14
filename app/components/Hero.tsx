@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black opacity-20"></div>""
     </>
       </div>
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">""
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>""
@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
               <span>Watch Demo</span>
             </button>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">""
             <div className="text-center">""

@@ -203,7 +203,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Bottom Footer */}
       <div className="bg-slate-800 border-t border-slate-700">""

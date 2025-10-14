@@ -22,8 +22,39 @@ class ErrorBoundary extends Component<Props, State> {
     });
   }
 
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+    
+    // Call custom error handler if provided
+    this.props.onError?.(error, errorInfo);
+    
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to your error reporting service
+      // Example: Sentry.captureException(error, { extra: errorInfo });
+    }
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
   render() {
     if (this.state.hasError) {
+      // Default error UI
       return (
                   Something went wrong;
                 </h1>

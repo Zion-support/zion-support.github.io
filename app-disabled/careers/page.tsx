@@ -11,25 +11,12 @@ import { Right, Circle,    } from "lucide-react";"
 
 const PagePage: React.FC = () => {}
   title: string;
-
   department: string;
-
   location: string;
-
   type: string;
-
-  experience: string;
-
-  posted: string;
-
   description: string;
-
   requirements: string[];
-
   benefits: string[];
-
-  featured: boolean;
-
 }
 const eersPage: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all);'
@@ -269,8 +256,7 @@ import { Right, Circle, Star,    } from "lucide-react";"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>""
               Build the future of technology with us. Were looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
-            
-            {/* Filter Controls */}
+          </div>
 
             <div className="flex flex-wrap justify-center gap-4 mb-8>""
               <select;
@@ -305,6 +291,9 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     </p>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
 
                   <option key={dept.id} value={dept.id} className="bg-slate-800>""
                 {locations.map((loc) => (
@@ -369,7 +358,10 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     {benefit.description}
                   </p>
         </div>
-      </section>
+      </div>
+    </>
+  );
+};
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">""

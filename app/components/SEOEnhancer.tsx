@@ -34,5 +34,4 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </div>
   );
 };
-
 export default SEOEnhancer;

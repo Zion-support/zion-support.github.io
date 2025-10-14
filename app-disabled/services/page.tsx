@@ -5,7 +5,57 @@ import {}
   Right,
   } from "lucide-react";"
 
-;
+const ServicesPage: React.FC = () => {
+  const services = [
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      price: 'Starting at $1,500',
+      category: 'AI Services'
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Cloud Computing',
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps', 'Monitoring', 'Security'],
+      price: 'Starting at $800',
+      category: 'Cloud Services'
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your business from cyber threats.',
+      features: ['Security Audit', 'Penetration Testing', 'Incident Response', 'Compliance', 'Training'],
+      price: 'Starting at $1,200',
+      category: 'Security Services'
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our analytics solutions.',
+      features: ['Data Visualization', 'Business Intelligence', 'Reporting', 'Dashboard Creation', 'Data Mining'],
+      price: 'Starting at $900',
+      category: 'Analytics Services'
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Web Development',
+      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      features: ['Frontend Development', 'Backend Development', 'API Integration', 'Database Design', 'Performance Optimization'],
+      price: 'Starting at $1,000',
+      category: 'Development Services'
+    },
+    {
+      icon: <Circle className="w-6 h-6" />,
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      features: ['iOS Development', 'Android Development', 'Cross-platform', 'UI/UX Design', 'App Store Optimization'],
+      price: 'Starting at $1,300',
+      category: 'Mobile Services'
+    }
+  ];
 
 const ServicesPage: React.FC = () => {const services = [;
     // AI Services;
@@ -64,6 +114,8 @@ const ServicesPage: React.FC = () => {const services = [;
                   )}
                 </div>
               </div>
+            ))}
+          </div>
 
               <div className="mb-6">""
                 <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>""
@@ -88,9 +140,11 @@ const ServicesPage: React.FC = () => {const services = [;
                 Learn More;
               </a>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default ServicesPage;

@@ -18,17 +18,9 @@ interface MicroSaasProduct {
   title: string;
 
   description: string;
-
-  features: string[];
-
   price: string;
-
-  users: string;
-
-  popular: boolean;
-
+  features: string[];
   category: string;
-
 }
 
 const MicroSaasPage: React.FC = () => {}
@@ -127,9 +119,9 @@ import { Right, Circle, Star,    } from "lucide-react";"
       title: 'Rapid Innovation,''
       description: Frequent updates and new features based on user feedback and market needs;
     }
-
   ];
 
+  const categories = ['All', 'Analytics', 'Productivity', 'Marketing', 'Finance', 'Communication'];
 
     <div></div>
       <Helmet></Helmet>
@@ -215,5 +207,6 @@ import { Right, Circle, Star,    } from "lucide-react";"
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300""
     </></to>
   );
+};
 
 export default MicroSaasPage;

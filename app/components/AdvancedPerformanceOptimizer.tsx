@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-  )}
+  );
 };
 
 export default AdvancedPerformanceOptimizer;

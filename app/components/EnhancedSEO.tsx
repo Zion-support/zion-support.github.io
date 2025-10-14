@@ -1,6 +1,6 @@
   description: string;
-  keywords?: string;
-  canonicalUrl?: string;
+  keywords: string;
+  canonical: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;

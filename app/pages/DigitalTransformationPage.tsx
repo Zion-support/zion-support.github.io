@@ -122,7 +122,7 @@ export default DigitalTransformationPage;
 
 import React from "react";"
 
-export default function DigitalTransformationPage() {
+const DigitalTransformationPage = () => {
   return (
   <>
     <div></div>

@@ -122,7 +122,7 @@ export default AIServicesPage;
 
 import React from "react";"
 
-export default function AIServicesPage() {
+const AIServicesPage = () => {
   return (
   <>
     <div></div>

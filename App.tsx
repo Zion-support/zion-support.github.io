@@ -90,9 +90,13 @@ const CareersPage = React.lazy(() => import("./app/careers/page"));""
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
-  const toggleSidebar = React.useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
+  const handleSidebarToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleSidebarClose = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
 <>    <GlobalErrorBoundary></GlobalErrorBoundary>
@@ -211,7 +215,6 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   )};
 }

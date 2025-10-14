@@ -19,6 +19,8 @@ import { Circle, Right, Star, } from lucide-react;
 
 const AIServicesPagePage: React.FC = () => {const features = [;
 
+const AIServicesPage: React.FC = () => {
+  const features = [
     {
       ico,
     n: title: 'AI-Powered Intelligence,''
@@ -145,6 +147,8 @@ import { Circle, Right, Star,    } from "lucide-react";"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">""
             AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>""
       </div>
-    </div>
-  )
-}
+    </>
+  );
+};
+
+export default AIServicesPage;

@@ -20,5 +20,4 @@ const PagePage = () => {
     </div>
   )};
 };
-
 export default PagePage;

@@ -122,7 +122,7 @@ export default ITServicesPage;
 
 import React from "react";"
 
-export default function ITServicesPage() {
+const ITServicesPage = () => {
   return (
   <>
     <div></div>

@@ -12,4 +12,5 @@
       <title>{title}</title>
   )};
 };
+
 export default SEO;

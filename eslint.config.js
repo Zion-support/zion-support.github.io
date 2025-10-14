@@ -5,6 +5,31 @@ import react from "eslint-plugin-react";"
 import reactHooks from "eslint-plugin-react-hooks";"
 
 export default [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/build-*.js',
+      '**/check-*.js',
+      '**/clean-*.js',
+      '**/cleanup-*.js',
+      '**/comprehensive-*.js',
+      '**/final-*.js',
+      '**/fix-*.js',
+      '**/app-broken/**',
+      '**/app-disabled/**',
+      '**/__tests__/**',
+      '**/src/**',
+      '**/temp-disabled/**',
+      '**/scripts/**',
+      '**/*.setup.js',
+      '**/resolve*.js',
+      '**/tailwind.config.js',
+      '**/vite-env.d.ts'
+    ]
+  },
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],'

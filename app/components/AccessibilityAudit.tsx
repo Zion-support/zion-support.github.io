@@ -15,5 +15,4 @@ const AccessibilityAudit = () => {
     </div>
   )};
 };
-
 export default AccessibilityAudit;

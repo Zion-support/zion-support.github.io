@@ -36,6 +36,7 @@ const structuredData = {
     }
   };
 
+const HomePage = () => {
   return (
 <>    <div></div>
       <SEOHead ;
@@ -238,4 +239,6 @@ const structuredData = {
       </section>
     </div>
   );
-}
+};
+
+export default HomePage;

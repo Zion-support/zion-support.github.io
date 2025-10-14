@@ -6,4 +6,4 @@
   )}
 };
 
-export default WebVitalsTracker;
+export default WebVitalsTrackerPage;

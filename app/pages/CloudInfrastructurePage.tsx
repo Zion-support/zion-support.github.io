@@ -122,7 +122,7 @@ export default CloudInfrastructurePage;
 
 import React from "react";"
 
-export default function CloudInfrastructurePage() {
+const CloudInfrastructurePage = () => {
   return (
   <>
     <div></div>

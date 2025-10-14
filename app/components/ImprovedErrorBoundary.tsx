@@ -172,4 +172,4 @@ export default ImprovedErrorBoundary;
 export default ImprovedErrorBoundary;
 };
 
-export default ImprovedErrorBoundary;
+export default ImprovedErrorBoundaryPage;

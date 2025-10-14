@@ -13,15 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      '@': resolve(__dirname, './src'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
@@ -30,11 +23,6 @@ export default defineConfig({
     minify: "esbuild",
     cssCodeSplit: true,
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
         manualChunks: (id) => {
           // Vendor chunks
@@ -55,8 +43,6 @@ export default defineConfig({
         entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
-    // Enable tree shaking
-    treeshake: true,
   },
   server: {
     port: 3000,
@@ -66,12 +52,6 @@ export default defineConfig({
       overlay: true,
     },
   },
-  preview: {
-    port: 4173,
-    open: true,
-    host: true,
-  },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',

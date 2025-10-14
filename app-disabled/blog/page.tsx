@@ -5,7 +5,14 @@ import { User, Right, Filter    } from "lucide-react";"
 import Footer from "../components/Footer;";
 export default function Blog() {
 interface BlogPost {
-  id: number;  title: string;
+  id: number;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  category: string;
+  image: string;
+}
 
 const BlogPage: React.FC = () => {
   const blogPosts = [{

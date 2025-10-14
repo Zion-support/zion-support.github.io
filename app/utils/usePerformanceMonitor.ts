@@ -9,7 +9,7 @@ interface PerformanceMetrics {
 export const usePerformanceMonitor = (): PerformanceMetrics => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
+    renderTime: 0
   });
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
       setMetrics({
         loadTime,
         renderTime: performance.now() - startTime,
-        memoryUsage,
+        memoryUsage
       });
     };
 

@@ -17,18 +17,13 @@ interface Props {
 >>>>>>> origin/main;
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class EnhancedErrorBoundary extends React.Component<EnhancedErrorBoundaryProps, { hasError: boolean; error?: Error }> {
+  constructor(props: EnhancedErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error) {
     return { hasError: true, error };
 >>>>>>> origin/main;
 }
@@ -47,10 +42,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/main;
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-    });
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
+  }
 
     // Call the onError callback if provided;
     if (this.props.onError) {
