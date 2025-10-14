@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
 
   // These variables are used for future functionality
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _unused = { isVisible, handlePhoneClick };
+  const _unused = { /* isVisible, handlePhoneClick - will be implemented later */ };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
