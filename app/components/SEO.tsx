@@ -114,11 +114,6 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-<<<<<<< HEAD
   );
 }
 export default SEO;
-=======
-  )}
-export default SEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
