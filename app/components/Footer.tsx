@@ -225,10 +225,10 @@ const Footer: React.FC = () => {
                 Cookie Policy
               </Link>
             </div>
-          </div>
         </div>
       </div>
     </footer>
+    </>
   );
 };
 

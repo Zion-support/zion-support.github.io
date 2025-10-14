@@ -101,6 +101,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
+    </>
   );
 };
 

@@ -22,6 +22,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
       {text && (
     </div>
+    </>
   );
 };
 

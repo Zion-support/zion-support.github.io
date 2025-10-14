@@ -36,7 +36,7 @@ const structuredData = {
   }
 const HomePage = () => {
   return (
-<>
+    <>
       <SEOHead ;
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."

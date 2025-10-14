@@ -1,14 +1,14 @@
 
 const ServicesDataPage = () => {
   return (
-<>    <div className="min-h-screen bg-white"></div>
+    <>    <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>
         <title>Services Data - Zion Tech Group</title>"
         <meta name="description" content="Professional services data by Zion Tech Group." /></meta>
       </Helmet>"
       <div className="container mx-auto px-4 py-16"></div>"
     </>
-        <div className="text-center"></div>"
+        <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
             Services Data;
           </h1>"
@@ -33,7 +33,6 @@ const ServicesDataPage = () => {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
               Get Started Today;
             </button>
-          </div>
         </div>
       </div>
     </div>

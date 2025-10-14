@@ -32,6 +32,7 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         </div>
       )}
     </div>
+    </>
   );
 };
 

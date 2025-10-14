@@ -63,7 +63,9 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
         <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin mx-auto mb-2`} />
         <p className="text-gray-600 text-sm">{message || getDefaultMessage()}</p>
       </div>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

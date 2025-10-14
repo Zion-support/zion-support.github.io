@@ -92,7 +92,7 @@ export default ImprovedFooter;
 export default ImprovedFooter;
 const ImprovedFooter = () => {
   return (
-<>    <div className="p-4"></div>
+    <>    <div className="p-4"></div>
       <h2 className="text-xl font-semibold mb-2">ImprovedFooter</h2>
       <p>This component is under construction.</p>
     </>
@@ -137,10 +137,9 @@ const ImprovedFooter: React.FC = () => {
             <p className="text-gray-300">
               Track record of delivering successful projects and exceeding client expectations.
             </p>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

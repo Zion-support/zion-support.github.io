@@ -3,7 +3,7 @@
         <meta name="description" content="Professional navigation services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
+        <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -39,7 +39,6 @@
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today;
             </button>
-          </div>
         </div>
       </div>
     </div>
@@ -65,7 +64,6 @@
               Get Started Today</div></div>
   )
             </button>
-          </div>
         </div>
       </div>
     </div>

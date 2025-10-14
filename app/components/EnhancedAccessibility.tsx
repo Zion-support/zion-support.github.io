@@ -103,7 +103,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         existingStyle.remove()
     }}, [])
   return (
-<>
+    <>
       <button></button>
         ♿ A11y;
       </button>
@@ -135,7 +135,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -335,6 +335,7 @@ const AIDataAnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

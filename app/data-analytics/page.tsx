@@ -40,10 +40,9 @@ const DataAnalyticsPage = () => {
             <p className="text-gray-300">
               Track record of delivering successful projects and exceeding client expectations.
             </p>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

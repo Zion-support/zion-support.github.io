@@ -13,7 +13,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = ['AI', 'IT', 'technology', 'solutions']
 }) => {
   return (
-<>    <div className="seo-enhancer"></div>
+    <>    <div className="seo-enhancer"></div>
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (

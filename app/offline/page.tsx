@@ -113,7 +113,7 @@ const OfflinePage: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

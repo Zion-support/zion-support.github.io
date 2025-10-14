@@ -55,29 +55,62 @@ function App() {
     setIsSidebarOpen(prev => !prev);
   }, []);
 
-const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            Welcome to Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Advanced AI and IT Solutions for the Modern Enterprise
-          </p>
-          <div className="flex justify-center space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
-            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-              Learn More
-            </button>
-          </div>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-slate-900 text-white">
+          <FuturisticBackground />
+          <AccessibilityEnhancer />
+          <GlobalErrorBoundary>
+            <Navigation 
+              isSidebarOpen={isSidebarOpen} 
+              toggleSidebar={toggleSidebar} 
+            />
+            <Sidebar 
+              isOpen={isSidebarOpen} 
+              onClose={() => setIsSidebarOpen(false)} 
+            />
+            <main className="relative z-10">
+              <Breadcrumb />
+              <Suspense fallback={<LoadingPage />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/tutorials" element={<TutorialsPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                  <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </GlobalErrorBoundary>
         </div>
-      </div>
-    </div>
+      </Router>
+    </HelmetProvider>
   );
-};
+}
 
 export default App;

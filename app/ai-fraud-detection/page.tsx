@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const AIFraudDetectionPage = () => {
   return (
-<>
+    <>
       <Helmet></Helmet>
         <title>Ai Fraud Detection - Zion Tech Group</title>
         <meta name="description" content="Ai Fraud Detection services and solutions from Zion Tech Group" /></meta>

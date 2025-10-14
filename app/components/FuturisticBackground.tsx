@@ -52,7 +52,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10">
         {children}
       </div>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

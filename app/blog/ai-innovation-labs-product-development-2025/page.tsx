@@ -128,10 +128,9 @@ const InnovationLabsPage: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

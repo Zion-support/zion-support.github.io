@@ -97,10 +97,9 @@ const AIMegaTrends20252026: React.FC = () => {
                 Explore AI Services
               </Link>
             </div>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

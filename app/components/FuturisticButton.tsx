@@ -8,6 +8,7 @@ const FuturisticButton: React.FC = () => {
         This is a placeholder component for FuturisticButton.
       </p>
     </div>
+    </>
   );
 };
 

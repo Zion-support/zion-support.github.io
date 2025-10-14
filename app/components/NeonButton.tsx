@@ -26,7 +26,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   
   if (href) {
     return (
-<>      <a;
+    <>      <a;
         href={href}
         className={classes}
         target="_blank

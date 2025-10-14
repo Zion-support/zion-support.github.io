@@ -60,6 +60,7 @@ const DynamicContentShowcase: React.FC = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

@@ -46,6 +46,7 @@ const ContentStatistics: React.FC = () => {
         ))}
       </div>
     </section>
+    </>
   );
 };
 

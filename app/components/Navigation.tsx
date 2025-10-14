@@ -52,6 +52,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 

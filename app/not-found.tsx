@@ -93,7 +93,6 @@ export default function NotFound() {
               <Phone className="w-5 h-5" />
               <span>Contact Support</span>
             </Link>
-          </div>
         </div>
       </div>
     </div>

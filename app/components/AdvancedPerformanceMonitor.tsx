@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-<>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
+    <>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>
       <div className="flex items-center justify-between mb-4"></div>
         <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button;

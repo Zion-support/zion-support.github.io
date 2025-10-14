@@ -2,7 +2,7 @@ import React from "react";
 
 const EnhancedMetaTags: React.FC = () => {
   return (
-<>    <Helmet></Helmet>
+    <>    <Helmet></Helmet>
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       <meta name="description" content={description} />"

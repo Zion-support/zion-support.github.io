@@ -189,7 +189,9 @@ const WebDevelopmentPage = () => {
           </div>
         </section>
       </div>
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

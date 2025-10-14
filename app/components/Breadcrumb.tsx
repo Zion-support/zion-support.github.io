@@ -44,6 +44,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
         This is a placeholder component for Breadcrumb.
       </p>
     </div>
+    </>
   );
 };
 

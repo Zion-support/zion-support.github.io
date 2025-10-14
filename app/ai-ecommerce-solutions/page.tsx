@@ -219,6 +219,7 @@ const AIEcommerceSolutionsPage: React.FC = () =>&apos;,
         </div>
       </section>
     </div>
+    </>
   );
 };
 

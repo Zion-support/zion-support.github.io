@@ -96,6 +96,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+    </>
   );
 };
 

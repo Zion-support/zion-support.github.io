@@ -40,7 +40,6 @@ const CloudInfrastructurePage = () => {
             <p className="text-gray-300">
               Enterprise-grade security and compliance solutions for your cloud infrastructure.
             </p>
-          </div>
         </div>
       </div>
     </>

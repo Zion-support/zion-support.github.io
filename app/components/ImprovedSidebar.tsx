@@ -151,7 +151,6 @@ const ImprovedSidebar: React.FC = () => {
                 All rights reserved
               </p>
             </div>
-          </div>
         </div>
       </div>
     </>

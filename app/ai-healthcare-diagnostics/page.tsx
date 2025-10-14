@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet    } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const AiHealthcareDiagnosticsPage = () => {
   return (
@@ -40,7 +40,6 @@ const AiHealthcareDiagnosticsPage = () => {
             <p className="text-gray-300">
               Personalized treatment recommendations based on patient data and medical history.
             </p>
-          </div>
         </div>
       </div>
     </>

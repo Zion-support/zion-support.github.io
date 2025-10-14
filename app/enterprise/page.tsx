@@ -45,7 +45,6 @@ export default function EnterprisePage() {
                 </span>
               </Link>
             </div>
-          </div>
         </div>
       </div>
 

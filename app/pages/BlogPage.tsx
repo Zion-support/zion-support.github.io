@@ -5,6 +5,7 @@
       </div>
 export default BlogPag;e;
     </React.Fragment>
+    </>
   );
 };
 

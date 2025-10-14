@@ -69,7 +69,6 @@
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
               Send Resume;
             </button>
-          </div>
         </div>
       </div>
     </div>;  )

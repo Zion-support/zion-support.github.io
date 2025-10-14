@@ -89,7 +89,7 @@ export default ImprovedNavigation;
 export default ImprovedNavigation;
 const ImprovedNavigation = () => {
   return (
-<>    <div className="p-4"></div>
+    <>    <div className="p-4"></div>
       <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
       <p>This component is under construction.</p>
     </>
@@ -134,10 +134,9 @@ const ImprovedNavigation: React.FC = () => {
             <p className="text-gray-300">
               Track record of delivering successful projects and exceeding client expectations.
             </p>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -6,6 +6,7 @@ const EnhancedErrorFeedback: React.FC = () => {
       <h2 className="text-2xl font-bold mb-4">EnhancedErrorFeedback</h2>
       <p>This component is under development.</p>
     </div>
+    </>
   );
 };
 

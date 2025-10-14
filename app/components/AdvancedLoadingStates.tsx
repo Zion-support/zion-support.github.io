@@ -7,7 +7,7 @@ interface AdvancedLoadingStatesProps {
 
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className = "", children }) => {
   return (
-<>    <div className={`advancedloadingstates ${className}`}></div>```
+    <>    <div className={`advancedloadingstates ${className}`}></div>```
       {children}
     </>
   );

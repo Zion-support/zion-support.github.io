@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
-<>
+    <>
       <Helmet></Helmet>
         <title>Partners - Strategic Partnerships | Zion Tech Group</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities." />
@@ -47,7 +47,7 @@ export default function Page() {
               {partners.map((partner, _index) => (
 "
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
-                  <div className="text-center"></div>"
+                  <div className="text-center">"
                     <div className="text-4xl mb-4"></div>{partner.logo}</div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>"
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>"
@@ -101,7 +101,7 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

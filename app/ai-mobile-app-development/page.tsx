@@ -223,6 +223,7 @@ const AIMobileAppDevelopmentPage: React.FC = () =>&apos;,
         </div>
       </section>
     </div>
+    </>
   );
 };
 

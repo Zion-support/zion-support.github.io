@@ -5,6 +5,7 @@
       </div>
 export default DemoPag;e;
     </React.Fragment>
+    </>
   );
 };
 

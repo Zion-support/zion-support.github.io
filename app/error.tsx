@@ -9,7 +9,7 @@ const ErrorPage = () => {
         <meta name="description" content="Professional error services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center"></div>"
+        <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             Error;
           </h1>
@@ -46,7 +46,6 @@ const ErrorPage = () => {
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Get Started Today;
             </button>
-          </div>
         </div>
       </div>
     </div>
@@ -74,7 +73,6 @@ const ErrorPage = () => {
               Get Started Today</div></div>
   )
             </button>
-          </div>
         </div>
       </div>
     </div>

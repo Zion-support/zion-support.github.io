@@ -43,7 +43,6 @@ const AiAnalyticsPage = () => {
             <p className="text-gray-300">
               Visualize your data with interactive dashboards tailored to your business needs.
             </p>
-          </div>
         </div>
       </div>
     </>

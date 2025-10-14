@@ -1,66 +1,88 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to create a proper page template
-function createPageTemplate(title, description) {
-  return `'use client';
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function Page() {
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
-          <p className="text-xl text-gray-600">
-            This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}`;
-}
-
-// Find all page.tsx files
-const pageFiles = glob.sync('app/**/page.tsx');
-
-console.log(`Found ${pageFiles.length} page files to process`);
-
-pageFiles.forEach(filePath => {
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has syntax errors (contains malformed patterns)
-    if (content.includes(';""') || (content.includes('import') && content.includes('""')) || content.includes('<div></div>') || content.includes('<>    <div></div>')) {
-      console.log(`Fixing: ${filePath}`);
-      
-      // Extract title from path
-      const pathParts = filePath.split('/');
-      const folderName = pathParts[pathParts.length - 2];
-      const title = folderName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `${title} services and solutions from Zion Tech Group`;
-      
-      // Create new content
-      const newContent = createPageTemplate(title, description);
-      
-      // Write the fixed content
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix extra semicolon in import statements
+    if (content.includes('import React from "react";"')) {
+      content = content.replace(/import React from "react";"/g, 'import React from "react";');
+      modified = true;
     }
+
+    // Fix malformed JSX fragments and Helmet tags
+    if (content.includes('<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>')) {
+      content = content.replace(
+        /<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><\/div>\s*<Helmet><\/Helmet>\s*<title>([^<]+)<\/title>\s*<meta name="description" content="([^"]+)" \/><\/meta>\s*<\/Helmet>/g,
+        '<>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <Helmet>\n          <title>$1</title>\n          <meta name="description" content="$2" />\n        </Helmet>'
+      );
+      modified = true;
+    }
+
+    // Fix malformed closing tags
+    if (content.includes('</div>\n    </div>\n  );\n};')) {
+      content = content.replace(/<\/div>\n    <\/div>\n  \);\n\};/g, '</div>\n        </div>\n      </div>\n    </>\n  );\n};');
+      modified = true;
+    }
+
+    // Fix missing closing tags for fragments
+    if (content.includes('  );\n};') && !content.includes('</>')) {
+      content = content.replace(/  \);\n\};/g, '    </>\n  );\n};');
+      modified = true;
+    }
+
+    // Fix malformed paragraph tags
+    if (content.includes('<p className="text-gray-300 text-lg"></p>')) {
+      content = content.replace(
+        /<p className="text-gray-300 text-lg"><\/p>\s*This page is under construction\. Please check back later\.\s*<\/p>/g,
+        '<p className="text-gray-300 text-lg">\n              This page is under construction. Please check back later.\n            </p>'
+      );
+      modified = true;
+    }
+
+    // Fix extra spaces in Helmet import
+    if (content.includes('import { Helmet    } from "react-helmet-async";')) {
+      content = content.replace(/import { Helmet    } from "react-helmet-async";/g, 'import { Helmet } from "react-helmet-async";');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Syntax error fixing completed!');
+// Function to recursively find and fix TSX files
+function findAndFixTSXFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += findAndFixTSXFiles(filePath);
+    } else if (file.endsWith('.tsx')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+
+  return fixedCount;
+}
+
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = findAndFixTSXFiles('./app');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
