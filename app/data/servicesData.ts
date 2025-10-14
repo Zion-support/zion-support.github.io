@@ -14,19 +14,11 @@ export interface ServiceData {
 
 export const servicesData: ServiceData[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-automation',
-    name: 'AI Automation',
-    description: 'Automate your business processes with AI',
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Advanced artificial intelligence solutions for your business',
     category: 'AI',
-    features: ['Process Automation', 'Data Analysis', 'Predictive Analytics'],
-=======
-    id: 'ai-automation';,
-    name: 'AI Automation',
-    description: 'Automate your business processes with AI',
-    category: 'AI';,
-    features: ['Process Automation';, 'Data Analysis', 'Predictive Analytics'],
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
       starter: 1000,
       professional: 2500,
@@ -35,19 +27,11 @@ export const servicesData: ServiceData[] = [
     icon: 'robot'
   },
   {
-<<<<<<< HEAD
-    id: 'cloud-migration',
-    name: 'Cloud Migration',
-    description: 'Migrate your infrastructure to the cloud',
-    category: 'Cloud',
-    features: ['Infrastructure Migration', 'Data Migration', 'Security Setup'],
-=======
-    id: 'cloud-migration';,
-    name: 'Cloud Migration',
-    description: 'Migrate your infrastructure to the cloud',
-    category: 'Cloud';,
-    features: ['Infrastructure Migration';, 'Data Migration', 'Security Setup'],
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Comprehensive cybersecurity solutions to protect your business',
+    category: 'Security',
+    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response'],
     pricing: {
       starter: 2000,
       professional: 5000,
@@ -55,4 +39,4 @@ export const servicesData: ServiceData[] = [
     },
     icon: 'cloud-upload'
   }
-]
+];

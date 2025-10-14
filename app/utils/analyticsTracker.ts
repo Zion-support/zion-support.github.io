@@ -1,86 +1,37 @@
 export const analyticsTracker = {
-  trackPageView: (page: string, title?: string) => {
+  trackPageView: (_page: string, _title?: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'page_view', {
-<<<<<<< HEAD
-        page_title: title || document.title,
-        page_location: window.location.href,
-        page_path: page})
-=======
-<<<<<<< HEAD
-        page_title: title || document.title;,
-        page_location: window.location.href;,
-        page_path: page
-=======
-        page_title: title || document.title,
-        page_location: window.location.href,
-        page_path: page;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+        page_title: _title,
+        page_location: _page
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   },
   
-  trackClick: (element: string, location: string) => {
+  trackClick: (_element: string, _location: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'click', {
-<<<<<<< HEAD
-        event_category: 'engagement',
-        event_label: element,
-        custom_parameter: location})
-=======
-<<<<<<< HEAD
-        event_category: 'engagement';,
-        event_label: element;,
-        custom_parameter: location
-=======
-        event_category: 'engagement',
-        event_label: element,
-        custom_parameter: location;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+        element: _element,
+        location: _location
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   },
   
-  trackFormSubmit: (formName: string, success: boolean) => {
+  trackFormSubmit: (_formName: string, _success: boolean) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'form_submit', {
-<<<<<<< HEAD
-        event_category: 'engagement',
-        event_label: formName,
-        value: success ? 1 : 0})
-=======
-<<<<<<< HEAD
-        event_category: 'engagement';,
-        event_label: formName;,
-        value: success ? 1 : 0
-=======
-        event_category: 'engagement',
-        event_label: formName,
-        value: success ? 1 : 0;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+        form_name: _formName,
+        success: _success
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   },
   
-  trackConversion: (conversionId: string, value?: number) => {
+  trackConversion: (_conversionId: string, _value?: number) => {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
-<<<<<<< HEAD
-        send_to: conversionId,
-        value: value})
-=======
-<<<<<<< HEAD
-        send_to: conversionId;,
-        value: value
-=======
-        send_to: conversionId,
-        value: value;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+        send_to: _conversionId,
+        value: _value
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   }
 }
