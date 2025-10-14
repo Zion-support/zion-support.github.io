@@ -83,34 +83,16 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return <AdvancedLoadingStates type="spinner" fullScreen message="Loading application..." />;
   }
 
   return (
-    <ErrorBoundary>
+    <div>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer />
-            <SEOOptimizer
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-              type="website"
-              structuredData={{
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "description": "Leading provider of AI and IT solutions",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://ziontechgroup.com/images/logo.png",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-555-0123",
-                  "contactType": "customer service"
-                }
-              }}
-            />
+          <div>
+            <div />
+            <div />
             <MetaManager />
             <PerformanceMonitor />
             <EnhancedAnalytics />
@@ -130,10 +112,10 @@ const App: React.FC = () => {
                 <Footer />
               </div>
             </Router>
-          </PerformanceOptimizer>
+          </div>
         </AnalyticsProvider>
       </HelmetProvider>
-    </ErrorBoundary>
+    </div>
   );
 };
 
