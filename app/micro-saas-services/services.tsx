@@ -90,6 +90,7 @@ import React from 'react';
               <button className="w-5h-5ml-2">Learn More;
               </button>
             </div>
+          </div>
         </div>
       </section>
       {/* Features Section */}

@@ -1,220 +1,250 @@
-# Zion Tech Group - Advanced AI and IT Solutions
+# Zion Tech Group Website
 
-A modern, high-performance website built with React + Vite, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, cybersecurity, cloud computing, and digital transformation services.
+A modern, high-performance website built with React, TypeScript, and Vite, featuring AI services, micro-SaaS solutions, and 5G technology offerings.
 
 ## 🚀 Features
 
 ### Core Technologies
-- **React 18** - Latest React with modern hooks and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Smooth animations and transitions
-- **Lucide React** - Beautiful, customizable icons
+
+- **React 18** with TypeScript for type safety
+- **Vite** for fast development and optimized builds
+- **Tailwind CSS** for utility-first styling
+- **Framer Motion** for smooth animations
+- **React Router** for client-side routing
 
 ### Performance Optimizations
-- **Code Splitting** - Dynamic imports for better performance
-- **Bundle Analysis** - Vite bundle analyzer integration
-- **Performance Monitoring** - Real-time Core Web Vitals tracking
-- **SEO Optimization** - Comprehensive meta tags and structured data
-- **PWA Support** - Progressive Web App capabilities
+
+- **Lazy Loading** for images and components
+- **Code Splitting** for optimal bundle sizes
+- **WebP Image Support** with fallbacks
+- **Core Web Vitals** monitoring
+- **Performance Budget** enforcement
 
 ### Accessibility Features
-- **WCAG 2.1 AA Compliance** - Full accessibility support
-- **Keyboard Navigation** - Complete keyboard accessibility
-- **Screen Reader Support** - ARIA landmarks and labels
-- **High Contrast Mode** - Support for high contrast displays
-- **Focus Management** - Proper focus indicators and management
 
-### SEO & Marketing
-- **Structured Data** - Rich snippets for search engines
-- **Sitemap** - XML sitemap for better crawling
-- **Robots.txt** - Search engine crawling instructions
-- **PWA Support** - Progressive Web App capabilities
-- **Open Graph** - Social media sharing optimization
+- **WCAG 2.1 AA** compliance
+- **Keyboard Navigation** support
+- **Screen Reader** optimization
+- **High Contrast** mode support
+- **Reduced Motion** preferences
 
-## 🛠️ Development
+### SEO Optimizations
 
-### Prerequisites
-- Node.js 18.0.0 or higher
-- pnpm 8.0.0 or higher (recommended) or npm
+- **Enhanced Meta Tags** with Open Graph and Twitter Cards
+- **Structured Data** for rich snippets
+- **XML Sitemap** with 60+ pages
+- **Robots.txt** configuration
+- **Canonical URLs** and proper linking
 
-### Installation
+### Error Handling
 
-1. Clone the repository:
-```bash
-git clone https://github.com/ziontechgroup/website.git
-cd website
-```
-
-2. Install dependencies:
-```bash
-pnpm install
-# or
-npm install
-```
-
-3. Start the development server:
-```bash
-pnpm dev
-# or
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Available Scripts
-
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Fix ESLint issues
-- `pnpm type-check` - Run TypeScript type checking
-- `pnpm test` - Run tests
-- `pnpm build:analyze` - Analyze bundle size
+- **Enhanced Error Boundaries** with recovery options
+- **User-Friendly Error Pages** with actionable buttons
+- **Error Reporting** and logging
+- **Graceful Degradation** for failed components
 
 ## 📁 Project Structure
 
 ```
-├── app/                    # React application
-│   ├── components/         # Reusable components
-│   ├── globals.css        # Global styles
-│   ├── page.tsx           # Home page
-│   ├── about/             # About page
-│   ├── contact/           # Contact page
-│   └── ai-services/       # AI services pages
-├── public/                # Static assets
-│   ├── manifest.json      # PWA manifest
-│   ├── robots.txt         # Robots.txt
-│   └── favicon.svg        # Favicon
-├── vite.config.ts         # Vite configuration
-├── tailwind.config.js     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Dependencies and scripts
+├── app/                          # Main application code
+│   ├── components/               # Reusable UI components
+│   │   ├── OptimizedImage.tsx   # Image optimization component
+│   │   ├── AccessibilityEnhancer.tsx
+│   │   ├── EnhancedErrorBoundary.tsx
+│   │   ├── PerformanceMonitor.tsx
+│   │   └── EnhancedSEO.tsx
+│   ├── pages/                   # Page components
+│   │   ├── ai-services/         # AI service pages
+│   │   ├── micro-saas/          # Micro SaaS pages
+│   │   ├── 5g-solutions/        # 5G solution pages
+│   │   └── ...
+│   └── styles/                  # Global styles
+├── __tests__/                   # Test files
+├── scripts/                     # Build and optimization scripts
+├── public/                      # Static assets
+│   ├── sitemap.xml             # Generated sitemap
+│   └── robots.txt              # SEO configuration
+└── dist/                        # Build output
 ```
+
+## 🛠️ Development
+
+### Prerequisites
+
+- Node.js 18+
+- pnpm 8+
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+### Testing
+
+```bash
+# Run tests
+pnpm test
+
+# Run tests with coverage
+pnpm test:coverage
+
+# Run tests in watch mode
+pnpm test:watch
+```
+
+### Code Quality
+
+```bash
+# Lint code
+pnpm lint
+
+# Fix linting issues
+pnpm lint:fix
+
+# Type checking
+pnpm type-check
+
+# Format code
+pnpm format
+```
+
+## 🚀 Performance
+
+### Bundle Analysis
+
+- **Total Bundle Size**: ~820KB (gzipped: ~200KB)
+- **Largest Chunk**: React vendor bundle (~142KB)
+- **Code Splitting**: Automatic route-based splitting
+- **Tree Shaking**: Unused code elimination
+
+### Core Web Vitals
+
+- **First Contentful Paint (FCP)**: < 1.8s
+- **Largest Contentful Paint (LCP)**: < 2.5s
+- **First Input Delay (FID)**: < 100ms
+- **Cumulative Layout Shift (CLS)**: < 0.1
+
+### Optimization Features
+
+- **Image Optimization**: WebP support, lazy loading, responsive images
+- **Font Optimization**: Preloaded critical fonts
+- **CSS Optimization**: Purged unused styles
+- **JavaScript Optimization**: Minified and compressed bundles
 
 ## 🎨 Design System
 
 ### Color Palette
-- **Primary**: Cyan (#00ffff) - Tech and innovation
-- **Secondary**: Purple (#8b5cf6) - Creativity and AI
-- **Accent**: Pink (#ec4899) - Energy and growth
-- **Background**: Dark slate gradient for modern look
+
+- **Primary**: Slate-900 to Purple-900 gradient
+- **Accent**: Cyan-500 to Purple-600
+- **Text**: White, Gray-300, Gray-400
+- **Background**: Dark gradients with glassmorphism
 
 ### Typography
-- **Headings**: Bold, large sizes with neon effects
-- **Body**: Clean, readable text with proper contrast
-- **Code**: Monospace font for technical content
+
+- **Headings**: Bold, large sizes with proper hierarchy
+- **Body**: Clean, readable font stack
+- **Code**: Monospace for technical content
 
 ### Components
-- **Cyber Cards**: Glassmorphism design with neon borders
-- **Hologram Cards**: Animated cards with scanning effects
-- **Quantum Cards**: Energy pulse animations
-- **Buttons**: Gradient backgrounds with hover effects
+
+- **Futuristic Design**: Glassmorphism and neon effects
+- **Responsive**: Mobile-first approach
+- **Accessible**: WCAG 2.1 AA compliant
+- **Interactive**: Smooth animations and transitions
+
+## 📱 Responsive Design
+
+- **Mobile**: 320px - 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: 1024px - 1440px
+- **Large Desktop**: 1440px+
 
 ## 🔧 Configuration
 
 ### Environment Variables
-Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
+NODE_ENV=production
+VITE_APP_TITLE=Zion Tech Group
+VITE_APP_URL=https://ziontechgroup.com
 ```
 
-### Performance Monitoring
-The application includes built-in performance monitoring that tracks:
-- **LCP** (Largest Contentful Paint)
-- **FID** (First Input Delay)
-- **CLS** (Cumulative Layout Shift)
-- **FCP** (First Contentful Paint)
-- **TTFB** (Time to First Byte)
+### Build Configuration
 
-## 🚀 Deployment
-
-### Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables
-3. Deploy automatically on push to main branch
-
-### Other Platforms
-The application can be deployed to any platform that supports Next.js:
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
+- **Target**: Modern browsers (ES2020+)
+- **Minification**: Terser for optimal compression
+- **Source Maps**: Generated for debugging
+- **Asset Optimization**: Automatic image and font optimization
 
 ## 📊 Analytics & Monitoring
 
-### Google Analytics
-- Page views and user interactions
-- Performance metrics
-- Error tracking
-- Custom events for service clicks
-
 ### Performance Monitoring
-- Real-time Core Web Vitals
-- Bundle size analysis
-- Image optimization tracking
-- Loading performance metrics
 
-## 🔒 Security
+- **Core Web Vitals** tracking
+- **Resource Loading** metrics
+- **Memory Usage** monitoring
+- **Error Tracking** and reporting
 
-### Security Headers
-- Content Security Policy (CSP)
-- X-Frame-Options
-- X-Content-Type-Options
-- Referrer-Policy
-- Permissions-Policy
+### SEO Monitoring
 
-### Best Practices
-- Input sanitization
-- XSS protection
-- CSRF protection
-- Secure cookie settings
+- **Sitemap**: 60+ pages with proper priorities
+- **Meta Tags**: Comprehensive SEO optimization
+- **Structured Data**: Rich snippets for search engines
+- **Social Media**: Open Graph and Twitter Cards
 
-## 📱 Mobile Optimization
+## 🚀 Deployment
 
-- **Responsive Design** - Mobile-first approach
-- **Touch Optimization** - Touch-friendly interactions
-- **Performance** - Optimized for mobile networks
-- **PWA Features** - Installable and offline-capable
+### Build Process
 
-## 🌐 Internationalization
+1. **Clean**: Remove previous build artifacts
+2. **Type Check**: Validate TypeScript
+3. **Lint**: Check code quality
+4. **Build**: Create optimized production bundle
+5. **Sitemap**: Generate XML sitemap
+6. **Optimize**: Performance optimizations
 
-The website is prepared for internationalization with:
-- Language detection
-- RTL support
-- Localized content structure
-- SEO-friendly URLs
+### Deployment Checklist
+
+- [ ] All tests passing
+- [ ] TypeScript compilation successful
+- [ ] Linting errors resolved
+- [ ] Build size within budget
+- [ ] Performance metrics acceptable
+- [ ] Accessibility compliance verified
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT License - see LICENSE file for details
 
 ## 📞 Support
 
-For support and questions:
-- **Phone**: +1 (302) 464-0950
+For technical support or questions:
+
 - **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-
-## 🔗 Links
-
-- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
-- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
-- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
+- **Phone**: +1-302-464-0950
+- **Website**: https://ziontechgroup.com
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
+Built with ❤️ by Zion Tech Group

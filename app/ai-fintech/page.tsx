@@ -23,6 +23,22 @@ export default function AiFintech() {
           </Link>
         </div>
       </div>
-    </>
-  );
+    </div>)
+)
+  ); }
+
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+
+        </p>;
+      </div>
+    </div>
+  );}
 }
+'"
+"
+"'

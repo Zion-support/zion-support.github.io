@@ -1,97 +1,62 @@
-export default AdvancedErrorBoundary;
-// Simple logger implementation;
-      console.error(message, context);
-};
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+import React, { Component, ErrorInfo, ReactNode } from "react";
+
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;
- void;
-  enableErrorReporting?: boolean;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableRetry?: boolean;
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
-class AdvancedErrorBoundary extends Component;
-  private retryCount = 0;
-  private maxRetries = 3;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  retryCount: number;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {;
+constructor(props: Props) {
     super(props);
-      errorId: null;
-    };
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-      errorInfo;
-    });
-    // Log error to console in development;
-        errorInfo;
-      });
-    // Call custom error handler;
+    this.state = { hasError: false, retryCount: 0 };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error, retryCount: 0 };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {"
+    console.error("Error caught by boundary:", error, errorInfo);
+    if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    // Report error to external service;
-      this.reportError(error, errorInfo);
-      sessionId: this.getSessionId()
-    };
-    // Send to error reporting service;
-    this.sendErrorReport(errorReport);
+    }
+  }
+
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: undefined,
+      retryCount: this.state.retryCount + 1,)
+    });
   };
-    // Try to get user ID from localStorage or other sources;
-      return localStorage.getItem('userId') || null;
-      return null;
-  };
-    // Generate or retrieve session ID;
-      let sessionId = sessionStorage.getItem('sessionId');
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
-      return sessionId;
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-      // Send to your error reporting service;
-          'Content-Type': 'application/json'
-        body: JSON.stringify(errorReport)
-      });
-        error: reportError;
-      });
-  };
-    if (this.retryCount;
-    window.location.reload();
-  };
-    window.location.href = '/';
-  };
-      // Custom fallback UI;
-        return this.props.fallback;
-      // Default error UI;
-                  Oops! Something went wrong;
-                  We&apos;re sorry, but something unexpected happened. Our team;
-                  has been notified.
-                    Error Details:
-                      <strong>Error ID:</strong> {this.state.errorId}
-                      <strong>Message:</strong> {this.state.error?.message}
-                        Stack Trace;
-                        {this.state.error?.stack}
-                        Component Stack;
-                        {this.state.errorInfo?.componentStack}
-              )}
-                {this.props.enableRetry &&
-                  this.retryCount;
-                      Try Again ({this.maxRetries - this.retryCount} attempts;
-                      left)
-                  )}
-                  Reload Page;
-                  Go to Homepage;
-                  If this problem persists, please contact our support team;
-                  at&nbsp;
-                    kleber@ziontechgroup.com;
-  );
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || ("
+          <div className="error-boundary"></div>
+            <h2>Something went wrong.</h2>)
+            <details>{this.state.error && this.state.error.toString()}</details>
+            {this.props.enableRetry && ("
+              <button onClick={this.handleRetry} className="retry-button">
+                Try Again
+              </button>)
+            )}
+          </div>
+        )
+      );
+    }
     return this.props.children;
+  }
+}
+;
+export default AdvancedErrorBoundary;
+"

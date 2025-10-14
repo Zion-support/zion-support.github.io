@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 export default SkipLink;
 'use client';
@@ -39,3 +40,5 @@ export default function ComponentsPage() {
     </a>
   );
 };
+=======
+>>>>>>> origin/main

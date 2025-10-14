@@ -23,6 +23,6 @@ export default function Blockchain() {
           </Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+"
 }

@@ -1,4 +1,4 @@
-'use client';
+import React, { ReactNode } from "react";
 
 import React, { createContext, useContext, useEffect } from 'react';
 
@@ -7,15 +7,9 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, unknown>) => void;
   page: (name: string, properties?: Record<string, unknown>) => void;
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
+;
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
+  return <div>{children}</div>;
 };
 
 interface AnalyticsProviderProps {

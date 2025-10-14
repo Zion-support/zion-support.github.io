@@ -1,81 +1,122 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// List of files that need to be fixed with proper function declarations
-const corruptedFiles = [
-  'app/api/page.tsx',
-  'app/automation/page.tsx',
-  'app/blockchain/page.tsx',
-  'app/cybersecurity/page.tsx',
-  'app/database/page.tsx',
-  'app/devops/page.tsx',
-  'app/health/page.tsx',
-  'app/investors/page.tsx',
-  'app/iot/page.tsx',
-  'app/news/page.tsx',
-  'app/nlp/page.tsx',
-  'app/offline/page.tsx',
-  'app/productivity/page.tsx',
-  'app/search/page.tsx',
-  'app/security/page.tsx',
-  'app/sla/page.tsx'
-];
-
-function createStandardPage(filePath, pageName, title, description) {
-  const content = `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
-
-export default function ${pageName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  );
-}`;
-
-  return content;
-}
-
-function fixCorruptedFile(filePath) {
+// Function to clean up corrupted TSX/JSX files
+function cleanFile(filePath) {
   try {
-    const fileName = path.basename(filePath, '.tsx');
-    const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page';
-    const title = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ');
-    const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
-    
-    const content = createStandardPage(filePath, pageName, title, description);
-    
+    let content = fs.readFileSync(filePath, "utf8");
+
+    // Fix common corruption patterns
+    content = content
+      // Remove extra semicolons after imports
+      .replace(/';';/g, ";")
+      .replace(/';';';/g, ";")
+      // Fix malformed JSX attributes
+      .replace(/";";/g, '"')
+      .replace(/";';/g, '"')
+      .replace(/';";/g, ";")
+      // Fix malformed className attributes
+      .replace(/c,lassName/g, "className")
+      .replace(/bg-gray-90o0/g, "bg-gray-900")
+      .replace(/text-gray-30o0/g, "text-gray-300")
+      // Remove stray closing tags and malformed JSX
+      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div><\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div><\/div>/g, "")
+      .replace(/<\/div><\/div>/g, "")
+      // Fix malformed function declarations
+      .replace(
+        /export default function ComponentsPage\(\) \{\}/g,
+        "export default function Page() {",
+      )
+      // Remove duplicate return statements
+      .replace(
+        /return \(\s*<div>Page content<\/div>\s*\);\s*\}\s*return \(/g,
+        "return (",
+      )
+      // Fix malformed JSX structure
+      .replace(
+        /<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g,
+        "",
+      )
+      .replace(/<div className="container mx-auto px-4">";"<\/div>/g, "")
+      .replace(
+        /<h1 className="text-4xl font-bold mb-8">Components<\/h1>";"/g,
+        "",
+      )
+      .replace(/<p className="text-gray-30o0 text-lg">";"/g, "")
+      .replace(/This page is under development\.<\/p>/g, "")
+      .replace(/<\/p><\/div><\/div>/g, "")
+      .replace(/\);\}/g, ");")
+      .replace(/\}\s*\);\}/g, "});")
+      // Clean up extra closing braces and parentheses
+      .replace(/\}\s*\);\}\s*\}/g, "});")
+      .replace(/\}\s*\);\}/g, "});")
+      // Remove malformed interface declarations
+      .replace(
+        /interface ResponsiveContainerProps \{\}\s*children:\s*c,lassName\?\: string;\s*\}/g,
+        "interface ResponsiveContainerProps {\n  children: React.ReactNode;\n  className?: string;\n}",
+      )
+      // Fix malformed function parameters
+      .replace(
+        /const ResponsiveContainer: React\.FC<ResponsiveContainerProps> = \(\{\}\s*children,\s*className = \}\) => \{\}/g,
+        "const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({\n  children, \n  className = ''\n}) => {",
+      )
+      // Remove stray closing tags at the end
+      .replace(/<\/ResponsiveContainerProps>\s*$/g, "")
+      // Clean up multiple consecutive newlines
+      .replace(/\n\s*\n\s*\n/g, "\n\n")
+      // Remove empty lines at the end
+      .replace(/\n\s*$/g, "\n");
+
+    // Write the cleaned content back
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed corrupted file: ${filePath}`);
+    console.log(`Fixed: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all corrupted files
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join('./', filePath);
-  if (fs.existsSync(fullPath)) {
-    fixCorruptedFile(fullPath);
-  } else {
-    console.log(`File not found: ${fullPath}`);
-  }
-});
+// Function to find and fix all corrupted files
+function fixAllCorruptedFiles() {
+  const appDir = path.join(__dirname, "app");
+  let fixedCount = 0;
+  let errorCount = 0;
 
-console.log('Corrupted files fix completed!');
+  function walkDir(dir) {
+    const files = fs.readdirSync(dir);
+
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+
+      if (stat.isDirectory()) {
+        walkDir(filePath);
+      } else if (
+        file.endsWith(".tsx") ||
+        file.endsWith(".ts") ||
+        file.endsWith(".jsx") ||
+        file.endsWith(".js")
+      ) {
+        if (cleanFile(filePath)) {
+          fixedCount++;
+        } else {
+          errorCount++;
+        }
+      }
+    }
+  }
+
+  walkDir(appDir);
+
+  console.log(`\nFixed ${fixedCount} files`);
+  console.log(`Errors in ${errorCount} files`);
+}
+
+// Run the fix
+fixAllCorruptedFiles();

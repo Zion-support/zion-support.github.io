@@ -1,23 +1,35 @@
 import React from 'react';
 
   children, 
-  const variant = 'default', 
-  className = '', ;
-  onClick;
-}: FuturisticCardProps) {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'service':;
-        return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 shadow-2 xl hover:shadow-cyan-500/20';
-      case 'testimonial':
-        return 'bg-gradient-to-br from-slate-800/50 via-purple-900/30 to-slate-800/50 backdrop-blur-xl border border-purple-500/30 hover:border-purple-400/50 shadow-2 xl hover:shadow-purple-500/20';
-      case 'feature':
-        return 'bg-gradient-to-br from-slate-800/70 via-indigo-900/40 to-slate-800/70 backdrop-blur-xl border border-indigo-500/30 hover: border-indigo-400/50 shadow-2 xl hover:shadow-indigo-500/20';,
-  default: return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-white/20 hover:border-cyan-500/50 shadow-2 xl hover:shadow-cyan-500/20';
-    }
+  className = '','')
+  variant = 'default''}) => {';
+const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'';
+const variantClasses = {
+
+    default: "bg-white/10",';"
+    glow: "bg-white/10 shadow-lg shadow-blue-500/20",';
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';
+  }
+
+  children: React.ReactNode;
+  className?: string';
+  variant?: 'default' | 'glow' | 'gradient';}'
+}
+;
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, '
+  className = '',';'
+  variant = 'default''; })
+}) => {';
+const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
+  const variantClasses = {'"
+    default: "bg-white/10",';'"
+    glow: "bg-white/10 shadow-lg shadow-blue-500/20",';'
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';}
   };
   return (
-    <div>Content</div>
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>
+      { children }
+    </div>)
   );
     <motion.div;
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}

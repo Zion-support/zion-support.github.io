@@ -1,7 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+name: "Sarah Johnson",""
+      company: "TechCorp Inc.",""
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","
+      rating: 5},
+    {"
+      name: "Michael Chen",""
+      company: "DataFlow Systems",""
+      content: "The live demonstration helped us understand the full potential of the AI solutions.","
+      rating: 5},
+"
+    { name: "Emily Rodriguez","
+      company: "InnovateLabs","
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
+      rating: 5 }
 
 export default function Demo() {
   return (
@@ -23,6 +33,7 @@ export default function Demo() {
           </Link>
         </div>
       </div>
-    </>
+
+    </div>)
   );
-}
+"

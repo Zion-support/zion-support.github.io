@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+=======
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+>>>>>>> origin/main
+>>>>>>> origin/main
 }
 
 interface State {
@@ -14,14 +18,18 @@ interface State {
   errorInfo?: ErrorInfo;
 }
 
+>>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
-  }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+>>>>>>> origin/main
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -29,9 +37,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
   }
 
+    }
+>>>>>>> origin/main
+>>>>>>> origin/main
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
+
         return this.props.fallback;
       }
 
@@ -76,6 +89,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
+          </div>
+        </>
+      )
+    return this.props.children}
+export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary';
+              )}
+
+>>>>>>> origin/main
         </div>
       );
     }
@@ -85,3 +107,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
+=======
+"
+>>>>>>> origin/main
+>>>>>>> origin/main

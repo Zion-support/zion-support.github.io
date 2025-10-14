@@ -23,6 +23,8 @@ export default function FiveGimplementation() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
-}
+};
+;
+export default FiveGImplementationPage;"

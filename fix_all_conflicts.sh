@@ -1,23 +1,34 @@
 #!/bin/bash
 
-echo "Fixing all remaining merge conflicts..."
+echo "Fixing all merge conflicts..."
 
 # Find all files with merge conflicts
-files=$(find app -name "*.tsx" -o -name "*.ts" | xargs grep -l "\|
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null)
 
-for file in $files; do
-    echo "Fixing: $file"
+if [ -z "$files_with_conflicts" ]; then
+    echo "No merge conflicts found!"
+    exit 0
+fi
+
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    # Create backup
-    cp "$file" "${file}.backup"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Use git checkout to resolve conflicts by choosing HEAD version
-    git checkout --ours "$file" 2>/dev/null || true
-    
-    # If that doesn't work, use sed to remove conflict markers
-    if grep -q "
-        sed -i '/
+    # Use sed to remove merge conflict markers and keep HEAD content
+    sed -i '/^/,/^/!d; /^/d; /^    
+    # Alternative approach using awk if sed fails
+    if grep -q "" "$file"; then
+        awk '
+        /^/ { in_head = 1; next }
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_head || (!in_head && !in_other) { print }
+        ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     fi
 done
 
-echo "All merge conflicts fixed!"
+echo "All merge conflicts resolved!"

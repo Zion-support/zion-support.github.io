@@ -7,18 +7,15 @@ interface LazyWrapperProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
 }
-const DefaultFallback = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-)
-  children, ;
-  fallback = <DefaultFallback /&gt;</DefaultFallback&gt;}) => {
-  return (
-    <div>Content</div>
-  );
-    <Suspense fallback = "{fallback}"  />{children}
+const LazyWrapper: React.FC<LazyWrapperProps> = ({ children, 
+  fallback = <LoadingSpinner size="lg" text="Loading component..." /> })
+}) => { return ( }
+    <Suspense fallback={fallback}>
+      { children }
+
     </Suspense>
-  )
+)
+  );
 };
 // Higher-order component for lazy loading pages;
   Component: ComponentType<P />,

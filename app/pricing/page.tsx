@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+;
+export default function Page() {
 
-export default function Pricing() {
   return (
     <>
       <Helmet>
@@ -23,6 +22,8 @@ export default function Pricing() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
+
 }
+"

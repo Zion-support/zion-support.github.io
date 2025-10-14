@@ -23,6 +23,21 @@ export default function ApiDocs() {
           </Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+)
+  ); }
+
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+
+        </p>;
+      </div>
+    </div>
+  );}
 }
+'
+"

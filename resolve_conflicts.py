@@ -1,64 +1,62 @@
 #!/usr/bin/env python3
 import os
 import re
-import glob
+import subprocess
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts by keeping the newer version (after =======)"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Split by conflict markers and keep the newer version
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
-        if len(parts) < 3:
-            return False
-        
-        # Reconstruct content by keeping the newer version (after =======)
-        resolved_content = parts[0]  # Content before first conflict
-        for i in range(1, len(parts), 3):
-            if i + 2 < len(parts):
-                resolved_content += parts[i + 1]  # Keep the newer version
-                if i + 3 < len(parts):
-                    resolved_content += parts[i + 3]  # Content after conflict
-        
-        # Write resolved content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        print(f"Resolved conflicts in: {file_path}")
-        return True
-        
-    except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
-
-def main():
-    # Find all files with merge conflicts
-    file_patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.js',
-        '**/*.jsx',
-        '**/*.json',
-        '**/*.md'
-    ]
+def resolve_merge_conflicts():
+    """Resolve merge conflicts by choosing the main branch version (HEAD)"""
     
-    resolved_count = 0
-    total_files = 0
+    # Get list of conflicted files
+    result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+    conflicted_files = []
     
-    for pattern in file_patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if resolve_merge_conflicts(file_path):
-                resolved_count += 1
+    for line in result.stdout.split('\n'):
+        if line.startswith('UU') or line.startswith('AA') or line.startswith('DD'):
+            file_path = line[3:].strip()
+            if file_path:
+                conflicted_files.append(file_path)
     
-    print(f"\nResolved conflicts in {resolved_count} out of {total_files} files processed")
+    print(f"Found {len(conflicted_files)} conflicted files")
+    
+    for file_path in conflicted_files:
+        if not os.path.exists(file_path):
+            print(f"Skipping {file_path} - file doesn't exist")
+            continue
+            
+        print(f"Resolving conflicts in {file_path}")
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Remove conflict markers and keep only HEAD version
+            # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> [commit_hash]
+            pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+            
+            def replace_conflict(match):
+                head_content = match.group(1)
+                return head_content
+            
+            resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+            
+            # Also handle cases where there might be different conflict markers
+            # Pattern: <<<<<<< ... ======= ... >>>>>>> 
+            pattern2 = r'<<<<<<< [^\n]+\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+            resolved_content = re.sub(pattern2, replace_conflict, resolved_content, flags=re.DOTALL)
+            
+            # Write the resolved content back
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+                
+            print(f"Resolved conflicts in {file_path}")
+            
+        except Exception as e:
+            print(f"Error resolving {file_path}: {e}")
+            continue
+    
+    # Add all resolved files
+    subprocess.run(['git', 'add', '.'])
+    print("Added all resolved files to staging")
 
 if __name__ == "__main__":
-    main()
+    resolve_merge_conflicts()

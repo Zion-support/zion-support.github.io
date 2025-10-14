@@ -23,6 +23,9 @@ export default function Sitemap() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
-}
+};
+;
+export default HomePage;
+"

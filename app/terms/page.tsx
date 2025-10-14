@@ -23,6 +23,8 @@ export default function Terms() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
-}
+};
+;
+export default TermsPage;"

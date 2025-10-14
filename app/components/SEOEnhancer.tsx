@@ -1,4 +1,6 @@
-import React from 'react';
+document.head.removeChild(script);
+'
+{ useEffect } from 'react';';
 import { Helmet } from 'react-helmet-async';
 
 

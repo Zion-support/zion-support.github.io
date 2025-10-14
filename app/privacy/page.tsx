@@ -23,6 +23,8 @@ export default function Privacy() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
-}
+};
+;
+export default PrivacyPage;"

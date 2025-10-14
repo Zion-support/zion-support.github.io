@@ -23,6 +23,6 @@ export default function AnalyticsTools() {
           </Link>
         </div>
       </div>
-    </>
+    </div>)
   );
-}
+}"

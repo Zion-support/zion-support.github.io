@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Network } from "lucide-react";
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 
 export default function CloudInfrastructure() {
   return (
@@ -21,8 +23,11 @@ export default function CloudInfrastructure() {
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
+
         </div>
       </div>
-    </>
+    </div>
+)
   );
+"
 }

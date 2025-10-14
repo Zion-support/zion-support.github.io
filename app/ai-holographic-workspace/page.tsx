@@ -1,8 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
 
+<<<<<<< HEAD
 export default function AiHolographicWorkspace() {
   return (
     <>
@@ -22,7 +24,11 @@ export default function AiHolographicWorkspace() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div>)
+    </div>)
   );
-}
+};
+;
+export default HomePage;"
+"
+"

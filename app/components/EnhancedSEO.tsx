@@ -10,7 +10,6 @@ interface SEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
 }
@@ -58,12 +57,28 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {canonical && <link rel="canonical" href={canonical} />}
       
       {/* Open Graph */}
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      <meta name="robots" content={robots} />
+      
+      {/* Open Graph Meta Tags */}
+>>>>>>> origin/main
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:url" content={canonical || window.location.href} />
       <meta property="og:site_name" content="Zion Tech Group" />
+<<<<<<< HEAD
       
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
@@ -89,3 +104,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 };
 
 export default EnhancedSEO;
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

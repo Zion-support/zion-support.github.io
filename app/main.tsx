@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 
   const features = [
@@ -33,94 +34,79 @@ const benefits = [
     'Proven track record of success';
   ];
   return (
-    <div>Content</div>
-  );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>Main | Zion Tech Group</title>
-        <meta name="description" content="Professional Main services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="main, AI solutions, IT services, Zion Tech Group, main" /></meta>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Main - Zion Tech Group</title>
+        <meta name="description" content="Professional main services by Zion Tech Group." />
       </Helmet>
+      
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>;
-              <span className="w-5h-5ml-2" />Main;
-              </span>
-              <br /></br>
-              <span className = "text-white"  >Solutions</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced main solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>;
-                Get Started;
-                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-              </button>;
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Main
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional main services designed to help your business grow and succeed.
+          </p>
         </div>
       </section>
-      {/* Features Section */}
-      <section className = "w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Main?
-            </h2>
-            <p className="w-5h-5ml-2">Our main solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-6w-6text-white"  /></feature>
-                </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <h2 className="w-5h-5ml-2" />Key Benefits;
-            </h2>
-            <p className = "w-5h-5ml-2">Experience the power of our main solutions for your business.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                <p className="text-gray-300text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-      {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact our experts to discuss your main needs and get a customized solution.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
-                <Phone className="w-5h-5ml-2" /></Phone>;
-                Call Now;
-              </button>
-              <button className = "w-5h-5ml-2" /></button>
-                <Mail className="w-5h-5ml-2" /></Mail>;
-                Email Us;
-              </button>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive main solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
             </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our main services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our main services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
         </div>
       </section>
     </div>

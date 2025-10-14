@@ -47,18 +47,11 @@ const content = (
   );
   if (href) {
     return (
-    <div>Content</div>
-  );
-      <a;
-        const href = {href}
-        className="{buttonClasses}"
-        style="{{"
-          boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }} /></a>
-        {content}
-      </a>;
-    );
-  }
+      <Link to={to} className={classes}>
+        {children}
+      </Link>
+)
+    )
   return (
     <div>Content</div>
   );

@@ -23,6 +23,8 @@ export default function AiContentWriter() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
-}
+};
+;
+export default AIContentWriterPage;"

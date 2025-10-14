@@ -1,129 +1,135 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: 'automatic',
-    })
+      jsxRuntime: "automatic",
+    }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),
+      "@": path.resolve(__dirname, "./"),
+      "@app": path.resolve(__dirname, "./app"),
+      "@components": path.resolve(__dirname, "./app/components"),
+      "@utils": path.resolve(__dirname, "./utils"),
     },
   },
   build: {
-    outDir: 'dist',
-    sourcemap: false,
-    minify: 'esbuild',
-    target: 'es2020',
+    outDir: "dist",
+    target: "esnext",
+    minify: "esbuild",
+    sourcemap: process.env.NODE_ENV === "development",
     cssCodeSplit: true,
-    
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("react-dom")) {
+              return "vendor-react";
+            }
+            if (id.includes("react-router")) {
+              return "vendor-router";
+            }
+            if (id.includes("@heroicons") || id.includes("lucide-react")) {
+              return "vendor-icons";
+            }
+            if (id.includes("framer-motion")) {
+              return "vendor-motion";
+            }
+            if (id.includes("react-helmet")) {
+              return "vendor-helmet";
+            }
+            return "vendor-other";
           }
-          // Router
-          if (id.includes('react-router')) {
-            return 'router'
+          if (id.includes("/app/pages/")) {
+            return "pages";
           }
-          // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
           }
-          if (id.includes('lucide-react')) {
-            return 'icons'
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
           }
-          // SEO and meta
-          if (id.includes('react-helmet')) {
-            return 'seo'
-          }
-          // Charts and data visualization
-          if (id.includes('recharts')) {
-            return 'charts'
-          }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
-          }
-          // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // AI service pages
-          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
-            return 'ai-pages'
-          }
-          // IT service pages
-          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
-            return 'it-pages'
-          }
-          // Micro SAAS pages
-          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
-            return 'saas-pages'
-          }
-          // Other pages
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+            return 'main-pages'
           }
           // Default chunk for other modules
           return 'vendor'
+          if (id.includes("/app/components/")) {
+            return "components";
+          }
+          return undefined;
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        assetFileNames: (assetInfo) => {
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          if (
+            assetInfo.name &&
+            /\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)
+          ) {
+            return `assets/fonts/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
-    // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
-    // Enable tree shaking
-    treeshake: true,
-    // Enable compression
+    chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
   },
   server: {
     port: 3000,
-    open: true,
-    host: true,
-    // Enable HMR
+    open: false,
+    cors: true,
     hmr: {
       overlay: true,
     },
   },
   preview: {
     port: 4173,
-    open: true,
-    host: true,
+    open: false,
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'react-helmet-async',
-      'framer-motion',
-      'lucide-react',
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "react-helmet-async",
+      "@heroicons/react/24/outline",
+      "lucide-react",
+      "framer-motion",
     ],
+    exclude: ["@vite/client", "@vite/env"],
   },
-  // CSS optimization
+  esbuild: {
+    drop: process.env.NODE_ENV === "production" ? ["console", "debugger"] : [],
+    target: "esnext",
+  },
+  define: {
+    __VUE_OPTIONS_API__: false,
+    __VUE_PROD_DEVTOOLS__: false,
+  },
   css: {
     devSourcemap: true,
   },
-})
+});

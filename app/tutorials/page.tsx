@@ -1,7 +1,19 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';';
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock } from 'lucide-react';
+;
+const TutorialsPage: React.FC = () => {;
+const tutorials = [{
+      id: 1,
+      title: "Getting Started with AI Development",""
+      description: "Learn the fundamentals of AI development and machine learning concepts.",""
+      duration: "2 hours",""
+      level: "Beginner",""
+      instructor: "Dr. Sarah Johnson","
+      rating: 4.8,
+      students: 1250,
+"
+      thumbnail: "🤖" },"
+      thumbnail: "🤖";}
 
 export default function Tutorials() {
   return (
@@ -23,6 +35,7 @@ export default function Tutorials() {
           </Link>
         </div>
       </div>
-    </>
+
+    </div>)
   );
-}
+"

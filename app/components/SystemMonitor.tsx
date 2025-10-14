@@ -22,9 +22,9 @@ export default SystemMonitorPage;
                 Learn More;
   </            </div>
     </div>
-  )}
-  </button>
+")
 }
+<<<<<<< HEAD
 interface SystemMonitorProps {
   onAlert?: (alert: string) => void;
   className?: string;
@@ -94,3 +94,5 @@ export default function SystemMonitor() {
     </>;
   );
 }
+=======
+>>>>>>> origin/main
