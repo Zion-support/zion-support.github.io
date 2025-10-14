@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Right, Star, Cloud, Shield, Zap, BarChart3, Server, Database, Globe, Lock } from "lucide-react";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const CloudInfrastructurePage: React.FC = () => {

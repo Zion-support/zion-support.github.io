@@ -1,87 +1,48 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-"use client";
+
 const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Not Found - Zion Tech Group</title>
-        <meta name="description" content="Professional not found services by Zion Tech Group." />
-      </Helmet>}
+        <meta name="description" content="Page not found - Zion Tech Group." />
+      </Helmet>
+      
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10">
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-90 mb-6">
-            Not Found;
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            404 - Page Not Found
           </h1>
-          <p className="text-xl text-gray-60 max-w-3xl mx-auto">
-            Professional not found services;
-            designed to help your business grow and succeed.;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            The page you're looking for doesn't exist.
+            Let's get you back on track.
           </p>
         </div>
       </section>
+      
       {/* Content Section */}
       <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-90 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-60 mb-6">
-                We provide comprehensive not found;
-                solutions tailored to your specific needs and requirements.;
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-60 rounded-full mr-3"></span>
-                  Custom solutions;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-60 rounded-full mr-3"></span>
-                  Expert consultation;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-60 rounded-full mr-3"></span>
-                  Ongoing support;
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-50 to-purple-60 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our not found services?;
-              </p>
-              <a;
-                href="$1"
-                className="$1"
-              >
-                Contact Us;
-              </a>
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="bg-gray-100 p-8 rounded-lg max-w-md mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What can we do for you?</h2>
+            <p className="text-gray-600 mb-6">
+              Let us help you find what you're looking for or get you back to our homepage.
+            </p>
+            <div className="space-y-3">
+              <button className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Go Home
+              </button>
+              <button className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Support
+              </button>
             </div>
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-60">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?;
-          </h2>
-          <p className="text-xl text-blue-10 mb-8">
-            Let"s discuss how our not found";"
-            services can help you achieve your goals.;
-          </p>
-          <a;
-            href="$1"
-            className="$1"
-          >
-            Get Started Today;
-          </a>
-        </div>
-      </section>
     </div>
-  )
-}
-export default Page
-}
+  );
+};
 
-export default NotFound;"'
+export default NotFound;

@@ -1,58 +1,70 @@
-import { createContext, useContext, useState, useEffect } from  from "react";
-"use client";
+import { createContext, useContext, useState, useEffect } from "react";
+
 interface AnalyticsContextType {
-  trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void
-  trackPageView: "(pageNam,e: string) => void",setUser: "(userI,d: string", properties?: Record<string, any>) => void
-  isEnabled: "boolean"}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false)
-  const [userId, setUserId] = useState<string | null>(null)
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void;
+  setUser: (userId: string, properties?: Record<string, unknown>) => void;
+  isEnabled: boolean;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
+
   useEffect(() => {
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName: "string", properties?: Record<string, any>) => {
+    // Enable analytics in production
+    setIsEnabled(process.env.NODE_ENV === "production");
+  }, []);
+
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
-    // Track event logic here;
-    console.log("Analytics Event: """, eventName, properties);"
-  }
-  const trackPageView = (pageName: "string) => {"
+
+    // Track event with analytics service
+    console.log("Analytics Event:", { eventName, properties, userId });
+    
+    // Here you would integrate with your analytics service
+    // e.g., Google Analytics, Mixpanel, etc.
+  };
+
+  const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
-    // Track page view logic here;
-    console.log("Page View: """, pageName);"
-  }
-  const setUser = (newUserId: "string", properties?: Record<string, any>) => {
+
+    // Track page view
+    console.log("Page View:", { pageName, userId });
+    
+    // Here you would integrate with your analytics service
+  };
+
+  const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
     setUserId(newUserId);
-    console.log("User Set: """, newUserId, properties);"
-  }
-    // Track event logic here;""
-    console.log("Analytics Event: """, eventName, properties);
+    
+    if (isEnabled) {
+      console.log("User Set:", { userId: newUserId, properties });
+      
+      // Here you would integrate with your analytics service
     }
   };
-  const trackPageView = (pageName: "string) => {"
-    if (!isEnabled) return;
-    // Track page view logic here;""
-    console.log("Page View: """, pageName);
-    }
-  };
-  const setUser = (newUserId: "string", properties?: Record<string, any>) => {
-    setUserId(newUserId);""
-    console.log("User Set: """, newUserId, properties);
-    }
-  };
-  const value: "AnalyticsContextType = {"
+
+  const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     setUser,
     isEnabled
-  }
+  };
+
   return (
-    <AnalyticsContext.Provider value="{value
-    }>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  )
-}
-export { AnalyticsContext }
+  );
 };
-export { AnalyticsContext };""
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error("useAnalytics must be used within an AnalyticsProvider");
+  }
+  return context;
+};

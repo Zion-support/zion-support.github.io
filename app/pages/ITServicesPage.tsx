@@ -1,118 +1,112 @@
-import React from "react";"
-import { Helmet } from "react-helmet-async";"
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from "lucide-react;"
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from "lucide-react";
+
 const ITServicesPage: React.FC = () => {
-  const services = [{
-      icon: "Server",title: ""Infrastructure Management"",;"
-      description: ""Comprehensive IT infrastructure setup", maintenance, and optimization for maximum performance.",;"
-      features: ["Server Configuration",Network Setup", "Hardware Maintenance",Performance Monitoring"]";"
+  const services = [
+    {
+      icon: Server,
+      title: "Infrastructure Management",
+      description: "Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.",
+      features: ["Server Configuration", "Network Setup", "Hardware Maintenance", "Performance Monitoring"]
     },
     {
-      icon: "Cloud",
-      title: ""Cloud Solutions"",;"
-      description: ""Migrate to the cloud and optimize your cloud infrastructure for scalability and cost-effectiveness."",;"
-      features: ["Cloud Migration",Multi-cloud Strategy", "Cost Optimization",Disaster Recovery"]";"
+      icon: Cloud,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services to modernize your IT environment.",
+      features: ["Cloud Migration", "Infrastructure as Code", "Auto-scaling", "Cost Optimization"]
     },
     {
-      icon: "Shield",
-      title: ""Cybersecurity"",;"
-      description: ""Protect your business with comprehensive security solutions and threat monitoring."",;"
-      features: ["Security Audits",Threat Detection", "Compliance Management",Incident Response"]";"
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your systems and data from evolving threats.",
+      features: ["Threat Detection", "Security Audits", "Compliance Management", "Incident Response"]
     },
     {
-      icon: "Wrench",
-      title: ""Technical Support"",;"
-      description: ""24/7 technical support and maintenance to keep your systems running smoothly."",;"
-      features: ["Help Desk Support",Remote Monitoring", "Preventive Maintenance",Emergency Response"]";"
+      icon: Wrench,
+      title: "Technical Support",
+      description: "24/7 technical support and maintenance services to keep your systems running smoothly.",
+      features: ["Help Desk", "Remote Support", "On-site Assistance", "Preventive Maintenance"]
     },
     {
-      icon: "Monitor",
-      title: ""System Integration"",;"
-      description: ""Seamlessly integrate different systems and applications for improved workflow efficiency."",;"
-      features: ["API Integration",Data Synchronization", "Workflow Automation",Legacy System Modernization"]";"
+      icon: Monitor,
+      title: "System Monitoring",
+      description: "Continuous monitoring and alerting to ensure optimal system performance and availability.",
+      features: ["Real-time Monitoring", "Performance Analytics", "Automated Alerts", "Capacity Planning"]
     },
     {
-      icon: "Database",
-      title: ""Data Management"",;"
-      description: ""Organize", secure, and optimize your data infrastructure for better insights and compliance.",;"
-      features: ["Database Design",Data Backup", "Data Migration",Performance Tuning"]";"
+      icon: Database,
+      title: "Database Management",
+      description: "Expert database administration and optimization services for all major database systems.",
+      features: ["Database Design", "Performance Tuning", "Backup & Recovery", "Data Migration"]
     }
-  ]
-const ITServicesPage: React.FC = () => {
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-90 via-blue-90 to-slate-90">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />
-        <meta name="keywords" content="IT services, infrastructure, cloud computing, cybersecurity, technical support, system integration" />
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Professional IT services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-40 to-blue-40">Services</span>
+      
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            IT Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions to keep your business running efficiently and securely.;
-            From infrastructure to support, we"ve got you covered.";'
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive IT services designed to keep your business running smoothly
+            and securely in today's digital landscape.
           </p>
         </div>
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, _index) => {
-            const Icon = service.icon;
-            return (
-              <div key={_index} className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20 hover:border-white"/40 transition-all duration-30">
+      </section>
+      
+      {/* Services Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg mr-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  <service.icon className="h-8 w-8 text-blue-600 mr-3" />
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {service.title}
+                  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-6">
+                  {service.description}
+                </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-40 flex items-center">
-                      <span className="w-2 h-2 bg-cyan-40 rounded-full mr-3"></span>
+                    <li key={featureIndex} className="flex items-center">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
-            );
-          })}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Need Reliable IT Support?</h2>
-            <p className="text-gray-300 mb-6">
-              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-50 to-blue-50 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-60 hover:to-blue-60 transition-all duration-30">
-                Get Support;
-              </button>
-              <button className="border border-white"/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white"/10 transition-all duration-30">
-                Request Quote;
-              </button>
-            </div>
+            ))}
           </div>
-
-const ITServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>ITServicesPage - Zion Tech Group</title>
-        <meta name="description" content="ITServicesPage - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-90 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
         </div>
-      </div>
-    </div>  )
-}
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Optimize Your IT Infrastructure?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Contact us today to learn more about our IT services.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
 export default ITServicesPage;

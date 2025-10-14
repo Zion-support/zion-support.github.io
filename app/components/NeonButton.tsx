@@ -1,65 +1,66 @@
 import React from "react";
-import { Link } from "react-router-dom";
-interface NeonButtonProps {
-  children: "React.ReactNode;"
-  to?: string;
-  href?: string;
-  onClick?: () => void;
-  variant?: "primary" | "secondary" | "accent";
-  size?: "sm" | "md" | "lg";
-  className?: string;
-}
+import { Helmet } from "react-helmet-async";
 
-const NeonButton: "React.FC<NeonButtonProps> = ({"
-  children,
-  to,
-  href,
-  onClick,
-  variant = "primary",
-  size = "md",
-  className = ""'
-}) => {
-  const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-30 transform hover:scale-15 focus:outline-none focus:ring-2 focu,s:ring-offset-2""
-  const variantClasses = {
-    primary: "bg-gradient-to-r from-purple-60 to-cyan-60 text-white hover:from-purple-70 hover:to-cyan-70 shadow-lg shadow-purple-50/25 hover:shadow-purple-50/40",
-    secondary: "bg-transparent border-2 border-purple-40 text-purple-30 hover:bg-purple-40 hover:text-white shadow-lg shadow-purple-50/25 hover:shadow-purple-50/40",
-      accent: "accent"
-    }
-  const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",;
-    lg: "px-8 py-4 text-lg";
-  };
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-  
-  const content = (
-    <>
-      <span className="relative z-10">{children}</span>;
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-60 to-cyan-60 opacity-0 group-hover:opacity-20 transition-opacity duration-30"></div>
-    </>;
-  );
-
-  if (to) {
-    return (
-      <Link to={to} className={`${classes} group`}>
-        {content}
-      </Link>
-    );
-  }
-
-  if (href) {
-    return (
-      <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">
-        {content}
-      </a>
-    );
-  }
-
+const NeonButton: React.FC = () => {
   return (
-    <button onClick={onClick} className={`${classes} group`}>
-      {content}
-    </button>
-  )
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Neon Button - Zion Tech Group</title>
+        <meta name="description" content="Professional neon button services by Zion Tech Group." />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Neon Button
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional neon button services
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
+      
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive neon button
+                solutions tailored to your specific needs.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Professional service
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Expert solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                  Quality results
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gray-100 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Started</h3>
+              <p className="text-gray-600 mb-6">
+                Contact us today to learn more about our neon button services.
+              </p>
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default NeonButton;

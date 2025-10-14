@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
-import { AlertTriangle, RefreshCw, Home } from "lucide-react";
-import { Link } from "react-router-dom";
+
 interface Props {
   children: ReactNode;
 }
@@ -36,86 +35,28 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === "development") {"
-      console.error("ErrorBoundary caught an error:", error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error caught by boundary:", error, errorInfo);
     }
-
-    // In production, you might want to log this to an error reporting service
-    // Example: logErrorToService(error, errorInfo);
   }
 
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  };
-
   render() {
-
     if (this.state.hasError) {
       return (
-          <div className="min-h-screen flex items-center justify-center bg-slate-90 px-4">
-            <div className="max-w-md w-full bg-slate-80 rounded-lg shadow-xl p-8 text-center">
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-50/20 rounded-full mb-6">
-                <AlertTriangle className="w-8 h-8 text-red-40" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Oops! Something went wrong
             </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We"re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue."
+            <p className="text-gray-600 mb-8">
+              We're sorry, but something unexpected happened.
             </p>
-
-            {process.env.NODE_ENV === "development" && this.state.error && ("
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-40 cursor-pointer hover:text-white">
-                  Error Details (Development Only)
-                </summary>
-                <div className="mt-2 p-4 bg-slate-90 rounded text-xs text-red-40 font-mono overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error: "</strong> {this.state.error.message"}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack Trace: "</strong>",
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-60 to-cyan-60 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-70 hover:to-cyan-70 transition-all duration-30"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </button>
-              
-              <Link
-                to=""/""
-                className="flex items-center justify-center gap-2 border-2 border-purple-40 text-purple-30 px-6 py-3 rounded-lg font-semibold hover:bg-purple-40 hover:text-white transition-all duration-30"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
-              </Link>
-            </div>
-
-            <div className="mt-6 pt-6 border-t border-slate-70">
-              <p className="text-sm text-gray-40">
-                If this problem persists, please{" "}'
-                <Link to=""/contact" className="text-purple-40 hover:text-purple-30">
-                  contact our support team
-                </Link>
-              </p>
-            </div>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Reload Page
+            </button>
           </div>
         </div>
       );
