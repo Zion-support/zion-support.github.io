@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 const BlogPage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group." />
       </Helmet>
@@ -21,12 +22,12 @@ const BlogPage: React.FC = () => {
                   </div>
                   <h2 className="text-xl font-semibold mb-3">The Future of AI in Business</h2>
                   <p className="text-gray-300 mb-4">
-                    Exploring how artificial intelligence is transforming modern business operations.;
+                    Exploring how artificial intelligence is transforming modern business operations.
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-blue-400">Read More</span>
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">
-                      Read Article;
+                      Read Article
                     </button>
                   </div>
                 </article>
@@ -35,25 +36,24 @@ const BlogPage: React.FC = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-6">Stay Updated</h2>
               <p className="text-gray-300 mb-6">
-                Subscribe to our newsletter for the latest insights and updates.;
+                Subscribe to our newsletter for the latest insights and updates.
               </p>
               <div className="flex space-x-4">
-                <input;
-                  type="$1"
-                  placeholder="$1"
-                  className="service-card"
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">
-                  Subscribe;
+                  Subscribe
                 </button>
               </div>
             </section>
           </div>
         </div>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default BlogPag;e;
+};
+
+export default BlogPage;

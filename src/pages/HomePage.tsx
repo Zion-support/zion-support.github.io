@@ -1,13 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const Page: React.FC = () => {
+
+const HomePage: React.FC = () => {
   return (
-  <>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta;
-          name="$1"
-          content="$1"
+        <meta
+          name="description"
+          content="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services."
         />
       </Helmet>
       <div className="min-h-screen bg-gray-900 text-white">
@@ -17,20 +18,20 @@ const Page: React.FC = () => {
               Welcome to <span className="text-blue-400">Zion Tech Group</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Leading provider of AI-powered enterprise solutions;
+              Leading provider of AI-powered enterprise solutions
             </p>
             <div className="flex justify-center space-x-4">
-              <a;
-                href="$1"
-                className="service-card"
+              <a
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
               >
-                Get Started;
+                Get Started
               </a>
-              <a;
-                href="$1"
-                className="service-card"
+              <a
+                href="/services"
+                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md transition-colors"
               >
-                Our Solutions;
+                Our Solutions
               </a>
             </div>
           </section>
@@ -40,19 +41,19 @@ const Page: React.FC = () => {
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
                 <p className="text-gray-300">
-                  Advanced artificial intelligence solutions for your business needs.;
+                  Advanced artificial intelligence solutions for your business needs.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Computing</h3>
+                <h3 className="text-xl font-semibold mb-4">Cloud Computing</h3>
                 <p className="text-gray-300">
-                  Scalable cloud infrastructure and migration services.;
+                  Scalable cloud infrastructure and migration services.
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
                 <p className="text-gray-300">
-                  Comprehensive security solutions to protect your data.;
+                  Comprehensive security solutions to protect your data.
                 </p>
               </div>
             </div>
@@ -60,20 +61,19 @@ const Page: React.FC = () => {
           <section className="text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how we can help you achieve your goals.;
+              Contact us today to learn how we can help you achieve your goals.
             </p>
-            <a;
-              href="$1"
-              className="service-card"
+            <a
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
             >
-              Contact Us;
+              Contact Us
             </a>
           </section>
         </main>
       </div>
-)
-    </>)
+    </>
   );
-}
-}
-export default Pag;e;
+};
+
+export default HomePage;

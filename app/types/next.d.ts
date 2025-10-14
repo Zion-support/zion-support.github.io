@@ -2,12 +2,17 @@
 declare module 'next' {
   interface NextConfig {
     // Add any custom Next.js configuration types here
+    reactStrictMode?: boolean;
+    swcMinify?: boolean;
+    images?: {
+      domains?: string[];
+      formats?: string[];
+    };
+    experimental?: {
+      optimizeCss?: boolean;
+    };
+    compiler?: {
+      removeConsole?: boolean;
+    };
   }
 }
-
-// Export a default configuration object
-const nextConfig = {
-  // Configuration options
-};
-
-export default nextConfig;
