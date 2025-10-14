@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+import { X, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin, ChevronDown, ChevronRight } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,68 +8,65 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  if (!isOpen) return null;
-
-  return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-  const mainNavItems = [
+  const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
-    { name: 'Contact', href: '/contact', icon: Mail },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: '5G Solutions', href: '/5g-solutions', icon: Zap },
+    { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud },
+    { name: 'Blog', href: '/blog', icon: Code },
+    { name: 'Contact', href: '/contact', icon: Phone }
   ];
 
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart3 },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Zap }
   ];
 
-  if (!isOpen) return null;
+  const itServices = [
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'DevOps Services', href: '/devops', icon: Settings },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Users },
+    { name: 'Network Security', href: '/network-security', icon: Shield },
+    { name: 'Software Development', href: '/custom-software', icon: Code },
+    { name: 'Web Development', href: '/web-development', icon: Code }
+  ];
+
+  const contactInfo = [
+    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
+    { icon: Phone, text: '+1 (555) 012-3456', href: 'tel:+1-555-0123' },
+    { icon: MapPin, text: 'San Francisco, CA', href: '#' }
+  ];
 
   return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-        onClick={onClose}
-      />
-      
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+
       {/* Sidebar */}
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="p-6">
+      <div className={`fixed inset-y-0 left-0 z-50 w-80 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
+        isOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}>
+        <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="flex items-center justify-between p-6 border-b border-gray-700">
+            <div className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech
+              </span>
             </div>
             <button
               onClick={onClose}
@@ -109,51 +76,100 @@ export default Sidebar;
             </button>
           </div>
 
-          {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-              >
-                <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
+          {/* Navigation */}
+          <div className="flex-1 overflow-y-auto p-6">
+            <nav className="space-y-6">
+              {/* Main Navigation */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                  Main Menu
+                </h3>
+                <ul className="space-y-2">
+                  {navigationItems.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        to={item.href}
+                        onClick={onClose}
+                        className="flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                      >
+                        <item.icon className="w-5 h-5 mr-3" />
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Services */}
-          <div className="mb-8">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Services</h3>
-            <div className="space-y-2">
-              {serviceItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-                >
-                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>{item.name}</span>
-                </Link>
-              ))}
-            </div>
+              {/* AI Services */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                  AI Services
+                </h3>
+                <ul className="space-y-2">
+                  {aiServices.map((service) => (
+                    <li key={service.name}>
+                      <Link
+                        to={service.href}
+                        onClick={onClose}
+                        className="flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                      >
+                        <service.icon className="w-4 h-4 mr-3" />
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* IT Services */}
+              <div>
+                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                  IT Services
+                </h3>
+                <ul className="space-y-2">
+                  {itServices.map((service) => (
+                    <li key={service.name}>
+                      <Link
+                        to={service.href}
+                        onClick={onClose}
+                        className="flex items-center px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                      >
+                        <service.icon className="w-4 h-4 mr-3" />
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </nav>
           </div>
 
           {/* Contact Info */}
-          <div className="border-t border-gray-700 pt-6">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
-            <div className="space-y-3 px-4">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
+          <div className="p-6 border-t border-gray-700">
+            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+              Contact Us
+            </h3>
+            <div className="space-y-2">
+              {contactInfo.map((contact, index) => (
+                <a
+                  key={index}
+                  href={contact.href}
+                  className="flex items-center text-sm text-gray-300 hover:text-white transition-colors"
+                >
+                  <contact.icon className="w-4 h-4 mr-3" />
+                  {contact.text}
+                </a>
+              ))}
+            </div>
+            
+            <div className="mt-4">
+              <Link
+                to="/contact"
+                onClick={onClose}
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+              >
+                Get Started <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           </div>
         </div>
@@ -162,9 +178,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

@@ -1,7 +1,4 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Star, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
 export default function AIHealthcareDiagnostics() {
   const features = [
     {

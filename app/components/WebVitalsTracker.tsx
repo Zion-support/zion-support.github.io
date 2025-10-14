@@ -4,9 +4,15 @@ interface WebVitalsTrackerProps {
   children: ReactNode;
 }
 
+interface WebVitalsData {
+  name: string;
+  value: number;
+  id: string;
+  delta: number;
+}
+
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -35,72 +41,37 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
       }
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-<<<<<<< HEAD
+    // Import and initialize web-vitals
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      getCLS(sendToAnalytics);
+      getFID(sendToAnalytics);
+      getFCP(sendToAnalytics);
+      getLCP(sendToAnalytics);
+      getTTFB(sendToAnalytics);
+    }).catch(console.error);
 
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
+    // Performance observer for custom metrics
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            sendToAnalytics({
+              name: 'Navigation Timing',
+              value: navEntry.loadEventEnd - navEntry.loadEventStart,
+              id: 'navigation',
+              delta: navEntry.loadEventEnd - navEntry.loadEventStart,
+            });
+          }
+        });
       });
 
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
-    }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
-            console.log('CLS:', metric);
-          });
-          getFID((metric) => {
-            console.log('FID:', metric);
-          });
-          getFCP((metric) => {
-            console.log('FCP:', metric);
-          });
-          getLCP((metric) => {
-            console.log('LCP:', metric);
-          });
-          getTTFB((metric) => {
-            console.log('TTFB:', metric);
-          });
-        });
-      }
-    };
+      observer.observe({ entryTypes: ['navigation'] });
 
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+      return () => {
+        observer.disconnect();
+      };
+    }
   }, []);
 
   return <>{children}</>;

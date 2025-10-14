@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const WebDevelopmentPage = () => {
   const services = [
@@ -11,7 +12,7 @@ const WebDevelopmentPage = () => {
       id: 'frontend-development',
       title: 'Frontend Development',
       description: 'Modern, responsive web applications using React, Vue, and Angular.',
-      icon: Code,
+      icon: <Code className="w-8 h-8" />,
       features: ['React Applications', 'Vue.js Development', 'Angular Solutions', 'Progressive Web Apps'],
       price: 'Starting at $2,500'
     },
@@ -19,7 +20,7 @@ const WebDevelopmentPage = () => {
       id: 'backend-development',
       title: 'Backend Development',
       description: 'Robust server-side applications and APIs for your business needs.',
-      icon: Database,
+      icon: <Database className="w-8 h-8" />,
       features: ['Node.js APIs', 'Python/Django', 'PHP/Laravel', 'Microservices'],
       price: 'Starting at $3,000'
     },
@@ -27,185 +28,214 @@ const WebDevelopmentPage = () => {
       id: 'full-stack-development',
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend and everything in between.',
-      icon: Globe,
+      icon: <Globe className="w-8 h-8" />,
       features: ['End-to-End Solutions', 'Database Design', 'API Integration', 'Deployment'],
       price: 'Starting at $5,000'
     },
     {
-      id: 'mobile-web-apps',
-      title: 'Mobile Web Apps',
-      description: 'Cross-platform mobile applications that work on all devices.',
-      icon: Smartphone,
-      features: ['Responsive Design', 'Mobile Optimization', 'Touch Interfaces', 'Offline Support'],
-      price: 'Starting at $3,500'
-    },
-    {
-      id: 'e-commerce-solutions',
-      title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment processing and inventory management.',
-      icon: Shield,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Security'],
-      price: 'Starting at $4,500'
-    },
-    {
-      id: 'web-optimization',
-      title: 'Web Optimization',
-      description: 'Performance optimization and SEO improvements for existing websites.',
-      icon: Zap,
-      features: ['Speed Optimization', 'SEO Enhancement', 'Security Updates', 'Analytics'],
-      price: 'Starting at $1,500'
+      id: 'ecommerce-development',
+      title: 'E-commerce Development',
+      description: 'Custom e-commerce platforms and online store solutions.',
+      icon: <Smartphone className="w-8 h-8" />,
+      features: ['Custom Stores', 'Payment Integration', 'Inventory Management', 'Mobile Commerce'],
+      price: 'Starting at $4,000'
     }
+  ];
+
+  const technologies = [
+    { name: 'React', category: 'Frontend' },
+    { name: 'Vue.js', category: 'Frontend' },
+    { name: 'Angular', category: 'Frontend' },
+    { name: 'Node.js', category: 'Backend' },
+    { name: 'Python', category: 'Backend' },
+    { name: 'PHP', category: 'Backend' },
+    { name: 'MongoDB', category: 'Database' },
+    { name: 'PostgreSQL', category: 'Database' },
+    { name: 'AWS', category: 'Cloud' },
+    { name: 'Docker', category: 'DevOps' }
   ];
 
   const process = [
     {
       step: '01',
       title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.'
+      description: 'We analyze your requirements and create a detailed project plan'
     },
     {
       step: '02',
       title: 'Design & Prototyping',
-      description: 'We create wireframes and prototypes to visualize your project.'
+      description: 'Create wireframes and prototypes to visualize your project'
     },
     {
       step: '03',
       title: 'Development',
-      description: 'Our team builds your application using the latest technologies.'
+      description: 'Build your application using the latest technologies and best practices'
     },
     {
       step: '04',
       title: 'Testing & Launch',
-      description: 'We thoroughly test your application and deploy it to production.'
+      description: 'Thorough testing and deployment to ensure everything works perfectly'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Fast Development',
+      description: 'Quick turnaround times without compromising quality'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Secure & Scalable',
+      description: 'Built with security and scalability in mind'
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: 'Expert Team',
+      description: 'Experienced developers with proven track records'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: '24/7 Support',
+      description: 'Round-the-clock support and maintenance'
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      <EnhancedSEO 
-        title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and mobile web applications."
-        keywords="web development, frontend development, backend development, full-stack development, mobile web apps, e-commerce"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Web Development Services
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Web Development Services - Zion Tech Group</title>
+        <meta name="description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." />
+        <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js, Python" />
+      </Helmet>
+
+      <ResponsiveContainer>
+        {/* Hero Section */}
+        <div className="text-center py-20">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+            Web Development
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional web development services to bring your ideas to life with modern, scalable, and secure web applications.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Transform your ideas into powerful web applications with our expert development team. 
+            From simple websites to complex enterprise solutions, we've got you covered.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2"
-            >
-              Get Started <ArrowRight className="w-5 h-5" />
+            <Link to="/contact">
+              <FuturisticButton size="lg">
+                Get Started <ArrowRight className="w-5 h-5 ml-2" />
+              </FuturisticButton>
             </Link>
-            <Link 
-              to="/demo" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
-              View Portfolio
+            <Link to="/demo">
+              <FuturisticButton variant="outline" size="lg">
+                View Portfolio <Globe className="w-5 h-5 ml-2" />
+              </FuturisticButton>
             </Link>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <IconComponent className="w-12 h-12 text-blue-400" />
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
+        {/* Services Section */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Our Web Development Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <FuturisticCard key={service.id} className="p-8">
+                <div className="text-blue-400 mb-6">{service.icon}</div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>2-8 weeks</span>
-                  </div>
-                </div>
-                
-                <Link 
-                  to={`/${service.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  Learn More <ArrowRight className="w-4 h-4" />
+                <div className="text-2xl font-bold text-blue-400 mb-6">{service.price}</div>
+                <Link to="/contact">
+                  <FuturisticButton className="w-full">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </FuturisticButton>
                 </Link>
-              </div>
-            );
-          })}
+              </FuturisticCard>
+            ))}
+          </div>
         </div>
 
-        {/* Development Process */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Development Process</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Technologies Section */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Technologies We Use
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="text-center p-4 bg-gray-800 rounded-lg">
+                <div className="text-white font-semibold mb-1">{tech.name}</div>
+                <div className="text-gray-400 text-sm">{tech.category}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Process Section */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Our Development Process
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Benefits Section */}
+        <div className="py-20">
+          <h2 className="text-4xl font-bold text-center text-white mb-16">
+            Why Choose Us?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <FuturisticCard key={index} className="p-6 text-center">
+                <div className="text-blue-400 mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </FuturisticCard>
+            ))}
+          </div>
+        </div>
+
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Web Application?</h2>
+        <div className="py-20 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Build Your Next Web Application?
+          </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project requirements and create a custom web solution that meets your business needs.
+            Let's discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-            >
-              <Code className="w-5 h-5" />
-              Start Your Project
+            <Link to="/contact">
+              <FuturisticButton size="lg">
+                Start Your Project <ArrowRight className="w-5 h-5 ml-2" />
+              </FuturisticButton>
             </Link>
-            <Link 
-              to="/pricing" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
-            >
-              View Pricing
+            <Link to="/demo">
+              <FuturisticButton variant="outline" size="lg">
+                View Our Work <Globe className="w-5 h-5 ml-2" />
+              </FuturisticButton>
             </Link>
           </div>
         </div>
-      </div>
+      </ResponsiveContainer>
     </div>
   );
 };
 
 export default WebDevelopmentPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
