@@ -1,16 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react';
 const AIServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,
-      title: 'AI Strategy & Consulting',';
-      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';
-      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';
+      title: 'AI Strategy & Consulting',
+      description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',
+      features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']
     },
     {
       icon: Bot,
-      title: 'Conversational AI',';
+        title: 'Conversational AI',
       description: 'Build intelligent chatbots and virtual assistants that enhance customer experience and automate support.',';
       features: ['Natural Language Processing', 'Multi-channel Integration', 'Sentiment Analysis', '24/7 Availability']';
     },

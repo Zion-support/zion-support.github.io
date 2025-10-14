@@ -47,6 +47,11 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-sm max-w-xs">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
@@ -95,9 +100,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
-import React from 'react';
+};
 
-const PerformanceMonitor: React.FC = () => {
-  return null;
-}
 export default PerformanceMonitor;

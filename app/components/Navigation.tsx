@@ -49,15 +49,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
     { 
       name: 'Solutions', 
       href: '/solutions', 
@@ -69,26 +60,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
       ]
     },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
   const isActive = (path: string) => {
     return location.pathname === path;
-  }
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  }
+  };
+
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
-  }
+  };
+
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
-  }
+  };
+
   return (
     <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,61 +93,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               const Icon = item.icon;
               return (
                 <div key={item.name} className="relative group">
-                  <Link
-                    to={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(item.href)
-                        ? 'bg-purple-600 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              Get Started
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
                   {item.submenu ? (
                     <div className="relative">
                       <button
@@ -172,7 +103,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             : 'text-gray-300 hover:text-white hover:bg-slate-700'
                         }`}
                       >
-                        <item.icon className="w-4 h-4 mr-2" />
+                        <Icon className="w-4 h-4 mr-2" />
                         {item.name}
                         <ChevronDownIcon className="w-4 h-4 ml-1" />
                       </button>
@@ -186,12 +117,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             key={subItem.name}
                             to={subItem.href}
                             className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                            onClick={() => {
-                              setIsServicesOpen(false);
-                              setIsSolutionsOpen(false);
-                            }}
                           >
-                            <subItem.icon className="w-4 h-4 mr-3" />
+                            {subItem.icon && <subItem.icon className="w-4 h-4 mr-3" />}
                             {subItem.name}
                           </Link>
                         ))}
@@ -202,17 +129,17 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       to={item.href}
                       className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                         isActive(item.href)
-                          ? 'text-white bg-slate-800'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                          ? 'bg-purple-600 text-white'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-800'
                       }`}
                     >
-                      <item.icon className="w-4 h-4 mr-2" />
+                      <Icon className="w-4 h-4 mr-2" />
                       {item.name}
                     </Link>
                   )}
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
 
           {/* Mobile menu button */}
@@ -237,31 +164,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <div>
                   <button
                     onClick={item.name === 'Services' ? toggleServicesMenu : toggleSolutionsMenu}
-                    className={`flex items-center w-full px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                      isActive(item.href) || (item.submenu && item.submenu.some(sub => isActive(sub.href)))
-                        ? 'text-white bg-slate-700'
-                        : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                    }`}
+                    className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700"
                   >
                     <item.icon className="w-5 h-5 mr-3" />
                     {item.name}
                     <ChevronDownIcon className="w-4 h-4 ml-auto" />
                   </button>
-                  
-                  {/* Mobile Submenu */}
-                  <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
+                  <div className={`${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'} pl-6`}>
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => {
-                          setIsOpen(false);
-                          setIsServicesOpen(false);
-                          setIsSolutionsOpen(false);
-                        }}
+                        className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                       >
-                        <subItem.icon className="w-4 h-4 mr-3" />
+                        {subItem.icon && <subItem.icon className="w-4 h-4 mr-3" />}
                         {subItem.name}
                       </Link>
                     ))}
@@ -270,12 +186,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ) : (
                 <Link
                   to={item.href}
-                  className={`flex items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'text-white bg-slate-700'
-                      : 'text-gray-300 hover:text-white hover:bg-slate-700'
-                  }`}
-                  onClick={() => setIsOpen(false)}
+                  className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700"
                 >
                   <item.icon className="w-5 h-5 mr-3" />
                   {item.name}
@@ -287,5 +198,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
-}
+};
+
 export default Navigation;
