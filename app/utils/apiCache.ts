@@ -1,8 +1,8 @@
-export const apiCache = {
-  cache: newMap<string, { data: unknown; timestamp: number; ttl: number }>(),
+export const apiCache ={
+  cache: newMap<string,{ data: unknown; timestamp: number; ttl: number }>(),
   
-  set: (key: string, data: unknown, ttl: number = 300000) => {
-    apiCache.cache.set(key, {
+  set: (key: string, data: unknown, ttl: numbe r = 300000) => {
+    apiCache.cache.set(key,{
       data,
       timestamp: Date.now(),
       ttl

@@ -1,10 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef  } from 'react';
 
 export const usePerformance Monitor = (name: string) => {
   const startTime = useRef<number>();
   
   useEffect(() => {
-    startTime.current = performance.now();
+    startTime.curren t = performance.now();
     
     return () => {
       if (startTime.current) {
@@ -16,13 +16,13 @@ export const usePerformance Monitor = (name: string) => {
         console.log(`${name} took ${duration.toFixed(2)}ms`);
         
         // Send to analytics
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'performance_measurement', {
+        if (typeof window !=='undefined' && window.gtag) {
+          window.gtag('event','performance_measurement',{
             metric_name: name,
             value: duration
           });
         }
       }
     };
-  }, [name]);
+  },[name]);
 }

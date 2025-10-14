@@ -2,7 +2,7 @@ export interfaceUser {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'user' | 'guest';
+  role:'admin' | 'user' | 'guest';
 }
 
 export interfaceService {
@@ -11,7 +11,7 @@ export interfaceService {
   description: string;
   category: string;
   features: string[];
-  pricing: {
+  pricing:{
     starter: number;
     professional: number;
     enterprise: number;

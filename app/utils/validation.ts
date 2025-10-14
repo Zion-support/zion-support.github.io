@@ -1,14 +1,14 @@
-export const validation = {
+export const validation ={
   email: (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
   },
   phone: (phone: string) => {
     const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
-    return phoneRegex.test(phone.replace(/\s/g, ''))
+    return phoneRegex.test(phone.replace(/\s/g,''))
   },
   required: (value: unknown) => {
-    return value !== null && value !== undefined && value !== '';
+    return value !== null && value !== undefined && value !=='';
   },
   
   minLength: (value: string, min: number) => {

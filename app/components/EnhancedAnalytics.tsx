@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 
 interface EnhancedAnalyticsProps {
   eventName?: string;
@@ -12,9 +12,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     // Enhanced analytics tracking
     const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-      if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-        (window as unknown as { gtag: (command: string, event: string, config: Record<string, unknown>) => void }).gtag('event', event, {
-          event_category: 'Enhanced Analytics',
+      if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+        (window as unknown as { gtag: (command: string, event: string, config: Record<string, unknown>) => void }).gtag('event', event,{
+          event_category:'Enhanced Analytics',
           ...properties
         });
       }
@@ -22,8 +22,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Track page view
     const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-        (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+        (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config','GA_MEASUREMENT_ID',{
           page_title: document.title,
           page_location: window.location.href
         });
@@ -40,16 +40,16 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         const scrollDepth = Math.round(
           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
-        maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
+        maxScrollDept h = Math.max(maxScrollDepth, scrollDepth);
       };
 
       const trackVisibility = () => {
-        isActive = !document.hidden;
+        isActiv e = !document.hidden;
         if (isActive) {
-          startTime = Date.now();
+          startTim e = Date.now();
         } else {
           const timeSpent = Date.now() - startTime;
-          trackEvent('time_on_page', {
+          trackEvent('time_on_page',{
             time_spent: timeSpent,
             max_scroll_depth: maxScrollDepth
           });
@@ -62,7 +62,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       // Track when user leaves page
       window.addEventListener('beforeunload', () => {
         const timeSpent = Date.now() - startTime;
-        trackEvent('page_exit', {
+        trackEvent('page_exit',{
           time_spent: timeSpent,
           max_scroll_depth: maxScrollDepth
         });
@@ -84,7 +84,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     }
 
     return cleanup;
-  }, [eventName, eventProperties]);
+  },[eventName, eventProperties]);
 
   return null; // This component doesn't render anything
 };

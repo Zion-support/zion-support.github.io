@@ -1,7 +1,7 @@
-export const advancedAnalytics = {
+export const advancedAnalytics ={
   trackPage View: (page: string) => {
-    if (typeof window !== 'undefined') {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !=='undefined') {
+      window.gtag('config','GA_MEASUREMENT_ID',{
         page_title: page,
         page_location: window.location.href
       });
@@ -9,14 +9,14 @@ export const advancedAnalytics = {
   },
   
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !=='undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'conversion', {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event','conversion',{
         send_to: conversionId,
         value: value,
         currency: currency
@@ -24,8 +24,8 @@ export const advancedAnalytics = {
     }
   },
   setUser Properties: (properties: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('config','GA_MEASUREMENT_ID',{
         custom_map: properties
       });
     }

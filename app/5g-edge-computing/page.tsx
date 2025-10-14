@@ -1,17 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const FiveGEdgeComputing: React.FC = () => {
-=======
-const FiveGEdgeComputingPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
         <title>5G Edge Computing</title>
-        <meta name="description" content="Cutting-edge 5G edge computing solutions." />
-        <meta name="keywords" content="5G, edge, computing, solutions" />
+        <meta name ="description" content="Cutting-edge 5G edge computing solutions." />
+        <meta name ="keywords" content="5G, edge, computing, solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

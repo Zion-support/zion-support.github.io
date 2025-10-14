@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 
-interface SEOOptimizer Props {
+interface SEOOptimizerProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -16,8 +16,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords,
   canonical,
   ogImage: _ogImage,
-  ogType: _ogType = 'website',
-  twitterCard: _twitterCard = 'summary_large_image'
+  ogType: _ogType ='website',
+  twitterCard: _twitterCard ='summary_large_image'
 }) => {
   useEffect(() => {
     // Update document title
@@ -32,7 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         metaDescription.setAttribute('content', description);
       } else {
         const meta = document.createElement('meta');
-        meta.name = 'description';
+        meta.name ='description';
         meta.content = description;
         document.head.appendChild(meta);
       }
@@ -45,7 +45,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         metaKeywords.setAttribute('content', keywords);
       } else {
         const meta = document.createElement('meta');
-        meta.name = 'keywords';
+        meta.name ='keywords';
         meta.content = keywords;
         document.head.appendChild(meta);
       }
@@ -58,12 +58,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         canonicalLink.setAttribute('href', canonical);
       } else {
         const link = document.createElement('link');
-        link.rel = 'canonical';
+        link.rel ='canonical';
         link.href = canonical;
         document.head.appendChild(link);
       }
     }
-  }, [title, description, keywords, canonical]);
+  },[title, description, keywords, canonical]);
 
   return null; // This component doesn't render anything
 };

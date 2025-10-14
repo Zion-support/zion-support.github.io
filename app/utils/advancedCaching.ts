@@ -1,6 +1,6 @@
-export const advancedCaching = {
-  setCache: (key: string, value: unknown, ttl: number = 3600) => {
-    const item = {
+export const advancedCaching ={
+  setCache: (key: string, value: unknown, ttl: numbe r = 3600) => {
+    const item ={
       value,
       timestamp: Date.now(),
       ttl: ttl * 1000
@@ -24,7 +24,7 @@ export const advancedCaching = {
   clearCache: (pattern?: string) => {
     if (pattern) {
       const keys = Object.keys(localStorage);
-      keys.forEach(key => {
+      keys.forEach(ke y => {
         if (key.includes(pattern)) {
           localStorage.removeItem(key);
         }

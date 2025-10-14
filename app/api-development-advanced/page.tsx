@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
 const ApiDevelopmentAdvancedPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Api Development Advanced</title>
-        <meta name="description" content="Professional api development advanced solutions and services" />
-        <meta name="keywords" content="api, development, advanced" />
+        <meta name ="description" content="Professional api development advanced solutions and services" />
+        <meta name ="keywords" content="api, development, advanced" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

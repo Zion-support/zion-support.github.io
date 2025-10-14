@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import React,{ ReactNode } from 'react';
+import { AnalyticsContext  } from '../contexts/AnalyticsContext';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -7,7 +7,7 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_EN V ==='development') {
       console.warn('Analytics Event:', eventName, properties);
     }
     // TODO: Implement actual analytics tracking
@@ -16,12 +16,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     console.warn('Page View:', pageName);
     // TODO: Implement actual page view tracking
   };
-  const value = {
+  const value ={
     trackEvent,
-    trackPageView,
-  };
+    trackPageView};
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value ={value}>
       {children}
       </AnalyticsContext.Provider>
   );

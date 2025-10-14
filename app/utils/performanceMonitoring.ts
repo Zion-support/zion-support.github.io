@@ -1,4 +1,4 @@
-export const performanceMonitoring = {
+export const performanceMonitoring ={
   start: (name: string) => {
     performance.mark(`${name}-start`)
   },
@@ -12,8 +12,8 @@ export const performanceMonitoring = {
       console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
       
       // Send to analytics
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'performance_measurement', {
+      if (typeof window !=='undefined' && window.gtag) {
+        window.gtag('event','performance_measurement',{
           metric_name: name,
           value: measure.duration
         })

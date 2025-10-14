@@ -1,8 +1,8 @@
-export const cacheManager = {
-  cache: newMap<string, { data: unknown; timestamp: number; ttl: number }>(),
+export const cacheManager ={
+  cache: newMap<string,{ data: unknown; timestamp: number; ttl: number }>(),
   
-  set: (key: string, data: unknown, ttl: number = 300000) => {
-    cacheManager.cache.set(key, {
+  set: (key: string, data: unknown, ttl: numbe r = 300000) => {
+    cacheManager.cache.set(key,{
       data,
       timestamp: Date.now(),
       ttl

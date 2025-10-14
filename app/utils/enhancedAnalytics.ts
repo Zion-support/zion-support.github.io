@@ -1,7 +1,7 @@
-export const enhancedAnalytics = {
+export const enhancedAnalytics ={
   trackPageView: (page: string, title?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'page_view', {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event','page_view',{
         page_title: title,
         page_location: page
       });
@@ -9,8 +9,8 @@ export const enhancedAnalytics = {
   },
   
   trackUserInteraction: (action: string, category: string, label?: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', action, {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event', action,{
         event_category: category,
         event_label: label
       });
@@ -18,8 +18,8 @@ export const enhancedAnalytics = {
   },
   
   trackUserEngagement: (engagementType: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'user_engagement', {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event','user_engagement',{
         engagement_type: engagementType,
         value: value
       });
@@ -27,8 +27,8 @@ export const enhancedAnalytics = {
   },
   
   trackPerformance: (metric: string, value: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'performance_metric', {
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event','performance_metric',{
         metric_name: metric,
         metric_value: value
       });

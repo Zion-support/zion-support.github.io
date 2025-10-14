@@ -1,17 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const AiEnterpriseTransformation2025Page: React.FC = () => {
-=======
-constAi Enterprise Transformation 2025 Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-789c
   return (
     <>
       <Helmet>
         <title>Ai Enterprise Transformation 2025</title>
-        <meta name="description" content="Professional ai enterprise transformation 2025 solutions and services" />
-        <meta name="keywords" content="ai, enterprise, transformation, 2025" />
+        <meta name ="description" content="Professional ai enterprise transformation 2025 solutions and services" />
+        <meta name ="keywords" content="ai, enterprise, transformation, 2025" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

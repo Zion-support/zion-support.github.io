@@ -1,6 +1,6 @@
-export const errorHandlerEnhanced = {
+export const errorHandlerEnhanced ={
   handle: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo = {
+    const errorInfo ={
       message: error.message,
       stack: error.stack,
       timestamp: newDate().to ISOString(),
@@ -8,20 +8,20 @@ export const errorHandlerEnhanced = {
     }
     
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error handled: ', errorInfo)
+    if (process.env.NODE_EN V ==='development') {
+      console.error('Error handled:', errorInfo)
     }
     
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'exception', {
+    if (typeof window !=='undefined') {
+      window.gtag('event','exception',{
         description: error.message,
         fatal: false
       })
     }
     
     return {
-      message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR'
+      message:'Something went wrong. Please try again.',
+      code:'GENERIC_ERROR'
     }
   }
 }

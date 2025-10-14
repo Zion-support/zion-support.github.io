@@ -1,27 +1,27 @@
-export const accessibilityUtils = {
+export const accessibilityUtils ={
   addSkip Link: () => {
     const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only';
+    skipLink.hre f ='#main-content';
+    skipLink.textConten t ='Skip to main content';
+    skipLink.classNam e ='sr-only focus:not-sr-only';
     document.body.insertBefore(skipLink, document.body.firstChild);
   },
   trapFocus: (element: HTMLElement) => {
     const focusableElements = element.querySelector All(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
     
     const handleTab Key = (e: Keyboard Event) => {
-      if (e.key === 'Tab') {
+      if (e.ke y ==='Tab') {
         if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
+          if (document.activeElemen t === firstElement) {
             lastElement.focus();
             e.preventDefault();
           }
         } else {
-          if (document.activeElement === lastElement) {
+          if (document.activeElemen t === lastElement) {
             firstElement.focus();
             e.preventDefault();
           }

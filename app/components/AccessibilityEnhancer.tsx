@@ -1,19 +1,19 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React,{ useEffect } from 'react';
 
-interfaceAccessibility Enhancer Props {
-  enableKeyboard Navigation?: boolean;
-  enableScreen Reader Support?: boolean;
-  enableHigh Contrast?: boolean;
-  enableFocus Management?: boolean;
+interface AccessibilityEnhancerProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboard Navigation = true,
-  enableScreen Reader Support = true,
-  enableHigh Contrast = true,
-  enableFocus Management = true
+  enableKeyboardNavigatio n = true,
+  enableScreenReaderSuppor t = true,
+  enableHighContras t = true,
+  enableFocusManagemen t = true
 }) => {
   useEffect(() => {
     const root = document.documentElement;
@@ -37,7 +37,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.altKey) {
+        if (event.ke y ==='Tab' && event.shiftKey && event.altKey) {
           event.preventDefault();
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
@@ -49,17 +49,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEvent Listener('keydown', handleKey Down);
       return () => document.removeEvent Listener('keydown', handleKey Down);
     }
-  }, [enableKeyboardNavigation, enableHighContrast]);
+  },[enableKeyboardNavigation, enableHighContrast]);
 
   useEffect(() => {
     if (enableScreenReaderSupport) {
       // Add screen reader announcements
       const announceToScreenReader = (message: string) => {
         const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.textContent = message;
+        announcement.setAttribute('aria-live','polite');
+        announcement.setAttribute('aria-atomic','true');
+        announcement.classNam e ='sr-only';
+        announcement.textConten t = message;
         document.body.appendChild(announcement);
         
         setTimeout(() => {
@@ -70,9 +70,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Announce page changes
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          if (mutation.type==='childList' && mutation.addedNodes.length > 0) {
             const addedNode = mutation.addedNodes[0] asElement;
-            if (addedNode && addedNode.nodeType === Node.ELEMENT_NODE) {
+            if (addedNode && addedNode.nodeTyp e === Node.ELEMENT_NODE) {
               const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
               if (heading) {
                 announceToScreenReader(`Page updated: ${heading.textContent}`);
@@ -82,34 +82,34 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         });
       });
 
-      observer.observe(document.body, {
+      observer.observe(document.body,{
         childList: true,
         subtree: true
       });
 
       return () => observer.disconnect();
     }
-  }, [enableScreenReaderSupport]);
+  },[enableScreenReaderSupport]);
 
   useEffect(() => {
     if (enableFocusManagement) {
       // Focus management for modals and dropdowns
       const manageFocus = (event: FocusEvent) => {
         const target = event.target asElement;
-        if (target && target.closest('[role="dialog"], [role="menu"], [role="listbox"]')) {
-          const focusableElements = target.closest('[role="dialog"], [role="menu"], [role="listbox"]')?.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        if (target && target.closest('[role="dialog"],[role="menu"],[role="listbox"]')) {
+          const focusableElements = target.closest('[role="dialog"],[role="menu"],[role="listbox"]')?.querySelectorAll(
+            'button,[href], input, select, textarea,[tabindex]:not([tabinde x ="-1"])'
           );
           
           if (focusableElements && focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
-            if (event.key === 'Tab') {
-              if (event.shiftKey && target === firstElement) {
+            if (event.ke y ==='Tab') {
+              if (event.shiftKey && targe t === firstElement) {
                 event.preventDefault();
                 lastElement.focus();
-              } else if (!event.shiftKey && target === lastElement) {
+              } else if (!event.shiftKey && targe t === lastElement) {
                 event.preventDefault();
                 firstElement.focus();
               }
@@ -121,7 +121,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', manageFocus);
       return () => document.removeEventListener('keydown', manageFocus);
     }
-  }, [enableFocusManagement]);
+  },[enableFocusManagement]);
 
   return null;
 };

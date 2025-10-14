@@ -1,61 +1,49 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp  } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
+  const features =[
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
+      title:'AI-Powered Solutions',
+      description:'Advanced AI technology to transform your business operations and improve efficiency'
+    },{
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
+      title:'High Performance',
+      description:'Lightning-fast processing and real-time analytics for optimal results'
+    },{
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
+      title:'Enterprise Security',
+      description:'Bank-level security with encryption and compliance standards'
+    },{
       icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
+      title:'Global Reach',
+      description:'Worldwide deployment with local support and compliance'
     }
   ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+  const benefits =[
+    'Advanced AI technology integration','Real-time processing and analytics','Enterprise-grade security and compliance','Scalable and flexible solutions','24/7 technical support','Easy integration with existing systems','Cost-effective pricing plans','Proven track record of success'
   ];
 
-  const stats = [
+  const stats =[
     {
       icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
-    },
-    {
+      value:'10,000+',
+      label:'Happy Customers',
+      description:'Businesses trust our solutions'
+    },{
       icon: Trending Up,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
-    },
-    {
+      value:'99.9%',
+      label:'Uptime',
+      description:'Reliable service guarantee'
+    },{
       icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
+      value:'4.9/5',
+      label:'Rating',
+      description:'Highly rated by clients'
     }
   ];
 
@@ -72,11 +60,11 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
           
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+            <button ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
               Get Started Today
             </butn>
-            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </butn>
@@ -86,7 +74,7 @@ const ContentPromotionBanner: React.FC = () => {
         {/* Stats Section */}
         <div className="gridgrid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
-            <divkey={index} className="text-center">
+            <divke y ={index} classNam e ="text-center">
               <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-8 h-8text-white" />
               </div>
@@ -100,7 +88,7 @@ const ContentPromotionBanner: React.FC = () => {
         {/* Features Grid */}
         <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
-            <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+            <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
               <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <feature.icon className="w-8 h-8text-white" />
               </div>
@@ -121,7 +109,7 @@ const ContentPromotionBanner: React.FC = () => {
           
           <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <divkey={index} className="flexitems-startspace-x-3">
+              <divke y ={index} classNam e ="flexitems-startspace-x-3">
                 <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
@@ -139,11 +127,11 @@ const ContentPromotionBanner: React.FC = () => {
               Join the future of business technology. Get started with our AI solutions today and see the difference.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+              <button ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <button ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </butn>
             </div>

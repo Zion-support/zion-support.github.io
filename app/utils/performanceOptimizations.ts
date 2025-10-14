@@ -1,9 +1,9 @@
-export const performanceOptimizations = {
+export const performanceOptimizations ={
   debounce: <Textends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
     let timeout: Node JS.Timeout;
     return ((...args: unknown[]) => {
       clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
+      timeou t = setTimeout(() => func.apply(this, args), wait);
     }) as T;
   },
   throttle: <Textends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
@@ -11,8 +11,8 @@ export const performanceOptimizations = {
     return ((...args: unknown[]) => {
       if (!inThrottle) {
         func.apply(this, args);
-        inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+        inThrottl e = true;
+        setTimeout(() => inThrottl e = false, limit);
       }
     }) as T;
   },

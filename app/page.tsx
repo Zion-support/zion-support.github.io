@@ -1,10 +1,10 @@
-import React, { useState, useEffect, Suspense, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react';
+import React,{ useState, useEffect, Suspense, memo } from 'react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud  } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import { ContentPromotionBanner } from './components/ContentPromotionBanner';
+import { ContentPromotionBanner  } from './components/ContentPromotionBanner';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -14,7 +14,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded"></div>
   </div>
 ));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+ServiceCardSkeleton.displayName ='ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,14 +22,14 @@ const HomePage: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
-  }, []);
+  },[]);
 
   const handlePhoneClick = () => {
     // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'header_phone'
+    if (typeof window !=='undefined' && window.gtag) {
+      window.gtag('event','phone_click',{
+        event_category:'engagement',
+        event_label:'header_phone'
       });
     }
   };
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
       <SEOOptimizer />
       <PerformanceOptimizer />
       
-      <Navigation onSidebarToggle={() => {}} />
+      <Navigation onSidebarToggle ={() => {}} />
       
       <main className="relative">
         {/* Hero Section */}

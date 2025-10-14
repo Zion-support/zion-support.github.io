@@ -1,9 +1,9 @@
-export const apiInterceptor = {
+export const apiInterceptor ={
   request: (config: Record<string, unknown>) => {
     // Add auth token if available
     const token = localStorage.getItem('authToken');
-    if (token && config.headers && typeof config.headers === 'object') {
-      (config.headers asRecord<string, string>).Authorization = `Bearer ${token}`;
+    if (token && config.headers && typeof config.header s ==='object') {
+      (config.headers asRecord<string, string>).Authorizatio n = `Bearer ${token}`;
     }
     return config;
   },
@@ -11,12 +11,12 @@ export const apiInterceptor = {
     return response;
   },
   error: (error: unknown) => {
-    if (error && typeof error === 'object' && 'response' in error) {
-      const errorWith Response = error as { response?: { status?: number } };
-      if (errorWith Response.response?.status === 401) {
+    if (error && typeof error ==='object' && 'response' in error) {
+      const errorWith Response = error as { response?:{ status?: number } };
+      if (errorWith Response.response?.statu s === 401) {
         // Handle unauthorized access
         localStorage.removeItem('authToken');
-        window.location.href = '/login';
+        window.location.hre f ='/login';
       }
     }
     returnPromise.reject(error);
