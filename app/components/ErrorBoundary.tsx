@@ -31,7 +31,23 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
   }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error monitoring service
+    // For now, we'll just log it
+    console.error('Error logged to service:', {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()
+    });
+  };
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
