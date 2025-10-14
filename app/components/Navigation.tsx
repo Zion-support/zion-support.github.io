@@ -1,5 +1,21 @@
-import React, { useState } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
+  Network,
+  FileText,
+  Clock,
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart
+} from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -8,7 +24,15 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
+
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
+
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth >= 1024) {
