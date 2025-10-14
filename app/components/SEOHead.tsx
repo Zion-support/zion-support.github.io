@@ -1,14 +1,39 @@
-import React from "react";
+  structuredData;
+}) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type === 'article' ? 'Article' : 'WebPage',
+    headline: title,
+    description,
+    image,
+    url,
+    author: {
+      '@type': 'Organization',
+      name: author
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/logo.png'
+      }
+    },
+    ...(publishedTime && { datePublished: publishedTime }),
+    ...(modifiedTime && { dateModified: modifiedTime }),
+    ...(section && { articleSection: section }),
+    ...(tags.length > 0 && { keywords: tags.join(', ') })
+  };
 
-const SEOHead = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEOHead</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEOHead.
-      </p>
-    </div>
-  );
-};
-
-export default SEOHead;
+  <>
+    <Helmet></Helmet>
+      <title>{title}</title>
+      {structuredData && (
+        <script type="application/ld+json">""
+          {JSON.stringify(structuredData
+  </>
+);
+        </script>
+      )
+    </Helmet>

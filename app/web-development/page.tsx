@@ -1,192 +1,27 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRightIcon, CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
-import FuturisticBackground from "../components/FuturisticBackground";
-
-const WebDevelopmentPage = () => {
-  const services = [
-    {
-      icon: <CodeBracketIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Frontend Development",
-      description: "Modern, responsive user interfaces built with the latest technologies and best practices.",
-      features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Responsive Design", "Performance Optimization"]
-    },
-    {
-      icon: <GlobeAltIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Backend Development",
-      description: "Robust server-side applications and APIs that power your web applications.",
-      features: ["Node.js & Express", "Python & Django", "Database Design", "API Development", "Cloud Integration"]
-    },
-    {
-      icon: <DevicePhoneMobileIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Mobile-First Design",
-      description: "Responsive web applications optimized for all devices and screen sizes.",
-      features: ["Mobile Optimization", "Touch Interactions", "Progressive Web Apps", "Cross-Browser Compatibility"]
-    },
-    {
-      icon: <ShoppingCartIcon className="w-12 h-12 text-cyan-400" />,
-      title: "E-commerce Solutions",
-      description: "Complete online store solutions with payment processing and inventory management.",
-      features: ["Online Store Setup", "Payment Integration", "Inventory Management", "Order Processing", "Customer Management"]
-    },
-    {
-      icon: <ChartBarIcon className="w-12 h-12 text-cyan-400" />,
-      title: "Performance Optimization",
-      description: "Fast, efficient web applications with optimal loading times and user experience.",
-      features: ["Speed Optimization", "SEO Optimization", "Analytics Integration", "Performance Monitoring"]
-    }
-  ];
-
-  const technologies = [
-    "React & Next.js", "TypeScript", "Node.js", "Python", "PostgreSQL", "MongoDB", 
-    "AWS", "Docker", "Kubernetes", "GraphQL", "REST APIs", "Tailwind CSS"
-  ];
-
-  const stats = [
-    { value: "100+", label: "Projects Completed" },
-    { value: "99%", label: "Client Satisfaction" },
-    { value: "50%", label: "Faster Load Times" },
-    { value: "24/7", label: "Support Available" }
-  ];
+import React from "react";""
+import { Helmet    } from "react-helmet-async";""
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Web Development Services - Zion Tech Group | Professional Web Solutions</title>
-        <meta name="description" content="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications." />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack, e-commerce, web applications" />
-        <meta property="og:title" content="Web Development Services - Zion Tech Group" />
-        <meta property="og:description" content="Professional web development services for modern businesses." />
-        <meta property="og:type" content="website" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
       </Helmet>
-
-      <FuturisticBackground />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Web Development Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build modern, scalable web applications that drive business growth. 
-            From frontend interfaces to backend systems, we create digital solutions that work.
+      <div className="container mx-auto px-4 py-16"></div>""
+    </>
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>Start Your Project</span>
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
-            <Link 
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Our Work
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Web Development Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive web development solutions tailored to your business needs and goals.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="flex items-center mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  {service.description}
-                </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technologies We Use
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We work with the latest technologies and frameworks to build modern, efficient web applications.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all duration-300">
-                <span className="text-white font-medium">{tech}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Build Your Next Web Application?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our experienced developers bring your vision to life with cutting-edge web technologies.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-            >
-              Start Your Project
-            </Link>
-            <Link 
-              to="/demo"
+            <Link to="/portfolio"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               View Portfolio
@@ -194,8 +29,127 @@ const WebDevelopmentPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Our Web Development Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                      <CheckIcon className="w-4 h-4 text-green-400" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/contact"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center block"
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Technologies We Use
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-slate-800/70 transition-all duration-300">
+                <span className="text-white font-medium">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Our Development Process
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
+              <p className="text-gray-300">We analyze your requirements and create a detailed project plan.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
+              <p className="text-gray-300">We create wireframes and mockups for your approval.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
+              <p className="text-gray-300">We build your application using modern technologies and best practices.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
+              <p className="text-gray-300">We deploy your application and provide ongoing support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Build Your Web Application?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss your project and create something amazing together.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Start Your Project</span>
+              <ArrowRightIcon className="w-5 h-5" />
+            </Link>
+            <Link to="/about"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )};
 };
 
-export default WebDevelopmentPage;
+>>>>>>> origin/main;
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad;

@@ -1,72 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Server, Database, Globe } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import Footer from '../components/Footer';
-import FuturisticBackground from '../components/FuturisticBackground';
-
-const CloudInfrastructurePage: React.FC = () => {
-  const features = [
-    {
-      title: "Scalable Cloud Architecture",
-      description: "Build and deploy applications on a robust, scalable cloud infrastructure that grows with your business needs.",
-      icon: <Cloud className="w-12 h-12 text-cyan-400" />
-    },
-    {
-      title: "High Availability & Reliability",
-      description: "Ensure your applications are always available with our 99.9% uptime guarantee and redundant systems.",
-      icon: <Shield className="w-12 h-12 text-purple-400" />
-    },
-    {
-      title: "Auto-Scaling Solutions",
-      description: "Automatically scale your resources based on demand to optimize costs and performance.",
-      icon: <Zap className="w-12 h-12 text-yellow-400" />
-    },
-    {
-      title: "Database Management",
-      description: "Comprehensive database solutions with backup, replication, and optimization services.",
-      icon: <Database className="w-12 h-12 text-green-400" />
-    }
-  ];
-
-  const services = [
-    "Cloud migration and modernization",
-    "Container orchestration with Kubernetes",
-    "Serverless architecture implementation",
-    "Multi-cloud strategy and management",
-    "Disaster recovery and backup solutions",
-    "Performance monitoring and optimization",
-    "Security compliance and auditing",
-    "24/7 technical support and maintenance"
-  ];
-
-  const stats = [
-    { label: "Infrastructure Managed", value: "500+", icon: <Server className="w-8 h-8 text-cyan-400" /> },
-    { label: "Uptime Guarantee", value: "99.9%", icon: <Shield className="w-8 h-8 text-purple-400" /> },
-    { label: "Cost Savings", value: "40%", icon: <Zap className="w-8 h-8 text-yellow-400" /> },
-    { label: "Global Reach", value: "50+", icon: <Globe className="w-8 h-8 text-green-400" /> }
-  ];
-
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO 
-        title="Cloud Infrastructure - Zion Tech Group | Scalable Cloud Solutions"
-        description="Transform your business with our comprehensive cloud infrastructure services. Scalable, secure, and reliable cloud solutions for modern enterprises."
-        keywords="cloud infrastructure, cloud migration, cloud services, scalable architecture, cloud security, cloud management"
-        canonical="https://ziontechgroup.com/cloud-infrastructure"
-      />
-      
-      <FuturisticBackground />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cloud Infrastructure
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Build and scale your applications on a robust, secure, and reliable cloud infrastructure. 
-            Transform your business with enterprise-grade cloud solutions.
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Home - Zion Tech Group</title>"""
+        <meta name="description" content="Home - Zion Tech Group" /></meta>""
+      </Helmet>"""
+      <div className="container mx-auto px-4 py-16"></div>"""
+    </>
+        <div className="text-center"></div>"""
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
+          </p>
+
+        </div>
+      </div>
+    </div>
+)}
+  );
+"""
+}
+=======
+import React from "react";""
+import { Helmet    } from "react-helmet-async";""
+
+const PagePage = () => {
+  return (
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16"></div>""
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -84,84 +53,27 @@ const CloudInfrastructurePage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud infrastructure services designed to meet the unique needs of your business.
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Cloud Migration</h3>
+            <p className="text-gray-300">
+              Seamlessly migrate your applications and data to the cloud with minimal downtime.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-4">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete cloud infrastructure management and optimization services.
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Auto Scaling</h3>
+            <p className="text-gray-300">
+              Automatically scale your infrastructure based on demand to optimize costs and performance.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-gray-300">
-                  {service}
-                </p>
-              </div>
-            ))}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
+            <p className="text-gray-300">
+              Enterprise-grade security and compliance solutions to protect your cloud infrastructure.
+            </p>
           </div>
         </div>
       </section>
@@ -196,7 +108,8 @@ const CloudInfrastructurePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
+  )};
 };
 
-export default CloudInfrastructurePage;
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad;
