@@ -5,7 +5,7 @@ export const accessibilityEnhancer = {
     );
     
     focusableElements.forEach(element => {
-      element.addEventListener('keydown', (e) => {
+      element.addEventListener('keydown', (e: KeyboardEvent) => {
         if (e.key === 'Enter' || e.key === ' ') {
           if (element.tagName === 'BUTTON' || element.getAttribute('role') === 'button') {
             e.preventDefault();

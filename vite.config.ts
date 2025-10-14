@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
-      fastRefresh: true
+      include: "**/*.{jsx,tsx}",
     }),
   ],
   resolve: {
@@ -73,6 +73,7 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor';
           }
+          return undefined;
         },
         assetFileNames: (assetInfo) => {
           if (

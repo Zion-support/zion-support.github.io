@@ -1,50 +1,50 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Menu } from 'lucide-react';
 
-export default function Page() {
+interface NavigationProps {
+  onSidebarToggle: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
-    <>
-      <Helmet>
-        <title>Navigation - Zion Tech Group</title>
-        <meta name="description" content="Professional Navigation solutions and services" />
-        <meta name="keywords" content="navigation" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Navigation</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional Navigation solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <a href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-          </div>
+            <span className="text-white font-bold text-xl">Zion Tech</span>
+          </a>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            <a href="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Home
+            </a>
+            <a href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Services
+            </a>
+            <a href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              About
+            </a>
+            <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Contact
+            </a>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={onSidebarToggle}
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+          >
+            <Menu size={24} />
+          </button>
         </div>
       </div>
-    </>
+    </header>
   );
-}
+};
+
+export default Navigation;
