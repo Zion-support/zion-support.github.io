@@ -2,9 +2,9 @@ export interface Service {
   id: string;
   title: string,
         description: string;
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
   shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5 G' | 'Blockchain' | 'IoT';
   icon: string;
   features: string[];
   pricing: {
@@ -24,12 +24,12 @@ ursor/fix-errors-and-merge-to-main-94a7
 
 export const services: Service[] = [
   {
-    id: 'ai-solutions',
-    title: 'AI Solutions',
-    description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.',
-    shortDescription: 'Advanced AI solutions for business transformation',
-    category: 'AI',
-    icon: 'CpuChipIcon',
+    id: "ai-solutions",
+    title: "AI Solutions",
+    description: "Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.",
+    shortDescription: "Advanced AI solutions for business transformation",
+    category: "AI",
+    icon: "CpuChipIcon",
     features: [
       'Machine Learning Models',
       'Natural Language Processing',
@@ -69,20 +69,20 @@ export const services: Service[] = [
       'NumPy;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'ai@ziontechgroup.com',
+      phone: "+1-302-464-0950",
+      email: "ai@ziontechgroup.com",
       website: 'https://ziontechgroup.com/ai-solutions;
     },
     href: '/ai-solutions;
   },
   {
 
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',
-    shortDescription: 'Comprehensive cybersecurity protection',
-    category: 'Cybersecurity',
-    icon: 'ShieldCheckIcon',
+    id: "cybersecurity",
+    title: "Cybersecurity",
+    description: "Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.",
+    shortDescription: "Comprehensive cybersecurity protection",
+    category: "Cybersecurity",
+    icon: "ShieldCheckIcon",
     features: [
       'Threat Detection',
       'Vulnerability Assessment',
@@ -124,20 +124,20 @@ export const services: Service[] = [
       'DLP;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'security@ziontechgroup.com',
+      phone: "+1-302-464-0950",
+      email: "security@ziontechgroup.com",
       website: 'https://ziontechgroup.com/cybersecurity;
     },
     href: '/cybersecurity;
   },
   {
 
-    id: 'cloud-infrastructure',
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',
-    shortDescription: 'Scalable cloud infrastructure solutions',
-    category: 'Cloud',
-    icon: 'CloudIcon',
+    id: "cloud-infrastructure",
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.",
+    shortDescription: "Scalable cloud infrastructure solutions",
+    category: "Cloud",
+    icon: "CloudIcon",
     features: [
       'Cloud Migration',
       'Architecture Design',
@@ -177,19 +177,19 @@ export const services: Service[] = [
       'Ansible;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'cloud@ziontechgroup.com',
+      phone: "+1-302-464-0950",
+      email: "cloud@ziontechgroup.com",
       website: 'https://ziontechgroup.com/cloud-infrastructure;
     },
     href: '/cloud-infrastructure;
   },
   {
-    id: 'digital-transformation',
-    title: 'Digital Transformation',
-    description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.',
-    shortDescription: 'Complete digital transformation services',
-    category: 'IT',
-    icon: 'RocketLaunchIcon',
+    id: "digital-transformation",
+    title: "Digital Transformation",
+    description: "Complete digital transformation services including process automation, workflow optimization, system integration, and change management.",
+    shortDescription: "Complete digital transformation services",
+    category: "IT",
+    icon: "RocketLaunchIcon",
     features: [
       'Process Automation',
       'Workflow Optimization',
@@ -229,19 +229,19 @@ export const services: Service[] = [
       'IoT Integration;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'transformation@ziontechgroup.com',
+      phone: "+1-302-464-0950",
+      email: "transformation@ziontechgroup.com",
       website: 'https://ziontechgroup.com/digital-transformation;
     },
     href: '/digital-transformation;
   },
   {
-    id: '5g-solutions',
-    title: '5G Solutions',
-    description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.',
-    shortDescription: 'Next-generation 5G solutions',
-    category: '5G',
-    icon: 'SignalIcon',
+    id: "5 g-solutions",
+    title: "5 G Solutions",
+    description: "Next-generation 5 G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5 G services.",
+    shortDescription: "Next-generation 5 G solutions",
+    category: "5 G",
+    icon: "SignalIcon",
     features: [
       'Network Implementation',
       'IoT Connectivity',
@@ -272,7 +272,7 @@ export const services: Service[] = [
       'Real-time Analytics;
     ],
     technologies: [
-      '5G NR',
+      '5 G NR',
       'Edge Computing',
       'Network Slicing',
       'MEC',
@@ -281,19 +281,19 @@ export const services: Service[] = [
       'AI/ML;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: '5g@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/5g-solutions;
+      phone: "+1-302-464-0950",
+      email: "5 g@ziontechgroup.com",
+      website: 'https://ziontechgroup.com/5 g-solutions;
     },
-    href: '/5g-solutions;
+    href: '/5 g-solutions;
   },
   {
-    id: 'micro-saas',
-    title: 'Micro SaaS Solutions',
-    description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.',
-    shortDescription: 'Custom micro SaaS solutions',
-    category: 'SaaS',
-    icon: 'GlobeAltIcon',
+    id: "micro-saas",
+    title: "Micro SaaS Solutions",
+    description: "Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.",
+    shortDescription: "Custom micro SaaS solutions",
+    category: "SaaS",
+    icon: "GlobeAltIcon",
     features: [
       'Application Development',
       'API Integration',
@@ -333,8 +333,8 @@ export const services: Service[] = [
       'Stripe API;
     ],
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'saas@ziontechgroup.com',
+      phone: "+1-302-464-0950",
+      email: "saas@ziontechgroup.com",
       website: 'https://ziontechgroup.com/micro-saas-solutions;
     },
     href: '/micro-saas-solutions;

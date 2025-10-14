@@ -18,8 +18,8 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+import { HelmetProvider  } from "react-helmet-async";
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -59,7 +59,7 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import FiveGSolutionsPage from './app/pages/5 GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 
@@ -85,7 +85,7 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
-// 5G Solutions Pages
+// 5 G Solutions Pages
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
@@ -135,16 +135,16 @@ function App() {
   }, []);
 
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
+    <ErrorBoundary >
+      <HelmetProvider >
+        <Router >
           <div className="min-h-screen bg-slate-900 flex">
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
             <div className="flex-1 flex flex-col">
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
-                <ErrorBoundary>
-                  <Routes>
+                <ErrorBoundary >
+                  <Routes >
                     {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -175,30 +175,25 @@ function App() {
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
                       <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                        <h1>404 - Page Not Found</h1>
+                        <p>The page you&apos;re looking for doesn&apos;t exist.</p>
                         <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
                           Go Home
                         </a>
-
                       </div>
                     </div>
                   } />
                 </Routes>
-              </ErrorBoundary>
-            </main>
+                </ErrorBoundary>
+              </main>
+            </div>
             <Footer />
             <PerformanceMonitor />
             <AccessibilityEnhancer />
           </div>
-        </div>
-      </Router>
-    </HelmetProvider>
-  </ErrorBoundary>
-
-
-
-
+        </Router>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 

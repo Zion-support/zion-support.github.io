@@ -1,4 +1,6 @@
-import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
+import React from 'react';
+import React from 'react';
+import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard  } from "lucide-react";
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -160,29 +162,27 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         aria-label="Open accessibility settings"
       >
         <Eye className="w-5 h-5" />
-      </button>
-
+      </>
       {/* Accessibility Panel */}
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Accessibility Settings</h3>
+            <h3 className="text-lg font-semibold">Accessibility Settings</>
             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white"
               aria-label="Close accessibility settings"
             >
               ×
-            </button>
-          </div>
-
+            </>
+          </>
           <div className="space-y-4">
             {/* High Contrast */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Eye className="w-4 h-4" />
-                <span className="text-sm">High Contrast</span>
-              </div>
+                <span className="text-sm">High Contrast</>
+              </>
               <button
                 onClick={() => toggleSetting('highContrast')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -190,20 +190,15 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}
                 aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                />
-              </button>
-            </div>
-
+                <div >
+              </>
+            </>
             {/* Large Text */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Type className="w-4 h-4" />
-                <span className="text-sm">Large Text</span>
-              </div>
+                <span className="text-sm">Large Text</>
+              </>
               <button
                 onClick={() => toggleSetting('largeText')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -211,20 +206,15 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}
                 aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                />
-              </button>
-            </div>
-
+                <div >
+              </>
+            </>
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MousePointer className="w-4 h-4" />
-                <span className="text-sm">Reduced Motion</span>
-              </div>
+                <span className="text-sm">Reduced Motion</>
+              </>
               <button
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -232,20 +222,15 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}
                 aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                />
-              </button>
-            </div>
-
+                <div >
+              </>
+            </>
             {/* Screen Reader */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-                <span className="text-sm">Screen Reader</span>
-              </div>
+                <span className="text-sm">Screen Reader</>
+              </>
               <button
                 onClick={() => toggleSetting('screenReader')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -253,20 +238,15 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}
                 aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                />
-              </button>
-            </div>
-
+                <div >
+              </>
+            </>
             {/* Keyboard Navigation */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Keyboard className="w-4 h-4" />
-                <span className="text-sm">Keyboard Navigation</span>
-              </div>
+                <span className="text-sm">Keyboard Navigation</>
+              </>
               <button
                 onClick={() => toggleSetting('keyboardNavigation')}
                 className={`w-12 h-6 rounded-full transition-colors ${
@@ -274,26 +254,21 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
                 }`}
                 aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
               >
-                <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-                />
-              </button>
-            </div>
-          </div>
-
+                <div >
+              </>
+            </>
+          </>
           {/* Keyboard Shortcuts */}
           <div className="mt-6 pt-4 border-t border-white/10">
-            <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
+            <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</>
             <div className="text-xs text-gray-400 space-y-1">
-              <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
-            </div>
-          </div>
-        </div>
+              <p>Alt + Shift + Tab: Skip to main content</>
+              <p>Alt + Ctrl + Tab: Toggle this panel</>
+              <p>Tab: Navigate elements</>
+              <p>Enter/Space: Activate elements</>
+            </>
+          </>
+        </>
       )}
 
       {/* Skip to main content link */}
@@ -310,8 +285,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }}
       >
         Skip to main content
-      </a>
-
+      </>
       {/* Accessibility Styles */}
       <style jsx global>{`
         .high-contrast {
@@ -326,38 +300,38 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         }
         
         .large-text {
-          font-size: 1.125rem;
+          font-size: 1.125 rem;
         }
         
-        .large-text h1 { font-size: 3.5rem; }
-        .large-text h2 { font-size: 2.5rem; }
-        .large-text h3 { font-size: 2rem; }
-        .large-text h4 { font-size: 1.5rem; }
-        .large-text h5 { font-size: 1.25rem; }
-        .large-text h6 { font-size: 1.125rem; }
+        .large-text h1 { font-size: 3.5 rem; }
+        .large-text h2 { font-size: 2.5 rem; }
+        .large-text h3 { font-size: 2 rem; }
+        .large-text h4 { font-size: 1.5 rem; }
+        .large-text h5 { font-size: 1.25 rem; }
+        .large-text h6 { font-size: 1.125 rem; }
         
         .reduced-motion * {
-          animation-duration: 0.01ms !important;
+          animation-duration: 0.01 ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          transition-duration: 0.01 ms !important;
         }
         
         .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important;
         }
         
         .focus-visible *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important;
         }
         
         .sr-only {
           position: absolute;
-          width: 1px;
-          height: 1px;
+          width: 1 px;
+          height: 1 px;
           padding: 0;
-          margin: -1px;
+          margin: -1 px;
           overflow: hidden;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
@@ -368,13 +342,13 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           position: static;
           width: auto;
           height: auto;
-          padding: 0.5rem 1rem;
+          padding: 0.5 rem 1 rem;
           margin: 0;
           overflow: visible;
           clip: auto;
           white-space: normal;
         }
-      `}</style>
+      `}</>
     </>
   );
 };

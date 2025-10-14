@@ -1,5 +1,7 @@
+import React from 'react';
+import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet  } from "react-helmet-async";
 
 interface OptimizedImageProps {
   src: string;
@@ -22,8 +24,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = ''
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+'
-  sizes = '100vw'
+  placeholder = 'data:image/svg+xml;base64,PHN2 ZyB3 aWR0 aD0 iMzAwIiBoZWlnaHQ9 IjIwMCIgeG1 sbnM9 Imh0 dHA6 Ly93 d3 cudzMub3 JnLzIwMDAvc3 ZnIj48 cmVjdCB3 aWR0 aD0 iMTAwJSIgaGVpZ2 h0 PSIxMDAlIiBmaWxsPSIjZjNmNGY2 Ii8+PHRleHQgeD0 iNTAlIiB5 PSI1 MCUiIGZvbnQtZmFtaWx5 PSJBcmlhbCwgc2 Fucy1 zZXJpZiIgZm9 udC1 zaXplPSIxNCIgZmlsbD0 iIzY2 NjY2 NiIgdGV4 dC1 hbmNob3 I9 Im1 pZGRsZSIgZHk9 Ii4 zZW0 iPkxvYWRpbmcuLi48 L3 RleHQ+PC9 zdmc+'
+  sizes = '100 vw'
   quality = 85,
   loading = 'lazy'
   onLoad,
@@ -44,7 +46,7 @@ const observer = new IntersectionObserver()
       },
       {
         threshold: 0.1,;
-        rootMargin: '50px'}
+        rootMargin: '50 px'}
       });
     if (imgRef.current) {
       observer.observe(imgRef.current)}
@@ -80,38 +82,34 @@ const observer = new IntersectionObserver()
       {priority && (
         <Helmet>}
           <link rel="preload" as="image" href={optimizedSrc} />
-        </Helmet>
+        </>
 )}
-      <div
-
-        ref={ imgRef }
+      <div ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
-          <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
+          <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
             style={{ width, height }
           >
-            <div className="text-gray-400 text-sm">Loading...</div>
-          </div>
+            <div>Loading...</>
+          </>
 )}
         {/* Error state */}
         {isError && (
-          <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
+          <div className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
             style={{ width, height }
           >
             <div className="text-gray-400 text-sm text-center">
-              <div className="text-2xl mb-2">📷</div>
-              <div>Image not available</div>
-            </div>
-          </div>
+              <div>📷</>
+              <div>Image not available</>
+            </>
+          </>
 )}
         {/* Actual image */}
         {isInView && !isError && (
-          <img}
+          <img }
             src={optimizedSrc}
             alt={alt}
             width={width}
@@ -124,15 +122,15 @@ const observer = new IntersectionObserver()
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
             style={{
-              width: '100%'
-              height: '100%'
-              objectFit: 'cover'
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
             }}
           />
 )}
-      </div>
+      </>
     </>
   )};
 
 export default OptimizedImage
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7

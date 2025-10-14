@@ -1,3 +1,5 @@
+import React from 'react';
+import React from 'react';
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -48,7 +50,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 { useEffect, Node } from 'react';
 interface PerformanceOptimizerProps {
   children: Node,}
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code;
@@ -151,7 +153,7 @@ img.setAttribute('loading', 'lazy')}
 
     const observerOptions = {
       root: null,
-      rootMargin: '50px',
+      rootMargin: "50 px",
       threshold: 0.1
     };
 
@@ -217,7 +219,7 @@ img.setAttribute('loading', 'lazy')}
         @keyframes fade-in {
           from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(20 px);
           }
           to {
             opacity: 1;
@@ -226,7 +228,7 @@ img.setAttribute('loading', 'lazy')}
         }
         
         .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
+          animation: fade-in 0.6 s ease-out forwards;
         }
         
         /* Optimize font loading */
@@ -235,7 +237,7 @@ img.setAttribute('loading', 'lazy')}
           font-style: normal;
           font-weight: 400;
           font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3 FwrK3 iLTeHuS_fvQtMwCp50 KnMw2 boKoduKmMEVuLyfAZ9 hiJ-Ek-_EeA.woff2') format('woff2');
         }
         
         /* Critical CSS for above-the-fold content */
@@ -259,12 +261,12 @@ img.setAttribute('loading', 'lazy')}
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
           * {
-            animation-duration: 0.01ms !important;
+            animation-duration: 0.01 ms !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            transition-duration: 0.01 ms !important;
           }
         }
-      `}</style>
+      `}</>
     </>
   );
 };

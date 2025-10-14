@@ -1,5 +1,6 @@
+import React from 'react';
 // Analytics utility functions;
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
   // Basic analytics tracking;
   console.log('Analytics Event:', eventName, properties);

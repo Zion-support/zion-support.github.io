@@ -1,4 +1,6 @@
-import { Activity, TrendingUp } from 'lucide-react';
+import React from 'react';
+import React from 'react';
+import { Activity, TrendingUp  } from "lucide-react";
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -184,107 +186,102 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         title="Performance Monitor"
       >
         <Activity className="w-5 h-5" />
-      </button>
-
+      </>
       {isVisible && (
         <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold flex items-center gap-2">
               <TrendingUp className="w-5 h-5" />
               Performance
-            </h3>
+            </>
             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white"
             >
               ×
-            </button>
-          </div>
-
+            </>
+          </>
           {/* Performance Score */}
           <div className="mb-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-300">Overall Score</span>
+              <span className="text-sm text-gray-300">Overall Score</>
               <span className={`font-bold ${getScoreColor(performanceScore)}`}>
                 {performanceScore}/100
-              </span>
-            </div>
+              </>
+            </>
             <div className="w-full bg-slate-700 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  performanceScore >= 90 ? 'bg-green-400' :
+              <div>= 90 ? 'bg-green-400' :
                   performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'
                 }`}
                 style={{ width: `${performanceScore}%` }}
               />
-            </div>
-            <p className="text-xs text-gray-400 mt-1">
+            </>
+            <p >
               {getScoreLabel(performanceScore)}
-            </p>
-          </div>
-
+            </>
+          </>
           {/* Metrics */}
           <div className="space-y-2 text-sm">
             {metrics.lcp && (
               <div className="flex justify-between">
-                <span className="text-gray-300">LCP</span>
+                <span className="text-gray-300">LCP</>
                 <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.lcp.toFixed(0)}ms
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.fid && (
               <div className="flex justify-between">
-                <span className="text-gray-300">FID</span>
+                <span className="text-gray-300">FID</>
                 <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fid.toFixed(0)}ms
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.cls && (
               <div className="flex justify-between">
-                <span className="text-gray-300">CLS</span>
+                <span className="text-gray-300">CLS</>
                 <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.cls.toFixed(3)}
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.fcp && (
               <div className="flex justify-between">
-                <span className="text-gray-300">FCP</span>
+                <span className="text-gray-300">FCP</>
                 <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fcp.toFixed(0)}ms
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.ttfb && (
               <div className="flex justify-between">
-                <span className="text-gray-300">TTFB</span>
+                <span className="text-gray-300">TTFB</>
                 <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.ttfb.toFixed(0)}ms
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.memory && (
               <div className="flex justify-between">
-                <span className="text-gray-300">Memory</span>
+                <span className="text-gray-300">Memory</>
                 <span className="text-cyan-400">
                   {metrics.memory.toFixed(1)}MB
-                </span>
-              </div>
+                </>
+              </>
             )}
             {metrics.connection && (
               <div className="flex justify-between">
-                <span className="text-gray-300">Connection</span>
+                <span className="text-gray-300">Connection</>
                 <span className="text-cyan-400">
                   {metrics.connection}
-                </span>
-              </div>
+                </>
+              </>
             )}
-          </div>
-        </div>
+          </>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

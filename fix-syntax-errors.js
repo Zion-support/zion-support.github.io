@@ -8,43 +8,49 @@ import { glob } from 'glob';
 function fixSyntaxErrors(content) {
   let fixed = content;
   
-  // Fix unterminated string literals by adding missing quotes
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'react-helmet-async;/g, "import React from 'react';\nimport { Helmet } from 'react-helmet-async';");
+  // Fix unterminated string literals - replace ' with ' at end of lines
+  fixed = fixed.replace(/'$/gm, "'");
   
-  // Fix missing quotes in import statements
-  fixed = fixed.replace(/from\s+'lucide-react;/g, "from 'lucide-react';");
-  fixed = fixed.replace(/from\s+'react-router-dom;/g, "from 'react-router-dom';");
-  fixed = fixed.replace(/from\s+'react-helmet-async;/g, "from 'react-helmet-async';");
-  fixed = fixed.replace(/from\s+'@heroicons\/react\/24\/outline';/g, "from '@heroicons/react/24/outline';");
+  // Fix malformed object properties - remove extra quotes and fix syntax
+  fixed = fixed.replace(/(\w+):\s*'([^']*)',/g, '$1: "$2",');
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)",/g, '$1: "$2",');
   
-  // Fix object property syntax errors
-  fixed = fixed.replace(/icon:\s*icon:\s*/g, "icon: ");
-  fixed = fixed.replace(/title:\s*'([^']*)';/g, "title: '$1',");
-  fixed = fixed.replace(/description:\s*'([^']*)';/g, "description: '$1',");
-  fixed = fixed.replace(/color:\s*'([^']*)';/g, "color: '$1',");
+  // Fix object properties with trailing quotes
+  fixed = fixed.replace(/(\w+):\s*'([^']*)'$/gm, '$1: "$2"');
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"$/gm, '$1: "$2"');
   
-  // Fix array syntax errors
-  fixed = fixed.replace(/\[\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*;\s*\]/g, '["$1", "$2", "$3", "$4", "$5", "$6"]');
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className="([^"]*)'$/gm, 'className="$1"');
+  fixed = fixed.replace(/title="([^"]*)'$/gm, 'title="$1"');
+  fixed = fixed.replace(/description="([^"]*)'$/gm, 'description="$1"');
   
-  // Fix semicolons in wrong places
-  fixed = fixed.replace(/;\s*\]/g, ']');
-  fixed = fixed.replace(/;\s*\}/g, '}');
-  fixed = fixed.replace(/;\s*\)/g, ')');
+  // Fix object literals with missing commas
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*$/gm, '$1: "$2",');
   
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*;\s*(\w+):/g, '$1: "$2",\n      $3:');
-  fixed = fixed.replace(/(\w+):\s*'([^']*)'\s*;\s*(\w+):/g, "$1: '$2',\n      $3:");
+  // Fix malformed array/object syntax
+  fixed = fixed.replace(/{\s*'([^']*)':\s*'([^']*)',?\s*}/g, '{"$1": "$2"}');
   
-  // Fix JSX syntax errors
-  fixed = fixed.replace(/<(\w+);/g, '<$1>');
-  fixed = fixed.replace(/<\/(\w+);/g, '</$1>');
+  // Fix missing closing brackets/parentheses
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*$/gm, '$1: "$2",');
   
-  // Fix function declarations
-  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
+  // Fix JSX fragment issues
+  fixed = fixed.replace(/<>\s*$/gm, '<>');
+  fixed = fixed.replace(/<\/>\s*$/gm, '</>');
   
-  // Fix missing closing tags
-  fixed = fixed.replace(/<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/div>/g, 
-    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-8">\n          <h1 className="text-4xl font-bold text-white text-center mb-8">\n            $1\n          </h1>\n          <p className="text-xl text-gray-300 text-center">\n            $2\n          </p>\n          <div className="mt-8 text-center">\n            <p className="text-gray-400">\n              $3\n            </p>\n          </div>\n        </div>\n      </div>');
+  // Fix numeric literal issues
+  fixed = fixed.replace(/(\d+)([a-zA-Z_])/g, '$1 $2');
+  
+  // Fix malformed imports
+  fixed = fixed.replace(/import\s*{\s*([^}]*)\s*}\s*from\s*'([^']*)';/g, 'import { $1 } from "$2";');
+  
+  // Fix missing semicolons
+  fixed = fixed.replace(/(\w+)\s*$/gm, '$1;');
+  
+  // Fix extra quotes in object properties
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*$/gm, '$1: "$2",');
+  
+  // Fix malformed JSX
+  fixed = fixed.replace(/<(\w+)\s*([^>]*)\s*>\s*$/gm, '<$1 $2>');
   
   return fixed;
 }
@@ -68,24 +74,26 @@ function processFile(filePath) {
 }
 
 // Main function
-async function main() {
+function main() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts',
     '*.tsx',
     '*.ts'
   ];
   
   let totalFixed = 0;
   
-  for (const pattern of patterns) {
+  patterns.forEach(async pattern => {
     const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
+    files.forEach(file => {
       if (processFile(file)) {
         totalFixed++;
       }
-    }
-  }
+    });
+  });
   
   console.log(`\nTotal files fixed: ${totalFixed}`);
 }

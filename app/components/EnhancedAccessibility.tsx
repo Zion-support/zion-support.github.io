@@ -1,6 +1,6 @@
 import React from 'react';
     highContrast: false,'
-    fontSize: 'normal',
+    fontSize: "normal",
     reducedMotion: false,
     screenReader: false
   });
@@ -19,14 +19,14 @@ import React from 'react';
       const style = document.createElement('style')
       style.textContent = `
         *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important}
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important}
         .sr-only {
           position: absolute;
-          width: 1px;
-          height: 1px;
+          width: 1 px;
+          height: 1 px;
           padding: 0;
-          margin: -1px;
+          margin: -1 px;
           overflow: hidden,
           clip: rect(0, 0, 0, 0)
           white-space: nowrap;
@@ -142,31 +142,31 @@ import React from 'react';
         filter: contrast(150%) brightness(110%)}
 
       .font-size-small {
-        font-size: 0.875rem}
+        font-size: 0.875 rem}
 
       .font-size-large {
-        font-size: 1.125rem}
+        font-size: 1.125 rem}
 
       .font-size-extra-large {
-        font-size: 1.25rem}
+        font-size: 1.25 rem}
 
       .reduced-motion * {
-        animation-duration: 0.01ms !important;
+        animation-duration: 0.01 ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important}
+        transition-duration: 0.01 ms !important}
 
       .accessibility-panel {
         position: fixed;
         top: 50%;
-        right: -300px;
+        right: -300 px;
         transform: translateY(-50%);
-        width: 300px;
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 8px 0 0 8px;
-        padding: 1rem;
+        width: 300 px;
+        background: #1 e293 b;
+        border: 1 px solid #334155;
+        border-radius: 8 px 0 0 8 px;
+        padding: 1 rem;
         z-index: 1000;
-        transition: right 0.3s ease;
+        transition: right 0.3 s ease;
         color: white}
 
       .accessibility-panel.visible {
@@ -177,19 +177,19 @@ import React from 'react';
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        background: #8b5cf6;
+        background: #8 b5 cf6;
         color: white;
         border: none;
-        padding: 0.5rem;
-        border-radius: 8px 0 0 8px;
+        padding: 0.5 rem;
+        border-radius: 8 px 0 0 8 px;
         cursor: pointer;
         z-index: 1001;
-        font-size: 0.875rem;
+        font-size: 0.875 rem;
         writing-mode: vertical-rl;
         text-orientation: mixed}
 
       .accessibility-toggle:hover {
-        background: #7c3aed}
+        background: #7 c3 aed}
     `;
     document.head.appendChild(style);
 
@@ -203,29 +203,27 @@ import React from 'react';
     }}, [])
   return (
     <>
-      <button
-        className="accessibility-toggle""
+      <button className="accessibility-toggle""
         onClick={toggleVisibility}
         aria-label="Toggle accessibility options""
         title="Accessibility Options""
       >
-        ♿ A11y
-      </button>
+        ♿ A11 y
+      </>
       <div className={`accessibility-panel ${isVisible ? 'visible' :;}`}>
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
+        <h3 className="text-lg font-semibold mb-4">Accessibility Options</>
         <div className="space-y-4">
-          <div>
+          <div >
             <label className="flex items-center space-x-2">"
-              <input
-                type="checkbox""
+              <input type="checkbox""
                 checked={settings.highContrast}
                 onChange={toggleHighContrast}
                 className="rounded""
               />
-              <span>High Contrast</span>
-            </label>
-          </div>
-          <div>
+              <span>High Contrast</>
+            </>
+          </>
+          <div >
             <label className="block text-sm font-medium mb-2">Font Size</label>"
             <div className="space-y-2">"
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
@@ -239,28 +237,27 @@ onChange={() => setFontSize(size)}
                     className="rounded"
                   />
                   <span className="capitalize">{size}</span>"
-                </label>
+                </>
 ))}
-            </div>
-          </div>
-          <div>
-            <p className="text-sm text-gray-300">"
+            </>
+          </>
+          <div >
+            <p>"
               Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
-            </p>
-            <p className="text-sm text-gray-300">"
+            </>
+            <p>"
               Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
-            </p>
-          </div>
-          <button
-            onClick={toggleVisibility}
+            </>
+          </>
+          <button onClick={toggleVisibility}
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
             Close
-          </button>
-        </div>
-      </div>
+          </>
+        </>
+      </>
     </>
   )};
 
 export default EnhancedAccessibility
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7

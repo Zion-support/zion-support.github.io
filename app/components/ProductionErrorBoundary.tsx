@@ -1,4 +1,5 @@
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import React from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail  } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -55,17 +56,15 @@ class ProductionErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        userId: 'anonymous', // You would get this from your auth context
+        userId: "anonymous", // You would get this from your auth context
         sessionId: this.getSessionId(),
       };
 
       // Send to your error reporting service
       // Example: Sentry, LogRocket, Bugsnag, etc.
       await fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(errorData),
       });
     } catch (reportingError) {
@@ -124,76 +123,65 @@ class ProductionErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
+            </>
+            <h1 >
               Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
+            </>
+            <p >
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-
+            </>
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-cyan-400 cursor-pointer mb-2">
                   Error Details (Development)
-                </summary>
+                </>
                 <div className="bg-black/20 p-4 rounded-lg text-sm font-mono text-gray-300 overflow-auto max-h-40">
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  <div>
-                    <strong>Stack:</strong>
-                    <pre className="whitespace-pre-wrap mt-1">
+                  </>
+                  <div >
+                    <strong>Stack:</>
+                    <p >
                       {this.state.error.stack}
-                    </pre>
-                  </div>
-                </div>
-              </details>
+                    </>
+                  </>
+                </>
+              </>
             )}
 
             <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
+              <button onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
-                <span>Try Again</span>
-              </button>
-
-              <button
-                onClick={this.handleReload}
+                <span>Try Again</>
+              </>
+              <button onClick={this.handleReload}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-5 h-5" />
-                <span>Reload Page</span>
-              </button>
-
-              <button
-                onClick={this.handleGoHome}
+                <span>Reload Page</>
+              </>
+              <button onClick={this.handleGoHome}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Home className="w-5 h-5" />
-                <span>Go Home</span>
-              </button>
-
-              <button
-                onClick={this.handleReportError}
+                <span>Go Home</>
+              </>
+              <button onClick={this.handleReportError}
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Mail className="w-5 h-5" />
-                <span>Report Error</span>
-              </button>
-            </div>
-
+                <span>Report Error</>
+              </>
+            </>
             {this.state.errorId && (
-              <p className="text-xs text-gray-400 mt-4">
+              <p >
                 Error ID: {this.state.errorId}
-              </p>
+              </>
             )}
-          </div>
-        </div>
+          </>
+        </>
       );
     }
 

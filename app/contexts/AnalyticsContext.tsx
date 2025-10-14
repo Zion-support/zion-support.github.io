@@ -1,9 +1,10 @@
+import React from 'react';
 { createContext, useContext, useState, useEffect } from 'react';
 'use client';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void,
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -38,7 +39,7 @@ setIsEnabled(true)}, [])
   }
     isEnabled,}
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext .Provider value={value}>
       {children}
     </AnalyticsContext.Provider>)};
 export { AnalyticsContext };

@@ -1,4 +1,6 @@
 import React from 'react';
+import React from 'react';
+import React from 'react';
 
 
 const TermsPage: React.FC = () => {
@@ -6,7 +8,7 @@ const TermsPage: React.FC = () => {
 
   const sections = [
     {
-      title: 'Acceptance of Terms',
+      title: "Acceptance of Terms",
       content: [
         'By accessing and using Zion Tech Group services, you accept and agree to be bound by the terms and provision of this agreement.',
         'If you do not agree to abide by the above, please do not use this service.',
@@ -15,7 +17,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Description of Service',
+      title: "Description of Service",
       content: [
         'Zion Tech Group provides AI and IT solutions including but not limited to artificial intelligence services, cloud infrastructure, cybersecurity solutions, and digital transformation services.',
         'Our services are provided on a subscription basis with various pricing tiers and features.',
@@ -24,7 +26,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'User Accounts',
+      title: "User Accounts",
       content: [
         'You must provide accurate and complete information when creating an account.',
         'You are responsible for maintaining the confidentiality of your account credentials.',
@@ -34,7 +36,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Acceptable Use',
+      title: "Acceptable Use",
       content: [
         'You may not use our services for any unlawful purpose or to solicit others to perform unlawful acts.',
         'You may not violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances.',
@@ -44,7 +46,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Payment Terms',
+      title: "Payment Terms",
       content: [
         'Fees for our services are billed in advance on a monthly or annual basis.',
         'All fees are non-refundable except as required by law.',
@@ -54,7 +56,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Intellectual Property',
+      title: "Intellectual Property",
       content: [
         'The service and its original content, features, and functionality are owned by Zion Tech Group and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.',
         'You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of our material.',
@@ -63,7 +65,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Privacy Policy',
+      title: "Privacy Policy",
       content: [
         'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the service.',
         'We collect and use your information in accordance with our Privacy Policy.',
@@ -72,7 +74,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Service Availability',
+      title: "Service Availability",
       content: [
         'We strive to provide continuous service availability but cannot guarantee 100% uptime.',
         'We may perform scheduled maintenance that may temporarily interrupt service.',
@@ -82,7 +84,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Limitation of Liability',
+      title: "Limitation of Liability",
       content: [
         'In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages.',
         'Our total liability to you for any damages arising from or related to these terms or the service shall not exceed the amount you paid us for the service in the 12 months preceding the claim.',
@@ -91,7 +93,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Indemnification',
+      title: "Indemnification",
       content: [
         'You agree to defend, indemnify, and hold harmless Zion Tech Group and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney\'s fees).',
         'This indemnification obligation will survive these terms and your use of the service.',
@@ -100,7 +102,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Termination',
+      title: "Termination",
       content: [
         'We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation.',
         'You may terminate your account at any time by contacting us.',
@@ -110,7 +112,7 @@ const TermsPage: React.FC = () => {
       ]
     },
     {
-      title: 'Governing Law',
+      title: "Governing Law",
       content: [
         'These terms shall be interpreted and governed by the laws of the State of Delaware, United States.',
         'Any dispute arising from these terms or the service shall be subject to the exclusive jurisdiction of the courts of Delaware.',
@@ -121,13 +123,11 @@ const TermsPage: React.FC = () => {
   ];
 
   const contactInfo = {
-    email: 'legal@ziontechgroup.com',
-    phone: '+1-302-464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
+    email: "legal@ziontechgroup.com",
+    phone: "+1-302-464-0950",
+    address: "364 E Main St STE 1008, Middletown, DE 19709",
   }
 
   return (
     <>
-      <Helmet>
-
-
+      <Helmet >

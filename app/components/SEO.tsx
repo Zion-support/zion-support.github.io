@@ -1,5 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import React from 'react';
+import { Helmet  } from "react-helmet-async";
 
 interface SEOProps {
   title?: string
@@ -28,7 +30,7 @@ interface SEOProps {
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.'
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions'
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5 G solutions'
   image = '/og-image.svg'
   url = 'https://ziontechgroup.com'
   type = 'website'
@@ -44,21 +46,21 @@ const SEO: React.FC<SEOProps> = ({
   const structuredData = {
     '@context': 'https://schema.org'
     '@type': 'Organization'
-    name: 'Zion Tech Group'
-    url: 'https://ziontechgroup.com'
-    logo: 'https://ziontechgroup.com/logo.svg'
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.'
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.svg",
+    description: "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
     address: {
       '@type': 'PostalAddress'
-      addressLocality: 'Middletown'
-      addressRegion: 'DE'
-      addressCountry: 'US'
+      addressLocality: "Middletown",
+      addressRegion: "DE",
+      addressCountry: "US",
     },
     contactPoint: {
       '@type': 'ContactPoint'
-      telephone: '+1-302-464-0950'
-      contactType: 'customer service'
-      email: 'kleber@ziontechgroup.com'
+      telephone: "+1-302-464-0950",
+      contactType: "customer service",
+      email: "kleber@ziontechgroup.com",
     },
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group'
@@ -67,8 +69,8 @@ const SEO: React.FC<SEOProps> = ({
     ]
   }
   return (
-    <Helmet>
-      <title>{title}</title>
+    <Helmet >
+      <title>{title}</>
 """
       <meta name=description content={description} />""
       <meta name=keywords content={keywords} />
@@ -85,7 +87,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name=twitter:image content={image} />
       { /* Canonical URL */ }"""
       <link rel="canonical" href={url} />""
-    </Helmet>
+    </>
   )};
 
 export default SEO;

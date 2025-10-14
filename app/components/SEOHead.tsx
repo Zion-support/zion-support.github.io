@@ -1,5 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import React from 'react';
+import { Helmet  } from "react-helmet-async";
 
 interface SEOHeadProps {
     title?: string;
@@ -13,7 +15,7 @@ interface SEOHeadProps {
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions'
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.'
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group'
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5 G solutions, Zion Tech Group'
   image = '/og-image.svg'
   url = 'https://ziontechgroup.com'
   type = 'website'
@@ -68,8 +70,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-    <Helmet>
-      <title>{title}</title>
+    <Helmet >
+      <title>{title}</>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
@@ -85,9 +87,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {structuredData && (
         <script type="application/ld+json">
 {JSON.stringify(structuredData)}
-        </script>
+        </>
 )}
-    </Helmet>
+    </>
   )};
 
 export default SEOHead;

@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig  } from "vite";
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     react({
       fastRefresh: true,
-      jsxRuntime: 'automatic',
+      jsxRuntime: "automatic",
     })
   ],
   resolve: {
@@ -18,9 +18,9 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
-    target: 'esnext',
-    minify: 'esbuild',
+    outDir: "dist",
+    target: "esnext",
+    minify: "esbuild",
     sourcemap: process.env.NODE_ENV === 'development',
     cssCodeSplit: true,
     modulePreload: {
@@ -30,7 +30,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
     assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
     // Enable compression
-    reportCompressedSize: true,
     // Optimize for production;
     terserOptions: {
       compress: {
@@ -147,12 +146,11 @@ export default defineConfig({
           }
           return 'assets/[name]-[hash][extname]';
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     treeshake: true,
   },
@@ -183,7 +181,7 @@ export default defineConfig({
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    target: 'esnext',
+    target: "esnext",
   },
   define: {
     __VUE_OPTIONS_API__: false,

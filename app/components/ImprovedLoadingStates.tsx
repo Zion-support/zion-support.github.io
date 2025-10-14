@@ -1,4 +1,6 @@
-import { Loader2, Brain, Zap, Shield } from 'lucide-react';
+import React from 'react';
+import React from 'react';
+import { Loader2, Brain, Zap, Shield  } from "lucide-react";
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -10,15 +12,15 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   className = '' 
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12",
   };
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-    </div>
+    </>
   );
 };
 
@@ -38,13 +40,13 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
           <div className="mb-6">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <Brain className="w-8 h-8 text-white animate-pulse" />
-            </div>
-          </div>
+            </>
+          </>
         )}
         <LoadingSpinner size="lg" />
-        <p className="mt-4 text-white text-lg">{message}</p>
-      </div>
-    </div>
+        <p>{message}</>
+      </>
+    </>
   );
 };
 
@@ -62,14 +64,14 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
   return (
     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">
       {icon && (
-        <div className="mb-4">
+        <div >
           {icon}
-        </div>
+        </>
       )}
       <LoadingSpinner size="md" className="mb-4" />
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-300">{description}</p>
-    </div>
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</>
+      <p>{description}</>
+    </>
   );
 };
 
@@ -85,14 +87,9 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
   return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`h-4 bg-white/10 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-        />
+        <div >
       ))}
-    </div>
+    </>
   );
 };
 
@@ -111,15 +108,15 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center max-w-md mx-auto px-6">
         <div className="mb-6">
-          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div >
             {getServiceIcon(serviceName)}
-          </div>
-        </div>
+          </>
+        </>
         <LoadingSpinner size="lg" />
-        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>
-        <p className="text-gray-300">Preparing your personalized experience...</p>
-      </div>
-    </div>
+        <h2 className="text-2 xl font-bold text-white mb-2 mt-4">Loading {serviceName}</>
+        <p>Preparing your personalized experience...</>
+      </>
+    </>
   );
 };
 

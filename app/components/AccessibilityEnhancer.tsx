@@ -1,3 +1,5 @@
+import React from 'react';
+import React from 'react';
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -29,8 +31,8 @@ const AccessibilityEnhancer: React.FC = () => {
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #8 b5 cf6 !important;
+          outline-offset: 2 px !important;
         }
         .high-contrast {
           filter: contrast(150%) brightness(1.2);

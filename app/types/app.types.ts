@@ -1,3 +1,4 @@
+import React from 'react';
 /**;
  * Application Types;
  * Core type definitions for the Zion Tech Group website;

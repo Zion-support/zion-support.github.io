@@ -1,5 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import React from 'react';
+import { Helmet  } from "react-helmet-async";
 
 interface EnhancedSEOProps {
   title?: string;
@@ -14,7 +16,7 @@ interface EnhancedSEOProps {
   noFollow?: boolean}
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
   title,
   description,
   keywords,
@@ -46,17 +48,17 @@ ursor/fix-errors-and-merge-to-main-94a7
     name: siteName,
     url: siteUrl,}
     logo: `${siteUrl}/logo.png`,'
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    description: "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
     address: {'
       '@type': 'PostalAddress','
-      addressLocality: 'Middletown','
-      addressRegion: 'DE','
+      addressLocality: "Middletown",'
+      addressRegion: "DE",'
       addressCountry: 'US'}
     },
     contactPoint: {'
       '@type': 'ContactPoint','
-      telephone: '+1-302-464-0950','
-      contactType: 'customer service','
+      telephone: "+1-302-464-0950",'
+      contactType: "customer service",'
       email: 'kleber@ziontechgroup.com'}
     },
     sameAs: ['
@@ -69,23 +71,20 @@ ursor/fix-errors-and-merge-to-main-94a7
   const mergedStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <Helmet>
+    <Helmet >
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{fullTitle}</>
       <meta name="description" content={optimizedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonical} />
       <html lang={lang} />
-      
       {/* Enhanced Performance Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#0f172a" />
+      <meta name="theme-color" content="#0 f172 a" />
       <meta name="color-scheme" content="dark" />
-      
       {/* Robots */}
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       <meta name="googlebot" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
-      
       {/* Open Graph */}
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
@@ -94,7 +93,6 @@ ursor/fix-errors-and-merge-to-main-94a7
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={twitterTitle || title} />
@@ -119,21 +117,19 @@ ursor/fix-errors-and-merge-to-main-94a7
       {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0ea5e9" />
-      <meta name="msapplication-TileColor" content="#0ea5e9" />
-      
+      <meta name="theme-color" content="#0 ea5 e9" />
+      <meta name="msapplication-TileColor" content="#0 ea5 e9" />
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180 x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.png" />
+      <link rel="icon" type="image/png" sizes="16 x16" href="/favicon-16 x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-      
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData, null, 2)}
-        </script>
+        </>
       )}
       
       {/* Default Structured Data */}
@@ -158,10 +154,10 @@ ursor/fix-errors-and-merge-to-main-94a7
               "https://github.com/ziontechgroup"
             ]
           }, null, 2)}
-        </script>
+        </>
       )}
-ursor/fix-errors-and-merge-to-main-94a7
-    </Helmet>
+ursor/fix-errors-and-merge-to-main-94 a7
+    </>
   )};
 
 export default EnhancedSEO;

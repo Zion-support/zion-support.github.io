@@ -1,6 +1,8 @@
-import { Menu, X } from 'lucide-react'
+import React from 'react';
+import React from 'react';
+import { Menu, X  } from "lucide-react";
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from "react-router-dom";
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => {
@@ -26,11 +28,10 @@ const EnhancedHeader: React.FC = () => {
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Contact
           {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
+          <button onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          </>
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20">
@@ -46,4 +47,4 @@ const EnhancedHeader: React.FC = () => {
         )}
   )
 }
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></>

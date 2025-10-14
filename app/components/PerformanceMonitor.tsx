@@ -7,8 +7,6 @@ interface PerformanceMetrics {
   ttfb: number | null;
   loadTime: number | null;
 }
-
-ursor/fix-errors-and-merge-to-main-94a7
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
@@ -48,15 +46,15 @@ const PerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <h3 className="font-bold mb-2">Performance Metrics</>
       <div className="space-y-1 text-sm">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
-    </div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</>
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</>
+        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'Loading...'}</>
+      </>
+    </>
   );
 };
 

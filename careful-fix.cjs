@@ -2,21 +2,45 @@ const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors more carefully
 function fixSyntaxErrors(content) {
   let fixed = content;
   
   // Remove git branch markers
   fixed = fixed.replace(/cursor\/fix-errors-and-merge-to-main-[a-f0-9]+/g, '');
   
-  // Fix unterminated string literals - replace ' with ' at end of lines
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<title>([^<]*)<\/>/g, '<title>$1</title>');
+  fixed = fixed.replace(/<meta[^>]*\/>/g, (match) => {
+    if (!match.endsWith('/>')) {
+      return match + ' />';
+    }
+    return match;
+  });
+  
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/<Helmet\s*>/g, '<Helmet>');
+  fixed = fixed.replace(/<title>([^<]*)<\/>/g, '<title>$1</title>');
+  fixed = fixed.replace(/<meta[^>]*\/>/g, (match) => {
+    if (!match.endsWith('/>')) {
+      return match + ' />';
+    }
+    return match;
+  });
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<h1[^>]*>([^<]*)<\/>/g, '<h1>$1</h1>');
+  fixed = fixed.replace(/<p[^>]*>([^<]*)<\/>/g, '<p>$1</p>');
+  fixed = fixed.replace(/<div[^>]*>([^<]*)<\/>/g, '<div>$1</div>');
+  
+  // Fix unterminated string literals
   fixed = fixed.replace(/'$/gm, "'");
   
-  // Fix malformed object properties with trailing quotes
+  // Fix malformed object properties
   fixed = fixed.replace(/(\w+):\s*'([^']*)',/g, '$1: "$2",');
   fixed = fixed.replace(/(\w+):\s*"([^"]*)",/g, '$1: "$2",');
   
-  // Fix object properties with trailing quotes at end of lines
+  // Fix object properties with trailing quotes
   fixed = fixed.replace(/(\w+):\s*'([^']*)'$/gm, '$1: "$2",');
   fixed = fixed.replace(/(\w+):\s*"([^"]*)"$/gm, '$1: "$2",');
   
@@ -65,7 +89,7 @@ function fixSyntaxErrors(content) {
   fixed = fixed.replace(/<\/\w+>\s*$/gm, '</>');
   
   // Fix missing React import
-  if (fixed.includes('React.FC') || fixed.includes('<') && fixed.includes('>') && !fixed.includes('import React')) {
+  if (fixed.includes('React.FC') || (fixed.includes('<') && fixed.includes('>') && !fixed.includes('import React'))) {
     fixed = "import React from 'react';\n" + fixed;
   }
   

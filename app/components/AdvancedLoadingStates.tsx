@@ -1,10 +1,12 @@
 import React from 'react';
+import React from 'react';
+import React from 'react';
 
 interface AdvancedLoadingStatesProps {
   type?: string;
   fullScreen?: boolean;
   message?: string;
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
 }
 ;
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ 
@@ -23,8 +25,8 @@ const getLoadingIcon = () => {
       case 'dots':"
         return <div className="flex space-x-1 justify-center mb-4">
         <div className="animate-bounce w-2 h-2 bg-white rounded-full"></div></div>"
-          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1s' }}></div></div>"
-          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.2s' }}></div></div>
+          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.1 s' }}></div></div>"
+          <div className="animate-bounce w-2 h-2 bg-white rounded-full" style={{ animationDelay: '0.2 s' }}></div></>
         </div>;
       default:"""
         return <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div></div>;""
@@ -36,11 +38,10 @@ const AdvancedLoadingStatesPage = () => {
     <div className={`${fullScreen ? 'fixed inset-0' : ''} flex items-center justify-center bg-slate-900 text-white`}></div>"""
       <div className="text-center"></div>)""
         {getLoadingIcon()}
-        <p>{message || 'Loading...'}</p>
-      </div>
-    
-    </div>
+        <p>{message || 'Loading...'}</>
+      </>
+    </>
   );
 };
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94 a7
 export default AdvancedLoadingStates;

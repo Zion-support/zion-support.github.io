@@ -1,219 +1,171 @@
 import React from 'react';
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import { CheckCircle, Shield, Wifi, Zap, Globe, Smartphone, Right  } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 
 const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Features',
-      description: 'Cutting-edge technology for maximum efficiency'
+      title: "Advanced Features",
+      description: "Cutting-edge technology for maximum efficiency",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime'
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security and 99.9% uptime",
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: 'Mobile Optimization',
-      description: 'Optimized 5G solutions for mobile devices and applications',
+      title: "Mobile Optimization",
+      description: "Optimized 5 G solutions for mobile devices and applications",
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
       icon: <Wifi className="w-8 h-8" />,
-      title: 'Network Connectivity',
-      description: 'High-speed 5G network solutions for seamless connectivity'
+      title: "Network Connectivity",
+      description: "High-speed 5 G network solutions for seamless connectivity",
     }
   ];
 
   const solutions = [
     {
-
-      description: 'Complete 5G network setup and optimization',
-      price: 'Starting at $50,000',
+      title: "5 G Network Infrastructure",
+      description: "Complete 5 G network setup and optimization",
+      price: "Starting at $50,000",
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: "5 G Mobile Applications",
+      description: "Custom mobile apps optimized for 5 G networks",
+      price: "Starting at $25,000",
+      features: ['App development', '5 G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: "5 G IoT Solutions",
+      description: "IoT device connectivity and management platform",
+      price: "Starting at $35,000",
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
   ];
 
   return (
     <>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
+      <EnhancedSEO title="5 G Solutions - Zion Tech Group"
+        description="Professional 5 G solutions by Zion Tech Group. Expert 5 G network infrastructure, mobile applications, and IoT solutions for your business needs."
+        keywords="5 G solutions, 5 G network, 5 G mobile apps, 5 G IoT, network infrastructure, mobile optimization"
       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Helmet >
+          <title>5 G Solutions - Advanced 5 G Technology | Zion Tech Group</>
+          <meta name="description" content="Transform your business with our comprehensive 5 G solutions including network infrastructure, mobile applications, and IoT connectivity." />
+          <meta name="keywords" content="5 G solutions, 5 G network, 5 G mobile apps, 5 G IoT, network infrastructure, mobile optimization" />
+        </>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        <section className="relative py-20 px-4">
+          <div className="max-w-7 xl mx-auto text-center">
+            <h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6">
+              5 G
+              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
                 Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional page services designed to help your business succeed and grow.
-            </p>
+              </>
+            </>
+            <p >
+              Experience the future of connectivity with our comprehensive 5 G solutions.
+              From network infrastructure to mobile applications, we deliver cutting-edge 5 G technology.
+            </>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
+              <FuturisticButton className="px-8 py-4">
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
+                <Right className="w-5 h-5 ml-2 inline" />
+              </>
+              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-300">
+                Learn More
+              </>
+            </>
+          </>
+        </>
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Page Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="py-20 px-4">
+          <div className="max-w-7 xl mx-auto">
+            <h2 className="text-4 xl font-bold text-white text-center mb-16">
+              Why Choose Our 5 G Solutions
+            </>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FuturisticCard key={index} className="p-6 text-center">
+                  <div >
                     {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  </>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</>
+                  <p>{feature.description}</>
+                  {feature.benefits && (
+                    <ul className="text-sm text-gray-400 space-y-1">
+                      {feature.benefits.map((benefit, i) => (
+                        <li key={i}>• {benefit}</>
+                      ))}
+                    </>
+                  )}
+                </>
               ))}
-            </div>
-          </div>
-        </section>
-
+            </>
+          </>
+        </>
+        {/* Solutions Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7 xl mx-auto">
+            <h2 className="text-4 xl font-bold text-white text-center mb-16">
+              Our 5 G Solutions
+            </>
+            <div className="grid md:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
+                <FuturisticCard key={index} className="p-8">
+                  <h3 className="text-2 xl font-bold text-white mb-4">{solution.title}</>
+                  <p>{solution.description}</>
+                  <div>{solution.price}</>
+                  <ul className="space-y-2 mb-8">
+                    {solution.features.map((feature, i) => (
+                      <li key={i} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </>
+                    ))}
+                  </>
+                  <FuturisticButton className="w-full">
+                    Learn More
+                    <Right className="w-5 h-5 ml-2 inline" />
+                  </>
+                </>
+              ))}
+            </>
+          </>
+        </>
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our page services can help your business succeed.
-            </p>
+        <section className="py-20 px-4">
+          <div className="max-w-4 xl mx-auto text-center">
+            <h2 className="text-4 xl font-bold text-white mb-6">
+              Ready to Embrace 5 G Technology?
+            </>
+            <p >
+              Join the 5 G revolution with our comprehensive solutions designed to transform your business.
+            </>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
+              <FuturisticButton className="px-8 py-4">
+                Start Your 5 G Journey
+                <Right className="w-5 h-5 ml-2 inline" />
+              </>
+              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-300">
+                Schedule Consultation
+              </>
+            </>
+          </>
+        </>
+      </>
+    </>
+  );
+};
 
-      {/* Features Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our 5G Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge technology meets enterprise-grade reliability
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-              )})}
-          </div>
-        </div>
-      </div>
-
-      {/* Solutions Section */}
-      <div className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our 5G Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive 5G services tailored to your business needs
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                <div className="text-3xl font-bold text-blue-400 mb-6">{solution.price}</div>
-                <ul className="space-y-3 mb-8">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <Right className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-))}
-                </ul>
-                <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                  Get Started
-                </button>
-              </div>
-))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with 5G?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to discuss your 5G implementation strategy
-ursor/fix-errors-and-merge-to-main-94a7
-          </p>
-        </div>
-      </div>
-    </div>
-  )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+export default Page;

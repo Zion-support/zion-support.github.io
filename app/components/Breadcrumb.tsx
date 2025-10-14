@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import React from 'react';
+import React from 'react';
+import { Link, useLocation  } from "react-router-dom";
+import { ChevronRight, Home  } from "lucide-react";
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { Link, useLocation  } from "react-router-dom";
+import { ChevronRight, Home  } from "lucide-react";
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();    return null;
@@ -18,7 +20,7 @@ const Breadcrumb: React.FC = () => {
       'services': 'Services',
       'ai-services': 'AI Services',
       'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
+      '5 g-solutions': '5 G Solutions',
       'blog': 'Blog',
       'contact': 'Contact',
       'privacy': 'Privacy Policy',
@@ -34,9 +36,9 @@ const Breadcrumb: React.FC = () => {
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2" aria-label="Breadcrumb">
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3">              <Home className="w-4 h-4" />
-              <span className="sr-only">Home</span>
-            </Link>
-          </li> cursor/analyze-improve-and-deploy-application-30da
+              <span className="sr-only">Home</>
+            </>
+          </li> cursor/analyze-improve-and-deploy-application-30 da
           {pathSegments.map((segment, index) => (
             <li key={segment.path} className="flex items-center">
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />

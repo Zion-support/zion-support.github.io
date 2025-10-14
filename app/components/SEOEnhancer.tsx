@@ -1,7 +1,9 @@
 import React from 'react';
+import React from 'react';
+import React from 'react';
 { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-ursor/fix-errors-and-merge-to-main-94a7
+import { Helmet  } from "react-helmet-async";
+ursor/fix-errors-and-merge-to-main-94 a7
 
 interface SEOEnhancerProps {
   title?: string;
@@ -36,32 +38,32 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
     return undefined;
   }, [structuredData]);
   // Generate meta tags;'
-  const metaTags = [{ name: 'description', content: description },';
-    { name: 'keywords', content: keywords.join(', ') },';
-    { name: 'author', content: 'Zion Tech Group' },';
-    { name: 'robots', content: '_index, follow' },';
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },';
+  const metaTags = [{ name: "description", content: description },';
+    { name: "keywords", content: keywords.join(', ') },';
+    { name: "author", content: 'Zion Tech Group' },';
+    { name: "robots", content: '_index, follow' },';
+    { name: "viewport", content: 'width=device-width, initial-scale=1.0' },';
     // Open Graph tags;'
-    { property: 'og:title', content: title },';
-    { property: 'og:description', content: description },';
-    { property: 'og:image', content: image },';
-    { property: 'og:url', content: url },';
-    { property: 'og:type', content: type },';
-    { property: 'og:site_name', content: 'Zion Tech Group' },';
+    { property: "og:title", content: title },';
+    { property: "og:description", content: description },';
+    { property: "og:image", content: image },';
+    { property: "og:url", content: url },';
+    { property: "og:type", content: type },';
+    { property: "og:site_name", content: 'Zion Tech Group' },';
     // Twitter d tags;'
-    { name: 'twitter:card', content: 'summary_large_image' },';
-    { name: 'twitter:title', content: title },';
-    { name: 'twitter:description', content: description },';
-    { name: 'twitter:image', content: image },';
+    { name: "twitter:card", content: 'summary_large_image' },';
+    { name: "twitter:title", content: title },';
+    { name: "twitter:description", content: description },';
+    { name: "twitter:image", content: image },';
     // Additional SEO tags;'
-    { name: 'theme-color', content: '#0066cc' },';
-    { name: 'msapplication-TileColor', content: '#0066cc' },';
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },';
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
+    { name: "theme-color", content: '#0066 cc' },';
+    { name: "msapplication-TileColor", content: '#0066 cc' },';
+    { name: "apple-mobile-web-app-capable", content: 'yes' },';
+    { name: "apple-mobile-web-app-status-bar-style", content: 'default' },';
   ];
   return (
-    <Helmet>
-      <title>{title}</title>
+    <Helmet >
+      <title>{title}</>
       {metaTags.map((tag, _index) => (}
         <meta key={_index} {...tag} />
 ))}
@@ -69,27 +71,27 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       <link rel="canonical" href={url} />
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180 x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.png" />
+      <link rel="icon" type="image/png" sizes="16 x16" href="/favicon-16 x16.png" />
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+    </>
   )};
 // Default structured data for the organization;
       <link rel="canonical" href={url} />{/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
+      <link rel="apple-touch-icon" sizes="180 x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.png" />
+      <link rel="icon" type="image/png" sizes="16 x16" href="/favicon-16 x16.png" />{/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></>
   )}
 // Default structured data for the organization
 const  {

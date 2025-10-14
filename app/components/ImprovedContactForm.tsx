@@ -1,3 +1,5 @@
+import React from 'react';
+import React from 'react';
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
 interface FormData {
@@ -42,7 +44,7 @@ const ImprovedContactForm: React.FC = () => {
     "Custom Software",
     "Network Infrastructure",
     "Micro SAAS",
-    "5G Solutions",
+    "5 G Solutions",
     "Other"
   ];
 
@@ -162,46 +164,44 @@ const ImprovedContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center">
+      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2 xl p-8 text-center">
         <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-8 h-8 text-green-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300 mb-6">
+        </>
+        <h3 className="text-2 xl font-bold text-white mb-2">Thank You!</>
+        <p >
           Your message has been sent successfully. We'll get back to you within 24 hours.
-        </p>
+        </>
         <button
           onClick={() => setIsSubmitted(false)}
           className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
         >
           Send Another Message
-        </button>
-      </div>
+        </>
+      </>
     );
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
+    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2 xl p-8">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
           <MessageSquare className="w-6 h-6 text-cyan-400" />
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold text-white">Get In Touch</h3>
-          <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>
-        </div>
-      </div>
-
+        </>
+        <div >
+          <h3 className="text-2 xl font-bold text-white">Get In Touch</>
+          <p>We'd love to hear from you. Send us a message!</>
+        </>
+      </>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name and Email Row */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div>
+          <div >
             <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
               <User className="w-4 h-4 inline mr-2" />
               Full Name *
-            </label>
-            <input
-              type="text"
+            </>
+            <input type="text"
               id="name"
               name="name"
               value={formData.name}
@@ -215,17 +215,15 @@ const ImprovedContactForm: React.FC = () => {
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
                 {errors.name}
-              </p>
+              </>
             )}
-          </div>
-
-          <div>
+          </>
+          <div >
             <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
               <Mail className="w-4 h-4 inline mr-2" />
               Email Address *
-            </label>
-            <input
-              type="email"
+            </>
+            <input type="email"
               id="email"
               name="email"
               value={formData.email}
@@ -239,20 +237,18 @@ const ImprovedContactForm: React.FC = () => {
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
                 {errors.email}
-              </p>
+              </>
             )}
-          </div>
-        </div>
-
+          </>
+        </>
         {/* Phone and Company Row */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div>
+          <div >
             <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
               <Phone className="w-4 h-4 inline mr-2" />
               Phone Number
-            </label>
-            <input
-              type="tel"
+            </>
+            <input type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
@@ -266,17 +262,15 @@ const ImprovedContactForm: React.FC = () => {
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
                 {errors.phone}
-              </p>
+              </>
             )}
-          </div>
-
-          <div>
+          </>
+          <div >
             <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
               <Building className="w-4 h-4 inline mr-2" />
               Company
-            </label>
-            <input
-              type="text"
+            </>
+            <input type="text"
               id="company"
               name="company"
               value={formData.company}
@@ -284,14 +278,13 @@ const ImprovedContactForm: React.FC = () => {
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
               placeholder="Your company name"
             />
-          </div>
-        </div>
-
+          </>
+        </>
         {/* Service Selection */}
-        <div>
+        <div >
           <label className="block text-sm font-medium text-white mb-2">
             Service Interest *
-          </label>
+          </>
           <div className="relative">
             <button
               type="button"
@@ -302,10 +295,9 @@ const ImprovedContactForm: React.FC = () => {
             >
               <span className={formData.service ? 'text-white' : 'text-gray-400'}>
                 {formData.service || 'Select a service'}
-              </span>
+              </>
               <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-            
+            </>
             {isServiceDropdownOpen && (
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                 {services.map((service) => (
@@ -316,70 +308,64 @@ const ImprovedContactForm: React.FC = () => {
                     className="w-full px-4 py-3 text-left text-white hover:bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"
                   >
                     {service}
-                  </button>
+                  </>
                 ))}
-              </div>
+              </>
             )}
-          </div>
+          </>
           {errors.service && (
             <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
               <AlertCircle className="w-4 h-4" />
               {errors.service}
-            </p>
+            </>
           )}
-        </div>
-
+        </>
         {/* Budget and Timeline Row */}
         <div className="grid md:grid-cols-2 gap-4">
-          <div>
+          <div >
             <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
               Budget Range
-            </label>
-            <select
-              id="budget"
+            </>
+            <select id="budget"
               name="budget"
               value={formData.budget}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             >
-              <option value="">Select budget range</option>
+              <option value="">Select budget range</>
               {budgets.map((budget) => (
                 <option key={budget} value={budget} className="bg-slate-800">
                   {budget}
-                </option>
+                </>
               ))}
-            </select>
-          </div>
-
-          <div>
+            </>
+          </>
+          <div >
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
               Project Timeline
-            </label>
-            <select
-              id="timeline"
+            </>
+            <select id="timeline"
               name="timeline"
               value={formData.timeline}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             >
-              <option value="">Select timeline</option>
+              <option value="">Select timeline</>
               {timelines.map((timeline) => (
                 <option key={timeline} value={timeline} className="bg-slate-800">
                   {timeline}
-                </option>
+                </>
               ))}
-            </select>
-          </div>
-        </div>
-
+            </>
+          </>
+        </>
         {/* Message */}
-        <div>
+        <div >
           <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
             <FileText className="w-4 h-4 inline mr-2" />
             Message *
-          </label>
-          <textarea
-            id="message"
+          </>
+          <textarea id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
@@ -393,19 +379,17 @@ const ImprovedContactForm: React.FC = () => {
             <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
               <AlertCircle className="w-4 h-4" />
               {errors.message}
-            </p>
+            </>
           )}
-        </div>
-
+        </>
         {/* Submit Button */}
-        <button
-          type="submit"
+        <button type="submit"
           disabled={isSubmitting}
           className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
             <>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <div >
               Sending...
             </>
           ) : (
@@ -414,9 +398,9 @@ const ImprovedContactForm: React.FC = () => {
               Send Message
             </>
           )}
-        </button>
-      </form>
-    </div>
+        </>
+      </>
+    </>
   );
 };
 
