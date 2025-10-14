@@ -4,8 +4,6 @@ interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   return <>{children}</>;
-};
-
-export default AnalyticsProvider;
+}
