@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  onSidebarToggle?: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+    if (onSidebarToggle) {
+      onSidebarToggle();
+    }
+  };
   return (
     <nav className="bg-slate-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +59,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={onSidebarToggle}
+              onClick={handleToggle}
               className="text-gray-400 hover:text-white p-2 rounded-md transition-colors"
             >
               <Menu size={24} />
