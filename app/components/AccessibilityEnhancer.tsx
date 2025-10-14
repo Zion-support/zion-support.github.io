@@ -109,11 +109,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
-<<<<<<< HEAD
     return () => {
-<<<<<<< HEAD
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
