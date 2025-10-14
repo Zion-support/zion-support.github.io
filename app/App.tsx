@@ -2,5 +2,19 @@ import {Browser Routeras Router, Routes, Route, Helmet Provider }from 'react-rou
           </div> </Router> </Helmet Provider> );
 };
 
-export default App
-</div>
+function App() {
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </div>
+      </Router>
+    </HelmetProvider>
+  );
+}
+
+export default App;
