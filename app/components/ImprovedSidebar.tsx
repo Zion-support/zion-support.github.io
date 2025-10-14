@@ -175,7 +175,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     {
       id: 'it-services'
-      title: 'IT Services'
+      title: 'IT Services'"
       icon: <Shield className="w-5 h-5"
       color: 'from-green-500 to-emerald-500'
       href: '/services'
@@ -197,7 +197,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     {
       id: 'micro-saas'
-      title: 'Micro SAAS'
+      title: 'Micro SAAS'"
       icon: <Zap className="w-5 h-5"
       color: 'from-purple-500 to-pink-500'
       href: '/micro-saas'
@@ -229,7 +229,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     {
       id: '5g-solutions'
-      title: '5G Solutions'
+      title: '5G Solutions'"
       icon: <Globe className="w-5 h-5"
       color: 'from-orange-500 to-red-500'
       href: '/5g-solutions'
@@ -275,11 +275,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
 const ImprovedSidebar = () => {
-  return (
+  return ("
     <div className="p-4"
       <h2 className="text-xl font-semibold mb-2"
       <p>This component is under construction.</p>
     </div>
->>>>>>> origin/main
+
   );
 export default ImprovedSidebar;

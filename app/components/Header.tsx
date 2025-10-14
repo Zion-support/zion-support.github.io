@@ -11,7 +11,7 @@ import React from 'react';'
 import { Link  , Menu,  X,  ChevronDown } from 'lucide-react';
 const Header: React.FC = () => { const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-' }
+' }"
 const navigationItems = [{ name: "Home", href: "/" },';'"
     { name: "About", href: "/about" },'"
     { '

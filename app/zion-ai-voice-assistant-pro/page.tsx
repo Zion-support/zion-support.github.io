@@ -1,157 +1,98 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
 
-import { Helmet } from "react-helmet-async
-import { Link } from "react-router-dom
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from "lucide-react
-import SEOOptimizer    from "../components/SEOOptimizer
-export default function ZionAIVoiceAssistantPro() {
-  const features = ["
-    "Natural language processing (NLP)
-    "Multi-language support (50+ languages)
-    "Voice recognition & synthesis"
-    "Context-aware conversations"
-    "Integration with 500+ apps"
-    "Custom voice training"
-    "Real-time transcription"
-    "Smart scheduling & reminders"
-    "Email & calendar management"
-    "Document creation & editing"
-    "Web search & research"
-    "Code generation & debugging"
-    "Customer service automation"
-    "Meeting transcription & summaries"
-    "Voice-controlled presentations"
-    "Multi-device synchronization"
-  ];
-const benefits = [
-    "Increase productivity by 60%"
-    "Reduce manual tasks by 80%"
-    "Improve accessibility for all users"
-    "Enable hands-free operation"
-    "Scale customer support efficiently"
-    "Enhance user experience"
-    "Reduce training time for new employees"
-    "Improve response accuracy"
-  ];
-const pricingPlans = [
+const PagePage = () => {
+  const features = [
     {
-      name: "Starter"
-      price: "$29"
-      period: "/month"
-      description: "Perfect for small teams and individuals"
-      features: [
-        "Up to 5 users"
-        "Basic voice commands"
-        "10 integrations"
-        "Standard voice models"
-        "Email support"
-        "5GB storage"
-      ],
-      popular: false
+      icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+      title: "Professional Service",
+      description: "High-quality  solutions tailored to your needs."
     },
     {
-      name: "Professional"
-      price: "$79"
-      period: "/month"
-      description: "Ideal for growing businesses"
-      features: [
-        "Up to 25 users"
-        "Advanced AI capabilities"
-        "Unlimited integrations"
-        "Custom voice training"
-        "Priority support"
-        "50GB storage"
-        "API access"
-        "Analytics dashboard"
-      ],
-      popular: true
+      icon: <Star className="w-8 h-8 text-purple-500" />,
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
     },
     {
-      name: "Enterprise"
-      price: "$199"
-      period: "/month"
-      description: "For large organizations"
-      features: [
-        "Unlimited users"
-        "Full AI suite"
-        "Custom integrations"
-        "Advanced voice models"
-        "24/7 dedicated support"
-        "Unlimited storage"
-        "White-label options"
-        "Advanced analytics"
-        "Custom deployment"
-      ],
-      popular: false
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson"
-      company: "TechStart Inc."
-      role: "CEO"
-      content:
-      rating: 5
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen"
-      company: "E-commerce Solutions"
-      role: "CTO"
-      content:
-      rating: 5
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez"
-      company: "Digital Marketing Agency"
-      role: "Operations Director"
-      content: "Our team can now handle 3x more customer inquiries thanks to the voice automation. The ROI was immediate and continues to grow."
-      rating: 5
-      avatar: "ER"
-    }
-  ];
-const useCases = [
-    {
-      title: "Customer Service"
-      description: "Automate customer inquiries with intelligent voice responses"
-      icon: <Headphones className="w-8 h-8" />
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Meeting Assistant"
-      description: "Transcribe, summarize, and manage meeting notes automatically"
-      icon: <Video className="w-8 h-8" />
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Content Creation"
-      description: "Generate articles, emails, and documents through voice commands"
-      icon: <FileText className="w-8 h-8" />
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Code Development"
-      description: "Write, debug, and review code using natural language"
-      icon: <Code className="w-8 h-8" />
-      color: "from-orange-500 to-red-500"
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: "Global Reach",
+      description: "Serving clients worldwide with local expertise."
     }
   ];
 
-      </Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg"
-            This page is under construction. Please check back later.
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional  services by Zion Tech Group. 
+            We deliver innovative solutions that drive business success.
           </p>
-        </div>
-      </div>
-    </div>
-
-            </button>;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovation and expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our  solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5 inline" />
+              </button>
+              <a
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  );}
-}
-'
+  );
+};
+
+export default PagePage;

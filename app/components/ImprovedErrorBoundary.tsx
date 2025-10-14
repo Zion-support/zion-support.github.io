@@ -30,7 +30,7 @@ const ImprovedErrorBoundary: React.FC = () => { return (
               <p className="text-lg text-gray-600 mb-6">
                 We provide comprehensive improved error boundary;
                 solutions tailored to your specific needs and requirements.;
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+import React, { Component, ErrorInfo, ReactNode } from 'react'"
 import { AlertTriangle, RefreshCw, Home }    from "lucide-react
 interface Props {
   children: ReactNode;
@@ -68,8 +68,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    })
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`"
+    })"
     // Log error to console in development"
     if (process.env.NODE_ENV === 'development'"
->>>>>>> origin/main

@@ -55,9 +55,9 @@ const CareersPage: React.FC = () => {
         'Proficiency in modern CSS frameworks'
         'Experience with responsive design'
         'Portfolio of previous work'
-      ]
-    }
-  ]
+      ]"
+    }"
+  ]"
   const benefits = ["
     {"
       icon: <Users className="w-8 h-8 text-blue-500"
@@ -197,7 +197,7 @@ const CareersPage: React.FC = () => {
               <div className="flex justify-center space-x-4"
                 <a
                   href="/"
->>>>>>> origin/main
+
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home

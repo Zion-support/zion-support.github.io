@@ -7,8 +7,8 @@ interface LoadingPageProps {
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md'
-  className = ''
+  size = 'md'"
+  className = ''"
 }) => {"
   if (variant === 'minimal'"
     return (
@@ -135,7 +135,7 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
->>>>>>> origin/main
+
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
           <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>
@@ -182,6 +182,5 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
     </div>
   )}
 }''
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+

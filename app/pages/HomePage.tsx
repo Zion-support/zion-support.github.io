@@ -73,11 +73,11 @@ const structuredData = {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <NeonButton to="/contact" variant="primary" size="lg">
+              <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
-              <NeonButton to="/services" variant="secondary" size="lg">
+              <NeonButton to="/services" variant="secondary" size="lg"></NeonButton>
                 Explore Services
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
@@ -122,13 +122,13 @@ const structuredData = {
                   </div>
                   <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
                 </div>
-                
+                "
                 <div className="flex flex-col gap-3">
-                  <NeonButton to={service.href} variant="primary" size="sm">
+                  <NeonButton to={service.href} variant="primary" size="sm"></NeonButton>
                     Learn More
                     <ArrowRightIcon className="w-4 h-4 ml-2" />
                   </NeonButton>
-                  <NeonButton to="/contact" variant="secondary" size="sm">
+                  <NeonButton to="/contact" variant="secondary" size="sm"></NeonButton>
                     Get Quote
                   </NeonButton>
                 </div>
@@ -137,7 +137,7 @@ const structuredData = {
           </div>
           
           <div className="text-center mt-12">
-            <NeonButton to="/services" variant="primary" size="lg">
+            <NeonButton to="/services" variant="primary" size="lg"></NeonButton>
               View All Services
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </NeonButton>
@@ -179,7 +179,7 @@ const structuredData = {
             </div>
             
             <div className="text-center">
-              <NeonButton to="/about" variant="primary" size="lg">
+              <NeonButton to="/about" variant="primary" size="lg"></NeonButton>
                 Learn More About Us
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
@@ -223,11 +223,11 @@ const structuredData = {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <NeonButton to="/contact" variant="primary" size="lg">
+              <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
-              <NeonButton to="/demo" variant="secondary" size="lg">
+              <NeonButton to="/demo" variant="secondary" size="lg"></NeonButton>
                 Schedule Demo
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from "react-router-dom
+import { Link } from "react-router-dom"
 import { Languages, Target, CheckCircle }    from "lucide-react
-import Layout from '../layout'
-
-export default function AITranslationServicePage() {
+import Layout from '../layout'"
+"
+export default function AITranslationServicePage() {"
   const features = ["
     {"
       icon: <Target className="w-6 h-6 text-green-400"
@@ -212,7 +212,7 @@ export default function AITranslationServicePage() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section */}"
         <div className="py-16 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
@@ -232,4 +232,3 @@ export default function AITranslationServicePage() {
     </Layout>
   );
 }
->>>>>>> origin/main

@@ -1,192 +1,98 @@
-import React from "react
-import { Helmet }    from "react-helmet-async
-    'AI Services','
-    'IT Services','
-    'Services','
-    'Micro SAAS','
-    'Digital Transformation','
-    '5G Implementation','
-      description: '9:00 AM - 6:00 PM EST'}'
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
+
+const PagePage = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+      title: "Professional Service",
+      description: "High-quality  solutions tailored to your needs."
+    },
+    {
+      icon: <Star className="w-8 h-8 text-purple-500" />,
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: "Global Reach",
+      description: "Serving clients worldwide with local expertise."
     }
   ];
-const subjects = [''
-    'AI Services',''
-    'IT Services',''
-    'Services',''
-    'Micro SAAS',''
-    'Digital Transformation',''
-    '5G Implementation',''
-    'Other''
-  ]""
+
   return (
-    <div className="min-h-screen bg-white"><Helmet><title>Contact - Zion Tech Group</title><meta name="description" content="Contact Zion Tech Group for AI and IT solutions" /></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional  services by Zion Tech Group. 
+            We deliver innovative solutions that drive business success.
           </p>
-        </div>
-
-      {/* Contact Info */}
-
-            Get in Touch
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
-            {contactInfo.map((info, index) => {;
-const Icon = info.icon
-              return (<div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"><div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"><Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>)
-              )}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
-
-            Send us a Message
-          </h2>
-          
-          {isSubmitted ? (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"><div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>
-                <Circle className="w-8 h-8 text-white" />
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovation and expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
-              <p className="text-gray-300 mb-6">''"
-                Thank you for contacting us. We'll get back to you within 24 hours.'
-              </p>
-              <button)
-                onClick={() => {
-                  setIsSubmitted(false)
-                  setFormData({
-
-              >
-                Send Another Message
-              </button>
-            </div>)
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6"><div></div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={ formData.name }
-                    onChange={ handleChange }
-
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div></div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={ formData.email }
-                    onChange={ handleChange }
-
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
-              <div className="grid md:grid-cols-2 gap-6 mb-6"><div></div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={ formData.company }
-                    onChange={ handleChange }
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div></div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={ formData.phone }
-                    onChange={ handleChange }
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent")
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
-              <div className="mb-6"><label htmlFor="subject" className="block text-white font-medium mb-2">
-                  Subject *
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={ formData.subject }
-                  onChange={ handleChange }
-
-                  required
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select a subject</option>
-                  { subjects.map((subject, index) => ( }
-
-                    <option key={index} value={subject}>
-                      { subject }
-                    </option>)
-                  ))
-                </select>
-              </div>
-              <div className="mb-8"><label htmlFor="message" className="block text-white font-medium mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={ formData.message }
-                  onChange={ handleChange }
-                  required
-                  rows={ 6 }
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or how we can help you..."
-                />
-              </div>
-              <div className="text-center"><button"
-                  type="submit"
-                  disabled={ isSubmitting }
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  { isSubmitting ? (
-                    <>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Sending...
-                    </>)
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />
-                    </> })
-                  )}
-
-                </button>
-              </div>
-            </form>
-          )
+            ))}
+          </div>
         </div>
       </section>
 
-    </div>);
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our  solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5 inline" />
+              </button>
+              <a
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
-export default ContactPage;
-};
+
+export default PagePage;

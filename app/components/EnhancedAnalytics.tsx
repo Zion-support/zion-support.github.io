@@ -5,5 +5,5 @@ interface EnhancedAnalyticsProps {
 ;
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <div>{children}</div>;
-}
-export default EnhancedAnalytics
+}"
+export default EnhancedAnalytics"

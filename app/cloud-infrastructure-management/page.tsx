@@ -1,9 +1,9 @@
 
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, } from "lucide-react
-import Layout from "../layout
-import { Link } from "react-router-dom
-import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from "lucide-react
-import Layout from '../layout'
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, } from "lucide-react"
+import Layout from "../layout"
+import { Link } from "react-router-dom"
+import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from "lucide-react"
+import Layout from '../layout'"
 import { Helmet }    from "react-helmet-async"
 const HomePage = () => {"
   return (

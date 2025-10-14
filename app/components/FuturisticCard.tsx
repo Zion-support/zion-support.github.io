@@ -23,7 +23,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, '
   variant = 'default''; })
 }) => {';
 const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
-  const variantClasses = {'
+  const variantClasses = {'"
     default: "bg-white/10",';'"
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",';'"
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';}
@@ -34,7 +34,7 @@ const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
     </div>)
   );
 }
-export default FuturisticCard
+export default FuturisticCard"
     default: "bg-white/10",'"
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",'"
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''}
@@ -53,3 +53,4 @@ export default FuturisticCard;
 export default FuturisticCard;
 };
 export default FuturisticCard;'
+"

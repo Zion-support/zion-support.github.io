@@ -1,9 +1,9 @@
-import React from "react
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react
-import { Helmet } from "react-helmet-async
-import { Link }    from "react-router-dom
-import EnhancedSEO from '../components/EnhancedSEO'
-
+import React from "react"
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react"
+import { Helmet } from "react-helmet-async"
+import { Link }    from "react-router-dom"
+import EnhancedSEO from '../components/EnhancedSEO'"
+"
 const MicroSaasPage: React.FC = () => {"
   const microSaasServices = ["
     {"
@@ -234,10 +234,10 @@ const MicroSaasPage: React.FC = () => {"
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">{testimonial.content}
-                <div>
+                <div></div>
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
->>>>>>> origin/main
+
 
                 </div>
               </div>

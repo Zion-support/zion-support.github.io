@@ -22,7 +22,7 @@ icon: Phone
       description: "Browse our comprehensive guides"
       action: "View Docs"
       color: 'from-orange-500 to-red-500'
-    {'
+    {'"
       icon: "Book",';'"
       title: "Documentation",';'"
       description: "Browse our comprehensive guides",';'"
@@ -30,7 +30,7 @@ icon: Phone
       color: 'from-orange-500 to-red-500'';}
     }
   ];
-  const faqs = [{ '
+  const faqs = [{ '"
       question: "How do I get started with your AI services?",';'"
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.''; }
     },

@@ -1,7 +1,7 @@
-import { Helmet } from "react-helmet-async
-import { Link } from "react-router-dom
-import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock }    from "lucide-react
-export default function ZionAiAnalyticsPro() {
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock }    from "lucide-react"
+export default function ZionAiAnalyticsPro() {"
   const features = ["
     {"
       title: "Real-time Analytics Dashboard"
@@ -209,7 +209,7 @@ const ZionAIAnalyticsProPage = () => {
 
   return (
     <>
-      <Helmet >
+      <Helmet ></Helmet>
         <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title><meta
           name="description"
           content="Transform your business with Zion AI Analytics Pro - advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Starting at $299/month."
@@ -222,13 +222,13 @@ const ZionAIAnalyticsProPage = () => {
     { number: "50+", label: "Data Sources Supported", icon: <Database className="w-6 h-6"
     { number: "24/7", label: "Real-Time Monitoring", icon: <Clock className="w-6 h-6"
   ];
->>>>>>> origin/main
->>>>>>> origin/main
+
+
 
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> origin/main
+
       <Helmet >
         <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title><meta
           name="description"
@@ -244,8 +244,8 @@ const HomePage = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]
-        {/* Hero Section */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"
+        {/* Hero Section */}"
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
           <div className="max-w-7xl mx-auto"
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
@@ -437,7 +437,7 @@ const HomePage = () => {
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`
                   >
-                    Get Started
+                    Get Started"
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   </Link>
                 </div>
@@ -475,7 +475,7 @@ const HomePage = () => {
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3"
                       {testimonial.avatar}
                     </div>
-                    <div>
+                    <div></div>
                       <div className="font-semibold text-white"
                       <div className="text-sm text-gray-400"
                     </div>
@@ -602,7 +602,6 @@ const HomePage = () => {
         <meta name="description" content="Professional services by Zion Tech Group."
 }
   );
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+
+

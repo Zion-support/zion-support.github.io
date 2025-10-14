@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react
-import EnhancedSEO from "./components/EnhancedSEO
-import FuturisticBackground from "./components/FuturisticBackground
-import FuturisticCard from "./components/FuturisticCard
-import FuturisticButton from "./components/FuturisticButton
-import FuturisticText from "./components/FuturisticText
-import ResponsiveContainer from "./components/ResponsiveContainer
-import ResponsiveGrid from "./components/ResponsiveGrid
-import ResponsiveText    from "./components/ResponsiveText
+import { Link } from "react-router-dom"
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react"
+import EnhancedSEO from "./components/EnhancedSEO"
+import FuturisticBackground from "./components/FuturisticBackground"
+import FuturisticCard from "./components/FuturisticCard"
+import FuturisticButton from "./components/FuturisticButton"
+import FuturisticText from "./components/FuturisticText"
+import ResponsiveContainer from "./components/ResponsiveContainer"
+import ResponsiveGrid from "./components/ResponsiveGrid"
+import ResponsiveText    from "./components/ResponsiveText"
 const HomePage = () => {"
   const structuredData = {"
     "@context": "https://schema.org"
@@ -142,7 +142,7 @@ const HomePage = () => {"
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"><div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"><div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center relative z-10">
             <FuturisticText
               as="h1"
@@ -202,7 +202,7 @@ const HomePage = () => {"
 
       {/* Core Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16">
             <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Our Core Services
@@ -249,7 +249,7 @@ const HomePage = () => {"
 
       {/* Micro SAAS Highlights */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16">
             <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Featured Micro SAAS Solutions
@@ -315,7 +315,7 @@ const HomePage = () => {"
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center mb-16">
             <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               What Our Clients Say
@@ -334,7 +334,7 @@ const HomePage = () => {"
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"
                   />
-                  <div>
+                  <div></div>
                     <h4 className="font-semibold">{testimonial.name}</h4>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                     <p className="text-sm text-cyan-400">{testimonial.company}</p>
@@ -359,7 +359,7 @@ const HomePage = () => {"
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer>
+        <ResponsiveContainer></ResponsiveContainer>
           <div className="text-center">
             <FuturisticText as="h2" className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Transform Your Business?

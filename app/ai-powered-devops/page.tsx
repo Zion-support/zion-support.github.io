@@ -13,19 +13,19 @@ export default function AiPoweredDevOps() {
     },
     {
       title: 'Automated Testing',
-      description: 'Smart test generation and execution with AI-driven test case optimization and coverage analysis.',
+      description: 'Smart test generation and execution with AI-driven test case optimization and coverage analysis.',"
       icon: <Zap className="w-8 h-8" />
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Security Scanning',
-      description: 'Advanced AI security scanning that detects vulnerabilities and suggests remediation strategies.',
+      description: 'Advanced AI security scanning that detects vulnerabilities and suggests remediation strategies.',"
       icon: <Shield className="w-8 h-8" />
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Performance Monitoring',
-      description: 'Real-time performance monitoring with predictive analytics and automated scaling recommendations.',;
+      description: 'Real-time performance monitoring with predictive analytics and automated scaling recommendations.',;"
       icon: <TrendingUp className="w-8 h-8" />
       color: 'from-orange-500 to-red-500';
     };
@@ -65,7 +65,7 @@ export default function AiPoweredDevOps() {
 
   return (
     <>
-      <Helmet>
+      <Helmet>"
         <title>AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations</title><meta name="description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, automated testing, and smart monitoring solutions."  />
         <meta name="keywords" content="AI DevOps, intelligent CI/CD, automated testing, AI monitoring, DevOps automation, smart deployment"  />
         <meta property="og:title" content="AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations"  />

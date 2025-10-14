@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom
+import { Link } from "react-router-dom"
 import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
 
@@ -69,9 +69,9 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'
       color: 'text-gray-400'
     }
-  ]
-  return (
-    <>
+  ]"
+  return ("
+    <>"
       <SEOOptimizer title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, e-commerce, and performance optimization. Build modern, scalable web applications."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'web applications'
@@ -86,7 +86,7 @@ const WebDevelopmentPage: React.FC = () => {
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      >
+      ></AccessibilityEnhancer>
         <div></div>
       </AccessibilityEnhancer>
       <SecurityEnhancer enableCSP={true}
@@ -234,5 +234,4 @@ const WebDevelopmentPage: React.FC = () => {
 };
 
 export default WebDevelopmentPage;
->>>>>>> origin/main
->>>>>>> origin/main
+

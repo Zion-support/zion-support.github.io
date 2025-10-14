@@ -74,7 +74,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title><meta name="description" content={description}  />
       <meta name="keywords" content={keywords}  />
@@ -112,7 +112,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)}
       </script>
       

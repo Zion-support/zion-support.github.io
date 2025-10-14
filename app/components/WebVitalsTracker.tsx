@@ -1,7 +1,6 @@
 import React    from "react
 interface WebVitalsTrackerProps {
-  children: ReactNode;
-}
+  children: ReactNode;"
+}"
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {"
   useEffect(() => {"
->>>>>>> origin/main

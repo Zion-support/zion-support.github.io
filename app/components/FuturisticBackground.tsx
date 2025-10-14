@@ -10,14 +10,14 @@ const FuturisticBackground = () => {
           <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
             {Array.from({ length: 144 }).map((_, i) => (
               <div
-                key={i}
+                key={i}"
                 className="border border-purple-500/30 animate-pulse"
                 style={{
                   animationDelay: `${i * 0.1}s`,`
                   animationDuration: '3s''
                 }
                 }}
->>>>>>> origin/main
+
               ></div>
             ))
           </div>
@@ -167,11 +167,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10"
         {children}
       </div>
->>>>>>> origin/main
+
     </div>);
 };
 
 export default FuturisticBackground;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+

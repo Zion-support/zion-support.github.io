@@ -1,11 +1,11 @@
-import React, { useMemo } from "react
-import { Link } from "react-router-dom
-import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react
-import { Link } from "react-router-dom
+import React, { useMemo } from "react"
+import { Link } from "react-router-dom"
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react"
+import { Link } from "react-router-dom"
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle }    from "lucide-react
 const ImprovedFooter = () => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear();"
+"
   const serviceCategories = ["
     {"
       title: 'AI Services'"
@@ -40,7 +40,7 @@ const ImprovedFooter = () => {
       ]
     },
     {
-      title: 'IT Services'
+      title: 'IT Services'"
       icon: <Shield className="w-5 h-5"
       color: 'from-green-500 to-emerald-500'
       links: [
@@ -61,7 +61,7 @@ const ImprovedFooter = () => {
       ]
     },
     {
-      title: 'Micro SAAS'
+      title: 'Micro SAAS'"
       icon: <Zap className="w-5 h-5"
       color: 'from-purple-500 to-pink-500'
       links: [
@@ -93,7 +93,7 @@ const ImprovedFooter = () => {
     },
   ], []);
 
-  const services = useMemo(() => [
+  const services = useMemo(() => ["
     { name: "AI Analytics", href: "/ai-analytics"
     { name: "AI Automation", href: "/ai-automation-platform"
     { name: "AI Content Generation", href: "/ai-content-generation"
@@ -312,7 +312,7 @@ const legal = [
             </div>
             
             {/* Social Links */}
-            <div>
+            <div></div>
               <h4 className="text-white font-semibold mb-4"
               <div className="flex space-x-4"
                 {socialLinks.map((social, index) => (
@@ -342,7 +342,7 @@ const legal = [
                 >
                   {link.label}
                 </Link>
->>>>>>> origin/main
+
               ))}
             </div>
           </div>
@@ -371,7 +371,7 @@ const legal = [
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
             <div className="flex items-center space-x-2">
               <PhoneIcon className="w-4 h-4 text-purple-400" />
-              <div>
+              <div></div>
                 <p className="text-sm text-gray-400"
                 <p className="text-white"
               </div>
@@ -401,7 +401,7 @@ const legal = [
             <div className="flex items-center">
               <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />
               <span className="text-gray-300">San Francisco, CA</span>
->>>>>>> origin/main
+
             </div>
           </div>
         </div>
@@ -448,7 +448,6 @@ const legal = [
 
 Footer.displayName = "Footer"
 export default Footer;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+
+

@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async
-import { Cloud, Shield, }    from "lucide-react
+import { Helmet } from "react-helmet-async"
+import { Cloud, Shield, }    from "lucide-react"
 const CloudMigrationProPage = () => {"
   const features = ["
     {"
@@ -126,7 +126,7 @@ const CloudMigrationProPage = () => {"
 
   return (
     <Layout>
-      <Helmet >
+      <Helmet ></Helmet>
         <title>Cloud Migration Pro - Zion Tech Group</title><meta name="description" content="Professional cloud migration services with zero downtime. Expert migration to AWS, Azure, Google Cloud with enterprise-grade security."
       </Helmet>
       
@@ -144,7 +144,7 @@ const CloudMigrationProPage = () => {"
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Seamlessly migrate your applications and data to the cloud with zero downtime. 
                 Our expert team ensures a smooth transition with enterprise-grade security.
->>>>>>> origin/main
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to="/contact"
@@ -186,7 +186,7 @@ const HomePage = () => {
       </div>
     </div>
   ); }
->>>>>>> origin/main
+
             Page</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional page solutions tailored to your business needs.</p>
@@ -216,6 +216,5 @@ const HomePage = () => {
       </div>
     </div>
   )}
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+

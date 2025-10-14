@@ -19,7 +19,6 @@ export default withErrorLogging(async (req, res) => {
 
   const { amount, currency = 'usd' } = req.body;
 
-const { amount, currency = 'usd' } = req.body;
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
@@ -27,20 +26,19 @@ const { amount, currency = 'usd' } = req.body;
   }
 
   try {
-
+    // Mock payment intent creation
     const paymentIntent = {
-const paymentIntent = {
-      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      id: `pi_${Date.now()}`,
+      amount: amount * 100, // Convert to cents
+      currency,
       status: 'requires_payment_method',
-      amount: amount,
-      currency: currency
+      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`
     };
 
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(paymentIntent));
+    res.end(JSON.stringify({ paymentIntent }));
   } catch (error) {
     console.error('Payment intent creation error:', error);
-
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }

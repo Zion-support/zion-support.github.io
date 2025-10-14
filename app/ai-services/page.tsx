@@ -1,9 +1,9 @@
 import React from 'react'
-import { Helmet } from "react-helmet-async
-import { Link } from "react-router-dom
-import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap }    from "lucide-react
-import EnhancedSEO from '../components/EnhancedSEO'
-
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap }    from "lucide-react"
+import EnhancedSEO from '../components/EnhancedSEO'"
+"
 const AIServicesPage: React.FC = () => {"
   const aiServices = ["
     {"
@@ -126,7 +126,7 @@ const AIServicesPage: React.FC = () => {"
 import React from 'react'
 const AIServicesPage: React.FC = () => {;
 const services = [
-    {
+    {"
       title: "AI Consulting"
       description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps."
       color: "from-purple-500 to-pink-500"
@@ -156,7 +156,7 @@ const services = [
     { icon: Shield
       title: "AI Security"
       description: "AI-powered security solutions to protect your business from threats."
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500'"
       description: "AI-powered security solutions to protect your business and data."
       color: "from-cyan-500 to-blue-500"
   ];
@@ -181,7 +181,7 @@ const features = [
       description: "AI-powered security solutions to protect your business and data."
       color: 'from-cyan-500 to-blue-500''
     }
-  ]
+  ]"
 const testimonials = [{ name: "Dr. Sarah Johnson"
       company: "MedTech Solutions"
       role: "CTO",'"
@@ -205,7 +205,7 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
     }
   ];
 
->>>>>>> origin/main
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <EnhancedSEO title="AI Services - Zion Tech Group | Advanced AI Solutions for Business"
@@ -337,7 +337,7 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current""))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">{testimonial.content}
-                <div>
+                <div></div>
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
                 </div>
@@ -420,7 +420,7 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
         </section>
       </div>
     </div>
-      <FuturisticBackground>
+      <FuturisticBackground></FuturisticBackground>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
           { /* Hero Section */ }
           <section className="relative py-20 px-4">
@@ -601,7 +601,7 @@ export default AIServicesPage;
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      >
+      ></AccessibilityEnhancer>
         <div></div>
       </AccessibilityEnhancer>
       <SecurityEnhancer enableCSP={true}
@@ -702,7 +702,6 @@ export default AIServicesPage;
 };
 
 export default AIServicesPage;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+
+

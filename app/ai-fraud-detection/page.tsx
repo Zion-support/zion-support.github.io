@@ -117,7 +117,7 @@ const benefits = [
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      >
+      ></AccessibilityEnhancer>
         <div></div></div>
       </AccessibilityEnhancer>
       <SecurityEnhancer
@@ -143,7 +143,7 @@ const benefits = [
             </p>
           </section>
 
-          {/* Benefits Section */}
+          {/* Benefits Section */}"
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose Our AI Fraud Detection?
@@ -234,7 +234,7 @@ const benefits = [
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto"><h2 className="text-3xl font-bold text-white mb-4 neon-text">
                 Protect Your Business from Fraud
-              </h2>
+              </h2>"
               <p className="text-gray-300 mb-6 text-lg">
                 Don&apos;t let fraud damage your business. Our AI-powered fraud detection systems 
                 provide real-time protection and help you stay ahead of emerging threats.

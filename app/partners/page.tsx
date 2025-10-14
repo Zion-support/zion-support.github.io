@@ -42,8 +42,8 @@ const benefits = ['Access to cutting-edge technology',''
 
   return (
     <>
-      <Helmet></Helmet>
-        <title>Partners - Strategic Partnerships | Zion Tech Group</title>
+      <Helmet></Helmet>"
+        <title>Partners - Strategic Partnerships | Zion Tech Group</title>"
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities."  />
         <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"

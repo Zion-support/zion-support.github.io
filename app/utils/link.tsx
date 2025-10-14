@@ -1,114 +1,98 @@
-'use client';
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';'
-'use client';
-const : React.FC = () => { return (
-    <div className="min-h-screen bg-white"><Helmet><title>- Zion Tech Group</title><meta name="description" content="Professional link services by Zion Tech Group." /></Helmet> }
-      { /* Hero Section */ }
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center"><h1 className="text-5xl font-bold text-gray-900 mb-6">
-            </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional link services;
-            designed to help your business grow and succeed.;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
+
+const LinkPage = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+      title: "Professional Service",
+      description: "High-quality link solutions tailored to your needs."
+    },
+    {
+      icon: <Star className="w-8 h-8 text-purple-500" />,
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: "Global Reach",
+      description: "Serving clients worldwide with local expertise."
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Link - Zion Tech Group</title>
+        <meta name="description" content="Professional link services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Link
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional link services by Zion Tech Group. 
+            We deliver innovative solutions that drive business success.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
       </section>
 
-      { /* Content Section */ }
-          <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional link services
-            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto"><div className="grid md:grid-cols-2 gap-12 items-center"><div></div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive link;
-                solutions tailored to your specific needs and requirements.;
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support;
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"><h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our link services?;
-              </p>
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovation and expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our link solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5 inline" />
+              </button>
               <a
-                href="$1""
-                className="$1"
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                Contact Us;
+                Contact Sales
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      { /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?;
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let"s discuss how our link"
-            services can help you achieve your goals.;
-          </p>
-          <a
-            href="$1""
-            className="$1"
-          >
-            Get Started Today;
-          </a>
-        </div>
-      </section>
-    </div>)
+    </div>
   );
-export default ;
-                We provide comprehensive link
-                solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions</li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation</li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"><h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our link services?</p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{ /* CTA Section */ }
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our link''
-            services can help you achieve your goals.</p>
-          <a
-            href="/contact""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
-            Get Started Today</a></div></section></div>);
-export default 
-;
 };
-export default ;'
+
+export default LinkPage;

@@ -1,133 +1,98 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
 
-import { Helmet } from "react-helmet-async
-import { motion } from "framer-motion
-<<<<<<< HEAD
-import { Heart, TrendingUp, MessageSquare, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Smile, AlertCircle }    from "lucide-react
-const AICustomerSentimentTrackerPage = () => {"
-  const features = ["
-    {"
-      icon: <Brain className="w-8 h-8 text-cyan-400"
-      title: "Real-time Sentiment Analysis"
-      description: "Advanced AI analyzes customer feedback, reviews, and interactions in real-time to provide instant sentiment insights."
+const PagePage = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+      title: "Professional Service",
+      description: "High-quality  solutions tailored to your needs."
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400"
-      title: "Multi-channel Monitoring"
-      description: "Track sentiment across all channels including social media, email, chat, reviews, and support tickets."
+      icon: <Star className="w-8 h-8 text-purple-500" />,
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400"
-      title: "Advanced Analytics Dashboard"
-      description: "Comprehensive analytics with sentiment trends, customer satisfaction scores, and actionable insights."
-    },
-    {
-      icon: <AlertCircle className="w-8 h-8 text-red-400"
-      title: "Proactive Alerts"
-      description: "Get instant notifications when sentiment drops or negative feedback requires immediate attention."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400"
-      title: "Automated Response Suggestions"
-      description: "AI-powered suggestions for responding to negative feedback and improving customer satisfaction."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400"
-      title: "Team Collaboration"
-      description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: "Global Reach",
+      description: "Serving clients worldwide with local expertise."
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter"
-      price: "$39"
-      period: "/month"
-      description: "Perfect for small businesses"
-      features: [
-        "Up to 5,000 mentions/month"
-        "Basic sentiment analysis"
-        "Email alerts"
-        "Basic dashboard"
-        "Email support"
-        "3 team members"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional"
-      price: "$99"
-      period: "/month"
-      description: "Ideal for growing businesses"
-      features: [
-        "Up to 25,000 mentions/month"
-        "Advanced AI analysis"
-        "Multi-channel monitoring"
-        "Advanced analytics"
-        "Priority support"
-        "10 team members"
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise"
-      price: "$249"
-      period: "/month"
-      description: "For large organizations"
-      features: [
-        "Unlimited mentions"
-        "Custom AI models"
-        "White-label solution"
-        "Advanced security"
-        "Dedicated support"
-        "Unlimited team members"
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Smile className="w-12 h-12 text-green-400"
-      title: "Improve Customer Satisfaction"
-      description: "Increase customer satisfaction scores by 35% with proactive sentiment monitoring and quick response times."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-blue-400"
-      title: "Boost Brand Reputation"
-      description: "Protect and enhance your brand reputation by quickly addressing negative sentiment and amplifying positive feedback."
-    },
-    {
-      icon: <MessageSquare className="w-12 h-12 text-purple-400"
-      title: "Reduce Customer Churn"
-      description: "Identify at-risk customers early and take proactive steps to retain them, reducing churn by up to 40%."
-    },
-    {
-      icon: <Heart className="w-12 h-12 text-red-400"
-      title: "Increase Customer Loyalty"
-      description: "Build stronger customer relationships through better understanding of their needs and emotions."
-    }
-  ];
-
-  const stats = [
-    { number: "35%", label: "Satisfaction Increase"
-    { number: "40%", label: "Churn Reduction"
-    { number: "95%", label: "Accuracy Rate"
-    { number: "2.5x", label: "Faster Response"
-  ];
-import { Helmet }    from "react-helmet-async"
-const HomePage = () => {"
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg"
-            This page is under construction. Please check back later.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional  services by Zion Tech Group. 
+            We deliver innovative solutions that drive business success.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>)
-    </div>)
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovation and expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our  solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5 inline" />
+              </button>
+              <a
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
-export default HomePage;
+
+export default PagePage;

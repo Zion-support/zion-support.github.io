@@ -1,149 +1,98 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
 
-import { Link } from "react-router-dom
-<<<<<<< HEAD
-import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand }    from "lucide-react
-import EnhancedSEO from '../components/EnhancedSEO'
-
-const AIHolographicWorkspace = () => {"
-  const features = ["
-    {"
-      title: "3D Holographic Display"
-      description: "Immersive 3D holographic interface that projects data and applications into your physical space."
-      icon: <Monitor className="w-8 h-8"
-      color: "from-blue-500 to-cyan-500"
+const PagePage = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8 text-blue-500" />,
+      title: "Professional Service",
+      description: "High-quality  solutions tailored to your needs."
     },
     {
-      title: "Remote Collaboration"
-      description: "Seamless collaboration with team members in shared holographic workspaces from anywhere in the world."
-      icon: <Users className="w-8 h-8"
-      color: "from-purple-500 to-pink-500"
+      icon: <Star className="w-8 h-8 text-purple-500" />,
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
     },
     {
-      title: "Data Visualization"
-      description: "Transform complex data into interactive 3D visualizations that you can manipulate with gestures."
-      icon: <BarChart3 className="w-8 h-8"
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Gesture Control"
-      description: "Control your holographic workspace with natural hand gestures and eye tracking technology."
-      icon: <Hand className="w-8 h-8"
-      color: "from-orange-500 to-red-500"
+      icon: <Globe className="w-8 h-8 text-green-500" />,
+      title: "Global Reach",
+      description: "Serving clients worldwide with local expertise."
     }
   ];
 
-  const capabilities = [
-    "3D holographic projection technology"
-    "Real-time remote collaboration tools"
-    "Gesture and eye-tracking controls"
-    "Interactive 3D data visualization"
-    "Spatial audio and haptic feedback"
-    "Multi-user virtual meeting rooms"
-    "3D file and document management"
-    "Augmented reality integration"
-    "Virtual whiteboard and sketching"
-    "3D model manipulation and editing"
-    "Spatial computing applications"
-    "Immersive presentation capabilities"
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Holographic Starter"
-      price: "$399"
-      period: "/month"
-      description: "Perfect for individuals exploring holographic workspace technology"
-      features: [
-        "Basic 3D holographic display"
-        "Single-user workspace"
-        "Gesture control interface"
-        "Basic data visualization"
-        "Email support"
-        "10GB holographic storage"
-      ],
-      popular: false
-    },
-    {
-      name: "Holographic Professional"
-      price: "$799"
-      period: "/month"
-      description: "Advanced features for teams and professionals"
-      features: [
-        "All Starter features"
-        "Multi-user collaboration"
-        "Advanced 3D visualization"
-        "Spatial audio integration"
-        "Priority support"
-        "100GB holographic storage"
-        "API access"
-        "Custom workspace templates"
-      ],
-      popular: true
-    },
-    {
-      name: "Holographic Enterprise"
-      price: "$1,599"
-      period: "/month"
-      description: "Complete solution for large organizations"
-      features: [
-        "All Professional features"
-        "Unlimited users"
-        "Custom holographic applications"
-        "White-label interface"
-        "Dedicated support team"
-        "Unlimited holographic storage"
-        "Advanced security protocols"
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Dr. Alex Thompson"
-      company: "Future Tech Labs"
-      role: "Research Director"
-      content: "The holographic workspace has revolutionized how we collaborate. The 3D data visualization capabilities are absolutely mind-blowing."
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Rodriguez"
-      company: "Design Innovation Co."
-      role: "Creative Director"
-      content: "Working in 3D space has completely changed our design process. We can now visualize and iterate on concepts in ways we never thought possible."
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "James Chen"
-      company: "Global Engineering Solutions"
-      role: "CTO"
-      content:
-      rating: 5,
-      avatar: "JC"
-    }
-  ];
-
-  const stats = [
-    { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6"
-    { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6"
-    { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6"
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6"
-  ];
-import { Helmet }    from "react-helmet-async"
-const HomePage = () => {"
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg"
-            This page is under construction. Please check back later.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group." />
+      </Helmet>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional  services by Zion Tech Group. 
+            We deliver innovative solutions that drive business success.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5 inline" />
+            </button>
+            <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>)
-    </div>)
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovation and expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our  solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5 inline" />
+              </button>
+              <a
+                href="/contact"
+                className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Contact Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
-export default HomePage;
+
+export default PagePage;

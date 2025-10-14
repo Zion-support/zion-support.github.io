@@ -13,7 +13,6 @@ import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOp
 import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
 import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";

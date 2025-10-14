@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from "react-router-dom
+import { Link } from "react-router-dom"
 import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone }    from "lucide-react
 import {
   XMarkIcon,
@@ -23,9 +23,9 @@ import {
 } from '
 interface SidebarProps {isOpen: boolean;
   onClose: () => void}
->>>>>>> origin/main
->>>>>>> origin/main
-
+"
+"
+"
   ]"
   const additionalLinks = ["
     { name: "Privacy Policy", href: "/privacy"
@@ -99,9 +99,9 @@ interface SidebarProps {isOpen: boolean;
         </div>
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navigation.map((link) => (
-            <div key={link.name}>
+            <div key={link.name}></div>
               {link.submenu ? (
-                <div>
+                <div></div>
                   <button
                     onClick={() => toggleExpanded(link.name)
                     className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
@@ -129,7 +129,7 @@ interface SidebarProps {isOpen: boolean;
                         >
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
->>>>>>> origin/main
+
             <button
               onClick={onClose}
               className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
@@ -159,13 +159,13 @@ interface SidebarProps {isOpen: boolean;
             </div>
 
             {/* Services */}
-            <div>
+            <div></div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
                 Services
               </h3>
               <nav className="space-y-2"
                 {serviceItems.map((item) => (
-                  <div key={item.name}>
+                  <div key={item.name}></div>
                     <Link to={item.href}
                       onClick={onClose}
                       className="flex items-center space-x-3 px-3 py-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/5 transition-colors duration-200"
@@ -179,7 +179,7 @@ interface SidebarProps {isOpen: boolean;
             </div>
 
             {/* AI Services Dropdown */}
-            <div>
+            <div></div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
                 AI Services
               </h3>
@@ -197,7 +197,7 @@ interface SidebarProps {isOpen: boolean;
             </div>
 
             {/* IT Services Dropdown */}
-            <div>
+            <div></div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
                 IT Services
               </h3>
@@ -215,7 +215,7 @@ interface SidebarProps {isOpen: boolean;
             </div>
 
             {/* Micro SAAS Services Dropdown */}
-            <div>
+            <div></div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
                 Micro SAAS
               </h3>
@@ -250,12 +250,11 @@ interface SidebarProps {isOpen: boolean;
             </div>
           </div>
         </div>
->>>>>>> origin/main
+
       </div>
     </>
   );
 };
 
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+
+

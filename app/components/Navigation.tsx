@@ -281,7 +281,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                         service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
-                    >
+                    >"
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
                         {service.icon}
                       </div>
@@ -336,7 +336,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               ))}
               
               {/* Mobile Services */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
@@ -387,7 +387,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </div>
 
               {/* Mobile IT Services */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleItServices}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
@@ -417,7 +417,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </div>
 
               {/* Mobile Micro SAAS */}
-              <div>
+              <div></div>
                 <button
                   onClick={toggleMicroSaas}
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
