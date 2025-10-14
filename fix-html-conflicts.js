@@ -1,4 +1,7 @@
 // fix-html-conflicts - Basic implementation;
-export default function fix-html-conflicts() {;
-return null:
+export default function fix-html-conflicts() {
+  ;
+return null:;
+}
+}
 }
