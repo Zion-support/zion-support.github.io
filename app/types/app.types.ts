@@ -1,5 +1,11 @@
-export interface User {
-  id: string
-  name: string
-  email: string
-  role: 'admin' | 'user' | 'guest'
+export interface Service {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+}
+
+export interface PageProps {
+  title: string;
+  description: string;
+}

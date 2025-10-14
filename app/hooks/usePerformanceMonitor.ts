@@ -1,3 +1,11 @@
-import { useState, useEffect } from 'react'
-    if (typeof window !== 'undefined' && 'performance'
-      observer.observe({ entryTypes: ['measure', 'navigation'
+import { useEffect, useState } from 'react';
+
+export const usePerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState({});
+
+  useEffect(() => {
+    // Performance monitoring logic
+  }, []);
+
+  return { metrics };
+};
