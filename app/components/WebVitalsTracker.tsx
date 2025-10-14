@@ -17,7 +17,7 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          const fidEntry = entry as { processingStart: number; startTime: number };
+          const fidEntry = entry as unknown as { processingStart: number; startTime: number };
           onVitalsUpdate?.({ type: 'FID', value: fidEntry.processingStart - fidEntry.startTime });
         });
       }).observe({ entryTypes: ['first-input'] });
@@ -26,7 +26,7 @@ export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerPro
       new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          const clsEntry = entry as { hadRecentInput?: boolean; value: number };
+          const clsEntry = entry as unknown as { hadRecentInput?: boolean; value: number };
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
           }
