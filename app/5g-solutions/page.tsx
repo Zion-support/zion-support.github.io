@@ -1,29 +1,28 @@
 import React from "react"
 import { Helmet } from "react-helmet-async"
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from "lucide-react"
+import { ArrowRight, Wifi, Circle } from "lucide-react"
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: "Zap",
+      icon: Wifi,
       title: "Ultra-Fast Speeds",
       description: "Experience lightning-fast 5G connectivity with speeds up to 10 Gbps",
       benefits: ["10x faster than 4G", "Low latency", "High bandwidth", "Reliable connection"]
     },
     {
-      icon: "Globe",
+      icon: Wifi,
       title: "Global Coverage",
       description: "Comprehensive 5G network coverage across multiple regions",
       benefits: ["Wide coverage", "Seamless roaming", "International support", "Network redundancy"]
     },
     {
-      icon: "Smartphone",
+      icon: Wifi,
       title: "Mobile Optimization",
       description: "Optimized 5G solutions for mobile devices and applications",
       benefits: ["Mobile-first design", "App optimization", "Battery efficiency", "Device compatibility"]
     },
     {
-      icon: "Wifi",
-
+      icon: Wifi,
       title: "IoT Connectivity",
       description: "Connect thousands of IoT devices with 5G technology",
       benefits: ["Massive IoT support", "Low power consumption", "Real-time monitoring", "Scalable solutions"]
@@ -80,7 +79,7 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-60 to-purple-60 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70 hover:to-purple-70 transition-all duration-30 flex items-center">
                 Get Started
-                <Right className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border border-blue-40 text-blue-40 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40 hover:text-white transition-all duration-30">
                 Learn More
