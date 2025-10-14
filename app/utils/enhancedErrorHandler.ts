@@ -42,7 +42,7 @@ export const enhancedErrorHandler = {
     }
   },
   
-  getErrorMessage: (error: any) => {
+  getErrorMessage: (error: unknown) => {
     if (error.response?.status) {
       switch (error.response.status) {
         case 400:
