@@ -10,9 +10,9 @@ const PrivacyPage: React.FC = () => {
         <meta name ="keywords" content="privacypolicy, data protection, privacy" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-autopx-4 py-16">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4 xlfont-bold text-white mb-8">Privacy Policy</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
             <div className="text-gray-400">
               <p>Privacy policy content coming soon...</p>
             </div>
