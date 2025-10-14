@@ -1,22 +1,22 @@
 import React from "react"
 import { Helmet } from "react-helmet-async"
-import { ArrowRight, Wifi, Circle } from "lucide-react"
+import { ChevronRight, Wifi, Circle, Zap, Globe, Smartphone } from "lucide-react"
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Wifi,
+      icon: Zap,
       title: "Ultra-Fast Speeds",
       description: "Experience lightning-fast 5G connectivity with speeds up to 10 Gbps",
       benefits: ["10x faster than 4G", "Low latency", "High bandwidth", "Reliable connection"]
     },
     {
-      icon: Wifi,
+      icon: Globe,
       title: "Global Coverage",
       description: "Comprehensive 5G network coverage across multiple regions",
       benefits: ["Wide coverage", "Seamless roaming", "International support", "Network redundancy"]
     },
     {
-      icon: Wifi,
+      icon: Smartphone,
       title: "Mobile Optimization",
       description: "Optimized 5G solutions for mobile devices and applications",
       benefits: ["Mobile-first design", "App optimization", "Battery efficiency", "Device compatibility"]
@@ -79,7 +79,11 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-60 to-purple-60 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-70 hover:to-purple-70 transition-all duration-30 flex items-center">
                 Get Started
+<<<<<<< HEAD
                 <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                <ChevronRight className="w-5 h-5 ml-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-b4e0
               </button>
               <button className="border border-blue-40 text-blue-40 px-8 py-3 rounded-lg font-semibold hover:bg-blue-40 hover:text-white transition-all duration-30">
                 Learn More

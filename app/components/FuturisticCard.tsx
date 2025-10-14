@@ -17,7 +17,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     glow: "bg-white/10 shadow-lg shadow-blue-50/20",
     gradient: "bg-gradient-to-br from-blue-50/20 to-purple-50/20"
   }
-
+  
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
