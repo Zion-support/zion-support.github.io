@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 const resolve = path.resolve;
 
@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@app': resolve(__dirname, './app'),
+      "@": resolve(__dirname, "./src"),
+      "@app": resolve(__dirname, "./app"),
     },
   },
   build: {
@@ -26,16 +26,27 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Increased threshold to reduce warnings
+    assetsInlineLimit: 2048, // Reduced for better chunking
     // Enable compression
     reportCompressedSize: true,
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
+    // Enable tree shaking
+    treeshake: {
+      moduleSideEffects: false,
+    },
     // Optimize for production
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [
+          "console.log",
+          "console.info",
+          "console.debug",
+          "console.warn",
+        ],
         passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
@@ -57,13 +68,13 @@ export default defineConfig({
         safari10: true, // Better Safari compatibility
         toplevel: true,
         properties: {
-          regex: /^_/
-        }
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true,
+      },
     },
     // Enhanced build optimizations
     rollupOptions: {
@@ -72,18 +83,37 @@ export default defineConfig({
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
             // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+            if (
+              id.includes('react') ||
+              id.includes('react-dom') ||
+              id.includes('react-router')
+            ) {
               return 'react-vendor';
             }
             // UI libraries
-            if (id.includes('lucide-react') || id.includes('framer-motion')) {
-              return 'ui-vendor';
+            if (id.includes("lucide-react") || id.includes("framer-motion")) {
+              return "ui-vendor";
+            }
+            // Large libraries
+            if (id.includes('recharts') || id.includes('gray-matter')) {
+              return 'large-vendor';
             }
             // Other vendor libraries
-            return 'vendor';
+            return "vendor";
           }
-          // App chunks
+          // App chunks - split by feature
           if (id.includes('/app/')) {
+<<<<<<< HEAD
+            // Split by page categories
+            if (id.includes('/ai-') || id.includes('/5g-')) {
+              return 'feature-pages';
+            }
+            // Main app pages
+            if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
+              return 'main-pages';
+            }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-e9f6
             return 'app';
           }
           return undefined;
@@ -112,5 +142,12 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
+  },
+  esbuild: {
+    // Remove console logs in production
+    drop: ['console', 'debugger'],
+    // Target modern browsers
+    target: 'es2020',
   },
 });

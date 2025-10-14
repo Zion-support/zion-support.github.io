@@ -1,131 +1,44 @@
-'use client';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
+
+
+const Case Studies Page: React.FC = () => {
 import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Link  } from 'react-router-dom';
-import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award  } from 'lucide-react';
-
-interface CaseStudy {
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  duration: string;
-  team: string;
-}
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies: CaseStudy[] =[
+  const services = [
     {
-      id:'1',
-      title:'AI-Powered Customer Service Transformation',
-      client:'TechCorp Solutions',
-      industry:'Technology',
-      challenge:'High customer service costs and long response times affecting customer satisfaction.',
-      solution:'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
-      results:[
-        '75% reduction in response time','60% decrease in support costs','90% customer satisfaction rate','24/7 automated support coverage'
-      ],
-      image:'/images/case-studies/ai-customer-service.jpg',
-      duration:'3 months',
-      team:'8 specialists'
-    },{
-      id:'2',
-      title:'Cloud Migration forFinancial Services',
-      client:'FinanceCorp',
-      industry:'Financial Services',
-      challenge:'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
-      solution:'Complete cloud migration to AWS with microservices architecture and automated scaling.',
-      results:[
-        '99.9% uptime achieved','50% reduction in infrastructure costs','300% improvement in deployment speed','Enhanced security compliance'
-      ],
-      image:'/images/case-studies/cloud-migration.jpg',
-      duration:'6 months',
-      team:'12 specialists'
-    },{
-      id:'3',
-      title:'Cybersecurity Enhancement forHealthcare',
-      client:'MediCare Plus',
-      industry:'Healthcare',
-      challenge:'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
-      solution:'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
-      results:[
-        '100% HIPAA compliance achieved','Zero security breaches in 12 months','Real-time threat detection and response','Automated compliance reporting'
-      ],
-      image:'/images/case-studies/cybersecurity-healthcare.jpg',
-      duration:'4 months',
-      team:'10 specialists'
-    },{
-      id:'4',
-      title:'Machine Learning forPredictive Analytics',
-      client:'RetailMax',
-      industry:'Retail',
-      challenge:'Inventory management inefficiencies leading to stockouts and overstock situations.',
-      solution:'ML-powered demand forecasting system with real-time inventory optimization.',
-      results:[
-        '40% reduction in stockouts','25% decrease in excess inventory','15% increase in revenue','Real-time demand prediction accuracy of 92%'
-      ],
-      image:'/images/case-studies/ml-predictive-analytics.jpg',
-      duration:'5 months',
-      team:'6 specialists'
-    },{
-      id:'5',
-      title:'Digital Transformation forManufacturing',
-      client:'ManufacturingPro',
-      industry:'Manufacturing',
-      challenge:'Manual processes and lack of real-time visibility into production efficiency.',
-      solution:'IoT integration with AI-powered analytics dashboard and automated quality control.',
-      results:[
-        '30% increase in production efficiency','50% reduction in quality defects','Real-time production monitoring','Predictive maintenance implementation'
-      ],
-      image:'/images/case-studies/digital-transformation.jpg',
-      duration:'8 months',
-      team:'15 specialists'
-    },{
-      id:'6',
-      title:'Blockchain Integration forSupply Chain',
-      client:'GlobalLogistics',
-      industry:'Logistics',
-      challenge:'Lack of transparency and traceability in complex supply chain operations.',
-      solution:'Blockchain-based supply chain tracking system with smart contracts and real-time verification.',
-      results:[
-        'Complete supply chain transparency','60% reduction in disputes','Real-time shipment tracking','Automated compliance verification'
-      ],
-      image:'/images/case-studies/blockchain-supply-chain.jpg',
-      duration:'7 months',
-      team:'11 specialists'
+      title: 'Expert Case Studies Solutions',
+      description: 'Professional case studies services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored case studies implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your case studies needs.'
     }
-  ];
-
-  const stats =[
-    { label:'Projects Completed', value:'150+', icon: CheckCircle },{ label:'Client Satisfaction', value:'98%', icon: TrendingUp },{ label:'Team Members', value:'50+', icon: Users },{ label:'Industry Awards', value:'25+', icon: Award }
   ];
 
   return (
     <>
+      <div>
       <Helmet>
-        <title>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
-        <meta name ="description" content="Explore our successful case studies and see howZion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
-        <meta name ="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
-        <meta property ="og:title" content="Case Studies - Zion Tech Group" />
-        <meta property ="og:description" content="Success stories and client results from our AI and IT solutions" />
-        <meta property ="og:type" content="website" />
-        <meta property ="og:url" content="https://ziontechgroup.com/case-studies" />
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Professional case studies solutions and services" />
+        <meta name="keywords" content="case, studies" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Discover how we&apos;ve helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Case studies</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Case studies solutions and services
             </p>
 
             {/* Stats */}
@@ -230,11 +143,13 @@ const CaseStudiesPage: React.FC = () => {
                   Explore Our Services
                 </Link>
               </div>
-            </div>
           </div>
-        </section>
       </div>
-    </>
+    </div> 
+          
+        </div>
+      </div>
+</>
   );
 };
 

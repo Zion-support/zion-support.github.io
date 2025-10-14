@@ -1,52 +1,65 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { glob } = require('glob');
+const glob = require('glob');
 
-// Function to fix all remaining JSX errors
+// Function to fix all remaining syntax issues
 function fixAllRemaining(content) {
-  let fixed = content;
+  // Fix malformed component names
+  content = content.replace(/constAnalyticsproviderpagePage:/g, 'const AnalyticsProviderPage:');
+  content = content.replace(/interface Analyticsproviderprops/g, 'interface AnalyticsProviderProps');
   
-  // Remove all extra closing tags at the end of files
-  const lines = fixed.split('\n');
-  const cleanLines = [];
-  let foundExport = false;
+  // Fix malformed function declarations
+  content = content.replace(/constTrackevent\s*=/g, 'const trackEvent =');
+  content = content.replace(/const Trackpageview=/g, 'const trackPageView =');
+  content = content.replace(/const Value=/g, 'const value =');
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    // If we find an export statement, mark it
-    if (line.includes('export default')) {
-      foundExport = true;
-      cleanLines.push(line);
-      continue;
-    }
-    
-    // If we found export and this line is just a closing tag, skip it
-    if (foundExport && line.match(/^<\/[^>]+>$/)) {
-      continue;
-    }
-    
-    // If we found export and this line is empty or whitespace, skip it
-    if (foundExport && line.trim() === '') {
-      continue;
-    }
-    
-    cleanLines.push(line);
-  }
+  // Fix malformed variable names
+  content = content.replace(/trackEvent/g, 'trackEvent');
+  content = content.replace(/trackPageView/g, 'trackPageView');
+  content = content.replace(/value/g, 'value');
   
-  return cleanLines.join('\n');
+  // Fix malformed function calls
+  content = content.replace(/trackEvent\(/g, 'trackEvent(');
+  content = content.replace(/trackPageView\(/g, 'trackPageView(');
+  
+  // Fix malformed object properties
+  content = content.replace(/trackEvent,/g, 'trackEvent,');
+  content = content.replace(/trackPageView,/g, 'trackPageView,');
+  
+  // Fix malformed console statements
+  content = content.replace(/console\.warn\('analyticsEvent: '/g, "console.warn('Analytics Event: '");
+  content = content.replace(/console\.warn\('pageView: '/g, "console.warn('Page View: '");
+  
+  // Fix malformed JSX
+  content = content.replace(/<AnalyticsContext\.Provider value={value}>/g, '<AnalyticsContext.Provider value={value}>');
+  content = content.replace(/<\/AnalyticsContext\.Provider>/g, '</AnalyticsContext.Provider>');
+  
+  // Fix malformed return statements
+  content = content.replace(/return\s*<AnalyticsContext\.Provider value={value}>/g, 'return <AnalyticsContext.Provider value={value}>');
+  
+  // Fix malformed export statements
+  content = content.replace(/export constAnalyticsproviderpagePage/g, 'export const AnalyticsProviderPage');
+  
+  // Fix malformed interface properties
+  content = content.replace(/children: ReactNode;/g, 'children: ReactNode;');
+  
+  // Fix malformed function parameters
+  content = content.replace(/{\s*children\s*}/g, '{ children }');
+  
+  // Fix malformed type annotations
+  content = content.replace(/React\.FC<Analyticsproviderprops>/g, 'React.FC<AnalyticsProviderProps>');
+  
+  return content;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixAllRemaining(content);
+    const fixedContent = fixAllRemaining(content);
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -58,24 +71,22 @@ function processFile(filePath) {
 }
 
 // Main execution
-async function main() {
-  const pattern = 'app/**/*.tsx';
-  const files = await glob(pattern, { cwd: process.cwd() });
-  
-  console.log(`Found ${files.length} TSX files to process...`);
-  
-  let fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  });
-  
-  console.log(`Fixed ${fixedCount} files`);
-}
+console.log('Starting all remaining syntax fixes...');
 
-if (require.main === module) {
-  main();
-}
+// Find all TypeScript/JSX files
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
 
-module.exports = { fixAllRemaining, processFile };
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to process...`);
+
+files.forEach(file => {
+  const fullPath = path.join(__dirname, file);
+  if (processFile(fullPath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalFiles} files.`);
+console.log('All remaining syntax fixes completed!');

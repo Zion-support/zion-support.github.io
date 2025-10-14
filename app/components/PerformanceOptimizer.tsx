@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 
-const PerformanceOptimizer: React.FC = () => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  // Preload critical resources
   useEffect(() => {
     // Performance optimization code
     const optimizeImages = () => {
@@ -18,15 +19,12 @@ const PerformanceOptimizer: React.FC = () => {
         '/fonts/inter.woff2',
         '/css/critical.css'
       ];
-
-      criticalResources.forEach((resource) => {
+      
+      fontLinks.forEach(href => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'font';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.as = 'style';
+        link.href = href;
         document.head.appendChild(link);
       });
     };
@@ -35,13 +33,43 @@ const PerformanceOptimizer: React.FC = () => {
     optimizeImages();
     preloadCriticalResources();
 
-    // Cleanup function
-    return () => {
-      // Cleanup if needed
-    };
+    // Set up performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Performance metric:', entry.name, entry.value);
+          }
+        });
+      });
+
+      try {
+        observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+      } catch (e) {
+        // Performance Observer not supported
+      }
+    }
   }, []);
 
-  return null; // This component doesn't render anything
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    if (typeof window !== 'undefined') {
+      window.requestAnimationFrame(() => {
+        // Scroll optimization logic can be added here
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [handleScroll]);
+
+  return <>{children}</>;
 };
 
 export default PerformanceOptimizer;

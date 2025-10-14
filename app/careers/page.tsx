@@ -1,133 +1,45 @@
-'use client';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
+
+
+const Careers Page: React.FC = () => {
 import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Zap, Heart, Brain, Rocket, Star, MapPin, Clock, Users, CheckCircle  } from 'lucide-react';
-
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  posted: string;
-  description: string;
-  requirements: string[];
-  featured: boolean;
-}
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CareersPage: React.FC = () => {
-  const positions: JobPosition[] =[
+  const services = [
     {
-      id:'1',
-      title:'Senior AI Engineer',
-      department:'AI Solutions',
-      location:'Remote / New York',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'2 days ago',
-      description:'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements:['PhD inComputer Science or related field','5+ years ML/AI experience','Expert inPython, TensorFlow, PyTorch'],
-      featured: true
-    },{
-      id:'2',
-      title:'Quantum Computing Researcher',
-      department:'Research & Development',
-      location:'San Francisco, CA',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'1 week ago',
-      description:'Research and develop quantum algorithms and applications for real-world problems.',
-      requirements:['PhD inPhysics orComputer Science','Quantum computing experience','Strong mathematical background'],
-      featured: true
-    },{
-      id:'3',
-      title:'DevOps Engineer',
-      department:'Infrastructure',
-      location:'Austin, TX',
-      type:'Full-time',
-      experience:'4+ years',
-      posted:'3 days ago',
-      description:'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
-      requirements:['AWS/Azure/GCP certification','Kubernetes experience','Infrastructure asCode'],
-      featured: false
-    },{
-      id:'4',
-      title:'UX Designer',
-      department:'Design',
-      location:'Remote',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'5 days ago',
-      description:'Create intuitive user experiences for complex AI and technology products.',
-      requirements:['Portfolio of AI/tech products','Figma expertise','User research experience'],
-      featured: false
-    },{
-      id:'5',
-      title:'Data Scientist',
-      department:'AI Solutions',
-      location:'Boston, MA',
-      type:'Full-time',
-      experience:'2+ years',
-      posted:'1 week ago',
-      description:'Analyze complex datasets and build predictive models for business insights.',
-      requirements:['Masters inData Science','Python/R expertise','Statistical modeling'],
-      featured: false
-    },{
-      id:'6',
-      title:'Product Manager',
-      department:'Product',
-      location:'Seattle, WA',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'4 days ago',
-      description:'Lead product strategy and development for AI-powered enterprise solutions.',
-      requirements:['Technical background','Product management experience','AI/ML knowledge'],
-      featured: false
-    }
-  ];
-
-  const benefits =[
+      title: 'Expert Careers Solutions',
+      description: 'Professional careers services tailored to your needs.'
+    },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title:'Competitive Salary',
-      description:'Above-market compensation with performance bonuses'
-    },{
-      icon: <Heart className="w-8 h-8" />,
-      title:'Health & Wellness',
-      description:'Comprehensive health, dental, and mental health coverage'
-    },{
-      icon: <Brain className="w-8 h-8" />,
-      title:'Learning & Development',
-      description:'Annual learning budget and conference attendance'
-    },{
-      icon: <Rocket className="w-8 h-8" />,
-      title:'Career Growth',
-      description:'Clear promotion paths and mentorship programs'
+      title: 'Custom Implementation',
+      description: 'Tailored careers implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your careers needs.'
     }
   ];
 
   return (
     <>
+      <div>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name ="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
         <meta name ="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Join Our Team
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Careers</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Careers solutions and services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
@@ -252,60 +164,26 @@ const CareersPage: React.FC = () => {
                   We foster an environment of innovation, collaboration, and continuous learning. 
                   Our team is diverse, inclusive, and passionate about pushing the boundaries of technology.
                 </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle className="w-10 h-10 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
-                  <p className="text-gray-300">We encourage experimentation and bold ideas that challenge the status quo.</p>
                 </div>
-
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-purple-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Collaborative Spirit</h3>
-                  <p className="text-gray-300">We believe the best solutions come from diverse teams working together.</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Rocket className="w-10 h-10 text-pink-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Growth Mindset</h3>
-                  <p className="text-gray-300">We invest in our team&apos;s development and provide opportunities to learn and grow.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Don&apos;tSee Your Dream Job?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
+        </div>
+              <div className="bg-green-50 border border-green-200rounded-lgp-6">
+                <h3 className="text-lg font-semiboldtext-green-900mb-2">
+                  Custom Implementation
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+              </p><div className="bg-purple-50 border border-purple-200rounded-lgp-6">
+                <h3 className="text-lg font-semiboldtext-purple-900mb-2">
+                  24/7 Support
+                <p className="text-purple-700">Round-the-clock support for all your needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
-                  Send Your Resume
-                </button>
-                <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
-                  Contact HR Team
-                </button>
               </div>
-            </div>
           </div>
-        </section>
       </div>
-    </>
+    </div> 
+          
+        </div>
+      </div>
+</>
   );
 };
 

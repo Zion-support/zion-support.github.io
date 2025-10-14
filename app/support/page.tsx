@@ -1,36 +1,27 @@
-'use client';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
-import React,{ useState } from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, Search, HelpCircle, BookOpen, Users, Zap  } from 'lucide-react';
 
-interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
-}
+
+const Support Page: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
-
-  const resources = [
+  const services = [
     {
-      title:'Documentation',
-      description:'Comprehensive guides and API references',
-      icon: BookOpen,
-      link:'/docs'
-    },{
-      title:'Community Forum',
-      description:'Connect with other users and experts',
-      icon: Users,
-      link:'/community'
-    },{
-      title:'Video Tutorials',
-      description:'Step-by-step video guides',
-      icon: Zap,
-      link:'/tutorials'
+      title: 'Expert Support Solutions',
+      description: 'Professional support services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored support implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your support needs.'
     }
   ];
 
@@ -117,21 +108,18 @@ const SupportPage: React.FC = () => {
 
   return (
     <>
+      <div>
       <Helmet>
-        <title>Support - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
-        <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Professional support solutions and services" />
+        <meta name="keywords" content="support" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Support</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Get the help you need, when you need it. Our expert support team is available 24/7 to assist with all your AI and IT solutions.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Support solutions and services
             </p>
 
             {/* Search Bar */}
@@ -272,62 +260,14 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Explore our comprehensive documentation, tutorials, and community resources.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <BookOpen className="w-16 h-16 text-purple-400 mx-auto mb-6" />
-                <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
-                <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  View Docs
-                </button>
               </div>
-
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
-                <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
-                <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Join Community
-                </button>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                <Clock className="w-16 h-16 text-purple-400 mx-auto mb-6" />
-                <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
-                <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Check Status
-                </button>
-              </div>
-            </div>
           </div>
-        </section>
-
-        {/* Contact CTA */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">Still Need Help?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Can&apos;t find what you&apos;re looking for? Our expert team is here to help with any questions or issues.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  <Phone className="w-5 h-5" />
-                  Call Support
-                </button>
-                <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <Mail className="w-5 h-5" />
-                  Email Support
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
-    </>
+    </div> 
+          
+        </div>
+      </div>
+</>
   );
 };
 

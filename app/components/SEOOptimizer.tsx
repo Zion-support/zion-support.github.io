@@ -11,13 +11,19 @@ const SEOOptimizer: React.FC = () => {
         metaDescription.content = 'Advanced AI & IT Solutions - Transform your business with cutting-edge artificial intelligence, 5G technology, and comprehensive IT services.';
         document.head.appendChild(metaDescription);
       }
-
-      // Set viewport meta tag if not already set
-      if (!document.querySelector('meta[name="viewport"]')) {
-        const viewport = document.createElement('meta');
-        viewport.name = 'viewport';
-        viewport.content = 'width=device-width, initial-scale=1.0';
-        document.head.appendChild(viewport);
+  )
+    }
+  )
+    // Update meta keywords
+    if (keywords) {
+      const meta Keywords = document.query Selector('meta')
+      if (meta Keywords) {
+        meta Keywords.set Attribute('content', keywords)
+      } else {
+        const meta = document.create Element('meta')
+        meta.name = 'keywords'
+        meta.content = keywords
+        document.head.append Child(meta)
       }
 
       // Add structured data for organization
@@ -57,6 +63,6 @@ const SEOOptimizer: React.FC = () => {
   }, []);
 
   return null; // This component doesn't render anything
-};
-
-export default SEOOptimizer;
+}
+  )
+export default SEO;; Optimizer

@@ -1,134 +1,44 @@
-'use client';
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
+
+
+const Micro Saas Page: React.FC = () => {
 import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Star, CheckCircle, Zap, Users, TrendingUp  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
-
-interface MicroSaasProduct {
-  id: string;
-  icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
-}
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MicroSaasPage: React.FC = () => {
-  const microSaasProducts: MicroSaasProduct[] = [
+  const services = [
     {
-      id:'1',
-      icon:'📊',
-      title:'AI Analytics Dashboard',
-      description:'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features:['Real-time dashboards','Predictive analytics','Custom reports','Mobile app','API integration'],
-      price:'$99/month',
-      users:'Up to 50 users',
-      popular: true,
-      category:'Analytics'
-    },{
-      id:'2',
-      icon:'👥',
-      title:'AI-Powered CRM',
-      description:'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features:['Lead management','Email automation','Sales forecasting','Integration APIs','Custom fields'],
-      price:'$149/month',
-      users:'Up to 100 users',
-      popular: false,
-      category:'CRM'
-    },{
-      id:'3',
-      icon:'🔒',
-      title:'Security Monitoring Suite',
-      description:'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features:['Threat detection','Vulnerability scanning','Compliance reporting','24/7 monitoring','Incident response'],
-      price:'$199/month',
-      users:'Up to 200 users',
-      popular: false,
-      category:'Security'
-    },{
-      id:'4',
-      icon:'☁️',
-      title:'Cloud Infrastructure Manager',
-      description:'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features:['Resource optimization','Cost tracking','Auto-scaling','Multi-cloud support','Backup management'],
-      price:'$299/month',
-      users:'Unlimited users',
-      popular: false,
-      category:'Infrastructure'
-    },{
-      id:'5',
-      icon:'📧',
-      title:'Email Marketing Automation',
-      description:'AI-driven email campaigns with advanced segmentation and personalization',
-      features:['Email templates','A/B testing','Segmentation','Analytics','Integration tools'],
-      price:'$79/month',
-      users:'Up to 25,000 contacts',
-      popular: false,
-      category:'Marketing'
-    },{
-      id:'6',
-      icon:'💬',
-      title:'Customer Support Chatbot',
-      description:'Intelligent chatbot solution for 24/7 customer support and lead generation',
-      features:['Natural language processing','Multi-channel support','Knowledge base','Analytics','Custom training'],
-      price:'$129/month',
-      users:'Unlimited conversations',
-      popular: false,
-      category:'Support'
-    }
-  ];
-
-  const benefits = [
-    'No upfront costs or setup fees','Quick deployment in 24-48 hours','Scalable solutions that grow with you','Regular updates and new features','24/7 technical support','Easy integration with existing tools','Free trial for all products','Cancel anytime, no long-term contracts'
-  ];
-
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-
-  const stats = [
+      title: 'Expert Micro Saas Solutions',
+      description: 'Professional micro saas services tailored to your needs.'
+    },
     {
-      icon: Users,
-      value:'10,000+',
-      label:'Active Users',
-      description:'Growing community of satisfied customers'
-    },{
-      icon: TrendingUp,
-      value:'99.9%',
-      label:'Uptime',
-      description:'Reliable service you can count on'
-    },{
-      icon: Star,
-      value:'4.8/5',
-      label:'Rating',
-      description:'Highly rated by our customers'
-    },{
-      icon: Zap,
-      value:'24/7',
-      label:'Support',
-      description:'Always here when you need us'
+      title: 'Custom Implementation',
+      description: 'Tailored micro saas implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your micro saas needs.'
     }
   ];
 
   return (
     <>
+      <div>
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name ="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
-        <meta name ="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
+        <title>Micro Saas - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas solutions and services" />
+        <meta name="keywords" content="micro, saas" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Micro saas</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Micro saas solutions and services
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
@@ -314,7 +224,11 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div> 
+          
+        </div>
+      </div>
+</>
   );
 };
 

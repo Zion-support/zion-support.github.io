@@ -1,5 +1,5 @@
-require('@testing-library/jest-dom');
-const React = require('react');
+require("@testing-library/jest-dom");
+const React = require("react");
 
 // Polyfill for TextEncoder/TextDecoder
 const { TextEncoder, TextDecoder } = require('util');
@@ -13,33 +13,36 @@ jest.mock('react-router-dom', () => {
   return {
     ...actual,
     useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null
+      pathname: "/",
+      search: "",
+      hash: "",
+      state: null,
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return React.createElement("a", { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return React.createElement("a", { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {
       const { createMemoryRouter, RouterProvider } = actual;
-      const router = createMemoryRouter([
+      const router = createMemoryRouter(
+        [
+          {
+            path: "/",
+            element: children,
+          },
+        ],
         {
-          path: '/',
-          element: children
-        }
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0
-      });
+          initialEntries: ["/"],
+          initialIndex: 0,
+        },
+      );
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null
+    RouterProvider: ({ router }) => null,
   };
 });
 
@@ -56,8 +59,8 @@ const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
     if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      typeof args[0] === "string" &&
+      args[0].includes("Warning: ReactDOM.render is no longer supported")
     ) {
       return;
     }
