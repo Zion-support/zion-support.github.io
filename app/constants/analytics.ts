@@ -6,8 +6,3 @@ export const ANALYTICS_EVENTS = {
   FORM_SUBMIT: 'form_submit'
 } as const;
 
-<<<<<<< HEAD
-export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
-=======
-export const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID';
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
