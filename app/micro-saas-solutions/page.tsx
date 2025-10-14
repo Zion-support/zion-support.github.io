@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Users, Target, Rocket } from 'lucide-react';
+import { Target, Rocket } from 'lucide-react';
 
-const Page: React.FC = () => {
+const PagePage: React.FC = () => {
 
   return (
     <>
@@ -44,5 +44,4 @@ const Page: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default PagePage;
