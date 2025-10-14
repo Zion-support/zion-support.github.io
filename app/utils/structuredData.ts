@@ -7,7 +7,6 @@ export const structuredData = {
   },
   
   website: {
-    '@context': 'https: //schema.org',
     '@type': 'WebSite',
     name: 'Zion Tech Group',
 
@@ -16,4 +15,3 @@ export const structuredData = {
   generate: (type: 'organization' | 'website') => {
     return structuredData[type]
   }
-}

@@ -15,7 +15,6 @@ const AccessibilityEnhancer: React.FC = () => {
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
       root.classList.remove('reduced-motion');
     }
     // Font size adjustment
@@ -40,6 +39,7 @@ const AccessibilityEnhancer: React.FC = () => {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
   // Add ARIA landmarks
   useEffect(() => {
     const addAriaLandmarks = () => {
@@ -58,6 +58,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
     addAriaLandmarks();
   }, []);
+
   // Add alt text to images without alt attributes
   useEffect(() => {
     const addAltText = () => {
@@ -96,9 +97,8 @@ const AccessibilityEnhancer: React.FC = () => {
           <label className="text-white text-sm">Font Size</label>
           <select
             value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
-          >
+            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large' | 'extra-large')}
+            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm">
             <option value="small">Small</option>
             <option value="normal">Normal</option>
             <option value="large">Large</option>
