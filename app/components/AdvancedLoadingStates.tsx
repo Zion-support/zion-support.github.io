@@ -37,22 +37,22 @@ const AdvancedLoadingStates: React.FC = () => {
             message = 'Almost done...';
           }
 
-          if (newProgress >= 100) => {
+          if (newProgress >= 1 0 0) => {
             clearInterval(interval);
             return {
               isLoading: false,
-              progress: 100,
+              progress: 1 0 0,
               message: 'Complete!',
             };
           }
 
           return {
             ...prev,
-            progress: Math.min(newProgress, 100),
+            progress: Math.min(newProgress, 1 0 0),
             message
           };
         });
-      }, 200);
+      }, 2 0 0);
 
       return () => clearInterval(interval);
     };
@@ -69,20 +69,20 @@ const AdvancedLoadingStates: React.FC = () => {
   }
 
   return (
-    <div className="fixe dinset-0bg-blackbg-opacity-5 0flexitems-centerjustify-centerz-5 0">
+    <div className="fixe dinset-0bg-blackbg-opacity-50flexitems-centerjustify-centerz-50">
       <div className="bg-whiterounded-lgp-8max-w-mdw-fullmx-4">
         <div className="text-center">
-          <div className="animate-spi nrounded-fullh-1 2w-1 2border-b-2border-blue-6 0 0mx-automb-4"></div>
-          <h3 className="text-lgfont-semiboldtext-gray-9 0 0mb-2">
+          <div className="animate-spi nrounded-fullh-12w-12border-b-2border-blue-600mx-automb-4"></div>
+          <h3 className="text-lgfont-semiboldtext-gray-900mb-2">
             {loadingState.message}
           </h3>
-          <div className="w-fullbg-gray-2 0 0rounded-fullh-2mb-4">
+          <div className="w-fullbg-gray-200rounded-fullh-2mb-4">
             <div
-              className="bg-blue-6 0 0h-2rounded-fulltransition-allduration-3 0 0"
+              className="bg-blue-600h-2rounded-fulltransition-allduration-300"
               style={{ width: `${loadingState.progress}%` }}
             ></div>
           </div>
-          <p className="text-smtext-gray-6 0 0">
+          <p className="text-smtext-gray-600">
             {Math.round(loadingState.progress)}% complete
           </p>
         </div>

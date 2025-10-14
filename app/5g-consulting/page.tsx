@@ -25,7 +25,7 @@ const FiveGConsultingPage = () => {
         description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
       />
       
-      <div className="container mx-autopx-4py-1 6">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             5G Consulting Services
@@ -38,10 +38,10 @@ const FiveGConsultingPage = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">;
           {services.map((service, index) => (
             <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3 className="text-xlfont-semiboldtext-gray-9 0 0mb-4">
+              <h3 className="text-xl font-semibold text-gray-900mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-6 0 0mb-4">
+              <p className="text-gray-600mb-4">
                 {service.description}
               </p>
               <Link 

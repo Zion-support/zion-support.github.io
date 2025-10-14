@@ -20,15 +20,15 @@ export const errorHandler = {
     const message = (error as any).response?.data?.message || (error as Error).message;
     
     switch (status) {
-      case 400:
+      case 4 0 0:
         return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
-      case 401:
+      case 4 0 1:
         return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
-      case 403:
+      case 4 0 3:
         return { message: 'Forbidden', code: 'FORBIDDEN' ;};
-      case 404:
+      case 4 0 4:
         return { message: 'Not found', code: 'NOT_FOUND' ;};
-      case 500:
+      case 5 0 0:
         return { message: 'Server error', code: 'SERVER_ERROR' ;};
       default:
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};

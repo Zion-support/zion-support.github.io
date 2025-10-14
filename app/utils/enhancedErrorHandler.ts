@@ -27,30 +27,30 @@ export const enhancedErrorHandler = {
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
-      case 400:
+      case 4 0 0:
         return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
-      case 401:
+      case 4 0 1:
         return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
-      case 403:
+      case 4 0 3:
         return { message: 'Forbidden', code: 'FORBIDDEN' ;};
-      case 404:
+      case 4 0 4:
         return { message: 'Not found', code: 'NOT_FOUND' ;};
-      case 500:
+      case 5 0 0:
         return { message: 'Server error', code: 'SERVER_ERROR' ;};
       default:
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
   getErrorMessage: (error: any) => {
     if (error.response?.status) {
       switch (error.response.status) {
-        case 400:
+        case 4 0 0:
           return { message: 'Invalid request', code: 'BAD_REQUEST' ;}
-        case 401:
+        case 4 0 1:
           return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;}
-        case 403:
+        case 4 0 3:
           return { message: 'Forbidden', code: 'FORBIDDEN' ;}
-        case 404:
+        case 4 0 4:
           return { message: 'Not found', code: 'NOT_FOUND' ;}
-        case 500:
+        case 5 0 0:
           return { message: 'Server error', code: 'SERVER_ERROR' ;}
         default:
           return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}

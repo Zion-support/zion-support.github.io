@@ -38,7 +38,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       const trackScroll = () => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 1 0 0
         );
         maxScrollDepth = Math.max(maxScrollDepth, scrollDepth);
       };

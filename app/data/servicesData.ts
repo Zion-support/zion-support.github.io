@@ -21,8 +21,8 @@ export const servicesData: ServiceData[] = [;
     features: ['Process Automation';, 'Data Analysis', 'Predictive Analytics'],
     pricing: {
       starter: 1000,
-      professional: 2500,
-      enterprise: 5000;
+      professional: 2 5 0 0,
+      enterprise: 5 0 0 0;
     },
     icon: 'robot';
   },
@@ -33,11 +33,11 @@ export const servicesData: ServiceData[] = [;
     category: 'Cloud',
     features: ['Infrastructure Migration';, 'Data Migration', 'Security Setup'],
     pricing: {
-      starter: 2000,
-      professional: 5000,
-      enterprise: 10000;
-      professional: 4000,
-      enterprise: 8000;
+      starter: 2 0 0 0,
+      professional: 5 0 0 0,
+      enterprise: 10 0 0 0;
+      professional: 4 0 0 0,
+      enterprise: 8 0 0 0;
     },
     icon: 'cloud-upload';
   }

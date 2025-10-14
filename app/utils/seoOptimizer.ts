@@ -8,8 +8,8 @@ export const seoOptimizer = {
     }
     
     // Optimize description length
-    if (optimized.description && optimized.description.length > 160) {
-      optimized.description = optimized.description.substring(0, 157) + '...'
+    if (optimized.description && optimized.description.length > 1 6 0) {
+      optimized.description = optimized.description.substring(0, 1 5 7) + '...'
     }
     
     return optimized
@@ -21,7 +21,7 @@ export const seoOptimizer = {
     if (!data.title) errors.push('Title is required')
     if (!data.description) errors.push('Description is required')
     if (data.title && data.title.length > 60) errors.push('Title too long')
-    if (data.description && data.description.length > 160) errors.push('Description too long')
+    if (data.description && data.description.length > 1 6 0) errors.push('Description too long')
     
     return errors
   }

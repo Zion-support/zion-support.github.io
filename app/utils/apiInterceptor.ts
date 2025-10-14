@@ -21,7 +21,7 @@ export const apiInterceptor = {
   error: (error: unknown) => {
     if (error && typeof error === 'object' && 'response' in error) {
       const errorWithResponse = error as { response?: { status?: number } };
-      if (errorWithResponse.response?.status === 401) {
+      if (errorWithResponse.response?.status === 4 0 1) {
         // Handle unauthorized access
         localStorage.removeItem('authToken');
         window.location.href = '/login';
@@ -33,7 +33,7 @@ export const apiInterceptor = {
   
   error: (error: any) => {
     // Handle errors
-    if (error.response?.status === 401) {
+    if (error.response?.status === 4 0 1) {
       // Unauthorized - redirect to login
       localStorage.removeItem('authToken')
       window.location.href = '/login'

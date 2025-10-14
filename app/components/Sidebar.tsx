@@ -25,8 +25,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Overlay */}
       {isOpen && (
+    </>
         <div 
-          className="fixedinset-0bg-blackbg-opacity-5 0z-4 0lg:hidden";
+          className="fixedinset-0bg-blackbg-opacity-50z-40lg:hidden";
           onClick={onClose}
         />
       )}
@@ -37,12 +38,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
         lg: translate-x-0 lg:static lg:inset-0;
       `}>
-        <div className="flexitems-centerjustify-betweenp-4border-bborder-slate-7 0 0">
-          <h2 className="text-xlfont-boldtext-white">Zion Tech Group</h2>
+        <div className="flexitems-centerjustify-betweenp-4border-bborder-slate-700">
+          <h2 className="text-xlfont-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
-            className="text-gray-4 0 0hover:text-whitelg:hidden";
-          >
+            className="$1">
             <X className="w-6h-6" />
           </button>
           </div>
@@ -57,8 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <Link
                     to={item.href}
                     onClick={onClose}
-                    className="fle x items-centerpx-4py-3text-gray-3 0 0hover:bg-slate-7 0 0hover:text-whiterounded-lgtransition-colors";
-                  >
+                    className="$1">
                     <Icon className="w -5h-5 mr-3" />
                     {item.name}
                   </Link>
@@ -69,18 +68,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
         
         <div className="absolutebottom-4left-4right-4">
-          <div className="bg-slate-7 0 0rounded-lgp-4">
-            <div className="flexitems-centertext-smtext-gray-3 0 0mb-2">
+          <div className="bg-slate-700rounded-lgp-4">
+            <div className="flexitems-centertext-smtext-gray-300mb-2">
               <MapPin className="w -4h-4 mr-2" />
               <span>Contact Info</span>
               </div>
         </div>
-            <div className="flexitems-centertext-smtext-gray-3 0 0mb-1">
+            <div className="flexitems-centertext-smtext-gray-300mb-1">
               <Phone className="w -4h-4 mr-2" />
-              <span>+1 (555) 123-4567</span>
+              <span>+1 (5 5 5) 1 2 3-4567</span>
               </div>
         </div>
-            <div className="flexitems-centertext-smtext-gray-3 0 0">
+            <div className="flexitems-centertext-smtext-gray-300">
               <Mail className="w -4h-4 mr-2" />
               <span>info@ziontechgroup.com</span>
               </div>

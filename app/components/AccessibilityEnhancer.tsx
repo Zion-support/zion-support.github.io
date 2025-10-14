@@ -84,7 +84,7 @@ const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return (
-    <div className="accessibility-control s fixedbottom-4left-4z-5 0bg-slate-8 0 0p-4rounded-lgshadow-lg">
+    <div className="accessibility-control s fixedbottom-4left-4z-50bg-slate-800p-4rounded-lgshadow-lg">
       <h3 className="text-whitefont-semiboldmb-3">Accessibility</h3>
       
       <div className="space-y-3">
@@ -113,7 +113,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <select
             value={fontSize}
             onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
-            className="w-fullbg-slate-7 0 0text-whiteroundedpx-2py-1text-sm"
+            className="w-fullbg-slate-700text-whiteroundedpx-2py-1text-sm"
           >
             <option value="small">Small</option>
             <option value="normal">Normal</option>

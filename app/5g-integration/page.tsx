@@ -17,8 +17,7 @@ const FiveGIntegrationPage = () => {
       title: 'Team Training',
       description: 'Expert training for 5G integration and maintenance.',
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
