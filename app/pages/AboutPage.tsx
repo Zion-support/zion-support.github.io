@@ -12,6 +12,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
+
 } from '@heroicons/react/24/outline';
 
 const AboutPage: React.FC = () => {
@@ -49,7 +50,7 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
+        <meta name=description content=Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services. />""
       </Helmet>
       
       <div className="min-h-screen bg-white">
@@ -66,41 +67,23 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-600">{stat.label}</div>
+              </p>"
+              <div className="space-y-4">
+        <div className="flex items-start"></div>"
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+                  <span className="text-gray-300">Innovation-driven approach</span>
+                </div>"
+                <div className="flex items-start"></div>"
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+                  <span className="text-gray-300">Client-focused solutions</span>
+                </div>"
+                <div className="flex items-start"></div>"
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+                  <span className="text-gray-300">Cutting-edge technology</span>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </section>
 
-        {/* Values Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our Values
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <value.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600">{value.description}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 

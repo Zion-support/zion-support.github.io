@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
@@ -9,8 +9,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function DocumentationPage() {
   const sections = [
     {
@@ -64,6 +64,8 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]
+import { Helmet } from 'react-helmet-async';
+const DocumentationPage: React.FC = () => {
   return (
     <>
       <SEO 
@@ -138,7 +140,7 @@ export default function DocumentationPage() {
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -178,10 +180,10 @@ export default function DocumentationPage() {
                         {link.name}
                       </Link>
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -203,14 +205,14 @@ export default function DocumentationPage() {
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
-  environment: 'production'
-})
+  environment: 'production;
+});
 // Make an API call
 const response = await client.ai.generateText({
   prompt: 'Hello, world!',
   maxTokens: 100
-})
-console.log(response.data);`}</code>
+});
+console.log(response.data)`}</code>
               </pre>
             </div>
             
@@ -285,4 +287,9 @@ console.log(response.data);`}</code>
         </div>
       </section>
     </>
-  )}
+)}
+      </div>
+    </>
+  )
+}
+export default DocumentationPage;

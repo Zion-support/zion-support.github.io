@@ -90,8 +90,8 @@ const CareersPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
-              );
-            })}
+              )
+});
           </div>
         </div>
 
@@ -118,7 +118,7 @@ const CareersPage: React.FC = () => {
                   Apply Now
                 </button>
               </div>
-            ))}
+))}
           </div>
         </div>
 

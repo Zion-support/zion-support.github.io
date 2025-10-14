@@ -1,20 +1,22 @@
-import React from 'react'
-/* global describe, test, expect, it, beforeEach */
-'use client'
-export default function ZionAiTestingAutomationPage() {
-  return (
+import React from 'react;
+/* global describe, test, expect, it, beforeEach */';
+'use client;
+/* global describe, test, expect, it, beforeEach */;
+'use client';
+export default function ZionAiTestingAutomationPage() { return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Testing Automation</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
-          This page is under development.;
+          This page is under development.</p>
+      </div>
+    </div>
+  )
+}
+          This page is under development.</p></div></div>
+)}
         </p>
       </div>
     </div>
-  );
-}
-=======
-          This page is under development.</p></div></div>
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+)}
+};

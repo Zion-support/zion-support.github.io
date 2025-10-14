@@ -1,3 +1,2 @@
 
-export default function AIMobileBuilder() {
-}
+export default function AIMobileBuilder() {}

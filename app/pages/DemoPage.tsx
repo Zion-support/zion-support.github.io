@@ -48,7 +48,7 @@ const DemoPage: React.FC = () => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Live Demos - Zion Tech Group</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive live demos." />

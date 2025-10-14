@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
+import {
+  CpuChipIcon,
+  EnvelopeIcon,
+  PhoneIcon,
   MapPinIcon,
   ArrowRightIcon,
   HeartIcon
@@ -14,29 +15,28 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: '5G Solutions', href: '/5g-solutions' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' }
   ];
 
-  const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
+  const resources = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' }
   ];
 
   const legal = [
@@ -52,11 +52,44 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
+  const footerLinks = {
+    services: [
+      { name: 'AI Solutions', href: '/ai-solutions' },
+      { name: 'IT Solutions', href: '/it-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'Micro SaaS', href: '/micro-saas-solutions' },
+      { name: '5G Solutions', href: '/5g-solutions' },
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Contact', href: '/contact' },
+    ],
+    resources: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Support', href: '/support' },
+      { name: 'Demo', href: '/demo' },
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' },
+    ]
+  }
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: GlobeAltIcon },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: GlobeAltIcon },
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -78,15 +111,19 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
+            { /* Contact Info */ }
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-gray-400">
+                <PhoneIcon className="w-4 h-4" />
                 <span>+1-302-464-0950</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center space-x-3 text-gray-400">"
+                <EnvelopeIcon className="w-4 h-4" />"
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-300">
-                <MapPinIcon className="w-5 h-5 text-purple-400" />
-                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              <div className="flex items-center space-x-3 text-gray-400">"
+                <MapPinIcon className="w-4 h-4" />"
+                <span>Middletown, DE 19709</span>
               </div>
             </div>
 
@@ -96,22 +133,22 @@ const Footer: React.FC = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  target="_blank""
+                  rel="noopener noreferrer""
+                  className="text-gray-400 hover:text-white transition-colors""
                   aria-label={social.name}
                 >
                   <span className="sr-only">{social.name}</span>
                   <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">
-                    {social.icon === 'linkedin' && <span className="text-xs">in</span>}
-                    {social.icon === 'twitter' && <span className="text-xs">t</span>}
-                    {social.icon === 'github' && <span className="text-xs">g</span>}
+                    { social.icon === 'linkedin' && <span className="text-xs">in</span> }
+                    { social.icon === 'twitter' && <span className="text-xs">t</span> }
+                    { social.icon === 'github' && <span className="text-xs">g</span> }
                   </div>
                 </a>
               ))}
             </div>
           </div>
-
+          { /* Services */ }
           {/* Services */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
@@ -125,8 +162,10 @@ const Footer: React.FC = () => {
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
                   </Link>
+                    {item.name}
+                  </a>
                 </li>
-              ))}
+))}
             </ul>
           </div>
 
@@ -144,7 +183,7 @@ const Footer: React.FC = () => {
                     {item.name}
                   </Link>
                 </li>
-              ))}
+))}
             </ul>
           </div>
 
@@ -162,7 +201,7 @@ const Footer: React.FC = () => {
                     {resource.name}
                   </Link>
                 </li>
-              ))}
+))}
               {legal.map((item) => (
                 <li key={item.name}>
                   <Link 
@@ -173,19 +212,19 @@ const Footer: React.FC = () => {
                     {item.name}
                   </Link>
                 </li>
-              ))}
+))}
             </ul>
           </div>
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 pt-8 border-t border-slate-700/50">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
-            <p className="text-gray-300 mb-6 text-lg">
-              Get the latest insights on AI and IT trends delivered to your inbox.
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="max-w-md">
+            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+            <p className="text-gray-300 mb-4">
+              Get the latest news and updates from Zion Tech Group.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex space-x-2">
               <input
                 type="email"
                 placeholder="Enter your email"

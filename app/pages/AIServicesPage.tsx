@@ -1,10 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react;
 const AIServicesPage: React.FC = () => {
   const services = [{
-      icon: Brain,
+      icon: Brain,';
       title: 'AI Strategy & Consulting',';
       description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';
       features: ['AI Readiness Assessment', 'Technology Roadmap', 'ROI Analysis', 'Implementation Planning']';
@@ -56,8 +55,7 @@ const AIServicesPage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions.;
-            From strategy to implementation, we help you harness the power of AI.;
-          </p>
+            From strategy to implementation, we help you harness the power of AI.</p>
         </div>
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -78,27 +76,24 @@ const AIServicesPage: React.FC = () => {
                       <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                       {feature}
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            );
-          })}
+            )
+});
         </div>
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
             <p className="text-gray-300 mb-6">
-              Our AI experts are ready to help you implement the right solutions for your specific needs.;
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Our AI experts are ready to help you implement the right solutions for your specific needs.</p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
                 Get Started Today;
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Schedule Consultation;
-=======
-
+                Schedule Consultation,
 const AIServicesPage: React.FC = () => {
   return (
     <>
@@ -144,20 +139,26 @@ const AIServicesPage: React.FC = () => {
             <div className="mt-12">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </button>
             </div>
           </div>
+const AIServicesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AIServicesPage - Zion Tech Group</title>
+        <meta name="description" content="AIServicesPage - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">AIServicesPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>;  );
+    </div>  )
 }
 export default AIServicesPage;
-=======
     </>
-  );
-};
-
+  )
+}
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
