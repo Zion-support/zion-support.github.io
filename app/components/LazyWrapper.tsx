@@ -5,9 +5,5 @@ interface LazyWrapperProps {
 }
 
 export default function LazyWrapper({ children }: LazyWrapperProps) {
-  return (
-    <div className="lazy-wrapper">
-      {children}
-    </div>
-  );
+  return <div className="lazy-wrapper">{children}</div>;
 }

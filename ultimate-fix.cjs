@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // Function to create a clean page component
 function createCleanPageComponent(pageName) {
@@ -85,41 +85,49 @@ export {};`;
 
 // Function to fix all files
 function fixAllFiles() {
-  const appDir = path.join(__dirname, 'app');
+  const appDir = path.join(__dirname, "app");
   let fixedCount = 0;
 
   function walkDir(dir) {
     const files = fs.readdirSync(dir);
-    
+
     for (const file of files) {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
-      
+
       if (stat.isDirectory()) {
         walkDir(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
         try {
-          const pathParts = filePath.split('/');
-          const fileName = pathParts[pathParts.length - 1].replace(/\.(tsx|ts)$/, '');
-          const componentName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '');
-          
-          let content = '';
-          
-          if (filePath.includes('/page.tsx')) {
-            const pageName = pathParts[pathParts.length - 2].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+          const pathParts = filePath.split("/");
+          const fileName = pathParts[pathParts.length - 1].replace(
+            /\.(tsx|ts)$/,
+            "",
+          );
+          const componentName = fileName
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, (l) => l.toUpperCase())
+            .replace(/\s/g, "");
+
+          let content = "";
+
+          if (filePath.includes("/page.tsx")) {
+            const pageName = pathParts[pathParts.length - 2]
+              .replace(/-/g, " ")
+              .replace(/\b\w/g, (l) => l.toUpperCase());
             content = createCleanPageComponent(pageName);
-          } else if (filePath.includes('/hooks/')) {
+          } else if (filePath.includes("/hooks/")) {
             content = createCleanHook(componentName);
-          } else if (filePath.includes('/utils/')) {
+          } else if (filePath.includes("/utils/")) {
             content = createCleanUtility(componentName);
-          } else if (filePath.includes('/types/')) {
+          } else if (filePath.includes("/types/")) {
             content = createCleanTypes();
-          } else if (filePath.includes('/components/')) {
+          } else if (filePath.includes("/components/")) {
             content = createCleanComponent(componentName);
           } else {
             content = createCleanComponent(componentName);
           }
-          
+
           fs.writeFileSync(filePath, content);
           console.log(`Fixed: ${filePath}`);
           fixedCount++;
@@ -131,10 +139,12 @@ function fixAllFiles() {
   }
 
   walkDir(appDir);
-  
+
   // Fix root files
   const rootFiles = [
-    { file: 'App.tsx', content: `import React, { Suspense } from 'react';
+    {
+      file: "App.tsx",
+      content: `import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -194,8 +204,11 @@ function App() {
   );
 }
 
-export default App;` },
-    { file: 'main.tsx', content: `import React from 'react';
+export default App;`,
+    },
+    {
+      file: "main.tsx",
+      content: `import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
@@ -203,7 +216,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);` }
+);`,
+    },
   ];
 
   for (const { file, content } of rootFiles) {
@@ -214,7 +228,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       fixedCount++;
     }
   }
-  
+
   console.log(`\nFixed ${fixedCount} files`);
 }
 

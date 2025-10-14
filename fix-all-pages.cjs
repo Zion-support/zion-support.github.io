@@ -1,16 +1,24 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 function fixPageComponent(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, "utf8");
+
     // Check if the file has syntax errors (missing closing tags, broken JSX)
-    if (content.includes('const ') && content.includes(': React.FC = () => {') && content.includes('return (') && content.includes('<>')) {
+    if (
+      content.includes("const ") &&
+      content.includes(": React.FC = () => {") &&
+      content.includes("return (") &&
+      content.includes("<>")
+    ) {
       // This looks like a broken page component, let's fix it
-      const pageName = path.basename(path.dirname(filePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-      const componentName = pageName.replace(/\s+/g, '') + 'Page';
-      
+      const pageName = path
+        .basename(path.dirname(filePath))
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (l) => l.toUpperCase());
+      const componentName = pageName.replace(/\s+/g, "") + "Page";
+
       const fixedContent = `'use client';
 
 import React from 'react';
@@ -119,11 +127,11 @@ export default function ${componentName}() {
   );
 }`;
 
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      fs.writeFileSync(filePath, fixedContent, "utf8");
       console.log(`Fixed broken page: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -134,23 +142,26 @@ export default function ${componentName}() {
 function findAndFixBrokenPages(dir) {
   const files = fs.readdirSync(dir);
   let fixedCount = 0;
-  
+
   for (const file of files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory()) {
       fixedCount += findAndFixBrokenPages(filePath);
-    } else if (file === 'page.tsx' && (filePath.includes('/pages/') || filePath.includes('/app/'))) {
+    } else if (
+      file === "page.tsx" &&
+      (filePath.includes("/pages/") || filePath.includes("/app/"))
+    ) {
       if (fixPageComponent(filePath)) {
         fixedCount++;
       }
     }
   }
-  
+
   return fixedCount;
 }
 
-console.log('Fixing all broken page components...');
-const fixedCount = findAndFixBrokenPages('./app');
+console.log("Fixing all broken page components...");
+const fixedCount = findAndFixBrokenPages("./app");
 console.log(`Fixed ${fixedCount} broken page components.`);
