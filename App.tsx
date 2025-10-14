@@ -1,13 +1,16 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+<<<<<<< HEAD
 // Components
+=======
+import './app/styles/futuristic.css';
+>>>>>>> fb9ac3cec7e583b520c05c6d49af695b8d83a618
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
 import { LoadingPage } from './app/components/EnhancedLoadingStates';
-import AdvancedPerformanceEnhancer from './app/components/AdvancedPerformanceEnhancer';
 import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
 import EnhancedSEOOptimizer from './app/components/EnhancedSEOOptimizer';
 import EnhancedAccessibilityManager from './app/components/EnhancedAccessibilityManager';
