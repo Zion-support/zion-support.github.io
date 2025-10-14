@@ -1,18 +1,21 @@
-import React from 'react'; import {Helmet} from 'react-helmet-async'; interface EnhancedMetaTagsProps {} title: string;,"
-'description: string; keywords?: string; canonical?: string; ogImage?: string; ogType?:'website' |'article' |'product'; twitterCard?:'summary' |'summary_large_image' |'app' |'player'; noIndex?: boolean; structuredData?: Record<string, an y> author?: string; publishedTime?: string; modifiedTime?: string; section?: string; tags?: string[]; }"'const EnhancedMetaTags: React.FC<EnhancedMetaTagsProp s> = ({} title,; description,; keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology','; canonical,; ogImage ='https://ziontechgroup.com/images/og-image.jpg','; ogType = 'website','; twitterCard ='summary_large_image','; noIndex = false,; structuredData,; author = 'Zion Tech Group','; publishedTime,; modifiedTime,; section,; tags = [],')''}) => {} const siteUrl = 'https://ziontechgroup.com'; const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`;`;`'``'
-'const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;`'` // Generate structured data; const defaultStructuredData={};@context':'https://schema.org',"'@type':'Organization',';,"``''name: 'Zion Tech Group',';,"'
-'url: siteUrl,;,
-logo: `${siteUrl}/images/logo.png`,`;,```
-`description:'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.',';,"''address: {} '@type': 'PostalAddress',';,"'
-'streetAddress:'364 E Main St STE 1008',';,"''addressLocality: 'Middletown',';,"'
-'addressRegion:'DE',';,"''postalCode: '19709',';,"'
-'addressCountry:'US'," },;,'''contactPoint: {} '@type': 'ContactPoint',';,"'
-'telephone:'+1-302-464-0950',';,"''contactType: 'customer service',';,"'
-'email:'kleber@ziontechgroup.com'," },;,'''sameAs: ['https://twitter.com/ziontechgroup'," 'https://linkedin.com/company/ziontechgroup'," 'https://github.com/ziontechgroup',"], }; const articleStructuredData = ogType === 'article' ? {'};@context': 'https://schema.org'," '@type': 'Article',';,"'
-'headline: title,; description,;,
-author: {}'@type':'Organization',';,"''name: author, },;,
-publisher: {} '@type': 'Organization',';,"'
-'name:'Zion Tech Group',';,"''logo: {} '@type': 'ImageObject',';,"'
-'url:`${siteUrl}/images/logo.png`,`` }, },;,```datePublished: publishedTime,;,
-dateModified: modifiedTime || publishedTime,;,
-mainEntityOfPage: {}'@type':'WebPage',"'@id': finalCanonical," },;,'''image: finalOgImage, ...(section && {articleSection: section}), ...(tags.length > 0 && {keywords: tags.join(',')})," } : null; const finalStructuredData = structuredData || (articleStructuredData || defaultStructuredData); return ( <Helme t> {/* Basic Meta Tags */} <titl e>{title}</titl e><//meta nam e="description" conten t={description} />" <meta nam e="keywords" conten t={keywords} />" <meta nam e="author" conten t={author} />" <meta nam e="robots" conten t={noIndex ?"noindex, nofollow" :"index, follow"} />" <meta nam e="googlebot" conten t={noIndex ? "noindex, nofollow" : "index, follow"} />" {/* Canonical URL */} <link re l="canonical" hre f={finalCanonical} />" {/* Open Graph / Facebook */} <meta propert y="og:type" conten t={ogType} />" <meta propert y="og:url" conten t={finalCanonical} />" <meta propert y="og:title" conten t={title} />" <meta propert y="og:description" conten t={description} />" <meta propert y="og:image" conten t={finalOgImage} />" <meta propert y="og:image:width" conten t="1200" />" <meta propert y="og:image:height" conten t="630" />" <meta propert y="og:image:alt" conten t={`${title} - Zion Tech Group`} />"`"` <meta propert y="og:site_name" conten t="Zion Tech Group" />" <meta propert y="og:locale" conten t="en_US" />" {/* Article specific meta tags */} {ogType === 'article' && publishedTime && ('}' <meta propert y="article:published_time" conten t={publishedTime} />" )} {ogType === 'article' && modifiedTime && ('}' <meta propert y="article:modified_time" conten t={modifiedTime} />" )} {ogType === 'article' && author && ('}' <meta propert y="article:author" conten t={author} />" )} {ogType === 'article' && section && ('}' <meta propert y="article:section" conten t={section} />" )} {ogType === 'article' && tags.length > 0 && ('}' tags.map((tag, index) => ( <meta ke y={index} propert y="article:tag" conten t={tag} />" )) )} {/* Twitter Card */} <meta nam e="twitter:card" conten t={twitterCard} />" <meta nam e="twitter:url" conten t={finalCanonical} />" <meta nam e="twitter:title" conten t={title} />" <meta nam e="twitter:description" conten t={description} />" <meta nam e="twitter:image" conten t={finalOgImage} />" <meta nam e="twitter:site" conten t="@ziontechgroup" />" <meta nam e="twitter:creator" conten t="@ziontechgroup" />" {/* Additional SEO Meta Tags */} <meta nam e="viewport" conten t="widt h=device-width, initial-scal e=1.0" />" <meta nam e="theme-color" conten t="#00ffff" />" <meta nam e="msapplication-TileColor" conten t="#8b5cf6" />" <meta nam e="apple-mobile-web-app-capable" conten t="yes" />" <meta nam e="apple-mobile-web-app-status-bar-style" conten t="black-translucent" />" <meta nam e="apple-mobile-web-app-title" conten t="Zion Tech Group" />" {/* Performance and Security */} <meta httpEqui v="X-UA-Compatible" conten t="I E=edge" />" <meta nam e="format-detection" conten t="telephon e=no" />" <meta nam e="mobile-web-app-capable" conten t="yes" />" <meta nam e="application-name" conten t="Zion Tech Group" />" {/* Preload critical resources */} <link re l="preload" hre f="/fonts/inter-var.woff2" a s="font" typ e="font/woff2" crossOrigi n="anonymous" />" <link re l="preload" hre f="/images/hero-bg.jpg" a s="image" />" {/* DNS prefetch for performance */} <link re l="dns-prefetch" hre f="//fonts.googleapis.com" />" <link re l="dns-prefetch" hre f="//fonts.gstatic.com" />" <link re l="dns-prefetch" hre f="//www.google-analytics.com" />" <link re l="dns-prefetch" hre f="//www.googletagmanager.com" />" {/* Structured Data */} <script typ e="application/ld+json">" {JSON.stringify(finalStructuredData)} </scrip t><///Helme t> ); }; export default EnhancedMetaTags;`"'`"'``"'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const EnhancedMetaTags: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>EnhancedMetaTags - Zion Tech Group</title>
+        <meta name="description" content="Professional enhancedmetatags services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">EnhancedMetaTags</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default EnhancedMetaTags;

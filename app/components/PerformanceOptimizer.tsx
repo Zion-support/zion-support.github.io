@@ -1,42 +1,21 @@
 import React from 'react';
-';import {useEffect, Node} from'react';
-;interface PerformanceOptimizerProps {// Add properties here}
-  children: "Node"}""const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps>  = ({children"}) => {}""  useEffect(() => {}
-    // Performance optimization code"'    const optimizeImages = () => {};
-      const images = document.querySelectorAll('img')';'
-'      images.forEach((img) => {;}
-        if (!img.hasAttribute('loading')) {';}''          img.setAttribute('loading', 'lazy');''        }
-      });
-    }
-    const optimizeFonts = () => {;}
-      // Preload critical fonts;"''      const link = document.createElement('link');"''      link.rel = 'preload';"''      link.href = '/fonts/inter.woff2';"''      link.as = 'font';"''      link.type = 'font/woff2';"''      link.crossOrigin = 'anonymous';''      document.head.appendChild(link);
-    }
-    const optimizeResources  = () => {};
-      // Preload critical resources;
-const criticalResources  = ['/css/critical.css',"]''        '/js/critical.js"'';'      ];
-      criticalResources.forEach((resource) => {;}
-        const link = document.createElement('link');''        link.rel = 'preload';''        link.href = resource;"''        link.as = resource.endsWith('.css') ? 'style' : 'script';''        document.head.appendChild(link);}
-      });
-    }
-    // Run optimizations;
-    optimizeImages();
-    optimizeFonts();
-    optimizeResources();
+import { Helmet } from 'react-helmet-async';
 
-    // Cleanup function;
-    return () => {}
-      // Cleanup if needed;
-    }
-  }, []);
-
-  return <React.Fragment>{children}</React.Fragment>>
-}
-export default PerformanceOptimizer;
-      // Cleanup if needed;}
-    };
-  }, []);
-
-  return <React.Fragment>{children}</React.Fragment>>
+const PerformanceOptimizer: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>PerformanceOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional performanceoptimizer services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">PerformanceOptimizer</h1>
+          <p className="text-gray-300">This page is under construction.</p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
 };
-;
-export default PerformanceOptimizer;"'
+
+export default PerformanceOptimizer;
