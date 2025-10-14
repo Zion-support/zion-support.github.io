@@ -1,22 +1,24 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play     } from "lucide-react";"
+import EnhancedSEO from "../components/EnhancedSEO";"
+import ResponsiveContainer from "../components/ResponsiveContainer";"
+import FuturisticCard from "../components/FuturisticCard";"
+import FuturisticButton from "../components/FuturisticButton";"
+import React from "react";"
+import { Helmet     } from "react-helmet-async";"
 
 const AiAutomationPlatformPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Automation Platform - Zion Tech Group</title>
-        <meta name="description" content="Professional AI automation platform services by Zion Tech Group." />
-        <meta name="keywords" content="AI automation, platform, AI solutions, IT services" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Automation Platform
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional AI automation platform services designed to help your business grow and succeed.
+      <div className="container mx-auto px-4 py-16"></div>""
+    </>
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>""
+            This page is under construction. Please check back later.
           </p>
         </div>
         
@@ -44,7 +46,7 @@ const AiAutomationPlatformPage = () => {
         </div>
       </div>
     </div>
-  );
+  )};
 };
 
-export default AiAutomationPlatformPage;
+export default PagePage;

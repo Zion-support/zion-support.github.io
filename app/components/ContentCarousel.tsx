@@ -1,70 +1,27 @@
-
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "AI-Powered Automation",
-      description: "Transform your business processes with intelligent automation that learns and adapts.",
-      image: "🤖",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Quantum Computing Solutions",
-      description: "Harness the power of quantum computing for complex problem solving and optimization.",
-      image: "⚛️",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Enterprise Security",
-      description: "Bank-level security and compliance for your critical data and infrastructure.",
-      image: "🔒",
-      color: "from-green-500 to-emerald-500"
-    }
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  return (
-    <section className="mb-16" aria-labelledby="carousel-heading">
-      <h2 id="carousel-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Featured Solutions
-      </h2>
-      
-      <div className="relative max-w-4xl mx-auto">
-        <div className="overflow-hidden rounded-xl">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {slides.map((slide, index) => (
-              <div key={index} className="w-full flex-shrink-0">
-                <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-center text-white`}>
-                  <div className="text-6xl md:text-8xl mb-6">{slide.image}</div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{slide.title}</h3>
-                  <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-                    {slide.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+            ContentCarousel</h1>
+          <p className="text-xl text-gray-600 mb-8">""
+            Professional contentcarousel solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">""
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">""
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">""
+                Expert Solutions</h3>
+              <p className="text-blue-700">""
+                Our team of experts delivers cutting-edge contentcarousel solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">""
+              <h3 className="text-lg font-semibold text-green-900 mb-2">""
+                Custom Implementation</h3>
+              <p className="text-green-700">""
+                Tailored contentcarousel implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">""
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">""
+                24/7 Support</h3>
+              <p className="text-purple-700">""
+                Round-the-clock support for all your contentcarousel needs.</p></div></div>
+          <div className="mt-12">""
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">""
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
           </div>
         </div>
 
@@ -99,8 +56,5 @@ const ContentCarousel: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
-  );
-};
-
-export default ContentCarousel;
+    </div>
+  )}

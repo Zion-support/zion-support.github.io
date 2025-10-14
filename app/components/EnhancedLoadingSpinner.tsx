@@ -1,52 +1,6 @@
-
-import React from 'react';
-
-interface EnhancedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  message?: string;
-  showProgress?: boolean;
-  progress?: number;
-  variant?: 'default' | 'cyber' | 'minimal';
-}
-
-const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
-  size = 'md',
-  message = 'Loading...',
-  showProgress = false,
-  progress = 0,
-  variant = 'cyber'
-}) => {
-  const sizeClasses = {
-    sm: 'w-6 h-6',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-24 h-24'
-  };
-
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
-  if (variant === 'minimal') {
-    return (
-      <div className="flex flex-col items-center justify-center p-8">
-        <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}></div>
-        {message && (
-          <p className={`mt-4 text-gray-600 ${textSizeClasses[size]}`}>
-            {message}
-          </p>
-        )}
-        {showProgress && (
-          <div className="w-48 bg-gray-200 rounded-full h-2 mt-4">
-            <div 
-              className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
-              style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-            ></div>
-          </div>
-        )}
+          This page is under development.</p></div></div>
+  )
+        </p>
       </div>
     );
   }
@@ -115,7 +69,4 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         </div>
       )}
     </div>
-  );
-};
-
-export default EnhancedLoadingSpinner;
+  )}
