@@ -5,11 +5,15 @@ export const productionLogger = {
         // Production error logging would go to external service
         console.error(message, data)
       } else {
-        console.log(message, data)
+        console.warn(message, data)
       }
     } else {
       // In development, log everything
-      console[level](message, data)
+      if (level === 'error') {
+        console.error(message, data);
+      } else {
+        console.warn(message, data);
+      }
     }
   },
   
