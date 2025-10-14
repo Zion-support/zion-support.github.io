@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import path from "path"";
@@ -191,3 +192,7 @@ const componentName = path.basename(file, ".tsx")
 // Run the fix
 processFiles().catch(console.error)"
 }}}}}
+=======
+// fix-components.js - Under development
+console.log('fix-components.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

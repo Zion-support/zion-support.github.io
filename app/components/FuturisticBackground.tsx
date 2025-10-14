@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import React, { useRef, useEffect } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
 const FuturisticBackground = () => {
   return (
@@ -15,15 +18,18 @@ const FuturisticBackground = () => {
                 key={i}
                 className="border border-purple-500/30 animate-pulse""
                 style={{
+<<<<<<< HEAD
                   animationDelay: `${i * 0.1}s`,`
                   animationDuration: '3s''
                 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
                 }}
->>>>>>> origin/main
               ></div>
             ))
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Floating Neon Orbs */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-xl animate-pulse"></div></div>""
@@ -183,3 +189,20 @@ export default FuturisticBackground;
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+        
+        <div className="absolute inset-0">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              }}
+            ></div>
+          ))
+        </div>
+        
+    </div>
+  );
+};
+
+export default FuturisticBackground;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

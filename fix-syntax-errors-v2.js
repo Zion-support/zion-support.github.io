@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import path from "path"";
@@ -165,3 +166,7 @@ const filePath = path.join("/workspace", file)
 console.log(`Fixed ${rootFixedCount} root files.`)
 console.log(`Total files fixed: ${fixedCount + rootFixedCount}`)"
 }}}}}}}}}}}}}
+=======
+// fix-syntax-errors-v2.js - Under development
+console.log('fix-syntax-errors-v2.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

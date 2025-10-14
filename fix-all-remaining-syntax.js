@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 #!/usr/bin/env node;
 import fs from 'fs';
@@ -161,3 +162,5 @@ console.log('Starting comprehensive syntax error resolution...');';
 const fixedCount = fixAllSyntaxErrors(process.cwd())
 console.log(`Fixed syntax errors in ${fixedCount} files.`);`
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

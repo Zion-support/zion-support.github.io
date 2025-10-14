@@ -1,12 +1,10 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+interface PerformanceDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+<<<<<<< HEAD
 ;
 const PerformanceDashboard: React.FC = () => {;
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -121,3 +119,15 @@ const interval = setInterval(updateMetrics, 5000);
 };
 export default PerformanceDashboard;
 "
+=======
+
+const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`performancedashboard ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default PerformanceDashboard;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

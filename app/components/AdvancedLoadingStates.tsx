@@ -1,10 +1,10 @@
 import React from 'react';
 
 interface AdvancedLoadingStatesProps {
-  type?: string;
-  fullScreen?: boolean;
-  message?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
+<<<<<<< HEAD
 ;
 const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ 
   type = 'spinner', 
@@ -36,6 +36,13 @@ const getLoadingIcon = () => {
         {getLoadingIcon()}
         <p>{message || 'Loading...'}</p>
       </div>
+=======
+
+const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedloadingstates ${className}`}>
+      {children}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     </div>
   );
 };

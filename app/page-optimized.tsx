@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
@@ -7,6 +8,10 @@ export default function Page() { return (
 
       <Helmet></Helmet>
         <title>Page optimized - Zion Tech Group</title>"
+=======
+      <Helmet>
+        <title>Page optimized - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
         <meta name="description" content="Professional page optimized services by Zion Tech Group." />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16"></div>""
@@ -51,10 +56,14 @@ export default function Page() { return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 )
   ); }
 
             Page optimized</h1>"
+=======
+            Page optimized</h1>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <p className="text-xl text-gray-600 mb-8">"
             Professional page optimized solutions tailored to your business needs.</p>"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>""
@@ -83,6 +92,7 @@ export default function Page() { return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 
             </button>;
           </div>
@@ -92,3 +102,5 @@ export default function Page() { return (
   );}
 }'
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

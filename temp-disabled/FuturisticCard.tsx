@@ -2,8 +2,13 @@ import React from 'react'''''
 interface FuturisticCardProps {}
   children: React.ReactNode
   className?: string
+<<<<<<< HEAD
   variant?: 'default' | 'glow' | 'gradient'}'''';
 const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}""
+=======
+  variant?: 'default' | 'glow' | 'gradient'}''''
+const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   children,
   className = '',''''')
   variant = 'default''}) => {'}''';

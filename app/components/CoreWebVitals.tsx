@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useCallback, ReactNode } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -47,6 +48,8 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
 };
 
 export default CoreWebVitals;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             CoreWebVitals</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional corewebvitals solutions tailored to your business needs.</p>
@@ -76,7 +79,10 @@ export default CoreWebVitals;
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react''''';
 const AccessibilityEnhancer: React.FC = () => {"}""
+=======
+import React, { useEffect } from 'react'''''
+const AccessibilityEnhancer: React.FC = () => {"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   useEffect(() => {}, [])
     // Add skip link functionality;
 const addSkipLink = () => {}
@@ -9,8 +14,13 @@ const addSkipLink = () => {}
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'''''
       document.body.insertBefore(skipLink, document.body.firstChild)
     }
+<<<<<<< HEAD
 // Focus management for keyboard navigation";
 const handleKeyDown = (event: "KeyboardEvent) => {"}""
+=======
+// Focus management for keyboard navigation
+    const handleKeyDown = (event: "KeyboardEvent) => {"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       if (event.key === 'Tab') {'}'''
         document.body.classList.add('keyboard-navigation')''''
       }
@@ -23,8 +33,13 @@ const addFocusStyles = () => {}
       const style = document.createElement('style')''''
       style.textContent = `
         *:focus {}
+<<<<<<< HEAD
           outline: 2px solid #3b82f6"
           outline-offset: "2px""""
+=======
+          outline: 2px solid #3b82f6
+          outline-offset: "2px"""
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
         }
       `
       document.head.appendChild(style)
@@ -49,8 +64,13 @@ const addAriaLandmarks = () => {}
     )
   }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement
+<<<<<<< HEAD
   useEffect(() => {}, [])";
 const handleKeyDown = (e: "KeyboardEvent) => {"}""
+=======
+  useEffect(() => {}, [])
+    const handleKeyDown = (e: "KeyboardEvent) => {"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {'}'''
         e.preventDefault();
@@ -71,6 +91,7 @@ const activeElement = document.activeElement as HTMLElement
     return () => document.removeEventListener('keydown', handleKeyDown)''''
   }, [])
   // Focus management
+<<<<<<< HEAD
   useEffect(() => {}, [])";
 const handleFocusIn = (e: "FocusEvent) => {"}"";
 const target = e.target as HTMLElement
@@ -80,6 +101,17 @@ const target = e.target as HTMLElement
     }";
 const handleFocusOut = (e: "FocusEvent) => {"}"";
 const target = e.target as HTMLElement
+=======
+  useEffect(() => {}, [])
+    const handleFocusIn = (e: "FocusEvent) => {"}"
+      const target = e.target as HTMLElement
+      if (target) {}
+        target.classList.add('focus-visible')''''
+      }
+    }
+    const handleFocusOut = (e: "FocusEvent) => {"}"
+      const target = e.target as HTMLElement
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       if (target) {}
         target.classList.remove('focus-visible')''''
       }
@@ -121,9 +153,15 @@ const addAltText = () => {}
       document.removeEventListener('mousedown', handleMouseDown)''''
     }
   }, [])
+<<<<<<< HEAD
 return null;
 import React from 'react'''''";
 const AccessibilityEnhancer: React.FC = () => {"}""
+=======
+return null
+import React from 'react'''''
+const AccessibilityEnhancer: React.FC = () => {"}"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return null
 }
 export default AccessibilityEnhancer"

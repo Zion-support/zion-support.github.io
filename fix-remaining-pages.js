@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import { glob } from "glob"
@@ -67,3 +68,7 @@ const newContent = pageTemplate(title, description)"
 }
 fixRemainingPages().catch(console.error)"
 }}
+=======
+// fix-remaining-pages.js - Under development
+console.log('fix-remaining-pages.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

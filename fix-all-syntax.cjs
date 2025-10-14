@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -5,10 +6,17 @@ const path = require('path');
 
 // Function to fix all syntax issues in a file
 function fixAllSyntax(filePath) {
+=======
+const fs = require('fs');
+const path = require('path');
+
+function fixSyntaxErrors(filePath) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
+<<<<<<< HEAD
     // Fix malformed import statements with extra quotes
     content = content.replace(/import\s+([^"';]+)\s+from\s+([^"';]+);?'/g, (match, imports, module) => {
       modified = true;
@@ -105,10 +113,44 @@ function fixAllSyntax(filePath) {
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+=======
+    // Fix common syntax errors
+    const fixes = [
+      // Fix missing quotes in imports
+      { pattern: /from 'lucide-react;$/gm, replacement: "from 'lucide-react';" },
+      { pattern: /from 'lucide-react';$/gm, replacement: "from 'lucide-react';" },
+      // Fix extra semicolons in object properties
+      { pattern: /',\s*;$/gm, replacement: "'," },
+      { pattern: /",\s*;$/gm, replacement: '",' },
+      // Fix array syntax
+      { pattern: /\[\s*'([^']+)',\s*'([^']+)',\s*'([^']+)',\s*'([^']+)'\s*\]\s*;$/gm, replacement: "['$1', '$2', '$3', '$4']" },
+      // Fix object syntax
+      { pattern: /:\s*'([^']+)',\s*;$/gm, replacement: ": '$1'," },
+      { pattern: /:\s*"([^"]+)",\s*;$/gm, replacement: ': "$1",' },
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
     return false;
   }
 }
 
+<<<<<<< HEAD
 // Function to fix all files recursively
 function fixAllFiles(dir) {
   let fixedCount = 0;
@@ -137,11 +179,29 @@ function fixAllFiles(dir) {
     }
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message);
+=======
+function findAndFixSyntaxErrors(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixSyntaxErrors(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
   }
   
   return fixedCount;
 }
 
+<<<<<<< HEAD
 // Main execution
 console.log('Starting comprehensive syntax fix...');
 
@@ -174,3 +234,8 @@ try {
 }
 
 console.log('Comprehensive syntax fix complete!');
+=======
+console.log('Starting comprehensive syntax error fixes...');
+const fixedCount = findAndFixSyntaxErrors('.');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80

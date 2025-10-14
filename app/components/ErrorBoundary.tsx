@@ -1,4 +1,48 @@
+<<<<<<< HEAD
 {this.state.errorInfo.componentStack}
+=======
+  error: Error | null;
+  errorInfo: ErrorInfo | null}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    }
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+                  Something went wrong
+                </h1>
+                <p className="mt-2 text-sm text-gray-600">"
+                  We're sorry, but something unexpected happened. Please try refreshing the page.'
+                </p>
+                
+                {process.env.NODE_ENV === 'development' && this.state.error && ('
+                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-md">"
+                    <h3 className="text-sm font-medium text-red-800">Error Details:</h3>"
+                    <pre className="mt-2 text-xs text-red-700 overflow-auto">"
+                      {this.state.error.toString()
+                    </pre>
+                    {this.state.errorInfo && (
+                        {this.state.errorInfo.componentStack}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
                       </pre>
                     )
                   </div>
@@ -19,6 +63,7 @@
                     Go Home
                   </Link>
                 </div>
+<<<<<<< HEAD
 
               </div>
 
@@ -34,3 +79,11 @@
   }
 }
 "
+=======
+            </div>
+          </div>
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

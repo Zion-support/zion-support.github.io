@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Loader2, Brain, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
 
@@ -10,6 +11,8 @@ interface LoadingPageProps {
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 }) => {
   if (variant === 'minimal') {
     return (
@@ -26,6 +29,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="text-center">
+<<<<<<< HEAD
           <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-white mb-2">{message}</h2>
           <p className="text-gray-400">Please wait while we load the content</p>
@@ -157,6 +161,14 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>
 >>>>>>> origin/main
+=======
+          <div className="relative mb-8">
+            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Brain className="w-10 h-10 text-white animate-pulse" />
+            </div>
+            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
@@ -173,6 +185,7 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
   }
 
   return (
+<<<<<<< HEAD
 "
     <div className="flex items-center justify-center p-4"></div>"
       <div className="text-center"></div>
@@ -182,6 +195,9 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
 
     </div>
   )
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             LoadingStates</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional loadingstates solutions tailored to your business needs.</p>
@@ -211,7 +227,10 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

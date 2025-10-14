@@ -1,11 +1,8 @@
 import React from 'react';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
-function HomePage() {
+
+const page-minimal: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-white"></div>
       {/* Header */}"
       <header className="bg-white border-b border-gray-200">"
@@ -162,3 +159,13 @@ function HomePage() {
 };
 export default HomePage;
 "
+=======
+    <div>
+      <h1>page-minimal</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default page-minimal;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

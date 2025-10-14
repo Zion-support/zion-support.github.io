@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';';
 export default function fix-remaining-corrupted.js() {
@@ -31,6 +32,9 @@ export default function fix-remaining-corrupted.js() {
                   Round-the-clock support for all your needs.
 
     </>)
+=======
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   )
 }
 "

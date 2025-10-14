@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"";
 import fs from "fs"";
 import path from "path"";
@@ -88,3 +89,5 @@ const fixedCount = processDirectory("./app")
 console.log(`Fixed ${fixedCount} files.`)
 "
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

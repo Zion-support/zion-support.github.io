@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -141,29 +142,35 @@ export default function CaseStudies() {
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Start Your Success Story?</h2>
           <p className="text-gray-300 mb-8">
             Let's discuss how we can help transform your business with our AI and IT solutions.
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const PagePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
-            >
-              Get Free Consultation
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link 
-              to="/services" 
-              className="border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View All Services
-            </Link>
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default CaseStudiesPage;
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

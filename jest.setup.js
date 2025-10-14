@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Learn more: https://github.com/testing-library/jest-dom
 require("@testing-library/jest-dom");
 
@@ -22,13 +23,23 @@ jest.mock('react-lazy-load-image-component', () => {
 });
 
 Object.defineProperty(window, "matchMedia", {
+=======
+require('@testing-library/jest-dom');
+
+// Mock TextEncoder and TextDecoder
+global.TextEncoder = require('util').TextEncoder;
+global.TextDecoder = require('util').TextDecoder;
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   writable: true,
-  value: jest.fn().mockImplementation((query) => ({
+  value: jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
@@ -40,12 +51,10 @@ global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
   unobserve() {}
 };
 
+<<<<<<< HEAD
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
@@ -64,3 +73,12 @@ beforeAll(() => {
 afterAll(() => {
   console.error = originalError;
 });
+=======
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,12 +16,15 @@ interface FuturisticButtonProps {
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
   loading?: boolean;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   children, 
   className = '',''
   variant = 'primary',''
   size = 'md',''
   icon,
+<<<<<<< HEAD
   onClick,)
   type = 'button''}) => {';
 const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'';
@@ -82,9 +86,19 @@ export default FuturisticButton;
     >{icon && <span className="mr-2">{icon}</span>}
       { children }
 
+=======
+  onClick,
+  type = 'button''}) => {'
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2''
+  const variantClasses = {
+    </button>
+  )
+export default FuturisticButton;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     </button>
   );
 export default FuturisticButton
+<<<<<<< HEAD
 
 };
 export default FuturisticButton;'
@@ -183,12 +197,17 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     >
       {content}
     </button>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   );
 };
 
 export default FuturisticButton;
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> origin/main
 =======
 "
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"";
 import fs from "fs"";
 import { glob } from "glob"
@@ -66,3 +67,7 @@ const fixedContent = fixMergeConflicts(content)
 })
 console.log(`Fixed ${fixedCount} files.`)"
 }
+=======
+// fix_merge_conflicts.js - Under development
+console.log('fix_merge_conflicts.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

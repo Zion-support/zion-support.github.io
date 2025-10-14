@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import fs from 'fs';
 import path from 'path'
@@ -539,3 +540,7 @@ const dir = path.dirname(component)
     console.log(`Error fixing ${component}: ${error.message}`);`
 }
 console.log(`Fixed ${fixedCount} components.`);`"
+=======
+// fix-broken-components.js - Under development
+console.log('fix-broken-components.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

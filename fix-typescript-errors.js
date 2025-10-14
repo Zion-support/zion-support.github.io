@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"
 // Function to fix App.tsx import and ErrorBoundary issues;
+=======
+#!/usr/bin/env node
+import fs from "fs
+// Function to fix App.tsx import and ErrorBoundary issues
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixAppTsx() {
   try {"
     let content = fs.readFileSync("/workspace/App.tsx", "utf8")

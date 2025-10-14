@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { memo } from "react"";
 import { Link } from "react-router-dom"";
 import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react";
@@ -6,6 +7,25 @@ const services = ["
     { name: "AI Services", url: "/ai-services" },"
     { name: "IT Solutions", url: "/it-services" },"
     { name: "Cloud Services", url: "/cloud-services" },"
+=======
+<<<<<<< HEAD
+import { memo } from "react"
+import { Link } from "react-router-dom"
+import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
+=======
+import { memo } from 'react;
+import { } from 'react-router-dom';
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
+&apos;use client&apos;
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c80
+
+const Footer = memo(() => {
+  const services = [
+    { name: "AI Services", url: "/ai-services" },
+    { name: "IT Solutions", url: "/it-services" },
+    { name: "Cloud Services", url: "/cloud-services" },
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     { name: "Cybersecurity", url: "/cybersecurity" }
   ];
 const solutions = ["
@@ -44,6 +64,7 @@ const socialLinks = ["
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>"
             <p className="text-sm text-cyan-400">AI & IT Solutions</p>"
             <p className="text-gray-300 text-sm leading-relaxed">
+<<<<<<< HEAD
 
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems,
               and digital transformation services. Transform your business with cutting-edge technology.
@@ -60,6 +81,8 @@ const socialLinks = ["
                     to={service.url}"
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
                   >
                     {service.name}
                   </Link>
@@ -70,6 +93,7 @@ const socialLinks = ["
                   to="/services""
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
                 >
+<<<<<<< HEAD
 
                   View All AI Services"
                   <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
@@ -88,6 +112,8 @@ const socialLinks = ["
                     to={solution.url}"
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
                   >
                     {solution.name}
                   </Link>
@@ -98,6 +124,7 @@ const socialLinks = ["
                   to="/solutions""
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
                 >
+<<<<<<< HEAD
 
                   View All Solutions"
                   <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
@@ -176,3 +203,5 @@ const socialLinks = ["
 Footer.displayName = "Footer";
 export default Footer
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

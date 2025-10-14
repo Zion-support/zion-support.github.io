@@ -9,12 +9,21 @@ function fixApiFile(content)   {}
   fixed = fixed.replace(/20o0/g, '200');'
   fixed = fixed.replace(/50o0/g, '500');'
   // Fix malformed string literals
+<<<<<<< HEAD
   fixed = fixed.replace(/'Method not allowed'/g, "'Method not allowed'");""
   fixed = fixed.replace(/'Internal server error'/g, "'Internal server error'");"
   fixed = fixed.replace(/'true'/g, 'true');'
   fixed = fixed.replace(/'false'/g, 'false');'
   // Fix malformed console.error calls"
   fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/g, "console.error('API Error:', error);");"
+=======
+  fixed = fixed.replace(/'Method not allowed'/g, "'Method not allowed'");
+  fixed = fixed.replace(/'Internal server error'/g, "'Internal server error'");
+  fixed = fixed.replace(/'true'/g, 'true');'
+  fixed = fixed.replace(/'false'/g, 'false');'
+  // Fix malformed console.error calls
+  fixed = fixed.replace(/console\.error\('API Error: "\'"', error\);/g, "console.error('API Error:', error);");
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return fixed
 }
 // Function to process a single file;

@@ -1,8 +1,15 @@
 import React from 'react'
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import { glob } from "glob"
 // Function to fix quote issues in a file;
+=======
+#!/usr/bin/env node
+import fs from "fs
+import { glob } from "glob
+// Function to fix quote issues in a file
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixFile(filePath) {
   try {"
     let content = fs.readFileSync(filePath, "utf8")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -108,8 +109,13 @@ const auditSchedule = [
       ]
     }
   ]
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
+const page: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
@@ -345,3 +351,13 @@ const auditSchedule = [
 }
 ;
 export default CompliancePage"
+=======
+    <div>
+      <h1>page</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock } from "lucide-react";
@@ -229,10 +230,16 @@ const ZionAIAnalyticsProPage = () => {
 >>>>>>> origin/main
 
 const HomePage = () => {
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const PagePage = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/main
       <Helmet>
+<<<<<<< HEAD
         <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title>
         <meta
           name="description"
@@ -622,3 +629,21 @@ const HomePage = () => {
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+=======
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

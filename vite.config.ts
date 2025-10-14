@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
+<<<<<<< HEAD
       // Enable JSX runtime
       jsxRuntime: "automatic",
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     }),
   ],
   resolve: {
@@ -29,6 +39,7 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false,
     minify: "esbuild",
+<<<<<<< HEAD
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
@@ -75,6 +86,9 @@ export default defineConfig({
       }
     },
     // Enhanced build optimizations
+=======
+    cssCodeSplit: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     rollupOptions: {
       treeshake: {
         moduleSideEffects: false,
@@ -83,6 +97,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
+<<<<<<< HEAD
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
@@ -144,6 +159,24 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
+=======
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+        assetFileNames: (assetInfo) => {
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       },
     },
     // Enable tree shaking
@@ -151,9 +184,14 @@ export default defineConfig({
   },
   server: {
     port: 3000,
+<<<<<<< HEAD
     open: true,
     host: true,
     // Enable HMR
+=======
+    open: false,
+    cors: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     hmr: {
       overlay: true,
     },
@@ -166,6 +204,7 @@ export default defineConfig({
   // Optimize dependencies
   optimizeDeps: {
     include: [
+<<<<<<< HEAD
       "react",
       "react-dom",
       "react-router-dom",
@@ -178,4 +217,11 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+=======
+      'react',
+      'react-dom',
+      'react-router-dom',
+    ],
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 });

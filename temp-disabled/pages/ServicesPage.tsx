@@ -9,6 +9,9 @@ export default function ServicesPage() {
       <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>)
   );
+<<<<<<< HEAD
 
 }
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

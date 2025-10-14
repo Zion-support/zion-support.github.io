@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface LazyWrapperProps { children: React.ReactNode
   fallback?: React.ReactNode }
 import React, { Suspense, lazy, ComponentType } from 'react';';
@@ -18,3 +19,7 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({ children,
 ;
 export default LazyWrapper;
 "
+=======
+      {children}
+    </Suspense>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

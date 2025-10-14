@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -302,16 +303,26 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
 
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const PagePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
+      </Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our Blog
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay informed with the latest insights, trends, and best practices in technology, 
-            AI, and digital transformation from our expert team.
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
+<<<<<<< HEAD
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -401,11 +412,14 @@ export default function Page() {
             </button>
           </div>
         </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default BlogPage;
                 >
@@ -424,3 +438,6 @@ export default BlogPage;
 =======
 "
 >>>>>>> origin/main
+=======
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

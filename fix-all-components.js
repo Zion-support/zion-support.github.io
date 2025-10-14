@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import { glob } from "glob"
@@ -135,3 +136,7 @@ const newContent = componentTemplate(componentName)"
 }
 fixAllComponents().catch(console.error)"
 }}
+=======
+// fix-all-components.js - Under development
+console.log('fix-all-components.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

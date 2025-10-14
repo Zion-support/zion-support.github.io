@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   export interface NextPageProps {
   export default content;
 // Next.js type definitions
@@ -46,3 +47,5 @@ export default nextUtil;
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

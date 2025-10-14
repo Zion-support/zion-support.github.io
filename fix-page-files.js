@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from "fs"";
 import path from "path"";
 import { fileURLToPath } from "url";
@@ -81,3 +82,7 @@ for (const file of pageFiles) {
 }
 console.log(`Fixed ${fixedCount} out of ${pageFiles.length} files`)"
 }}}
+=======
+// fix-page-files.js - Under development
+console.log('fix-page-files.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

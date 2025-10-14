@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 interface WebVitalsTrackerProps {
@@ -57,15 +58,18 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
       }
     }
     // Track Core Web Vitals
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           This page is under development.</p></div></div>
   )
         </p>
       </div>
     </div>
   )}
+<<<<<<< HEAD
 ''
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 };
 
 export default WebVitalsTracker;
->>>>>>> origin/main
->>>>>>> origin/main

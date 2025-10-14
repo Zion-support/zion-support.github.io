@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -164,3 +165,7 @@ console.log('Starting to fix syntax errors...');
 filesToFix.forEach(fixFile);
 console.log('Syntax error fixing completed!');"
 }}
+=======
+// fix-all-syntax-errors.js - Under development
+console.log('fix-all-syntax-errors.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

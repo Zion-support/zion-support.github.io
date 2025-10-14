@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"";
 import fs from "fs"";
 import { glob } from "glob"
@@ -81,3 +82,7 @@ const fixedContent = fixSyntaxErrors(content)
     console.error(`Error processing ${file}:`, error.message)
 })
 console.log(`Fixed ${fixedCount} files.`)"
+=======
+// final_syntax_fix.js - Under development
+console.log('final_syntax_fix.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from "react"";
 import { Helmet } from "react-helmet-async";
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 export default function SEOEnhancer() {
   return (
     <div></div>
@@ -21,7 +24,10 @@ export default function SEOEnhancer() {
             </p>
           </div>
         </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       </div>
     </div>)
   )

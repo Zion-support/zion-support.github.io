@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 
 import { Cloud, Shield,  } from "lucide-react";
@@ -175,23 +176,32 @@ const CloudMigrationProPage = () => {
       </div>
     </div>
   )
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
-const HomePage = () => {
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Professional services by Zion Tech Group." />
+=======
+        <meta name="description" content="Page - Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
           <p className="text-gray-300 text-lg">
             This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ); }
 >>>>>>> origin/main
             Page</h1>
@@ -229,3 +239,9 @@ const HomePage = () => {
 >>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+  );
+};
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

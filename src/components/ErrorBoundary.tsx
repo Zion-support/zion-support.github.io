@@ -1,14 +1,19 @@
-import React, { Component, ReactNode } from "react"
+import React from 'react';
 
-interface Props {
-  children: ReactNode
+interface ErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-interface State {
-  hasError: boolean
-  error?: Error
-}
+const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
 
+<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
@@ -47,3 +52,6 @@ class ErrorBoundary extends Component<Props, State> {
 }
 ;
 export default ErrorBoundary"
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

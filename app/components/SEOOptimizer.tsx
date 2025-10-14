@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ); }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             SEOOptimizer</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional seooptimizer solutions tailored to your business needs.</p>"
@@ -29,6 +32,7 @@
       </div>
     </div>
   )}
+<<<<<<< HEAD
 
             </button>;
           </div>
@@ -38,3 +42,5 @@
   );}
 }'
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

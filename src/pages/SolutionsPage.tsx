@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"";
 import { Helmet } from "react-helmet-async";
 const SolutionsPage: React.FC = () => {
@@ -6,6 +7,9 @@ const SolutionsPage: React.FC = () => {
       <Helmet></Helmet>
 
         <title>Solutions - Zion Tech Group</title>"
+=======
+        <title>Solutions - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
         <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />
       </Helmet>"
       <div className="min-h-screen bg-gray-900 text-white py-16"></div>"
@@ -98,6 +102,7 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
     </div>)
   )
@@ -105,3 +110,5 @@ const SolutionsPage: React.FC = () => {
 ;
 export default SolutionsPage
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

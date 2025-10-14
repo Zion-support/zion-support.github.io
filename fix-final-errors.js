@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ';
 import { Helmet } from 'react-helmet-async';';
 import fs from 'fs';
@@ -132,3 +133,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 export { fixFinalErrors, processFile }
 "
 }}}}
+=======
+// fix-final-errors.js - Under development
+console.log('fix-final-errors.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

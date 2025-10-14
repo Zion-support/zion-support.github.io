@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import path from "path"";
@@ -232,3 +233,7 @@ const filePath = path.join(process.cwd(), file)"
 // Run the fix
 processFiles().catch(console.error)"
 }}}
+=======
+// fix-syntax-errors-v3.js - Under development
+console.log('fix-syntax-errors-v3.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

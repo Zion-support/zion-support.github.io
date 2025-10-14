@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 const LoadingSpinner: React.FC = () => {
   return (
@@ -11,3 +12,21 @@ const LoadingSpinner: React.FC = () => {
 }
 ;
 export default LoadingSpinner"
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`loadingspinner ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

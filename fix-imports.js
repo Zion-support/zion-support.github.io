@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from "fs"";
 import path from "path"";
 import { fileURLToPath } from "url";
@@ -79,3 +80,5 @@ for (const file of tsxFiles) {
 console.log(`Fixed ${fixedCount} out of ${tsxFiles.length} files`)
 "
 }}}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
@@ -13,6 +14,8 @@ const ImprovedSidebar: React.FC = () => { return (
         <div className="max-w-6xl mx-auto text-center"></div>"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Improved Sidebar;
           </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -25,6 +28,7 @@ const ImprovedSidebar: React.FC = () => { return (
             Improved Sidebar</h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional improved sidebar services
+<<<<<<< HEAD
 
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
       <section className="py-16 px-4">"
@@ -33,6 +37,10 @@ const ImprovedSidebar: React.FC = () => { return (
 
             <div></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>""
+=======
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
               <p className="text-lg text-gray-600 mb-6">"
                 We provide comprehensive improved sidebar;
                 solutions tailored to your specific needs and requirements.;
@@ -67,12 +75,15 @@ const ImprovedSidebar: React.FC = () => { return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       { /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6">
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Ready to Get Started?;
           </h2>"
           <p className="text-xl text-blue-100 mb-8">"
@@ -109,6 +120,7 @@ export default ImprovedSidebar;
               <p className="mb-6">"
                 Ready to transform your business with our improved sidebar services?</p>
               <a
+<<<<<<< HEAD
 "
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
@@ -118,6 +130,9 @@ export default ImprovedSidebar;
           <h2 className="text-3xl font-bold text-white mb-6">
 
             Ready to Get Started?</h2>"
+=======
+            Ready to Get Started?</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our improved sidebar''
             services can help you achieve your goals.</p>
@@ -127,6 +142,7 @@ export default ImprovedSidebar;
             Get Started Today</a></div></section></div>
   )
 export default ImprovedSidebar
+<<<<<<< HEAD
 }
 export default ImprovedSidebar';
 
@@ -287,6 +303,8 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === '');
 
   if (!isOpen) return null;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
 const ImprovedSidebar = () => {
   return (
@@ -297,5 +315,11 @@ const ImprovedSidebar = () => {
 =======
 >>>>>>> origin/main
   );
+<<<<<<< HEAD
 export default ImprovedSidebar
 "
+=======
+};
+
+export default ImprovedSidebar;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

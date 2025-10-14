@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -101,3 +102,7 @@ console.log('Starting to fix all remaining issues...');
 filesToFix.forEach(fixFile);
 console.log('All remaining issues fixed!');"
 }}
+=======
+// fix-all-remaining.js - Under development
+console.log('fix-all-remaining.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

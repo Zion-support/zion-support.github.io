@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 const BlogPage: React.FC = () => {}
@@ -19,3 +20,17 @@ const BlogPage: React.FC = () => {}
   )
 }
 export default BlogPage"
+=======
+import React from 'react';
+
+const BlogPage: React.FC = () => {
+  return (
+    <div>
+      <h1>BlogPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default BlogPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

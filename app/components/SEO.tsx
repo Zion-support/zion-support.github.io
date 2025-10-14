@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface SEOProps {
@@ -24,6 +25,11 @@ interface SEOProps {
       contactType: "customer service","
       email: "kleber@ziontechgroup.com" },
 
+=======
+  title?: string;
+  description?: string;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group','
       'https://twitter.com/ziontechgroup','
@@ -33,6 +39,7 @@ interface SEOProps {
   return (
     <Helmet></Helmet>
       <title>{title}</title>
+<<<<<<< HEAD
 "
       <meta name="description" content={description} />"
       <meta name="keywords" content={keywords} />
@@ -51,3 +58,8 @@ interface SEOProps {
       <link rel="canonical" href={url} />
     </Helmet>
 ")
+=======
+  );
+};
+export default SEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

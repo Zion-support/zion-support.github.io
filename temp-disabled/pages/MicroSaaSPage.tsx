@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";";
 import { Helmet } from "react-helmet-async";
 ;
@@ -22,3 +23,17 @@ const MicroSaaSPagePage = () => {
 ;
 export default MicroSaaSPagePage;
 "
+=======
+import React from 'react';
+
+const MicroSaaSPage: React.FC = () => {
+  return (
+    <div>
+      <h1>MicroSaaSPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default MicroSaaSPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

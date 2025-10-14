@@ -100,6 +100,7 @@ const fullPath = path.join(__dirname, filePath);
     content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
     
     // Fix malformed function declarations
+<<<<<<< HEAD
 
     content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
     
@@ -134,6 +135,8 @@ const jsxContent = `  return ("
       // Fix TypeScript declaration files
       content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     }
     
     if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
@@ -176,10 +179,54 @@ const jsxContent = `  return ("
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
+<<<<<<< HEAD
+=======
+}
+          }
+        } catch (err) { // Skip files that can't be read }
+}
+        }
+      }
+    }
+  }
+  searchDirectory(dir);
+  return files;
+}
+// Main execution
+async function main() { console.log('🔍 Finding problematic files...');
+  const problematicFiles = findProblematicFiles('.'); }
+}
+  console.log(`Found ${problematicFiles.length} problematic files`);
+  let fixedCount = 0;
+  for (const file of problematicFiles) {
+  if (fixFile(file)) {
+      fixedCount++;
+}
+}
+    }
+  }
+  console.log(`✅ Fixed ${fixedCount} files`);
+  // Run a quick lint check on a few key files
+  console.log('🔍 Running quick validation...');
+  try {
+}
+}
+    execSync('pnpm run lint --max-warnings 10', { stdio: "pipe" });
+    console.log('✅ Linting improved!');
+  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }
+}
+  }
+  console.log('🎉 Remaining error fixing process completed!');
+}
+main().catch(console.error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
 // Fix all files
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
 console.log('Remaining syntax error fixing completed!');
+<<<<<<< HEAD
 "
 }}}}}}}}}}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

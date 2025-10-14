@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react''';
@@ -105,3 +106,17 @@ const AIServicesPage: React.FC = () => {}
 }
 export default AIServicesPage
 </Icon>"
+=======
+import React from 'react';
+
+const AIServicesPage: React.FC = () => {
+  return (
+    <div>
+      <h1>AIServicesPage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default AIServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,13 +1,16 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
->>>>>>> origin/main
 }
 ;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+<<<<<<< HEAD
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -16,11 +19,14 @@ export const useAnalytics = () => {
   }
   return context;
 };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
+<<<<<<< HEAD
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     // Track event with Google Analytics or other analytics service
@@ -72,6 +78,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 };
 
 export default AnalyticsProvider;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     // Analytics tracking implementation
     console.log('Analytics Event:', event, properties)";
     // In a real implementation, you would send this to your analytics service
@@ -91,6 +99,7 @@ export default AnalyticsProvider;
         page_title: name,
         page_location: window.location.href,
         ...properties
+<<<<<<< HEAD
     // Analytics tracking implementation';
     console.log('Analytics Event:', event, properties)";
     // In a real implementation, you would send this to your analytics service';
@@ -136,3 +145,17 @@ export default AnalyticsProvider;
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+=======
+    page
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      { children }
+    </AnalyticsContext.Provider>
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

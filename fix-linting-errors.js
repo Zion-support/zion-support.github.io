@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import path from "path"
 // Function to recursively find all TypeScript/JavaScript files";
+=======
+#!/usr/bin/env node
+import fs from "fs
+import path from "path
+// Function to recursively find all TypeScript/JavaScript files
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   let results = [];
 const list = fs.readdirSync(dir)

@@ -1,7 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 ;
 export default function ServicesData() {
+=======
+
+export default function Page() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return (
     <div className="min-h-screen bg-white"></div>
       <Helmet></Helmet>

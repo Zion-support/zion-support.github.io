@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 #!/usr/bin/env node;
 import fs from "fs"";
@@ -69,3 +70,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main()
 }
 export { fixAllJSXAttributes, processFile }"
+=======
+// fix-all-jsx-attributes.js - Under development
+console.log('fix-all-jsx-attributes.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

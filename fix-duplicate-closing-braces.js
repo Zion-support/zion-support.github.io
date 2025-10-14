@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import fs from "fs"";
 import path from "path"
 // Function to fix duplicate closing braces;
+=======
+import fs from "fs
+import path from "path
+// Function to fix duplicate closing braces
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixDuplicateClosingBraces(content) {
   // Fix duplicate closing braces
   content = content.replace()

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from "fs"";
 import path from "path"";
 import { fileURLToPath } from "url";
@@ -100,3 +101,7 @@ if (fs.existsSync(appDir)) {
   console.log("App directory not found.")
 }"
 }}}}}
+=======
+// fix-component-files.js - Under development
+console.log('fix-component-files.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 import path from "path"";
@@ -192,3 +193,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 export { fixSpecificErrors, processFile }"
 }}}}}}}}}}}}}}}}}}}}}}}}
+=======
+// fix-specific-errors.js - Under development
+console.log('fix-specific-errors.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

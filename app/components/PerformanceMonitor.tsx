@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, ReactNode } from 'react';
 
 interface PerformanceMetrics {
@@ -15,6 +16,8 @@ interface PerformanceMonitorProps {
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showDetails = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
@@ -69,6 +72,7 @@ const PerformanceMonitor: React.FC = () => {
         }));
       }
 
+<<<<<<< HEAD
       return () => observer.disconnect();
     };
 
@@ -125,6 +129,18 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+      // Measure Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        // First Contentful Paint
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');
+          if (fcp) {
+            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
+          }
+        });
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     ttfb: null,
     loadTime: null
   }
@@ -147,6 +163,7 @@ export default PerformanceMonitor;
         loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
       }
     // Wait for page load
+<<<<<<< HEAD
     if (document.readyState === 'complete') {'
       getPerformanceMetrics()
     } else {window.addEventListener('load', getPerformanceMetrics)"}"
@@ -164,6 +181,11 @@ export default PerformanceMonitor;
       <button
         onClick={() => setIsVisible(!isVisible)
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors""
+=======
+  return (
+    <div className="fixed bottom-4 right-4 z-50">"
+      <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       >
         Performance
       </button>
@@ -205,6 +227,7 @@ export default PerformanceMonitor;
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
+<<<<<<< HEAD
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
         setIsVisible(!isVisible)
     window.addEventListener('keydown', handleKeyPress)";
@@ -221,6 +244,8 @@ export default PerformanceMonitor;
         <button
           onClick={() => setIsVisible(false)
           className="text-gray-400 hover:text-white text-xs""
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       }
     };
 
@@ -235,22 +260,29 @@ export default PerformanceMonitor;
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
+<<<<<<< HEAD
   }, [isVisible]);
   // Don't render in production
   if (process.env.NODE_ENV === 'production') { return null; }
   if (!isVisible) { return null; }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return (
     <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button
+<<<<<<< HEAD
           onClick={ () => setIsVisible(false) }
           className="text-gray-400 hover:text-white text-xs"
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
         >
           ×
         </button>
       </div>
+<<<<<<< HEAD
 
       <div className="space-y-2 text-sm"></div>"
         <div className="flex justify-between"></div>
@@ -304,9 +336,16 @@ export default PerformanceMonitor;
 <<<<<<< HEAD
   )
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+      )
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 };
 
->>>>>>> origin/main
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

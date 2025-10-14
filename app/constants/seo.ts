@@ -14,6 +14,7 @@ export const META_TAGS = {
 } as const;
 ;
 export const defaultStructuredData = {
+<<<<<<< HEAD
   "@context": "https://schema.org","
   "@type": "Organization","
   "name": "Zion Tech Group","
@@ -30,6 +31,24 @@ export const defaultStructuredData = {
     "https://www.linkedin.com/company/zion-tech-group","
     "https://twitter.com/ziontechgroup","
     "https://www.facebook.com/ziontechgroup"
+=======
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "customer service",
+    "availableLanguage": "English
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/zion-tech-group",
+    "https://twitter.com/ziontechgroup",
+    "https://www.facebook.com/ziontechgroup
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   ]
 };
 "

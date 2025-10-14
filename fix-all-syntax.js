@@ -33,6 +33,7 @@ const missingBraces = openBraces - closeBraces;}
       content += '\n' + '}'.repeat(missingBraces);'
       modified = true
 }
+<<<<<<< HEAD
     // Fix missing closing parentheses;
 const openParens = (content.match(/\(/g) || []).length;
 const closeParens = (content.match(/\)/g) || []).length
@@ -129,6 +130,9 @@ const missingBrackets = openBrackets - closeBrackets;}
 }
     return false
 
+=======
+    // Fix missing closing parentheses
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`
     return false
@@ -152,9 +156,12 @@ const files = fs.readdirSync(dir);}
         console.log(`Fixed syntax errors in: ${filePath}`);`
 }
 }
+<<<<<<< HEAD
 
   return fixedCount
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 }
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');';

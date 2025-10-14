@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -138,10 +139,13 @@ function fixUnusedImports(filePath) {
     
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   }
 }
 
 // Main execution
+<<<<<<< HEAD
 console.log('Fixing unused imports...');
 
 const files = getAllFiles('./app');
@@ -155,3 +159,5 @@ fixUnusedImports('./App.tsx');
 console.log('Done fixing unused imports!');
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -30,12 +30,16 @@ for (const file of conflictedFiles) {
 const content = fs.readFileSync(file, 'utf8');
     
     // Check if file has merge conflict markers
+<<<<<<< HEAD
     if (!content.includes('<<<<<<<') || !content.includes(')
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       console.log(`✅ No merge conflicts found in: ${file}`);
       continue;
     }
 
     // Strategy: Use the version from main (the newer version) for most conflicts
+<<<<<<< HEAD
     // This means we'll take the content after 
     let resolvedContent = content;
     
@@ -78,3 +82,9 @@ if (resolvedCount > 0) {
   console.log('4. Run: git push origin resolve-all-conflicts');
 }
 "
+=======
+    let resolvedContent = content;
+    
+    // Remove merge conflict markers and keep the main branch version
+    resolvedContent = resolvedContent.replace(
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

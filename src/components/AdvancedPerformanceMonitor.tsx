@@ -1,15 +1,16 @@
+<<<<<<< HEAD
 "use client"";
 import React, { useEffect, useState, useCallback } from "react"
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
-interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memory: number | null
+interface AdvancedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   enableRealTimeMonitoring?: boolean
@@ -312,3 +313,14 @@ const recommendations = getPerformanceRecommendations()
 }
 ;
 export default AdvancedPerformanceMonitor"
+=======
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancedperformancemonitor ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

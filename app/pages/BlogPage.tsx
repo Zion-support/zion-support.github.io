@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 ";
 import React from "react";";
@@ -25,3 +26,16 @@ const BlogPage: React.FC = () => {
 ;
 export default BlogPag;e;
 "
+=======
+        <title>BlogPage - Zion Tech Group</title>
+        <meta name="description" content="BlogPage - Zion Tech Group" />"
+      </Helmet>
+        </div>
+      </div>
+export default BlogPag;e;
+    </React.Fragment>
+  );
+};
+
+export default BlogPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

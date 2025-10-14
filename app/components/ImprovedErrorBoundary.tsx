@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
@@ -13,6 +14,8 @@ const ImprovedErrorBoundary: React.FC = () => { return (
         <div className="max-w-6xl mx-auto text-center"></div>"
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Improved Error Boundary;
           </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -25,6 +28,7 @@ const ImprovedErrorBoundary: React.FC = () => { return (
             Improved Error Boundary</h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional improved error boundary services
+<<<<<<< HEAD
 
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
       <section className="py-16 px-4">"
@@ -127,6 +131,14 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               <a;
                 href="$1""
                 className="$1""
+=======
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+              <p className="text-lg text-gray-600 mb-6">"
+                We provide comprehensive improved error boundary;
+                solutions tailored to your specific needs and requirements.;
+              </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
@@ -146,12 +158,15 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">"
@@ -188,12 +203,15 @@ export default ImprovedErrorBoundary;
               <p className="mb-6">"
                 Ready to transform your business with our improved error boundary services?</p>
               <a
+<<<<<<< HEAD
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
                 Contact Us</a></div></div></div></section>{/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our improved error boundary''
@@ -204,10 +222,11 @@ export default ImprovedErrorBoundary;
             Get Started Today</a></div></section></div>
   )
 export default ImprovedErrorBoundary
+<<<<<<< HEAD
 }
 export default ImprovedErrorBoundary';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 };
 
 export default ImprovedErrorBoundary;
->>>>>>> origin/main
->>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 #!/usr/bin/env node;
 import fs from "fs"
@@ -42,3 +43,7 @@ fixed = fixed.replace()
 // Write the fixed content back"
 fs.writeFileSync("/workspace/app/components/Navigation.tsx", fixed, "utf8")"
 console.log("Fixed Navigation.tsx")"
+=======
+// fix-navigation.js - Under development
+console.log('fix-navigation.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

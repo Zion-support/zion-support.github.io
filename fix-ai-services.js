@@ -1,8 +1,15 @@
 import React from 'react'
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"";
 const filePath = "/workspace/app/ai-services/page.tsx";
 function fixAiServicesFile() {"
+=======
+#!/usr/bin/env node
+import fs from "fs
+const filePath = "/workspace/app/ai-services/page.tsx
+function fixAiServicesFile() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   let content = fs.readFileSync(filePath, "utf8")
   // Fix all the syntax errors in this specific file"
   content = content.replace(/title: "([^"]*)",\s*"/g, 'title: "$1",')

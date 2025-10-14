@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 #!/usr/bin/env node;
 import fs from "fs"
@@ -22,3 +23,7 @@ fixed = fixed.replace(/(\w+):\s*([^"',}]+)}/g, '$1: "$2"}')
 // Write the fixed content back"
 fs.writeFileSync("/workspace/app/components/Navigation.tsx", fixed, "utf8")"
 console.log("Fixed Navigation JSX attributes")"
+=======
+// fix-navigation-jsx.js - Under development
+console.log('fix-navigation-jsx.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

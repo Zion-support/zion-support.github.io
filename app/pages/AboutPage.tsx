@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 ;
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -12,15 +16,20 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
+<<<<<<< HEAD
 
 } from '@heroicons/react/24/outline';
 
+=======
+const AboutPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   return (
     <>
       <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"
       </Helmet>
+<<<<<<< HEAD
 "
       <div className="min-h-screen bg-slate-900 text-white"></div>
 
@@ -28,6 +37,22 @@ import {
               <div className="space-y-4"></div>"
                 <div className="flex items-start"></div>"
                   <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+=======
+      
+        {/* Hero Section */}
+        <div className="relative overflow-hidden">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">"
+            <div className="text-center">"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">"
+                Empowering businesses with cutting-edge AI and IT solutions for the digital age
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
                   <span className="text-gray-300">Innovation-driven approach</span>
                 </div>"
                 <div className="flex items-start"></div>"
@@ -40,6 +65,7 @@ import {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 
           </div>
         </div>
@@ -170,3 +196,5 @@ import {
       </div>
     </>
 ")
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

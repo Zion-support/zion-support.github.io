@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react''''';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'''''
 interface PerformanceMetrics {}
@@ -117,3 +118,17 @@ const PerformanceMonitor: React.FC = () => {"}""
 }
 export default PerformanceMonitor
 </PerformanceMetrics>"
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return (
+    <div>
+      <h1>PerformanceMonitor</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

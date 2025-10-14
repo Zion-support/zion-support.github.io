@@ -1,18 +1,19 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableRetry?: boolean;
+interface AdvancedErrorBoundaryProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  retryCount: number;
-}
+const AdvancedErrorBoundary: React.FC<AdvancedErrorBoundaryProps> = ({ className = '', children }) => {
+  return (
+    <div className={`advancederrorboundary ${className}`}>
+      {children}
+    </div>
+  );
+};
 
+<<<<<<< HEAD
 class AdvancedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {
     super(props);
@@ -60,3 +61,6 @@ constructor(props: Props) {
 ;
 export default AdvancedErrorBoundary;
 "
+=======
+export default AdvancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -371,11 +371,19 @@ const style = el.getAttribute('style');
    * @private
    * @param element - Root element to check
    */
+<<<<<<< HEAD
   private checkKeyboardAccess(element: Element): void {"
     // Check for interactive elements with tabindex="-1";
 const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
     interactiveElements.forEach(el => {);
 const tabindex = el.getAttribute('tabindex');
+=======
+  private checkKeyboardAccess(element: Element): void {
+    // Check for interactive elements with tabindex="-1
+    const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
+    interactiveElements.forEach(el => {
+      const tabindex = el.getAttribute('tabindex');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       if (tabindex === '-1') {
         this.addIssue({
           type: 'interactive-not-focusable',

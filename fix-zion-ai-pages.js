@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs"
 // Function to fix zion-ai pages syntax errors;
@@ -8,6 +9,18 @@ const pages = ["
     "/workspace/app/zion-ai-email-analyzer/page.tsx","
     "/workspace/app/zion-ai-performance-optimizer/page.tsx","
     "/workspace/app/zion-ai-social-media-manager/page.tsx","
+=======
+#!/usr/bin/env node
+import fs from "fs
+// Function to fix zion-ai pages syntax errors
+function fixZionAiPages() {
+  const pages = [
+    "/workspace/app/zion-ai-analytics-pro/page.tsx",
+    "/workspace/app/zion-ai-crm-pro/page.tsx",
+    "/workspace/app/zion-ai-email-analyzer/page.tsx",
+    "/workspace/app/zion-ai-performance-optimizer/page.tsx",
+    "/workspace/app/zion-ai-social-media-manager/page.tsx",
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
     "/workspace/app/zion-ai-voice-assistant-pro/page.tsx",
   ]
   for (const page of pages) {

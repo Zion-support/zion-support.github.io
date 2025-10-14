@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'''';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'''';
 import { Link } from 'react-router-dom''''
@@ -151,3 +152,17 @@ export default ErrorBoundary
 </RefreshCw>
 </AlertTriangle>
 </AlertTriangle>"
+=======
+import React from 'react';
+
+const ErrorBoundary: React.FC = () => {
+  return (
+    <div>
+      <h1>ErrorBoundary</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default ErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -65,15 +65,19 @@ const initApp = async () => {
       try {
         // Add any initialization logic here
         setIsInitialized(true);
+<<<<<<< HEAD
 
       } catch (error) {"
         console.error("Failed to initialize app:", error);
         setIsInitialized(true); // Still show the app even if initialization fails
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       }
     };
     initApp();
   }, []);
+<<<<<<< HEAD
 
   if (!isInitialized) {
     return <LoadingSpinner />;
@@ -152,3 +156,5 @@ const initApp = async () => {
 ;
 export default App;
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

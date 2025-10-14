@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 'use client'
 #!/usr/bin/env node;
@@ -118,3 +119,7 @@ const files = await glob(pattern, )
 }
 // Run the script
 main().catch(console.error)"
+=======
+// fix-use-client.js - Under development
+console.log('fix-use-client.js loaded');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

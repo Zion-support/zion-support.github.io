@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
@@ -14,6 +15,9 @@ const MobileNavigation: React.FC = () => { return (
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
 
             Mobile </h1>"
+=======
+            Mobile </h1>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional mobile navigation services;
             designed to help your business grow and succeed.;
@@ -22,6 +26,7 @@ const MobileNavigation: React.FC = () => { return (
       </section>
       { /* Content Section */ }
             Professional mobile navigation services
+<<<<<<< HEAD
 
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
       <section className="py-16 px-4">"
@@ -30,6 +35,10 @@ const MobileNavigation: React.FC = () => { return (
 
             <div></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>""
+=======
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
               <p className="text-lg text-gray-600 mb-6">"
                 We provide comprehensive mobile navigation;
                 solutions tailored to your specific needs and requirements.;
@@ -64,12 +73,15 @@ const MobileNavigation: React.FC = () => { return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       { /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6">
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
             Ready to Get Started?;
           </h2>"
           <p className="text-xl text-blue-100 mb-8">"
@@ -106,6 +118,7 @@ export default MobileNavigation;
               <p className="mb-6">"
                 Ready to transform your business with our mobile navigation services?</p>
               <a
+<<<<<<< HEAD
 "
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
@@ -115,6 +128,9 @@ export default MobileNavigation;
           <h2 className="text-3xl font-bold text-white mb-6">
 
             Ready to Get Started?</h2>"
+=======
+            Ready to Get Started?</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our mobile navigation''
             services can help you achieve your goals.</p>
@@ -122,6 +138,14 @@ export default MobileNavigation;
             href="/contact"""
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
             Get Started Today</a></div></section></div>
+<<<<<<< HEAD
   );
 export default MobileNavigation
 "
+=======
+  )
+export default MobileNavigation
+};
+
+export default MobileNavigation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

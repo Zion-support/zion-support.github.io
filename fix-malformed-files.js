@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React from "react"";
 import fs from "fs"";
 import path from "path"
 // Function to fix malformed files;
+=======
+import React from "react
+import fs from "fs
+import path from "path
+// Function to fix malformed files
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 function fixMalformedFiles(content) {
   // Remove malformed closing tags at the end
   content = content.replace(")

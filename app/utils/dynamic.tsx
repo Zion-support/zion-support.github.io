@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 '
 'use client';
@@ -7,19 +8,25 @@ export default function UtilsPage() { return (
         <h1 className="text-4xl font-bold mb-8">Utils</h1>"
         <p className="text-gray-300 text-lg">
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           This page is under development.;
         </p>
       </div>
     </div>
+<<<<<<< HEAD
 )
   ); }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           This page is under development.</p></div></div>
   )
         </p>
       </div>
     </div>
   )}
+<<<<<<< HEAD
 
         </p>;
       </div>
@@ -28,3 +35,5 @@ export default function UtilsPage() { return (
 }
 '
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

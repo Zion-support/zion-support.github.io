@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
@@ -202,3 +203,5 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 export default GlobalErrorBoundary;
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

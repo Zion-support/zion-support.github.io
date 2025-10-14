@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';
@@ -8,6 +9,10 @@ export default function Page() { return (
 
       <Helmet></Helmet>
         <title>TestRunner - Zion Tech Group</title>"
+=======
+      <Helmet>
+        <title>TestRunner - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
         <meta name="description" content="Professional testrunner services by Zion Tech Group." />"
       </Helmet>"
       <div className="container mx-auto px-4 py-16"></div>""
@@ -52,10 +57,14 @@ export default function Page() { return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 )
   ); }
 
             TestRunner</h1>"
+=======
+            TestRunner</h1>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <p className="text-xl text-gray-600 mb-8">"
             Professional testrunner solutions tailored to your business needs.</p>"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>""
@@ -84,6 +93,7 @@ export default function Page() { return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 
             </button>;
           </div>
@@ -93,3 +103,5 @@ export default function Page() { return (
   );}
 }'
 "
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

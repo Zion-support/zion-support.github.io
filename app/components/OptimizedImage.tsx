@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 onError?: () => void }
 import React, { useState, useRef, useEffect } from 'react';';
 import { Helmet } from 'react-helmet-async';
 interface OptimizedImageProps { src: string;
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   alt: string;
   width?: number;
   height?: number;
@@ -13,11 +16,14 @@ interface OptimizedImageProps { src: string;
   quality?: number';
   loading?: 'lazy' | "eager"
   onLoad?: () => void;
+<<<<<<< HEAD
 
   onError?: () => void; }
 }
 const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   alt,
   width,
   height,''
@@ -28,6 +34,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
   quality = 85,''
   loading = 'lazy','
   onLoad,
+<<<<<<< HEAD
 
   onError })
 }) => {;
@@ -35,6 +42,11 @@ const [isLoaded, setIsLoaded] = useState(false);
 const [isError, setIsError] = useState(false);
 const [isInView, setIsInView] = useState(priority);
 const imgRef = useRef<HTMLImageElement>(null)
+=======
+  const [isError, setIsError] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imgRef = useRef<HTMLImageElement>(null)
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
   useEffect(() => {
     if (priority) return;
 const observer = new IntersectionObserver()
@@ -45,6 +57,7 @@ const observer = new IntersectionObserver()
           setIsInView(true)
           observer.disconnect()}
       },
+<<<<<<< HEAD
 
       { threshold: 0.1,'"
         rootMargin: "50px" }
@@ -80,6 +93,13 @@ const getOptimizedSrc = (originalSrc: string) => {''
     // For external images, return as-is'
     if (originalSrc.startsWith('http')) { return originalSrc }
 
+=======
+  // Generate WebP src if supported
+  const getOptimizedSrc = (originalSrc: string) => {''
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'
+      return originalSrc}
+      return originalSrc;}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
       return originalSrc;}
     // For local images, you could implement WebP conversion here
     return originalSrc;
@@ -89,6 +109,7 @@ const getOptimizedSrc = (originalSrc: string) => {''
   const optimizedSrc = getOptimizedSrc(src)
   return (
     <>
+<<<<<<< HEAD
 
       { priority && (
         <Helmet></Helmet> }"
@@ -154,3 +175,29 @@ const getOptimizedSrc = (originalSrc: string) => {''
       </div>
     </>
 "
+=======
+        </Helmet>
+      )
+      <div
+      >
+        { /* Placeholder */ }
+        { !isLoaded && !isError && (
+          <div
+          >
+            <div className="text-gray-400 text-sm">Loading...</div>"
+          </div>
+          >
+            <div className="text-gray-400 text-sm text-center">"
+              <div className="text-2xl mb-2">📷</div>"
+              <div>Image not available</div>
+            </div>
+          </div>
+          />
+        )
+      </div>
+    </>
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

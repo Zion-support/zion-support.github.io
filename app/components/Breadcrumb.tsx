@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
@@ -9,6 +10,8 @@ const Breadcrumb: React.FC = () => {
   if (pathnames.length === 0) {
     return null;
   }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 
   const getBreadcrumbName = (pathname: string) => {
     const nameMap: Record<string, string> = {
@@ -44,6 +47,7 @@ const Breadcrumb: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-3 px-4">
       <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
@@ -93,3 +97,5 @@ export default Breadcrumb;
 export default Breadcrumb;
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";";
 import { Helmet } from "react-helmet-async";
 ;
@@ -12,6 +13,10 @@ const Main: React.FC = () => {
       {/* Hero Section */}"
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
         <div className="max-w-6xl mx-auto text-center"></div>"
+=======
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Main
           </h1>"
@@ -21,6 +26,7 @@ const Main: React.FC = () => {
           </p>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Content Section */}"
       <section className="py-16 px-4">"
@@ -28,6 +34,13 @@ const Main: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center"></div>
             <div></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
               <p className="text-lg text-gray-600 mb-6">
                 We provide comprehensive main
                 solutions tailored to your specific needs and requirements.
@@ -62,10 +75,15 @@ const Main: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center"></div>"
+=======
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>"

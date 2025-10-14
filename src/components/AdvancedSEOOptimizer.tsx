@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from "react"";
 import { Helmet } from "react-helmet-async";
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
 export default function AdvancedSEOOptimizer() {
   return (
     <div></div>
@@ -10,6 +13,7 @@ export default function AdvancedSEOOptimizer() {
           content="Professional advanced SEO optimization services by Zion Tech Group."
         />
       </Helmet>
+<<<<<<< HEAD
 
       <h1>Advanced SEO Optimizer</h1>
       <p>This component is under development.</p>
@@ -18,3 +22,6 @@ export default function AdvancedSEOOptimizer() {
 
 }
 "
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad

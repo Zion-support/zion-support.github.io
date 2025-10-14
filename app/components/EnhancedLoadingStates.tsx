@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 ;
 const EnhancedLoadingStates = () => {
@@ -8,3 +9,11 @@ const EnhancedLoadingStates = () => {
     </div>
 ")
 }
+=======
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54ad
