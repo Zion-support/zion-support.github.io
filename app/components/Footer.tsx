@@ -69,9 +69,7 @@ const services = [
             </Link>
             <p className="text-gray-400mb-6 max-w-sm">
               Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, 
-              and digital transformation services for businesses worldwide.
-            </p>
-            
+              and digital transformation services for businesses worldwide.</p>
             {/* Contact Info */}
             <div className="space-y-3mb-6">
               <div className="flexitems-center space-x-3 text-gray-300">
@@ -87,7 +85,6 @@ const services = [
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
-
             {/* Social Links */}
             <div className="flexspace-x-4">
               {socialLinks.map((social) => (
@@ -107,7 +104,6 @@ const services = [
               ))}
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
@@ -125,7 +121,6 @@ const services = [
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
@@ -143,7 +138,6 @@ const services = [
               ))}
             </ul>
           </div>
-
           {/* Support & Legal */}
           <div>
             <h3 className="text-whitefont-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
@@ -173,14 +167,12 @@ const services = [
             </ul>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="mt-16pt-8 border-t border-slate-700/50">
           <div className="max-w-2xlmx-auto text-center">
             <h3 className="text-2xlfont-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
             <p className="text-gray-300mb-6 text-lg">
-              Get the latest insights on AI and IT trends delivered to your inbox.
-            </p>
+              Get the latest insights on AI and IT trends delivered to your inbox.</p>
             <div className="flexflex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -194,7 +186,6 @@ const services = [
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="mt-12pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flexitems-center space-x-2 text-gray-400 mb-4 md:mb-0">
@@ -211,5 +202,4 @@ const services = [
     </footer>
   );
 };
-
 export default Footer;

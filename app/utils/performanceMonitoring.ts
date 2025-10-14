@@ -15,18 +15,7 @@ export const performanceMonitoring = {
       // Send to analytics
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', 'performance_measurement', {
-<<<<<<< HEAD
-          name: name,
-          duration: measure.duration
-        })
-=======
-<<<<<<< HEAD
-          name: name;,
-          duration: measure.duration
-=======
-          name: name,
-          duration: measure.duration;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+
         });
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
       }

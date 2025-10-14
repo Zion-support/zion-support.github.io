@@ -25,7 +25,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
-
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
@@ -40,7 +39,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: '5G Solutions', href: '/5G-solutions' }
       ]
     },
     { 
@@ -61,15 +60,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-  
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
   };
-  
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
   };
@@ -84,7 +80,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </div>
             <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hiddenlg:flex items-center space-x-8">
             {navigation.map((item) => {
@@ -105,7 +100,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4h-4 ml-1" />}
                   </Link>
-                  
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
                     <div className="absoluteleft-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
@@ -124,7 +118,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               );
             })}
           </div>
-
           {/* CTA Button */}
           <div className="hiddenlg:flex items-center space-x-4">
             <Link
@@ -134,7 +127,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               Get Started
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hiddenflex items-center space-x-2">
             <button
@@ -147,7 +139,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
         <div className="px-2pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
@@ -167,7 +158,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     {item.name}
                     <ChevronDownIcon className="w-4h-4 ml-auto" />
                   </button>
-                  
                   {/* Mobile Submenu */}
                   <div className={`pl-6 ${(item.name === 'Services' ? isServicesOpen : isSolutionsOpen) ? 'block' : 'hidden'}`}>
                     {item.submenu.map((subItem) => (
@@ -208,5 +198,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     </nav>
   );
 }
-
 export default Navigation;
