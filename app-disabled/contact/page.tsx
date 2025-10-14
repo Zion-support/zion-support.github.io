@@ -1,34 +1,30 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client;
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: ',
     company: ',
     phone: ',
     service: ',
     message: ';)
-})const [isSubmitting, setIsSubmitting] = useState(false);
-
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
-
-const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
-
+})const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle)
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
     setFormData(prev => ({
     message: '';)
 })
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
       ...prev,
       [e.target.name]: e.target.value;)
 })))
-}, []);
-
-const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;
-  const handleSubmit = useCallback(async (e: .FormEvent) => {;
-  const handleSubmit = useCallback (async (e: .FormEvent) => {;
-    e.preventDefault();    setIsSubmitting(true);
+}, [])
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({
+  const handleSubmit = useCallback(async (e: .FormEvent) => {
+  const handleSubmit = useCallback (async (e: .FormEvent) => {
+    e.preventDefault();    setIsSubmitting(true)
       setFormData({
         name: ',
         email: ',
@@ -39,15 +35,12 @@ message: ']
     });]
     } catch (error) {
       setSubmitStatus('error)]
-      setSubmitStatus('error);
-
+      setSubmitStatus('error)
     } finally {
-      setIsSubmitting(false);
-
-  }, []);
-
+      setIsSubmitting(false)
+  }, [])
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-      
+
         <title>Contact Us - Zion Tech Group | Get in Touch<
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com 
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
@@ -65,7 +58,7 @@ message: ']
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact Zion Tech Group for advanced AI and IT solutions" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -74,7 +67,7 @@ message: ']
         <meta name="keywords" content="contact, AI consulting, IT support, technology consultation" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
-      
+
       {/* Hero Section */}
 
       <section className="relative py-20 px-4 overflow-hidden></section>
@@ -127,7 +120,7 @@ message: ']
                         />
                       </div>
                     </div>
-                    
+
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -165,7 +158,7 @@ message: ']
                         Send Message
         </div>
       </div>
-  );
+  )
 }
       {/* Contact Form and Info *
       <section className="py-20 px-4>
@@ -175,7 +168,7 @@ message: ']
             {/* Contact Form *
             <div className=bg-white/5 backdrop-blur-sm border border-white
               <h2 className="text-3xl font-bold text-white mb-6>Send us a message<
-              
+
               {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
                   <Circle className="w-5 h-5 text-green-400 mr-2 
                   <span className="text-green-400>Message sent successfully!<
@@ -198,7 +191,7 @@ message: ']
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
                     placeholder="Tell us about your project..."
-                  
+
                 <
 
                 <button
@@ -212,7 +205,7 @@ message: ']
                       Sending...
                     <)
                   ) : (<>
-                      
+
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
                 <p className="text-gray-300 mb-8">
@@ -224,7 +217,7 @@ message: ']
               <div className="space-y-6>
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
+
                     <h3 className="text-lg font-semibold text-white mb-1><
                     <p className="text-gray-300>+1-302-464-0950<
                     <p className="text-sm text-gray-400>Mon-Fri 9AM-6PM EST<
@@ -233,7 +226,7 @@ message: ']
 
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
+
                     <h3 className="text-lg font-semibold text-white mb-1>Email<
                     <p className="text-gray-300>kleber@ziontechgroup.com<
                     <p className="text-sm text-gray-400">Well respond within 24 hours<
@@ -242,7 +235,7 @@ message: ']
 
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
+
                     <h3 className="text-lg font-semibold text-white mb-1>Office<
                     <p className="text-gray-300>364 E Main St STE 1008<
                     <p className="text-gray-300>Middletown, DE 19709<
@@ -251,7 +244,7 @@ message: ']
 
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
+
                     <h3 className="text-lg font-semibold text-white mb-1>Business Hours<
                     <p className="text-gray-300>Monday - Friday: 9:00 AM - 6:00 PM<
                     <p className="text-gray-300>Saturday: 10:00 AM - 4:00 PM<
@@ -267,8 +260,7 @@ message: ']
 
       <Footer 
     <
-  );
-
+  )
 )]
     }
 

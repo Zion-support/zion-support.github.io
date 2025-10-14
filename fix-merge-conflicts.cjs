@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
@@ -7,42 +5,39 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the latest version (after   } catch (error) {
+    // Remove merge conflict markers
+    content = content.replace(/ursor\/fix-errors-and-merge-to-main-[a-z0-9]+/g, '');
+    
+    // Fix common syntax errors
+    content = content.replace(/;\s*$/gm, ';');
+    content = content.replace(/\s+$/gm, '');
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-function findTsxFiles(dir) {
-  const files = [];
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir);
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findAndFixFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('ursor/fix-errors-and-merge-to-main')) {
+        fixMergeConflicts(filePath);
       }
     }
   }
-  
-  traverse(dir);
-  return files;
 }
 
-// Find all TypeScript/TSX files
-const files = findTsxFiles('./app');
-files.push('./App.tsx');
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+// Start fixing from the workspace root
+findAndFixFiles('/workspace');
+console.log('Merge conflict fixing completed!');

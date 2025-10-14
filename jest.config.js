@@ -29,4 +29,4 @@ export default {
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   preset: 'ts-jest'
-};
+}

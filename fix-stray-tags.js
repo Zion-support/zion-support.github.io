@@ -1,4 +1,4 @@
-// fix-stray-tags - Basic implementation;
+// fix-stray-tags - Basic implementation
 export default function fix-stray-tags() {
-  return null;
+  return null
 }
