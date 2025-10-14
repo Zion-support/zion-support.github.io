@@ -15,7 +15,7 @@ const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-  const resources = [
+  const resources= [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API references',
@@ -44,7 +44,7 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'What support do you provide after implementation?',
-      answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.',
+      answer: 'We provide 24/7 technicalsupport, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our supportincludesmonitoring, troubleshooting, and performance optimization.',
       category: 'support'
     },
     {
@@ -59,17 +59,17 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'What security measures do you have in place?',
-      answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.',
+      answer: 'We implement enterprise-grade securityincludingencryption, access controls, regular securityaudits, and compliancewithindustrystandardslikeSOC2, GDPR, and HIPAA.',
       category: 'security'
     },
     {
       question: 'Can you integrate with our existing systems?',
-      answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.',
+      answer: 'Absolutely. We specializeinseamlessintegrationwithexistingsystemsandcanworkwithmostplatforms, databases, and APIs to ensure smooth data flow and functionality.',
       category: 'integration'
     },
     {
       question: 'What happens if we need to scale up?',
-      answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.',
+      answer: 'Our solutions are designed to scale with your business. We caneasilyaddmorecapacity, features, or usersasyourneedsgrow, with minimal disruption to your operations.',
       category: 'scaling'
     },
     {
@@ -79,7 +79,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const supportChannels = [
+  const supportChannels= [
     {
       name: 'Phone Support',
       description: 'Speak directly with our technical experts',
@@ -114,16 +114,16 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
+  const categories= ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 
-  const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredFAQs= faqs.filter(faq => {
+    const matchesSearch= faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
+    const matchesCategory= selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const toggleFAQ = (index: number) => {
+  const toggleFAQ= (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
@@ -131,7 +131,7 @@ const SupportPage: React.FC = () => {
     <>
       <Helmet>
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
-        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
+        <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact ourexpertteamviaphone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
       </Helmet>
 
@@ -143,7 +143,7 @@ const SupportPage: React.FC = () => {
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Support</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Get the help you need, when you need it. Our expert support team is available 24/7 to assist with all your AI and IT solutions.
+              Get thehelpyouneed, when you need it. Our expert support team is available 24/7 to assist with all your AI and IT solutions.
             </p>
 
             {/* Search Bar */}
@@ -287,7 +287,7 @@ const SupportPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive documentation, tutorials, and community resources.
+                Explore ourcomprehensivedocumentation, tutorials, and community resources.
               </p>
             </div>
 
@@ -331,7 +331,7 @@ const SupportPage: React.FC = () => {
                 Can&apos;t find what you&apos;re looking for? Our expert team is here to help with any questions or issues.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105">
                   <Phone className="w-5 h-5" />
                   Call Support
                 </button>

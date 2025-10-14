@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Logo Designer Page: React.FC = () => {
+const AiLogoDesignerPage: React.FC = () => {
   return (
     <>
       <Helmet>

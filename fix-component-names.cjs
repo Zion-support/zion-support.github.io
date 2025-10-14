@@ -1,102 +1,100 @@
 const fs = require('fs');
-const { glob } = require('glob');
+const path = require('path');
+const glob = require('glob');
 
-async function fixFile(filePath) {
+// Function to convert kebab-case to PascalCase
+function kebabToPascalCase(str) {
+  return str
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
+}
+
+// Function to fix component names in a file
+function fixComponentNames(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    let modified = false;
+
+    // Fix component declarations with spaces
+    const componentRegex = /const\s+([A-Za-z][A-Za-z0-9\s]+)\s*:\s*React\.FC/g;
+    const matches = content.match(componentRegex);
     
-    // Fix component names with spaces in various contexts
-    content = content
-      // Fix const declarations with spaces
-      .replace(/const\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)\s*:/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `const ${cleanName}:`;
-      })
-      
-      // Fix function declarations with spaces
-      .replace(/function\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)\s*\(/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `function ${cleanName}(`;
-      })
-      
-      // Fix export default with spaces
-      .replace(/export\s+default\s+([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `export default ${cleanName}`;
-      })
-      
-      // Fix JSX component names with spaces
-      .replace(/<([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `<${cleanName}`;
-      })
-      
-      // Fix closing JSX tags with spaces
-      .replace(/<\/([A-Z][a-zA-Z]*\s+[A-Z][a-zA-Z]*\s*[A-Za-z]*)>/g, (match, name) => {
-        const cleanName = name.replace(/\s+/g, '');
-        return `</${cleanName}>`;
-      })
-      
-      // Fix specific patterns like "Not Found Page" -> "NotFoundPage"
-      .replace(/Not\s+Found\s+Page/g, 'NotFoundPage')
-      .replace(/Five\s+G\s+Consulting\s+Page/g, 'FiveGConsultingPage')
-      .replace(/Five\s+G\s+Data\s+Analytics\s+Page/g, 'FiveGDataAnalyticsPage')
-      .replace(/Five\s+G\s+Deployment\s+Page/g, 'FiveGDeploymentPage')
-      .replace(/Five\s+G\s+Edge\s+Computing\s+Page/g, 'FiveGEdgeComputingPage')
-      .replace(/Five\s+G\s+Implementation\s+Page/g, 'FiveGImplementationPage')
-      .replace(/Five\s+G\s+Infrastructure\s+Page/g, 'FiveGInfrastructurePage')
-      .replace(/Five\s+G\s+Integration\s+Page/g, 'FiveGIntegrationPage')
-      .replace(/Five\s+G\s+IoT\s+Solutions\s+Page/g, 'FiveGIoTSolutionsPage')
-      .replace(/Five\s+G\s+Maintenance\s+Page/g, 'FiveGMaintenancePage')
-      .replace(/Five\s+G\s+Mobile\s+Applications\s+Page/g, 'FiveGMobileApplicationsPage')
-      .replace(/Five\s+G\s+Modernization\s+Page/g, 'FiveGModernizationPage')
-      .replace(/Five\s+G\s+Monitoring\s+Page/g, 'FiveGMonitoringPage')
-      .replace(/Five\s+G\s+Network\s+Infrastructure\s+Page/g, 'FiveGNetworkInfrastructurePage')
-      .replace(/Five\s+G\s+Network\s+Optimization\s+Page/g, 'FiveGNetworkOptimizationPage')
-      .replace(/Five\s+G\s+Optimization\s+Page/g, 'FiveGOptimizationPage')
-      .replace(/Five\s+G\s+Performance\s+Page/g, 'FiveGPerformancePage')
-      .replace(/Five\s+G\s+Private\s+Networks\s+Page/g, 'FiveGPrivateNetworksPage')
-      .replace(/Five\s+G\s+Reliability\s+Page/g, 'FiveGReliabilityPage')
-      .replace(/Five\s+G\s+Scalability\s+Page/g, 'FiveGScalabilityPage')
-      .replace(/Five\s+G\s+Security\s+Page/g, 'FiveGSecurityPage')
-      .replace(/Five\s+G\s+Smart\s+City\s+Solutions\s+Page/g, 'FiveGSmartCitySolutionsPage')
-      .replace(/Five\s+G\s+Solutions\s+Page/g, 'FiveGSolutionsPage')
-      .replace(/Five\s+G\s+Support\s+Page/g, 'FiveGSupportPage')
-      .replace(/Five\s+G\s+Testing\s+Page/g, 'FiveGTestingPage')
-      .replace(/Five\s+G\s+Training\s+Page/g, 'FiveGTrainingPage')
-      .replace(/Five\s+G\s+Transformation\s+Page/g, 'FiveGTransformationPage')
-      .replace(/Five\s+G\s+Upgrade\s+Page/g, 'FiveGUpgradePage');
+    if (matches) {
+      matches.forEach(match => {
+        const componentName = match.match(/const\s+([A-Za-z][A-Za-z0-9\s]+)\s*:/)[1];
+        const fixedName = componentName.replace(/\s+/g, '');
+        const fixedMatch = match.replace(componentName, fixedName);
+        content = content.replace(match, fixedMatch);
+        modified = true;
+      });
+    }
+
+    // Fix interface names with spaces
+    const interfaceRegex = /interface\s+([A-Za-z][A-Za-z0-9\s]+)\s*Props/g;
+    const interfaceMatches = content.match(interfaceRegex);
     
-    if (content !== originalContent) {
+    if (interfaceMatches) {
+      interfaceMatches.forEach(match => {
+        const interfaceName = match.match(/interface\s+([A-Za-z][A-Za-z0-9\s]+)\s*Props/)[1];
+        const fixedName = interfaceName.replace(/\s+/g, '');
+        const fixedMatch = match.replace(interfaceName, fixedName);
+        content = content.replace(match, fixedMatch);
+        modified = true;
+      });
+    }
+
+    // Fix property names with spaces in interfaces
+    const propRegex = /(\w+)\s+([A-Za-z][A-Za-z0-9\s]+)\??\s*:/g;
+    const propMatches = content.match(propRegex);
+    
+    if (propMatches) {
+      propMatches.forEach(match => {
+        const propName = match.match(/(\w+)\s+([A-Za-z][A-Za-z0-9\s]+)\??\s*:/)[2];
+        if (propName.includes(' ')) {
+          const fixedName = propName.replace(/\s+/g, '');
+          const fixedMatch = match.replace(propName, fixedName);
+          content = content.replace(match, fixedMatch);
+          modified = true;
+        }
+      });
+    }
+
+    // Fix use Effect -> useEffect
+    content = content.replace(/use Effect/g, 'useEffect');
+    content = content.replace(/use State/g, 'useState');
+    content = content.replace(/use Callback/g, 'useCallback');
+    content = content.replace(/use Memo/g, 'useMemo');
+    content = content.replace(/use Ref/g, 'useRef');
+    content = content.replace(/use Context/g, 'useContext');
+    content = content.replace(/use Reducer/g, 'useReducer');
+    content = content.replace(/use ImperativeHandle/g, 'useImperativeHandle');
+    content = content.replace(/use LayoutEffect/g, 'useLayoutEffect');
+    content = content.replace(/use DebugValue/g, 'useDebugValue');
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  try {
-    const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-    
-    console.log(`Found ${files.length} files to process...`);
-    
-    let fixedCount = 0;
-    for (const file of files) {
-      if (await fixFile(file)) {
-        fixedCount++;
-      }
-    }
-    
-    console.log(`Fixed ${fixedCount} files.`);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
+// Find all TypeScript/JavaScript files
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-main();
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixComponentNames(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);

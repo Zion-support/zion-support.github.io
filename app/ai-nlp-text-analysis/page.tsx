@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Nlp Text Analysis Page: React.FC = () => {
+const AiNlpTextAnalysisPage: React.FC = () => {
   return (
     <>
       <Helmet>

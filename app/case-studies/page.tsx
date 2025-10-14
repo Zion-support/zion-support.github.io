@@ -124,7 +124,7 @@ const CaseStudiesPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const stats= [
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
     { label: 'Team Members', value: '50+', icon: Users },
@@ -250,7 +250,7 @@ const CaseStudiesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />

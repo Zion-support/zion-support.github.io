@@ -1,6 +1,6 @@
-export const seo Optimizer = {
+export constseoOptimizer= {
   optimize: (data: { title?: string; description?: string; keywords?: string }) => {
-    const optimized = { ...data }
+    const optimized= { ...data }
     
     // Optimize title length
     if (optimized.title && optimized.title.length > 60) {
@@ -12,8 +12,7 @@ export const seo Optimizer = {
       optimized.description = optimized.description.substring(0, 157) + '...'
     }
     
-    return optimized
-  },
+    return optimized},
   validate: (data: { title?: string; description?: string; keywords?: string }) => {
     const errors: string[] = [];
     
@@ -22,6 +21,5 @@ export const seo Optimizer = {
     if (data.title && data.title.length > 60) errors.push('Title too long')
     if (data.description && data.description.length > 160) errors.push('Description too long')
     
-    return errors
-  }
+    return errors}
 }

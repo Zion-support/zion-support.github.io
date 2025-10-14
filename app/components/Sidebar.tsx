@@ -5,7 +5,7 @@ import { Phone } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface Sidebar Props {
+interface SidebarProps {
   is Open: boolean;
   on Close: () => void;
 }
@@ -39,7 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <nav className="mt-6">
           <ul className="space-y-2 px-4">
             {navigation Items.map((item) => {
-              const Icon = item.icon;
+              const Icon= item.icon;
               return (
                 <likey={item.name}>
                   <Link to={item.href}

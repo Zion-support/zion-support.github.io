@@ -1,6 +1,6 @@
-export const preload Optimizer = {
+export constpreloadOptimizer= {
   preload: (href: string, as: string) => {
-    const link = document.create Element('link');
+    const link= document.create Element('link');
     link.rel = 'preload';
     link.href = href;
     link.as = as;

@@ -17,7 +17,7 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
 }
 
-const PerformanceMonitor = () => {
+const PerformanceMonitor= () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
   useEffect(() => {
@@ -27,18 +27,18 @@ const PerformanceMonitor = () => {
     const currentMetrics: PerformanceMetrics = {};
 
     // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
+    const lcpObserver= new PerformanceObserver((list) => {
+      const entries= list.getEntries();
+      const lastEntry= entries[entries.length - 1];
       currentMetrics.lcp = lastEntry.startTime;
       setMetrics({ ...currentMetrics });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver= new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
+        const fidEntry= entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
           currentMetrics.fid = fidEntry.processingStart - fidEntry.startTime;
           setMetrics({ ...currentMetrics });
@@ -48,10 +48,10 @@ const PerformanceMonitor = () => {
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
+    let clsValue= 0;
+    const clsObserver= new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
+        const layoutShiftEntry= entry as LayoutShift;
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
         }
@@ -62,7 +62,7 @@ const PerformanceMonitor = () => {
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver= new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
           currentMetrics.fcp = entry.startTime;
@@ -73,16 +73,15 @@ const PerformanceMonitor = () => {
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigationEntry= performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       currentMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
       setMetrics({ ...currentMetrics });
     }
 
-    // Send metrics after page load
-    const sendMetrics = () => {
+    // Send metricsafterpageloadconstsendMetrics= () => {
       if (Object.keys(currentMetrics).length > 0) {
-        // In a real application, you would send these metrics to your analytics service
+        // In arealapplication, you would send these metrics to your analytics service
         console.warn('Performance Metrics:', currentMetrics);
       }
     };
@@ -105,9 +104,7 @@ const PerformanceMonitor = () => {
     return null;
   }
 
-  // Development mode: show performance metrics
-
-  const get Score Color = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+  // Development mode: show performancemetricsconstgetScoreColor= (value: number | undefined, thresholds: { good: number; poor: number }) => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

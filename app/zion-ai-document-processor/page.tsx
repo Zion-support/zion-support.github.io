@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Zion Ai Document Processor Page: React.FC = () => {
+const ZionAiDocumentProcessorPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 
-const services = [
+const services= [
   { name: 'AI & Machine Learning', path: '/ai-services' },
   { name: 'Cloud Solutions', path: '/cloud-services' },
   { name: 'Cybersecurity', path: '/cybersecurity' },
@@ -13,7 +13,7 @@ const services = [
   { name: 'Digital Transformation', path: '/digital-transformation' }
 ];
 
-const quickLinks = [
+const quickLinks= [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services' },
@@ -22,7 +22,7 @@ const quickLinks = [
   { name: 'Careers', path: '/careers' }
 ];
 
-const resources = [
+const resources= [
   { name: 'Case Studies', path: '/case-studies' },
   { name: 'Blog', path: '/blog' },
   { name: 'Documentation', path: '/docs' },
@@ -31,7 +31,7 @@ const resources = [
   { name: 'Help Center', path: '/help' }
 ];
 
-const legal = [
+const legal= [
   { name: 'Privacy Policy', path: '/privacy' },
   { name: 'Terms of Service', path: '/terms' },
   { name: 'Cookie Policy', path: '/cookies' },
@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <p className="text-smtext-gray-400">Location</p>
-                <p className="text-whitefont-medium">364 E Main St STE 1008, Middletown, DE 19709</p>
+                <p className="text-whitefont-medium">364 EMainStSTE1008, Middletown, DE 19709</p>
               </div>
             </div>
           </div>
@@ -152,13 +152,13 @@ const Footer: React.FC = () => {
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
           <div className="text-center">
             <h3 className="text-xlfont-semiboldtext-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 text-smmb-4">Get the latest insights on AI, technology trends, and industry updates.</p>
+            <p className="text-gray-300 text-smmb-4">Get thelatestinsightsonAI, technology trends, and industry updates.</p>
             <div className="flexflex-colsm:flex-row gap-3 max-w-md mx-auto">
               <inputtype="email"
                 placeholder="Enteryour email"
                 className="flex-1 px-4py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <but ton className="bg-gradient-to-rfrom-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <but tonclassName="bg-gradient-to-rfrom-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>

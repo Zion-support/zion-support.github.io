@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOEnhancer Props {
+interface SEOEnhancerProps {
   title: string;
   description: string;
   keywords?: string[];

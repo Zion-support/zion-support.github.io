@@ -11,7 +11,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   // const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu= () => {
     setIsOpen(!isOpen);
   };
 
@@ -23,7 +23,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarTogg
   //   setIsSolutionsOpen(!isSolutionsOpen);
   // };
 
-  const navigation = [
+  const navigation= [
     { name: 'Home', href: '/', icon: null },
     { name: 'About', href: '/about', icon: null },
     { 

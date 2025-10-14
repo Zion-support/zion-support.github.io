@@ -1,6 +1,6 @@
-export const errorTracking = {
+export consterrorTracking= {
   track: (error: Error, context?: Record<string, unknown>) => {
-    const error Info = {
+    const errorInfo= {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().to ISOString(),

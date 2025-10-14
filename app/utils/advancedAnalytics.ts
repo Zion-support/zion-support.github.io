@@ -1,5 +1,5 @@
-export const advanced Analytics = {
-  track Page View: (page: string) => {
+export constadvancedAnalytics= {
+  track PageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: page,
@@ -23,7 +23,7 @@ export const advanced Analytics = {
       });
     }
   },
-  set User Properties: (properties: Record<string, unknown>) => {
+  set UserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         custom_map: properties

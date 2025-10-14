@@ -28,7 +28,7 @@ const CareersPage: React.FC = () => {
       experience: '5+ years',
       posted: '2 days ago',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: ['PhD in Computer Science or related field', '5+ years ML/AI experience', 'Expert in Python, TensorFlow, PyTorch'],
+      requirements: ['PhD in Computer Science or related field', '5+ years ML/AI experience', 'Expert inPython, TensorFlow, PyTorch'],
       featured: true
     },
     {
@@ -93,7 +93,7 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const benefits= [
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Competitive Salary',
@@ -121,7 +121,7 @@ const CareersPage: React.FC = () => {
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
-        <meta name="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
+        <meta name="keywords" content="tech careers, AI jobs, quantum computingjobs, software engineering, remote work, tech company" />
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
@@ -135,10 +135,10 @@ const CareersPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
+              Build the future of technology with us. We&apos;re lookingforpassionateindividualstojoinourmissionofadvancingAI, quantum computing, and autonomous systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformhover:scale-105">
                 View Open Positions
               </button>
               <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
@@ -259,8 +259,8 @@ const CareersPage: React.FC = () => {
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-white mb-6">Our Culture</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We foster an environment of innovation, collaboration, and continuous learning. 
-                  Our team is diverse, inclusive, and passionate about pushing the boundaries of technology.
+                  We fosteranenvironmentofinnovation, collaboration, and continuous learning. 
+                  Our teamisdiverse, inclusive, and passionate about pushing the boundaries of technology.
                 </p>
               </div>
 
@@ -304,7 +304,7 @@ const CareersPage: React.FC = () => {
                 We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transformhover:scale-105">
                   Send Your Resume
                 </button>
                 <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">

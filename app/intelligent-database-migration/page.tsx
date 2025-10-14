@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Intelligent Database Migration Page: React.FC = () => {
+const IntelligentDatabaseMigrationPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Smart Inventory Optimizer Page: React.FC = () => {
+const SmartInventoryOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>

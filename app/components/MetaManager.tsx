@@ -1,7 +1,7 @@
-import React, { use Effect } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface Meta Manager Props {
+interface MetaManagerProps {
   title?: string;
   description?: string;
   keywords?: string;
@@ -17,10 +17,10 @@ const MetaManager: React.FC<MetaManagerProps> = ({
   keywords,
   canonical,
   og Image,
-  og Type = 'website',
-  twitter Card = 'summary_large_image'
+  og Type= 'website',
+  twitter Card= 'summary_large_image'
 }) => {
-  use Effect(() => {
+  useEffect(() => {
     // Update document title
     if (title) {
       document.title = title;
@@ -28,11 +28,11 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 
     // Update meta description
     if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
+      const metaDescription= document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', description);
       } else {
-        const meta = document.createElement('meta');
+        const meta= document.createElement('meta');
         meta.name = 'description';
         meta.content = description;
         document.head.appendChild(meta);
@@ -41,11 +41,11 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 
     // Update meta keywords
     if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      const metaKeywords= document.querySelector('meta[name="keywords"]');
       if (metaKeywords) {
         metaKeywords.setAttribute('content', keywords);
       } else {
-        const meta = document.createElement('meta');
+        const meta= document.createElement('meta');
         meta.name = 'keywords';
         meta.content = keywords;
         document.head.appendChild(meta);
@@ -54,11 +54,11 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 
     // Update canonical URL
     if (canonical) {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      const canonicalLink= document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
         canonicalLink.setAttribute('href', canonical);
       } else {
-        const link = document.createElement('link');
+        const link= document.createElement('link');
         link.rel = 'canonical';
         link.href = canonical;
         document.head.appendChild(link);

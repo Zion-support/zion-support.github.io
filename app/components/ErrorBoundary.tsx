@@ -19,8 +19,7 @@ class Error Boundary extends Component<Props, State> {
     return { hasError: true, error };
   }
   componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged
-  }
+    // Error logged}
   render() {
     if (this.state.has Error) {
       return (

@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <>
       <Helmet>
         <title>Zion Tech Group - Leading Technology Solutions</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge technology solutions, AI services, cloud infrastructure, and digital transformation services for businesses worldwide." />
+        <meta name="description" content="Zion Tech Group provides cutting-edge technologysolutions, AI services, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="technology solutions, AI services, cloud computing, digital transformation, software development" />
       </Helmet>
       
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
               Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading the future of technology with innovative solutions, AI-powered services, 
+              Leading thefutureoftechnologywithinnovativesolutions, AI-powered services, 
               and cutting-edge digital transformation strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

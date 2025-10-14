@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Users, CheckCircle, Zap, Award, TrendingUp, Clock, Globe, BarChart3 } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, set Counters] = use State({
+  const [counters, set Counters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
   });
 
 
-  const statistics = [
+  const statistics= [
     {
       icon: Users,
       value: counters.clients,
@@ -56,7 +56,7 @@ const ContentStatistics: React.FC = () => {
       description: 'Global presence'
     },
     {
-      icon: Bar Chart 3,
+      icon: Bar Chart3,
       value: counters.uptime,
       label: 'Uptime Guarantee',
       suffix: '%',
@@ -65,7 +65,7 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  const features = [
+  const features= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -92,7 +92,7 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const benefits= [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -103,7 +103,7 @@ const ContentStatistics: React.FC = () => {
     'Proven track record of success'
   ];
 
-  const achievements = [
+  const achievements= [
     {
       icon: Star,
       title: 'Industry Recognition',
@@ -125,7 +125,7 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
-    const targetCounters = {
+    const targetCounters= {
       clients: 10000,
       projects: 5000,
       satisfaction: 99,
@@ -134,14 +134,13 @@ const ContentStatistics: React.FC = () => {
       uptime: 99
     };
 
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const step Duration = duration / steps;
+    const duration= 3000; // 3 secondsconststeps= 60;
+    const stepDuration= duration / steps;
 
-    const timers = Object.keys(target Counters).map((key) => {
-      const target = target Counters[key as keyof typeof target Counters];
-      const increment = target / steps;
-      let current = 0;
+    const timers= Object.keys(target Counters).map((key) => {
+      const target= target Counters[key as keyof typeof target Counters];
+      const increment= target / steps;
+      let current= 0;
 
       return set Interval(() => {
         current += increment;
@@ -273,11 +272,11 @@ const ContentStatistics: React.FC = () => {
               Be part of our growing community of successful businesses. Start your transformation journey today.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+              <but tonclassName="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Get Started</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <but tonclassName="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 View Case Studies
               </butn>
             </div>

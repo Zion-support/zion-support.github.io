@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Zion Lead Magnet Page: React.FC = () => {
+const ZionLeadMagnetPage: React.FC = () => {
   return (
     <>
       <Helmet>

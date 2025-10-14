@@ -1,4 +1,4 @@
-export const enhancedErrorHandler = {
+export constenhancedErrorHandler= {
   handleError: (error: Error, context?: string) => {
     console.error('Error occurred: ', error);
     
@@ -16,15 +16,15 @@ export const enhancedErrorHandler = {
   },
   
   handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { 
+    const errorWithResponse= error as { 
       response?: { 
         status?: number; 
         data?: { message?: string } 
       }; 
       message?: string 
     };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status= errorWithResponse.response?.status;
+    const message= errorWithResponse.response?.data?.message || errorWithResponse.message;
     
     switch (status) {
       case 400:
@@ -43,7 +43,7 @@ export const enhancedErrorHandler = {
   },
   
   getErrorMessage: (error: unknown) => {
-    const errorWithResponse = error as { 
+    const errorWithResponse= error as { 
       response?: { status?: number }; 
       message?: string 
     };

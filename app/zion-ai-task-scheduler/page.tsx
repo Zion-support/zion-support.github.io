@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Zion Ai Task Scheduler Page: React.FC = () => {
+const ZionAiTaskSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>

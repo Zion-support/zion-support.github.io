@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Document Scanner Page: React.FC = () => {
+const AiDocumentScannerPage: React.FC = () => {
   return (
     <>
       <Helmet>

@@ -6,4 +6,4 @@ export interface AnalyticsContextType {
   setUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+export constAnalyticsContext= createContext<AnalyticsContextType | undefined>(undefined);

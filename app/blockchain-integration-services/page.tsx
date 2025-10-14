@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Blockchain Integration Services Page: React.FC = () => {
+const BlockchainIntegrationServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>

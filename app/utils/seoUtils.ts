@@ -1,4 +1,4 @@
-export const seo Utils = {
+export constseoUtils= {
   generate Title: (page Title: string, site Name: string = 'Zion Tech Group') => {
     return `${page Title} | ${site Name}`
   },
@@ -19,8 +19,8 @@ export const seo Utils = {
     return `${baseUrl}${path}`
   },
   
-  generate Og Image: (title: string, description: string) => {
-    const params = new URLSearch Params({
+  generate OgImage: (title: string, description: string) => {
+    const params= new URLSearch Params({
       title,
       description,
       site: 'Zion Tech Group'
@@ -28,7 +28,7 @@ export const seo Utils = {
     return `https://og-image.vercel.app/${encodeURIComponent(title)}?${params.toString()}`
   },
   
-  generate Structured Data: (data: Record<string, unknown>) => {
+  generate StructuredData: (data: Record<string, unknown>) => {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',

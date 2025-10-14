@@ -4,7 +4,7 @@ import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
+  const features= [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +27,7 @@ const ContentPromotionBanner: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const benefits= [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -38,7 +38,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Proven track record of success'
   ];
 
-  const stats = [
+  const stats= [
     {
       icon: Users,
       value: '10,000+',
@@ -72,11 +72,11 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
           
           <div className="flexflex-colsm:flex-row gap-4 justify-center">
-            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+            <but tonclassName="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transformhover:scale-105">
               <Zap className="w-5 h-5" />
               Get Started Today
             </butn>
-            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <but tonclassName="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </butn>
@@ -139,11 +139,11 @@ const ContentPromotionBanner: React.FC = () => {
               Join the future of business technology. Get started with our AI solutions today and see the difference.
             </p>
             <div className="flexflex-colsm:flex-row gap-4 justify-center">
-              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+              <but tonclassName="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </butn>
-              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              <but tonclassName="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </butn>
             </div>

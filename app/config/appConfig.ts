@@ -1,4 +1,4 @@
-export const app Config = {
+export constappConfig= {
   name: 'Zion Tech Group',
   version: '1.0.0',
   description: 'Advanced AI and IT Solutions',
