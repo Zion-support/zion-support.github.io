@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -17,7 +15,6 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fps: 0)
   });
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
 const updateMetrics = () => {;
 const navigation = performance.getEntriesByType(
@@ -26,7 +23,6 @@ const navigation = performance.getEntriesByType(
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
-      
       // Measure render time;
 const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
@@ -36,7 +32,6 @@ const renderStart = performance.now();
 const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
-      
       // Measure FPS (simplified)
       let fps = 0;
       if ('requestAnimationFrame' in window) {
@@ -53,7 +48,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         };
         requestAnimationFrame(measureFPS);
       }
-      
       setMetrics({
         loadTime,
         renderTime,
@@ -61,7 +55,6 @@ const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         fps)
       });
     };
-    
     updateMetrics();
     // Update metrics every 5 seconds;
 const interval = setInterval(updateMetrics, 5000);
@@ -122,7 +115,6 @@ const interval = setInterval(updateMetrics, 5000);
 };
 export default PerformanceDashboard;
 "
-=======
 import React from 'react';
 interface PerformanceDashboardProps {
   className?: string;
@@ -136,4 +128,3 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className =
   );
 };
 export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

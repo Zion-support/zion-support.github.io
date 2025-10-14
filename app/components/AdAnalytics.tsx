@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const AdAnalytics = () => {"
   return (
@@ -6,9 +5,7 @@ const AdAnalytics = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from 'react';
-
 const AdAnalytics = () => {
   return (
     <div className="p-4">
@@ -17,6 +14,4 @@ const AdAnalytics = () => {
     </div>
   );
 };
-
 export default AdAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

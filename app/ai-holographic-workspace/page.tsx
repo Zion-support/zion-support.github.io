@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
 import { Link } from "react-router-dom
-<<<<<<< HEAD
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
-
 const AIHolographicWorkspace = () => {"
   const features = ["
     {"
@@ -32,7 +28,6 @@ const AIHolographicWorkspace = () => {"
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const capabilities = [
     "3D holographic projection technology"
     "Real-time remote collaboration tools"
@@ -47,7 +42,6 @@ const AIHolographicWorkspace = () => {"
     "Spatial computing applications"
     "Immersive presentation capabilities"
   ];
-
   const pricingPlans = [
     {
       name: "Holographic Starter"
@@ -99,7 +93,6 @@ const AIHolographicWorkspace = () => {"
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Alex Thompson"
@@ -126,14 +119,13 @@ const AIHolographicWorkspace = () => {"
       avatar: "JC"
     }
   ];
-
   const stats = [
     { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6"
     { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6"
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6"
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6"
   ];
-import { Helmet }    from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 const HomePage = () => {"
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -148,9 +140,7 @@ const HomePage = () => {"
   );
 };
 export default HomePage;
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -161,6 +151,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

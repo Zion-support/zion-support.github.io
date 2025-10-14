@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react''''';
 import { useState } from 'react''''';
 import { Link } from 'react-router-dom''''';
@@ -123,7 +122,6 @@ export default Header
 </Menu>
 </X>
 </ChevronDown>"
-=======
 import React from 'react';
 const Header: React.FC = () => {
   return (
@@ -134,4 +132,3 @@ const Header: React.FC = () => {
   );
 };
 export default Header;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

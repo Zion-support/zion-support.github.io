@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";";
 import { Helmet } from "react-helmet-async";
 ;
@@ -23,7 +22,6 @@ const CloudSolutionsPagePage = () => {
 ;
 export default CloudSolutionsPagePage;
 "
-=======
 import React from 'react';
 const CloudSolutionsPage: React.FC = () => {
   return (
@@ -34,4 +32,3 @@ const CloudSolutionsPage: React.FC = () => {
   );
 };
 export default CloudSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

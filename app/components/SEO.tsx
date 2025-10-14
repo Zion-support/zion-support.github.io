@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface SEOProps {
-
   title?: string;
   description?: string;
-
 }
-
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: "Zion Tech Group"
@@ -46,9 +41,7 @@ interface SEOProps {
       <meta name="twitter:image" content={image}  />
       { /* Canonical URL */ }
       <link rel="canonical" href={url} /></Helmet>)
-=======
 import React from "react";
-
 const SEO = () => {
   return (
     <div className="p-4">
@@ -59,6 +52,4 @@ const SEO = () => {
     </div>
   );
 };
-
 export default SEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

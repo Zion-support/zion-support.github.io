@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
 import { Helmet }    from "react-helmet-async
 import React from 'react'
-
-
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -91,7 +87,6 @@ const CareersPage: React.FC = () => {
       description: 'Competitive salary, bonuses, and comprehensive benefits package.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Helmet>
@@ -106,7 +101,6 @@ const CareersPage: React.FC = () => {
             We'
           </p>
         </div>
-
         {/* Company Culture */}
         <div className="mb-16"
           <h2 className="text-3xl font-bold text-white text-center mb-12"
@@ -122,7 +116,6 @@ const CareersPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Open Positions */}
         <div className="mb-16"
           <h2 className="text-3xl font-bold text-white text-center mb-12"
@@ -154,7 +147,6 @@ const CareersPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2"
                   </Link>
                 </div>
-                
                 <p className="text-gray-300 mb-4"
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-2"
@@ -171,7 +163,6 @@ const CareersPage: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
           <h2 className="text-3xl font-bold text-white mb-6"
@@ -198,7 +189,6 @@ const CareersPage: React.FC = () => {
               <div className="flex justify-center space-x-4"
                 <a
                   href="/"
->>>>>>> origin/main
                   className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Go Home
@@ -211,14 +201,11 @@ const CareersPage: React.FC = () => {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -229,6 +216,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

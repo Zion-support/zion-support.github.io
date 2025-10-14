@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -18,7 +17,4 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production'
   }
 };
-
 module.exports = nextConfig;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 const EnhancedFooter = () => {
   return (
@@ -12,4 +9,3 @@ const EnhancedFooter = () => {
   );
 };
 export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

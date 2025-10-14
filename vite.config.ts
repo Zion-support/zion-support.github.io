@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -40,64 +38,8 @@ export default defineConfig({
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true, // Better Safari compatibility
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    // Enhanced build optimizations
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-
-export default defineConfig({
-  plugins: [
-    react(),
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@app': path.resolve(__dirname, './app'),
-    },
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     rollupOptions: {
       output: {
-<<<<<<< HEAD
         manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
@@ -160,29 +102,19 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
-=======
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-        },
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       },
     },
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   },
   optimizeDeps: {
-<<<<<<< HEAD
     include: [
       "react",
       "react-dom",
@@ -195,8 +127,5 @@ export default defineConfig({
   // CSS optimization
   css: {
     devSourcemap: true,
-=======
-    include: ['react', 'react-dom', 'react-router-dom'],
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   },
 });

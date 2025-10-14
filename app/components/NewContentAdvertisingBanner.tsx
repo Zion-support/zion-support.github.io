@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const NewContentAdvertisingBanner = () => {"
   return (
@@ -6,9 +5,7 @@ const NewContentAdvertisingBanner = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const NewContentAdvertisingBanner = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const NewContentAdvertisingBanner = () => {
     </div>
   );
 };
-
 export default NewContentAdvertisingBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

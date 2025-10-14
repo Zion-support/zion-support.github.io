@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Page() {
@@ -31,9 +30,7 @@ export default function Page() {
     </div>);
   );
 }
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -44,6 +41,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

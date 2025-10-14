@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
@@ -20,9 +19,7 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
-
 export default function HomePage()  {
-
   const structuredData = {
 export default function HomePage() {
 const structuredData = {
@@ -37,13 +34,9 @@ const structuredData = {
       "query-input": "required name=search_term_string
     };
   };
-=======
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
-
 const HomePage = () => {
   return (
-<<<<<<< HEAD
     <>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -51,9 +44,7 @@ const HomePage = () => {
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         structuredData={structuredData}
       />
-      
       <FuturisticBackground />
-      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -69,7 +60,6 @@ const HomePage = () => {
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />
               </div>
             </div>
-            
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
               Advanced AI and IT Solutions for Modern Businesses
             </p>
@@ -77,7 +67,6 @@ const HomePage = () => {
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get Started Today
@@ -91,7 +80,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Featured Services Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
@@ -103,7 +91,6 @@ const HomePage = () => {
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
@@ -112,7 +99,6 @@ const HomePage = () => {
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
                 </div>
-                
                 <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300">
@@ -120,7 +106,6 @@ const HomePage = () => {
                     </div>
                   ))}
                 </div>
-                
                 <div className="mb-6">
                   <div className="text-center">
                     <span className="text-3xl font-bold text-white">${service.pricing.basic}</span>
@@ -128,7 +113,6 @@ const HomePage = () => {
                   </div>
                   <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
                 </div>
-                
                 <div className="flex flex-col gap-3">
                   <NeonButton to={service.href} variant="primary" size="sm">
                     Learn More
@@ -141,7 +125,6 @@ const HomePage = () => {
               </AnimatedCard>
             ))}
           </div>
-          
           <div className="text-center mt-12">
             <NeonButton to="/services" variant="primary" size="lg">
               View All Services
@@ -150,7 +133,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900"><div className="container mx-auto px-4 relative z-10">
@@ -165,7 +147,6 @@ const HomePage = () => {
                 and achieve unprecedented growth.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <div className="text-6xl font-bold text-purple-400 mb-4 animate-pulse">50+</div>
@@ -183,7 +164,6 @@ const HomePage = () => {
                 <div className="text-gray-400 text-sm">Projects delivered on time and within budget</div>
               </AnimatedCard>
             </div>
-            
             <div className="text-center">
               <NeonButton to="/about" variant="primary" size="lg">
                 Learn More About Us
@@ -193,7 +173,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-slate-900"><div className="container mx-auto px-4 relative z-10">
@@ -206,7 +185,6 @@ const HomePage = () => {
                 Let's discuss how our technology solutions can drive your business forward
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <PhoneIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -227,7 +205,6 @@ const HomePage = () => {
                 <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008</p>
               </AnimatedCard>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get In Touch
@@ -242,15 +219,12 @@ const HomePage = () => {
         </div>
       </section>
     </>
-=======
     <div className="p-4">
       <h2 className="text-2xl font-bold text-white mb-4">HomePage</h2>
       <p className="text-gray-300">
         This is a placeholder component for HomePage.
       </p>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
 };
-
 export default HomePage;

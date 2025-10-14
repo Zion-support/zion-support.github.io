@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function TermsPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const TermsPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const TermsPage: React.FC = () => {
   );
 };
 export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

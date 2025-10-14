@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const EnhancedPerformanceMonitor = () => {"
   return (
@@ -6,9 +5,7 @@ const EnhancedPerformanceMonitor = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const EnhancedPerformanceMonitor = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const EnhancedPerformanceMonitor = () => {
     </div>
   );
 };
-
 export default EnhancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

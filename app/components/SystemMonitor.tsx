@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const SystemMonitor = () => {"
   return (
@@ -6,9 +5,7 @@ const SystemMonitor = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const SystemMonitor = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const SystemMonitor = () => {
     </div>
   );
 };
-
 export default SystemMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

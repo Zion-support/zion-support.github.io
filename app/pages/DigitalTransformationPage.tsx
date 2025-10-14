@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
-
 const DigitalTransformationPage = () => {
   return (
     <div className="p-4">
@@ -13,6 +9,4 @@ const DigitalTransformationPage = () => {
     </div>
   );
 };
-
 export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

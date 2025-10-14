@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const PerformanceMetrics = () => {"
   return (
@@ -6,9 +5,7 @@ const PerformanceMetrics = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const PerformanceMetrics = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const PerformanceMetrics = () => {
     </div>
   );
 };
-
 export default PerformanceMetrics;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

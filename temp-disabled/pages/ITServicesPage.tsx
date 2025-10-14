@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react''';
@@ -106,7 +105,6 @@ const ITServicesPage: React.FC = () => {}
 }
 export default ITServicesPage
 </Icon>"
-=======
 import React from 'react';
 const ITServicesPage: React.FC = () => {
   return (
@@ -117,4 +115,3 @@ const ITServicesPage: React.FC = () => {
   );
 };
 export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

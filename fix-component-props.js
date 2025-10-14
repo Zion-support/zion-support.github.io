@@ -1,35 +1,26 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
 console.log('🔧 Fixing component props...');
-
 // Fix GlobalErrorBoundary component
 function fixGlobalErrorBoundary() {
   const componentPath = 'app/components/EnhancedErrorFeedback.tsx';
   console.log(`Fixing: ${componentPath}`);
-  
   const newContent = `import React from "react";
-
 interface GlobalErrorBoundaryProps {
   children: React.ReactNode;
 }
-
 class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { hasError: boolean }> {
   constructor(props: GlobalErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error) {
     return { hasError: true };
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Global Error Boundary caught an error:', error, errorInfo);
   }
-
   render() {
     if (this.state.hasError) {
       return (
@@ -41,28 +32,21 @@ class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { ha
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default GlobalErrorBoundary;`;
-
   fs.writeFileSync(componentPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${componentPath}`);
 }
-
 // Fix FuturisticBackground component
 function fixFuturisticBackground() {
   const componentPath = 'app/components/FuturisticBackground.tsx';
   console.log(`Fixing: ${componentPath}`);
-  
   const newContent = `import React from "react";
-
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
-
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
@@ -75,22 +59,16 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     </div>
   );
 };
-
 export default FuturisticBackground;`;
-
   fs.writeFileSync(componentPath, newContent, 'utf8');
   console.log(`✅ Fixed: ${componentPath}`);
 }
-
 // Main execution
 try {
   console.log('Fixing component props...');
-  
   fixGlobalErrorBoundary();
   fixFuturisticBackground();
-  
   console.log('\n🎉 Component props have been fixed!');
-  
 } catch (error) {
   console.error('❌ Script failed:', error.message);
   process.exit(1);

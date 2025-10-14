@@ -5,7 +5,6 @@ import {
   MapPinIcon,
   ClockIcon
 } from '@heroicons/react/24/outline';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,20 +12,17 @@ const Contact: React.FC = () => {
     company: '',
     message: ''
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
   };
-
   const contactInfo = [
     {
       icon: EnvelopeIcon,
@@ -53,7 +49,6 @@ const Contact: React.FC = () => {
       description: 'We respond quickly'
     }
   ];
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +61,6 @@ const Contact: React.FC = () => {
             can help you achieve your goals.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
@@ -103,7 +97,6 @@ const Contact: React.FC = () => {
                   />
                 </div>
               </div>
-              
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -118,7 +111,6 @@ const Contact: React.FC = () => {
                   placeholder="Your company name"
                 />
               </div>
-              
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -134,7 +126,6 @@ const Contact: React.FC = () => {
                   placeholder="Tell us about your project or requirements..."
                 />
               </div>
-              
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -143,7 +134,6 @@ const Contact: React.FC = () => {
               </button>
             </form>
           </div>
-
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -155,7 +145,6 @@ const Contact: React.FC = () => {
                 and we'll get back to you as soon as possible.
               </p>
             </div>
-
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -178,7 +167,6 @@ const Contact: React.FC = () => {
                 </div>
               ))}
             </div>
-
             {/* Additional Info */}
             <div className="bg-gray-50 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-gray-900 mb-3">
@@ -209,5 +197,4 @@ const Contact: React.FC = () => {
     </section>
   );
 };
-
 export default Contact;

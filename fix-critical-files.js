@@ -15,4 +15,3 @@ import { Helmet } from 'react-helmet-async'; export default function FiveGImplem
 fs.writeFileSync('/workspace/app/5g-implementation/page.tsx', content); console.log('Fixed 5g-implementation/page.tsx');'
 }
 // Main execution; console.log('Fixing critical files...'); fixAppTsx(); fix404Page(); fix5gImplementationPage(); console.log('Critical files fixed!');`"'`"'``
-

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Shield, Database, Code, CheckCircle, Star, TrendingUp } from 'lucide-react';
-
 export default function AiPoweredDevOps() {
   const features = [
     {
@@ -31,7 +29,6 @@ export default function AiPoweredDevOps() {
       color: 'from-orange-500 to-red-500';
     };
   ];
-
   const benefits = [
     'Reduce deployment time by 70%',
     'Increase code quality by 60%',
@@ -40,7 +37,6 @@ export default function AiPoweredDevOps() {
     'Improve system reliability by 85%',
     'Reduce operational costs by 50%'
   ];
-
   const tools = [
     {
       name: 'AI Code Review',
@@ -63,16 +59,12 @@ export default function AiPoweredDevOps() {
       features: ['Real-time monitoring', 'Anomaly detection', 'Predictive alerts', 'Performance insights']
     }
   ];
-
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations</title><meta name="description" content="Transform your DevOps with AI-powered automation, intelligent CI/CD, automated testing, and smart monitoring solutions."  />
         <meta name="keywords" content="AI DevOps, intelligent CI/CD, automated testing, AI monitoring, DevOps automation, smart deployment"  />
         <meta property="og:title" content="AI-Powered DevOps - Zion Tech Group | Intelligent Development Operations"  />
@@ -87,17 +79,14 @@ const PagePage = () => {
               <Cpu className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered DevOps</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">AI-Powered DevOps</span>
               <br />Intelligent Development Operations
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize your development operations with AI-driven automation, intelligent CI/CD pipelines, 
               and smart monitoring solutions that adapt and optimize automatically.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -116,7 +105,6 @@ const PagePage = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -128,7 +116,6 @@ const PagePage = () => {
                 Leverage artificial intelligence to automate, optimize, and enhance every aspect of your development operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -146,7 +133,6 @@ const PagePage = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -158,7 +144,6 @@ const PagePage = () => {
                 See the impact of AI-powered DevOps on your development operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -169,7 +154,6 @@ const PagePage = () => {
             </div>
           </div>
         </section>
-
         {/* Tools Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -181,7 +165,6 @@ const PagePage = () => {
                 Comprehensive suite of AI-powered tools designed to streamline your development operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {tools.map((tool, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -204,7 +187,6 @@ const PagePage = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
@@ -215,7 +197,6 @@ const PagePage = () => {
               Join leading companies that have revolutionized their development operations with AI-powered DevOps solutions. 
               Start your transformation today.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -234,7 +215,6 @@ const PagePage = () => {
             </div>
           </div>
         </section>
-=======
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
@@ -245,13 +225,9 @@ const PagePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

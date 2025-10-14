@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -20,7 +18,6 @@ interface EnhancedSEOProps {
   structuredData?: object;
   lang?: string;
 }
-
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions"
   description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
@@ -46,7 +43,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     if (!noindex && !nofollow) robots.push('index', 'follow');
     return robots.join(', ');
   }, [noindex, nofollow]);
-
   const defaultStructuredData = {
     "@context": "https://schema.org"
     "@type": "Organization"
@@ -71,9 +67,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -116,7 +110,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Additional Meta Tags for Better SEO */}
       <meta name="google-site-verification" content="your-google-verification-code"  />
       <meta name="yandex-verification" content="your-yandex-verification-code"  />
@@ -130,9 +123,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="dns-prefetch" href="//images.unsplash.com" />
       {/* Additional Performance Hints */}
       <meta httpEquiv="x-dns-prefetch-control" content="on" /></Helmet>");
-=======
 import React from "react";
-
 const EnhancedSEO = () => {
   return (
     <div className="p-4">
@@ -142,7 +133,5 @@ const EnhancedSEO = () => {
       </p>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 };
-
 export default EnhancedSEO;

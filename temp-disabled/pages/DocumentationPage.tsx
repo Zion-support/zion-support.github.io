@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function DocumentationPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const DocumentationPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const DocumentationPage: React.FC = () => {
   );
 };
 export default DocumentationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

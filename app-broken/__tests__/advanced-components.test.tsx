@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function Page() {
   return (
     <div>
@@ -16,7 +15,6 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
 }) => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
-
   React.useEffect(() => {
     const handleError = (error: Error) => {
       setHasError(true);
@@ -25,7 +23,6 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
         onError(error);
       }
     };
-
     // Simulate error boundary behavior
     try {
       // This will catch any errors thrown by children
@@ -33,7 +30,6 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
       handleError(err as Error);
     }
   }, [onError]);
-
   if (hasError) {
     return (
       <div data-testid="error-boundary">
@@ -56,15 +52,12 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
       </div>
     );
   }
-
   return <>{children}</>;
 };
-
 const TestComponent = () => <div>Test Component</div>;
 const ErrorComponent = () => {
   throw new Error('Test error');
 };
-
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
     render(
@@ -74,21 +67,17 @@ describe('Advanced Components', () => {
     );
     expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
-
   test('AdvancedErrorBoundary shows error UI when error occurs', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
-    
     render(
       <AdvancedErrorBoundary>
         <ErrorComponent />
       </AdvancedErrorBoundary>
     );
-    
     expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     consoleSpy.mockRestore();
   });
-
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
       <Helmet>
@@ -96,13 +85,11 @@ describe('Advanced Components', () => {
         <meta name="description" content="Test description" />
       </Helmet>
     );
-
     render(
       <HelmetProvider>
         <SEOEnhancer />
       </HelmetProvider>
     );
-    
     expect(document.title).toBe('Test Title');
   });
 });

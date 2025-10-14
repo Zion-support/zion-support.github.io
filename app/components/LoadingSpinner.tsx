@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 </div>
   )
   if (fullScreen) {
     return (
-
         {spinner}
       </div>
     )
   return spinner;
-
 };
-=======
 import React from "react";
-
 const LoadingSpinner = () => {
   return (
     <div className="p-4">
@@ -23,6 +18,4 @@ const LoadingSpinner = () => {
     </div>
   );
 };
-
 export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

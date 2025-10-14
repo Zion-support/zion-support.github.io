@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from "react-router-dom
 import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Clock }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
-
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -71,11 +69,9 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'text-gray-400'
     }
   ]
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return (
     <>
       <SEOOptimizer title="Web Development Services - Zion Tech Group"
@@ -117,7 +113,6 @@ const PagePage = () => {
               From simple websites to complex enterprise applications, we deliver solutions that drive results.
             </p>
           </section>
-
           {/* Services Grid */}
           <section className="mb-16"
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -130,7 +125,6 @@ const PagePage = () => {
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed"
                     {service.description}
                   </p>
-                  
                   <div className="mb-4"
                     <h4 className="text-sm font-semibold text-blue-400 mb-2"
                     <ul className="space-y-1"
@@ -142,7 +136,6 @@ const PagePage = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center"
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`
                     <a 
@@ -156,7 +149,6 @@ const PagePage = () => {
               ))}
             </div>
           </section>
-
           {/* Technology Stack */}
           <section className="mb-16"
             <div className="cyber-card p-8"
@@ -203,7 +195,6 @@ const PagePage = () => {
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center"
             <div className="cyber-card p-8 max-w-4xl mx-auto"
@@ -232,17 +223,10 @@ const PagePage = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
-<<<<<<< HEAD
-
 export default WebDevelopmentPage;
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

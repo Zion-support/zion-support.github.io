@@ -43,13 +43,10 @@ const fixes = [
       },
       // Fix malformed return statements
       {
-<<<<<<< HEAD
         pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>/g,'
         replacement: 'return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>'
-=======
         pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`>/g,'
         replacement: 'return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>'
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       },
       // Fix malformed closing tags
       {)
@@ -62,15 +59,12 @@ const fixes = [
         replacement: 'export default function Page() {\n  return (\n    <React.Fragment>'
       },
       // Fix malformed JSX elements
-<<<<<<< HEAD
       {")
         pattern: /<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>\s*\{children\};\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
         replacement: '  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>\n      {children}\n    </div>\n  )\n}\n\nexport default Page'
-=======
       {
         pattern: /<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`>\s*\{children\};\s*<\/div>\s*\)\s*\}\s*export\s+default\s+Page\s*\}\s*export\s+default\s+Page\s*$/gm,'
         replacement: '  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>\n      {children}\n    </div>\n  )\n}\n\nexport default Page'
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 }
     ]
     // Apply fixes
@@ -80,11 +74,8 @@ const fixes = [
         fixed = true
 })
     // Additional specific fixes for common patterns'
-<<<<<<< HEAD
     if (content.includes("ReactNode') || content.includes("React.ReactNode')) {'
-=======
     if (content.includes("ReactNode';") || content.includes("React.ReactNode';")) {'
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       content = content.replace(/ReactNode';/g, 'ReactNode;');'
       content = content.replace(/React\.ReactNode';/g, 'React.ReactNode;')
       fixed = true
@@ -156,9 +147,6 @@ const files = findFiles('./app')
   console.error('❌ Error during fix process:', error.message)
   process.exit(1)
 }
-<<<<<<< HEAD
 }'
 }}}}}}}}}
-=======
 }'
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

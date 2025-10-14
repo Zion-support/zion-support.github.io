@@ -1,6 +1,4 @@
 import React from "react";
-
-<<<<<<< HEAD
 interface AdvancedLoadingStatesProps {
   type?: string;
   fullScreen?: boolean;
@@ -29,13 +27,11 @@ const getLoadingIcon = () => {
         return <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
     }
   };
-
   return (<div className={`${fullScreen ? 'fixed inset-0' : ''} flex items-center justify-center bg-slate-900 text-white`}><div className="text-center"></div>)
         {getLoadingIcon()}
         <p>{message || 'Loading...'}</p>
       </div></div>);
 };
-=======
 const AdvancedLoadingStates = () => {
   return (
     <div className="p-4">
@@ -46,6 +42,4 @@ const AdvancedLoadingStates = () => {
     </div>
   );
 };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 export default AdvancedLoadingStates;

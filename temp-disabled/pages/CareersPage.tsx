@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {'}''
@@ -112,7 +111,6 @@ export default CareersPage
 </Users>
 </MapPin>
 </Icon>"
-=======
 import React from 'react';
 const CareersPage: React.FC = () => {
   return (
@@ -123,4 +121,3 @@ const CareersPage: React.FC = () => {
   );
 };
 export default CareersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

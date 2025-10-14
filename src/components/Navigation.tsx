@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check } from 'lucide-react';
@@ -10,12 +9,10 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isITOpen, setIsITOpen] = useState(false);
   const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
 const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -167,7 +164,6 @@ const specializedServices = [
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
@@ -181,7 +177,6 @@ const specializedServices = [
             </div>"
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
           </a>
-
           {/* Desktop Navigation */}"
           <div className="hidden lg:flex items-center space-x-8"></div>"
             <div className="relative group"></div>
@@ -192,7 +187,6 @@ const specializedServices = [
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
               {isServicesOpen && ("
                 <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6"></div>"
                   <div className="grid grid-cols-3 gap-6"></div>
@@ -307,7 +301,6 @@ const specializedServices = [
               </a>
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}"
@@ -316,7 +309,6 @@ const specializedServices = [
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isMenuOpen && ("
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20"></div>"
@@ -329,7 +321,6 @@ const specializedServices = [
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
                 {isServicesOpen && ("
                   <div className="mt-4 pl-4 space-y-3"></div>
                     <div></div>"
@@ -406,7 +397,6 @@ const specializedServices = [
         )}
       </div>
     </nav>
-=======
 import React from 'react';
 interface NavigationProps {
   className?: string;
@@ -417,7 +407,6 @@ const Navigation: React.FC<NavigationProps> = ({ className = '', children }) => 
     <div className={`navigation ${className}`}>
       {children}
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
 };
 ;

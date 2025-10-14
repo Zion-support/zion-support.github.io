@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 // generate-sitemap - Basic implementation
 export default function generateSitemap() {
   console.log('Sitemap generation completed');
   return null;
 }
-=======
 ]
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""}`
@@ -27,4 +25,3 @@ ${pages.map(;}
   console.log('Sitemap generated successfully!')''
 }
 generateSitemap()
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

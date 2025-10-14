@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function SolutionsPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const SolutionsPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const SolutionsPage: React.FC = () => {
   );
 };
 export default SolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

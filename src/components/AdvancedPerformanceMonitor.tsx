@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 "use client"";
 import React, { useEffect, useState, useCallback } from "react"
-
 interface PerformanceMetrics {
   fcp: number | null
   lcp: number | null
@@ -10,7 +8,6 @@ interface PerformanceMetrics {
   ttfb: number | null
   memory: number | null
 }
-
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   enableRealTimeMonitoring?: boolean
@@ -32,12 +29,10 @@ const measureWebVitals = useCallback(() => {"
     if (typeof window === "undefined" || !("performance" in window)) return"
     if (typeof PerformanceObserver === "undefined") return;
 const observers: PerformanceObserver[] = []
-
     // Measure First Contentful Paint (FCP);
 const fcpEntries ="
       performance.getEntriesByName("first-contentful-paint") || [];
 const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null
-
     // Measure Largest Contentful Paint (LCP)"
     if ("PerformanceObserver" in window) {
       try {;
@@ -53,7 +48,6 @@ const lastEntry = entries[entries.length - 1]
         console.warn("LCP observer failed:", error)
       }
     }
-
     // Measure First Input Delay (FID)"
     if ("PerformanceObserver" in window) {
       try {;
@@ -80,7 +74,6 @@ const fidEntry = entry as PerformanceEventTiming
         console.warn("FID observer failed:", error)
       }
     }
-
     // Measure Cumulative Layout Shift (CLS)"
     if ("PerformanceObserver" in window) {
       try {
@@ -108,7 +101,6 @@ const clsEntry = entry as LayoutShift
         console.warn("CLS observer failed:", error)
       }
     }
-
     // Measure Time to First Byte (TTFB)
     try {;
 const navigationEntries ="
@@ -118,12 +110,10 @@ const navigationEntry =
 const ttfb = navigationEntry
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null
-
       // Measure Memory Usage;
 const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null
-
       setMetrics((prev) => ({
         ...prev,
         fcp,
@@ -134,7 +124,6 @@ const memory =
       // eslint-disable-next-line no-console"
       console.warn("TTFB measurement failed:", error)
     }
-
     // Cleanup observers
     return () => {
       observers.forEach((observer) => {
@@ -154,7 +143,6 @@ const resources = performance.getEntriesByType("resource");
 const slowResources = resources.filter()
       (resource: PerformanceResourceTiming) => resource.duration > 1000,
     )
-
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
       console.log("
@@ -169,31 +157,26 @@ const slowResources = resources.filter()
   }, []);
 const measureCoreWebVitals = useCallback(() => {"
     if (typeof window === "undefined") return
-
     // Use web-vitals library if available
     try {";
 import("web-vitals")
         .then((webVitals) => {;
 const { onCLS, onFCP, onLCP, onTTFB } = webVitals
-
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics((prev) => ({ ...prev, cls: metric.value })),
             )
           }
-
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics((prev) => ({ ...prev, fcp: metric.value })),
             )
           }
-
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics((prev) => ({ ...prev, lcp: metric.value })),
             )
           }
-
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics((prev) => ({ ...prev, ttfb: metric.value })),
@@ -207,18 +190,15 @@ const { onCLS, onFCP, onLCP, onTTFB } = webVitals
       // web-vitals not available, continue without it
     }
   }, [])
-
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 const cleanup = measureWebVitals()
     measureResourceTiming()
     measureCoreWebVitals()
-
     // Monitor performance every 5 seconds;
 const interval = setInterval(() => {
       measureResourceTiming()
     }, 5000)
-
     return () => {
       if (cleanup) cleanup()
       clearInterval(interval)
@@ -229,47 +209,39 @@ const interval = setInterval(() => {
     measureResourceTiming,
     measureCoreWebVitals,
   ])
-
   useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics)
     }
   }, [metrics, onMetricsUpdate])
-
   // Performance recommendations;
 const getPerformanceRecommendations = useCallback(() => {;
 const recommendations: string[] = []
-
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push("
         "First Contentful Paint is slow. Consider optimizing critical rendering path.",)
       )
     }
-
     if (metrics.lcp && metrics.lcp > 2500) {
       recommendations.push("
         "Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.",)
       )
     }
-
     if (metrics.fid && metrics.fid > 100) {
       recommendations.push("
         "First Input Delay is high. Reduce JavaScript execution time.",)
       )
     }
-
     if (metrics.cls && metrics.cls > 0.1) {
       recommendations.push("
         "Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.",)
       )
     }
-
     if (metrics.ttfb && metrics.ttfb > 600) {
       recommendations.push("
         "Time to First Byte is slow. Optimize server response time.",)
       )
     }
-
     return recommendations
   }, [metrics]);
 const recommendations = getPerformanceRecommendations()
@@ -308,12 +280,10 @@ const recommendations = getPerformanceRecommendations()
       </div>
     )
   }
-
   return null
 }
 ;
 export default AdvancedPerformanceMonitor"
-=======
 import React from 'react';
 interface AdvancedPerformanceMonitorProps {
   className?: string;
@@ -327,4 +297,3 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   );
 };
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

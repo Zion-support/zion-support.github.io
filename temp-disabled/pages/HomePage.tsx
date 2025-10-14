@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 import { 
@@ -56,7 +55,6 @@ const structuredData = {"
       href: '/digital-transformation''
     }
   ];
-
   return (
     <>
       <SEOHead "
@@ -68,7 +66,6 @@ const structuredData = {"
       "
       <div className="min-h-screen bg-slate-900 text-white"></div>"
         <FuturisticBackground />
-        
         {/* Hero Section */}"
         <div className="relative z-10"></div>""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>""
@@ -94,7 +91,6 @@ const structuredData = {"
             </div>
           </div>
         </div>
-
         {/* Features Section */}"
         <div className="py-20 relative z-10"></div>""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>""
@@ -126,7 +122,6 @@ const structuredData = {"
             </div>
           </div>
         </div>
-
         {/* Services Section */}"
         <div className="py-20 bg-slate-800/30 relative z-10"></div>""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>""
@@ -158,7 +153,6 @@ const structuredData = {"
             </div>
           </div>
         </div>
-
         {/* CTA Section */}"
         <div className="py-20 relative z-10"></div>""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"></div>""
@@ -186,7 +180,6 @@ const structuredData = {"
     </>
   )"
 }}}}
-=======
 const HomePage: React.FC = () => {
   return (
     <div>
@@ -196,4 +189,3 @@ const HomePage: React.FC = () => {
   );
 };
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

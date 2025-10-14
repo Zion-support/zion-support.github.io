@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
@@ -70,7 +69,6 @@ function OptimizedHomePage() {
 };
 export default OptimizedHomePage;
 "
-=======
 const page-optimized: React.FC = () => {
   return (
     <div>
@@ -80,4 +78,3 @@ const page-optimized: React.FC = () => {
   );
 };
 export default page-optimized;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

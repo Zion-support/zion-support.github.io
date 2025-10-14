@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function TeamPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const TeamPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const TeamPage: React.FC = () => {
   );
 };
 export default TeamPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

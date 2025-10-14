@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 ;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // List of all files that need fixing;
 const filesToFix = [
   'app/consultation/page.tsx',
@@ -30,44 +29,35 @@ const filesToFix = [
   'app/utils/image.tsx',
   'app/utils/link.tsx'
 ];
-
 // Function to fix a single file;
 function fixFile(filePath) {
   try {;
 const fullPath = path.join(__dirname, filePath);
-    
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
       return;
     }
-
     let content = fs.readFileSync(fullPath, 'utf8');
-    
     // Remove all React imports
     content = content.replace(/import React from ['"]react['"];\s*/g, '')
     content = content.replace(/import React from ['"]react['"]\s*/g, '')
     content = content.replace(/import { Helmet } from ['"]react-helmet-async['"];\s*/g, '')
     content = content.replace(/import { Helmet } from ['"]react-helmet-async['"]\s*/g, '')
-    
     // Remove unused expressions and console.log statements
     content = content.replace(/console\.log\([^)]*\);\s*$/gm, '');
     content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-    
     // Fix specific patterns
     content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
     content = content.replace(/;\s*\[/g, ' [');
-    
     // Clean up empty lines
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
     // If the file is now empty or just has whitespace, add a basic structure
     if (content.trim() === '' || content.trim().length < 10) {
       if (filePath.endsWith('.tsx')) {;
 const pageName = filePath.split('/').pop()?.replace('.tsx', '').replace('page', '') || 'Page';
         const componentName = pageName.charAt(0).toUpperCase() + pageName.slice(1) + 'Page';
-        
         content = `export default function ${componentName}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">></div>
@@ -87,15 +77,12 @@ export const utility = () => {
 };`;
       }
     }
-    
     fs.writeFileSync(fullPath, content);
     console.log(`Fixed: ${filePath}`);
-    
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-
 // Fix all files
 console.log('Starting to fix all remaining issues...');
 filesToFix.forEach(fixFile);

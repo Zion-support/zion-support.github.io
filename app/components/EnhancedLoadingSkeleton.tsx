@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const EnhancedLoadingSkeleton = () => {"
   return (
@@ -6,9 +5,7 @@ const EnhancedLoadingSkeleton = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const EnhancedLoadingSkeleton = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const EnhancedLoadingSkeleton = () => {
     </div>
   );
 };
-
 export default EnhancedLoadingSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

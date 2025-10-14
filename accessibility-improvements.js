@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Accessibility improvements utility
 export default function accessibilityImprovements() {
   // Add focus indicators for keyboard navigation
@@ -16,7 +15,6 @@ export default function accessibilityImprovements() {
     `;
     document.head.appendChild(style);
   };
-
   // Add ARIA landmarks
   const addAriaLandmarks = () => {
     const main = document.querySelector('main');
@@ -24,16 +22,12 @@ export default function accessibilityImprovements() {
       main.setAttribute('role', 'main');
     }
   };
-
   // Initialize accessibility improvements
   if (typeof document !== 'undefined') {
     addFocusStyles();
     addAriaLandmarks();
   }
-
-=======
 // accessibility-improvements - Basic implementation
 export default function accessibilityImprovements() {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   return null;
 }

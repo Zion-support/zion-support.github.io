@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
@@ -20,7 +19,6 @@ const FuturisticButtonEnhanced: React.FC = () => { return (
             Futuristic Button Enhanced</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional futuristic button enhanced services
-
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto"><div className="grid md:grid-cols-2 gap-12 items-center"><div></div>
@@ -58,7 +56,6 @@ const FuturisticButtonEnhanced: React.FC = () => { return (
           </div>
         </div>
       </section>
-
       { /* CTA Section */ }
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6">
@@ -111,10 +108,8 @@ export default FuturisticButtonEnhanced;
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Get Started Today</a></div></section></div>);
 export default FuturisticButtonEnhanced;
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const FuturisticButtonEnhancedPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -123,7 +118,6 @@ const FuturisticButtonEnhancedPage = () => {
         <meta name="description" content="Professional FuturisticButtonEnhanced services by Zion Tech Group." />
         <meta name="keywords" content="FuturisticButtonEnhanced, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -133,7 +127,6 @@ const FuturisticButtonEnhancedPage = () => {
             Professional FuturisticButtonEnhanced services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -141,14 +134,12 @@ const FuturisticButtonEnhancedPage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
@@ -160,6 +151,4 @@ const FuturisticButtonEnhancedPage = () => {
     </div>
   );
 };
-
 export default FuturisticButtonEnhancedPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 "use client"
-import React from "react
+import React from "react";
 import { Helmet }    from "react-helmet-async
 const DemoPage: React.FC = () => {
   return (
@@ -18,9 +17,6 @@ const DemoPage: React.FC = () => {
 }
 ;
 export default DemoPag;e
-=======
-import React from "react";
-
 const DemoPage = () => {
   return (
     <div className="p-4">
@@ -31,6 +27,4 @@ const DemoPage = () => {
     </div>
   );
 };
-
 export default DemoPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

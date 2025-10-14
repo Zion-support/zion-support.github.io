@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from "react-helmet-async
 import { Link } from "react-router-dom
 import { Brain, Shield, BarChart3, Users, Target, Globe, ArrowRight, Star, CheckCircle, Video, MessageSquare, TrendingUp, Database, Eye, Award, Zap }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO'
-
 const AIServicesPage: React.FC = () => {"
   const aiServices = ["
     {"
@@ -62,7 +60,6 @@ const AIServicesPage: React.FC = () => {"
       popular: false
     }
   ];
-
   const features = [
     {
       title: "Advanced AI Models"
@@ -95,14 +92,12 @@ const AIServicesPage: React.FC = () => {"
       icon: <Users className="w-6 h-6 text-pink-400"
     }
   ];
-
   const stats = [
     { number: "500+", label: "AI Models Deployed", icon: <Brain className="w-6 h-6"
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6"
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6"
     { number: "50%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6"
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
@@ -124,7 +119,6 @@ const AIServicesPage: React.FC = () => {"
       role: "Operations Manager"
       content: "The workflow automation tools streamlined our processes and improved efficiency by 60%."
       rating: 5
-import React from 'react'
 const AIServicesPage: React.FC = () => {;
 const services = [
     {
@@ -201,12 +195,9 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective."
       rating: 5; }
     }
-
   ]
     }
   ];
-
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <EnhancedSEO title="AI Services - Zion Tech Group | Advanced AI Solutions for Business"
@@ -240,7 +231,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5"
         <div className="max-w-7xl mx-auto"
@@ -257,7 +247,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
@@ -303,7 +292,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5"
         <div className="max-w-7xl mx-auto"
@@ -323,7 +311,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
@@ -347,7 +334,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-4xl mx-auto text-center"
@@ -441,7 +427,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                   Learn More;
-
                 </button>;
               </div>
             </div>
@@ -502,7 +487,6 @@ const testimonials = [{ name: "Dr. Sarah Johnson"
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
                   Schedule Consultation;
-
                 </button>;
               </div>
             </div>
@@ -573,7 +557,6 @@ export default AiServicesPage;
 export default AiServicesPage';
     </div>);
 };
-
 export default AIServicesPage;
     },
     {
@@ -585,7 +568,6 @@ export default AIServicesPage;
       color: 'text-gray-400'
     }
   ];
-
   return (
     <>
       <SEOOptimizer title="AI Services - Zion Tech Group"
@@ -627,7 +609,6 @@ export default AIServicesPage;
               we provide cutting-edge artificial intelligence solutions tailored to your specific needs.
             </p>
           </section>
-
           {/* Services Grid */}
           <section className="mb-16"
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
@@ -640,7 +621,6 @@ export default AIServicesPage;
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed"
                     {service.description}
                   </p>
-                  
                   <div className="mb-4"
                     <h4 className="text-sm font-semibold text-purple-400 mb-2"
                     <ul className="space-y-1"
@@ -652,7 +632,6 @@ export default AIServicesPage;
                       ))}
                     </ul>
                   </div>
-                  
                   <div className="text-center"
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`
                     <a 
@@ -666,7 +645,6 @@ export default AIServicesPage;
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center"
             <div className="cyber-card p-8 max-w-4xl mx-auto"
@@ -695,12 +673,9 @@ export default AIServicesPage;
             </div>
           </section>
         </main>
-
         <Footer />
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -709,7 +684,6 @@ const PagePage = () => {
         <meta name="description" content="Professional page services by Zion Tech Group." />
         <meta name="keywords" content="page, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -719,7 +693,6 @@ const PagePage = () => {
             Professional page services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -727,14 +700,12 @@ const PagePage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
@@ -742,18 +713,9 @@ const PagePage = () => {
             </p>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       </div>
     </div>
   );
 };
-
-<<<<<<< HEAD
 export default AIServicesPage;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

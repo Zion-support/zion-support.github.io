@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
-
 const CloudInfrastructurePage = () => {
   return (
     <div className="p-4">
@@ -13,6 +9,4 @@ const CloudInfrastructurePage = () => {
     </div>
   );
 };
-
 export default CloudInfrastructurePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

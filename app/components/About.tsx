@@ -5,14 +5,12 @@ import {
   TrophyIcon, 
   LightBulbIcon 
 } from '@heroicons/react/24/outline';
-
 const About: React.FC = () => {
   const stats = [
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
     { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
   ];
-
   const values = [
     {
       title: 'Innovation',
@@ -31,7 +29,6 @@ const About: React.FC = () => {
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     }
   ];
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +43,6 @@ const About: React.FC = () => {
               Our mission is to empower businesses with innovative technology that drives 
               growth, efficiency, and success.
             </p>
-            
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
@@ -73,7 +69,6 @@ const About: React.FC = () => {
                 </p>
               </div>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               {stats.map((stat, index) => (
@@ -87,7 +82,6 @@ const About: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Image/Visual */}
           <div className="relative">
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -97,7 +91,6 @@ const About: React.FC = () => {
                 enabling businesses of all sizes to compete and thrive in the 
                 digital economy.
               </p>
-              
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
@@ -115,7 +108,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Values Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -141,5 +133,4 @@ const About: React.FC = () => {
     </section>
   );
 };
-
 export default About;

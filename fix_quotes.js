@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from "fs
 import path from "path
@@ -140,7 +139,5 @@ const files = findFiles("./app")
   process.exit(1)
 }
 }}}
-=======
 // fix_quotes.js - Under development
 console.log('fix_quotes.js loaded');
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

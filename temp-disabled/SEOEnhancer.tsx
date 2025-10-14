@@ -62,7 +62,6 @@ const metaTags = [{ name: 'description', content: "description"},'''''"
       {metaTags.map((tag, _index) => (}
         <meta key={_index} {...tag} />)
       ))}
-<<<<<<< HEAD
       {/* Canonical URL */}"
       <link rel="canonical" href={url} />""""
       {/* Favicon */}"
@@ -103,7 +102,6 @@ const  {}"
     "addressRegion": "CA","""""
     "postalCode": "94105","""""
     "addressCountry": "US"""""
-=======
       {/* Canonical URL */}
       <link rel="canonical" href={url} />"""
       {/* Favicon */}
@@ -144,7 +142,6 @@ const  {}
     "addressRegion": "CA","""
     "postalCode": "94105","""
     "addressCountry": "US""""
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   }
 }
 export default SEOEnhancer

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const PerformanceDashboard = () => {"
   return (
@@ -6,9 +5,7 @@ const PerformanceDashboard = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const PerformanceDashboard = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const PerformanceDashboard = () => {
     </div>
   );
 };
-
 export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

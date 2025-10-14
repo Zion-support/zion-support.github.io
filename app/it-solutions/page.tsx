@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React  from "react
 import { Helmet }   from "react-helmet-async
     {"
@@ -13,7 +12,6 @@ import { Helmet }   from "react-helmet-async
         "Compliance management"
         "Security training"
       ],
-
     {
       title: "IT Consulting"
       description: "Strategic IT consulting to help you make informed technology decisions."
@@ -26,7 +24,6 @@ import { Helmet }   from "react-helmet-async
         "Change management"
         "Training and support"
       ],
-
     {
       title: "Network Solutions"
       description: "Advanced networking solutions for reliable and secure connectivity."
@@ -39,7 +36,6 @@ import { Helmet }   from "react-helmet-async
         "Disaster recovery"
         "Remote access"
       ],
-
     {
       title: "Data Management"
       description: "Comprehensive data management solutions for storage, processing, and analytics."
@@ -52,7 +48,6 @@ import { Helmet }   from "react-helmet-async
         "Backup and recovery"
         "Data governance"
       ],
-
       icon: UserGroupIcon,
       features: [
         "24/7 support"
@@ -62,7 +57,6 @@ import { Helmet }   from "react-helmet-async
         "Hardware support"
         "User training"
       ],
-
   ];
 const features = [
     {
@@ -80,13 +74,10 @@ const features = [
       description: "Round-the-clock support to ensure your systems are always running."
       icon: UserGroupIcon
     },
-
   ];
 import React from 'react';';
 import { Helmet } from 'react-helmet-async';';
-import React from 'react';';
 import { Helmet } from 'react-helmet-async';'
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet>
               Our IT Solutions
@@ -102,7 +93,6 @@ import { Helmet } from 'react-helmet-async';'
                   <div className="mb-4"><p className="text-blue-600 font-semibold">{solution.price}</p>
                   </div>
                   <Link 
-
                     to={ solution.href }
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
                   >
@@ -113,9 +103,7 @@ import { Helmet } from 'react-helmet-async';'
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-
               Why Choose Our IT Solutions?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -130,9 +118,7 @@ import { Helmet } from 'react-helmet-async';'
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-
               Let's discuss how our IT solutions can help you achieve your business goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link"
@@ -150,12 +136,10 @@ import { Helmet } from 'react-helmet-async';'
             </div>
           </div>
         </section>
-
       </div>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses."  />
         <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security" /></Helmet>
       {/* Hero Section */}
-
               IT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -168,9 +152,7 @@ import { Helmet } from 'react-helmet-async';'
           </div>
         </div>
       </section>
-
       {/* IT Services Grid */}
-
             {itServices.map((service, index) => {;
 const Icon = service.icon;
               return (<div key={service.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"><div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}></div>`"
@@ -179,13 +161,10 @@ const Icon = service.icon;
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     { service.description }
-
                   </p>
-
                   {/* Pricing */}
                   <div className="mb-6"><span className="text-3xl font-bold text-green-400">{service.price}</span>
                   </div>
-
                   {/* Features */}
 )
                       {service.features.map((feature, featureIndex) => (
@@ -196,16 +175,12 @@ const Icon = service.icon;
                       ))
                     </ul>
                   </div>
-
                   {/* Benefits */}
-
                         </span>
                       ))
                     </div>
                   </div>
-
                   {/* Use Cases */}
-
                         </span>
                       ))
                     </div>
@@ -229,9 +204,7 @@ const Icon = service.icon;
           </div>
         </div>
       </section>
-
       {/* Why Choose Our IT Solutions */}
-
               Why Choose Our IT Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -272,9 +245,7 @@ const Icon = service.icon;
           </div>
         </div>
       </section>
-
       {/* IT Implementation Process */}
-
               Our IT Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -315,9 +286,7 @@ const Icon = service.icon;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-
               Let's discuss how our IT solutions can enhance your business operations and security'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"><Link"
@@ -348,7 +317,6 @@ const Icon = service.icon;
       </section>
     </>
 }}}}}}}}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -370,4 +338,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

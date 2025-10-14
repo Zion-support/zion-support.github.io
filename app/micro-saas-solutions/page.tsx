@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
       title: "AI Content Generator"
       description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing."
@@ -11,7 +10,6 @@
         "Content scheduling"
         "Performance analytics"
       ],
-
     {
       title: "AI Customer Support Chatbot"
       description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing."
@@ -24,7 +22,6 @@
         "Analytics dashboard"
         "Custom training"
       ],
-
     {
       title: "AI Project Manager"
       description: "Intelligent project management tool with AI-powered task optimization and team collaboration features."
@@ -37,7 +34,6 @@
         "Automated scheduling"
         "Performance insights"
       ],
-
     {
       title: "AI Inventory Manager"
       description: "Smart inventory management system with predictive analytics and automated reordering capabilities."
@@ -50,7 +46,6 @@
         "Integration APIs"
         "Real-time tracking"
       ],
-
       icon: CurrencyDollarIcon,
       features: [
         "Automated categorization"
@@ -60,7 +55,6 @@
         "Tax preparation"
         "Multi-currency support"
       ],
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet>
               Our Micro SaaS Solutions
@@ -76,7 +70,6 @@
                   <div className="mb-4"><p className="text-blue-600 font-semibold">{solution.price}</p>
                   </div>
                   <Link 
-
                     to={ solution.href }
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
                   >
@@ -87,9 +80,7 @@
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -104,9 +95,7 @@
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-
               Let's discuss how our micro SaaS solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link"
@@ -124,12 +113,10 @@
             </div>
           </div>
         </section>
-
       </div>
         <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions."  />
         <meta name="keywords" content="micro SaaS, software solutions, AI analytics, content management, customer support, business automation" /></Helmet>
       {/* Hero Section */}
-
               Micro SaaS Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -142,9 +129,7 @@
           </div>
         </div>
       </section>
-
       {/* Micro SaaS Products Grid */}
-
             {microSaaSProducts.map((product, index) => {;
 const Icon = product.icon;
               return (<div key={product.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark"><div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}></div>`"
@@ -153,14 +138,10 @@ const Icon = product.icon;
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{product.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     { product.description }
-
                   </p>
-
                   {/* Pricing */}
-
                     </div>
                   </div>
-
                   {/* Features */}
 )
                       {product.features.map((feature, featureIndex) => (
@@ -171,16 +152,12 @@ const Icon = product.icon;
                       ))
                     </ul>
                   </div>
-
                   {/* Benefits */}
-
                         </span>
                       ))
                     </div>
                   </div>
-
                   {/* Use Cases */}
-
                         </span>
                       ))
                     </div>
@@ -204,9 +181,7 @@ const Icon = product.icon;
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Micro SaaS */}
-
               Why Choose Our Micro SaaS Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -247,9 +222,7 @@ const Icon = product.icon;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-
               Let's discuss which micro SaaS solution is perfect for your business needs'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"><Link"
@@ -280,7 +253,6 @@ const Icon = product.icon;
       </section>
     </>
 }}}}}}}}
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -302,4 +274,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

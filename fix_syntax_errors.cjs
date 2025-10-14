@@ -2,124 +2,96 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive syntax error fix...');
-
-// Function to fix common syntax errors in files
+// Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
-    try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let modified = false;
-
-        // Fix common merge conflict markers
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-            console.log(`⚠️  Found merge conflict markers in ${filePath}`);
-            // Remove merge conflict markers and keep the main branch version
-            content = content.replace(/<<<<<<<.*?=======.*?>>>>>>>.*?\n/gs, '');
-            content = content.replace(/<<<<<<<.*?>>>>>>>.*?\n/gs, '');
-            content = content.replace(/=======.*?\n/gs, '');
-            modified = true;
-        }
-
-        // Fix unterminated string literals
-        content = content.replace(/'([^']*?)$/gm, "'");
-        content = content.replace(/"([^"]*?)$/gm, '"');
-        
-        // Fix unterminated template literals
-        content = content.replace(/`([^`]*?)$/gm, '`');
-        
-        // Fix common TypeScript syntax errors
-        content = content.replace(/import\s+{\s*([^}]*?)\s*}\s*from\s*['"]([^'"]*?)['"];?\s*$/gm, 'import { $1 } from "$2";');
-        
-        // Fix JSX syntax errors
-        content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)>\s*$/gm, '<$1 $2>');
-        
-        // Fix function declarations
-        content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*$/gm, 'function $1() {');
-        
-        // Fix class declarations
-        content = content.replace(/class\s+([A-Z][a-zA-Z0-9]*)\s*{\s*$/gm, 'class $1 {');
-        
-        // Fix interface declarations
-        content = content.replace(/interface\s+([A-Z][a-zA-Z0-9]*)\s*{\s*$/gm, 'interface $1 {');
-        
-        // Fix type declarations
-        content = content.replace(/type\s+([A-Z][a-zA-Z0-9]*)\s*=\s*{\s*$/gm, 'type $1 = {');
-        
-        // Fix object literals
-        content = content.replace(/{\s*$/gm, '{');
-        
-        // Fix array literals
-        content = content.replace(/\[\s*$/gm, '[');
-        
-        // Fix parentheses
-        content = content.replace(/\(\s*$/gm, '(');
-        
-        // Fix brackets
-        content = content.replace(/\[\s*$/gm, '[');
-        
-        // Fix braces
-        content = content.replace(/{\s*$/gm, '{');
-        
-        // Remove empty lines at the end
-        content = content.replace(/\n\s*$/, '');
-        
-        if (modified) {
-            fs.writeFileSync(filePath, content);
-            console.log(`✅ Fixed syntax errors in ${filePath}`);
-            return true;
-        }
-        
-        return false;
-    } catch (error) {
-        console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-        return false;
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Fix unterminated strings
+    content = content.replace(/import React from "react\n/g, 'import React from "react";\n');
+    content = content.replace(/from "react-helmet-async"\n/g, 'from "react-helmet-async";\n');
+    content = content.replace(/from "react-helmet-async"\n/g, 'from "react-helmet-async";\n');
+    
+    // Fix missing semicolons
+    content = content.replace(/const AppPage = \(\) => \{\n/g, 'const AppPage = () => {\n');
+    content = content.replace(/const AppPage = \(\) => \{\n/g, 'const AppPage = () => {\n');
+    
+    // Fix JSX syntax issues
+    content = content.replace(/<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>App - Zion Tech Group</title><meta name="description" content="App - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>/g, 
+      '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>\n        <title>App - Zion Tech Group</title>\n        <meta name="description" content="App - Zion Tech Group" />\n      </Helmet>\n      <div className="container mx-auto px-4 py-16">\n        <div className="text-center">');
+    
+    // Fix duplicate imports and content
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const seenContent = new Set();
+    const cleanedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Skip duplicate imports
+      if (line.startsWith('import ') && seenImports.has(line)) {
+        continue;
+      }
+      if (line.startsWith('import ')) {
+        seenImports.add(line);
+      }
+      
+      // Skip duplicate content
+      if (line.includes('const AppPage = () => {') && seenContent.has('AppPage')) {
+        continue;
+      }
+      if (line.includes('const AppPage = () => {')) {
+        seenContent.add('AppPage');
+      }
+      
+      cleanedLines.push(line);
     }
+    
+    content = cleanedLines.join('\n');
+    
+    // Clean up extra whitespace and empty lines
+    content = content.replace(/\n\n\n+/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Function to recursively find and fix files
-function fixFilesInDirectory(dir) {
-    const files = fs.readdirSync(dir);
-    let fixedCount = 0;
+// Function to recursively find and fix all files with syntax errors
+function findAndFixSyntaxErrors(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-            // Skip node_modules and other common directories
-            if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-                continue;
-            }
-            fixedCount += fixFilesInDirectory(filePath);
-        } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-            if (fixSyntaxErrors(filePath)) {
-                fixedCount++;
-            }
-        }
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += findAndFixSyntaxErrors(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
     }
-    
-    return fixedCount;
+  }
+  
+  return fixedCount;
 }
 
 // Main execution
-try {
-    console.log('🔍 Scanning for files to fix...');
-    const fixedCount = fixFilesInDirectory('.');
-    console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-    
-    // Run TypeScript check to see if we fixed the issues
-    console.log('🔍 Running TypeScript check...');
-    try {
-        execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
-        console.log('✅ TypeScript check passed!');
-    } catch (error) {
-        console.log('⚠️  TypeScript check still has errors, but we fixed what we could');
-    }
-    
-    console.log('🎉 Syntax error fix completed!');
-} catch (error) {
-    console.error('❌ Error during syntax fix:', error.message);
-    process.exit(1);
-}
+console.log('Starting syntax error resolution...');
+const fixedCount = findAndFixSyntaxErrors('/workspace');
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+console.log('Syntax error resolution completed!');

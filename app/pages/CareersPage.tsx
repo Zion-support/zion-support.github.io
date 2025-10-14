@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 "use client"
 import React    from "react
 export default function CareersPage() {"
   return ()
 }
-=======
 import React from "react";
-
 const CareersPage = () => {
   return (
     <div className="p-4">
@@ -17,6 +14,4 @@ const CareersPage = () => {
     </div>
   );
 };
-
 export default CareersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

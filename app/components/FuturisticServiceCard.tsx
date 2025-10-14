@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const FuturisticServiceCard = () => {"
   return (
@@ -6,9 +5,7 @@ const FuturisticServiceCard = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const FuturisticServiceCard = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const FuturisticServiceCard = () => {
     </div>
   );
 };
-
 export default FuturisticServiceCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Loader2, Brain, Shield, Zap, Globe, BarChart3 }    from "lucide-react
 interface LoadingPageProps {
@@ -6,7 +5,6 @@ interface LoadingPageProps {
   message?: string;
   variant?: 'default' | 'futuristic' | 'minimal'
 }
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md'
   className = ''
@@ -19,7 +17,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <span className="text-white"
         </div></div>);
   }
-
   if (variant === 'default'
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -29,7 +26,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <p className="text-gray-400"
         </div></div>);
   }
-
   // Futuristic variant (default)
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
@@ -39,7 +35,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"
       </div>
-
       <div className="relative z-10 text-center"
         <div className="w-20 h-20 mx-auto mb-6 relative"
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-spin"
@@ -47,22 +42,18 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             <Brain className="w-8 h-8 text-cyan-400"
           </div>
         </div>
-        
         <h2 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
           {message}
         </h2>
-        
         <p className="text-gray-300 mb-8 max-w-md mx-auto"
           Initializing advanced AI systems and preparing your experience...
         </p>
-
         {/* Loading dots */}
         <div className="flex justify-center space-x-2"
           <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"
           <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-100"
           <div className="w-3 h-3 bg-blue-400 rounded-full animate-bounce delay-200"
         </div>
-
         {/* Feature icons */}
         <div className="flex justify-center space-x-6 mt-8"
           <div className="flex flex-col items-center space-y-2"
@@ -80,10 +71,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className="flex flex-col items-center space-y-2"
             <BarChart3 className="w-6 h-6 text-green-400 animate-pulse delay-600"
             <span className="text-xs text-gray-400"
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const LoadingStatesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -92,7 +81,6 @@ const LoadingStatesPage = () => {
         <meta name="description" content="Professional LoadingStates services by Zion Tech Group." />
         <meta name="keywords" content="LoadingStates, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -102,7 +90,6 @@ const LoadingStatesPage = () => {
             Professional LoadingStates services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -110,25 +97,20 @@ const LoadingStatesPage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
               Track record of delivering successful projects and exceeding client expectations.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
           </div>
         </div></div></div>);
 };
-
-<<<<<<< HEAD
 export const AILoadingPage: React.FC<{ message?: string }> = ({ message = "AI is thinking..."
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
     <div className="text-center"
@@ -181,7 +163,6 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
             </div>
             <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
->>>>>>> origin/main
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
           <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>
@@ -190,7 +171,6 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
           </div></div></div>);
   }
-
   return (
     <div className="flex items-center justify-center p-4"><div className="text-center"
         <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin mx-auto mb-2`
@@ -228,9 +208,4 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
     </div>
   )}
 }''
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 export default LoadingStatesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

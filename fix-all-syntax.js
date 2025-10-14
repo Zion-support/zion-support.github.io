@@ -128,7 +128,6 @@ const missingBrackets = openBrackets - closeBrackets;}
       return true
 }
     return false
-
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`
     return false
@@ -152,9 +151,7 @@ const files = fs.readdirSync(dir);}
         console.log(`Fixed syntax errors in: ${filePath}`);`
 }
 }
-
   return fixedCount
-
 }
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');';

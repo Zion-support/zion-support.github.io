@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 export default function Page() {
-
               </p>
               <div className="flex justify-center space-x-4"><a"
                   href="/"
@@ -16,13 +14,11 @@ export default function Page() {
                 </a>
               </div>
             </div>
-
           </div>
         </div>
       </div>;
     </div>;
 };
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -44,4 +40,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

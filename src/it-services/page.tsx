@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -300,7 +299,6 @@ const benefits = [
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
@@ -332,7 +330,6 @@ const benefits = [
             </a>
           </div>
         </section>
-
         {/* Main Services Grid */}"
         <section className="mb-16">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>"
@@ -401,7 +398,6 @@ const benefits = [
             ))}
           </div>
         </section>
-
         {/* Additional Services */}"
         <section className="mb-16">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>"
@@ -418,7 +414,6 @@ const benefits = [
             ))}
           </div>
         </section>
-
         {/* Support Tiers */}"
         <section className="mb-16">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>"
@@ -505,7 +500,6 @@ const benefits = [
             </div>
           </div>
         </section>
-
         {/* CTA Section */}"
         <section className="text-center">"
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>"
@@ -530,14 +524,12 @@ const benefits = [
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
 ;
 export default ITServicesPage;"
-=======
 const page: React.FC = () => {
   return (
     <div>
@@ -547,4 +539,3 @@ const page: React.FC = () => {
   );
 };
 export default page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

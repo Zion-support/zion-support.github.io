@@ -1,20 +1,14 @@
 // Learn more: https://github.com/testing-library/jest-dom
-<<<<<<< HEAD
 require("@testing-library/jest-dom
 // Polyfills for Node.js environment
 const { TextEncoder, TextDecoder } = require("util
-=======
 require("@testing-library/jest-dom");
-
 // Polyfills for Node.js environment
 const { TextEncoder, TextDecoder } = require("util");
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
-
 // Mock CSS imports
 jest.mock('react-lazy-load-image-component/src/effects/blur.css'
-
 // Mock react-lazy-load-image-component
 jest.mock('react-lazy-load-image-component'
   const React = require('react'
@@ -26,14 +20,10 @@ jest.mock('react-lazy-load-image-component'
     },
   };
 });
-<<<<<<< HEAD
 Object.defineProperty(windowmatchMedia
   writable: true,)
-=======
-
 Object.defineProperty(window, "matchMedia", {
   writable: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
@@ -45,7 +35,6 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -53,7 +42,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
-
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -61,7 +49,6 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
@@ -69,22 +56,15 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning: ReactDOM.render") ||
-<<<<<<< HEAD
         args[0].includes("Not implemented: HTMLFormElement.prototype.submit
-=======
         args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     ) {
       return;
     }
     originalError.call(console, ...args);
   });
 });
-
 afterAll(() => {
   console.error = originalError;
-<<<<<<< HEAD
 })
-=======
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

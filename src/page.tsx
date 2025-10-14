@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Server, Network, Layers } from 'lucide-react';
@@ -10,14 +9,12 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
 // Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -27,7 +24,6 @@ import('./components/ContentPromotionBanner');
     }, 100);
   }
 };
-
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
@@ -41,18 +37,14 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {;
 const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
-    
     // Initialize performance optimizations
     initializePerformanceOptimizations();
-    
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized;
 const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -62,7 +54,6 @@ const handlePhoneClick = useCallback(() => {
       });
     }
   }, []);
-
   // Enhanced Micro SAAS Services with real functionality and pricing;
 const microSAASServices = [
     {
@@ -274,7 +265,6 @@ const microSAASServices = [
       savings: '40%'
     }
   ];
-
   // Enhanced AI Services with real capabilities and market pricing;
 const aiServices = [
     {
@@ -374,7 +364,6 @@ const aiServices = [
       contact: 'kleber@ziontechgroup.com'
     }
   ];
-
   // Enhanced IT Services with comprehensive capabilities;
 const itServices = [
     {
@@ -474,7 +463,6 @@ const itServices = [
       contact: '+1 302 464 0950'
     }
   ];
-
   // Specialized Services;
 const specializedServices = [
     {
@@ -550,33 +538,25 @@ const specializedServices = [
       contact: '+1 302 464 0950'
     }
   ];
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
-      
       {/* SEO Optimizer */}
       <SEOOptimizer />
-      
       {/* Accessibility Enhancer */}
       <AccessibilityEnhancer />
-      
       {/* Analytics */}
       <Analytics />
-      
       {/* Security Enhancer */}
       <SecurityEnhancer />
-
       {/* Navigation */}
       <Navigation />
-
       {/* Hero Section with Futuristic Design */}"
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}"
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div></div>")
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div></div>
-        
         {/* Neon Grid Overlay */}"
         <div className="absolute inset-0" style={{
           backgroundImage: `
@@ -632,7 +612,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Micro SAAS Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
         <div className="container mx-auto px-4"></div>"
@@ -719,7 +698,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* AI Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">"
         <div className="container mx-auto px-4"></div>"
@@ -798,7 +776,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* IT Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
         <div className="container mx-auto px-4"></div>"
@@ -877,7 +854,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Specialized Services Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">"
         <div className="container mx-auto px-4"></div>"
@@ -956,7 +932,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Contact Section */}"
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
         <div className="container mx-auto px-4"></div>"
@@ -1000,7 +975,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <Footer />
     </div>
@@ -1009,7 +983,6 @@ const specializedServices = [
 ;
 export default HomePage;
 "
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -1031,4 +1004,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

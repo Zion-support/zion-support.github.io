@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react
 interface AdvancedSEOOptimizerProps {
   className?: string;
@@ -21,9 +20,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className, 
     </div>)
   );
 };
-=======
 import React from 'react';
-
 const AdvancedSEOOptimizer = () => {
   return (
     <div className="p-4">
@@ -32,6 +29,4 @@ const AdvancedSEOOptimizer = () => {
     </div>
   );
 };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 export default AdvancedSEOOptimizer;

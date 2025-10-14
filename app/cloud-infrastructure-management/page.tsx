@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-
 import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, } from "lucide-react
 import Layout from "../layout
 import { Link } from "react-router-dom
 import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight, CheckCircle } from "lucide-react
 import Layout from '../layout'
-import { Helmet }    from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 const HomePage = () => {"
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -20,7 +18,6 @@ const HomePage = () => {"
     </div>)
   );
 };
-
   const managementFeatures = [
     {
       category: 'Infrastructure Management'
@@ -39,7 +36,6 @@ const HomePage = () => {"
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter'
@@ -87,9 +83,7 @@ const HomePage = () => {"
       popular: false
     }
   ];
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -100,6 +94,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

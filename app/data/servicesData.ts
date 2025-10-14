@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 },
     href: '/ai-solutions''
   },
   {
-
     id: 'cybersecurity',
     title: 'Cybersecurity',
-
     ],
     pricing: {
       basic: 3000,
@@ -14,20 +11,14 @@
       enterprise: 30000
     },
     benefits: [
-
       'Enhanced Security',
-
     },
     href: '/cybersecurity''
   },
   {
-
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure',
-=======
 // ServicesData data
-
 export const ServicesData = {
   // Add your data here
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -3,10 +3,8 @@ interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
 }
-<<<<<<< HEAD
 ;
 const navigationItems = [
-
   { name: "Home", href: "/", icon: User }
   { name: "Profile", href: "/profile", icon: User }
   { name: "Settings", href: "/settings", icon: User }
@@ -15,7 +13,6 @@ const navigationItems = [
 ];
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   return (
-
     <>
       {/* Overlay */}
       {isOpen && (
@@ -24,12 +21,10 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           onClick={onClose}
         /></div>)
       )}
-
         </nav>
       </div></div>);
 };
 export default SidebarNavigation;
-=======
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   return (
     <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-slate-800 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}>
@@ -48,4 +43,3 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
 ;
 export default SidebarNavigation;
 "
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

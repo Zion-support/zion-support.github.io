@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react''';
@@ -106,7 +105,6 @@ const AIServicesPage: React.FC = () => {}
 }
 export default AIServicesPage
 </Icon>"
-=======
 import React from 'react';
 const AIServicesPage: React.FC = () => {
   return (
@@ -117,4 +115,3 @@ const AIServicesPage: React.FC = () => {
   );
 };
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

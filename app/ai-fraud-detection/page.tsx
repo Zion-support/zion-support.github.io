@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone } from 'lucide-react';
@@ -98,7 +97,6 @@ const benefits = [
       icon: '✅'
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -143,7 +141,6 @@ const benefits = [
               Real-time monitoring, advanced analytics, and instant alerts to keep your business secure.
             </p>
           </section>
-
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -159,7 +156,6 @@ const benefits = [
               ))}
             </div>
           </section>
-
           {/* Services Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -196,7 +192,6 @@ const benefits = [
               ))}
             </div>
           </section>
-
           {/* Industry Applications */}
           <section className="mb-16">
             <div className="cyber-card p-8"><h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -230,7 +225,6 @@ const benefits = [
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto"><h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -257,14 +251,12 @@ const benefits = [
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
 export default AIFraudDetectionPage;
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -286,4 +278,3 @@ export default function Page() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

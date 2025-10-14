@@ -17,7 +17,6 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
@@ -30,7 +29,6 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
-<<<<<<< HEAD
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 const PartnersPage = React.lazy(() => import("./app/partners/page"));
 const NewsPage = React.lazy(() => import("./app/news/page"));
@@ -73,7 +71,6 @@ const IotEdgeComputingPage = React.lazy(() => import("./app/iot-edge-computing/p
 const ApiDocsPage = React.lazy(() => import("./app/api-docs/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 const OfflinePage = React.lazy(() => import("./app/offline/page"));
-
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -115,11 +112,9 @@ const AISolutionsPage = React.lazy(() => import("./app/ai-solutions/page"));
 const AITranslationServicePage = React.lazy(() => import("./app/ai-translation-service/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
 // 5G Pages
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-
 // Zion AI Pages
 const ZionAIAccountingSuitePage = React.lazy(() => import("./app/zion-ai-accounting-suite/page"));
 const ZionAIAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
@@ -133,10 +128,8 @@ const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice
 const ZionHrAssistantProPage = React.lazy(() => import("./app/zion-hr-assistant-pro/page"));
 const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
 const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
-=======
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
-
 // Additional service pages
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
@@ -147,12 +140,9 @@ const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/pag
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
-
 const App = () => {
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <GlobalErrorBoundary>
         <AnalyticsProvider>
           <PerformanceMonitor>
@@ -169,7 +159,6 @@ const App = () => {
                   <AdvancedPerformanceOptimizer />
                   <EnhancedSEOOptimizer />
                   <EnhancedAccessibilityManager />
-                  
                   <main className="relative z-10">
                     <Suspense fallback={<LoadingPage />}>
                       <Routes>
@@ -227,7 +216,6 @@ const App = () => {
                         <Route path="/api-docs" element={<ApiDocsPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
                         <Route path="/offline" element={<OfflinePage />} />
-                        
                         {/* AI Services Routes */}
                         <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
                         <Route path="/ai-automation" element={<AIAutomationPage />} />
@@ -269,11 +257,9 @@ const App = () => {
                         <Route path="/ai-translation-service" element={<AITranslationServicePage />} />
                         <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                         <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
-                        
                         {/* 5G Routes */}
                         <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                         <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                        
                         {/* Zion AI Routes */}
                         <Route path="/zion-ai-accounting-suite" element={<ZionAIAccountingSuitePage />} />
                         <Route path="/zion-ai-analytics-pro" element={<ZionAIAnalyticsProPage />} />
@@ -287,7 +273,6 @@ const App = () => {
                         <Route path="/zion-hr-assistant-pro" element={<ZionHrAssistantProPage />} />
                         <Route path="/zion-smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
                         <Route path="/zion-smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
-                        
                         {/* 404 Route */}
                         <Route path="*" element={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                           <div className="text-center">
@@ -301,7 +286,6 @@ const App = () => {
                       </Routes>
                     </Suspense>
                   </main>
-                  
                   <Footer />
                 </div>
               </Router>
@@ -309,7 +293,6 @@ const App = () => {
           </PerformanceMonitor>
         </AnalyticsProvider>
       </GlobalErrorBoundary>
-=======
       <Router>
         <GlobalErrorBoundary>
           <FuturisticBackground>
@@ -317,7 +300,6 @@ const App = () => {
               <Navigation />
               <Sidebar />
               <Breadcrumb />
-              
               <Suspense fallback={<LoadingPage />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
@@ -334,7 +316,6 @@ const App = () => {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/sitemap" element={<SitemapPage />} />
-                  
                   {/* Service pages */}
                   <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/it-services" element={<ItServicesPage />} />
@@ -347,9 +328,7 @@ const App = () => {
                   <Route path="/database-management" element={<DatabaseManagementPage />} />
                 </Routes>
               </Suspense>
-              
               <Footer />
-              
               {/* Performance and SEO optimizations */}
               <AdvancedPerformanceOptimizer />
               <EnhancedSEOOptimizer />
@@ -361,9 +340,7 @@ const App = () => {
           </FuturisticBackground>
         </GlobalErrorBoundary>
       </Router>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
     </HelmetProvider>
   );
 };
-
 export default App;

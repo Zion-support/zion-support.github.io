@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const NewsletterSignup = () => {"
   return (
@@ -6,9 +5,7 @@ const NewsletterSignup = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const NewsletterSignup = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const NewsletterSignup = () => {
     </div>
   );
 };
-
 export default NewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

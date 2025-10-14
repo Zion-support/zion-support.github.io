@@ -23,4 +23,3 @@ function findFilesToFix(dir)  const _files = []; function traverse(currentDir)  
 let fixedCount = 0; for (const file of filesToFix)  if (fixFile(file))  fixedCount++; } console.log(`Fixed: ${file}`);`` }``
 }
 console.log(`Fixed ${fixedCount} _files`);`"'`"'``)`
-

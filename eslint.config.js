@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import js from "@eslint/js
 import globals from "globals
 import reactHooks from "eslint-plugin-react-hooks
@@ -63,7 +62,6 @@ export default tseslint.config(
         afterAll: "readonly
         jest: "readonly
       },
-=======
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -75,7 +73,6 @@ export default [
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
@@ -108,7 +105,6 @@ export default [
       "react-refresh": reactRefresh
     },
     rules: {
-<<<<<<< HEAD
       ...reactHooks.configs.recommended.rulesreact-refresh/only-export-components": [
         "warn
         {
@@ -123,7 +119,6 @@ export default [
     },
   },
 );
-=======
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -139,4 +134,3 @@ export default [
     },
   },
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
-
 const EnhancedAccessibility = () => {
   return (
     <div className="p-4">
@@ -13,6 +9,4 @@ const EnhancedAccessibility = () => {
     </div>
   );
 };
-
 export default EnhancedAccessibility;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

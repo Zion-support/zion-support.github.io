@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { ReactNode }    from "react
 interface MetaManagerProps {
   children: ReactNode;
@@ -8,9 +7,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ children }) => {
   return <div>{children}</div>;
 }
 export default MetaManager
-=======
 import React from 'react';
-
 const MetaManager = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const MetaManager = () => {
     </div>
   );
 };
-
 export default MetaManager;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

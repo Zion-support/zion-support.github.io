@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -141,7 +140,6 @@ const stats = [
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -179,7 +177,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* Stats */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto"></div>"
@@ -195,7 +192,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* AI Services */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto"></div>"
@@ -243,7 +239,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* IT Services */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto"></div>"
@@ -286,7 +281,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* Micro SAAS Services */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto"></div>"
@@ -334,7 +328,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto"></div>"
@@ -359,7 +352,6 @@ const stats = [
             </div>
           </div>
         </section>
-
         {/* CTA Section */}"
         <section className="py-16 px-4">"
           <div className="container mx-auto text-center"></div>"
@@ -387,7 +379,6 @@ const stats = [
             </div>
           </div>
         </section>
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -404,16 +395,11 @@ const PagePage = () => {
             This page is under construction. Please check back later.
           </p>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
       </div>
-
       <Footer />
     </>
   );
 };
-<<<<<<< HEAD
 ;
 export default ServicesPage;"
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

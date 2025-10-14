@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const GlobalErrorBoundary = () => {"
   return (
@@ -6,9 +5,7 @@ const GlobalErrorBoundary = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const GlobalErrorBoundary = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const GlobalErrorBoundary = () => {
     </div>
   );
 };
-
 export default GlobalErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

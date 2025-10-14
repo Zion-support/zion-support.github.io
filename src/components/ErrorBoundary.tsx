@@ -1,28 +1,21 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from "react"
-
 interface Props {
   children: ReactNode
 }
-
 interface State {
   hasError: boolean
   error?: Error
 }
-
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
   }
-
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
-
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {"
     console.error("Uncaught error:", error, errorInfo)
   }
-
   public render() {
     if (this.state.hasError) {
       return ("
@@ -42,13 +35,11 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       )
     }
-
     return this.props.children
   }
 }
 ;
 export default ErrorBoundary"
-=======
 import React from 'react';
 interface ErrorBoundaryProps {
   className?: string;
@@ -62,4 +53,3 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ className = '', children 
   );
 };
 export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

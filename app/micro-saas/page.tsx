@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-import React from "react
+import React from "react";
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Globe, Smartphone, TrendingUp, Settings, Monitor, MessageSquare, Share, Award, Cpu, Video, Calculator, Grid, Star as StarIcon, Package, Receipt, Workflow } from "lucide-react
 import { Helmet } from "react-helmet-async
 import { Link }    from "react-router-dom
 import EnhancedSEO from '../components/EnhancedSEO'
-
 const MicroSaasPage: React.FC = () => {"
   const microSaasServices = ["
     {"
@@ -62,7 +60,6 @@ const MicroSaasPage: React.FC = () => {"
       popular: false
     }
   ];
-
   const features = [
     {
       title: "AI-Powered Automation"
@@ -95,7 +92,6 @@ const MicroSaasPage: React.FC = () => {"
       icon: <Users className="w-6 h-6 text-pink-400"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
@@ -119,7 +115,6 @@ const MicroSaasPage: React.FC = () => {"
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <EnhancedSEO
@@ -153,7 +148,6 @@ const MicroSaasPage: React.FC = () => {"
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
@@ -200,7 +194,6 @@ const MicroSaasPage: React.FC = () => {"
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5"
         <div className="max-w-7xl mx-auto"
@@ -220,7 +213,6 @@ const MicroSaasPage: React.FC = () => {"
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-7xl mx-auto"
@@ -238,14 +230,11 @@ const MicroSaasPage: React.FC = () => {"
                 <div>
                   <p className="text-white font-semibold"
                   <p className="text-gray-400 text-sm"
->>>>>>> origin/main
-
                 </div>
               </div>
             ))}
           </div>
         </div>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"
         <div className="max-w-4xl mx-auto text-center"
@@ -268,7 +257,6 @@ const MicroSaasPage: React.FC = () => {"
               Schedule Demo
             </Link>
         <title>Page - Zion Tech Group</title>
-
               </p>
               <div className="flex justify-center space-x-4"
                 <a
@@ -285,9 +273,6 @@ const MicroSaasPage: React.FC = () => {"
                 </a>
               </div>
             </div>
-=======
-import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -298,6 +283,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

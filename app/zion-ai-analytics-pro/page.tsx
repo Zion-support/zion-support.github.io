@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async
 import { Link } from "react-router-dom
 import { ArrowRight, BarChart3, Brain, Star, Users, Award, Zap, Shield, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Cpu, Sparkles, Target, Calendar, FileText, Clock }    from "lucide-react
@@ -96,7 +95,6 @@ const ZionAIAnalyticsProPage = () => {
       color: "from-red-500 to-pink-500"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter"
@@ -170,7 +168,6 @@ const ZionAIAnalyticsProPage = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
@@ -200,20 +197,15 @@ const ZionAIAnalyticsProPage = () => {
       avatar: "ER"
     }
   ];
-
   const stats = [
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6"
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6"
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6"
     { number: "24/7", label: "Real-time Monitoring", icon: <Monitor className="w-6 h-6"
   ];
-=======
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
-
 const Page = () => {
   return (
-<<<<<<< HEAD
     <>
       <Helmet >
         <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title><meta
@@ -228,13 +220,9 @@ const Page = () => {
     { number: "50+", label: "Data Sources Supported", icon: <Database className="w-6 h-6"
     { number: "24/7", label: "Real-Time Monitoring", icon: <Clock className="w-6 h-6"
   ];
->>>>>>> origin/main
->>>>>>> origin/main
-
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> origin/main
       <Helmet >
         <title>Zion AI Analytics Pro | Advanced Business Intelligence Platform | Zion Tech Group</title><meta
           name="description"
@@ -246,7 +234,6 @@ const HomePage = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-analytics-pro"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"
@@ -265,12 +252,10 @@ const HomePage = () => {
                     Zion AI Analytics Pro
                   </span>
                 </h1>
-                
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"
                   Transform your business with advanced AI-powered business intelligence. Get real-time insights, 
                   predictive analytics, and automated reporting that drives growth and efficiency.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 mb-8"
                   <Link to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -285,7 +270,6 @@ const HomePage = () => {
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform"
                   </Link>
                 </div>
-                
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6"
                   {stats.map((stat, index) => (
@@ -299,7 +283,6 @@ const HomePage = () => {
                   ))}
                 </div>
               </div>
-              
               <div className="relative"
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
                   <div className="text-center mb-6"
@@ -309,7 +292,6 @@ const HomePage = () => {
                     <h3 className="text-2xl font-bold text-white mb-2"
                     <p className="text-gray-300"
                   </div>
-                  
                   <div className="space-y-4"
                     <div className="flex items-center text-gray-300"
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3"
@@ -328,7 +310,6 @@ const HomePage = () => {
                       <span>100+ integrations</span>
                     </div>
                   </div>
-                  
                   <div className="mt-6"
                     <Link to="/contact"
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
@@ -342,7 +323,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"
           <div className="max-w-7xl mx-auto"
@@ -356,7 +336,6 @@ const HomePage = () => {
                 Everything you need to transform your data into actionable business insights
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {features.map((feature, index) => (
                 <div
@@ -385,7 +364,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50"
           <div className="max-w-7xl mx-auto"
@@ -399,7 +377,6 @@ const HomePage = () => {
                 Choose the plan that fits your business needs. All plans include our core AI analytics features.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {pricingPlans.map((plan, index) => (
                 <div
@@ -417,7 +394,6 @@ const HomePage = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6"
                     <h3 className="text-2xl font-bold text-white mb-2"
                     <p className="text-gray-300 text-sm mb-4"
@@ -426,7 +402,6 @@ const HomePage = () => {
                       <span className="text-gray-300 ml-1"
                     </div>
                   </div>
-                  
                   <div className="space-y-4 mb-8"
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300"
@@ -435,7 +410,6 @@ const HomePage = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <Link to="/contact"
                     className={`
                       plan.popular
@@ -451,7 +425,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"
           <div className="max-w-7xl mx-auto"
@@ -465,7 +438,6 @@ const HomePage = () => {
                 See what our clients say about Zion AI Analytics Pro
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {testimonials.map((testimonial, index) => (
                 <div
@@ -491,7 +463,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"
           <div className="max-w-4xl mx-auto text-center"
@@ -502,7 +473,6 @@ const HomePage = () => {
               <p className="text-xl text-gray-300 mb-8"
                 Join thousands of businesses already using Zion AI Analytics Pro to drive growth and make data-driven decisions.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
                 <div className="text-center"
@@ -527,7 +497,6 @@ const HomePage = () => {
                   <p className="text-cyan-400 text-sm"
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to="/contact"
                   className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
@@ -554,7 +523,6 @@ const HomePage = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-500"
       </div>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
         <div className="max-w-7xl mx-auto text-center"
@@ -608,11 +576,6 @@ const HomePage = () => {
         <meta name="description" content="Professional services by Zion Tech Group."
 }
   );
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
     <div className="p-4">
       <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
       <p className="text-gray-300">
@@ -621,6 +584,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

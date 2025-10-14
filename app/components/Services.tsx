@@ -7,7 +7,6 @@ import {
   ShieldCheckIcon,
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
-
 const Services: React.FC = () => {
   const services = [
     {
@@ -47,7 +46,6 @@ const Services: React.FC = () => {
       features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training & Support']
     }
   ];
-
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +58,6 @@ const Services: React.FC = () => {
             thrive in the digital age.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
@@ -75,11 +72,9 @@ const Services: React.FC = () => {
                   {service.title}
                 </h3>
               </div>
-              
               <p className="text-gray-600 mb-6">
                 {service.description}
               </p>
-              
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-500">
@@ -88,7 +83,6 @@ const Services: React.FC = () => {
                   </li>
                 ))}
               </ul>
-              
               <div className="mt-6">
                 <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline">
                   Learn More →
@@ -97,7 +91,6 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -116,5 +109,4 @@ const Services: React.FC = () => {
     </section>
   );
 };
-
 export default Services;

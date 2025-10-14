@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-
 import { ArrowRight, BarChart3, Brain, CheckCircle, TrendingUp, PieChart, Activity, Target }    from "lucide-react
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-
 const AIDataAnalyticsPro = () => {"
   const features = ["
     {"
@@ -34,7 +31,6 @@ const AIDataAnalyticsPro = () => {"
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const benefits = [
     "40% faster data processing"
     "99.9% accuracy in predictions"
@@ -43,7 +39,7 @@ const AIDataAnalyticsPro = () => {"
     "Multi-source data integration"
     "Advanced security protocols"
   ];
-import { Helmet }    from "react-helmet-async"
+import { Helmet } from "react-helmet-async";
 const HomePage = () => {"
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
@@ -57,9 +53,7 @@ const HomePage = () => {"
   );
 };
 export default HomePage;
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -70,6 +64,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

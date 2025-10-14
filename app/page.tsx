@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from "react-router-dom
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react
 import EnhancedSEO from "./components/EnhancedSEO
@@ -34,7 +33,6 @@ const HomePage = () => {"
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   const coreServices = [
     {
       icon: Brain,
@@ -69,7 +67,6 @@ const HomePage = () => {"
       link: "/micro-saas"
     }
   ];
-
   const microSaasServices = [
     {
       name: "Zion Analytics Pro"
@@ -102,7 +99,6 @@ const HomePage = () => {"
       link: "/zion-content-studio"
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson"
@@ -129,7 +125,6 @@ const HomePage = () => {"
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
     }
   ];
-
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
@@ -137,7 +132,6 @@ const HomePage = () => {"
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -154,12 +148,10 @@ const HomePage = () => {"
                 AI-Powered Solutions
               </span>
             </FuturisticText>
-            
             <ResponsiveText className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Leading provider of cutting-edge AI services, IT solutions, and micro SAAS platforms. 
               Accelerate your digital transformation with our innovative technology stack.
             </ResponsiveText>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <FuturisticButton
                 as={Link}
@@ -170,7 +162,6 @@ const HomePage = () => {"
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </FuturisticButton>
-              
               <FuturisticButton
                 as={Link}
                 to="/demo"
@@ -181,7 +172,6 @@ const HomePage = () => {"
                 <Sparkles className="ml-2 h-5 w-5" />
               </FuturisticButton>
             </div>
-
             {/* Contact Information */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400">
               <div className="flex items-center gap-2">
@@ -200,7 +190,6 @@ const HomePage = () => {"
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Core Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -212,7 +201,6 @@ const HomePage = () => {"
               Comprehensive technology solutions designed to drive your business forward
             </ResponsiveText>
           </div>
-
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreServices.map((service, index) => (
               <FuturisticCard key={index} className="p-6 h-full">
@@ -230,7 +218,6 @@ const HomePage = () => {"
                       </div>
                     ))}
                   </div>
-                  
                   <div className="text-cyan-400 font-semibold mb-4">{service.pricing}</div>
                   <FuturisticButton
                     as={Link}
@@ -247,7 +234,6 @@ const HomePage = () => {"
           </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
-
       {/* Micro SAAS Highlights */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -259,7 +245,6 @@ const HomePage = () => {"
               Ready-to-deploy software solutions that solve specific business challenges
             </ResponsiveText>
           </div>
-
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
               <FuturisticCard key={index} className="p-6 h-full">
@@ -274,12 +259,10 @@ const HomePage = () => {"
                       </div>
                     ))}
                   </div>
-                  
                   <div className="mb-4">
                     <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                     <div className="text-sm text-green-400">{service.discount}</div>
                   </div>
-                  
                   <div className="flex items-center justify-center mb-4">
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i) => (
@@ -297,7 +280,6 @@ const HomePage = () => {"
                       {service.rating} ({service.reviews} reviews)
                     </span>
                   </div>
-                  
                   <FuturisticButton
                     as={Link}
                     to={service.link}
@@ -313,7 +295,6 @@ const HomePage = () => {"
           </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -325,7 +306,6 @@ const HomePage = () => {"
               Trusted by businesses worldwide for our innovative solutions
             </ResponsiveText>
           </div>
-
           <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <FuturisticCard key={index} className="p-6">
@@ -357,7 +337,6 @@ const HomePage = () => {"
           </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer>
@@ -368,7 +347,6 @@ const HomePage = () => {"
             <ResponsiveText className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our solutions
             </ResponsiveText>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <FuturisticButton
                 as={Link}
@@ -379,7 +357,6 @@ const HomePage = () => {"
                 Start Your Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </FuturisticButton>
-              
               <FuturisticButton
                 as={Link}
                 to="/pricing"
@@ -393,7 +370,6 @@ const HomePage = () => {"
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Structured Data */}
       <script
         type="application/ld+json"
@@ -401,8 +377,6 @@ const HomePage = () => {"
       />
     </div>);
 };
-
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Hero from "./components/Hero";
@@ -432,5 +406,4 @@ const HomePage = () => {
     </div>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
 export default HomePage;

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React from "react
+import React from "react";
 import fs from "fs
 import { glob } from "glob
 // Comprehensive syntax fix for all common issues;
@@ -99,7 +98,5 @@ const fixedContent = fixAllSyntaxErrors(content)
 })
 console.log(`Fixed ${fixedCount} files.`)
 }}
-=======
 // comprehensive_syntax_fix.js - Under development
 console.log('comprehensive_syntax_fix.js loaded');
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

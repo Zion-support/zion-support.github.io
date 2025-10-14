@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const UltimateContentAdvertisingBanner = () => {"
   return (
@@ -6,9 +5,7 @@ const UltimateContentAdvertisingBanner = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const UltimateContentAdvertisingBanner = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const UltimateContentAdvertisingBanner = () => {
     </div>
   );
 };
-
 export default UltimateContentAdvertisingBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

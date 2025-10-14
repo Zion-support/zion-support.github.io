@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
   CheckCircleIcon,
@@ -12,9 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-
 } from '@heroicons/react/24/outline';
-
   return (
     <>
       <Helmet><title>About Us - Zion Tech Group</title><meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." /></Helmet>
@@ -31,10 +28,8 @@ import {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
         {/* Mission Section */}
         <div className="py-20 bg-slate-800/30"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -61,7 +56,6 @@ import {
             </div>
           </div>
         </div>
-
         {/* Values Section */}
         <div className="py-20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -88,7 +82,6 @@ import {
             </div>
           </div>
         </div>
-
         {/* Team Section */}
         <div className="py-20 bg-slate-800/30"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -110,7 +103,6 @@ import {
             </div>
           </div>
         </div>
-
         {/* Contact Section */}
         <div className="py-20"><div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -136,10 +128,8 @@ import {
         </div>
       </div>
     </>)
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const AboutPagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -148,7 +138,6 @@ const AboutPagePage = () => {
         <meta name="description" content="Professional AboutPage services by Zion Tech Group." />
         <meta name="keywords" content="AboutPage, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -158,7 +147,6 @@ const AboutPagePage = () => {
             Professional AboutPage services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -166,14 +154,12 @@ const AboutPagePage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
@@ -185,6 +171,4 @@ const AboutPagePage = () => {
     </div>
   );
 };
-
 export default AboutPagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

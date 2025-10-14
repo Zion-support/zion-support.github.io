@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const AccessibilityAudit = () => {"
   return (
@@ -6,7 +5,6 @@ const AccessibilityAudit = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from 'react';
 const AccessibilityAudit = () => {
   return (
@@ -23,4 +21,3 @@ const AccessibilityAudit = () => {
   );
 };
 export default AccessibilityAudit;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function FiveGSolutionsPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const 5GSolutionsPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const 5GSolutionsPage: React.FC = () => {
   );
 };
 export default 5GSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const SEOAudit = () => {"
   return (
@@ -6,9 +5,7 @@ const SEOAudit = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const SEOAudit = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const SEOAudit = () => {
     </div>
   );
 };
-
 export default SEOAudit;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

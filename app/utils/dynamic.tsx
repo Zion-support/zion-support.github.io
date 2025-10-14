@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 '
 'use client';
@@ -12,24 +11,19 @@ export default function UtilsPage() { return (
     </div>
 )
   ); }
-
           This page is under development.</p></div></div>
   )
         </p>
       </div>
     </div>
   )}
-
         </p>;
       </div>
     </div>
   );}
 }
 '
-=======
 // Dynamic utility functions
-
 export const Dynamic = {
   // Add your utility functions here
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

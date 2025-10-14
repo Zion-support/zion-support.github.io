@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from "react-router-dom
 import { ArrowRight }    from "lucide-react
 import Layout from '../layout'
-
 export default function BlockchainWeb3Page() {
   const features = ["
     {"
@@ -27,7 +25,6 @@ export default function BlockchainWeb3Page() {
       description: 'Enterprise-grade security with comprehensive smart contract audits and testing'
     }
   ];
-
   const serviceFeatures = [
     {
       category: 'Blockchain Development'
@@ -46,7 +43,6 @@ export default function BlockchainWeb3Page() {
       items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter'
@@ -94,13 +90,9 @@ export default function BlockchainWeb3Page() {
       popular: false
     }
   ];
-=======
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
-
 const Page = () => {
   return (
-<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
@@ -116,7 +108,6 @@ const Page = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Build the future with our comprehensive blockchain and Web3 development services. 
                 From smart contracts to DApps, we bring your decentralized vision to life.
->>>>>>> origin/main
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to="/contact"
@@ -142,7 +133,6 @@ const Page = () => {
       </div>
     </div>
   )
-
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -158,7 +148,6 @@ const HomePage = () => {
       </div>
     </div>
   ); }
->>>>>>> origin/main
             Page</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional page solutions tailored to your business needs.</p>
@@ -188,10 +177,6 @@ const HomePage = () => {
       </div>
     </div>
   )}
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
     <div className="p-4">
       <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
       <p className="text-gray-300">
@@ -200,6 +185,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

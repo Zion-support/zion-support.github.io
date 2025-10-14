@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const EnhancedSkipLink = () => {"
   return (
@@ -6,9 +5,7 @@ const EnhancedSkipLink = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const EnhancedSkipLink = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const EnhancedSkipLink = () => {
     </div>
   );
 };
-
 export default EnhancedSkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

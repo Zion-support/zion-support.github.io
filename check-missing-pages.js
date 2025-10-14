@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require("fs")
 const path = require("path")
 // Define all the routes that should exist based on navigation and footer;
@@ -151,7 +150,5 @@ if (missingPages.length === 0) {
   console.log("All missing pages created!")
 }
 }}
-=======
 // check-missing-pages.js - Under development
 console.log('check-missing-pages.js loaded');
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

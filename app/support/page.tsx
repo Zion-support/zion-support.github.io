@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet></Helmet>
       title: "Live Chat"
@@ -46,7 +45,6 @@ icon: Phone
     { '
       question: "What if I need custom development?",';'"
       answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.''; }
-
     }
   ];
   return (
@@ -71,7 +69,6 @@ icon: Phone
             </p>
           </div>
         </section>
-
         { /* Support Options */ }
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto"><h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -111,7 +108,6 @@ const Icon = option.icon;
             </div>
           </div>
         </section>
-
         { /* FAQ Section */ }
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto"><h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -130,7 +126,6 @@ const Icon = option.icon;
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
-
             </h2>
             <div className="space-y-6"></div>;)
               { faqs.map((faq, _index) => ( }
@@ -200,7 +195,6 @@ const Icon = option.icon
           </div>
         </div></div></div>);
 }
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -222,4 +216,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

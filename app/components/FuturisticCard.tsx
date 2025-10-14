@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 variant?: 'default' | 'glow' | 'gradient' }
 ;
@@ -8,12 +7,10 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   variant = 'default''}) => {';
 const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'';
 const variantClasses = {
-
     default: "bg-white/10",'"
     glow: "bg-white/10 shadow-lg shadow-blue-500/20",'"
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';
   }
-
   children: React.ReactNode;
   className?: string';
   variant?: 'default' | 'glow' | 'gradient';}'
@@ -54,9 +51,7 @@ export default FuturisticCard;
 export default FuturisticCard;
 };
 export default FuturisticCard;'
-=======
 import React from "react";
-
 const FuturisticCard = () => {
   return (
     <div className="p-4">
@@ -67,6 +62,4 @@ const FuturisticCard = () => {
     </div>
   );
 };
-
 export default FuturisticCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

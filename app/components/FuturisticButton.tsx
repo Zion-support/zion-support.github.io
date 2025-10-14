@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { ArrowRight } from "lucide-react
 import { Link } from "react-router-dom
@@ -73,7 +72,6 @@ const baseClasses = 'inline-flex items-center justify-center font-semibold round
     >
       {icon && <span className="mr-2"
       { children }
-
     </button>)
   );
 export default FuturisticButton
@@ -84,23 +82,17 @@ export default FuturisticButton
 export default FuturisticButton;
 };
 export default FuturisticButton;'
-import React from 'react'
-
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'outline'
   size?: 'sm' | 'md' | 'lg'
   disabled?: boolean;
->>>>>>> origin/main
   className?: string;
 }
-
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
-=======
 import React from "react";
-
 const FuturisticButton = () => {
   return (
     <div className="p-4">
@@ -111,6 +103,4 @@ const FuturisticButton = () => {
     </div>
   );
 };
-
 export default FuturisticButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

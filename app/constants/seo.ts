@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // SEO constants;
 export const DEFAULT_SEO = {
   title: 'ZionTechGroup-AdvancedAIandITSolutions',
@@ -30,10 +29,7 @@ export const defaultStructuredData = {
     "https://www.facebook.com/ziontechgroup"
   ]
 }
-=======
 // Seo constants
-
 export const Seo = {
   // Add your constants here
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

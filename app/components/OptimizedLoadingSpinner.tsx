@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const OptimizedLoadingSpinner = () => {"
   return (
@@ -6,9 +5,7 @@ const OptimizedLoadingSpinner = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const OptimizedLoadingSpinner = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const OptimizedLoadingSpinner = () => {
     </div>
   );
 };
-
 export default OptimizedLoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

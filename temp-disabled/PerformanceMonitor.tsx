@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react''''';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'''''
 interface PerformanceMetrics {}
@@ -118,7 +117,6 @@ const PerformanceMonitor: React.FC = () => {"}""
 }
 export default PerformanceMonitor
 </PerformanceMetrics>"
-=======
 import React from 'react';
 const PerformanceMonitor: React.FC = () => {
   return (
@@ -129,4 +127,3 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

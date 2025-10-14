@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const ServiceWorkerRegistration = () => {"
   return (
@@ -6,9 +5,7 @@ const ServiceWorkerRegistration = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const ServiceWorkerRegistration = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const ServiceWorkerRegistration = () => {
     </div>
   );
 };
-
 export default ServiceWorkerRegistration;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -6,7 +6,6 @@ console.log('🔧 Starting comprehensive merge conflict resolution...');
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
     // Remove merge conflict markers and keep the HEAD version (first part)
@@ -44,7 +43,6 @@ function fixMergeConflicts(filePath) {
     fs.writeFileSync(filePath, cleanedContent, 'utf8')
     console.log(`✅ Fixed: ${filePath}`)
     return true
-=======
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     // Check if file has merge conflicts
@@ -52,9 +50,9 @@ function fixMergeConflicts(filePath) {
       return false; // No conflicts to fix
     }
     console.log(`Fixing merge conflicts in: ${filePath}`);
-    // Strategy: Keep the content after ======= (usually the incoming changes)
+    // Strategy: Keep the content after  (usually the incoming changes)
     // But first, let's try to be smarter about it
-    // Remove all merge conflict markers and keep the last version (after =======)
+    // Remove all merge conflict markers and keep the last version (after )
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
@@ -83,7 +81,6 @@ function fixMergeConflicts(filePath) {
     fs.writeFileSync(filePath, cleanedContent, 'utf8');
     console.log(`✅ Fixed merge conflicts in: ${filePath}`);
     return true;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
@@ -154,13 +151,10 @@ try {
     remainingConflicts.forEach(file => console.log(`  - ${file}`));
   }
 } catch (error) {
-<<<<<<< HEAD
   console.error('💥 Fatal error:', error.message)
   process.exit(1)
 }
 }}}}
-=======
   console.error('❌ Script failed:', error.message);
   process.exit(1);
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

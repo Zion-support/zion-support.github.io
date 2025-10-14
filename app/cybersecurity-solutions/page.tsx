@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { Helmet }    from "react-helmet-async
 const HomePage = () => {"
   return (
@@ -7,9 +5,7 @@ const HomePage = () => {"
       <Helmet></Helmet>
         <meta name="description" content="Professional services by Zion Tech Group."
 }
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -20,6 +16,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

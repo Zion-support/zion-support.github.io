@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 const LoadingSpinner: React.FC = () => {
   return (
@@ -12,7 +11,6 @@ const LoadingSpinner: React.FC = () => {
 }
 ;
 export default LoadingSpinner"
-=======
 import React from 'react';
 interface LoadingSpinnerProps {
   className?: string;
@@ -26,4 +24,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', childre
   );
 };
 export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,6 +1,5 @@
 'use client';
 import React from 'react'
-
 // Declare gtag function for Google Analytics
 declare global {
   function gtag(...args: any[]): void;

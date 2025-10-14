@@ -1,39 +1,24 @@
 import { useState } from 'react;
-
 import { Helmet } from 'react-helmet-async';'lucide-react;
-
 interface JobPosition {
   // Add properties here
 }
   id: number;
-
 import { Right, Circle, } from 'lucide-react';
-
 const PagePage: React.FC = () => {}
   title: string;
-
   department: string;
-
   location: string;
-
   type: string;
-
   experience: string;
-
   posted: string;
-
   description: string;
-
   requirements: string[];
-
   benefits: string[];
-
   featured: boolean;
-
 }
 const eersPage: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all);
-
   const [selectedLocation, setSelectedLocation] = useState('all);
       title: 'Senior AI Engineer,
       department: 'Engineering,
@@ -75,7 +60,6 @@ const eersPage: React.FC = () => {
         'Collaboration with top researchers,
         'Competitive salary and benefits,
         'State-of-the-art facilities
-
 const eersPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-20">
@@ -177,13 +161,9 @@ import { Right, Circle, Star, } from 'lucide-react';
         'Collaborative team environment
   const filteredPositions = positions.filter(position => {;
     const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment;;
-
     const matchesLocation = selectedLocation === 'all || position.location === selectedLocation;;
-
   const featuredPositions = filteredPositions.filter(position => position.featured);;
-
   const regularPositions = filteredPositions.filter(position => !position.featured);;
-
       id: '1,
       title: 'Senior AI Engineer,
       department: 'AI Solutions',      location: 'Remote,
@@ -218,17 +198,13 @@ import { Right, Circle, Star, } from 'lucide-react';
       ],
       posted: '2 days ago,
       featured: true});
-
 },
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
 }
-
     'eer growth opportunities'
   const values = [;;
-
     {
   const culture = [;;
-
     {
       stat: '98%,
       label: 'Employee Satisfaction,
@@ -256,10 +232,8 @@ import { Right, Circle, Star, } from 'lucide-react';
         <meta property="og:type" content="website />
         <meta property="og:url" content="https://ziontechgroup.com/careers />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
-
         <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>
@@ -269,23 +243,17 @@ import { Right, Circle, Star, } from 'lucide-react';
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8>
               Build the future of technology with us. Were looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
-            
             {/* Filter Controls */}
-
             <div className="flex flex-wrap justify-center gap-4 mb-8>
               <select
                 value={selectedDepartment}
-
                 onChange={(e) => setSelectedDepartment(e.target.value)}
-
                 className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors
               >
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-
               Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-
 Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
 Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
           {/* Why Work With Us */}
@@ -305,10 +273,8 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                     </p>
                   </div>
                 </div>
-
                   <option key={dept.id} value={dept.id} className="bg-slate-800>
                 {locations.map((loc) => (
-
                   <option key={loc.id} value={loc.id} className="bg-slate-800>
         </section>
   return (<div>
@@ -327,7 +293,6 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
         <section className="relative py-20 px-4 overflow-hidden>)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
-
           <div className="relative max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
               Join Our Team
@@ -337,21 +302,16 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
             <
           <
         <
-
         {/* Featured Positions */}
-
         {featuredPositions.length > 0 && (
-
           <section className="py-16 px-4>
             <div className="max-w-7xl mx-auto>
               <h2 className="text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
                 {featuredPositions.map((position) => (
-
                   <div key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>
                     <div className="flex items-start justify-between mb-6>
               {values.map((value, index) => (
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
@@ -366,23 +326,19 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                   </p>
         </div>
       </section>
-
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
               Don't See Your Role?
         </section>
       )}
-
         {/* All Positions */}
-
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <h2 className="text-3xl font-bold text-white mb-12 text-center>All Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>
               {regularPositions.map((position) => (
             {regularPositions.length === 0 && (
-
               <div className="text-center py-16>
                 <div className="text-6xl mb-4>🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4>No positions found</h3>
@@ -390,19 +346,14 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                 <button
                   onClick={() => {
                     setSelectedDepartment('all);
-
                     setSelectedLocation('all);
-
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
                   } hover:border-purple-400 transition-all duration-300 group}
-
                 >                <div></div>
                   {position.featured && (
-
                   <p className="text-gray-300 mb-6>{position.description}</p>
                       {position.requirements.length > 3 && (
-
                         <li className="text-sm text-gray-400>
             </div>  ));)
 export default eersPage;

@@ -1,5 +1,4 @@
 import React from "react";
-
 const CoreWebVitals = () => {
   return (
     <div className="p-4">
@@ -10,5 +9,4 @@ const CoreWebVitals = () => {
     </div>
   );
 };
-
 export default CoreWebVitals;

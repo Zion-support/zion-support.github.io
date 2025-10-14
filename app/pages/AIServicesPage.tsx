@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-=======
 import React from "react";
-
 const AIServicesPage = () => {
   return (
     <div className="p-4">
@@ -13,6 +9,4 @@ const AIServicesPage = () => {
     </div>
   );
 };
-
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

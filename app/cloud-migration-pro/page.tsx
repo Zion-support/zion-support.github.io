@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async
 import { Cloud, Shield, }    from "lucide-react
 const CloudMigrationProPage = () => {"
@@ -34,7 +33,6 @@ const CloudMigrationProPage = () => {"
       description: 'Tailored migration strategies for your specific business needs'
     }
   ];
-
   const migrationSteps = [
     {
       step: '01'
@@ -57,7 +55,6 @@ const CloudMigrationProPage = () => {"
       description: 'Post-migration optimization and performance tuning'
     }
   ];
-
   const migrationFeatures = [
     {
       category: 'Migration Types'
@@ -76,7 +73,6 @@ const CloudMigrationProPage = () => {"
       items: ['24/7 Monitoring', 'Migration Support', 'Training & Documentation', 'Post-Migration Support', 'Performance Optimization', 'Cost Optimization'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Basic Migration'
@@ -124,18 +120,13 @@ const CloudMigrationProPage = () => {"
       popular: false
     }
   ];
-=======
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
-
 const Page = () => {
   return (
-<<<<<<< HEAD
     <Layout>
       <Helmet >
         <title>Cloud Migration Pro - Zion Tech Group</title><meta name="description" content="Professional cloud migration services with zero downtime. Expert migration to AWS, Azure, Google Cloud with enterprise-grade security."
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
         <div className="relative overflow-hidden"
@@ -150,7 +141,6 @@ const Page = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Seamlessly migrate your applications and data to the cloud with zero downtime. 
                 Our expert team ensures a smooth transition with enterprise-grade security.
->>>>>>> origin/main
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to="/contact"
@@ -176,7 +166,6 @@ const Page = () => {
       </div>
     </div>
   )
-
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -192,7 +181,6 @@ const HomePage = () => {
       </div>
     </div>
   ); }
->>>>>>> origin/main
             Page</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional page solutions tailored to your business needs.</p>
@@ -222,10 +210,6 @@ const HomePage = () => {
       </div>
     </div>
   )}
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
     <div className="p-4">
       <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
       <p className="text-gray-300">
@@ -234,6 +218,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

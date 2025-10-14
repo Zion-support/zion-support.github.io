@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react''';
@@ -145,7 +144,6 @@ const CaseStudiesPage: React.FC = () => {}
 export default CaseStudiesPage
 </ArrowRight>
 </Icon>"
-=======
 import React from 'react';
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -156,4 +154,3 @@ const CaseStudiesPage: React.FC = () => {
   );
 };
 export default CaseStudiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

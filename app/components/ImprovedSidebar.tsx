@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
@@ -22,7 +21,6 @@ const ImprovedSidebar: React.FC = () => { return (
             Improved Sidebar</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional improved sidebar services
-
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto"><div className="grid md:grid-cols-2 gap-12 items-center"
@@ -61,7 +59,6 @@ const ImprovedSidebar: React.FC = () => { return (
           </div>
         </div>
       </section>
-
       { /* CTA Section */ }
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center"><h2 className="text-3xl font-bold text-white mb-6"
@@ -121,17 +118,14 @@ interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState(''
   const location = useLocation();
-
   // Close sidebar when route changes
   useEffect(() => {
     onClose();
   }, [location, onClose]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
@@ -139,7 +133,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, section]
     );
   };
-
   const navigationSections = [
     {
       id: 'ai-services'
@@ -245,7 +238,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     }
   ];
-
   const quickLinks = [
     { label: 'Home', href: '/'
     { label: 'Pricing', href: '/pricing'
@@ -255,7 +247,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Blog', href: '/blog'
     { label: 'Contact', href: '/contact'
   ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about'
     { label: 'Our Team', href: '/team'
@@ -265,29 +256,23 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { label: 'Press', href: '/press'
     { label: 'Partners', href: '/partners'
   ];
-
   const filteredSections = navigationSections.map(section => ({
     ...section,
     items: section.items.filter(item => 
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(section => section.items.length > 0 || searchQuery === ''
-
   if (!isOpen) return null;
-
 const ImprovedSidebar = () => {
   return (
     <div className="p-4"
       <h2 className="text-xl font-semibold mb-2"
       <p>This component is under construction.</p>
     </div>
->>>>>>> origin/main
   );
 export default ImprovedSidebar;
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const ImprovedSidebarPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -296,7 +281,6 @@ const ImprovedSidebarPage = () => {
         <meta name="description" content="Professional ImprovedSidebar services by Zion Tech Group." />
         <meta name="keywords" content="ImprovedSidebar, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -306,7 +290,6 @@ const ImprovedSidebarPage = () => {
             Professional ImprovedSidebar services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -314,14 +297,12 @@ const ImprovedSidebarPage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
@@ -333,6 +314,4 @@ const ImprovedSidebarPage = () => {
     </div>
   );
 };
-
 export default ImprovedSidebarPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React  from "react
 import { Helmet }   from "react-helmet-async
     {"
@@ -85,7 +84,6 @@ const features = [
       description: "High-performance AI systems that process data in real-time for immediate insights and actions."
       icon: RocketLaunchIcon
     },
-
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet></Helmet>
@@ -104,9 +102,7 @@ const features = [
               help businesses automate processes, gain insights, and deliver exceptional customer experiences.
             </p>
           </div>
-
         </div>
-
       {/* AI Services Grid */})
 )
             {aiServices.map((service, index) => {;
@@ -117,12 +113,10 @@ const Icon = service.icon
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     { service.description }
-
                   </p>
                   {/* Pricing */}
                   <div className="mb-6"><span className="text-3xl font-bold text-green-400">{service.price}</span>
                   </div>
-
                   {/* Features */})
 )
                       {service.features.map((feature, featureIndex) => (
@@ -133,16 +127,12 @@ const Icon = service.icon
                       ))
                     </ul>
                   </div>
-
                   {/* Benefits */}
-
                         </span>
                       ))
                     </div>
                   </div>
-
                   {/* Use Cases */}
-
                         </span>
                       ))
                     </div>
@@ -166,9 +156,7 @@ const Icon = service.icon
           </div>
         </div>
       </section>
-
       {/* Why Choose Our AI Solutions */}
-
               Why Choose Our AI Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -209,9 +197,7 @@ const Icon = service.icon
           </div>
         </div>
       </section>
-
       {/* AI Implementation Process */}
-
               Our AI Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -252,9 +238,7 @@ const Icon = service.icon
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-
               Let's discuss how our AI solutions can transform your business and drive innovation'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"><Link"
@@ -282,9 +266,7 @@ const Icon = service.icon
             </div>
           </div>
         </div>
-
       </section></>
-
       </section>
     </>
   )
@@ -310,9 +292,7 @@ export default AISolutionsPage
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
-
               Our AI Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -336,9 +316,7 @@ export default AISolutionsPage
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-
               Why Choose Our AI Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -353,7 +331,6 @@ export default AISolutionsPage
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 '
               Let's discuss how our AI solutions can help you achieve your goals.'
@@ -374,7 +351,6 @@ export default AISolutionsPage
 };
 export default HomePage;
 }}}}}}}}}';
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -396,4 +372,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

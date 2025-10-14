@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''';
 import { Helmet } from 'react-helmet-async'''';
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react''';
@@ -106,7 +105,6 @@ const DigitalTransformationPage: React.FC = () => {}
 }
 export default DigitalTransformationPage
 </Icon>"
-=======
 import React from 'react';
 const DigitalTransformationPage: React.FC = () => {
   return (
@@ -117,4 +115,3 @@ const DigitalTransformationPage: React.FC = () => {
   );
 };
 export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

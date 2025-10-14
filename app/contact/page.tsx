@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import React from "react
+import React from "react";
 import { Helmet }    from "react-helmet-async
     'AI Services','
     'IT Services','
@@ -23,9 +22,7 @@ const subjects = [''
     <div className="min-h-screen bg-white"><Helmet><title>Contact - Zion Tech Group</title><meta name="description" content="Contact Zion Tech Group for AI and IT solutions" /></Helmet>
           </p>
         </div>
-
       {/* Contact Info */}
-
             Get in Touch
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>)
@@ -41,12 +38,9 @@ const Icon = info.icon
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
-
             Send us a Message
           </h2>
-          
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"><div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>
                 <Circle className="w-8 h-8 text-white" />
@@ -59,7 +53,6 @@ const Icon = info.icon
                 onClick={() => {
                   setIsSubmitted(false)
                   setFormData({
-
               >
                 Send Another Message
               </button>
@@ -76,7 +69,6 @@ const Icon = info.icon
                     name="name"
                     value={ formData.name }
                     onChange={ handleChange }
-
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
                     placeholder="Your full name"
@@ -92,7 +84,6 @@ const Icon = info.icon
                     name="email"
                     value={ formData.email }
                     onChange={ handleChange }
-
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
                     placeholder="your.email@company.com"
@@ -136,13 +127,11 @@ const Icon = info.icon
                   name="subject"
                   value={ formData.subject }
                   onChange={ handleChange }
-
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
                   { subjects.map((subject, index) => ( }
-
                     <option key={index} value={subject}>
                       { subject }
                     </option>)
@@ -179,20 +168,16 @@ const Icon = info.icon
                       <Send className="w-5 h-5 ml-2 inline" />
                     </> })
                   )}
-
                 </button>
               </div>
             </form>
           )
         </div>
       </section>
-
     </div>);
 };
 export default ContactPage;
 };
-=======
-import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
   return (
@@ -213,4 +198,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

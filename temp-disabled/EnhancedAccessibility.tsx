@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'react''''
 interface EnhancedAccessibilityProps {}
   children: "Node"}"""";
@@ -226,7 +225,6 @@ const style = document.createElement('style')''''
 }
 export default EnhancedAccessibility
 </AccessibilitySettings>"
-=======
 import React from 'react';
 const EnhancedAccessibility: React.FC = () => {
   return (
@@ -237,4 +235,3 @@ const EnhancedAccessibility: React.FC = () => {
   );
 };
 export default EnhancedAccessibility;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

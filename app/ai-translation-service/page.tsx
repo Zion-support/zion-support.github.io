@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from "react-router-dom
 import { Languages, Target, CheckCircle }    from "lucide-react
 import Layout from '../layout'
-
 export default function AITranslationServicePage() {
   const features = ["
     {"
@@ -12,7 +10,6 @@ export default function AITranslationServicePage() {
       description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ];
-
   const translationFeatures = [
     {
       category: 'Translation Types'
@@ -31,7 +28,6 @@ export default function AITranslationServicePage() {
       items: ['Real-time Translation', 'Batch Processing', 'API Integration', 'Custom Models', 'Quality Scoring', 'Confidence Metrics'
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Basic'
@@ -79,7 +75,6 @@ export default function AITranslationServicePage() {
       popular: false
     }
   ];
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -112,7 +107,6 @@ export default function AITranslationServicePage() {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="py-16"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -135,7 +129,6 @@ export default function AITranslationServicePage() {
             </div>
           </div>
         </div>
-
         {/* Translation Features Section */}
         <div className="py-16 bg-white/5"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -164,7 +157,6 @@ export default function AITranslationServicePage() {
             </div>
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="py-16"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -212,7 +204,6 @@ export default function AITranslationServicePage() {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="py-16 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
@@ -233,8 +224,6 @@ export default function AITranslationServicePage() {
     </Layout>
   );
 }
->>>>>>> origin/main
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -256,4 +245,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

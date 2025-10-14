@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const ServiceCardSkeleton = () => {"
   return (
@@ -6,9 +5,7 @@ const ServiceCardSkeleton = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const ServiceCardSkeleton = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const ServiceCardSkeleton = () => {
     </div>
   );
 };
-
 export default ServiceCardSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

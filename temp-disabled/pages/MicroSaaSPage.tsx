@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";";
 import { Helmet } from "react-helmet-async";
 ;
@@ -23,7 +22,6 @@ const MicroSaaSPagePage = () => {
 ;
 export default MicroSaaSPagePage;
 "
-=======
 import React from 'react';
 const MicroSaaSPage: React.FC = () => {
   return (
@@ -34,4 +32,3 @@ const MicroSaaSPage: React.FC = () => {
   );
 };
 export default MicroSaaSPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

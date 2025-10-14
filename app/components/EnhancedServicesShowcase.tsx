@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const EnhancedServicesShowcase = () => {"
   return (
@@ -6,9 +5,7 @@ const EnhancedServicesShowcase = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const EnhancedServicesShowcase = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const EnhancedServicesShowcase = () => {
     </div>
   );
 };
-
 export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

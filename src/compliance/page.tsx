@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -109,12 +108,10 @@ const auditSchedule = [
       ]
     }
   ]
-
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
-        
         {/* Header */}"
         <section className="bg-white shadow-sm border-b">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"></div>"
@@ -135,7 +132,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Hero Section */}"
         <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -163,7 +159,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Compliance Frameworks */}"
         <section className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -208,7 +203,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Compliance Areas */}"
         <section className="py-16 bg-gray-50">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -242,7 +236,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Audit Schedule */}"
         <section className="py-16 bg-white">"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -280,7 +273,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Compliance Reports */}"
         <section className="py-16 bg-gray-50">"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
@@ -320,7 +312,6 @@ const auditSchedule = [
             </div>
           </div>
         </section>
-
         {/* Contact Compliance Team */}"
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>"
@@ -338,7 +329,6 @@ const auditSchedule = [
             </Link>
           </div>
         </section>
-
         <Footer />
       </div>
     </>
@@ -346,8 +336,6 @@ const auditSchedule = [
 }
 ;
 export default CompliancePage"
-=======
-import React from 'react';
 const page: React.FC = () => {
   return (
     <div>
@@ -357,4 +345,3 @@ const page: React.FC = () => {
   );
 };
 export default page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

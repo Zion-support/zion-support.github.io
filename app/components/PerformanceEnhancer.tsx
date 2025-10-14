@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React    from "react"
 const PerformanceEnhancer = () => {"
   return (
@@ -6,9 +5,7 @@ const PerformanceEnhancer = () => {"
       <p>This component is under construction.</p>
     </div>)
 }
-=======
 import React from "react";
-
 const PerformanceEnhancer = () => {
   return (
     <div className="p-4">
@@ -19,6 +16,4 @@ const PerformanceEnhancer = () => {
     </div>
   );
 };
-
 export default PerformanceEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

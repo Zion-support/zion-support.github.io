@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function PricingPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const PricingPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const PricingPage: React.FC = () => {
   );
 };
 export default PricingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

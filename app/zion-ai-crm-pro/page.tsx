@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 export default function Page() {;
-import React from "react
+import React from "react";
 import { Helmet }    from "react-helmet-async
       <Helmet></Helmet>"
         <meta name="description" content="Professional services by Zion Tech Group."
 }
-=======
-import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -18,6 +14,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

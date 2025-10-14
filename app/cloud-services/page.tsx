@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     {
       icon: <TrendingUp className="w-6 h-6" />
       title: "Scalability"
@@ -12,16 +11,13 @@
     {
     }
   ];
-
   return (
     <>
       <Helmet>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -34,7 +30,6 @@
             </div>
           </div>
         </section>
-
                 </div>
               ))}
             </div>
@@ -46,9 +41,7 @@
     </>
   );
 }
-=======
 import React from "react";
-
 const Page = () => {
   return (
     <div className="p-4">
@@ -59,6 +52,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

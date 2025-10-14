@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from "react-router-dom
 import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone }    from "lucide-react
@@ -24,9 +23,6 @@ import {
 } from '
 interface SidebarProps {isOpen: boolean;
   onClose: () => void}
->>>>>>> origin/main
->>>>>>> origin/main
-
   ]"
   const additionalLinks = ["
     { name: "Privacy Policy", href: "/privacy"
@@ -35,7 +31,6 @@ interface SidebarProps {isOpen: boolean;
     { name: "Documentation", href: "/docs"
     { name: "Careers", href: "/careers"
   ];
-
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics'
     { name: 'AI Automation', href: '/ai-automation-platform'
@@ -44,7 +39,6 @@ interface SidebarProps {isOpen: boolean;
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity'
     { name: 'AI Data Analytics', href: '/ai-data-analytics'
   ];
-
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration'
     { name: 'DevOps Services', href: '/devops-services'
@@ -53,7 +47,6 @@ interface SidebarProps {isOpen: boolean;
     { name: 'Software Development', href: '/software-development'
     { name: 'Web Development', href: '/web-development'
   ];
-
   const microSaasServices = [
     { name: 'Project Management Pro', href: '/project-management-pro'
     { name: 'AI CRM Pro', href: '/zion-ai-crm-pro'
@@ -62,9 +55,7 @@ interface SidebarProps {isOpen: boolean;
     { name: 'Performance Monitor', href: '/zion-performance-monitor'
     { name: 'Email Automation', href: '/zion-email-automation'
   ];
-
   if (!isOpen) return null;
-
   return (
     <>
       <div className="fixed inset-0 z-50 md:hidden"
@@ -86,9 +77,7 @@ interface SidebarProps {isOpen: boolean;
     { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },'
     { name: 'Contact', href: '/contact', icon: PhoneIcon }'
   ];
-
   if (!isOpen) return null;
-
   return (<div className="fixed inset-0 z-50 md:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="relative flex flex-col w-64 h-full bg-slate-900">
@@ -130,7 +119,6 @@ interface SidebarProps {isOpen: boolean;
                         >
                           <subLink.icon className="w-4 h-4 mr-3" />
                           {subLink.name}
->>>>>>> origin/main
             <button
               onClick={onClose}
               className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
@@ -138,7 +126,6 @@ interface SidebarProps {isOpen: boolean;
               <X className="w-6 h-6"
             </button>
           </div>
-
           <div className="p-4 space-y-6"
             {/* Main Navigation */}
             <div>
@@ -158,7 +145,6 @@ interface SidebarProps {isOpen: boolean;
                 ))}
               </nav>
             </div>
-
             {/* Services */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
@@ -178,7 +164,6 @@ interface SidebarProps {isOpen: boolean;
                 ))}
               </nav>
             </div>
-
             {/* AI Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
@@ -196,7 +181,6 @@ interface SidebarProps {isOpen: boolean;
                 ))}
               </nav>
             </div>
-
             {/* IT Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
@@ -214,7 +198,6 @@ interface SidebarProps {isOpen: boolean;
                 ))}
               </nav>
             </div>
-
             {/* Micro SAAS Services Dropdown */}
             <div>
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
@@ -232,7 +215,6 @@ interface SidebarProps {isOpen: boolean;
                 ))}
               </nav>
             </div>
-
             {/* Contact Info */}
             <div className="pt-6 border-t border-gray-700"
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3"
@@ -251,19 +233,12 @@ interface SidebarProps {isOpen: boolean;
             </div>
           </div>
         </div>
->>>>>>> origin/main
       </div>
     </>
   );
 };
-
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-
 const SidebarPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -272,7 +247,6 @@ const SidebarPage = () => {
         <meta name="description" content="Professional Sidebar services by Zion Tech Group." />
         <meta name="keywords" content="Sidebar, AI solutions, IT services" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -282,7 +256,6 @@ const SidebarPage = () => {
             Professional Sidebar services designed to help your business grow and succeed.
           </p>
         </div>
-        
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
@@ -290,14 +263,12 @@ const SidebarPage = () => {
               Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">
               Round-the-clock support to ensure your systems run smoothly at all times.
             </p>
           </div>
-          
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
             <p className="text-gray-300">
@@ -309,6 +280,4 @@ const SidebarPage = () => {
     </div>
   );
 };
-
 export default SidebarPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

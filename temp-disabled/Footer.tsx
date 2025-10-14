@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react''''';
 import { Link } from 'react-router-dom''''';
 import {}
@@ -376,7 +375,6 @@ export default Footer
 </div>
 </div>
 </div>"
-=======
 import React from 'react';
 const Footer: React.FC = () => {
   return (
@@ -387,4 +385,3 @@ const Footer: React.FC = () => {
   );
 };
 export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

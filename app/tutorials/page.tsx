@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';';
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock } from 'lucide-react';
 const TutorialsPage: React.FC = () => {;
@@ -82,14 +81,11 @@ const categories = [{ name: "All", count: 24 }
     { name: "DevOps", count: 3 }
     { name: "Data Science", count: 3 }
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet>
       </div>
-
     </div>)
   )
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -111,4 +107,3 @@ const PagePage = () => {
   );
 };
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

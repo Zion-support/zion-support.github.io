@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function TutorialsPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const TutorialsPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const TutorialsPage: React.FC = () => {
   );
 };
 export default TutorialsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

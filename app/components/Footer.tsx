@@ -1,26 +1,19 @@
-<<<<<<< HEAD
 import React, { useMemo } from "react
 import { Link } from "react-router-dom
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award } from "lucide-react
-import { Link } from "react-router-dom
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle }    from "lucide-react
 const ImprovedFooter = () => {
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
-
 const Footer = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   const currentYear = new Date().getFullYear();
-
   const serviceCategories = ["
     {"
       title: 'AI Services'"
       icon: <Brain className="w-5 h-5"
       color: 'from-blue-500 to-cyan-500'
       links: [
-<<<<<<< HEAD
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro'
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro'
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro'
@@ -101,7 +94,6 @@ const Footer = () => {
       ]
     },
   ], []);
-
   const services = useMemo(() => [
     { name: "AI Analytics", href: "/ai-analytics"
     { name: "AI Automation", href: "/ai-automation-platform"
@@ -115,7 +107,6 @@ const Footer = () => {
     { name: "AI Voice Assistant", href: "/ai-voice-assistant"
     { name: "AI Workflow Automation", href: "/ai-workflow-automation"
   ], []);
-
   const itServices = useMemo(() => [
     { name: "Cloud Migration", href: "/cloud-migration"
     { name: "DevOps Services", href: "/devops-services"
@@ -125,7 +116,6 @@ const Footer = () => {
     { name: "System Integration", href: "/system-integration"
     { name: "Web Development", href: "/web-development"
   ], []);
-
   const microSaasServices = useMemo(() => [
     { name: "Project Management Pro", href: "/project-management-pro"
     { name: "AI CRM Pro", href: "/zion-ai-crm-pro"
@@ -136,7 +126,6 @@ const Footer = () => {
     { name: "Email Automation", href: "/zion-email-automation"
     { name: "Data Analytics", href: "/data-analytics"
   ], []);
-
   const companyLinks = useMemo(() => [
     { name: "About Us", href: "/about"
     { name: "Our Team", href: "/team"
@@ -145,7 +134,6 @@ const Footer = () => {
     { name: "Partners", href: "/partners"
     { name: "Contact", href: "/contact"
   ], []);
-
   const supportLinks = useMemo(() => [
     { name: "Documentation", href: "/docs"
     { name: "API Reference", href: "/api"
@@ -154,7 +142,6 @@ const Footer = () => {
     { name: "Status Page", href: "/status"
     { name: "Community", href: "/community"
   ], []);
-
   const legalLinks = useMemo(() => [
     { name: "Privacy Policy", href: "/privacy"
     { name: "Terms of Service", href: "/terms"
@@ -162,7 +149,6 @@ const Footer = () => {
     { name: "GDPR Compliance", href: "/gdpr"
     { name: "Security", href: "/security"
   ], []);
-
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
@@ -203,7 +189,6 @@ const legal = [
     { label: 'Press', href: '/press'
     { label: 'Partners', href: '/partners'
   ];
-
   const resourceLinks = [
     { label: 'Pricing', href: '/pricing'
     { label: 'Demo', href: '/demo'
@@ -214,7 +199,6 @@ const legal = [
     { label: 'Webinars', href: '/webinars'
     { label: 'White Papers', href: '/whitepapers'
   ];
-
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy'
     { label: 'Terms of Service', href: '/terms'
@@ -223,7 +207,6 @@ const legal = [
     { label: 'Accessibility', href: '/accessibility'
     { label: 'Security', href: '/security'
   ];
-
   const socialLinks = [
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup'
     { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup'
@@ -232,20 +215,17 @@ const legal = [
     { label: 'Instagram', href: 'https://instagram.com/ziontechgroup'
     { label: 'YouTube', href: 'https://youtube.com/ziontechgroup'
   ];
-
   const stats = [
     { number: '10,000+', label: 'Active Users'
     { number: '99.9%', label: 'Uptime SLA'
     { number: '60+', label: 'Micro SAAS Solutions'
     { number: '24/7', label: 'Support Available'
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10"
       {/* Main Footer Content */}
@@ -259,7 +239,6 @@ const legal = [
               </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2"
               <div className="text-gray-300 text-xs md:text-sm"
-=======
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
@@ -296,7 +275,6 @@ const legal = [
       ]
     }
   ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -305,7 +283,6 @@ const legal = [
     { label: 'Blog', href: '/blog' },
     { label: 'News', href: '/news' }
   ];
-
   const supportLinks = [
     { label: 'Help Center', href: '/help' },
     { label: 'Documentation', href: '/docs' },
@@ -313,7 +290,6 @@ const legal = [
     { label: 'Status Page', href: '/status' },
     { label: 'Contact Support', href: '/support' }
   ];
-
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Service', href: '/terms' },
@@ -321,7 +297,6 @@ const legal = [
     { label: 'GDPR Compliance', href: '/gdpr' },
     { label: 'Security', href: '/security' }
   ];
-
   const socialLinks = [
     { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -330,7 +305,6 @@ const legal = [
     { icon: <Instagram className="w-5 h-5" />, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/ziontechgroup', label: 'YouTube' }
   ];
-
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
@@ -343,7 +317,6 @@ const legal = [
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
             </div>
             <p className="text-gray-400 mb-6 max-w-sm">
               Leading provider of AI and IT solutions, helping businesses transform and scale with cutting-edge technology.
@@ -363,26 +336,21 @@ const legal = [
               </div>
             </div>
           </div>
-
-<<<<<<< HEAD
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16"
           {serviceCategories.map((category, index) => (
             <div key={index} className="space-y-6"
               <div className="flex items-center space-x-3"
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`
-=======
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <div key={index} className="lg:col-span-1">
               <div className="flex items-center mb-6">
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
                   {category.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white"
               </div>
-<<<<<<< HEAD
               <div className="space-y-3"
                 {category.links.slice(0, 8).map((link, linkIndex) => (
                   <Link key={linkIndex}
@@ -411,7 +379,6 @@ const legal = [
                   </Link>
                 )}
               </div>
-=======
               <ul className="space-y-3">
                 {category.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
@@ -424,12 +391,9 @@ const legal = [
                   </li>
                 ))}
               </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
             </div>
           ))}
         </div>
-
-<<<<<<< HEAD
         {/* Company Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           {/* Company Info */}
@@ -444,7 +408,6 @@ const legal = [
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
               </p>
             </div>
-            
             {/* Social Links */}
             <div>
               <h4 className="text-white font-semibold mb-4"
@@ -464,7 +427,6 @@ const legal = [
               </div>
             </div>
           </div>
-
           {/* Company Links */}
           <div className="space-y-4"
             <h4 className="text-lg font-semibold text-white"
@@ -476,16 +438,12 @@ const legal = [
                 >
                   {link.label}
                 </Link>
->>>>>>> origin/main
               ))}
             </div>
           </div>
-
                   </Link>
                 </li>
-
   ))};
-
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -535,8 +493,6 @@ const legal = [
             <div className="flex items-center">
               <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />
               <span className="text-gray-300">San Francisco, CA</span>
->>>>>>> origin/main
-=======
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
           <div>
@@ -585,7 +541,6 @@ const legal = [
             </ul>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700">
           <div className="max-w-md mx-auto text-center">
@@ -601,13 +556,10 @@ const legal = [
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
             </div>
           </div>
         </div>
       </div>
-
-<<<<<<< HEAD
           { /* Copyright */ }
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm"
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
@@ -635,7 +587,6 @@ const legal = [
           <div className="flex space-x-6 text-gray-400 text-sm"><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
-
         {/* Bottom Bar */}
           <p className="text-gray-400"
             © {currentYear} Zion Tech Group. All rights reserved. Made with{ ' '
@@ -644,8 +595,6 @@ const legal = [
         </div>
       </div>
     </footer>
-
-=======
       {/* Bottom Footer */}
       <div className="bg-slate-800 border-t border-slate-700">
         <div className="container mx-auto px-4 py-6">
@@ -671,17 +620,8 @@ const legal = [
         </div>
       </div>
     </footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
   );
 };
-
-<<<<<<< HEAD
 Footer.displayName = "Footer"
 export default Footer;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
-=======
 export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

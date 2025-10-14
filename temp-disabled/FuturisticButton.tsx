@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'''''
 interface FuturisticButtonProps {}
   children: React.ReactNode
@@ -40,7 +39,6 @@ const variantClasses = {}
 }
 export default FuturisticButton
 </FuturisticButtonProps>"
-=======
 import React from 'react';
 const FuturisticButton: React.FC = () => {
   return (
@@ -51,4 +49,3 @@ const FuturisticButton: React.FC = () => {
   );
 };
 export default FuturisticButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

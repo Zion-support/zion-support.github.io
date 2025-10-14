@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 ";
 import React from "react";
@@ -11,7 +10,6 @@ export default function PrivacyPage() {
     </div>)
   );
 }"
-=======
 import React from 'react';
 const PrivacyPage: React.FC = () => {
   return (
@@ -22,4 +20,3 @@ const PrivacyPage: React.FC = () => {
   );
 };
 export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1

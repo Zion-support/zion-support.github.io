@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 structuredData
 }) => {
   return (
@@ -10,12 +9,9 @@ structuredData
         </script>
       )
     </Helmet>
-
   )
 }}
-=======
 import React from "react";
-
 const SEOHead = () => {
   return (
     <div className="p-4">
@@ -26,6 +22,4 @@ const SEOHead = () => {
     </div>
   );
 };
-
 export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-cbe1
