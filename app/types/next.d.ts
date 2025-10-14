@@ -8,7 +8,7 @@ declare module 'next' {';'
   }
 }
 // Export a utility function;
-export const nextUtil = () => {
+export const nextUtil = () => {;
   // Implementation;
   return true;}
 };

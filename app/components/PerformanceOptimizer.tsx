@@ -1,20 +1,20 @@
 import React from 'react'
 import { useEffect, Node } from 'react'
 interface PerformanceOptimizerProps {
-  children: Node}
+  children: "Node"}
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {
   useEffect(() => {
-    // Performance optimization code''
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img')'
-      images.forEach((img) => {
+    // Performance optimization code'';
+    const optimizeImages = () => {;
+      const images = document.querySelectorAll('img')';
+      images.forEach((img) => {;
         if (!img.hasAttribute('loading')) {';'
           img.setAttribute('loading', 'lazy');'
         }
       });
     }
-    const optimizeFonts = () => {
+    const optimizeFonts = () => {;
       // Preload critical fonts;''
       const link = document.createElement('link');''
       link.rel = 'preload';''
@@ -27,9 +27,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const optimizeResources = () => {
       // Preload critical resources
       const criticalResources = ['/css/critical.css',''
-        '/js/critical.js'''
-      ]
-      criticalResources.forEach((resource) => {
+        '/js/critical.js''';
+      ];
+      criticalResources.forEach((resource) => {;
         const link = document.createElement('link');'
         link.rel = 'preload';'
         link.href = resource;''

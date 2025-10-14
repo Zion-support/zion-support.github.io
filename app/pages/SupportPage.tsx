@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const SupportPage: React.FC = () => {
+const SupportPage: "React.FC = () => {"
   return (
   <>
       <Helmet></Helmet>
@@ -8,14 +8,14 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="SupportPage - Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">SupportPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+          <p className="text-gray-30o0">This page is under construction.</p>
         </div>
-      </div>
-)
-    </>)
+      </div>;
+);
+    </>);
   );
 }
 }

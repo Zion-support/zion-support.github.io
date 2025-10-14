@@ -1,142 +1,103 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// Common syntax error patterns and their fixes
-const fixes = [
-  // Fix unterminated string literals with trailing quotes
-  {
-    pattern: /'([^']*?)\n/g,
-    replacement: "'$1'\n"
-  },
-  // Fix unterminated string literals with trailing quotes in JSX
-  {
-    pattern: /"([^"]*?)\n/g,
-    replacement: '"$1"\n'
-  },
-  // Fix extra commas in object properties
-  {
-    pattern: /,\s*}/g,
-    replacement: '}'
-  },
-  // Fix extra commas in array properties
-  {
-    pattern: /,\s*]/g,
-    replacement: ']'
-  },
-  // Fix semicolons in object properties
-  {
-    pattern: /;\s*}/g,
-    replacement: '}'
-  },
-  // Fix semicolons in array properties
-  {
-    pattern: /;\s*]/g,
-    replacement: ']'
-  },
-  // Fix duplicate color properties
-  {
-    pattern: /color:\s*"[^"]*"\s*}\s*color:\s*"[^"]*"\s*}/g,
-    replacement: (match) => {
-      const colors = match.match(/"([^"]*)"/g);
-      return `color: ${colors[0]}}`;
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix malformed import statements with 'use client'
+  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  
+  // Fix missing semicolons after import statements
+  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match.trim() + ';\n';
     }
-  },
+    return match;
+  });
+  
+  // Fix unterminated string literals in object properties
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {
+    if (rest.includes('"') && !rest.includes('",')) {
+      return `${key}: "${value}",`;
+    }
+    return match;
+  });
+  
+  // Fix unterminated string literals with missing closing quotes
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {
+    if (!value.endsWith('"')) {
+      return `${key}: "${value}"`;
+    }
+    return match;
+  });
+  
+  // Fix missing commas in object properties
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
+  
   // Fix malformed JSX closing tags
-  {
-    pattern: /<([^>]+)\s*>\s*<\/\1\s*>/g,
-    replacement: '<$1></$1>'
-  },
-  // Fix missing closing braces in objects
-  {
-    pattern: /(\w+):\s*"([^"]*)"\s*,\s*$/gm,
-    replacement: '$1: "$2",'
-  },
-  // Fix stray semicolons in JSX
-  {
-    pattern: /;\s*<\/[^>]+>/g,
-    replacement: '</$1>'
-  },
-  // Fix malformed function declarations
-  {
-    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
-    replacement: 'const $1 = () => {\n'
-  }
-];
+  fixed = fixed.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2></$1>');
+  
+  // Fix missing closing brackets in object literals
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*}(?=\s*[}\]])/g, '$1: "$2"\n  }');
+  
+  // Fix missing semicolons after variable declarations
+  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match.trim() + ';\n';
+    }
+    return match;
+  });
+  
+  return fixed;
+}
 
-function fixFile(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    // Apply all fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-    });
-    
-    // Additional specific fixes for common patterns
-    content = content
-      // Fix unterminated strings at end of lines
-      .replace(/'([^']*?)\n/g, "'$1'\n")
-      .replace(/"([^"]*?)\n/g, '"$1"\n")
-      // Fix extra commas and semicolons
-      .replace(/,(\s*[}\]])/g, '$1')
-      .replace(/(\w+):\s*"([^"]*)"\s*;\s*}/g, '$1: "$2" }')
-      // Fix malformed JSX
-      .replace(/>\s*;\s*</g, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix duplicate properties
-      .replace(/(\w+):\s*"[^"]*"\s*}\s*\1:\s*"[^"]*"\s*}/g, (match) => {
-        const props = match.match(/(\w+):\s*"([^"]*)"/g);
-        return props[0] + ' }';
-      });
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and JSX files
+// Main function
+async function main() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
-    'api/**/*.js',
-    'components/**/*.tsx',
-    'components/**/*.ts'
+    'api/**/*.js'
   ];
   
   let totalFixed = 0;
   
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
-      if (fixFile(file)) {
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (processFile(file)) {
         totalFixed++;
       }
-    });
-  });
+    }
+  }
   
-  console.log(`Fixed ${totalFixed} files`);
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = { fixFile, fixes };
+export { fixSyntaxErrors, processFile };

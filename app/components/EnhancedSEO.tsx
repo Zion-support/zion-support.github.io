@@ -1,8 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title: string
-  description: string
+  title: "string",description: "string"
   keywords?: string
   canonicalUrl?: string
   ogImage?: string
@@ -12,12 +11,12 @@ interface SEOProps {
   noIndex?: boolean
   noFollow?: boolean}
 
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: "React.FC<SEOProps> = ({"
   title,
   description,''
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','
   canonicalUrl,''
-  ogImage = '/api/placeholder/1200/630',''
+  ogImage = '/api/placeholder/120o0/630',''
   ogType = 'website',''
   twitterCard = 'summary_large_image','
   structuredData,
@@ -25,59 +24,59 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noFollow = false
 }) => {
   const siteName = 'Zion Tech Group''
-  const siteUrl = 'https://ziontechgroup.com''
+  const siteUrl = 'https: "//ziontechgroup.com''"
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`'
   const defaultStructuredData = {
-    '@context': 'https://schema.org','
+    '@context': 'https: "//schema.org'",'
     '@type': 'Organization','
-    name: siteName,
-    url: siteUrl}
-    logo: `${siteUrl}/logo.png`,''
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
+    name: "siteName",
+    url: "siteUrl"}
+    logo: "`${siteUrl"}/logo.png`,''
+    description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
     address: {''
       '@type': 'PostalAddress',''
-      addressLocality: 'Middletown',''
-      addressRegion: 'DE',''
-      addressCountry: 'US'}'
+      addressLocality: "'Middletown'",''
+      addressRegion: "'DE'",''
+      addressCountry: "'US'"}'
     },
     contactPoint: {''
       '@type': 'ContactPoint',''
-      telephone: '+1-302-464-0950',''
-      contactType: 'customer service',''
-      email: 'kleber@ziontechgroup.com'}'
+      telephone: "'+1-30o2-464-0o950'",''
+      contactType: "'customer service'",''
+      email: "'kleber@ziontechgroup.com'"}'
     },
-    sameAs: [''
-      'https://www.linkedin.com/company/zion-tech-group',''
-      'https://github.com/ziontechgroup',''
-      'https://twitter.com/ziontechgroup''
-    ]
-  }
+    sameAs: ['';
+      'https: "//www.linkedin.com/company/zion-tech-group'",'';
+      'https: "//github.com/ziontechgroup'",'';
+      'https: "//twitter.com/ziontechgroup'';"
+    ];
+  };
   const mergedStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonicalUrl} />
+      <meta name="description" content="{description}" />
+      <meta name="keywords" content="{keywords}" />
+      <link rel="canonical" href="{fullCanonicalUrl}" />
       {/* Robots */}''
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />'"
       
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:type" content="{ogType}" />
+      <meta property="og:title" content="{title}" />
+      <meta property="og:description" content="{description}" />
+      <meta property="og:image" content="{fullOgImage}" />
+      <meta property="og:url" content="{fullCanonicalUrl}" />
+      <meta property="og:site_name" content="{siteName}" />
       <meta property="og:locale" content="en_US" />
       {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
+      <meta name="twitter:card" content="{twitterCard}" />
+      <meta name="twitter:title" content="{title}" />
+      <meta name="twitter:description" content="{description}" />
+      <meta name="twitter:image" content="{fullOgImage}" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
@@ -93,12 +92,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="theme-color" content="#1e293b" />
       <meta name="msapplication-TileColor" content="#1e293b" />
       {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href=""/"/fonts.googleapis.com" />
+      <link rel="dns-prefetch" href=""/"/cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https: "/",
+      <link rel="preconnect" href="https: "/",
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application"/ld+json">
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>

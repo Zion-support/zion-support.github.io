@@ -7,45 +7,45 @@ import {
   ShieldCheckIcon, 
   CloudIcon, 
   RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  StarIcon
+  CheckCircleIcon,;
+  ArrowRightIcon,;
+  StarIcon;
 } from '@heroicons/react/24/outline';'
-const HomePage: React.FC = () => {
+const HomePage: "React.FC = () => {"
   const services = [
     {
-      icon: CpuChipIcon,
-      title: 'AI Solutions','
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.','
-      href: '/ai-solutions'
+      icon: "CpuChipIcon",
+      title: "'AI Solutions'",'
+      description: "'Cutting-edge artificial intelligence solutions to transform your business.'",'
+      href: "'/ai-solutions'"
     },
     {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure','
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.','
-      href: '/cloud-infrastructure'
+      icon: "CloudIcon",
+      title: "'Cloud Infrastructure'",'
+      description: "'Scalable and secure cloud infrastructure solutions for modern businesses.'",'
+      href: "'/cloud-infrastructure'"
     },
     {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity','
-      description: 'Comprehensive cybersecurity solutions to protect your digital assets.','
-      href: '/cybersecurity'
+      icon: "ShieldCheckIcon",
+      title: "'Cybersecurity'",'
+      description: "'Comprehensive cybersecurity solutions to protect your digital assets.'",'
+      href: "'/cybersecurity'"
     },
     {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation','
-      description: 'Complete digital transformation services to modernize your business.','
-      href: '/digital-transformation'
-    }
+      icon: "RocketLaunchIcon",
+      title: "'Digital Transformation'",'
+      description: "'Complete digital transformation services to modernize your business.'",';
+      href: "'/digital-transformation';"
+    };
   ];
 
   const features = [
     '24/7 Expert Support','
     'Custom Solutions','
     'Scalable Architecture','
-    'Security First','
-    'Performance Optimized','
-    'Cost Effective''
+    'Security First',';
+    'Performance Optimized',';
+    'Cost Effective'';
   ];
 
   return (
@@ -58,25 +58,25 @@ const HomePage: React.FC = () => {
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
               Transform Your Business with AI & IT Solutions
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">
               We deliver cutting-edge artificial intelligence and information technology solutions 
               that drive growth, efficiency, and innovation for businesses of all sizes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                to=""/contact" "
+                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/services" "
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                to=""/services" "
+                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Learn More
               </Link>
@@ -87,24 +87,24 @@ const HomePage: React.FC = () => {
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
               Our Services
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <Link 
                   key={index} 
                   to={service.href}
-                  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-blue-10o0 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-blue-60o0" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-90o0 mb-2">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="flex items-center text-blue-600 font-medium">
+                  <p className="text-gray-60o0 mb-4">{service.description}</p>
+                  <div className="flex items-center text-blue-60o0 font-medium">
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
                   </div>
                 </Link>
@@ -116,14 +116,14 @@ const HomePage: React.FC = () => {
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
               Why Choose Us?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center">
-                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
-                  <span className="text-gray-700">{feature}</span>
+                  <CheckCircleIcon className="w-6 h-6 text-green-50o0 mr-3" />
+                  <span className="text-gray-70o0">{feature}</span>
                 </div>
               ))}
             </div>
@@ -133,33 +133,33 @@ const HomePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-60o0 mb-8">
               Let's discuss how our AI and IT solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                to=""/contact" "
+                className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/about" "
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                to=""/about" "
+                className="border border-blue-60o0 text-blue-60o0 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 About Us
               </Link>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 font-medium">{feature}</span>
+              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-80o0"/30 rounded-lg hover:bg-slate-70o0"/30 transition-colors">
+                <CheckCircleIcon className="w-6 h-6 text-green-40o0 flex-shrink-0" />
+                <span className="text-gray-30o0 font-medium">{feature}</span>
               </div>
             ))}
           </div>
@@ -167,13 +167,13 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-r from-purple-90o0"/30 to-cyan-90o0"/30">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
               Our Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">
               Numbers that speak to our commitment to excellence and client success
             </p>
           </div>
@@ -181,10 +181,10 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">
+                <div className="text-4xl lg:text-5xl font-bold text-purple-40o0 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm lg:text-base">
+                <div className="text-gray-30o0 text-sm lg:text-base">
                   {stat.label}
                 </div>
               </div>
@@ -194,24 +194,24 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-r from-purple-90o0"/30 to-cyan-90o0"/30">
+        <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 l,g:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-12">
+          <p className="text-xl text-gray-30o0 mb-12">
             Let's discuss how our technology solutions can drive your business forward'
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact""
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              to=""/contact""
+              className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hove,r:scale-10o5"
             >
               Start Your Project
             </Link>
             <Link
-              to="/demo""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              to=""/demo""
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hove,r:text-slate-90o0 transition-all duration-30o0"
             >
               Schedule Demo
             </Link>

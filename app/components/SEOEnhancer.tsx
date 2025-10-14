@@ -9,7 +9,7 @@ interface SEOEnhancerProps {
   url?: string
   type?: string
   structuredData?: unknown}
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+const SEOEnhancer: "React.FC<SEOEnhancerProps> = ({"
   title = 'Zion Tech Group - Advanced AI and IT Solutions',''
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',''
   keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],''
@@ -20,12 +20,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script')'
-      script.type = 'application/ld+json''
-      script.text = JSON.stringify(structuredData)
-      document.head.appendChild(script)
-      return () => {
-        if (document.head.contains(script)) {
+      const script = document.createElement('script')';
+      script.type = 'application/ld+json'';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+      return () => {;
+        if (document.head.contains(script)) {;
           document.head.removeChild(script);
         }
       }
@@ -33,37 +33,37 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     return undefined;
   }, [structuredData]);
   // Generate meta tags;''
-  const metaTags = [{ name: 'description', content: description },';''
-    { name: 'keywords', content: keywords.join(', ') },';''
-    { name: 'author', content: 'Zion Tech Group' },';''
-    { name: 'robots', content: '_index, follow' },';''
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },';'
+  const metaTags = [{ name: "'description'", content: "description"},';''
+    { name: "'keywords'", content: "keywords.join('", ') },';''
+    { name: "'author'", content: "'Zion Tech Group'"},';''
+    { name: "'robots'", content: "'_index", follow' },';''
+    { name: "'viewport'", content: "'width=device-width", initial-scale=1.0' },';'
     // Open Graph tags;''
-    { property: 'og:title', content: title },';''
-    { property: 'og:description', content: description },';''
-    { property: 'og:image', content: image },';''
-    { property: 'og:url', content: url },';''
-    { property: 'og:type', content: type },';''
-    { property: 'og:site_name', content: 'Zion Tech Group' },';'
+    { property: "'o,g:title'", content: "title"},';''
+    { property: "'o,g:description'", content: "description"},';''
+    { property: "'o,g:image'", content: "image"},';''
+    { property: "'o,g:url'", content: "url"},';''
+    { property: "'o,g:type'", content: "type"},';''
+    { property: "'o,g:site_name'", content: "'Zion Tech Group'"},';'
     // Twitter d tags;''
-    { name: 'twitter:card', content: 'summary_large_image' },';''
-    { name: 'twitter:title', content: title },';''
-    { name: 'twitter:description', content: description },';''
-    { name: 'twitter:image', content: image },';'
+    { name: "'twitte,r:card'", content: "'summary_large_image'"},';''
+    { name: "'twitte,r:title'", content: "title"},';''
+    { name: "'twitte,r:description'", content: "description"},';''
+    { name: "'twitte,r:image'", content: "image"},';'
     // Additional SEO tags;''
-    { name: 'theme-color', content: '#0066cc' },';''
-    { name: 'msapplication-TileColor', content: '#0066cc' },';''
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },';''
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';'
+    { name: "'theme-color'", content: "'#0o066cc'"},';''
+    { name: "'msapplication-TileColor'", content: "'#0o066cc'"},';''
+    { name: "'apple-mobile-web-app-capable'", content: "'yes'"},';''
+    { name: "'apple-mobile-web-app-status-bar-style'", content: "'default'"},';'
   ];
           document.head.removeChild(script)}
       }}
     return undefined}, [structuredData])
   // Generate meta tags
-  const metaTags = [{ name: 'description', content: description },'{ name: 'keywords', content: keywords.join(', ') },'{ name: 'author', content: 'Zion Tech Group' },'{ name: 'robots', content: '_index, follow' },'{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' },''
-    // Open Graph tags{ property: 'og:title', content: title },'{ property: 'og:description', content: description },'{ property: 'og:image', content: image },'{ property: 'og:url', content: url },'{ property: 'og:type', content: type },'{ property: 'og:site_name', content: 'Zion Tech Group' },''
-    // Twitter d tags{ name: 'twitter:card', content: 'summary_large_image' },'{ name: 'twitter:title', content: title },'{ name: 'twitter:description', content: description },'{ name: 'twitter:image', content: image },''
-    // Additional SEO tags{ name: 'theme-color', content: '#0066cc' },'{ name: 'msapplication-TileColor', content: '#0066cc' },'{ name: 'apple-mobile-web-app-capable', content: 'yes' },'{ name: 'apple-mobile-web-app-status-bar-style', content: 'default' },''
+  const metaTags = [{ name: "'description'", content: "description"},'{ name: "'keywords'", content: "keywords.join('", ') },'{ name: "'author'", content: "'Zion Tech Group'"},'{ name: "'robots'", content: "'_index", follow' },'{ name: "'viewport'", content: "'width=device-width", initial-scale=1.0' },''
+    // Open Graph tags{ property: "'o,g:title'", content: "title"},'{ property: "'o,g:description'", content: "description"},'{ property: "'o,g:image'", content: "image"},'{ property: "'o,g:url'", content: "url"},'{ property: "'o,g:type'", content: "type"},'{ property: "'o,g:site_name'", content: "'Zion Tech Group'"},''
+    // Twitter d tags{ name: "'twitte,r:card'", content: "'summary_large_image'"},'{ name: "'twitte,r:title'", content: "title"},'{ name: "'twitte,r:description'", content: "description"},'{ name: "'twitte,r:image'", content: "image"},''
+    // Additional SEO tags{ name: "'theme-color'", content: "'#0o066cc'"},'{ name: "'msapplication-TileColor'", content: "'#0o066cc'"},'{ name: "'apple-mobile-web-app-capable'", content: "'yes'"},'{ name: "'apple-mobile-web-app-status-bar-style'", content: "'default'"},''
   ]
   return (
     <Helmet>
@@ -72,19 +72,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta key={_index} {...tag} />
       ))}
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href="{url}" />
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="icon" type="image"/x-icon" href=""/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href=""/apple-touch-icon.png" />
+      <link rel="icon" type="image"/png" sizes="32x32" href=""/favicon-32x32.png" />
+      <link rel="icon" type="image"/png" sizes="16x16" href=""/favicon-16x16.png" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https: "/",
+      <link rel="preconnect" href="https: "/",
       {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+      <link rel="dns-prefetch" href=""/"/www.google-analytics.com" />;
+      <link rel="dns-prefetch" href=""/"/www.googletagmanager.com" />;
+    </Helmet>;
   );
 }
 // Default structured data for the organization;
@@ -97,7 +97,7 @@ const  {
   "logo": "https://ziontechgroup.com/images/logo.png","
   "contactPoint": {"
     "@type": "ContactPoint","
-    "telephone": "+1-555-0123","
+    "telephone": "+1-555-0o123","
     "contactType": "customer service","
     "availableLanguage": "English"},"
   "sameAs": ["https://www.linkedin.com/company/zion-tech-group","
@@ -109,7 +109,7 @@ const  {
     "streetAddress": "123 Tech Street","
     "addressLocality": "San Francisco","
     "addressRegion": "CA","
-    "postalCode": "94105","
+    "postalCode": "9410o5","
     "addressCountry": "US";"
   }
 }
