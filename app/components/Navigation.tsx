@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
+import { Menu, 
   X, 
   Brain, 
   Shield, 
   Zap, 
   Globe,
-  ChevronDown
-} from 'lucide-react';
+  ChevronDown } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -24,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { 
+    {
       name: 'Services', 
       href: '/services', 
       icon: BriefcaseIcon,
@@ -37,7 +35,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
-    { 
+    {
       name: 'Solutions', 
       href: '/solutions', 
       icon: CogIcon,
@@ -98,14 +96,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navigation.map((item) => {
+          <div className="hidden lg:flex items-center space-x-1" /></div>
+            {navigation.map((item) => {}
               const Icon = item.icon;
               return (
-                <div key={item.name} className="relative group">
+                <div key={item.name} className="relative group" /></div>
                   <Link
                     to={item.href}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${}
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
                         : 'text-gray-300 hover:text-white hover:bg-slate-800'
@@ -113,19 +111,19 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon className="w-4 h-4" / /></Icon>
                     <span>{item.name}</span>
                     {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50" /></div>
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
-                        >
+                         /></Link>
                           {subItem.name}
                         </Link>
                       ))}
@@ -137,23 +135,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4" /></div>
             <Link
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-            >
+             /></Link>
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-2" /></div>
             <button
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+             /></button>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" /></svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" / /></path>
               </svg>
             </button>
           </div>

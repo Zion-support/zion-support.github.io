@@ -1,19 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-export default function ZionAIEmailAnalyzer() {
+export default function ZionAIEmailAnalyzer() {}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>
+      <Helmet /></Helmet>
         <title>Zion AI Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." / /></meta>
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="container mx-auto px-4 py-16" /></div>
+        <div className="text-center mb-16" /></div>
+          <h1 className="text-5xl font-bold text-white mb-6" /></h1>
             Zion AI Email Analyzer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
             Advanced AI-powered email analysis and management solutions for modern businesses.;
           </p>;
         </div>

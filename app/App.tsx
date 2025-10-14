@@ -35,18 +35,18 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+  <div className="min-h-screen flex items-center justify-center bg-gray-900" /></div>
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500" /></div>
   </div>
 );
 
 // Main App Component
-export default function App() {
+export default function App() {}
   return (
-    <HelmetProvider>
-      <BrowserRouter>
+    <HelmetProvider /></HelmetProvider>
+      <BrowserRouter /></BrowserRouter>
         <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
+          <Routes /></Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />

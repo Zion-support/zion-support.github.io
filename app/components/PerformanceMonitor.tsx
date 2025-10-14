@@ -41,14 +41,14 @@ const PerformanceMonitor: React.FC = () => {
   }, []);
 
   // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === 'production') {}
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
+    <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs" /></div>
       <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1 text-sm">
+      <div className="space-y-1 text-sm" /></div>
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>

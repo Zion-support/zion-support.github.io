@@ -1,12 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
-const EnhancedFooter: React.FC = () => {
+const EnhancedFooter: React.FC = () => {}
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
+    <div className="min-h-screen bg-white" /></div>
+      <Helmet /></Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
-        <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
+        <meta name="description" content="Professional enhanced footer services by Zion Tech Group." / /></meta>
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;

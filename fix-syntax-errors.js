@@ -2,96 +2,139 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix unterminated string literals by adding missing quotes
-  fixed = fixed.replace(/import\s+React\s+from\s+'react';'react-helmet-async;/g, "import React from 'react';\nimport { Helmet } from 'react-helmet-async';");
-  
-  // Fix missing quotes in import statements
-  fixed = fixed.replace(/from\s+'lucide-react;/g, "from 'lucide-react';");
-  fixed = fixed.replace(/from\s+'react-router-dom;/g, "from 'react-router-dom';");
-  fixed = fixed.replace(/from\s+'react-helmet-async;/g, "from 'react-helmet-async';");
-  fixed = fixed.replace(/from\s+'@heroicons\/react\/24\/outline';/g, "from '@heroicons/react/24/outline';");
-  
-  // Fix object property syntax errors
-  fixed = fixed.replace(/icon:\s*icon:\s*/g, "icon: ");
-  fixed = fixed.replace(/title:\s*'([^']*)';/g, "title: '$1',");
-  fixed = fixed.replace(/description:\s*'([^']*)';/g, "description: '$1',");
-  fixed = fixed.replace(/color:\s*'([^']*)';/g, "color: '$1',");
-  
-  // Fix array syntax errors
-  fixed = fixed.replace(/\[\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*,\s*"([^"]*)"\s*;\s*\]/g, '["$1", "$2", "$3", "$4", "$5", "$6"]');
-  
-  // Fix semicolons in wrong places
-  fixed = fixed.replace(/;\s*\]/g, ']');
-  fixed = fixed.replace(/;\s*\}/g, '}');
-  fixed = fixed.replace(/;\s*\)/g, ')');
-  
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*;\s*(\w+):/g, '$1: "$2",\n      $3:');
-  fixed = fixed.replace(/(\w+):\s*'([^']*)'\s*;\s*(\w+):/g, "$1: '$2',\n      $3:");
-  
-  // Fix JSX syntax errors
-  fixed = fixed.replace(/<(\w+);/g, '<$1>');
-  fixed = fixed.replace(/<\/(\w+);/g, '</$1>');
-  
-  // Fix function declarations
-  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
-  
-  // Fix missing closing tags
-  fixed = fixed.replace(/<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>\s*<\/div>\s*<\/div>/g, 
-    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-8">\n          <h1 className="text-4xl font-bold text-white text-center mb-8">\n            $1\n          </h1>\n          <p className="text-xl text-gray-300 text-center">\n            $2\n          </p>\n          <div className="mt-8 text-center">\n            <p className="text-gray-400">\n              $3\n            </p>\n          </div>\n        </div>\n      </div>');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix common syntax errors in a file
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix malformed object properties with trailing commas and quotes
+    content = content.replace(/(\w+):\s*([^,}]+),'/g, '$1: $2,');
+    content = content.replace(/(\w+):\s*'([^']+)',/g, '$1: \'$2\',');
+    content = content.replace(/(\w+):\s*"([^"]+)",/g, '$1: "$2",');
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    // Fix unterminated string literals
+    content = content.replace(/(\w+):\s*'([^']*)$/gm, '$1: \'$2\'');
+    content = content.replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*)$/gm, 'className="$1"');
+    content = content.replace(/title="([^"]*)$/gm, 'title="$1"');
+    content = content.replace(/description="([^"]*)$/gm, 'description="$1"');
+    
+    // Fix missing closing tags
+    content = content.replace(/<(\w+)([^>]*)>\s*$/gm, '<$1$2></$1>');
+    
+    // Fix malformed imports
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s*'([^']+)';/g, (match, imports, module) => {
+      const cleanImports = imports.replace(/,\s*$/, '').trim();
+      return `import { ${cleanImports} } from '${module}';`;
+    });
+    
+    // Fix standalone semicolons
+    content = content.replace(/^;\s*$/gm, '');
+    
+    // Fix malformed return statements
+    content = content.replace(/return\s*\(\s*"$/gm, 'return (');
+    content = content.replace(/return\s*\(\s*'$/gm, 'return (');
+    
+    // Fix missing closing parentheses in JSX
+    content = content.replace(/<(\w+)([^>]*)>\s*$/gm, '<$1$2></$1>');
+    
+    // Fix malformed object arrays
+    content = content.replace(/\[\s*{\s*$/gm, '[');
+    content = content.replace(/}\s*,\s*{\s*$/gm, '}, {');
+    content = content.replace(/}\s*,\s*$/gm, '}');
+    
+    // Fix missing closing brackets
+    content = content.replace(/\[\s*$/gm, '[]');
+    content = content.replace(/{\s*$/gm, '{}');
+    
+    // Fix malformed JSX fragments
+    content = content.replace(/<>\s*$/gm, '<></>');
+    content = content.replace(/<>\s*{\s*$/gm, '<>{');
+    
+    // Fix missing export statements
+    if (content.includes('const ') && !content.includes('export default') && !content.includes('export const')) {
+      const componentMatch = content.match(/const\s+(\w+)\s*=/);
+      if (componentMatch) {
+        content = content.replace(/const\s+(\w+)\s*=/, 'const $1 =');
+        content += `\n\nexport default ${componentMatch[1]};`;
+        modified = true;
+      }
+    }
+    
+    // Fix malformed function declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, 'const $1 = () => {');
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/{/g) || []).length;
+    const closeBraces = (content.match(/}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '}'.repeat(openBraces - closeBraces);
+      modified = true;
+    }
+    
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      content += ')'.repeat(openParens - closeParens);
+      modified = true;
+    }
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
-  ];
+// Function to recursively find and fix all TypeScript/JavaScript files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
   
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += fixAllFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixFile(filePath)) {
+        fixedCount++;
       }
     }
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  return fixedCount;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+// Main execution
+console.log('Starting syntax error fixes...');
+const fixedCount = fixAllFiles('./app');
+console.log(`Fixed ${fixedCount} files.`);
+
+// Also fix root level files
+const rootFiles = ['App.tsx', 'App_minimal.tsx', 'App_test.tsx', 'EnhancedFooter.tsx', 'EnhancedHeader.tsx', 'SidebarNavigation.tsx'];
+let rootFixedCount = 0;
+
+for (const file of rootFiles) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      rootFixedCount++;
+    }
+  }
 }
 
-export { fixSyntaxErrors, processFile };
+console.log(`Fixed ${rootFixedCount} root files.`);
+console.log(`Total files fixed: ${fixedCount + rootFixedCount}`);

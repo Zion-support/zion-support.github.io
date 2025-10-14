@@ -4,12 +4,12 @@ import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
 export function withLazyLoading<T extends ComponentType<any>>(
   Component: T,
   fallback?: React.ReactNode;
-) {
+) {}
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...(props as any)} / /></LazyComponent>
     </Suspense>
   );
 }
@@ -17,19 +17,19 @@ export function withLazyLoading<T extends ComponentType<any>>(
 // Utility function to create lazy-loaded components;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 export function createLazyComponent<T extends ComponentType<any>>(
-  importFunction: () => Promise<{
+  importFunction: () => Promise<{}
     default: T ,
   }>,
   fallback?: React.ReactNode;
-) {
+) {}
   const LazyComponent = lazy(importFunction);
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...(props as any)} / /></LazyComponent>
     </Suspense>
   );,
-},
+}
 // Utility function to create lazy-loaded components,
 // eslint-disable-next-line @typescript-eslint/no-explicit-any,
 export function createLazyComponent<T extends ComponentType<any>>()
@@ -42,8 +42,11 @@ export function createLazyComponent<T extends ComponentType<any>>()
   return (props: ComponentProps<T>) => ()
 ,
     <Suspense fallback={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */},
-      <LazyComponent {...(props as any)} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <LazyComponent {...(props as any)} / /></LazyComponent>
     </Suspense>
   );,
 }'
+
+
+export default LazyComponent;

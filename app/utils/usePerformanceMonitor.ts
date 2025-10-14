@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -7,19 +7,19 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
 }
 
-export const usePerformanceMonitor = (): PerformanceMetrics => {
-    const [
+export const usePerformanceMonitor = (): PerformanceMetrics => {}
+    const []
     metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
+  ] = useState<PerformanceMetrics>({}
     loadTime: 0,
     renderTime: 0,
   });
-  useEffect(() => {
+  useEffect(() => {}
     const startTime = performance.now();
-    const measurePerformance = () => {
+    const measurePerformance = () => {}
       const loadTime = performance.now() - startTime;
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
-      setMetrics({
+      setMetrics({}
         loadTime,
         renderTime: performance.now() - startTime,
         memoryUsage,

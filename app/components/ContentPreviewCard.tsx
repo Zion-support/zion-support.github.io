@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ContentPreviewCardProps {
+interface ContentPreviewCardProps {}
   title: string;
   excerpt: string;
   author: string;
@@ -11,7 +11,7 @@ interface ContentPreviewCardProps {
   imageUrl?: string;
 }
 
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
+const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({}
   title,
   excerpt,
   author,
@@ -20,9 +20,9 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   category,
   slug,
   imageUrl
-}) => {
+}) => {}
   return (
-    <div className="p-4">
+    <div className="p-4" /></div>
       <h2 className="text-2xl font-bold mb-4">ContentPreviewCard</h2>
       <p>This component is under development.</p>
     </div>

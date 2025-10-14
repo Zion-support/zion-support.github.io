@@ -1,4 +1,4 @@
-export const utilityFunction = () => {
+export const utilityFunction = () => {}
   // Utility implementation;
   return true};
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
-const TutorialsPage: React.FC = () => {
-  const tutorials = [{
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock } from 'lucide-react';
+const TutorialsPage: React.FC = () => {}
+  const tutorials = []
       id: 1,
       title: "Getting Started with AI Development",
       description: "Learn the fundamentals of AI development and machine learning concepts.",
@@ -10,8 +10,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. Sarah Johnson",
       rating: 4.8,
       students: 1250,
-      thumbnail: "🤖"},
-    {
+      thumbnail: "🤖"}, {}
       id: 2,
       title: "Infrastructure Setup",
       description: "Complete guide to setting up cloud infrastructure on AWS and Azure.",
@@ -20,8 +19,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Michael Chen",
       rating: 4.9,
       students: 980,
-      thumbnail: "☁️"},
-    {
+      thumbnail: "☁️"}, {}
       id: 3,
       title: "Cybersecurity Fundamentals",
       description: "Essential cybersecurity practices and threat protection strategies.",
@@ -30,8 +28,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Emily Rodriguez",
       rating: 4.7,
       students: 2100,
-      thumbnail: "🔒"},
-    {
+      thumbnail: "🔒"}, {}
       id: 4,
       title: "Advanced Machine Learning",
       description: "Deep dive into advanced ML algorithms and neural networks.",
@@ -40,8 +37,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Dr. David Kim",
       rating: 4.9,
       students: 750,
-      thumbnail: "🧠"},
-    {
+      thumbnail: "🧠"}, {}
       id: 5,
       title: "DevOps Best Practices",
       description: "Learn modern DevOps practices and CI/CD pipeline implementation.",
@@ -50,8 +46,7 @@ const TutorialsPage: React.FC = () => {
       instructor: "Lisa Wang",
       rating: 4.8,
       students: 1100,
-      thumbnail: "⚙️"},
-    {
+      thumbnail: "⚙️"}, {}
       id: 6,
       title: "Data Analytics with Python",
       description: "Master data analysis and visualization using Python and popular libraries.",
@@ -63,19 +58,16 @@ const TutorialsPage: React.FC = () => {
       thumbnail: "📊"}
   ];
 
-const Page = () => {
-  const features = [
-    {
+const Page = () => {}
+  const features = []
       icon: <CheckCircle className="w-8 h-8" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
-    },
-    {
+    }, {}
       icon: <Shield className="w-8 h-8" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
-    },
-    {
+    }, {}
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
@@ -83,14 +75,13 @@ const Page = () => {
   ];
 
   return (
-    <>
+    <></>
       <EnhancedSEO 
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      / /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -120,7 +111,7 @@ const Page = () => {
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button>
+                <button /></button>
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
