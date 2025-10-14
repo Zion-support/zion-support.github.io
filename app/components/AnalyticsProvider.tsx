@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default AnalyticsProvider;
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  return (
+    <>
+      {children}
+    </>
+  );
+}

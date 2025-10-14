@@ -1,19 +1,18 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const AboutPage: React.FC = () => {
+const HomePage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group about page." />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
-      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About</h1>
-          <p className="text-xl text-gray-600">
-            Welcome to our about page.
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
       </div>
@@ -21,4 +20,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default HomePage;

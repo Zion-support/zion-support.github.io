@@ -1,63 +1,33 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React, { Component, ReactNode } from "react";
 
-interface Props {
+interface ErrorBoundaryProps {
   children: ReactNode;
 }
 
-interface State {
+interface ErrorBoundaryState {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === "development") {
-      console.error("Error caught by boundary:", error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-white flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-8">
-              We're sorry, but something unexpected happened.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Reload Page
-            </button>
-          </div>
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }

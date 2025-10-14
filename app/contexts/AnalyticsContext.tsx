@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -9,45 +9,34 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    // Enable analytics in production
-    setIsEnabled(process.env.NODE_ENV === "production");
+    // if analytics is enabled
+    setIsEnabled(true);
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     if (!isEnabled) return;
-
-    // Track event with analytics service
-    console.log("Analytics Event:", { eventName, properties, userId });
-    
-    // Here you would integrate with your analytics service
-    // e.g., Google Analytics, Mixpanel, etc.
+    // Track event logic here
+    console.log("Analytics Event:", eventName, properties);
   };
 
   const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-
-    // Track page view
-    console.log("Page View:", { pageName, userId });
-    
-    // Here you would integrate with your analytics service
+    // Track page view logic here
+    console.log("Page View:", pageName);
   };
 
   const setUser = (newUserId: string, properties?: Record<string, unknown>) => {
-    setUserId(newUserId);
-    
-    if (isEnabled) {
-      console.log("User Set:", { userId: newUserId, properties });
-      
-      // Here you would integrate with your analytics service
-    }
+    console.log("User Set:", newUserId, properties);
   };
 
-  const value: AnalyticsContextType = {
+  const value = {
     trackEvent,
     trackPageView,
     setUser,
@@ -63,8 +52,12 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
+  
   if (context === undefined) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
+  
   return context;
 };
+
+export { AnalyticsContext };

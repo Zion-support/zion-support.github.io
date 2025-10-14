@@ -1,91 +1,99 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+// Files that need specific fixes
+const filesToFix = [
+  "app/components/Navigation-backup.tsx",
+  "app/data/services.ts",
+  "app/data/servicesData.ts",
+  "app/global-error.tsx",
+  "app/medical-records-manager/page.tsx",
+  "app/not-found.tsx",
+  "app/page-backup.tsx",
+  "app/page-optimized.tsx",
+  "app/pages/5GSolutionsPage.tsx",
+  "app/service-template.tsx",
+  "app/sitemap-page.tsx",
+  "app/support/page.tsx",
+  "app/tutorials/page.tsx",
+  "app/types/next.d.ts",
+  "app/utils/__tests__/performanceMonitoring.test.ts",
+  "app/utils/accessibilityEnhancer.tsx",
+  "app/utils/dynamic.tsx",
+  "app/utils/errorHandler.tsx",
+  "app/utils/image.tsx",
+  "app/utils/link.tsx",
+  "app/utils/navigation.tsx",
+  "app/utils/testRunner.tsx",
+  "vite-env.d.ts",
+];
 
-// Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() });
-
-let fixedCount = 0;
-let errorCount = 0;
-
-console.log(`Found ${files.length} TypeScript files to check...`);
-
-files.forEach(file => {
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
-    
-    // Fix malformed closing tags and extra quotes
-    content = content.replace(/<\/div>""\s*<\/>""\s*\)\s*;""\s*\}""\s*$/gm, '');
-    content = content.replace(/<\/div>""\s*<\/>""\s*\)\s*;""\s*$/gm, '');
-    content = content.replace(/<\/div>""\s*<\/>""\s*$/gm, '');
-    content = content.replace(/<\/div>""\s*$/gm, '');
-    content = content.replace(/<\/>""\s*$/gm, '');
-    content = content.replace(/\)\s*;""\s*$/gm, '');
-    content = content.replace(/\}""\s*$/gm, '');
-    
-    // Fix unterminated string literals
-    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
-    
-    // Fix malformed JSX closing tags
-    content = content.replace(/<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '');
-    
-    // Fix malformed function endings
-    content = content.replace(/}\s*\);\s*}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*}\s*''\s*$/gm, '}');
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}');
-    
-    // Fix malformed JSX fragments
-    content = content.replace(/<>\s*<\/>\s*$/gm, '');
-    
-    // Fix malformed import statements
-    content = content.replace(/import React from  from 'react';/g, "import React from 'react';");
-    content = content.replace(/import React from 'react';'use client'/g, "import React from 'react';\n'use client'");
-    
-    // Fix missing semicolons in imports
-    content = content.replace(/import ([^;]+)\n/g, 'import $1;\n');
-    
-    // Fix malformed export statements
-    content = content.replace(/export default function ([^{]+)\s*{\s*}\s*$/gm, 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}');
-    
-    // Fix malformed function declarations
-    content = content.replace(/const ([^=]+) = \(\) => {\s*}\s*$/gm, 'const $1 = () => {\n  return (\n    <div>Page under development</div>\n  );\n};');
-    
-    // Fix common syntax errors in object definitions
-    content = content.replace(/{\s*title: "([^"]*)"",\s*description: "([^"]*)"",\s*icon: <([^>]+) className="([^"]*)" \/>,\s*color: "([^"]*)"",\s*color: "([^"]*)"",\s*}/g, '{\n  title: "$1",\n  description: "$2",\n  icon: <$3 className="$4" />,\n  color: "$5"\n}');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className="([^"]*)"\s*\/>/g, 'className="$1" />');
-    
-    // Fix unterminated JSX elements
-    content = content.replace(/<([^>]+)\s*$/gm, '<$1>');
-    
-    // Fix malformed closing tags
-    content = content.replace(/<\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '');
-    
-    // Fix duplicate closing braces
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}');
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{\s*\}\s*$/gm, '');
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim() + '\n';
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
-  }
-});
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, "utf8");
 
-console.log(`\nFixed ${fixedCount} files`);
-console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+    // Fix common syntax errors
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{/g,
+      "export default function $1() {",
+    );
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*=>/g,
+      "export default function $1() {",
+    );
+    content = content.replace(
+      /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>/g,
+      "const $1: React.FC = () =>",
+    );
+    content = content.replace(
+      /const\s+(\w+)\s*=\s*\(\s*\)\s*=>/g,
+      "const $1 = () =>",
+    );
+
+    // Fix unterminated string literals
+    content = content.replace(/"([^"]*);""/g, '"$1"');
+    content = content.replace(/""([^"]*);""/g, '"$1"');
+    content = content.replace(/""([^"]*);/g, '"$1"');
+
+    // Fix malformed function declarations
+    content = content.replace(
+      /function\s+(\w+)\s*\(\s*\)\s*=>/g,
+      "function $1() {",
+    );
+    content = content.replace(
+      /function\s+(\w+)\s*\(\s*\)\s*{/g,
+      "function $1() {",
+    );
+
+    // Fix numeric literal issues
+    content = content.replace(/5GSolutionsPage/g, "FiveGSolutionsPage");
+
+    // Fix missing commas
+    content = content.replace(/React\.FC\s*\(\s*\)/g, "React.FC = ()");
+    content = content.replace(/React\.FC\s*=>/g, "React.FC = () =>");
+
+    // Fix specific issues
+    if (filePath.includes("medical-records-manager")) {
+      content = content.replace(/""([^"]*);""/g, '"$1"');
+    }
+
+    if (filePath.includes("tutorials")) {
+      content = content.replace(/<className=/g, "<div className=");
+    }
+
+    if (filePath.includes("support")) {
+      content = content.replace(/,\s*}/g, "\n  }");
+    }
+
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all files
+filesToFix.forEach(fixFile);
+
+console.log("Finished fixing final errors");

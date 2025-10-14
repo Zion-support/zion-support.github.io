@@ -1,69 +1,69 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // List of problematic files to replace
 const problematicFiles = [
-  'app/5g-implementation/page.tsx',
-  'app/about/page.tsx',
-  'app/ad-management/page.tsx',
-  'app/ai-3d-generation/page.tsx',
-  'app/ai-analytics/page.tsx',
-  'app/ai-automation/page.tsx',
-  'app/ai-automation-platform/page.tsx',
-  'app/ai-automation-suite/page.tsx',
-  'app/ai-chatbot-builder/page.tsx',
-  'app/ai-content-creation/page.tsx',
-  'app/ai-content-generation/page.tsx',
-  'app/ai-content-writer/page.tsx',
-  'app/ai-customer-support-chatbot/page.tsx',
-  'app/ai-customer-support/page.tsx',
-  'app/ai-cybersecurity/page.tsx',
-  'app/ai-data-analytics/page.tsx',
-  'app/ai-data-mining-pro/page.tsx',
-  'app/ai-data-visualization/page.tsx',
-  'app/ai-ecommerce-solutions/page.tsx',
-  'app/ai-education-platform/page.tsx',
-  'app/ai-fintech-solutions/page.tsx',
-  'app/ai-fintech/page.tsx',
-  'app/ai-fraud-detection-pro/page.tsx',
-  'app/ai-healthcare/page.tsx',
-  'app/ai-language-translation/page.tsx',
-  'app/ai-mobile-app-builder/page.tsx',
-  'app/ai-mobile-app-development/page.tsx',
-  'app/ai-mobile-builder/page.tsx',
-  'app/ai-marketing/page.tsx',
-  'app/ai-nlp-text-analysis/page.tsx',
-  'app/ai-predictive-analytics/page.tsx',
-  'app/ai-sales-automation/page.tsx',
-  'app/ai-recommendation-engine/page.tsx',
-  'app/ai-project-management/page.tsx',
-  'app/ai-time-series-forecasting/page.tsx',
-  'app/ai-voice-assistant/page.tsx',
-  'app/ai-workflow-automation/page.tsx',
-  'app/ai-services/page.tsx',
-  'app/ai-solutions/page.tsx',
-  'app/autonomous-systems/page.tsx',
-  'app/blockchain/page.tsx',
-  'app/blockchain-web3/page.tsx',
-  'app/business-intelligence/page.tsx',
-  'app/careers/page.tsx',
-  'app/cloud-infrastructure/page.tsx',
-  'app/cloud-migration-pro/page.tsx',
-  'app/cloud-services/page.tsx',
-  'app/cybersecurity/page.tsx',
-  'app/cybersecurity-solutions/page.tsx',
-  'app/custom-software/page.tsx',
-  'app/database-management/page.tsx',
-  'app/demo/page.tsx',
-  'app/enterprise/page.tsx',
-  'app/it-infrastructure/page.tsx',
-  'app/it-services/page.tsx',
-  'app/it-solutions/page.tsx',
-  'app/mobile-development/page.tsx',
-  'app/network-infrastructure/page.tsx',
-  'app/quantum-computing/page.tsx'
+  "app/5g-implementation/page.tsx",
+  "app/about/page.tsx",
+  "app/ad-management/page.tsx",
+  "app/ai-3d-generation/page.tsx",
+  "app/ai-analytics/page.tsx",
+  "app/ai-automation/page.tsx",
+  "app/ai-automation-platform/page.tsx",
+  "app/ai-automation-suite/page.tsx",
+  "app/ai-chatbot-builder/page.tsx",
+  "app/ai-content-creation/page.tsx",
+  "app/ai-content-generation/page.tsx",
+  "app/ai-content-writer/page.tsx",
+  "app/ai-customer-support-chatbot/page.tsx",
+  "app/ai-customer-support/page.tsx",
+  "app/ai-cybersecurity/page.tsx",
+  "app/ai-data-analytics/page.tsx",
+  "app/ai-data-mining-pro/page.tsx",
+  "app/ai-data-visualization/page.tsx",
+  "app/ai-ecommerce-solutions/page.tsx",
+  "app/ai-education-platform/page.tsx",
+  "app/ai-fintech-solutions/page.tsx",
+  "app/ai-fintech/page.tsx",
+  "app/ai-fraud-detection-pro/page.tsx",
+  "app/ai-healthcare/page.tsx",
+  "app/ai-language-translation/page.tsx",
+  "app/ai-mobile-app-builder/page.tsx",
+  "app/ai-mobile-app-development/page.tsx",
+  "app/ai-mobile-builder/page.tsx",
+  "app/ai-marketing/page.tsx",
+  "app/ai-nlp-text-analysis/page.tsx",
+  "app/ai-predictive-analytics/page.tsx",
+  "app/ai-sales-automation/page.tsx",
+  "app/ai-recommendation-engine/page.tsx",
+  "app/ai-project-management/page.tsx",
+  "app/ai-time-series-forecasting/page.tsx",
+  "app/ai-voice-assistant/page.tsx",
+  "app/ai-workflow-automation/page.tsx",
+  "app/ai-services/page.tsx",
+  "app/ai-solutions/page.tsx",
+  "app/autonomous-systems/page.tsx",
+  "app/blockchain/page.tsx",
+  "app/blockchain-web3/page.tsx",
+  "app/business-intelligence/page.tsx",
+  "app/careers/page.tsx",
+  "app/cloud-infrastructure/page.tsx",
+  "app/cloud-migration-pro/page.tsx",
+  "app/cloud-services/page.tsx",
+  "app/cybersecurity/page.tsx",
+  "app/cybersecurity-solutions/page.tsx",
+  "app/custom-software/page.tsx",
+  "app/database-management/page.tsx",
+  "app/demo/page.tsx",
+  "app/enterprise/page.tsx",
+  "app/it-infrastructure/page.tsx",
+  "app/it-services/page.tsx",
+  "app/it-solutions/page.tsx",
+  "app/mobile-development/page.tsx",
+  "app/network-infrastructure/page.tsx",
+  "app/quantum-computing/page.tsx",
 ];
 
 let replacedCount = 0;
@@ -71,11 +71,12 @@ let errorCount = 0;
 
 console.log(`Processing ${problematicFiles.length} problematic files...`);
 
-problematicFiles.forEach(file => {
+problematicFiles.forEach((file) => {
   try {
-    const fileName = path.basename(file, '.tsx');
-    const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ');
-    
+    const fileName = path.basename(file, ".tsx");
+    const pageName =
+      fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, " ");
+
     // Create a clean, working version
     const cleanContent = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -182,8 +183,8 @@ export default function ${pageName}() {
     </div>
   );
 }`;
-    
-    fs.writeFileSync(file, cleanContent, 'utf8');
+
+    fs.writeFileSync(file, cleanContent, "utf8");
     console.log(`Replaced: ${file}`);
     replacedCount++;
   } catch (error) {
@@ -194,4 +195,4 @@ export default function ${pageName}() {
 
 console.log(`\nReplaced ${replacedCount} files`);
 console.log(`Errors: ${errorCount} files`);
-console.log('Done!');
+console.log("Done!");

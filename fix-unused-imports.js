@@ -1,101 +1,103 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix unused imports in a file
-function fixUnusedImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove "use client"; lines
-    if (content.includes('"use client";')) {
-      content = content.replace(/"use client";\n?/g, '');
-      modified = true;
-    }
-
-    // Fix common unused import patterns
-    const patterns = [
-      // Remove unused imports from @heroicons/react
-      /import\s*{\s*[^}]*}\s*from\s*"@heroicons\/react\/24\/outline";\s*\n?/g,
-      // Remove unused imports from lucide-react
-      /import\s*{\s*[^}]*}\s*from\s*"lucide-react";\s*\n?/g,
-      // Remove unused Link imports
-      /import\s*{\s*Link\s*}\s*from\s*"react-router-dom";\s*\n?/g,
-    ];
-
-    patterns.forEach(pattern => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, '');
-        modified = true;
-      }
-    });
-
-    // Fix specific files with known issues
-    if (filePath.includes('ai-solutions/page.tsx')) {
-      // Keep only the imports that are actually used
-      content = content.replace(
-        /import\s*{\s*[^}]*}\s*from\s*"@heroicons\/react\/24\/outline";/,
-        `import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  ArrowRightIcon,
-  CheckCircleIcon
-} from "@heroicons/react/24/outline";`
-      );
-      modified = true;
-    }
-
-    if (filePath.includes('5g-solutions/page.tsx')) {
-      // Keep only the imports that are actually used
-      content = content.replace(
-        /import\s*{\s*[^}]*}\s*from\s*"lucide-react"/,
-        `import { Right, Wifi, Circle } from "lucide-react"`
-      );
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
+// Common unused imports that appear frequently
+const commonUnusedImports = [
+  'Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles',']'
+  'Mail', 'MapPin', 'Phone', 'Globe', 'Target', 'MessageSquare', 'Eye', 'Zap','
+  'Shield', 'Database', 'Settings', 'BarChart', 'TrendingUp', 'CheckCircle','
+  'DollarSign', 'AlertCircle', 'Activity', 'PieChart', 'Headphones', 'Bot','
+  'AlertTriangle', 'Calendar', 'Briefcase', 'Wrench', 'Hammer', 'Paintbrush','
+  'Scissors', 'BookOpen', 'Calculator', 'Compass', 'Navigation', 'TrendingDown','
+  'Lightning', 'Crosshair', 'Security', 'People', 'StarIcon', 'Check', 'Arrow','
+  'PhoneIcon', 'MailIcon', 'Location', 'Truck', 'Smartphone', 'Cpu', 'Lock','
+  'FileText', 'Search', 'Palette', 'Camera', 'Music', 'Video', 'Gamepad2','
+  'ShoppingCart', 'CreditCard', 'Building', 'Factory', 'Car', 'Plane', 'Ship','
+  'Train', 'Home', 'Heart', 'Stethoscope', 'GraduationCap', 'Wrench', 'Hammer','
+  'Paintbrush', 'Scissors', 'BookOpen', 'Calculator', 'Calendar', 'Clock3','
+  'Compass', 'Navigation', 'PieChart', 'TrendingDown', 'Activity', 'Zap as Lightning','
+  'Target as Crosshair', 'Shield as Security', 'Users as People', 'Star as StarIcon','
+  'CheckCircle as Check', 'ArrowRight as Arrow', 'Phone as PhoneIcon', 'Mail as MailIcon','
+  'MapPin as Location', 'Truck', 'Smartphone', 'TrendingUp', 'Mic', 'Helmet','
+  'useState', 'isLoaded', 'stats', 'Link', 'errorHandler', 'isDevelopment','
+  'keys', 'array', 'byte', 'mountTimeRef', 'renderCountRef', 'duration','
+  'startTime', 'errorEvent', 'error', 'rejectionEvent', 'fieldValue', 'rules','
+  'result', 'validationResults', 'formErrors', 'fieldName', 'onSubmit','
+  'paintEntries', 'cumulativeLayoutShift', 'firstInputDelay', 'entries','
+  'lastEntry', 'clsValue', 'navEntry', 'ttfb', 'resourceEntry', 'loadTime','
+  'images', 'criticalResources', 'link', 'metrics', 'record', 'now', 'resetTime','
+  'headers', 'cfConnectingIp', 'realIp', 'forwardedFor', 'identifier','
+  'middleware', 'startTime', 'token', 'requests', 'key', 'timestamps','
+  'currentContent', 'performanceScore', 'performanceMetrics', 'errorStats','
+  'memoryInfo', 'networkInfo', 'interval', 'memory', 'percentage', 'nav',;'
+  'connection', 'a', 'url', 'body', 'img', 'score'
+]
+// Function to remove unused imports from a file
+function fixUnusedImports(filePath)   {}
+  try 
+    let content = fs.readFileSync(filePath, 'utf8');'
+    let modified = false
+    // Find import statements
+    const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;"
+    const imports = content.match(importRegex)
+    if (imports) 
+      imports.forEach(importStatement => {}
+        // Extract the import list
+        const match = importStatement.match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"];?/);"
+        if (match) 
+          const importList = match[1]
+          const source = match[2]
+          // Split imports and clean them
+          const imports = importList.split(',').map(imp => imp.trim());'
+          const usedImports = imports.filter(imp => 
+            // Check if this import is actually used in the file
+            const importName = imp.split(' as ')[0].trim();'
+            const alias = imp.includes(' as ') ? imp.split(' as ')[1].trim() : importName;'
+            // Skip if it's a common unused import'
+            if (commonUnusedImports.includes(importName) || commonUnusedImports.includes(alias)) 
+              return false
 }
-
-// Function to recursively find all .tsx and .ts files
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
+            // Check if the import is used in the file (excluding the import statement itself)
+            const contentWithoutImports = content.replace(importStatement, )
+            const usageRegex = new RegExp(`\\b${alias}\\b`, 'g');'`
+            const matches = contentWithoutImports.match(usageRegex)
+            return matches && matches.length > 0
+          })
+          if (usedImports.length !== imports.length) 
+            const newImportStatement = usedImports.length > 0 
+              ? `import { ${usedImports.join(', ')} from '${source}'``
+              : content = content.replace(importStatement, newImportStatement)
+            modified = true
 }
-
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to check`);
-
-files.forEach(file => {
-  fixUnusedImports(file);
-});
-
-console.log('Done fixing unused imports');
+      })
+}
+    if (modified) 
+      fs.writeFileSync(filePath, content)
+      console.log(`Fixed unused imports in: ${filePath}`);`
+} catch (error) 
+    console.error(`Error processing ${filePath}:`, error.message);`
+}
+// Find all TypeScript/JavaScript files
+const files = await glob('src/**/*.{ts,tsx,js,jsx}', '
+  ignore: [
+    'node_modules/**',']'
+    'dist/**','
+    'build/**','
+    '**/*.d.ts'
+  ]
+})
+console.log(`Processing ${files.length} files...`);`
+for (const file of files) 
+  fixUnusedImports(file)
+}
+console.log('Unused imports cleanup completed!');'
+import fs from 'fs' import path from 'path' import { glob } from 'glob' // Common unused imports that appear frequently; const commonUnusedImports = [;Download', 'Share', 'Star', 'Clock', 'Users', 'Award', 'ArrowRight', 'Sparkles','Mail', 'MapPin', 'Phone', 'Globe', 'Target', 'MessageSquare', 'Eye', 'Zap','Shield', 'Database', 'Settings', 'BarChart', 'TrendingUp', 'CheckCircle','DollarSign', 'AlertCircle', 'Activity', 'PieChart', 'Headphones', 'Bot','AlertTriangle', 'Calendar', 'Briefcase', 'Wrench', 'Hammer', 'Paintbrush','Scissors', 'BookOpen', 'Calculator', 'Compass', 'Navigation', 'TrendingDown','Lightning', 'Crosshair', 'Security', 'People', 'StarIcon', 'Check', 'Arrow','PhoneIcon', 'MailIcon', 'Location', 'Truck', 'Smartphone', 'Cpu', 'Lock','FileText', 'Search', 'Palette', 'Camera', 'Music', 'Video', 'Gamepad2','ShoppingCart', 'CreditCard', 'Building', 'Factory', 'Car', 'Plane', 'Ship','Train', 'Home', 'Heart', 'Stethoscope', 'GraduationCap', 'Wrench', 'Hammer','Paintbrush', 'Scissors', 'BookOpen', 'Calculator', 'Calendar', 'Clock3','Compass', 'Navigation', 'PieChart', 'TrendingDown', 'Activity', 'Zap as Lightning','Target as Crosshair', 'Shield as Security', 'Users as People', 'Star as StarIcon','CheckCircle as Check', 'ArrowRight as Arrow', 'Phone as PhoneIcon', 'Mail as MailIcon','MapPin as Location', 'Truck', 'Smartphone', 'TrendingUp', 'Mic', 'Helmet','useState', 'isLoaded', 'stats', 'Link', 'errorHandler', 'isDevelopment','keys', 'array', 'byte', 'mountTimeRef', 'renderCountRef', 'duration','startTime', 'errorEvent', 'error', 'rejectionEvent', 'fieldValue', 'rules','result', 'validationResults', 'formErrors', 'fieldName', 'onSubmit','paintEntries', 'cumulativeLayoutShift', 'firstInputDelay', 'entries','lastEntry', 'clsValue', 'navEntry', 'ttfb', 'resourceEntry', 'loadTime','images', 'criticalResources', 'link', 'metrics', 'record', 'now', 'resetTime','headers', 'cfConnectingIp', 'realIp', 'forwardedFor', 'identifier','middleware', 'startTime', 'token', 'requests', 'key', 'timestamps','currentContent', 'performanceScore', 'performanceMetrics', 'errorStats','memoryInfo', 'networkInfo', 'interval', 'memory', 'percentage', 'nav','connection', 'a', 'url', 'body', 'img', 'score]; // Function to remove unused imports from a file; function fixUnusedImports(filePath)  try  let content = fs.readFileSync(filePath, 'utf8'); let modified = false; // Find import statements; const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;''
+const imports = content.match(importRegex); if (imports)  imports.forEach(importStatement =>  // Extract the import list; const match = importStatement.match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"];?/);''
+if (match)  const importList = match[1]; const source = match[2]; // Split imports and clean them; const imports = importList.split(',').map(imp => imp.trim()); const usedImports = imports.filter(imp => ; // Check if this import is actually used in the file; const importName = imp.split(' as ')[0].trim(); const alias = imp.includes(' as ') ? imp.split(' as ')[1].trim() : importName; // Skip if it's a common unused import' if (commonUnusedImports.includes(importName) || commonUnusedImports.includes(alias))  return false; } // Check if the import is used in the file (excluding the import statement itself); const contentWithoutImports = content.replace(importStatement, ); const usageRegex = new RegExp(`\\b${alias}\\b`, 'g');`'``
+const matches = contentWithoutImports.match(usageRegex); return matches && matches.length > 0; }); if (usedImports.length !== imports.length)  const newImportStatement = usedImports.length > 0; ? `import { ${usedImports.join(', ')} from '${source}'`'`'` : content = content.replace(importStatement, newImportStatement); modified = true; } }); } if (modified)  fs.writeFileSync(filePath, content); console.log(`Fixed unused imports in: ${filePath}`);`` } catch (error)  console.error(`Error processing ${filePath}:`, error.message);`` }'``
+}
+// Find all TypeScript/JavaScript files; const files = await glob('src/**/*.{ts,tsx,js,jsx}', {'}; ignore: [ 'node_modules/**','dist/**','build/**','**/*.d.ts' ]''
+}); console.log(`Processing ${files.length} files...`);```
+for (const file of files)  fixUnusedImports(file); }
+console.log('Unused imports cleanup completed!');''
+'"`"'`"'``

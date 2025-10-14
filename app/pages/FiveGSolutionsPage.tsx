@@ -1,22 +1,12 @@
+"use client";
+
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-const FiveGSolutionsPage: React.FC = () => {
+export default function FiveGSolutionsPage() {
   return (
-    <>
-      <Helmet>
-        <title>5G Solutions - Zion Tech Group</title>
-        <meta name="description" content="5G Solutions - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">5G Solutions</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </>
+    <div>
+      <h1 className="text-4xl font-bold mb-8">FiveGSolutionsPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
   );
-};
-
-export default FiveGSolutionsPage;
+}

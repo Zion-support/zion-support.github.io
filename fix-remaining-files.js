@@ -1,149 +1,149 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix a corrupted component file
-function fixCorruptedComponent(filePath) {
+import fs from "fs"
+import path from "path"
+import { fileURLToPath } from "url"
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to fix a single file
+function fixFile(filePath) {
   try {
-    const fileName = path.basename(filePath, '.tsx');
-    const componentName = fileName.split(/(?=[A-Z])/).join(' ');
-    
-    const content = `import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const ${fileName}: React.FC = () => {
+    let content = fs.readFileSync(filePath, "utf8")
+    let originalContent = content
+    // Fix 'use client' directive
+    content = content.replace(/'use client';';';/g, "'use client';")
+    // Fix import statements
+    content = content.replace(
+      /import React from 'react';';';/g,
+      "import React from 'react';",
+    )
+    content = content.replace(
+      /import { [^}]+ } from '[^']+';';';/g,
+      (match) => {
+        return match.replace(/';';';$/, "';")
+      },
+    )
+    // Fix JSX with extra quotes and semicolons
+    content = content.replace(/\/>";";/g, " />")
+    content = content.replace(/>";";/g, ">")
+    content = content.replace(/className="[^"]*">";";/g, (match) => {
+      return match.replace(/>";";$/, ">")
+    })
+    // Fix any remaining stray quotes and semicolons
+    content = content.replace(/";";/g, "")
+    content = content.replace(/";/g, "")
+    // Fix merge conflict markers
+    content = content.replace(/[\s\S]*? [^\n]+/g, "")
+    // Fix specific file patterns
+    if (filePath.includes("services.ts")) {
+      content = `'use client'
+export interface Service {
+  id: string
+  name: string
+  description: string
+  category: string
+}
+export const services: Service[] = [
+  {
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Comprehensive AI solutions for your business',
+    category: 'AI'
+  },
+  {
+    id: 'it-services',
+    name: 'IT Services',
+    description: 'Professional IT services and support',
+    category: 'IT'
+}
+]
+export default services;`
+}
+    if (filePath.includes("global-error.tsx")) {
+      content = `'use client'
+import React from 'react'
+export default function GlobalError() {
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>${componentName} - Zion Tech Group</title>
-        <meta name="description" content="Professional ${componentName.toLowerCase()} services by Zion Tech Group." />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            ${componentName}
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional ${componentName.toLowerCase()} services
-            designed to help your business grow and succeed.
-          </p>
-        </div>
-      </section>
-      
-      {/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive ${componentName.toLowerCase()}
-                solutions tailored to your specific needs.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Professional service
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Expert solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Quality results
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Started</h3>
-              <p className="text-gray-600 mb-6">
-                Contact us today to learn more about our ${componentName.toLowerCase()} services.
-              </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default ${fileName};`;
-
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
+        <p className="text-gray-300">Please try again later.</p>
+  )
+}`
 }
-
-// Function to recursively find all .tsx files in components directory
-function findComponentFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findComponentFiles(fullPath));
-    } else if (item.endsWith('.tsx') && item !== 'index.tsx') {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
+    if (filePath.includes("not-found.tsx")) {
+      content = `'use client'
+import React from 'react'
+export default function NotFound() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+        <p className="text-gray-300">The page you are looking for does not exist.</p>
+  )
+}`
 }
-
-// List of known corrupted files
-const corruptedFiles = [
-  'ImprovedFooter.tsx',
-  'ImprovedImage.tsx', 
-  'ImprovedNavigation.tsx',
-  'ImprovedSidebar.tsx',
-  'LazyImage.tsx',
-  'LazyWrapper.tsx',
-  'Loading.tsx',
-  'MobileNavigation.tsx',
-  'NeonButton.tsx',
-  'OptimizedLoadingSpinner.tsx',
-  'PWAInstaller.tsx',
-  'PerformanceDashboard.tsx',
-  'PerformanceEnhancer.tsx',
-  'PerformanceMetrics.tsx',
-  'ResponsiveGrid.tsx',
-  'ResponsiveText.tsx',
-  'SEOAudit.tsx',
-  'SEOOptimizer.tsx',
-  'SecurityEnhancer.tsx',
-  'ServiceCard.tsx',
-  'ServiceCardSkeleton.tsx',
-  'ServiceWorkerRegistration.tsx',
-  'Sidebar.tsx',
-  'SkipLink.tsx',
-  'StructuredData.tsx',
-  'SystemMonitor.tsx',
-  'UltimateContentAdvertisingBanner.tsx',
-  'WebVitalsTracker.tsx'
-];
-
-// Main execution
-const componentsDir = path.join(__dirname, 'app', 'components');
-
-corruptedFiles.forEach(fileName => {
-  const filePath = path.join(componentsDir, fileName);
-  if (fs.existsSync(filePath)) {
-    fixCorruptedComponent(filePath);
-  }
-});
-
-console.log('Done fixing corrupted component files');
+    if (
+      filePath.includes("page-backup.tsx") ||
+      filePath.includes("page-optimized.tsx")
+    ) {
+      content = `'use client'
+import React from 'react'
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-4">Page</h1>
+        <p className="text-gray-300">This page is under development.</p>
+  )
+}`
+}
+    // Fix malformed function declarations
+    content = content.replace(
+      /export default function [^(]+\(\) \{\}/g,
+      (match) => {
+        const funcName = match.match(/export default function ([^(]+)\(\)/)[1]
+        return `export default function ${funcName}() {`
+      },
+    )
+    // Fix malformed JSX
+    content = content.replace(
+      /return \([\s\S]*?\);[\s\S]*?return \([\s\S]*?\);/g,
+      (match) => {
+        const firstReturn = match.match(/return \([\s\S]*?\);/)[0]
+        return firstReturn
+      },
+    )
+    // Fix stray closing braces and parentheses
+    content = content.replace(/\s*\}\s*\}\s*$/, "}")
+    content = content.replace(/\s*\)\s*;\s*\}\s*$/, ");\n}")
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content)
+      console.log(`Fixed: ${filePath}`)
+} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)
+}
+// Function to recursively find and fix all files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir)
+  for (const file of files) {
+    const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
+    if (stat.isDirectory()) {
+      fixAllFiles(filePath)
+    } else if (
+      file.endsWith(".tsx") ||
+      file.endsWith(".ts") ||
+      file.endsWith(".js") ||
+      file.endsWith(".jsx")
+    ) {
+      fixFile(filePath)
+}
+}
+// Start fixing from the app directory
+const appDir = path.join(__dirname, "app")
+if (fs.existsSync(appDir)) {
+  fixAllFiles(appDir)
+  console.log("All remaining files have been processed.")
+} else {
+  console.log("App directory not found.")
+}
