@@ -1,12 +1,14 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  type?: string;
-  structuredData?: Record<string, unknown>;
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  children?: React.ReactNode
 }
 constSeoenhancerpagePage: React.FC<Seoenhancerprops> = ({
   title,
@@ -31,7 +33,7 @@ constSeoenhancerpagePage: React.FC<Seoenhancerprops> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-    </Helmet>
-  );
-};
-export default SEOEnhancer;
+  </Helmet>)
+}
+export default SEOEnhancer
+</SEOEnhancerProps>

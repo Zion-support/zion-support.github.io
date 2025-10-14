@@ -1,70 +1,28 @@
 const fs = require('fs');
 const path = require('path');
-
-// Function to fix JSX structure issues
-function fixJSXStructure(content) {
-  let fixed = content;
+  // Fix CSS class syntax with spaces
+  fixed = fixed.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
+    const cleanClass = (part1 + part2).replace(/\s+/g, '');
+    return `className="${cleanClass}"`;
+  });
   
-  // Fix 1: Fix unclosed JSX fragments
-  const fragmentOpenCount = (fixed.match(/<>/g) || []).length;
-  const fragmentCloseCount = (fixed.match(/<\/>/g) || []).length;
+  // Fix specific CSS class patterns
+  fixed = fixed.replace(/min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900to-slate-900/g, 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900');
+  fixed = fixed.replace(/containermx-autopx-4 py-16/g, 'container mx-auto px-4 py-16');
+  fixed = fixed.replace(/text-4xlfont-bold text-whitemb-8/g, 'text-4xl font-bold text-white mb-8');
+  fixed = fixed.replace(/text-xltext-gray-300mb-8/g, 'text-xl text-gray-300 mb-8');
+  fixed = fixed.replace(/gridmd:grid-cols-2lg:grid-cols-3 gap-8 mt-12/g, 'grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12');
+  fixed = fixed.replace(/bg-blue-50borderborder-blue-200 rounded-lg p-6/g, 'bg-blue-50 border border-blue-200 rounded-lg p-6');
+  fixed = fixed.replace(/bg-green-50borderborder-green-200 rounded-lg p-6/g, 'bg-green-50 border border-green-200 rounded-lg p-6');
+  fixed = fixed.replace(/bg-purple-50borderborder-purple-200 rounded-lg p-6/g, 'bg-purple-50 border border-purple-200 rounded-lg p-6');
+  fixed = fixed.replace(/text-lgfont-semibold text-blue-900 mb-2/g, 'text-lg font-semibold text-blue-900 mb-2');
+  fixed = fixed.replace(/text-lgfont-semibold text-green-900 mb-2/g, 'text-lg font-semibold text-green-900 mb-2');
+  fixed = fixed.replace(/text-lgfont-semibold text-purple-900mb-2/g, 'text-lg font-semibold text-purple-900 mb-2');
   
-  if (fragmentOpenCount > fragmentCloseCount) {
-    const missingFragments = fragmentOpenCount - fragmentCloseCount;
-    fixed += '\n' + '</>'.repeat(missingFragments);
-  }
-  
-  // Fix 2: Fix missing semicolons in object declarations
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*\n\s*{/g, '$1 = [\n    {');
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*{/g, '$1 = [\n    {');
-  
-  // Fix 3: Fix malformed object properties
-  fixed = fixed.replace(/(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g, '$1: \'$2\',\n    $3:');
-  fixed = fixed.replace(/(\w+):\s*"([^"]+)"\s*\n\s*(\w+):/g, '$1: "$2",\n    $3:');
-  
-  // Fix 4: Fix missing commas in arrays
-  fixed = fixed.replace(/}\s*\n\s*{/g, '},\n    {');
-  fixed = fixed.replace(/}\s*{/g, '},\n    {');
-  
-  // Fix 5: Fix unclosed JSX tags - basic approach
-  const openTags = fixed.match(/<(\w+)(?:\s[^>]*)?(?!\/)>/g) || [];
-  const closeTags = fixed.match(/<\/(\w+)>/g) || [];
-  
-  // Simple fix for common unclosed tags
-  if (fixed.includes('<section') && !fixed.includes('</section>')) {
-    fixed = fixed.replace(/(<section[^>]*>.*?)(<\/div>)/g, '$1</section>$2');
-  }
-  
-  if (fixed.includes('<div') && !fixed.includes('</div>')) {
-    // Count opening and closing divs
-    const openDivs = (fixed.match(/<div/g) || []).length;
-    const closeDivs = (fixed.match(/<\/div>/g) || []).length;
-    if (openDivs > closeDivs) {
-      fixed += '\n' + '</div>'.repeat(openDivs - closeDivs);
-    }
-  }
-  
-  // Fix 6: Fix malformed function declarations
-  fixed = fixed.replace(/function\s+(\w+)\s*\(\s*\)\s*=>\s*{/g, 'function $1() {');
-  
-  // Fix 7: Fix missing closing braces
-  const openBraces = (fixed.match(/{/g) || []).length;
-  const closeBraces = (fixed.match(/}/g) || []).length;
-  if (openBraces > closeBraces) {
-    fixed += '\n' + '}'.repeat(openBraces - closeBraces);
-  }
-  
-  // Fix 8: Fix JSX expressions with multiple parent elements
-  // This is a complex fix that would need proper JSX parsing
-  // For now, wrap problematic sections in fragments
-  
-  // Fix 9: Fix malformed array syntax
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*\n\s*{/g, '$1 = [\n    {');
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*{/g, '$1 = [\n    {');
-  
-  // Fix 10: Fix missing semicolons after statements
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*\n\s*{/g, '$1 = [\n    {');
-  fixed = fixed.replace(/(\w+)\s*=\s*\[\s*{/g, '$1 = [\n    {');
+  // Fix broken JSX structure patterns
+  fixed = fixed.replace(/<\/p>\s*<\/div>\s*<\/div>\s*<div className="bg-green-50/g, '</p>\n              </div>\n              <div className="bg-green-50');
+  fixed = fixed.replace(/<\/p><div className="bg-purple-50/g, '</p>\n              </div>\n              <div className="bg-purple-50');
+  fixed = fixed.replace(/<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\)\s*}\s*export default/g, '</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </>\n  )\n}\n\nexport default');
   
   return fixed;
 }
@@ -77,7 +35,7 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed JSX structure: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
@@ -87,34 +45,18 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find and process all TSX files
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        fixedCount += processDirectory(fullPath);
-      } else if (item.endsWith('.tsx')) {
-        if (processFile(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-  
-  return fixedCount;
-}
-
 // Main execution
 console.log('Starting JSX structure fixes...');
-const appDir = path.join(__dirname, 'app');
-const fixedCount = processDirectory(appDir);
-console.log(`Fixed JSX structure in ${fixedCount} files`);
+
+// Get all TypeScript/JavaScript files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+console.log('JSX structure fixes completed!');

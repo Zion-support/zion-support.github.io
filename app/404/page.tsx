@@ -1,5 +1,5 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const NotFoundPage: React.FC = () => {
   return (
@@ -50,9 +50,7 @@ const NotFoundPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default 404Page;
-
-
+export default NotFoundPage

@@ -1,58 +1,93 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-constFivegoptimizationpagePage: React.FC = () => {
+import React, { Suspense } from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+const FiveGOptimizationPage: React.FC = () => {
   return (
-    <>Helmet>
-        <title>5G Optimization</title>
-        <meta
-          name="description"
-          content="Professional 5G Optimization solutions and services"
-        />
-        <meta name="keywords" content="5G, optimization" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              5G Optimization
+    <div className="min-h-screen bg-gray-50">
+      <EnhancedSEO 
+        title="5G Optimization Services | Zion Tech Group"
+        description="Expert 5G network optimization services to maximize performance, efficiency, and cost-effectiveness."
+        keywords="5G optimization, network optimization, performance tuning, 5G efficiency"
+      />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-rfrom-emerald-9 0 0 to-teal-9 0 0 text-whitepy-2 0"></section>
+        <div className="containermx-auto px-4">
+          <div className="max-w-4 xlmx-autotext-center">
+            <h1 className="text-4 xlmd:text-6-xlfont-boldmb-6">
+              5G Optimization Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional 5g optimization solutions and services
-            </p>
-            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
+            <p className="text-xlmd:text-2-xlmb-8 text-emerald-1 0 0">
+              Maximize your 5G network performance with our expert optimization services</p>
+            <Link 
+              to="/contact" 
+              className="inline-fle x items-center bg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-whitefont-semiboldpy-4 px-8 rounded-lgtransition-colors"
+            >
+              Optimize Now
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
           </div>
-        </div>
-      </div>
-    </>
-  );
-};
 
-export default 5gOptimizationPage;
+      {/* Services Section */}
+      <section className="py-2 0"></section>
+        <div className="containermx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3-xlfont-bold text-gray-9 0 0 mb-6">
+              Our 5G Optimization Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
+              Comprehensive optimization solutions to enhance your 5G network performance</p>
 
+          <div className="gridmd:grid-cols-3 gap-8">
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w -1 2 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semibold text-gray-9 0 0 mb-4">
+                Network Performance Tuning</h3>
+              <p className="text-gray-6 0 0">
+                Advanced performance optimization to maximize throughput and minimize latency</p>
 
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w -1 2 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semibold text-gray-9 0 0 mb-4">
+                Coverage Optimization</h3>
+              <p className="text-gray-6 0 0">
+                Strategic antenna placement and power optimization for maximum coverage</p>
+
+            <div className="bg-whitep-8 rounded-lgshadow-lg">
+              <CheckCircle className="w -1 2 h-1 2 text-emerald-6 0 0 mb-4" />
+              <h3 className="text-xlfont-semibold text-gray-9 0 0 mb-4">
+                Capacity Planning</h3>
+              <p className="text-gray-6 0 0">
+                Intelligent capacity management to handle peak loads efficiently</p>
+            </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-9 0 0 text-whitepy-2 0"></section>
+        <div className="containermx-auto px-4 text-center">
+          <h2 className="text-3-xlfont-boldmb-6">
+            Ready to Optimize Your 5G Network?
+          </h2>
+          <p className="text-xlmb-8 text-gray-3 0 0">
+            Contact us today for a comprehensive 5G optimization assessment</p>
+          <Link 
+            to="/contact" 
+            className="inline-fle x items-center bg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-whitefont-semiboldpy-4 px-8 rounded-lgtransition-colors"
+          >
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+      </section>
+  )
+}
+export default FiveGOptimizationPage
+</EnhancedSEO>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

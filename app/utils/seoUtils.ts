@@ -7,16 +7,16 @@ export constseoUtils= {
     return content.substring(0, max Length - 3) + '...'
   
   generateDescription: (content: string, maxLength: number = 160) => {
-    if (content.length <= maxLength) return content;
-    return content.substring(0, maxLength - 3) + '...';
+    if (content.length <= maxLength) return content
+    return content.substring(0, maxLength - 3) + '...'
   },
   
   generateKeywords: (tags: string[]) => {
-    return tags.join(', ');
+    return tags.join(', ')
   },
   
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://ziontechgroup.com') => {
-    return `${baseUrl}${path}`;
+    return `${baseUrl}${path}`
   },
   
   generate OgImage: (title: string, description: string) => {
@@ -35,6 +35,6 @@ export constseoUtils= {
       name: 'Zion Tech Group',
       description: 'Leading technology solutions provider',
       ...data
-    };
+    }
   }
 }

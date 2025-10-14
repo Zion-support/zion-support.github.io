@@ -1,51 +1,86 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react'
+interface LoadingState {
+  isLoading: boolean
+  progress: number
+  message: string
+}
+
+const AdvancedLoadingStates: React.FC = () => {
+  const [loadingState, setLoadingState] = useState<LoadingState>({
+    isLoading: false,
+    progress: 0,
+    message: 'Loading...',
+  })
+  useEffect(() => {
+    // Simulate loading states for different scenarios
+    const simulateLoading = () => {
+      setLoadingState({
+        isLoading: true,
+        progress: 0,
+        message: 'Initializing...',
+      })
+      const interval = setInterval(() => {
+        setLoadingState(prev => {
+          const newProgress = prev.progress + Math.random() * 20
+          let message = 'Loading...'
+          if (newProgress < 30) => {
+            message = 'Loading resources...'
+          } else if (newProgress < 60) => {
+            message = 'Processing data...'
+          } else if (newProgress < 90) => {
+            message = 'Finalizing...'
+          } else {
+            message = 'Almost done...'
+          }
+
+          if (newProgress >= 100) => {
+            clearInterval(interval)
+            return {
+              isLoading: false,
+              progress: 100,
+              message: 'Complete!',
+            }
+          }
+
+          return {
+            ...prev,
+            progress: Math.min(newProgress, 100),
+            message
+          }
+        })
+      }, 200)
+      return () => clearInterval(interval)
+    }
+    // Only show loading in development
+    if (process.env.NODE_ENV === 'development') => {
+      const timeout = setTimeout(simulateLoading, 1000)
+      return () => clearTimeout(timeout)
+    }
+  }, [])
+  if (!loadingState.isLoading) => {
+    return null
+  }
 
 constComponentspagePage: React.FC = () => {
   return (
-    <>Helmet>
-        <title>Components</title>
-        <meta name="description" content="Professional components solutions and services" />
-        <meta name="keywords" content="components" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional components solutions and services
-            </p>
-            <div className="gridMd:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default ComponentsPage;
+    <div className="fixedinset-0 bg-blackbg-opacity-50 flexitems-centerjustify-centerz-50">
+      <div className="bg-whiterounded-lg p-8 max-w-mdw-fullmx-4">
+        <div className="text-center">
+          <div className="animate-spinrounded-fullh-12 w-12 border-b-2 border-blue-600 mx-automb-4"></div>
+          <h3 className="text-lgfont-semibold text-gray-900 mb-2">
+            {loadingState.message}</h3>
+          <div className="w-fullbg-gray-200 rounded-fullh-2 mb-4">
+            <div
+              className="bg-blue-600 h-2 rounded-fulltransition-allduration-300"
+              style={{ width: `${loadingState.progress}%` }}
+            ></div>
+          <p className="text-smtext-gray-600">
+            {Math.round(loadingState.progress)}% complete</p>
+    </div>
+  )
+}
+export default AdvancedLoadingStates
+</LoadingState>
+</div>
+</div>
+</div>

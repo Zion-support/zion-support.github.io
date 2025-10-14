@@ -1,160 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
-
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 const AiAnalyticsDashboardProPage: React.FC = () => {
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(false);
-  // const [activeTab, setActiveTab] = useState('overview');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const features = [
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Monitor your business metrics in real-time with live data streaming and instant updates.",
-      benefits: ["Live data updates", "Instant insights", "Real-time alerts", "Performance monitoring"]
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Insights",
-      description: "Leverage machine learning algorithms to uncover hidden patterns and predict future trends.",
-      benefits: ["Predictive analytics", "Pattern recognition", "Anomaly detection", "Smart recommendations"]
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Custom Dashboards",
-      description: "Create personalized dashboards tailored to your specific business needs and KPIs.",
-      benefits: ["Drag-and-drop builder", "Custom widgets", "Role-based views", "Mobile optimization"]
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Data Source Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, and cloud services.",
-      benefits: ["100+ integrations", "Data transformation", "ETL pipelines", "API management"]
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance management.",
-      benefits: ["End-to-end encryption", "Role-based access", "Audit logs", "GDPR compliance"]
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Generate and distribute reports automatically with scheduled delivery and custom formats.",
-      benefits: ["Scheduled reports", "Email delivery", "PDF/Excel export", "Custom templates"]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      period: "month",
-      description: "Perfect for small businesses getting started with analytics",
-      features: [
-        "Up to 5 data sources",
-        "10 custom dashboards",
-        "Real-time analytics",
-        "Basic AI insights",
-        "Email support",
-        "5GB data storage"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$599",
-      period: "month",
-      description: "Ideal for growing companies with advanced analytics needs",
-      features: [
-        "Up to 25 data sources",
-        "Unlimited dashboards",
-        "Advanced AI insights",
-        "Custom integrations",
-        "Priority support",
-        "50GB data storage",
-        "API access",
-        "White-label options"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-      period: "month",
-      description: "Complete solution for large organizations with complex requirements",
-      features: [
-        "Unlimited data sources",
-        "Unlimited dashboards",
-        "Full AI suite",
-        "Custom development",
-        "24/7 dedicated support",
-        "Unlimited data storage",
-        "Advanced security",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      role: "CTO",
-      content: "The AI Analytics Dashboard Pro has revolutionized how we analyze our data. The predictive insights have helped us increase revenue by 35%.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "DataFlow Solutions",
-      role: "Data Director",
-      content: "The real-time analytics and custom dashboards have given us unprecedented visibility into our business operations.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "GrowthTech",
-      role: "VP of Analytics",
-      content: "The AI-powered insights have helped us identify opportunities we never knew existed. ROI was achieved within 2 months.",
-      rating: 5
-    }
-  ];
-
-constAianalyticsdashboardpropagePage: React.FC = () => {
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b03
   return (
     <>Helmet>
@@ -162,6 +8,7 @@ constAianalyticsdashboardpropagePage: React.FC = () => {
         <meta name="description" content="Professional ai analytics dashboard pro solutions and services" />
         <meta name="keywords" content="ai, analytics, dashboard, pro" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -397,3 +244,37 @@ constAianalyticsdashboardpropagePage: React.FC = () => {
 export default AiAnalyticsDashboardProPage;
 
 
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
+        <div className="container mx-auto px-4 py-1 6">
+          <div className="text-center">
+            <h1 className="text-4 xl font-bold text-white mb-8">Ai analytics dashboard pro</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Ai analytics dashboard pro solutions and services</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-1 2">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions</h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.</p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation</h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.</p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support</h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.</p>
+            </div>
+
+  )
+}
+export default AiAnalyticsDashboardProPage
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

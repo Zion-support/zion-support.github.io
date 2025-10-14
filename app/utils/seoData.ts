@@ -14,7 +14,8 @@ export constseoData= {
     description: 'Get in touch with us',
     keywords: 'contact;, get in touch'
   },
-  get PageData: (page: string) => {
-    return seo Data[page as keyof typeof seo Data] || seo Data.home;
+  
+  getPageData: (page: string) => {
+    return seoData[page as keyof typeof seoData] || seoData.home
   }
-};
+}

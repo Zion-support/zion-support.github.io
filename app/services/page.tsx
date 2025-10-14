@@ -1,167 +1,31 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Zap, Shield, Globe, Brain, Cloud, Database, Smartphone, Lock, ArrowRight, CheckCircle } from 'lucide-react';
-
-// Service categories
-const serviceCategories = [
-  {
-    icon: <Brain className="w-8 h-8" />,
-    title: "AI & Machine Learning",
-    description: "Advanced artificial intelligence solutions including deep learning, natural language processing, computer vision, and predictive analytics.",
-    services: [
-      "Machine Learning Model Development",
-      "Natural Language Processing",
-      "Computer Vision Solutions",
-      "Predictive Analytics",
-      "AI Chatbots & Virtual Assistants",
-      "Recommendation Systems"
-    ],
-    color: "from-blue-600 to-cyan-600"
-  },
-  {
-    icon: <Globe className="w-8 h-8" />,
-    title: "5G Technology",
-    description: "Next-generation 5G implementation, optimization, and IoT solutions for ultra-fast connectivity and smart infrastructure.",
-    services: [
-      "5G Network Implementation",
-      "IoT Solutions & Integration",
-      "Edge Computing",
-      "Smart City Solutions",
-      "5G Performance Optimization",
-      "Private 5G Networks"
-    ],
-    color: "from-purple-600 to-pink-600"
-  },
-  {
-    icon: <Shield className="w-8 h-8" />,
-    title: "Cybersecurity",
-    description: "Comprehensive security solutions to protect your business from cyber threats and ensure data integrity and compliance.",
-    services: [
-      "Security Assessment & Auditing",
-      "Threat Detection & Response",
-      "Data Encryption & Protection",
-      "Compliance Management",
-      "Security Training & Awareness",
-      "Incident Response Planning"
-    ],
-    color: "from-green-600 to-emerald-600"
-  },
-  {
-    icon: <Cloud className="w-8 h-8" />,
-    title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure and migration services to optimize your business operations and reduce costs.",
-    services: [
-      "Cloud Migration & Strategy",
-      "Multi-Cloud Management",
-      "Serverless Architecture",
-      "Cloud Security & Compliance",
-      "Cost Optimization",
-      "Disaster Recovery Solutions"
-    ],
-    color: "from-orange-600 to-red-600"
-  },
-  {
-    icon: <Database className="w-8 h-8" />,
-    title: "Data Analytics",
-    description: "Transform your data into actionable insights with advanced analytics, business intelligence, and data visualization solutions.",
-    services: [
-      "Business Intelligence Dashboards",
-      "Data Warehousing",
-      "Real-time Analytics",
-      "Data Visualization",
-      "Statistical Analysis",
-      "Data Quality Management"
-    ],
-    color: "from-indigo-600 to-purple-600"
-  },
-  {
-    icon: <Smartphone className="w-8 h-8" />,
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
-    services: [
-      "iOS & Android App Development",
-      "Cross-Platform Solutions",
-      "Mobile UI/UX Design",
-      "App Store Optimization",
-      "Mobile Security",
-      "Progressive Web Apps"
-    ],
-    color: "from-teal-600 to-cyan-600"
-  }
-];
-
-// Process steps
-const processSteps = [
-  {
-    step: "01",
-    title: "Discovery & Analysis",
-    description: "We begin by understanding your business goals, challenges, and requirements through comprehensive analysis and stakeholder interviews."
-  },
-  {
-    step: "02",
-    title: "Strategy & Planning",
-    description: "Our team develops a customized strategy and detailed implementation plan tailored to your specific needs and objectives."
-  },
-  {
-    step: "03",
-    title: "Development & Implementation",
-    description: "We execute the solution using cutting-edge technologies and best practices, ensuring quality and performance at every step."
-  },
-  {
-    step: "04",
-    title: "Testing & Optimization",
-    description: "Rigorous testing and optimization ensure your solution meets all requirements and performs at peak efficiency."
-  },
-  {
-    step: "05",
-    title: "Deployment & Support",
-    description: "We handle the deployment process and provide ongoing support to ensure your solution continues to deliver value."
-  }
-];
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including machine learning, 5G technology, cybersecurity, cloud solutions, data analytics, and mobile development." />
-        <meta name="keywords" content="AI services, 5G technology, cybersecurity, cloud solutions, data analytics, mobile development, IT consulting, machine learning" />
-        <meta property="og:title" content="Our Services - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive AI and IT services for modern businesses." />
-        <meta property="og:type" content="website" />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology services and solutions" />
+        <meta name="keywords" content="services, technology, solutions" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Services</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional services solutions and services
-            </p>
+            <p className="text-xl text-gray-300 mb-8">Comprehensive technology services and solutions</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">Expert Solutions</h3>
+                <p className="text-blue-700">Our team of experts delivers cutting-edge solutions.</p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
+                <h3 className="text-lg font-semibold text-green-900 mb-2">Custom Implementation</h3>
+                <p className="text-green-700">Tailored implementations for your specific requirements.</p>
               </div>
-              <div className="bg-purple-50 borderborder-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semiboldtext-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">24/7 Support</h3>
+                <p className="text-purple-700">Round-the-clock support for all your needs.</p>
               </div>
             </div>
           </div>
@@ -226,9 +90,7 @@ const ServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ServicesPage;
-
-export default ServicesPage;
+export default ServicesPage

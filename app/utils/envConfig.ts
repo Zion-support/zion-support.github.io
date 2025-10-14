@@ -1,10 +1,10 @@
 export constenvConfig= {
   api Url: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   environment: process.env.NODE_ENV || 'development',
-  features:{
-    analytics: process.env.NEXT_PUBLIC_ANALYTICS_ENABLE D ==='true',
-    seo: process.env.NEXT_PUBLIC_SEO_ENABLE D ==='true',
-    performance: process.env.NEXT_PUBLIC_PERFORMANCE_ENABLE D ==='true'
+  features: {
+    analytics: process.env.NEXT_PUBLIC_ANALYTICS_ENABLED === 'true',
+    seo: process.env.NEXT_PUBLIC_SEO_ENABLED === 'true',
+    performance: process.env.NEXT_PUBLIC_PERFORMANCE_ENABLED === 'true'
   },
-  debug: process.env.NODE_ENV ==='development'
+  debug: process.env.NODE_ENV === 'development'
 }

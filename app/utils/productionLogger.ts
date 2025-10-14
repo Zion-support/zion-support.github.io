@@ -9,12 +9,12 @@ export constproductionLogger= {
       }
     } else {
       // In development, log everything
-      if (leve l ==='info') {
-        console.warn(message, data);
-      } else if (leve l ==='warn') {
-        console.warn(message, data);
-      } else if (leve l ==='error') {
-        console.error(message, data);
+      if (level === 'info') {
+        console.warn(message, data)
+      } else if (level === 'warn') {
+        console.warn(message, data)
+      } else if (level === 'error') {
+        console.error(message, data)
       }
     }
   },

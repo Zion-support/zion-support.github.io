@@ -1,13 +1,14 @@
 interface Config {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0e50
-  apiUrl: string;
-  environment: string;
-  features:{
-    analytics: boolean;
-    seo: boolean;
-    performance: boolean;
-  
-};[key: string]: unknown;
+  apiUrl: string
+  environment: string
+  features: {
+    analytics: boolean
+    seo: boolean
+    performance: boolean
+  }
+  [key: string]: unknown
+  }
+  [key: string]: any
 }
 
 export const Configmanager={
@@ -19,31 +20,45 @@ export constconfigManager= {
     features:{
       analytics: process.env.NODE_ENV ==='production',
       seo: true,
-      performance: true,
+      performance: true
     }
+  } as Record<string, unknown>,
+  
+  get: (key: string) => {
+    return key.split('.').reduce((obj: any;, k) => obj?.[k], configManager.config)
   } as Config,
   
   get: (key: string) => {
-    return key.split('.').reduce((obj: unknown, k: string) => {
-      if (obj && typeof obj=== 'object' && k in obj) {
-        return (obj as Record<string, unknown>)[k];
+    return key.split('.').reduce((obj: unknown;, k: string) => {
+      if (obj && typeof obj === 'object' && k in obj) {
+        return (obj as Record<string, unknown>)[k]
       }
-      return undefined;
-    }, configManager.config);
+      return undefined
+    }, configManager.config)
+    return key.split('.').reduce((obj, k) => obj?.[k], configManager.config)
   },
   set: (key: string, value: unknown) => { constKeys = key.split('.');
     const Lastkey=keys.pop();
     const Target=keys.reduce((obj: Record<string, unknown>, k: string) => {
 =======
   set: (key: string, value: unknown) => {
-    const keys= key.split('.');
-    const lastKey= keys.pop();
-    const target= keys.reduce((obj: Record<string, unknown>, k: string) => {
+    const keys = key.split('.')
+    const lastKey = keys.pop()
+    const target = keys.reduce((obj: any;, k) => obj[k] = obj[k] || {}, configManager.config)
+    const target = keys.reduce((obj: Record<string;, unknown>, k: string) => {
       if (!(k in obj)) {
-        obj[k] ={};
+        obj[k] = {}
       }
-      return obj[k] as Record<string, unknown>;
-    }, configManager.config as Record<string, unknown>);
+      return obj[k] as Record<string, unknown>
+    }, configManager.config as Record<string, unknown>)
+    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config)
+  set: (key: string, value: any) => {
+    const keys = key.split('.')
+    const lastKey = keys.pop()
+    const target = keys.reduce((obj, k) => {
+      if (!obj[k]) obj[k] = {}
+      return obj[k]
+    }, configManager.config)
     
     if (lastKey) {
       target[lastKey] = value;

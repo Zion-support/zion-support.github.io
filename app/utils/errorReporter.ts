@@ -9,14 +9,18 @@ export consterrorReporter= {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('errorReported: ', errorInfo)
-    }
+      // Development logging disabled
+      // eslint-disable-next-line no-console
+      console.error('Error reported: ', errorInfo)
+      console.error('Error reported: ', errorInfo)
     
-    if (typeof window !=='undefined') {
-      window.gtag('event','exception',{
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'exception', {
+        description: _error.message,
+        fatal: false,
+        custom_parameters: context
+      })
         description: error.message,
         fatal: false
       })
-    }
-  }
-}
+}}}}}

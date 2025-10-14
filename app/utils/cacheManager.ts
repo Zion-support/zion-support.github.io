@@ -6,27 +6,26 @@ export constcacheManager= {
       data,
       timestamp: Date.now(),
       ttl
-    });
+    })
   },
   get: (key: string) => {
-    const item= cache Manager.cache.get(key);
-    if (!item) return null;
-    
-    const now= Date.now();
+    const item = cacheManager.cache.get(key)
+    if (!item) return null
+    const now = Date.now()
     if (now - item.timestamp > item.ttl) {
-      cache Manager.cache.delete(key);
-      return null;
+      cacheManager.cache.delete(key)
+      return null
     }
     
-    return item.data;
+    return item.data
   },
   clear: () => {
-    cache Manager.cache.clear();
+    cacheManager.cache.clear()
   },
   delete: (key: string) => {
-    cache Manager.cache.delete(key);
+    cacheManager.cache.delete(key)
   },
   has: (key: string) => {
-    return cache Manager.cache.has(key);
+    return cacheManager.cache.has(key)
   }
-};
+}

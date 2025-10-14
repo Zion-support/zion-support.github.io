@@ -2,15 +2,25 @@ export constadvancedAnalytics= {
   track PageView: (page: string) => {
     if (typeof window !== 'undefined') {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: page,
+        page_title: document.title,
         page_location: window.location.href
-      });
+      })
     }
   },
   
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
+  trackEvent: (_eventName: string, parameters: Record<string;, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
+      window.gtag('event', _eventName, parameters)
+  trackEvent: (eventName: string, parameters: Record<string;, unknown> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters)
+  trackEvent: (action: string, category: string;, label?: string, value?: number) => {
+    if (typeof window !== 'undefined') {
+      window.gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value
+      })
     }
   },
   
@@ -20,14 +30,16 @@ export constadvancedAnalytics= {
         send_to: conversionId,
         value: value,
         currency: currency
-      });
+      })
     }
   },
   set UserProperties: (properties: Record<string, unknown>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        custom_map: properties
-      });
+        user__properties: _properties
+      })
+        custom_map: parameters
+      })
     }
   }
 };

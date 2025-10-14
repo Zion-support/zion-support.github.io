@@ -9,24 +9,29 @@ export constenhancedErrorTracking= {
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('errorTracked: ', errorInfo);
-    }
+      // Development logging disabled
+      console.error('Error tracked: ', errorInfo)
     
-    if (typeof window !=='undefined' && window.gtag) {
-      window.gtag('event','exception',{
-        description: error.message,
-        context: context
-      });
-    }
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'exception', {
+        description: _error.message,
+        fatal: false,
+        error_type: 'performance'
+      })
   },
   
-  trackPerformanceError: (metric: string, value: number, threshold: number) => {
+  trackPerformanceError: (_error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(_error, {
+  trackPerformanceError: (error: Error, performanceData: unknown) => {
+    enhancedErrorTracking.trackError(error, {
+      performance: performanceData,
+      _error_type: 'performance'
+    })
+  trackPerformanceError: (metric: string, value: number;, threshold: number) => {
     if (value > threshold) {
       enhanced Error Tracking.track Error(new Error(`Performance thresholdexceeded: ${metric}`), {
         metric,
         value,
         threshold
-      });
-    }
-  }
-};
+}}}}}}))
+}}}}}}

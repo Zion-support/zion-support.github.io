@@ -1,207 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Code, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Download,
-  Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  Terminal,
-  GitBranch,
-  Bug,
-  FileText,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp
-} from 'lucide-react';
-
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
 const AiCodeAssistantProPage: React.FC = () => {
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(false);
-  // const [activeTab, setActiveTab] = useState('overview');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const features = [
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Intelligent Code Generation",
-      description: "Generate high-quality code in 50+ programming languages with AI-powered suggestions and completions.",
-      benefits: ["50+ Languages", "Context-aware suggestions", "Code completion", "Syntax optimization"]
-    },
-    {
-      icon: <Bug className="w-6 h-6" />,
-      title: "Advanced Bug Detection",
-      description: "Automatically identify and fix bugs, security vulnerabilities, and performance issues in your code.",
-      benefits: ["Static analysis", "Security scanning", "Performance optimization", "Error prevention"]
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI Code Review",
-      description: "Get intelligent code reviews with suggestions for improvements, best practices, and optimization.",
-      benefits: ["Automated reviews", "Best practices", "Code quality metrics", "Learning recommendations"]
-    },
-    {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Documentation Generation",
-      description: "Automatically generate comprehensive documentation, comments, and API references for your code.",
-      benefits: ["Auto-documentation", "API references", "Code comments", "README generation"]
-    },
-    {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Performance Optimization",
-      description: "Analyze and optimize your code for better performance, memory usage, and execution speed.",
-      benefits: ["Performance analysis", "Memory optimization", "Algorithm suggestions", "Bottleneck detection"]
-    },
-    {
-      icon: <GitBranch className="w-6 h-6" />,
-      title: "Version Control Integration",
-      description: "Seamlessly integrate with Git and other version control systems for collaborative development.",
-      benefits: ["Git integration", "Merge conflict resolution", "Branch management", "Commit optimization"]
-    }
-  ];
-
-  const supportedLanguages = [
-    { name: "JavaScript", icon: "🟨", level: "Expert" },
-    { name: "Python", icon: "🐍", level: "Expert" },
-    { name: "TypeScript", icon: "🔷", level: "Expert" },
-    { name: "Java", icon: "☕", level: "Expert" },
-    { name: "C++", icon: "⚡", level: "Advanced" },
-    { name: "C#", icon: "🔵", level: "Advanced" },
-    { name: "Go", icon: "🐹", level: "Advanced" },
-    { name: "Rust", icon: "🦀", level: "Advanced" },
-    { name: "PHP", icon: "🐘", level: "Advanced" },
-    { name: "Ruby", icon: "💎", level: "Advanced" },
-    { name: "Swift", icon: "🍎", level: "Advanced" },
-    { name: "Kotlin", icon: "🟣", level: "Advanced" }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Developer",
-      price: "$199",
-      period: "month",
-      description: "Perfect for individual developers and freelancers",
-      features: [
-        "50+ programming languages",
-        "Basic code generation",
-        "Bug detection & fixes",
-        "Documentation generation",
-        "Email support",
-        "10 projects max"
-      ],
-      popular: false
-    },
-    {
-      name: "Team",
-      price: "$399",
-      period: "month",
-      description: "Ideal for development teams and small companies",
-      features: [
-        "All Developer features",
-        "Advanced AI suggestions",
-        "Code review automation",
-        "Performance optimization",
-        "Priority support",
-        "Unlimited projects",
-        "Team collaboration",
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "month",
-      description: "Complete solution for large development organizations",
-      features: [
-        "All Team features",
-        "Custom AI models",
-        "On-premise deployment",
-        "Advanced security",
-        "24/7 dedicated support",
-        "Custom training",
-        "API access",
-        "White-label options"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Kim",
-      company: "DevTech Solutions",
-      role: "Lead Developer",
-      content: "AI Code Assistant Pro has increased our development speed by 40%. The intelligent suggestions and bug detection are game-changers.",
-      rating: 5
-    },
-    {
-      name: "Lisa Wang",
-      company: "StartupXYZ",
-      role: "CTO",
-      content: "The code generation and documentation features have saved us countless hours. Our code quality has improved significantly.",
-      rating: 5
-    },
-    {
-      name: "James Rodriguez",
-      company: "Enterprise Corp",
-      role: "Senior Architect",
-      content: "The performance optimization and security scanning features have helped us build more robust applications. Highly recommended!",
-      rating: 5
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Web Development",
-      description: "Build modern web applications with AI-powered code generation and optimization",
-      icon: <Globe className="w-8 h-8" />,
-      technologies: ["React", "Vue.js", "Angular", "Node.js", "Express"]
-    },
-    {
-      title: "Mobile Development",
-      description: "Create cross-platform mobile apps with intelligent code suggestions and debugging",
-      icon: <Terminal className="w-8 h-8" />,
-      technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin"]
-    },
-    {
-      title: "Data Science",
-      description: "Develop machine learning models and data analysis scripts with AI assistance",
-      icon: <Database className="w-8 h-8" />,
-      technologies: ["Python", "R", "TensorFlow", "PyTorch", "Pandas"]
-    },
-    {
-      title: "DevOps & Cloud",
-      description: "Automate infrastructure and deployment with intelligent DevOps code generation",
-      icon: <Cloud className="w-8 h-8" />,
-      technologies: ["Docker", "Kubernetes", "AWS", "Azure", "Terraform"]
-    }
-  ];
-
-constAicodeassistantpropagePage: React.FC = () => {
-=======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3b03
   return (
     <>Helmet>
@@ -209,6 +8,7 @@ constAicodeassistantpropagePage: React.FC = () => {
         <meta name="description" content="Professional ai code assistant pro solutions and services" />
         <meta name="keywords" content="ai, code, assistant, pro" />
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
@@ -511,3 +311,37 @@ constAicodeassistantpropagePage: React.FC = () => {
 export default AiCodeAssistantProPage;
 
 
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
+        <div className="container mx-auto px-4 py-1 6">
+          <div className="text-center">
+            <h1 className="text-4 xl font-bold text-white mb-8">Ai code assistant pro</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Ai code assistant pro solutions and services</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-1 2">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions</h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.</p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation</h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.</p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support</h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.</p>
+            </div>
+
+  )
+}
+export default AiCodeAssistantProPage
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

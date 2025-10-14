@@ -6,9 +6,9 @@ export constaccessibilityChecker= {
     images.forEach((img) => {
       if (!img.getAttribute('alt')) {
         issues.push({
-          element: img asHTMLElement,
+          element: img as HTMLElement,
           issue: 'Missing alt text'
-        });
+        })
       }
     });
     
@@ -16,17 +16,16 @@ export constaccessibilityChecker= {
   },
   
   checkHeadingStructure: () => {
-    const headings= document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const issues: Array<{ element: HTMLElement; issue: string }> = [];
-    let previousLevel= 0;
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    let previousLevel = 0
     
     headings.forEach((heading) => {
       const currentLevel= parseInt(heading.tagName.charAt(1));
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          element: heading asHTMLElement,
+          element: heading as HTMLElement,
           issue: 'Heading level skipped'
-        });
+        })
       }
       previous Level=currentLevel;
     });
@@ -36,6 +35,5 @@ export constaccessibilityChecker= {
   check ColorContrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
-    return [];
-  }
-};
+    return []))
+}}}}}

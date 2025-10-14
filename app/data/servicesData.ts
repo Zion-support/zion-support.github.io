@@ -1,18 +1,16 @@
-export interface Servicedata {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
+export interface ServiceData {
+  id: string
+  name: string
+  description: string
+  category: string
+  features: string[]
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-  };
-  icon: string;
-}
-
-export constservicesData: Service Data[] = [
+    starter: number
+    professional: number
+    enterprise: number
+  }
+  icon: string
+export const servicesData: ServiceData[] = [
   {
     id: 'ai-solutions',
     name: 'AI Solutions',
@@ -38,5 +36,5 @@ export constservicesData: Service Data[] = [
       enterprise: 10000
     },
     icon: 'cloud-upload'
-  }
-];
+]
+}}}

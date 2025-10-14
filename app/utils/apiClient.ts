@@ -12,30 +12,27 @@ export constapiClient= {
     });
     
     if (!response.ok) {
-      throw new Error(`API requestfailed: ${response.status}`);
+      throw new Error(`HTTP _error! status: ${response.status}`)
+      throw new Error(`HTTP error! status: ${response.status}`)
+      throw new Error(`API request failed: ${response.status}`)
     }
     
     return response.json();
   },
   
-  async get<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'GET' });
-  },
-  
-  async post<T>(endpoint: string, data: unknown): Promise<T> {
-    return this.request<T>(endpoint, {
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
-  },
-  
-  async put<T>(endpoint: string, data: unknown): Promise<T> {
-    return this.request<T>(endpoint, {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    });
-  },
-  async delete<T>(endpoint: string): Promise<T> {
-    return this.request<T>(endpoint, { method: 'DELETE' });
-  }
-};
+}
+
+}}}}}}}
+</T>
+</T>))
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>
+</T>

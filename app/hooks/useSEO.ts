@@ -20,7 +20,6 @@ export constuseSEO= ({ title, description, keywords }: UseSEOProps) => {
         metaKeywords.setAttribute('content', keywords);
       }
       
-      document.title= title;
-    }
-  },[title, description, keywords]);
-};
+      document.title = title
+  }, [title, description, keywords])
+}}}}}

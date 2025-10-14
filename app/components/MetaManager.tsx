@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from 'react'
 interface MetaManagerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
 }
 
 const MetaManagerPage: React.FC<MetaManagerProps> = ({
@@ -17,77 +16,108 @@ const MetaManagerPage: React.FC<MetaManagerProps> = ({
   description,
   keywords,
   canonical,
-  og Image,
-  og Type= 'website',
-  twitter Card= 'summary_large_image'
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image'
 }) => {
   useEffect(() => {
     // Update document title
     if (title) {
-      document.title = title;
+      document.title = title
     }
 
     // Update meta description
     if (description) {
-      const metaDescription= document.querySelector('meta[name="description"]');
+      const metaDescription = document.querySelector('meta[name="description"]')
       if (metaDescription) {
-        metaDescription.setAttribute('content', description);
+        metaDescription.setAttribute('content', description)
       } else {
-        const meta= document.createElement('meta');
-        meta.name = 'description';
-        meta.content = description;
-        document.head.appendChild(meta);
+        const meta = document.createElement('meta')
+        meta.name = 'description'
+        meta.content = description
+        document.head.appendChild(meta)
       }
     }
 
     // Update meta keywords
     if (keywords) {
-      const metaKeywords= document.querySelector('meta[name="keywords"]');
+      const metaKeywords = document.querySelector('meta[name="keywords"]')
       if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
+        metaKeywords.setAttribute('content', keywords)
       } else {
-        const meta= document.createElement('meta');
-        meta.name = 'keywords';
-        meta.content = keywords;
-        document.head.appendChild(meta);
+        const meta = document.createElement('meta')
+        meta.name = 'keywords'
+        meta.content = keywords
+        document.head.appendChild(meta)
       }
     }
 
     // Update canonical URL
     if (canonical) {
-      const canonicalLink= document.querySelector('link[rel="canonical"]');
+      const canonicalLink = document.querySelector('link[rel="canonical"]')
       if (canonicalLink) {
-        canonicalLink.setAttribute('href', canonical);
+        canonicalLink.setAttribute('href', canonical)
       } else {
-        const link= document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonical;
-        document.head.appendChild(link);
+        const link = document.createElement('link')
+        link.rel = 'canonical'
+        link.href = canonical
+        document.head.appendChild(link)
       }
     }
-  },[title, description, keywords, canonical]);
 
-  return (
-    <Helmet>
-      {title && <title>{title}</title>}
-      {description && <meta name="description" content={description} />}
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      {title && <meta property="og:title" content={title} />}
-      {description && <meta property="og:description" content={description} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      {canonical && <meta property="og:url" content={canonical} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      {title && <meta name="twitter:title" content={title} />}
-      {description && <meta name="twitter:description" content={description} />}
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-    </Helmet>
-  );
-};
+    // Update Open Graph meta tags
+    if (ogTitle) {
+      const ogTitleMeta = document.querySelector('meta[property="og:title"]')
+      if (ogTitleMeta) {
+        ogTitleMeta.setAttribute('content', ogTitle)
+      } else {
+        const meta = document.createElement('meta')
+        meta.setAttribute('property', 'og:title')
+        meta.content = ogTitle
+        document.head.appendChild(meta)
+      }
+    }
 
-export default MetaManager;
+    if (ogDescription) {
+      const ogDescMeta = document.querySelector('meta[property="og:description"]')
+      if (ogDescMeta) {
+        ogDescMeta.setAttribute('content', ogDescription)
+      } else {
+        const meta = document.createElement('meta')
+        meta.setAttribute('property', 'og:description')
+        meta.content = ogDescription
+        document.head.appendChild(meta)
+      }
+    }
+
+    if (ogImage) {
+      const ogImageMeta = document.querySelector('meta[property="og:image"]')
+      if (ogImageMeta) {
+        ogImageMeta.setAttribute('content', ogImage)
+      } else {
+        const meta = document.createElement('meta')
+        meta.setAttribute('property', 'og:image')
+        meta.content = ogImage
+        document.head.appendChild(meta)
+      }
+    }
+
+    // Update Twitter Card meta tags
+    const twitterCardMeta = document.querySelector('meta[name="twitter:card"]')
+    if (twitterCardMeta) {
+      twitterCardMeta.setAttribute('content', twitterCard)
+    } else {
+      const meta = document.createElement('meta')
+      meta.name = 'twitter:card'
+      meta.content = twitterCard
+      document.head.appendChild(meta)
+    }
+
+  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogImage, ogType, twitterCard])
+  
+  return null
+}
+
+export default MetaManager

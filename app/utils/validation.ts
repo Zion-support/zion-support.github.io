@@ -8,7 +8,10 @@ export constvalidation= {
     return phone Regex.test(phone.replace(/\s/g, ''))
   },
   required: (value: unknown) => {
-    return value !== null && value !== undefined && value !== '';
+    return value !== null && value !== undefined && value !== ''
+  required: (value: any) => {
+  required: (value: unknown) => {
+    return value !== null && value !== undefined && value !== ''
   },
   
   minLength: (value: string, min: number) => {

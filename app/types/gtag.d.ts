@@ -4,8 +4,11 @@ declare global {
       command: string,
       targetId: string,
       config?: Record<string, unknown>
-    ) => void;
-    dataLayer: unknown[];
+    ) => void
+    dataLayer: unknown[]
+      config?: any
+      config?: Record<string, unknown>
+    ) => void
   }
 }
 
