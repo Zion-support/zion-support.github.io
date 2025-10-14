@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 
 // Function to fix JSX syntax errors
 function fixJSXErrors(content) {
@@ -17,45 +17,8 @@ function fixJSXErrors(content) {
   return fixed;
 }
 
-// Function to fix specific JSX structure issues
-function fixJSXStructure(content) {
-  let lines = content.split('\n');
-  let fixed = [];
-  let braceCount = 0;
-  let inJSX = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    let trimmed = line.trim();
-    
-    // Track JSX opening and closing
-    if (trimmed.startsWith('<') && !trimmed.startsWith('</')) {
-      inJSX = true;
-    }
-    
-    // Fix common JSX issues
-    if (trimmed === '</Helmet>' && i > 0 && lines[i-1].trim() === '</Helmet>') {
-      // Skip duplicate closing tags
-      continue;
-    }
-    
-    // Fix missing closing tags for fragments
-    if (trimmed === '</>' && braceCount > 0) {
-      braceCount--;
-    }
-    
-    if (trimmed === '<>') {
-      braceCount++;
-    }
-    
-    fixed.push(line);
-  }
-  
-  return fixed.join('\n');
-}
-
 // Main function to process files
-function processFiles() {
+async function processFiles() {
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts'
@@ -64,15 +27,14 @@ function processFiles() {
   let totalFiles = 0;
   let fixedFiles = 0;
   
-  patterns.forEach(async (pattern) => {
+  for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
     
-    files.forEach(file => {
+    for (const file of files) {
       totalFiles++;
       try {
         const content = fs.readFileSync(file, 'utf8');
         let fixed = fixJSXErrors(content);
-        fixed = fixJSXStructure(fixed);
         
         if (fixed !== content) {
           fs.writeFileSync(file, fixed, 'utf8');
@@ -82,8 +44,8 @@ function processFiles() {
       } catch (error) {
         console.error(`Error processing ${file}:`, error.message);
       }
-    });
-  });
+    }
+  }
   
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
