@@ -13,19 +13,17 @@ function fixMergeConflicts(filePath) {
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======.*?\n>>>>>>> [^\n]+\n/g, '');
-    content = content.replace(/=======.*?\n>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
     
     // Clean up any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======\n?/g, '');
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
     
-    // Clean up duplicate lines and fix common issues
-    content = content.replace(/'use client';'use client';/g, "'use client';");
-    content = content.replace(/\n\n\n+/g, '\n\n');
-    content = content.replace(/\s+$/gm, '');
+    // Fix common syntax issues
+    content = content.replace(/\s+\)\s*\)\s*;?\s*$/gm, ');');
+    content = content.replace(/\s+\)\s*;?\s*$/gm, ');');
+    content = content.replace(/\s+\)\s*\}\s*$/gm, '}');
     
     fs.writeFileSync(filePath, content);
     return true;
@@ -57,4 +55,4 @@ function findAndFixConflicts(dir) {
 
 console.log('Starting merge conflict fix...');
 const fixedCount = findAndFixConflicts('/workspace/app');
-console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
