@@ -55,8 +55,4 @@ const AiMobileAppBuilderPage: React.FC = () => {
 };
 
 export default AiMobileAppBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

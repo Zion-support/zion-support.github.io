@@ -55,8 +55,4 @@ const IotEdgeComputingPage: React.FC = () => {
 };
 
 export default IotEdgeComputingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

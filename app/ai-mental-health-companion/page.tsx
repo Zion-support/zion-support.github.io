@@ -55,8 +55,4 @@ const AiMentalHealthCompanionPage: React.FC = () => {
 };
 
 export default AiMentalHealthCompanionPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

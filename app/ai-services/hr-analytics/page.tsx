@@ -53,8 +53,4 @@ const HrAnalyticsPage: React.FC = () => {
 };
 
 export default HrAnalyticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

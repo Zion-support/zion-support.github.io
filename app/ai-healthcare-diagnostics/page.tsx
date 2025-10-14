@@ -55,8 +55,4 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
 };
 
 export default AiHealthcareDiagnosticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

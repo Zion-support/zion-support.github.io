@@ -55,8 +55,4 @@ const AiStockPortfolioManagerPage: React.FC = () => {
 };
 
 export default AiStockPortfolioManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

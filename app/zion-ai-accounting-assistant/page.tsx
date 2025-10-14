@@ -55,8 +55,4 @@ const ZionAiAccountingAssistantPage: React.FC = () => {
 };
 
 export default ZionAiAccountingAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

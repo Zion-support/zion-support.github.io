@@ -53,8 +53,4 @@ const SystemAdminPage: React.FC = () => {
 };
 
 export default SystemAdminPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

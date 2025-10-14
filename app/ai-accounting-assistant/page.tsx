@@ -55,8 +55,4 @@ const AiAccountingAssistantPage: React.FC = () => {
 };
 
 export default AiAccountingAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

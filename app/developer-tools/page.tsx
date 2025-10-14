@@ -55,8 +55,4 @@ const DeveloperToolsPage: React.FC = () => {
 };
 
 export default DeveloperToolsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

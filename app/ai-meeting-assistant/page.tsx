@@ -55,8 +55,4 @@ const AiMeetingAssistantPage: React.FC = () => {
 };
 
 export default AiMeetingAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

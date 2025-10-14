@@ -55,8 +55,4 @@ const CybersecurityAuditPage: React.FC = () => {
 };
 
 export default CybersecurityAuditPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

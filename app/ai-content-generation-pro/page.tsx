@@ -55,8 +55,4 @@ const AiContentGenerationProPage: React.FC = () => {
 };
 
 export default AiContentGenerationProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const ZionAiPredictiveMaintenancePage: React.FC = () => {
 };
 
 export default ZionAiPredictiveMaintenancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

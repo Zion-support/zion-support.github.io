@@ -55,8 +55,4 @@ const AiMlPlatformPage: React.FC = () => {
 };
 
 export default AiMlPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -59,8 +59,4 @@ const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
 };
 
 export default Ai2025Sept30OperationalTrustScorecardsV3Page;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

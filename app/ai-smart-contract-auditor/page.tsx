@@ -55,8 +55,4 @@ const AiSmartContractAuditorPage: React.FC = () => {
 };
 
 export default AiSmartContractAuditorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

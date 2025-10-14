@@ -53,8 +53,4 @@ const InvestorsPage: React.FC = () => {
 };
 
 export default InvestorsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const AiMeetingTranscriberPage: React.FC = () => {
 };
 
 export default AiMeetingTranscriberPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

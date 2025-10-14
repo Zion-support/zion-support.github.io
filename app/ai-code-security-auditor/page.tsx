@@ -55,8 +55,4 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
 };
 
 export default AiCodeSecurityAuditorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

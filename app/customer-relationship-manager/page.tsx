@@ -55,8 +55,4 @@ const CustomerRelationshipManagerPage: React.FC = () => {
 };
 
 export default CustomerRelationshipManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

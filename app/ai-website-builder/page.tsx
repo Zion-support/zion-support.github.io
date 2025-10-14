@@ -55,8 +55,4 @@ const AiWebsiteBuilderPage: React.FC = () => {
 };
 
 export default AiWebsiteBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

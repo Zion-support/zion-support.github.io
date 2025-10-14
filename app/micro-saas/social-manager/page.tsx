@@ -55,8 +55,4 @@ const SocialManagerPage: React.FC = () => {
 };
 
 export default SocialManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

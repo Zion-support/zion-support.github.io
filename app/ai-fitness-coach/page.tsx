@@ -55,8 +55,4 @@ const AiFitnessCoachPage: React.FC = () => {
 };
 
 export default AiFitnessCoachPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

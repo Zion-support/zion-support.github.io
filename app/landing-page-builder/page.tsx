@@ -55,8 +55,4 @@ const LandingPageBuilderPage: React.FC = () => {
 };
 
 export default LandingPageBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

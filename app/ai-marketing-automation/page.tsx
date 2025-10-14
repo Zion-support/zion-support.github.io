@@ -55,8 +55,4 @@ const AiMarketingAutomationPage: React.FC = () => {
 };
 
 export default AiMarketingAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

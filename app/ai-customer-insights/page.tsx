@@ -55,8 +55,4 @@ const AiCustomerInsightsPage: React.FC = () => {
 };
 
 export default AiCustomerInsightsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

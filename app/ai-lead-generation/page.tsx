@@ -55,8 +55,4 @@ const AiLeadGenerationPage: React.FC = () => {
 };
 
 export default AiLeadGenerationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

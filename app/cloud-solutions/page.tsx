@@ -55,8 +55,4 @@ const CloudSolutionsPage: React.FC = () => {
 };
 
 export default CloudSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

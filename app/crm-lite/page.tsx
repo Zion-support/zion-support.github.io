@@ -53,8 +53,4 @@ const CrmLitePage: React.FC = () => {
 };
 
 export default CrmLitePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

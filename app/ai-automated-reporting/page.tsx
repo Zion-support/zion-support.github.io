@@ -55,8 +55,4 @@ const AiAutomatedReportingPage: React.FC = () => {
 };
 
 export default AiAutomatedReportingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

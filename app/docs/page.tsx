@@ -53,8 +53,4 @@ const DocsPage: React.FC = () => {
 };
 
 export default DocsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

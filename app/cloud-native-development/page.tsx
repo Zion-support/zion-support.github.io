@@ -55,8 +55,4 @@ const CloudNativeDevelopmentPage: React.FC = () => {
 };
 
 export default CloudNativeDevelopmentPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

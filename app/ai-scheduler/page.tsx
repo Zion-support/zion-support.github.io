@@ -53,8 +53,4 @@ const AiSchedulerPage: React.FC = () => {
 };
 
 export default AiSchedulerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

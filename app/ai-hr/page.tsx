@@ -53,8 +53,4 @@ const AiHrPage: React.FC = () => {
 };
 
 export default AiHrPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const CloudMigrationProPage: React.FC = () => {
 };
 
 export default CloudMigrationProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

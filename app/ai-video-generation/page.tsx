@@ -55,8 +55,4 @@ const AiVideoGenerationPage: React.FC = () => {
 };
 
 export default AiVideoGenerationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

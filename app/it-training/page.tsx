@@ -53,8 +53,4 @@ const ItTrainingPage: React.FC = () => {
 };
 
 export default ItTrainingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

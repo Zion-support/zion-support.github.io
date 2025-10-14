@@ -55,8 +55,4 @@ const PredictiveMaintenancePage: React.FC = () => {
 };
 
 export default PredictiveMaintenancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

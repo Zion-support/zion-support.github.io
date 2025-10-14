@@ -55,8 +55,4 @@ const AiNlpTextAnalysisPage: React.FC = () => {
 };
 
 export default AiNlpTextAnalysisPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

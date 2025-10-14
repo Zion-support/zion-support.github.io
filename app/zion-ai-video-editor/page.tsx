@@ -55,8 +55,4 @@ const ZionAiVideoEditorPage: React.FC = () => {
 };
 
 export default ZionAiVideoEditorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

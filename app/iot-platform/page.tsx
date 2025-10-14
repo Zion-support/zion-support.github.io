@@ -53,8 +53,4 @@ const IotPlatformPage: React.FC = () => {
 };
 
 export default IotPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

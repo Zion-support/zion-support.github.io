@@ -55,8 +55,4 @@ const AccessibilityPage: React.FC = () => {
 };
 
 export default AccessibilityPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

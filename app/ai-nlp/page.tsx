@@ -53,8 +53,4 @@ const AiNlpPage: React.FC = () => {
 };
 
 export default AiNlpPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

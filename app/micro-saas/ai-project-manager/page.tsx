@@ -55,8 +55,4 @@ const AiProjectManagerPage: React.FC = () => {
 };
 
 export default AiProjectManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

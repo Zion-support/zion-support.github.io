@@ -55,8 +55,4 @@ const DataCenterSolutionsPage: React.FC = () => {
 };
 
 export default DataCenterSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

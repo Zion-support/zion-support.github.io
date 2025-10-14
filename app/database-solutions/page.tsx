@@ -152,5 +152,3 @@ const DatabaseSolutionsPage: React.FC = () => {
 };
 
 export default DatabaseSolutionsPage;
-
-export default DatabaseSolutionsPage;

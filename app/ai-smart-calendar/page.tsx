@@ -55,8 +55,4 @@ const AiSmartCalendarPage: React.FC = () => {
 };
 
 export default AiSmartCalendarPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

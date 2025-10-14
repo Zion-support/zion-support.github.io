@@ -55,8 +55,4 @@ const AiExpenseTrackerPage: React.FC = () => {
 };
 
 export default AiExpenseTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

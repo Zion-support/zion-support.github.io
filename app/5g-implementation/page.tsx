@@ -514,6 +514,6 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default 5gImplementationPage;
+export default __5gImplementationPage;
 
 

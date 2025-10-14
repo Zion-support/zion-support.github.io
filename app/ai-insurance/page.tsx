@@ -53,8 +53,4 @@ const AiInsurancePage: React.FC = () => {
 };
 
 export default AiInsurancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

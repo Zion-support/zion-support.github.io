@@ -55,8 +55,4 @@ const AiManufacturingPage: React.FC = () => {
 };
 
 export default AiManufacturingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

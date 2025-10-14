@@ -54,6 +54,6 @@ const FiveGNetworkOptimizationPage: React.FC = () => {
   );
 };
 
-export default 5gNetworkOptimizationPage;
+export default __5gNetworkOptimizationPage;
 
 

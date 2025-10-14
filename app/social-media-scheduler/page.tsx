@@ -55,8 +55,4 @@ const SocialMediaSchedulerPage: React.FC = () => {
 };
 
 export default SocialMediaSchedulerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

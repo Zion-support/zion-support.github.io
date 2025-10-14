@@ -55,8 +55,4 @@ const SmartInventoryOptimizerPage: React.FC = () => {
 };
 
 export default SmartInventoryOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
 };
 
 export default AiCustomerSentimentTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

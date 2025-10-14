@@ -55,8 +55,4 @@ const QuantumComputingPage: React.FC = () => {
 };
 
 export default QuantumComputingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

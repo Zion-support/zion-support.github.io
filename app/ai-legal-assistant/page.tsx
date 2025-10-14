@@ -55,8 +55,4 @@ const AiLegalAssistantPage: React.FC = () => {
 };
 
 export default AiLegalAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

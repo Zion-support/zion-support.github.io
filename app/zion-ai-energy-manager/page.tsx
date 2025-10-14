@@ -55,8 +55,4 @@ const ZionAiEnergyManagerPage: React.FC = () => {
 };
 
 export default ZionAiEnergyManagerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

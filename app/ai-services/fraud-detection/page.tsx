@@ -55,8 +55,4 @@ const FraudDetectionPage: React.FC = () => {
 };
 
 export default FraudDetectionPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

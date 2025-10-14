@@ -55,8 +55,4 @@ const AiEnergyGridManagementProPage: React.FC = () => {
 };
 
 export default AiEnergyGridManagementProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const ZionAiCustomerSupportProPage: React.FC = () => {
 };
 
 export default ZionAiCustomerSupportProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

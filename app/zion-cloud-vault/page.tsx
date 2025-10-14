@@ -55,8 +55,4 @@ const ZionCloudVaultPage: React.FC = () => {
 };
 
 export default ZionCloudVaultPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

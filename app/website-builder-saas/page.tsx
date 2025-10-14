@@ -55,8 +55,4 @@ const WebsiteBuilderSaasPage: React.FC = () => {
 };
 
 export default WebsiteBuilderSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

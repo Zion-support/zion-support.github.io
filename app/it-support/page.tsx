@@ -53,8 +53,4 @@ const ItSupportPage: React.FC = () => {
 };
 
 export default ItSupportPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

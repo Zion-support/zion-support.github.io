@@ -54,6 +54,6 @@ const FiveGConsulting: React.FC = () => {
   );
 };
 
-export default 5gConsultingPage;
+export default __5gConsultingPage;
 
 

@@ -55,8 +55,4 @@ const TaskManagerProPage: React.FC = () => {
 };
 
 export default TaskManagerProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

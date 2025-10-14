@@ -55,8 +55,4 @@ const HealthcareItPage: React.FC = () => {
 };
 
 export default HealthcareItPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

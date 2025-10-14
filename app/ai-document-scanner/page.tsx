@@ -55,8 +55,4 @@ const AiDocumentScannerPage: React.FC = () => {
 };
 
 export default AiDocumentScannerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,8 +53,4 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf
