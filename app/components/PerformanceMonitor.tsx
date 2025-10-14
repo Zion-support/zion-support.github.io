@@ -50,11 +50,7 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         const layoutShiftEntry = entry as LayoutShift;
-<<<<<<< HEAD
         if (!layoutShiftEntry.hadRecentInput) {
-=======
-          if (!layoutShiftEntry.hadRecentInput) {
->>>>>>> 1881d73c152406db9416c36d1387e62ee2cf2636
           clsValue += layoutShiftEntry.value;
         }
       });
@@ -81,11 +77,7 @@ const PerformanceMonitor = () => {
 
     // Send metrics after page load
     const sendMetrics = () => {
-<<<<<<< HEAD
-        if (Object.keys(metrics).length > 0) {
-=======
       if (Object.keys(metrics).length > 0) {
->>>>>>> 1881d73c152406db9416c36d1387e62ee2cf2636
         // In a real application, you would send these metrics to your analytics service
         console.log('Performance Metrics: ', metrics);
       }
