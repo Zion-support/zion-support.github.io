@@ -13,10 +13,10 @@ export const preloadOptimizer = {
   },
   
   preloadScript: (src: string) => {
-    this.preload(src, 'script');
+    preloadOptimizer.preload(src, 'script');
   },
   
   preloadStyle: (href: string) => {
-    this.preload(href, 'style');
+    preloadOptimizer.preload(href, 'style');
   }
 };

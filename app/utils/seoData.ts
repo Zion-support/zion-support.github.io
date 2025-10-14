@@ -18,6 +18,6 @@ export const seoData = {
   },
   
   getPageData: (page: string) => {
-    return this[page as keyof typeof this] || this.home;
+    return seoData[page as keyof typeof seoData] || seoData.home;
   }
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, useCallback } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from './app/components/Navigation';
@@ -6,17 +6,9 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import LoadingPage from './app/components/Loading';
 import HomePage from './app/page';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-import WebVitalsTracker from './app/components/WebVitalsTracker';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import CoreWebVitals from './app/components/CoreWebVitals';
-import FuturisticBackground from './app/components/FuturisticBackground';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import Breadcrumb from './app/components/Breadcrumb';
-import EnhancedSEO from './app/components/EnhancedSEO';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 
 // All necessary imports are already defined above
 
@@ -34,11 +26,9 @@ import DemoPage from './app/pages/DemoPage';
 import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
+import CookiesPage from './app/pages/CookiesPage';
+import SitemapPage from './app/pages/SitemapPage';
 import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
@@ -68,13 +58,6 @@ import SitemapPage from './app/pages/SitemapPage';
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
-
-  const closeSidebar = useCallback(() => {
-    setIsSidebarOpen(false);
-  }, []);
 
   useEffect(() => {
     // Performance monitoring
@@ -102,9 +85,6 @@ function App() {
 
   useEffect(() => {
     // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
   }, []);
 
   return (
