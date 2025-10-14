@@ -32,6 +32,6 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Get Started')).toBeInTheDocument();
+    expect(screen.getByText('Get Started Today')).toBeInTheDocument();
   });
 });
