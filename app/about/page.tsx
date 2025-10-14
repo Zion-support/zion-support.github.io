@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,6 +49,5 @@ const Page: React.FC = () => {
   );
 }
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AboutPage;
 

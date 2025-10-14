@@ -69,7 +69,7 @@ if (typeof window !== 'undefined') {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', (entry as any).loadEventEnd - (entry as any).loadEventStart, 'ms');
+        console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
       }
     }
   });

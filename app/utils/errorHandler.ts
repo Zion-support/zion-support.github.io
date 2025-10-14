@@ -1,8 +1,8 @@
 export const errorHandler = {
-  log: (error: Error, context?: Record<string, unknown>) => {
+  log: (_error: Error, _context?: Record<string, unknown>) => {
     // Error logging logic
   },
-  report: (error: Error, context?: Record<string, unknown>) => {
+  report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
   }
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page: React.FC = () => {
+const ZionAiSocialMediaManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,4 @@ const Page: React.FC = () => {
   );
 }
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+export default ZionAiSocialMediaManagerPage;
