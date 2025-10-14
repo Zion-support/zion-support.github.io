@@ -17,6 +17,8 @@ export default defineConfig({
       "@app": resolve(__dirname, "./app"),
     },
   },
+  
+  // Enhanced performance optimizations
   build: {
     outDir: "dist",
     sourcemap: false,
@@ -26,28 +28,25 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 150, // Increased threshold to reduce warnings
-    assetsInlineLimit: 2048, // Reduced for better chunking
-    // Enable compression
+    chunkSizeWarningLimit: 200, // Increased threshold
+    assetsInlineLimit: 1024, // Reduced for better chunking
     reportCompressedSize: true,
-    // Target modern browsers for smaller bundles
     target: 'es2020',
-    // Enable tree shaking
     treeshake: {
       moduleSideEffects: false,
     },
-    // Optimize for production
+    // Enhanced terser options
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: [
           "console.log",
-          "console.info",
+          "console.info", 
           "console.debug",
           "console.warn",
         ],
-        passes: 3, // More passes for better optimization
+        passes: 3,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -65,7 +64,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true,
         toplevel: true,
         properties: {
           regex: /^_/,
@@ -79,42 +78,58 @@ export default defineConfig({
     // Enhanced build optimizations
     rollupOptions: {
       output: {
-        manualChunks: (id: string) => {
-          // Split vendor chunks for better caching
-          if (id.includes("node_modules")) {
-            // React ecosystem
-            if (
-              id.includes("react") ||
-              id.includes("react-dom") ||
-              id.includes("react-router")
-            ) {
-              return "react-vendor";
-            }
-            // UI libraries
-            if (id.includes("lucide-react") || id.includes("framer-motion")) {
-              return "ui-vendor";
-            }
-            // Large libraries
-            if (id.includes('recharts') || id.includes('gray-matter')) {
-              return 'large-vendor';
-            }
-            // Other vendor libraries
-            return "vendor";
-          }
-          // App chunks - split by feature
-          if (id.includes('/app/')) {
-            // Split by page categories
-            if (id.includes('/ai-') || id.includes('/5g-')) {
-              return 'feature-pages';
-            }
-            // Main app pages
-            if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
-              return 'main-pages';
-            }
-            return 'app';
-          }
-          return undefined;
-        },
+        
+    manualChunks: (id: string) => {
+      // React ecosystem - split more granularly
+      if (id.includes("node_modules")) {
+        if (id.includes("react") && !id.includes("react-dom")) {
+          return "react-core";
+        }
+        if (id.includes("react-dom")) {
+          return "react-dom";
+        }
+        if (id.includes("react-router")) {
+          return "react-router";
+        }
+        // UI libraries
+        if (id.includes("lucide-react")) {
+          return "icons";
+        }
+        if (id.includes("framer-motion")) {
+          return "animations";
+        }
+        // Large libraries
+        if (id.includes('recharts')) {
+          return 'charts';
+        }
+        if (id.includes('gray-matter')) {
+          return 'content';
+        }
+        // Other vendor libraries
+        return "vendor";
+      }
+      // App chunks - split by feature
+      if (id.includes('/app/')) {
+        // AI pages
+        if (id.includes('/ai-')) {
+          return 'ai-pages';
+        }
+        // 5G pages
+        if (id.includes('/5g-')) {
+          return '5g-pages';
+        }
+        // Main app pages
+        if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
+          return 'main-pages';
+        }
+        // Components
+        if (id.includes('/components/')) {
+          return 'components';
+        }
+        return 'app';
+      }
+      return undefined;
+    },
         assetFileNames: (assetInfo) => {
           if (
             assetInfo.name &&

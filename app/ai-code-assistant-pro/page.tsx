@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Code, 
-  Zap, 
-  Shield, 
   Globe, 
   Brain, 
   CheckCircle, 
@@ -11,27 +9,14 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
   Terminal,
   GitBranch,
   Bug,
   FileText,
   Cpu,
   Database,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  TrendingUp
+  Cloud
 } from 'lucide-react';
 
 const AiCodeAssistantProPage: React.FC = () => {
