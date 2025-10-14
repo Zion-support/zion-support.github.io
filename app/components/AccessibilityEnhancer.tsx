@@ -1,12 +1,13 @@
 import React from "react";
 
-const AccessibilityEnhancer = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">AccessibilityEnhancer</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for AccessibilityEnhancer.
-      </p>
+    <div className="accessibility-enhanced">
+      {children}
     </div>
   );
 };

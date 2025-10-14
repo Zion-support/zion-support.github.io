@@ -8,6 +8,7 @@ export const useSEO = (structuredData?: unknown) => {
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
+      
       return () => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);

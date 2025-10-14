@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
+import { ArrowRightIcon, CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const WebDevelopmentPage = () => {
@@ -79,7 +79,7 @@ const WebDevelopmentPage = () => {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>Start Your Project</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRightIcon className="w-5 h-5" />
             </Link>
             <Link 
               to="/demo"
