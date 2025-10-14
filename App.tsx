@@ -64,22 +64,22 @@ if (typeof window !== 'undefined') {
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
     onCLS((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('CLS:', metric);
+        console.log('CLS:', metric);
       }
     });
     onFCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('FCP:', metric);
+        console.log('FCP:', metric);
       }
     });
     onLCP((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('LCP:', metric);
+        console.log('LCP:', metric);
       }
     });
     onTTFB((metric) => {
       if (process.env.NODE_ENV === 'development') {
-        console.warn('TTFB:', metric);
+        console.log('TTFB:', metric);
       }
     });
   });
@@ -89,7 +89,7 @@ if (typeof window !== 'undefined') {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+          console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
         }
       }
     }
@@ -98,7 +98,7 @@ if (typeof window !== 'undefined') {
 }
 
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-      console.warn('Zion Tech Group App initialized');
+      console.log('Zion Tech Group App initialized');
     }
   }, []);
 

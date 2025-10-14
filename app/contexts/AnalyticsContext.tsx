@@ -13,18 +13,24 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = useCallback((_eventName: string, _properties?: Record<string, unknown>) => {
-    // Analytics events are tracked silently
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Event tracked:', eventName, properties)
+    }
     // Add your analytics tracking logic here
   }, [])
 
-  const trackPageView = useCallback((_pageName: string, _properties?: Record<string, unknown>) => {
-    // Page views are tracked silently
+  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Page view tracked:', pageName, properties)
+    }
     // Add your page view tracking logic here
   }, [])
 
-  const identifyUser = useCallback((_userId: string, _properties?: Record<string, unknown>) => {
-    // User identification is handled silently
+  const identifyUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('User identified:', userId, properties)
+    }
     // Add your user identification logic here
   }, [])
 

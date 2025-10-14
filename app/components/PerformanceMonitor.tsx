@@ -80,7 +80,7 @@ const PerformanceMonitor = () => {
       if (Object.keys(metrics).length > 0) {
         // Send to analytics service
         if (process.env.NODE_ENV === 'development') {
-          // Performance metrics logged in development
+          console.log('Performance Metrics:', metrics);
         }
         
         // You can send to your analytics service here

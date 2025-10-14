@@ -32,12 +32,12 @@ if ("serviceWorker" in navigator) {
       .register("/sw.js")
       .then((_registration) => {
         if (process.env.NODE_ENV === 'development') {
-          // Service Worker registered successfully
+          console.log('Service Worker registered successfully');
         }
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-          // Service Worker registration failed
+          console.log('Service Worker registration failed');
         }
       });
   });
