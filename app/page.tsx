@@ -265,9 +265,11 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-    </>
+      </main>
+        </div>
+      </EnhancedAccessibility>
+    </PerformanceOptimizer>
   );
 };
 
 export default HomePage;
-ursor/fix-errors-and-merge-to-main-94a7
