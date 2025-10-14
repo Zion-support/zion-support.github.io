@@ -1,21 +1,21 @@
 import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FiveGModernizationPage = () => {
   const services = [
     {
-      title: '5G Network Modernization';,
-      description: 'Complete modernization of legacy networks to 5G technology.';
+      title: '5G Network Modernization',
+      description: 'Complete modernization of legacy networks to 5G technology.'
     },
     {
-      title: 'Security Modernization';,
-      description: 'Upgrade security infrastructure to support 5G requirements.';
+      title: 'Security Modernization',
+      description: 'Upgrade security infrastructure to support 5G requirements.'
     },
     {
-      title: 'Team Training';,
-      description: 'Comprehensive training for modernized 5G network operations.';
+      title: 'Team Training',
+      description: 'Comprehensive training for modernized 5G network operations.'
     }
   ]
 
@@ -50,7 +50,7 @@ title="5G Modernization Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,7 +62,7 @@ title="5G Modernization Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />

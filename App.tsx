@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -7,10 +7,10 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOEnhancer from './app/components/SEOEnhancer';
+import EnhancedSEO from './app/components/EnhancedSEO';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
@@ -23,11 +23,15 @@ import AboutPage from './app/about/page';
 import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
 
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+class AppErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
@@ -119,12 +123,12 @@ const App: React.FC = () => {
   }
 
   return (
-    <ErrorBoundary>
+    <AppErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
-            <SEOEnhancer
+            <EnhancedSEO
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
               keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
@@ -165,7 +169,7 @@ const App: React.FC = () => {
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
-    </ErrorBoundary>
+    </AppErrorBoundary>
   );
 };
 
