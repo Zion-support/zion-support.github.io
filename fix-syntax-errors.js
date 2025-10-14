@@ -1,99 +1,115 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
+import fs from "fs"
+import path from "path"
+import { glob } from "glob"
 // Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix malformed import statements with concatenated strings
-  fixed = fixed.replace(/import\s+React\s+from\s+"react";"import\s+{([^}]+)}\s+from\s+"([^"]+)";"/g, 
-    'import React from "react";
-import { $1 } from "$2";');
-  
-  // Fix missing quotes in import statements
-  fixed = fixed.replace(/from\s+'([^']*);'/g, "from '$1';");
-  fixed = fixed.replace(/from\s+"([^"]*);"/g, 'from "$1";');
-  
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/from\s+['"]([^'"]+)['"]\s*([^;])/g, 'from "$1";
-$2');
-  
-  // Fix malformed React imports
-  fixed = fixed.replace(/import\s+React\s+from\s+'react;'const/g, "import React from 'react';
-
-const");
-  fixed = fixed.replace(/import\s+React\s+from\s+"react;"const/g, 'import React from "react";
-
-const');
-  
-  // Fix missing quotes in JSX attributes
-  fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className="$1"');
-  
-  // Fix missing semicolons in variable declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {
-');
-  
-  // Fix malformed export statements
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\(\)\s*{\s*return\s+null;\s*}/g, 
-    'export default function $1() {
-  return null;
-}');
-  
-  return fixed;
+function fixSyntaxErrors(content, filePath) {
+  let fixed = content
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"')
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]; // Keep only the last closing tag
+  })
+  // Fix orphaned closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]
+  })
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  // Fix multiple closing parentheses
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
 }
-
-// Function to process a single file
-function processFile(filePath) {
+      return match
+    },
+  )
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split("\n")
+  const fixedLines = []
+  const openTags = []
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue
+}
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g)
+    if (openingTags) {
+      openingTags.forEach((tag) => {
+        const tagName = tag.match(/<([^\s>]+)/)
+        if (tagName && !tag.includes("/>")) {
+          openTags.push(tagName[1])
+})
+}
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g)
+    if (closingTags) {
+      closingTags.forEach((tag) => {
+        const tagName = tag.match(/<\/([^>]+)>/)
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1])
+          if (index !== -1) {
+            openTags.splice(index, 1)
+}
+      })
+}
+    fixedLines.push(line)
+}
+  fixed = fixedLines.join("\n")
+  return fixed
+}
+// Function to fix specific file patterns
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixSyntaxErrors(content, filePath)
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
 }
-
-// Function to recursively find and process files
-function processDirectory(dirPath) {
-  let filesProcessed = 0;
-  let filesFixed = 0;
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
-        filesProcessed++;
-        if (processFile(fullPath)) {
-          filesFixed++;
-        }
-      }
-    }
-  }
-  
-  walkDir(dirPath);
-  return { filesProcessed, filesFixed };
-}
-
 // Main execution
-console.log('Starting syntax error fixes...');
-const { filesProcessed, filesFixed } = processDirectory('./app');
-console.log(`
-Completed! Processed ${filesProcessed} files, fixed ${filesFixed} files.`);
-
-
-
+async function main() {
+  console.log("Starting syntax error fixes...")
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++
+}
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

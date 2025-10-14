@@ -1,15 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
 
-// Minimal working App component
-function App() {
+const AppMinimal = () => {
   return (
-    <Router>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <h1>Zion Tech Group</h1>
-      </div>
-    </Router>
+    <div>
+      <h1>App Minimal</h1>
+      <p>This is a minimal app component.</p>
+      f7f852c0f7415181a1b362c4aa5a784585ad5828
+    </div>
   );
-}
+};
 
-export default App;
+export default AppMinimal;
