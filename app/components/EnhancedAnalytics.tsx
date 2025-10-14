@@ -206,8 +206,10 @@ const EnhancedAnalytics: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          trackPerformance('FID', entry.processingStart - entry.startTime);
+        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
+          if (entry.processingStart && entry.startTime) {
+            trackPerformance('FID', entry.processingStart - entry.startTime);
+          }
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -216,8 +218,8 @@ const EnhancedAnalytics: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
+        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
+          if (!entry.hadRecentInput && entry.value) {
             clsValue += entry.value;
             trackPerformance('CLS', clsValue);
           }
@@ -240,16 +242,56 @@ const EnhancedAnalytics: React.FC = () => {
 
   // Expose tracking functions globally for manual tracking
   useEffect(() => {
-    (window as any).trackEvent = trackEvent;
-    (window as any).trackUserInteraction = trackUserInteraction;
-    (window as any).trackPerformance = trackPerformance;
-    (window as any).trackError = trackError;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackEvent = trackEvent;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackUserInteraction = trackUserInteraction;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackPerformance = trackPerformance;
+    (window as typeof window & {
+      trackEvent?: typeof trackEvent;
+      trackUserInteraction?: typeof trackUserInteraction;
+      trackPerformance?: typeof trackPerformance;
+      trackError?: typeof trackError;
+    }).trackError = trackError;
 
     return () => {
-      delete (window as any).trackEvent;
-      delete (window as any).trackUserInteraction;
-      delete (window as any).trackPerformance;
-      delete (window as any).trackError;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackEvent;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackUserInteraction;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackPerformance;
+      delete (window as typeof window & {
+        trackEvent?: typeof trackEvent;
+        trackUserInteraction?: typeof trackUserInteraction;
+        trackPerformance?: typeof trackPerformance;
+        trackError?: typeof trackError;
+      }).trackError;
     };
   }, [trackEvent, trackUserInteraction, trackPerformance, trackError]);
 
