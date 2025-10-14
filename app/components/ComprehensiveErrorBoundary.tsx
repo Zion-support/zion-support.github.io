@@ -42,7 +42,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
@@ -69,7 +70,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     };
 
     // For now, just log to console
-    };
+    console.log('Error data logged:', errorData);
+  };
 
   handleRetry = () => {
     this.setState({

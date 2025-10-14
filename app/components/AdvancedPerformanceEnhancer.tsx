@@ -73,7 +73,8 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         return registration.update();
       })
       .catch((error) => {
-        });
+        console.error('Service worker registration failed:', error);
+      });
   }, [enableCaching]);
 
   // Implement compression for API responses
@@ -157,15 +158,20 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     // Monitor Core Web Vitals
     import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
-        });
+        console.log('CLS metric:', metric);
+      });
       onINP((metric: any) => {
-        });
+        console.log('INP metric:', metric);
+      });
       onFCP((metric: any) => {
-        });
+        console.log('FCP metric:', metric);
+      });
       onLCP((metric: any) => {
-        });
+        console.log('LCP metric:', metric);
+      });
       onTTFB((metric: any) => {
-        });
+        console.log('TTFB metric:', metric);
+      });
     });
 
     // Monitor memory usage

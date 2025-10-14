@@ -1,24 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Cpu,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
-  Activity,
-  PieChart
-} from 'lucide-react';
+
+
+import { Brain, TrendingUp, Shield, Zap, BarChart3, DollarSign, Target, CheckCircle, Cpu, Globe, Clock, Activity, PieChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

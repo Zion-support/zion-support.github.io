@@ -77,11 +77,13 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
-            }
+            console.log('Service worker registered:', registration);
+          }
         })
         .catch((registrationError) => {
           if (process.env.NODE_ENV === 'development') {
-            }
+            console.error('Service worker registration failed:', registrationError);
+          }
         });
     }
 
