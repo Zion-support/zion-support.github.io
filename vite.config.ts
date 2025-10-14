@@ -1,18 +1,16 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 const resolve = path.resolve;
-
-export default defineConfig({
-  plugins: [
+export default defineConfig({;
+  plugins: [;
     react({
-      // Enable React Fast Refresh
+      // Enable React Fast Refresh;
       fastRefresh: true,
     }),
   ],
   resolve: {
-    alias: {
+alias: {,
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
     },
@@ -25,18 +23,18 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks;
           if (id.includes('node_modules')) {
             return 'vendor';
           }
         },
         assetFileNames: (assetInfo) => {
-          if (
+          if (;
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
+            return `assets/images/[name]-[hash][extname]`;``````````
+          }```````````
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
@@ -45,14 +43,14 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,
-    open: false,
-    cors: true,
-    hmr: {
-      overlay: true,
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-});
+    port: 3000,`
+    open: false,``
+    cors: true,```
+hmr: {,````
+      overlay: true,`````
+    },``````
+  },```````
+  optimizeDeps: {````````
+include: ['react', 'react-dom', 'react-router-dom'],`````````
+  },``````````
+});```````````

@@ -1,6 +1,5 @@
-import React from 'react';'
-import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";"
-
+import React from 'react';
+import lucide-react from 'lucide-react';
 interface FormData {
   name: 'string;','
   email: 'string;','
@@ -11,28 +10,24 @@ interface FormData {
   budget: 'string;','
   timeline: string;
 }
-
 interface FormErrors {
   [key: string]: string;
 }
-
 const ImprovedContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: "","
-    email: "","
-    phone: "","
-    company: "","
-    message: "","
-    service: "","
-    budget: "","
-    timeline: "","
+    name: ,"
+    email: ,"
+    phone: ,"
+    company: ,"
+    message: ,"
+    service: ,"
+    budget: ,"
+    timeline: ,"
   });
-  
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
-
   const services = [
     "AI Solutions","
     "Cybersecurity","
@@ -46,7 +41,6 @@ const ImprovedContactForm: React.FC = () => {
     "5G Solutions","
     "Other"
   ];
-
   const budgets = [
     "Under $10,000","
     "$10,000 - $50,000","
@@ -55,7 +49,6 @@ const ImprovedContactForm: React.FC = () => {
     "Over $500,000","
     "Not sure"
   ];
-
   const timelines = [
     "ASAP","
     "Within 1 month","
@@ -64,94 +57,79 @@ const ImprovedContactForm: React.FC = () => {
     "6+ months","
     "Flexible"
   ];
-
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
-
     // Name validation;
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required";"
+      newErrors.name = "Name is required;
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters";"
+      newErrors.name = "Name must be at least 2 characters;
     }
-
     // Email validation;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required";"
+      newErrors.email = "Email is required;
     } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Please enter a valid email address";"
+      newErrors.email = "Please enter a valid email address;
     }
-
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {
       const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {'
-        newErrors.phone = "Please enter a valid phone number";"
+      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) {'
+        newErrors.phone = "Please enter a valid phone number;
       }
     }
-
     // Message validation;
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required";"
+      newErrors.message = "Message is required;
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters";"
+      newErrors.message = "Message must be at least 10 characters;
     }
-
     // Service validation;
     if (!formData.service) {
-      newErrors.service = "Please select a service";"
+      newErrors.service = "Please select a service;
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleChange = (
     e: 'React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>','
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
     // Clear error when user starts typing;
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));'
+      setErrors(prev => ({ ...prev, [name]:  }));'
     }
   };
-
   const handleServiceSelect = (service: string) => {
     setFormData(prev => ({ ...prev, service }));
     setIsServiceDropdownOpen(false);
     if (errors.service) {
-      setErrors(prev => ({ ...prev, service: '' }));'
+      setErrors(prev => ({ ...prev, service:  }));'
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!validateForm()) {
       return;
     }
-
     setIsSubmitting(true);
-    
     try {
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
       // In a real app, you would send the data to your backend;
       console.log('Form submitted: ', formData);','
       setIsSubmitted(true);
       setFormData({
-        name: "","
-        email: "","
-        phone: "","
-        company: "","
-        message: "","
-        service: "","
-        budget: "","
-        timeline: "","
+        name: ,"
+        email: ,"
+        phone: ,"
+        company: ,"
+        message: ,"
+        service: ,"
+        budget: ,"
+        timeline: ,"
       });
     } catch (error) {
       console.error('Error submitting form:', error);'
@@ -159,7 +137,6 @@ const ImprovedContactForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-
   if (isSubmitted) {
     return (
       <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center">"
@@ -167,7 +144,7 @@ const ImprovedContactForm: React.FC = () => {
           <CheckCircle className="w-8 h-8 text-green-400" />"
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>"
-        <p className="text-gray-300 mb-6">"
+        <p>"
           Your message has been sent successfully. We'll get back to you within 24 hours.'
         </p>
         <button;
@@ -179,7 +156,6 @@ const ImprovedContactForm: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">"
       <div className="flex items-center gap-3 mb-6">"
@@ -188,10 +164,9 @@ const ImprovedContactForm: React.FC = () => {
         </div>
         <div></div>
           <h3 className="text-2xl font-bold text-white">Get In Touch</h3>"
-          <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>'
+          <p>We'd love to hear from you. Send us a message!</p>'
         </div>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-6">"
         {/* Name and Email Row */}
         <div className="grid md: 'grid-cols-2 gap-4">"','
@@ -206,8 +181,8 @@ const ImprovedContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
-                errors.name ? 'border-red-500' : 'border-white/20'
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${``````````
+                errors.name ? 'border-red-500' : 'border-white/20'```````````
               }`}
               placeholder="Your full name"
             /></input>
@@ -218,20 +193,19 @@ const ImprovedContactForm: React.FC = () => {
               </p>
             )}
           </div>
-
-          <div></div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">"
-              <Mail className="w-4 h-4 inline mr-2" />"
-              Email Address *
-            </label>
-            <input;
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
-                errors.email ? 'border-red-500' : 'border-white/20'
+          <div></div>`
+            <label htmlFor="email" className="block text-sm font-medium text-white mb-2">"``
+              <Mail className="w-4 h-4 inline mr-2" />"```
+              Email Address *````
+            </label>`````
+            <input;``````
+              type="email"```````
+              id="email"````````
+              name="email"`````````
+              value={formData.email}``````````
+              onChange={handleChange}```````````
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${``````````
+                errors.email ? 'border-red-500' : 'border-white/20'```````````
               }`}
               placeholder="your.email@example.com"
             /></input>
@@ -243,22 +217,21 @@ const ImprovedContactForm: React.FC = () => {
             )}
           </div>
         </div>
-
         {/* Phone and Company Row */}
         <div className="grid md: 'grid-cols-2 gap-4">"','
-          <div></div>
-            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">"
-              <Phone className="w-4 h-4 inline mr-2" />"
-              Phone Number;
-            </label>
-            <input;
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
-                errors.phone ? 'border-red-500' : 'border-white/20'
+          <div></div>`
+            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">"``
+              <Phone className="w-4 h-4 inline mr-2" />"```
+              Phone Number;````
+            </label>`````
+            <input;``````
+              type="tel"```````
+              id="phone"````````
+              name="phone"`````````
+              value={formData.phone}``````````
+              onChange={handleChange}```````````
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${``````````
+                errors.phone ? 'border-red-500' : 'border-white/20'```````````
               }`}
               placeholder="+1 (555) 123-4567"
             /></input>
@@ -269,7 +242,6 @@ const ImprovedContactForm: React.FC = () => {
               </p>
             )}
           </div>
-
           <div></div>
             <label htmlFor="company" className="block text-sm font-medium text-white mb-2">"
               <Building className="w-4 h-4 inline mr-2" />"
@@ -284,28 +256,26 @@ const ImprovedContactForm: React.FC = () => {
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: 'outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"','
               placeholder="Your company name"
             /></input>
-          </div>
-        </div>
-
-        {/* Service Selection */}
-        <div></div>
-          <label className="block text-sm font-medium text-white mb-2">"
-            Service Interest *
-          </label>
-          <div className="relative">"
-            <button;
-              type="button"
-              onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${
-                errors.service ? 'border-red-500' : 'border-white/20'
-              }`}
-            >
-              <span className={formData.service ? 'text-white' : 'text-gray-400'}>'
-                {formData.service || 'Select a service'}'
-              </span>
-              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />'
+          </div>`
+        </div>``
+        {/* Service Selection */}```
+        <div></div>````
+          <label className="block text-sm font-medium text-white mb-2">"`````
+            Service Interest *``````
+          </label>```````
+          <div className="relative">"````````
+            <button;`````````
+              type="button"``````````
+              onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}```````````
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${``````````
+                errors.service ? 'border-red-500' : 'border-white/20'```````````
+              }`}```````
+            >````````
+              <span className={formData.service ? 'text-white' : 'text-gray-400'}>'`````````
+                {formData.service || 'Select a service'}'``````````
+              </span>```````````
+              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : }`} />'
             </button>
-            
             {isServiceDropdownOpen && (
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">"
                 {services.map((service) => (
@@ -328,7 +298,6 @@ const ImprovedContactForm: React.FC = () => {
             </p>
           )}
         </div>
-
         {/* Budget and Timeline Row */}
         <div className="grid md: 'grid-cols-2 gap-4">"','
           <div></div>
@@ -342,7 +311,7 @@ const ImprovedContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: 'outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"','
             ></select>
-              <option value="">Select budget range</option>"
+              <option value=>Select budget range</option>"
               {budgets.map((budget) => (
                 <option key={budget} value={budget} className="bg-slate-800">"
                   {budget}
@@ -350,7 +319,6 @@ const ImprovedContactForm: React.FC = () => {
               ))}
             </select>
           </div>
-
           <div></div>
             <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">"
               Project Timeline;
@@ -362,7 +330,7 @@ const ImprovedContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: 'outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"','
             ></select>
-              <option value="">Select timeline</option>"
+              <option value=>Select timeline</option>"
               {timelines.map((timeline) => (
                 <option key={timeline} value={timeline} className="bg-slate-800">"
                   {timeline}
@@ -371,21 +339,20 @@ const ImprovedContactForm: React.FC = () => {
             </select>
           </div>
         </div>
-
         {/* Message */}
-        <div></div>
-          <label htmlFor="message" className="block text-sm font-medium text-white mb-2">"
-            <FileText className="w-4 h-4 inline mr-2" />"
-            Message *
-          </label>
-          <textarea;
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={5}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${
-              errors.message ? 'border-red-500' : 'border-white/20'
+        <div></div>`
+          <label htmlFor="message" className="block text-sm font-medium text-white mb-2">"``
+            <FileText className="w-4 h-4 inline mr-2" />"```
+            Message *````
+          </label>`````
+          <textarea;``````
+            id="message"```````
+            name="message"````````
+            value={formData.message}`````````
+            onChange={handleChange}``````````
+            rows={5}```````````
+            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${``````````
+              errors.message ? 'border-red-500' : 'border-white/20'```````````
             }`}
             placeholder="Tell us about your project, requirements, or any questions you have..."
           /></textarea>
@@ -396,7 +363,6 @@ const ImprovedContactForm: React.FC = () => {
             </p>
           )}
         </div>
-
         {/* Submit Button */}
         <button;
           type="submit"
@@ -409,15 +375,14 @@ const ImprovedContactForm: React.FC = () => {
               Sending...
             </>
           ) : (
-            <>
-              <Send className="w-5 h-5" />"
-              Send Message;
-            </>
-          )}
-        </button>
-      </form>
-    </div>
-  );
-};
-
-export default ImprovedContactForm;
+            <>`
+              <Send className="w-5 h-5" />"``
+              Send Message;```
+            </>````
+          )}`````
+        </button>``````
+      </form>```````
+    </div>````````
+  );`````````
+};``````````
+export default ImprovedContactForm;```````````

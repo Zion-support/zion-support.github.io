@@ -1,5 +1,4 @@
-import React from "react";";
-
+import React from 'react';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -8,24 +7,23 @@ interface SEOEnhancerProps {
   url?: string;
   type?: string;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title="Zion Tech Group"
   description="Leading provider of AI and IT solutions"
-  keywords = ['AI', 'IT', 'technology', 'solutions'],'';
+  keywords = ['AI', 'IT', 'technology', 'solutions'],;
   image,
   url,
-  type = 'website'''
+  type = 'website'
 }) => {
   return (
-<>    <div className="seo-enhancer"></div>""
+<>    <div className="seo-enhancer"></div>
       <h1>{title}</h1>
       <p>{description}</p>
       {keywords && (
-        <div className="keywords"></div>""
+        <div className="keywords"></div>
     </>
           {keywords.map((keyword, index) => (
-            <span key={index} className="keyword"></span>""
+            <span key={index} className="keyword"></span>
               {keyword}
             </span>
           ))}
@@ -35,4 +33,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 export default SEOEnhancer;
-;

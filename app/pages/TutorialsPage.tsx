@@ -1,16 +1,15 @@
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
-import { 
+import React from 'react';
+import react-helmet-async from 'react-helmet-async';
+import react-router-dom from 'react-router-dom';
+import {
   AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
   ClockIcon,
   UserGroupIcon,
   ArrowRightIcon;
-} from '@heroicons/react/24/outline';'
-
+} from '@heroicons/react/24/outline;
 const TutorialsPage: React.FC = () => {
   const tutorials = [
     {
@@ -50,7 +49,6 @@ const TutorialsPage: React.FC = () => {
       href: '/tutorials/5g-implementation'
     }
   ];
-
   return (
     <>
       <Helmet></Helmet>
@@ -58,22 +56,20 @@ const TutorialsPage: React.FC = () => {
         <meta name="description" content="Comprehensive tutorials and guides for AI, cybersecurity, cloud computing, and digital transformation technologies." />"
         <meta name="keywords" content="tutorials, AI learning, cybersecurity training, cloud computing guides, 5G technology" />"
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white">"
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
           <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
             <div className="text-center">"
-              <h1 className="text-5xl md: 'text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">"','
+              <h1>"','
                 Tutorials & Learning;
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+              <p>"
                 Master cutting-edge technologies with our comprehensive tutorials and guides designed for all skill levels.
               </p>
             </div>
           </div>
         </section>
-
         {/* Tutorials Grid */}
         <section className="py-20">"
           <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
@@ -86,21 +82,17 @@ const TutorialsPage: React.FC = () => {
                     </span>
                     <span className="text-sm text-gray-400">{tutorial.level}</span>"
                   </div>
-                  
                   <h3 className="text-xl font-semibold mb-3 group-hover: 'text-purple-400 transition-colors">"','
                     {tutorial.title}
                   </h3>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">"
+                  <p>"
                     {tutorial.description}
                   </p>
-                  
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center text-gray-400 text-sm">"
                       <ClockIcon className="w-4 h-4 mr-1" />"
                       {tutorial.duration}
                     </div>
-                    
                     <Link;
                       to={tutorial.href}
                       className="inline-flex items-center text-purple-400 hover: 'text-purple-300 font-medium group-hover:gap-2 transition-all"','
@@ -114,12 +106,11 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-slate-800">"
           <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8 text-center">"','
             <h2 className="text-4xl font-bold mb-6">Ready to Start Learning?</h2>"
-            <p className="text-xl text-gray-300 mb-8">"
+            <p>"
               Join thousands of professionals who are advancing their careers with our expert-led tutorials.
             </p>
             <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
@@ -142,5 +133,4 @@ const TutorialsPage: React.FC = () => {
     </>
   );
 };
-
 export default TutorialsPage;

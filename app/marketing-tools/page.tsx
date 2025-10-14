@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-;
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [{
       title: 'AI Content Generator', price: '$199/month', description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.', features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
@@ -49,13 +48,11 @@ category: 'Advertising',
 category: 'Analytics',
     }
   ];
-;
   const benefits = [{
       icon: TrendingUp, title: 'Increase ROI', description: 'Average 250% increase in marketing ROI with AI-powered optimization', }, {
       icon: Clock, title: 'Save Time', description: 'Reduce marketing tasks by 80% with intelligent automation', }, {
       icon: Target, title: 'Better Targeting', description: 'Reach the right audience with AI-powered targeting and personalization', }, {
       icon: BarChart, title: 'Data-Driven', description: 'Make informed decisions with comprehensive analytics and insights', }];
-;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -63,14 +60,13 @@ category: 'Analytics',
         <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">;
+          <h1>;
             AI Marketing Tools
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+          <p>;
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
           {/* Stats */}
@@ -92,7 +88,6 @@ category: 'Analytics',
               <div className="text-gray-300">Time Saved</div>
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
@@ -112,26 +107,23 @@ category: 'Analytics',
           </div>
         </div>
       </section>
-
       {/* Marketing Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">;
             Our Marketing Tools
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {marketingTools.map((tool, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
+                  <p>{tool.description}</p>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
                     {tool.category}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
@@ -143,7 +135,6 @@ category: 'Analytics',
                     ))}
                   </ul>
                 </div>
-
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a;
@@ -158,7 +149,6 @@ category: 'Analytics',
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -170,20 +160,19 @@ category: 'Analytics',
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <p>{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">;
+          <p>;
             Get started with our AI marketing tools today and see the difference intelligent automation can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -195,16 +184,14 @@ category: 'Analytics',
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >;
-              Email Us
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default MarketingToolsPage;
-;
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"`
+            >;``
+              Email Us```
+            </a>````
+          </div>`````
+        </div>``````
+      </section>```````
+    </div>````````
+  );`````````
+};``````````
+export default MarketingToolsPage;```````````
