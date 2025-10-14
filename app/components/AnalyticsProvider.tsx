@@ -24,8 +24,8 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
 
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer?.push(args);
+      function gtag(..._args: unknown[]) {
+        window.dataLayer?.push(_args);
       }
       window.gtag = gtag;
       
