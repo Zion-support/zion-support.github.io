@@ -3,7 +3,7 @@ interface FuturisticCardProps {}
   children: React.ReactNode
   className?: string
   variant?: 'default' | 'glow' | 'gradient'}''''
-const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}""
+const FuturisticCard: "React.FC<FuturisticCardProps> = ({"}"
   children,
   className = '','''''
   variant = 'default''}) => {'}'''

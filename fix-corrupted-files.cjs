@@ -1,122 +1,138 @@
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
 
-// Function to clean up corrupted TSX/JSX files
-function cleanFile(filePath) {
+const fs = require('fs');
+const path = require('path');
+
+// Function to clean up corrupted files
+function cleanCorruptedFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-
-    // Fix common corruption patterns
-    content = content
-      // Remove extra semicolons after imports
-      .replace(/';';/g, ";")
-      .replace(/';';';/g, ";")
-      // Fix malformed JSX attributes
-      .replace(/";";/g, '"')
-      .replace(/";';/g, '"')
-      .replace(/';";/g, ";")
-      // Fix malformed className attributes
-      .replace(/c,lassName/g, "className")
-      .replace(/bg-gray-90o0/g, "bg-gray-900")
-      .replace(/text-gray-30o0/g, "text-gray-300")
-      // Remove stray closing tags and malformed JSX
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div><\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div><\/div>/g, "")
-      .replace(/<\/div><\/div>/g, "")
-      // Fix malformed function declarations
-      .replace(
-        /export default function ComponentsPage\(\) \{\}/g,
-        "export default function Page() {",
-      )
-      // Remove duplicate return statements
-      .replace(
-        /return \(\s*<div>Page content<\/div>\s*\);\s*\}\s*return \(/g,
-        "return (",
-      )
-      // Fix malformed JSX structure
-      .replace(
-        /<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g,
-        "",
-      )
-      .replace(/<div className="container mx-auto px-4">";"<\/div>/g, "")
-      .replace(
-        /<h1 className="text-4xl font-bold mb-8">Components<\/h1>";"/g,
-        "",
-      )
-      .replace(/<p className="text-gray-30o0 text-lg">";"/g, "")
-      .replace(/This page is under development\.<\/p>/g, "")
-      .replace(/<\/p><\/div><\/div>/g, "")
-      .replace(/\);\}/g, ");")
-      .replace(/\}\s*\);\}/g, "});")
-      // Clean up extra closing braces and parentheses
-      .replace(/\}\s*\);\}\s*\}/g, "});")
-      .replace(/\}\s*\);\}/g, "});")
-      // Remove malformed interface declarations
-      .replace(
-        /interface ResponsiveContainerProps \{\}\s*children:\s*c,lassName\?\: string;\s*\}/g,
-        "interface ResponsiveContainerProps {\n  children: React.ReactNode;\n  className?: string;\n}",
-      )
-      // Fix malformed function parameters
-      .replace(
-        /const ResponsiveContainer: React\.FC<ResponsiveContainerProps> = \(\{\}\s*children,\s*className = \}\) => \{\}/g,
-        "const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({\n  children, \n  className = ''\n}) => {",
-      )
-      // Remove stray closing tags at the end
-      .replace(/<\/ResponsiveContainerProps>\s*$/g, "")
-      // Clean up multiple consecutive newlines
-      .replace(/\n\s*\n\s*\n/g, "\n\n")
-      // Remove empty lines at the end
-      .replace(/\n\s*$/g, "\n");
-
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+    let content = fs.readFileSync(filePath, 'utf8');
+    let cleaned = false;
+    
+    // Remove duplicate 'use client' declarations
+    const useClientRegex = /'use client'[\s\n]*'use client'[\s\n]*/g;
+    if (useClientRegex.test(content)) {
+      content = content.replace(useClientRegex, "'use client'\n");
+      cleaned = true;
+    }
+    
+    // Remove duplicate imports
+    const importLines = content.split('\n').filter(line => line.trim().startsWith('import '));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {
+      // Remove all import lines and add unique ones back
+      const lines = content.split('\n');
+      const nonImportLines = lines.filter(line => !line.trim().startsWith('import '));
+      const newContent = [...uniqueImports, ...nonImportLines].join('\n');
+      content = newContent;
+      cleaned = true;
+    }
+    
+    // Fix malformed JSX with extra quotes
+    const quoteFixRegex = /className="([^"]*)"\s*"/g;
+    if (quoteFixRegex.test(content)) {
+      content = content.replace(quoteFixRegex, 'className="$1"');
+      cleaned = true;
+    }
+    
+    // Fix malformed JSX with extra quotes at end of lines
+    const endQuoteFixRegex = /"\s*$/gm;
+    if (endQuoteFixRegex.test(content)) {
+      content = content.replace(endQuoteFixRegex, '');
+      cleaned = true;
+    }
+    
+    // Remove empty lines with just quotes
+    const emptyQuoteLines = /^\s*"\s*$/gm;
+    if (emptyQuoteLines.test(content)) {
+      content = content.replace(emptyQuoteLines, '');
+      cleaned = true;
+    }
+    
+    // Fix malformed function declarations
+    const malformedFunctionRegex = /export default function\s+\w+\s*\(\s*\)\s*\{\s*return\s*\(\s*$/gm;
+    if (malformedFunctionRegex.test(content)) {
+      content = content.replace(malformedFunctionRegex, 'export default function Page() {\n  return (');
+      cleaned = true;
+    }
+    
+    // Fix duplicate export statements
+    const exportDefaultRegex = /export default function\s+\w+/g;
+    const exportMatches = content.match(exportDefaultRegex);
+    if (exportMatches && exportMatches.length > 1) {
+      // Keep only the first export default
+      const firstExport = exportMatches[0];
+      const lines = content.split('\n');
+      let foundFirst = false;
+      const cleanedLines = lines.filter(line => {
+        if (line.trim().startsWith('export default function') && !foundFirst) {
+          foundFirst = true;
+          return true;
+        }
+        return !line.trim().startsWith('export default function') || foundFirst;
+      });
+      content = cleanedLines.join('\n');
+      cleaned = true;
+    }
+    
+    if (cleaned) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Cleaned: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error cleaning ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find and fix all corrupted files
-function fixAllCorruptedFiles() {
-  const appDir = path.join(__dirname, "app");
-  let fixedCount = 0;
-  let errorCount = 0;
-
-  function walkDir(dir) {
-    const files = fs.readdirSync(dir);
-
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-
+// Function to find and clean all corrupted files
+function cleanAllCorruptedFiles(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
       if (stat.isDirectory()) {
-        walkDir(filePath);
-      } else if (
-        file.endsWith(".tsx") ||
-        file.endsWith(".ts") ||
-        file.endsWith(".jsx") ||
-        file.endsWith(".js")
-      ) {
-        if (cleanFile(filePath)) {
-          fixedCount++;
-        } else {
-          errorCount++;
+        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        if (item.match(/\.(ts|tsx|js|jsx)$/)) {
+          files.push(fullPath);
         }
       }
     }
   }
-
-  walkDir(appDir);
-
-  console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors in ${errorCount} files`);
+  
+  scanDirectory(dir);
+  
+  let cleanedCount = 0;
+  for (const file of files) {
+    if (cleanCorruptedFile(file)) {
+      cleanedCount++;
+    }
+  }
+  
+  console.log(`Cleaned ${cleanedCount} files`);
 }
 
-// Run the fix
-fixAllCorruptedFiles();
+// Main execution
+function main() {
+  console.log('Starting file cleanup...');
+  const workspaceDir = process.cwd();
+  cleanAllCorruptedFiles(workspaceDir);
+  console.log('File cleanup complete');
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { cleanCorruptedFile, cleanAllCorruptedFiles };

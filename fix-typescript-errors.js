@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import fs from "fs"
+import fs from "fs
 // Function to fix App.tsx import and ErrorBoundary issues
 function fixAppTsx() {
   try {

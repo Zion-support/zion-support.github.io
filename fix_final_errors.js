@@ -1,8 +1,8 @@
 import React from 'react'
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
-import { execSync } from "child_process"
+import fs from "fs
+import path from "path
+import { execSync } from "child_process
 console.log("🔧 Fixing final build errors...\n")
 // Function to fix final build errors
 function fixFile(filePath) {
@@ -103,7 +103,7 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
       if (
         stat.isDirectory() &&
         !item.startsWith(".") &&
-        item !== "node_modules"
+        item !== "node_modules
       ) {
         traverse(fullPath)
       } else if (

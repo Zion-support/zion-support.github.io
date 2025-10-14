@@ -1,7 +1,7 @@
-import React from "react"
-import fs from "fs"
-import path from "path"
-import { fileURLToPath } from "url"
+import React from "react
+import fs from "fs
+import path from "path
+import { fileURLToPath } from "url
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix final quote issues
