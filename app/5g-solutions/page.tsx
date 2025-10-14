@@ -1,5 +1,6 @@
-import React from 'react;'
-import { Helmet } from 'react-helmet-async;'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 const PagePage = () => {
   return (
     <React.Fragment>
@@ -10,7 +11,12 @@ const PagePage = () => {
       
       <div>
         <div>
-          
-        
+          <h1>5G Solutions</h1>
+          <p>Professional 5G solutions services by Zion Tech Group.</p>
+        </div>
+      </div>
+    </React.Fragment>
   );
-}
+};
+
+export default PagePage;

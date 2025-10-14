@@ -89,6 +89,6 @@ export default function Page() {
             </Link>;
           </div>
         </section>
-      </div></>
+      </div></></React.Fragment>
   );
 }

@@ -1,5 +1,5 @@
-import React from 'react;'
-import { Helmet } from 'react-helmet-async;'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function Pricing() {
   return (
     <React.Fragment>
@@ -8,9 +8,7 @@ export default function Pricing() {
         <meta name="description" content="Pricing plans for Zion Tech Group AI solutions, cybersecurity, and cloud services." />
       </Helmet>
       <div>
-        <div>
-          
-        </div>
+        <div><h1>Page Title</h1><p>Page content goes here.</p></div>
       </div>
     </React.Fragment>
   );

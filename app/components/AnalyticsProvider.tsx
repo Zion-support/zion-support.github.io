@@ -1,4 +1,5 @@
-import React, { createContext, useContext, ReactNode } from 'react;'
+import React, { createContext, useContext, ReactNode } from 'react';
+
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;
@@ -7,44 +8,43 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: ReactNode
-};
+  children: ReactNode;
+}
+
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     // Basic analytics tracking
-    console.log('Analytics Event:', eventName, properties);'
+    console.log('Analytics Event:', eventName, properties);
     
     // In a real implementation, you would send this to your analytics service
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', eventName, properties);
-    }
+    // Example: gtag('event', eventName, properties);
   };
 
   const trackPageView = (pageName: string) => {
     console.log('Page View:', pageName);
     
-    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag) {
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
+    // In a real implementation, you would send this to your analytics service
+    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_title: pageName });
   };
+
   const value = {
     trackEvent,
     trackPageView,
   };
+
   return (
     <AnalyticsContext.Provider value={value}>
-      {children};
+      {children}
     </AnalyticsContext.Provider>
-  )
+  );
 };
+
 export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext)
+  const context = useContext(AnalyticsContext);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');'
-  };
-  return context
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
-export default AnalyticsProvider
+
+export default AnalyticsProvider;

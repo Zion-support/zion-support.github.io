@@ -1,10 +1,11 @@
-import React from 'react;'
-const PerformanceMonitor = () => {
-  return (
-    <div>
-      <h1>PerformanceMonitor</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
+import React, { ReactNode } from 'react';
+
+interface PerformanceMonitorProps {
+  children: ReactNode;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
 };
-export default PerformanceMonitor
+
+export default PerformanceMonitor;
