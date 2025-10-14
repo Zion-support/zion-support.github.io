@@ -47,7 +47,7 @@ export default function AISupplyChainOptimizerPage() {
       name: 'Professional',
       price: '$499',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing enterprises',
       features: [
         'Up to 20 warehouses',
         'Advanced route optimization',
@@ -60,9 +60,9 @@ export default function AISupplyChainOptimizerPage() {
     },
     {
       name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large enterprises',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored for large organizations',
       features: [
         'Unlimited warehouses',
         'AI-powered optimization',

@@ -133,6 +133,14 @@ function App() {
     }
   }, []);
 
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
   return (
     <HelmetProvider>
       <GlobalErrorBoundary>
@@ -158,10 +166,8 @@ function App() {
                                 <Route path="/contact" element={<ContactPage />} />
                                 <Route path="/services" element={<ServicesPage />} />
                                 <Route path="/blog" element={<BlogPage />} />
-                                <Route path="/demo" element={<DemoPage />} />
                                 <Route path="/privacy" element={<PrivacyPage />} />
                                 <Route path="/terms" element={<TermsPage />} />
-                                <Route path="/ai-services" element={<AIServicesPage />} />
                                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                 <Route path="/tutorials" element={<TutorialsPage />} />
