@@ -10,7 +10,7 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
   
   return (props: ComponentProps<T>) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>
   );
 }
@@ -24,7 +24,7 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
   
   return (props: ComponentProps<T>) => (
     <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as Record<string, unknown>)} />
     </LazyWrapper>
   );
 }
