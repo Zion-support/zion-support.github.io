@@ -8,29 +8,46 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
       <Helmet>
         <title>AI Business Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered business intelligence solutions" />
+      </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-9-0-0 via-purple-9-0-0 to-slate-9-0-0">
-        <div className="container mx-auto px-4 py-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+        <div className="container mx-autopx-4py-1 6">
           <div className="text-center mb-16">
-            <h1 className="text-5xlfont-bold text-white mb-6">
+            <h1 className="text-5xlfont-boldtext-whitemb-6">
               AI Business Intelligence Pro
-            <p className="text-xl text-gray-3-0-0 mb-8">
+            </h1>
+            <p className="text-xl text-gray-30 0 mb-8">
               Transform your data into actionable insights with AI-powered business intelligence
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/1 0 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Brain className="w-1 2 h-12 text-blue-4-0-0 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">AI Analytics</h3>
-              <p className="text-gray-3-0-0">
+          <div className="gridmd:grid-cols-3gap-8">
+            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
+              <Brain className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">AI Analytics</h3>
+              <p className="text-gray-3 0 0">
                 Advanced AI algorithms for deep data analysis and insights.
-              <BarChart3 className="w-1 2 h-12 text-blue-4-0-0 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Dashboards</h3>
+              </p>
+            </div>
+            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
+              <BarChart3 className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Real-time Dashboards</h3>
+              <p className="text-gray-3 0 0">
                 Live dashboards with real-time business metrics and KPIs.
-              <TrendingUp className="w-1 2 h-12 text-blue-4-0-0 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
+              </p>
+            </div>
+            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
+              <TrendingUp className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Predictive Analytics</h3>
+              <p className="text-gray-3 0 0">
                 Forecast trends and make data-driven decisions.
-    
-  </div></div></div></div></></div></p></p></h1></Helmet>);
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default AIBusinessIntelligenceProPage;

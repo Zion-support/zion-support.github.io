@@ -1,11 +1,7 @@
 import { useEffect } from 'react'
 
-<<<<<<< HEAD
-export const useSEO = (title: string, description: string, keywords?: string) => {
-=======
-export const useSEO = (title: string;, description: string, keywords: string) => {
-export const useSEO = (title: string;, description: string, keywords?: string) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
+export const useSEO = (title: string;, description: string;, keywords: string) => {
+export const useSEO = (title: string;, description: string;, keywords?: string) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
       const metaDescription = document.querySelector('meta[name="description"]')
@@ -14,8 +10,17 @@ export const useSEO = (title: string;, description: string, keywords?: string) =
       if (metaDescription) {
         metaDescription.setAttribute('content', description)
       }
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords)
+      }
+      
+      if (metaKeywords) {
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords)
+      }
       
       document.title = title
+    }
   }, [title, description, keywords])
+}
+}}

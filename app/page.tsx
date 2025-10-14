@@ -1,166 +1,113 @@
-'use client';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ArrowRightIcon,
-  ChartBarIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline';
+import { Brain, Shield, Zap, Users, Target, ArrowRight } from 'lucide-react';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
-
-
-const HomePage: React.FC = () => {
-  
-
-  
-
-  
+function HomePage() {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence solutions for modern businesses",
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+    },
+    {
+      icon: Zap,
+      title: "Automation",
+      description: "Streamline operations with intelligent automation systems",
+    },
+    {
+      icon: Users,
+      title: "IT Services",
+      description: "Comprehensive IT support and infrastructure management",
+    },
+    {
+      icon: Target,
+      title: "Digital Transformation",
+      description: "Transform your business with innovative digital solutions",
+    }
+  ];
 
   return (
     <>
+      <PerformanceMonitor />
       <Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
+        <meta name="keywords" content="AI solutions, cybersecurity, IT services, digital transformation, automation" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-      
-      <div className="min-h-screen bg-slate-900 text-white">
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI solutions, cybersecurity, and IT services for modern businesses" />
+        <link rel="canonical" href="https://zion.app" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-9 0 0 text-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          {/* Animated Background */}
-          <div className="absolute inset-0 opacity-20">
-        
-          {/* Matrix Rain Effect */}
-          <div className="matrix-rain"></div>
-        
-          {/* Floating Elements with Neon Effects */}
-          <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating cyber-glow"></div>
-          <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '1s'}}></div>
-          <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating cyber-glow" style={{animationDelay: '3s'}}></div>
-        
-          {/* Cyber Grid Overlay */}
-          <div className="absolute inset-0 cyber-grid opacity-10"></div>
-        
-          {/* Data Streams */}
-          <div className="absolute top-1/3 left-0 w-full h-1 data-stream"></div>
-          <div className="absolute top-2/3 left-0 w-full h-1 data-stream" style={{animationDelay: '1.5s'}}></div>
-        
-          <div className="relative z-10 container mx-auto px-4 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
-                Zion Tech Group
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Advanced AI and IT Solutions for Modern Businesses
-              <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-                Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-                cloud infrastructure, and digital transformation services to drive innovation and growth.
-            
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link 
-                  to="/contact" 
-                  className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect">
-                  Get Started Today
-                  <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  to="/services" 
-                  className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
-                  Explore Services
+        <div className="container mx-auto px-4 py-2 0">
+          <div className="text-center mb-1 6">
+            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-2xl text-gray-3 0 0 max-w-4xl mx-auto mb-8">
+              Advanced AI and IT Solutions for the Digital Future
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/services" 
+                className="inline-flex items-center bg-gradient-to-r from-purple-6 00 to-cyan-6 00 hover:from-purple-7 00 hover:to-cyan-7 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+              >
+                Explore Our Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center border-2 border-purple-5 00 hover:bg-purple-5 0 0 text-white font-bold py-4 px-8 rounded-lg transition-all duration-3 0 0"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
 
-        {/* Services Section */}
-        <section className="py-20 bg-slate-900 particles">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-                Our Core Services
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to accelerate your business growth
-          
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Solutions */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating cyber-glow">
-                  <CpuChipIcon className="w-8 h-8 text-white" />
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">AI Solutions</h3>
-                <p className="text-gray-300 mb-6">
-                  Advanced artificial intelligence services including machine learning, 
-                  natural language processing, and predictive analytics.
-                <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-                  Learn More <ArrowRightIcon className="w-4 h-4" />
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-1 6">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
 
-              {/* Cybersecurity */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                  <ShieldCheckIcon className="w-8 h-8 text-white" />
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Cybersecurity</h3>
-                  Comprehensive security solutions to protect your digital assets, 
-                  data, and infrastructure from evolving threats.
-                <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-
-              {/* Cloud Infrastructure */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                  <CloudIcon className="w-8 h-8 text-white" />
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Cloud Infrastructure</h3>
-                  Scalable cloud solutions and infrastructure management to optimize 
-                  performance and reduce operational costs.
-                <Link to="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-
-              {/* Digital Transformation */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                  <ChartBarIcon className="w-8 h-8 text-white" />
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Digital Transformation</h3>
-                  Strategic digital transformation services to modernize your business 
-                  processes and enhance customer experiences.
-                <Link to="/digital-transformation" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-
-              {/* Micro SaaS */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                  <GlobeAltIcon className="w-8 h-8 text-white" />
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">Micro SaaS</h3>
-                  Custom micro SaaS solutions designed to solve specific business 
-                  challenges with scalable, cost-effective applications.
-                <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-
-              {/* 5G Solutions */}
-              <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
-                <h3 className="text-2xl font-bold text-white mb-4 holographic-text">5G Solutions</h3>
-                  Next-generation 5G technology solutions for enhanced connectivity, 
-                  IoT applications, and ultra-low latency services.
-                <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
-
-        {/* About Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-                Why Choose Zion Tech Group?
-              <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                With over 4 years of experience in cutting-edge technology solutions, 
-                we&apos;ve helped businesses across various industries transform their operations 
-                and achieve unprecedented growth.
-            
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
-                  <div className="text-gray-300">Projects Completed</div>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
-                  <div className="text-gray-300">Happy Clients</div>
-                  <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
-                  <div className="text-gray-300">Success Rate</div>
-    </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></>
-  </div></p></p></p></p></p></h1></h2></h2></section></section></section></Link></Link></Link></Link></Link></Link></Link></Helmet>);
-};
+          {/* CTA Section */}
+          <div className="text-center bg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
+            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our experts help you implement cutting-edge solutions
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+            >
+              Contact Us Today
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default HomePage;

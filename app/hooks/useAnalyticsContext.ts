@@ -1,1 +1,3 @@
-export { useAnalytics as useAnalyticsContext } from '../contexts/use-analytics';
+import { useAnalytics } from '../contexts/useAnalytics';
+
+export const useAnalyticsContext = useAnalytics;

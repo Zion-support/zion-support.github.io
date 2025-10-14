@@ -2,12 +2,14 @@ import React from 'react';
 
 const Loading: React.FC = () => {
   return (
-    <div className="min-h-screenflex items-center justify-center bg-slate-900">
+    <div className="min-h-screenflexitems-centerjustify-centerbg-slate-9 0 0">
       <div className="text-center">
-        <div className="animate-spinrounded-full h-32 w-32 border-b-2 border-purple-500 mx-auto mb-4"></div>
-<h2 className="text-2xlfont-bold text-white mb-2">Loading...</h2>
-        <p className="text-gray-300">Please wait while we load the content</p>
-  </div></div>);
+        <div className="animate-spi nrounded-fullh-3 2w-3 2border-b-2border-purple-5 0 0mx-automb-4"></div>
+<h2 className="text-2xlfont-boldtext-whitemb-2">Loading...</h2>
+        <p className="text-gray-3 0 0">Please wait while we load the content</p>
+      </div>
+    </div>
+  );
 };
 
 export default Loading;

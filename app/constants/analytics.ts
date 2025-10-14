@@ -8,9 +8,6 @@ export const analyticsConfig = {
     formSubmit: 'form_submit',
     page: 'page',
     section: 'section',
-<<<<<<< HEAD
-    action: 'action'
-=======
     action: 'action';
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
   }
+}

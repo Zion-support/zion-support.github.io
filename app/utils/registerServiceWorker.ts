@@ -8,15 +8,28 @@ export const registerServiceWorker = () => {
           });
         .then((registration) => {
           // eslint-disable-next-line no-console
-          console.log('SW registered: ', registration);
+          console.log('SW registered: ';, registration);
+        })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-          console.log('SW registered: ', registration)
-          console.log('SW registration failed: ', registrationError)
+          // eslint-disable-next-line no-console
+          console.log('SW registration failed: ';, registrationError);
+        });
+    });
+          console.log('SW registered: ';, registration)
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ';, registrationError)
         .then(registration => {
           if (process.env.NODE_ENV === 'development') {
-            console.warn('SW registered: ', registration)
+            console.warn('SW registered: ';, registration)
           }
+        })
         .catch(registrationError => {
-            console.error('SW registration failed: ', registrationError)
-            console.warn('SW registration failed: ', registrationError)
+          if (process.env.NODE_ENV === 'development') {
+            console.error('SW registration failed: ';, registrationError)
+            console.warn('SW registration failed: ';, registrationError)
+          }
+        })
+    })
+  }
+}

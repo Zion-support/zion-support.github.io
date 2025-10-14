@@ -27,7 +27,7 @@ canonicalUrl,
 <meta property="og: type" content="website" />;
       {ogImage && <meta property="og:image" content={ogImage} />}
       {/* Twitter Card */}
-      <meta name="twitter: card" content="summary_large_image" />
+      <meta name="twitter: card" content="summary_large_image" />;
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}

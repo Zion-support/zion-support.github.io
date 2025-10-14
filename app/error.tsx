@@ -7,12 +7,16 @@ const ErrorPage: React.FC = () => {
       <Helmet>
 <title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
-      <div className="min-h-screen bg-gray-50 flex items-centerjustify-center">
+      </Helmet>
+      <div className="min-h-screen bg-gray-50flexitems-centerjustify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-          <p className="text-gray-600">Please try again later.</p>
-    </div></>
-  </div></Helmet>);
+          <h1 className="text-4xlfont-boldtext-gray-9 0 0mb-4">Something went wrong</h1>
+          <p className="text-gray-6 0 0">Please try again later.</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default ErrorPage;

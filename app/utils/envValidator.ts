@@ -1,19 +1,26 @@
 export const envValidator = {
   required: (key: string): string => {
-    const value = process.env[key]
+    const value = process.env[key];
     if (!value) {
-      throw new Error(`Environment variable ${key} is required`)
+      throw new Error(`Environment variable ${key} is required`);
     }
-    return value
+    return value;
   },
   
   optional: (key: string, defaultValue: string = ''): string => {
-    return process.env[key] || defaultValue
+    return process.env[key] || defaultValue;
+  },
   
   boolean: (key: string, defaultValue: boolean = false): boolean => {
-    if (value === undefined) return defaultValue
-    return value.toLowerCase() === 'true'
+    const value = process.env[key];
+    if (value === undefined) return defaultValue;
+    return value.toLowerCase() === 'true';
+  },
   
   number: (key: string, defaultValue: number = 0): number => {
-    const parsed = parseInt(value, 10)
-    return isNaN(parsed) ? defaultValue : parsed
+    const value = process.env[key];
+    if (value === undefined) return defaultValue;
+    const parsed = parseInt(value, 10);
+    return isNaN(parsed) ? defaultValue : parsed;
+  }
+};

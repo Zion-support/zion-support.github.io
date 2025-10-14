@@ -1,5 +1,5 @@
 export const seoOptimizer = {
-  optimize: (data: { title?: string; description?: string keywords?: string }) => {
+  optimize: (data: { title?: string; description?: string; keywords?: string }) => {
     const optimized = { ...data }
     
     // Optimize title length
@@ -14,7 +14,7 @@ export const seoOptimizer = {
     return optimized
   },
   
-  validate: (data: { title?: string; description?: string keywords?: string }) => {
+  validate: (data: { title?: string; description?: string; keywords?: string }) => {
     const errors: string[] = [];
     
     if (!data.title) errors.push('Title is required')
