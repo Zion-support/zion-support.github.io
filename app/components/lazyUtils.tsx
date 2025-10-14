@@ -1,12 +1,30 @@
-import React from "react";
+import React, { lazy, ComponentType } from 'react';
+import LazyWrapper from './LazyWrapper';
 
-const LazyUtils = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LazyUtils</h2>
-      <p>This component is under construction.</p>
-    </div>
+// Higher-order component for lazy loading
+export function withLazyLoading<P = Record<string, never>>(
+  Component: ComponentType<P>,
+  fallback?: React.ReactNode
+) {
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
+  
+  return (props: P) => (
+    <LazyWrapper fallback={fallback}>
+      <LazyComponent {...(props as Record<string, unknown>)} />
+    </LazyWrapper>
   );
-};
+}
 
-export default LazyUtils;
+// Utility function to create lazy-loaded components
+export function createLazyComponent<P = Record<string, never>>(
+  importFunction: () => Promise<{ default: ComponentType<P> }>,
+  fallback?: React.ReactNode
+) {
+  const LazyComponent = lazy(importFunction);
+  
+  return (props: P) => (
+    <LazyWrapper fallback={fallback}>
+      <LazyComponent {...(props as Record<string, unknown>)} />
+    </LazyWrapper>
+  );
+}
