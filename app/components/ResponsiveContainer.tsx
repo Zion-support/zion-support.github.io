@@ -1,12 +1,13 @@
 import React from "react";
 
-const ResponsiveContainer = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ResponsiveContainer</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
 
-export default ResponsiveContainer;
+
+
+"interface ResponsiveContainerProps {}"children: 
+  c,lassName ?  : string
+
+const ResponsiveContainer: React.FC<Props> = ({ children   }) => {}
+  return (
+    div>Page content</div>
+  )
+  );</Props>

@@ -4,10 +4,11 @@ import { Helmet } from 'react-helmet-async';
 export default function PenetrationTestingPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Penetration Testing - Zion Tech Group</title>
-        <meta name="description" content="Professional penetration testing services by Zion Tech Group." />
-      </Helmet>
+  )
+<elmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description"content="Professional page services by Zion Tech Group." />
+      
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
@@ -38,5 +39,7 @@ export default function PenetrationTestingPage() {
         </div>
       </div>
     </div>
-  );
+}
+}
+  )
 }

@@ -1,12 +1,15 @@
 import React from "react";
 
-const EnhancedLoadingSpinner = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedLoadingSpinner</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
 
-export default EnhancedLoadingSpinner;
+
+
+''export default function EnhancedLoadingSpinner() {'  return (
+        <div>
+  )
+      <div>
+        <h1 className: ""text-4xl font-bold mb-8">Enhanced Loading Spinner</h1>        <p className: ""text-gray-300 text-lg">"          This page is under development.        </p>      </div>
+    </div>
+}
+}
+  )
+}

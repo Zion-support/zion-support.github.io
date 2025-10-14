@@ -17,8 +17,7 @@ export const defaultStructuredData = {
     "https://linkedin.com/company/ziontechgroup",
     "https://github.com/ziontechgroup"
   ]
-};
-
+}
 // Default SEO configuration
 export const defaultSEOConfig = {
   title: 'ZionTechGroup-AdvancedAIandITSolutions',
@@ -26,4 +25,4 @@ export const defaultSEOConfig = {
   keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
   image: '/images/og-image.jpg',
   type: 'website'
-};
+}

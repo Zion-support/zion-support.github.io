@@ -9,4 +9,6 @@ const LoadingStates = () => {
   );
 };
 
-export default LoadingStates;
+    <div>
+      <div>
+  )

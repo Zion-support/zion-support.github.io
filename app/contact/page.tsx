@@ -17,7 +17,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default HomePage;
+  )
+}
+export default ContactPage;

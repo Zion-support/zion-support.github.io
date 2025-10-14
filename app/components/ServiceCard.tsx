@@ -1,12 +1,17 @@
 import React from "react";
 
-const ServiceCard = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ServiceCard</h2>
-      <p>This component is under construction.</p>
+'export default function ServiceCard() {'  return (
+    div>
+  );Page content</div>
+  )
+    <div>Page content</div>
+  )
+    <div>
+      </div>
+        <h1 className: '"text-4xl font-bold mb-8>Components</h1>        <p className: ""text-gray-30o0 text-lg>"          This page is under development.;        </p>      </div>
     </div>
-  );
-};
-
-export default ServiceCard;
+  )
+        </p></div></div>
+}
+}
+  )}
