@@ -1,13 +1,16 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const BlockchainPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Blockchain</title>
-        <meta name ="description" content="Professional blockchain solutions and services" />
-        <meta name ="keywords" content="blockchain" />
+        <meta
+          name="description"
+          content="Professional blockchain solutions and services"
+        />
+        <meta name="keywords" content="blockchain" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -49,4 +52,5 @@ const BlockchainPage: React.FC = () => {
   );
 };
 
-export default BlockchainPage;
+const page = React.lazy(() => import('./page'));
+export default page;

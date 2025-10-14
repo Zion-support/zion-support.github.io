@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiAutomatedReportingPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Automated Reporting</title>
-        <meta name ="description" content="Professional ai automated reporting solutions and services" />
-        <meta name ="keywords" content="ai, automated, reporting" />
+        <meta
+          name="description"
+          content="Professional ai automated reporting solutions and services"
+        />
+        <meta name="keywords" content="ai, automated, reporting" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Automated Reporting</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Automated Reporting
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai automated reporting solutions and services
             </p>
@@ -49,4 +54,5 @@ const AiAutomatedReportingPage: React.FC = () => {
   );
 };
 
-export default AiAutomatedReportingPage;
+const page = React.lazy(() => import('./page'));
+export default page;

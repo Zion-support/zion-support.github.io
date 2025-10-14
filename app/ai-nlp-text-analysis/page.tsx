@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiNlpTextAnalysisPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Nlp Text Analysis</title>
-        <meta name ="description" content="Professional ai nlp text analysis solutions and services" />
-        <meta name ="keywords" content="ai, nlp, text, analysis" />
+        <meta
+          name="description"
+          content="Professional ai nlp text analysis solutions and services"
+        />
+        <meta name="keywords" content="ai, nlp, text, analysis" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Nlp Text Analysis</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Nlp Text Analysis
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai nlp text analysis solutions and services
             </p>
@@ -49,4 +54,5 @@ const AiNlpTextAnalysisPage: React.FC = () => {
   );
 };
 
-export default AiNlpTextAnalysisPage;
+const page = React.lazy(() => import('./page'));
+export default page;

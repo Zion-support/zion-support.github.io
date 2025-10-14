@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 const resolve = path.resolve;
 
@@ -13,8 +13,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@app': resolve(__dirname, './app'),
+      "@": resolve(__dirname, "./src"),
+      "@app": resolve(__dirname, "./app"),
     },
   },
   build: {
@@ -35,7 +35,12 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        pure_funcs: [
+          "console.log",
+          "console.info",
+          "console.debug",
+          "console.warn",
+        ],
         passes: 3, // More passes for better optimization
         unsafe: true,
         unsafe_comps: true,
@@ -57,34 +62,38 @@ export default defineConfig({
         safari10: true, // Better Safari compatibility
         toplevel: true,
         properties: {
-          regex: /^_/
-        }
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true,
+      },
     },
     // Enhanced build optimizations
     rollupOptions: {
       output: {
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
-          if (id.includes('node_modules')) {
+          if (id.includes("node_modules")) {
             // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+            if (
+              id.includes("react") ||
+              id.includes("react-dom") ||
+              id.includes("react-router")
+            ) {
+              return "react-vendor";
             }
             // UI libraries
-            if (id.includes('lucide-react') || id.includes('framer-motion')) {
-              return 'ui-vendor';
+            if (id.includes("lucide-react") || id.includes("framer-motion")) {
+              return "ui-vendor";
             }
             // Other vendor libraries
-            return 'vendor';
+            return "vendor";
           }
           // App chunks
-          if (id.includes('/app/')) {
-            return 'app';
+          if (id.includes("/app/")) {
+            return "app";
           }
           return undefined;
         },
@@ -111,6 +120,6 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ["react", "react-dom", "react-router-dom"],
   },
 });

@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const ZionAiTaskSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Zion Ai Task Scheduler</title>
-        <meta name ="description" content="Professional zion ai task scheduler solutions and services" />
-        <meta name ="keywords" content="zion, ai, task, scheduler" />
+        <meta
+          name="description"
+          content="Professional zion ai task scheduler solutions and services"
+        />
+        <meta name="keywords" content="zion, ai, task, scheduler" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Zion Ai Task Scheduler</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Zion Ai Task Scheduler
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional zion ai task scheduler solutions and services
             </p>
@@ -49,4 +54,5 @@ const ZionAiTaskSchedulerPage: React.FC = () => {
   );
 };
 
-export default ZionAiTaskSchedulerPage;
+const page = React.lazy(() => import('./page'));
+export default page;

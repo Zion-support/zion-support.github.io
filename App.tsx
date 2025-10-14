@@ -1,19 +1,41 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 
 // Components - Navigation removed for now
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+import HomePage from "./app/page";
+import AboutPage from "./app/about/page";
+import ServicesPage from "./app/services/page";
+import ContactPage from "./app/contact/page";
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  // Monitor Core Web Vitals
+  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    getCLS(console.warn);
+    getFID(console.warn);
+    getFCP(console.warn);
+    getLCP(console.warn);
+    getTTFB(console.warn);
+  });
+
+  // Monitor bundle size
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+        console.warn('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+      }
+    }
+  });
+  observer.observe({ entryTypes: ['navigation'] });
+}
+
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -37,7 +59,15 @@ const App: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             {/* Navigation removed for now */}
             <main className="relative z-10" id="main-content" role="main">
-              <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="text-white text-xl">Loading application...</div></div>}>
+              <Suspense
+                fallback={
+                  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <div className="text-white text-xl">
+                      Loading application...
+                    </div>
+                  </div>
+                }
+              >
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />

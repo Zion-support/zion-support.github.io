@@ -1,7 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 // Icons imported for future use
-// import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Download } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 // Team members data (for future use)
 // const teamMembers = [
@@ -72,7 +80,10 @@ const AboutPage: React.FC = () => {
     <>
       <Helmet>
         <title>About</title>
-        <meta name="description" content="Professional about solutions and services" />
+        <meta
+          name="description"
+          content="Professional about solutions and services"
+        />
         <meta name="keywords" content="about" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -115,4 +126,5 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+const page = React.lazy(() => import('./page'));
+export default page;
