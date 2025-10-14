@@ -84,16 +84,6 @@ export default defineConfig({
           }
           // App chunks
           if (id.includes('/app/')) {
-<<<<<<< HEAD
-            return 'app'
-          }
-          return undefined
-        }
-      }
-    }
-  }
-})
-=======
             return 'app';
           }
           return undefined;
@@ -124,4 +114,3 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
   },
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
