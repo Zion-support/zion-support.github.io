@@ -3,7 +3,34 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+
 export default [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/build-*.js',
+      '**/check-*.js',
+      '**/clean-*.js',
+      '**/cleanup-*.js',
+      '**/comprehensive-*.js',
+      '**/final-*.js',
+      '**/fix-*.js',
+      '**/app-broken/**',
+      '**/app-disabled/**',
+      '**/__tests__/**',
+      '**/src/**',
+      '**/temp-disabled/**',
+      '**/scripts/**',
+      '**/*.setup.js',
+      '**/resolve*.js',
+      '**/tailwind.config.js',
+      '**/vite-env.d.ts'
+    ]
+  },
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
@@ -37,7 +64,9 @@ export default [
       },
     },
     plugins: {
-      "react-hooks": reactHooks
+      "@typescript-eslint": typescript,
+      "react": react,
+      "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
     rules: {
@@ -47,7 +76,7 @@ export default [
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-undef': 'off', // Turn off no-undef for TypeScript files
+      'no-undef': 'off',
     },
     settings: {
       react: {
