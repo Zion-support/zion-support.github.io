@@ -35,7 +35,7 @@ function fixFile(filePath, removeHelmet, addImports) {
     // Remove Helmet imports and usage
     if (removeHelmet) {
       content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
-      content = content.replace(/<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
+      content = content.replace(/<div>\s*<Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
       content = content.replace(/\s*<\/>\s*$/gm, '');
     }
     

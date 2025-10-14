@@ -15,7 +15,7 @@ const PagePage: React.FC = () => {}
   location: string;
   type: string;
   description: string;
-  requirements: string[];
+  requirements: string[];,
   benefits: string[];
 }
 const eersPage: React.FC = () => {
@@ -402,3 +402,5 @@ Be part of a team that's shaping the future of AI and IT solutions. We're lookin
                         <li className="text-sm text-gray-400>""
             </div>  ));)
 export default eersPage;
+
+}

@@ -7,8 +7,7 @@ if (typeof window !== 'undefined') {'''
 const root = createRoot(
 root.render(
   <React.StrictMode></React>
-    <App /></React.StrictMode>,
-);
+    <App /></React.StrictMode>,);
 // Register service worker for PWA functionality;
 if ("serviceWorker" in navigator) {"""
   window.addEventListener("load", () => {"""
@@ -16,3 +15,8 @@ if ("serviceWorker" in navigator) {"""
       .register("/sw.js")"""
       .then((registration) => {
         // Service worker registered successfully;
+}
+}
+}
+}
+}

@@ -39,3 +39,5 @@ const content = fs.readFileSync(file, 'utf8');'
     
     // Remove merge conflict markers and keep the main branch version;
     resolvedContent = resolvedContent.replace(
+
+}
