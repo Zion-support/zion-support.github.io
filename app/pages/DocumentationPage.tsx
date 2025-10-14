@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
@@ -10,8 +9,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function DocumentationPage() {
   const sections = [
     {
@@ -65,25 +64,22 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const DocumentationPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
-      <Helmet>
-        <title>DocumentationPage - Zion Tech Group</title>
-        <meta name="description" content="DocumentationPage - Zion Tech Group" />
-      </Helmet>
+      <SEO 
+        title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for all Zion Tech Group services including API references, integration guides, user manuals, and troubleshooting resources."
+        keywords="documentation, API docs, integration guides, user manual, troubleshooting, SDK, developer resources"
+        url="/docs"
+      />
       
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">DocumentationPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-green-900/20 to-emerald-900/20"></div>
         </div>
-<<<<<<< HEAD
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -144,7 +140,7 @@ const DocumentationPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -184,10 +180,10 @@ const DocumentationPage: React.FC = () => {
                         {link.name}
                       </Link>
                     </li>
-                  ))}
+))}
                 </ul>
               </div>
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -209,14 +205,14 @@ const DocumentationPage: React.FC = () => {
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
-  environment: 'production'
-})
+  environment: 'production;
+});
 // Make an API call
 const response = await client.ai.generateText({
   prompt: 'Hello, world!',
   maxTokens: 100
-})
-console.log(response.data);`}</code>
+});
+console.log(response.data)`}</code>
               </pre>
             </div>
             
@@ -292,11 +288,3 @@ console.log(response.data);`}</code>
       </section>
     </>
   )}
-=======
-      </div>
-    </>
-  );
-};
-
-export default DocumentationPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

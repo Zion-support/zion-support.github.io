@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+import React from 'react';;
+import { Link } from 'react-router-dom';;
+import SEO from '../components/SEO;
+import {
   GlobeAltIcon,
   CpuChipIcon,
   ChartBarIcon,
@@ -11,8 +10,8 @@ import {
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline'
+  MapPinIcon';
+} from '@heroicons/react/24/outline;
 export default function MicroSaaSPage() {
   const services = [
     {
@@ -48,19 +47,14 @@ export default function MicroSaaSPage() {
     { name: 'Real Estate', description: 'Property management tools' },
     { name: 'Manufacturing', description: 'Production optimization' }
   ]
-=======
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const MicroSaaSPage: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   return (
     <>
       <Helmet>
         <title>MicroSaaSPage - Zion Tech Group</title>
         <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
@@ -68,11 +62,4 @@ const MicroSaaSPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   )}
-=======
-  );
-};
-
-export default MicroSaaSPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

@@ -1,6 +1,31 @@
-import React, { useEffect } from 'react';
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+}
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = false
+}) => {      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reduced-motion');
+      } else {
+        document.body.classList.remove('reduced-motion');
+      }
+    };
+
+    // Initialize accessibility features
+    addAriaLabels();
+    handleHighContrast();
+    handleReducedMotion();
+    manageFocus();
+
+    // Set up event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [enableKeyboardNavigation]);
+
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {

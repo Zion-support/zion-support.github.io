@@ -1,201 +1,311 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, User } from 'lucide-react';
-=======
-import React from 'react';'
-import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+import React, { useState } from "react";
+import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Right, User, Calendar } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const BlogPage: React.FC = () => {
-  const categories = [}
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
-  ]
+  const categories = [
+    { id: "all", name: "All Posts" },
+    { id: "ai", name: "Artificial Intelligence" },
+    { id: "blockchain", name: "Blockchain & Web3" },
+    { id: "cloud", name: "Cloud Computing" },
+    { id: "devops", name: "DevOps" },
+    { id: "security", name: "Cybersecurity" }
+  ];
+
   const blogPosts = [
     {
       id: 1,
-      title: "The Future of AI in Business: 2024 Trends",
-      excerpt: "Explore the latest AI trends that are transforming businesses across industries.",
-      author: "Sarah Johnson",
+      title: "The Future of AI in Business: Trends and Predictions for 2024",
+      excerpt: "Explore the latest AI trends shaping the business landscape and how companies can leverage these technologies for competitive advantage.",
+      author: "Zion Tech Team",
       date: "2024-01-15",
-      category: "ai",
       readTime: "5 min read",
-      image: "🤖"}
+      category: "ai",
+      image: "/api/placeholder/400/250",
+      featured: true
     },
     {
       id: 2,
-      title: "Cybersecurity Best Practices for 2024",
-      excerpt: "Learn essential cybersecurity practices to protect your business from threats.",
-      author: "Michael Chen",
-      date: "2024-01-12",
-      category: "cybersecurity",
+      title: "Cybersecurity Best Practices for Modern Enterprises",
+      excerpt: "Learn essential cybersecurity strategies to protect your organization from evolving threats in the digital age.",
+      author: "Security Team",
+      date: "2024-01-10",
       readTime: "7 min read",
-      image: "🔒"}
+      category: "cybersecurity",
+      image: "/api/placeholder/400/250",
+      featured: false
     },
     {
       id: 3,
-      title: "Migration: A Complete Guide",
-      excerpt: "Everything you need to know about migrating to the cloud successfully.",
-      author: "Emily Rodriguez",
-      date: "2024-01-10",
+      title: "Cloud Migration Strategies: A Complete Guide",
+      excerpt: "Discover proven strategies for migrating your infrastructure to the cloud while minimizing risks and maximizing benefits.",
+      author: "Cloud Team",
+      date: "2024-01-08",
+      readTime: "6 min read",
       category: "cloud",
-      readTime: "10 min read",
-      image: "☁️"}
+      image: "/api/placeholder/400/250",
+      featured: false
     },
     {
       id: 4,
-      title: "Scalable Applications with Modern Tech",
-      excerpt: "Discover the technologies and practices for building scalable applications.",
-      author: "David Kim",
-      date: "2024-01-08",
-      category: "development",
+      title: "Building Scalable Web Applications with Modern Technologies",
+      excerpt: "Learn how to build web applications that can handle millions of users using modern development practices and technologies.",
+      author: "Dev Team",
+      date: "2024-01-05",
       readTime: "8 min read",
-      image: "⚡"}
+      category: "development",
+      image: "/api/placeholder/400/250",
+      featured: false
     },
     {
       id: 5,
-      title: "AI-Powered Analytics: Transforming Data Insights",
-      excerpt: "How AI is revolutionizing the way we analyze and interpret data.",
-      author: "Lisa Wang",
-      date: "2024-01-05",
-      category: "ai",
-      readTime: "6 min read",
-      image: "📊"}
+      title: "Machine Learning in Healthcare: Revolutionizing Patient Care",
+      excerpt: "Explore how machine learning is transforming healthcare delivery and improving patient outcomes across the industry.",
+      author: "AI Team",
+      date: "2024-01-03",
+      readTime: "9 min read",
+      category: "AI & Technology",
+      image: "/api/placeholder/400/250",
+      featured: true
     },
     {
       id: 6,
-      title: "Zero Trust Architecture",
-      excerpt: "Implementing zero trust security for modern enterprise environments.",
-      author: "James Wilson",
-      date: "2024-01-03",
+      title: "Zero Trust Security Architecture: Implementation Guide",
+      excerpt: "Implement a zero trust security model to protect your organization's data and resources from internal and external threats.",
+      author: "Security Team",
+      date: "2024-01-01",
+      readTime: "10 min read",
       category: "cybersecurity",
-      readTime: "9 min read",
-      image: "🛡️"}
+      image: "/api/placeholder/400/250",
+      featured: false
     }
-  ]
+  ];
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const featuredPosts = filteredPosts.filter(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
+
   return (
     <>
       <Helmet>
-        <title>Blog - AI & IT Insights | Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, cybersecurity, and technology trends from Zion Tech Group experts." />
-        <meta name="keywords" content="blog, AI insights, IT trends, cybersecurity, cloud computing, technology news" />
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
+        <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, tech trends" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Tech
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Blog
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, IT solutions, cybersecurity, 
-              and technology trends from our experts.
-            </p>
-          </div>
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <ResponsiveContainer>
+            <div className="text-center relative z-10">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Tech Blog
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Stay ahead with the latest insights on AI, cybersecurity, cloud computing, 
+                and emerging technologies from our team of experts.
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search articles..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+            </div>
+          </ResponsiveContainer>
         </section>
 
         {/* Categories */}
-        <section className="py-10 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-8 bg-black/20">
+          <ResponsiveContainer>
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button}
+                <button
                   key={category.id}
-                  className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
                 >
                   {category.name} ({category.count})
                 </button>
               ))}
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
 
-        {/* Blog Posts */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (}
-                <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
-                  <div className="text-4xl mb-4">{post.image}</div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
-                    <span className="flex items-center">
+        {/* Featured Posts */}
+        {featuredPosts.length > 0 && (
+          <section className="py-16">
+            <ResponsiveContainer>
+              <div className="mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 flex items-center">
+                  <Zap className="w-8 h-8 text-yellow-400 mr-3" />
+                  Featured Articles
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  Handpicked articles that showcase the latest trends and insights
+                </p>
+              </div>
 
-<<<<<<< HEAD
-                      <div className="w-4 h-4 mr-1" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {featuredPosts.map((post) => (
+                  <FuturisticCard key={post.id} className="p-6 h-full">
+                    <div className="aspect-video bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg mb-4 flex items-center justify-center">
+                      <BookOpen className="w-16 h-16 text-blue-400" />
+                    </div>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {new Date(post.date).toLocaleDateString()}
+                      </span>
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {post.readTime}
+                      </span>
+                      <span className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {post.author}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                    >
+                      Read More
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </ResponsiveContainer>
+          </section>
+        )}
+
+        {/* All Posts */}
+        <section className="py-16">
+          <ResponsiveContainer>
+            <div className="mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                All Articles
+              </h2>
+              <p className="text-gray-300 text-lg">
+                Explore our complete collection of technology insights and tutorials
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPosts.map((post) => (
+                <FuturisticCard key={post.id} className="p-6 h-full">
+                  <div className="aspect-video bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg mb-4 flex items-center justify-center">
+                    <BookOpen className="w-12 h-12 text-blue-400" />
+                  </div>
+                  
+                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
+                    <span className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {post.author}
+                      <Clock className="w-4 h-4 mr-1" />
+                      {post.readTime}
                     </span>
                   </div>
-                  <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+
+                  <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">
                     {post.title}
-                  </h2>
-                  <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3 text-sm">
+                    {post.excerpt}
+                  </p>
+
                   <div className="flex items-center justify-between">
-                    <span className="text-cyan-400 text-sm font-medium">{post.readTime}</span>
-                    <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <span className="text-xs text-blue-400 font-medium">
+                      {post.author}
+                    </span>
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium transition-colors text-sm"
+                    >
                       Read More
-                      <Right className="w-4 h-4 ml-1" />
-                    </button>
+                      <ArrowRight className="ml-1 w-3 h-3" />
+                    </Link>
                   </div>
-                </article>
+                </FuturisticCard>
               ))}
             </div>
-          </div>
+
+            {filteredPosts.length === 0 && (
+              <div className="text-center py-12">
+                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
+                <p className="text-gray-400">Try adjusting your search or category filter</p>
+              </div>
+            )}
+          </ResponsiveContainer>
         </section>
 
-        {/* Newsletter Signup */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter for the latest tech insights and updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Subscribe
-              </button>
+        {/* Newsletter CTA */}
+        <section className="py-20 bg-black/20">
+          <ResponsiveContainer>
+            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Subscribe to our newsletter and never miss the latest insights on technology and innovation
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-black/30 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <FuturisticButton variant="primary">
+                  Subscribe
+                </FuturisticButton>
+              </div>
             </div>
-          </div>
+          </ResponsiveContainer>
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-}
-export default BlogPage;
-=======
-  )}
-export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
 };
 
-export default BlogPage;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+export default BlogPage;

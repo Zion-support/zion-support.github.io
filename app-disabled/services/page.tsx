@@ -3,19 +3,19 @@ import { }
   3, 
   Circle,
   Right,
-  } from 'lucide-react;
+  } from 'lucide-react';
 
 ;
 
 const ServicesPage: React.FC = () => {const services = [;
-    // AI Services
-    {      ico,
-    n: title: 'AI Solutions,
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
-      price: Starting at $1,500
-      category: 'AI Services,
-      <Helmet>
+    // AI Services;
+    {      ico,;
+    n: title: 'AI Solutions,'';
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,'';
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],'';
+      price: Starting at $1,500;
+      category: 'AI Services,''
+      <Helmet></Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />
       </Helmet>
@@ -44,7 +44,7 @@ const ServicesPage: React.FC = () => {const services = [;
                   <li key={featureIndex} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
                     {feature}
-                  </li>
+                  </li></div>;
                 ))}
               </ul>
 
@@ -62,8 +62,10 @@ const ServicesPage: React.FC = () => {const services = [;
                   {service.originalPrice && (
                     <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
                   )}
-                </div>
-              </div>
+                </////div>;
+              <div></div>;
+            ))}
+          </div>
 
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
@@ -72,26 +74,26 @@ const ServicesPage: React.FC = () => {const services = [;
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
-                    </li>
+                    </////li>;
                   ))}
                   {service.features.length > 3 && (
                     <li className="text-sm text-gray-400">
-                      +{service.features.length - 3} more features
-                    </li>
+                      +{service.features.length - 3} more features;
+                    </li></div>;
                   )}
-                </ul>
-              </div>
-
-              <a
+                <div></ul>;
+              </div></div>;
+              <div><a;
                 href={service.path}
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"
-              >
-                Learn More
+                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg>"
+                Learn More;
               </a>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </>
   );
+};
+
+export default ServicesPage;
 }

@@ -249,6 +249,14 @@ export default function ITSolutionsPage() {
     'IT Consulting'
   ];
 
+  const stats = [
+    { number: '100+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
+  ];
   return (
     <>
       <Helmet>
@@ -296,7 +304,7 @@ export default function ITSolutionsPage() {
                 to="/demo" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Schedule Demo
+                Learn More About Us
               </Link>
             </div>
           </div>

@@ -18,14 +18,14 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold">Email</h3>
                     <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
-                      info@ziontechgroup.com;
-                    </a>
+                      info@ziontechgroup.com
+                    </a>869
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold"></h3>
                     <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">
-                      +1 (234) 567-890;
-                    </a>
+                      +1 (234) 567-890
+                    </a>1160
                   </div>
                 </div>
               </div>
@@ -34,46 +34,43 @@ const ContactPage: React.FC = () => {
                 <form className="space-y-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name;
-                    </label>
-                    <input;
+                      Name
+                    </label>1559
+                    <input
                       type="$1"
                       id="$1"
                       name="$1"
-                      className="$1"
-                      required;
-                    />
+                      className=""
+                      required />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email;
-                    </label>
-                    <input;
+                      Email
+                    </label>1965
+                    <input
                       type="$1"
                       id="$1"
                       name="$1"
-                      className="$1"
-                      required;
-                    />
+                      className=""
+                      required />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message;
-                    </label>
-                    <textarea;
+                      Message
+                    </label>2373
+                    <textarea
                       id="$1"
                       name="$1"
                       rows={4}
-                      className="$1"
-                      required;
-                    ></textarea>
+                      className=""
+                      required></textarea>
                   </div>
-                  <button;
+                  <button
                     type="$1"
-                    className="$1"
+                    className=""
                   >
-                    Send Message;
-                  </button>
+                    Send Message
+                  </button>2771
                 </form>
               </div>
             </div>

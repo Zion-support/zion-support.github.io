@@ -7,41 +7,18 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0,
-  });
-
-  const [isVisible, setIsVisible] = useState(false);
-
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
-    // Only run in development mode
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
-
-    const measurePerformance = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = window.performance.getEntriesByType('paint');
-        
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-        const renderTime = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        
-        // Memory usage (if available)
-        const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
-        
-        // Network latency (simplified)
-        const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
-
-        setMetrics({
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(renderTime),
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          networkLatency: Math.round(networkLatency),
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
         });
       }
     };
@@ -60,9 +37,8 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [isVisible]);
+    monitorPerformance();
+  }, []);
 
   // Don't render in production
   if (process.env.NODE_ENV === 'production') {

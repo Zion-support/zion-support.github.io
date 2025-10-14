@@ -19,12 +19,13 @@ import {
 } from '@heroicons/react/24/outline';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },

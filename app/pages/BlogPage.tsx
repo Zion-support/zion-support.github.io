@@ -89,7 +89,7 @@ export default function BlogPage() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />

@@ -1,35 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Bars3Icon, 
-  XMarkIcon,
-  HomeIcon,
-  InformationCircleIcon,
-  BriefcaseIcon,
-  PhoneIcon,
-  DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
+  Zap,
+  ChevronDown
+} from 'lucide-react';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
-
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+interface NavigationItem {
+  name: string;
+  path: string;
+  icon: React.ReactNode;
+  dropdown?: NavigationItem[];
+}const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
+  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false); cursor/analyze-improve-and-deploy-application-30da
   const location = useLocation();
+  
+  const toggleMenu = useCallback(() => {
+export default function Navigation({ onSidebarToggle }: NavigationProps) {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
+  const toggleMicroSaas = useCallback(() => {
+    setIsMicroSaasOpen(!isMicroSaasOpen);
+  }, [isMicroSaasOpen]);
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -130,24 +124,21 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
             >
-              Get Started
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => {
-                setIsOpen(!isOpen);
-                onSidebarToggle?.();
-              }}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-expanded="false"
+              onClick={toggleMenu}
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -165,7 +156,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm">
               {navigation.map((item) => (
                 <div key={item.name}>
-                  {item.submenu ? (
+                  {item.children ? (
                     <div>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}

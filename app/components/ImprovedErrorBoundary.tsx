@@ -1,48 +1,70 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-=======
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-const ImprovedErrorBoundary: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Improved Error Boundary - Zion Tech Group</title>
-        <meta name="description" content="Professional improved error boundary services by Zion Tech Group." />
-      </Helmet>}
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
-            Improved Error Boundary;
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services;
-            designed to help your business grow and succeed.;
-          </p>
-        </div>
-      </section>
-      {/* Content Section */}
-=======
-            Improved Error Boundary</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
-                We provide comprehensive improved error boundary;
-                solutions tailored to your specific needs and requirements.;
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ImprovedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo)
+    }
+
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send to an error reporting service
+      } cursor/analyze-improve-and-deploy-application-9c39
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="max-w-md mx-auto px-6 text-center">
+            <div className="mb-8">
+              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-300 mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
@@ -78,31 +100,23 @@ const ImprovedErrorBoundary: React.FC = () => {
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?;
-<<<<<<< HEAD
+            Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-=======
-          </h2>;
-          <p className="text-xl text-blue-100 mb-8">;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
-            Let's discuss how our improved error boundary';
-            services can help you achieve your goals.;
+            Let&apos;s discuss how our improved error boundary 
+            services can help you achieve your goals.
           </p>
-          <a;
-            href="$1"
-            className="$1"
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            Get Started Today;
+            Get Started Today
           </a>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-export default ImprovedErrorBoundary;
-=======
                 We provide comprehensive improved error boundary
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -134,11 +148,4 @@ export default ImprovedErrorBoundary;
             href="/contact"
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
             Get Started Today</a></div></section></div>
-  )}
 export default ImprovedErrorBoundary
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-};
-
-export default ImprovedErrorBoundary;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

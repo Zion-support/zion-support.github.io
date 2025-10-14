@@ -47,35 +47,65 @@ export default function HomePage() {
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
+      href: '/ai-solutions',
+      color: 'from-purple-500 to-pink-500',
+      hoverColor: 'hover:border-purple-500'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      href: '/cloud-infrastructure'
+      href: '/cloud-infrastructure',
+      color: 'from-cyan-500 to-blue-500',
+      hoverColor: 'hover:border-cyan-500'
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
-      href: '/cybersecurity'
+      href: '/cybersecurity',
+      color: 'from-green-500 to-emerald-500',
+      hoverColor: 'hover:border-green-500'
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business.',
-      href: '/digital-transformation'
+      href: '/digital-transformation',
+      color: 'from-yellow-500 to-orange-500',
+      hoverColor: 'hover:border-yellow-500'
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Micro SaaS',
+      description: 'Custom micro SaaS solutions designed to solve specific business challenges.',
+      href: '/micro-saas-solutions',
+      color: 'from-pink-500 to-rose-500',
+      hoverColor: 'hover:border-pink-500'
+    },
+    {
+      icon: SignalIcon,
+      title: '5G Solutions',
+      description: 'Next-generation 5G technology solutions for enhanced connectivity.',
+      href: '/5g-solutions',
+      color: 'from-indigo-500 to-purple-500',
+      hoverColor: 'hover:border-indigo-500'
     }
   ];
-
   const features = [
     '24/7 Expert Support',
     'Custom Solutions',
     'Scalable Architecture',
     'Security First',
     'Performance Optimized',
-    'Cost Effective'
+    'Cost Effective;
+  ];
+
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '99%', label: 'Success Rate' },
+    { number: '4+', label: 'Years Experience' }
   ];
 
   const stats = [
@@ -105,10 +135,11 @@ export default function HomePage() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         {/* Floating Elements with Neon Effects */}

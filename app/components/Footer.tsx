@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { 
   PhoneIcon,
   EnvelopeIcon,
@@ -19,7 +19,7 @@ import {
   BriefcaseIcon
 } from '@heroicons/react/24/outline';
 
-const Footer: React.FC = () => {
+const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -155,7 +155,13 @@ const Footer: React.FC = () => {
                     <span>{service.name}</span>
                   </Link>
                 </li>
-              ))}
+              ))}          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
             </ul>
           </div>
 
@@ -200,6 +206,7 @@ const Footer: React.FC = () => {
                     to={item.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
+                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {item.name}
                   </Link>
                 </li>
