@@ -7,7 +7,7 @@ interface JobPosition {
 }
   id: number;
 
-import { Right, Circle, } from 'lucide-react;
+import { Right, Circle, } from 'lucide-react';
 
 const PagePage: React.FC = () => {}
   title: string;
@@ -91,7 +91,7 @@ const eersPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 import { Right, Circle, Star, } from 'lucide-react';
     },
     {}

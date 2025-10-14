@@ -99,7 +99,7 @@ const PrivacyPage: React.FC = () => {
     phone: '+1-302-464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     dpo: 'Data Protection Officer'
-  };
+  }
 
   return (
     <>
@@ -288,6 +288,6 @@ const PrivacyPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default PrivacyPage;

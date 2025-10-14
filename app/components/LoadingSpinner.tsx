@@ -19,7 +19,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
     xl: 'w-12 h-12'
-  };
+  }
 
   const spinner = (
     <div className={`flex items-center justify-center ${className}`}>
@@ -41,6 +41,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
-};
+}
 
 export default LoadingSpinner;

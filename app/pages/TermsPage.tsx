@@ -134,7 +134,7 @@ const TermsPage: React.FC = () => {
     email: 'legal@ziontechgroup.com',
     phone: '+1-302-464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
+  }
 
   return (
     <>
@@ -303,6 +303,6 @@ const TermsPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default TermsPage;

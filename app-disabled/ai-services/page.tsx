@@ -9,7 +9,7 @@ import { Helmet } from  from 'react;
 
 import { Helmet } from 'react-helmet-async';
 
-import { Box, Mic, } from 'lucide-react;
+import { Box, Mic, } from 'lucide-react';
 
 import from ../components
 import Footer from ../components

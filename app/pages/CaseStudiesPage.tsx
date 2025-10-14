@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRightIcon,
-  TrendingUpIcon,
+  ArrowTrendingUpIcon,
   UserGroupIcon,
   ClockIcon,
   CurrencyDollarIcon,
@@ -20,8 +20,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Low conversion rates and high cart abandonment',
       solution: 'Implemented AI-powered recommendation engine and personalized shopping experience',
       results: [
-        { metric: 'Conversion Rate', value: '+45%', icon: TrendingUpIcon },
-        { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },
+        { metric: 'Conversion Rate', value: '+45%', icon: ArrowTrendingUpIcon },
+        { metric: 'Cart Abandonment', value: '-30%', icon: ArrowTrendingUpIcon },
         { metric: 'Customer Satisfaction', value: '+60%', icon: UserGroupIcon },
         { metric: 'Implementation Time', value: '3 months', icon: ClockIcon }
       ],
@@ -35,8 +35,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Manual quality control processes causing delays and errors',
       solution: 'Deployed computer vision and machine learning for automated quality inspection',
       results: [
-        { metric: 'Quality Defects', value: '-75%', icon: TrendingUpIcon },
-        { metric: 'Processing Speed', value: '+200%', icon: TrendingUpIcon },
+        { metric: 'Quality Defects', value: '-75%', icon: ArrowTrendingUpIcon },
+        { metric: 'Processing Speed', value: '+200%', icon: ArrowTrendingUpIcon },
         { metric: 'Cost Savings', value: '$2.5M/year', icon: CurrencyDollarIcon },
         { metric: 'Implementation Time', value: '4 months', icon: ClockIcon }
       ],
@@ -50,7 +50,7 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Fragmented patient data and inefficient treatment planning',
       solution: 'Built comprehensive data analytics platform with predictive modeling',
       results: [
-        { metric: 'Treatment Accuracy', value: '+40%', icon: TrendingUpIcon },
+        { metric: 'Treatment Accuracy', value: '+40%', icon: ArrowTrendingUpIcon },
         { metric: 'Patient Outcomes', value: '+35%', icon: UserGroupIcon },
         { metric: 'Cost Reduction', value: '$1.8M/year', icon: CurrencyDollarIcon },
         { metric: 'Implementation Time', value: '6 months', icon: ClockIcon }
@@ -65,8 +65,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Legacy systems limiting scalability and innovation',
       solution: 'Complete cloud migration with modern microservices architecture',
       results: [
-        { metric: 'System Performance', value: '+300%', icon: TrendingUpIcon },
-        { metric: 'Scalability', value: '10x', icon: TrendingUpIcon },
+        { metric: 'System Performance', value: '+300%', icon: ArrowTrendingUpIcon },
+        { metric: 'Scalability', value: '10x', icon: ArrowTrendingUpIcon },
         { metric: 'Operational Costs', value: '-40%', icon: CurrencyDollarIcon },
         { metric: 'Implementation Time', value: '8 months', icon: ClockIcon }
       ],
@@ -80,9 +80,9 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Increasing cyber threats and manual security monitoring',
       solution: 'Implemented AI-powered threat detection and automated response system',
       results: [
-        { metric: 'Threat Detection', value: '+90%', icon: TrendingUpIcon },
+        { metric: 'Threat Detection', value: '+90%', icon: ArrowTrendingUpIcon },
         { metric: 'Response Time', value: '-85%', icon: ClockIcon },
-        { metric: 'False Positives', value: '-60%', icon: TrendingUpIcon },
+        { metric: 'False Positives', value: '-60%', icon: ArrowTrendingUpIcon },
         { metric: 'Implementation Time', value: '5 months', icon: ClockIcon }
       ],
       description: 'GlobalTech Corp now has a robust cybersecurity system that automatically detects and responds to threats in real-time, significantly improving their security posture.',
@@ -95,7 +95,7 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Need for rapid development and deployment of micro applications',
       solution: 'Built custom micro SaaS development platform with automated deployment',
       results: [
-        { metric: 'Development Speed', value: '+400%', icon: TrendingUpIcon },
+        { metric: 'Development Speed', value: '+400%', icon: ArrowTrendingUpIcon },
         { metric: 'Time to Market', value: '-70%', icon: ClockIcon },
         { metric: 'Cost per App', value: '-80%', icon: CurrencyDollarIcon },
         { metric: 'Implementation Time', value: '6 months', icon: ClockIcon }
@@ -328,6 +328,6 @@ const CaseStudiesPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default CaseStudiesPage;

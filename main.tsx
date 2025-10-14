@@ -7,7 +7,7 @@ import './index.css';
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
-    window.performance = window.performance || {};
+    window.performance = window.performance || {}
     window.performance.now = window.performance.now || (() => Date.now());
   }
 }

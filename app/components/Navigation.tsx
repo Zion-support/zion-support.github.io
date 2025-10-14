@@ -69,7 +69,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const isActive = (href: string) => {
     return location.pathname === href;
-  };
+  }
 
   return (
     <nav className="bg-white shadow-lg">
@@ -198,6 +198,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navigation;

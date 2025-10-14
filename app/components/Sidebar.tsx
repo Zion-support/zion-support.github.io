@@ -75,7 +75,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (path: string) => {
     return location.pathname === path;
-  };
+  }
 
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
@@ -83,11 +83,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
     );
-  };
+  }
 
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName);
-  };
+  }
 
   if (!isOpen) return null;
 
@@ -191,6 +191,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     </>
   );
-};
+}
 
 export default Sidebar;

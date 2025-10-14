@@ -431,6 +431,6 @@ const SolutionsPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default SolutionsPage;

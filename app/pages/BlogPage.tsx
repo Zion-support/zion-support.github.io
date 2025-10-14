@@ -107,7 +107,7 @@ const BlogPage: React.FC = () => {
   });
 
   const recentPosts = blogPosts.slice(0, 3);
-  const popularTags = ['AI', 'Cloud Computing', 'Security', 'Digital Transformation', '5G', 'Micro SaaS'];
+  const popularTags = ['AI', 'Cloud Computing', 'Security', 'Digital Transformation', '5G', 'Micro SaaS']
 
   return (
     <>
@@ -339,6 +339,6 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default BlogPage;

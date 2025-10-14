@@ -52,7 +52,9 @@ class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null
     });
-  }  render() {
+  }
+
+  render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {

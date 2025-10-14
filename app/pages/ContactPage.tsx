@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
       ...prev,
       [name]: value
     }));
-  };
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ const ContactPage: React.FC = () => {
         message: ''
       });
     }, 3000);
-  };
+  }
 
   const contactInfo = [
     {
@@ -318,6 +318,6 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-};
+}
 
 export default ContactPage;

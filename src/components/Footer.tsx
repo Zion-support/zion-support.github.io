@@ -1,6 +1,6 @@
 import { memo } from 'react;
 import { } from 'react-router-dom;
-import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react;
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
 &apos;use client&apos;
   ];
 

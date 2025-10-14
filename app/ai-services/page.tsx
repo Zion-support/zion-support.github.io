@@ -109,7 +109,7 @@ const AiServicesPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
