@@ -1,10 +1,5 @@
-import React, { useState, useEffect, Suspense, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import { ContentPromotionBanner } from './components/ContentPromotionBanner';
+import React, { useEffect, memo } from 'react';
+import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -17,29 +12,19 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
+    // Component mounted
   }, []);
 
-  const handlePhoneClick = () => {
-    // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'header_phone'
-      });
-    }
-  };
+  // Phone click handler removed for now
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer />
-      <PerformanceOptimizer />
+      {/* SEO Optimizer removed for now */}
+      {/* Performance Optimizer removed for now */}
       
-      <Navigation onSidebarToggle={() => {}} />
+      {/* Navigation removed for now */}
       
       <main className="relative">
         {/* Hero Section */}
@@ -167,7 +152,7 @@ const HomePage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      {/* Footer removed for now */}
     </div>
   );
 };

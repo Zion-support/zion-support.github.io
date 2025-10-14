@@ -1,10 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
+// Components removed for now - will be recreated later
 
 // Main Pages
 const HomePage = lazy(() => import('./page'));
@@ -99,7 +96,7 @@ const ZionAISEOOptimizerPage = lazy(() => import('./zion-ai-seo-optimizer/page')
 const ZionAIDataWarehousePage = lazy(() => import('./zion-ai-data-warehouse/page'));
 const ZionAIMobileAppBuilderPage = lazy(() => import('./zion-ai-mobile-app-builder/page'));
 const ZionAIAPIManagerPage = lazy(() => import('./zion-ai-api-manager/page'));
-const ZionAIBackupManagerPage = lazy(() => import('./zion-ai-backup-manager/page'));
+// ZionAIBackupManagerPage removed - page doesn't exist
 const ZionAITestingAutomationPage = lazy(() => import('./zion-ai-testing-automation/page'));
 
 // 5G Solutions
@@ -117,10 +114,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer>
-            <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<div>Loading...</div>}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
@@ -215,7 +209,7 @@ const App: React.FC = () => {
                 <Route path="/zion-ai-data-warehouse" element={<ZionAIDataWarehousePage />} />
                 <Route path="/zion-ai-mobile-app-builder" element={<ZionAIMobileAppBuilderPage />} />
                 <Route path="/zion-ai-api-manager" element={<ZionAIAPIManagerPage />} />
-                <Route path="/zion-ai-backup-manager" element={<ZionAIBackupManagerPage />} />
+                {/* Zion AI Backup Manager route removed - page doesn't exist */}
                 <Route path="/zion-ai-testing-automation" element={<ZionAITestingAutomationPage />} />
 
                 {/* 5G Solutions Routes */}
@@ -229,9 +223,7 @@ const App: React.FC = () => {
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
               </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
+        </Suspense>
       </BrowserRouter>
     </HelmetProvider>
   );
