@@ -1,11 +1,11 @@
 /* eslint-env jest, node */
-/* global beforeAll, afterAll, global */
+/* global beforeAll, afterAll, global, jest, console */
 
-require('@testing-library/jest-dom');
+import '@testing-library/jest-dom';
 
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
-  const React = require('react');
+  const React = jest.requireActual('react');
 
   return {
     ...actual,
