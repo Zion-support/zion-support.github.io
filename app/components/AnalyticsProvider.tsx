@@ -1,8 +1,9 @@
-/* eslint-disable react-refresh/only-export-components */
 import React, { ReactNode } from 'react';
 
-const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  return <>{children}</>;
-};
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
 
-export default AnalyticsProvider;
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  return <>{children}</>;
+}
