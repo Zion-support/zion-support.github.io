@@ -29,18 +29,18 @@ const ITServicesPage: React.FC = () => {
     },
     {
       icon: Monitor,
-      title: 'System Integration',';
-      description: 'Seamlessly integrate different systems and applications for improved workflow efficiency.',';
-      features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Legacy System Modernization']';
+      title: 'System Integration',
+      description: 'Seamlessly integrate different systems and applications for improved workflow efficiency.',
+      features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Legacy System Modernization']
     },
     {
       icon: Database,
-      title: 'Data Management',';
-      description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',';
-      features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']';
+      title: 'Data Management',
+      description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',
+      features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']
     }
   ];
-const ITServicesPage: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -89,19 +89,20 @@ const ITServicesPage: React.FC = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Need Reliable IT Support?</h2>
             <p className="text-gray-300 mb-6">
-              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
+              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                Get Support;
+                Get Support
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Request Quote;
+                Request Quote
               </button>
             </div>
           </div>
         </div>
       </div>
-    </div>;  );
-}
-export default ITServicesPage;
+    );
+  }
+
+  export default ITServicesPage;

@@ -282,9 +282,46 @@ export default function HomePage()  {
                 <div className="text-gray-300">Success Rate</div>
               </div>
             </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Let's discuss how our comprehensive services can accelerate your digital transformation and drive innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              Start Your Project
+              <ArrowRightIcon className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              Schedule Demo
+              <ArrowRightIcon className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
