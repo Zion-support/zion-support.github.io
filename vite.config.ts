@@ -31,12 +31,12 @@ export default defineConfig({
           }
         },
         assetFileNames: (assetInfo) => {
-          if (;
+          if (
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;``````````
-          }```````````
+            return `assets/images/[name]-[hash][extname]`;
+          }
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
@@ -45,14 +45,14 @@ export default defineConfig({
     },
   },
   server: {
-    port: 3000,`
-    open: false,``
-    cors: true,```
-hmr: {,````
-      overlay: true,`````
-    },``````
-  },```````
-  optimizeDeps: {````````
-include: ['react', 'react-dom', 'react-router-dom'],`````````
-  },``````````
-});```````````
+    port: 3000,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: true,
+    },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
