@@ -99,7 +99,8 @@ const AiServicesPage = () => {
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/demo"
+            <Link 
+              to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               View Demo
@@ -166,8 +167,6 @@ const AiServicesPage = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -188,6 +187,12 @@ const AiServicesPage = () => {
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {step.title}
+                </h3>
+                <p className="text-gray-300">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -210,10 +215,11 @@ const AiServicesPage = () => {
               <span>Get Started Now</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/demo"
+            <Link 
+              to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Schedule Demo
+              Schedule a Demo
             </Link>
           </div>
         </div>

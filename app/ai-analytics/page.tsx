@@ -10,14 +10,32 @@ const AiAnalyticsPage = () => {
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
+      <FuturisticBackground />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Analytics
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Transform your data into actionable insights with our advanced AI analytics solutions.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
         </div>
         
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,7 +60,37 @@ const AiAnalyticsPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Unlock Your Data&apos;s Potential?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our AI analytics platform transform your data into actionable insights. 
+            Get started with a free consultation and see the power of intelligent analytics.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Start Analytics Journey</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/pricing"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };

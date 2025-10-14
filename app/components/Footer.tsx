@@ -65,7 +65,7 @@ const Footer = () => {
   const supportLinks = [
     { label: 'Help Center', href: '/help' },
     { label: 'Documentation', href: '/docs' },
-    { label: 'API Reference', href: '/api-docs' },
+    { label: 'API Reference', href: '/api' },
     { label: 'Status Page', href: '/status' },
     { label: 'Contact Support', href: '/contact' },
     { label: 'System Requirements', href: '/requirements' }
