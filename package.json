@@ -98,17 +98,13 @@
     "generate:sitemap": "node scripts/generate-sitemap.js",
     "sitemap": "npm run generate:sitemap",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
-<<<<<<< HEAD
     "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "postbuild": "echo \"Build completed successfully\"",
-    "analyze:full": "npm run build && npm run analyze:bundle",
-    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
-=======
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "analyze:full": "npm run build && npm run analyze:bundle",
+    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev",
     "perf:check": "npm run build && npm run analyze:bundle"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
