@@ -57,4 +57,4 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
   );
 };
 
-export default AiBusinessIntelligenceProPage;
+export default AIBusinessIntelligenceProPage;
