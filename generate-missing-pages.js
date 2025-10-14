@@ -86,7 +86,7 @@ const missingPages = [
 
 // Template for generating pages
 const generatePageTemplate = (page) => {
-  const iconImport = `import { ${page.icon}, ArrowRight, CheckCircle, Star, Users, TrendingUp, Clock, Shield, BarChart3 } from 'lucide-react';`;
+  const iconImport = `import { ${page.icon}, ArrowRight, CheckCircle, Star, Users, TrendingUp, Clock, Shield } from 'lucide-react';`;
   
   return `import React from 'react';
 import { Link } from 'react-router-dom';

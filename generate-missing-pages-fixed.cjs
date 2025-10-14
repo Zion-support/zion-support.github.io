@@ -88,6 +88,11 @@ const missingPages = [
 const generatePageTemplate = (page) => {
   const iconImport = `import { ${page.icon}, ArrowRight, CheckCircle, Star, Users, TrendingUp, Clock, Shield, BarChart3 } from 'lucide-react';`;
   
+  // Extract color parts for proper template replacement
+  const colorParts = page.color.split(' ');
+  const fromColor = colorParts[0].replace('from-', '');
+  const toColor = colorParts[2].replace('to-', '');
+  
   return `import React from 'react';
 import { Link } from 'react-router-dom';
 ${iconImport}
@@ -145,13 +150,13 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${page.color.replace('from-', '').replace(' to-', '/20 to-')}/20 border ${page.color.replace('from-', '').replace(' to-', '/30 to-')}/30 mb-6">
-            <${page.icon} className="w-4 h-4 ${page.color.replace('from-', 'text-').replace(' to-', '-400')} mr-2" />
-            <span className="${page.color.replace('from-', 'text-').replace(' to-', '-400')} text-sm font-medium">${page.category}</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${fromColor}/20 to-${toColor}/20 border ${fromColor}/30 to-${toColor}/30 mb-6">
+            <${page.icon} className="w-4 h-4 text-${fromColor}-400 mr-2" />
+            <span className="text-${fromColor}-400 text-sm font-medium">${page.category}</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r ${page.color.replace('from-', 'from-').replace(' to-', ' via-')}-400 to-cyan-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-${fromColor}-400 via-${toColor}-400 to-cyan-400">
               ${page.title}
             </span>
           </h1>
@@ -163,14 +168,14 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               to="/contact"
-              className="bg-gradient-to-r ${page.color} text-white px-8 py-4 rounded-lg font-semibold hover:from-${page.color.split(' ')[0].replace('from-', '')}-600 hover:to-${page.color.split(' ')[2].replace('to-', '')}-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-${page.color.split(' ')[0].replace('from-', '')}-500/25 hover:scale-105"
+              className="bg-gradient-to-r ${page.color} text-white px-8 py-4 rounded-lg font-semibold hover:from-${fromColor}-600 hover:to-${toColor}-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-${fromColor}-500/25 hover:scale-105"
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="#demo"
-              className="border ${page.color.replace('from-', 'border-').replace(' to-', '-400')} ${page.color.replace('from-', 'text-').replace(' to-', '-400')} px-8 py-4 rounded-lg font-semibold hover:bg-${page.color.split(' ')[0].replace('from-', '')}-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-${fromColor}-400 text-${fromColor}-400 px-8 py-4 rounded-lg font-semibold hover:bg-${fromColor}-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Learn More
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -195,7 +200,7 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
             <div className="space-y-4">
               {features.slice(0, 5).map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 ${page.color.replace('from-', 'text-').replace(' to-', '-400')} flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-${fromColor}-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
@@ -203,7 +208,7 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
             <div className="space-y-4">
               {features.slice(5).map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 ${page.color.replace('from-', 'text-').replace(' to-', '-400')} flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-${fromColor}-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
@@ -213,7 +218,7 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-${page.color.split(' ')[0].replace('from-', '')}-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-${fromColor}-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -239,7 +244,7 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-${page.color.split(' ')[0].replace('from-', '')}-900/30 to-${page.color.split(' ')[2].replace('to-', '')}-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-${fromColor}-900/30 to-${toColor}-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -251,14 +256,14 @@ const ${page.title.replace(/\s+/g, '')}Page = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r ${page.color} text-white px-8 py-4 rounded-lg font-semibold hover:from-${page.color.split(' ')[0].replace('from-', '')}-600 hover:to-${page.color.split(' ')[2].replace('to-', '')}-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-${page.color.split(' ')[0].replace('from-', '')}-500/25 hover:scale-105"
+              className="bg-gradient-to-r ${page.color} text-white px-8 py-4 rounded-lg font-semibold hover:from-${fromColor}-600 hover:to-${toColor}-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-${fromColor}-500/25 hover:scale-105"
             >
               Contact Us
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/pricing"
-              className="border ${page.color.replace('from-', 'border-').replace(' to-', '-400')} ${page.color.replace('from-', 'text-').replace(' to-', '-400')} px-8 py-4 rounded-lg font-semibold hover:bg-${page.color.split(' ')[0].replace('from-', '')}-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-${fromColor}-400 text-${fromColor}-400 px-8 py-4 rounded-lg font-semibold hover:bg-${fromColor}-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View Pricing
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
