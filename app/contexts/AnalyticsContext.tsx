@@ -30,8 +30,8 @@ export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> =
   };
 
   return (
-    <AnalyticsContextContext.Provider value={value}>
-      {children}
-    </AnalyticsContextContext.Provider>
+    <div><AnalyticsContext.Provider value={value}></AnalyticsContext></div>)
+      { children }
+    </AnalyticsContext.Provider>;
   );
-};
+export { AnalyticsContext }

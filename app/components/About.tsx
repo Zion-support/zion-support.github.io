@@ -1,42 +1,18 @@
+import { Users } from 'lucide-react';
 import React from 'react';
 import { CheckIcon, 
   UsersIcon, 
   TrophyIcon, 
   LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
-  ];
-
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
-    },
-    {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
-    },
-    {
-      title: 'Partnership',
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
-    },
-    {
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    }
-  ];
-
   return (
-    <section className="py-20 bg-gray-50">
+<>    <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div>
+          <div></div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About Zion Tech Group
+              About Zion Tech Group;
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               We are a leading technology company specializing in AI and IT solutions. 
@@ -52,12 +28,12 @@ const About: React.FC = () => {
                   highly skilled professionals with deep expertise in AI, cloud computing, 
                   and enterprise software development.
                 </p>
-              </div>
+              </>
               <div className="flex items-start">
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                 <p className="text-gray-600">
                   <strong className="text-gray-900">Proven Track Record:</strong> We have 
-                  successfully delivered hundreds of projects for clients across various 
+                  successfully delivered hundreds of projects for clients across various ;
                   industries and company sizes.
                 </p>
               </div>
@@ -65,7 +41,7 @@ const About: React.FC = () => {
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                 <p className="text-gray-600">
                   <strong className="text-gray-900">Cutting-Edge Technology:</strong> We 
-                  leverage the latest technologies and best practices to deliver 
+                  leverage the latest technologies and best practices to deliver ;
                   innovative solutions that give our clients a competitive advantage.
                 </p>
               </div>
@@ -116,7 +92,7 @@ const About: React.FC = () => {
         {/* Values Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Our Core Values
+            Our Core Values;
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -137,6 +113,6 @@ const About: React.FC = () => {
       </div>
     </section>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;

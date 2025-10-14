@@ -1,39 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 import { 
-  XMarkIcon, 
-  HomeIcon, 
-  UserGroupIcon, 
-  BriefcaseIcon, 
-  CurrencyDollarIcon, 
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  CogIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  MapIcon,
-  CloudIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  DevicePhoneMobileIcon,
-  ServerIcon,
-  CodeBracketIcon,
-  WrenchScrewdriverIcon,
-  ChartBarIcon,
-  LockClosedIcon,
-  Cog6ToothIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
-  BeakerIcon,
-  HeartIcon,
-  ShieldExclamationIcon,
-  DocumentDuplicateIcon,
-  AcademicCapIcon,
-  PresentationChartLineIcon,
-  CommandLineIcon,
-  PuzzlePieceIcon,
-  ArrowRightIcon,
-  ChevronDownIcon
+  XMarkIcon,
+  CpuChipIcon
 } from '@heroicons/react/24/outline';
 
 interface ImprovedSidebarProps {
@@ -42,80 +10,8 @@ interface ImprovedSidebarProps {
 }
 
 const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
-
-  const mainLinks = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: UserGroupIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon },
-    { name: 'Demo', href: '/demo', icon: PresentationChartLineIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
-  ];
-
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
-    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
-    { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: ChatBubbleLeftRightIcon },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: ShieldExclamationIcon },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: ChartBarIcon }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-    { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
-    { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
-    { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
-    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
-    { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
-  ];
-
-  const businessSolutions = [
-    { name: 'Micro SaaS', href: '/micro-saas', icon: RocketLaunchIcon },
-    { name: 'Cloud Services', href: '/cloud-services', icon: ServerIcon },
-    { name: 'Digital Transformation', href: '/digital-transformation', icon: SparklesIcon },
-    { name: 'Process Automation', href: '/process-automation', icon: Cog6ToothIcon },
-    { name: 'Data Migration', href: '/data-migration', icon: ArrowRightIcon },
-    { name: 'Performance Optimization', href: '/performance-optimization', icon: ChartBarIcon },
-    { name: 'API Development', href: '/api-development', icon: CommandLineIcon },
-    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: BeakerIcon }
-  ];
-
-  const additionalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
-    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
-    { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
-    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
-    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-    { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
-    { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
-  ];
-
-  const serviceSections = [
-    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
-    { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
-    { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
-  ];
-
-  const isActive = (href: string) => location.pathname === href;
-
+const ImprovedSidebar: React.FC = () => {
   return (
     <>
       {/* Overlay */}
@@ -128,10 +24,9 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
 
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 
-        transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
+        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        shadow-2xl border-r border-slate-700
+        shadow-2 xl border-r border-slate-700
       `}>
         <div className="flex flex-col h-full">
           {/* Header */}
