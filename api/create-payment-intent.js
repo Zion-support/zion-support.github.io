@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   }
   
   try {
-    const { amount, currency = 'usd', metadata = {} } = req.body;
+    const { amount, currency = 'usd' } = req.body;
 
     if (!amount || amount <= 0) {
       return res.status(400).json({ error: 'Valid amount is required' });
@@ -13,20 +13,19 @@ export default async function handler(req, res) {
 
     // In a real implementation, you would use the Stripe SDK here
     // const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-    // const paymentIntent = await stripe.paymentIntents.create({
-    //   amount: Math.round(amount * 100), // Convert to cents
-    //   currency,
-    //   metadata
-    // });
+    // const paymentIntent = await stripe.paymentIntents.create({...});
 
     // For now, return a mock response
-    res.status(200).json({
-      clientSecret: 'mock_client_secret_' + Date.now(),
+    const mockPaymentIntent = {
+      id: `pi_${Date.now()}`,
+      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
       amount: amount,
-      currency: currency
-    });
-  } catch (error) {
-    console.error('Payment intent creation error:', error);
+      currency: currency,
+      status: 'requires_payment_method',
+      metadata: metadata};
+    res.status(200).json({ paymentIntent: mockPaymentIntent });
+  } catch (_error) {
+    console.error('Error creating payment intent:', _error);
     res.status(500).json({ error: 'Internal server error' });
   }
 }

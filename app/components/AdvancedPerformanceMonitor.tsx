@@ -160,43 +160,7 @@ const timer = setTimeout(measurePerformance, 1000)
         <div className="flex justify-between">
           <span className="text-gray-400">Load Time:</span>
           <span className={`font-mono ${getScoreColor(metrics.loadTime, { good: 1000, needsImprovement: 3000 })}`}>````
-            {metrics.loadTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-400">FCP:</span>
-          <span className={`font-mono ${getScoreColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}`}>````
-            {metrics.firstContentfulPaint}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-400">LCP:</span>
-          <span className={`font-mono ${getScoreColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}`}>````
-            {metrics.largestContentfulPaint}ms
-          </span>
-        </div>
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-400">TBT:</span>
-          <span className={`font-mono ${getScoreColor(metrics.totalBlockingTime, { good: 200, needsImprovement: 600 })}`}>````
-            {metrics.totalBlockingTime}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-400">Memory:</span>
-          <span className={`font-mono ${getScoreColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}`}>````
-            {metrics.memoryUsage}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
-          <span className="text-gray-400">Network:</span>
-          <span className={`font-mono ${getScoreColor(metrics.networkLatency, { good: 500, needsImprovement: 1000 })}`}>````
-            {metrics.networkLatency}ms
-          </span>
-        </div>
-      </div>
-      <div className="mt-3 pt-2 border-t border-slate-700 text-xs text-gray-500">
+
         <div>Ctrl+Shift+P: Toggle</div>
         <div>Ctrl+Shift+R: Record</div>
       </div>
@@ -208,5 +172,4 @@ export default AdvancedPerformanceMonitor
     <div></div>
       <h2>AdvancedPerformanceMonitor</h2>
       <p>This component is under construction.</p>
-    </div>
-export default AdvancedPerformanceMonitor
+

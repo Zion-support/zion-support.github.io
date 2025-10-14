@@ -1,20 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-const EnterpriseTransformationPage: React.FC = () => {
 
+const EnterpriseTransformationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <span>
+            <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
               💰 Success Story
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI Enterprise Transformation: $50M Annual Savings Blueprint
             </h1>
-            <p>January 28, 2025 · 50 min read · Enterprise AI</p>
-            </div>
+            <p className="text-gray-600 text-lg">
+              January 28, 2025 · 50 min read · Enterprise AI
+            </p>
+          </div>
 
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Results</h2>
@@ -27,12 +29,16 @@ const EnterpriseTransformationPage: React.FC = () => {
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">$50M</div>
                 <div className="text-gray-700">Annual Savings</div>
+              </div>
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
                 <div className="text-gray-700">Process Automation</div>
+              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">ROI</div>
+              </div>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏢 Company Profile</h2>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Fortune 500 Global Manufacturing</h3>
@@ -44,8 +50,10 @@ const EnterpriseTransformationPage: React.FC = () => {
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
-            <p>The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
-              exponential value. Here's the proven roadmap:</p>
+            <p className="text-gray-700 mb-6">
+              The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
+              exponential value. Here&apos;s the proven roadmap:
+            </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
@@ -66,7 +74,9 @@ const EnterpriseTransformationPage: React.FC = () => {
             <p className="text-gray-700 mb-6"><strong>Results:</strong> $8M in cost savings and 45% process automation achieved</p>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
-            <p>The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:</p>
+            <p className="text-gray-700 mb-6">
+              The transformation delivered measurable value across multiple dimensions. Here&apos;s the detailed breakdown:
+            </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Direct Cost Savings</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
@@ -78,17 +88,19 @@ const EnterpriseTransformationPage: React.FC = () => {
             </ul>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>
-            <p>Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
-              Get started with a comprehensive assessment and personalized transformation roadmap.</p>
+            <p className="text-gray-700 mb-6">
+              Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
+              Get started with a comprehensive assessment and personalized transformation roadmap.
+            </p>
 
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your $50M Transformation Today</h3>
-              <p>Join Fortune 500 companies achieving breakthrough results through strategic AI transformation</p>
+              <p className="text-gray-700 mb-4">
+                Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
+              </p>
               <div className="space-x-4">
-                <Link
-                  href="/contact"
-                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
-                >
+                <Link href="/contact"
+                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
                 </Link>
                 <Link
@@ -104,6 +116,6 @@ const EnterpriseTransformationPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default EnterpriseTransformationPage;

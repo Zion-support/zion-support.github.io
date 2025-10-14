@@ -1,24 +1,22 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle } from "@heroicons/react/24/solid";
 
-// Development process data
 const developmentProcess = [
-  { step: "1", title: "Discovery & Planning", description: "We analyze your requirements and create a detailed project roadmap" },
-  { step: "2", title: "Design & Prototyping", description: "Create intuitive UI/UX designs and interactive prototypes" },
-  { step: "3", title: "AI Integration", description: "Implement cutting-edge AI features tailored to your app's needs" },
-  { step: "4", title: "Development & Testing", description: "Build your app with rigorous testing and quality assurance" },
-  { step: "5", title: "Launch & Support", description: "Deploy your app and provide ongoing maintenance and updates" }
+  { step: "1", title: "Discovery & Planning", description: "Understanding your vision and requirements" },
+  { step: "2", title: "Design & Prototyping", description: "Creating intuitive user interfaces and experiences" },
+  { step: "3", title: "AI Integration", description: "Implementing intelligent features and automation" },
+  { step: "4", title: "Development & Testing", description: "Building and rigorously testing your app" },
+  { step: "5", title: "Launch & Support", description: "Deploying and providing ongoing maintenance" }
 ];
 
-// Mobile services data
 const mobileServices = [
   {
     icon: "📱",
     title: "Native iOS Development",
-    description: "High-performance iOS apps built with Swift and latest Apple technologies",
-    price: "$8,000 - $25,000",
-    marketPrice: "$15,000 - $40,000",
+    description: "High-performance iOS apps with Swift and SwiftUI",
+    price: "$15,000",
+    marketPrice: "$25,000",
     category: "iOS",
     features: [
       "Swift & SwiftUI development",
@@ -27,16 +25,16 @@ const mobileServices = [
       "App Store optimization"
     ],
     benefits: [
-      "Native performance and user experience",
-      "Access to all iOS features and APIs"
+      "Native performance and feel",
+      "Access to all iOS features"
     ]
   },
   {
     icon: "🤖",
-    title: "Android Development",
-    description: "Powerful Android apps built with Kotlin and modern Android architecture",
-    price: "$7,000 - $22,000",
-    marketPrice: "$12,000 - $35,000",
+    title: "Native Android Development",
+    description: "Powerful Android apps with Kotlin and Jetpack Compose",
+    price: "$15,000",
+    marketPrice: "$25,000",
     category: "Android",
     features: [
       "Kotlin & Jetpack Compose",
@@ -45,69 +43,68 @@ const mobileServices = [
       "Google Play optimization"
     ],
     benefits: [
-      "Optimized for Android ecosystem",
-      "Seamless Google services integration"
+      "Optimized for Android devices",
+      "Latest Android features"
     ]
   },
   {
-    icon: "⚡",
-    title: "Cross-Platform Development",
-    description: "Single codebase apps for iOS and Android using React Native or Flutter",
-    price: "$5,000 - $18,000",
-    marketPrice: "$10,000 - $30,000",
+    icon: "⚛️",
+    title: "React Native Development",
+    description: "Cross-platform apps with React Native and AI integration",
+    price: "$12,000",
+    marketPrice: "$20,000",
     category: "Cross-Platform",
     features: [
-      "React Native or Flutter",
-      "Shared business logic",
-      "Platform-specific optimizations",
-      "Faster development cycle"
+      "Single codebase for iOS & Android",
+      "AI/ML integration",
+      "Real-time synchronization",
+      "Rapid development cycle"
     ],
     benefits: [
-      "Reduced development time and cost",
-      "Consistent user experience across platforms"
+      "Faster development time",
+      "Cost-effective solution"
     ]
   },
   {
-    icon: "🧠",
+    icon: "🔧",
     title: "AI-Powered Features",
-    description: "Integrate machine learning, computer vision, and natural language processing",
-    price: "$3,000 - $12,000",
-    marketPrice: "$6,000 - $20,000",
+    description: "Intelligent features like chatbots, recommendations, and automation",
+    price: "$8,000",
+    marketPrice: "$15,000",
     category: "AI Integration",
     features: [
-      "Machine learning models",
-      "Computer vision capabilities",
       "Natural language processing",
-      "Predictive analytics"
+      "Machine learning models",
+      "Predictive analytics",
+      "Automated workflows"
     ],
     benefits: [
-      "Enhanced user engagement",
-      "Intelligent automation and insights"
+      "Enhanced user experience",
+      "Competitive advantage"
     ]
   }
 ];
 
-// Mobile features data
 const mobileFeatures = [
   {
-    icon: "🚀",
-    title: "Lightning Fast",
-    description: "Optimized for performance with smooth animations and quick load times"
+    icon: "🎨",
+    title: "Custom UI/UX Design",
+    description: "Beautiful, intuitive interfaces designed for your brand and users"
+  },
+  {
+    icon: "⚡",
+    title: "High Performance",
+    description: "Optimized apps that load fast and run smoothly on all devices"
   },
   {
     icon: "🔒",
-    title: "Secure & Reliable",
-    description: "Enterprise-grade security with robust error handling and data protection"
+    title: "Security & Privacy",
+    description: "Enterprise-grade security with data encryption and privacy protection"
   },
   {
     icon: "📊",
-    title: "Analytics Ready",
-    description: "Built-in analytics and monitoring for user behavior and app performance"
-  },
-  {
-    icon: "🌐",
-    title: "Offline Capable",
-    description: "Works seamlessly offline with intelligent data synchronization"
+    title: "Analytics & Insights",
+    description: "Comprehensive analytics to track user behavior and app performance"
   }
 ];
 
@@ -116,17 +113,37 @@ const PagePage = () => {
     <>
       <Helmet>
         <title>AI Mobile App Development - Zion Tech Group</title>
-        <meta name="description" content="Build powerful AI-powered mobile apps for iOS and Android. Expert development with cutting-edge AI integration, native performance, and modern design." />
+        <meta name="description" content="Build powerful AI-powered mobile apps for iOS and Android. Expert development with cutting-edge AI integration, custom UI/UX, and enterprise-grade security." />
+        <meta name="keywords" content="mobile app development, AI mobile apps, iOS development, Android development, React Native, mobile AI integration" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">AI Mobile App Development</h1>
-            <p className="text-gray-300 text-lg">
-              Build powerful, intelligent mobile apps that engage users and drive business growth with cutting-edge AI technology.
-            </p>
+      <section className="relative min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 flex items-center">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            AI-Powered Mobile
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+              App Development
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Build intelligent mobile apps that engage users and drive business growth. 
+            From iOS and Android to cross-platform solutions with cutting-edge AI integration.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#services"
+              className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-lg"
+            >
+              View Services
+            </a>
+            <a 
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-lg"
+            >
+              Get Free Quote
+            </a>
           </div>
         </div>
       </section>
@@ -297,5 +314,4 @@ const PagePage = () => {
     </>
   );
 };
-
 export default PagePage;

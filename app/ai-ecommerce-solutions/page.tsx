@@ -1,94 +1,91 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle } from "@heroicons/react/24/solid";
 
-// Industry stats data
 const industryStats = [
-  { metric: "150%", description: "Average sales increase" },
-  { metric: "80%", description: "Reduction in stockouts" },
-  { metric: "70%", description: "Support cost reduction" },
-  { metric: "95%", description: "Customer satisfaction rate" }
+  { metric: "150%", description: "Average Sales Increase" },
+  { metric: "80%", description: "Reduction in Stockouts" },
+  { metric: "70%", description: "Support Cost Reduction" },
+  { metric: "95%", description: "Customer Satisfaction" }
 ];
 
-// E-commerce services data
 const ecommerceServices = [
   {
-    icon: "🤖",
-    title: "AI Product Recommendations",
-    description: "Personalized product suggestions that increase conversion rates by up to 300%",
-    price: "$2,500/month",
-    marketPrice: "$5,000",
-    category: "Personalization",
+    icon: "🛒",
+    title: "AI Shopping Cart Optimization",
+    description: "Intelligent cart abandonment recovery and conversion optimization",
+    price: "$2,999",
+    marketPrice: "$4,500",
+    category: "Conversion",
     features: [
-      "Real-time product recommendations",
-      "Behavioral analysis",
-      "A/B testing capabilities",
-      "Cross-sell and upsell optimization"
+      "Smart cart abandonment emails",
+      "Dynamic pricing optimization",
+      "Cross-sell recommendations",
+      "One-click checkout optimization"
     ],
     benefits: [
-      "Increase average order value by 35%",
-      "Boost conversion rates by 200%"
+      "Increase conversion rates by 40%",
+      "Reduce cart abandonment by 60%"
     ]
   },
   {
     icon: "📊",
-    title: "Smart Inventory Management",
-    description: "AI-powered inventory optimization to prevent stockouts and reduce waste",
-    price: "$1,800/month",
-    marketPrice: "$3,500",
+    title: "AI Inventory Management",
+    description: "Predictive analytics for optimal stock levels and demand forecasting",
+    price: "$3,499",
+    marketPrice: "$5,200",
     category: "Operations",
     features: [
       "Demand forecasting",
       "Automated reorder points",
       "Seasonal trend analysis",
-      "Supplier performance tracking"
+      "Supplier optimization"
     ],
     benefits: [
-      "Reduce inventory costs by 25%",
-      "Eliminate 90% of stockouts"
+      "Reduce stockouts by 80%",
+      "Cut inventory costs by 30%"
     ]
   },
   {
-    icon: "💬",
+    icon: "🤖",
     title: "AI Customer Service",
     description: "24/7 intelligent chatbots and automated support systems",
-    price: "$1,200/month",
-    marketPrice: "$2,800",
+    price: "$1,999",
+    marketPrice: "$3,000",
     category: "Support",
     features: [
       "Natural language processing",
       "Multi-language support",
-      "Escalation to human agents",
+      "Escalation management",
       "Performance analytics"
     ],
     benefits: [
-      "Handle 80% of inquiries automatically",
-      "Reduce response time by 90%"
+      "Reduce support costs by 70%",
+      "Improve response time by 90%"
     ]
   }
 ];
 
-// E-commerce features data
 const ecommerceFeatures = [
   {
-    icon: "⚡",
-    title: "Lightning Fast",
-    description: "Optimized for speed with sub-second load times"
+    icon: "🎯",
+    title: "Personalization Engine",
+    description: "AI-powered product recommendations and personalized shopping experiences"
+  },
+  {
+    icon: "📈",
+    title: "Analytics Dashboard",
+    description: "Real-time insights into customer behavior and sales performance"
   },
   {
     icon: "🔒",
-    title: "Secure & Compliant",
-    description: "Enterprise-grade security with PCI DSS compliance"
+    title: "Security & Compliance",
+    description: "Enterprise-grade security with PCI DSS compliance and fraud detection"
   },
   {
-    icon: "📱",
-    title: "Mobile Optimized",
-    description: "Responsive design that works perfectly on all devices"
-  },
-  {
-    icon: "🌐",
-    title: "Global Ready",
-    description: "Multi-currency and multi-language support"
+    icon: "⚡",
+    title: "Performance Optimization",
+    description: "Lightning-fast page loads and seamless mobile experiences"
   }
 ];
 
@@ -97,17 +94,37 @@ const PagePage = () => {
     <>
       <Helmet>
         <title>AI E-commerce Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your e-commerce with AI-powered solutions. Increase sales, optimize inventory, and enhance customer experience with our advanced AI technology." />
+        <meta name="description" content="Transform your e-commerce with AI-powered solutions. Increase sales by 150%, reduce costs, and boost customer satisfaction with our advanced AI technology." />
+        <meta name="keywords" content="AI e-commerce, e-commerce automation, AI shopping cart, inventory management, customer service AI" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">AI E-commerce Solutions</h1>
-            <p className="text-gray-300 text-lg">
-              Transform your online store with cutting-edge AI technology that boosts sales, optimizes operations, and delights customers.
-            </p>
+      <section className="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 flex items-center">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            AI-Powered E-commerce
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your online store with cutting-edge AI technology. Increase sales by 150%, 
+            reduce operational costs, and deliver exceptional customer experiences.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#solutions"
+              className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-lg"
+            >
+              Explore Solutions
+            </a>
+            <a 
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-lg"
+            >
+              Get Free Audit
+            </a>
           </div>
         </div>
       </section>
@@ -275,5 +292,4 @@ const PagePage = () => {
     </>
   );
 };
-
 export default PagePage;

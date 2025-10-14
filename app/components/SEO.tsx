@@ -1,15 +1,14 @@
-  title?: string
-  description?: string
-}
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  }
+import React from "react";
+
+const SEO = () => {
   return (
-<>    <Helmet></Helmet>
-      <title>{title}</title>
-  )}
-}
-export default SEO
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for SEO.
+      </p>
+    </div>
+  );
+};
+
+export default SEO;

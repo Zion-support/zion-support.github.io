@@ -36,13 +36,4 @@ const AboutPage: React.FC = () => {
                   <span className="text-gray-300">Innovation-driven approach</span>"
                 </div>"
                 <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />
-                  <span className="text-gray-300">Client-focused solutions</span>"
-                </div>"
-                <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />
-                  <span className="text-gray-300">Cutting-edge technology</span>"
-                </div>
-              </div>
-            </div>
-"
+

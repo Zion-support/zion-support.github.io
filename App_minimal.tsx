@@ -10,4 +10,4 @@ const App_minimalPage = () => {
   );
 };
 
-export default App_minimalPage;
+

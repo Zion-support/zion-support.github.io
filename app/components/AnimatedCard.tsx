@@ -18,7 +18,8 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   const glowClass = glowClasses[glowColor]
 
   return (
-<>    <div>````
+<>
+      <div>````
       {children}</div>
     </div>
     </>

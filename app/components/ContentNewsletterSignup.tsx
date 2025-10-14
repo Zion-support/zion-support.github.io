@@ -29,7 +29,8 @@ const ContentNewsletterSignup: React.FC = () => {
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You've been successfully subscribed to our newsletter.</div>
+          <p className="text-green-100">You&apos;ve been successfully subscribed to our newsletter.</p>
+        </div>
       </section>
     );
   }
@@ -41,7 +42,8 @@ const ContentNewsletterSignup: React.FC = () => {
           <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">
             Stay Updated with AI Innovation
           </h2>
-          <p>Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.</p>
+          <p className="text-purple-100 mb-6">
+            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -70,11 +72,15 @@ const ContentNewsletterSignup: React.FC = () => {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </>
               )}
-            </form>
+            </button>
+          </form>
           
-          <p>We respect your privacy. Unsubscribe at any time.</p>
-          </div>
-      </section>
+          <p className="text-xs text-purple-200 mt-4">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 };
 

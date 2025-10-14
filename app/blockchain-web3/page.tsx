@@ -1,23 +1,14 @@
-'use client';
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+const Page = () => {
   return (
-    <>
-      <Helmet>
-        <title>Blockchain Web3 - Zion Tech Group</title>
-        <meta name="description" content="Blockchain Web3 services and solutions from Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Blockchain Web3</h1>
-          <p className="text-xl text-gray-600">
-            This page is under development. Please check back soon for more information about our blockchain web3 services.
-          </p>
-        </div>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
+      <p className="text-gray-300">
+        This is a placeholder component for Page.
+      </p>
+    </div>
   );
-}
+};
+
+export default Page;

@@ -203,6 +203,7 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Recent Discussions */}
@@ -252,6 +253,7 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Featured Projects */}
@@ -295,6 +297,7 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
       </section>
 
       {/* Join Community CTA */}

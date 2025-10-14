@@ -4,10 +4,11 @@ import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
-    <>
+
       <Helmet>
         <title>Zion Ai Inventory Manager - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Inventory Manager services and solutions from Zion Tech Group" />
+      </Helmet>
       </Helmet>
       
       <div className="min-h-screen bg-white">

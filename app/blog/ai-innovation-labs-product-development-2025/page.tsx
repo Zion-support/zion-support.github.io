@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-const InnovationLabsPage: React.FC = () => {
 
+const InnovationLabsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -14,7 +14,7 @@ const InnovationLabsPage: React.FC = () => {
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
             <p>January 28, 2025 · 45 min read · AI Innovation</p>
-            </div>
+          </div>
 
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>
@@ -27,12 +27,16 @@ const InnovationLabsPage: React.FC = () => {
               <div className="bg-blue-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">10x</div>
                 <div className="text-gray-700">Faster Time-to-Market</div>
+              </div>
               <div className="bg-green-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
                 <div className="text-gray-700">Cost Reduction</div>
+              </div>
               <div className="bg-purple-50 p-6 rounded-lg text-center">
                 <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
                 <div className="text-gray-700">Innovation Speed</div>
+              </div>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">AI-Powered Product Development</h3>
@@ -76,7 +80,7 @@ const InnovationLabsPage: React.FC = () => {
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <p>{`AI Innovation Lab Stack:
+              <pre className="text-sm text-gray-800 whitespace-pre-wrap">{`AI Innovation Lab Stack:
 ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
@@ -92,8 +96,8 @@ const InnovationLabsPage: React.FC = () => {
 └── Infrastructure
     ├── Cloud-native Architecture
     ├── Kubernetes & Docker
-    └── CI/CD Automation`}</p>
-              </div>
+    └── CI/CD Automation`}</pre>
+            </div>
 
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
             <p>Ready to revolutionize your product development? Our AI Innovation Labs can help you 
@@ -122,6 +126,6 @@ const InnovationLabsPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default InnovationLabsPage;

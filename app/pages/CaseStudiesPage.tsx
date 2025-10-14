@@ -15,25 +15,7 @@
     }
   ]
 const CaseStudiesPage: React.FC = () => {
-  return ("
-<>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
-      <Helmet></Helmet>
-        <title>Case Studies | Zion Tech Group</title>"
-        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
-        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />
-      </Helmet>"
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}"
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Stories</span>
-          </h1>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how we"ve helped businesses across various industries transform
-            their operations with cutting-edge AI and IT solutions.
-          </p>
-        </div>
+
     </>
                     </span>"
                     <h3 className="text-2xl font-bold text-white">{study.title}</h3>
@@ -41,16 +23,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
                     <p className="text-gray-300 mb-4">{study.description}</p>
-                  </div>"
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>"
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</p>
-                  </div>
-                </div>
+
                 { /* Results */ }
                 <div></div>"
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
@@ -139,11 +112,7 @@ const CaseStudiesPage: React.FC = () => {
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </div>;  )
-export default CaseStudiesPage
+
     </div>
   )}
 export default CaseStudiesPage
@@ -153,10 +122,6 @@ import React from "react
 
 export default function CaseStudiesPage() {
   return (
-<>"
-      <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>"
-      <p className="text-gray-300 text-lg">This page is under development.</p>"
-    </div>
-  )}
+
 }
 '"

@@ -253,32 +253,32 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Cpu className="w-8 h-8 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Mining</h3>
-              <p className="text-gray-600">Discover and analyze existing business processes using advanced algorithms</div>
+              <p className="text-gray-600">Discover and analyze existing business processes using advanced algorithms</p>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Settings className="w-8 h-8 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Workflow Automation</h3>
-              <p className="text-gray-600">Automate complex business workflows with intelligent decision-making</div>
+              <p className="text-gray-600">Automate complex business workflows with intelligent decision-making</p>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Brain className="w-8 h-8 text-purple-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI/ML Integration</h3>
-              <p className="text-gray-600">Integrate machine learning models for intelligent process optimization</div>
+              <p className="text-gray-600">Integrate machine learning models for intelligent process optimization</p>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Target className="w-8 h-8 text-orange-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">RPA Solutions</h3>
-              <p className="text-gray-600">Implement robotic process automation for repetitive tasks</div>
+              <p className="text-gray-600">Implement robotic process automation for repetitive tasks</p>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <BarChart className="w-8 h-8 text-red-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics & Monitoring</h3>
-              <p className="text-gray-600">Real-time monitoring and analytics for process performance</div>
+              <p className="text-gray-600">Real-time monitoring and analytics for process performance</p>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border">
               <Zap className="w-8 h-8 text-indigo-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Integration Platforms</h3>
-              <p className="text-gray-600">Seamless integration with existing enterprise systems</div>
+              <p className="text-gray-600">Seamless integration with existing enterprise systems</p>
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-green-900 to-blue-900 text-white p-12 rounded-lg text-center">
