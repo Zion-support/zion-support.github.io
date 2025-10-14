@@ -1,4 +1,5 @@
-import React from 'react'use client'
+'use client'
+import React from 'react'
 export default function AiLanguageTranslationPage() {
 
   return (
@@ -12,7 +13,3 @@ export default function AiLanguageTranslationPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''

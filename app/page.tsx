@@ -1,7 +1,7 @@
-'use client';'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -10,42 +10,42 @@ import {
   CheckCircleIcon,
   ArrowRightIcon,
   StarIcon
-} from '@heroicons/react/24/outline';'
+} from '@heroicons/react/24/outline';
 const HomePage: React.FC = () => {
   const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions','
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.','
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
       href: '/ai-solutions'
     },
     {
       icon: CloudIcon,
-      title: 'Cloud Infrastructure','
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.','
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
       href: '/cloud-infrastructure'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity','
-      description: 'Comprehensive cybersecurity solutions to protect your digital assets.','
+      title: 'Cybersecurity',
+      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
       href: '/cybersecurity'
     },
     {
       icon: RocketLaunchIcon,
-      title: 'Digital Transformation','
-      description: 'Complete digital transformation services to modernize your business.','
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business.',
       href: '/digital-transformation'
     }
   ];
 
   const features = [
-    '24/7 Expert Support','
-    'Custom Solutions','
-    'Scalable Architecture','
-    'Security First','
-    'Performance Optimized','
-    'Cost Effective''
+    '24/7 Expert Support',
+    'Custom Solutions',
+    'Scalable Architecture',
+    'Security First',
+    'Performance Optimized',
+    'Cost Effective'
   ];
 
   return (
@@ -69,13 +69,13 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/services" "
+                to="/services"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Learn More
@@ -141,30 +141,39 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/about" "
+                to="/about"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 About Us
               </Link>
             </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
-                <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 font-medium">{feature}</span>
-              </div>
-            ))}
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 bg-slate-900">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Why Choose Us?
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 font-medium">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
@@ -204,13 +213,13 @@ const HomePage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact""
+              to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Project
             </Link>
             <Link
-              to="/demo""
+              to="/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               Schedule Demo

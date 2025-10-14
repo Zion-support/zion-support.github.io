@@ -34,7 +34,7 @@ export default function AISolutionsPage() {
         "A/B testing framework","
         "Model performance monitoring","
         "Automated retraining","
-        "Edge deployment""
+        "Edge deployment"
       ],
       color: "from-purple-500 to-pink-500","
       price: "Starting at $3,500/month","
@@ -52,7 +52,7 @@ export default function AISolutionsPage() {
         "Language translation","
         "Named entity recognition","
         "Text summarization","
-        "Conversational AI""
+        "Conversational AI"
       ],
       color: "from-blue-500 to-cyan-500","
       price: "Starting at $2,800/month","
@@ -70,7 +70,7 @@ export default function AISolutionsPage() {
         "Facial recognition","
         "OCR (Optical Character Recognition)","
         "Video analysis","
-        "Real-time processing""
+        "Real-time processing"
       ],
       color: "from-green-500 to-emerald-500","
       price: "Starting at $4,200/month","
@@ -88,7 +88,7 @@ export default function AISolutionsPage() {
         "Risk assessment","
         "Trend analysis","
         "Anomaly detection","
-        "Performance optimization""
+        "Performance optimization"
       ],
       color: "from-orange-500 to-red-500","
       price: "Starting at $3,000/month","
@@ -106,7 +106,7 @@ export default function AISolutionsPage() {
         "Intelligent routing","
         "Decision automation","
         "Resource optimization","
-        "Performance monitoring""
+        "Performance monitoring"
       ],
       color: "from-indigo-500 to-purple-500","
       price: "Starting at $2,500/month","
@@ -124,7 +124,7 @@ export default function AISolutionsPage() {
         "Implementation planning","
         "ROI analysis","
         "Change management","
-        "Training and support""
+        "Training and support"
       ],
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $1,500/month","
@@ -247,7 +247,7 @@ const AISolutionsPage: React.FC = () => {
                       Learn More <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                     <Link
-                      to="/contact""
+                      to="/contact"
                       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold"
                     >
                       Get Started
@@ -376,14 +376,14 @@ const AISolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 Get Free AI Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
-                to="/demo""
+                to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule AI Demo

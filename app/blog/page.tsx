@@ -160,8 +160,8 @@ const BlogPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
-                type="email""
-                placeholder="Enter your email""
+                type="email"
+                placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
@@ -174,7 +174,4 @@ const BlogPage: React.FC = () => {
     </>
   );
 }
-export default BlogPage;
-};
-
-export default BlogPage;''
+export default FiveGSolutionsPage;

@@ -29,7 +29,3 @@ export default function AiChatbotBuilder() {
     </div>
   );
 }
-            </p></div></div></div></div>
-  );}
-}
-''

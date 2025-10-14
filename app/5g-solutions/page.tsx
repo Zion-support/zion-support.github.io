@@ -28,8 +28,9 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
     }
-  ]
-  const solutions = [
+  ];
+
+  const benefits = [
     {
 
       title: '5G Network Infrastructure',
@@ -139,12 +140,12 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (}
+            {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 <ul className="space-y-3">
-                  {solution.features.map((feature, idx) => (}
+                  {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-400">
                       <Circle className="w-4 h-4 text-blue-400 mr-3" />
                       {feature}
@@ -178,6 +179,3 @@ const FiveGSolutionsPage: React.FC = () => {
   );
 }
 export default FiveGSolutionsPage;
-};
-
-export default FiveGSolutionsPage;''

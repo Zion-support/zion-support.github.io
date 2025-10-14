@@ -12,7 +12,4 @@ export default function MedicalRecordsManagerPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

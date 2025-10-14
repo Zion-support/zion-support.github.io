@@ -84,8 +84,9 @@ const AiServicesPage: React.FC = () => {
       description: 'AI-powered security solutions to protect your business from threats.','
       color: 'from-red-500 to-pink-500'
     }
-  ]
-  const features = [
+  ];
+
+  const benefits = [
     {
       title: 'Custom AI Solutions','
       description: 'Tailored AI implementations designed specifically for your business needs.','

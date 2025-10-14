@@ -94,10 +94,10 @@ const ServicesPage: React.FC = () => {
     <>
       <EnhancedSEO
         title="Our Services - Zion Tech Group | AI and IT Solutions"
-        description="Comprehensive AI and IT services including machine learning, cybersecurity, cloud infrastructure, digital transformation, and 5G solutions.""
-        keywords="AI services, IT services, cybersecurity, cloud computing, digital transformation, 5G solutions, micro SaaS""
-        canonicalUrl="/services""
-        ogImage="/api/placeholder/1200/630""
+        description="Comprehensive AI and IT services including machine learning, cybersecurity, cloud infrastructure, digital transformation, and 5G solutions."
+        keywords="AI services, IT services, cybersecurity, cloud computing, digital transformation, 5G solutions, micro SaaS"
+        canonicalUrl="/services"
+        ogImage="/api/placeholder/1200/630"
       />
 
       {/* Hero Section */}
@@ -171,7 +171,7 @@ const ServicesPage: React.FC = () => {
                       </ul>
 
                       <Link 
-                        to="/contact" "
+                        to="/contact"
                         className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
                       >
                         Learn More <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -197,14 +197,14 @@ const ServicesPage: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Get Free Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link 
-                to="/demo" "
+                to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule Demo
@@ -217,7 +217,4 @@ const ServicesPage: React.FC = () => {
     </>
   );
 }
-export default ServicesPage;
-};
-
-export default ServicesPage;''
+export default FiveGSolutionsPage;

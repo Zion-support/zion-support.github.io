@@ -12,7 +12,4 @@ export default function OnlineLearningPlatformPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

@@ -12,7 +12,4 @@ export default function EcommerceAnalyticsProPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

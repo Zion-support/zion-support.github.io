@@ -34,8 +34,9 @@ const DemoPage: React.FC = () => {
 
 
     }
-  ]
-  const testimonials = [{
+  ];
+
+  const benefits = [{
       name: "Sarah Johnson","
       company: "TechCorp Inc.","
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","
@@ -213,7 +214,4 @@ const DemoPage: React.FC = () => {
     </>
   );
 }
-export default DemoPage;
-};
-
-export default DemoPage;''
+export default FiveGSolutionsPage;

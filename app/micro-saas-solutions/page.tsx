@@ -35,7 +35,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Custom dashboards","
         "Automated reporting","
         "Data export capabilities","
-        "Multi-user access""
+        "Multi-user access"
       ],
       color: "from-blue-500 to-cyan-500","
       price: "Starting at $99/month","
@@ -53,7 +53,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "SEO optimization","
         "Brand voice consistency","
         "Content scheduling","
-        "Performance analytics""
+        "Performance analytics"
       ],
       color: "from-green-500 to-emerald-500","
       price: "Starting at $79/month","
@@ -71,7 +71,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Multi-language support","
         "Integration capabilities","
         "Analytics dashboard","
-        "Custom training""
+        "Custom training"
       ],
       color: "from-purple-500 to-pink-500","
       price: "Starting at $149/month","
@@ -89,7 +89,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Progress tracking","
         "Resource management","
         "Automated scheduling","
-        "Performance insights""
+        "Performance insights"
       ],
       color: "from-orange-500 to-red-500","
       price: "Starting at $129/month","
@@ -107,7 +107,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Stock optimization","
         "Multi-location support","
         "Integration APIs","
-        "Real-time tracking""
+        "Real-time tracking"
       ],
       color: "from-indigo-500 to-purple-500","
       price: "Starting at $199/month","
@@ -125,7 +125,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Expense reporting","
         "Budget tracking","
         "Tax preparation","
-        "Multi-currency support""
+        "Multi-currency support"
       ],
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $59/month","
@@ -182,13 +182,13 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/demo" "
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -257,13 +257,13 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/demo" "
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -366,7 +366,7 @@ import { Helmet } from 'react-helmet-async';'
                       Learn More <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                     <Link
-                      to="/contact""
+                      to="/contact"
                       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold"
                     >
                       Get Started
@@ -443,14 +443,14 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 Get Free Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
-                to="/demo""
+                to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule Demo

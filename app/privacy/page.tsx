@@ -81,7 +81,4 @@ const PrivacyPage: React.FC = () => {
     </>
   );
 }
-export default PrivacyPage;
-};
-
-export default PrivacyPage;''
+export default FiveGSolutionsPage;

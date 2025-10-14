@@ -1,4 +1,5 @@
-import React from 'react'use client'
+'use client'
+import React from 'react'
 export default function CreateAdPage() {
 
   return (
@@ -12,7 +13,4 @@ export default function CreateAdPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

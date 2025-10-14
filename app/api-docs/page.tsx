@@ -12,7 +12,4 @@ export default function ApiDocsPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

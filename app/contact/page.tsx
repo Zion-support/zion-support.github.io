@@ -4,12 +4,12 @@ import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
 export default function ContactPage() {
 
   const [formData, setFormData] = useState({
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    subject: '','
-    message: '''
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    subject: '',
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -64,8 +64,9 @@ export default function ContactPage() {
       icon: 'Clock','
       description: '9:00 AM - 6:00 PM EST'
     }
-  ]
-  const subjects = [
+  ];
+
+  const benefits = [
     'AI Services','
     'IT Services','
     'Services','
@@ -172,14 +173,14 @@ export default function ContactPage() {
                     Full Name *
                   </label>
                   <input
-                    type="text""
+                    type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your full name""
+                    placeholder="Your full name"
                   />
                 </div>
                 <div>
@@ -187,14 +188,14 @@ export default function ContactPage() {
                     Email Address *
                   </label>
                   <input
-                    type="email""
+                    type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com""
+                    placeholder="your.email@company.com"
                   />
                 </div>
               </div>
@@ -205,13 +206,13 @@ export default function ContactPage() {
                     Company
                   </label>
                   <input
-                    type="text""
+                    type="text"
                     id="company"
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name""
+                    placeholder="Your company name"
                   />
                 </div>
                 <div>
@@ -219,13 +220,13 @@ export default function ContactPage() {
                     Number
                   </label>
                   <input
-                    type="tel""
+                    type="tel"
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567""
+                    placeholder="+1 (555) 123-4567"
                   />
                 </div>
               </div>
@@ -263,13 +264,13 @@ export default function ContactPage() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or how we can help you...""
+                  placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
 
               <div className="text-center">
                 <button
-                  type="submit""
+                  type="submit"
                   disabled={isSubmitting}
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >

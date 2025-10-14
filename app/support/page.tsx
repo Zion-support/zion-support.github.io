@@ -32,8 +32,9 @@ const SupportPage: React.FC = () => {
   ];
 
     }
-  ]
-  const faqs = [{
+  ];
+
+  const benefits = [{
       question: 'How do I get started with your AI services?',''
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.''},'
     {
@@ -242,7 +243,4 @@ icon: Phone,
     </>
   );
 }
-export default SupportPage;
-};
-
-export default SupportPage;''
+export default FiveGSolutionsPage;

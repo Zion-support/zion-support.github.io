@@ -1,4 +1,5 @@
-import React from 'react'use client'
+'use client'
+import React from 'react'
 export default function ZionAiExpenseTrackerPage() {
 
   return (
@@ -12,7 +13,4 @@ export default function ZionAiExpenseTrackerPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

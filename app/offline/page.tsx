@@ -12,7 +12,4 @@ export default function OfflinePage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

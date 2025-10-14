@@ -1,142 +1,76 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import { glob } from 'glob';
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+// Find all page.tsx files
+const pageFiles = await glob('app/**/page.tsx');
 
-// Common syntax error patterns and their fixes
-const fixes = [
-  // Fix unterminated string literals with trailing quotes
-  {
-    pattern: /'([^']*?)\n/g,
-    replacement: "'$1'\n"
-  },
-  // Fix unterminated string literals with trailing quotes in JSX
-  {
-    pattern: /"([^"]*?)\n/g,
-    replacement: '"$1"\n'
-  },
-  // Fix extra commas in object properties
-  {
-    pattern: /,\s*}/g,
-    replacement: '}'
-  },
-  // Fix extra commas in array properties
-  {
-    pattern: /,\s*]/g,
-    replacement: ']'
-  },
-  // Fix semicolons in object properties
-  {
-    pattern: /;\s*}/g,
-    replacement: '}'
-  },
-  // Fix semicolons in array properties
-  {
-    pattern: /;\s*]/g,
-    replacement: ']'
-  },
-  // Fix duplicate color properties
-  {
-    pattern: /color:\s*"[^"]*"\s*}\s*color:\s*"[^"]*"\s*}/g,
-    replacement: (match) => {
-      const colors = match.match(/"([^"]*)"/g);
-      return `color: ${colors[0]}}`;
-    }
-  },
-  // Fix malformed JSX closing tags
-  {
-    pattern: /<([^>]+)\s*>\s*<\/\1\s*>/g,
-    replacement: '<$1></$1>'
-  },
-  // Fix missing closing braces in objects
-  {
-    pattern: /(\w+):\s*"([^"]*)"\s*,\s*$/gm,
-    replacement: '$1: "$2",'
-  },
-  // Fix stray semicolons in JSX
-  {
-    pattern: /;\s*<\/[^>]+>/g,
-    replacement: '</$1>'
-  },
-  // Fix malformed function declarations
-  {
-    pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
-    replacement: 'const $1 = () => {\n'
-  }
-];
+console.log(`Found ${pageFiles.length} page files to fix`);
 
-function fixFile(filePath) {
+let fixedCount = 0;
+
+for (const filePath of pageFiles) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply all fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
-    });
-    
-    // Additional specific fixes for common patterns
-    content = content
-      // Fix unterminated strings at end of lines
-      .replace(/'([^']*?)\n/g, "'$1'\n")
-      .replace(/"([^"]*?)\n/g, '"$1"\n")
-      // Fix extra commas and semicolons
-      .replace(/,(\s*[}\]])/g, '$1')
-      .replace(/(\w+):\s*"([^"]*)"\s*;\s*}/g, '$1: "$2" }')
-      // Fix malformed JSX
-      .replace(/>\s*;\s*</g, '><')
-      .replace(/>\s*;\s*$/gm, '>')
-      // Fix duplicate properties
-      .replace(/(\w+):\s*"[^"]*"\s*}\s*\1:\s*"[^"]*"\s*}/g, (match) => {
-        const props = match.match(/(\w+):\s*"([^"]*)"/g);
-        return props[0] + ' }';
+    let modified = false;
+
+    // Fix malformed JSX with incorrect parentheses
+    const malformedJSXRegex = /{solutions\.map\(\(solution, index\) => \(}/g;
+    if (malformedJSXRegex.test(content)) {
+      content = content.replace(malformedJSXRegex, '{solutions.map((solution, index) => (');
+      modified = true;
+    }
+
+    const malformedJSXRegex2 = /{solution\.features\.map\(\(feature, idx\) => \(}/g;
+    if (malformedJSXRegex2.test(content)) {
+      content = content.replace(malformedJSXRegex2, '{solution.features.map((feature, idx) => (');
+      modified = true;
+    }
+
+    // Fix malformed object syntax with extra quotes
+    const malformedObjectRegex = /title: "([^"]+)",\s*description: "([^"]+)",\s*icon: <([^>]+) \/>,\s*color: "([^"]+)"}/g;
+    if (malformedObjectRegex.test(content)) {
+      content = content.replace(malformedObjectRegex, (match, title, description, icon, color) => {
+        return `title: "${title}",\n      description: "${description}",\n      icon: <${icon} />,\n      color: "${color}"`;
       });
-    
-    if (content !== originalContent) {
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    const unterminatedStringRegex = /"([^"]*)"\s*"\s*$/gm;
+    if (unterminatedStringRegex.test(content)) {
+      content = content.replace(unterminatedStringRegex, '"$1"');
+      modified = true;
+    }
+
+    // Fix malformed closing tags and brackets
+    const malformedClosingRegex = /}\s*<\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm;
+    if (malformedClosingRegex.test(content)) {
+      content = content.replace(malformedClosingRegex, '}\n          </div>\n        </div>\n      </div>\n    </div>\n  );\n}');
+      modified = true;
+    }
+
+    // Fix duplicate color properties
+    const duplicateColorRegex = /color: "([^"]+)"\s*color: "([^"]+)"/g;
+    if (duplicateColorRegex.test(content)) {
+      content = content.replace(duplicateColorRegex, 'color: "$1"');
+      modified = true;
+    }
+
+    // Fix malformed closing brackets
+    const malformedBracketsRegex = /}\s*\);\s*}\s*}\s*''\s*$/gm;
+    if (malformedBracketsRegex.test(content)) {
+      content = content.replace(malformedBracketsRegex, '}\n  );\n}');
+      modified = true;
+    }
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      fixedCount++;
     }
-    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-function main() {
-  console.log('Starting syntax error fixes...');
-  
-  // Find all TypeScript and JSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFixed = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    });
-  });
-  
-  console.log(`Fixed ${totalFixed} files`);
-}
-
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixFile, fixes };
+console.log(`Fixed ${fixedCount} files`);

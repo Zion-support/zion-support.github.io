@@ -12,7 +12,4 @@ export default function SupplyChainOptimizerPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

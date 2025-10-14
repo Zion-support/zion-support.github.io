@@ -12,7 +12,4 @@ export default function PropertyManagementAiPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

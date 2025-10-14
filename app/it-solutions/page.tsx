@@ -35,7 +35,7 @@ const ITSolutionsPage: React.FC = () => {
         "Security compliance","
         "Cost optimization","
         "24/7 monitoring","
-        "Disaster recovery""
+        "Disaster recovery"
       ],
       color: "from-blue-500 to-cyan-500","
       price: "Starting at $1,500/month","
@@ -53,7 +53,7 @@ const ITSolutionsPage: React.FC = () => {
         "Security monitoring","
         "Incident response","
         "Compliance management","
-        "Security training""
+        "Security training"
       ],
       color: "from-red-500 to-pink-500","
       price: "Starting at $2,200/month","
@@ -71,7 +71,7 @@ const ITSolutionsPage: React.FC = () => {
         "Vendor selection","
         "Implementation guidance","
         "Change management","
-        "Training and support""
+        "Training and support"
       ],
       color: "from-green-500 to-emerald-500","
       price: "Starting at $1,200/month","
@@ -89,7 +89,7 @@ const ITSolutionsPage: React.FC = () => {
         "Performance optimization","
         "Monitoring and maintenance","
         "Disaster recovery","
-        "Remote access""
+        "Remote access"
       ],
       color: "from-purple-500 to-indigo-500","
       price: "Starting at $1,800/month","
@@ -107,7 +107,7 @@ const ITSolutionsPage: React.FC = () => {
         "Analytics and reporting","
         "Data security","
         "Backup and recovery","
-        "Data governance""
+        "Data governance"
       ],
       color: "from-orange-500 to-red-500","
       price: "Starting at $2,000/month","
@@ -125,7 +125,7 @@ const ITSolutionsPage: React.FC = () => {
         "System maintenance","
         "Software updates","
         "Hardware support","
-        "User training""
+        "User training"
       ],
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $1,000/month","
@@ -182,13 +182,13 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/demo" "
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -257,13 +257,13 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" "
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/demo" "
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -360,7 +360,7 @@ import { Helmet } from 'react-helmet-async';'
                       Learn More <ArrowRightIcon className="w-4 h-4" />
                     </Link>
                     <Link
-                      to="/contact""
+                      to="/contact"
                       className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 font-semibold"
                     >
                       Get Started
@@ -489,14 +489,14 @@ import { Helmet } from 'react-helmet-async';'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                to="/contact""
+                to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 Get Free IT Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
-                to="/demo""
+                to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Schedule IT Demo

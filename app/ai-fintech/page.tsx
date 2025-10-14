@@ -12,7 +12,3 @@ export default function AiFintechPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''

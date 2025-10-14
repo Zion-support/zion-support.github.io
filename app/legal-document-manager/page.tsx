@@ -12,7 +12,4 @@ export default function LegalDocumentManagerPage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );

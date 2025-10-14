@@ -1,5 +1,6 @@
+'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'use client'
+import { Helmet } from 'react-helmet-async'
 export default function ZionAIPerformanceOptimizer() {
 
   return (
@@ -67,7 +68,4 @@ export default function ZionAIPerformanceOptimizer() {
     </div>
   );
 }
-            </button></div></div></div></div>
-  );}
-}
-''
+  );

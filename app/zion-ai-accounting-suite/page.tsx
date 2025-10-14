@@ -1,4 +1,5 @@
-import React from 'react'use client'
+'use client'
+import React from 'react'
 export default function ZionAiAccountingSuitePage() {
 
   return (
@@ -12,7 +13,4 @@ export default function ZionAiAccountingSuitePage() {
     </div>
   );
 }
-        </p></div></div>
-  );}
-}
-''
+  );
