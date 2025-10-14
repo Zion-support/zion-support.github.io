@@ -1,4 +1,13 @@
 export default function Page() {
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from "lucide-react";
+=======
+>>>>>>> origin/main
 
       <Helmet></Helmet>
 

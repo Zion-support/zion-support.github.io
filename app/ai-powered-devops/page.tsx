@@ -1,9 +1,17 @@
 import { Helmet } from "react-helmet-async";
-"
-  // const benefits = [""
-  //   "Reduce deployment time by 80%",""
-  //   "Eliminate 95% of manual DevOps tasks",""
-  //   "Improve system reliability by 99.9%",""
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Award as AwardIcon, Rocket, Phone, Star as StarIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import SEOOptimizer from "../components/SEOOptimizer";
+
+export default function AiPoweredDevops() {
+  const features = [
+    "AI-powered automated testing and quality assurance",Intelligent deployment orchestration and rollback",Predictive infrastructure scaling and optimization",Automated security vulnerability detection and patching",AI-driven performance monitoring and alerting",Intelligent log analysis and anomaly detection",Automated code review and optimization suggestions",Smart resource allocation and cost optimization",AI-powered incident response and resolution",Automated compliance checking and reporting",Intelligent capacity planning and forecasting",AI-driven continuous integration and deployment"
+  ];
+
+  const benefits = [
+    "Reduce deployment time by 80%",Eliminate 95% of manual DevOps tasks",Improve system reliability by 99.9%",Cut infrastructure costs by 40%"
+  ];
   //   "Cut infrastructure costs by 40%"
   // ];
 ;

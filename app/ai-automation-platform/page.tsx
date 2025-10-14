@@ -1,5 +1,27 @@
-const AIAutomationPlatform = () => {;
-const features = [
+<<<<<<< HEAD
+import React from 'react';
+
+import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Target, Workflow } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+
+=======
+>>>>>>> origin/main
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '../components/FuturisticButton'
+<<<<<<< HEAD
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton";
+const AIAutomationPlatform = () => {
+  const features = [
     {
       title: "Workflow Automation",""
       description: "Automate complex business processes with AI-powered workflows",""

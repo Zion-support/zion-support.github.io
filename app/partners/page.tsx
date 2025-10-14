@@ -1,4 +1,15 @@
+
+import { Helmet } from 'react-helmet-async';
+
+<<<<<<< HEAD
+import { Users, Globe, Shield, Zap } from "lucide-react";
+
+export default function Partners() {
+  const partners = [
+    {
+=======
 {
+>>>>>>> origin/main
       name: 'Amazon Web Services',''
       logo: '☁️',''
       description: 'infrastructure and AI services collaboration',''

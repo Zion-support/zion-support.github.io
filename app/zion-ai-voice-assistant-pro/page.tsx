@@ -1,22 +1,27 @@
+
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
-;
-export default function ZionAIVoiceAssistantPro() {;
-const features = ["
-    "Natural language processing (NLP)","
-    "Multi-language support (50+ languages)","
-    "Voice recognition & synthesis","
-    "Context-aware conversations","
-    "Integration with 500+ apps","
-    "Custom voice training","
-    "Real-time transcription","
-    "Smart scheduling & reminders","
-    "Email & calendar management","
-    "Document creation & editing","
-    "Web search & research","
-    "Code generation & debugging","
-    "Customer service automation","
-    "Meeting transcription & summaries","
-    "Voice-controlled presentations","
+
+export default function ZionAIVoiceAssistantPro() {
+  const features = [
+    "Natural language processing (NLP)",
+    "Multi-language support (50+ languages)",
+    "Voice recognition & synthesis",
+    "Context-aware conversations",
+    "Integration with 500+ apps",
+    "Custom voice training",
+    "Real-time transcription",
+    "Smart scheduling & reminders",
+    "Email & calendar management",
+    "Document creation & editing",
+    "Web search & research",
+    "Code generation & debugging",
+    "Customer service automation",
+    "Meeting transcription & summaries",
+    "Voice-controlled presentations",
     "Multi-device synchronization"
   ];
 ;

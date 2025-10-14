@@ -46,6 +46,30 @@ export default defineConfig({
           if (id.includes("/app/pages/")) {
             return "pages";
           }
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+            return 'main-pages'
+          }
+          // Default chunk for other modules
+          return 'vendor'
           if (id.includes("/app/components/")) {
             return "components";
           }

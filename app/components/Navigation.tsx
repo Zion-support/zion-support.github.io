@@ -1,5 +1,86 @@
-const navigation = [
-    { name: "Home", href: "/", icon: HomeIcon },"
+import React, { useState } from 'react";
+import { Link, useLocation } from 'react-router-dom";
+import { 
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  PlayIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline";
+const Navigation: React.FC = () => {const location = useLocation()
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
+  const isActive = (href: string) => {
+    if (href === '/') {'
+      return location.pathname === '/'"}"
+    return location.pathname.startsWith(href)
+  const toggleExpanded = (item: string) => {
+    setExpandedItems(prev => 
+      prev.includes(item) 
+        ? prev.filter(i => i !== item)
+        : [...prev, item]
+    )
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },'
+    { name: 'About', href: '/about', icon: InformationCircleIcon },'
+    { 
+      name: 'Services', '
+      href: '/services', '
+      icon: BriefcaseIcon,
+      submenu: [
+        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },'
+        { name: 'IT Services', href: '/it-services', icon: CogIcon },'
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
+        { name: 'AI Solutions', href: '/ai-solutions' },'
+        { name: 'IT Solutions', href: '/it-solutions' },'
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },'
+        { name: 'Digital Transformation', href: '/digital-transformation' },'
+        { name: '5G Solutions', href: '/5g-solutions' }'
+      ]
+    },
+    { 
+      name: 'Solutions', '
+      href: '/solutions', '
+      icon: CogIcon,
+      submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },'
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },'
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },'
+        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: SignalIcon },'
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }'
+      ]
+    },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },'
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },'
+    { name: 'Demo', href: '/demo', icon: PlayIcon },'
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },'
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },'
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }'
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: "Home", href: "/", icon: HomeIcon },
     { name: "About", href: "/about", icon: InformationCircleIcon },
     { 
 
@@ -22,7 +103,160 @@ const navigation = [
 
   ];
 
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
+
+  return (
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/" className="text-2xl font-bold text-blue-600">
+                Zion Tech Group
+              </Link>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:ml-6 md:flex md:space-x-8">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative">
+                  {item.submenu ? (
+                    <div className="relative group">
+                      <button
+                        className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        {item.name}
+                        <ChevronDownIcon className="ml-1 h-4 w-4" />
+                      </button>
+                      {isServicesOpen && (
+                        <div 
+                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                          onMouseEnter={() => setIsServicesOpen(true)}
+                          onMouseLeave={() => setIsServicesOpen(false)}
+                        >
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`px-3 py-2 text-sm font-medium ${
+                        isActive(item.href)
+                          ? 'text-blue-600 border-b-2 border-blue-600'
+                          : 'text-gray-700 hover:text-blue-600'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
+            >
+              {isOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.submenu ? (
+                    <div>
+                      <button
+                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        className="w-full text-left text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center justify-between"
+                      >
+                        {item.name}
+                        <ChevronDownIcon className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isServicesOpen && (
+                        <div className="pl-4 space-y-1">
+                          {item.submenu.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`block px-3 py-2 text-sm font-medium ${
+                        isActive(item.href)
+                          ? 'text-blue-600 bg-blue-50'
+                          : 'text-gray-700 hover:text-blue-600'
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+const Navigation: React.FC = () => {
+  return (
+    <nav className="bg-gray-800 text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-xl font-bold">Zion Tech Group</h1>
+        <div className="space-x-4">
+          <a href="/" className="hover:text-gray-300">Home</a>
+          <a href="/about" className="hover:text-gray-300">About</a>
+          <a href="/services" className="hover:text-gray-300">Services</a>
+          <a href="/contact" className="hover:text-gray-300">Contact</a>
+        </div>
+      </div>
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
     </nav>
   );
 };
-"
+
+export default Navigation;
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

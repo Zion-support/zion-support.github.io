@@ -122,6 +122,21 @@ export default ImprovedNavigation;
             href="/contact"""
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
             Get Started Today</a></div></section></div>
+  )
+export default ImprovedNavigation
+<<<<<<< HEAD
+}
+export default ImprovedNavigation';
+>>>>>>> origin/main
+
+const ImprovedNavigation = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
+      <p>This component is under construction.</p>
+    </div>
+=======
+>>>>>>> origin/main
   );
 export default ImprovedNavigation
 "

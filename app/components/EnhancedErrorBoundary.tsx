@@ -1,5 +1,5 @@
-errorId: string }
-import React, { Component, ErrorInfo, ReactNode } from 'react';';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 interface Props { children: ReactNode;
   fallback?: ReactNode;
@@ -10,35 +10,68 @@ interface State { hasError: boolean;
   errorInfo: ErrorInfo | null;
   errorId: string; }
 
-class EnhancedErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {
-    super(props);
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+>>>>>>> origin/main
+}
 
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
-    try {;
-const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+>>>>>>> origin/main
+}
 
-      };
+>>>>>>> origin/main
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
 
-  private handleRetry = () => {
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+>>>>>>> origin/main
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
+      error,
+    });
 
-      errorId: ''
+    // Call the onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a logging service
+      console.error('Production error:', error);
+>>>>>>> origin/main
+    }
+>>>>>>> origin/main
+=======
 )
+>>>>>>> origin/main
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -161,7 +194,15 @@ const errorData = {
                     )
                   </div>
                 </details>
-
+              )
+            </div>
+>>>>>>> origin/main
+          </div>
+        </>
+      )
+    return this.props.children}
+export default EnhancedErrorBoundary
+export default EnhancedErrorBoundary';
               )}
 
         </div>
@@ -173,4 +214,7 @@ const errorData = {
 }
 ;
 export default EnhancedErrorBoundary;
+>>>>>>> origin/main
+=======
 "
+>>>>>>> origin/main
