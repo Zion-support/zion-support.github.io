@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Shield, Cloud, BarChart3, Users, Award, ArrowRight, CheckCircle, Star, Globe, Smartphone, Monitor } from 'lucide-react';
@@ -16,35 +5,7 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-import ResponsiveGrid from '../components/ResponsiveGrid';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Users, 
-  TrendingUp, 
-  Database, 
-  Cpu, 
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Globe
-} from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts = [
-    {
-<<<<<<< HEAD
-      id: "zion-analytics-pro",
+import ResponsiveGrid from '../components/ResponsiveGrid';      id: "zion-analytics-pro",
       name: "Zion Analytics Pro",
       description: "Advanced analytics platform with AI-powered insights and real-time reporting",
       features: [
@@ -102,7 +63,6 @@ const MicroSaasPage: React.FC = () => {
         "Customer segmentation",
         "Integration capabilities"
       ],
-<<<<<<< HEAD
       benefits: [
         "Increase sales by 35%",
         "Improve lead quality by 50%",
@@ -236,74 +196,11 @@ const MicroSaasPage: React.FC = () => {
       category: "Social Media",
       rating: 4.5,
       reviews: 1234,
-      link: "/zion-social-scheduler",
-=======
-      icon: <Users className="w-8 h-8" />,
-      href: "/zion-ai-crm-pro",
-      price: "$129/month",
-      featured: false
-    },
-    {
-      id: "zion-ai-marketing-automation-pro",
-      name: "Zion AI Marketing Automation Pro",
-      description: "Complete marketing automation platform with AI-driven campaign optimization",
-      features: [
-        "Email marketing automation",
-        "Social media scheduling",
-        "Lead nurturing workflows",
-        "A/B testing",
-        "Performance analytics"
-      ],
-      icon: <Globe className="w-8 h-8" />,
-      href: "/zion-ai-marketing-automation-pro",
-      price: "$199/month",
-      featured: false
-    },
-    {
-      id: "zion-ai-project-manager-pro",
-      name: "Zion AI Project Manager Pro",
-      description: "Smart project management tool with AI-powered resource allocation and timeline optimization",
-      features: [
-        "AI task prioritization",
-        "Resource optimization",
-        "Timeline forecasting",
-        "Team collaboration",
-        "Progress tracking"
-      ],
-      icon: <Award className="w-8 h-8" />,
-      href: "/zion-ai-project-manager-pro",
-      price: "$159/month",
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
+      link: "/zion-social-scheduler", cursor/website-audit-and-update-with-deployment-4146
       featured: false
     }
   ];
 
-<<<<<<< HEAD
-  const categories = [
-    { name: "All", count: microSaasServices.length, active: true },
-    { name: "Analytics", count: microSaasServices.filter(s => s.category === "Analytics").length, active: false },
-    { name: "Security", count: microSaasServices.filter(s => s.category === "Security").length, active: false },
-    { name: "Storage", count: microSaasServices.filter(s => s.category === "Storage").length, active: false },
-    { name: "Content", count: microSaasServices.filter(s => s.category === "Content").length, active: false },
-    { name: "Data", count: microSaasServices.filter(s => s.category === "Data").length, active: false },
-    { name: "Marketing", count: microSaasServices.filter(s => s.category === "Marketing").length, active: false },
-    { name: "Productivity", count: microSaasServices.filter(s => s.category === "Productivity").length, active: false },
-    { name: "CRM", count: microSaasServices.filter(s => s.category === "CRM").length, active: false },
-    { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
-    { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
-    { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
-    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
-    { name: "HR", count: microSaasServices.filter(s => s.category === "HR").length, active: false },
-    { name: "E-commerce", count: microSaasServices.filter(s => s.category === "E-commerce").length, active: false },
-    { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length, active: false },
-    { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
-    { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
-    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
-  ];
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
   const stats = [
     { label: "Active Users", value: "10,000+", icon: <Users className="w-6 h-6" /> },
     { label: "Uptime", value: "99.9%", icon: <Shield className="w-6 h-6" /> },
@@ -335,7 +232,6 @@ const MicroSaasPage: React.FC = () => {
       content: "Zion AI Project Manager Pro has streamlined our workflow. We're completing projects 40% faster now.",
       rating: 5,
       avatar: "ER"
-=======
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
@@ -370,11 +266,6 @@ const MicroSaasPage: React.FC = () => {
       features: ['AI content generation', 'Content calendar', 'Team collaboration'],
       price: '$39/month',
       featured: false
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-    }
-  ];
-<<<<<<< HEAD
-
   return (
     <>
       <Helmet>
@@ -392,16 +283,8 @@ const MicroSaasPage: React.FC = () => {
                 <Zap className="w-10 h-10 text-white" />
               </div>
             </div>
-<<<<<<< HEAD
           </div>
-        </div>
-=======
-import React from 'react';
-import { ArrowRight, CheckCircle, Star, Package, Shield, BarChart3, Cloud, Users, Zap, Mail } from 'lucide-react';
-=======
-import React from 'react';
-import { Zap, Shield, Cloud, BarChart3, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+        </div> cursor/analyze-improve-and-deploy-application-30da
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticButton from '../components/FuturisticButton';
@@ -629,7 +512,6 @@ const MicroSaasPage: React.FC = () => {
             >
               Schedule Demo
             </FuturisticButton>
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -655,119 +537,7 @@ const MicroSaasPage: React.FC = () => {
                 View Demo
               </Link>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
           </div>
-<<<<<<< HEAD
-        </ResponsiveContainer>
-      </section>
-
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <ResponsiveGrid className="grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <FuturisticCard key={index} className="text-center p-6">
-                <div className="text-blue-400 mb-4 flex justify-center">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Products Section */}
-      <section id="products" className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Micro SAAS Products
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose from our carefully crafted suite of business tools designed for modern enterprises
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasProducts.map((product) => (
-              <FuturisticCard key={product.id} className="p-6 hover:scale-105 transition-transform">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-blue-400">
-                    {product.icon}
-                  </div>
-                  {product.featured && (
-                    <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
-                  )}
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {product.name}
-                </h3>
-                
-                <p className="text-gray-300 mb-4">
-                  {product.description}
-                </p>
-                
-                <ul className="space-y-2 mb-6">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    {product.price}
-                  </span>
-                </div>
-                
-                <Link
-                  to={product.href}
-                  className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 inline" />
-                </Link>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Don't just take our word for it. See what our satisfied customers have to say about our micro SAAS solutions.
-            </p>
-          </div>
-
-          <ResponsiveGrid className="grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <FuturisticCard key={index} className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-=======
         {/* Products Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -826,28 +596,7 @@ const MicroSaasPage: React.FC = () => {
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-                  </div>
-                </div>
-                
-                <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 italic">
-                  "{testimonial.content}"
-                </p>
-              </FuturisticCard>
-            ))}
-          </ResponsiveGrid>
-        </ResponsiveContainer>
-      </section>
-
-<<<<<<< HEAD
-      {/* CTA Section */}
+                    </Link>      {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <FuturisticCard className="text-center p-8 md:p-12">
@@ -871,107 +620,16 @@ const MicroSaasPage: React.FC = () => {
                 className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
               >
                 Schedule a Demo
-              </FuturisticButton>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Micro SAAS?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Built with modern technology and designed for scalability
-              </p>
+              </FuturisticButton> cursor/analyze-improve-and-deploy-application-c573
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Lightning Fast</h3>
-                <p className="text-gray-300">
-                  Optimized for speed and performance, delivering instant results and seamless user experience.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Secure & Reliable</h3>
-                <p className="text-gray-300">
-                  Enterprise-grade security with 99.9% uptime guarantee and comprehensive data protection.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable</h3>
-                <p className="text-gray-300">
-                  Grows with your business, from startup to enterprise, with flexible pricing and features.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start your journey with our micro SAAS solutions today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-                >
-                  Get Started Now
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-                >
-                  View Pricing
-                </Link>
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-            </div>
-<<<<<<< HEAD
-          </div>
-        </section>
-      </div>
-    </>
-<<<<<<< HEAD
-=======
-=======
           </FuturisticCard>
-        </ResponsiveContainer>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
+        </ResponsiveContainer> cursor/website-audit-and-update-with-deployment-4146
       </section>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
         </div>
       </section>
     </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
   );
 };
 
 export default MicroSaasPage;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

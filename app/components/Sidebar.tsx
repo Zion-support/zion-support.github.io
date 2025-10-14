@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -25,12 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,121 +27,174 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
+  const location = useLocation();
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+
+  const toggleSection = useCallback((section: string) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(section)) {
+        newSet.delete(section);
+      } else {
+        newSet.add(section);
+      }
+      return newSet;
+    });
+  }, []);
+
+  const navigationItems = useMemo(() => [
+    {
+      title: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      title: 'Services',
+      href: '/services',
+      icon: Settings,
+      children: [
+        { title: 'AI Services', href: '/ai-services' },
+        { title: 'IT Services', href: '/services' },
+        { title: '5G Solutions', href: '/5g-solutions' },
+        { title: 'Micro SAAS', href: '/micro-saas' }
+      ]
+    },
+    {
+      title: 'About',
+      href: '/about',
+      icon: Users
+    },
+    {
+      title: 'Blog',
+      href: '/blog',
+      icon: BarChart3
+    },
+    {
+      title: 'Contact',
+      href: '/contact',
+      icon: Phone
+    }
+  ], []);
+
+  const isActive = useCallback((href: string) => {
+    return location.pathname === href;
+  }, [location.pathname]);
+
   if (!isOpen) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-  const mainNavItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
-    { name: 'Contact', href: '/contact', icon: Mail },
-  ];
-
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-  ];
-
-  if (!isOpen) return null;
-
-  return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
-      {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+      {/* Backdrop */}
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
         onClick={onClose}
       />
       
       {/* Sidebar */}
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="p-6">
+      <div className="fixed inset-y-0 left-0 w-80 bg-slate-900 border-r border-slate-700 z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
+        <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
+          <div className="flex items-center justify-between p-6 border-b border-slate-700">
+            <h2 className="text-xl font-bold text-white">Navigation</h2>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="p-2 rounded-lg hover:bg-slate-800 transition-colors"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 text-gray-400" />
             </button>
           </div>
 
-          {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-              >
-                <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{item.name}</span>
-              </Link>
-            ))}
-          </div>
-
-          {/* Services */}
-          <div className="mb-8">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Services</h3>
-            <div className="space-y-2">
-              {serviceItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-                >
-                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>{item.name}</span>
-                </Link>
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto p-6">
+            <ul className="space-y-2">
+              {navigationItems.map((item) => (
+                <li key={item.title}>
+                  {item.children ? (
+                    <div>
+                      <button
+                        onClick={() => toggleSection(item.title)}
+                        className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-800 transition-colors text-left"
+                      >
+                        <div className="flex items-center">
+                          <item.icon className="w-5 h-5 text-gray-400 mr-3" />
+                          <span className="text-white font-medium">{item.title}</span>
+                        </div>
+                        {expandedSections.has(item.title) ? (
+                          <ChevronDown className="w-4 h-4 text-gray-400" />
+                        ) : (
+                          <ChevronRight className="w-4 h-4 text-gray-400" />
+                        )}
+                      </button>
+                      
+                      {expandedSections.has(item.title) && (
+                        <ul className="ml-8 mt-2 space-y-1">
+                          {item.children.map((child) => (
+                            <li key={child.title}>
+                              <Link
+                                to={child.href}
+                                onClick={onClose}
+                                className={`block p-2 rounded-lg hover:bg-slate-800 transition-colors ${
+                                  isActive(child.href)
+                                    ? 'text-blue-400 bg-blue-900/20'
+                                    : 'text-gray-300'
+                                }`}
+                              >
+                                {child.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={onClose}
+                      className={`flex items-center p-3 rounded-lg hover:bg-slate-800 transition-colors ${
+                        isActive(item.href)
+                          ? 'text-blue-400 bg-blue-900/20'
+                          : 'text-gray-300'
+                      }`}
+                    >
+                      <item.icon className="w-5 h-5 mr-3" />
+                      <span className="font-medium">{item.title}</span>
+                    </Link>
+                  )}
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </nav>
 
-          {/* Contact Info */}
-          <div className="border-t border-gray-700 pt-6">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
-            <div className="space-y-3 px-4">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
+          {/* Footer */}
+          <div className="p-6 border-t border-slate-700">
+            <div className="space-y-4">
+              <div className="text-sm text-gray-400">
+                <p className="font-medium text-white mb-2">Contact Info</p>
+                <div className="space-y-2">
+                  <div className="flex items-center">
+                    <Phone className="w-4 h-4 mr-2" />
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="w-4 h-4 mr-2" />
+                    <span>info@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>New York, NY</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">+1 302 464 0950</span>
+              
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  onClick={onClose}
+                  className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
             </div>
           </div>
@@ -162,9 +204,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
