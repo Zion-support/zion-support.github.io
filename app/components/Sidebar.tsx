@@ -15,10 +15,10 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Home';, href: '/';, icon: Home ;},
-    { name: 'About';, href: '/about';, icon: Users ;},
-    { name: 'Services';, href: '/services';, icon: Settings ;},
-    { name: 'Contact';, href: '/contact';, icon: Mail ;},
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ];
 
   return (
@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden";
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}

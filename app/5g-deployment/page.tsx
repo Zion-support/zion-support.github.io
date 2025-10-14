@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 const FiveGDeploymentPage = () => {
   const services = [
     {
-      title: '5G Network Deployment';,
+      title: '5G Network Deployment',
       description: 'Complete 5G network infrastructure deployment and configuration.';
     },
     {
-      title: 'Security Implementation';,
+      title: 'Security Implementation',
       description: 'Advanced security measures for 5G network protection.';
     },
     {
-      title: 'Team Training';,
+      title: 'Team Training',
       description: 'Comprehensive training for your team on 5G deployment best practices.';
     }
   ]

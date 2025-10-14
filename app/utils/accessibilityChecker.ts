@@ -6,7 +6,7 @@ export const accessibilityChecker = {
     images.forEach((img) => {
       if (!img.getAttribute('alt')) {
         issues.push({
-          element: img as HTMLElement;,
+          element: img as HTMLElement,
           issue: 'Missing alt text';
         })
       }
@@ -24,7 +24,7 @@ export const accessibilityChecker = {
       const currentLevel = parseInt(heading.tagName.charAt(1))
       if (currentLevel > previousLevel + 1) {
         issues.push({
-          element: heading as HTMLElement;,
+          element: heading as HTMLElement,
           issue: 'Heading level skipped';
         })
       }

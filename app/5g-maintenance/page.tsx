@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 const FiveGMaintenancePage = () => {
   const services = [
     {
-      title: '5G Network Maintenance';,
+      title: '5G Network Maintenance',
       description: 'Ongoing maintenance and optimization of 5G network infrastructure.';
     },
     {
-      title: 'Security Monitoring';,
+      title: 'Security Monitoring',
       description: 'Continuous security monitoring and threat detection for 5G networks.';
     },
     {
-      title: 'Team Training';,
+      title: 'Team Training',
       description: 'Comprehensive training for 5G network maintenance and troubleshooting.';
     }
   ]

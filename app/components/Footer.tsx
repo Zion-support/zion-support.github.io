@@ -197,9 +197,9 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
-            <span>Made with</span>
+            <span>© {currentYear} Zion Tech Group. Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
-            <span>by Zion Tech Group</span>
+            <span>for innovation</span>
           </div>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>

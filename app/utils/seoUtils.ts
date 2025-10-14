@@ -27,12 +27,12 @@ export const seoUtils = {
   
   generateStructuredData: (data: any) => {
     return {
-      '@context': 'https: //schema.org';,
+      '@context': 'https: //schema.org',
       '@type': 'Organization',
-      name: 'Zion Tech Group';,
-      url: 'https://ziontechgroup.com';,
-      logo: 'https://ziontechgroup.com/logo.png';,
-      description: 'Leading technology solutions provider';,
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading technology solutions provider',
       ...data
     }
   }

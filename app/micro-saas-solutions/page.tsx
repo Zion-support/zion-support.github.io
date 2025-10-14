@@ -926,7 +926,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   });
 
   return (
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | AI-Powered Business Tools</title>
@@ -971,7 +970,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
               </p>
               <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
@@ -1258,8 +1256,4 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default MicroSaasSolutionsPage;
-=======
 export default MicroSaaSSolutionsPage;
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f

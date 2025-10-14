@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom';
 const FiveGMigrationPage = () => {
   const services = [
     {
-      title: '5G Migration Planning';,
+      title: '5G Migration Planning',
       description: 'Strategic planning for migrating from legacy networks to 5G.';
     },
     {
-      title: 'Security Migration';,
+      title: 'Security Migration',
       description: 'Secure migration of security protocols to 5G infrastructure.';
     },
     {
-      title: 'Team Training';,
+      title: 'Team Training',
       description: 'Comprehensive training for 5G migration and new technology adoption.';
     }
   ]

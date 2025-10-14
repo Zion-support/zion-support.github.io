@@ -172,13 +172,11 @@ export default function AISolutionsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, predictive analytics, and automation services." />
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI automation, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -208,14 +206,6 @@ export default function AISolutionsPage() {
             </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
-
-export default AiSolutionsPage;
-=======
-
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 text-center">
@@ -300,4 +290,5 @@ export default AiSolutionsPage;
     </div>
   );
 }
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
+
+export default AiSolutionsPage;
