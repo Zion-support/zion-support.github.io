@@ -1,77 +1,52 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Helmet } from 'react-helmet-async';
 
-const FiveGMigrationPage = () => {
-  const services = [
-    {
-      title: '5G Migration Planning',
-      description: 'Strategic planning for migrating from legacy networks to 5G.',
-    },
-    {
-      title: 'Security Migration',
-      description: 'Secure migration of security protocols to 5G infrastructure.',
-    },
-    {
-      title: 'Team Training',
-      description: 'Comprehensive training for 5G migration and new technology adoption.',
-    }
-  ]
-
+const FiveGMigrationPage: React.FC = () => {
   return (
     <>
-      <div className="min-h-screenbg-gray-50"></div>
-      <EnhancedSEO 
-title="5G Migration Services - Zion Tech Group"
-        description="Expert 5G migration services to transition your business to next-generation wireless technology."
-      />
-      
-      <div className="containermx-auto px-4py-16"></div>
-        <div className="text-centermb-16"></div>
-          <h1 className="text-4xlfont-bold text-gray-900mb-6">
-            5G Migration Services
-          </h1>
-          <p className="text-xltext-gray-600 max-w-3xlmx-auto">
-            Migrate to 5G technology with minimal disruption using our proven migration strategies.
-          </p>
-        </div>
-
-        <div className="gridmd:grid-cols-3 gap-8mb-16"></div>
-          {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lg shadow-lgp-8"></div>
-              <div className="flexitems-center mb-4"></div>
-                <CheckCircle className="h-8w-8 text-blue-600mr-3" />
-                <h3 className="text-xlfont-semibold text-gray-900">
-                  {service.title}
+      <Helmet>
+        <title>5G Migration</title>
+        <meta name="description" content="Professional 5G Migration solutions and services" />
+        <meta name="keywords" content="5G, migration" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5G Migration</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional 5g migration solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
                 </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
               </div>
-              <p className="text-gray-600mb-6">
-                {service.description}
-              </p>
-              <Link 
-                to="/contact" 
-                className="inline-flexitems-center text-blue-600hover:text-blue-800font-medium"
-              >
-                Learn More
-                <ArrowRight className="ml-2h-4 w-4" />
-              </Link>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
             </div>
-          ))}
-        </div>
-
-        <div className="text-center"></div>
-          <Link 
-            to="/contact"
-            className="inline-flexitems-center px-8py-3borderborder-transparenttext-basefont-mediumrounded-mdtext-whitebg-blue-600hover:bg-blue-700"
-          >
-            Get Started Today
-            <ArrowRight className="ml-2h-5 w-5" />
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
-  )
-  };
+    </>
+  );
+};
 
-export default FiveGMigrationPage
+export default FiveGMigrationPage;

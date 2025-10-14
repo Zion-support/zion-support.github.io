@@ -1,150 +1,47 @@
-import { useEffect } from 'react';
+import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number
-  }
-
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart?: number
-  }
-
-interface LayoutShift extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number
-  }
-
-const PerformanceMonitor = () => {
-  useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    const metrics: PerformanceMetrics = {};
-
-    // Measure Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime
-  });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const fidEntry = entry as PerformanceEventTiming;
-        if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime
-  }
-      })
-  });
-    fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        const layoutShiftEntry = entry as LayoutShift;
-        if (!layoutShiftEntry.hadRecentInput) {
-          clsValue += layoutShiftEntry.value
-  }
-      });
-      metrics.cls = clsValue
-  });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    // Measure First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime
-  }
-      })
-  });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
-  }
-
-    // Send metrics after page load
-    const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) {
-        // In a real application, you would send these metrics to your analytics service
-        console.log('Performance Metrics: ', metrics)
-  }
-    };
-
-    // Send metrics when page is about to unload
-    window.addEventListener('beforeunload', sendMetrics);
-
-    // Cleanup observers
-    return () => {
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics)
-  }
-  }, []);
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null
-  }
-
-  // Development mode: show performance metrics
-  const metrics: PerformanceMetrics = {};
-
-  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
-    if (!value) return 'text-gray-500';
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500'
-  };
-
+const ComponentsPage: React.FC = () => {
   return (
     <>
-      <div className="fixed bottom-4right-4bg-blackbg-opacity-75text-whitep-4rounded-lgtext-xsfont-mono">
-        <div className="font-bold mb-2">Performance Metrics</div>
-        <div className="space-y-1">
-          <div className="flex justify-between">
-            <span>FCP: </span>
-              <span className={getScoreColor(metrics.fcp, { good: 1-80-0, poor: 3-00-0 })}>
-                {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
-              </span>
+      <Helmet>
+        <title>Components</title>
+        <meta name="description" content="Professional components solutions and services" />
+        <meta name="keywords" content="components" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional components solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
             </div>
-            <div className="flex justify-between">
-              <span>LCP: </span>
-              <span className={getScoreColor(metrics.lcp, { good: 2-50-0, poor: 4-00-0 })}>
-              {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>FID: </span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>CLS: </span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-            </span>
-          </div>
-          <div className="flex justify-between">
-            <span>TTFB: </span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1-80-0 })}>
-              {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
-            </span>
           </div>
         </div>
       </div>
@@ -152,4 +49,4 @@ const PerformanceMonitor = () => {
   );
 };
 
-export default PerformanceMonitor;
+export default ComponentsPage;

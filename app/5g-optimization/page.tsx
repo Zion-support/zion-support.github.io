@@ -1,114 +1,52 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Helmet } from 'react-helmet-async';
 
 const FiveGOptimizationPage: React.FC = () => {
   return (
     <>
-      <div className="min-h-screenbg-gray-50"></div>
-      <EnhancedSEO 
-        title="5G Optimization Services | Zion Tech Group"
-        description="Expert 5G network optimization services to maximize performance, efficiency, and cost-effectiveness."
-        keywords="5G optimization, network optimization, performance tuning, 5G efficiency"
-      />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-rfrom-emerald-900to-teal-900text-whitepy-20">
-        <div className="containermx-autopx-4"></div>
-          <div className="max-w-4xlmx-autotext-center"></div>
-            <h1 className="text-4xlmd:text-6xlfont-boldmb-6">
-              5G Optimization Services
-            </h1>
-            <p className="text-xlmd:text-2xlmb-8text-emerald-100">
-              Maximize your 5G network performance with our expert optimization services
+      <Helmet>
+        <title>5G Optimization</title>
+        <meta name="description" content="Professional 5G Optimization solutions and services" />
+        <meta name="keywords" content="5G, optimization" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5G Optimization</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional 5g optimization solutions and services
             </p>
-            <Link 
-              to="/contact" 
-              className="inline-flex items-centerbg-emerald-600hover:bg-emerald-700text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
-            >
-              Optimize Now
-              <ArrowRight className="ml-2w-5h-5" />
-            </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
             </div>
-        </div>
           </div>
         </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20">
-        <div className="containermx-autopx-4"></div>
-          <div className="text-centermb-16"></div>
-            <h2 className="text-3xlfont-boldtext-gray-900mb-6">
-              Our 5G Optimization Services
-            </h2>
-            <p className="text-xltext-gray-600 max-w-3xlmx-auto">
-              Comprehensive optimization solutions to enhance your 5G network performance
-            </p>
-            </div>
-        </div>
-
-          <div className="gridmd:grid-cols-3gap-8"></div>
-            <div className="bg-whitep-8rounded-lgshadow-lg"></div>
-              <CheckCircle className="w-12h-12 text-emerald-600mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-900mb-4">
-                Network Performance Tuning
-              </h3>
-              <p className="text-gray-600">
-                Advanced performance optimization to maximize throughput and minimize latency
-              </p>
-              </div>
-        </div>
-
-            <div className="bg-whitep-8rounded-lgshadow-lg"></div>
-              <CheckCircle className="w-12h-12 text-emerald-600mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-900mb-4">
-                Coverage Optimization
-              </h3>
-              <p className="text-gray-600">
-                Strategic antenna placement and power optimization for maximum coverage
-              </p>
-              </div>
-        </div>
-
-            <div className="bg-whitep-8rounded-lgshadow-lg"></div>
-              <CheckCircle className="w-12h-12 text-emerald-600mb-4" />
-              <h3 className="text-xlfont-semiboldtext-gray-900mb-4">
-                Capacity Planning
-              </h3>
-              <p className="text-gray-600">
-                Intelligent capacity management to handle peak loads efficiently
-              </p>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-gray-900text-whitepy-20">
-        <div className="containermx-autopx-4text-center"></div>
-          <h2 className="text-3xlfont-boldmb-6">
-            Ready to Optimize Your 5G Network?
-          </h2>
-          <p className="text-xlmb-8text-gray-300">
-            Contact us today for a comprehensive 5G optimization assessment
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-centerbg-emerald-600hover:bg-emerald-700text-whitefont-semiboldpy-4px-8rounded-lgtransition-colors"
-          >
-            Get Started
-            <ArrowRight className="ml-2w-5h-5" />
-          </Link>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-  };
+      </div>
+    </>
+  );
+};
 
 export default FiveGOptimizationPage;

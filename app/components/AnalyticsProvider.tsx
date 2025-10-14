@@ -1,21 +1,12 @@
-'use client';
-
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+  identifyUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -23,35 +14,46 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
+    if (process.env.NODE_ENV === 'development') => {
+      console.warn('Event tracked: ', eventName, properties);
     }
-    // TODO: Implement actual analytics tracking
+    // Add your analytics tracking logic here
   };
 
-  const trackPageView = (pageName: string, pagePath: string) => {
+  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
+      console.warn('Page view tracked: ', pageName, properties);
     }
-    // TODO: Implement actual page view tracking
+    // Add your page view tracking logic here
   };
 
-  useEffect(() => {
-    // Initialize analytics
+  const identifyUser = (userId: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics initialized');
+      console.warn('User identified: ', userId, properties);
     }
-  }, []);
+    // Add your user identification logic here
+  };
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
+    identifyUser,
   };
 
   return (
-    <>
-      <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) => {
+    throw new Error(',useAnalytics must be used within an AnalyticsProvider');
+  };
+
+  return context;
+};
+
+export default AnalyticsProvider;

@@ -5,36 +5,36 @@ const FiveGEdgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5G Edge Computing - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G edge computing solutions and services" />
-        <meta name="keywords" content="5g, edge, computing" />
+        <title>5G Edge Computing</title>
+        <meta name="description" content="Cutting-edge 5G edge computing solutions." />
+        <meta name="keywords" content="5G, edge, computing, solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
-        <div className="containermx-auto px-4py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xlfont-bold text-whitemb-8">5G Edge Computing</h1>
-            <p className="text-xltext-gray-300 mb-8">
-              Professional 5G edge computing solutions and services
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5G Edge Computing</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Cutting-edge 5G edge computing solutions.
             </p>
-            <div className="gridmd:grid-cols-2 lg:grid-cols-3gap-8mt-12"></div>
-              <div className="bg-blue-50border border-blue-200rounded-lgp-6"></div>
-                <h3 className="text-lgfont-semibold text-blue-900mb-2">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-              <div className="bg-green-50border border-green-200rounded-lgp-6"></div>
-                <h3 className="text-lgfont-semibold text-green-900mb-2">
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
                   Custom Implementation
                 </h3>
                 <p className="text-green-700">
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50border border-purple-200rounded-lgp-6"></div>
-                <h3 className="text-lgfont-semibold text-purple-900mb-2">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support
                 </h3>
                 <p className="text-purple-700">
@@ -46,6 +46,7 @@ const FiveGEdgeComputingPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-  }
+  );
+};
+
 export default FiveGEdgeComputingPage;

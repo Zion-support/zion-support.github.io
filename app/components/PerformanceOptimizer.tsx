@@ -6,8 +6,8 @@ const PerformanceOptimizer: React.FC = () => {
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
-        if (!(img as any).loading) {
-          (img as any).loading = 'lazy';
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
       });
     };
@@ -29,7 +29,7 @@ const PerformanceOptimizer: React.FC = () => {
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       ];
 
       resourceHints.forEach((hint) => {
@@ -45,7 +45,8 @@ const PerformanceOptimizer: React.FC = () => {
     optimizeFonts();
     optimizeResources();
 
-    // Cleanup function return() {
+    // Cleanup function
+    return () => {
       // Cleanup if needed
     };
   }, []);

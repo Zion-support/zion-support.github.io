@@ -1,95 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface LoadingState {
-  isLoading: boolean;
-  progress: number;
-  message: string
-  }
-
-const AdvancedLoadingStates: React.FC = () => {
-  const [loadingState, setLoadingState] = useState<LoadingState>({
-    isLoading: false,
-    progress: 0,
-    message: 'Loading...',
-  });
-
-  useEffect(() => {
-    // Simulate loading states for different scenarios
-    const simulateLoading = () => {
-      setLoadingState({
-        isLoading: true,
-        progress: 0,
-        message: 'Initializing...',
-      });
-
-      const interval = setInterval(() => {
-        setLoadingState(prev => {
-          const newProgress = prev.progress + Math.random() * 20;
-          let message = 'Loading...';
-
-          if (newProgress < 30)  {
-            message = 'Loading resources...'
-  } else if (newProgress < 60)  {
-            message = 'Processing data...'
-  } else if (newProgress < 90)  {
-            message = 'Finalizing...'
-  } else {
-            message = 'Almost done...'
-  }
-
-          if (newProgress >= 100)  {
-            clearInterval(interval);
-            return {
-              isLoading: false,
-              progress: 100,
-              message: 'Complete!',
-            }
-  }
-
-          return {
-            ...prev,
-            progress: Math.min(newProgress, 100),
-            message
-          }
-  })
-  }, 200);
-
-      return () => clearInterval(interval)
-  };
-
-    // Only show loading in development
-    if (process.env.NODE_ENV === 'development')  {
-      const timeout = setTimeout(simulateLoading, 1-00-0);
-      return () => clearTimeout(timeout)
-  }
-  }, []);
-
-  if (!loadingState.isLoading)  {
-    return null
-  }
-
+const ComponentsPage: React.FC = () => {
   return (
     <>
-      <div className="fixedinset-0bg-blackbg-opacity-50flexitems-centerjustify-centerz-50"></div>
-      <div className="bg-whiterounded-lgp-8max-w-mdw-fullmx-4"></div>
-        <div className="text-center"></div>
-          <div className="animate-spinrounded-fullh-12w-12border-b-2border-blue-600mx-automb-4"></div>
-          <h3 className="text-lgfont-semiboldtext-gray-900mb-2">
-            {loadingState.message}
-          </h3>
-          <div className="w-fullbg-gray-200rounded-fullh-2mb-4"></div>
-            <div
-              className="bg-blue-600h-2rounded-fulltransition-all duration-300"
-              style={{ width: `${loadingState.progress}%` }}
-            ></div>
+      <Helmet>
+        <title>Components</title>
+        <meta name="description" content="Professional components solutions and services" />
+        <meta name="keywords" content="components" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional components solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-smtext-gray-600">
-            {Math.round(loadingState.progress)}% complete
-          </p>
         </div>
       </div>
-    </div>
-  )
-  };
+    </>
+  );
+};
 
-export default AdvancedLoadingStates;
+export default ComponentsPage;

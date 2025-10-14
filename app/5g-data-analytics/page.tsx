@@ -1,122 +1,52 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const FiveGDataAnalyticsPage = () => {
-  const services = [
-    {
-      icon: <CheckCircle className="w-8h-8" />,
-      title: 'Advanced Analytics',
-      description: 'Cutting-edge 5G data analytics for maximum efficiency',
-    },
-    {
-      icon: <Shield className="w-8h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime',
-    },
-    {
-      icon: <Users className="w-8h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists',
-    }
-  ];
-
+const FiveGDataAnalyticsPage: React.FC = () => {
   return (
     <>
-      <EnhancedSEO 
-        title="5G Data Analytics - Zion Tech Group"
-        description="Professional 5G data analytics services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="5G, data analytics, business solutions, technology services, professional services"
-      />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900"></div>
-        {/* Hero Section */}
-        <section className="relativepy-20 px-4sm:px-6lg:px-8">
-          <div className="max-w-7xlmx-auto text-center"></div>
-            <h1 className="text-4xlmd:text-6xl font-boldtext-whitemb-6">
-              5G Data Analytics
-              <span className="blockbg-gradient-to-r from-cyan-400to-purple-400bg-clip-texttext-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xltext-gray-300mb-8max-w-3xlmx-auto">
-              Professional 5G data analytics services designed to help your business succeed and grow.
+      <Helmet>
+        <title>5G Data Analytics</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for maximum efficiency." />
+        <meta name="keywords" content="5G, data, analytics, solutions" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">5G Data Analytics</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Advanced 5G data analytics solutions for maximum efficiency.
             </p>
-            <div className="flexflex-col sm:flex-rowgap-4justify-center"></div>
-              <Link
-                to="/contact"
-                className="inline-flexitems-center px-8py-4bg-gradient-to-rfrom-cyan-500to-purple-600text-whitefont-semiboldrounded-lghover:from-cyan-600hover:to-purple-700transition-allduration-300group"
-              >
-                Get Started
-                <ArrowRight className="ml-2w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flexitems-center px-8py-4borderborder-cyan-400text-cyan-400font-semiboldrounded-lghover:bg-cyan-400/10transition-allduration-300"
-              >
-                View Demo
-              </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4sm:px-6lg:px-8">
-          <div className="max-w-7xlmx-auto"></div>
-            <div className="text-centermb-16"></div>
-              <h2 className="text-3xlmd:text-4xl font-boldtext-whitemb-4">
-                Why Choose Our 5G Data Analytics Services?
-              </h2>
-              <p className="text-xltext-gray-300max-w-2xlmx-auto">
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
-            <div className="gridgrid-cols-1 md:grid-cols-3gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16bg-gradient-to-rfrom-cyan-500to-purple-600rounded-fullflexitems-centerjustify-centermx-automb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xlfont-semibold text-whitemb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4sm:px-6lg:px-8bg-slate-800/30">
-          <div className="max-w-4xlmx-auto text-center"></div>
-            <h2 className="text-3xlmd:text-4xl font-boldtext-whitemb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xltext-gray-300mb-8">
-              Let&apos;s discuss how our 5G data analytics services can help your business succeed.
-            </p>
-            <div className="flexflex-col sm:flex-rowgap-4justify-center"></div>
-              <Link
-                to="/contact"
-                className="inline-flexitems-center px-8py-4bg-gradient-to-rfrom-cyan-500to-purple-600text-whitefont-semiboldrounded-lghover:from-cyan-600hover:to-purple-700transition-allduration-300group"
-              >
-                Contact Us
-                <ArrowRight className="ml-2w-5 h-5group-hover:translate-x-1transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flexitems-center px-8py-4borderborder-cyan-400text-cyan-400font-semiboldrounded-lghover:bg-cyan-400/10transition-allduration-300"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
-  )
-  };
+  );
+};
 
 export default FiveGDataAnalyticsPage;
