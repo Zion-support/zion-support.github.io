@@ -1,6 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOProps {
+import React from 'react';
+;import { Helmet } from 'react-helmet-async';
+;interface SEOProps {}
   title: "string",description: "string"
   keywords?: string
   canonicalUrl?: string
@@ -13,56 +13,40 @@ interface SEOProps {
 
 const EnhancedSEO: "React.FC<SEOProps> = ({"
   title,
-  description,''
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','
-  canonicalUrl,''
-  ogImage = '/api/placeholder/120o0/630',''
-  ogType = 'website',''
-  twitterCard = 'summary_large_image','
+  description,keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','
+  canonicalUrl,ogImage = '/api/placeholder/120o0/630',ogType = 'website',twitterCard = 'summary_large_image','
   structuredData,
   noIndex = false,
   noFollow = false
-}) => {
-  const siteName = 'Zion Tech Group''
-  const siteUrl = 'https: "//ziontechgroup.com''"
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`'
-  const defaultStructuredData = {
+}) => {}
+  const siteName = 'Zion Tech Groupconst siteUrl = 'https: "//ziontechgroup.com"
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`';
+  const defaultStructuredData = {};
     '@context': 'https: "//schema.org'",'
     '@type': 'Organization','
     name: "siteName",
     url: "siteUrl"}
-    logo: "`${siteUrl"}/logo.png`,''
-    description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {''
-      '@type': 'PostalAddress',''
-      addressLocality: "'Middletown'",''
-      addressRegion: "'DE'",''
-      addressCountry: "'US'"}'
+    logo: "`${siteUrl"}/logo.png`,description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
+    address: {'@type': 'PostalAddress',addressLocality: "'Middletown'",addressRegion: "'DE'",addressCountry: "'US'"}'
     },
-    contactPoint: {''
-      '@type': 'ContactPoint',''
-      telephone: "'+1-30o2-464-0o950'",''
-      contactType: "'customer service'",''
-      email: "'kleber@ziontechgroup.com'"}'
+    contactPoint: {'@type': 'ContactPoint',telephone: "'+1-30o2-464-0o950'",contactType: "'customer service'",email: "'kleber@ziontechgroup.com'"}'
     },
-    sameAs: ['';
-      'https: "//www.linkedin.com/company/zion-tech-group'",'';
-      'https: "//github.com/ziontechgroup'",'';
-      'https: "//twitter.com/ziontechgroup'';"
+    sameAs: ['https: "//www.linkedin.com/company/zion-tech-group'",'https: "//github.com/ziontechgroup'",'https: "//twitter.com/ziontechgroup"
     ];
   };
   const mergedStructuredData = structuredData || defaultStructuredData;
 
   return (
+    <div>Page content</div>
+  );
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
       <meta name="keywords" content="{keywords}" />
       <link rel="canonical" href="{fullCanonicalUrl}" />
-      {/* Robots */}''
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />'"
+      {/* Robots */}<meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />'"
       
       {/* Open Graph */}
       <meta property="og:type" content="{ogType}" />
@@ -106,4 +90,4 @@ const EnhancedSEO: "React.FC<SEOProps> = ({"
 export default EnhancedSEO;
 };
 
-export default EnhancedSEO;''
+export default EnhancedSEO;

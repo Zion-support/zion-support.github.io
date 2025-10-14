@@ -1,39 +1,31 @@
-import React from 'react'
-import { useEffect, Node } from 'react'
-interface PerformanceOptimizerProps {
+'use client';
+import React from 'react';
+;import { useEffect, Node } from 'react';
+;interface PerformanceOptimizerProps {}
   children: "Node"}
 
-const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {
-  useEffect(() => {
-    // Performance optimization code''
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img')'
-      images.forEach((img) => {
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {}
+  useEffect(() => {}
+    // Performance optimization codeconst optimizeImages = () => {}
+      const images = document.querySelectorAll('img')';
+      images.forEach((img) => {;
         if (!img.hasAttribute('loading')) {';
           img.setAttribute('loading', 'lazy');
         }
       });
     }
     const optimizeFonts = () => {;
-      // Preload critical fonts;''
-      const link = document.createElement('link');''
-      link.rel = 'preload';''
-      link.href = '/fonts/inter.woff2';''
-      link.as = 'font';''
-      link.type = 'font/woff2';''
-      link.crossOrigin = 'anonymous';
+      // Preload critical fonts;const link = document.createElement('link');link.rel = 'preload';link.href = '/fonts/inter.woff2';link.as = 'font';link.type = 'font/woff2';link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     }
-    const optimizeResources = () => {
+    const optimizeResources = () => {}
       // Preload critical resources
-      const criticalResources = ['/css/critical.css',''
-        '/js/critical.js'''
-      ]
-      criticalResources.forEach((resource) => {
+      const criticalResources = ['/css/critical.css','/js/critical.js'
+      ];
+      criticalResources.forEach((resource) => {;
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;''
-        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        link.href = resource;link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link);}
       });
     }
@@ -43,7 +35,7 @@ const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}
     optimizeResources();
 
     // Cleanup function;
-    return () => {
+    return () => {}
       // Cleanup if needed;
     }
   }, []);
@@ -58,4 +50,4 @@ export default PerformanceOptimizer;
   return <>{children}</>
 };
 
-export default PerformanceOptimizer;''
+export default PerformanceOptimizer;

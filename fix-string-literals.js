@@ -4,7 +4,7 @@ import fs from 'fs';
 import { glob } from 'glob';
 
 // Function to fix string literal issues
-function fixStringLiterals(content) {
+function fixStringLiterals(content) {}
   let fixed = content;
   
   // Fix malformed string literals with extra quotes
@@ -29,35 +29,35 @@ function fixStringLiterals(content) {
 }
 
 // Function to process a single file
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     const content = fs.readFileSync(filePath, 'utf8');
     const fixed = fixStringLiterals(content);
     
-    if (content !== fixed) {
+    if (content !== fixed) {}
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
-  } catch (error) {
+  } catch (error) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main function
-async function main() {
-  const patterns = [
-    'api/**/*.js'
+async function main() {}
+  const patterns = [;
+    'api/**/*.js';
   ];
   
   let totalFixed = 0;
   
-  for (const pattern of patterns) {
+  for (const pattern of patterns) {}
     const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (processFile(file)) {
+    for (const file of files) {}
+      if (processFile(file)) {}
         totalFixed++;
       }
     }
@@ -66,7 +66,7 @@ async function main() {
   console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {}
   main();
 }
 

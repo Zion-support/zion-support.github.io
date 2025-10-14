@@ -1,18 +1,34 @@
+'use client';
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-export default function 5GSolutionsPage() {
-
+export default function 5GSolutionsPage() {}
   return (
-    <>
+    <div>Page content</div>
+  );
+}
+  return (
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>5GSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." />
       </Helmet>
       
       <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
           <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
               5GSolutionsPage
             </h1>
@@ -25,16 +41,41 @@ export default function 5GSolutionsPage() {
         {/* Content Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Professional Service</h3>
                 <p className="text-gray-60o0">High-quality professional services tailored to your needs.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-4">Expert Team</h3>
                 <p className="text-gray-60o0">Experienced professionals with deep industry knowledge.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h3 className="text-2xl font-bold text-gray-90o0 mb-4">24/7 Support</h3>
                 <p className="text-gray-60o0">Round-the-clock support to ensure your success.</p>
               </div>
@@ -45,6 +86,11 @@ export default function 5GSolutionsPage() {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-90o0">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>

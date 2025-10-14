@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+export default {}
   content: [
     "./index.html",
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -12,8 +12,7 @@ export default {
   },0: '#1d4ed8',
         },
       },
-      fontFamily: {
-
+      fontFamily: {}
         san
   },s: ['Inter', 'system-ui', 'sans-serif'],
       },

@@ -1,5 +1,5 @@
-#!/usr/bin/env node; import fs from 'fs'; import path from 'path'; // Function to fix merge conflicts in a file; function fixMergeConflicts(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); // Check if file has merge conflicts; if (!content.includes('content = content.replace(/\s*\n?/g, ''); content = content.replace( /'
-) // Clean up any remaining conflict markers); content = content.replace(/ content = content.replace(/\s*\n?/g, ''); content = content.replace( /'
+#!/usr/bin/env node; import fs from 'fs'; import path from 'path'; // Function to fix merge conflicts in a file; function fixMergeConflicts(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); // Check if file has merge conflicts; if (!content.includes('content = content.replace(/\s*\n?/g, ); content = content.replace( /'
+) // Clean up any remaining conflict markers); content = content.replace(/ content = content.replace(/\s*\n?/g, ); content = content.replace( /'
 ) // Clean up multiple empty lines); content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Write the cleaned content back; fs.writeFileSync(filePath, content, 'utf8'); return true; } } catch (error) {}'
 } console.error(`Error fixing ${filePath}:`, error.message);`;``
 return false; }

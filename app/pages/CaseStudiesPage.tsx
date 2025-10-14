@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;'
-const CaseStudiesPage: "React.FC = () => {"
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;';
+;const CaseStudiesPage: "React.FC = () => {"
   const caseStudies = [{;
       title: "'E-commerce Platform AI Optimization'",';'
       client: "'TechRetail Inc.'",';'
@@ -15,7 +16,7 @@ const CaseStudiesPage: "React.FC = () => {"
       ],
       description: "'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization", resulting in significant improvements in conversion rates and customer satisfaction.';'
     },
-    {
+    {}
       title: "'Manufacturing Process Automation'",';'
       client: "'AutoParts Manufacturing'",';'
       industry: "'Manufacturing'",';'
@@ -26,9 +27,9 @@ const CaseStudiesPage: "React.FC = () => {"
         { metric: "'Cost Savings'", value: "'$2.5M/year'", icon: "DollarSign"},';'
         { metric: "'Implementation Time'", value: "'4 months'", icon: "Clock"}';'
       ],
-      description: "'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line", dramatically reducing defects while increasing throughput.'';'
+      description: "'Our AI-powered quality control system revolutionized AutoParts Manufacturing\'s production line", dramatically reducing defects while increasing throughput.'
     },
-    {
+    {}
       title: "'Healthcare Data Analytics Platform'",';'
       client: "'MediCare Systems'",';'
       industry: "'Healthcare'",';'
@@ -41,7 +42,7 @@ const CaseStudiesPage: "React.FC = () => {"
       ],
       description: "'MediCare Systems now leverages our advanced analytics platform to provide better patient care through data-driven insights and predictive modeling.';'"
     },
-    {
+    {}
       title: "'Financial Services Cloud Migration'",';'
       client: "'SecureBank Ltd.'",';'
       industry: "'Financial Services'",';'
@@ -57,15 +58,34 @@ const CaseStudiesPage: "React.FC = () => {"
   ];
 const CaseStudiesPage: "React.FC = () => {"
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-violet-90o0 to-slate-90o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
         <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-5xl font-bold text-white mb-6">
             Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-40o0 to-purple-40o0">Stories</span>
           </h1>
@@ -76,38 +96,95 @@ const CaseStudiesPage: "React.FC = () => {"
         </div>
         {/* Case Studies Grid */}
         <div className="space-y-12">
-          {caseStudies.map((study, _index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+          {caseStudies.map((study, _index) => ()
             <div key={_index} className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="grid lg:grid-cols-2 gap-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 {/* Content */}
                 <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="flex items-center mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <span className="bg-gradient-to-r from-violet-50o0 to-purple-50o0 text-white px-3 py-1 rounded-full text-sm font-medium mr-4">
                       {study.industry}
                     </span>
                     <h3 className="text-2xl font-bold text-white">{study.title}</h3>
                   </div>
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-lg font-semibold text-white mb-2">Client: {study.client}</h4>
                     <p className="text-gray-30o0 mb-4">{study.description}</p>
                   </div>
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-30o0">{study.challenge}</p>
                   </div>
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                     <p className="text-gray-30o0">{study.solution}</p>
                   </div>
                 </div>
                 {/* Results */}
                 <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <h4 className="text-lg font-semibold text-white mb-4">Results</h4>
                   <div className="grid grid-cols-2 gap-4">
-                    {study.results.map((result, resultIndex) => {
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                    {study.results.map((result, resultIndex) => {}
                       const Icon = result.icon;
                       return (
+    <div>Page content</div>
+  );
                         <div key={resultIndex} className="bg-white"/5 rounded-lg p-4 text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                           <Icon className="w-8 h-8 text-violet-40o0 mx-auto mb-2" />
                           <div className="text-2xl font-bold text-white mb-1">{result.value}</div>
                           <div className="text-sm text-gray-40o0">{result.metric}</div>
@@ -122,12 +199,27 @@ const CaseStudiesPage: "React.FC = () => {"
         </div>
         {/* CTA Section */}
         <div className="text-center mt-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Create Your Success Story?</h2>
             <p className="text-gray-30o0 mb-6">
               Let us help you achieve similar results with our proven AI and IT solutions.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <button className="bg-gradient-to-r from-violet-50o0 to-purple-50o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-violet-60o0 hove,r:to-purple-60o0 transition-all duration-30o0 flex items-center justify-center">
                 Start Your Project;
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -140,14 +232,26 @@ const CaseStudiesPage: "React.FC = () => {"
 
 const CaseStudiesPage: "React.FC = () => {"
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>CaseStudiesPage - Zion Tech Group</title>
         <meta name="description" content="CaseStudiesPage - Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold mb-4">CaseStudiesPage</h1>
           <p className="text-gray-30o0">This page is under construction.</p>
         </div>

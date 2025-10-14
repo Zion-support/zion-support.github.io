@@ -1,15 +1,36 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function AiChatbotBuilder() {
-
+'use client';
+import React from 'react';
+;import { Helmet } from 'react-helmet-async';
+;export default function AiChatbotBuilder() {}
   return (
+    <div>Page content</div>
+  );
+}
+  return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
+      <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>;
+        <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>;
           <h1 className="text-4xl font-bold text-gray-90o0 mb-4">;
             AI Chatbot Builder;
           </h1>
@@ -18,7 +39,17 @@ export default function AiChatbotBuilder() {
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="bg-white rounded-lg shadow-md p-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-2xl font-semibold text-gray-90o0 mb-4">Coming Soon</h2>
             <p className="text-gray-60o0">
               This page is under development. Please check back later for updates.;
@@ -32,4 +63,3 @@ export default function AiChatbotBuilder() {
             </p></div></div></div></div>
   );}
 }
-''

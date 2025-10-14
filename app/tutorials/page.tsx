@@ -1,14 +1,13 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
-const TutorialsPage: React.FC = () => {
-=======
+const TutorialsPage: React.FC = () => {}
 import { ArrowRight, Play, User, Star, Circle, Clock } from 'lucide-react';
 
-const TutorialsPage: React.FC = () => {
+const TutorialsPage: React.FC = () => {}
   const tutorials = [
-    {
+    {}
       id: 1,
       title: 'Getting Started with AI Development',
       description: 'Learn the fundamentals of AI development and machine learning concepts.',
@@ -19,7 +18,7 @@ const TutorialsPage: React.FC = () => {
       instructor: 'Sarah Johnson',
       category: 'AI & Machine Learning'
     },
-    {
+    {}
       id: 2,
       title: 'Cloud Infrastructure Setup',
       description: 'Complete guide to setting up scalable cloud infrastructure on AWS and Azure.',
@@ -30,7 +29,7 @@ const TutorialsPage: React.FC = () => {
       instructor: 'Mike Chen',
       category: 'Cloud Computing'
     },
-    {
+    {}
       id: 3,
       title: 'Cybersecurity Fundamentals',
       description: 'Essential cybersecurity concepts and best practices for developers.',
@@ -41,7 +40,7 @@ const TutorialsPage: React.FC = () => {
       instructor: 'Alex Rodriguez',
       category: 'Cybersecurity'
     },
-    {
+    {}
       id: 4,
       title: 'Advanced React Patterns',
       description: 'Master advanced React patterns and optimization techniques.',
@@ -52,7 +51,7 @@ const TutorialsPage: React.FC = () => {
       instructor: 'Sarah Johnson',
       category: 'Web Development'
     },
-    {
+    {}
       id: 5,
       title: 'Data Analytics with Python',
       description: 'Learn data analysis and visualization using Python and popular libraries.',
@@ -63,7 +62,7 @@ const TutorialsPage: React.FC = () => {
       instructor: 'Mike Chen',
       category: 'Data Science'
     },
-    {
+    {}
       id: 6,
       title: 'DevOps Best Practices',
       description: 'Implement DevOps practices for continuous integration and deployment.',
@@ -72,8 +71,8 @@ const TutorialsPage: React.FC = () => {
       rating: 4.6,
       students: 650,
       instructor: 'Alex Rodriguez',
-      category: 'DevOps'
-    }
+      category: 'DevOps';
+    };
   ];
 
   const categories = [
@@ -82,43 +81,73 @@ const TutorialsPage: React.FC = () => {
     'Cloud Computing',
     'Cybersecurity',
     'Web Development',
-    'Data Science',
-    'DevOps'
+    'Data Science',;
+    'DevOps';
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-  const filteredTutorials = selectedCategory === 'All' 
-    ? tutorials 
+  const filteredTutorials = selectedCategory === 'All' ;
+    ? tutorials ;
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>Tutorials - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Zion Tech Group tutorials page." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Tutorials</h1>
           <p className="text-xl text-gray-600">
             Welcome to our tutorials page.
           </p>
         </div>
-=======
         <meta name="description" content="Learn from our comprehensive tutorials on AI, cloud computing, cybersecurity, and web development." />
         <meta name="keywords" content="tutorials, learning, AI tutorials, cloud tutorials, cybersecurity tutorials, web development" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Tutorials
               </h1>
@@ -133,12 +162,22 @@ const TutorialsPage: React.FC = () => {
         {/* Categories */}
         <section className="py-12">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {categories.map((category) => ()
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                  className={`px-6 py-3 rounded-full font-medium transition-colors ${}
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -154,14 +193,44 @@ const TutorialsPage: React.FC = () => {
         {/* Tutorials Grid */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTutorials.map((tutorial) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {filteredTutorials.map((tutorial) => ()
                 <div key={tutorial.id} className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:bg-white/20 transition-colors group">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <Play className="w-16 h-16 text-white opacity-80" />
                   </div>
                   <div className="p-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <div className="flex items-center gap-2 mb-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         {tutorial.category}
                       </span>
@@ -173,18 +242,43 @@ const TutorialsPage: React.FC = () => {
                     <p className="text-gray-300 mb-4 line-clamp-2">{tutorial.description}</p>
                     
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <div className="flex items-center gap-1">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <Clock className="w-4 h-4" />
                         <span>{tutorial.duration}</span>
                       </div>
                       <div className="flex items-center gap-1">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <User className="w-4 h-4" />
                         <span>{tutorial.students} students</span>
                       </div>
                     </div>
 
                     <div className="flex items-center justify-between mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <div className="flex items-center gap-1">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm text-gray-300">{tutorial.rating}</span>
                       </div>
@@ -205,13 +299,28 @@ const TutorialsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Learn?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join thousands of students who are already advancing their careers 
                 with our comprehensive tutorials and expert guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
                   Browse All Tutorials
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -223,14 +332,10 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default TutorialsPage;
-=======
 export default TutorialsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c

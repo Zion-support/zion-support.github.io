@@ -1,38 +1,138 @@
-#!/usr/bin/env node; import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; console.log(' Starting comprehensive remaining error fixing process...');'
-// Function to fix specific file patterns; function fixFile(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); const originalContent = content; // Fix unterminated string literals; content = content.replace(/import React from 'react';]*)/g, "import React from 'react';);'"'
+'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to fix specific parsing errors
+function fixParsingErrors(content) {}
+  // Fix unterminated string literals
+  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');
+  
+  // Fix missing closing parentheses in function calls
+  content = content.replace(/\(\s*$/gm, '()');
+  
+  // Fix missing closing tags
+  content = content.replace(/<div[^>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>]*>(?!.*<\/div>)/g, (match) => {}
+    return match + '\n      </div>';
+  });
+  
+  // Fix malformed JSX fragments
+  content = content.replace(/<>\s*$/gm, '<></>');
+  
+  // Fix property assignment errors
+  content = content.replace(/const\s+(\w+)\s*=\s*{\s*$/gm, 'const $1 = {};');
+  
+  // Fix unterminated string literals in JSX attributes
+  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');
+  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');
+  content = content.replace(/alt\s*=\s*["']([^"']*?)\s*$/gm, 'alt="$1"');
+  
+  // Fix missing semicolons after variable declarations
+  content = content.replace(/const\s+\w+\s*=\s*[^;]+$/gm, (match) => {}
+    if (!match.endsWith(';')) {}
+      return match + ';';
+    }
+    return match;
+  });
+  
+  // Fix malformed import statements
+  content = content.replace(/import\s+.*?\s+from\s+from\s+/g, (match) => {}
+    return match.replace(/\s+from\s+from\s+/, ' from ');
+  });
+  
+  // Fix missing closing braces
+  content = content.replace(/{\s*$/gm, '{}');
+  
+  return content;
 }
-} content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);'
-content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);' // Fix malformed JSX; content = content.replace(/<>/g, '<>'); content = content.replace(/<\/>/g, '</>'); content = content.replace(/<Helme t><///Helme t>/g, '<Helme t><///Helme t>'); content = content.replace(/<\/Helme t>/g, '</Helme t>'); content = content.replace(/<titl e>([^<]*)<\/titl e>/g, '<titl e>$1</titl e>'); content = content.replace(/<meta[^>]*\/>/g, (match) => match.slice(0, -1)); // Fix unterminated string constants; content = content.replace(/'use client';/g, "'use client';);' // Fix malformed function declarations; content = content.replace( /export default functio;n; ([ ^ {} ]"'
-)
-) ]+)\s*{/g, 'export default functio;n; $1 {');}' // Fix missing closing parentheses; content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>\s*\);/g, 'return (\n <>\n$1\n </>\n );); // Fix test file issues by commenting out problematic lines; if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {'}' content = content.replace(/^(describe|test|it|expect|beforeEach|afterEach|beforeAll|afterAll)\(/gm, '// $1(');'
+
+// Function to fix specific file patterns
+function fixSpecificFiles(content, filePath) {}
+  // Fix common patterns in specific files
+  if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {}
+    // These directories seem to have corrupted files, skip them for now
+    return content;
+  }
+  
+  // Fix common patterns in page files
+  if (filePath.includes('/page.tsx')) {}
+    // Ensure proper function structure
+    if (content.includes('export default function') && !content.includes('return')) {}
+      content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{/, 
+        'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}');
+    }
+  }
+  
+  return content;
 }
-} } // Fix duplicate React imports; const lines = content.split('\n'); const reactImports = lines.filter(line => line.trim().startsWith('import React')); if (reactImports.length > 1) {} // Keep only the first React import; const firstReactImport = reactImports[0]; content = content.replace(/import React[^;]+;/g, ''); content = firstReactImport + '\n' + content;'
+
+// Function to process a single file
+function processFile(filePath) {}
+  try {}
+    // Skip broken and disabled directories for now
+    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {}
+      return false;
+    }
+    
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixParsingErrors(content);
+    content = fixSpecificFiles(content, filePath);
+    
+    // Only write if content changed
+    if (content !== originalContent) {}
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {}
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
-} } // Fix merge conflict markers; content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n // Fix specific syntax errors; content = content.replace(/;\s*\);/g, '\n );); content = content.replace(/;\s*<\/>/g, '\n </>'); content = content.replace(/;\s*\);/g, '\n );); // Fix malformed JSX in broken files; if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {'}' // For broken/disabled files, try to create a minimal valid structure; if (content.includes('import React from') && !content.includes('export default')) {'}' content = content.replace(/import React[^;]+;/g, '');'
+
+// Main function
+async function main() {}
+  console.log('Starting targeted error fix...');
+  
+  // Get all TypeScript and JavaScript files, excluding broken/disabled directories
+  const patterns = [
+    'app/**/*.{ts,tsx,js,jsx}',
+    'api/**/*.{ts,tsx,js,jsx}',
+    'components/**/*.{ts,tsx,js,jsx}',;
+    '*.{ts,tsx,js,jsx}';
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {}
+    const files = await glob(pattern, {}
+      cwd: process.cwd(),;
+      ignore: ['**/app-broken/**', '**/app-disabled/**'];
+    });
+    for (const file of files) {}
+      totalFiles++;
+      if (processFile(file)) {}
+        fixedFiles++;
+      }
+    }
+  }
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
+  console.log('Targeted error fix completed!');
 }
-} content = `import React from 'react';\n\nexport default function Component; Page() {\n return (\n <di v>\n <h 1>Page Under Construction</h 1>\n <p>This page is currently being updated.</p>\n </di v>\n );\n}`;`'` } } if (content !== originalContent) {} fs.writeFileSync(filePath, content, 'utf8');'`
-}
-} console.log(` Fixed: ${filePath}`);`;``
-return true; } return false; } catch (error) {}
-}
-} console.error(` Error fixing ${filePath}:`, error.message);`;``
-return false; }
-}
-// Function to find all problematic files; function findProblematicFiles(dir) {} const files = []; function searchDirectory(currentDir) {} const items = fs.readdirSync(currentDir); for (const item of items) {} const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {} if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {'}' searchDirectory(fullPath); }'
-} } } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {} try {} const content = fs.readFileSync(fullPath, 'utf8'); if (content.includes('import React from \'react;) || '''
-}
-} content.includes('import { Helmet } from \'react-helmet-async;) ||'; content.includes('<>') ||'; content.includes('</>') ||'; content.includes('') ||'; content.includes('') ||'; files.push(fullPath); }'
-} } } catch (err) {} // Skip files that can't be read'''
-}
-} } } } } searchDirectory(dir); return files; }
-// Main execution; async function main() {} console.log(' Finding problematic files...'); const problematicFiles = findProblematicFiles('.');'
-}
-} console.log(`Found ${problematicFiles.length} problematic files`);`;``
-let fixedCount = 0; for (const file of problematicFiles) {} if (fixFile(file)) {} fixedCount++; }
-} } } console.log(` Fixed ${fixedCount} files`);`` // Run a quick lint check on a few key files; console.log(' Running quick validation...'); try {}'`
-}
-} execSync('pnpm run lint --max-warnings 10', { stdio: 'pipe' }); console.log(' Linting improved!'); } catch (error) {} console.log(' Some linting issues remain, but major problems should be resolved');'
-}
-} } console.log(' Remaining error fixing process completed!');'
-}
-main().catch(console.error);`"'`"'`
+
+// Run the script
+main().catch(console.error);

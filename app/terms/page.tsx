@@ -1,34 +1,66 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const TermsPage: React.FC = () => {
+const TermsPage: React.FC = () => {}
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
-<<<<<<< HEAD
         <title>Terms - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group terms page." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>
           <p className="text-xl text-gray-600">
             Welcome to our terms page.
           </p>
         </div>
-=======
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Terms of Service for Zion Tech Group - Learn about our terms and conditions for using our services." />
         <meta name="keywords" content="terms of service, terms and conditions, legal, user agreement" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Terms of Service
               </h1>
@@ -46,8 +78,23 @@ const TermsPage: React.FC = () => {
         {/* Content Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="prose prose-invert max-w-none">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>
                 <p className="text-gray-300 mb-6">
                   By accessing and using Zion Tech Group's services, you accept and agree to be bound 
@@ -154,6 +201,11 @@ const TermsPage: React.FC = () => {
                   If you have any questions about these Terms of Service, please contact us at:
                 </p>
                 <div className="bg-slate-700/50 rounded-lg p-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <p className="text-gray-300">
                     <strong>Email:</strong> legal@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (555) 123-4567<br />
@@ -164,14 +216,10 @@ const TermsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default TermsPage;
-=======
 export default TermsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c

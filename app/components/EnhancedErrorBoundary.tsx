@@ -1,27 +1,28 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface Props {
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+;import { Helmet } from 'react-helmet-async';
+;interface Props {}
   children: "ReactNode"
   fallback?: ReactNode
   onError?: (error: "Error", errorInfo: "ErrorInfo) => void"}
 
-interface State {
+interface State {}
   hasError: "boolean",error: "Error | null",errorInfo: "ErrorInfo | null",errorId: "string"}
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+class EnhancedErrorBoundary extends Component<Props, State> {}
   constructor(props: "Props) {"
     super(props)
-    this.state = {
+    this.state = {}
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: "'''"
+      errorId: "'"
   }
   }
     }}
 
   static getDerivedStateFromError(error: "Error): Partial<State> {"
-    return {
+    return {}
       hasError: true,
       error}
       errorId: "`error_${Date.now()"}_${Math.random().toString(36).substr(2, 9)}`
@@ -29,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: "Error", errorInfo: "ErrorInfo) {"
-    this.setState({
+    this.setState({}
       error,
       errorInfo
     })
@@ -46,8 +47,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private logErrorToService = (error: "Error", errorInfo: "ErrorInfo) => {"
     // In a real application, you would send this to an error tracking service
     // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
+    try {}
+      const errorData = {};
         message: "error.message",
         stack: "error.stack",
         componentStack: "errorInfo.componentStack",
@@ -58,52 +59,65 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       };
       // Example: "Send to error tracking service;"
       // errorTrackingService.captureException(error, { extra: "errorData"});
-      ''
       console.error('Error logged to service:', errorData);
-    } catch (loggingError) {''
-      console.error('Failed to log error to service: "'", loggingError);}'
+    } catch (loggingError) {console.error('Failed to log error to service: "'", loggingError);}'
     }
   }
-  private handleRetry = () => {
-    this.setState({
+  private handleRetry = () => {}
+    this.setState({}
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: "'''"
+      errorId: "'"
     });
   }
-  private handleReload = () => {
+  private handleReload = () => {}
     window.location.reload();
   }
-  private handleGoHome = () => {
+  private handleGoHome = () => {}
     window.location.href = '/';
   }
     window.location.reload();}
   };
 
-  private handleGoHome = () => {''
-    window.location.href = '/';}'
+  private handleGoHome = () => {window.location.href = '/';}'
   };
 
-  render() {
-
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       // Custom fallback UI
-      if (this.props.fallback) {
+      if (this.props.fallback) {}
         return this.props.fallback}
 
       // Default error UI
       return (
-        <>
+    <div>Page content</div>
+  );
+        <></>
           <Helmet>
             <title>Error - Zion Tech Group</title>
             <meta name="robots" content="noindex, nofollow" />
           </Helmet>
           
           <div className="min-h-screen flex items-center justify-center bg-slate-90o0 px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="max-w-md w-full bg-slate-80o0 rounded-lg shadow-xl p-8 text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               {/* Error Icon */}
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-50o0"/20 rounded-full mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <svg 
                   className="w-8 h-8 text-red-40o0"
                   fill="none" "
@@ -126,14 +140,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </h1>
 
               {/* Error Message */}
-              <p className="text-gray-30o0 mb-6 leading-relaxed">''"
+              <p className="text-gray-30o0 mb-6 leading-relaxed">"
                 We're sorry, but something unexpected happened. Our team has been notified'
                 and is working to fix this issue.
               </p>
 
               {/* Error ID for support */}
-              {this.state.errorId && (
+              {this.state.errorId && ()
                 <div className="bg-slate-70o0 rounded-lg p-3 mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <p className="text-sm text-gray-40o0 mb-1">Error ID: "</p>",}"
                     {this.state.errorId}
                   </code>
@@ -142,6 +161,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
               {/* Action Buttons */}
               <div className="space-y-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <button
                   onClick={this.handleRetry}
                   className="w-full bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-purple-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
@@ -150,6 +174,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </button>
                 
                 <div className="flex space-x-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <button
                     onClick={this.handleGoHome}
                     className="flex-1 border border-slate-60o0 text-gray-30o0 px-4 py-2 rounded-lg font-semibold hover: bg-slate-70o0 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-50o0 focus:ring-offset-2 focu,s:ring-offset-slate-80o0"
@@ -168,29 +197,53 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
               {/* Support Information */}
               <div className="mt-8 pt-6 border-t border-slate-70o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <p className="text-sm text-gray-40o0 mb-2">
                   Still having trouble? Contact our support team: "</p>",
                   <p>Email: "kleber@ziontechgroup.com</p>",
                 </div>
               </div>
 
-              {/* Development Error Details */}''
-              {process.env.NODE_ENV === 'development' && this.state.error && ('
+              {/* Development Error Details */}{process.env.NODE_ENV === 'development' && this.state.error && ('
                 <details className="mt-6 text-left">
                   <summary className="text-sm text-gray-40o0 cursor-pointer hover:text-white">
                     Error Details (Development)
                   </summary>
                   <div className="mt-2 p-3 bg-slate-90o0 rounded text-xs text-red-40o0 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">}"
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                    <div className="mb-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>}"
                       <strong>Error: "</strong> {this.state.error.message"}
                     </div>
                     <div className="mb-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <strong>Stack: "</strong>",
                         {this.state.error.stack}
                       </pre>
                     </div>
-                    {this.state.errorInfo && (
+                    {this.state.errorInfo && ()
                       <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <strong>Component Stack: "</strong>",}"
                           {this.state.errorInfo.componentStack}
                         </pre>

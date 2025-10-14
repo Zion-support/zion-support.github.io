@@ -1,29 +1,29 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap } from 'lucide-react';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
   const features = [
-    {
+    {}
       icon: Zap,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
       color: 'from-blue-500 to-purple-600'
     },
-    {
+    {}
       icon: Users,
       title: 'Expert Team',
       description: 'Experienced professionals dedicated to delivering exceptional results for your business.',
       color: 'from-green-500 to-teal-600'
     },
-    {
+    {}
       icon: Award,
       title: 'Proven Results',
       description: 'Track record of successful implementations and satisfied clients across various industries.',
-      color: 'from-orange-500 to-red-600'
-    }
+      color: 'from-orange-500 to-red-600';
+    };
   ];
 
   const stats = [
@@ -31,8 +31,7 @@ const HomePage: React.FC = () => {
     { number: '100+', label: 'Happy Clients' },
     { number: '50+', label: 'Team Members' },
     { number: '99%', label: 'Client Satisfaction' }
-=======
-import { 
+import {}
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -41,39 +40,43 @@ import {
   ArrowRightIcon,
   StarIcon,
   UsersIcon,
-  GlobeAltIcon,
-  ChartBarIcon
+  GlobeAltIcon,;
+  ChartBarIcon;
 } from '@heroicons/react/24/outline';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
 import ResponsiveContainer from './components/ResponsiveContainer';
 
-export default function HomePage() {
+export default function HomePage() {}
+  return (
+    <div>Page content</div>
+  );
+}
   const services = [
-    {
+    {}
       icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions to transform your business.',
       href: '/ai-solutions'
     },
-    {
+    {}
       icon: CloudIcon,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services.',
       href: '/cloud-services'
     },
-    {
+    {}
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets.',
       href: '/cybersecurity'
     },
-    {
+    {}
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
       description: 'Complete digital transformation strategies and implementation.',
-      href: '/digital-transformation'
-    }
+      href: '/digital-transformation';
+    };
   ];
 
   const features = [
@@ -81,22 +84,27 @@ export default function HomePage() {
     'Cutting-edge Technology',
     'Scalable Solutions',
     'Enterprise Security',
-    'Custom Implementation',
-    'Proven Results'
+    'Custom Implementation',;
+    'Proven Results';
   ];
 
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Success Rate', value: '99%' }
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
+    { label: 'Years Experience', value: '10+' },;
+    { label: 'Success Rate', value: '99%' };
   ];
 
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
-<<<<<<< HEAD
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation." />
         <meta name="keywords" content="AI solutions, IT services, digital transformation, automation, technology consulting" />
@@ -105,7 +113,17 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center max-w-4xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Transform Your Business with
               <span className="text-blue-600"> AI & Technology</span>
@@ -115,6 +133,11 @@ export default function HomePage() {
               efficiency, and growth for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link 
                 to="/contact" 
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center"
@@ -136,9 +159,24 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {stats.map((stat, index) => ()
               <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
@@ -150,7 +188,17 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why Choose Zion Tech Group?
             </h2>
@@ -160,9 +208,24 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {features.map((feature, index) => ()
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6`}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <feature.icon className="text-white" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -180,7 +243,17 @@ export default function HomePage() {
       {/* Services Preview */}
       <section className="py-20">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Our Services
             </h2>
@@ -190,7 +263,17 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 AI Solutions
               </h3>
@@ -205,6 +288,11 @@ export default function HomePage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 IT Infrastructure
               </h3>
@@ -219,6 +307,11 @@ export default function HomePage() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Digital Transformation
               </h3>
@@ -238,7 +331,17 @@ export default function HomePage() {
       {/* Testimonials */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               What Our Clients Say
             </h2>
@@ -248,10 +351,25 @@ export default function HomePage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {[1, 2, 3].map((i) => ()
               <div key={i} className="bg-white p-6 rounded-lg shadow-lg">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, j) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                  {[...Array(5)].map((_, j) => ()
                     <Star key={j} className="text-yellow-400" size={20} fill="currentColor" />
                   ))}
                 </div>
@@ -269,7 +387,17 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center text-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -291,18 +419,27 @@ export default function HomePage() {
 };
 
 export default HomePage;
-=======
         <title>Zion Tech Group - AI & Technology Solutions</title>
         <meta name="description" content="Leading provider of AI, cloud, cybersecurity, and digital transformation solutions. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <ResponsiveContainer>
             <div className="text-center relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Zion Tech Group
               </h1>
@@ -311,6 +448,11 @@ export default HomePage;
                 Your trusted partner in digital innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <Link to="/contact">
                   <FuturisticButton size="lg">
                     Get Started
@@ -326,8 +468,18 @@ export default HomePage;
               
               {/* Stats */}
               <div className="flex flex-wrap justify-center gap-8">
-                {stats.map((stat, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                {stats.map((stat, index) => ()
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <div className="text-2xl font-bold text-white">{stat.value}</div>
                     <div className="text-sm text-gray-300">{stat.label}</div>
                   </div>
@@ -341,6 +493,11 @@ export default HomePage;
         <section className="py-20">
           <ResponsiveContainer>
             <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth 
@@ -348,9 +505,19 @@ export default HomePage;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {services.map((service, index) => ()
                 <FuturisticCard key={index} className="text-center group hover:scale-105 transition-transform duration-300">
                   <div className="text-blue-400 mb-4 flex justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <service.icon className="w-12 h-12" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -373,15 +540,35 @@ export default HomePage;
         <section className="py-20">
           <ResponsiveContainer>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech?</h2>
                 <p className="text-xl text-gray-300 mb-8">
                   We combine deep technical expertise with business acumen to deliver 
                   solutions that drive real results for your organization.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-                  {features.map((feature, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                  {features.map((feature, index) => ()
                     <div key={index} className="flex items-center gap-3 text-gray-300">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
                       {feature}
                     </div>
@@ -389,6 +576,11 @@ export default HomePage;
                 </div>
               </div>
               <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform?</h3>
                 <p className="text-gray-300 mb-6">
                   Let's discuss how our solutions can accelerate your digital transformation 
@@ -409,12 +601,22 @@ export default HomePage;
         <section className="py-20">
           <ResponsiveContainer>
             <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Join hundreds of satisfied clients who have transformed their businesses 
                 with our technology solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <Link to="/contact">
                   <FuturisticButton size="lg">
                     Contact Us Today
@@ -434,4 +636,3 @@ export default HomePage;
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c

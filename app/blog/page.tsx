@@ -1,21 +1,20 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
-const BlogPage: React.FC = () => {
-=======
+const BlogPage: React.FC = () => {}
 import { ArrowRight, User, Calendar, Tag } from 'lucide-react';
 
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = () => {}
   const categories = [
     { id: 'all', name: 'All Posts', count: 12 },
     { id: 'ai', name: 'AI & Machine Learning', count: 5 },
-    { id: 'cloud', name: 'Cloud Computing', count: 4 },
-    { id: 'security', name: 'Cybersecurity', count: 3 }
+    { id: 'cloud', name: 'Cloud Computing', count: 4 },;
+    { id: 'security', name: 'Cybersecurity', count: 3 };
   ];
 
   const posts = [
-    {
+    {}
       id: 1,
       title: 'The Future of AI in Business: Trends and Predictions for 2024',
       excerpt: 'Explore the latest AI trends and how they\'re transforming businesses across industries.',
@@ -25,7 +24,7 @@ const BlogPage: React.FC = () => {
       readTime: '5 min read',
       image: '/api/placeholder/400/250'
     },
-    {
+    {}
       id: 2,
       title: 'Cloud Migration Best Practices: A Complete Guide',
       excerpt: 'Learn the essential steps and strategies for successful cloud migration projects.',
@@ -35,7 +34,7 @@ const BlogPage: React.FC = () => {
       readTime: '8 min read',
       image: '/api/placeholder/400/250'
     },
-    {
+    {}
       id: 3,
       title: 'Cybersecurity Threats in 2024: What You Need to Know',
       excerpt: 'Stay ahead of emerging cybersecurity threats and protect your organization.',
@@ -45,7 +44,7 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read',
       image: '/api/placeholder/400/250'
     },
-    {
+    {}
       id: 4,
       title: 'Building Scalable AI Applications: A Developer\'s Guide',
       excerpt: 'Technical insights on creating robust and scalable AI applications.',
@@ -55,7 +54,7 @@ const BlogPage: React.FC = () => {
       readTime: '10 min read',
       image: '/api/placeholder/400/250'
     },
-    {
+    {}
       id: 5,
       title: 'Multi-Cloud Strategy: Benefits and Implementation',
       excerpt: 'Discover how a multi-cloud approach can enhance your business resilience.',
@@ -65,7 +64,7 @@ const BlogPage: React.FC = () => {
       readTime: '7 min read',
       image: '/api/placeholder/400/250'
     },
-    {
+    {}
       id: 6,
       title: 'Zero Trust Security: A Modern Approach to Cybersecurity',
       excerpt: 'Implement zero trust principles to strengthen your security posture.',
@@ -73,43 +72,73 @@ const BlogPage: React.FC = () => {
       date: '2024-01-03',
       category: 'security',
       readTime: '9 min read',
-      image: '/api/placeholder/400/250'
-    }
+      image: '/api/placeholder/400/250';
+    };
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
+  const filteredPosts = selectedCategory === 'all' ;
+    ? posts ;
     : posts.filter(post => post.category === selectedCategory);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Zion Tech Group blog page." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Blog</h1>
           <p className="text-xl text-gray-600">
             Welcome to our blog page.
           </p>
         </div>
-=======
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends." />
         <meta name="keywords" content="blog, AI insights, cloud computing, cybersecurity, technology trends" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Our Blog
               </h1>
@@ -124,12 +153,22 @@ const BlogPage: React.FC = () => {
         {/* Categories */}
         <section className="py-12">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {categories.map((category) => ()
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-medium transition-colors ${
+                  className={`px-6 py-3 rounded-full font-medium transition-colors ${}
                     selectedCategory === category.id
                       ? 'bg-blue-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -145,12 +184,32 @@ const BlogPage: React.FC = () => {
         {/* Blog Posts */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {filteredPosts.map((post) => ()
                 <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden border border-white/20 hover:bg-white/20 transition-colors group">
                   <div className="h-48 bg-gray-600"></div>
                   <div className="p-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <div className="flex items-center gap-2 mb-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <Tag className="w-4 h-4 text-blue-400" />
                       <span className="text-sm text-blue-400 capitalize">{post.category}</span>
                     </div>
@@ -159,16 +218,36 @@ const BlogPage: React.FC = () => {
                     </h2>
                     <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <div className="flex items-center gap-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
                       </div>
                       <div className="flex items-center gap-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                         <Calendar className="w-4 h-4" />
                         <span>{new Date(post.date).toLocaleDateString()}</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <span className="text-sm text-gray-400">{post.readTime}</span>
                       <button className="text-blue-400 hover:text-blue-300 font-medium flex items-center">
                         Read More
@@ -185,13 +264,28 @@ const BlogPage: React.FC = () => {
         {/* Newsletter Signup */}
         <section className="py-20">
           <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-4xl font-bold text-white mb-4">Stay Updated</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Subscribe to our newsletter and never miss the latest insights, 
                 trends, and updates from the world of technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -204,14 +298,10 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default BlogPage;
-=======
 export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c

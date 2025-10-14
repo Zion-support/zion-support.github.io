@@ -1,7 +1,7 @@
 import React from 'react';
 import { User, X } from 'lucide-react';
 
-interface SidebarNavigationProps {
+interface SidebarNavigationProps {}
   isOpen: boolean;
   onClose: () => void;
 }
@@ -10,28 +10,45 @@ const navigationItems = [
   { name: 'Home', href: '/', icon: User },
   { name: 'Profile', href: '/profile', icon: User },
   { name: 'Settings', href: '/settings', icon: User },
-  { name: 'Help', href: '/help', icon: User },
-  { name: 'About', href: '/about', icon: User }
+  { name: 'Help', href: '/help', icon: User },;
+  { name: 'About', href: '/about', icon: User };
 ];
 
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {}
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       {/* Overlay */}
-      {isOpen && (
+      {isOpen && ()
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
         />
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${}
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="flex items-center justify-between p-4 border-b">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h2 className="text-lg font-semibold">Navigation</h2>
           <button
             onClick={onClose}
@@ -42,7 +59,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </div>
 
         <nav className="mt-4">
-          {navigationItems.map((item) => (
+          {navigationItems.map((item) => ()
             <a
               key={item.name}
               href={item.href}

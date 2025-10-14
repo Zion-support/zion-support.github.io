@@ -1,34 +1,66 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PrivacyPage: React.FC = () => {
+const PrivacyPage: React.FC = () => {}
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
-<<<<<<< HEAD
         <title>Privacy - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group privacy page." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy</h1>
           <p className="text-xl text-gray-600">
             Welcome to our privacy page.
           </p>
         </div>
-=======
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="Privacy Policy for Zion Tech Group - Learn how we collect, use, and protect your personal information." />
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Privacy Policy
               </h1>
@@ -46,8 +78,23 @@ const PrivacyPage: React.FC = () => {
         {/* Content Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="prose prose-invert max-w-none">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h2 className="text-2xl font-semibold text-white mb-4">Information We Collect</h2>
                 <p className="text-gray-300 mb-6">
                   We collect information you provide directly to us, such as when you create an account, 
@@ -129,6 +176,11 @@ const PrivacyPage: React.FC = () => {
                   please contact us at:
                 </p>
                 <div className="bg-slate-700/50 rounded-lg p-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <p className="text-gray-300">
                     <strong>Email:</strong> privacy@ziontechgroup.com<br />
                     <strong>Phone:</strong> +1 (555) 123-4567<br />
@@ -139,14 +191,10 @@ const PrivacyPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default PrivacyPage;
-=======
 export default PrivacyPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c

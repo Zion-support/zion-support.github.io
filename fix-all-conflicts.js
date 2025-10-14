@@ -3,7 +3,7 @@
 } console.error(`Error fixing ${filePath}:`, error.message);`;``
 return false; }
 }
-// Function to find all files with merge conflicts; function findFilesWithConflicts(dir) {} const files = []; function walkDir(currentPath) {} const items = fs.readdirSync(currentPath); for (const item of items) {} const fullPath = path.join(currentPath, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'}' walkDir(fullPath); } } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {} try {} const content = fs.readFileSync(fullPath, 'utf8'); if (content.includes('')) {'}' files.push(fullPath); } } } catch (error) {} // Skip files that can't be read'''
+// Function to find all files with merge conflicts; function findFilesWithConflicts(dir) {} const files = []; function walkDir(currentPath) {} const items = fs.readdirSync(currentPath); for (const item of items) {} const fullPath = path.join(currentPath, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'}' walkDir(fullPath); } } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {} try {} const content = fs.readFileSync(fullPath, 'utf8'); if (content.includes()) {'}' files.push(fullPath); } } } catch (error) {} // Skip files that can't be read'
 } } } } } walkDir(dir); return files; }
 // Main execution; console.log(' Searching for files with merge conflicts...'); const conflictedFiles = findFilesWithConflicts('/workspace'); console.log(`Found ${conflictedFiles.length} files with merge conflicts`);`;`'`
 let fixedCount = 0; for (const file of conflictedFiles) {} if (fixMergeConflicts(file)) {} fixedCount++; } }
