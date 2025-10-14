@@ -5,7 +5,7 @@ import path from 'path';
 import { glob } from 'glob';
 
 // Function to fix common syntax errors
-function fixSyntaxErrors(content) {
+function fixSyntaxErrors(content, filePath) {
   let fixed = content;
 
   // Fix unterminated string literals in JSX attributes
@@ -93,7 +93,7 @@ function fixSyntaxErrors(content) {
 function fixFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const fixed = fixSyntaxErrors(content, filePath);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');

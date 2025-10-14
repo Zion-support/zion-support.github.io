@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import Navigation from './app/components/Navigation';
+import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
@@ -18,29 +18,14 @@ import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ServicesPage from './app/pages/ServicesPage';
+import ContactPage from './app/pages/ContactPage';
+import BlogPage from './app/pages/BlogPage';
+import DemoPage from './app/pages/DemoPage';
 
 const App: React.FC = () => {
-  const handlePerformanceMetrics = (metrics: { fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number }) => {
-    // Log performance metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', metrics);
-    }
-    
-    // Send to analytics in production
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag) {
-      (window as typeof window & { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'performance_metrics', {
-        custom_parameter_1: metrics.fcp,
-        custom_parameter_2: metrics.lcp,
-        custom_parameter_3: metrics.fid,
-        custom_parameter_4: metrics.cls
-      });
-    }
-  };
-
   return (
     <ErrorBoundary>
       <HelmetProvider>

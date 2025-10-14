@@ -8,7 +8,7 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
@@ -28,9 +28,9 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <div>
       {children}
-    </AnalyticsContext.Provider>
+    </div>
   );
 }
 

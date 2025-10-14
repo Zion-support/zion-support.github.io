@@ -9,6 +9,6 @@ export default function AppPage() {
           <p className="text-gray-300 text-xl mb-8">Learn more about app</p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

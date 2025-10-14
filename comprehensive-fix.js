@@ -141,6 +141,8 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
+  
+  return content;
 }
 
 // Main execution

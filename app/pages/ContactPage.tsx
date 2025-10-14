@@ -1,4 +1,5 @@
-// ContactPage - Basic implementation
+import React from "react";
+
 export default function ContactPage() {
   return null;
 };
