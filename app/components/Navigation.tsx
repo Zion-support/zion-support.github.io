@@ -6,21 +6,12 @@ interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle: _onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const toggleSolutions = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
   };
 
   const navigation = [

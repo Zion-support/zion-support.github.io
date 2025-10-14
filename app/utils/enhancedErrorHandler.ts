@@ -42,24 +42,32 @@ export const enhancedErrorHandler = {
     }
   },
   
-  getErrorMessage: (error: any) => {
-    if (error.response?.status) {
-      switch (error.response.status) {
-        case 400:
-          return { message: 'Invalid request', code: 'BAD_REQUEST' };
-        case 401:
-          return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
-        case 403:
-          return { message: 'Forbidden', code: 'FORBIDDEN' };
-        case 404:
-          return { message: 'Not found', code: 'NOT_FOUND' };
-        case 500:
-          return { message: 'Server error', code: 'SERVER_ERROR' };
-        default:
-          return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+  getErrorMessage: (error: unknown) => {
+    if (error && typeof error === 'object' && 'response' in error) {
+      const errorWithResponse = error as { response?: { status?: number } };
+      if (errorWithResponse.response?.status) {
+        switch (errorWithResponse.response.status) {
+          case 400:
+            return { message: 'Invalid request', code: 'BAD_REQUEST' };
+          case 401:
+            return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
+          case 403:
+            return { message: 'Forbidden', code: 'FORBIDDEN' };
+          case 404:
+            return { message: 'Not found', code: 'NOT_FOUND' };
+          case 500:
+            return { message: 'Server error', code: 'SERVER_ERROR' };
+          default:
+            return { message: 'Unknown error', code: 'UNKNOWN_ERROR' };
+        }
       }
     }
     
-    return { message: error.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    if (error && typeof error === 'object' && 'message' in error) {
+      const errorWithMessage = error as { message: string };
+      return { message: errorWithMessage.message, code: 'UNKNOWN_ERROR' };
+    }
+    
+    return { message: 'Unknown error', code: 'UNKNOWN_ERROR' };
   }
 };

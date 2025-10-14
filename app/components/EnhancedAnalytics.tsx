@@ -12,8 +12,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     // Enhanced analytics tracking
     const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', event, {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, event: string, parameters?: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, event: string, parameters?: Record<string, unknown>) => void }).gtag('event', event, {
           event_category: 'Enhanced Analytics',
           ...properties
         });
@@ -22,8 +22,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Track page view
     const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: (command: string, config: string, parameters?: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, config: string, parameters?: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href
         });
