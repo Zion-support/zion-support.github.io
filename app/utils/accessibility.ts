@@ -1,43 +1,41 @@
-export const accessibilityUtils = {
-  addSkipLink: () => {
-    const skipLink = document.createElement('a');
-    skipLink.hre f ='#main-content';
-    skipLink.textConten t ='Skip to main content';
-    skipLink.className='sr-only focus:not-sr-only';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+export const Accessibilityutils={
+  addSkipLink: () => { constSkiplink = document.create Element('a');
+    skip Link.href = '#main-content';
+    skip Link.text Content='Skip to main content';
+    skip Link.className='sr-onlyFocus:not-sr-only';
+    document.body.insert Before(skip Link, document.body.first Child);
   },
-  trapFocus: (element: HTMLElement) => {
-    const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  trapFocus: (element: HTMLElement) => { constFocusableelements = element.query Selector All(
+      'button, [href], input, select, textarea, [tabindex]:not([tabIndex="-1"])'
     );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+    const Firstelement=focusable Elements[0] as HTMLElement;
+    const last Element=focusable Elements[focusable Elements.length - 1] as HTMLElement;
     
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTab key=(e: Keyboard Event) => {
       if (e.key === 'Tab') {
-        if (e.shiftKey) {
-          if (document.activeElemen t === firstElement) {
-            lastElement.focus();
-            e.preventDefault();
+        if (e.shift Key) {
+          if (document.active Element=== first Element) {
+            last Element.focus();
+            e.prevent Default();
           }
         } else {
-          if (document.activeElemen t === lastElement) {
-            firstElement.focus();
-            e.preventDefault();
+          if (document.active Element=== last Element) {
+            first Element.focus();
+            e.prevent Default();
           }
         }
       }
     };
     
-    element.addEventListener('keydown', handleTabKey);
+    element.addEventListener('keydown', handle Tab Key);
     return () => {
-      element.removeEventListener('keydown', handleTabKey);
+      element.removeEventListener('keydown', handle Tab Key);
     };
   },
   addAriaLabels: (element: HTMLElement, label: string) => {
-    element.setAttribute('aria-label', label);
+    element.set Attribute('aria-label', label);
   },
   addRole: (element: HTMLElement, role: string) => {
-    element.setAttribute('role', role);
+    element.set Attribute('role', role);
   }
 };

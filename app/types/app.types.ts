@@ -19,14 +19,14 @@ export interface Service {
   icon: string;
 }
 
-export interface AnalyticsEvent {
+export interface Analyticsevent {
   action: string;
   category: string;
   label?: string;
   value?: number;
 }
 
-export interface ContactForm {
+export interface Contactform {
   name: string;
   email: string;
   company: string;
@@ -34,7 +34,7 @@ export interface ContactForm {
   phone?: string;
 }
 
-export interface BlogPost {
+export interface Blogpost {
   id: string;
   title: string;
   content: string;
@@ -54,8 +54,7 @@ export interface Testimonial {
   rating: number;
 }
 
-export interface FAQ {
-  
+export interface Faq {
   id: string;
   question: string;
   answer: string;

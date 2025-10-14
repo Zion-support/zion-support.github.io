@@ -1,18 +1,16 @@
 import { useEffect  } from 'react';
 
-interface UseSEOProps {
-  
+interface Useseoprops {
   title: string;
   description: string;
   keywords?: string;
 
 }
 
-export const useSEO = ({ title, description, keywords }: UseSEOProps)  => {
-  useEffect(()  => {
-    if (typeof document !=='undefined') {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
+export const Useseo=({ title, description, keywords }: UseSEOProps) => {
+  useEffect(() => {
+    if (typeof document !== 'undefined') { constMetadescription = document.query Selector('meta[name="description"]');
+      const Metakeywords=document.query Selector('meta[name="keywords"]');
       
       if (metaDescription) {
         metaDescription.setAttribute('content', description);
@@ -21,7 +19,7 @@ export const useSEO = ({ title, description, keywords }: UseSEOProps)  => {
         metaKeywords.setAttribute('content', keywords);
       }
       
-      document.titl e = title;
+      document.title= title;
     }
   },[title, description, keywords]);
 };

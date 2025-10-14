@@ -199,54 +199,43 @@ const AiCodeAssistantProPage: React.FC = () => {
     }
   ];
 
+constAicodeassistantpropagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>AI Code Assistant Pro - Intelligent Development Platform | Zion Tech Group</title>
-        <meta name="description" content="Boost developer productivity with AI-powered code generation, bug detection, and optimization. Support for 50+ programming languages with intelligent suggestions and automation." />
-        <meta name="keywords" content="AI code assistant, code generation, bug detection, programming, development tools, code optimization, IDE integration" />
-        <meta property="og:title" content="AI Code Assistant Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent development platform with AI-powered code generation and optimization" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-code-assistant-pro" />
+    <>Helmet>
+        <title>Ai Code Assistant Pro</title>
+        <meta name="description" content="Professional ai code assistant pro solutions and services" />
+        <meta name="keywords" content="ai, code, assistant, pro" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        </div>
-
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="h-full w-full" style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
-        <main className="relative z-10">
-          {/* Hero Section */}
-          <section className="relative py-20 overflow-hidden">
-            <div className="container mx-auto px-4">
-              <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
-                  <Star className="w-4 h-4 mr-2" />
-                  #1 AI Development Platform
-                </div>
-                <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Code Assistant Pro
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Supercharge your development with AI-powered code generation, intelligent debugging, 
-                  and automated optimization. Support for 50+ programming languages.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Ai Code Assistant Pro</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional ai code assistant pro solutions and services
+            </p>
+            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a

@@ -1,38 +1,37 @@
 import React, { ReactNode, useCallback } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContext';
+import { AnalyticsContext, AnalyticsContextType } from './Analytics Context';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV ==='development') {
-      console.warn('Event tracked:', eventName, properties);
+export const AnalyticsProviderPage: React.FC<AnalyticsProviderProps> = ({ children }) => { const trackEvent = useCallback((eventName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('eventTracked: ', eventName, properties);
     }
     // Add your analytics tracking logic here
   },[]);
   
-  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
+  const trackPageView =useCallback((pageName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Page view tracked:', pageName, properties);
+      console.warn('PageViewTracked: ', page Name, properties);
     }
     // Add your page view tracking logic here
   },[]);
   
-  const setUser = useCallback((userId: string, properties?: Record<string, unknown>) => {
-    if (process.env.NODE_ENV ==='development') {
-      console.warn('User set:', userId, properties);
+  const Setuser=useCallback((userId: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('userSet: ', user Id, properties);
     }
     // Add your user identification logic here
-  },[]);
-  const value: AnalyticsContextTyp e ={
+  }, []);
+  constValue: Analyticscontexttype = {
     trackEvent,
     trackPageView,
     setUser};
   return (
-    <AnalyticsContext.Provider value ={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <AnalyticsContext.provider Value={value}>
+      { children }
+    </Analytics Context.Provider>
   );
 };

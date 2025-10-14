@@ -22,11 +22,11 @@ interface Testimonial {
   avatar?: string;
 }
 
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+constDynamiccontentshowcasepagePage: React.FC = () => {
+  const [currentIndex,SetCurrentIndex] = useState(0);
+  const [isPlaying,SetIsPlaying] = useState(true);
 
-  const features: Feature[] =[
+  constFeatures: Feature[] = [
     {
       icon: Brain,
       title:'AI-Powered Intelligence',
@@ -54,11 +54,18 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-  const benefits =[
-    'Advanced AI technology integration','Real-time processing and analytics','Enterprise-grade security and compliance','Scalable and flexible solutions','24/7 technical support','Easy integration with existing systems','Cost-effective pricing plans','Proven track record of success'
+  const Benefits=[
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ];
 
-  const testimonials: Testimonial[] =[
+  constTestimonials: Testimonial[] = [
     {
       name:'Sarah Johnson',
       company:'Tech Corp Inc.',
@@ -87,47 +94,47 @@ const DynamicContentShowcase: React.FC = () => {
   ];
 
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!is Playing) return;
     
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    const Timer=set Interval(() => {
+      set Current Index((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
     return () => clearInterval(timer);
   },[isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const Nexttestimonial=() => {
+    set Current Index((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const Prevtestimonial=() => {
+    set Current Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+  const Toggleplaypause=() => {
+    set Is Playing(!is Playing);
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const Currenttestimonial=testimonials[current Index];
 
   return (
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xlmx-auto text-center">
-          <h1 className="text-4 xlmd:text-6 xl font-bold text-white mb-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4Xlmd: text-6 xl font-bold text-white mb-6">
             Dynamic <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+          <div className="flexflex-colsm:flex-row gap-4 justify-center">
+            <but ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semiboldHover:from-purple-600Hover:to-blue-600 transition-all duration-300 transformHover:scale-105">
               <Play className="w-5 h-5" />
               Start Demo
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            </butn>
+            <but ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20Hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </button>
@@ -137,7 +144,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xlmx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-centermb-16">
             <h2 className="text-3 xlfont-bold text-white mb-6">
               Why Choose Our Solutions?
@@ -147,22 +154,22 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <divkey={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20Hover: border-purple-400 transition-all duration-300 group">
+                <div className="flexitems-centerjustify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+                  <feature.icon className="w-8 h-8text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-boldtext-white mb-4 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 
                 {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
+                  <div className="gridgrid-cols-3 gap-4">
+                    {feature.stats.map((stat, stat Index) => (
+                      <divkey={ statIndex } className="text-center">
+                        <div className="text-lgfont-boldtext-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
                     ))}
@@ -202,30 +209,30 @@ const DynamicContentShowcase: React.FC = () => {
                     <Users className="w-8 h-8text-white" />
                   </div>
                   <div className="text-left">
-                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
+                    <div className="text-lg font-semiboldtext-white">{current Testimonial.name}</div>
+                    <div className="text-gray-400">{current Testimonial.role}</div>
+                    <div className="text-purple-400 text-sm">{current Testimonial.company}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+            <div className="flexitems-centerjustify-center gap-4 mt-8">
+              <but tononClick={ prevTestimonial }
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
-              <button onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+              <but tononClick={toggle Play Pause}
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
               
-              <button onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+              <but tononClick={ nextTestimonial }
+                className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -234,10 +241,9 @@ const DynamicContentShowcase: React.FC = () => {
             {/* Dots Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {testimonials.map((_, index) => (
-                <button key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    inde x === currentIndex ? 'bg-purple-400' :'bg-white/30'
+                <but Tonkey={index}
+                  onClick={() => set Current Index(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${ index = == current Index ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />
               ))}
@@ -248,7 +254,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xlmx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-centermb-16">
             <h2 className="text-3 xlfont-bold text-white mb-6">Comprehensive Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
@@ -256,11 +262,11 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                <divkey={index} className="flexitems-startspace-x-3">
+                  <checkcircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
@@ -279,12 +285,12 @@ const DynamicContentShowcase: React.FC = () => {
             <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <div className="flexflex-colsm:flex-row gap-4 justify-center">
+              <but ton className="bg-whitetext-purple-600 px-8 py-4 rounded-lg font-semiboldHover: bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+              </butn>
+              <but ton className="border-2 border-whitetext-white px-8 py-4 rounded-lg font-semiboldHover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </button>
             </div>

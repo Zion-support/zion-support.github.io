@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const PrivacyPage: React.FC = () => {
+constPrivacypagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
         <meta
           name="description"

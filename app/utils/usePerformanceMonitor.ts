@@ -1,15 +1,14 @@
 import { useEffect, useRef } from 'react';
 
-export const usePerformanceMonitor = (name: string) => {
-  const startTime = useRef<number>();
+export const Useperformancemonitor=(name: string) => { constStarttime = useRef<number>();
   
   useEffect(() => {
-    startTime.current = performance.now();
+    start Time.current = performance.now();
     
     return () => {
-      if (startTime.current) {
-        const endTime = performance.now();
-        const duration = endTime - startTime.current;
+      if (start Time.current) {
+        const Endtime=performance.now();
+        const Duration=end Time - start Time.current;
         
         // Performance measurement logged
         // eslint-disable-next-line no-console

@@ -1,6 +1,5 @@
-export const errorTracking ={
-  track: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo ={
+export const Errortracking={
+  track: (error: Error, context?: Record<string, unknown>) => { constErrorinfo = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
@@ -8,8 +7,8 @@ export const errorTracking ={
     }
     
     // Log to console in development
-    if (process.env.NODE_ENV ==='development') {
-      console.error('Error tracked:', errorInfo)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('errorTracked: ', errorInfo)
     }
     
     if (typeof window !=='undefined') {

@@ -1,25 +1,24 @@
 import { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com';
+export default function sitemap(): MetadataRoute.Sitemap { constBaseurl = 'https://ziontechgroup.com';
   
   return [
     {
-      url: baseUrl,
+      url: base Url,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/ai-solutions`,
+      url: `${ baseUrl }/ai-solutions`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/it-solutions`,
+      url: `${ baseUrl }/it-solutions`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.8,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6be4
   ];

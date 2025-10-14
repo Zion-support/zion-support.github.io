@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
-interface EnhancedSEOProps {
-  
+interface Enhancedseoprops {
   title: string;
   description: string;
   keywords?: string;
@@ -11,8 +10,7 @@ interface EnhancedSEOProps {
 
 }
 
-const,
-  EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+constEnhancedseopagePage: React.FC<Enhancedseoprops> = ({
   title,
   description,
   keywords,
@@ -22,9 +20,9 @@ const,
   return (
     <Helmet>
       <title>{title}</title>
-      <meta name ="description" content={description} />
-      {keywords && <meta name ="keywords" content={keywords} />}
-      {canonicalUrl && <link rel="canonical" href ={canonicalUrl} />}
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      {canonicalUrl && <Link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph */}
       <meta property ="og:title" content={title} />
       <meta property ="og:description" content={description} />

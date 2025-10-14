@@ -1,6 +1,5 @@
-export const errorLogger ={
-  log: (error: Error, context?: Record<string, unknown>) => {
-    const errorInfo ={
+export const Errorlogger={
+  log: (error: Error, context?: Record<string, unknown>) => { constErrorinfo = {
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
@@ -8,8 +7,8 @@ export const errorLogger ={
     }
     
     // Log to console in development
-    if (process.env.NODE_ENV ==='development') {
-      console.error('Error logged:', errorInfo)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('errorLogged: ', errorInfo)
     }
     
     if (typeof window !=='undefined') {

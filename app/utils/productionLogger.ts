@@ -1,7 +1,7 @@
-export const productionLogger ={
-  log: (level:'info' | 'warn' | 'error', message: string, data?: unknown) => {
-    if (process.env.NODE_ENV ==='production') {
-      if (leve l ==='error') {
+export const Productionlogger={
+  log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
+    if (process.env.NODE_ENV === 'production') {
+      if (level === 'error') {
         // Production error logging would go to external service
         console.error(message, data)
       } else {

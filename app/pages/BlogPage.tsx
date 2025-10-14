@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const BlogPage: React.FC = () => {
+constBlogpagePage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta
           name="description"

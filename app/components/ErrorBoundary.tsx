@@ -9,7 +9,7 @@ interface State {
   error?: Error;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+className Error Boundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -28,11 +28,10 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">We&apos;re sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <button 
+              onClick={() => window.location.reload()}
+              className="px-6 py-3 bg-purple-600 text-white rounded-lgHover: bg-purple-700 transition-colors"
             >
               Try again
             </button>

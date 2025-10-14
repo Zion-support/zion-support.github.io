@@ -7,41 +7,37 @@ interface EnhancedAnalyticsProps {
 
 }
 
-const,
-  EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  eventName,
-  eventProperties;
-})  => {
-  useEffect(()  => {
-    // Enhanced analytics tracking;
-const trackEvent = (event: string, properties?: Record<string, unknown>)  => {
-      if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-        (window as unknown as { gtag: (command: string, event: string, config: Record<string, unknown>) => void }).gtag('event', event,{
-          event_category:'Enhanced Analytics',
-          ...properties;
+const EnhancedAnalyticsPage: React.FC<Enhancedanalyticsprops> = ({ eventName, eventProperties }) => {
+  useEffect(() => {
+    // Enhanced analytics tracking
+    const trackEvent =(event: string, properties?: Record<string, unknown>) => {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+        (window as unknown as { gtag: (command: string, event: string, config: Record<string, unknown>) => void }).gtag('event', event, {
+          event_category: 'Enhanced Analytics',
+          ...properties
         });
       }
     };
 
-    // Track page view;
-const trackPageView = ()  => {
-      if (typeof window !=='undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-        (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config','GA_MEASUREMENT_ID',{
+    // Track page view
+    const trackPageView =() => {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
+        (window as unknown as { gtag: (command: string, id: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href;
         });
       }
     };
 
-    // Track user engagement;
-const trackEngagement = ()  => {
-        let startTime = Date.now();
-        let maxScrollDepth = 0;
+    // Track user engagement
+    const trackEngagement = () => {
+      let startTime = Date.now();
+      let maxScrollDepth = 0;
       let isActive = true;
 
-      const trackScroll = ()  => {
+      const trackScroll = () => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
         maxScrollDept h = Math.max(maxScrollDepth, scrollDepth);
       };
@@ -77,8 +73,8 @@ window.addEventListener('beforeunload', ()  => {
       };
     };
 
-    // Initialize tracking;
-trackPageView();
+    // Initialize tracking
+    trackPageView();
     const cleanup = trackEngagement();
 
     // Track custom event if provided;

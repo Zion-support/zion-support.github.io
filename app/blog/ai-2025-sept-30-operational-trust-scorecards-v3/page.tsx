@@ -1,11 +1,9 @@
 import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
-
-const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
+constAi2025sept30operationaltrustscorecardsv3page: React.FC = () => {
   return (
-    <>
-      <Helmet>
+    <>Helmet>
         <title>Ai 2025 Sept 30 Operational Trust Scorecards V3</title>
         <meta name="description" content="Professional ai 2025 sept 30 operational trust scorecards v3 solutions and services" />
         <meta name="keywords" content="ai, 2025, sept, 30, operational, trust, scorecards, v3" />
@@ -17,9 +15,7 @@ const Ai2025Sept30OperationalTrustScorecardsV3Page: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional ai 2025 sept 30 operational trust scorecards v3 solutions and services;
             </p>
-            <div className="grid,
-  md:grid-cols-2,
-  lg:grid-cols-3 gap-8 mt-12">
+            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions;

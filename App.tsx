@@ -5,7 +5,12 @@ import { HelmetProvider } from 'react-helmet-async';
 // Components
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
-import Navigation from './app/components/Navigation';
+import { AnalyticsProviderPage as AnalyticsProvider } from './app/components/AnalyticsProvider';
+// import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+// import EnhancedSEO from './app/components/EnhancedSEO';
+// import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// import ErrorBoundary from './app/components/ErrorBoundary';
+// import LoadingStates from './app/components/LoadingStates';
 
 // Lazy load main pages for better code splitting
 const HomePage = React.lazy(() => import('./app/page'));

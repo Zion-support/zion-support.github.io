@@ -1,7 +1,11 @@
-export const seoUtils = {
+export const Seoutils={
   generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group') => {
-    return `${pageTitle} | ${siteName}`
+    return `${ pageTitle } | ${ siteName }`
   },
+  generateDescription: (content: string, maxLength: number = 160) => {
+    if (content.length <= max Length) return content
+    return content.substring(0, max Length - 3) + '...'
+  
   generateDescription: (content: string, maxLength: number = 160) => {
     if (content.length <= maxLength) return content;
     return content.substring(0, maxLength - 3) + '...';
@@ -15,8 +19,7 @@ export const seoUtils = {
     return `${baseUrl}${path}`;
   },
   
-  generateOgImage: (title: string, description: string) => {
-    const params = new URLSearchParams({
+  generateOgImage: (title: string, description: string) => { constParams = new URLSearch Params({
       title,
       description,
       site: 'Zion Tech Group'

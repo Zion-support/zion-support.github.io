@@ -5,21 +5,20 @@ interface AnalyticsProviderProps {
   
   children: ReactNode;
 
+interface AnalyticsProviderProps {
+  children: ReactNode;
 }
 
-export const,
-  AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children })  => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>)  => {
-    if (process.env.NODE_EN V ==='development') {
-      console.warn('Analytics,
-  Event:', eventName, properties);
+export const AnalyticsProviderPage: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Analytics Event: ', eventName, properties);
     }
     // TODO: Implement actual analytics tracking;
   };
-  const trackPageView = (pageName: string)  => {
-    console.warn('Page,
-  View:', pageName);
-    // TODO: Implement actual page view tracking;
+  const trackPageView = (pageName: string) => {
+    console.warn('Page View: ', pageName);
+    // TODO: Implement actual page view tracking
   };
   const value ={
     trackEvent,
@@ -27,6 +26,6 @@ export const,
   return (
     <AnalyticsContext.Provider value ={value}>
       {children}
-      </AnalyticsContext.Provider>
+    </AnalyticsContext.Provider>
   );
 };

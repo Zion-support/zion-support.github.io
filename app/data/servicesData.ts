@@ -1,4 +1,4 @@
-export interface ServiceData {
+export interface Servicedata {
   id: string;
   name: string;
   description: string;
@@ -12,7 +12,7 @@ export interface ServiceData {
   icon: string;
 }
 
-export const servicesData: ServiceData[] = [
+exportConstServicesdata: ServiceData[] = [
   {
     id: 'ai-solutions',
     name: 'AI Solutions',

@@ -1,39 +1,65 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+interface Seooptimizerprops {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+}
 
-      // Add meta tags for social sharing
-      const metaTags = [
-        { name: 'robots', content: 'index, follow' },
-        { name: 'author', content: 'Zion Tech Group' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Zion Tech Group' },
-        { property: 'twitter:card', content: 'summary_large_image' }
-      ];
+constSeooptimizerpagePage: React.FC<Seooptimizerprops> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage: _ogImage,
+  ogType: _og Type='website',
+  twitterCard: _twitter Card='summary_large_image'
+}) => {
+  useEffect(() => {
+    // Update document title
+    if (title) {
+      document.title= title;
+    }
 
-      metaTags.forEach(tag => {
-        const meta = document.createElement('meta');
-        Object.entries(tag).forEach(([key, value]) => {
-          meta.setAttribute(key, value);
-        });
-        document.head.appendChild(meta);
-      });
-    };
+    // Update meta description
+    if (description) { constMetadescription = document.query Selector('meta[name="description"]');
+      if (meta Description) {
+        meta Description.set Attribute('content', description);
+      } else { constMeta = document.create Element('meta');
+        meta.name = 'description';
+        meta.content = description;
+        document.head.append Child(meta);
+      }
+    }
 
-    // Run SEO optimization
-    optimizeSEO();
-  }, []);
+    // Update meta keywords
+    if (keywords) { constMetakeywords = document.query Selector('meta[name="keywords"]');
+      if (meta Keywords) {
+        meta Keywords.set Attribute('content', keywords);
+      } else { constMeta = document.create Element('meta');
+        meta.name = 'keywords';
+        meta.content = keywords;
+        document.head.append Child(meta);
+      }
+    }
 
-  return (
-    <Helmet>
-      <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-      <meta name="description" content="Transform your business with cutting-edge artificial intelligence, 5G technology, and comprehensive IT services. Leading provider of AI and IT solutions." />
-      <meta name="keywords" content="AI solutions, IT services, 5G technology, artificial intelligence, machine learning, cybersecurity, cloud computing" />
-      <link rel="canonical" href="https://ziontech.com" />
-    </Helmet>
-  );
+    // Update canonical URL
+    if (canonical) { constCanonicallink = document.query Selector('link[rel="canonical"]');
+      if (canonical Link) {
+        canonical Link.set Attribute('href', canonical);
+      } else { constLink = document.create Element('link');
+        link.rel = 'canonical';
+        link.href = canonical;
+        document.head.append Child(link);
+      }
+    }
+  }, [title, description, keywords, canonical]);
+
+  return null; // This component doesn't render anything
 };
 
 export default SEOOptimizer;

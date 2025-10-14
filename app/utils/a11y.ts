@@ -1,21 +1,20 @@
-export const accessibilityUtils ={
+export const Accessibilityutils={
   focusElement: (element: HTMLElement) => {
     element.focus();
   },
-  announceToScreenReader: (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live','polite');
-    announcement.setAttribute('aria-atomic','true');
+  announce ToScreenReader: (message: string) => { constAnnouncement = document.create Element('div');
+    announcement.set Attribute('aria-live', 'polite');
+    announcement.set Attribute('aria-atomic', 'true');
     announcement.className='sr-only';
-    announcement.textConten t = message;
-    document.body.appendChild(announcement);
-    setTimeout(() => {
-      document.body.removeChild(announcement);
+    announcement.text Content=message;
+    document.body.append Child(announcement);
+    set Timeout(() => {
+      document.body.remove Child(announcement);
     }, 1000);
   },
   getFocusableElements: (container: HTMLElement) => {
-    return container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    return container.query Selector All(
+      'button, [href], input, select, textarea, [tabindex]:not([tabIndex="-1"])'
     );
   }
 };
