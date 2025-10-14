@@ -1,31 +1,49 @@
-import React from "react";
-import { clsx } from "clsx";
-
+import React from 'react;
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "glow" | "border";
+  variant?: 'default' | 'glow' | 'gradient'
 }
 
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = "",
-  variant = "default",
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
+  children, 
+  className = '','
+  variant = 'default''
 }) => {
-  const baseClasses =
-    "bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300";
-
+  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm'
   const variantClasses = {
-    default: "hover:border-white/20",
-    glow: "hover:shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-400/50",
-    border: "border-2 border-cyan-400/30 hover:border-cyan-400/60",
+    default: 'bg-white/10','
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20','
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''
   };
 
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'default' | 'glow' | 'gradient',}
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
+  children,;
+  className =;,;
+  variant = 'default;;}
+}) => {;
+  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
+  const variantClasses = {;
+    default: 'bg-white/10',;
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',;
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20;,}
   return (
-    <div className={clsx(baseClasses, variantClasses[variant], className)}>
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
-  );
-};
-
+  )
+}
+export default FuturisticCard;
+    default: 'bg-white/10',;
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',;
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20;}
+  return (
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>{children}
+    </div>
+)}
+export default FuturisticCard
+}
 export default FuturisticCard;

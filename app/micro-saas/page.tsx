@@ -1,34 +1,36 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function MicroSaas() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+export default function Page() {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Micro SAAS - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Micro SAAS solutions for businesses"
-        />
+        <title>Micro SAAS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive micro SAAS solutions for small and medium businesses." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Micro SAAS</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Micro SAAS solutions coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Micro SAAS Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive micro SAAS solutions for small and medium businesses.
+              </p>
+              <Link to="/contact">
+                <FuturisticButton size="lg">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+              </Link>
+            </div>
+          </ResponsiveContainer>
+        </section>
       </div>
     </>
   );
-}
+};
+
+export default MicroSAASSolutions;

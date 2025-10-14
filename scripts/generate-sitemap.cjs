@@ -1,106 +1,98 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
-// Get all page routes
-function getAllRoutes() {
-  const routes = [];
-  const appDir = path.join(__dirname, "../app");
+// Define all the routes in your application
+const routes = [
+  '/',
+  '/about',
+  '/contact',
+  '/services',
+  '/ai-services',
+  '/micro-saas',
+  '/5g-solutions',
+  '/pricing',
+  '/blog',
+  '/tutorials',
+  '/demo',
+  '/support',
+  '/privacy',
+  '/terms',
+  '/ai-analytics',
+  '/ai-automation-platform',
+  '/ai-climate-prediction-engine',
+  '/ai-customer-sentiment-tracker',
+  '/ai-data-analytics-pro',
+  '/ai-financial-analysis',
+  '/ai-healthcare-diagnostics',
+  '/ai-holographic-workspace',
+  '/ai-hr-recruitment-pro',
+  '/ai-image-recognition-pro',
+  '/ai-powered-devops',
+  '/ai-powered-email-analyzer',
+  '/ai-quantum-computing',
+  '/ai-supply-chain-optimizer',
+  '/ai-translation-service',
+  '/zion-analytics',
+  '/zion-ai-platform',
+  '/zion-security-shield',
+  '/5g-network-optimization',
+  '/5g-infrastructure',
+  '/cloud-infrastructure-management',
+  '/cloud-migration-pro',
+  '/blockchain-web3',
+  '/project-management-saas',
+  '/customer-relationship-saas',
+  '/inventory-management-saas',
+  '/financial-management-saas',
+  '/employee-management-saas',
+  '/social-media-management-saas',
+  '/email-marketing-saas',
+  '/website-builder-saas',
+  '/task-management-saas',
+  '/smart-home-saas',
+  '/ai-powered-chatbot-saas'
+];
 
-  function scanDirectory(dir, basePath = "") {
-    const items = fs.readdirSync(dir);
-
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (stat.isDirectory()) {
-        // Skip node_modules and other non-page directories
-        if (
-          !["node_modules", ".git", "components", "utils", "types"].includes(
-            item,
-          )
-        ) {
-          scanDirectory(fullPath, basePath + "/" + item);
-        }
-      } else if (item === "page.tsx" || item === "page.ts") {
-        // This is a page
-        const route = basePath || "/";
-        routes.push(route);
-      }
-    }
-  }
-
-  scanDirectory(appDir);
-  return routes;
-}
-
-// Generate sitemap XML
-function generateSitemap() {
-  const routes = getAllRoutes();
-  const baseUrl = "https://ziontechgroup.com";
+// Generate sitemap.xml
+const generateSitemap = () => {
+  const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
-
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-`;
-
-  // Add main pages with higher priority
-  const mainPages = [
-    "/",
-    "/about",
-    "/contact",
-    "/services",
-    "/ai-services",
-    "/it-services",
-  ];
-
-  for (const route of routes) {
-    const url = baseUrl + route;
-    const priority = mainPages.includes(route) ? "1.0" : "0.8";
-    const changefreq = mainPages.includes(route) ? "weekly" : "monthly";
-
-    sitemap += `  <url>
-    <loc>${url}</loc>
+${routes.map(route => `  <url>
+    <loc>${baseUrl}${route}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>
-`;
-  }
+    <changefreq>weekly</changefreq>
+    <priority>${route === '/' ? '1.0' : '0.8'}</priority>
+  </url>`).join('\n')}
+</urlset>`;
 
-  sitemap += `</urlset>`;
-
-  // Write to public directory
-  const publicDir = path.join(__dirname, "../public");
+  // Write sitemap to public directory
+  const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
-
-  fs.writeFileSync(path.join(publicDir, "sitemap.xml"), sitemap);
-  console.log(`Generated sitemap with ${routes.length} routes`);
-}
+  
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully!');
+};
 
 // Generate robots.txt
-function generateRobots() {
+const generateRobots = () => {
   const robots = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-`;
-
-  const publicDir = path.join(__dirname, "../public");
+  const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
-
-  fs.writeFileSync(path.join(publicDir, "robots.txt"), robots);
-  console.log("Generated robots.txt");
-}
+  
+  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robots);
+  console.log('Robots.txt generated successfully!');
+};
 
 // Run the generators
 generateSitemap();

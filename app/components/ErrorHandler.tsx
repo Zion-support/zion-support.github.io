@@ -1,5 +1,4 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 
 interface Props {
@@ -39,8 +38,7 @@ class ErrorHandler extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by handler:', error, errorInfo);
-    }
+      }
 
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {

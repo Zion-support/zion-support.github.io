@@ -6,10 +6,14 @@ export default function Consultation() {
   return (
     <>
       <Helmet>
-        <title>Consultation - Zion Tech Group</title>
+        <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
         <meta
           name="description"
-          content="Professional consultation services from Zion Tech Group"
+          content="Get expert IT consultation from Zion Tech Group. Technology strategy, AI implementation, cloud migration, and cybersecurity consulting services."
+        />
+        <meta
+          name="keywords"
+          content="IT consultation, technology consulting, AI consulting, cloud migration, cybersecurity audit, digital transformation"
         />
       </Helmet>
 

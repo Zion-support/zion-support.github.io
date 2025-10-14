@@ -1,25 +1,17 @@
-import React, { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
   }
 }
 
-const Analytics: React.FC = () => {
-  useEffect(() => {
-    const initAnalytics = () => {
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("config", "GA_MEASUREMENT_ID", {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
-    };
-    initAnalytics();
-  }, []);
-
-  return null; // Analytics component doesn't render anything
+interface AnalyticsProps {
+  children?: React.ReactNode;
+},
+const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
-export default Analytics;
+export default Analytics

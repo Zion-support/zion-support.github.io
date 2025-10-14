@@ -1,76 +1,48 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
 
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-
-    // Check if file has merge conflicts
-    if (!content.includes("<<<<<<< HEAD")) {
-      return false;
-    }
-
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-
-    // Remove merge conflict markers and keep the newer version (after =======)
-    const lines = content.split("\n");
-    const newLines = [];
-    let inConflict = false;
-    let keepLines = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      if (line.startsWith("<<<<<<< HEAD")) {
-        inConflict = true;
-        keepLines = false;
-        continue;
-      }
-
-      if (line.startsWith("=======")) {
-        keepLines = true;
-        continue;
-      }
-
-      if (line.startsWith(">>>>>>>")) {
-        inConflict = false;
-        keepLines = false;
-        continue;
-      }
-
-      if (!inConflict || keepLines) {
-        newLines.push(line);
-      }
-    }
-
-    const newContent = newLines.join("\n");
-    fs.writeFileSync(filePath, newContent, "utf8");
-    return true;
-  } catch (error) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the latest version (after   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Get all files with merge conflicts
-const { execSync } = require("child_process");
-const files = execSync(
-  'find /workspace/app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \\;',
-  { encoding: "utf8" },
-)
-  .trim()
-  .split("\n")
-  .filter((f) => f.length > 0);
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-console.log(`Found ${files.length} files with merge conflicts`);
+// Find all TypeScript/TSX files
+const files = findTsxFiles('./app');
+files.push('./App.tsx');
 
 let fixedCount = 0;
-files.forEach((file) => {
+for (const file of files) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
   }
-});
+}
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
