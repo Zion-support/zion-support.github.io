@@ -2,7 +2,7 @@ import React, { createContext, ReactNode, useCallback } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (page: string) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
   setUser: (userId: string, properties?: Record<string, unknown>) => void;
 }
 
@@ -20,9 +20,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Add your analytics tracking logic here
   }, []);
 
-  const trackPageView = useCallback((page: string) => {
+  const trackPageView = useCallback((pageName: string, properties?: Record<string, unknown>) => {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('Page view tracked:', page);
+      console.warn('Page view tracked:', pageName, properties);
     }
     // Add your page view tracking logic here
   }, []);
