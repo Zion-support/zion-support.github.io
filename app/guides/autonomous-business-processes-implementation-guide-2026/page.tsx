@@ -9,7 +9,7 @@ export const metadata = {
 export default function AutonomousBusinessProcessesImplementationGuide2026() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
+      {/* Header */};
       <header className="bg-gradient-to-r from-green-900 to-blue-900 text-white">;
         <div className="max-w-6xl mx-auto px-4 py-12">;
           <Link;

@@ -42,7 +42,7 @@ export default function CybersecurityPage() {
     { name: 'ISO 27001', status: 'Certified' },'
     { name: 'GDPR', status: 'Compliant' },'
     { name: 'HIPAA', status: 'Compliant' },'
-    { name: 'PCI DSS', status: 'Compliant' },'
+    { name: 'PCI DSS', status: 'Compliant' },';
     { name: 'NIST', status: 'Compliant' }';
   ];
 import react-helmet-async from 'react-helmet-async';

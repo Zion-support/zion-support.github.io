@@ -19,7 +19,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     '@context': 'https://schema.org',';
   noFollow = false}
 }) => {;
-  const siteName="Zion Tech Group" siteUrl="https://ziontechgroup.com" fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`;```````
+  const siteName="Zion Tech Group" siteUrl="https://ziontechgroup.com" fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`;`````````
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";`"`'"``'"`;
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -36,12 +36,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   return (
 <>    <Helmet></Helmet>
       { /* Basic Meta Tags */ }
-      <title>{title}</title>
-      </script>
-    </Helmet>`
-  )}``
-export default EnhancedSEO;```
-  );````
+      <title>{title}</title>`
+      </script>``
+    </Helmet>```
+  )}````
 export default EnhancedSEO;`````
-  return (``````
-;```````
+  );``````
+export default EnhancedSEO;```````
+  return (````````
+;`````````

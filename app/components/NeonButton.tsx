@@ -31,12 +31,12 @@ const NeonButton: React.FC<NeonButtonProps> = ({
         rel="noopener noreferrer"></a>
         {children}
       </a>
-    )}
-  }
-  ;`
-  if (to) {``
-    return (```
-      <Link to={to} className={classes}></Link>````
-        {children}`````
-      </Link>``````
-;```````
+    )}`
+  }``
+  ;```
+  if (to) {````
+    return (`````
+      <Link to={to} className={classes}></Link>``````
+        {children}```````
+      </Link>````````
+;`````````

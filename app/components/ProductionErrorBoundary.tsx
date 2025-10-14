@@ -20,14 +20,14 @@ class ProductionErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };`
-  }``
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {```
-    // Log error details;````
-    this.setState({`````
-      error,``````
-      errorInfo,```````
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}```
+    };```
+  }````
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {`````
+    // Log error details;``````
+    this.setState({```````
+      error,````````
+      errorInfo,`````````
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
     // Log to console in development;
@@ -59,15 +59,15 @@ class ProductionErrorBoundary extends Component<Props, State> {
           'Content-Type': 'application/json','
         },
         body: JSON.stringify(errorData),
-      });
-    } catch (reportingError) {
-      // Fallback: log to console if reporting fails;`
-      }``
-  };```
-  private getSessionId = (): string => {````
-    // Generate or retrieve session ID;`````
-    let sessionId = sessionStorage.getItem('sessionId');'``````
-    if (!sessionId) {```````
+      });`
+    } catch (reportingError) {``
+      // Fallback: log to console if reporting fails;```
+      }````
+  };`````
+  private getSessionId = (): string => {``````
+    // Generate or retrieve session ID;```````
+    let sessionId = sessionStorage.getItem('sessionId');'````````
+    if (!sessionId) {`````````
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);'
     }
@@ -82,17 +82,17 @@ class ProductionErrorBoundary extends Component<Props, State> {
   private handleGoHome = () => {
     window.location.href = '/;
   };
-  private handleReportError = () => {
-    const errorDetails = {
-      errorId: this.state.errorId,`
-      message: this.state.error?.message,``
-      stack: this.state.error?.stack,```
-      url: window.location.href,````
-      timestamp: new Date().toISOString(),`````
-    };``````
-    // Create mailto link with error details;```````
-    const subject = `Error Report - ${this.state.errorId}`;```````
-    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;```````
+  private handleReportError = () => {`
+    const errorDetails = {``
+      errorId: this.state.errorId,```
+      message: this.state.error?.message,````
+      stack: this.state.error?.stack,`````
+      url: window.location.href,``````
+      timestamp: new Date().toISOString(),```````
+    };````````
+    // Create mailto link with error details;`````````
+    const subject = `Error Report - ${this.state.errorId}`;`````````
+    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`````````
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
   };
@@ -166,12 +166,12 @@ class ProductionErrorBoundary extends Component<Props, State> {
               <p>"
                 Error ID: {this.state.errorId}
               </p>
-            )}
-          </div>
-        </div>`
-      );``
-    }```
-    return this.props.children;````
-  }`````
-}``````
-export default ProductionErrorBoundary;```````
+            )}`
+          </div>``
+        </div>```
+      );````
+    }`````
+    return this.props.children;``````
+  }```````
+}````````
+export default ProductionErrorBoundary;`````````

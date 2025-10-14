@@ -85,15 +85,15 @@ const InnovationLabsPage: React.FC = () => {
 │   └── Custom AI Models
 ├── Development Tools
 │   ├── GitHub Copilot
-│   ├── AI Code Generation
-│   └── Automated Testing
-├── Data & Analytics`
-│   ├── Real-time Data Processing``
-│   ├── Predictive Analytics```
-│   └── Market Intelligence````
-└── Infrastructure`````
-    ├── Cloud-native Architecture``````
-    ├── Kubernetes & Docker```````
+│   ├── AI Code Generation`
+│   └── Automated Testing``
+├── Data & Analytics```
+│   ├── Real-time Data Processing````
+│   ├── Predictive Analytics`````
+│   └── Market Intelligence``````
+└── Infrastructure```````
+    ├── Cloud-native Architecture````````
+    ├── Kubernetes & Docker`````````
     └── CI/CD Automation`}
               </pre>
             </div>
@@ -116,12 +116,12 @@ const InnovationLabsPage: React.FC = () => {
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">;
                   Explore AI Services
                 </Link>
-              </div>
-            </div>
-          </div>`
-        </div>``
-      </div>```
-    </div>````
-  );`````
-}``````
-export default InnovationLabsPage;```````
+              </div>`
+            </div>``
+          </div>```
+        </div>````
+      </div>`````
+    </div>``````
+  );```````
+}````````
+export default InnovationLabsPage;`````````

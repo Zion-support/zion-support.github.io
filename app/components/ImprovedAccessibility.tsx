@@ -152,103 +152,103 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               ×
             </button>
           </div>
-          <div className="space-y-4">"
-            {/* High Contrast */}
-            <div className="flex items-center justify-between">"`
-              <div className="flex items-center gap-2">"``
-                <Eye className="w-4 h-4" />"```
-                <span className="text-sm">High Contrast</span>"````
-              </div>`````
-              <button;``````
-                onClick={() => toggleSetting('highContrast')}'```````
-                className={`w-12 h-6 rounded-full transition-colors ${``````
-                  settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'```````
-                }`}```````
-                aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}'`````
-              >``````
-                <div;```````
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${``````
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'```````
+          <div className="space-y-4">"`
+            {/* High Contrast */}``
+            <div className="flex items-center justify-between">"```
+              <div className="flex items-center gap-2">"````
+                <Eye className="w-4 h-4" />"`````
+                <span className="text-sm">High Contrast</span>"``````
+              </div>```````
+              <button;````````
+                onClick={() => toggleSetting('highContrast')}'`````````
+                className={`w-12 h-6 rounded-full transition-colors ${````````
+                  settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'`````````
+                }`}`````````
+                aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}'```````
+              >````````
+                <div;`````````
+                  className={`w-5 h-5 bg-white rounded-full transition-transform ${````````
+                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'`````````
                   }`}
                 /></div>
               </button>
-            </div>
-            {/* Large Text */}
-            <div className="flex items-center justify-between">"`
-              <div className="flex items-center gap-2">"``
-                <Type className="w-4 h-4" />"```
-                <span className="text-sm">Large Text</span>"````
-              </div>`````
-              <button;``````
-                onClick={() => toggleSetting('largeText')}'```````
-                className={`w-12 h-6 rounded-full transition-colors ${``````
-                  settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'```````
-                }`}```````
-                aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}'`````
-              >``````
-                <div;```````
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${``````
-                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'```````
+            </div>`
+            {/* Large Text */}``
+            <div className="flex items-center justify-between">"```
+              <div className="flex items-center gap-2">"````
+                <Type className="w-4 h-4" />"`````
+                <span className="text-sm">Large Text</span>"``````
+              </div>```````
+              <button;````````
+                onClick={() => toggleSetting('largeText')}'`````````
+                className={`w-12 h-6 rounded-full transition-colors ${````````
+                  settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'`````````
+                }`}`````````
+                aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}'```````
+              >````````
+                <div;`````````
+                  className={`w-5 h-5 bg-white rounded-full transition-transform ${````````
+                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'`````````
                   }`}
                 /></div>
               </button>
-            </div>
-            {/* Reduced Motion */}
-            <div className="flex items-center justify-between">"`
-              <div className="flex items-center gap-2">"``
-                <MousePointer className="w-4 h-4" />"```
-                <span className="text-sm">Reduced Motion</span>"````
-              </div>`````
-              <button;``````
-                onClick={() => toggleSetting('reducedMotion')}'```````
-                className={`w-12 h-6 rounded-full transition-colors ${``````
-                  settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'```````
-                }`}```````
-                aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}'`````
-              >``````
-                <div;```````
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${``````
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'```````
+            </div>`
+            {/* Reduced Motion */}``
+            <div className="flex items-center justify-between">"```
+              <div className="flex items-center gap-2">"````
+                <MousePointer className="w-4 h-4" />"`````
+                <span className="text-sm">Reduced Motion</span>"``````
+              </div>```````
+              <button;````````
+                onClick={() => toggleSetting('reducedMotion')}'`````````
+                className={`w-12 h-6 rounded-full transition-colors ${````````
+                  settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'`````````
+                }`}`````````
+                aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}'```````
+              >````````
+                <div;`````````
+                  className={`w-5 h-5 bg-white rounded-full transition-transform ${````````
+                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'`````````
                   }`}
                 /></div>
               </button>
-            </div>
-            {/* Screen Reader */}
-            <div className="flex items-center justify-between">"`
-              <div className="flex items-center gap-2">"``
-                {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}"```
-                <span className="text-sm">Screen Reader</span>"````
-              </div>`````
-              <button;``````
-                onClick={() => toggleSetting('screenReader')}'```````
-                className={`w-12 h-6 rounded-full transition-colors ${``````
-                  settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'```````
-                }`}```````
-                aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}'`````
-              >``````
-                <div;```````
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${``````
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'```````
+            </div>`
+            {/* Screen Reader */}``
+            <div className="flex items-center justify-between">"```
+              <div className="flex items-center gap-2">"````
+                {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}"`````
+                <span className="text-sm">Screen Reader</span>"``````
+              </div>```````
+              <button;````````
+                onClick={() => toggleSetting('screenReader')}'`````````
+                className={`w-12 h-6 rounded-full transition-colors ${````````
+                  settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'`````````
+                }`}`````````
+                aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}'```````
+              >````````
+                <div;`````````
+                  className={`w-5 h-5 bg-white rounded-full transition-transform ${````````
+                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'`````````
                   }`}
                 /></div>
               </button>
-            </div>
-            {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">"`
-              <div className="flex items-center gap-2">"``
-                <Keyboard className="w-4 h-4" />"```
-                <span className="text-sm">Keyboard Navigation</span>"````
-              </div>`````
-              <button;``````
-                onClick={() => toggleSetting('keyboardNavigation')}'```````
-                className={`w-12 h-6 rounded-full transition-colors ${``````
-                  settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'```````
-                }`}```````
-                aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}'`````
-              >``````
-                <div;```````
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${``````
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'```````
+            </div>`
+            {/* Keyboard Navigation */}``
+            <div className="flex items-center justify-between">"```
+              <div className="flex items-center gap-2">"````
+                <Keyboard className="w-4 h-4" />"`````
+                <span className="text-sm">Keyboard Navigation</span>"``````
+              </div>```````
+              <button;````````
+                onClick={() => toggleSetting('keyboardNavigation')}'`````````
+                className={`w-12 h-6 rounded-full transition-colors ${````````
+                  settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'`````````
+                }`}`````````
+                aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}'```````
+              >````````
+                <div;`````````
+                  className={`w-5 h-5 bg-white rounded-full transition-transform ${````````
+                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'`````````
                   }`}
                 /></div>
               </button>
@@ -273,15 +273,15 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         onClick={(e) => {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');'
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: 'smooth' });'`
-          }``
-        }}```
-      >````
-        Skip to main content;`````
-      </a>``````
-      {/* Accessibility Styles */}```````
+          if (mainContent) {`
+            mainContent.focus();``
+            mainContent.scrollIntoView({ behavior: 'smooth' });'```
+          }````
+        }}`````
+      >``````
+        Skip to main content;```````
+      </a>````````
+      {/* Accessibility Styles */}`````````
       <style jsx global>{`
         .high-contrast {
           --tw-bg-opacity: '1;','
@@ -326,17 +326,17 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           border: 0;
         }
         .focus\\:not-sr-only:focus {
-          position: 'static;','
-          width: 'auto;','
-          height: 'auto;','`
-          padding: '0.5rem 1rem;','``
-          margin: '0;','```
-          overflow: 'visible;','````
-          clip: 'auto;','`````
-          white-space: normal;``````
-        }```````
-      `}</style>```
-    </>````
-  );`````
-};``````
-export default ImprovedAccessibility;```````
+          position: 'static;','`
+          width: 'auto;','``
+          height: 'auto;','```
+          padding: '0.5rem 1rem;','````
+          margin: '0;','`````
+          overflow: 'visible;','``````
+          clip: 'auto;','```````
+          white-space: normal;````````
+        }`````````
+      `}</style>`````
+    </>``````
+  );```````
+};````````
+export default ImprovedAccessibility;`````````

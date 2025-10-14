@@ -175,12 +175,12 @@ export default EnhancedErrorBoundary;
 export default EnhancedErrorBoundary;
               )}
         </div>
-      );
-    }
-    return this.props.children;`
-  }``
-}```
-;````
-export default EnhancedErrorBoundary;`````
->>>>>>> origin/main;``````
- origin/main;```````
+      );`
+    }``
+    return this.props.children;```
+  }````
+}`````
+;``````
+export default EnhancedErrorBoundary;```````
+>>>>>>> origin/main;````````
+ origin/main;`````````

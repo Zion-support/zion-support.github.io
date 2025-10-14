@@ -3,7 +3,7 @@ export default function OptimizedLoading() {
   return (
     <div className="optimized-loading-container">"
       <div className="loading-content">"
-        <div className="spinner"></div>"
+        <div className="spinner"></div>";
         <p>Loading...</p>;
       </div>;
       <Link;

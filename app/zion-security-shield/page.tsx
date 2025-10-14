@@ -20,7 +20,7 @@ benefits: ["Malware Protection", "Ransomware Defense", "Device Management", "Pol
     {
       title: "Compliance Management",
       description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOC 2, and other regulatory requirements.",
-      icon: <CheckCircle className="w-6 h-6" />,
+      icon: <CheckCircle className="w-6 h-6" />,;
 benefits: ["Regulatory Compliance", "Automated Reports", "Audit Trails", "Policy Templates"],;
     };
   ];
@@ -210,10 +210,10 @@ popular: false,
               {pricingPlans.map((plan, index) => (
                 <div;
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${,````
-                    plan.popular`````
-                      ? 'border-red-500/50 shadow-red-500/20'``````
-: 'border-white/20 hover:border-red-500/30',```````
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${,``````
+                    plan.popular```````
+                      ? 'border-red-500/50 shadow-red-500/20'````````
+: 'border-white/20 hover:border-red-500/30',`````````
                   }`}
                 >
                   {plan.popular && (
@@ -232,19 +232,19 @@ popular: false,
                     <p>{plan.description}</p>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />`
-                        <span className="text-gray-300">{feature}</span>``
-                      </li>```
-                    ))}````
-                  </ul>`````
-                  <Link;``````
-                    to="/contact"```````
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${````
-                      plan.popular`````
-? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25',``````
-: 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900',```````
+                    {plan.features.map((feature, idx) => (`
+                      <li key={idx} className="flex items-center space-x-3">``
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />```
+                        <span className="text-gray-300">{feature}</span>````
+                      </li>`````
+                    ))}``````
+                  </ul>```````
+                  <Link;````````
+                    to="/contact"`````````
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${``````
+                      plan.popular```````
+? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25',````````
+: 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900',`````````
                     }`}
                   >
                     {plan.popular ? 'Start Free Trial' : 'Get Started',}
@@ -333,12 +333,12 @@ popular: false,
                   className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >;
                   Security Assessment
-                </Link>
-              </div>
-            </div>`
-          </div>``
-        </section>```
-      </div>````
-    </>`````
-  );``````
-}```````
+                </Link>`
+              </div>``
+            </div>```
+          </div>````
+        </section>`````
+      </div>``````
+    </>```````
+  );````````
+}`````````

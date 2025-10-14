@@ -7,7 +7,7 @@ export default function DataAnalyticsPage() {
         <title>Data Analytics - Zion Tech Group</title>
         <meta name="description" content="Professional data analytics services by Zion Tech Group." />
         <meta name="keywords" content="data analytics, business intelligence, IT services" />
-      </Helmet>
+      </Helmet>;
       <div className="container mx-auto px-4 py-20">;
         <div className="text-center">;
           <h1>;

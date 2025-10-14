@@ -117,7 +117,7 @@ tags: ['content-moderation', 'automation', 'nlp'],
             {categories.map((category, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>```````
+                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>`````````
                     <category.icon className={`w-6 h-6 ${category.color}`} />
                   </div>
                   <div>
@@ -238,12 +238,12 @@ tags: ['content-moderation', 'automation', 'nlp'],
               Sign Up Free
             </button>
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">;
-              Learn More
-            </button>
-          </div>`
-        </div>``
-      </section>```
-    </div>````
-  );`````
-};``````
-export default CommunityPage;```````
+              Learn More`
+            </button>``
+          </div>```
+        </div>````
+      </section>`````
+    </div>``````
+  );```````
+};````````
+export default CommunityPage;`````````

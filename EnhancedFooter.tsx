@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedFooter = () => {
   return (
     <footer className="bg-slate-800 text-white py-8">
@@ -9,5 +8,4 @@ const EnhancedFooter = () => {
     </footer>
   );
 };
-
 export default EnhancedFooter;

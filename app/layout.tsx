@@ -5,7 +5,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
-export default function RootLayout({
+export default function RootLayout({;
   children,;
 }: {;
   children: React.ReactNode;

@@ -167,25 +167,25 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </h3>
             <button;
               onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover: 'text-white"','
-            >
-              ×`
-            </button>``
-          </div>```
-          {/* Performance Score */}````
-          <div className="mb-4">"`````
-            <div className="flex items-center justify-between mb-2">"``````
-              <span className="text-sm text-gray-300">Overall Score</span>"```````
-              <span className={`font-bold ${getScoreColor(performanceScore)}`}></span>``
-                {performanceScore}/100;```
-              </span>````
-            </div>`````
-            <div className="w-full bg-slate-700 rounded-full h-2">"``````
-              <div;```````
-                className={`h-2 rounded-full transition-all duration-300 ${`````
-                  performanceScore >= 90 ? 'bg-green-400' :'``````
-                  performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'```````
-                }`}```````
+              className="text-gray-400 hover: 'text-white"','`
+            >``
+              ×```
+            </button>````
+          </div>`````
+          {/* Performance Score */}``````
+          <div className="mb-4">"```````
+            <div className="flex items-center justify-between mb-2">"````````
+              <span className="text-sm text-gray-300">Overall Score</span>"`````````
+              <span className={`font-bold ${getScoreColor(performanceScore)}`}></span>````
+                {performanceScore}/100;`````
+              </span>``````
+            </div>```````
+            <div className="w-full bg-slate-700 rounded-full h-2">"````````
+              <div;`````````
+                className={`h-2 rounded-full transition-all duration-300 ${```````
+                  performanceScore >= 90 ? 'bg-green-400' :'````````
+                  performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'`````````
+                }`}`````````
                 style={{ width: `${performanceScore}%` }}
               />
             </div>
@@ -249,12 +249,12 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <span className="text-cyan-400">"
                   {metrics.connection}
                 </span>
-              </div>
-            )}
-          </div>`
-        </div>``
-      )}```
-    </div>````
-  );`````
-};``````
-export default ImprovedPerformanceMonitor;```````
+              </div>`
+            )}``
+          </div>```
+        </div>````
+      )}`````
+    </div>``````
+  );```````
+};````````
+export default ImprovedPerformanceMonitor;`````````

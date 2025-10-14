@@ -4,7 +4,7 @@ export default function ZionHrAssistantProPage() {
   return (
 <>    <div></div>"
       <h1>Zion Hr Assistant Pro</h1>"
-      <p>This page is under development.</p>
+      <p>This page is under development.</p>;
     </div>)};
     </>;
   );

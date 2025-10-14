@@ -3,7 +3,7 @@ export default function FuturisticGlow() {
   return (
     <>
       <Helmet></Helmet>
-        <title>Futuristic Glow - Zion Tech Group</title>
+        <title>Futuristic Glow - Zion Tech Group</title>;
       </Helmet>;
       <div className="futuristic-glow-container">";
         <Link;

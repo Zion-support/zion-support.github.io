@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface NotFoundProps {
   className?: string;
 }
-
 const NotFound: React.FC<NotFoundProps> = ({ className = '' }) => {
   return (
     <div className={`404-container ${className}`}>
@@ -11,6 +9,5 @@ const NotFound: React.FC<NotFoundProps> = ({ className = '' }) => {
       <p>This is the 404 component.</p>
     </div>
   );
-};
-
-export default NotFound;
+};`
+export default NotFound;``

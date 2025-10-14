@@ -14,12 +14,12 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   const baseClasses="transition-all duration-300 transform" hoverClasses = hoverEffect ? 'hover:scale-105 hover:-translate-y-1' : ';
   const glowClass = glowClasses[glowColor];
   return (
-<>    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>````
-      {children}
-    </div>`
-    </>``
-  )}```
-    </div>````
-  );`````
-};``````
-```````
+<>    <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>`````
+      {children}``
+    </div>```
+    </>````
+  )}`````
+    </div>``````
+  );```````
+};````````
+`````````

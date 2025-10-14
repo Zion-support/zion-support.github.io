@@ -59,7 +59,7 @@ export default function DocumentationPage() {
   const quickStart = [
     { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },'
     { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },'
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },'
+    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },';
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }';
   ];
 import react-helmet-async from 'react-helmet-async';
@@ -193,15 +193,15 @@ const DocumentationPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>"
               <pre className="text-left text-green-400 overflow-x-auto">"
                 <code>{`// Initialize the client;
-const client = new ZionTechClient({
-  apiKey: 'your-api-key','
-  environment: 'production;'`
-});``
-// Make an API call;```
-const response = await client.ai.generateText({````
-  prompt: 'Hello, world!','`````
-  maxTokens: 100;``````
-});```````
+const client = new ZionTechClient({`
+  apiKey: 'your-api-key','``
+  environment: 'production;'```
+});````
+// Make an API call;`````
+const response = await client.ai.generateText({``````
+  prompt: 'Hello, world!','```````
+  maxTokens: 100;````````
+});`````````
 console.log(response.data)`}</code>
               </pre>
             </div>
@@ -266,12 +266,12 @@ console.log(response.data)`}</code>
                 to="/contact"
                 className="border-2 border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold text-lg hover: 'bg-green-400 hover:text-white transition-all duration-300"','
               ></Link>
-                Get In Touch;
-              </Link>
-            </div>`
-          </div>``
-        </div>```
-      </section>````
-    </>`````
-  )}``````
-```````
+                Get In Touch;`
+              </Link>``
+            </div>```
+          </div>````
+        </div>`````
+      </section>``````
+    </>```````
+  )}````````
+`````````

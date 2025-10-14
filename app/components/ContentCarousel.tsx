@@ -45,14 +45,14 @@
             <button;
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${``````
-index === currentSlide ? 'bg-white' : 'bg-white/30',```````
-              }`}```````
-              aria-label={`Go to slide ${index + 1}`}
-            />`
-          ))}``
-        </div>```
-      </div>````
-    </div>`````
-  )}``````
-;```````
+              className={`w-3 h-3 rounded-full transition-colors ${````````
+index === currentSlide ? 'bg-white' : 'bg-white/30',`````````
+              }`}`````````
+              aria-label={`Go to slide ${index + 1}`}``
+            />```
+          ))}````
+        </div>`````
+      </div>``````
+    </div>```````
+  )}````````
+;`````````

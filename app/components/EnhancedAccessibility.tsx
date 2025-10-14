@@ -24,25 +24,25 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50"
       skipLink.style.cssText = `````;
         position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #8b5cf6;`
-        color: white;``
-        padding: 8px;```
-        text-decoration: none;````
-        border-radius: 4px;`````
-        z-index: 1000;``````
-        transition: top 0.3s;```````
+        top: -40px;`
+        left: 6px;``
+        background: #8b5cf6;```
+        color: white;````
+        padding: 8px;`````
+        text-decoration: none;``````
+        border-radius: 4px;```````
+        z-index: 1000;````````
+        transition: top 0.3s;`````````
       `;````;
-      skipLink.addEventListener('focus', () => {';
-        skipLink.style.top = '6px'"})"'"'";
-      skipLink.addEventListener('blur', () => {';`
-        skipLink.style.top="-40px" skipLink = document.createElement('a')';``
-      skipLink.href = '#main-content;```
-      skipLink.textContent = 'Skip to main content;````
-      skipLink.className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50" enhanceFocusManagement = () => {`````
-      // Add focus indicators;``````
-      const style = document.createElement('style')';```````
+      skipLink.addEventListener('focus', () => {';`
+        skipLink.style.top = '6px'"})"'"'";``
+      skipLink.addEventListener('blur', () => {';```
+        skipLink.style.top="-40px" skipLink = document.createElement('a')';````
+      skipLink.href = '#main-content;`````
+      skipLink.textContent = 'Skip to main content;``````
+      skipLink.className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50" enhanceFocusManagement = () => {```````
+      // Add focus indicators;````````
+      const style = document.createElement('style')';`````````
       style.textContent = `````
         *:focus {
           outline: 2px solid #06b6d4 !important;
@@ -61,15 +61,15 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
           margin: 0;
           overflow: visible;
           clip: auto;
-          position: absolute;
-          width: 1px;
-          height: 1px;`
-          padding: 0;``
-          margin: -1px;```
-          overflow: hidden;````
-          clip: rect(0, 0, 0, 0);`````
-          white-space: nowrap;``````
-          border: 0}```````
+          position: absolute;`
+          width: 1px;``
+          height: 1px;```
+          padding: 0;````
+          margin: -1px;`````
+          overflow: hidden;``````
+          clip: rect(0, 0, 0, 0);```````
+          white-space: nowrap;````````
+          border: 0}`````````
       `````;
       document.head.appendChild(style);
     const addAriaLabels = () => {
@@ -123,21 +123,21 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     return () => {
       // Cleanup if needed}}, []);
   useEffect(() => {
-    applyAccessibilitySettings(settings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])';
-  const applyAccessibilitySettings = () => {`
-    const root = document.documentElement;``
-    // Apply high contrast;```
-    if (settings.highContrast) {````
-    // Apply font size;`````
-    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')';``````
-    if (settings.fontSize !== 'normal') {';```````
-      root.classList.add(`font-size-${settings.fontSize}`)}``````
-    // Apply reduced motion;```
-  // Add CSS for accessibility features;````
-  useEffect(() => {`````
-    const style = document.createElement('style')';``````
-    style.id = 'enhanced-accessibility-styles;```````
+    applyAccessibilitySettings(settings);`
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])';``
+  const applyAccessibilitySettings = () => {```
+    const root = document.documentElement;````
+    // Apply high contrast;`````
+    if (settings.highContrast) {``````
+    // Apply font size;```````
+    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')';````````
+    if (settings.fontSize !== 'normal') {';`````````
+      root.classList.add(`font-size-${settings.fontSize}`)}````````
+    // Apply reduced motion;`````
+  // Add CSS for accessibility features;``````
+  useEffect(() => {```````
+    const style = document.createElement('style')';````````
+    style.id = 'enhanced-accessibility-styles;`````````
     style.textContent = `````
       .high-contrast {
         animation-iteration-count: 1 !important;
@@ -172,15 +172,15 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     return () => {
       const existingStyle = document.getElementById('enhanced-accessibility-styles')';
       if (existingStyle) {
-        existingStyle.remove()
-  }, []);
         existingStyle.remove()`
-    }}, []);``
-  return (```
-<>    <div></div>````
-      <button></button>`````
-        ♿ A11y;``````
-      </button>```````
+  }, []);``
+        existingStyle.remove()```
+    }}, []);````
+  return (`````
+<>    <div></div>``````
+      <button></button>```````
+        ♿ A11y;````````
+      </button>`````````
       <div className={`accessibility-panel ${isVisible ? 'visible' : ,}`}>"`"`'"``'"`
         <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>"
         <div className="space-y-4">"
@@ -209,24 +209,24 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
             Close;
           </button>
         </div>
-      </div>
-    </div>
-  );`
-export default EnhancedAccessibility;``
+      </div>`
+    </div>``
   );```
 export default EnhancedAccessibility;````
-    // Apply high contrast mode;`````
-  useEffect(() => {``````
-    // Apply font size changes;```````
+  );`````
+export default EnhancedAccessibility;``````
+    // Apply high contrast mode;```````
+  useEffect(() => {````````
+    // Apply font size changes;`````````
     document.documentElement.style.fontSize = `${fontSize}px`;````
   }, [fontSize])
   // Keyboard shortcuts;
-  useEffect(() => {
-    const handleKeyDown = () => {
-      // Alt + M: Skip to main content;`
-      if (event.altKey && event.key === 'm') {';``
-        event.preventDefault();```
-        const mainContent = document.getElementById('main-content');'";````
-        if (mainContent) {}`````
-      // Alt + H: Go to home;``````
-export default EnhancedAccessibility;```````
+  useEffect(() => {`
+    const handleKeyDown = () => {``
+      // Alt + M: Skip to main content;```
+      if (event.altKey && event.key === 'm') {';````
+        event.preventDefault();`````
+        const mainContent = document.getElementById('main-content');'";``````
+        if (mainContent) {}```````
+      // Alt + H: Go to home;````````
+export default EnhancedAccessibility;`````````

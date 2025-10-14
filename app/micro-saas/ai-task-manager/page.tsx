@@ -317,10 +317,10 @@ const AITaskManagerPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">"','
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${````
-                  plan.popular ;`````
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'``````
-                    : 'border-white/20 hover:border-cyan-400/30'```````
+                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${``````
+                  plan.popular ;```````
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'````````
+                    : 'border-white/20 hover:border-cyan-400/30'`````````
                 }`}></div>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
@@ -338,19 +338,19 @@ const AITaskManagerPage: React.FC = () => {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">"
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">"
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"`
-                        <span className="text-gray-300">{feature}</span>"``
-                      </li>```
-                    ))}````
-                  </ul>`````
-                  <Link ;``````
-                    to="/contact" ```````
-                    className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${````
-                      plan.popular;`````
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: 'from-cyan-600 hover:to-purple-700,'``````
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900'```````
+                    {plan.features.map((feature, featureIndex) => (`
+                      <li key={featureIndex} className="flex items-center space-x-3">"``
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"```
+                        <span className="text-gray-300">{feature}</span>"````
+                      </li>`````
+                    ))}``````
+                  </ul>```````
+                  <Link ;````````
+                    to="/contact" `````````
+                    className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${``````
+                      plan.popular;```````
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: 'from-cyan-600 hover:to-purple-700,'````````
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900'`````````
                     }`}
                   ></Link>
                     Get Started;
@@ -425,12 +425,12 @@ const AITaskManagerPage: React.FC = () => {
                   <span>View All Plans</span>
                   <ArrowRight className="w-5 h-5 group-hover: 'translate-x-1 transition-transform" />"','
                 </Link>
-              </div>
-            </div>
-          </div>`
-        </section>``
-      </div>```
-    </>````
-  )`````
-}``````
-export default AITaskManagerPage;```````
+              </div>`
+            </div>``
+          </div>```
+        </section>````
+      </div>`````
+    </>``````
+  )```````
+}````````
+export default AITaskManagerPage;`````````

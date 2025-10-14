@@ -52,26 +52,26 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <div className="flex items-center">
             <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mr-3">
               <span className="text-sm font-medium text-gray-700">
-                {author.charAt(0).toUpperCase()}
-              </span>
-            </div>`
-            <div>``
-              <p>{author}</p>```
-              <p>{publishedAt}</p>````
-            </div>`````
-          </div>``````
-          <Link;```````
+                {author.charAt(0).toUpperCase()}`
+              </span>``
+            </div>```
+            <div>````
+              <p>{author}</p>`````
+              <p>{publishedAt}</p>``````
+            </div>```````
+          </div>````````
+          <Link;`````````
             href={`/blog/${slug}`}
             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
           >;
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>`
-        </div>``
-      </div>```
-    </article>````
-  );`````
-};``````
-export default ContentPreviewCard;```````
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />`
+            </svg>``
+          </Link>```
+        </div>````
+      </div>`````
+    </article>``````
+  );```````
+};````````
+export default ContentPreviewCard;`````````

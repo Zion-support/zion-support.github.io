@@ -199,12 +199,12 @@ const Footer = () => {
                   aria-label={social.label}></a>
                   {social.icon}
                 </a>
-              ))}
-            </div>
-          </div>`
-        </div>``
-      </div>```
-    </footer>````
-  );`````
-};``````
-export default Footer;```````
+              ))}`
+            </div>``
+          </div>```
+        </div>````
+      </div>`````
+    </footer>``````
+  );```````
+};````````
+export default Footer;`````````

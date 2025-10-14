@@ -132,12 +132,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
           src={src}
         /></img>
   </>
-);
-      {!isLoaded && (
-        <div;`
-          className="absolute inset-0 bg-gray-200 animate-pulse"``
-          style={{```
-        /></div>````
-      )`````
-    </div>;``````
-export default LazyImage;```````
+);`
+      {!isLoaded && (``
+        <div;```
+          className="absolute inset-0 bg-gray-200 animate-pulse"````
+          style={{`````
+        /></div>``````
+      )```````
+    </div>;````````
+export default LazyImage;`````````

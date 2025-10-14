@@ -1,5 +1,5 @@
 import lucide-react from 'lucide-react';
-export default function FuturisticLoader() {
+export default function FuturisticLoader() {;
   return (;
     <div className="futuristic-loader-container">";
       <Link;

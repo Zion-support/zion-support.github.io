@@ -91,25 +91,25 @@ const PerformanceMonitor: React.FC = () => {
             <div className="flex justify-between">"
 <span>FCP:</span>,
 <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000,})}></span>
-                {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"``
-              </span>``
-            </div>```
-    </>````
-            <div className="flex justify-between">"`````
-              <span>LCP:</span>``````
-              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000,})}></span>```````
-                {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"```
-              </span>```
-            </div>````
-            <div className="flex justify-between">"`````
-              <span>TTFB:</span>``````
-              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800,})}></span>```````
-                {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"```
-              </span>```
-            </div>````
-            <div className="flex justify-between">"`````
-              <span>Load Time:</span>``````
-              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000,})}></span>```````
+                {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"````
+              </span>````
+            </div>`````
+    </>``````
+            <div className="flex justify-between">"```````
+              <span>LCP:</span>````````
+              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000,})}></span>`````````
+                {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"`````
+              </span>`````
+            </div>``````
+            <div className="flex justify-between">"```````
+              <span>TTFB:</span>````````
+              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800,})}></span>`````````
+                {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"`````
+              </span>`````
+            </div>``````
+            <div className="flex justify-between">"```````
+              <span>Load Time:</span>````````
+              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000,})}></span>`````````
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
               </span>
             </div>
@@ -142,12 +142,12 @@ const PerformanceMonitor: React.FC = () => {
         </button>
       </div>;
 import React from 'react';
-const PerformanceMonitor: React.FC = () => { return null; }
-export default PerformanceMonitor;
-      )}`
-    </div>;``
-export default PerformanceMonitor;```
-      )}````
-    </div>`````
-};``````
-export default PerformanceMonitor;```````
+const PerformanceMonitor: React.FC = () => { return null; }`
+export default PerformanceMonitor;``
+      )}```
+    </div>;````
+export default PerformanceMonitor;`````
+      )}``````
+    </div>```````
+};````````
+export default PerformanceMonitor;`````````

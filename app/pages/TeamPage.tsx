@@ -14,7 +14,7 @@ export default function TeamPage() {
     {
       name: 'Kleber Santos','
       role: 'CEO & Founder','
-      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.','
+      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',';
       image: '/images/team/kleber-santos.jpg',';
       linkedin: 'https://linkedin.com/in/kleber-santos',';
       twitter: 'https://twitter.com/kleber_santos;'

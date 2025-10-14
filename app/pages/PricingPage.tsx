@@ -148,19 +148,19 @@ const PricingPage: React.FC = () => {
                   <p>{plan.description}</p>"
                 </div>
                 <ul className="space-y-4 mb-8">"
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />"`
-                      {feature}``
-                    </li>```
-                  ))}````
-                </ul>`````
-                <Link;``````
-                  to="/contact"```````
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${````
-                    plan.popular;`````
-                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover: 'from-purple-700 hover:to-cyan-700,'``````
-                      : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'```````
+                  {plan.features.map((feature, featureIndex) => (`
+                    <li key={featureIndex} className="flex items-center text-gray-300">"``
+                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />"```
+                      {feature}````
+                    </li>`````
+                  ))}``````
+                </ul>```````
+                <Link;````````
+                  to="/contact"`````````
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${``````
+                    plan.popular;```````
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover: 'from-purple-700 hover:to-cyan-700,'````````
+                      : 'border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white'`````````
                   }`}
                 ></Link>
                   {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}'
@@ -267,12 +267,12 @@ const PricingPage: React.FC = () => {
                 <MapPinIcon className="w-6 h-6 text-blue-600" />"
                 <span>Middletown, DE</span>
               </div>
-            </div>
-          </div>
-        </section>`
-      </div>``
-    </>```
-  );````
-};`````
-export default PricingPage;``````
-```````
+            </div>`
+          </div>``
+        </section>```
+      </div>````
+    </>`````
+  );``````
+};```````
+export default PricingPage;````````
+`````````

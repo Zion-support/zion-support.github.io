@@ -15,9 +15,9 @@ export default FuturisticCard;
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20}';
   return (
   <>
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>{children}``````
-    </div>```
-  </>````
-);`````
-  );``````
-export default FuturisticCard;```````
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}></div>{children}````````
+    </div>`````
+  </>``````
+);```````
+  );````````
+export default FuturisticCard;`````````

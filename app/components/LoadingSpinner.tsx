@@ -9,9 +9,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   const sizeClasses = {
   const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`"``"``````
-      <div className="relative">"``````
-        <div;```````
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`"``"````````
+      <div className="relative">"````````
+        <div;`````````
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````;
           style={{
             animation: 'spin 1s linear infinite',';
@@ -20,12 +20,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <Loader2 className="w-full h-full" />"
         </div>
       </div>
-      {text && (
-    </div>
-  );`
-  if (fullScreen) {``
-    return (```
-        {spinner}````
-      </div>`````
-    );``````
-  return spinner;```````
+      {text && (`
+    </div>``
+  );```
+  if (fullScreen) {````
+    return (`````
+        {spinner}``````
+      </div>```````
+    );````````
+  return spinner;`````````

@@ -32,7 +32,7 @@ benefits: ["Interactive charts", "Multiple chart types", "Custom themes", "Expor
     {
       title: "Automated Alerts",
       description: "Set up intelligent alerts for important metrics and receive notifications via email, SMS, or Slack.",
-      icon: <Bell className="w-6 h-6" />,
+      icon: <Bell className="w-6 h-6" />,;
 benefits: ["Smart thresholds", "Multi-channel alerts", "Custom conditions", "Escalation rules"],;
     };
   ];
@@ -223,10 +223,10 @@ popular: false,
               {pricingPlans.map((plan, index) => (
                 <div;
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${,````
-                    plan.popular`````
-                      ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25'``````
-: 'border-white/20 hover:border-blue-500/30',```````
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${,``````
+                    plan.popular```````
+                      ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25'````````
+: 'border-white/20 hover:border-blue-500/30',`````````
                   }`}
                 >
                   {plan.popular && (
@@ -245,19 +245,19 @@ popular: false,
                     <p>{plan.description}</p>
                   </div>
                   <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />`
-                        <span>{feature}</span>``
-                      </div>```
-                    ))}````
-                  </div>`````
-                  <Link;``````
-                    to="/contact"```````
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${````
-                      plan.popular`````
-? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-blue-500/25',``````
-: 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900',```````
+                    {plan.features.map((feature, idx) => (`
+                      <div key={idx} className="flex items-center text-gray-300">``
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />```
+                        <span>{feature}</span>````
+                      </div>`````
+                    ))}``````
+                  </div>```````
+                  <Link;````````
+                    to="/contact"`````````
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${``````
+                      plan.popular```````
+? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700 shadow-lg hover:shadow-blue-500/25',````````
+: 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900',`````````
                     }`}
                   >;
                     Get Started
@@ -352,12 +352,12 @@ popular: false,
                   className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >;
                   Schedule Demo
-                </Link>
-              </div>
-            </div>`
-          </div>``
-        </section>```
-      </div>````
-    </>`````
-  );``````
-}```````
+                </Link>`
+              </div>``
+            </div>```
+          </div>````
+        </section>`````
+      </div>``````
+    </>```````
+  );````````
+}`````````

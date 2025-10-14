@@ -72,21 +72,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                       {link.name}
                     </div>
                     <ChevronDownIcon;
-                      className={`w-4 h-4 transition-transform ${}````;``````
-                        expandedItems.includes(link.name) ? 'rotate-180' : '```````
-                      }`} ````
-                    /></ChevronDownIcon>
-                  </button>`
-                  {expandedItems.includes(link.name) && (``
-                    <div className="ml-4 mt-2 space-y-1">"```
-                      {link.submenu.map((subLink) => (````
-                        <Link;`````
-                          key={subLink.name}``````
-                          to={subLink.href}```````
-                          className={`flex items-center px-3 py-2 text-sm transition-colors ${}````;````
-                            isActive(subLink.href)`````
-                              ? 'text-blue-400 bg-blue-900/20``````
-                              : 'text-gray-400 hover:text-white hover:bg-slate-800```````
+                      className={`w-4 h-4 transition-transform ${}````;````````
+                        expandedItems.includes(link.name) ? 'rotate-180' : '`````````
+                      }`} `````
+                    /></ChevronDownIcon>``
+                  </button>```
+                  {expandedItems.includes(link.name) && (````
+                    <div className="ml-4 mt-2 space-y-1">"`````
+                      {link.submenu.map((subLink) => (``````
+                        <Link;```````
+                          key={subLink.name}````````
+                          to={subLink.href}`````````
+                          className={`flex items-center px-3 py-2 text-sm transition-colors ${}````;``````
+                            isActive(subLink.href)```````
+                              ? 'text-blue-400 bg-blue-900/20````````
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800`````````
                           }`}````;
                           onClick={onClose}></Link>
                           <subLink.icon className="w-4 h-4 mr-3" />"
@@ -230,15 +230,15 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {label: 'News', href: '/news', },
     {label: 'Press', href: '/press', },
     {label: 'Partners', href: '/partners', }];
-  const filteredSections = navigationSections.map(section => ({
-    ...section,
-    items: section.items.filter(item => ;`
-      item.label.toLowerCase().includes(searchQuery.toLowerCase())``
-    )```
-  })).filter(section => section.items.length > 0 || searchQuery === );';````
-  if (!isOpen) return null;`````
-import React from 'react';``````
-  return (```````
+  const filteredSections = navigationSections.map(section => ({`
+    ...section,``
+    items: section.items.filter(item => ;```
+      item.label.toLowerCase().includes(searchQuery.toLowerCase())````
+    )`````
+  })).filter(section => section.items.length > 0 || searchQuery === );';``````
+  if (!isOpen) return null;```````
+import React from 'react';````````
+  return (`````````
     <div className={`bg-slate-800 text-white transition-all duration-300 ${isOpen ? 'w-64' : 'w-16',} ${className}`}>
       <div className="flex items-center justify-between p-4 border-b border-slate-700">
         {isOpen && (
@@ -248,12 +248,12 @@ import React from 'react';``````
           onClick={onToggle}
           className="p-2 rounded-lg hover:bg-slate-700 transition-colors"
         >
-          {isOpen ? (
-            <ChevronLeftIcon className="w-5 h-5" />
-) : (,`
-            <ChevronRightIcon className="w-5 h-5" />``
-          )}```
-        </button>````
-      </div>`````
-    </div>``````
-;```````
+          {isOpen ? (`
+            <ChevronLeftIcon className="w-5 h-5" />``
+) : (,```
+            <ChevronRightIcon className="w-5 h-5" />````
+          )}`````
+        </button>``````
+      </div>```````
+    </div>````````
+;`````````
