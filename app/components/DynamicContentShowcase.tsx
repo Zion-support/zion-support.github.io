@@ -92,7 +92,7 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
+      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we&apos;ve seen a 50% reduction in operational costs.',
       rating: 5
     },
     {

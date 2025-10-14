@@ -6,6 +6,7 @@ export const enhancedAnalytics = {
         page_location: page
       })
     }
+
   },
   
   trackUserInteraction: (action: string, category: string, label?: string) => {
@@ -15,6 +16,7 @@ export const enhancedAnalytics = {
         event_label: label
       })
     }
+
   },
   
   trackUserEngagement: (engagementType: string, value?: number) => {
@@ -24,6 +26,7 @@ export const enhancedAnalytics = {
         value: value
       })
     }
+
   },
   
   trackPerformance: (metric: string, value: number) => {
@@ -33,5 +36,7 @@ export const enhancedAnalytics = {
         metric_value: value
       })
     }
+
   }
+
 }

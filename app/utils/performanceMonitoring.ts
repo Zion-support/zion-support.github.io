@@ -1,31 +1,22 @@
 export const performanceMonitoring = {
   start: (name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(`${name}-start`)
-    }
+    performance.mark(`${name}-start`)
   },
   
   end: (name: string) => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.mark(`${name}-end`)
-      performance.measure(name, `${name}-start`, `${name}-end`)
+    performance.mark(`${name}-end`)
+    performance.measure(name, `${name}-start`, `${name}-end`)
+    
+    const measures = performance.getEntriesByName(name)
+    if (measures.length > 0) {
+      const measure = measures[0]
+      console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
       
-      const measures = performance.getEntriesByName(name)
-      if (measures.length > 0) {
-        const measure = measures[0]
-        console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
-        
-        // Send to analytics
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'performance_measurement', {
-            metric_name: name,
-            metric_value: measure.duration
-          })
-        }
-      }
-      
-      performance.clearMarks(`${name}-start`)
-      performance.clearMarks(`${name}-end`)
-    }
-  }
-}
+      // Send to analytics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'performance_measurement', {
+
+        })}
+
+    performance.clearMarks(`${name}-start`)
+    performance.clearMarks(`${name}-end`)

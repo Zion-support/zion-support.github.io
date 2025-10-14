@@ -1,50 +1,141 @@
-'use client';
-
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import './app/styles/futuristic.css';
+
+// Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import ErrorBoundary from './app/components/ErrorBoundary';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import SEOOptimizer from './app/components/SEOOptimizer';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import MetaManager from './app/components/MetaManager';
+import EnhancedAnalytics from './app/components/EnhancedAnalytics';
+import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
-// Structured data for SEO - moved to SEOHead component
+// Pages
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ServicesPage from './app/services/page';
+import ContactPage from './app/contact/page';
 
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+// ErrorBoundary is imported from components
 
-// Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>;
-};
-
-// Main App Component
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  // Sidebar state management (currently unused)
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    // Performance monitoring
+    if (typeof window !== 'undefined') {
+      // Monitor Core Web Vitals
+      import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('CLS:', metric);
+          }
+        });
+        onFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('FCP:', metric);
+          }
+        });
+        onLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('LCP:', metric);
+          }
+        });
+        onTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('TTFB:', metric);
+          }
+        });
+      });
+
+      // Monitor bundle size
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            if (process.env.NODE_ENV === 'development') {
+              console.warn('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
+            }
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    }
+
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      console.warn('Zion Tech Group App initialized');
+    }
+
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <ErrorBoundary>
       <HelmetProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+        <AnalyticsProvider>
+          <PerformanceOptimizer>
+            <AccessibilityEnhancer />
+            <SEOOptimizer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
+              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
+              type="website"
+              structuredData={{
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Zion Tech Group",
+                "description": "Leading provider of AI and IT solutions",
+                "url": "https://ziontechgroup.com",
+                "logo": "https://ziontechgroup.com/images/logo.png",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-555-0123",
+                  "contactType": "customer service"
+                }
+              }}
+            />
+            <MetaManager>
+              <EnhancedAnalytics>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <Navigation />
+                    <main className="relative z-10" id="main-content" role="main">
+                      <Suspense fallback={<div>Loading...</div>}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                        </Routes>
+                      </Suspense>
+                    </main>
+                    <Footer />
+                  </div>
+                </Router>
+              </EnhancedAnalytics>
+            </MetaManager>
+            <PerformanceMonitor />
+        </PerformanceOptimizer>
+      </AnalyticsProvider>
+    </HelmetProvider>
+  </ErrorBoundary>
   );
 };
-
-App.displayName = 'App';
 
 export default App;

@@ -167,6 +167,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
+          // eslint-disable-next-line no-console
           console.log('Service Worker registered successfully:', registration);
           
           // Track service worker registration

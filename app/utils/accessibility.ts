@@ -31,7 +31,6 @@ export const accessibilityUtils = {
     };
     
     element.addEventListener('keydown', handleTabKey);
-    
     return () => {
       element.removeEventListener('keydown', handleTabKey);
     };

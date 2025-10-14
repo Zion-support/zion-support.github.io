@@ -2,11 +2,11 @@ export const enhancedErrorHandler = {
   handleError: (error: Error, context?: string) => {
     console.error('Error occurred: ', error)
     
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        context: context
+        custom_map: context ? { context } : {}
       })
     }
     

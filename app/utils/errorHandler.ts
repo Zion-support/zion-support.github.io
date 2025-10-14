@@ -4,7 +4,8 @@ export const errorHandler = {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: _error.message,
-        context: context || 'unknown'
+        fatal: false,
+        custom_map: { context: context || 'unknown' }
       });
     }
     

@@ -6,6 +6,7 @@ export const dataTransformers = {
         id: itemObj.id || index,
         ...itemObj
       }
+
     })
   },
   
@@ -20,13 +21,13 @@ export const dataTransformers = {
   },
   
   transformToSelectOptions: (data: unknown[], valueField: string, labelField: string) => {
-    return data.map((item, index) => {
+    return data.map(item => {
       const itemObj = item as Record<string, unknown>
       return {
         value: itemObj[valueField],
-        label: itemObj[labelField],
-        id: itemObj.id || index
+        label: itemObj[labelField]
       }
     })
   }
+
 }

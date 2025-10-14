@@ -18,13 +18,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
     { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: Mail }
   ];
+
   return (
     <>
       {/* Overlay */}
       {isOpen && (
         <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
         />
       )}
@@ -38,6 +39,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
+            className="text-white hover:text-gray-300"
           >
             <X className="w-6 h-6" />
           </button>
@@ -51,7 +53,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <Link
                     to={item.href}
                     onClick={onClose}
-                    className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                    className="flex items-center text-gray-300 hover:text-white py-2"
                   >
                     <Icon className="w-5 h-5 mr-3" />
                     {item.name}
