@@ -11,11 +11,11 @@ const Footer = () => {
     { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
     { name: "Digital Transformation", href: "/digital-transformation" },
     { name: "IT Services", href: "/it-services" },
-    { name: "Micro SAAS", href: "/micro-saas" };
+    { name: "Micro SAAS", href: "/micro-saas" }
   ];
 
   return (
-    footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -31,10 +31,10 @@ const Footer = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <Link to={service.href} className="text-gray-400 hover:text-white">
-                    {service.name};
+                    {service.name}
                   </Link>
                 </li>
-  ))};
+              ))}
             </ul>
           </div>
           
@@ -42,15 +42,15 @@ const Footer = () => {
             <h4 className="text-md font-semibold mb-4">Contact</h4>
             <div className="space-y-2">
               <div className="flex items-center">
-                <Mail className="h-4 w-4 mr-2"/>
+                <Mail className="h-4 w-4 mr-2" />
                 <span className="text-gray-400">contact@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                </Mail><Phone className="h-4 w-4 mr-2"/>
+                <Phone className="h-4 w-4 mr-2" />
                 <span className="text-gray-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center">
-                </Phone><MapPin className="h-4 w-4 mr-2"/>
+                <MapPin className="h-4 w-4 mr-2" />
                 <span className="text-gray-400">New York, NY</span>
               </div>
             </div>
@@ -60,13 +60,13 @@ const Footer = () => {
             <h4 className="text-md font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
-                </MapPin><Github className="h-5 w-5"/>
+                <Github className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-                </Github><Twitter className="h-5 w-5"/>
+                <Twitter className="h-5 w-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-                </Twitter><Linkedin className="h-5 w-5"/>
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -82,4 +82,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;</Linkedin>
+export default Footer;

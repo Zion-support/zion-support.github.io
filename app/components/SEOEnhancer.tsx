@@ -1,30 +1,97 @@
-import React from "react";
-import { useEffect } from "react";
-
-
-";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
+interface SEOEnhancerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+}
 
-interface SEOEnhancerProps {}"title ?  : string"description?: string"keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: unknown};
-const SEOEnhancer: 
-    // Add structured data to the page
-    if (structuredData) {};
-      const script = document.createElement("script)      script.type ="application/ld+jsonscript.text = JSON.stringify(structuredData);      document.head.appendChild(script);"      return () => {;"if (document.head.contains(script)) {;
-          document.head.removeChild(script);
-        };
-      };
-    };
-  }, [structuredData]);
-  // Generate meta tags;const metaTags = [{ name: ""description, content="description },{ name="keywords", content="keywords.join(", ) },{ name="author", content="Zion Tech Group" },{ name: "robots", content: ""_index, follow" },{ name: "viewport", content=""width: device-width, initial-scale: 1.0 },"    // Open Graph tags;{ property: og:title, content="title },{ property: "og:description", content="description },{ property: og:image, content: image },{ property: "og:url, content="url },{ property: "og:type, content="type },{ property: og:site_name", content=""Zion Tech Group },    // Twitter d tags;{ name=""twitter:card, content=""summary_large_image },{ name="twitter:title", content="title },{ name=""twitter:description, content="description },{ name="twitter:image", content="image },    // Additional SEO tags;{ name: ""theme-color, content="#0066cc" },{ name: ""msapplication-TileColor, content="#0066cc" },{ name="apple-mobile-web-app-capable", content="yes },{ name: ""apple-mobile-web-app-status-bar-style", content="default },"  ];'          document.head.removeChild(script)}'      }}'  // Generate meta tags'  );
-<elmet>
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = "Zion Tech Group - AI-Powered IT Solutions",
+  description = "Leading provider of AI-powered IT solutions and digital transformation services.",
+  keywords = ["AI", "IT Solutions", "Digital Transformation", "Cybersecurity", "Cloud Computing"],
+  canonical,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
+}) => {
+  useEffect(() => {
+    // Update document title
+    if (title) {
+      document.title = title;
+    }
 
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
+
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
+    }
+
+    // Add canonical URL
+    if (canonical) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical);
+      } else {
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonical;
+        document.head.appendChild(link);
+      }
+    }
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [title, description, keywords, canonical, structuredData]);
+
+  return (
+    <Helmet>
       <title>{title}</title>
-      {metaTags.map((tag, _index) : > (};
-        <meta key={_index} {...tag} />
-      ))};
-      {/* Canonical URL */};
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:image" content={ogImage} />
+      
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+    </Helmet>
+  );
+};
+
+export default SEOEnhancer;

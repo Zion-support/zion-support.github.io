@@ -2,7 +2,11 @@ import React from 'react';
 
 
 
+
+
 import { Helmet } from 'react-helmet-async';
+
+
 
 
 
@@ -11,7 +15,7 @@ export default function page() {
   return (
     <div className="min-h-screen bg-white">
   );
-      <Helmet>
+<elmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description"content="Professional page services by Zion Tech Group." />
       </Helmet>;
@@ -58,6 +62,8 @@ export default function page() {
       </div>
     </div>
 }
+};
+};
 };
 };
   );

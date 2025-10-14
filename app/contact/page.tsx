@@ -1,26 +1,23 @@
 import React from "react";
-
-
-
 import { Helmet } from "react-helmet-async";
 
-
-const PagePage = () => {
-
+const ContactPage = () => {
   return (
-    div>
+    <div>
       <Helmet>
-
-  );
-        <title>PagePage - Zion Tech Group</title>
-        <meta name="description"content="PagePage - Zion Tech Group" />      </Helmet>            <div>
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Contact Zion Tech Group for AI-powered IT solutions and digital transformation services." />
+      </Helmet>
+      <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-8">PagePage</h1>          <p className="text-gray-300 text-lg">"            This page is under construction. Please check back later.          </p>
+          <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
+          <p className="text-gray-300 text-lg">
+            Get in touch with our team for AI-powered IT solutions and digital transformation services.
+          </p>
         </div>
       </div>
+    </div>
   );
 };
-export default PagePage;</div>
 
-
-
+export default ContactPage;

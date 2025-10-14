@@ -2,7 +2,11 @@ import { lazy, ComponentType, Suspense } from 'react';
 
 
 
+
+
 import LazyWrapper from '../components/LazyWrapper';
+
+
 
 
 
@@ -30,6 +34,8 @@ export const createLazyComponent = <P extends object>(
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = lazy(importFunction);
+
+
 
 
 

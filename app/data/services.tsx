@@ -2,7 +2,11 @@ import React from 'react';
 
 
 
+
+
 import { Helmet } from 'react-helmet-async';
+
+
 
 
 
@@ -11,7 +15,7 @@ export default function services() {
   return (
     <div className="min-h-screen bg-white">
   );
-      <Helmet>
+<elmet>
         <title>Services.ts - Zion Tech Group</title>
         <meta name="description"content="Professional services.ts services by Zion Tech Group." />
       </Helmet>;
@@ -58,6 +62,8 @@ export default function services() {
       </div>
     </div>
 }
+};
+};
 };
 };
   );
