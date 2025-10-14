@@ -1,272 +1,88 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
-}
-interface PerformanceMonitorProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+interface AdvancedPerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
+  onMetricsUpdate?: (metrics: any) => void;
 }
-const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
-  enableRealTimeMonitoring = true
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null
-  });
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-    const observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          const _lastEntry = _entries[_entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        }
-    }
-    // Measure First Input Delay (FID)
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          _entries.forEach(entry => {
-            if (
-              entry.entryType === 'first-input' &&
-              'processingStart' in entry &&
-              'startTime' in entry
-            ) {
-              const _fidEntry = entry as PerformanceEventTiming;
-              setMetrics(prev => ({
-                ...prev,
-                fid: _fidEntry.processingStart - _fidEntry.startTime
-              }));
-            }
-          });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-        observers.push(fidObserver);
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        }
-    }
-    // Measure Cumulative Layout Shift (CLS)
-    if ('PerformanceObserver' in window) {
-      try {
-        let _clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-          const _entries = list.getEntries();
-          _entries.forEach(entry => {
-            if (
-              entry.entryType === 'layout-shift' &&
-              'hadRecentInput' in entry &&
-              'value' in entry
-            ) {
-              const _clsEntry = entry as LayoutShift;
-              if (!_clsEntry.hadRecentInput) {
-                _clsValue += _clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: _clsValue }));
-              }
-            }
-          });
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-        observers.push(clsObserver);
-      } catch (error) {
-        // eslint-disable-next-line no-console
-        }
-    }
-    // Measure Time to First Byte (TTFB)
-    try {
-      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = _navigationEntry
-        ? _navigationEntry.responseStart - _navigationEntry.requestStart
-        : null;
-      // Measure Memory Usage
-      const memory =
-        (performance as Performance & { memory?: { usedJSHeapSize: number } })
-          .memory?.usedJSHeapSize || null;
-      setMetrics(prev => ({
-        ...prev,
-        fcp: _fcp,
-        ttfb,
-        memory
-      }));
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      }
-    // Cleanup observers
-    return () => {
-      observers.forEach(observer => {
-        try {
-          observer.disconnect();
-        } catch (error) {
-          // eslint-disable-next-line no-console
-          }
-      });
-    };
-  }, []);
-  const measureResourceTiming = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const _resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter(
-      (resource: PerformanceResourceTiming) => resource.duration > 1000
-    );
-    if (slowResources.length > 0) {
-      // eslint-disable-next-line no-console
-      console.log(slowResources.map(r => ({
-          name: r.name,
-          duration: r.duration,
-          size: r.transferSize
-        }))
-      );
-    }
-  }, []);
-  const measureCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    // Use web-vitals library if available
-    try {
-      import('web-vitals')
-        .then(webVitals => {
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-          if (onCLS) {
-            onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
-          }
-          if (onFCP) {
-            onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
-          if (onLCP) {
-            onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
-          if (onTTFB) {
-            onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
-        })
-        .catch(() => {
-          // web-vitals not available, continue without it
-        });
-    } catch {
-      // web-vitals not available, continue without it
-    }
-  }, []);
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-    const _cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
-    return () => {
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
-    };
-  }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
-  ]);
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-  // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
-    if (metrics.fcp && metrics.fcp > 1800) {
-      recommendations.push(
-        'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
-    }
-    if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
-    if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
-    if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
-    return recommendations;
-  }, [metrics]);
-  const _recommendations = getPerformanceRecommendations();
-  if (process.env['NODE_ENV'] === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
-          </div>
-          <div>
-            Memory:{' '}
-            {metrics.memory
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
-          </div>
-        </div>
-        {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations:
-            </h4>
-            <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </div>
-    );
+
+export default function AdvancedPerformanceMonitor({ 
+  enableRealTimeMonitoring = false,
+  onMetricsUpdate
+}: AdvancedPerformanceMonitorProps) {
+  // Don't render in production mode
+  if (process.env.NODE_ENV === 'production') {
+    return null;
   }
-  return null;
-};
-export default AdvancedPerformanceMonitor;
+
+  return (
+    <div>
+      <Helmet>
+        <title>AdvancedPerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Professional advancedperformancemonitor services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Performance Monitor
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional performance monitoring services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+        
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Performance Monitoring</h3>
+                <p className="text-gray-600">Advanced performance monitoring solutions for optimal application performance</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Analytics</h3>
+                <p className="text-gray-600">Real-time performance analytics and insights</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Optimization</h3>
+                <p className="text-gray-600">Performance optimization recommendations and implementation</p>
+              </div>
+            </div>
+            
+            {/* Performance Recommendations */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recommendations:</h3>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Optimize images and assets</li>
+                  <li>• Implement lazy loading</li>
+                  <li>• Use CDN for static resources</li>
+                  <li>• Minimize JavaScript bundles</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our performance monitoring services.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+// Link import removed as it's not being used
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -26,38 +26,7 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    'Competitive salary and equity',
-    'Comprehensive health insurance',
-    'Flexible work arrangements',
-    'Professional development budget',
-    'Top-tier equipment and tools',
-    'Team building events',
-    'Career growth opportunities'
-  ];
-
-  const values = [
-    {
-      icon: Star,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with technology'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results'
-    },
-    {
-      icon: Heart,
-      title: 'Impact',
-      description: 'We create solutions that make a real difference'
-    },
-    {
-      icon: Award,
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do'
-    }
-  ];
+  // Benefits and values data removed as they were not being used in the component
 
   return (
     <>
