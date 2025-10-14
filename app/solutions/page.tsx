@@ -48,13 +48,9 @@ export default function SolutionsPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-<<<<<<< HEAD
-                <h2 className="text-3xl font-bold text-white mb-6">Our Solutions Services</h2>
-=======
                 <h2 className="text-3xl font-bold text-white mb-6">
                   Our Solutions Services
                 </h2>
->>>>>>> c5a0e475c16896928f26a9f791e5983c756778a0
                 <p className="text-lg text-gray-300 mb-6">
                   We provide comprehensive solutions tailored to your specific needs and requirements.
                 </p>
