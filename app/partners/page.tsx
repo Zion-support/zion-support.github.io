@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet ,   } from 'lucide-react';
-import { Circle, Right,  } from 'lucide-react';
+import { Helmet } from 'lucide-react';
+import { Circle, Right } from 'lucide-react';
 const PartnersPage: React.FC = () => {
   const partners = [{'
       name: 'Microsoft',';

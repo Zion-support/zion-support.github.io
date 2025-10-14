@@ -30,17 +30,17 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
@@ -119,7 +119,7 @@ const Page = () => {
             {metrics.map((metric, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {metric.icon}
+                  {metric.icon;
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
@@ -145,7 +145,7 @@ const Page = () => {
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

@@ -1,5 +1,4 @@
 import { Activity, TrendingUp } from 'lucide-react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -277,7 +276,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               <div className="flex justify-between">
                 <span className="text-gray-300">Connection</span>
                 <span className="text-cyan-400">
-                  {metrics.connection}
+                  {metrics.connection;
                 </span>
               </div>
             )}

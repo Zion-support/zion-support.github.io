@@ -130,10 +130,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {isInView && (
         <img
-          src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
+          src={src;
+          alt={alt;
+          onLoad={handleLoad;
+          onError={handleError;
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0;
           }`}

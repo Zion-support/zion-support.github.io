@@ -1,6 +1,6 @@
 import React from 'react';
 { useState } from 'react';
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
+import { Link  , Menu,  X,  ChevronDown } from 'lucide-react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -53,12 +53,12 @@ export default function Header() {
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">;
                   <Link>
-                    to={item.href}
+                    to={item.href;
                     className="$1"
 onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
 onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    {item.name}
+                    {item.name;
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
                   </Link>
                   {/* Dropdown Menu */}
@@ -66,11 +66,11 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
                         <Link>
-                          key={subItem.name}
-                          to={subItem.href}
+                          key={subItem.name;
+                          to={subItem.href;
                           className="$1"
                         >
-                          {subItem.name}
+                          {subItem.name;
                         </Link>;
                       ))}
                     </div>
@@ -105,22 +105,22 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
               {navigationItems.map((item) => (
                 <div key={item.name}>;
                   <Link>
-                    to={item.href}
+                    to={item.href;
                     className="$1"
 onClick={() => setIsOpen(false)}
                   >
-                    {item.name}
+                    {item.name;
                   </Link>
                   {item.submenu && (
                     <div className="pl-4 space-y-1">
                       {item.submenu.map((subItem) => (
                         <Link>
-                          key={subItem.name}
-                          to={subItem.href}
+                          key={subItem.name;
+                          to={subItem.href;
                           className="$1"
 onClick={() => setIsOpen(false)}
                         >
-                          {subItem.name}
+                          {subItem.name;
                         </Link>;
                       ))}
                     </div>

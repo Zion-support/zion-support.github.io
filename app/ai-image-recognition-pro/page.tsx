@@ -103,19 +103,19 @@ const AIImageRecognitionPro = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <FuturisticCard
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {feature.icon;
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
+                  {feature.title;
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {feature.description}
+                  {feature.description;
                 </p>
               </FuturisticCard>
             ))}

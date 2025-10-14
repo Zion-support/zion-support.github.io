@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,
@@ -66,17 +66,17 @@ const TutorialsPage: React.FC = () => {
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
@@ -121,7 +121,7 @@ const Page = () => {
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
                 <button>
-                  key={_index}
+                  key={_index;
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
                   {category.name} ({category.count})
@@ -142,7 +142,7 @@ const Page = () => {
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">;
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">;
-                      {tutorial.level}
+                      {tutorial.level;
                     </span>;
                     <div className="flex items-center text-yellow-400">;
                       <Star className="w-4 h-4 fill-current" />;
@@ -150,13 +150,13 @@ const Page = () => {
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                    {tutorial.title}
+                    {tutorial.title;
                   </h3>;
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>;
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">;
                     <span className="flex items-center">;
                       <Clock className="w-4 h-4 mr-1" />;
-                      {tutorial.duration}
+                      {tutorial.duration;
                     </span>;
                     <span className="flex items-center">;
                       <User className="w-4 h-4 mr-1" />;

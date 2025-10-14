@@ -1,37 +1,36 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react'
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react';
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      icon: <Brain className="w-6 h-6" />,
       title: 'AI Password Generation',
       description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Advanced Security',
       description: 'Military-grade encryption with zero-knowledge architecture ensures your passwords are never accessible to anyone but you.'
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-400" />,
+      icon: <Eye className="w-6 h-6" />,
       title: 'Breach Monitoring',
       description: 'AI-powered monitoring scans the dark web and alerts you immediately if any of your accounts are compromised.'
     },
     {
-      icon: <Key className="w-6 h-6 text-orange-400" />,
+      icon: <Key className="w-6 h-6" />,
       title: 'Auto-Fill & Sync',
       description: 'Seamlessly fill passwords across all your devices with intelligent auto-fill that learns your patterns.'
     },
     {
-      icon: <Fingerprint className="w-6 h-6 text-pink-400" />,
+      icon: <Fingerprint className="w-6 h-6" />,
       title: 'Biometric Access',
       description: 'Secure access using fingerprint, face ID, or other biometric authentication methods.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Security Analytics',
       description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'
     }
@@ -39,42 +38,42 @@ const AIPasswordManagerPage: React.FC = () => {
 
   const securityFeatures = [
     {
-      icon: <Lock className="w-8 h-8 text-cyan-400" />,
+      icon: <Lock className="w-6 h-6" />,
       title: 'Password Vault',
       description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.',
       price: 'Included',
       features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access']
     },
     {
-      icon: <Brain className="w-8 h-8 text-emerald-400" />,
+      icon: <Brain className="w-6 h-6" />,
       title: 'AI Security Scan',
       description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.',
       price: 'Included',
       features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring']
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Two-Factor Auth',
       description: 'Built-in 2FA support with TOTP generation and secure backup codes.',
       price: 'Included',
       features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices']
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Family Sharing',
       description: 'Secure password sharing with family members and trusted contacts.',
       price: '$2.99/month',
       features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring']
     },
     {
-      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      icon: <Globe className="w-6 h-6" />,
       title: 'Dark Web Monitoring',
       description: 'Continuous monitoring of the dark web for your personal information and credentials.',
       price: '$4.99/month',
       features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system']
     },
     {
-      icon: <Database className="w-8 h-8 text-blue-400" />,
+      icon: <Database className="w-6 h-6" />,
       title: 'Business Features',
       description: 'Advanced features for businesses including team management and admin controls.',
       price: '$9.99/month',
@@ -126,8 +125,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Compliance reporting',
         'Dedicated support'
       ],
-      popular: false
-    }
+      popular: false;
   ]
 
   const stats = [
@@ -154,8 +152,7 @@ const AIPasswordManagerPage: React.FC = () => {
       name: 'Emily Rodriguez',
       company: 'IT Manager',
       content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',
-      rating: 5
-    }
+      rating: 5;
   ]
 
   return (
@@ -222,13 +219,13 @@ const AIPasswordManagerPage: React.FC = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                    {stat.icon;
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {stat.number}
+                    {stat.number;
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
-                    {stat.label}
+                    {stat.label;
                   </div>
                 </div>
               ))}
@@ -253,13 +250,13 @@ const AIPasswordManagerPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
+                    {feature.title;
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
+                    {feature.description;
                   </p>
                 </div>
               ))}
@@ -285,19 +282,19 @@ const AIPasswordManagerPage: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                        {feature.icon}
+                        {feature.icon;
                       </div>
                       <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                        {feature.title}
+                        {feature.title;
                       </h3>
                     </div>
                   </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {feature.description}
+                    {feature.description;
                   </p>
                   <div className="space-y-3">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-                      {feature.price}
+                      {feature.price;
                     </div>
                     <div className="space-y-1">
                       {feature.features.map((feat, featureIndex) => (

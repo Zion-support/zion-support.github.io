@@ -173,11 +173,11 @@ const DocumentationPage: React.FC = () => {
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <Link 
-                        to={link.href} 
+                        to={link.href;
                         className="text-green-400 hover:text-green-300 flex items-center group"
                       >
                         <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                        {link.name}
+                        {link.name;
                       </Link>
                     </li>
 ))}

@@ -1,17 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
+import { CpuChipIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon,
   ArrowRightIcon,
   CheckIcon,
-  SparklesIcon
-} from '@heroicons/react/24/outline';
-
+  SparklesIcon } from '@heroicons/react/24/outline';
 const AISolutionsPage: React.FC = () => {
   const aiServices = [
     {
@@ -164,7 +161,7 @@ const AISolutionsPage: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                  {service.description;
                 </p>
                 
                 <div className="space-y-4 mb-6">
@@ -174,7 +171,7 @@ const AISolutionsPage: React.FC = () => {
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckIcon className="w-4 h-4 text-green-400 mr-3" />
-                          {feature}
+                          {feature;
                         </li>
                       ))}
                     </ul>
@@ -185,7 +182,7 @@ const AISolutionsPage: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <span key={benefitIndex} className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
-                          {benefit}
+                          {benefit;
                         </span>
                       ))}
                     </div>
@@ -196,7 +193,7 @@ const AISolutionsPage: React.FC = () => {
                     <div className="flex flex-wrap gap-2">
                       {service.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="px-3 py-1 bg-cyan-600 text-white text-sm rounded-full">
-                          {useCase}
+                          {useCase;
                         </span>
                       ))}
                     </div>
@@ -204,7 +201,7 @@ const AISolutionsPage: React.FC = () => {
                 </div>
                 
                 <Link
-                  to={service.href}
+                  to={service.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 >
                   Learn More

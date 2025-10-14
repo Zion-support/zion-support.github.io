@@ -11,19 +11,19 @@ const About: React.FC = () => {
     { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }];
 
   const values = [{'
-      title: 'Innovation','
+      title: 'Innovation'
       description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
     },
     {'
-      title: 'Excellence','
+      title: 'Excellence'
       description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
     },
     {'
-      title: 'Partnership','
+      title: 'Partnership'
       description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
     },
     {'
-      title: 'Integrity','
+      title: 'Integrity'
       description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
     }];
 

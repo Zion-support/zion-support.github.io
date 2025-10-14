@@ -5,9 +5,9 @@ import { EnvelopeIcon,
   ClockIcon } from '@heroicons/react/24/outline';
 const Contact: React.FC = () => {,
   const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
+    name: ''
+    email: ''
+    company: ''
     message: '',
   });
 
@@ -21,30 +21,30 @@ const Contact: React.FC = () => {,
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission',
-    console.log('Form submitted:', formData);
+    console.log('Form submitted: ', formData);
   };
 
   const contactInfo = [{
-      icon: EnvelopeIcon,'
-      title: 'Email','
-      details: 'contact@ziontech.com','
+      icon: EnvelopeIcon'
+      title: 'Email'
+      details: 'contact@ziontech.com'
       description: 'Send us an email anytime',
     },
     {
       icon: PhoneIcon,'
-      title: 'Phone','
-      details: '+1 (555) 123-4567','
+      title: 'Phone'
+      details: '+1 (555) 123-4567'
       description: 'Mon-Fri from 9am to 6pm',
     },
     {
       icon: MapPinIcon,'
-      title: 'Office','
-      details: 'San Francisco, CA','
+      title: 'Office'
+      details: 'San Francisco, CA'
       description: 'Visit our headquarters',
     },
     {icon: ClockIcon,'
-      title: 'Response Time','
-      details: '< 24 hours','
+      title: 'Response Time'
+      details: '< 24 hours'
       description: 'We respond quickly'}];
 
   return ()

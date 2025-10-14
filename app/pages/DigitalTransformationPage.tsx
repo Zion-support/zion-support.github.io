@@ -1,16 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowPathIcon,
+import { ArrowPathIcon,
   UserGroupIcon,
   CloudIcon,
   CpuChipIcon,
   ArrowRightIcon,
   CheckIcon,
-  ChartBarIcon
-} from '@heroicons/react/24/outline';
-
+  ChartBarIcon } from '@heroicons/react/24/outline';
 const DigitalTransformationPage: React.FC = () => {
   const services = [
     {
@@ -146,14 +143,14 @@ const DigitalTransformationPage: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                  {service.description;
                 </p>
                 
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature;
                     </li>
                   ))}
                 </ul>

@@ -30,17 +30,17 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
@@ -124,7 +124,7 @@ const Page = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                    {stat.icon;
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -144,21 +144,21 @@ const Page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FuturisticCard
-                key={index}
+                key={index;
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
+                  {feature.icon;
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
-                  {feature.title}
+                  {feature.title;
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {feature.description}
+                  {feature.description;
                 </p>
                 <div className="text-center">
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
-                    {feature.stats}
+                    {feature.stats;
                   </span>
                 </div>
               </FuturisticCard>
@@ -183,7 +183,7 @@ const Page = () => {
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

@@ -1,15 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon,
+import { ArrowRightIcon,
   CheckIcon,
   ChartBarIcon,
   TrendingUpIcon,
   ClockIcon,
-  CurrencyDollarIcon
-} from '@heroicons/react/24/outline';
-
+  CurrencyDollarIcon } from '@heroicons/react/24/outline';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -21,7 +18,7 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         { metric: 'Conversion Rate', value: '+45%', icon: TrendingUpIcon },
         { metric: 'Cart Abandonment', value: '-30%', icon: TrendingUpIcon },
-        { metric: 'Revenue Growth', value: '+60%', icon: CurrencyDollarIcon }
+        { metric: 'Revenue Growth', value: '+60%', icon: CurrencyDollarIcon;
       ],
       duration: '6 months',
       image: '/case-studies/ecommerce-ai.jpg'
@@ -35,7 +32,7 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         { metric: 'Security Incidents', value: '-95%', icon: CheckIcon },
         { metric: 'Response Time', value: '-80%', icon: ClockIcon },
-        { metric: 'Compliance Score', value: '100%', icon: ChartBarIcon }
+        { metric: 'Compliance Score', value: '100%', icon: ChartBarIcon;
       ],
       duration: '4 months',
       image: '/case-studies/cybersecurity.jpg'
@@ -49,7 +46,7 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         { metric: 'Performance', value: '+200%', icon: TrendingUpIcon },
         { metric: 'Cost Savings', value: '-40%', icon: CurrencyDollarIcon },
-        { metric: 'Uptime', value: '99.9%', icon: CheckIcon }
+        { metric: 'Uptime', value: '99.9%', icon: CheckIcon;
       ],
       duration: '8 months',
       image: '/case-studies/cloud-migration.jpg'
@@ -63,7 +60,7 @@ const CaseStudiesPage: React.FC = () => {
       results: [
         { metric: 'Response Time', value: '-70%', icon: ClockIcon },
         { metric: 'Customer Satisfaction', value: '+85%', icon: TrendingUpIcon },
-        { metric: 'Support Costs', value: '-50%', icon: CurrencyDollarIcon }
+        { metric: 'Support Costs', value: '-50%', icon: CurrencyDollarIcon;
       ],
       duration: '3 months',
       image: '/case-studies/ai-customer-service.jpg'
@@ -119,7 +116,7 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="bg-slate-800 rounded-xl p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
-                        {study.industry}
+                        {study.industry;
                       </span>
                       <span className="text-gray-400 text-sm">{study.duration}</span>
                     </div>

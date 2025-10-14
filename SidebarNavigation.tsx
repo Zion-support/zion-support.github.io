@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, X  } from 'lucide-react';
+import { User, X } from 'lucide-react';
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
@@ -25,8 +25,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         <nav className="p-4">;
           {navigationItems.map((item) => (
             <a
-              key={item.name}
-              href={item.href}
+              key={item.name;
+              href={item.href;
               className="flex items-center space-x-3 p-3 hover:bg-gray-100 rounded-lg transition-colors"
             >
               <item.icon className="w-5 h-5" />

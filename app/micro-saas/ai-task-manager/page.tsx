@@ -1,37 +1,36 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react'
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Brain, Target, BarChart3, CheckCircle2, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, Mail, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react';
 const AITaskManagerPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      icon: <Brain className="w-6 h-6" />,
       title: 'AI Task Prioritization',
       description: 'Intelligent AI algorithms automatically prioritize your tasks based on deadlines, importance, and your work patterns.'
     },
     {
-      icon: <Target className="w-6 h-6 text-emerald-400" />,
+      icon: <Target className="w-6 h-6" />,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that considers your energy levels, meeting times, and optimal productivity windows.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Progress Analytics',
       description: 'Detailed analytics and insights to track your productivity patterns and identify areas for improvement.'
     },
     {
-      icon: <Users className="w-6 h-6 text-orange-400" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with shared workspaces, task assignments, and real-time updates.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-pink-400" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Automation',
       description: 'Automate repetitive tasks and workflows to focus on what matters most with AI-powered automation.'
     },
     {
-      icon: <Globe className="w-6 h-6 text-blue-400" />,
+      icon: <Globe className="w-6 h-6" />,
       title: 'Cross-Platform Sync',
       description: 'Sync your tasks across all devices and platforms with real-time updates and offline access.'
     }
@@ -39,42 +38,42 @@ const AITaskManagerPage: React.FC = () => {
 
   const taskFeatures = [
     {
-      icon: <CheckCircle className="w-8 h-8 text-cyan-400" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Smart Task Creation',
       description: 'Create tasks using natural language and let AI extract details, set priorities, and suggest deadlines.',
       price: 'Included',
       features: ['Natural language input', 'Auto-categorization', 'Priority detection', 'Deadline suggestions']
     },
     {
-      icon: <Calendar className="w-8 h-8 text-emerald-400" />,
+      icon: <Calendar className="w-6 h-6" />,
       title: 'Intelligent Scheduling',
       description: 'AI-powered calendar integration that finds optimal time slots and prevents scheduling conflicts.',
       price: 'Included',
       features: ['Calendar sync', 'Time blocking', 'Conflict detection', 'Energy optimization']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Productivity Analytics',
       description: 'Comprehensive analytics dashboard to track your productivity and identify improvement opportunities.',
       price: 'Included',
       features: ['Time tracking', 'Productivity metrics', 'Goal tracking', 'Performance insights']
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-400" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Team Management',
       description: 'Advanced team collaboration features with task assignments, progress tracking, and communication tools.',
       price: '$4.99/month',
       features: ['Team workspaces', 'Task assignments', 'Progress tracking', 'Team analytics']
     },
     {
-      icon: <Zap className="w-8 h-8 text-pink-400" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Workflow Automation',
       description: 'Automate repetitive tasks and create custom workflows to boost your productivity.',
       price: '$2.99/month',
       features: ['Custom workflows', 'Task automation', 'Integration triggers', 'Smart notifications']
     },
     {
-      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Enterprise Security',
       description: 'Advanced security features for enterprise teams including SSO, audit logs, and compliance.',
       price: '$9.99/month',
@@ -126,8 +125,7 @@ const AITaskManagerPage: React.FC = () => {
         'Dedicated support',
         'White-label options'
       ],
-      popular: false
-    }
+      popular: false;
   ]
 
   const stats = [
@@ -154,8 +152,7 @@ const AITaskManagerPage: React.FC = () => {
       name: 'Sarah Johnson',
       company: 'Team Lead',
       content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.',
-      rating: 5
-    }
+      rating: 5;
   ]
 
   return (
@@ -222,13 +219,13 @@ const AITaskManagerPage: React.FC = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                    {stat.icon;
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {stat.number}
+                    {stat.number;
                   </div>
                   <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
-                    {stat.label}
+                    {stat.label;
                   </div>
                 </div>
               ))}
@@ -253,13 +250,13 @@ const AITaskManagerPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
+                    {feature.title;
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
+                    {feature.description;
                   </p>
                 </div>
               ))}
@@ -285,19 +282,19 @@ const AITaskManagerPage: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                        {feature.icon}
+                        {feature.icon;
                       </div>
                       <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                        {feature.title}
+                        {feature.title;
                       </h3>
                     </div>
                   </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {feature.description}
+                    {feature.description;
                   </p>
                   <div className="space-y-3">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-                      {feature.price}
+                      {feature.price;
                     </div>
                     <div className="space-y-1">
                       {feature.features.map((feat, featureIndex) => (

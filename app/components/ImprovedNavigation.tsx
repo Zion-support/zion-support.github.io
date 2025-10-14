@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ArrowRight, 
+import { ArrowRight, 
   ChevronDown, 
   Menu, 
   X, 
@@ -27,9 +26,7 @@ import {
   Clock,
   CheckCircle,
   DollarSign,
-  Play
-} from 'lucide-react';
-
+  Play } from 'lucide-react';
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -47,7 +44,7 @@ const ImprovedNavigation = () => {
     {
       label: 'AI Services',
       href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className="w-6 h-6" />,
       description: 'Advanced AI Solutions',
       color: 'from-blue-500 to-cyan-500',
       dropdown: [
@@ -206,7 +203,7 @@ const ImprovedNavigation = () => {
     {
       label: 'IT Services',
       href: '/services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <Shield className="w-6 h-6" />,
       description: 'Comprehensive IT Solutions',
       color: 'from-green-500 to-emerald-500',
       dropdown: [
@@ -299,7 +296,7 @@ const ImprovedNavigation = () => {
     {
       label: 'Micro SAAS',
       href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
+      icon: <Zap className="w-6 h-6" />,
       description: 'Ready-to-Use Solutions',
       color: 'from-purple-500 to-pink-500',
       dropdown: [
@@ -452,7 +449,7 @@ const ImprovedNavigation = () => {
     {
       label: '5G Solutions',
       href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
+      icon: <Globe className="w-6 h-6" />,
       description: 'Next-Gen Connectivity',
       color: 'from-orange-500 to-red-500',
       dropdown: [
@@ -509,7 +506,7 @@ const ImprovedNavigation = () => {
     {
       label: 'Company',
       href: '/about',
-      icon: <BarChart3 className="w-4 h-4" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       description: 'About Zion Tech Group',
       color: 'from-cyan-500 to-blue-500',
       dropdown: [
@@ -600,7 +597,7 @@ const ImprovedNavigation = () => {
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchQuery}
+                value={searchQuery;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
@@ -612,12 +609,12 @@ const ImprovedNavigation = () => {
             {navigationItems.map((item) => (
               <div key={item.label}>
                 <Link
-                  to={item.href}
+                  to={item.href;
                   className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors"
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
-                    {item.icon}
+                    {item.icon;
                   </div>
                   <div>
                     <div className="text-white font-medium">{item.label}</div>
@@ -634,12 +631,12 @@ const ImprovedNavigation = () => {
             <div className="space-y-2">
               {quickLinks.map((link) => (
                 <Link
-                  key={link.href}
-                  to={link.href}
+                  key={link.href;
+                  to={link.href;
                   className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsSidebarOpen(false)}
                 >
-                  {link.icon}
+                  {link.icon;
                   <span>{link.label}</span>
                 </Link>
               ))}

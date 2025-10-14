@@ -8,22 +8,22 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 export default function AITranslationServicePage() {
   const features = [
     {
-      icon: <Languages className="w-6 h-6 text-blue-400" />,
+      icon: <Languages className="w-6 h-6" />,
       title: '100+ Languages',
       description: 'Support for over 100 languages with high accuracy translation'
     },
     {
-      icon: <Brain className="w-6 h-6 text-purple-400" />,
+      icon: <Brain className="w-6 h-6" />,
       title: 'AI-Powered',
       description: 'Advanced neural machine translation with context understanding'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-400" />,
+      icon: <FileText className="w-6 h-6" />,
       title: 'Document Translation',
       description: 'Translate documents while preserving original formatting'
     },
     {
-      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      icon: <Clock className="w-6 h-6" />,
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations and content'
     }
@@ -95,17 +95,17 @@ export default function AITranslationServicePage() {
 
   const benefits = [
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
+      icon: <Target className="w-6 h-6" />,
       title: 'Industry-Specific Translation',
       description: 'Specialized translation models for legal, medical, technical, and business content'
     },
     {
-      icon: <Zap className="w-6 h-6 text-blue-400" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Lightning Fast',
       description: 'Get translations in seconds with our optimized AI models'
     },
     {
-      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      icon: <Globe className="w-6 h-6" />,
       title: 'Global Reach',
       description: 'Expand your business to new markets with accurate translations'
     }
@@ -156,7 +156,7 @@ export default function AITranslationServicePage() {
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -183,7 +183,7 @@ export default function AITranslationServicePage() {
                     {type.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {item}
+                        {item;
                       </li>
                     ))}
                   </ul>
@@ -206,7 +206,7 @@ export default function AITranslationServicePage() {
               {benefits.map((benefit, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
-                    {benefit.icon}
+                    {benefit.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -238,7 +238,7 @@ export default function AITranslationServicePage() {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">
-                      {plan.price}
+                      {plan.price;
                       <span className="text-lg text-gray-400">{plan.period}</span>
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
@@ -247,7 +247,7 @@ export default function AITranslationServicePage() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        {feature;
                       </li>
                     ))}
                   </ul>

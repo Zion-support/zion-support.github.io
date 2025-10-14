@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -112,7 +111,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
                   <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
                   <p className="text-red-300 text-sm font-mono break-all">
-                    {this.state.error.message}
+                    {this.state.error.message;
                   </p>
                   {this.state.error.stack && (
                     <details className="mt-2">
@@ -120,7 +119,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                         Stack Trace
                       </summary>
                       <pre className="text-red-300 text-xs mt-2 overflow-auto">
-                        {this.state.error.stack}
+                        {this.state.error.stack;
                       </pre>
                     </details>
                   )}
@@ -129,7 +128,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
                 <button
-                  onClick={this.handleRetry}
+                  onClick={this.handleRetry;
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
                 >
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
@@ -137,7 +136,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </button>
                 
                 <button
-                  onClick={this.handleReload}
+                  onClick={this.handleReload;
                   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 >
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
@@ -165,7 +164,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
               {this.state.errorId && (
                 <p className="text-gray-400 text-sm mt-6">
-                  Error ID: {this.state.errorId}
+                  Error ID: {this.state.errorId;
                 </p>
               )}
             </div>

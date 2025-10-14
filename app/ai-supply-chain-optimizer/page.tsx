@@ -15,22 +15,22 @@ import { Link } from "react-router-dom";
 export default function AISupplyChainOptimizerPage() {
   const features = [
     {
-      icon: <Truck className="w-6 h-6 text-green-400" />,
+      icon: <Truck className="w-6 h-6" />,
       title: 'Route Optimization',
       description: 'AI-powered route planning to minimize delivery time and fuel costs'
     },
     {
-      icon: <Package className="w-6 h-6 text-blue-400" />,
+      icon: <Package className="w-6 h-6" />,
       title: 'Inventory Management',
       description: 'Smart inventory tracking with predictive restocking and demand forecasting'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
+      icon: <TrendingUp className="w-6 h-6" />,
       title: 'Performance Analytics',
       description: 'Real-time insights and analytics to optimize supply chain performance'
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Risk Management',
       description: 'Identify and mitigate supply chain risks with AI-powered risk assessment'
     }
@@ -83,17 +83,17 @@ export default function AISupplyChainOptimizerPage() {
 
   const benefits = [
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
+      icon: <Target className="w-6 h-6" />,
       title: 'Cost Reduction',
       description: 'Reduce logistics costs by up to 30% through optimized routing and inventory management'
     },
     {
-      icon: <Clock className="w-6 h-6 text-blue-400" />,
+      icon: <Clock className="w-6 h-6" />,
       title: 'Time Savings',
       description: 'Automate manual processes and save hours of planning time every week'
     },
     {
-      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      icon: <Globe className="w-6 h-6" />,
       title: 'Global Scale',
       description: 'Manage complex supply chains across multiple countries and time zones'
     }
@@ -144,7 +144,7 @@ export default function AISupplyChainOptimizerPage() {
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -167,7 +167,7 @@ export default function AISupplyChainOptimizerPage() {
               {benefits.map((benefit, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
-                    {benefit.icon}
+                    {benefit.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -199,7 +199,7 @@ export default function AISupplyChainOptimizerPage() {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-green-400 mb-2">
-                      {plan.price}
+                      {plan.price;
                       <span className="text-lg text-gray-400">{plan.period}</span>
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
@@ -208,7 +208,7 @@ export default function AISupplyChainOptimizerPage() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
+                        {feature;
                       </li>
                     ))}
                   </ul>

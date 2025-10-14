@@ -3,8 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  PlayIcon,
+import { PlayIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -13,9 +12,7 @@ import {
   ArrowRightIcon,
   CheckIcon,
   PhoneIcon,
-  EnvelopeIcon
-} from '@heroicons/react/24/outline';
-
+  EnvelopeIcon } from '@heroicons/react/24/outline';
 const DemoPage: React.FC = () => {
   const demos = [
     {
@@ -143,14 +140,14 @@ const DemoPage: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {demo.description}
+                  {demo.description;
                 </p>
                 
                 <ul className="space-y-3 mb-6">
                   {demo.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature;
                     </li>
                   ))}
                 </ul>

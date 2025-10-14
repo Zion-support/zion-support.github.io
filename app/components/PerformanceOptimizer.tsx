@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: Node}
-
+  children: Node;
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const [isOptimized, setIsOptimized] = useState(false);
 
@@ -209,8 +208,7 @@ img.setAttribute('loading', 'lazy')}
 
   return (
     <>
-      {children}
-      
+      {children;
       {/* Performance monitoring styles */}
       <style jsx>{`
         @keyframes fade-in {

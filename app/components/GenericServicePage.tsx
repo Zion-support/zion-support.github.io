@@ -52,11 +52,11 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              {description}
+              {description;
             </p>
             {pricing && (
               <div className="text-2xl font-semibold text-cyan-400 mb-8">
-                Starting at {pricing}
+                Starting at {pricing;
               </div>
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -91,13 +91,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
                 <div
-                  key={index}
+                  key={index;
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">
-                      {feature}
+                      {feature;
                     </h3>
                   </div>
                 </div>
@@ -124,7 +124,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">
-                      {benefit}
+                      {benefit;
                     </h3>
                     <p className="text-gray-300">
                       Leverage our expertise to maximize your business potential

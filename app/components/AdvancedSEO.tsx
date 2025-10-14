@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-
 interface AdvancedSEOProps {
   title: string;
   description: string;
@@ -245,8 +244,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
               "@type": "ListItem",
               "position": 2,
               "name": title,
-              "item": fullCanonical
-            }
+              "item": fullCanonical;
           ]
         })}
       </script>

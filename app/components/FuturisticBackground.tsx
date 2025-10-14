@@ -101,11 +101,11 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   return (
     <div className="relative min-h-screen">
       <canvas
-        ref={canvasRef}
+        ref={canvasRef;
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       />
-      {children}
+      {children;
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Animated gradient overlay */}
@@ -115,7 +115,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         <div className="absolute inset-0">
           {Array.from({ length: 20 }).map((_, i) => (
             <div
-              key={i}
+              key={i;
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
@@ -133,7 +133,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       
       {/* Content */}
       <div className="relative z-10">
-        {children}
+        {children;
       </div>
     </div>
   )};

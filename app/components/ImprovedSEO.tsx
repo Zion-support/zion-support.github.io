@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-
 interface ImprovedSEOProps {
   title?: string;
   description?: string;

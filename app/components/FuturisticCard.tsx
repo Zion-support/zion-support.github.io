@@ -18,7 +18,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
 
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
+      {children;
     </div>
   );
 };

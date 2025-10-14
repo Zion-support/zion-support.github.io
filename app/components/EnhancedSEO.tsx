@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -11,8 +10,7 @@ interface EnhancedSEOProps {
   twitterImage?: string;
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean}
-
+  noFollow?: boolean;
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -27,7 +25,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
   structuredData,
   noIndex = false,
-  noFollow = false}
+  noFollow = false;
 }) => {'
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';}
@@ -48,14 +46,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
     address: {'
       '@type': 'PostalAddress','
-      addressLocality: 'Middletown','
-      addressRegion: 'DE','
+      addressLocality: 'Middletown'
+      addressRegion: 'DE'
       addressCountry: 'US'}
     },
     contactPoint: {'
       '@type': 'ContactPoint','
-      telephone: '+1-302-464-0950','
-      contactType: 'customer service','
+      telephone: '+1-302-464-0950'
+      contactType: 'customer service'
       email: 'kleber@ziontechgroup.com'}
     },
     sameAs: ['

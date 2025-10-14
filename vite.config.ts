@@ -63,8 +63,7 @@ export default defineConfig({
       },
       format: {
         comments: false,
-        ascii_only: true
-      }
+        ascii_only: true;
     },
     // Enhanced build optimizations;
     rollupOptions: {

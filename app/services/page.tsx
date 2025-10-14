@@ -15,17 +15,17 @@ import {
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
     }
@@ -93,7 +93,7 @@ const Icon = category.icon
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>

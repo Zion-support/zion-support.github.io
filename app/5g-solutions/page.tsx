@@ -1,52 +1,49 @@
 import React from 'react';
-import { Helmet , Right,  Wifi,  Circle,  Zap,  Globe,  Smartphone  } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async';
+import { Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react';
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-6 h-6" />,
       title: 'Advanced Features',
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: Smartphone,'
-      title: 'Mobile Optimization','
-      description: 'Optimized 5G solutions for mobile devices and applications','
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']}
+      icon: <Smartphone className="w-6 h-6" />,
+      title: 'Mobile Optimization',
+      description: 'Optimized 5G solutions for mobile devices and applications',
+      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
     {
-      icon: Wifi,
-
-
+      icon: <Wifi className="w-6 h-6" />,
+      title: 'High-Speed Connectivity',
+      description: 'Ultra-fast 5G network solutions for businesses'
     }
   ];
 
   const solutions = [
     {
-
+      title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-
     },
-    {'
-      title: '5G Mobile Applications','
-      description: 'Custom mobile apps optimized for 5G networks','
-      price: 'Starting at $25,000','
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']}
+    {
+      title: '5G Mobile Applications',
+      description: 'Custom mobile apps optimized for 5G networks',
+      price: 'Starting at $25,000',
+      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
     },
-    {'
-      title: '5G IoT Solutions','
-      description: 'IoT device connectivity and management platform','
-      price: 'Starting at $35,000','
+    {
+      title: '5G IoT Solutions',
+      description: 'IoT device connectivity and management platform',
+      price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
   ];
 
@@ -186,7 +183,7 @@ const Page = () => {
                   {solution.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <Right className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature;
                     </li>
 ))}
                 </ul>

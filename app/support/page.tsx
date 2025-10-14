@@ -72,15 +72,14 @@ const SupportPage = () => {
       question: "What happens if I need to scale my solution?",
       answer: "Our solutions are built to scale with your business. We can easily adjust capacity, add new features, or expand functionality as your needs grow. We also provide ongoing optimization and performance monitoring.",
       category: "cloud",
-      featured: false
-    }
+      featured: false;
   ];
 
   const supportChannels = [
     {
       title: "Live Chat",
       description: "Get instant help from our support team",
-      icon: <MessageCircle className="w-8 h-8" />,
+      icon: <MessageCircle className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "#chat"
@@ -88,7 +87,7 @@ const SupportPage = () => {
     {
       title: "Phone Support",
       description: "Speak directly with our technical experts",
-      icon: <Phone className="w-8 h-8" />,
+      icon: <Phone className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "tel:+13024640950"
@@ -96,7 +95,7 @@ const SupportPage = () => {
     {
       title: "Email Support",
       description: "Send us detailed questions and get comprehensive answers",
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Within 2 hours",
       link: "mailto:support@ziontechgroup.com"
@@ -104,7 +103,7 @@ const SupportPage = () => {
     {
       title: "Documentation",
       description: "Browse our comprehensive knowledge base",
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "/docs"
@@ -189,7 +188,7 @@ const SupportPage = () => {
               <input
                 type="text"
                 placeholder="Search for help, documentation, or answers..."
-                value={searchQuery}
+                value={searchQuery;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-lg"
               />
@@ -205,7 +204,7 @@ const SupportPage = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {stat.icon;
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -232,19 +231,19 @@ const SupportPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportChannels.map((channel, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {channel.icon}
+                    {channel.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {channel.title}
+                    {channel.title;
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {channel.description}
+                    {channel.description;
                   </p>
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
@@ -257,7 +256,7 @@ const SupportPage = () => {
                     </div>
                   </div>
                   <a
-                    href={channel.link}
+                    href={channel.link;
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                   >
                     Get Help
@@ -288,7 +287,7 @@ const SupportPage = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {supportCategories.map((category) => (
               <button
-                key={category.id}
+                key={category.id;
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   selectedCategory === category.id
@@ -296,7 +295,7 @@ const SupportPage = () => {
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category.icon}
+                {category.icon;
                 <span>{category.label}</span>
               </button>
             ))}
@@ -306,7 +305,7 @@ const SupportPage = () => {
           <div className="space-y-6">
             {searchResults.map((item) => (
               <div
-                key={item.id}
+                key={item.id;
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                   item.featured ? 'ring-2 ring-cyan-500/50' : ''
                 }`}
@@ -321,10 +320,10 @@ const SupportPage = () => {
                 
                 <div className="pr-20">
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {item.question}
+                    {item.question;
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {item.answer}
+                    {item.answer;
                   </p>
                 </div>
               </div>
@@ -358,27 +357,27 @@ const SupportPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      {resource.icon}
+                      {resource.icon;
                     </div>
                     <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-medium">
-                      {resource.type}
+                      {resource.type;
                     </span>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                    {resource.title}
+                    {resource.title;
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                    {resource.description}
+                    {resource.description;
                   </p>
                   <a
-                    href={resource.link}
+                    href={resource.link;
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
                   >
                     Learn More

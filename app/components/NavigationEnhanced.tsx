@@ -1,6 +1,5 @@
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  Menu, 
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, 
   X, 
   ChevronDown, 
   Zap, 
@@ -22,14 +21,11 @@ import {
   Settings,
   Search,
   Bell,
-  User
-} from 'lucide-react'
+  User } from 'lucide-react';
 import FuturisticButton from './FuturisticButton'
 
 interface NavigationEnhancedProps {
-  onSidebarToggle?: () => void
-}
-
+  onSidebarToggle?: () => void;
 const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
@@ -81,7 +77,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" />, featured: false },
     { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" />, featured: false },
     { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" />, featured: false },
-    { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" />, featured: false }
+    { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" />, featured: false;
   ], [])
 
   const itServices = useMemo(() => [
@@ -103,7 +99,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: false },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: false },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: false },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" />, featured: false }
+    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" />, featured: false;
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -123,7 +119,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className="w-6 h-6" />,
       services: [
         { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
         { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
@@ -134,7 +130,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     {
       name: 'IT Services',
       path: '/it-services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <Shield className="w-6 h-6" />,
       services: [
         { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
         { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions' },
@@ -145,7 +141,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     {
       name: '5G Solutions',
       path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
+      icon: <Globe className="w-6 h-6" />,
       services: [
         { name: '5G Implementation', path: '/5g-implementation' },
         { name: '5G Edge Computing', path: '/5g-edge-computing' },
@@ -212,7 +208,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
           <div className="hidden lg:flex space-x-8 items-center">
             {/* Search Button */}
             <button
-              onClick={toggleSearch}
+              onClick={toggleSearch;
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Search"
             >
@@ -221,7 +217,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
 
             {/* Sidebar Toggle Button */}
             <button
-              onClick={onSidebarToggle}
+              onClick={onSidebarToggle;
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Toggle sidebar"
             >
@@ -230,13 +226,13 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             
             {mainNavItems.map((item) => (
               <Link
-                key={item.name}
-                to={item.path}
+                key={item.name;
+                to={item.path;
                 className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${
                   location.pathname === item.path ? 'text-cyan-400' : 'text-white'
                 }`}
               >
-                {item.name}
+                {item.name;
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${
                   location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
@@ -246,7 +242,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleAiServices}
+                onClick={toggleAiServices;
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>AI Services</span>
@@ -260,15 +256,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   </div>
                   {aiServices.map((service) => (
                     <Link
-                      key={service.name}
-                      to={service.path}
+                      key={service.name;
+                      to={service.path;
                       className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
                         service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
                       }`}
                       onClick={() => setIsAiServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
+                        {service.icon;
                       </div>
                       <div className="flex-1">
                         <span className="font-medium">{service.name}</span>
@@ -288,7 +284,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             {/* IT Services Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleItServices}
+                onClick={toggleItServices;
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>IT Services</span>
@@ -302,13 +298,13 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   </div>
                   {itServices.map((service) => (
                     <Link
-                      key={service.name}
-                      to={service.path}
+                      key={service.name;
+                      to={service.path;
                       className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
                       onClick={() => setIsItServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                        {service.icon}
+                        {service.icon;
                       </div>
                       <span className="font-medium">{service.name}</span>
                     </Link>
@@ -320,7 +316,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             {/* Micro SAAS Dropdown */}
             <div className="relative">
               <button
-                onClick={toggleMicroSaas}
+                onClick={toggleMicroSaas;
                 className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
               >
                 <span>Micro SAAS</span>
@@ -334,15 +330,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   </div>
                   {microSaasServices.map((service) => (
                     <Link
-                      key={service.name}
-                      to={service.path}
+                      key={service.name;
+                      to={service.path;
                       className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
                         service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
+                        {service.icon;
                       </div>
                       <div className="flex-1">
                         <span className="font-medium">{service.name}</span>
@@ -372,7 +368,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={toggleMenu;
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -388,7 +384,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               <input
                 type="text"
                 placeholder="Search services, solutions, or topics..."
-                value={searchQuery}
+                value={searchQuery;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
@@ -402,23 +398,23 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             <div className="flex flex-col space-y-2">
               {mainNavItems.map((item) => (
                 <Link
-                  key={item.name}
-                  to={item.path}
+                  key={item.name;
+                  to={item.path;
                   className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
                     location.pathname === item.path 
                       ? 'bg-cyan-500/20 text-cyan-400' 
                       : 'hover:bg-cyan-500/10 hover:text-cyan-400'
                   }`}
-                  onClick={toggleMenu}
+                  onClick={toggleMenu;
                 >
-                  {item.name}
+                  {item.name;
                 </Link>
               ))}
               
               {/* Mobile AI Services */}
               <div>
                 <button
-                  onClick={toggleAiServices}
+                  onClick={toggleAiServices;
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>AI Services</span>
@@ -429,15 +425,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <div className="ml-4 mt-2 space-y-1">
                     {aiServices.map((service) => (
                       <Link
-                        key={service.name}
-                        to={service.path}
+                        key={service.name;
+                        to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
                         onClick={() => {
                           setIsAiServicesOpen(false)
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
                       </Link>
@@ -449,7 +445,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               {/* Mobile IT Services */}
               <div>
                 <button
-                  onClick={toggleItServices}
+                  onClick={toggleItServices;
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
                 >
                   <span>IT Services</span>
@@ -460,15 +456,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <div className="ml-4 mt-2 space-y-1">
                     {itServices.map((service) => (
                       <Link
-                        key={service.name}
-                        to={service.path}
+                        key={service.name;
+                        to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
                         onClick={() => {
                           setIsItServicesOpen(false)
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;
                         <span>{service.name}</span>
                       </Link>
                     ))}
@@ -479,7 +475,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-                  onClick={toggleMicroSaas}
+                  onClick={toggleMicroSaas;
                   className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium"
                 >
                   <span>Micro SAAS</span>
@@ -490,15 +486,15 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <div className="ml-4 mt-2 space-y-1">
                     {microSaasServices.map((service) => (
                       <Link
-                        key={service.name}
-                        to={service.path}
+                        key={service.name;
+                        to={service.path;
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
                         onClick={() => {
                           setIsMicroSaasOpen(false)
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
+                        {service.icon;
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
                       </Link>
@@ -512,7 +508,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 variant="primary"
                 size="lg"
                 className="mt-4 flex items-center justify-center space-x-2"
-                onClick={toggleMenu}
+                onClick={toggleMenu;
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-4 h-4" />

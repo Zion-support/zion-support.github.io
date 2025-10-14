@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
+import { Menu, 
   X, 
   Brain, 
   Shield, 
   Zap, 
   Globe,
-  ChevronDown
-} from 'lucide-react';
-
+  ChevronDown } from 'lucide-react';
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
@@ -34,7 +31,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon;
       ]
     },
     { 
@@ -45,7 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon;
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
@@ -53,7 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Contact', href: '/contact', icon: PhoneIcon;
   ];
 
   const isActive = (path: string) => {
@@ -104,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               return (
                 <div key={item.name} className="relative group">
                   <Link
-                    to={item.href}
+                    to={item.href;
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
                         ? 'bg-purple-600 text-white'
@@ -122,11 +119,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
+                        <Link key={subItem.name;
+                          to={subItem.href;
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
-                          {subItem.name}
+                          {subItem.name;
                         </Link>
                       ))}
                     </div>
@@ -149,7 +146,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <button
-              onClick={onSidebarToggle}
+              onClick={onSidebarToggle;
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

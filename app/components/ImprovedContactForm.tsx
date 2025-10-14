@@ -204,8 +204,8 @@ const ImprovedContactForm: React.FC = () => {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
+              value={formData.name;
+              onChange={handleChange;
               className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
                 errors.name ? 'border-red-500' : 'border-white/20'
               }`}
@@ -214,7 +214,7 @@ const ImprovedContactForm: React.FC = () => {
             {errors.name && (
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
-                {errors.name}
+                {errors.name;
               </p>
             )}
           </div>
@@ -228,8 +228,8 @@ const ImprovedContactForm: React.FC = () => {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
+              value={formData.email;
+              onChange={handleChange;
               className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
                 errors.email ? 'border-red-500' : 'border-white/20'
               }`}
@@ -238,7 +238,7 @@ const ImprovedContactForm: React.FC = () => {
             {errors.email && (
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
-                {errors.email}
+                {errors.email;
               </p>
             )}
           </div>
@@ -255,8 +255,8 @@ const ImprovedContactForm: React.FC = () => {
               type="tel"
               id="phone"
               name="phone"
-              value={formData.phone}
-              onChange={handleChange}
+              value={formData.phone;
+              onChange={handleChange;
               className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${
                 errors.phone ? 'border-red-500' : 'border-white/20'
               }`}
@@ -265,7 +265,7 @@ const ImprovedContactForm: React.FC = () => {
             {errors.phone && (
               <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
                 <AlertCircle className="w-4 h-4" />
-                {errors.phone}
+                {errors.phone;
               </p>
             )}
           </div>
@@ -279,8 +279,8 @@ const ImprovedContactForm: React.FC = () => {
               type="text"
               id="company"
               name="company"
-              value={formData.company}
-              onChange={handleChange}
+              value={formData.company;
+              onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
               placeholder="Your company name"
             />
@@ -310,12 +310,12 @@ const ImprovedContactForm: React.FC = () => {
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                 {services.map((service) => (
                   <button
-                    key={service}
+                    key={service;
                     type="button"
                     onClick={() => handleServiceSelect(service)}
                     className="w-full px-4 py-3 text-left text-white hover:bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"
                   >
-                    {service}
+                    {service;
                   </button>
                 ))}
               </div>
@@ -324,7 +324,7 @@ const ImprovedContactForm: React.FC = () => {
           {errors.service && (
             <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
               <AlertCircle className="w-4 h-4" />
-              {errors.service}
+              {errors.service;
             </p>
           )}
         </div>
@@ -338,14 +338,14 @@ const ImprovedContactForm: React.FC = () => {
             <select
               id="budget"
               name="budget"
-              value={formData.budget}
-              onChange={handleChange}
+              value={formData.budget;
+              onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             >
               <option value="">Select budget range</option>
               {budgets.map((budget) => (
                 <option key={budget} value={budget} className="bg-slate-800">
-                  {budget}
+                  {budget;
                 </option>
               ))}
             </select>
@@ -358,14 +358,14 @@ const ImprovedContactForm: React.FC = () => {
             <select
               id="timeline"
               name="timeline"
-              value={formData.timeline}
-              onChange={handleChange}
+              value={formData.timeline;
+              onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             >
               <option value="">Select timeline</option>
               {timelines.map((timeline) => (
                 <option key={timeline} value={timeline} className="bg-slate-800">
-                  {timeline}
+                  {timeline;
                 </option>
               ))}
             </select>
@@ -381,9 +381,9 @@ const ImprovedContactForm: React.FC = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={5}
+            value={formData.message;
+            onChange={handleChange;
+            rows={5;
             className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${
               errors.message ? 'border-red-500' : 'border-white/20'
             }`}
@@ -392,7 +392,7 @@ const ImprovedContactForm: React.FC = () => {
           {errors.message && (
             <p className="mt-1 text-sm text-red-400 flex items-center gap-1">
               <AlertCircle className="w-4 h-4" />
-              {errors.message}
+              {errors.message;
             </p>
           )}
         </div>
@@ -400,7 +400,7 @@ const ImprovedContactForm: React.FC = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting;
           className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           {isSubmitting ? (

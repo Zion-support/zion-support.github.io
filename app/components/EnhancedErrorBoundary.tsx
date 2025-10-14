@@ -1,17 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
-
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string}
-
+  errorId: string;
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -104,8 +101,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback}
-
+        return this.props.fallback;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -129,16 +125,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </h3>
                 <div className="text-sm text-gray-300 space-y-2">
                   <div>
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error:</strong> {this.state.error.message;
                   </div>
                   <div>
-                    <strong>Error ID:</strong> {this.state.errorId}
+                    <strong>Error ID:</strong> {this.state.errorId;
                   </div>
                   {this.state.error.stack && (
                     <div>
                       <strong>Stack Trace:</strong>
                       <pre className="mt-2 text-xs bg-black/40 p-2 rounded overflow-auto">
-                        {this.state.error.stack}
+                        {this.state.error.stack;
                       </pre>
                     </div>
                   )}
@@ -146,7 +142,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="mt-2 text-xs bg-black/40 p-2 rounded overflow-auto">
-                        {this.state.errorInfo.componentStack}
+                        {this.state.errorInfo.componentStack;
                       </pre>
                     </div>
                   )}
@@ -164,7 +160,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </button>
               
               <button
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome;
                 className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group"
               >
                 <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
@@ -172,7 +168,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </button>
               
               <button
-                onClick={this.handleReload}
+                onClick={this.handleReload;
                 className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
               >
                 <RefreshCw className="w-5 h-5 mr-2" />
@@ -206,7 +202,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </>
       )}
 
-    return this.props.children}
+    return this.props.children;
 }
 
 export default EnhancedErrorBoundary;

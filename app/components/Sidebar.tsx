@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  XMarkIcon,
+import { XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
@@ -15,14 +14,10 @@ import {
   ShieldCheckIcon,
   GlobeAltIcon,
   SignalIcon,
-  UserGroupIcon
-} from '@heroicons/react/24/outline';
-
+  UserGroupIcon } from '@heroicons/react/24/outline';
 interface SidebarProps {
   isOpen: boolean
-  onClose: () => void
-}
-
+  onClose: () => void;
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
@@ -41,14 +36,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
         { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon;
       ]
     },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Contact', href: '/contact', icon: PhoneIcon;
   ];
 
   const isActive = (href: string) => {
@@ -65,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        onClick={onClose}
+        onClick={onClose;
       />
       
       {/* Sidebar */}
@@ -78,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
           <button
-            onClick={onClose}
+            onClick={onClose;
             className="text-gray-400 hover:text-white lg:hidden"
           >
             <XMarkIcon className="w-6 h-6" />
@@ -90,13 +85,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {navigation.map((item) => (
               <li key={item.name}>
                 <Link
-                  to={item.href}
+                  to={item.href;
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? 'bg-purple-600 text-white'
                       : 'text-gray-300 hover:text-white hover:bg-slate-800'
                   }`}
-                  onClick={onClose}
+                  onClick={onClose;
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
@@ -108,13 +103,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     {item.submenu.map((subItem) => (
                       <li key={subItem.name}>
                         <Link
-                          to={subItem.href}
+                          to={subItem.href;
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive(subItem.href)
                               ? 'text-purple-400 bg-slate-800'
                               : 'text-gray-400 hover:text-white hover:bg-slate-800'
                           }`}
-                          onClick={onClose}
+                          onClick={onClose;
                         >
                           <subItem.icon className="w-4 h-4" />
                           <span>{subItem.name}</span>

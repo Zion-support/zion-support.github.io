@@ -3,8 +3,7 @@ export interface ImageOptimizationOptions {
   height?: number;
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';
-  lazy?: boolean}
-
+  lazy?: boolean;
 export const optimizeImage = (
   src: string,
   options: ImageOptimizationOptions = {}

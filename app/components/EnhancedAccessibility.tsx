@@ -20,7 +20,7 @@ import React from 'react';
       style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important}
+          outline-offset: 2px !important;
         .sr-only {
           position: absolute;
           width: 1px;
@@ -30,7 +30,7 @@ import React from 'react';
           overflow: hidden,
           clip: rect(0, 0, 0, 0)
           white-space: nowrap;
-          border: 0}
+          border: 0;
       `;
       document.head.appendChild(style)};
 
@@ -142,19 +142,15 @@ import React from 'react';
         filter: contrast(150%) brightness(110%)}
 
       .font-size-small {
-        font-size: 0.875rem}
-
+        font-size: 0.875rem;
       .font-size-large {
-        font-size: 1.125rem}
-
+        font-size: 1.125rem;
       .font-size-extra-large {
-        font-size: 1.25rem}
-
+        font-size: 1.25rem;
       .reduced-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important}
-
+        transition-duration: 0.01ms !important;
       .accessibility-panel {
         position: fixed;
         top: 50%;
@@ -167,11 +163,9 @@ import React from 'react';
         padding: 1rem;
         z-index: 1000;
         transition: right 0.3s ease;
-        color: white}
-
+        color: white;
       .accessibility-panel.visible {
-        right: 0}
-
+        right: 0;
       .accessibility-toggle {
         position: fixed;
         top: 50%;
@@ -186,10 +180,9 @@ import React from 'react';
         z-index: 1001;
         font-size: 0.875rem;
         writing-mode: vertical-rl;
-        text-orientation: mixed}
-
+        text-orientation: mixed;
       .accessibility-toggle:hover {
-        background: #7c3aed}
+        background: #7c3aed;
     `;
     document.head.appendChild(style);
 
@@ -205,7 +198,7 @@ import React from 'react';
     <>
       <button
         className="accessibility-toggle""
-        onClick={toggleVisibility}
+        onClick={toggleVisibility;
         aria-label="Toggle accessibility options""
         title="Accessibility Options""
       >
@@ -218,8 +211,8 @@ import React from 'react';
             <label className="flex items-center space-x-2">"
               <input
                 type="checkbox""
-                checked={settings.highContrast}
-                onChange={toggleHighContrast}
+                checked={settings.highContrast;
+                onChange={toggleHighContrast;
                 className="rounded""
               />
               <span>High Contrast</span>
@@ -233,8 +226,8 @@ import React from 'react';
                   <input
                     type="radio""
                     name="fontSize""
-                    value={size}
-                    checked={settings.fontSize === size}
+                    value={size;
+                    checked={settings.fontSize === size;
 onChange={() => setFontSize(size)}
                     className="rounded"
                   />
@@ -252,7 +245,7 @@ onChange={() => setFontSize(size)}
             </p>
           </div>
           <button
-            onClick={toggleVisibility}
+            onClick={toggleVisibility;
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
             Close

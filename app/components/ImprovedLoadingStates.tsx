@@ -1,5 +1,4 @@
 import { Loader2, Brain, Zap, Shield } from 'lucide-react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -63,7 +62,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({
     <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">
       {icon && (
         <div className="mb-4">
-          {icon}
+          {icon;
         </div>
       )}
       <LoadingSpinner size="md" className="mb-4" />
@@ -86,7 +85,7 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div
-          key={index}
+          key={index;
           className={`h-4 bg-white/10 rounded mb-2 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
           }`}

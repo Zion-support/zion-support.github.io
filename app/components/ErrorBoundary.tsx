@@ -1,7 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -83,13 +82,13 @@ class ErrorBoundary extends Component<Props, State> {
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
                   <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error:</strong> {this.state.error.message;
                   </div>
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack Trace:</strong>
                       <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
+                        {this.state.errorInfo.componentStack;
                       </pre>
                     </div>
                   )}

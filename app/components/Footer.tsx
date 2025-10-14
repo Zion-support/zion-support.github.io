@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
+import { PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
   ArrowRightIcon,
@@ -9,9 +8,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
   FacebookIcon,
-  InstagramIcon
-} from '@heroicons/react/24/outline';
-
+  InstagramIcon } from '@heroicons/react/24/outline';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -56,7 +53,7 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: TwitterIcon },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: FacebookIcon },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon }
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon;
   ];
 
   return (
@@ -96,12 +93,12 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={social.name;
+                  href={social.href;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
+                  aria-label={social.name;
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -116,11 +113,11 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <Link 
-                    to={service.href} 
+                    to={service.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {service.name}
+                    {service.name;
                   </Link>
                 </li>
               ))}          <div>
@@ -140,11 +137,11 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    to={item.href} 
+                    to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
+                    {item.name;
                   </Link>
                 </li>
               ))}
@@ -158,11 +155,11 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}>
                   <Link 
-                    to={resource.href} 
+                    to={resource.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {resource.name}
+                    {resource.name;
                   </Link>
                 </li>
               ))}
@@ -174,11 +171,11 @@ const Footer: React.FC = () => {
               {legal.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    to={item.href} 
+                    to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                    {item.name}
+                    {item.name;
                   </Link>
                 </li>
               ))}

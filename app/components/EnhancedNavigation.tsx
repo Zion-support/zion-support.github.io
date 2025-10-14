@@ -11,7 +11,6 @@ import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
-
 const EnhancedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -20,7 +19,7 @@ const EnhancedNavigation = () => {
     {
       label: 'AI Services',
       href: '/ai-services',
-      icon: <Brain className="w-4 h-4" />,
+      icon: <Brain className="w-6 h-6" />,
       dropdown: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
@@ -52,7 +51,7 @@ const EnhancedNavigation = () => {
     {
       label: 'IT Services',
       href: '/services',
-      icon: <Shield className="w-4 h-4" />,
+      icon: <Shield className="w-6 h-6" />,
       dropdown: [
         { label: 'AI-Powered Business Intelligence Pro', href: '/ai-business-intelligence' },
         { label: 'AI Customer Support Automation Suite', href: '/ai-customer-support' },
@@ -90,7 +89,7 @@ const EnhancedNavigation = () => {
     {
       label: 'Micro SAAS',
       href: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />,
+      icon: <Zap className="w-6 h-6" />,
       dropdown: [
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
@@ -121,7 +120,7 @@ const EnhancedNavigation = () => {
     {
       label: '5G Solutions',
       href: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />,
+      icon: <Globe className="w-6 h-6" />,
       dropdown: [
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
         { label: '5G Edge Computing', href: '/5g-edge-computing' },
@@ -136,7 +135,7 @@ const EnhancedNavigation = () => {
     {
       label: 'Company',
       href: '/about',
-      icon: <BarChart3 className="w-4 h-4" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       dropdown: [
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
@@ -172,16 +171,16 @@ const EnhancedNavigation = () => {
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
               <div
-                key={item.label}
+                key={item.label;
                 className="relative group"
                 onMouseEnter={() => setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
-                  to={item.href}
+                  to={item.href;
                   className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                 >
-                  {item.icon}
+                  {item.icon;
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </Link>
@@ -192,11 +191,11 @@ const EnhancedNavigation = () => {
                     <div className="py-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
-                          key={dropdownItem.href}
-                          to={dropdownItem.href}
+                          key={dropdownItem.href;
+                          to={dropdownItem.href;
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
                         >
-                          {dropdownItem.label}
+                          {dropdownItem.label;
                         </Link>
                       ))}
                     </div>
@@ -211,11 +210,11 @@ const EnhancedNavigation = () => {
             <div className="hidden lg:flex space-x-4">
               {quickLinks.map((link) => (
                 <Link
-                  key={link.href}
-                  to={link.href}
+                  key={link.href;
+                  to={link.href;
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 >
-                  {link.label}
+                  {link.label;
                 </Link>
               ))}
             </div>
@@ -244,27 +243,27 @@ const EnhancedNavigation = () => {
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
-                    to={item.href}
+                    to={item.href;
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                     onClick={() => setIsOpen(false)}
                   >
-                    {item.icon}
+                    {item.icon;
                     <span className="font-medium">{item.label}</span>
                   </Link>
                   <div className="ml-6 space-y-2">
                     {item.dropdown.slice(0, 4).map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.href}
-                        to={dropdownItem.href}
+                        key={dropdownItem.href;
+                        to={dropdownItem.href;
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
                         onClick={() => setIsOpen(false)}
                       >
-                        {dropdownItem.label}
+                        {dropdownItem.label;
                       </Link>
                     ))}
                     {item.dropdown.length > 4 && (
                       <Link
-                        to={item.href}
+                        to={item.href;
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                         onClick={() => setIsOpen(false)}
                       >
@@ -279,12 +278,12 @@ const EnhancedNavigation = () => {
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
-                      key={link.href}
-                      to={link.href}
+                      key={link.href;
+                      to={link.href;
                       className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      {link.label}
+                      {link.label;
                     </Link>
                   ))}
                 </div>

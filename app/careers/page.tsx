@@ -136,8 +136,7 @@ const CareersPage = () => {
       ],
       benefits: ["Health Insurance", "401k Matching", "Design Tools", "Creative Freedom"],
       posted: "4 days ago",
-      featured: false
-    }
+      featured: false;
   ];
 
   const benefits = [
@@ -230,7 +229,7 @@ const CareersPage = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {stat.icon;
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
@@ -257,19 +256,19 @@ const CareersPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {benefit.icon}
+                    {benefit.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {benefit.title}
+                    {benefit.title;
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
+                    {benefit.description;
                   </p>
                 </div>
               </div>
@@ -296,7 +295,7 @@ const CareersPage = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {jobCategories.map((category) => (
               <button
-                key={category.id}
+                key={category.id;
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   selectedCategory === category.id
@@ -304,7 +303,7 @@ const CareersPage = () => {
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category.icon}
+                {category.icon;
                 <span>{category.label}</span>
               </button>
             ))}
@@ -314,7 +313,7 @@ const CareersPage = () => {
           <div className="space-y-6">
             {filteredJobs.map((job) => (
               <div
-                key={job.id}
+                key={job.id;
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                   job.featured ? 'ring-2 ring-cyan-500/50' : ''
                 }`}
@@ -331,10 +330,10 @@ const CareersPage = () => {
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-3">
                       <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                        {job.title}
+                        {job.title;
                       </h3>
                       <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-sm font-medium">
-                        {job.department}
+                        {job.department;
                       </span>
                     </div>
                     
@@ -362,16 +361,16 @@ const CareersPage = () => {
                     </div>
                     
                     <p className="text-gray-300 mb-4 leading-relaxed">
-                      {job.description}
+                      {job.description;
                     </p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {job.requirements.slice(0, 3).map((req, idx) => (
                         <span
-                          key={idx}
+                          key={idx;
                           className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"
                         >
-                          {req}
+                          {req;
                         </span>
                       ))}
                       {job.requirements.length > 3 && (

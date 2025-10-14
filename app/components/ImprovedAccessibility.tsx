@@ -1,5 +1,4 @@
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -150,8 +149,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
 
   return (
     <>
-      {children}
-      
+      {children;
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}

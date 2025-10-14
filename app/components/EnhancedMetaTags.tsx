@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedMetaTagsProps {
   title: string;
   description: string;
@@ -60,10 +59,9 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com',
     },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
+    sameAs: ['https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup',
+      'https://github.com/ziontechgroup']
     ],
   }
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
+import { Calendar, 
   Clock, 
   CheckCircle, 
   ArrowRight, 
@@ -16,8 +15,7 @@ import {
   Star,
   Users,
   Award,
-  BarChart3
-} from 'lucide-react';
+  BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function ConsultationPage() {
@@ -138,7 +136,7 @@ export default function ConsultationPage() {
               <div className="space-y-2 mb-4">
                 <div className="flex items-center text-sm text-gray-300">
                   <Clock className="w-4 h-4 mr-2" />
-                  {type.duration}
+                  {type.duration;
                 </div>
                 <div className="text-cyan-400 font-semibold">{type.price}</div>
               </div>
@@ -146,7 +144,7 @@ export default function ConsultationPage() {
                 {type.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
-                    {feature}
+                    {feature;
                   </li>
                 ))}
               </ul>

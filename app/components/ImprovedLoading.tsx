@@ -1,13 +1,10 @@
-import { Loader2, Brain, Zap, Shield, Globe } from 'lucide-react'
-
+import { Loader2, Brain, Zap, Shield, Globe } from 'lucide-react';
 interface ImprovedLoadingProps {
   message?: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'default' | 'futuristic' | 'minimal'
   showProgress?: boolean
-  progress?: number
-}
-
+  progress?: number;
 const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
   message = 'Loading...',
   size = 'md',
@@ -35,7 +32,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
         <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
         {message && (
           <span className={`ml-2 text-gray-300 ${textSizeClasses[size]}`}>
-            {message}
+            {message;
           </span>
         )}
       </div>
@@ -60,7 +57,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
           </div>
 
           <h2 className="text-2xl font-bold text-white mb-4">
-            {message}
+            {message;
           </h2>
 
           {showProgress && (
@@ -110,7 +107,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       </div>
       {message && (
         <span className={`mt-4 text-gray-300 ${textSizeClasses[size]}`}>
-          {message}
+          {message;
         </span>
       )}
       {showProgress && (

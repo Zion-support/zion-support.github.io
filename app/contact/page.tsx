@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
-
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock } from 'lucide-react';
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
     name: '',
@@ -39,15 +38,15 @@ export default function ContactPage()    {
 
     },
     {'
-      icon: 'Email','
-      title: 'Email','
-      value: 'contact@ziontechgroup.com','
+      icon: 'Email'
+      title: 'Email'
+      value: 'contact@ziontechgroup.com'
       description: 'We respond within 24 hours'}
     },
     {'
-      icon: 'Location','
-      title: 'Address','
-      value: '123 Tech Street, Suite 100','
+      icon: 'Location'
+      title: 'Address'
+      value: '123 Tech Street, Suite 100'
       description: 'San Francisco, CA 94105'}
     },
     {'
@@ -174,7 +173,7 @@ export default function ContactPage()    {
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -189,15 +188,15 @@ export default function ContactPage()    {
                 <select
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
+                  value={formData.subject;
+                  onChange={handleChange;
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
                   {subjects.map((subject, index) => (
                     <option key={index} value={subject}>
-                      {subject}
+                      {subject;
                     </option>
                   ))}
                 </select>
@@ -210,10 +209,10 @@ export default function ContactPage()    {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={formData.message;
+                  onChange={handleChange;
                   required
-                  rows={6}
+                  rows={6;
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 />
@@ -222,7 +221,7 @@ export default function ContactPage()    {
               <div className="text-center">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting;
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isSubmitting ? (

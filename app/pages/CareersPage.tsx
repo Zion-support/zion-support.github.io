@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BriefcaseIcon,
+import { BriefcaseIcon,
   MapPinIcon,
   ClockIcon,
   ArrowRightIcon,
@@ -11,9 +10,7 @@ import {
   UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon
-} from '@heroicons/react/24/outline';
-
+  CloudIcon } from '@heroicons/react/24/outline';
 const CareersPage: React.FC = () => {
   const positions = [
     {
@@ -73,8 +70,7 @@ const CareersPage: React.FC = () => {
     {
       title: 'Health Benefits',
       description: 'Comprehensive health coverage',
-      icon: UserGroupIcon
-    }
+      icon: UserGroupIcon;
   ];
 
   return (
@@ -135,11 +131,11 @@ const CareersPage: React.FC = () => {
                     <div className="flex items-center gap-4 text-gray-300">
                       <div className="flex items-center gap-1">
                         <MapPinIcon className="w-4 h-4" />
-                        {position.location}
+                        {position.location;
                       </div>
                       <div className="flex items-center gap-1">
                         <ClockIcon className="w-4 h-4" />
-                        {position.type}
+                        {position.type;
                       </div>
                     </div>
                   </div>
@@ -160,7 +156,7 @@ const CareersPage: React.FC = () => {
                     {position.requirements.map((requirement, reqIndex) => (
                       <li key={reqIndex} className="flex items-center text-gray-300">
                         <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                        {requirement}
+                        {requirement;
                       </li>
                     ))}
                   </ul>

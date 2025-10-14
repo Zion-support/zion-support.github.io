@@ -7,32 +7,28 @@ import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [
     {
-      title: "Workflow Automation",""
-      description: "Automate complex business processes with AI-powered workflows",""
-      icon: <Workflow className="w-6 h-6" />,"
-""
+      title: "Workflow Automation",
+      description: "Automate complex business processes with AI-powered workflows",
+      icon: <Workflow className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-
+      icon: <Brain className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
-
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-
+      icon: <Settings className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
-
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-
+      icon: <Circle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
-
     }
   ];
 
@@ -96,13 +92,13 @@ const AIAutomationPlatform = () => {
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
-                    {feature.icon}
+                    {feature.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">
-                    {feature.title}
+                    {feature.title;
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
+                    {feature.description;
                   </p>
                 </FuturisticCard>
               ))}

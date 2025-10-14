@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -13,8 +12,7 @@ interface OptimizedImageProps {
   quality?: number;
   loading?: 'lazy' | 'eager'
   onLoad?: () => void;
-  onError?: () => void}
-
+  onError?: () => void;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -62,18 +60,16 @@ const observer = new IntersectionObserver()
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc}
-    
+      return originalSrc;
     // For external images, return as-is
     if (originalSrc.startsWith('http')) {
-      return originalSrc}
-    
+      return originalSrc;
     // For local images, you could implement WebP conversion here
     return originalSrc};
 
   const optimizedSrc = getOptimizedSrc(src);
 
-    return originalSrc}
+    return originalSrc;
   const optimizedSrc = getOptimizedSrc(src)
   return (
     <>
@@ -84,15 +80,15 @@ const observer = new IntersectionObserver()
 )}
       <div
 
-        ref={ imgRef }
+        ref={ imgRef;
         className={`relative overflow-hidden ${className}`}
-        style={{ width, height }
+        style={{ width, height;
       >
         {/* Placeholder */}
         {!isLoaded && !isError && (
           <div
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
-            style={{ width, height }
+            style={{ width, height;
           >
             <div className="text-gray-400 text-sm">Loading...</div>
           </div>
@@ -101,7 +97,7 @@ const observer = new IntersectionObserver()
         {isError && (
           <div
             className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
-            style={{ width, height }
+            style={{ width, height;
           >
             <div className="text-gray-400 text-sm text-center">
               <div className="text-2xl mb-2">📷</div>
@@ -111,15 +107,15 @@ const observer = new IntersectionObserver()
 )}
         {/* Actual image */}
         {isInView && !isError && (
-          <img}
-            src={optimizedSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            loading={loading}
-            sizes={sizes}
-            onLoad={handleLoad}
-            onError={handleError}
+          <img;
+            src={optimizedSrc;
+            alt={alt;
+            width={width;
+            height={height;
+            loading={loading;
+            sizes={sizes;
+            onLoad={handleLoad;
+            onError={handleError;
             className={`transition-opacity duration-300 ${;
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}

@@ -2,15 +2,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  AcademicCapIcon,
+import { AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
   ClockIcon,
   UserGroupIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-
+  ArrowRightIcon } from '@heroicons/react/24/outline';
 const TutorialsPage: React.FC = () => {
   const tutorials = [
     {
@@ -82,27 +79,27 @@ const TutorialsPage: React.FC = () => {
                 <div key={tutorial.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-all duration-300 group">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
-                      {tutorial.category}
+                      {tutorial.category;
                     </span>
                     <span className="text-sm text-gray-400">{tutorial.level}</span>
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors">
-                    {tutorial.title}
+                    {tutorial.title;
                   </h3>
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {tutorial.description}
+                    {tutorial.description;
                   </p>
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center text-gray-400 text-sm">
                       <ClockIcon className="w-4 h-4 mr-1" />
-                      {tutorial.duration}
+                      {tutorial.duration;
                     </div>
                     
                     <Link
-                      to={tutorial.href}
+                      to={tutorial.href;
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all"
                     >
                       Start Tutorial

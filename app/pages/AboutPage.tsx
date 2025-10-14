@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  UserGroupIcon,
+import { UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -10,9 +9,7 @@ import {
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
-} from '@heroicons/react/24/outline';
-
+  MapPinIcon } from '@heroicons/react/24/outline';
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -28,8 +25,7 @@ const AboutPage: React.FC = () => {
     {
       title: 'Reliability',
       description: 'We deliver consistent, high-quality solutions that you can depend on.',
-      icon: CloudIcon
-    }
+      icon: CloudIcon;
   ];
 
   const stats = [
@@ -147,10 +143,10 @@ const AboutPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
-                  {stat.number}
+                  {stat.number;
                 </div>
                 <div className="text-gray-300 text-lg">
-                  {stat.label}
+                  {stat.label;
                 </div>
               </div>
             ))}

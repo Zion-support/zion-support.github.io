@@ -1,16 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
+import { CpuChipIcon,
   CloudIcon,
   GlobeAltIcon,
   SignalIcon,
   BriefcaseIcon,
   ArrowRightIcon,
-  CheckIcon
-} from '@heroicons/react/24/outline';
-
+  CheckIcon } from '@heroicons/react/24/outline';
 const ServicesPage: React.FC = () => {
   const services = [
     {
@@ -187,20 +184,20 @@ const ServicesPage: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
+                  {service.description;
                 </p>
                 
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature;
                     </li>
                   ))}
                 </ul>
                 
                 <Link
-                  to={service.href}
+                  to={service.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 >
                   Learn More

@@ -56,8 +56,7 @@ const AiServicesPage: React.FC = () => {
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5
-    }
+      rating: 5;
   ];
 
   return (

@@ -19,8 +19,6 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
-
-
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -64,7 +62,7 @@ import { services } from '../data/servicesData';
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        structuredData={structuredData}
+        structuredData={structuredData;
       />
       
       <FuturisticBackground />
@@ -191,7 +189,7 @@ import { services } from '../data/servicesData';
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <Link
-                    to={feature.href}
+                    to={feature.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   >
                     Learn More
@@ -226,7 +224,7 @@ import { services } from '../data/servicesData';
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <Link
-                    to={service.href}
+                    to={service.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   >
                     Learn More

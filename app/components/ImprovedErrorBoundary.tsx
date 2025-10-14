@@ -119,9 +119,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
-      } cursor/analyze-improve-and-deploy-application-9c39
-  }
-
+      } cursor/analyze-improve-and-deploy-application-9c39;
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };

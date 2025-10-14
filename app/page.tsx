@@ -2,15 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon, 
+import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
   ArrowRightIcon,
   GlobeAltIcon,
   SignalIcon,
-  BriefcaseIcon
-} from '@heroicons/react/24/outline';
+  BriefcaseIcon } from '@heroicons/react/24/outline';
 import FuturisticBackground from './components/FuturisticBackground';
 
 const HomePage: React.FC = () => {
@@ -115,7 +113,7 @@ const HomePage: React.FC = () => {
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
             canonical="https://ziontechgroup.com"
-            structuredData={structuredData}
+            structuredData={structuredData;
           />
           
           <StructuredData type="Organization" data={structuredData} />
@@ -202,7 +200,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
                 <p className="text-gray-300 mb-6">
-                  {service.description}
+                  {service.description;
                 </p>
                 <Link to={service.href} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                   Learn More <ArrowRightIcon className="w-4 h-4" />
@@ -229,10 +227,10 @@ const HomePage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
-                  {stat.number}
+                  {stat.number;
                 </div>
                 <div className="text-gray-300 text-lg">
-                  {stat.label}
+                  {stat.label;
                 </div>
               </div>
             ))}

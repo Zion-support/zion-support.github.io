@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
-
 const GuidesPage: React.FC = () => {
   const guides = [
     {
@@ -115,14 +114,14 @@ const Page = () => {
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-cyan-400 text-sm font-medium">{guide.category}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
-                      {guide.difficulty}
+                      {guide.difficulty;
                     </span>
                   </div>
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
                     <Link
-                      to={guide.url}
+                      to={guide.url;
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
                       Read Guide →

@@ -3,17 +3,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CurrencyDollarIcon,
+import { CurrencyDollarIcon,
   CheckIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon
-} from '@heroicons/react/24/outline';
-
+  CloudIcon } from '@heroicons/react/24/outline';
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -65,8 +62,7 @@ const PricingPage: React.FC = () => {
         'On-site Consulting',
         'SLA Guarantees'
       ],
-      popular: false
-    }
+      popular: false;
   ];
 
   const addOns = [
@@ -161,7 +157,7 @@ const PricingPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature;
                     </li>
                   ))}
                 </ul>

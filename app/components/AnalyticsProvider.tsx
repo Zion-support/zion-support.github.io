@@ -3,14 +3,12 @@ import React from 'react';
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void}
-
+  page: (name: string, properties?: Record<string, any>) => void;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
-  children: ReactNode}
-
+  children: ReactNode;
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation;
@@ -52,7 +50,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 
   return (
     <AnalyticsContext.Provider value={value}>;
-      {children}
+      {children;
     </AnalyticsContext.Provider>)};
 
 const  (): AnalyticsContextType => {

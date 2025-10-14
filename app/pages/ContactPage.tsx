@@ -2,15 +2,12 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  PhoneIcon,
+import { PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
   ClockIcon,
   ArrowRightIcon,
-  CheckIcon
-} from '@heroicons/react/24/outline';
-
+  CheckIcon } from '@heroicons/react/24/outline';
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -154,8 +151,8 @@ const ContactPage: React.FC = () => {
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={formData.name;
+                        onChange={handleInputChange;
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your full name"
@@ -170,8 +167,8 @@ const ContactPage: React.FC = () => {
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+                        value={formData.email;
+                        onChange={handleInputChange;
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="your@email.com"
@@ -188,8 +185,8 @@ const ContactPage: React.FC = () => {
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
+                        value={formData.company;
+                        onChange={handleInputChange;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
@@ -203,8 +200,8 @@ const ContactPage: React.FC = () => {
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
+                        value={formData.phone;
+                        onChange={handleInputChange;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       />
@@ -218,8 +215,8 @@ const ContactPage: React.FC = () => {
                     <select
                       id="service"
                       name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
+                      value={formData.service;
+                      onChange={handleInputChange;
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
@@ -236,10 +233,10 @@ const ContactPage: React.FC = () => {
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
+                      value={formData.message;
+                      onChange={handleInputChange;
                       required
-                      rows={6}
+                      rows={6;
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Tell us about your project or how we can help..."
                     />
@@ -247,7 +244,7 @@ const ContactPage: React.FC = () => {
                   
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting;
                     className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Message'}
