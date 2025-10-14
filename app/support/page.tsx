@@ -1,13 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Phone, Mail, FileText, HelpCircle, Clock } from 'lucide-react';
+import { MessagePhone, Mail, FileText, HelpClock } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
+      icon: Messagetitle: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'

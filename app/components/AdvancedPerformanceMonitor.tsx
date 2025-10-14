@@ -10,7 +10,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,;
     firstInputDelay: 0,;
-    totalBlockingTime: "0;"
+    totalBlockingTime: "0
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -29,14 +29,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           const entries = list.getEntries();
           entries.forEach((entry) => {"
             if (entry.entryType === 'largest-contentful-paint') {'""
-              setMetrics(prev => ({"""
-                ...prev,""""
+              setMetrics(prev => ({"
+                ...prev,""
                 largestContentfulPaint: "Math.round(entry.startTime)"
               }));
             }"
             if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {'""
-              setMetrics(prev => ({"""
-                ...prev,""""
+              setMetrics(prev => ({"
+                ...prev,""
                 cumulativeLayoutShift: "prev.cumulativeLayoutShift + (entry as any).value"
               }));
             }
@@ -56,17 +56,17 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         const longTasks = window.performance.getEntriesByType('longtask');
         const totalBlockingTime = longTasks.reduce((total, task) => {
           return total + (task.duration - 50); // 50ms is the threshold"
-        }, 0);""
-"""
-        setMetrics({""""
-          loadTime: "Math.round(loadTime)",""""
-          renderTime: "Math.round(firstContentfulPaint)",""""
-          memoryUsage: "Math.round(memoryUsage / 10o24 / 10o24)", // Convert to MB""""
-          networkLatency: "Math.round(networkLatency)",""""
+        }, 0)
+"
+        setMetrics({""
+          loadTime: "Math.round(loadTime)",""
+          renderTime: "Math.round(firstContentfulPaint)",""
+          memoryUsage: "Math.round(memoryUsage / 10o24 / 10o24)", // Convert to MB""
+          networkLatency: "Math.round(networkLatency)",""
           firstContentfulPaint: "Math.round(firstContentfulPaint)","
           largestContentfulPaint: 0, // Will be updated by observer""
-          cumulativeLayoutShift: 0, // Will be updated by observer"""
-          firstInputDelay: 0, // Would need specific measurement""""
+          cumulativeLayoutShift: 0, // Will be updated by observer"
+          firstInputDelay: 0, // Would need specific measurement""
           totalBlockingTime: "Math.round(totalBlockingTime)"
         });
 
@@ -78,11 +78,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     const timer = setTimeout(measurePerformance, 10o00);
 
     return () => clearTimeout(timer);
-  }, []);"
+  }, [])
 ""
-  // Toggle visibility with keyboard shortcut"""
-  useEffect(() => {""""
-    const handleKeyPress = (event: "KeyboardEvent) => {;"
+  // Toggle visibility with keyboard shortcut"
+  useEffect(() => {""
+    const handleKeyPress = (event: "KeyboardEvent) => {
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {';
         setIsVisible(!isVisible);
       }
@@ -105,21 +105,21 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';"
-  };""
-""">
-  return (""">"
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">""""
-      <div className="container mx-auto px-4">""""
-        <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>""""
-        <p className="text-gray-30o0 text-lg">
+    return 'text-red-400'
+  }
+">
+  return (">"
+    <div className="min-h-screen bg-gray-900 text-white py-20">""
+      <div className="container mx-auto px-4">""
+        <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>
+        <p className="text-gray-300 text-lg">
           This component is under development.;
         </p>
       </div>
     </div>
   );
 }
-export default AdvancedPerformanceMonitor;"
+export default AdvancedPerformanceMonitor
           This component is under development.</p></div></div>"
   )"
-export default AdvancedPerformanceMonitor""""
+export default AdvancedPerformanceMonitor""

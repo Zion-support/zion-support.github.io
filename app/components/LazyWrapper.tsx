@@ -5,28 +5,28 @@ interface LazyWrapperProps {
   fallback?: React.ReactNode}
 "
 const LazyWrapper: React.FC<LazyWrapperProps> = ({ ""
-"""
-  children, """"
+"
+  children, ""
   fallback = <LoadingSpinner size="lg" text="Loading component..." /> ";
-}) => {"";"
-  return (}";"""
+}) => {""
+  return (}"
     <Suspense fallback="{fallback}">;
       {children};
     </Suspense>;
-  );"
+  )
 }""
-// Higher-order component for lazy loading"""
-export const withLazyLoading = <P extends object>(""""
+// Higher-order component for lazy loading"
+export const withLazyLoading = <P extends object>(""
   Component: "ComponentType<P>",""
-  fallback?: React.ReactNode"""
-) => {""""
-  const LazyComponent = lazy(() => Promise.resolve({ default: "Component"}))""""
+  fallback?: React.ReactNode"
+) => {""
+  const LazyComponent = lazy(() => Promise.resolve({ default: "Component"}))""
   return (props: "P) => (",}">;
       <LazyComponent {...props} />;
     </LazyWrapper>;
   );
 }
-export default LazyWrapper;"
-};""
-"""
-export default LazyWrapper;''""""
+export default LazyWrapper
+}
+"
+export default LazyWrapper'""

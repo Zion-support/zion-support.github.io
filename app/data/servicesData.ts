@@ -4,7 +4,7 @@ export interface Service {
   title: string;
   description: string;
   shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';'
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT'
   icon: string;
   features: string[];
   pricing: {
@@ -13,10 +13,10 @@ export interface Service {
     enterprise: number;}
 
   };
-  benefits: "string[];",useCases: "string[];",technologies: "string[];",contactInfo: {,phone: "string;",email: "string;",website: "string;"
+  benefits: "string[],useCases: "string[],technologies: "string[],contactInfo: {,phone: "string,email: "string,website: "string
   }
   };
-  href: "string;",glowColor: "'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';'"
+  href: "string,glowColor: "'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange'"
 }
 
 export const services: Service[] = [
@@ -1117,10 +1117,10 @@ export const services: Service[] = [
   }
 ];
 ''
-export const getServicesByCategory = (category: "Service['category']) => {';"
+export const getServicesByCategory = (category: "Service['category']) => {'
   return services.filter(service => service.category === category);}
 };
 
-export const getServiceById = (id: "string) => {;"
+export const getServiceById = (id: "string) => {
   return services.find(service => service.id === id);}
-};'
+}

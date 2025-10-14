@@ -23,17 +23,17 @@ const AccessibilityEnhancer: React.FC = () => {
     }
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {"
-      const style = document.createElement('style');""
-      style.textContent = `"""
-        *:focus {""""
-          outline: "2px solid #3b82f6;"
+      const style = document.createElement('style')
+      style.textContent = `"
+        *:focus {""
+          outline: "2px solid #3b82f6
     };
 
     // Add focus indicators for keyboard navigation"
     const addFocusStyles = () => {"
       const style = document.createElement('style'"
-      style.textContent = `""""
-        .focus-visible: "focus {",outline: "2px solid #8b5cf6;",
+      style.textContent = `""
+        .focus-visible: "focus {",outline: "2px solid #8b5cf6,
         }
       `;
       document.head.appendChild(style);
@@ -56,10 +56,10 @@ const AccessibilityEnhancer: React.FC = () => {
       fontSize === 'extra-large' ? '1.4' :'
       fontSize === 'small' ? '0.9' : '1''
     );
-  }, [isHighContrast, isReducedMotion, fontSize]);"
+  }, [isHighContrast, isReducedMotion, fontSize])
 ""
-  // Keyboard navigation enhancement"""
-  useEffect(() => {""""
+  // Keyboard navigation enhancement"
+  useEffect(() => {""
     const handleKeyDown = (e: "KeyboardEvent) => {";
       // Skip to main content;
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {';
@@ -77,17 +77,17 @@ const AccessibilityEnhancer: React.FC = () => {
     }
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);"
+  }, [])
 ""
-  // Focus management"""
-  useEffect(() => {""""
-    const handleFocusIn = (e: "FocusEvent) => {;"
+  // Focus management"
+  useEffect(() => {""
+    const handleFocusIn = (e: "FocusEvent) => {
       const target = e.target as HTMLElement;
       if (target) {"
-        target.classList.add('focus-visible');"
+        target.classList.add('focus-visible')
       "
-    }""""
-    const handleFocusOut = (e: "FocusEvent) => {;"
+    }""
+    const handleFocusOut = (e: "FocusEvent) => {
       const target = e.target as HTMLElement;
       if (target) {
         target.classList.remove('focus-visible');
@@ -102,7 +102,7 @@ const AccessibilityEnhancer: React.FC = () => {
         nav.setAttribute('role', 'navigation');
       }
 
-      const footer = document.querySelector('footer');'
+      const footer = document.querySelector('footer')
 
       if (footer && !footer.getAttribute('role')) {'
         footer.setAttribute('role', 'contentinfo');
@@ -133,7 +133,7 @@ import React from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   return null;
 }
-export default AccessibilityEnhancer;"
-};""
-"""
-export default AccessibilityEnhancer;""""
+export default AccessibilityEnhancer
+}
+"
+export default AccessibilityEnhancer

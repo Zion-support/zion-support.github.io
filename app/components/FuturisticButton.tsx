@@ -12,9 +12,9 @@ interface FuturisticButtonProps {
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
   children, ''
-  className = '',';''
-  variant = 'primary',';''
-  size = 'md',';'
+  className = '',''
+  variant = 'primary',''
+  size = 'md','
 
   icon,
   onClick,
@@ -43,7 +43,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
       {icon && <span className="mr-2">{icon}</span>}
       {children}
     </button>"
-  );""
-};"""
-"""
-export default FuturisticButton;"""
+  )
+}
+"
+export default FuturisticButton

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Play, User, Star, Circle, Clock } from 'lucide-react';
+import { ArrowRight, Play, User, Star, Clock } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [

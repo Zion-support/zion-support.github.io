@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   CpuChipIcon, 
-  CloudIcon, 
   SignalIcon,
   RocketLaunchIcon,
   CheckCircleIcon,
@@ -20,7 +19,7 @@ export default function FiveGSolutionsPage() {
     {
       title: 'Massive Connectivity',
       description: 'Support for millions of devices per square kilometer',
-      icon: CloudIcon,
+      icon: RocketLaunchIcon,
       color: 'from-green-500 to-emerald-500'
     },
     {

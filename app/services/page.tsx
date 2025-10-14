@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
   RocketLaunchIcon,
   CheckCircleIcon
 } from '@heroicons/react/24/outline';
@@ -23,8 +20,7 @@ export default function ServicesPage() {
     {
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services to modernize your IT environment.',
-      icon: CloudIcon,
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Multi-cloud Strategy', 'DevOps Automation'],
+      icon: features: ['Cloud Migration', 'Infrastructure as Code', 'Multi-cloud Strategy', 'DevOps Automation'],
       color: 'green'
     },
     {
@@ -37,8 +33,7 @@ export default function ServicesPage() {
     {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics solutions.',
-      icon: ChartBarIcon,
-      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Data Warehousing'],
+      icon: features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Data Warehousing'],
       color: 'purple'
     },
     {
@@ -51,8 +46,7 @@ export default function ServicesPage() {
     {
       title: 'Global Solutions',
       description: 'Worldwide IT solutions and support services for international businesses.',
-      icon: GlobeAltIcon,
-      features: ['Global Support', 'Multi-region Deployment', 'Compliance Management', 'Local Expertise'],
+      icon: features: ['Global Support', 'Multi-region Deployment', 'Compliance Management', 'Local Expertise'],
       color: 'indigo'
     }
   ];
