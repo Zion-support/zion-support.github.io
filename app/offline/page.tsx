@@ -1,13 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-
-/**
- * Offline Page
- * Displayed when the user is offline and tries to access a page
- */
-
 
 const OfflinePage: React.FC = () => {
   return (
@@ -30,10 +23,10 @@ const OfflinePage: React.FC = () => {
             </svg>
           </div>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            You&apos;re Offline
+            You're Offline
           </h1>
           <p className='text-xl text-gray-600 mb-8'>
-            It looks like you&apos;ve lost your internet connection. Please check your
+            It looks like you've lost your internet connection. Please check your
             network settings and try again.
           </p>
         </div>

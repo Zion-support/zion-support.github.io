@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain, Target } from 'lucide-react';
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
@@ -53,31 +53,18 @@ const GuidesPage: React.FC = () => {
     }
   };
 
+const Page = () => {
   return (
     <>
       <Helmet>
-        <title>Implementation Guides - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
-        <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content=" - Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Navigation */}
-        <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
-              <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-cyan-400">
-                <span className="text-3xl">⚡</span>
-                <span>Zion Tech Group</span>
-              </Link>
-              <div className="hidden lg:flex items-center space-x-8">
-                <Link to="/" className="text-white hover:text-cyan-400 transition-colors">Home</Link>
-                <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">About</Link>
-                <Link to="/services" className="text-white hover:text-cyan-400 transition-colors">Services</Link>
-                <Link to="/guides" className="text-cyan-400 font-semibold">Guides</Link>
-                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</Link>
-              </div>
-            </div>
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8"></h1>
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
           </div>
         </nav>
 
@@ -206,9 +193,8 @@ const GuidesPage: React.FC = () => {
             </div>
           </section>
         </main>
-      </div>
-    </>
+      </>
   );
 };
 
-export default GuidesPage;
+export default Page;

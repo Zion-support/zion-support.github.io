@@ -10,74 +10,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to resolve
-    }
-    
-    console.log(`Resolving conflicts in: ${filePath}`);
-    
-    // Split by conflict markers and process
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictStart = -1;
-    let headLines = [];
-    let separatorFound = false;
-    let originLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        conflictStart = i;
-        headLines = [];
-        separatorFound = false;
-        originLines = [];
-        continue;
-      }
-      
-      if (line.startsWith('=======')) {
-        separatorFound = true;
-        continue;
-      }
-      
-      if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
-        
-        // Choose the version after ======= (usually the newer one)
-        if (separatorFound && originLines.length > 0) {
-          resolvedLines.push(...originLines);
-        } else if (headLines.length > 0) {
-          resolvedLines.push(...headLines);
-        }
-        
-        conflictStart = -1;
-        headLines = [];
-        separatorFound = false;
-        originLines = [];
-        continue;
-      }
-      
-      if (inConflict) {
-        if (!separatorFound) {
-          headLines.push(line);
-        } else {
-          originLines.push(line);
-        }
-      } else {
-        resolvedLines.push(line);
-      }
-    }
-    
-    // Write the resolved content
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    
-    return true;
-  } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
+    if (!content.includes('<<<<<<<') && !content.includes('    return false;
   }
 }
 

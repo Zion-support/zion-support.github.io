@@ -1,5 +1,11 @@
 
-import React, { useEffect } from 'react';
+interface AnalyticsContextType {
+  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
+  trackPageView: (_page: string) => void;
+}
+
+// Define proper types for gtag function
+type GtagFunction = (..._args: unknown[]) => void;
 
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -86,24 +92,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       });
     };
 
-    // Handle route changes
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-    // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
-
-  return <>{children}</>;
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
 };
 
 export default AnalyticsProvider;

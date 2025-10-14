@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
   title?: string;
@@ -58,7 +59,7 @@ export const SEO: React.FC<SEOProps> = ({
   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
+  _alternateLocales = [],
 }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
