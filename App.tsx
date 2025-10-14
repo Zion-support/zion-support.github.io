@@ -6,18 +6,25 @@ import { HelmetProvider } from 'react-helmet-async';
 import Footer from './app/components/Footer';
 import Navigation from './app/components/Navigation';
 
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import SEOEnhancer from './app/components/SEOEnhancer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
-// import LoadingStates from './app/components/LoadingStates';
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
 import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
+// Page components
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ServicesPage from './app/pages/ServicesPage';
+import ContactPage from './app/pages/ContactPage';
+
+const App = () => {
+  return (
     <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
@@ -69,7 +76,6 @@ import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
- f7f852c0f7415181a1b362c4aa5a784585ad5828
   );
 };
 
