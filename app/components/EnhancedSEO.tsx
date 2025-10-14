@@ -14,6 +14,7 @@ interface EnhancedSEOProps {
   noFollow?: boolean}
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+ursor/fix-errors-and-merge-to-main-94a7
   title,
   description,
   keywords,
@@ -159,6 +160,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           }, null, 2)}
         </script>
       )}
+ursor/fix-errors-and-merge-to-main-94a7
     </Helmet>
   )};
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+ursor/fix-errors-and-merge-to-main-94a7
 import { 
   UserGroupIcon,
   CpuChipIcon,
@@ -66,6 +67,7 @@ const AboutPage: React.FC = () => {
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." />
         <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" />
+ursor/fix-errors-and-merge-to-main-94a7
       </Helmet>
 
       {/* Hero Section */}

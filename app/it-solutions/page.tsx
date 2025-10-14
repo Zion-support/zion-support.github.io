@@ -41,8 +41,9 @@ const ITSolutionsPage: React.FC = () => {
     }
   ];
 
+ursor/fix-errors-and-merge-to-main-94a7
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, and AI integration services." />
@@ -135,9 +136,11 @@ const ITSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
+ursor/fix-errors-and-merge-to-main-94a7
       </div>
-    </>
+    </div>
   );
 };
 
 export default ITSolutionsPage;
+ursor/fix-errors-and-merge-to-main-94a7

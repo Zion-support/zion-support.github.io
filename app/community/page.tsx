@@ -43,6 +43,7 @@ const Page = () => {
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Support',
       description: '24/7 support from our team of specialists'
+ursor/fix-errors-and-merge-to-main-94a7
     }
   ];
 
@@ -139,6 +140,7 @@ const Page = () => {
         </section>
       </div>
     </>
+ursor/fix-errors-and-merge-to-main-94a7
   );
 };
 

@@ -82,8 +82,10 @@ const Main: React.FC = () => {
           </a>;
         </div>
       </section>;
+ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 };
 
 export default Main;
+ursor/fix-errors-and-merge-to-main-94a7

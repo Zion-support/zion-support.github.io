@@ -11,6 +11,7 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean;
   className?: string;
 }
+ursor/fix-errors-and-merge-to-main-94a7
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',

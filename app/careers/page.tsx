@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
+ursor/fix-errors-and-merge-to-main-94a7
 import { Helmet } from "react-helmet-async";
 import EnhancedSEO from '../components/EnhancedSEO';
 
@@ -204,6 +205,7 @@ const CareersPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Be part of the future of technology. Join our diverse team of innovators, engineers, and visionaries who are building the next generation of AI and IT solutions.
+ursor/fix-errors-and-merge-to-main-94a7
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -437,3 +439,4 @@ const CareersPage = () => {
     </div>
   );}
 }'
+ursor/fix-errors-and-merge-to-main-94a7

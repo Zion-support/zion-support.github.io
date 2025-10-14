@@ -5,6 +5,7 @@ const LazyImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
+ursor/fix-errors-and-merge-to-main-94a7
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />
       </Helmet>

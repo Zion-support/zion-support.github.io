@@ -176,8 +176,10 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
+ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 };
 
 export default AIImageRecognitionPro;
+ursor/fix-errors-and-merge-to-main-94a7

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LucideIcon, ArrowRight } from 'lucide-react';
+ursor/fix-errors-and-merge-to-main-94a7
 
 interface FuturisticButtonProps {
   children: React.ReactNode;

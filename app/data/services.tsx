@@ -10,6 +10,7 @@ export default function Services() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1>
+ursor/fix-errors-and-merge-to-main-94a7
             Services
           </h1>
           <p className="text-xl text-gray-600 mb-8">

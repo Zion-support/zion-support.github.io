@@ -1,6 +1,7 @@
 import React from 'react';
 { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+ursor/fix-errors-and-merge-to-main-94a7
 
 interface SEOEnhancerProps {
   title?: string;

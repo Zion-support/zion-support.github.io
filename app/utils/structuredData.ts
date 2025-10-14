@@ -18,6 +18,7 @@ const StructuredDataPage = () => {
       </div>
     </div>
   );
+ursor/fix-errors-and-merge-to-main-94a7
 };
 
 export default structureddata

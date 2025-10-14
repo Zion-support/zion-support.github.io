@@ -207,6 +207,7 @@ const Page = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your 5G implementation strategy
+ursor/fix-errors-and-merge-to-main-94a7
           </p>
         </div>
       </div>
@@ -215,3 +216,4 @@ const Page = () => {
 
 const page = React.lazy(() => import('./page'));
 export default page;
+ursor/fix-errors-and-merge-to-main-94a7

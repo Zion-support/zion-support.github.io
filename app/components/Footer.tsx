@@ -51,6 +51,7 @@ const Footer: React.FC = () => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' }
   ];
+ursor/fix-errors-and-merge-to-main-94a7
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: LinkedinIcon },

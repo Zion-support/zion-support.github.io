@@ -604,6 +604,7 @@ const ImprovedNavigation = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
               />
+ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </div>
 

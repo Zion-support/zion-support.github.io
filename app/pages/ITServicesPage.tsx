@@ -12,6 +12,7 @@ import {
   EnvelopeIcon
 } from '@heroicons/react/24/outline';
 
+ursor/fix-errors-and-merge-to-main-94a7
 const ITServicesPage: React.FC = () => {
   const services = [
     {
@@ -86,6 +87,7 @@ const ITServicesPage: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+ursor/fix-errors-and-merge-to-main-94a7
               IT Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">

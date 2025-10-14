@@ -82,8 +82,10 @@ const CriticalResourcePreloader: React.FC = () => {
           </a>;
         </div>
       </section>;
+ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
 };
 
 export default CriticalResourcePreloader;
+ursor/fix-errors-and-merge-to-main-94a7

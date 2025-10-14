@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">
+ursor/fix-errors-and-merge-to-main-94a7
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
@@ -51,3 +52,4 @@ export default function Page() {
     </div>
   );}
 }'
+ursor/fix-errors-and-merge-to-main-94a7

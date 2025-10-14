@@ -1,6 +1,7 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
+ursor/fix-errors-and-merge-to-main-94a7
 const Hero: React.FC = () => {
   return ()
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden"></section>,

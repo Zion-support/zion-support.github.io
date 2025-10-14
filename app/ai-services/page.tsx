@@ -60,8 +60,9 @@ const AiServicesPage: React.FC = () => {
     }
   ];
 
+ursor/fix-errors-and-merge-to-main-94a7
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Comprehensive AI Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." />
@@ -167,3 +168,4 @@ const AiServicesPage: React.FC = () => {
 
 const page = React.lazy(() => import('./page'));
 export default page;
+ursor/fix-errors-and-merge-to-main-94a7

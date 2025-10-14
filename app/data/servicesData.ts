@@ -2,6 +2,7 @@ export interface Service {
   id: string;
   title: string,
         description: string;
+ursor/fix-errors-and-merge-to-main-94a7
   shortDescription: string;
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
   icon: string;

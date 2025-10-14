@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+ursor/fix-errors-and-merge-to-main-94a7
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;

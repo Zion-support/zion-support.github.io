@@ -1,6 +1,7 @@
 import React from 'react';
 { useState } from 'react';
 import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react';
+ursor/fix-errors-and-merge-to-main-94a7
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);

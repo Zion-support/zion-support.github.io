@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -58,17 +60,18 @@ function fixJSXErrors(content) {
     '<>\n      <//Helmet>\n        <////title>$1</title>\n        <////meta name="description" content="$1" />\n      </Helmet>\n      <////div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <////h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <////p className="text-xl text-gray-600">$3</p>\n        </////div>\n      </div>\n    </////>');
   
   return content;
+ursor/fix-errors-and-merge-to-main-94a7
 }
 
 // Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixJSXErrors(content);
+    const result = fixJSXErrors(content, filePath);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed JSX: ${filePath}`);
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content);
+      console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
@@ -98,10 +101,13 @@ async function main() {
       if (processFile(file)) {
         fixedFiles++;
       }
+ursor/fix-errors-and-merge-to-main-94a7
     }
-  }
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+    filesProcessed++;
+  });
+
+  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
+  console.log('JSX error fixes completed!');
 }
 
-main();
+main().catch(console.error);

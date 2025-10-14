@@ -6,8 +6,9 @@ import React from 'react';
 
 
 
+ursor/fix-errors-and-merge-to-main-94a7
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services with competitive pricing." />
@@ -30,3 +31,4 @@ import React from 'react';
         </div>
 
 
+ursor/fix-errors-and-merge-to-main-94a7

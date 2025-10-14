@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+ursor/fix-errors-and-merge-to-main-94a7
 
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {

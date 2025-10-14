@@ -1,4 +1,5 @@
 import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
+ursor/fix-errors-and-merge-to-main-94a7
 // Higher-order component for lazy loading;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 export function withLazyLoading<T extends ComponentType<any>>(

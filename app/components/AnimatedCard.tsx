@@ -5,6 +5,7 @@ interface AnimatedCardProps {
   className?: string;
   glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
   hoverEffect?: boolean}
+ursor/fix-errors-and-merge-to-main-94a7
 
 const AnimatedCard: React.FC<AnimatedCardProps> = ({
   children,
@@ -29,6 +30,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     blue: 'border-blue-500/30 hover:border-blue-500/60'
     yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
   };
+ursor/fix-errors-and-merge-to-main-94a7
 
   return (
     <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
@@ -37,3 +39,4 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   )};
 
 export default AnimatedCard;
+ursor/fix-errors-and-merge-to-main-94a7

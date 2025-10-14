@@ -3,6 +3,7 @@
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void,
+ursor/fix-errors-and-merge-to-main-94a7
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);

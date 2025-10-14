@@ -54,8 +54,9 @@ const GuidesPage: React.FC = () => {
   };
 
 const Page = () => {
+ursor/fix-errors-and-merge-to-main-94a7
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content=" - Zion Tech Group" />
@@ -198,3 +199,4 @@ const Page = () => {
 };
 
 export default Page;
+ursor/fix-errors-and-merge-to-main-94a7

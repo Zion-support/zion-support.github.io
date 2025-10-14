@@ -8,6 +8,7 @@ interface PerformanceMetrics {
   loadTime: number | null;
 }
 
+ursor/fix-errors-and-merge-to-main-94a7
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,

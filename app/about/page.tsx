@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client';
 export default function Page() {
+ursor/fix-errors-and-merge-to-main-94a7
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -41,6 +42,7 @@ export default function Page() {
                 Round-the-clock support for all your page needs.;
               </p>;
             </div>
+ursor/fix-errors-and-merge-to-main-94a7
           </div>
           <div className="mt-12">;
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
@@ -52,3 +54,4 @@ export default function Page() {
     </div>
   );}
 }'
+ursor/fix-errors-and-merge-to-main-94a7

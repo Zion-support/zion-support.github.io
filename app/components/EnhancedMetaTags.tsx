@@ -18,6 +18,7 @@ interface EnhancedMetaTagsProps {
   tags?: string[];
 }
 
+ursor/fix-errors-and-merge-to-main-94a7
 const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   title,
   description,
