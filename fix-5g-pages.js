@@ -1,24 +1,83 @@
-import React from 'react'
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const fiveGPages = [
+  'app/5g-deployment/page.tsx',
+  'app/5g-integration/page.tsx',
+  'app/5g-maintenance/page.tsx',
+  'app/5g-migration/page.tsx',
+  'app/5g-modernization/page.tsx',
+  'app/5g-monitoring/page.tsx',
+  'app/5g-optimization/page.tsx',
+  'app/5g-performance/page.tsx',
+  'app/5g-reliability/page.tsx',
+  'app/5g-scalability/page.tsx',
+  'app/5g-security/page.tsx',
+  'app/5g-support/page.tsx',
+  'app/5g-testing/page.tsx',
+  'app/5g-training/page.tsx',
+  'app/5g-transformation/page.tsx',
+  'app/5g-upgrade/page.tsx'
+];
+
+const pageTitles = {
+  '5g-deployment': '5G Deployment Services',
+  '5g-integration': '5G Integration Services',
+  '5g-maintenance': '5G Maintenance Services',
+  '5g-migration': '5G Migration Services',
+  '5g-modernization': '5G Modernization Services',
+  '5g-monitoring': '5G Monitoring Services',
+  '5g-optimization': '5G Optimization Services',
+  '5g-performance': '5G Performance Services',
+  '5g-reliability': '5G Reliability Services',
+  '5g-scalability': '5G Scalability Services',
+  '5g-security': '5G Security Services',
+  '5g-support': '5G Support Services',
+  '5g-testing': '5G Testing Services',
+  '5g-training': '5G Training Services',
+  '5g-transformation': '5G Transformation Services',
+  '5g-upgrade': '5G Upgrade Services'
+};
+
+function createFiveGPage(filePath) {
+  const fileName = path.basename(path.dirname(filePath));
+  const title = pageTitles[fileName] || '5G Services';
+  
+  // Convert 5g-xxx to FiveGXxx format
+  const componentName = fileName
+    .split('-')
+    .map((part, index) => {
+      if (index === 0 && part === '5g') {
+        return 'FiveG';
+      }
+      return part.charAt(0).toUpperCase() + part.slice(1);
+    })
+    .join('');
+const content = `import React from 'react'
 import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 
-const FiveGSecurityPage: React.FC = () => {
+const ${componentName}Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>5G Security Services - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g security services for enterprise 5G solutions." />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${title.toLowerCase()} for enterprise 5G solutions." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-white mb-6">
-              5G Security Services
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional 5g security services for your 5G infrastructure
+              Professional ${title.toLowerCase()} for your 5G infrastructure
             </p>
           </div>
           
@@ -62,4 +121,13 @@ const FiveGSecurityPage: React.FC = () => {
   )
 }
 
-export default FiveGSecurityPage
+export default ${componentName}Page
+`;
+
+  fs.writeFileSync(path.join(__dirname, filePath), content);
+  console.log(`Created: ${filePath}`);
+}
+
+// Create all 5G pages
+fiveGPages.forEach(createFiveGPage);
+console.log('All 5G pages created successfully!');

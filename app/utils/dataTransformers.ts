@@ -1,6 +1,6 @@
 export const dataTransformers = {
   transformToTableData: (data: unknown[]) => {
-    return data.map((item, index) => ({
+    return data.map((item: any, index) => ({
       id: item.id || index,
       ...item
     }))
