@@ -15,14 +15,11 @@ const TermsPage: React.FC = () => {
             <h1 className="text-4xl font-bold text-white mb-8">Terms of Service</h1>
             <div className="text-gray-400">
               <p>Terms content coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>
-</>
+    </>
   );
 };
 export default TermsPage;
