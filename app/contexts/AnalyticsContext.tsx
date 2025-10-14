@@ -11,8 +11,8 @@ const  ({ children }) => {}
     // if analytics is enabled;
     setIsEnabled(true)}, []);
   const trackEvent = (eventName: "string", properties?: Record<string, any>) => {;;
-    if (!isEnabled) return';
-    // Track event logic here';
+    if (!isEnabled) return;
+    // Track event logic here;'
     console.log('Analytics Event: "'", eventName, properties);;
   }
   const trackPageView = (pageName: 
@@ -42,14 +42,13 @@ const  ({ children }) => {}
   return (
     <div>Page content</div>
   );
-    <AnalyticsContext.Provider value="{value}">;
+    <AnalyticsContext.Provider value="{value}">
       {children}
     </AnalyticsContext.Provider>
   );
-}
+
 export { AnalyticsContext }
 };
 export { AnalyticsContext };
 </string>
 </AnalyticsContextType>
-

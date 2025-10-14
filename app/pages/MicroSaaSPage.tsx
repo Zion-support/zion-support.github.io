@@ -1,7 +1,7 @@
 'use client;;
 import React from 'react';
 ;import { Link   } from 'react-router-dom';
-';import SEO from '../components/SEO;
+';import SEO from '../components/SEO;'
 ';import {}
   GlobeAltIcon,
   CpuChipIcon,
@@ -11,16 +11,16 @@ import React from 'react';
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon'
 } from '@heroicons/react/24/outline;
 export default function MicroSaaSPage() {}
   return (
     <div>Page content</div>
   );
-}
+
   const services = [
     {};
-      icon: "GlobeAltIcon",';
+      icon: "GlobeAltIcon",;'
       title: "'Custom Micro SaaS Development'",;
       description: "'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.'",;
       features: ['Custom development', 'Scalable architecture', 'API integration', 'Multi-tenant support'];
@@ -62,22 +62,21 @@ export default function MicroSaaSPage() {}
         <meta name="description" content="MicroSaaSPage - Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">;
+      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
       </div>
       </div>
       </div>
       </div>
       </div>
-        <div className="text-center">;
+        <div className="text-center">
       </div>
       </div>
       </div>
-      </div>;
-      </div>;
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>;;
-          <p className="text-gray-30o0">This page is under construction.</p>;;
-        </div>;
-      </div>;
-    </>;
+      </div>
+      </div>
+          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
+          <p className="text-gray-30o0">This page is under construction.</p>
+        </div>
+      </div>
+    </>
   )};
-

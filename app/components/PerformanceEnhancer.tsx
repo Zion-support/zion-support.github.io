@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PerformanceEnhancer = () => {
   return (
     <div className="performanceenhancer-component">
@@ -10,4 +9,4 @@ const PerformanceEnhancer = () => {
 };
 
 export default PerformanceEnhancer;
-
+'

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PerformanceDashboard = () => {
   return (
     <div className="performancedashboard-component">
@@ -10,4 +9,4 @@ const PerformanceDashboard = () => {
 };
 
 export default PerformanceDashboard;
-
+'

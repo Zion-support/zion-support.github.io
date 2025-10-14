@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ErrorBoundary = () => {
   return (
     <div className="errorboundary-component">
@@ -10,4 +9,4 @@ const ErrorBoundary = () => {
 };
 
 export default ErrorBoundary;
-
+'

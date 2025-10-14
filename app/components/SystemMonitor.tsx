@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SystemMonitor = () => {
   return (
     <div className="systemmonitor-component">
@@ -10,4 +9,4 @@ const SystemMonitor = () => {
 };
 
 export default SystemMonitor;
-
+'

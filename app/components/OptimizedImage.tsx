@@ -1,5 +1,4 @@
 import React from 'react';
-
 const OptimizedImage = () => {
   return (
     <div className="optimizedimage-component">
@@ -10,4 +9,4 @@ const OptimizedImage = () => {
 };
 
 export default OptimizedImage;
-
+'

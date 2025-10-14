@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SEOOptimizer = () => {
   return (
     <div className="seooptimizer-component">
@@ -10,4 +9,4 @@ const SEOOptimizer = () => {
 };
 
 export default SEOOptimizer;
-
+'

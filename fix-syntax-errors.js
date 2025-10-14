@@ -1,128 +1,117 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {}
-  let fixed = content;
-  
-  // Fix malformed import statements with fixed = fixed.replace(/import\s+([^']+)'([^']+)/g, "import $1 from '$2';\n");
-  fixed = fixed.replace(/import\s+([^']+)'([^']+)/g, "import $1 from '$2';\n");
-  
-  // Fix missing semicolons after import statements
-  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {}
-    if (!match.trim().endsWith(';')) {}
-      return match.trim() + ';\n';
-    }
-    return match;
-  });
-  
-  // Fix unterminated string literals in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {}
-    if (rest.includes('"') && !rest.includes('",')) {}
-      return `${key}: "${value}",`;
-    }
-    return match;
-  });
-  
-  // Fix unterminated string literals with missing closing quotes
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {}
-    if (!value.endsWith('"')) {}
-      return `${key}: "${value}"`;
-    }
-    return match;
-  });
-  
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-  
-  // Fix malformed JSX closing tags
-  {
-    pattern: /}\s*<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix malformed function endings
-  {
-    pattern: /}\s*\);\s*}\s*}\s*''\s*$/gm,
-    replacement: '}'
-  },
-  
-  // Fix missing semicolons after variable declarations
-  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {}
-    if (!match.trim().endsWith(';')) {}
-      return match.trim() + ';\n';
+    // Fix stray semicolons in JSX
+    if (content.includes('>;')) {
+      content = content.replace(/>;/g, '>');
+      modified = true;
     }
-    return match;
-  });
 
-  
-  // Fix unterminated string literals
-  {
-    pattern: /"([^"]*)\n/g,
-    replacement: '"$1"\n'
-  },
-  
-  // Fix missing semicolons in imports
-  {
-    pattern: /import ([^;]+)\n/g,
-    replacement: 'import $1;\n'
-  },
-  
-  // Fix malformed export statements
-  {
-    pattern: /export default function ([^{]+)\s*{\s*}\s*$/gm,
-    replacement: 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}'
-  }
-];
+    // Fix stray quotes after closing parentheses
+    if (content.includes(");'")) {
+      content = content.replace(/\);'/g, ');');
+      modified = true;
+    }
 
-// Function to process a single file
-function processFile(filePath) {}
-  try {}
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {}
-      fs.writeFileSync(filePath, fixed, 'utf8');
+    // Fix unterminated string literals in JSX
+    if (content.includes("'>")) {
+      content = content.replace(/'>/g, '>');
+      modified = true;
+    }
+
+    // Fix stray quotes in JSX text content
+    if (content.includes("</p>';")) {
+      content = content.replace(/<\/p>';/g, '</p>');
+      modified = true;
+    }
+
+    // Fix stray quotes after closing divs
+    if (content.includes("</div>';")) {
+      content = content.replace(/<\/div>';/g, '</div>');
+      modified = true;
+    }
+
+    // Fix stray quotes after closing fragments
+    if (content.includes("</React.Fragment>';")) {
+      content = content.replace(/<\/React.Fragment>';/g, '</React.Fragment>');
+      modified = true;
+    }
+
+    // Fix function names that start with numbers
+    if (content.includes('export default function 404()')) {
+      content = content.replace('export default function 404()', 'export default function NotFound()');
+      modified = true;
+    }
+
+    // Fix missing closing braces
+    if (content.includes('return null;') && !content.includes('}')) {
+      content = content.replace('return null;', 'return null;\n}');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    return false;
-  } catch (error) {}
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+  return false;
+}
 
-// Main function
-async function main() {}
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',;
-    'api/**/*.js';
-  ];
+// Function to find all TSX files
+function findTsxFiles(dir) {
+  const files = [];
   
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {}
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {}
-      if (processFile(file)) {}
-        totalFixed++;
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
       }
     }
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  traverse(dir);
+  return files;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {}
-  main();
+// Main execution
+console.log('Starting syntax error fixes...');
+
+const tsxFiles = findTsxFiles('./app');
+let fixedCount = 0;
+
+for (const file of tsxFiles) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
 }
 
-export { fixSyntaxErrors, processFile };
+console.log(`Fixed ${fixedCount} files.`);
 
+// Also fix files in src directory
+const srcFiles = findTsxFiles('./src');
+for (const file of srcFiles) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Total fixed: ${fixedCount} files.`);

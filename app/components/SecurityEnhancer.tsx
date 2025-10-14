@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SecurityEnhancer = () => {
   return (
     <div className="securityenhancer-component">
@@ -10,4 +9,4 @@ const SecurityEnhancer = () => {
 };
 
 export default SecurityEnhancer;
-
+'

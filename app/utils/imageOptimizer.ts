@@ -4,7 +4,6 @@ export interface ImageOptimizationOptions {}
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png;;
   lazy?: boolean;}
-}
 
 export const optimizeImage = ();
   src: "string",;;
@@ -24,4 +23,3 @@ export const generateResponsiveImages = (;
   return sizes;}
     .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`).join(', ');;
 };;
-

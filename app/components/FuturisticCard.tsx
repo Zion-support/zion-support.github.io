@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticCard = () => {
   return (
     <div className="futuristiccard-component">
@@ -10,4 +9,4 @@ const FuturisticCard = () => {
 };
 
 export default FuturisticCard;
-
+'

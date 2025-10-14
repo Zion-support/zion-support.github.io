@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
 const Main: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">"
@@ -69,8 +67,8 @@ const Main: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
             Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">"
+          </h2>'
+          <p className="text-xl text-blue-100 mb-8">"'
             Let's discuss how our main'
             services can help you achieve your goals.
           </p>
@@ -87,5 +85,3 @@ const Main: React.FC = () => {
 };
 
 export default Main;
-
-

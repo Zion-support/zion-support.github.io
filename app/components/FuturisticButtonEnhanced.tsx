@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticButtonEnhanced = () => {
   return (
     <div className="futuristicbuttonenhanced-component">
@@ -10,4 +9,4 @@ const FuturisticButtonEnhanced = () => {
 };
 
 export default FuturisticButtonEnhanced;
-
+'

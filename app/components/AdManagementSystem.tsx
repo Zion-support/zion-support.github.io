@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdManagementSystem = () => {
   return (
     <div className="admanagementsystem-component">
@@ -10,4 +9,4 @@ const AdManagementSystem = () => {
 };
 
 export default AdManagementSystem;
-
+'

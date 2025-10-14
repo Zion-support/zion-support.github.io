@@ -1,39 +1,110 @@
-'use client';
-#!/usr/bin/env node; import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url'; const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function fixFile(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); const originalContent = content; // Fix common syntax patterns; content = content.replace(/export default functio;n;\s*(\w+)\s*\(/g, 'export default function Component; $1('); content = content.replace(/export default function Component;\s*(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helme t>\s*<titl e>([^<]*)<\/titl e>\s*<meta nam e="description" conten t="([^"]*)" \/>\s*<\/Helme t>/g, 'export default function Component; $1() {\n return (\n <>\n <Helme t>\n <titl e>$2</titl e>\n <meta nam e="description" conten t="$3" />\n </Helme t>');}"' // Fix malformed JSX; content = content.replace(/<div\s+ke y="([^"]*)"\s*>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>\s*classNam e="([^"]*)>\s*>/g, '<divke y="$1" classNam e="$2">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>');'
-content = content.replace(/classNam e="\$1"/g, 'classNam e=>service-card"');' // Fix missing closing tags; content = content.replace(/<div\s+ke y="([^"]*)"\s*>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>\s*classNam e="([^"]*)>\s*>\s*<div/g, '<div ke y="$1" classNam e="$2">
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div><//div');' // Fix malformed function declarations; content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helme t>\s*<titl e>([^<]*)<\/titl e>\s*<meta nam e="description" conten t="([^"]*)" \/>\s*<\/Helme t>/g, 'function $1() {\n return (\n <>\n <Helme t>\n <titl e>$2</titl e>\n <meta nam e="description" conten t="$3" />\n </Helme t>');}"' // Fix missing semicolons; content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;); // Fix malformed object literals"'
-} content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n $1\n}'); // Fix missing commas in arrays and objects; content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n $2'); // Fix JSX fragment issues; content = content.replace(/<>\s*<\/>/g, '<>/>'); // Fix missing closing parentheses; content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n $1\n)'); // Fix malformed JSX attributes; content = content.replace(/<(\w+)\s+([^>]*)\s*>\s*<\/\1>/g, '<$1 $2 />'); // Clean up extra whitespace and newlines; content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); content = content.replace(/^\s*\n/gm, ); // Fix specific patterns for React components; if (content.includes('export default function Component;) && !content.includes('export default function Component;)) {'}' content = content.replace(/export default function Component;/g, 'export default function Component; Component');'
-} } if (content !== originalContent) {} fs.writeFileSync(filePath, content); return true; } } return false; } catch (error) {}
-} console.error(`Error fixing ${filePath}:`, error.message);`;``
-return false; }
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+
+// Function to fix all syntax errors in a file
+function fixAllSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix all patterns systematically
+    const patterns = [
+      // Fix stray semicolons in JSX
+      { from: />;/g, to: '>' },
+      
+      // Fix stray quotes after closing parentheses
+      { from: /\);'/g, to: ');' },
+      
+      // Fix unterminated string literals in JSX
+      { from: /'>/g, to: '>' },
+      
+      // Fix stray quotes in JSX text content
+      { from: /<\/p>';/g, to: '</p>' },
+      { from: /<\/div>';/g, to: '</div>' },
+      { from: /<\/React.Fragment>';/g, to: '</React.Fragment>' },
+      { from: /<\/h1>';/g, to: '</h1>' },
+      { from: /<\/h2>';/g, to: '</h2>' },
+      { from: /<\/h3>';/g, to: '</h3>' },
+      { from: /<\/span>';/g, to: '</span>' },
+      
+      // Fix function names that start with numbers
+      { from: /export default function 404\(\)/g, to: 'export default function NotFound()' },
+      
+      // Fix missing closing braces
+      { from: /return null;\s*$/gm, to: 'return null;\n}' },
+      
+      // Fix stray quotes at end of return statements
+      { from: /\s+\)';$/gm, to: '\n  );' },
+      
+      // Fix any remaining stray quotes in JSX
+      { from: /';\s*$/gm, to: ';' },
+    ];
+
+    for (const pattern of patterns) {
+      const newContent = content.replace(pattern.from, pattern.to);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+  return false;
 }
-function findCorruptedFiles(dir) {} const files = []; function traverse(currentDir) {} const items = fs.readdirSync(currentDir); for (const item of items) {} const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {'}' traverse(fullPath); } } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {'}' try {} const content = fs.readFileSync(fullPath, 'utf8'); // Check for common corruption patterns; if (content.includes('export default functio;n;) || '; content.includes('classNam e="service-card"') ||'>'
-content.includes('export default function Component;) && !content.includes('export default function Component;)) {'}' files.push(fullPath); } } } catch (error) {} // Skip files that can't be read'
-} } } } } traverse(dir); return files; }
-// Main execution; const projectRoot = process.cwd(); console.log('Searching for corrupted files...'); const corruptedFiles = findCorruptedFiles(projectRoot); console.log(`Found ${corruptedFiles.length} corrupted files`);`;`'`
-let fixedCount = 0; for (const file of corruptedFiles) {} if (fixFile(file)) {} fixedCount++; } console.log(`Fixed: ${file}`);`` }`
+
+// Function to find all TSX/TS files
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          traverse(fullPath);
+        } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      // Skip directories we can't read
+    }
+  }
+  
+  traverse(dir);
+  return files;
 }
-console.log(`Fixed ${fixedCount} corrupted files`);`"'`"'`
+
+// Main execution
+console.log('Starting comprehensive syntax error fixes...');
+
+const directories = ['./app', './src'];
+let totalFixed = 0;
+
+for (const dir of directories) {
+  if (fs.existsSync(dir)) {
+    const tsxFiles = findTsxFiles(dir);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
+    
+    for (const file of tsxFiles) {
+      if (fixAllSyntaxErrors(file)) {
+        totalFixed++;
+      }
+    }
+  }
+}
+
+console.log(`Total fixed: ${totalFixed} files.`);

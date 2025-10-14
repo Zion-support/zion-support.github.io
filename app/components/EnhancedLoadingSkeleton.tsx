@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedLoadingSkeleton = () => {
   return (
     <div className="enhancedloadingskeleton-component">
@@ -10,4 +9,4 @@ const EnhancedLoadingSkeleton = () => {
 };
 
 export default EnhancedLoadingSkeleton;
-
+'

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Sidebar = () => {
   return (
     <div className="sidebar-component">
@@ -10,4 +9,4 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-
+'

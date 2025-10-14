@@ -1,5 +1,4 @@
 import React from 'react';
-
 const StructuredData = () => {
   return (
     <div className="structureddata-component">
@@ -10,4 +9,4 @@ const StructuredData = () => {
 };
 
 export default StructuredData;
-
+'

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CoreWebVitals = () => {
   return (
     <div className="corewebvitals-component">
@@ -10,4 +9,4 @@ const CoreWebVitals = () => {
 };
 
 export default CoreWebVitals;
-
+'

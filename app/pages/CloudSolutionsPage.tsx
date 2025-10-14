@@ -1,7 +1,7 @@
 'use client;;
 import React from 'react';
 ;import { Link   } from 'react-router-dom';
-';import SEO from '../components/SEO;
+';import SEO from '../components/SEO;'
 ';import {}
   CloudIcon,
   ServerIcon,
@@ -11,16 +11,16 @@ import React from 'react';
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon'
 } from '@heroicons/react/24/outline;
 export default function CloudSolutionsPage() {}
   return (
     <div>Page content</div>
   );
-}
+
   const services = [
     {};
-      icon: "CloudIcon",';
+      icon: "CloudIcon",;'
       title: "'Cloud Migration'",;
       description: "'Seamless migration of your applications and data to the cloud with minimal downtime.'",;
       features: ['Assessment & planning', 'Data migration', 'Application modernization', 'Performance optimization'];
@@ -62,22 +62,21 @@ export default function CloudSolutionsPage() {}
         <meta name="description" content="CloudSolutionsPage - Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">;
+      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
       </div>
       </div>
       </div>
       </div>
       </div>
-        <div className="text-center">;
+        <div className="text-center">
       </div>
       </div>
       </div>
-      </div>;
-      </div>;
-          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>;;
-          <p className="text-gray-30o0">This page is under construction.</p>;;
-        </div>;
-      </div>;
-    </>;
+      </div>
+      </div>
+          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>
+          <p className="text-gray-30o0">This page is under construction.</p>
+        </div>
+      </div>
+    </>
   )};
-

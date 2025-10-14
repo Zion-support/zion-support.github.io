@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PWAInstaller = () => {
   return (
     <div className="pwainstaller-component">
@@ -10,4 +9,4 @@ const PWAInstaller = () => {
 };
 
 export default PWAInstaller;
-
+'

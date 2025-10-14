@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ContentStatistics = () => {
   return (
     <div className="contentstatistics-component">
@@ -10,4 +9,4 @@ const ContentStatistics = () => {
 };
 
 export default ContentStatistics;
-
+'

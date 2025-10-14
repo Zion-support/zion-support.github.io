@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SEOAudit = () => {
   return (
     <div className="seoaudit-component">
@@ -10,4 +9,4 @@ const SEOAudit = () => {
 };
 
 export default SEOAudit;
-
+'

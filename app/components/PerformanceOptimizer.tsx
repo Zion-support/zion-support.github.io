@@ -1,12 +1,10 @@
 import React, { useEffect, ReactNode } from 'react';
-
 interface PerformanceOptimizerProps {
   children: ReactNode;
-}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    const optimizeImages = () => {
+    const optimizeImages = () => {'
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.hasAttribute('loading')) {
@@ -49,8 +47,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>
 };
 
 export default PerformanceOptimizer;
-

@@ -23,14 +23,12 @@ const HomePage: React.FC = () => {return (
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
-
               >
                 Get Started;
               </a>
               <a
                 href="/solutions"
                 className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-
 
               >
                 Our Solutions;
@@ -69,7 +67,6 @@ const HomePage: React.FC = () => {return (
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
-
             >
               Contact Us;
             </a>
@@ -79,3 +76,4 @@ const HomePage: React.FC = () => {return (
     </>
   )};
 export default HomePage;
+'

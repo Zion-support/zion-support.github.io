@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewContentAdvertisingBanner = () => {
   return (
     <div className="newcontentadvertisingbanner-component">
@@ -10,4 +9,4 @@ const NewContentAdvertisingBanner = () => {
 };
 
 export default NewContentAdvertisingBanner;
-
+'

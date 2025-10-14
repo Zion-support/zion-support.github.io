@@ -1,5 +1,4 @@
 import React from 'react';
-
 const GlobalErrorBoundary = () => {
   return (
     <div className="globalerrorboundary-component">
@@ -10,4 +9,4 @@ const GlobalErrorBoundary = () => {
 };
 
 export default GlobalErrorBoundary;
-
+'

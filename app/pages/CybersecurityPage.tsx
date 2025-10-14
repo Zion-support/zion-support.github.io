@@ -1,7 +1,7 @@
 'use client;;
 import React from 'react';
 ;import { Link   } from 'react-router-dom';
-';import SEO from '../components/SEO;
+';import SEO from '../components/SEO;'
 ';import {}
   ShieldCheckIcon,
   LockClosedIcon,
@@ -11,16 +11,16 @@ import React from 'react';
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon'
 } from '@heroicons/react/24/outline;
 export default function CybersecurityPage() {}
   return (
     <div>Page content</div>
   );
-}
+
   const services = [
     {};
-      icon: "ShieldCheckIcon",';
+      icon: "ShieldCheckIcon",;'
       title: "'Advanced Threat Protection'",;
       description: "'Comprehensive security solutions to protect against malware", ransomware, and advanced persistent threats.',;
       features: ['Real-time threat detection', 'Behavioral analysis', 'Automated response', '24/7 monitoring'];
@@ -62,22 +62,21 @@ export default function CybersecurityPage() {}
         <meta name="description" content="CybersecurityPage - Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">;
+      <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
       </div>
       </div>
       </div>
       </div>
       </div>
-        <div className="text-center">;
+        <div className="text-center">
       </div>
       </div>
       </div>
-      </div>;
-      </div>;
-          <h1 className="text-4xl font-bold mb-4">CybersecurityPage</h1>;;
-          <p className="text-gray-30o0">This page is under construction.</p>;;
-        </div>;
-      </div>;
-    </>;
+      </div>
+      </div>
+          <h1 className="text-4xl font-bold mb-4">CybersecurityPage</h1>
+          <p className="text-gray-30o0">This page is under construction.</p>
+        </div>
+      </div>
+    </>
   )};
-

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ImprovedFooter = () => {
   return (
     <div className="improvedfooter-component">
@@ -10,4 +9,4 @@ const ImprovedFooter = () => {
 };
 
 export default ImprovedFooter;
-
+'

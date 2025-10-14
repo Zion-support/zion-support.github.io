@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ImprovedSidebar = () => {
   return (
     <div className="improvedsidebar-component">
@@ -10,4 +9,4 @@ const ImprovedSidebar = () => {
 };
 
 export default ImprovedSidebar;
-
+'

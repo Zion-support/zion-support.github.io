@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticBackgroundEnhanced = () => {
   return (
     <div className="futuristicbackgroundenhanced-component">
@@ -10,4 +9,4 @@ const FuturisticBackgroundEnhanced = () => {
 };
 
 export default FuturisticBackgroundEnhanced;
-
+'

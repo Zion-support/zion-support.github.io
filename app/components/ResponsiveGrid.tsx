@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ResponsiveGrid = () => {
   return (
     <div className="responsivegrid-component">
@@ -10,4 +9,4 @@ const ResponsiveGrid = () => {
 };
 
 export default ResponsiveGrid;
-
+'

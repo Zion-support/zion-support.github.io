@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LoadingSpinner = () => {
   return (
     <div className="loadingspinner-component">
@@ -10,4 +9,4 @@ const LoadingSpinner = () => {
 };
 
 export default LoadingSpinner;
-
+'

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticServiceCard = () => {
   return (
     <div className="futuristicservicecard-component">
@@ -10,4 +9,4 @@ const FuturisticServiceCard = () => {
 };
 
 export default FuturisticServiceCard;
-
+'

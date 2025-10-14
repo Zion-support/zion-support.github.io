@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedLoading = () => {
   return (
     <div className="enhancedloading-component">
@@ -10,4 +9,4 @@ const EnhancedLoading = () => {
 };
 
 export default EnhancedLoading;
-
+'

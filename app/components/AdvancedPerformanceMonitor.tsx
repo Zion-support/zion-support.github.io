@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const AdvancedPerformanceMonitor = () => {
   return (
     <div className="advancedperformancemonitor-component">
@@ -12,3 +10,4 @@ const AdvancedPerformanceMonitor = () => {
 };
 
 export default AdvancedPerformanceMonitor;
+'

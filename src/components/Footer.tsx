@@ -1,8 +1,6 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
-
-
 const Footer = memo(() => {
   const services = [
     { name: 'AI Services', url: '/ai-services' },
@@ -10,14 +8,12 @@ const Footer = memo(() => {
     { name: 'Cloud Services', url: '/cloud-services' },
     { name: 'Cybersecurity', url: '/cybersecurity' }
 
-
   ];
   const solutions = [
     { name: 'Quantum Computing', url: '/quantum-computing' },
     { name: 'Autonomous Systems', url: '/autonomous-systems' },
     { name: 'Blockchain Web3', url: '/blockchain-web3' },
     { name: 'IoT Edge Computing', url: '/iot-edge-computing' }
-
 
   ];
   const company = [
@@ -121,7 +117,6 @@ const Footer = memo(() => {
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-2">
 
-
               {company.map((item) => (
                 <li key={item.name}>
                   <Link;
@@ -192,5 +187,5 @@ const Footer = memo(() => {
     </footer>
   );
 });
-Footer.displayName = 'Footer';'
+Footer.displayName = 'Footer;
 export default Footer;

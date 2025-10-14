@@ -1,5 +1,4 @@
 import React from 'react';
-
 const MobileNavigation = () => {
   return (
     <div className="mobilenavigation-component">
@@ -10,4 +9,4 @@ const MobileNavigation = () => {
 };
 
 export default MobileNavigation;
-
+'

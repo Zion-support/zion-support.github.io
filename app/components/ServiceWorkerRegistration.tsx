@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ServiceWorkerRegistration = () => {
   return (
     <div className="serviceworkerregistration-component">
@@ -10,4 +9,4 @@ const ServiceWorkerRegistration = () => {
 };
 
 export default ServiceWorkerRegistration;
-
+'

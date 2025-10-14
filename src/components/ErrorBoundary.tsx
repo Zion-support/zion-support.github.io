@@ -10,8 +10,8 @@ class ErrorBoundary extends Component<Props, State> {public state: State = {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);'
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {'
+    console.error('Uncaught error:', error, errorInfo);
   }
 
   public render() {
@@ -36,6 +36,5 @@ class ErrorBoundary extends Component<Props, State> {public state: State = {
 
     return this.props.children;
   }
-}
 
 export default ErrorBoundary;

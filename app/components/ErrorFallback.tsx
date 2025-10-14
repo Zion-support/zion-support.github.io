@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ErrorFallback = () => {
   return (
     <div className="errorfallback-component">
@@ -10,4 +9,4 @@ const ErrorFallback = () => {
 };
 
 export default ErrorFallback;
-
+'

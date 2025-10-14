@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PerformanceMetrics = () => {
   return (
     <div className="performancemetrics-component">
@@ -10,4 +9,4 @@ const PerformanceMetrics = () => {
 };
 
 export default PerformanceMetrics;
-
+'

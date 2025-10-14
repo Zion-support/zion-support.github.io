@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LazyWrapper = () => {
   return (
     <div className="lazywrapper-component">
@@ -10,4 +9,4 @@ const LazyWrapper = () => {
 };
 
 export default LazyWrapper;
-
+'

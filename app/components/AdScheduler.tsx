@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdScheduler = () => {
   return (
     <div className="adscheduler-component">
@@ -10,4 +9,4 @@ const AdScheduler = () => {
 };
 
 export default AdScheduler;
-
+'
