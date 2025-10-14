@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const DigitalTwinPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Digital Twin Platform</title>
-        <meta name ="description" content="Professional digital twin platform solutions and services" />
-        <meta name ="keywords" content="digital, twin, platform" />
+        <meta
+          name="description"
+          content="Professional digital twin platform solutions and services"
+        />
+        <meta name="keywords" content="digital, twin, platform" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Digital Twin Platform</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Digital Twin Platform
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional digital twin platform solutions and services
             </p>
@@ -49,4 +54,5 @@ const DigitalTwinPlatformPage: React.FC = () => {
   );
 };
 
-export default DigitalTwinPlatformPage;
+const page = React.lazy(() => import('./page'));
+export default page;

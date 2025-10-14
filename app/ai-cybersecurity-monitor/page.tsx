@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiCybersecurityMonitorPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Cybersecurity Monitor</title>
-        <meta name ="description" content="Professional ai cybersecurity monitor solutions and services" />
-        <meta name ="keywords" content="ai, cybersecurity, monitor" />
+        <meta
+          name="description"
+          content="Professional ai cybersecurity monitor solutions and services"
+        />
+        <meta name="keywords" content="ai, cybersecurity, monitor" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Cybersecurity Monitor</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Cybersecurity Monitor
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai cybersecurity monitor solutions and services
             </p>
@@ -49,4 +54,5 @@ const AiCybersecurityMonitorPage: React.FC = () => {
   );
 };
 
-export default AiCybersecurityMonitorPage;
+const page = React.lazy(() => import('./page'));
+export default page;

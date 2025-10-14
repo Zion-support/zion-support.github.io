@@ -1,26 +1,31 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const FiveGImplementation: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Implementation Services | Zion Tech Group</title>
-        <meta name ="description" content="Professional 5G network implementation services for businesses. Expert 5G deployment, optimization, and support." />
+        <meta
+          name="description"
+          content="Professional 5G network implementation services for businesses. Expert 5G deployment, optimization, and support."
+        />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             5G Implementation Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with cutting-edge 5G technology implementation and optimization services.
+            Transform your business with cutting-edge 5G technology
+            implementation and optimization services.
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default FiveGImplementation;
+const page = React.lazy(() => import('./page'));
+export default page;

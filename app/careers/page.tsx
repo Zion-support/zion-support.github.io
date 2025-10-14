@@ -1,8 +1,16 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
-import { Zap, Heart, Brain, Rocket, Star, MapPin, Clock, Users, CheckCircle  } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Zap } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 interface JobPosition {
   id: string;
@@ -18,102 +26,146 @@ interface JobPosition {
 }
 
 const CareersPage: React.FC = () => {
-  const positions: JobPosition[] =[
+  const positions: JobPosition[] = [
     {
-      id:'1',
-      title:'Senior AI Engineer',
-      department:'AI Solutions',
-      location:'Remote / New York',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'2 days ago',
-      description:'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements:['PhD inComputer Science or related field','5+ years ML/AI experience','Expert inPython, TensorFlow, PyTorch'],
-      featured: true
-    },{
-      id:'2',
-      title:'Quantum Computing Researcher',
-      department:'Research & Development',
-      location:'San Francisco, CA',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'1 week ago',
-      description:'Research and develop quantum algorithms and applications for real-world problems.',
-      requirements:['PhD inPhysics orComputer Science','Quantum computing experience','Strong mathematical background'],
-      featured: true
-    },{
-      id:'3',
-      title:'DevOps Engineer',
-      department:'Infrastructure',
-      location:'Austin, TX',
-      type:'Full-time',
-      experience:'4+ years',
-      posted:'3 days ago',
-      description:'Design and maintain cloud infrastructure for scalable AI and IT solutions.',
-      requirements:['AWS/Azure/GCP certification','Kubernetes experience','Infrastructure asCode'],
-      featured: false
-    },{
-      id:'4',
-      title:'UX Designer',
-      department:'Design',
-      location:'Remote',
-      type:'Full-time',
-      experience:'3+ years',
-      posted:'5 days ago',
-      description:'Create intuitive user experiences for complex AI and technology products.',
-      requirements:['Portfolio of AI/tech products','Figma expertise','User research experience'],
-      featured: false
-    },{
-      id:'5',
-      title:'Data Scientist',
-      department:'AI Solutions',
-      location:'Boston, MA',
-      type:'Full-time',
-      experience:'2+ years',
-      posted:'1 week ago',
-      description:'Analyze complex datasets and build predictive models for business insights.',
-      requirements:['Masters inData Science','Python/R expertise','Statistical modeling'],
-      featured: false
-    },{
-      id:'6',
-      title:'Product Manager',
-      department:'Product',
-      location:'Seattle, WA',
-      type:'Full-time',
-      experience:'5+ years',
-      posted:'4 days ago',
-      description:'Lead product strategy and development for AI-powered enterprise solutions.',
-      requirements:['Technical background','Product management experience','AI/ML knowledge'],
-      featured: false
-    }
+      id: "1",
+      title: "Senior AI Engineer",
+      department: "AI Solutions",
+      location: "Remote / New York",
+      type: "Full-time",
+      experience: "5+ years",
+      posted: "2 days ago",
+      description:
+        "Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.",
+      requirements: [
+        "PhD inComputer Science or related field",
+        "5+ years ML/AI experience",
+        "Expert inPython, TensorFlow, PyTorch",
+      ],
+      featured: true,
+    },
+    {
+      id: "2",
+      title: "Quantum Computing Researcher",
+      department: "Research & Development",
+      location: "San Francisco, CA",
+      type: "Full-time",
+      experience: "3+ years",
+      posted: "1 week ago",
+      description:
+        "Research and develop quantum algorithms and applications for real-world problems.",
+      requirements: [
+        "PhD inPhysics orComputer Science",
+        "Quantum computing experience",
+        "Strong mathematical background",
+      ],
+      featured: true,
+    },
+    {
+      id: "3",
+      title: "DevOps Engineer",
+      department: "Infrastructure",
+      location: "Austin, TX",
+      type: "Full-time",
+      experience: "4+ years",
+      posted: "3 days ago",
+      description:
+        "Design and maintain cloud infrastructure for scalable AI and IT solutions.",
+      requirements: [
+        "AWS/Azure/GCP certification",
+        "Kubernetes experience",
+        "Infrastructure asCode",
+      ],
+      featured: false,
+    },
+    {
+      id: "4",
+      title: "UX Designer",
+      department: "Design",
+      location: "Remote",
+      type: "Full-time",
+      experience: "3+ years",
+      posted: "5 days ago",
+      description:
+        "Create intuitive user experiences for complex AI and technology products.",
+      requirements: [
+        "Portfolio of AI/tech products",
+        "Figma expertise",
+        "User research experience",
+      ],
+      featured: false,
+    },
+    {
+      id: "5",
+      title: "Data Scientist",
+      department: "AI Solutions",
+      location: "Boston, MA",
+      type: "Full-time",
+      experience: "2+ years",
+      posted: "1 week ago",
+      description:
+        "Analyze complex datasets and build predictive models for business insights.",
+      requirements: [
+        "Masters inData Science",
+        "Python/R expertise",
+        "Statistical modeling",
+      ],
+      featured: false,
+    },
+    {
+      id: "6",
+      title: "Product Manager",
+      department: "Product",
+      location: "Seattle, WA",
+      type: "Full-time",
+      experience: "5+ years",
+      posted: "4 days ago",
+      description:
+        "Lead product strategy and development for AI-powered enterprise solutions.",
+      requirements: [
+        "Technical background",
+        "Product management experience",
+        "AI/ML knowledge",
+      ],
+      featured: false,
+    },
   ];
 
-  const benefits =[
+  const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
-      title:'Competitive Salary',
-      description:'Above-market compensation with performance bonuses'
-    },{
+      title: "Competitive Salary",
+      description: "Above-market compensation with performance bonuses",
+    },
+    {
       icon: <Heart className="w-8 h-8" />,
-      title:'Health & Wellness',
-      description:'Comprehensive health, dental, and mental health coverage'
-    },{
+      title: "Health & Wellness",
+      description: "Comprehensive health, dental, and mental health coverage",
+    },
+    {
       icon: <Brain className="w-8 h-8" />,
-      title:'Learning & Development',
-      description:'Annual learning budget and conference attendance'
-    },{
+      title: "Learning & Development",
+      description: "Annual learning budget and conference attendance",
+    },
+    {
       icon: <Rocket className="w-8 h-8" />,
-      title:'Career Growth',
-      description:'Clear promotion paths and mentorship programs'
-    }
+      title: "Career Growth",
+      description: "Clear promotion paths and mentorship programs",
+    },
   ];
 
   return (
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
-        <meta name="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
+        <meta
+          name="description"
+          content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities."
+        />
+        <meta
+          name="keywords"
+          content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company"
+        />
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
@@ -127,7 +179,9 @@ const CareersPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
+              Build the future of technology with us. We&apos;re looking for
+              passionate individuals to join our mission of advancing AI,
+              quantum computing, and autonomous systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
@@ -149,11 +203,15 @@ const CareersPage: React.FC = () => {
                 <div className="text-gray-300">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">15+</div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  15+
+                </div>
                 <div className="text-gray-300">Countries</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-pink-400 mb-2">100%</div>
+                <div className="text-4xl font-bold text-pink-400 mb-2">
+                  100%
+                </div>
                 <div className="text-gray-300">Remote Friendly</div>
               </div>
             </div>
@@ -168,14 +226,20 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div key={position.id}
+                <div
+                  key={position.id}
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
-                  } hover:border-purple-400 transition-all duration-300 group`}>
+                    position.featured
+                      ? "border-purple-400 shadow-2xl shadow-purple-500/25"
+                      : "border-white/20"
+                  } hover:border-purple-400 transition-all duration-300 group`}
+                >
                   {position.featured && (
                     <div className="flex items-center gap-2 mb-4">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm font-semibold">Featured Position</span>
+                      <span className="text-yellow-400 text-sm font-semibold">
+                        Featured Position
+                      </span>
                     </div>
                   )}
 
@@ -184,7 +248,9 @@ const CareersPage: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
                         {position.title}
                       </h3>
-                      <p className="text-cyan-400 font-medium">{position.department}</p>
+                      <p className="text-cyan-400 font-medium">
+                        {position.department}
+                      </p>
                     </div>
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
                       {position.type}
@@ -234,7 +300,9 @@ const CareersPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {benefit.title}
+                  </h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
               ))}
@@ -247,10 +315,13 @@ const CareersPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-12 border border-white/10">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6">Our Culture</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">
+                  Our Culture
+                </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  We foster an environment of innovation, collaboration, and continuous learning. 
-                  Our team is diverse, inclusive, and passionate about pushing the boundaries of technology.
+                  We foster an environment of innovation, collaboration, and
+                  continuous learning. Our team is diverse, inclusive, and
+                  passionate about pushing the boundaries of technology.
                 </p>
               </div>
 
@@ -259,24 +330,39 @@ const CareersPage: React.FC = () => {
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-10 h-10 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Innovation First</h3>
-                  <p className="text-gray-300">We encourage experimentation and bold ideas that challenge the status quo.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Innovation First
+                  </h3>
+                  <p className="text-gray-300">
+                    We encourage experimentation and bold ideas that challenge
+                    the status quo.
+                  </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-10 h-10 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Collaborative Spirit</h3>
-                  <p className="text-gray-300">We believe the best solutions come from diverse teams working together.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Collaborative Spirit
+                  </h3>
+                  <p className="text-gray-300">
+                    We believe the best solutions come from diverse teams
+                    working together.
+                  </p>
                 </div>
 
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Rocket className="w-10 h-10 text-pink-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Growth Mindset</h3>
-                  <p className="text-gray-300">We invest in our team&apos;s development and provide opportunities to learn and grow.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Growth Mindset
+                  </h3>
+                  <p className="text-gray-300">
+                    We invest in our team&apos;s development and provide
+                    opportunities to learn and grow.
+                  </p>
                 </div>
               </div>
             </div>
@@ -291,7 +377,9 @@ const CareersPage: React.FC = () => {
                 Don&apos;tSee Your Dream Job?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                We&apos;re always looking for exceptional talent. Send us your resume and let us know how you&apos;d like to contribute to our mission.
+                We&apos;re always looking for exceptional talent. Send us your
+                resume and let us know how you&apos;d like to contribute to our
+                mission.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
@@ -309,4 +397,5 @@ const CareersPage: React.FC = () => {
   );
 };
 
-export default CareersPage;
+const page = React.lazy(() => import('./page'));
+export default page;

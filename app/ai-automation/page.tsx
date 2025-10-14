@@ -1,18 +1,23 @@
-import React from 'react';
-import { Helmet  } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AiAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Ai Automation</title>
-        <meta name ="description" content="Professional ai automation solutions and services" />
-        <meta name ="keywords" content="ai, automation" />
+        <meta
+          name="description"
+          content="Professional ai automation solutions and services"
+        />
+        <meta name="keywords" content="ai, automation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Ai Automation</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">
+              Ai Automation
+            </h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional ai automation solutions and services
             </p>
@@ -49,4 +54,5 @@ const AiAutomationPage: React.FC = () => {
   );
 };
 
-export default AiAutomationPage;
+const page = React.lazy(() => import('./page'));
+export default page;

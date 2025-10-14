@@ -1,23 +1,27 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // List of corrupted files that need fixing
 const corruptedFiles = [
-  'app/5g-implementation/page.tsx',
-  'app/5g-infrastructure/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx'
+  "app/5g-implementation/page.tsx",
+  "app/5g-infrastructure/page.tsx",
+  "app/5g-iot-solutions/page.tsx",
+  "app/5g-mobile-applications/page.tsx",
+  "app/5g-network-infrastructure/page.tsx",
+  "app/5g-private-networks/page.tsx",
+  "app/5g-smart-city-solutions/page.tsx",
 ];
 
 // Template for 5G pages
-const create5GPageTemplate = (title, description, keywords) => `import React from 'react';
+const create5GPageTemplate = (
+  title,
+  description,
+  keywords,
+) => `import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -142,58 +146,76 @@ export default Page;`;
 
 // Page configurations
 const pageConfigs = {
-  'app/5g-implementation/page.tsx': {
-    title: '5G Implementation',
-    description: 'Professional 5G implementation services designed to help your business succeed and grow.',
-    keywords: '5G, implementation, business solutions, technology services, professional services'
+  "app/5g-implementation/page.tsx": {
+    title: "5G Implementation",
+    description:
+      "Professional 5G implementation services designed to help your business succeed and grow.",
+    keywords:
+      "5G, implementation, business solutions, technology services, professional services",
   },
-  'app/5g-infrastructure/page.tsx': {
-    title: '5G Infrastructure',
-    description: 'Professional 5G infrastructure services designed to help your business succeed and grow.',
-    keywords: '5G, infrastructure, business solutions, technology services, professional services'
+  "app/5g-infrastructure/page.tsx": {
+    title: "5G Infrastructure",
+    description:
+      "Professional 5G infrastructure services designed to help your business succeed and grow.",
+    keywords:
+      "5G, infrastructure, business solutions, technology services, professional services",
   },
-  'app/5g-iot-solutions/page.tsx': {
-    title: '5G IoT Solutions',
-    description: 'Professional 5G IoT solutions designed to help your business succeed and grow.',
-    keywords: '5G, IoT, solutions, business solutions, technology services, professional services'
+  "app/5g-iot-solutions/page.tsx": {
+    title: "5G IoT Solutions",
+    description:
+      "Professional 5G IoT solutions designed to help your business succeed and grow.",
+    keywords:
+      "5G, IoT, solutions, business solutions, technology services, professional services",
   },
-  'app/5g-mobile-applications/page.tsx': {
-    title: '5G Mobile Applications',
-    description: 'Professional 5G mobile application services designed to help your business succeed and grow.',
-    keywords: '5G, mobile applications, business solutions, technology services, professional services'
+  "app/5g-mobile-applications/page.tsx": {
+    title: "5G Mobile Applications",
+    description:
+      "Professional 5G mobile application services designed to help your business succeed and grow.",
+    keywords:
+      "5G, mobile applications, business solutions, technology services, professional services",
   },
-  'app/5g-network-infrastructure/page.tsx': {
-    title: '5G Network Infrastructure',
-    description: 'Professional 5G network infrastructure services designed to help your business succeed and grow.',
-    keywords: '5G, network infrastructure, business solutions, technology services, professional services'
+  "app/5g-network-infrastructure/page.tsx": {
+    title: "5G Network Infrastructure",
+    description:
+      "Professional 5G network infrastructure services designed to help your business succeed and grow.",
+    keywords:
+      "5G, network infrastructure, business solutions, technology services, professional services",
   },
-  'app/5g-private-networks/page.tsx': {
-    title: '5G Private Networks',
-    description: 'Professional 5G private network services designed to help your business succeed and grow.',
-    keywords: '5G, private networks, business solutions, technology services, professional services'
+  "app/5g-private-networks/page.tsx": {
+    title: "5G Private Networks",
+    description:
+      "Professional 5G private network services designed to help your business succeed and grow.",
+    keywords:
+      "5G, private networks, business solutions, technology services, professional services",
   },
-  'app/5g-smart-city-solutions/page.tsx': {
-    title: '5G Smart City Solutions',
-    description: 'Professional 5G smart city solutions designed to help your business succeed and grow.',
-    keywords: '5G, smart city, solutions, business solutions, technology services, professional services'
-  }
+  "app/5g-smart-city-solutions/page.tsx": {
+    title: "5G Smart City Solutions",
+    description:
+      "Professional 5G smart city solutions designed to help your business succeed and grow.",
+    keywords:
+      "5G, smart city, solutions, business solutions, technology services, professional services",
+  },
 };
 
 // Fix corrupted files
-corruptedFiles.forEach(filePath => {
+corruptedFiles.forEach((filePath) => {
   const fullPath = path.join(__dirname, filePath);
   const config = pageConfigs[filePath];
-  
+
   if (config) {
-    const content = create5GPageTemplate(config.title, config.description, config.keywords);
-    
+    const content = create5GPageTemplate(
+      config.title,
+      config.description,
+      config.keywords,
+    );
+
     try {
       // Ensure directory exists
       const dir = path.dirname(fullPath);
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
-      
+
       fs.writeFileSync(fullPath, content);
       // console.log(`Fixed: ${filePath}`);
     } catch {
