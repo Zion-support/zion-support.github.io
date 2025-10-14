@@ -1,71 +1,43 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  type?: string;
+  structuredData?: Record<string, unknown>;
+  children?: React.ReactNode;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ 
+  title, 
+  description, 
+  keywords, 
+  type = 'website',
+  structuredData,
+  children 
 }) => {
-  useEffect(() => {
-    // Update document title
-    if (title) {
-      document.title = title;
-    }
-
-    // Update meta description
-    if (description) {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', description);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = description;
-        document.head.appendChild(meta);
-      }
-    }
-
-    // Update meta keywords
-    if (keywords) {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'keywords';
-        meta.content = keywords;
-        document.head.appendChild(meta);
-      }
-    }
-
-    // Update canonical URL
-    if (canonical) {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) {
-        canonicalLink.setAttribute('href', canonical);
-      } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonical;
-        document.head.appendChild(link);
-      }
-    }
-  }, [title, description, keywords, canonical]);
-
-  return null; // This component doesn't render anything
+  return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords.join(', ')} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content={type} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        {structuredData && (
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        )}
+      </Helmet>
+      {children}
+    </>
+  );
 };
 
 export default SEOOptimizer;

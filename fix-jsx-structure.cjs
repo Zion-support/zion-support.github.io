@@ -6,94 +6,63 @@ const glob = require('glob');
 function fixJSXStructure(content) {
   let fixed = content;
   
-  // Fix malformed class names
-  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3$4"');
-  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3 $4$5"');
-  fixed = fixed.replace(/className="([^"]*?)(\w+)\s+(\w+)\s+(\w+)\s+(\w+)([^"]*?)"/g, 'className="$1$2 $3 $4 $5$6"');
+  // Fix CSS class syntax with spaces
+  fixed = fixed.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
+    const cleanClass = (part1 + part2).replace(/\s+/g, '');
+    return `className="${cleanClass}"`;
+  });
   
-  // Fix common malformed patterns
-  fixed = fixed.replace(/min-h-screenbg-gradient-to-br/g, 'min-h-screen bg-gradient-to-br');
-  fixed = fixed.replace(/from-slate-9 0 0via-purple-9 0 0to-slate-9 0 0/g, 'from-slate-900 via-purple-900 to-slate-900');
-  fixed = fixed.replace(/containermx-autopx-4py-1 6/g, 'container mx-auto px-4 py-16');
-  fixed = fixed.replace(/text-4xlfont-boldtext-white/g, 'text-4xl font-bold text-white');
-  fixed = fixed.replace(/text-xltext-gray-30 0/g, 'text-xl text-gray-300');
-  fixed = fixed.replace(/gridmd:grid-cols-2 lg:grid-cols-3gap-8 mt-1 2/g, 'grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12');
-  fixed = fixed.replace(/bg-blue-50border border-blue-20 0rounded-lgp-6/g, 'bg-blue-50 border border-blue-200 rounded-lg p-6');
-  fixed = fixed.replace(/text-lgfont-semiboldtext-blue-90 0/g, 'text-lg font-semibold text-blue-900');
-  fixed = fixed.replace(/text-blue-70 0/g, 'text-blue-700');
-  fixed = fixed.replace(/text-purple-70 0/g, 'text-purple-700');
-  fixed = fixed.replace(/text-purple-90 0/g, 'text-purple-900');
-  fixed = fixed.replace(/text-gray-4 0 0/g, 'text-gray-400');
-  fixed = fixed.replace(/hover:text-whitetransition-colors/g, 'hover:text-white transition-colors');
-  fixed = fixed.replace(/flexitems-centergroup/g, 'flex items-center group');
-  fixed = fixed.replace(/w-4h-4mr-2group-hover:translate-x-1transition-transform/g, 'w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform');
-  fixed = fixed.replace(/space-y-3mb-8/g, 'space-y-3 mb-8');
-  fixed = fixed.replace(/mt -1 2/g, 'mt-12');
-  fixed = fixed.replace(/pt-8border-tborder-slate-7 0 0\/5 0/g, 'pt-8 border-t border-slate-700/50');
-  fixed = fixed.replace(/max-w-2xlmx-autotext-center/g, 'max-w-2xl mx-auto text-center');
-  fixed = fixed.replace(/text -2xl/g, 'text-2xl');
-  fixed = fixed.replace(/font-boldtext-whitemb-4/g, 'font-bold text-white mb-4');
-  fixed = fixed.replace(/text-gray-3 0 0mb-6text-lg/g, 'text-gray-300 mb-6 text-lg');
-  fixed = fixed.replace(/flexflex-colsm:flex-rowgap-4max-w-mdmx-auto/g, 'flex flex-col sm:flex-row gap-4 max-w-md mx-auto');
-  fixed = fixed.replace(/flex -1/g, 'flex-1');
-  fixed = fixed.replace(/px-4 py-3 bg-slate-8 0 0/g, 'px-4 py-3 bg-slate-800');
-  fixed = fixed.replace(/border border-slate-6 0 0/g, 'border border-slate-600');
-  fixed = fixed.replace(/rounded-lgtext-whiteplaceholder-gray-4 0 0/g, 'rounded-lg text-white placeholder-gray-400');
-  fixed = fixed.replace(/focus:outline-nonefocus:ring-2focus:ring-purple-5 0 0focus:border-transparent/g, 'focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent');
-  fixed = fixed.replace(/px -8/g, 'px-8');
-  fixed = fixed.replace(/py-3 bg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0/g, 'py-3 bg-gradient-to-r from-purple-600 to-cyan-600');
-  fixed = fixed.replace(/text-white rounded-lg hover:from-purple-7 0 0hover:to-cyan-7 0 0/g, 'text-white rounded-lg hover:from-purple-700 hover:to-cyan-700');
-  fixed = fixed.replace(/transition-allduration-3 0 0/g, 'transition-all duration-300');
-  fixed = fixed.replace(/flexitems-centerjustify-centerfont-semibold/g, 'flex items-center justify-center font-semibold');
-  fixed = fixed.replace(/w -4h-4 ml-2/g, 'w-4 h-4 ml-2');
-  fixed = fixed.replace(/mt -1 2 pt-8border-tborder-slate-7 0 0\/5 0flexflex-colmd:flex-rowjustify-betweenitems-center/g, 'mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center');
-  fixed = fixed.replace(/flexitems-centerspace-x-2text-gray-4 0 0mb-4md:mb-0/g, 'flex items-center space-x-2 text-gray-400 mb-4 md:mb-0');
-  fixed = fixed.replace(/w -4h-4 text-red-4 0 0/g, 'w-4 h-4 text-red-400');
-  fixed = fixed.replace(/flexspace-x-6/g, 'flex space-x-6');
-  fixed = fixed.replace(/text-gray-4 0 0hover:text-whitetransition-colorstext-sm/g, 'text-gray-400 hover:text-white transition-colors text-sm');
+  // Fix specific CSS class patterns
+  fixed = fixed.replace(/min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900to-slate-900/g, 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900');
+  fixed = fixed.replace(/containermx-autopx-4 py-16/g, 'container mx-auto px-4 py-16');
+  fixed = fixed.replace(/text-4xlfont-bold text-whitemb-8/g, 'text-4xl font-bold text-white mb-8');
+  fixed = fixed.replace(/text-xltext-gray-300mb-8/g, 'text-xl text-gray-300 mb-8');
+  fixed = fixed.replace(/gridmd:grid-cols-2lg:grid-cols-3 gap-8 mt-12/g, 'grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12');
+  fixed = fixed.replace(/bg-blue-50borderborder-blue-200 rounded-lg p-6/g, 'bg-blue-50 border border-blue-200 rounded-lg p-6');
+  fixed = fixed.replace(/bg-green-50borderborder-green-200 rounded-lg p-6/g, 'bg-green-50 border border-green-200 rounded-lg p-6');
+  fixed = fixed.replace(/bg-purple-50borderborder-purple-200 rounded-lg p-6/g, 'bg-purple-50 border border-purple-200 rounded-lg p-6');
+  fixed = fixed.replace(/text-lgfont-semibold text-blue-900 mb-2/g, 'text-lg font-semibold text-blue-900 mb-2');
+  fixed = fixed.replace(/text-lgfont-semibold text-green-900 mb-2/g, 'text-lg font-semibold text-green-900 mb-2');
+  fixed = fixed.replace(/text-lgfont-semibold text-purple-900mb-2/g, 'text-lg font-semibold text-purple-900 mb-2');
   
-  // Fix semicolon issues
-  fixed = fixed.replace(/;\s*}/g, '\n  }');
-  fixed = fixed.replace(/;\s*]/g, '\n  ]');
-  fixed = fixed.replace(/;\s*\)/g, '\n  )');
+  // Fix broken JSX structure patterns
+  fixed = fixed.replace(/<\/p>\s*<\/div>\s*<\/div>\s*<div className="bg-green-50/g, '</p>\n              </div>\n              <div className="bg-green-50');
+  fixed = fixed.replace(/<\/p><div className="bg-purple-50/g, '</p>\n              </div>\n              <div className="bg-purple-50');
+  fixed = fixed.replace(/<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\)\s*}\s*export default/g, '</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </>\n  )\n}\n\nexport default');
   
   return fixed;
 }
 
-// Main function to process files
-function processFiles() {
-  const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
-  
-  console.log(`Found ${files.length} TSX files to process...`);
-  
-  let processedCount = 0;
-  let errorCount = 0;
-  
-  files.forEach(file => {
-    try {
-      const filePath = path.join(__dirname, file);
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Apply fixes
-      content = fixJSXStructure(content);
-      
-      // Write back the fixed content
-      fs.writeFileSync(filePath, content, 'utf8');
-      processedCount++;
-      
-      if (processedCount % 50 === 0) {
-        console.log(`Processed ${processedCount} files...`);
-      }
-    } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
-      errorCount++;
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXStructure(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-  });
-  
-  console.log(`\nProcessing complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors: ${errorCount}`);
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Run the fix
-processFiles();
+// Main execution
+console.log('Starting JSX structure fixes...');
+
+// Get all TypeScript/JavaScript files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+
+let fixedCount = 0;
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+console.log('JSX structure fixes completed!');

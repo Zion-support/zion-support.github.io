@@ -1,34 +1,27 @@
-'use client';
+import React, { useEffect, useState } from 'react';
 
-import React, { useEffect } from 'react';
+const AccessibilityEnhancer: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
 
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
   useEffect(() => {
     const root = document.documentElement;
+
     // High contrast mode
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
+
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
+
     // Font size adjustment
     root.style.setProperty('--font-size-multiplier', 
       fontSize === 'large' ? '1.2' : 
@@ -49,6 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       }
     };
+
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
@@ -112,7 +106,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           <select
             value={fontSize}
             onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large' | 'extra-large')}
-            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm">
+            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
+          >
             <option value="small">Small</option>
             <option value="normal">Normal</option>
             <option value="large">Large</option>

@@ -1,71 +1,64 @@
 import React, { Suspense } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Link } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const FiveGMigrationPage = () => {
+constFiveGMigrationPage = () => {
   const services = [
     {
-      title: '5G Migration Planning',
-      description: 'Strategic planning for migrating from legacy networks to 5G.',
+      title: '5GMigration Planning',
+      description: 'Strategicplanningfor migratingfromlegacy networksto-5G.',
     },
     {
       title: 'Security Migration',
-      description: 'Secure migration of security protocols to 5G infrastructure.',
+      description: 'Securemigrationof securityprotocolsto 5G infrastructure.',
     },
     {
       title: 'Team Training',
-      description: 'Comprehensive training for 5G migration and new technology adoption.',
-    }
-  ]
-
+      description: 'Comprehensivetrainingfor 5G migration andnewtechnology adoption.',
+        },
+];
   return (
-    <div className="min-h-screenbg-gray-50">
-      <EnhancedSEO 
-title="5G Migration Services - Zion Tech Group"
+    <div className="min-h-screen bg-gray-50">
+      <Enhanced SEOtitle="5GMigration Services - Zion Tech Group"
         description="Expert 5G migration services to transition your business to next-generation wireless technology."
       />
       
-      <div className="containermx-auto px-4 py-16">
-        <div className="text-centermb-16">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
-            5G Migration Services
-          </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
-            Migrate to 5G technology with minimal disruption using our proven migration strategies.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-126">
+          <h-1 className="text-4-xlfont-bold text-gray-900 mb-6">
+            5GMigration Services
+          </h-1>
+          <p className="text-xltext-gray-600 max-w-3-xl mx-auto">
+            Migrateto-5G technologywith minimaldisruptionusing ourprovenmigration strategies.
           </p>
         </div>
-
         <div className="gridmd:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <div key={index} className="bg-whiterounded-lg shadow-lg p-8">
+            <divke y={index} className="bg-whiterounded-lg shadow-lg p-8">
               <div className="flexitems-center mb-4">
-                <CheckCircle className="h-8w-8 text-blue-600 mr-3" />
-                <h3 className="text-xlfont-semibold text-gray-900">
-                  {service.title}
-                </h3>
+                <Check Circle className="h-8-w-8 text-blue-600 mr-3" />
+                <h-3 className="text-xlfont-semibold text-gray-900">
+                  {service.title  },
+                </h-3>
               </div>
-              <p className="text-gray-600mb-6">
-                {service.description}
+              <p className="text-gray-600-mb-6">
+                {service.description  },
               </p>
-              <Link 
-                to="/contact" 
-                className="inline-flexitems-center text-blue-600 hover:text-blue-800 font-medium"
+              <Linkt o="/contact" 
+                className="inline-flexitems-center text-blue-600-hover:text-blue-800 font-medium"
               >
                 Learn More
-                <ArrowRight className="ml-2h-4 w-4" />
+                <Arrow Right className="ml-2-h-4 w-4" />
               </Link>
             </div>
-          ))}
+          ))  },
         </div>
-
         <div className="text-center">
-          <Link 
-            to="/contact"
-            className="inline-flexitems-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+          <Linkt o="/contact"
+            className="inline-flexitems-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600-hover:bg-blue-700"
           >
             Get Started Today
-            <ArrowRight className="ml-2h-5 w-5" />
+            <Arrow Right className="ml-2-h-5 w-5" />
           </Link>
         </div>
       </div>
@@ -73,4 +66,4 @@ title="5G Migration Services - Zion Tech Group"
   )
   };
 
-export default FiveGMigrationPage
+exportdefault FiveGMigrationPage

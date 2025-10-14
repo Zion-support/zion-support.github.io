@@ -1,11 +1,11 @@
 export const errorHandler = {
-  handle: (_error: Error, context?: string) => {
+  handle: (error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: _error.message,
+        description: error.message,
         fatal: false,
-        custom_map: { context: context || 'unknown' }
+        custom_map: context ? { context } : {}
       });
     }
     
@@ -32,17 +32,11 @@ export const errorHandler = {
       case 500:
         return { message: 'Server error', code: 'SERVER_ERROR' };
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
-    }
-  },
-  
-  log: (_error: Error, _context?: Record<string, unknown>) => {
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
+  log: () => {
     // Error logging logic
-    console.error('Error logged:', _error, _context);
-  },
-  
+  report: () => {
+  log: (_error: Error, _context?: Record<string, unknown>) => {
   report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', _error, _context);
-  }
-};
+}}

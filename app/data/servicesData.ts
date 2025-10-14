@@ -8,9 +8,8 @@ export interface ServiceData {
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  }
   icon: string;
-}
 
 export const servicesData: ServiceData[] = [
   {
@@ -36,7 +35,5 @@ export const servicesData: ServiceData[] = [
       starter: 2000,
       professional: 5000,
       enterprise: 10000
-    },
     icon: 'cloud-upload'
-  }
-];
+]

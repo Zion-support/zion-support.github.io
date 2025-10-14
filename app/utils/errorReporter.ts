@@ -9,9 +9,8 @@ export const errorReporter = {
       stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
-
     }
-
+    
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
@@ -21,7 +20,10 @@ export const errorReporter = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-
+        description: _error.message,
+        fatal: false,
+        custom_parameters: context;
       });
         description: error.message,
-        fatal: false})
+        fatal: false;
+      })

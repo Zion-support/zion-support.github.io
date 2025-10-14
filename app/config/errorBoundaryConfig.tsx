@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 
-export const errorBoundaryConfig = {
-  fallback: <div>Something went wrong</div>,
+exportconsterror Boundary Config = {
+  fallback: <div>Somethingwentwrong</div>,
   onError: (_error: Error) => {
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error boundary caught an error:', _error);
-    }
-  }
+      console.error('Errorboundarycaughtanerror:', _error);
+      },
+    },
 };
