@@ -1,196 +1,105 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-'use client'
-export default function Page() {
-
-
-const AboutPage: React.FC = () => {
-=======
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
   RocketLaunchIcon,
   CheckCircleIcon,
-  UsersIcon,
-  GlobeAltIcon,
-  ChartBarIcon
+  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage() {
-  const team = [
+export default function Page() {
+  const features = [
     {
-      name: 'John Smith',
-      role: 'CEO & Founder',
-      description: '20+ years in technology leadership',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in AI and machine learning',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Head of Security',
-      description: 'Cybersecurity specialist',
-      image: '/api/placeholder/300/300'
-    }
-  ];
-
-  const values = [
-    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology',
       icon: CpuChipIcon,
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology to deliver cutting-edge solutions.'
+      color: 'from-blue-500 to-cyan-500'
     },
     {
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for your business',
       icon: ShieldCheckIcon,
-      title: 'Security',
-      description: 'Security is our top priority in every solution we deliver.'
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: UsersIcon,
-      title: 'Collaboration',
-      description: 'We work closely with our clients to understand their unique needs.'
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business needs',
+      icon: CloudIcon,
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: ChartBarIcon,
-      title: 'Results',
-      description: 'We measure success by the impact we create for our clients.'
+      title: 'Innovation First',
+      description: 'Always at the forefront of technological innovation',
+      icon: RocketLaunchIcon,
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group - leading provider of AI, cloud, and cybersecurity solutions." />
-        <meta name="keywords" content="about us, company, team, AI solutions, technology company" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions from Zion Tech Group." />
+        <meta name="keywords" content="page, technology solutions, AI, cloud, cybersecurity" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                About Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                We are a leading technology company specializing in AI, cloud computing, 
-                and cybersecurity solutions that transform businesses.
-              </p>
-            </div>
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              Page
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our cutting-edge page solutions. 
+              Built with the latest technology and designed for success.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Mission Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-xl text-gray-300 mb-6">
-                  To empower businesses with cutting-edge technology solutions that drive 
-                  innovation, growth, and digital transformation.
-                </p>
-                <p className="text-lg text-gray-400">
-                  We believe technology should be accessible, secure, and transformative. 
-                  Our team of experts works tirelessly to deliver solutions that not only 
-                  meet today's needs but anticipate tomorrow's challenges.
-                </p>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the features that make our solutions stand out
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 transition-colors">
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Our Vision</h3>
-                <p className="text-gray-300">
-                  To be the world's most trusted technology partner, enabling businesses 
-                  to thrive in the digital age through innovative AI, cloud, and security solutions.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Values Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The principles that guide everything we do
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                  <div className="text-blue-400 mb-4 flex justify-center">
-                    <value.icon className="w-12 h-12" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              ))}
-            </div>
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our page solutions can transform your business.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </button>
           </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                  <div className="w-32 h-32 bg-gray-600 rounded-full mx-auto mb-4"></div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-blue-400 mb-3">{member.role}</p>
-                  <p className="text-gray-300">{member.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl font-bold text-white mb-2">500+</div>
-                  <div className="text-gray-300">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-white mb-2">200+</div>
-                  <div className="text-gray-300">Happy Clients</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-white mb-2">10+</div>
-                  <div className="text-gray-300">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-4xl font-bold text-white mb-2">99%</div>
-                  <div className="text-gray-300">Success Rate</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
-
 }
-

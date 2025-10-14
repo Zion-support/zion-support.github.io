@@ -1,76 +1,105 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
+import { 
+  CpuChipIcon, 
+  ShieldCheckIcon, 
+  CloudIcon, 
+  RocketLaunchIcon,
+  CheckCircleIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
 
-'use client'
-export default function NetworkInfrastructure() {
+export default function Page() {
+  const features = [
+    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology',
+      icon: CpuChipIcon,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for your business',
+      icon: ShieldCheckIcon,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business needs',
+      icon: CloudIcon,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Innovation First',
+      description: 'Always at the forefront of technological innovation',
+      icon: RocketLaunchIcon,
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Network Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Professional Network Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions from Zion Tech Group." />
+        <meta name="keywords" content="page, technology solutions, AI, cloud, cybersecurity" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Network Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-purple-40o0">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-30o0 mb-8 max-w-3xl mx-auto">
-            Build robust, scalable network infrastructure with our expert solutions designed for modern businesses.;
-          </p>
-        </div>
-        <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Network Design</h3>
-            <p className="text-gray-30o0 mb-4">
-              Custom network architecture designed for your specific business requirements.;
+
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              Page
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your business with our cutting-edge page solutions. 
+              Built with the latest technology and designed for success.
             </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Scalable architecture</li>
-              <li>• High availability</li>
-              <li>• -first design</li>
-            </ul>
-          </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Network </h3>
-            <p className="text-gray-30o0 mb-4">
-              Comprehensive security solutions to protect your network infrastructure.;
-            </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Firewall configuration</li>
-              <li>• Intrusion detection</li>
-              <li>• VPN solutions</li>
-            </ul>
-          </div>
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-6 border border-white"/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Network Monitoring</h3>
-            <p className="text-gray-30o0 mb-4">
-              24/7 monitoring and management of your network infrastructure.;
-            </p>
-            <ul className="text-sm text-gray-40o0 space-y-2">
-              <li>• Real-time monitoring</li>
-              <li>• Performance optimization</li>
-              <li>• Proactive maintenance</li>
-            </ul>
           </div>
         </div>
-        <div className="text-center">
-          <div className="bg-white"/10 backdrop-blur-sm rounded-xl p-8 border border-white"/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Build Your Network?</h2>
-            <p className="text-gray-30o0 mb-6">
-              Our network infrastructure experts are ready to help you build a robust, secure, and scalable network.;
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the features that make our solutions stand out
             </p>
-            <button className="bg-gradient-to-r from-blue-50o0 to-purple-50o0 text-white px-8 py-3 rounded-lg font-semibold hover: from-blue-60o0 hove,r:to-purple-60o0 transition-all duration-30o0">
-              Get Started Today;
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center hover:bg-white/20 transition-colors">
+                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our page solutions can transform your business.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center">
+              Get Started
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
             </button>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
-            </button></div></div></div></div>
-  );}
-}
-''

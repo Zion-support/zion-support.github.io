@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -73,4 +72,3 @@ const useAnalytics = (): AnalyticsContextType => {
 
 export default AnalyticsProvider;
 export { useAnalytics };
-

@@ -6,6 +6,6 @@ import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-
+  ChartBarIcon,;
+  GlobeAltIcon,;
+;
