@@ -33,6 +33,9 @@ const socialLinks = ['';
             <h3 className="text-xl font-bold text-white'>Zion Tech Group</h3>';">AI & IT Solutions</p>';"
             <p className="text-gray-300 text-sm leading-relaxed'></p>';
                   >
+=======
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm""                  >
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
                     {service.name}
                   </Link>
                 </li>)}
@@ -40,6 +43,9 @@ const socialLinks = ['';
               <li />
                 <Link"></Link>';
                   >
+=======
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm""                  >
+>>>>>>> 49ce30c3f3ae4860a26ff68154f018323375cc1a
                     {solution.name}
                   </Link>
                 </li>)
