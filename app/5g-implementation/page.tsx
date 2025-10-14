@@ -40,7 +40,7 @@ import {
 
 const FiveGImplementationPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
+  // const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setIsVisible(true);
@@ -466,7 +466,7 @@ const FiveGImplementationPage: React.FC = () => {
                       ))}
                     </div>
                     <p className="text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
+                      &ldquo;{testimonial.content}&rdquo;
                     </p>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -487,7 +487,7 @@ const FiveGImplementationPage: React.FC = () => {
                   Ready for the 5G Revolution?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Don't get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
+                  Don&apos;t get left behind. Start your 5G transformation today and unlock the full potential of next-generation wireless technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
