@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AnimatedCard = () => {
   return (
     <div className="animatedcard-component">
@@ -8,6 +7,4 @@ const AnimatedCard = () => {
     </div>
   );
 };
-
 export default AnimatedCard;
-

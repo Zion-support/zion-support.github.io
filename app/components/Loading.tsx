@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Loading = () => {
   return (
     <div className="loading-component">
@@ -8,6 +7,4 @@ const Loading = () => {
     </div>
   );
 };
-
 export default Loading;
-

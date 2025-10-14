@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LoadingStates = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -10,6 +9,4 @@ const LoadingStates = () => {
     </div>
   );
 };
-
 export default LoadingStates;
-

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Breadcrumb = () => {
   return (
     <div className="breadcrumb-component">
@@ -8,5 +7,4 @@ const Breadcrumb = () => {
     </div>
   );
 };
-
 export default Breadcrumb;

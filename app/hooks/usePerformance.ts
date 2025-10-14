@@ -1,4 +1,8 @@
-'use client';';';
-// usePerformance utility; export const usePerformance = () => {}; // Implementation; return true;}
+'use client';
 
-}; export default usePerformance;
+export const UsePerformance = () => {
+  // Implementation
+  return true;
+};
+
+export default UsePerformance;

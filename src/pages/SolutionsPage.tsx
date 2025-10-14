@@ -68,16 +68,12 @@ const SolutionsPage: React.FC = () => {return (
                 <a
                   href="/contact"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-
-
                 >
                   Contact Us;
                 </a>
                 <a
                   href="/demo"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-
-
                 >
                   Request Demo;
                 </a>

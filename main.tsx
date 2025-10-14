@@ -31,9 +31,9 @@ if ("serviceWorker" in navigator) {
         // Service worker registered successfully
         console.log('Service worker registered successfully');
       })
-      .catch((registrationError) => {
-        // Service worker registration failed
-        console.error('Service worker registration failed:', registrationError);
+      .catch((Error) => {
+        // Service worker failed
+        console.error('Service worker failed:',Error);
       });
   });
 }

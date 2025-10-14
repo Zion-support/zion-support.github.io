@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ResponsiveText = () => {
   return (
     <div className="responsivetext-component">
@@ -8,6 +7,4 @@ const ResponsiveText = () => {
     </div>
   );
 };
-
 export default ResponsiveText;
-

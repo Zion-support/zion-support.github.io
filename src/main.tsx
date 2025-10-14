@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-
 const Main: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">"
@@ -9,7 +7,6 @@ const Main: React.FC = () => {
         <title>Main - Zion Tech Group</title>
         <meta name="description" content="Professional main services by Zion Tech Group." />"
       </Helmet>
-      
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
         <div className="max-w-6xl mx-auto text-center">"
@@ -22,7 +19,6 @@ const Main: React.FC = () => {
           </p>
         </div>
       </section>
-      
       {/* Content Section */}
       <section className="py-16 px-4">"
         <div className="max-w-6xl mx-auto">"
@@ -63,7 +59,6 @@ const Main: React.FC = () => {
           </div>
         </div>
       </section>
-      
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
@@ -85,7 +80,4 @@ const Main: React.FC = () => {
     </div>
   );
 };
-
 export default Main;
-
-

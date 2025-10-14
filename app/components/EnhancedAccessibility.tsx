@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedAccessibility = () => {
   return (
     <div className="enhancedaccessibility-component">
@@ -8,6 +7,4 @@ const EnhancedAccessibility = () => {
     </div>
   );
 };
-
 export default EnhancedAccessibility;
-

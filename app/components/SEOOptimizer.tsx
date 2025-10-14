@@ -1,67 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = "Zion Tech Group - Advanced AI & IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
-  keywords = ["AI solutions", "IT services", "cybersecurity", "cloud computing", "digital transformation"],
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
-  useEffect(() => {
-    // Generate structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": url,
-      "logo": "https://ziontechgroup.com/logo.svg",
-      "description": description,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "364 E Main St STE 1008",
-        "addressLocality": "Middletown",
-        "addressRegion": "DE",
-        "postalCode": "19709",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
-    };
-
-    // Add structured data to page
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, [title, description, url]);
-
+import React from 'react';
+const SEOOptimizer = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -97,5 +35,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default SEOOptimizer;

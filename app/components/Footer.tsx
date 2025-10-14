@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -13,7 +11,6 @@ const Footer = () => {
     { name: 'IT Services', href: '/it-services' },
     { name: 'Micro SAAS', href: '/micro-saas' }
   ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,7 +38,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -54,13 +50,11 @@ const Footer = () => {
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
-
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
@@ -69,10 +63,8 @@ const Footer = () => {
               <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
               <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-
             </ul>
           </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
@@ -88,22 +80,18 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-blue-400" />
                 <span className="text-gray-300">Middletown, DE</span>
-
               </div>
             </div>
           </div>
         </div>
-
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-
         </div>
       </div>
     </footer>
   );
 };
-
 export default Footer;

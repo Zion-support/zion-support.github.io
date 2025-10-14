@@ -1,5 +1,4 @@
 import React from 'react';
-
 const AdAnalyticsDashboard = () => {
   return (
     <div className="adanalyticsdashboard-component">
@@ -8,6 +7,4 @@ const AdAnalyticsDashboard = () => {
     </div>
   );
 };
-
 export default AdAnalyticsDashboard;
-
