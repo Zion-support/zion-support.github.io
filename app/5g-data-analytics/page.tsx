@@ -14,15 +14,21 @@ import EnhancedSEO from '../components/EnhancedSEO'
 
 
 const FiveGDataAnalyticsPage = () => {
-  
-  const services = [
+  const _services = [
     {
-      title: "Service 1",
-      description: "Description 1"
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Analytics',
+      description: 'Cutting-edge 5G data analytics for maximum efficiency',
     },
     {
-      title: "Service 2",
-      description: "Description 2"
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime',
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists',
     }
   ];
   return (
@@ -36,20 +42,15 @@ const FiveGDataAnalyticsPage = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
         {/* Hero Section */}
-  )
-        <section>
-        
-          <div className="max-w-7xl mx-auto text-center">
-        
-            <h1>
-          
+        <section className="relativepy-2 0 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7 xlmx-auto text-center">
+            <h1 className="text-4 xlmd:text-6xl font-bold text-white mb-6">
               5G Data Analytics
               <span className="blockbg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
-            <p>
-          
+            <p className="text-xl text-gray-3 0 0 mb-8 max-w-3 xl mx-auto">
               Professional 5G data analytics services designed to help your business succeed and grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -71,19 +72,13 @@ const FiveGDataAnalyticsPage = () => {
         </section>
 
         {/* Features Section */}
-  )
-        <section>
-        
-          <div className="max-w-7xl mx-auto">
-        
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7 xlmx-auto">
             <div className="text-center mb-1 6">
-        
-              <h2>
-          
+              <h2 className="text-3 xlmd:text-4xl font-bold text-white mb-4">
                 Why Choose Our 5G Data Analytics Services?
               </h2>
-              <p>
-          
+              <p className="text-xl text-gray-3 0 0 max-w-2 xl mx-auto">
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
@@ -104,17 +99,13 @@ const FiveGDataAnalyticsPage = () => {
             </div>
         </section>
 
-        {/* CT A Section */}
-  )
-        <section>
-        
-          <div className="max-w-4xl mx-auto text-center">
-        
-            <h2>
-          
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-8 0 0/3 0">
+          <div className="max-w-4 xlmx-auto text-center">
+            <h2 className="text-3 xlmd:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-3 0 0 mb-8">
               Let&apos;s discuss how our 5G data analytics services can help your business succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

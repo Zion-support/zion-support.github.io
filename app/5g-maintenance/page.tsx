@@ -18,25 +18,22 @@ const FiveGMaintenancePage = () => {
       title: "Service 2"
       description: "Description 2"
     }
-  ]
+  
+  }]
+
   return (
     <div className="min-h-screen bg-gray-50">
-        
       <EnhancedSEO 
 title="5G Maintenance Services - Zion TechGroup"
         description="Professional 5G maintenance services to keep your network runningoptimally."
       />
       
       <div className="containermx-auto px-4 py-16">
-        
         <div className="text-center mb-16">
-        
-          <h1>
-          
+          <h1 className="text-4 xlfont-bold text-gray-900 mb-6">
             5G Maintenance Services
           </h1>
-          <p>
-          
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
             Keep your 5G network running smoothly with our comprehensive maintenance services.
           </p>
         </div>
@@ -46,16 +43,13 @@ title="5G Maintenance Services - Zion TechGroup"
           {services.map((service, index) => (
             <div key={index} className="bg-whiterounded-lg shadow-lg p-8">
               <div className="flexitems-center mb-4">
-        
                 <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
-                <h3>
-          
+                <h3 className="text-xlfont-semibold text-gray-900">
                   {service.title}
   )
                 </h3>
               </div>
-              <p>
-          
+              <p className="text-gray-600 mb-6">
                 {service.description}
   )
               </p>

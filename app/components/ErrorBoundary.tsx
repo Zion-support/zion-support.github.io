@@ -32,8 +32,7 @@ class Error Boundary extends Component<Props, State> {
     <div className="min-h-screen flex items-center justify-center bg-slate-900">
         
           <div className="text-center">
-        
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <h1 className="text-4 xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
               on Click={() => window.location.reload()}

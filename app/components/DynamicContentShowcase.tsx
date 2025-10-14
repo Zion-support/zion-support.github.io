@@ -23,11 +23,55 @@ interface Testimonial {
   rating: number
   avatar?: string
 }
-  )
-const Dynamic Content Showcase: React.FC = () => {
-  const  = use State(0)
-  const  = use State(true)
-  const features: Feature = 
+
+const DynamicContentShowcase: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const features: Feature[] = [
+    {
+      icon: Brain,
+    {
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
+      stats: [
+        { value: '95%', label: 'Accuracy' },
+        { value: '10x', label: 'Faster' },
+        { value: '24/7', label: 'Learning' }
+      ]
+    },
+    {
+      icon: Zap,
+    {
+      title: 'Lightning Fast Performance',
+      description: 'Optimized for speed with sub-second response times and seamless user experience',
+      stats: [
+        { value: '< 100ms', label: 'Response' },
+        { value: '99.9%', label: 'Uptime' },
+        { value: '10M+', label: 'Requests' }
+      ]
+    },
+    {
+      icon: Shield,
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards',
+      stats: [
+        { value: '256-bit', label: 'Encryption' },
+        { value: 'SOC 2', label: 'Compliance' },
+        { value: 'Zero', label: 'Breaches' }
+      ]
+    },
+    {
+      icon: Globe,
+    {
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing',
+      stats: [
+        { value: '50+', label: 'Countries' },
+        { value: '15+', label: 'Languages' },
+        { value: '24/7', label: 'Support' }
+      ]
     }
     {
       icon: Zap
@@ -82,17 +126,12 @@ const Dynamic Content Showcase: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
         
       {/* Hero Section */}
-  )
-      <section>
-        
-        <div className="max-w-7xl mx-auto text-center">
-        
-          <h1>
-          
+      <section className="py-20 px-4">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6xl font-bold text-white mb-6">
             Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
           </h1>
-          <p>
-          
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8">
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
@@ -110,19 +149,13 @@ const Dynamic Content Showcase: React.FC = () => {
       </section>
 
       {/* Features Section */}
-  )
-      <section>
-        
-        <div className="max-w-7xl mx-auto">
-        
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-        
-            <h2>
-          
+            <h2 className="text-3 xl font-bold text-white mb-6">
               Why Choose Our Solutions?
             </h2>
-            <p>
-          
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
             </p>
           </div>
@@ -130,7 +163,7 @@ const Dynamic Content Showcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
         
                   <feature.icon className="w-8 h-8 text-white" />
@@ -161,23 +194,17 @@ const Dynamic Content Showcase: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-  )
-      <section>
-        
-        <div className="max-w-6xl mx-auto">
-        
+      <section className="py-16 px-4">
+        <div className="max-w-6 xl mx-auto">
           <div className="text-center mb-16">
-        
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h2 className="text-3 xl font-bold text-white mb-6">What Our Customers Say</h2>
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their experience.
             </p>
           </div>
 
           <div className="relative">
-        
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-        
+            <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-12 border border-white/20">
               <div className="text-center">
         
                 <div className="flex justify-center mb-6">
@@ -188,8 +215,8 @@ const Dynamic Content Showcase: React.FC = () => {
   )
                 </div>
                 
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  &ldquo {current Testimonial.content}&rdquo
+                <blockquote className="text-xl text-gray-300 mb-8 max-w-4 xl mx-auto">
+                  &ldquo;{currentTestimonial.content}&rdquo;
                 </blockquote>
                 
                 <div className="flex items-center justify-center gap-4">
@@ -258,22 +285,16 @@ const Dynamic Content Showcase: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-  )
-      <section>
-        
-        <div className="max-w-7xl mx-auto">
-        
+      <section className="py-16 px-4">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-        
-            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p>
-          
+            <h2 className="text-3 xl font-bold text-white mb-6">Comprehensive Benefits</h2>
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-        
+          <div className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
               {benefits.map((benefit, index) => (
@@ -287,20 +308,14 @@ const Dynamic Content Showcase: React.FC = () => {
         </div>
       </section>
 
-      {/* CT A Section */}
-  )
-      <section>
-        
-        <div className="max-w-4xl mx-auto text-center">
-        
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-        
-            <h2>
-          
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4 xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-12">
+            <h2 className="text-3 xl font-bold text-white mb-6">
               Ready to Experience the Future?
             </h2>
-            <p>
-          
+            <p className="text-xl text-white/90 mb-8 max-w-2 xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

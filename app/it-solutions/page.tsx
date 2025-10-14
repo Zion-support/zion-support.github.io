@@ -35,16 +35,12 @@ const It Solutions Page: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         
         <div className="containermx-auto px-4 py-1 6">
-        
           <div className="text-center mb-1 6">
-        
-            <h1>
-          
-              I T Solutions
+            <h1 className="text-5 xlfont-bold text-white mb-6">
+              IT Solutions
             </h1>
-            <p>
-          
-              Comprehensive I T services to power your digital transformation
+            <p className="text-xl text-gray-3 0 0 mb-8">
+              Comprehensive IT services to power your digital transformation
             </p>
           </div>
           

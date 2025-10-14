@@ -14,15 +14,11 @@ const Ai Solutions Page: React.FC = () => {
         <meta name="description" content="Advanced A I solutions for your business needs" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-        
           <div className="text-center mb-16">
-        
-            <h1>
-          
-              A I Solutions
+            <h1 className="text-5 xlfont-boldtext-whitemb-6">
+              AI Solutions
             </h1>
             <p>
           
@@ -31,22 +27,17 @@ const Ai Solutions Page: React.FC = () => {
           </div>
           
           <div className="gridmd:grid-cols-2 gap-8">
-        
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-        
-              <Brain className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xl font-semiboldtext-whitemb-3">Machine Learning</h3>
-              <p>
-          
-                Custom M L models tailored to your specific business requirements.
+            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
+              <Brain className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Machine Learning</h3>
+              <p className="text-gray-30 0">
+                Custom ML models tailored to your specific business requirements.
               </p>
             </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-        
-              <Zap className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xl font-semiboldtext-whitemb-3">Automation</h3>
-              <p>
-          
+            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
+              <Zap className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Automation</h3>
+              <p className="text-gray-30 0">
                 Intelligent automation solutions to streamline your operations.
               </p>
             </div>

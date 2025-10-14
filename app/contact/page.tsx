@@ -17,10 +17,8 @@ const Contact Page: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
         
           <div className="text-center">
-        
-            <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
-            <p>
-          
+            <h1 className="text-4 xl font-bold text-white mb-8">Contact Us</h1>
+            <p className="text-xl text-gray-300 mb-8">
               Get in touch with Zion Tech Group
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

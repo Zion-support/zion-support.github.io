@@ -47,8 +47,7 @@ const Case Studies Page: React.FC = () => {
       description: 'The A I analytics platform improved treatment accuracy by 55% and patient outcomes by 40%, while reducing operational costs by $1.8 M.'
     }]
   return (
-    <div className="min-h-screen bg-slate-90 0text-white">
-        
+    <div className="min-h-screenbg-slate-90 0 text-white">
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful A I and I T implementation case studies. See how we've helped businesses across industries achieve remarkable results." />
@@ -56,16 +55,12 @@ const Case Studies Page: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-  )
-      <section>
-        
-        <div className="containermx-autopx-4text-center">
-        
-          <h1>
-          
+      <section className="relative py-2 0 bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-5 xl md:text-6xlfont-boldmb-6bg-gradient-to-r from-purple-400 to-cyan-400bg-clip-text text-transparent">
             Success Stories
           </h1>
-          <p className="text-xl text-gray-300 mb-8max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
             Discover how we&apos;ve helped businesses across industries achieve remarkable results 
             with our A I and I T solutions.
           </p>
@@ -73,41 +68,33 @@ const Case Studies Page: React.FC = () => {
       </section>
 
       {/* Case Studies Grid */}
-  )
-      <section>
-        
-        <div className="containermx-autopx-4">
-        
-          <div className="grid grid-cols-1lg:grid-cols-2xl:grid-cols-3 gap-8">
-        
-            {case Studies.map((study, index) => (
-              <div key={index} className="bg-slate-8 00 rounded-xl p-8borderborder-slate-7 00hover:border-purple-5 00transition-all duration-300hover:transformhover:scale-1 0 5">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="gridgrid-cols-1 lg:grid-cols-2xl:grid-cols-3gap-8">
+            {caseStudies.map((study, index) => (
+              <div key={index} className="bg-slate-8 00 rounded-xl p-8 borderborder-slate-7 00hover:border-purple-5 00transition-all duration-300hover:transformhover:scale-1 0 5">
                 </div><div className="mb-6">
-        
-                  <div className="text-smtext-purple-40 0font-semiboldmb-2">{study.industry}</div>
-                  <h3 className="text-2xlfont-boldtext-whitemb-2">{study.title}</h3>
-                  <div className="text-gray-40 0text-smmb-4">Client: {study.client}</div>
+                  <div className="text-smtext-purple-40 0 font-semiboldmb-2">{study.industry}</div>
+                  <h3 className="text-2 xlfont-boldtext-whitemb-2">{study.title}</h3>
+                  <div className="text-gray-40 0 text-smmb-4">Client: {study.client}</div>
+                  </div>
         </div>
 
                 <div className="mb-6">
-        
                   <h4 className="text-white font-semiboldmb-2">Challenge</h4>
-                  <p className="text-gray-300text-smmb-4">{study.challenge}</p>
+                  <p className="text-gray-30 0 text-smmb-4">{study.challenge}</p>
                   
                   <h4 className="text-white font-semiboldmb-2">Solution</h4>
-                  <p className="text-gray-300text-smmb-4">{study.solution}</p>
+                  <p className="text-gray-30 0 text-smmb-4">{study.solution}</p>
                   </div>
 
                 <div className="mb-6">
-        
                   <h4 className="text-white font-semiboldmb-3">Results</h4>
                   <div className="gridgrid-cols-2 gap-3">
-        
-                    {study.results.map((result, result Index) => (
-                      <div key={result Index} className="bg-slate-70 0rounded-lgp-3">
+                    {study.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="bg-slate-70 0 rounded-lgp-3">
                         </div><div className="flexitems-centerjustify-betweenmb-1">
-        
-                          <span className="text-gray-300text-xs">{result.metric}</span>
+                          <span className="text-gray-30 0 text-xs">{result.metric}</span>
                           <result.icon className="w-4 h-4 text-purple-4 0 0" />
                           </div>
                         <div className="text-whitefont-boldtext-lg">{result.value}</div>
@@ -117,9 +104,9 @@ const Case Studies Page: React.FC = () => {
                     </div>
                   </div>
 
-                <p className="text-gray-300text-smmb-6">{study.description}</p>
+                <p className="text-gray-30 0 text-smmb-6">{study.description}</p>
 
-                <button className="w-full bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-7 00hover:to-cyan-7 0 0transition-all duration-300flexitems-center justify-centergap-2">
+                <button className="w-full bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-7 00 hover:to-cyan-7 0 0transition-all duration-300flexitems-centerjustify-centergap-2">
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -130,24 +117,18 @@ const Case Studies Page: React.FC = () => {
           </div>
       </section>
 
-      {/* CT A Section */}
-  )
-      <section>
-        
-        <div className="containermx-autopx-4text-center">
-        
-          <h2>
-          
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-9 0 0/3 0to-cyan-9 0 0/3 0">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4 xlmd:text-5xlfont-boldtext-whitemb-6">
             Ready to Create Your Success Story?
           </h2>
-          <p>
-          
-            Let&apos;s discuss how our A I and I T solutions can transform your business 
+          <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto">
+            Let&apos;s discuss how our AI and IT solutions can transform your business 
             and deliver measurable results.
           </p>
-          <div className="flex flex-colsm:flex-rowgap-4 justify-center">
-        
-            <button className="bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-7 00hover:to-cyan-7 00transition-all duration-300transformhover:scale-1 0 5">
+          <div className="flexflex-colsm:flex-rowgap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-6 00 to-cyan-6 00 text-white px-8 py-4 rounded-lgfont-semiboldhover:from-purple-7 00 hover:to-cyan-7 00transition-all duration-300transformhover:scale-1 0 5">
               Start Your Project
             </button>
             <button className="border-2 border-white text-white px-8 py-4rounded-lgfont-semiboldhover:bg-whitehover:text-slate-9 0 0transition-all duration-300">

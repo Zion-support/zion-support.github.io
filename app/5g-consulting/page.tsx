@@ -14,29 +14,20 @@ const FiveGConsultingPage = () => {
       title: "Service 1"
       description: "Description 1"
     }
-    {
-      title: "Service 2"
-      description: "Description 2"
-    }
-  ]
+  }];
   return (
     <div className="min-h-screen bg-gray-50">
-        
       <EnhancedSEO 
         title="5G Consulting Services - Zion TechGroup"
         description="Expert 5G consulting services to help your business leverage next-generation wirelesstechnology."
       />
       
       <div className="container mx-auto px-4 py-16">
-        
         <div className="text-center mb-16">
-        
-          <h1>
-          
+          <h1 className="text-4 xlfont-bold text-gray-900 mb-6">
             5G Consulting Services
           </h1>
-          <p>
-          
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
             Expert guidance for your 5G transformation journey
           </p>
           </div>
@@ -44,13 +35,11 @@ const FiveGConsultingPage = () => {
         
           {services.map((service, index) => (
             <div key={index} className="bg-whiterounded-lgshadow-lgp-6">
-              <h3>
-          
+              <h3 className="text-xlfont-semiboldtext-gray-900 mb-4">
                 {service.title}
   )
               </h3>
-              <p>
-          
+              <p className="text-gray-60 0 mb-4">
                 {service.description}
   )
               </p>

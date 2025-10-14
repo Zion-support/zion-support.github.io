@@ -17,8 +17,7 @@ const Support Page: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
         
           <div className="text-center">
-        
-            <h1 className="text-4xl font-bold text-white mb-8">Support</h1>
+            <h1 className="text-4 xl font-bold text-white mb-8">Support</h1>
             <div className="text-gray-400">
         
               <p>Support information coming soon...</p>

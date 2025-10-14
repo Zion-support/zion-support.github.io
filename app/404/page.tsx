@@ -18,18 +18,13 @@ const NotFoundPage: React.FC = () => {
         <div className="containermx-auto px-4 py-16">
         
           <div className="text-center">
-        
-            <h1 className="text-4xlfont-bold text-white mb-8">404</h1>
-            <p>
-          
+            <h1 className="text-4 xlfont-bold text-white mb-8">404</h1>
+            <p className="text-xl text-gray-300 mb-8">
               Professional 404 solutions and services
             </p>
             <div className="gridmd:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-        
-              <div className="bg-blue-50border border-blue-200 rounded-lg p-6">
-        
-                <h3>
-          
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lgfont-semibold text-blue-900 mb-2">
                   Expert Solutions
                 </h3>
                 <p>
@@ -37,10 +32,8 @@ const NotFoundPage: React.FC = () => {
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-              <div className="bg-green-50border border-green-200 rounded-lg p-6">
-        
-                <h3>
-          
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lgfont-semibold text-green-900 mb-2">
                   Custom Implementation
                 </h3>
                 <p>
@@ -48,10 +41,8 @@ const NotFoundPage: React.FC = () => {
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50border border-purple-200 rounded-lg p-6">
-        
-                <h3>
-          
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lgfont-semibold text-purple-900 mb-2">
                   24/7 Support
                 </h3>
                 <p>

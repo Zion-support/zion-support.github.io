@@ -17,8 +17,7 @@ const Pricing Page: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
         
           <div className="text-center">
-        
-            <h1 className="text-4xl font-bold text-white mb-8">Pricing</h1>
+            <h1 className="text-4 xl font-bold text-white mb-8">Pricing</h1>
             <div className="text-gray-400">
         
               <p>Pricing information coming soon...</p>

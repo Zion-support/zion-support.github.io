@@ -14,15 +14,11 @@ const AI Business Intelligence Pro Page: React.FC = () => {
         <meta name="description" content="Advanced A I-powered business intelligence solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-        
           <div className="text-center mb-16">
-        
-            <h1>
-          
-              A I Business Intelligence Pro
+            <h1 className="text-5 xlfont-boldtext-whitemb-6">
+              AI Business Intelligence Pro
             </h1>
             <p>
           
@@ -31,31 +27,24 @@ const AI Business Intelligence Pro Page: React.FC = () => {
           </div>
           
           <div className="gridmd:grid-cols-3 gap-8">
-        
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-        
-              <Brain className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xl font-semiboldtext-whitemb-3">A I Analytics</h3>
-              <p>
-          
-                Advanced A I algorithms for deep data analysis and insights.
+            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
+              <Brain className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">AI Analytics</h3>
+              <p className="text-gray-30 0">
+                Advanced AI algorithms for deep data analysis and insights.
               </p>
             </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-        
-              <Bar Chart3 className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xl font-semiboldtext-whitemb-3">Real-time Dashboards</h3>
-              <p>
-          
-                Live dashboards with real-time business metrics and KP Is.
+            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
+              <BarChart3 className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Real-time Dashboards</h3>
+              <p className="text-gray-30 0">
+                Live dashboards with real-time business metrics and KPIs.
               </p>
             </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-        
-              <Trending Up className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xl font-semiboldtext-whitemb-3">Predictive Analytics</h3>
-              <p>
-          
+            <div className="bg-white/10 backdrop-blur-smrounded-lg p-6borderborder-white/2 0">
+              <TrendingUp className="w-1 2 h-1 2 text-blue-4 0 0mb-4" />
+              <h3 className="text-xlfont-semiboldtext-whitemb-3">Predictive Analytics</h3>
+              <p className="text-gray-30 0">
                 Forecast trends and make data-driven decisions.
               </p>
             </div>

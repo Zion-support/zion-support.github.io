@@ -39,18 +39,13 @@ function Home Page() {
       <div className="min-h-screen bg-slate-9 0 0 text-white">
         
         {/* Hero Section */}
-  )
-        <div className="containermx-auto px-4 py-20">
-        
+        <div className="containermx-auto px-4 py-2 0">
           <div className="text-center mb-1 6">
-        
-            <h1>
-          
+            <h1 className="text-6 xlfont-bold mb-6 bg-gradient-to-r from-purple-4 0 0 to-cyan-4 0 0 bg-clip-text text-transparent">
               Zion Tech Group
             </h1>
-            <p>
-          
-              Advanced A I and I T Solutions for the Digital Future
+            <p className="text-2 xltext-gray-3 0 0 max-w-4xl mx-auto mb-8">
+              Advanced AI and IT Solutions for the Digital Future
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
         
@@ -75,14 +70,12 @@ function Home Page() {
         
             {features.map((feature, index) => (
               <div 
-                key={index}
-  )
+                key={index} 
                 className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20"
-                style={{ animation Delay: `${index * 100}ms` }}
-  )
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <h3 className="text-xlfont-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -93,10 +86,8 @@ function Home Page() {
           {/* CT A Section */}
   )
           <div className="text-centerbg-gradient-to-r from-purple-900/50 to-cyan-900/50 p-12 rounded-lg">
-        
-            <h2 className="text-3xlfont-bold mb-4">Ready to Transform Your Business?</h2>
-            <p>
-          
+            <h2 className="text-3 xlfont-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
               Let our experts help you implement cutting-edge solutions
             </p>
             <Link 
