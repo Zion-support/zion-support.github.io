@@ -1,19 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-<<<<<<< HEAD
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'profile'
-  author?: string
-  publishedTime?: string
-  modifiedTime?: string
-  section?: string
-  tags?: string[]}
-=======
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -21,7 +9,7 @@ interface SEOProps {
   url?: string;
   type?: 'website' | 'article' | 'profile';
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -31,37 +19,8 @@ const SEO: React.FC<SEOProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website'
 }) => {
-<<<<<<< HEAD
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.svg',
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -84,17 +43,8 @@ const SEO: React.FC<SEOProps> = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
     </Helmet>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-}
-export default SEO;
-=======
+
   )}
 export default SEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-};
 
-export default SEO;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+

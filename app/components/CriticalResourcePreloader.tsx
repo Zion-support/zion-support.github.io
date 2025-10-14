@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-'use client'
-=======
+
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
 const CriticalResourcePreloader: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -18,74 +14,22 @@ const CriticalResourcePreloader: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
-            Critical Resource Preloader;
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional critical resource preloader services;
-            designed to help your business grow and succeed.;
-          </p>
-        </div>
-      </section>
-      {/* Content Section */}
-=======
+
             Critical Resource Preloader</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional critical resource preloader services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
-                We provide comprehensive critical resource preloader;
-                solutions tailored to your specific needs and requirements.;
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support;
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our critical resource preloader services?;
-              </p>
-              <a;
-                href="$1"
-                className="$1"
-              >
-                Contact Us;
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?;
-<<<<<<< HEAD
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-=======
+
           </h2>;
           <p className="text-xl text-blue-100 mb-8">;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
             Let's discuss how our critical resource preloader';
             services can help you achieve your goals.;
           </p>
@@ -99,10 +43,7 @@ const CriticalResourcePreloader: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-export default CriticalResourcePreloader;
-=======
+
                 We provide comprehensive critical resource preloader
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -136,9 +77,5 @@ export default CriticalResourcePreloader;
             Get Started Today</a></div></section></div>
   )}
 export default CriticalResourcePreloader
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-};
 
-export default CriticalResourcePreloader;'
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+

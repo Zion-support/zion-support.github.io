@@ -1,15 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-<<<<<<< HEAD
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: 'website' | 'article' | 'product'
-  structuredData?: any}
-=======
+
   title?: string;
   description?: string;
   keywords?: string;
@@ -23,7 +15,7 @@ interface SEOHeadProps {
   tags?: string[];
   structuredData?: object;
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
@@ -39,63 +31,13 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   structuredData
 }) => {
-<<<<<<< HEAD
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo192.png",
-    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "50+",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "AI Solutions",
-          "description": "Advanced artificial intelligence solutions for businesses"
-        },
-        {
-          "@type": "Offer",
-          "name": "Cybersecurity Services",
-          "description": "Comprehensive cybersecurity solutions and consulting"
-        },
-        {
-          "@type": "Offer",
-          "name": "Cloud Infrastructure",
-          "description": "Scalable cloud infrastructure and migration services"
-        }
-      ]
-    }
-  }
-<<<<<<< HEAD
-  const finalStructuredData = structuredData || defaultStructuredData;
-=======
+
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 
-=======
-  const finalStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -164,17 +106,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
     </Helmet>
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-}
-export default SEOHead;
-=======
+
   )}
 export default SEOHead
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-=======
-};
 
-export default SEOHead;
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
+

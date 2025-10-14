@@ -15,11 +15,7 @@ const SolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
-export default SolutionsPage;
-=======
+
   )}
 export default SolutionsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
