@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Star, TrendingUp, Award, BookOpen, Code, Lightbulb, Share2 } from 'lucide-react';
+import { Users, MessageCircle, Star, TrendingUp, Calendar, Award, BookOpen, Code, Lightbulb, Share2 } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   const communityStats = [
