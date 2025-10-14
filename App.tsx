@@ -1,19 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-import ErrorBoundary from './app/components/ErrorBoundary';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
-
-// Import pages
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
-import NotFoundPage from './app/404';
-=======
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
@@ -49,12 +36,12 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
           <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
         </div>
       </div>
-      <div className="mb-4">
+      <div className="mt-2">
         <p className="text-sm text-gray-500">
           {error.message || 'An unexpected error occurred'}
         </p>
       </div>
-      <div className="flex space-x-3">
+      <div className="mt-4 flex space-x-3">
         <button
           onClick={resetErrorBoundary}
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -71,33 +58,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  
   return (
-<<<<<<< HEAD
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900 flex">
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
-              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
-              <main className="relative z-10 flex-1" id="main-content" role="main">
-                <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
-                  </Suspense>
-                </ErrorBoundary>
-=======
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <AnalyticsProvider>
@@ -134,20 +97,13 @@ function App() {
                     } />
                   </Routes>
                 </Suspense>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
               </main>
+              <Footer />
             </div>
-<<<<<<< HEAD
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
-=======
           </Router>
         </AnalyticsProvider>
       </ErrorBoundary>
     </HelmetProvider>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
   );
 }
 
