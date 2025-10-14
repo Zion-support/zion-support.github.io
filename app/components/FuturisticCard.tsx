@@ -1,29 +1,22 @@
-import React from 'react';
-
+import React from 'react;
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'glow' | 'border';
-}
+  variant?: 'default' | 'glow' | 'gradient'}
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
-  className = '', 
-  variant = 'default' 
-}) => {
-  const baseClasses = 'bg-slate-800/50 backdrop-blur-md rounded-2xl p-6 transition-all duration-300';
-  
+  className = '',';
+  variant = 'default''}) => {
+  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
   const variantClasses = {
-    default: 'border border-cyan-500/20 hover:border-cyan-500/40',
-    glow: 'border border-cyan-500/20 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20',
-    border: 'border-2 border-cyan-500/30 hover:border-cyan-500/60'
-  };
+    default: 'bg-white/10',';
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',';
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20''};
 
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
-    </div>
-  );
-};
+    </div>)};
 
 export default FuturisticCard;

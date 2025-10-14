@@ -1,131 +1,135 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
 const MobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <>
-      {/* Mobile menu button */}
-      <button
-        onClick={toggleMenu}
-        className="md:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-300"
-        aria-label="Toggle mobile menu"
-        aria-expanded={isOpen}
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Mobile menu overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={closeMenu}
-          />
-          
-          {/* Menu panel */}
-          <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl">
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-8">
-                <span className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Zion Tech Group
-                </span>
-                <button
-                  onClick={closeMenu}
-                  className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-300"
-                  aria-label="Close menu"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Navigation links */}
-              <nav className="space-y-4 mb-8">
-                <Link
-                  to="/about"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <span className="font-medium">About Us</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link
-                  to="/services"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <span className="font-medium">Our Services</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link
-                  to="/contact"
-                  onClick={closeMenu}
-                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <span className="font-medium">Contact</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </nav>
-
-              {/* Quick services */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
-                  Popular Services
-                </h3>
-                <div className="space-y-2">
-                  <Link
-                    to="/ai-business-intelligence"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-                  >
-                    AI Business Intelligence
-                  </Link>
-                  <Link
-                    to="/ai-customer-support"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-                  >
-                    AI Customer Support
-                  </Link>
-                  <Link
-                    to="/ai-cybersecurity"
-                    onClick={closeMenu}
-                    className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
-                  >
-                    AI Cybersecurity
-                  </Link>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <Link
-                to="/contact"
-                onClick={closeMenu}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started Today
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
+    <div className="min-h-screen bg-white">;
+      <Helmet>
+        <title>Mobile - Zion Tech Group</title>
+        <meta name="description" content="Professional mobile navigation services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Mobile </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional mobile navigation services;
+            designed to help your business grow and succeed.</p>
         </div>
-      )}
-    </>
-  );
-};
+      </section>
+      {/* Content Section */}
+            Professional mobile navigation services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive mobile navigation;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our mobile navigation services?;
+              </p>;
+              <a>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our mobile navigation';
+            services can help you achieve your goals.;
+          </p>;
+          <a>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>;
+      </section>;
+    </div>)};
 
-export default MobileNavigation;
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
+
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our mobile navigation 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+                We provide comprehensive mobile navigation
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our mobile navigation services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our mobile navigation'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default MobileNavigation

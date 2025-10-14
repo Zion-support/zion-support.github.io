@@ -1,32 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
+import { Github } from 'lucide-react';
+import { Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+import { Youtube } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Clock } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -187,216 +185,137 @@ const ImprovedFooter = () => {
   };
 
   return (
-    <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-              <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-            </div>
-          ))}
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Improved Footer - Zion Tech Group</title>
+        <meta name="description" content="Professional improved footer services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Improved Footer;
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional improved footer services;
+            designed to help your business grow and succeed.;
+          </p>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
-          {serviceCategories.map((category, index) => (
-            <div key={index} className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                  {category.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-              </div>
-              <div className="space-y-3">
-                {category.links.slice(0, 8).map((link, linkIndex) => (
-                  <Link
-                    key={linkIndex}
-                    to={link.href}
-                    className={`block text-sm transition-colors duration-300 group ${
-                      link.featured 
-                        ? 'text-cyan-400 hover:text-cyan-300 font-medium' 
-                        : 'text-gray-300 hover:text-cyan-400'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-2">
-                      <span>{link.label}</span>
-                      {link.featured && <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />}
-                    </div>
-                  </Link>
-                ))}
-                {category.links.length > 8 && (
-                  <Link
-                    to={category.links.find(l => l.featured)?.href || '#'}
-                    className="block text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 group"
-                  >
-                    <div className="flex items-center space-x-2">
-                      <span>View All {category.title}</span>
-                      <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Link>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Company Info & Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1 space-y-6">
+      </section>
+      {/* Content Section */}
+            Improved Footer</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional improved footer services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Zion Tech Group
-                </span>
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
-              </p>
-            </div>
-            
-            {/* Social Links */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300 group"
-                    aria-label={social.label}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive improved footer;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our improved footer services?;
+              </p>;
+              <a>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our improved footer';
+            services can help you achieve your goals.;
+          </p>;
+          <a>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>;
+      </section>;
+    </div>)};
 
-          {/* Company Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Company</h4>
-            <div className="space-y-3">
-              {companyLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.href}
-                  className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
 
-          {/* Resources */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Resources</h4>
-            <div className="space-y-3">
-              {resourceLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.href}
-                  className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact</h4>
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400 mt-0.5" />
-                <div>
-                  <p className="text-white text-sm font-medium">Phone</p>
-                  <p className="text-gray-300 text-sm">{contactInfo.phone}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400 mt-0.5" />
-                <div>
-                  <p className="text-white text-sm font-medium">Email</p>
-                  <p className="text-gray-300 text-sm">{contactInfo.email}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
-                <div>
-                  <p className="text-white text-sm font-medium">Address</p>
-                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our improved footer 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
         </div>
-
-        {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl p-8 mb-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Stay Updated</h3>
-            <p className="text-gray-300 mb-6">
-              Get the latest updates on AI innovations, technology trends, and exclusive offers delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-300 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex flex-wrap gap-6">
-                {legalLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                <span>SSL Secured</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>GDPR Compliant</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default ImprovedFooter;
+      </section>
+    </div>
+  )
+}
+                We provide comprehensive improved footer
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our improved footer services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our improved footer'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default ImprovedFooter

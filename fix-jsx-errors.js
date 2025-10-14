@@ -1,219 +1,107 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Function to fix common JSX syntax errors
-function fixJSXContent(content) {
-  // Remove duplicate function declarations
-  content = content.replace(
-    /export default function \w+\(\) \{\s*return \(\s*export default function \w+\(\) \{\s*return \(/g,
-    "export default function Page() {\n  return (",
-  );
-
-  // Fix malformed JSX tags
-  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "");
-  content = content.replace(/<div><\/div>/g, "");
-  content = content.replace(/<div><div>/g, "<div>");
-  content = content.replace(/<\/div><\/div>/g, "</div>");
-
-  // Fix broken closing tags
-  content = content.replace(
-    /<title>([^<]+)<div><div><\/title>/g,
-    "<title>$1</title>",
-  );
-  content = content.replace(
-    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g,
-    "<meta$1 />",
-  );
-  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>");
-  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>");
-
-  // Fix broken Link components
-  content = content.replace(
-    /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g,
-    "",
-  );
-  content = content.replace(
-    /<Link([^>]*)><\/Link>/g,
-    "<Link$1>Contact Us</Link>",
-  );
-  content = content.replace(/Contact Us;/g, "Contact Us");
-
-  // Fix broken ArrowRight components
-  content = content.replace(
-    /<ArrowRight className="w-5h-5ml-2"><\/ArrowRight>/g,
-    '<ArrowRight className="w-5 h-5 ml-2" />',
-  );
-  content = content.replace(
-    /<ArrowRight className="ml-2 h-5 w-5" \/>/g,
-    '<ArrowRight className="ml-2 h-5 w-5" />',
-  );
-
-  // Fix malformed JSX structure
-  content = content.replace(
-    /<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,
-    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">',
-  );
-  content = content.replace(
-    /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,
-    '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">',
-  );
-
-  // Remove orphaned closing tags
-  content = content.replace(
-    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g,
-    "</div>",
-  );
-  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>");
-
-  // Fix missing imports
-  if (content.includes("Helmet") && !content.includes("import { Helmet }")) {
-    content = content.replace(
-      /import React from 'react';/,
-      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`,
-    );
-  }
-  if (content.includes("Link") && !content.includes("import { Link }")) {
-    content = content.replace(
-      /import React from 'react';/,
-      `import React from 'react';\nimport { Link } from 'react-router-dom';`,
-    );
-  }
-  if (
-    content.includes("ArrowRight") &&
-    !content.includes("import { ArrowRight }")
-  ) {
-    content = content.replace(
-      /import React from 'react';/,
-      `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`,
-    );
-  }
-
+// Function to fix JSX structure errors;
+function fixJSXErrors(content) {
+  // Fix malformed JSX fragments and structure;
+  content = content.replace(/<>\s*<//////div[^>]*><\/div>\s*<////Helmet>/g, '<>\n      <//////Helmet>');
+  content = content.replace(/<>\s*<//////div[^>]*><\/div>\s*<////div[^>]*>/g, '<>\n      <//////div');>;
+  // Fix missing closing tags for common elements;
+  content = content.replace(/<Helmet>\s*<////title>([^<]+)<\/title>\s*<////meta[^>]*\/>\s*<\/Helmet>/g, '<////Helmet>\n        <title>$1</////title>\n        <meta name="description" content="$1" />\n      </////Helmet>');
+  
+  // Fix malformed JSX structure patterns;
+  content = content.replace(/<>\s*<//////div[^>]*><\/div>\s*<////Helmet>\s*<title>([^<////]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<div[^>]*>/g, '<>\n      <//Helmet>\n        <////title>$1</title>\n        <////meta name="description" content="$1" />\n      </Helmet>\n      <////div');>;
+  // Fix missing closing tags for p elements;
+  content = content.replace(/<p[^>]*>\s*([^<]+)\s*<\/p>/g, '<p>$1</////p>');
+  content = content.replace(/<p[^>]*>\s*([^<]+)\s*$/gm, '<p>$1</p>');
+  
+  // Fix missing closing tags for div elements;
+  content = content.replace(/<////div[^>]*>\s*([^<]+)\s*$/gm, '<div>$1</////div>');
+  
+  // Fix malformed return statements;
+  content = content.replace(/return\s*\(\s*<>\s*<//////div[^>]*><\/div>\s*<////Helmet>/g, 'return (\n    <>\n      <//////Helmet>');
+  
+  // Fix missing closing fragments;
+  content = content.replace(/<>\s*<//////Helmet>[\s\S]*?<\/Helmet>\s*<////div[^>]*>[\s\S]*?<\/div>\s*$/gm, (match) => {
+    if (!match.includes('</>')) {
+      return match + '\n    </>';
+    };
+    return match;
+  });
+  
+  // Fix malformed JSX structure with multiple divs;
+  content = content.replace(/<////div[^>]*>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)<\/p>\s*<\/div>\s*<////\/div>\s*<\/div>/g,;
+    '<////div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <////h1 className="text-4xl font-bold text-gray-900 mb-8">$1</h1>\n          <////p className="text-xl text-gray-600">$2</p>\n        </////div>\n      </div>');
+  
+  // Fix common malformed patterns;
+  content = content.replace(/<////>\s*</div[^>]*><\/div>\s*<Helmet>\s*<////title>([^<]+)<\/title>\s*<////meta[^>]*\/>\s*<\/Helmet>\s*<////div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<////p[^>]*>([^<]+)<\/p>\s*<////\/div>\s*<\/div>\s*<////\/div>\s*<\/>/g,;
+    '<////>\n      </Helmet>\n        <////title>$1</title>\n        <////meta name="description" content="$1" />\n      </Helmet>\n      <////div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <////h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <////p className="text-xl text-gray-600">$3</p>\n        </////div>\n      </div>\n    </////>');
+  
+  // Fix malformed function returns;
+  content = content.replace(/  \)\};/g, '  );');
+  content = content.replace(/  \)\};/g, '  );');
+  
+  // Fix missing closing tags for common elements;
+  content = content.replace(/<Link[^>]*>([^<]+)<\/Link>/g, '<Link to="$1">$1</////Link>');
+  content = content.replace(/<a[^>]*>([^<]+)<\/a>/g, '<a href="#">$1</////a>');
+  
+  // Fix malformed JSX structure with missing closing tags;
+  content = content.replace(/<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<////p[^>]*>([^<]+)\s*$/gm,;
+    '<div className="min-h-screen bg-white">\n        <////div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">$1</////h1>\n          <p className="text-xl text-gray-600">$2</////p>\n        </div>\n      </////div>');
+  
+  // Fix missing closing tags for spans;
+  content = content.replace(/<span[^>]*>([^<]+)<\/span>/g, '<span>$1</////span>');
+  
+  // Fix malformed JSX structure patterns;
+  content = content.replace(/<>\s*<//////div[^>]*><\/div>\s*<////Helmet>\s*<title>([^<////]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)\s*$/gm,;
+    '<>\n      <//Helmet>\n        <////title>$1</title>\n        <////meta name="description" content="$1" />\n      </Helmet>\n      <////div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <////h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <////p className="text-xl text-gray-600">$3</p>\n        </////div>\n      </div>\n    </////>');
+  
   return content;
 }
 
-// Function to create a proper page structure
-function createProperPageStructure(pageName, title, description) {
-  return `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function ${pageName}() {
-  return (
-    <>
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}`;
-}
-
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, "utf8");
-
-    // Check if file is severely corrupted
-    if (
-      content.includes("export default function") &&
-      content.split("export default function").length > 2
-    ) {
-      console.log(`Fixing severely corrupted file: ${filePath}`);
-
-      // Extract page name from file path
-      const pathParts = filePath.split("/");
-      const fileName = pathParts[pathParts.length - 2]; // Get directory name
-      const pageName =
-        fileName
-          .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-          .join("") + "Page";
-
-      const title = fileName
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-
-      const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
-
-      const newContent = createProperPageStructure(
-        pageName,
-        title,
-        description,
-      );
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed: ${filePath}`);
-    } else {
-      // Try to fix the existing content
-      const fixedContent = fixJSXContent(content);
-      if (fixedContent !== content) {
-        fs.writeFileSync(filePath, fixedContent);
-        console.log(`Fixed: ${filePath}`);
-      }
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixJSXErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed JSX: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to recursively find all .tsx files
-function findTsxFiles(dir) {
-  const files = [];
-
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        traverse(fullPath);
-      } else if (item.endsWith(".tsx") && !item.includes(".original")) {
-        files.push(fullPath);
+// Main function to process all TSX files;
+async function main() {
+  const patterns = [;
+    'app/**/*.tsx',;
+    '*.tsx';
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**'];
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
     }
   }
-
-  traverse(dir);
-  return files;
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
-// Main execution
-const appDir = path.join(__dirname, "app");
-const tsxFiles = findTsxFiles(appDir);
-
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  processFile(file);
-  fixedCount++;
-}
-
-console.log(`Processed ${fixedCount} files`);
+main();

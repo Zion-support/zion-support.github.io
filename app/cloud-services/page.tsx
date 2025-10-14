@@ -1,119 +1,96 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Wifi } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-export default function CloudServices() {
-  const services = [
+const Page = () => {
+  const features = [
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scalability",
-      description: "Scale your infrastructure up or down based on demand"
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security",
-      description: "Enterprise-grade security with advanced threat protection"
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance",
-      description: "Optimized performance with global content delivery"
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-white">;
       <Helmet>
-        <title>Cloud Services - Zion Tech Group | Enterprise Cloud Solutions</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, storage, and infrastructure management. Transform your business with our enterprise cloud solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud infrastructure, AWS, Azure, Google Cloud" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-              >
-                Free Consultation
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Schedule Demo
-                <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Cloud Services?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver cloud solutions that provide real business value through innovation, security, and scalability.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                >
-                  Start Your Cloud Journey
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-                >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
+      <div className="container mx-auto px-4 py-16">;
+        <div className="text-center">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+            Page;
+          </h1>;
+          <p className="text-xl text-gray-600 mb-8">;
+            Professional page solutions tailored to your business needs.;
+          </p>;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+                Expert Solutions;
+              </h3>;
+              <p className="text-blue-700">;
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>;
+            </div>;
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;
+                Custom Implementation;
+              </h3>;
+              <p className="text-green-700">;
+                Tailored page implementations for your specific requirements.;
+              </p>;
+            </div>;
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
+                24/7 Support;
+              </h3>;
+              <p className="text-purple-700">;
+                Round-the-clock support for all your page needs.;
+              </p>;
+            </div>;
+          </div>;
+          <div className="mt-12">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+              Get Started Today;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>)}

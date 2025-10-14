@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  Menu, 
-  X, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Sparkles,
-  Search,
-  User,
-  Settings,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
+import { Menu } from 'lucide-react';
+import { X } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -668,173 +666,133 @@ const ImprovedNavigation = () => {
   );
 
   return (
-    <>
-      <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <Link to="/" className="text-2xl font-bold text-white group">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
-                Zion Tech Group
-              </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex space-x-8">
-              {navigationItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="relative group"
-                  onMouseEnter={() => setActiveDropdown(item.label)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  <Link
-                    to={item.href}
-                    className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                  >
-                    {item.icon}
-                    <span>{item.label}</span>
-                    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                  </Link>
-                  
-                  {/* Enhanced Dropdown Menu */}
-                  {activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl z-50">
-                      <div className="p-4">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
-                            {item.icon}
-                          </div>
-                          <div>
-                            <h3 className="text-white font-semibold">{item.label}</h3>
-                            <p className="text-gray-400 text-sm">{item.description}</p>
-                          </div>
-                        </div>
-                        <div className="space-y-1 max-h-96 overflow-y-auto">
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.href}
-                              to={dropdownItem.href}
-                              className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group"
-                            >
-                              <div className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors">
-                                {dropdownItem.icon}
-                              </div>
-                              <div className="flex-1">
-                                <div className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors">
-                                  {dropdownItem.label}
-                                </div>
-                                <div className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
-                                  {dropdownItem.description}
-                                </div>
-                              </div>
-                              <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Quick Links & CTA */}
-            <div className="hidden md:flex items-center space-x-4">
-              <div className="hidden lg:flex space-x-4">
-                {quickLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.icon}
-                    <span>{link.label}</span>
-                  </Link>
-                ))}
-              </div>
-              <Link
-                to="/contact"
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
-              >
-                Contact Us
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Mobile Menu Buttons */}
-            <div className="lg:hidden flex items-center space-x-2">
-              <button
-                onClick={() => setIsSidebarOpen(true)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isOpen && (
-            <div className="lg:hidden py-4 border-t border-white/10">
-              <div className="space-y-4">
-                {navigationItems.map((item) => (
-                  <div key={item.label}>
-                    <Link
-                      to={item.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.icon}
-                      <span className="font-medium">{item.label}</span>
-                    </Link>
-                    <div className="ml-6 space-y-2">
-                      {item.dropdown.slice(0, 4).map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.href}
-                          to={dropdownItem.href}
-                          className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
-                      {item.dropdown.length > 4 && (
-                        <Link
-                          to={item.href}
-                          className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          View All →
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                ))}
-                
-                <div className="pt-4 border-t border-white/10">
-                  <div className="space-y-2">
-                    {quickLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        to={link.href}
-                        className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+    <div className="min-h-screen bg-white">;
+      <Helmet>
+        <title>Improved - Zion Tech Group</title>
+        <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Improved </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional improved navigation services;
+            designed to help your business grow and succeed.</p>
         </div>
-      </header>
+      </section>
+      {/* Content Section */}
+            Professional improved navigation services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive improved navigation;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our improved navigation services?;
+              </p>;
+              <a>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our improved navigation';
+            services can help you achieve your goals.;
+          </p>;
+          <a>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>;
+      </section>;
+    </div>)};
 
-      {/* Sidebar */}
-      <Sidebar />
-    </>
-  );
-};
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
 
-export default ImprovedNavigation;
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our improved navigation 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+                We provide comprehensive improved navigation
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our improved navigation services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our improved navigation'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default ImprovedNavigation

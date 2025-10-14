@@ -6,7 +6,6 @@ const DYNAMIC_CACHE = 'dynamic-v1';
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
-<<<<<<< HEAD
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -21,8 +20,6 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       })
       .then(() => {
         return self.skipWaiting();
@@ -50,7 +47,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache with network fallback
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -60,24 +57,23 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
+  // Skip cross-origin requests
+  if (url.origin !== location.origin) {
     return;
   }
 
-<<<<<<< HEAD
   event.respondWith(
     caches.match(request)
-      .then((cachedResponse) => {
+      .then((response) => {
         // Return cached version if available
-        if (cachedResponse) {
-          return cachedResponse;
+        if (response) {
+          return response;
         }
 
-        // Otherwise fetch from network
+        // Otherwise, fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache non-successful responses
+            // Don't cache if not a valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -95,8 +91,8 @@ self.addEventListener('fetch', (event) => {
           })
           .catch(() => {
             // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/index.html');
+            if (request.destination === 'document') {
+              return caches.match('/offline.html');
             }
           });
       })
@@ -105,10 +101,10 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
+  if (event.tag === 'background-sync') {
     event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineFormSubmissions()
+      // Handle offline form submissions here
+      console.log('Background sync triggered')
     );
   }
 });
@@ -116,7 +112,7 @@ self.addEventListener('sync', (event) => {
 // Push notifications
 self.addEventListener('push', (event) => {
   const options = {
-    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    body: event.data ? event.data.text() : 'New update available!',
     icon: '/images/icon-192x192.png',
     badge: '/images/icon-192x192.png',
     vibrate: [100, 50, 100],
@@ -127,12 +123,12 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
-        title: 'Explore',
+        title: 'Go to the site',
         icon: '/images/icon-192x192.png'
       },
       {
         action: 'close',
-        title: 'Close',
+        title: 'Close notification',
         icon: '/images/icon-192x192.png'
       }
     ]
@@ -153,12 +149,3 @@ self.addEventListener('notificationclick', (event) => {
     );
   }
 });
-
-// Helper function for offline form submissions
-async function handleOfflineFormSubmissions() {
-  // This would typically involve storing form data in IndexedDB
-  // and syncing when back online
-  console.log('Handling offline form submissions');
-}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
