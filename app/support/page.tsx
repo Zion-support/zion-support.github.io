@@ -138,10 +138,10 @@ const SupportPage: React.FC = () => {
             <div className="max-w-2xl mx-auto relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input type ="text"
-                placeholde r ="Search for help..."
+                placeholder="Search for help..."
                 valu e ={searchTerm}
                 onChang e ={(e) => setSearchTerm(e.target.value)}
-                classNam e ="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -175,7 +175,7 @@ const SupportPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportChannels.map((channel, index) => (
-                <div key ={index} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center">
                   <div className ={`w-16 h-16 ${channel.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
                     <channel.icon className="w-8 h-8" />
                   </div>
@@ -195,14 +195,14 @@ const SupportPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Support Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {resources.map((resource, index) => (
-                <div key ={index} classNam e ="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
+                <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
                     <resource.icon className="w-6 h-6 text-slate-900" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}</h3>
                   <p className="text-gray-300 mb-4">{resource.description}</p>
                   <a href ={resource.link}
-                    classNam e ="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                     Access Resource →
                   </a>
                 </div>
@@ -221,9 +221,9 @@ const SupportPage: React.FC = () => {
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
-                  <buttonton key ={category}
+                  <buttonton key={category}
                     onClic k ={() => setSelectedCategory(category)}
-                    classNam e ={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       selectedCategor y === category
                         ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
                         :'bg-white/10 text-gray-300 hover:bg-white/20'
@@ -237,9 +237,9 @@ const SupportPage: React.FC = () => {
 
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
-                <div key ={index} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
                   <buttonton onClick ={() => toggleFAQ(index)}
-                    classNam e ="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     <div className ={`transform transition-transform ${expandedFA Q === index ? 'rotate-180' :''}`}>

@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet  } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const FiveGMobileApplicationsPage: React.FC = () => {  return (
-=======
-const FiveGMobileApplications: React.FC = () => {
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
     <>
       <Helmet>
         <title>5G Mobile Applications - Zion Tech Group</title>

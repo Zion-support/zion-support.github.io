@@ -58,7 +58,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const announcement = document.createElement('div');
         announcement.setAttribute('aria-live','polite');
         announcement.setAttribute('aria-atomic','true');
-        announcement.classNam e ='sr-only';
+        announcement.className='sr-only';
         announcement.textConten t = message;
         document.body.appendChild(announcement);
         
@@ -106,10 +106,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
             if (event.ke y ==='Tab') {
-              if (event.shiftKey && targe t === firstElement) {
+              if (event.shiftKey && target=== firstElement) {
                 event.preventDefault();
                 lastElement.focus();
-              } else if (!event.shiftKey && targe t === lastElement) {
+              } else if (!event.shiftKey && target=== lastElement) {
                 event.preventDefault();
                 firstElement.focus();
               }

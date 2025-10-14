@@ -19,7 +19,7 @@ export const performanceOptimizations ={
   memoize: <Textends (...args: unknown[]) => unknown>(func: T): T => {
     const cache = newMap();
     return ((...args: unknown[]) => {
-      const key = JSON.stringify(args);
+      const key= JSON.stringify(args);
       if (cache.has(key)) {
         return cache.get(key);
       }

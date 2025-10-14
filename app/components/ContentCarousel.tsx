@@ -86,10 +86,10 @@ const ContentCarousel: React.FC = () => {
         {/* Carousel Container */}
         <div className="relative">
           <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 md:p-12 border border-white/20 overflow-hidden">
-            <div className="gridgrid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <div className="space-y-8">
-                <div className="flexitems-centergap-4">
+                <div className="flex items-centergap-4">
                   <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
                     <currentSl ideData.icon className="w-8 h-8text-white" />
                   </div>
@@ -106,9 +106,9 @@ const ContentCarousel: React.FC = () => {
                 {/* Features */}
                 <div className="space-y-4">
                   <h4 className="text-lgfont-semiboldtext-white mb-4">Key Features:</h4>
-                  <div className="gridgrid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {currentSlide Data.features.map((feature, index) => (
-                      <divke y ={index} classNam e ="flexitems-centerspace-x-3">
+                      <divke y ={index} className="flex items-centerspace-x-3">
                         <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </div>
@@ -118,9 +118,9 @@ const ContentCarousel: React.FC = () => {
 
                 {/* Stats */}
                 {currentSlide Data.stats && (
-                  <div className="gridgrid-cols-3 gap-6">
+                  <div className="grid grid-cols-3 gap-6">
                     {currentSlide Data.stats.map((stat, index) => (
-                      <divke y ={index} classNam e ="text-center">
+                      <divke y ={index} className="text-center">
                         <div className="text-2 xlfont-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
@@ -130,11 +130,11 @@ const ContentCarousel: React.FC = () => {
 
                 {/* CTA */}
                 <div className="flexflex-colsm:flex-row gap-4">
-                  <button ton className="inline-flexitems-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                  <button ton className="inline-flex items-centergap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
                     Get Started
                   </butn>
-                  <button ton className="inline-flexitems-centergap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <button ton className="inline-flex items-centergap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
                   </butn>
@@ -155,11 +155,11 @@ const ContentCarousel: React.FC = () => {
 
           {/* Navigation */}
           <buttonton onClick ={prevSlide}
-            classNam e ="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
             <ChevronLeft className="w-6 h-6" />
           </button>
           <buttonton onClick ={nextSlide}
-            classNam e ="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -167,9 +167,9 @@ const ContentCarousel: React.FC = () => {
         {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">
           {slides.map((_, index) => (
-            <buttonton key ={index}
+            <buttonton key={index}
               onClic k ={() => setCurrentSlide(index)}
-              classNam e ={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 inde x === currentSlide
                   ? 'bg-gradient-to-r from-purple-500 to-blue-500'
                   :'bg-white/30 hover:bg-white/50'

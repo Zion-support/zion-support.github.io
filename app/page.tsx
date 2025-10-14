@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { Suspense, memo } from 'react';
+import React, { useState, useEffect, Suspense, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react';
-=======
-import React,{ useState, useEffect, Suspense, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Zap, Shield, Globe, Database, Code, Cloud  } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -19,32 +14,27 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-3 bg-gray-300 rounded"></div>
   </div>
 ));
-ServiceCardSkeleton.displayName ='ServiceCardSkeleton';
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
-  },[]);
+  }, []);
 
   const handlePhoneClick = () => {
     // Analytics tracking
-    if (typeof window !=='undefined' && window.gtag) {
-      window.gtag('event','phone_click',{
-        event_category:'engagement',
-        event_label:'header_phone'
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'header_phone'
       });
     }
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-897f
 
-  // These variables are used for future functionality
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _unused = { /* isVisible, handlePhoneClick - will be implemented later */ };
+  // Use the state and handler for future functionality
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

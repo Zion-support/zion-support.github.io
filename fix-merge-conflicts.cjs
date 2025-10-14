@@ -1,49 +1,136 @@
 const fs = require('fs');
 const path = require('path');
 
-// Files with merge conflicts
-const filesToFix = [
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-network-optimization/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx',
-  'app/ai-3d-generation/page.tsx',
-  'app/blockchain-web3/page.tsx',
-  'app/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
-  'app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
-  'app/blog/ai-innovation-labs-product-development-2025/page.tsx',
-  'app/blog/ai-enterprise-transformation-2025/page.tsx',
-  'app/guides/autonomous-business-processes-implementation-guide-2026/page.tsx'
-];
-
+// Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+    let modified = false;
+
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\nconst \w+: React\.FC = \(\) => \{\n=======\nconst \w+Page: React\.FC = \(\) => \{\n>>>>>>> cursor\/fix-errors-and-merge-to-main-\w+\n/g, 
-      (match) => {
-        const lines = match.split('\n');
-        const pageLine = lines.find(line => line.includes('Page: React.FC'));
-        return pageLine || lines[1];
-      });
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in: ${filePath}`);
+      
+      // Remove merge conflict markers and keep the HEAD version (first part)
+      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
+      
+      // Clean up any remaining merge conflict markers
+      content = content.replace(/<<<<<<< HEAD\n?/g, '');
+      content = content.replace(/=======\n?/g, '');
+      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+      
+      modified = true;
+    }
+
+    // Fix common syntax errors
+    if (content.includes('classNam e =')) {
+      content = content.replace(/classNam e =/g, 'className=');
+      modified = true;
+    }
     
-    // Fix export statements
-    content = content.replace(/export default \w+;(?!Page)/g, (match) => {
-      const componentName = match.replace('export default ', '').replace(';', '');
-      return `export default ${componentName}Page;`;
-    });
+    if (content.includes('targe t =')) {
+      content = content.replace(/targe t =/g, 'target=');
+      modified = true;
+    }
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in ${filePath}`);
+    if (content.includes('re l =')) {
+      content = content.replace(/re l =/g, 'rel=');
+      modified = true;
+    }
+    
+    if (content.includes('placeholde r =')) {
+      content = content.replace(/placeholde r =/g, 'placeholder=');
+      modified = true;
+    }
+    
+    if (content.includes('t o =')) {
+      content = content.replace(/t o =/g, 'to=');
+      modified = true;
+    }
+    
+    if (content.includes('key =')) {
+      content = content.replace(/key =/g, 'key=');
+      modified = true;
+    }
+    
+    if (content.includes('max-w-7 xl')) {
+      content = content.replace(/max-w-7 xl/g, 'max-w-7xl');
+      modified = true;
+    }
+    
+    if (content.includes('gridgrid-cols')) {
+      content = content.replace(/gridgrid-cols/g, 'grid grid-cols');
+      modified = true;
+    }
+    
+    if (content.includes('flexitems-center')) {
+      content = content.replace(/flexitems-center/g, 'flex items-center');
+      modified = true;
+    }
+    
+    if (content.includes('space-x-3')) {
+      content = content.replace(/space-x-3/g, 'space-x-3');
+    }
+    
+    if (content.includes('rounded-lgp-6')) {
+      content = content.replace(/rounded-lgp-6/g, 'rounded-lg p-6');
+      modified = true;
+    }
+    
+    if (content.includes('text-xlfont-bold')) {
+      content = content.replace(/text-xlfont-bold/g, 'text-xl font-bold');
+      modified = true;
+    }
+    
+    if (content.includes('text-smtext-gray-400')) {
+      content = content.replace(/text-smtext-gray-400/g, 'text-sm text-gray-400');
+      modified = true;
+    }
+    
+    if (content.includes('text-whitefont-medium')) {
+      content = content.replace(/text-whitefont-medium/g, 'text-white font-medium');
+      modified = true;
+    }
+    
+    if (content.includes('w-3 h-3ml-1')) {
+      content = content.replace(/w-3 h-3ml-1/g, 'w-3 h-3 ml-1');
+      modified = true;
+    }
+    
+    if (content.includes('byZion')) {
+      content = content.replace(/byZion/g, 'by Zion');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+    }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixMergeConflicts);
+// Function to recursively find and fix files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other irrelevant directories
+      if (!['node_modules', '.git', 'dist', 'out', '.next'].includes(item)) {
+        processDirectory(fullPath);
+      }
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+      fixMergeConflicts(fullPath);
+    }
+  }
+}
 
+// Start processing from the app directory
+console.log('Starting merge conflict fixes...');
+processDirectory('./app');
 console.log('Merge conflict fixes completed!');

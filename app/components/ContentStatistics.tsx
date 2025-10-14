@@ -144,7 +144,7 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7 xlmx-auto">
+      <div className="max-w-7xlmx-auto">
         {/* Header */}
         <div className="text-centermb-16">
           <h2 className="text-3 xlmd:text-4 xl font-bold text-white mb-6">
@@ -156,9 +156,9 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Statistics Grid */}
-        <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
+            <divke y ={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
               <div className ={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
               </div>
@@ -180,9 +180,9 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+              <divke y ={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className="w-12 h-12bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6text-white" />
                 </div>
@@ -192,7 +192,7 @@ const ContentStatistics: React.FC = () => {
                 <p className="text-gray-300 text-smmb-4">{feature.description}</p>
                 <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
-                    <divke y ={statIndex} classNam e ="flexitems-centertext-xs text-gray-400">
+                    <divke y ={statIndex} className="flex items-centertext-xs text-gray-400">
                       <CheckCircle className="w-3 h-3text-green-400 mr-2 flex-shrink-0" />
                       {stat}
                     </div>
@@ -212,9 +212,9 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
 
-          <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <divke y ={index} classNam e ="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+              <divke y ={index} className="bg-white/10 backdrop-blur-lgrounded-2 xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
                 <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <achievement.icon className="w-8 h-8text-white" />
                 </div>
@@ -235,9 +235,9 @@ const ContentStatistics: React.FC = () => {
             </p>
           </div>
           
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <divke y ={index} classNam e ="flexitems-startspace-x-3">
+              <divke y ={index} className="flexitems-startspace-x-3">
                 <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>

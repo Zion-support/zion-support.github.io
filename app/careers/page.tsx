@@ -130,10 +130,10 @@ const CareersPage: React.FC = () => {
               Build the future of technology with us. We&apos;re looking for passionate individuals to join our mission of advancing AI, quantum computing, and autonomous systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <buttonton className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
                 View Open Positions
               </button>
-              <buttonton className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+              <button className="border border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300">
                 Learn About Our Culture
               </button>
             </div>
@@ -168,8 +168,8 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div key ={position.id}
-                  classNam e ={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                <div key={position.id}
+                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' :'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {position.featured && (
@@ -230,7 +230,7 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key ={index} classNam e ="text-center group">
+                <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>

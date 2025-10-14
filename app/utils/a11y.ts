@@ -6,7 +6,7 @@ export const accessibilityUtils ={
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live','polite');
     announcement.setAttribute('aria-atomic','true');
-    announcement.classNam e ='sr-only';
+    announcement.className='sr-only';
     announcement.textConten t = message;
     document.body.appendChild(announcement);
     setTimeout(() => {

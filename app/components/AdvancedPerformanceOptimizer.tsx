@@ -118,7 +118,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       fontPreloads.forEach((font) => {
         const link = document.createElement('link');
-        link.re l ='preload';
+        link.rel='preload';
         link.hre f = font.href;
         link.a s = font.as;
         link.type= font.type;
@@ -133,7 +133,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       imagePreloads.forEach((src) => {
         const link = document.createElement('link');
-        link.re l ='preload';
+        link.rel='preload';
         link.hre f = src;
         link.a s ='image';
         document.head.appendChild(link);
@@ -146,7 +146,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       scriptPreloads.forEach((src) => {
         const link = document.createElement('link');
-        link.re l ='modulepreload';
+        link.rel='modulepreload';
         link.hre f = src;
         document.head.appendChild(link);
       });
@@ -189,7 +189,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       dnsPrefetch Domains.forEach((domain) => {
         const link = document.createElement('link');
-        link.re l ='dns-prefetch';
+        link.rel='dns-prefetch';
         link.hre f = `//${domain}`;
         document.head.appendChild(link);
       });
@@ -201,7 +201,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 
       preconnectOrigins.forEach((origin) => {
         const link = document.createElement('link');
-        link.re l ='preconnect';
+        link.rel='preconnect';
         link.hre f = origin;
         link.crossOrigi n ='anonymous';
         document.head.appendChild(link);
