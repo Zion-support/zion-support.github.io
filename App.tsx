@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-<<<<<<< HEAD
 import { AnalyticsProvider } from './app/contexts/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
@@ -20,14 +19,7 @@ import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Pages
-=======
->>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
 import HomePage from './app/page';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-
-// Structured data for SEO - moved to SEOHead component
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -56,7 +48,6 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-<<<<<<< HEAD
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
@@ -83,58 +74,37 @@ const App: React.FC = () => {
             <PerformanceMonitor />
             <EnhancedAnalytics />
             <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
-=======
-        <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
-                <PerformanceMonitor />
+              <AppWithPerformanceMonitoring>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                   <Navigation />
-                  <main id="main-content" className="flex-1">
-                    <Suspense fallback={<div>Loading...</div>}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                          </Routes>
+                  <main className="relative z-10" id="main-content" role="main">
+                    <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/pricing" element={<PricingPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        <Route path="/partners" element={<PartnersPage />} />
+                        <Route path="/support" element={<SupportPage />} />
+                        <Route path="/faq" element={<FAQPage />} />
+                        <Route path="/demo" element={<DemoPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/ai-services" element={<AiServicesPage />} />
+                        <Route path="/it-services" element={<ItServicesPage />} />
+                      </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </div>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
-        </Router>
->>>>>>> 7c403644bad909cfd6e23ad37c52c4b81893395b
+              </AppWithPerformanceMonitoring>
+            </Router>
+          </PerformanceOptimizer>
+        </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
