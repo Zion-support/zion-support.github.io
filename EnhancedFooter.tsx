@@ -1,13 +1,15 @@
-import React from 'react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 const EnhancedFooter = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white">
+      <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">;
           <h1 className="text-5xl font-bold text-gray-900 mb-6">;
             Enhanced Footer;
@@ -23,4 +25,3 @@ const EnhancedFooter = () => {
 };
 
 export default EnhancedFooter;
-'
