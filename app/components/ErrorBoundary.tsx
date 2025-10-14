@@ -1,10 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-export default function ErrorBoundary() {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+export default function ErrorBoundary({ children }: ErrorBoundaryProps) {
   return (
-    <div>
-      <h1>ErrorBoundary</h1>
-      <p>This component is under development.</p>
-    </div>
+    <>
+      {children}
+    </>
   );
 }

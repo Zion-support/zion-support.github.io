@@ -7,8 +7,8 @@ interface LazyWrapperProps {
 
 export default function LazyWrapper({ children }: LazyWrapperProps) {
   return (
-    <div>
+    <>
       {children}
-    </div>
+    </>
   );
 }
