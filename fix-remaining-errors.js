@@ -1,138 +1,192 @@
-'use client';
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
 
-// Function to fix specific parsing errors
-function fixParsingErrors(content) {}
-  // Fix unterminated string literals
-  content = content.replace(/title\s*=\s*["']([^"']*?)\s*$/gm, 'title="$1"');
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
   
-  // Fix missing closing parentheses in function calls
-  content = content.replace(/\(\s*$/gm, '()');
-  
-  // Fix missing closing tags
-  content = content.replace(/<div[^>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>]*>(?!.*<\/div>)/g, (match) => {}
-    return match + '\n      </div>';
-  });
-  
-  // Fix malformed JSX fragments
-  content = content.replace(/<>\s*$/gm, '<></>');
-  
-  // Fix property assignment errors
-  content = content.replace(/const\s+(\w+)\s*=\s*{\s*$/gm, 'const $1 = {};');
-  
-  // Fix unterminated string literals in JSX attributes
-  content = content.replace(/className\s*=\s*["']([^"']*?)\s*$/gm, 'className="$1"');
-  content = content.replace(/src\s*=\s*["']([^"']*?)\s*$/gm, 'src="$1"');
-  content = content.replace(/alt\s*=\s*["']([^"']*?)\s*$/gm, 'alt="$1"');
-  
-  // Fix missing semicolons after variable declarations
-  content = content.replace(/const\s+\w+\s*=\s*[^;]+$/gm, (match) => {}
-    if (!match.endsWith(';')) {}
-      return match + ';';
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+        results = results.concat(findFiles(filePath, extensions));
+      }
+    } else {
+      const ext = path.extname(file);
+      if (extensions.includes(ext)) {
+        results.push(filePath);
+      }
     }
-    return match;
   });
   
-  // Fix malformed import statements
-  content = content.replace(/import\s+.*?\s+from\s+from\s+/g, (match) => {}
-    return match.replace(/\s+from\s+from\s+/, ' from ');
+  return results;
+}
+
+// Function to fix unterminated string literals
+function fixUnterminatedStrings(content) {
+  let fixed = content;
+  
+  // Fix unterminated single quotes
+  fixed = fixed.replace(/(['"])([^'"]*?)(\n|$)/g, (match, quote, str, newline) => {
+    if (str.includes(quote)) return match;
+    return quote + str + quote + ';' + newline;
   });
   
-  // Fix missing closing braces
-  content = content.replace(/{\s*$/gm, '{}');
+  // Fix double semicolons
+  fixed = fixed.replace(/;;+/g, ';');
   
-  return content;
+  // Fix malformed imports
+  fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
+  
+  return fixed;
+}
+
+// Function to fix JSX issues
+function fixJSX(content) {
+  let fixed = content;
+  
+  // Fix unclosed JSX tags
+  const openTags = [];
+  const lines = fixed.split('\n');
+  let result = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i];
+    
+    // Find opening tags
+    const openTagMatches = line.match(/<(\w+)(?:\s[^>]*)?(?!\/)>/g);
+    if (openTagMatches) {
+      openTagMatches.forEach(match => {
+        const tagName = match.match(/<(\w+)/)[1];
+        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+          openTags.push(tagName);
+        }
+      });
+    }
+    
+    // Find closing tags
+    const closeTagMatches = line.match(/<\/(\w+)>/g);
+    if (closeTagMatches) {
+      closeTagMatches.forEach(match => {
+        const tagName = match.match(/<\/(\w+)>/)[1];
+        const index = openTags.lastIndexOf(tagName);
+        if (index !== -1) {
+          openTags.splice(index, 1);
+        }
+      });
+    }
+    
+    result.push(line);
+  }
+  
+  // Close any remaining open tags
+  while (openTags.length > 0) {
+    const tag = openTags.pop();
+    result.push(`</${tag}>`);
+  }
+  
+  return result.join('\n');
 }
 
 // Function to fix specific file patterns
-function fixSpecificFiles(content, filePath) {}
-  // Fix common patterns in specific files
-  if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {}
-    // These directories seem to have corrupted files, skip them for now
-    return content;
-  }
+function fixFileSpecific(content, filePath) {
+  let fixed = content;
   
-  // Fix common patterns in page files
-  if (filePath.includes('/page.tsx')) {}
-    // Ensure proper function structure
-    if (content.includes('export default function') && !content.includes('return')) {}
-      content = content.replace(/export default function\s+(\w+)\s*\(\s*\)\s*{/, 
-        'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}');
+  // Fix common React patterns
+  if (filePath.includes('App.tsx') || filePath.includes('main.tsx')) {
+    // Ensure proper React imports
+    if (!fixed.includes("import React from 'react'") && fixed.includes('React.')) {
+      fixed = "import React from 'react';\n" + fixed;
+    }
+    
+    // Fix Router imports
+    if (fixed.includes('Router') && !fixed.includes("import { BrowserRouter as Router }")) {
+      fixed = fixed.replace(/import.*Router.*from.*react-router-dom.*;/, "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';");
     }
   }
   
-  return content;
+  // Fix component exports
+  if (filePath.includes('components/') && fixed.includes('export default function') && !fixed.includes('return')) {
+    fixed = fixed.replace(/(export default function[^{]+{)([\s\S]*?)(})/g, '$1\n  return <div>Component placeholder</div>;\n$3');
+  }
+  
+  return fixed;
 }
 
-// Function to process a single file
-function processFile(filePath) {}
-  try {}
-    // Skip broken and disabled directories for now
-    if (filePath.includes('app-broken') || filePath.includes('app-disabled')) {}
-      return false;
+// Function to fix HTML files
+function fixHTML(content) {
+  let fixed = content;
+  
+  // Fix malformed meta tags
+  fixed = fixed.replace(/<,\s*meta/g, '<meta');
+  fixed = fixed.replace(/<meta\s+property="og:\s*"/g, '<meta property="og:title"');
+  
+  // Fix malformed script tags
+  fixed = fixed.replace(/<script\s+src="([^"]*)"\s*>\s*<\/script>/g, '<script src="$1"></script>');
+  
+  return fixed;
+}
+
+// Main function to process files
+function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+    // Fix unterminated strings
+    content = fixUnterminatedStrings(content);
+    
+    // Fix JSX issues
+    content = fixJSX(content);
+    
+    // Fix file-specific patterns
+    content = fixFileSpecific(content, filePath);
+    
+    // Fix HTML if it's an HTML file
+    if (filePath.endsWith('.html')) {
+      content = fixHTML(content);
     }
     
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Apply fixes
-    content = fixParsingErrors(content);
-    content = fixSpecificFiles(content, filePath);
-    
     // Only write if content changed
-    if (content !== originalContent) {}
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {}
+  } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-async function main() {}
-  console.log('Starting targeted error fix...');
-  
-  // Get all TypeScript and JavaScript files, excluding broken/disabled directories
-  const patterns = [
-    'app/**/*.{ts,tsx,js,jsx}',
-    'api/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}',;
-    '*.{ts,tsx,js,jsx}';
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {}
-    const files = await glob(pattern, {}
-      cwd: process.cwd(),;
-      ignore: ['**/app-broken/**', '**/app-disabled/**'];
-    });
-    for (const file of files) {}
-      totalFiles++;
-      if (processFile(file)) {}
-        fixedFiles++;
-      }
+// Main execution
+console.log('Starting remaining error fix...');
+
+const files = findFiles('./app');
+let fixedCount = 0;
+
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+
+// Also fix root level files
+const rootFiles = ['./App.tsx', './main.tsx', './index.html'];
+rootFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    if (processFile(file)) {
+      fixedCount++;
     }
   }
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
-  console.log('Targeted error fix completed!');
-}
+});
 
-// Run the script
-main().catch(console.error);
+console.log(`\nFixed ${fixedCount} files.`);
+console.log('Remaining error fixing completed!');

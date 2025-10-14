@@ -44,13 +44,13 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <div className="mt-4 flex space-x-3">
         <button
           onClick={resetErrorBoundary}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors"
         >
           Try again
         </button>
         <button
           onClick={() => window.location.href = '/'}
-          className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors"
         >
           Go home
         </button>
@@ -89,7 +89,7 @@ function App() {
                         <div className="text-center">
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                           <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors">
                             Go Home
                           </a>
                         </div>

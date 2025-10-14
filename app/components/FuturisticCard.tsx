@@ -1,33 +1,10 @@
 import React from 'react';
 
-interface FuturisticCardProps {}
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'glow' | 'gradient';
-}
-
-const FuturisticCard: React.FC<FuturisticCardProps> = ({}
-  children,
-  className = ,
-  variant = 'default'
-}) => {}
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
-  const variantClasses = {};
-    default: 'bg-white/10',
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',
-    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'
-  };
-
+const FuturisticCard = () => {
   return (
-    <div>Page content</div>
-  );
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      {children}
+    <div className="futuristiccard-component">
+      <h2>FuturisticCard</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };
