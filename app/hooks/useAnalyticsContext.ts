@@ -1,3 +1,10 @@
-import { useAnalyticsContext as useAnalyticsHook } from '../contexts/AnalyticsContext';
+import { useContext } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
-export const useAnalytics = useAnalyticsHook;
+export const useAnalyticsContext = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalyticsContext must be used within an AnalyticsContextProvider');
+  }
+  return context;
+};
