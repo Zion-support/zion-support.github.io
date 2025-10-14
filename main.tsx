@@ -1,5 +1,7 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import './index.css';
 
@@ -21,7 +23,11 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 );
 
@@ -30,10 +36,10 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-      .then((registration) => {
+      .then((_registration) => {
         console.log('Service Worker registered successfully');
       })
-      .catch((error) => {
+      .catch((_error) => {
         console.log('Service Worker registration failed');
       });
   });

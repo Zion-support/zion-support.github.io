@@ -12,105 +12,97 @@ function Page() {
   const features = [
     {
       icon: Brain,
-      title: "AI Solutions",
-      description: "Advanced artificial intelligence solutions for your business needs.",
-      link: "/ai-services"
+      title: "AI-Powered Solutions",
+      description: "Cutting-edge artificial intelligence solutions for modern businesses."
     },
     {
       icon: Shield,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets.",
-      link: "/it-services"
+      title: "Cybersecurity Excellence",
+      description: "Comprehensive security solutions to protect your digital assets."
     },
     {
       icon: Zap,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions for modern businesses.",
-      link: "/cloud-infrastructure"
+      title: "Rapid Implementation",
+      description: "Fast and efficient deployment of technology solutions."
     },
     {
       icon: Users,
-      title: "Digital Transformation",
-      description: "Transform your business with cutting-edge technology.",
-      link: "/digital-transformation"
+      title: "Expert Team",
+      description: "Experienced professionals dedicated to your success."
     },
     {
       icon: Target,
-      title: "Micro SaaS",
-      description: "Innovative micro SaaS solutions for specific business needs.",
-      link: "/micro-saas"
+      title: "Custom Solutions",
+      description: "Tailored technology solutions for your specific needs."
     }
   ];
+
   return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
-        <meta name="keywords" content="AI solutions, IT services, cloud computing, cybersecurity, digital transformation, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, and IT services for modern businesses" />
+        <meta name="keywords" content="AI solutions, IT services, cybersecurity, digital transformation, business intelligence" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of advanced AI and IT solutions for businesses worldwide. 
-              We deliver expert services in artificial intelligence, cloud computing, 
-              cybersecurity, and digital transformation.
+            <h1 className="text-6xl font-bold text-white mb-6">Zion Tech Group</h1>
+            <p className="text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Empowering businesses with cutting-edge AI solutions, robust cybersecurity, and innovative IT services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <Link 
+                to="/services" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Explore Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/about"
-                className="border border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              <Link 
+                to="/contact" 
+                className="border border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
               >
-                Learn More
+                Get In Touch
               </Link>
             </div>
           </div>
 
-          {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <Link
-                key={index}
-                to={feature.link}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6 hover:bg-white/20 transition-all duration-300 group"
-              >
-                <feature.icon className="h-12 w-12 text-purple-400 mb-4 group-hover:text-purple-300 transition-colors" />
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-100 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
-                  {feature.description}
-                </p>
-              </Link>
-            ))}
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="bg-gradient-to-r from-purple-500 to-cyan-500 p-4 rounded-xl mr-4">
+                      <IconComponent className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  <p className="text-gray-300 text-lg">{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of businesses that trust Zion Tech Group for their AI and IT solutions. 
-              Let's build the future together.
+          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-gray-300 mb-8 max-w-3xl mx-auto text-xl">
+              Join thousands of forward-thinking companies that trust Zion Tech Group for their digital transformation journey.
             </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
-            >
-              Start Your Journey
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
+              >
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link 
+                to="/about" 
+                className="border border-purple-400 text-purple-300 hover:bg-purple-600 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,10 @@ export default tseslint.config(
       'node_modules/**',
       '*.config.js',
       '*.config.cjs',
-      '*.config.mjs'
+      '*.config.mjs',
+      '*.cjs',
+      'api/**',
+      'scripts/**'
     ]
   },
   js.configs.recommended,

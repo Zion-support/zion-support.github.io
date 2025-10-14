@@ -26,6 +26,8 @@ import DemoPage from './app/pages/DemoPage';
 import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
+import CookiesPage from './app/pages/CookiesPage';
+import SitemapPage from './app/pages/SitemapPage';
 import PricingPage from './app/pages/PricingPage';
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
@@ -39,8 +41,6 @@ import CareersPage from './app/pages/CareersPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import CookiesPage from './app/pages/CookiesPage';
 // TODO: Add lazy imports for components when they are created
-
-import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
 

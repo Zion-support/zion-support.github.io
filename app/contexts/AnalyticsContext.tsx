@@ -1,9 +1,9 @@
-import React, { createContext, useContext, ReactNode } from 'react';
+import React, { createContext, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
+  identify: (userId: string, traits?: Record<string, unknown>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -13,19 +13,22 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+  const trackEvent = (_eventName: string, _properties?: Record<string, unknown>) => {
     // Analytics tracking implementation
-    console.log('Event tracked:', eventName, properties);
+    // In production, this would send data to analytics service
+    // console.log('Event tracked:', eventName, properties);
   };
 
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+  const trackPageView = (_pageName: string, _properties?: Record<string, unknown>) => {
     // Page view tracking implementation
-    console.log('Page view tracked:', pageName, properties);
+    // In production, this would send data to analytics service
+    // console.log('Page view tracked:', pageName, properties);
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (_userId: string, _traits?: Record<string, unknown>) => {
     // User identification implementation
-    console.log('User identified:', userId, traits);
+    // In production, this would send data to analytics service
+    // console.log('User identified:', userId, traits);
   };
 
   const value: AnalyticsContextType = {
