@@ -8,6 +8,7 @@ interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
 }
 
+// LayoutShift interface removed as it's not used
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
