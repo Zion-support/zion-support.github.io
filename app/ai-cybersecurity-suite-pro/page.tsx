@@ -1,53 +1,74 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Brain, Lock } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AICybersecuritySuiteProPage: React.FC = () => {
+const AiCybersecuritySuiteProPage: React.FC = () => {
+  const services = [
+    {
+      title: 'Expert Ai Cybersecurity Suite Pro Solutions',
+      description: 'Professional ai cybersecurity suite pro services tailored to your needs.'
+    },
+    {
+      title: 'Custom Implementation',
+      description: 'Tailored ai cybersecurity suite pro implementations for your specific requirements.'
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock support for all your ai cybersecurity suite pro needs.'
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered cybersecurity solutions" />
+        <title>Ai Cybersecurity Suite Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional ai cybersecurity suite pro solutions and services" />
+        <meta name="keywords" content="ai, cybersecurity, suite, pro" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
-          <div className="text-centermb-16">
-            <h1 className="text-5xlfont-boldtext-whitemb-6">
-              AI Cybersecurity Suite Pro
-            </h1>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Ai Cybersecurity Suite Pro</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Protect your business with AI-powered cybersecurity solutions
+              Professional ai cybersecurity suite pro solutions and services
             </p>
-          </div>
-          
-          <div className="gridmd:grid-cols-3gap-8">
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Shield className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Threat Detection</h3>
-              <p className="text-gray-30 0">
-                AI-powered threat detection and prevention systems.
-              </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    to="/contact" 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
+              ))}
             </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Lock className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">Data Protection</h3>
-              <p className="text-gray-30 0">
-                Advanced encryption and data protection mechanisms.
-              </p>
-            </div>
-            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Brain className="w-1 2h-1 2 text-blue-4 0 0mb-4" />
-              <h3 className="text-xlfont-semiboldtext-whitemb-3">AI Monitoring</h3>
-              <p className="text-gray-30 0">
-                Continuous AI monitoring and security analysis.
-              </p>
+            <div className="text-center mt-12">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-  };
+  );
+};
 
-export default AICybersecuritySuiteProPage;
+export default AiCybersecuritySuiteProPage;

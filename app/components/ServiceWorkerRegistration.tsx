@@ -1,56 +1,21 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { useEffect } from 'react';
 
-export default function Page() => {
-  return (
-    <>
-      <Helmet>
-        <title>ServiceWorkerRegistration - Zion Tech Group</title>
-        <meta name="description" content="Professional ServiceWorkerRegistration solutions and services" />
-        <meta name="keywords" content="serviceworker_registration" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">ServiceWorkerRegistration</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional ServiceWorkerRegistration solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-                </div>
-        </div>
-              <div className="bg-green-50border border-green-20 0rounded-lgp-6">
-                <h3 className="text-lgfont-semiboldtext-green-90 0mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-                </div>
-        </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-purple-900mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-                </div>
-        </div>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-  }
+const ServiceWorkerRegistration: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  }, []);
+
+  return null;
+};
+
+export default ServiceWorkerRegistration;

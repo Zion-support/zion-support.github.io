@@ -117,10 +117,13 @@ export const generateImageAlt = (imagePath: string, alt?: string) => {
 }
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
+};
+
+export const defaultMeta = {
   viewport: 'width=device-width, initial-scale=1',
   charset: 'UTF-8'
-}
+};
 
 export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
   const seoConfig = { ...defaultSEOConfig, ...config }

@@ -1,56 +1,73 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { AlertTriangle, Send } from 'lucide-react';
 
-export default function Page() => {
+interface ErrorFeedbackProps {
+  error: Error;
+  onRetry?: () => void;
+  onReport?: (error: Error) => void;
+}
+
+const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
+  error,
+  onRetry,
+  onReport
+}) => {
+  const handleReport = () => {
+    if (onReport) {
+      onReport(error);
+    } else {
+      // Default behavior: log to console
+      console.error('Error reported:', error);
+    }
+  };
+
   return (
-    <>
-      <Helmet>
-        <title>EnhancedErrorFeedback - Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorFeedback solutions and services" />
-        <meta name="keywords" content="enhanced_errorfeedback" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">EnhancedErrorFeedback</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional EnhancedErrorFeedback solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-                </div>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+          <AlertTriangle className="w-6 h-6 text-red-600" />
         </div>
-              <div className="bg-green-50border border-green-20 0rounded-lgp-6">
-                <h3 className="text-lgfont-semiboldtext-green-90 0mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-                </div>
+        
+        <h1 className="text-xl font-semibold text-gray-900 text-center mb-2">
+          Oops! Something went wrong
+        </h1>
+        
+        <p className="text-gray-600 text-center mb-6">
+          We encountered an error while processing your request. Our team has been notified.
+        </p>
+        
+        <div className="space-y-3">
+          {onRetry && (
+            <button
+              onClick={onRetry}
+              className="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >
+              Try Again
+            </button>
+          )}
+          
+          <button
+            onClick={handleReport}
+            className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 flex items-center justify-center"
+          >
+            <Send className="w-4 h-4 mr-2" />
+            Report Issue
+          </button>
         </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-purple-900mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-                </div>
-        </div>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
+        
+        {process.env.NODE_ENV === 'development' && (
+          <details className="mt-4 p-4 bg-gray-100 rounded-md">
+            <summary className="cursor-pointer font-medium text-gray-700">
+              Error Details (Development)
+            </summary>
+            <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+              {error.toString()}
+            </pre>
+          </details>
+        )}
       </div>
-    </>
-  )
-  }
+    </div>
+  );
+};
+
+export default EnhancedErrorFeedback;

@@ -50,7 +50,7 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         const layoutShiftEntry = entry as LayoutShift;
-        if (!layoutShiftEntry.hadRecentInput) => {
+        if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value;
         }
       });
@@ -62,7 +62,7 @@ const PerformanceMonitor = () => {
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') => {
+        if (entry.name === 'first-contentful-paint') {
           metrics.fcp = entry.startTime;
         }
       });
@@ -71,13 +71,13 @@ const PerformanceMonitor = () => {
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) => {
+    if (navigationEntry) {
       metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
     }
 
     // Send metrics after page load
     const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) => {
+      if (Object.keys(metrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
         console.log('Performance Metrics: ', metrics);
       }
@@ -97,7 +97,7 @@ const PerformanceMonitor = () => {
   }, []);
 
   // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') => {
+  if (process.env.NODE_ENV === 'production') {
     return null;
   }
 
