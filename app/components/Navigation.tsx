@@ -1,2 +1,1 @@
-import React from 'react'
-import { Menu } from 'lucide-react'
+import React, { Suspense } from 'react';

@@ -6,5 +6,28 @@ export const validation = {
   
   phone: (phone: string) => {
     const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
-    return phoneRegex.test(phone.replace(/\s/g, ''
+    return phoneRegex.test(phone.replace(/\s/g, ''))
+  },
+  
+  required: (value: any) => {
+  required: (value: unknown) => {
     return value !== null && value !== undefined && value !== ''
+  },
+  
+  minLength: (value: string, min: number) => {
+    return value.length >= min
+  },
+  
+  maxLength: (value: string, max: number) => {
+    return value.length <= max
+  },
+  
+  url: (url: string) => {
+    try {
+      new URL(url)
+      return true
+    } catch {
+      return false
+    }
+  }
+}

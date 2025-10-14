@@ -1,19 +1,19 @@
 export const dataTransformers = {
-  transformToTableData: (data: any[]) => {
-    return data.map((item, index) => ({
+  transformToTableData: (data: unknown[]) => {
+    return data.map((item: any, index) => ({
       id: item.id || index,
       ...item
     }))
   },
   
-  transformToChartData: (data: any[], xField: string, yField: string) => {
+  transformToChartData: (data: Record<string, unknown>[], xField: string, yField: string) => {
     return data.map(item => ({
       x: item[xField],
       y: item[yField]
     }))
   },
   
-  transformToSelectOptions: (data: any[], valueField: string, labelField: string) => {
+  transformToSelectOptions: (data: Record<string, unknown>[], valueField: string, labelField: string) => {
     return data.map(item => ({
       value: item[valueField],
       label: item[labelField]

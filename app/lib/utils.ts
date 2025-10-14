@@ -5,6 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function formatDate(date: Date) {
 export function formatDate(date: Date): string {
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -13,6 +14,9 @@ export function formatDate(date: Date): string {
   }).format(date)
 }
 
+export function slugify(text: string) {
+export function slugify(str: string) {
+  return str
 export function slugify(text: string): string {
   return text
     .toLowerCase()

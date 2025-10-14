@@ -34,6 +34,8 @@ export const servicesData: ServiceData[] = [
     features: ['Infrastructure Migration', 'Data Migration', 'Security Setup'],
     pricing: {
       starter: 2000,
+      professional: 5000,
+      enterprise: 10000
       professional: 4000,
       enterprise: 8000
     },
