@@ -85,13 +85,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       documentationUrl: "https://docs.ziontechgroup.com/analytics",
       apiUrl: "https://api.ziontechgroup.com/analytics"
     },
-    {
       id: 2,
       title: "AI Content Studio Pro",
       description: "Next-generation content management system with AI-powered content generation, SEO optimization, multi-language support, and automated publishing workflows.",
       icon: DocumentTextIcon,
-      category: 'ai',
-      features: [
         "AI content generation with GPT-4 integration",
         "Advanced SEO optimization and keyword research",
         "Multi-language content creation and translation",
@@ -100,7 +97,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Team collaboration with approval workflows",
         "Brand voice consistency checking",
         "Content plagiarism detection and originality scoring"
-      ],
       color: "from-green-5 0 0 to-emerald-6 0 0",
       price: "$1 9 9/month",
       setupFee: "$8 0 0",
@@ -113,19 +109,14 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       reviews: 89,
       popularity: 88,
       isNew: true,
-      isFeatured: true,
       tags: ["AI", "Content", "SEO", "Multi-language"],
       demoUrl: "https://demo.ziontechgroup.com/content-studio",
       documentationUrl: "https://docs.ziontechgroup.com/content-studio",
       apiUrl: "https://api.ziontechgroup.com/content-studio"
-    },
-    {
       id: 3,
       title: "AI Customer Success Platform",
       description: "Intelligent customer support automation with advanced NLP, sentiment analysis, multi-channel support, and predictive customer success management.",
       icon: ChatBubbleLeftRightIcon,
-      category: 'ai',
-      features: [
         "24/7 AI chatbot with human-like conversations",
         "Advanced sentiment analysis and emotion detection",
         "Intelligent ticket routing and prioritization",
@@ -134,32 +125,25 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Customer journey mapping and analytics",
         "Predictive churn detection and prevention",
         "Integration with 1 0 0+ business tools"
-      ],
       color: "from-purple-5 0 0 to-pink-6 0 0",
       price: "$1 4 9/month",
       setupFee: "$6 0 0",
       originalPrice: "$1 9 9/month",
-      discount: "25% OFF",
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction", "Predictive insights"],
       useCases: ["Customer service", "Lead qualification", "FAQ automation", "Support optimization"],
       href: "/ai-customer-success-platform",
       rating: 4.7,
       reviews: 1 5 6,
       popularity: 92,
-      isNew: false,
-      isFeatured: true,
       tags: ["AI", "Customer Support", "Chatbot", "Automation"],
       demoUrl: "https://demo.ziontechgroup.com/customer-success",
       documentationUrl: "https://docs.ziontechgroup.com/customer-success",
       apiUrl: "https://api.ziontechgroup.com/customer-success"
-    },
-    {
       id: 4,
       title: "AI Project Management Suite Pro",
       description: "Advanced project management platform with AI-powered task optimization, resource allocation, deadline prediction, and risk assessment capabilities.",
       icon: CogIcon,
       category: 'productivity',
-      features: [
         "AI task optimization and priority scoring",
         "Intelligent resource allocation and capacity planning",
         "Predictive deadline and milestone tracking",
@@ -168,7 +152,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Risk assessment and mitigation recommendations",
         "Integration with 2 0 0+ project tools",
         "Custom workflow automation and triggers"
-      ],
       color: "from-orange-5 0 0 to-red-6 0 0",
       price: "$2 4 9/month",
       setupFee: "$1,2 0 0",
@@ -180,20 +163,15 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       rating: 4.6,
       reviews: 78,
       popularity: 85,
-      isNew: false,
       isFeatured: false,
       tags: ["AI", "Project Management", "Productivity", "Collaboration"],
       demoUrl: "https://demo.ziontechgroup.com/project-management",
       documentationUrl: "https://docs.ziontechgroup.com/project-management",
       apiUrl: "https://api.ziontechgroup.com/project-management"
-    },
-    {
       id: 5,
       title: "AI E-commerce Intelligence Suite",
       description: "Comprehensive e-commerce optimization platform with AI-powered product recommendations, dynamic pricing, inventory management, and customer behavior analysis.",
-      icon: ChartBarIcon,
       category: 'business',
-      features: [
         "AI product recommendations with 95% accuracy",
         "Dynamic pricing optimization and A/B testing",
         "Intelligent inventory management and forecasting",
@@ -202,32 +180,23 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Competitor analysis and market intelligence",
         "Conversion rate optimization tools",
         "Multi-channel sales analytics and reporting"
-      ],
       color: "from-cyan-5 0 0 to-blue-6 0 0",
       price: "$3 9 9/month",
       setupFee: "$2,0 0 0",
       originalPrice: "$5 9 9/month",
-      discount: "33% OFF",
       benefits: ["25% sales increase", "Optimized pricing", "Reduced inventory costs", "Better targeting"],
       useCases: ["Online stores", "Marketplace optimization", "Retail analytics", "Dropshipping"],
       href: "/ai-ecommerce-intelligence",
-      rating: 4.8,
       reviews: 1 3 4,
       popularity: 90,
-      isNew: false,
-      isFeatured: true,
       tags: ["AI", "E-commerce", "Analytics", "Optimization"],
       demoUrl: "https://demo.ziontechgroup.com/ecommerce-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/ecommerce-intelligence",
       apiUrl: "https://api.ziontechgroup.com/ecommerce-intelligence"
-    },
-    {
       id: 6,
       title: "AI HR Management System Pro",
       description: "Intelligent human resources platform with AI-powered recruitment, employee analytics, performance optimization, and predictive workforce planning.",
       icon: UserGroupIcon,
-      category: 'business',
-      features: [
         "AI resume screening with 90% accuracy",
         "Advanced employee analytics and insights",
         "Performance tracking and goal management",
@@ -236,7 +205,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Compliance monitoring and reporting",
         "Employee engagement surveys and analytics",
         "Integration with payroll and benefits systems"
-      ],
       color: "from-teal-5 0 0 to-green-6 0 0",
       price: "$1 7 9/month",
       setupFee: "$9 0 0",
@@ -248,20 +216,14 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       rating: 4.5,
       reviews: 67,
       popularity: 82,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "HR", "Recruitment", "Analytics"],
       demoUrl: "https://demo.ziontechgroup.com/hr-management",
       documentationUrl: "https://docs.ziontechgroup.com/hr-management",
       apiUrl: "https://api.ziontechgroup.com/hr-management"
-    },
-    {
       id: 7,
       title: "AI Financial Intelligence Platform",
       description: "Advanced financial analytics platform with AI-powered forecasting, risk assessment, automated reporting, and investment analysis capabilities.",
       icon: CurrencyDollarIcon,
-      category: 'business',
-      features: [
         "AI financial forecasting with 95% accuracy",
         "Advanced risk assessment and modeling",
         "Automated financial reporting and compliance",
@@ -270,32 +232,24 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Fraud detection and prevention",
         "Tax optimization and planning",
         "Integration with 5 0 0+ financial institutions"
-      ],
       color: "from-emerald-5 0 0 to-teal-6 0 0",
       price: "$3 2 9/month",
-      setupFee: "$1,5 0 0",
       originalPrice: "$4 4 9/month",
       discount: "27% OFF",
       benefits: ["Accurate forecasting", "Risk mitigation", "Automated compliance", "Cost optimization"],
       useCases: ["Financial planning", "Investment analysis", "Risk management", "Accounting"],
       href: "/ai-financial-intelligence",
-      rating: 4.9,
       reviews: 98,
       popularity: 87,
-      isNew: false,
-      isFeatured: true,
       tags: ["AI", "Finance", "Analytics", "Risk Management"],
       demoUrl: "https://demo.ziontechgroup.com/financial-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/financial-intelligence",
       apiUrl: "https://api.ziontechgroup.com/financial-intelligence"
-    },
-    {
       id: 8,
       title: "AI Marketing Automation Pro",
       description: "Comprehensive marketing automation platform with AI-powered campaign optimization, lead scoring, personalization, and multi-channel orchestration.",
       icon: RocketLaunchIcon,
       category: 'marketing',
-      features: [
         "AI campaign optimization and A/B testing",
         "Advanced lead scoring and qualification",
         "Hyper-personalized email and SMS campaigns",
@@ -304,32 +258,22 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Customer journey mapping and automation",
         "Integration with 3 0 0+ marketing tools",
         "Advanced analytics and reporting dashboard"
-      ],
       color: "from-pink-5 0 0 to-rose-6 0 0",
       price: "$2 7 9/month",
-      setupFee: "$1,2 0 0",
-      originalPrice: "$3 9 9/month",
       discount: "30% OFF",
       benefits: ["3 0 0% ROI increase", "Personalized campaigns", "Automated optimization", "Multi-channel"],
       useCases: ["Email marketing", "Social media", "Lead generation", "Customer retention"],
       href: "/ai-marketing-automation-pro",
-      rating: 4.7,
       reviews: 1 1 2,
       popularity: 89,
-      isNew: false,
-      isFeatured: true,
       tags: ["AI", "Marketing", "Automation", "Personalization"],
       demoUrl: "https://demo.ziontechgroup.com/marketing-automation",
       documentationUrl: "https://docs.ziontechgroup.com/marketing-automation",
       apiUrl: "https://api.ziontechgroup.com/marketing-automation"
-    },
-    {
       id: 9,
       title: "AI Inventory Intelligence System",
       description: "Smart inventory management platform with AI-powered demand forecasting, automated reordering, supplier optimization, and cost reduction analytics.",
       icon: CloudIcon,
-      category: 'business',
-      features: [
         "AI demand forecasting with 92% accuracy",
         "Automated reordering and supplier management",
         "Inventory optimization and space utilization",
@@ -338,32 +282,21 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Supplier performance analytics",
         "Integration with 1 0 0+ ERP and POS systems",
         "Mobile app for warehouse management"
-      ],
       color: "from-violet-5 0 0 to-purple-6 0 0",
       price: "$2 1 9/month",
       setupFee: "$1,0 0 0",
-      originalPrice: "$2 9 9/month",
-      discount: "27% OFF",
       benefits: ["30% cost reduction", "Zero stockouts", "Optimized inventory", "Supplier efficiency"],
       useCases: ["Retail management", "Manufacturing", "Supply chain", "Warehouse operations"],
       href: "/ai-inventory-intelligence",
-      rating: 4.6,
       reviews: 73,
       popularity: 84,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Inventory", "Supply Chain", "Optimization"],
       demoUrl: "https://demo.ziontechgroup.com/inventory-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/inventory-intelligence",
       apiUrl: "https://api.ziontechgroup.com/inventory-intelligence"
-    },
-    {
       id: 10,
       title: "AI Document Intelligence Platform",
       description: "Advanced document processing platform with AI-powered OCR, data extraction, workflow automation, and intelligent document classification.",
-      icon: DocumentTextIcon,
-      category: 'productivity',
-      features: [
         "AI OCR with 99% accuracy for 1 0 0+ languages",
         "Intelligent data extraction and validation",
         "Automated workflow and approval processes",
@@ -372,7 +305,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Security compliance and audit trails",
         "Integration with 2 0 0+ business applications",
         "Mobile document capture and processing"
-      ],
       color: "from-indigo-5 0 0 to-blue-6 0 0",
       price: "$1 5 9/month",
       setupFee: "$7 0 0",
@@ -381,23 +313,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       benefits: ["90% accuracy", "80% time savings", "Automated workflows", "Multi-language"],
       useCases: ["Document management", "Data entry", "Compliance processing", "Invoice processing"],
       href: "/ai-document-intelligence",
-      rating: 4.8,
       reviews: 91,
       popularity: 86,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Document Processing", "OCR", "Automation"],
       demoUrl: "https://demo.ziontechgroup.com/document-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/document-intelligence",
       apiUrl: "https://api.ziontechgroup.com/document-intelligence"
-    },
-    {
       id: 11,
       title: "AI Social Media Intelligence Suite",
       description: "Comprehensive social media management platform with AI-powered content creation, optimal posting times, engagement optimization, and brand monitoring.",
       icon: GlobeAltIcon,
-      category: 'marketing',
-      features: [
         "AI content creation and curation",
         "Optimal posting time prediction",
         "Engagement optimization and hashtag suggestions",
@@ -406,32 +331,22 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Multi-platform management (15+ networks)",
         "Advanced analytics and ROI tracking",
         "Crisis management and reputation monitoring"
-      ],
       color: "from-rose-5 0 0 to-pink-6 0 0",
       price: "$1 2 9/month",
       setupFee: "$5 0 0",
       originalPrice: "$1 7 9/month",
-      discount: "28% OFF",
       benefits: ["2 0 0% engagement increase", "Automated posting", "Optimized timing", "Brand protection"],
       useCases: ["Social media marketing", "Brand management", "Community building", "Crisis management"],
       href: "/ai-social-media-intelligence",
-      rating: 4.5,
       reviews: 1 4 5,
-      popularity: 88,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Social Media", "Content Creation", "Analytics"],
       demoUrl: "https://demo.ziontechgroup.com/social-media-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/social-media-intelligence",
       apiUrl: "https://api.ziontechgroup.com/social-media-intelligence"
-    },
-    {
       id: 12,
       title: "AI Email Intelligence Platform",
       description: "Advanced email marketing platform with AI-powered personalization, send time optimization, subject line testing, and performance analytics.",
       icon: EnvelopeIcon,
-      category: 'marketing',
-      features: [
         "AI personalization with behavioral targeting",
         "Optimal send time prediction",
         "Subject line A/B testing and optimization",
@@ -440,7 +355,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Deliverability optimization and monitoring",
         "Integration with 1 5 0+ email platforms",
         "Compliance and GDPR management"
-      ],
       color: "from-amber-5 0 0 to-orange-6 0 0",
       price: "$99/month",
       setupFee: "$4 0 0",
@@ -449,23 +363,16 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       benefits: ["40% open rates", "Personalized content", "Optimized timing", "Better deliverability"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing", "Customer retention"],
       href: "/ai-email-intelligence",
-      rating: 4.6,
       reviews: 1 6 7,
       popularity: 91,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Email Marketing", "Personalization", "Analytics"],
       demoUrl: "https://demo.ziontechgroup.com/email-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/email-intelligence",
       apiUrl: "https://api.ziontechgroup.com/email-intelligence"
-    },
-    {
       id: 13,
       title: "AI Voice Intelligence Platform",
       description: "Advanced voice assistant platform with natural language processing, multi-language support, custom voice training, and business integration capabilities.",
       icon: PhoneIcon,
-      category: 'ai',
-      features: [
         "Natural language processing with 98% accuracy",
         "Multi-language support (50+ languages)",
         "Custom voice training and personalization",
@@ -474,32 +381,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Voice biometrics and authentication",
         "Integration with 3 0 0+ business applications",
         "Custom voice assistant development"
-      ],
-      color: "from-violet-5 0 0 to-purple-6 0 0",
-      price: "$3 9 9/month",
       setupFee: "$2,5 0 0",
-      originalPrice: "$5 9 9/month",
-      discount: "33% OFF",
       benefits: ["95% accuracy", "24/7 availability", "Multi-language", "Custom training"],
       useCases: ["Customer service", "Voice commands", "Accessibility", "Voice commerce"],
       href: "/ai-voice-intelligence",
-      rating: 4.9,
-      reviews: 78,
       popularity: 83,
-      isNew: true,
-      isFeatured: true,
       tags: ["AI", "Voice", "NLP", "Automation"],
       demoUrl: "https://demo.ziontechgroup.com/voice-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/voice-intelligence",
       apiUrl: "https://api.ziontechgroup.com/voice-intelligence"
-    },
-    {
       id: 14,
       title: "AI Video Intelligence Suite",
       description: "Advanced video analytics platform with AI-powered content analysis, engagement tracking, sentiment analysis, and performance optimization.",
       icon: VideoCameraIcon,
-      category: 'marketing',
-      features: [
         "AI content analysis and tagging",
         "Engagement tracking and heat mapping",
         "Sentiment analysis and emotion detection",
@@ -508,32 +402,22 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time monitoring and alerts",
         "Integration with 20+ video platforms",
         "Custom analytics dashboard and reporting"
-      ],
       color: "from-red-5 0 0 to-pink-6 0 0",
       price: "$3 4 9/month",
       setupFee: "$1,8 0 0",
       originalPrice: "$4 9 9/month",
-      discount: "30% OFF",
       benefits: ["Real-time insights", "Automated analysis", "Performance boost", "Engagement optimization"],
       useCases: ["Video marketing", "Content optimization", "Audience analysis", "Live streaming"],
       href: "/ai-video-intelligence",
-      rating: 4.7,
-      reviews: 89,
-      popularity: 87,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Video", "Analytics", "Content"],
       demoUrl: "https://demo.ziontechgroup.com/video-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/video-intelligence",
       apiUrl: "https://api.ziontechgroup.com/video-intelligence"
-    },
-    {
       id: 15,
       title: "AI Legal Intelligence Platform",
       description: "Advanced legal document analysis platform with contract review, compliance checking, risk assessment, and automated legal research capabilities.",
       icon: ScaleIcon,
       category: 'security',
-      features: [
         "AI contract analysis and review",
         "Compliance checking and monitoring",
         "Risk assessment and scoring",
@@ -542,32 +426,24 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Automated legal summaries and insights",
         "Integration with legal databases",
         "Client communication and reporting tools"
-      ],
       color: "from-slate-5 0 0 to-gray-6 0 0",
       price: "$5 9 9/month",
       setupFee: "$3,0 0 0",
       originalPrice: "$7 9 9/month",
-      discount: "25% OFF",
       benefits: ["90% time savings", "Risk reduction", "Compliance assurance", "Automated research"],
       useCases: ["Legal firms", "Contract management", "Compliance", "Legal research"],
       href: "/ai-legal-intelligence",
-      rating: 4.8,
       reviews: 56,
       popularity: 79,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Legal", "Compliance", "Document Analysis"],
       demoUrl: "https://demo.ziontechgroup.com/legal-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/legal-intelligence",
       apiUrl: "https://api.ziontechgroup.com/legal-intelligence"
-    },
-    {
       id: 16,
       title: "AI Real Estate Intelligence Suite",
       description: "Comprehensive real estate platform with property valuation, market analysis, lead generation, investment insights, and client management tools.",
       icon: HomeIcon,
       category: 'industry',
-      features: [
         "AI property valuation with 95% accuracy",
         "Market analysis and trend prediction",
         "Lead generation and qualification",
@@ -576,32 +452,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Client relationship management",
         "Property listing optimization",
         "Integration with MLS and property databases"
-      ],
-      color: "from-emerald-5 0 0 to-teal-6 0 0",
-      price: "$2 7 9/month",
-      setupFee: "$1,5 0 0",
-      originalPrice: "$3 9 9/month",
-      discount: "30% OFF",
       benefits: ["Accurate valuations", "Market insights", "Lead generation", "Investment optimization"],
       useCases: ["Real estate agents", "Property management", "Investment analysis", "Market research"],
       href: "/ai-real-estate-intelligence",
-      rating: 4.6,
       reviews: 72,
       popularity: 81,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Real Estate", "Valuation", "Market Analysis"],
       demoUrl: "https://demo.ziontechgroup.com/real-estate-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/real-estate-intelligence",
       apiUrl: "https://api.ziontechgroup.com/real-estate-intelligence"
-    },
-    {
       id: 17,
       title: "AI Healthcare Intelligence Platform",
       description: "Advanced healthcare analytics platform with patient insights, treatment optimization, predictive diagnostics, and clinical decision support.",
       icon: BeakerIcon,
-      category: 'industry',
-      features: [
         "Patient analytics and risk stratification",
         "Treatment optimization and recommendations",
         "Predictive diagnostics and early warning",
@@ -610,32 +473,22 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Compliance and regulatory reporting",
         "Integration with EHR and health systems",
         "Privacy-compliant data processing"
-      ],
-      color: "from-green-5 0 0 to-emerald-6 0 0",
       price: "$7 9 9/month",
       setupFee: "$4,0 0 0",
       originalPrice: "$1,1 9 9/month",
-      discount: "33% OFF",
       benefits: ["Improved outcomes", "Risk reduction", "Cost savings", "Better diagnostics"],
       useCases: ["Hospitals", "Clinics", "Health systems", "Medical research"],
       href: "/ai-healthcare-intelligence",
-      rating: 4.9,
       reviews: 43,
       popularity: 76,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Healthcare", "Analytics", "Clinical Support"],
       demoUrl: "https://demo.ziontechgroup.com/healthcare-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/healthcare-intelligence",
       apiUrl: "https://api.ziontechgroup.com/healthcare-intelligence"
-    },
-    {
       id: 18,
       title: "AI Supply Chain Intelligence",
       description: "Intelligent supply chain management platform with demand forecasting, route optimization, cost analysis, and supplier performance monitoring.",
       icon: TruckIcon,
-      category: 'business',
-      features: [
         "AI demand forecasting with 94% accuracy",
         "Route optimization and logistics planning",
         "Cost analysis and optimization",
@@ -644,66 +497,42 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time tracking and visibility",
         "Integration with 2 0 0+ logistics systems",
         "Sustainability and carbon footprint tracking"
-      ],
-      color: "from-blue-5 0 0 to-indigo-6 0 0",
       price: "$4 4 9/month",
       setupFee: "$2,2 0 0",
       originalPrice: "$6 4 9/month",
-      discount: "31% OFF",
       benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation", "Sustainability"],
       useCases: ["Logistics", "Manufacturing", "Retail", "Transportation"],
       href: "/ai-supply-chain-intelligence",
-      rating: 4.7,
       reviews: 61,
-      popularity: 85,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Supply Chain", "Logistics", "Optimization"],
       demoUrl: "https://demo.ziontechgroup.com/supply-chain-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/supply-chain-intelligence",
       apiUrl: "https://api.ziontechgroup.com/supply-chain-intelligence"
-    },
-    {
       id: 19,
       title: "AI Energy Intelligence System",
       description: "Smart energy management platform with consumption optimization, cost reduction, sustainability tracking, and predictive maintenance.",
       icon: LightBulbIcon,
-      category: 'industry',
-      features: [
         "Energy consumption optimization",
         "Cost analysis and reduction strategies",
         "Sustainability and carbon footprint tracking",
         "Predictive maintenance and monitoring",
         "Energy forecasting and planning",
         "Integration with smart meters and IoT",
-        "Real-time monitoring and alerts",
         "Compliance and reporting automation"
-      ],
       color: "from-yellow-5 0 0 to-orange-6 0 0",
-      price: "$3 2 9/month",
-      setupFee: "$1,8 0 0",
-      originalPrice: "$4 4 9/month",
-      discount: "27% OFF",
       benefits: ["30% energy savings", "Cost reduction", "Sustainability", "Predictive maintenance"],
       useCases: ["Manufacturing", "Buildings", "Utilities", "Renewable energy"],
       href: "/ai-energy-intelligence",
-      rating: 4.5,
       reviews: 38,
       popularity: 74,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Energy", "Sustainability", "IoT"],
       demoUrl: "https://demo.ziontechgroup.com/energy-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/energy-intelligence",
       apiUrl: "https://api.ziontechgroup.com/energy-intelligence"
-    },
-    {
       id: 20,
       title: "AI Fraud Intelligence Platform",
       description: "Advanced fraud detection platform with real-time monitoring, pattern recognition, automated alerts, and machine learning-based risk scoring.",
       icon: ShieldCheckIcon,
-      category: 'security',
-      features: [
         "Real-time fraud monitoring and detection",
         "Advanced pattern recognition and ML models",
         "Automated alerts and response systems",
@@ -712,32 +541,21 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Compliance reporting and audit trails",
         "Integration with 5 0 0+ payment systems",
         "Custom rule engine and configuration"
-      ],
       color: "from-red-5 0 0 to-rose-6 0 0",
       price: "$4 9 9/month",
-      setupFee: "$2,5 0 0",
       originalPrice: "$6 9 9/month",
-      discount: "29% OFF",
       benefits: ["99.9% accuracy", "Real-time detection", "Cost savings", "Compliance"],
       useCases: ["Banking", "E-commerce", "Financial services", "Payment processing"],
       href: "/ai-fraud-intelligence",
-      rating: 4.8,
       reviews: 94,
-      popularity: 88,
-      isNew: false,
-      isFeatured: true,
       tags: ["AI", "Fraud Detection", "Security", "Risk Management"],
       demoUrl: "https://demo.ziontechgroup.com/fraud-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/fraud-intelligence",
       apiUrl: "https://api.ziontechgroup.com/fraud-intelligence"
-    },
-    {
       id: 21,
       title: "AI Learning Intelligence Platform",
       description: "Intelligent learning management system with personalized content, adaptive learning paths, progress tracking, and skill assessment capabilities.",
       icon: AcademicCapIcon,
-      category: 'productivity',
-      features: [
         "Personalized content and learning paths",
         "Adaptive learning and skill assessment",
         "Progress tracking and analytics",
@@ -746,32 +564,18 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Integration with 1 0 0+ learning platforms",
         "Mobile learning and offline capabilities",
         "Instructor tools and course management"
-      ],
       color: "from-indigo-5 0 0 to-purple-6 0 0",
-      price: "$1 9 9/month",
-      setupFee: "$1,0 0 0",
-      originalPrice: "$2 9 9/month",
-      discount: "33% OFF",
       benefits: ["Personalized learning", "Better outcomes", "Engagement boost", "Skill tracking"],
       useCases: ["Education", "Corporate training", "Online courses", "Professional development"],
       href: "/ai-learning-intelligence",
-      rating: 4.6,
-      reviews: 1 2 7,
-      popularity: 83,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Learning", "Education", "Training"],
       demoUrl: "https://demo.ziontechgroup.com/learning-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/learning-intelligence",
       apiUrl: "https://api.ziontechgroup.com/learning-intelligence"
-    },
-    {
       id: 22,
       title: "AI Quality Intelligence Platform",
       description: "Automated quality assurance platform with AI-powered testing, defect detection, performance monitoring, and continuous quality improvement.",
       icon: ClipboardDocumentCheckIcon,
-      category: 'productivity',
-      features: [
         "AI-powered automated testing",
         "Defect detection and analysis",
         "Performance monitoring and optimization",
@@ -780,32 +584,23 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Quality metrics and reporting",
         "Integration with 1 5 0+ development tools",
         "Continuous integration and deployment"
-      ],
       color: "from-teal-5 0 0 to-cyan-6 0 0",
       price: "$3 7 9/month",
       setupFee: "$1,9 0 0",
       originalPrice: "$5 4 9/month",
-      discount: "31% OFF",
       benefits: ["90% test coverage", "Faster delivery", "Quality improvement", "Automated testing"],
       useCases: ["Software development", "Manufacturing", "Quality control", "DevOps"],
       href: "/ai-quality-intelligence",
-      rating: 4.7,
       reviews: 69,
       popularity: 80,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Quality Assurance", "Testing", "DevOps"],
       demoUrl: "https://demo.ziontechgroup.com/quality-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/quality-intelligence",
       apiUrl: "https://api.ziontechgroup.com/quality-intelligence"
-    },
-    {
       id: 23,
       title: "AI Event Intelligence Suite",
       description: "Comprehensive event management platform with AI-powered planning, attendee insights, performance optimization, and networking facilitation.",
       icon: CalendarDaysIcon,
-      category: 'business',
-      features: [
         "AI event planning and optimization",
         "Attendee insights and behavior analysis",
         "Performance optimization and recommendations",
@@ -814,32 +609,18 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Real-time analytics and reporting",
         "Integration with 50+ event platforms",
         "Mobile app for attendees and organizers"
-      ],
-      color: "from-pink-5 0 0 to-rose-6 0 0",
-      price: "$2 4 9/month",
-      setupFee: "$1,2 0 0",
-      originalPrice: "$3 4 9/month",
-      discount: "29% OFF",
       benefits: ["Better engagement", "Optimized planning", "Success metrics", "Networking boost"],
       useCases: ["Conferences", "Webinars", "Corporate events", "Trade shows"],
       href: "/ai-event-intelligence",
-      rating: 4.5,
       reviews: 52,
       popularity: 77,
-      isNew: false,
-      isFeatured: false,
       tags: ["AI", "Event Management", "Analytics", "Networking"],
       demoUrl: "https://demo.ziontechgroup.com/event-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/event-intelligence",
       apiUrl: "https://api.ziontechgroup.com/event-intelligence"
-    },
-    {
       id: 24,
       title: "AI Cybersecurity Intelligence Suite",
       description: "Advanced cybersecurity platform with AI-powered threat detection, vulnerability assessment, incident response, and security monitoring.",
-      icon: ShieldCheckIcon,
-      category: 'security',
-      features: [
         "AI threat detection and analysis",
         "Vulnerability assessment and scanning",
         "Automated incident response",
@@ -848,32 +629,23 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Penetration testing and assessment",
         "Integration with 2 0 0+ security tools",
         "24/7 security operations center"
-      ],
       color: "from-red-5 0 0 to-orange-6 0 0",
       price: "$6 9 9/month",
       setupFee: "$3,5 0 0",
       originalPrice: "$9 9 9/month",
-      discount: "30% OFF",
       benefits: ["99.9% threat detection", "Automated response", "Compliance assurance", "24/7 monitoring"],
       useCases: ["Enterprise security", "Compliance", "Threat management", "Security operations"],
       href: "/ai-cybersecurity-intelligence",
-      rating: 4.9,
       reviews: 87,
       popularity: 93,
-      isNew: true,
-      isFeatured: true,
       tags: ["AI", "Cybersecurity", "Threat Detection", "Compliance"],
       demoUrl: "https://demo.ziontechgroup.com/cybersecurity-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/cybersecurity-intelligence",
       apiUrl: "https://api.ziontechgroup.com/cybersecurity-intelligence"
-    },
-    {
       id: 25,
       title: "AI IoT Intelligence Platform",
       description: "Comprehensive IoT management platform with device monitoring, data analytics, predictive maintenance, and automated optimization.",
       icon: WrenchScrewdriverIcon,
-      category: 'industry',
-      features: [
         "IoT device monitoring and management",
         "Real-time data analytics and insights",
         "Predictive maintenance and optimization",
@@ -882,26 +654,18 @@ const MicroSaaSSolutionsPage: React.FC = () => {
         "Edge computing and processing",
         "Security and compliance management",
         "Custom dashboard and reporting"
-      ],
       color: "from-purple-5 0 0 to-indigo-6 0 0",
       price: "$5 4 9/month",
       setupFee: "$2,8 0 0",
-      originalPrice: "$7 9 9/month",
-      discount: "31% OFF",
       benefits: ["Predictive maintenance", "Device optimization", "Cost reduction", "Real-time insights"],
       useCases: ["Smart cities", "Manufacturing", "Agriculture", "Healthcare IoT"],
       href: "/ai-iot-intelligence",
-      rating: 4.6,
       reviews: 41,
       popularity: 75,
-      isNew: true,
-      isFeatured: false,
       tags: ["AI", "IoT", "Edge Computing", "Predictive Maintenance"],
       demoUrl: "https://demo.ziontechgroup.com/iot-intelligence",
       documentationUrl: "https://docs.ziontechgroup.com/iot-intelligence",
       apiUrl: "https://api.ziontechgroup.com/iot-intelligence"
-    }
-  ];
 
   const filteredProducts = microSaaSProducts.filter(product => 
     selectedCategory === 'all' || product.category === selectedCategory
@@ -918,12 +682,10 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       case 'popularity':
       default:
         return b.popularity - a.popularity;
-    }
   });
 
 =======
 import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Target, Rocket } from 'lucide-react';
 
 const MicroSaasSolutionsPage: React.FC = () => {
@@ -941,84 +703,58 @@ const MicroSaasSolutionsPage: React.FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Micro SaaS Solutions - Zion Tech Group" />
         <meta name="twitter:description" content="25+ AI-powered micro SaaS solutions to transform your business." />
-      </Helmet>
       
-      <div className="min-h-screen bg-slate-9 0 0 text-white">
+      <div className="min-h-screen bg-slate-9-0-0 text-white">
         {/* Hero Section */}
         <section className="relativeoverflow-hidden py-20">
           {/* Animated Background */}
           <div className="absoluteinset-0 opacity-20">
-            </div>
           
-<<<<<<< HEAD
           {/* Floating Elements */}
-          <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-5 0 0 to-pink-5 0 0 rounded-full opacity-20 animate-pulse floating"></div>
-          <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-5 0 0 to-blue-5 0 0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-          <div className="absolutetop-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-5 0 0 to-rose-5 0 0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
+          <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-5-0-0 to-pink-5-0-0 rounded-full opacity-20 animate-pulse floating"></div>
+          <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-5-0-0 to-blue-5-0-0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+          <div className="absolutetop-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-5-0-0 to-rose-5-0-0 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
           
           <div className="relativez-10 container mx-auto px-4 text-center">
             <div className="max-w-4xlmx-auto">
               <h1 className="text-6xlmd:text-7xl font-bold mb-6 gradient-text neon-text">
                 Micro SaaS Solutions
-              </h1>
-              <p className="text-xlmd:text-2xl text-gray-3 0 0 mb-8 leading-relaxed">
+              <p className="text-xlmd:text-2xl text-gray-3-0-0 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
-=======
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white/1 0 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Rocket className="w-1 2 h-12 text-blue-4 0 0 mb-4" />
+              <Rocket className="w-1 2 h-12 text-blue-4-0-0 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
-              <p className="text-gray-3 0 0">
+              <p className="text-gray-3-0-0">
                 Fast-track your SaaS product development with our expert team.
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d 0 5
-              </p>
-              <p className="text-lgtext-gray-4 0 0 mb-12 max-w-3xl mx-auto">
+              <p className="text-lgtext-gray-4-0-0 mb-12 max-w-3xl mx-auto">
                 Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
                 optimize, and accelerate your business growth with cutting-edge AI technology.
-              </p>
               
               <div className="flexflex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link 
                   to="/contact" 
-                  className="groupbg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glow-effect"
-                >
+                  className="groupbg-gradient-to-r from-purple-6-0-0 to-cyan-6-0-0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-7-0-0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glow-effect">
                   Get Started Today
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link 
                   to="/demo" 
-                  className="groupborder-2 border-purple-4 0 0 text-purple-3 0 0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-4 0 0 hover:text-white transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glass"
-                >
+                  className="groupborder-2 border-purple-4-0-0 text-purple-3-0-0 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-4-0-0 hover:text-white transition-all duration-3 0 0 hover-lift hover-glow flex items-center gap-2 glass"
                   Schedule Demo
-                  <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
 
               {/* Stats */}
               <div className="gridgrid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-purple-4 0 0 mb-2">25+</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-purple-4-0-0 mb-2">25+</div>
                   <div className="text-gray-30 0 text-sm md:text-base">AI Solutions</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-cyan-4 0 0 mb-2">5 0 0+</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-cyan-4-0-0 mb-2">5 0 0+</div>
                   <div className="text-gray-30 0 text-sm md:text-base">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-green-4 0 0 mb-2">99.9%</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-green-4-0-0 mb-2">99.9%</div>
                   <div className="text-gray-30 0 text-sm md:text-base">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xlmd:text-4xl font-bold text-pink-4 0 0 mb-2">24/7</div>
+                  <div className="text-3xlmd:text-4xl font-bold text-pink-4-0-0 mb-2">24/7</div>
                   <div className="text-gray-30 0 text-sm md:text-base">Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Filters and Sorting */}
-        <section className="py-8bg-slate-8 0 0/50 border-b border-slate-7 0 0">
+        <section className="py-8bg-slate-8-0-0/50 border-b border-slate-7-0-0">
           <div className="container mx-auto px-4">
             <div className="flexflex-col lg:flex-row gap-6 items-center justify-between">
               {/* Category Filters */}
@@ -1032,11 +768,8 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         ? 'bg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white'
                         : 'bg-slate-7 0 0 text-gray-3 0 0 hover:bg-slate-6 0 0 hover:text-white'
                     }`}
-                  >
                     {category.name} ({category.count})
-                  </button>
                 ))}
-              </div>
 
               {/* Sorting */}
               <div className="flexitems-center gap-4">
@@ -1044,110 +777,73 @@ const MicroSaasSolutionsPage: React.FC = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-slate-70 0 text-white px-4 py-2 rounded-lg border border-slate-6 0 0 focus:outline-none focus:ring-2 focus:ring-purple-5 0 0"
-                >
+                  className="bg-slate-70 0 text-white px-4 py-2 rounded-lg border border-slate-6-0-0 focus:outline-none focus:ring-2 focus:ring-purple-5-0-0"
                   <option value="popularity">Popularity</option>
                   <option value="rating">Rating</option>
                   <option value="price-low">Price: Low to High</option>
                   <option value="price-high">Price: High to Low</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Products Grid */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
             <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sortedProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="groupbg-gradient-to-br from-slate-8 0 0 to-slate-7 0 0 p-8 rounded-xl border border-slate-6 0 0 hover:border-purple-5 0 0 transition-all duration-3 0 0 hover-lift hover-glow glass-dark relative overflow-hidden"
-                >
+                  className="groupbg-gradient-to-br from-slate-8-0-0 to-slate-7-0-0 p-8 rounded-xl border border-slate-6-0-0 hover:border-purple-5 0 0 transition-all duration-3 0 0 hover-lift hover-glow glass-dark relative overflow-hidden"
                   {/* Badges */}
                   <div className="absolutetop-4 right-4 flex flex-col gap-2">
                     {product.isNew && (
-                      <span className="bg-gradient-to-rfrom-green-5 0 0 to-emerald-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-green-5-0-0 to-emerald-5-0-0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         NEW
-                      </span>
                     )}
                     {product.isFeatured && (
-                      <span className="bg-gradient-to-rfrom-purple-5 0 0 to-pink-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-purple-5-0-0 to-pink-5-0-0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         FEATURED
-                      </span>
-                    )}
                     {product.discount && (
-                      <span className="bg-gradient-to-rfrom-red-5 0 0 to-orange-5 0 0 text-white text-xs font-bold px-2 py-1 rounded-full">
+                      <span className="bg-gradient-to-rfrom-red-5-0-0 to-orange-5-0-0 text-white text-xs font-bold px-2 py-1 rounded-full">
                         {product.discount}
-                      </span>
-                    )}
-                  </div>
 
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-1 1 0 transition-transform floating`}>
                     <product.icon className="w-8h-8 text-white" />
-                  </div>
 
                   {/* Title and Description */}
-                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-4 0 0 transition-colors">
+                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-4-0-0 transition-colors">
                     {product.title}
-                  </h3>
                   <p className="text-gray-30 0 mb-6 leading-relaxed">
                     {product.description}
-                  </p>
 
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-whitefont-semibold mb-3 flex items-center gap-2">
-                      <SparklesIcon className="w-4h-4 text-purple-4 0 0" />
+                      <SparklesIcon className="w-4h-4 text-purple-4-0-0" />
                       Key Features
-                    </h4>
                     <ul className="space-y-2">
                       {product.features.slice(0, 4).map((feature, index) => (
                         <li key={index} className="text-gray-30 0 text-sm flex items-center gap-2">
-                          <CheckCircleIcon className="w-4h-4 text-green-4 0 0 flex-shrink-0" />
+                          <CheckCircleIcon className="w-4h-4 text-green-4-0-0 flex-shrink-0" />
                           {feature}
-                        </li>
-                      ))}
                       {product.features.length > 4 && (
                         <li className="text-purple-40 0 text-sm font-medium">
                           +{product.features.length - 4} more features
-                        </li>
-                      )}
-                    </ul>
-                  </div>
 
                   {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-whitefont-semibold mb-3 flex items-center gap-2">
-                      <BoltIcon className="w-4h-4 text-yellow-4 0 0" />
+                      <BoltIcon className="w-4h-4 text-yellow-4-0-0" />
                       Benefits
-                    </h4>
-                    <div className="flexflex-wrap gap-2">
                       {product.benefits.map((benefit, index) => (
                         <span
                           key={index}
-                          className="bg-gradient-to-rfrom-purple-5 0 0/20 to-cyan-5 0 0/20 text-purple-3 0 0 text-xs px-3 py-1 rounded-full border border-purple-5 0 0/30"
-                        >
+                          className="bg-gradient-to-rfrom-purple-5-0-0/20 to-cyan-5-0-0/20 text-purple-3-0-0 text-xs px-3 py-1 rounded-full border border-purple-5 0 0/30"
                           {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
 
                   {/* Pricing */}
-                  <div className="mb-6p-4 bg-slate-9 0 0/50 rounded-lg border border-slate-6 0 0">
+                  <div className="mb-6p-4 bg-slate-9-0-0/50 rounded-lg border border-slate-6-0-0">
                     <div className="flexitems-center justify-between mb-2">
                       <span className="text-2xlfont-bold text-white">{product.price}</span>
                       {product.originalPrice && (
                         <span className="text-gray-40 0 line-through text-sm">{product.originalPrice}</span>
-                      )}
-                    </div>
                     <div className="text-gray-30 0 text-sm">
                       Setup fee: {product.setupFee}
-                    </div>
-                  </div>
 
                   {/* Rating and Reviews */}
                   <div className="flexitems-center justify-between mb-6">
@@ -1160,110 +856,55 @@ const MicroSaasSolutionsPage: React.FC = () => {
                               i < Math.floor(product.rating)
                                 ? 'text-yellow-4 0 0 fill-current'
                                 : 'text-gray-4 0 0'
-                            }`}
                           />
-                        ))}
-                      </div>
                       <span className="text-gray-30 0 text-sm">
                         {product.rating} ({product.reviews} reviews)
-                      </span>
-                    </div>
                     <div className="text-gray-40 0 text-sm">
                       {product.popularity}% popular
-                    </div>
-                  </div>
 
                   {/* Action Buttons */}
                   <div className="flexflex-col gap-3">
-                    <Link
                       to={product.href}
-                      className="w-fullbg-gradient-to-r from-purple-6 0 0 to-cyan-6 0 0 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 flex items-center justify-center gap-2 group-hover:scale-1 0 5"
-                    >
+                      className="w-fullbg-gradient-to-r from-purple-6-0-0 to-cyan-6-0-0 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-7-0-0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 flex items-center justify-center gap-2 group-hover:scale-1 0 5"
                       Learn More
                       <ArrowRightIcon className="w-4h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
                     
                     <div className="flexgap-2">
                       <a
                         href={product.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1bg-slate-7 0 0 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-6 0 0 transition-colors flex items-center justify-center gap-2"
-                      >
+                        className="flex-1bg-slate-7-0-0 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-6-0-0 transition-colors flex items-center justify-center gap-2"
                         <EyeIcon className="w-4h-4" />
                         Demo
-                      </a>
-                      <a
                         href={product.documentationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1bg-slate-7 0 0 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-6 0 0 transition-colors flex items-center justify-center gap-2"
-                      >
                         <DocumentTextIcon className="w-4h-4" />
                         Docs
-                      </a>
-                    </div>
-                  </div>
 
                   {/* Tags */}
                   <div className="mt-4flex flex-wrap gap-2">
                     {product.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-gray-40 0 text-xs px-2 py-1 bg-slate-8 0 0 rounded border border-slate-6 0 0"
-                      >
+                        className="text-gray-40 0 text-xs px-2 py-1 bg-slate-8-0-0 rounded border border-slate-6-0-0"
                         {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-2 0 bg-gradient-to-r from-purple-9 0 0/30 to-cyan-9 0 0/30">
+        <section className="py-2 0 bg-gradient-to-r from-purple-9-0-0/30 to-cyan-9-0-0/30">
           <div className="container mx-auto px-4 text-center">
-            <div className="max-w-4xlmx-auto">
               <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-3 0 0 mb-8">
+              <p className="text-xl text-gray-3-0-0 mb-8">
                 Choose from our comprehensive suite of AI-powered micro SaaS solutions 
                 and start your digital transformation journey today.
-              </p>
               <div className="flexflex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-rfrom-purple-6 0 0 to-cyan-6 0 0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-7 0 0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 transform hover:scale-1 0 5 flex items-center justify-center gap-2"
-                >
-                  Get Started Today
+                  className="bg-gradient-to-rfrom-purple-6-0-0 to-cyan-6-0-0 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-7-0-0 hover:to-cyan-7 0 0 transition-all duration-3 0 0 transform hover:scale-1 0 5 flex items-center justify-center gap-2"
                   <ArrowRightIcon className="w-5h-5" />
-                </Link>
-                <Link
                   to="/pricing"
-                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-9 0 0 transition-all duration-3 0 0 flex items-center justify-center gap-2"
-                >
+                  className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-9-0-0 transition-all duration-3-0-0 flex items-center justify-center gap-2"
                   View Pricing
                   <CurrencyDollarIcon className="w-5h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     
-  );
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></></div></p></p></p></p></p></p></h1></h2></h3></h4></section></section></section></section></span></span></span></span></span></Link></Helmet>);
 };
 
-<<<<<<< HEAD
 export default MicroSaaSSolutionsPage;
-=======
 export default MicroSaasSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d 0 5
-
-        </div>
-        </div>
-              </p>
-              </p>

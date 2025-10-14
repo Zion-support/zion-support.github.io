@@ -19,7 +19,6 @@ export const advancedCaching = {
       return null}
     
     return parsed.value;
-  },
   
   clearCache: (pattern?: string) => {
     if (pattern) {
@@ -31,5 +30,4 @@ export const advancedCaching = {
     } else {
       localStorage.clear();
     }
-  }
 };

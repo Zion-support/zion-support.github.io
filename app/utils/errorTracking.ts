@@ -17,7 +17,6 @@ export const errorTracking = {
       // eslint-disable-next-line no-console
       console.error('Error tracked: ', errorInfo);
       console.error('Error tracked: ', errorInfo)
-    }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
@@ -34,7 +33,3 @@ export const errorTracking = {
         description: error.message,
         fatal: false;
       })
-    }
-  }
-}
-}

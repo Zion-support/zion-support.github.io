@@ -17,7 +17,6 @@ export const errorLogger = {
       // eslint-disable-next-line no-console
       console.error('Error logged: ', errorInfo);
       console.error('Error logged: ', errorInfo)
-    }
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
@@ -34,7 +33,3 @@ export const errorLogger = {
         description: error.message,
         fatal: false;
       })
-    }
-  }
-}
-}

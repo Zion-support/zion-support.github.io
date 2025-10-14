@@ -6,10 +6,8 @@ export interface AnalyticsContextType {
 
 export interface AnalyticsProviderProps {
   children: React.ReactNode;
-}
 
 export interface AnalyticsEvent {
   name: string;
   properties?: Record<string, unknown>;
   timestamp: number;
-}

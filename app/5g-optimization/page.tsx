@@ -13,98 +13,51 @@ const FiveGOptimizationPage: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-emerald-9 0 0 to-teal-9 0 0 text-white py-20">
+      <section className="bg-gradient-to-r from-emerald-9-0-0 to-teal-9-0-0 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               5G Optimization Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-emerald-1 0 0">
+            <p className="text-xl md:text-2xl mb-8 text-emerald-1-0-0">
               Maximize your 5G network performance with our expert optimization services
-            </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-            >
+              className="inline-flex items-center bg-emerald-6-0-0 hover:bg-emerald-7-0-0 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
               Optimize Now
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-9 0 0 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-9-0-0 mb-6">
               Our Optimization Services
-            </h2>
-            <p className="text-xl text-gray-6 0 0 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-6-0-0 max-w-3xl mx-auto">
               Comprehensive 5G network optimization to ensure peak performance and efficiency
-            </p>
-          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-1 0 0 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-6 0 0" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-9 0 0 mb-4">
+              <div className="w-12 h-12 bg-emerald-1-0-0 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircle className="w-6 h-6 text-emerald-6-0-0" />
+              <h3 className="text-xl font-semibold text-gray-9-0-0 mb-4">
                 Performance Tuning
-              </h3>
-              <p className="text-gray-6 0 0">
+              <p className="text-gray-6-0-0">
                 Fine-tune your 5G network parameters for optimal speed and reliability.
-              </p>
-            </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-1 0 0 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-6 0 0" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-9 0 0 mb-4">
                 Capacity Planning
-              </h3>
-              <p className="text-gray-6 0 0">
                 Strategic planning to ensure your network can handle current and future demands.
-              </p>
-            </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-1 0 0 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-6 0 0" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-9 0 0 mb-4">
                 Cost Optimization
-              </h3>
-              <p className="text-gray-6 0 0">
                 Reduce operational costs while maintaining high performance standards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-9 0 0 text-white py-20">
+      <section className="bg-gray-9-0-0 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Optimize Your 5G Network?
-          </h2>
-          <p className="text-xl mb-8 text-gray-3 0 0">
+          <p className="text-xl mb-8 text-gray-3-0-0">
             Contact our experts today for a comprehensive network assessment
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center bg-emerald-6 0 0 hover:bg-emerald-7 0 0 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-          >
             Get Started
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-    </div>
-  );
+  </div></div></div></div></div></div></div></div></p></p></p></p></h1></h2></h2></h3></section></section></section></Link>);
 };
 
 export default FiveGOptimizationPage;

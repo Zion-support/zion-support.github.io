@@ -20,9 +20,7 @@ export const usePerformanceMonitor = () => {
       return () => {
         observer.disconnect();
       };
-    }
     return undefined;
   }, []);
 
   return { metrics };
-};

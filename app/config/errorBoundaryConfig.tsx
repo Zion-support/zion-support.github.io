@@ -10,5 +10,4 @@ export const errorBoundaryConfig = {
       console.error('Error caught by boundary: ', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
-  }
 };

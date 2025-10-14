@@ -24,24 +24,14 @@ export const accessibilityUtils = {
         } else {
           if (document.activeElement === lastElement) {
             firstElement.focus()
-            e.preventDefault()
-          }
-        }
-      }
-    }
     
     element.addEventListener('keydown', handleTabKey)
     
     return () => {
       element.removeEventListener('keydown', handleTabKey)
-    }
-  },
 
   addAriaLabels: (element: HTMLElement, label: string) => {
     element.setAttribute('aria-label', label)
-  },
 
   addRole: (element: HTMLElement, role: string) => {
     element.setAttribute('role', role)
-  }
-}

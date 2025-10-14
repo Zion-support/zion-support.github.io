@@ -38,16 +38,10 @@ export const errorHandler = {
         return { message: 'Server error', code: 'SERVER_ERROR' ;};
       default:
         return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
-    }
   log: () => {
     // Error logging logic
-  },
   report: () => {
   log: (_error: Error, _context?: Record<string, unknown>) => {
-    // Error logging logic
-  },
   report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-  }
-};
 }}

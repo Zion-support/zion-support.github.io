@@ -14,4 +14,3 @@ export const analyticsConfig = {
     action: 'action';
 >>>>>>> cursor/fix-errors-and-merge-to-main-c17d
   }
-}

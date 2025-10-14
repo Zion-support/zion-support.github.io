@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
@@ -33,11 +32,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Overlay */}
       {isOpen && (
         <div 
-<<<<<<< HEAD
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-=======
           className="fixedinset-0 bg-black bg-opacity-50 z-40 lg: hidden"
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
           onClick={onClose}
         />
       )}
@@ -51,66 +47,36 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="flexitems-center justify-between p-4 border-b border-slate-700">
           <h2 className="text-xlfont-bold text-white">Zion Tech Group</h2>
           <button
-            onClick={onClose}
-<<<<<<< HEAD
             className="text-gray-400 hover:text-white lg:hidden"
-=======
-            className="text-gray-400hover:text-white lg:hidden"
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
-          >
+            className="text-gray-400hover:text-white lg:hidden">
             <X className="w-6h-6" />
-          </button>
-          </div>
-        </div>
         
         <nav className="mt-6">
           <ul className="space-y-2px-4">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              return (
                 <li key={item.name}>
                   <Link
                     to={item.href}
-                    onClick={onClose}
-<<<<<<< HEAD
                     className="flex items-center px-4 py-3 text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors"
-=======
                     className="flexitems-center px-4 py-3 text-gray-300 hover:bg-slate-700 hover:text-white rounded-lg transition-colors"
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
-                  >
                     <Icon className="w-5h-5 mr-3" />
                     {item.name}
-                  </Link>
-                </li>
-              );
+              </>);
             })}
-          </ul>
-        </nav>
         
         <div className="absolutebottom-4 left-4 right-4">
           <div className="bg-slate-700rounded-lg p-4">
             <div className="flexitems-center text-sm text-gray-300 mb-2">
               <MapPin className="w-4h-4 mr-2" />
               <span>Contact Info</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300 mb-1">
               <Phone className="w-4h-4 mr-2" />
               <span>+1 (555) 123-4567</span>
-              </div>
-        </div>
             <div className="flexitems-center text-sm text-gray-300">
               <Mail className="w-4h-4 mr-2" />
               <span>info@ziontechgroup.com</span>
-              </div>
-        </div>
-            </div>
-        </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    </div></div></div></div></div></div></div></div></Link></>
 };
 
 export default Sidebar;

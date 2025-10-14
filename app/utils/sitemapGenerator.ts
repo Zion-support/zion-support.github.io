@@ -18,5 +18,4 @@ Allow: /
 
 Sitemap: ${sitemapUrl}`
   }
-}
               </p>

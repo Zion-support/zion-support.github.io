@@ -17,23 +17,14 @@ export const enhancedLogger = {
     
     if (process.env.NODE_ENV === 'production') {
       // Implementation would depend on the logging service
-      }
       console.log('Log entry: ', {
-        level,
-        message,
-        data,
-        timestamp: new Date().toISOString()
       })
-    }
   },
   
   info: (message: string, data?: unknown) => enhancedLogger.log('info', message, data),
   warn: (message: string, data?: unknown) => enhancedLogger.log('warn', message, data),
   error: (message: string, data?: unknown) => enhancedLogger.log('_error', message, data)
-};
   error: (message: string, data?: unknown) => enhancedLogger.log('error', message, data)
-};
   info: (message: string, data?: any) => enhancedLogger.log('info', message, data),
   warn: (message: string, data?: any) => enhancedLogger.log('warn', message, data),
   error: (message: string, data?: any) => enhancedLogger.log('error', message, data)
-}

@@ -14,11 +14,9 @@ export const accessibilityUtils = {
     setTimeout(() => {
       document.body.removeChild(announcement)
     }, 1000)
-  },
 
   getFocusableElements: (container: HTMLElement) => {
     return container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
   }
-}

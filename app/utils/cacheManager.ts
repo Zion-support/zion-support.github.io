@@ -19,7 +19,6 @@ export const cacheManager = {
       return null}
     
     return item.data;
-  },
   
   clear: () => {
     cacheManager.cache.clear()},
