@@ -30,8 +30,8 @@ const [isRecording, setIsRecording] = useState(false)
       return}
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {';
-const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";";
-const paint = window.performance.getEntriesByType('paint')";
+const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";";""
+const paint = window.performance.getEntriesByType('paint')";""
         const observer = new PerformanceObserver((list) => {;
 const entries = list.getEntries()
           entries.forEach((entry) => {
@@ -46,16 +46,16 @@ const entries = list.getEntries()
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
               }))
           }
-        }"
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";
-        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;";
-const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";
+        }"""
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] })";""
+        const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;";""
+const firstContentfulPaint = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0";""
         // Memory usage (if available);
 const memoryUsage = (window as any).performance?.memory?.usedJSHeapSize || 0;
         // Network latency;
 const networkLatency = navigation ? navigation.responseEnd - navigation.requestStart : 0;
-        // Calculate Total Blocking Time";
-const longTasks = window.performance.getEntriesByType('longtask')";
+        // Calculate Total Blocking Time";""
+const longTasks = window.performance.getEntriesByType('longtask')";""
         const totalBlockingTime = longTasks.reduce((total, task) => {
           return total + (task.duration - 50); // 50ms is the threshold
         }, 0)
@@ -95,5 +95,5 @@ const handleKeyPress = (event: KeyboardEvent) => {
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
-"
+"""
 }}}}}
