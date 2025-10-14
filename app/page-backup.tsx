@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface page-backupProps {
+interface PageBackupProps {
   className?: string;
 }
 
-export default function page-backup({ className = '' }: page-backupProps) {
+export default function PageBackup({ className = '' }: PageBackupProps) {
   return (
     <div className={`${className}`}>
       <h2>page-backup</h2>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface page-optimizedProps {
+interface PageOptimizedProps {
   className?: string;
 }
 
-export default function page-optimized({ className = '' }: page-optimizedProps) {
+export default function PageOptimized({ className = '' }: PageOptimizedProps) {
   return (
     <div className={`${className}`}>
       <h2>page-optimized</h2>

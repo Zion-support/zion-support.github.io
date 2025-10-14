@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const 404: React.FC = () => {
+const NotFound404: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
@@ -18,4 +18,4 @@ const 404: React.FC = () => {
   );
 };
 
-export default 404;
+export default NotFound404;

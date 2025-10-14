@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface global-errorProps {
+interface GlobalErrorProps {
   className?: string;
 }
 
-export default function global-error({ className = '' }: global-errorProps) {
+export default function GlobalError({ className = '' }: GlobalErrorProps) {
   return (
     <div className={`${className}`}>
       <h2>global-error</h2>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface service-templateProps {
+interface ServiceTemplateProps {
   className?: string;
 }
 
-export default function service-template({ className = '' }: service-templateProps) {
+export default function ServiceTemplate({ className = '' }: ServiceTemplateProps) {
   return (
     <div className={`${className}`}>
       <h2>service-template</h2>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface sitemap-pageProps {
+interface SitemapPageProps {
   className?: string;
 }
 
-export default function sitemap-page({ className = '' }: sitemap-pageProps) {
+export default function SitemapPage({ className = '' }: SitemapPageProps) {
   return (
     <div className={`${className}`}>
       <h2>sitemap-page</h2>

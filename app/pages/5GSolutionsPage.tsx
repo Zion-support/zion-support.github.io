@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface 5GSolutionsPageProps {
+interface FiveGSolutionsPageProps {
   className?: string;
 }
 
-export default function 5GSolutionsPage({ className = '' }: 5GSolutionsPageProps) {
+export default function FiveGSolutionsPage({ className = '' }: FiveGSolutionsPageProps) {
   return (
     <div className={`${className}`}>
       <h2>5GSolutionsPage</h2>

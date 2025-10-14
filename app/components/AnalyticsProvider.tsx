@@ -62,13 +62,4 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   );
 };
 
-const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
 export default AnalyticsProvider;
-export { useAnalytics };

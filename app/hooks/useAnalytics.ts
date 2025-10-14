@@ -1,14 +1,10 @@
-import React from 'react';
+import { useContext } from 'react';
+import { AnalyticsContext } from '../components/AnalyticsProvider';
 
-interface useAnalytics.tsProps {
-  className?: string;
-}
-
-export default function useAnalytics.ts({ className = '' }: useAnalytics.tsProps) {
-  return (
-    <div className={`${className}`}>
-      <h2>useAnalytics.ts</h2>
-      <p>Component content goes here.</p>
-    </div>
-  );
-}
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};

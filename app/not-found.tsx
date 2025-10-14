@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface not-foundProps {
+interface NotFoundProps {
   className?: string;
 }
 
-export default function not-found({ className = '' }: not-foundProps) {
+export default function NotFound({ className = '' }: NotFoundProps) {
   return (
     <div className={`${className}`}>
       <h2>not-found</h2>

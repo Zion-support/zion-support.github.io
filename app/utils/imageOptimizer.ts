@@ -1,14 +1,18 @@
-import React from 'react';
+export const optimizeImage = (src: string, width?: number, height?: number): string => {
+  // Simple image optimization logic
+  const params = new URLSearchParams();
+  if (width) params.append('w', width.toString());
+  if (height) params.append('h', height.toString());
+  
+  return `${src}?${params.toString()}`;
+};
 
-interface imageOptimizer.tsProps {
-  className?: string;
-}
-
-export default function imageOptimizer.ts({ className = '' }: imageOptimizer.tsProps) {
-  return (
-    <div className={`${className}`}>
-      <h2>imageOptimizer.ts</h2>
-      <p>Component content goes here.</p>
-    </div>
-  );
-}
+export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    };
+    img.src = src;
+  });
+};

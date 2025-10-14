@@ -1,14 +1,12 @@
-import React from 'react';
+import { performanceMonitoring } from '../performanceMonitoring';
 
-interface performanceMonitoring.test.tsProps {
-  className?: string;
-}
+describe('performanceMonitoring', () => {
+  it('should initialize correctly', () => {
+    expect(performanceMonitoring).toBeDefined();
+  });
 
-export default function performanceMonitoring.test.ts({ className = '' }: performanceMonitoring.test.tsProps) {
-  return (
-    <div className={`${className}`}>
-      <h2>performanceMonitoring.test.ts</h2>
-      <p>Component content goes here.</p>
-    </div>
-  );
-}
+  it('should track performance metrics', () => {
+    const metrics = performanceMonitoring.getMetrics();
+    expect(metrics).toBeDefined();
+  });
+});

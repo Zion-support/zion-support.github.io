@@ -1,14 +1,29 @@
-import React from 'react';
-
-interface next.d.tsProps {
-  className?: string;
+declare module '*.svg' {
+  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+  export default content;
 }
 
-export default function next.d.ts({ className = '' }: next.d.tsProps) {
-  return (
-    <div className={`${className}`}>
-      <h2>next.d.ts</h2>
-      <p>Component content goes here.</p>
-    </div>
-  );
+declare module '*.png' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.jpg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.jpeg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.gif' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.webp' {
+  const content: string;
+  export default content;
 }
