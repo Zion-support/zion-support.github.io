@@ -12,6 +12,7 @@ export default tseslint.config(
       "scripts/**",
       "src/**",
       "temp-broken/**",
+      "coverage/**",
       "*.js",
       "*.cjs",
     ],
