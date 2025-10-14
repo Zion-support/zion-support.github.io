@@ -7,219 +7,196 @@ import {
   CloudIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  RocketLaunchIcon,
   ArrowRightIcon,
   CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon
+  CogIcon,
+  ServerIcon,
+  WrenchScrewdriverIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline';
 
 export default function ITSolutionsPage() {
   const itServices = [
     {
       title: "Infrastructure Management",
-      description: "Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance and reliability.",
-      icon: CpuChipIcon,
+      description: "Complete IT infrastructure management including servers, networks, and data centers with 24/7 monitoring and support.",
+      icon: ServerIcon,
       features: [
-        "Server configuration and management",
-        "Network setup and optimization",
-        "Hardware maintenance and upgrades",
-        "Performance monitoring and tuning",
-        "Disaster recovery planning",
-        "24/7 technical support"
+        "Server management and maintenance",
+        "Network monitoring and optimization",
+        "Data center operations",
+        "Backup and disaster recovery",
+        "Performance monitoring",
+        "Security updates and patches"
       ],
-      color: "from-blue-500 to-indigo-500",
+      color: "from-blue-500 to-cyan-500",
       price: "Starting at $2,500/month",
-      benefits: ["99.9% uptime", "Scalable infrastructure", "Expert support"],
+      benefits: ["99.9% uptime", "24/7 monitoring", "Proactive maintenance"],
       useCases: ["Enterprise infrastructure", "Cloud migration", "System optimization"],
       href: "/it-infrastructure"
     },
     {
       title: "Cybersecurity Solutions",
-      description: "Advanced security solutions to protect your digital assets and ensure compliance with industry standards.",
+      description: "Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.",
       icon: ShieldCheckIcon,
       features: [
-        "Security audits and assessments",
-        "Threat detection and prevention",
-        "Incident response planning",
-        "Compliance management",
-        "Security training",
-        "Penetration testing"
+        "Security assessment and auditing",
+        "Threat detection and response",
+        "Firewall and network security",
+        "Data encryption and protection",
+        "Security training and awareness",
+        "Compliance management"
       ],
       color: "from-red-500 to-pink-500",
-      price: "Starting at $3,200/month",
-      benefits: ["Advanced protection", "Compliance ready", "24/7 monitoring"],
-      useCases: ["Security audits", "Threat protection", "Compliance"],
-      href: "/it-cybersecurity"
+      price: "Starting at $3,000/month",
+      benefits: ["Advanced threat protection", "Compliance ready", "Expert security team"],
+      useCases: ["Data protection", "Compliance", "Threat prevention"],
+      href: "/cybersecurity"
     },
     {
       title: "Cloud Solutions",
-      description: "Migrate to the cloud with our expert cloud architecture and management services for optimal performance.",
+      description: "Scalable cloud infrastructure and services to optimize performance, reduce costs, and enhance flexibility.",
       icon: CloudIcon,
       features: [
-        "Cloud migration planning",
-        "Multi-cloud strategy",
+        "Cloud migration and deployment",
+        "Multi-cloud management",
         "Cost optimization",
-        "Security implementation",
-        "Performance monitoring",
-        "Disaster recovery"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Scalable solutions", "Cost effective", "High availability"],
-      useCases: ["Cloud migration", "Multi-cloud setup", "Cost optimization"],
-      href: "/it-cloud-solutions"
-    },
-    {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
-      icon: ChartBarIcon,
-      features: [
-        "Data warehouse design",
-        "ETL process development",
-        "Business intelligence dashboards",
-        "Predictive analytics",
-        "Data visualization",
-        "Real-time reporting"
+        "Auto-scaling and load balancing",
+        "Cloud security and compliance",
+        "Backup and disaster recovery"
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $2,200/month",
-      benefits: ["Data-driven insights", "Real-time analytics", "Custom dashboards"],
-      useCases: ["Business intelligence", "Data visualization", "Predictive analytics"],
-      href: "/it-data-analytics"
+      benefits: ["Cost effective", "Scalable", "Secure"],
+      useCases: ["Cloud migration", "Scalability", "Cost optimization"],
+      href: "/cloud-solutions"
     },
     {
       title: "System Integration",
-      description: "Seamlessly integrate different systems and applications for improved efficiency and data flow.",
+      description: "Seamless integration of disparate systems and applications to create a unified, efficient IT environment.",
       icon: CogIcon,
       features: [
         "API development and integration",
-        "Data migration services",
-        "System customization",
+        "Legacy system modernization",
+        "Data synchronization",
         "Workflow automation",
         "Third-party integrations",
-        "Legacy system modernization"
+        "Custom middleware development"
       ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $2,600/month",
-      benefits: ["Seamless integration", "Improved efficiency", "Custom solutions"],
-      useCases: ["System integration", "API development", "Workflow automation"],
-      href: "/it-system-integration"
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $2,800/month",
+      benefits: ["Unified systems", "Improved efficiency", "Custom solutions"],
+      useCases: ["System modernization", "Workflow automation", "Data integration"],
+      href: "/system-integration"
     },
     {
-      title: "Compliance & Governance",
-      description: "Ensure your IT systems meet regulatory requirements and industry standards with our compliance solutions.",
-      icon: ShieldCheckIcon,
+      title: "IT Support & Helpdesk",
+      description: "Professional IT support services to ensure your systems run smoothly and your team stays productive.",
+      icon: ComputerDesktopIcon,
       features: [
-        "Compliance assessment",
-        "Policy development",
-        "Audit preparation",
-        "Risk management",
-        "Documentation",
-        "Training programs"
+        "24/7 technical support",
+        "Remote troubleshooting",
+        "Hardware and software support",
+        "User training and onboarding",
+        "Incident management",
+        "Knowledge base management"
       ],
-      color: "from-emerald-500 to-teal-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
-      useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
-      href: "/it-compliance"
+      color: "from-orange-500 to-yellow-500",
+      price: "Starting at $1,500/month",
+      benefits: ["24/7 support", "Fast response", "Expert technicians"],
+      useCases: ["Technical support", "User assistance", "System maintenance"],
+      href: "/it-support"
+    },
+    {
+      title: "DevOps & Automation",
+      description: "Streamline development and operations with automated CI/CD pipelines, monitoring, and deployment solutions.",
+      icon: WrenchScrewdriverIcon,
+      features: [
+        "CI/CD pipeline setup",
+        "Infrastructure as Code",
+        "Automated testing and deployment",
+        "Monitoring and alerting",
+        "Container orchestration",
+        "Performance optimization"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $3,200/month",
+      benefits: ["Faster deployments", "Reduced errors", "Improved efficiency"],
+      useCases: ["Development automation", "Deployment optimization", "Monitoring"],
+      href: "/devops"
     }
   ];
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cybersecurity, cloud solutions, and system integration services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cybersecurity, cloud solutions, system integration, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Comprehensive IT services to power your digital transformation
-            </p>
-          </div>
-          
-          <div className="grid md: grid-cols-2 gap-8">;
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Server className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
-              <p className="text-gray-300">
-                Robust IT infrastructure solutions for scalable growth.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Cloud className="w-12 h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300">
-                Secure and scalable cloud computing solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default ItSolutionsPage;
-=======
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-cyan-900/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text">
             IT Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we've got you covered.
+            Comprehensive IT services to keep your business running smoothly, securely, and efficiently.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
+            >
+              Get Started
+              <ArrowRightIcon className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+            >
+              View Case Studies
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">Our IT Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional IT solutions tailored to your business needs
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                
                 <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Key Features</h4>
+                  <h4 className="text-lg font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-300 text-sm flex items-center">
-                        <CheckCircleIcon className="w-4 h-4 text-blue-400 mr-3 flex-shrink-0" />
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-blue-400 mb-2">{service.price}</div>
-                  <div className="text-gray-400 text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
+                  <div className="text-sm text-gray-400">Monthly subscription</div>
                 </div>
-
-                <Link
+                <Link 
                   to={service.href}
                   className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
@@ -233,26 +210,25 @@ export default ItSolutionsPage;
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Infrastructure?
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT solutions can improve your business operations and security.
+            Let our IT experts help you build a robust, secure, and efficient technology foundation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
             >
-              Get Started
+              Start Your IT Transformation
+              <ArrowRightIcon className="w-5 h-5" />
             </Link>
-            <Link
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+            <Link 
+              to="/consultation" 
+              className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
             >
-              Schedule Demo
+              Schedule Consultation
             </Link>
           </div>
         </div>
@@ -260,4 +236,3 @@ export default ItSolutionsPage;
     </div>
   );
 }
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f

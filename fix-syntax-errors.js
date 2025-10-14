@@ -5,85 +5,88 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files with syntax errors that need fixing
-const filesToFix = [
-  'app/hooks/useAnalyticsContext.ts',
-  'app/hooks/usePerformanceMonitor.ts',
-  'app/types/app.types.ts',
-  'app/types/gtag.d.ts',
-  'app/utils/a11y.ts',
-  'app/utils/accessibility.ts',
-  'app/utils/accessibilityChecker.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/analyticsTracker.ts',
-  'app/utils/apiClient.ts',
-  'app/utils/apiInterceptor.ts',
-  'app/utils/configManager.ts',
-  'app/utils/enhancedAnalytics.ts',
-  'app/utils/enhancedErrorHandler.ts',
-  'app/utils/enhancedErrorTracking.ts',
-  'app/utils/enhancedLogger.ts',
-  'app/utils/envConfig.ts',
-  'app/utils/envValidator.ts',
-  'app/utils/errorHandlerEnhanced.ts',
-  'app/utils/errorLogger.ts',
-  'app/utils/errorReporter.ts',
-  'app/utils/errorTracking.ts',
-  'app/utils/performanceMonitor.ts',
-  'app/utils/performanceMonitoring.ts',
-  'app/utils/preloadOptimizer.ts',
-  'app/utils/productionLogger.ts',
-  'app/utils/registerServiceWorker.ts',
-  'app/utils/seoConstants.ts',
-  'app/utils/seoEnhancer.ts',
-  'app/utils/seoOptimizer.ts',
-  'app/utils/seoUtils.ts',
-  'app/utils/sitemapGenerator.ts',
-  'app/utils/structuredData.ts',
-  'app/utils/validation.ts',
-  'hooks/usePerformanceMetrics.ts',
-  'utils/seoUtils.ts'
-];
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix semicolons in object properties
+  content = content.replace(/title: '([^']+)';,/g, "title: '$1',");
+  content = content.replace(/description: '([^']+)';/g, "description: '$1'");
+  content = content.replace(/name: '([^']+)';/g, "name: '$1'");
+  content = content.replace(/href: '([^']+)';/g, "href: '$1'");
+  
+  // Fix extra semicolons in object properties
+  content = content.replace(/hasError: false ;/g, 'hasError: false');
+  content = content.replace(/hasError: true;,/g, 'hasError: true,');
+  content = content.replace(/error: Error;,/g, 'error: Error,');
+  content = content.replace(/Error;,/g, 'Error,');
+  
+  // Fix CSS class syntax errors
+  content = content.replace(/grid md: grid-cols/g, 'grid md:grid-cols');
+  content = content.replace(/hover: border-/g, 'hover:border-');
+  content = content.replace(/hover: from-/g, 'hover:from-');
+  content = content.replace(/hover: to-/g, 'hover:to-');
+  content = content.replace(/border: border-/g, 'border:border-');
+  
+  // Fix JSX syntax errors
+  content = content.replace(/className="([^"]*);/g, 'className="$1"');
+  content = content.replace(/style={{([^}]*);/g, 'style={{$1');
+  
+  // Fix function parameter syntax
+  content = content.replace(/\(([^)]*);/g, '($1');
+  content = content.replace(/\): ([^,;]+);/g, '): $1');
+  
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+):\s*'([^']+)'\s*(\w+):/g, "$1: '$2',\n    $3:");
+  content = content.replace(/(\w+):\s*"([^"]+)"\s*(\w+):/g, '$1: "$2",\n    $3:');
+  
+  // Fix merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
+  
+  // Fix malformed JSX closing tags
+  content = content.replace(/<(\w+)>\s*<\/\1>\s*;/g, '<$1></$1>');
+  
+  // Fix missing closing braces
+  content = content.replace(/(\w+):\s*\([^)]*\)\s*{([^}]*)\s*$/gm, '$1: () => {\n    $2\n  }');
+  
+  return content;
+}
 
-function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Fix common syntax errors
-    content = content
-      // Fix missing commas in object literals
-      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n])/g, '$1: $2,')
-      // Fix missing commas in arrays
-      .replace(/(\w+)(?=\s*[}\n])/g, '$1,')
-      // Fix unterminated strings
-      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"')
-      // Fix missing closing brackets
-      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2]')
-      // Fix missing closing parentheses
-      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2)')
-      // Remove trailing commas before closing brackets
-      .replace(/,(\s*[}\]])/g, '$1')
-      // Fix incomplete function declarations
-      .replace(/(\w+)\s*\(([^)]*)$/gm, (match, funcName, params) => {
-        if (params.trim() === '') {
-          return `${funcName}() { return null; }`;
-        }
-        return match;
-      });
-
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
   }
+  
+  return files;
 }
 
 // Fix all files
-filesToFix.forEach(fixFile);
-console.log('Syntax error fixing completed!');
+const files = getAllFiles(path.join(__dirname, 'app'));
+let fixedCount = 0;
+
+files.forEach(file => {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const fixedContent = fixSyntaxErrors(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(file, fixedContent);
+      console.log(`Fixed: ${path.relative(__dirname, file)}`);
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${file}:`, error.message);
+  }
+});
+
+console.log(`\nFixed ${fixedCount} files`);

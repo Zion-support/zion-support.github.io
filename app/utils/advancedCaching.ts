@@ -1,5 +1,5 @@
 export const advancedCaching = {
-  setCache: (key: string, value: unknown;, ttl: number = 3600) => {
+  setCache: (key: string, value: unknown, ttl: number = 3600) => {
     const item = {
       value,
       timestamp: Date.now(),

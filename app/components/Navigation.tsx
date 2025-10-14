@@ -215,5 +215,5 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     </nav>
   );
 }
+
 export default Navigation;
->>>>>>> 738f440eeff51c77c81d522cf07739993de2622f
