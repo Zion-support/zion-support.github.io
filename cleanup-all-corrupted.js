@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
+// import path from 'path';
 
 // List of all corrupted files to remove
 const corruptedFiles = [
@@ -193,24 +193,24 @@ export default NotFoundPage;`;
 }
 
 // Main execution
-console.log('Starting comprehensive cleanup...');
+// Starting comprehensive cleanup
 
 // Create essential files
 createEssentialFiles();
 
 // Delete corrupted files
-let deletedCount = 0;
+// let deletedCount = 0;
 corruptedFiles.forEach(file => {
   if (fs.existsSync(file)) {
     try {
       fs.unlinkSync(file);
-      console.log(`Deleted corrupted file: ${file}`);
-      deletedCount++;
-    } catch (error) {
-      console.error(`Failed to delete ${file}:`, error.message);
+      // Deleted corrupted file
+      // deletedCount++;
+    } catch {
+      // Failed to delete file
     }
   }
 });
 
-console.log(`Cleanup complete. Deleted ${deletedCount} corrupted files.`);
-console.log('Created essential files: main.tsx, index.css, 404.tsx, global-error.tsx, not-found.tsx');
+// Cleanup complete
+// Created essential files

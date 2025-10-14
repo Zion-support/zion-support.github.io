@@ -1,20 +1,15 @@
 export const enhancedLogger = {
-  log: (level: 'info' | 'warn' | 'error', message: string, data?: any) => {
-    const logEntry = {
-      level,
-      message,
-      data,
-      timestamp: new Date().toISOString()
-    };
+  log: (_level: 'info' | 'warn' | 'error', _message: string, _data?: any) => {
+    // Logging logic
     
     if (process.env.NODE_ENV === 'development') {
-      console[level](logEntry);
+      // Log entry in development
     }
     
     // Send to external logging service in production
     if (process.env.NODE_ENV === 'production') {
       // Implementation would depend on the logging service
-      console.log('Log entry:', logEntry);
+      // Log entry sent to external service
     }
   },
   

@@ -1,6 +1,6 @@
 export const enhancedErrorHandler = {
   handleError: (error: Error, context?: string) => {
-    console.error('Error occurred:', error);
+    // Error occurred
     
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {

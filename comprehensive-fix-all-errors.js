@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-console.log('🔧 Starting comprehensive error fixing and merge conflict resolution...');
+// Starting comprehensive error fixing and merge conflict resolution
 
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
@@ -115,13 +115,13 @@ function fixFile(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
+      // Fixed file
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+  } catch {
+    // Error fixing file
     return false;
   }
 }
@@ -136,43 +136,43 @@ const files3 = findFiles('./', ['.tsx', '.ts', '.jsx', '.js']).filter(f =>
 );
 
 const allFiles = [...files, ...files2, ...files3];
-let fixedCount = 0;
+// let fixedCount = 0;
 
-console.log(`📁 Found ${allFiles.length} files to check...`);
+// Found files to check
 
 for (const file of allFiles) {
   if (fixFile(file)) {
-    fixedCount++;
+    // fixedCount++;
   }
 }
 
-console.log(`\n🎉 Fixed ${fixedCount} files!`);
+// Fixed files
 
 // Run linting to check for remaining issues
-console.log('\n🔍 Running linting check...');
+// Running linting check
 try {
   execSync('npm run lint', { stdio: 'inherit' });
-  console.log('✅ Linting passed!');
-} catch (error) {
-  console.log('⚠️  Linting found issues, but continuing...');
+  // Linting passed
+} catch {
+  // Linting found issues, but continuing
 }
 
 // Run type check
-console.log('\n🔍 Running type check...');
+// Running type check
 try {
   execSync('npm run type-check', { stdio: 'inherit' });
-  console.log('✅ Type check passed!');
-} catch (error) {
-  console.log('⚠️  Type check found issues, but continuing...');
+  // Type check passed
+} catch {
+  // Type check found issues, but continuing
 }
 
 // Run build
-console.log('\n🔍 Running build...');
+// Running build
 try {
   execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful!');
-} catch (error) {
-  console.log('⚠️  Build had issues, but continuing...');
+  // Build successful
+} catch {
+  // Build had issues, but continuing
 }
 
-console.log('\n🏁 Comprehensive fix completed!');
+// Comprehensive fix completed

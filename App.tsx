@@ -39,7 +39,6 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import CookiesPage from './app/pages/CookiesPage';
 // TODO: Add lazy imports for components when they are created
 
 // New Innovative Micro SAAS Services

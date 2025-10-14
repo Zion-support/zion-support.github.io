@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Shield } from 'lucide-react';
-<<<<<<< HEAD
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
@@ -9,13 +8,6 @@ import { Zap } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-=======
-import { Lock } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Eye } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ea4b
 
 function AICybersecuritySuitePro() {
   const features = [
@@ -94,4 +86,5 @@ function AICybersecuritySuitePro() {
   );
 }
 
-export default AICybersecuritySuitePro;
+const page = React.lazy(() => import('./page'));
+export default page;

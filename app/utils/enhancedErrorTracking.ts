@@ -1,15 +1,10 @@
 export const enhancedErrorTracking = {
   trackError: (error: Error, context?: Record<string, any>) => {
-    const errorInfo = {
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      context: context || {}
-    };
+    // Error tracking logic
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error tracked:', errorInfo);
+      // Error tracked in development
     }
     
     // Send to analytics

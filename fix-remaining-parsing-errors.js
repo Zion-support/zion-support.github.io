@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 
-console.log('🔧 Fixing remaining parsing errors...');
+// Fixing remaining parsing errors
 
 // Function to fix specific parsing errors
 function fixParsingErrors(content) {
@@ -68,13 +68,13 @@ function fixFile(filePath) {
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✅ Fixed: ${filePath}`);
+      // Fixed file
       return true;
     }
     
     return false;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
+  } catch {
+    // Error fixing file
     return false;
   }
 }
@@ -127,14 +127,14 @@ function findComponentFiles(dir) {
 findComponentFiles('./app/components');
 
 const allFiles = [...files, ...pageFiles, ...componentFiles];
-let fixedCount = 0;
+// let fixedCount = 0;
 
-console.log(`📁 Found ${allFiles.length} files to check...`);
+// Found files to check
 
 for (const file of allFiles) {
   if (fs.existsSync(file) && fixFile(file)) {
-    fixedCount++;
+    // fixedCount++;
   }
 }
 
-console.log(`\n🎉 Fixed ${fixedCount} additional files!`);
+// Fixed additional files

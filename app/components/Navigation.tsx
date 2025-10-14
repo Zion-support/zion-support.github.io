@@ -1,11 +1,13 @@
 import React from 'react';
 import { Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
+  isOpen?: boolean;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle, isOpen = false }) => {
   return (
     <nav className="bg-slate-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
