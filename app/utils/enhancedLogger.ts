@@ -1,25 +1,27 @@
 export const enhancedLogger = {
-  log: (level: string, message: string, data?: unknown) => {
-    if (typeof window !== 'undefined') {
-      const logEntry = {
+  log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
+    if (process.env.NODE_ENV === 'development') {
+      if (level === 'info') {
+        console.warn(message, data);
+      } else if (level === 'warn') {
+        console.warn(message, data);
+      } else if (level === 'error') {
+        console.error(message, data);
+      }
+    }
+    
+    if (process.env.NODE_ENV === 'production') {
+      // Implementation would depend on the logging service
+      console.warn('Log entry: ', {
         level,
         message,
         data,
-        timestamp: new Date().toISOString(),
-        url: window.location.href
-      };
-      
-      if (level === 'info') {
-        console.info(logEntry);
-      } else if (level === 'warn') {
-        console.warn(logEntry);
-      } else if (level === 'error') {
-        console.error(logEntry);
-      }
+        timestamp: new Date().toISOString()
+      })
     }
   },
   
   info: (message: string, data?: unknown) => enhancedLogger.log('info', message, data),
   warn: (message: string, data?: unknown) => enhancedLogger.log('warn', message, data),
   error: (message: string, data?: unknown) => enhancedLogger.log('error', message, data)
-};
+}

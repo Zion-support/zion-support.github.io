@@ -8,17 +8,17 @@ export interface ServiceData {
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  }
   icon: string;
 }
 
 export const servicesData: ServiceData[] = [
   {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    description: 'Advanced AI solutions to automate and optimize your business processes.',
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Advanced artificial intelligence solutions for your business',
     category: 'AI',
-    features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
       starter: 1000,
       professional: 2500,
@@ -27,11 +27,11 @@ export const servicesData: ServiceData[] = [
     icon: 'robot'
   },
   {
-    id: 'cloud-infrastructure',
-    name: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
-    category: 'Infrastructure',
-    features: ['Cloud Migration', 'Auto-scaling', 'Security Monitoring', 'Backup & Recovery'],
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Comprehensive cybersecurity solutions to protect your business',
+    category: 'Security',
+    features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response'],
     pricing: {
       starter: 2000,
       professional: 5000,
@@ -39,4 +39,4 @@ export const servicesData: ServiceData[] = [
     },
     icon: 'cloud-upload'
   }
-]
+];

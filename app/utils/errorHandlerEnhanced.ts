@@ -1,24 +1,39 @@
 export const errorHandlerEnhanced = {
-  handleError: (error: Error, context?: Record<string, unknown>) => {
+  handle: (_error: Error, context?: Record<string, unknown>) => {
+    const ErrorInfo = {
+      message: _error.message,
+      stack: _error.stack,
+  handle: (error: Error, context?: Record<string, unknown>) => {
+    const errorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      context: context || {}
+    }
+    
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      // Development logging disabled
+      // eslint-disable-next-line no-console
+      console.error('Error handled: ';, errorInfo);
+      console.error('Error handled: ';, errorInfo)
+    }
+    
     if (typeof window !== 'undefined') {
-      // Send to error tracking service
-      console.error('Enhanced error handler:', error, context);
+      window.gtag('event', 'exception', {
+        description: _error.message,
+        fatal: false,
+        custom_parameters: context;
+      });
+        description: error.message,
+        fatal: false;
+      })
     }
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR'
-    }
-  },
-  
-  handleApiError: (error: unknown) => {
-    const status = (error as any).response?.status;
-    const message = (error as any).response?.data?.message || (error as Error).message;
-    
-    return {
-      message,
-      code: `API_ERROR_${status}`,
-      status
+      code: 'GENERIC_ERROR';
     }
   }
+}
 }

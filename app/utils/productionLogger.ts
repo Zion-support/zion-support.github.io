@@ -2,17 +2,24 @@ export const productionLogger = {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'production') {
       if (level === 'error') {
-        // In production, only log errors
-        console.error(message, data);
+        // Production error logging would go to external service
+        console.error(message, data)
+      } else {
+        console.warn(message, data)
       }
     } else {
       // In development, log everything
-      // eslint-disable-next-line no-console
-      console[level](message, data);
+      if (level === 'info') {
+        console.warn(message, data);
+      } else if (level === 'warn') {
+        console.warn(message, data);
+      } else if (level === 'error') {
+        console.error(message, data);
+      }
     }
   },
   
   info: (message: string, data?: unknown) => productionLogger.log('info', message, data),
   warn: (message: string, data?: unknown) => productionLogger.log('warn', message, data),
   error: (message: string, data?: unknown) => productionLogger.log('error', message, data)
-};
+}
