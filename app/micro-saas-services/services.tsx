@@ -1,15 +1,10 @@
-import React from "react";
+import React from 'react';
 
-interface ServicesProps {
-  className?: string;
-}
-
-const Services: React.FC<ServicesProps> = ({ className = "" }) => {
+export default function Services() {
   return (
-    <div className={className}>
-      <h2>Services</h2>
+    <div>
+      <h1>Services</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Services;
+}

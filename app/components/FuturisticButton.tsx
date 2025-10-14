@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticButtonProps {
@@ -46,6 +47,16 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
       )}
     </button>
+=======
+import React from "react";
+
+const FuturisticButton = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">FuturisticButton</h2>
+      <p>This component is under construction.</p>
+    </div>
+>>>>>>> origin/main
   );
 };
 

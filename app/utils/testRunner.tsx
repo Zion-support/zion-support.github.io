@@ -1,15 +1,10 @@
-import React from "react";
+import React from 'react';
 
-interface TestrunnerxProps {
-  className?: string;
-}
-
-const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
+export default function TestRunner() {
   return (
-    <div className={className}>
-      <h2>Testrunnerx</h2>
+    <div>
+      <h1>TestRunner</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Testrunnerx;
+}

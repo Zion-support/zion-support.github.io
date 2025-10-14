@@ -1,15 +1,10 @@
-import React from "react";
+import React from 'react';
 
-interface ErrorhandlerxProps {
-  className?: string;
-}
-
-const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
+export default function ErrorHandler() {
   return (
-    <div className={className}>
-      <h2>Errorhandlerx</h2>
+    <div>
+      <h1>ErrorHandler</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Errorhandlerx;
+}

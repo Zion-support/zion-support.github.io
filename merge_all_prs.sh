@@ -3,47 +3,98 @@
 # Script to merge all open PRs into main branch
 set -e
 
-echo "Starting to merge all open PRs..."
+echo "Starting PR merge process..."
 
-# List of branches to merge (most recent first)
-branches=(
-    "origin/cursor/fix-errors-and-merge-to-main-1077"
-    "origin/cursor/fix-errors-and-merge-to-main-25a5"
-    "origin/cursor/fix-errors-and-merge-to-main-2d1b"
-    "origin/cursor/fix-errors-and-merge-to-main-2fa9"
-    "origin/cursor/fix-errors-and-merge-to-main-396e"
-    "origin/cursor/fix-errors-and-merge-to-main-3b7c"
-    "origin/cursor/fix-errors-and-merge-to-main-3f21"
-    "origin/cursor/fix-errors-and-merge-to-main-4d8c"
-    "origin/cursor/fix-errors-and-merge-to-main-5690"
-    "origin/cursor/fix-errors-and-merge-to-main-5aa5"
-    "origin/cursor/fix-errors-and-merge-to-main-653f"
-    "origin/cursor/fix-errors-and-merge-to-main-6977"
-    "origin/cursor/fix-errors-and-merge-to-main-7ab0"
-    "origin/cursor/fix-errors-and-merge-to-main-87ea"
-    "origin/cursor/fix-errors-and-merge-to-main-c0a0"
-    "origin/cursor/fix-errors-and-merge-to-main-c5eb"
-    "origin/cursor/fix-errors-and-merge-to-main-c6b9"
-    "origin/cursor/fix-errors-and-merge-to-main-d738"
-    "origin/cursor/fix-errors-and-merge-to-main-dcd8"
-    "origin/cursor/fix-errors-and-merge-to-main-e54f"
-    "origin/cursor/fix-errors-and-merge-to-main-e863"
-    "origin/cursor/fix-errors-and-merge-to-main-f45b"
-)
+# Get list of open PRs
+PR_LIST=$(gh pr list --state open --json number,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
 
-# Merge each branch
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
-    else
-        echo "❌ Failed to merge $branch, resolving conflicts..."
-        # Resolve conflicts automatically
-        git status --porcelain | grep "^UU" | cut -c4- | xargs -I {} git checkout --theirs {}
-        git add .
-        git commit -m "Resolve merge conflicts for $branch"
-        echo "✅ Resolved conflicts and merged $branch"
+# Process each PR
+while IFS= read -r line; do
+    if [ -z "$line" ]; then
+        continue
     fi
-done
+    
+    PR_NUMBER=$(echo $line | cut -d' ' -f1)
+    BRANCH_NAME=$(echo $line | cut -d' ' -f2)
+    
+    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
+    
+    # Checkout the PR branch
+    if git checkout "$BRANCH_NAME" 2>/dev/null; then
+        echo "Checked out branch $BRANCH_NAME"
+        
+        # Fetch latest main
+        git fetch origin main
+        
+        # Try to merge with main
+        if git merge origin/main --no-edit; then
+            echo "Successfully merged $BRANCH_NAME with main"
+            
+            # Switch to main and merge
+            git checkout main
+            if git merge "$BRANCH_NAME" --no-edit; then
+                echo "Successfully merged $BRANCH_NAME into main"
+                
+                # Push to main
+                if git push origin main; then
+                    echo "Successfully pushed main"
+                    
+                    # Delete the branch
+                    git branch -D "$BRANCH_NAME" 2>/dev/null || true
+                    echo "Deleted local branch $BRANCH_NAME"
+                else
+                    echo "Failed to push main"
+                fi
+            else
+                echo "Failed to merge $BRANCH_NAME into main"
+                git merge --abort 2>/dev/null || true
+            fi
+        else
+            echo "Failed to merge $BRANCH_NAME with main - resolving conflicts"
+            git merge --abort 2>/dev/null || true
+            
+            # Try to resolve conflicts by removing problematic files
+            if [ -f "tsconfig.tsbuildinfo" ]; then
+                rm tsconfig.tsbuildinfo
+                git add .
+                git commit -m "Remove tsconfig.tsbuildinfo - build cache file should not be committed" || true
+            fi
+            
+            # Try merge again
+            if git merge origin/main --no-edit; then
+                echo "Successfully merged $BRANCH_NAME with main after conflict resolution"
+                
+                # Switch to main and merge
+                git checkout main
+                if git merge "$BRANCH_NAME" --no-edit; then
+                    echo "Successfully merged $BRANCH_NAME into main"
+                    
+                    # Push to main
+                    if git push origin main; then
+                        echo "Successfully pushed main"
+                        
+                        # Delete the branch
+                        git branch -D "$BRANCH_NAME" 2>/dev/null || true
+                        echo "Deleted local branch $BRANCH_NAME"
+                    else
+                        echo "Failed to push main"
+                    fi
+                else
+                    echo "Failed to merge $BRANCH_NAME into main after conflict resolution"
+                    git merge --abort 2>/dev/null || true
+                fi
+            else
+                echo "Failed to merge $BRANCH_NAME with main even after conflict resolution"
+                git merge --abort 2>/dev/null || true
+            fi
+        fi
+    else
+        echo "Failed to checkout branch $BRANCH_NAME"
+    fi
+    
+    echo "Completed processing PR #$PR_NUMBER"
+    echo "---"
+    
+done <<< "$PR_LIST"
 
-echo "🎉 All PRs merged successfully!"
+echo "PR merge process completed!"

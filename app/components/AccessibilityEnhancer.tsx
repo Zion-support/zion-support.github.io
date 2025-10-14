@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
 
@@ -381,3 +382,20 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
 };
 
 export default ImprovedAccessibility;
+=======
+import React, { ReactNode } from "react";
+
+interface AccessibilityEnhancerProps {
+  children?: ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> origin/main

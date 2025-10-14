@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -6,18 +7,30 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+import React, { Component, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+>>>>>>> origin/main
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+=======
+  error?: Error;
+>>>>>>> origin/main
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
+<<<<<<< HEAD
     this.state = {
       hasError: false,
       error: null,
@@ -195,6 +208,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               If this problem persists, please contact our support team.
             </div>
           </div>
+=======
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+          </details>
+>>>>>>> origin/main
         </div>
       );
     }
@@ -203,4 +239,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default EnhancedErrorBoundary;
+=======
+export default EnhancedErrorBoundary;
+>>>>>>> origin/main

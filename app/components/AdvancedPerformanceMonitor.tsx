@@ -1,19 +1,7 @@
-'use client'
-import { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  loadTime: number | null
-  firstContentfulPaint: number | null
-  largestContentfulPaint: number | null
-  firstInputDelay: number | null
-  cumulativeLayoutShift: number | null
-  timeToFirstByte: number | null
-  memoryUsage: number | null
-  domContentLoaded: number | null
-  totalBlockingTime: number | null
-}
+import React from 'react';
 
 const AdvancedPerformanceMonitor = () => {
+<<<<<<< HEAD
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,
     firstContentfulPaint: null,
@@ -228,3 +216,14 @@ const AdvancedPerformanceMonitor = () => {
 }
 
 export default AdvancedPerformanceMonitor
+=======
+  return (
+    <div>
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AdvancedPerformanceMonitor;
+>>>>>>> origin/main

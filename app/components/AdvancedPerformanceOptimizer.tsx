@@ -1,6 +1,6 @@
-import React, { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
 
+<<<<<<< HEAD
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enablePreloading?: boolean;
@@ -244,20 +244,15 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [location.pathname, optimizeImages, preloadCriticalResources]);
 
   return null; // This component doesn't render anything
-};
-
-// Helper function to determine next likely page
-const getNextLikelyPage = (currentPath: string): string | null => {
-  const likelyPages: Record<string, string> = {
-    '/': '/about',
-    '/about': '/services',
-    '/services': '/contact',
-    '/ai-services': '/ai-analytics',
-    '/micro-saas': '/zion-analytics-pro',
-    '/5g-solutions': '/5g-implementation',
-  };
-
-  return likelyPages[currentPath] || null;
+=======
+const AdvancedPerformanceOptimizer = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AdvancedPerformanceOptimizer</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+>>>>>>> origin/main
 };
 
 export default AdvancedPerformanceOptimizer;

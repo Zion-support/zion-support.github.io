@@ -1,17 +1,10 @@
-import React from "react";
+import React from 'react';
 
-interface MicrosaasservicesProps {
-  className?: string;
-}
-
-const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
-  className = "",
-}) => {
+export default function MicroSaasServices() {
   return (
-    <div className={className}>
-      <h2>Microsaasservices</h2>
+    <div>
+      <h1>MicroSaasServices</h1>
+      <p>This component is under development.</p>
     </div>
   );
-};
-
-export default Microsaasservices;
+}

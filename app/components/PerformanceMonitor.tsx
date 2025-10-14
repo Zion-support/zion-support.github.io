@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -139,6 +140,22 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+=======
+import React from 'react';
+
+interface PerformanceMonitorProps {
+  onMetricsUpdate: (metrics: {
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
+    ttfb?: number;
+  }) => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
+  return null;
+>>>>>>> origin/main
 };
 
 export default PerformanceMonitor;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -28,8 +29,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     noindex ? 'noindex' : 'index',
     nofollow ? 'nofollow' : 'follow'
   ].join(', ');
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const EnhancedSEO = () => {
   return (
+<<<<<<< HEAD
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -86,3 +92,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 };
 
 export default EnhancedSEO;
+=======
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedSEO</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default EnhancedSEO;
+>>>>>>> origin/main

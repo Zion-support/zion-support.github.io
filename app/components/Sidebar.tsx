@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
@@ -159,8 +160,13 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   })).filter(section => section.items.length > 0 || searchQuery === '');
 
   if (!isOpen) return null;
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const Sidebar = () => {
   return (
+<<<<<<< HEAD
     <div className="fixed inset-0 z-50 lg:hidden">
       <div className="fixed inset-0 bg-black/50" onClick={onClose} />
       <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-white/10 overflow-y-auto">
@@ -300,8 +306,17 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
+=======
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Sidebar</h2>
+      <p>This component is under construction.</p>
+>>>>>>> origin/main
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ImprovedSidebar;
+=======
+export default Sidebar;
+>>>>>>> origin/main

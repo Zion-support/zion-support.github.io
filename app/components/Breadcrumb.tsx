@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
@@ -16,8 +17,13 @@ const Breadcrumb: React.FC = () => {
   if (pathSegments.length === 0) {
     return null;
   }
+=======
+import React from "react";
+>>>>>>> origin/main
 
+const Breadcrumb = () => {
   return (
+<<<<<<< HEAD
     <nav className="bg-gray-50 px-4 py-2 text-sm" aria-label="Breadcrumb">
       <ol className="flex items-center space-x-2">
         <li>
@@ -44,3 +50,13 @@ const Breadcrumb: React.FC = () => {
 };
 
 export default Breadcrumb;
+=======
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Breadcrumb</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default Breadcrumb;
+>>>>>>> origin/main
