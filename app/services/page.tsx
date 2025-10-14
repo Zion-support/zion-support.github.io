@@ -14,9 +14,13 @@ const serviceCategories = [
       "Computer Vision Solutions",
       "Predictive Analytics",
       "AI Chatbots & Virtual Assistants",
-      "Recommendation Systems"
+      "Recommendation Systems",
+      "AI Content Generation",
+      "AI Code Assistant",
+      "AI Analytics Dashboard"
     ],
-    color: "from-blue-600 to-cyan-600"
+    color: "from-blue-600 to-cyan-600",
+    price: "Starting at $199/month"
   },
   {
     icon: <Globe className="w-8 h-8" />,
@@ -28,9 +32,12 @@ const serviceCategories = [
       "Edge Computing",
       "Smart City Solutions",
       "5G Performance Optimization",
-      "Private 5G Networks"
+      "Private 5G Networks",
+      "5G Security Solutions",
+      "5G Testing & Validation"
     ],
-    color: "from-purple-600 to-pink-600"
+    color: "from-purple-600 to-pink-600",
+    price: "Starting at $999/month"
   },
   {
     icon: <Shield className="w-8 h-8" />,
@@ -42,9 +49,12 @@ const serviceCategories = [
       "Data Encryption & Protection",
       "Compliance Management",
       "Security Training & Awareness",
-      "Incident Response Planning"
+      "Incident Response Planning",
+      "Penetration Testing",
+      "Security Monitoring"
     ],
-    color: "from-green-600 to-emerald-600"
+    color: "from-green-600 to-emerald-600",
+    price: "Starting at $399/month"
   },
   {
     icon: <Cloud className="w-8 h-8" />,
@@ -56,9 +66,12 @@ const serviceCategories = [
       "Serverless Architecture",
       "Cloud Security & Compliance",
       "Cost Optimization",
-      "Disaster Recovery Solutions"
+      "Disaster Recovery Solutions",
+      "AI-Powered Cloud Management",
+      "Container Orchestration"
     ],
-    color: "from-orange-600 to-red-600"
+    color: "from-orange-600 to-red-600",
+    price: "Starting at $499/month"
   },
   {
     icon: <Database className="w-8 h-8" />,
@@ -70,9 +83,12 @@ const serviceCategories = [
       "Real-time Analytics",
       "Data Visualization",
       "Statistical Analysis",
-      "Data Quality Management"
+      "Data Quality Management",
+      "AI-Powered Analytics",
+      "Predictive Modeling"
     ],
-    color: "from-indigo-600 to-purple-600"
+    color: "from-indigo-600 to-purple-600",
+    price: "Starting at $299/month"
   },
   {
     icon: <Smartphone className="w-8 h-8" />,
@@ -84,9 +100,12 @@ const serviceCategories = [
       "Mobile UI/UX Design",
       "App Store Optimization",
       "Mobile Security",
-      "Progressive Web Apps"
+      "Progressive Web Apps",
+      "AI-Integrated Mobile Apps",
+      "Mobile Analytics"
     ],
-    color: "from-teal-600 to-cyan-600"
+    color: "from-teal-600 to-cyan-600",
+    price: "Starting at $799/month"
   }
 ];
 
@@ -159,30 +178,43 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
-                  </div>
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-purple-500/30 rounded-xl p-8 hover:border-cyan-400/50 transition-all duration-500 group relative overflow-hidden">
+                  {/* Animated background glow */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{category.description}</p>
-                  
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Services:</h4>
-                    {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{service}</span>
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-cyan-500/25`}>
+                      <div className="text-white group-hover:animate-pulse">
+                        {category.icon}
                       </div>
-                    ))}
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{category.title}</h3>
+                    <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">{category.description}</p>
+                    
+                    {/* Pricing */}
+                    <div className="mb-6">
+                      <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-sm font-medium text-cyan-300 mb-4">
+                        {category.price}
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Services:</h4>
+                      {category.services.map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="flex items-center space-x-2 group-hover:text-white transition-colors duration-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                          <span className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <button className="mt-6 w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group/btn transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 relative overflow-hidden">
+                      <span className="relative z-10">Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300 relative z-10" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                    </button>
                   </div>
-                  
-                  <button className="mt-6 w-full bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
                 </div>
               ))}
             </div>
