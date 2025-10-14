@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 const fs = require('fs');
 const path = require('path');
@@ -130,7 +131,7 @@ function hasSyntaxErrors(filePath) {
     ];
     
     return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
+  } catch {
     return true; // If we can't read the file, consider it corrupted
   }
 }
