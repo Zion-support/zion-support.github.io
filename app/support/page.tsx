@@ -82,7 +82,7 @@ const SupportPage: React.FC = () => {
       name:'Email Support',
       description:'Get detailed responses to your questions',
       icon: Mail,
-      contact:'support@ziontech.com',
+      contact:'support@ziontechgroup.com',
       availability:'Response within 2 hours',
       color:'text-green-400'
     },{

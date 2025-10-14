@@ -126,7 +126,7 @@ const HomePage: React.FC = () => {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
+                  <p className="text-gray-300">info@ziontechgroup.com</p>
                 </div>
                 
                 <div className="flex flex-col items-center">

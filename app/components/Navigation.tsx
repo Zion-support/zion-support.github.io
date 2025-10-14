@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 interface NavigationProps {
@@ -19,32 +20,32 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-white">
+            <Link to="/" className="text-2xl font-bold text-white">
               Zion Tech Group
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <a href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Home
-              </a>
-              <a href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
-              </a>
-              <a href="/services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Services
-              </a>
-              <a href="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Case Studies
-              </a>
-              <a href="/careers" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/careers" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Careers
-              </a>
-              <a href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -76,24 +77,24 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg rounded-lg mt-2">
-              <a href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
-              </a>
-              <a href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
-              </a>
-              <a href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Services
-              </a>
-              <a href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Case Studies
-              </a>
-              <a href="/careers" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link to="/careers" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Careers
-              </a>
-              <a href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
-              </a>
+              </Link>
               <div className="border-t border-white/10 pt-4 mt-4">
                 <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                   <Phone className="w-4 h-4 mr-2" />

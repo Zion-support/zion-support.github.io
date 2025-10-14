@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -32,11 +33,11 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/about" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="/services" className="text-gray-300 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="/case-studies" className="text-gray-300 hover:text-white transition-colors text-sm">Case Studies</a></li>
-              <li><a href="/careers" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</a></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors text-sm">Services</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors text-sm">Case Studies</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-white transition-colors text-sm">Careers</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">Contact</Link></li>
             </ul>
           </div>
 
@@ -44,11 +45,11 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2">
-              <li><a href="/ai-solutions" className="text-gray-300 hover:text-white transition-colors text-sm">AI Solutions</a></li>
-              <li><a href="/cloud-services" className="text-gray-300 hover:text-white transition-colors text-sm">Cloud Services</a></li>
-              <li><a href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors text-sm">Cybersecurity</a></li>
-              <li><a href="/data-analytics" className="text-gray-300 hover:text-white transition-colors text-sm">Data Analytics</a></li>
-              <li><a href="/devops" className="text-gray-300 hover:text-white transition-colors text-sm">DevOps</a></li>
+              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-white transition-colors text-sm">AI Solutions</Link></li>
+              <li><Link to="/cloud-services" className="text-gray-300 hover:text-white transition-colors text-sm">Cloud Services</Link></li>
+              <li><Link to="/cybersecurity" className="text-gray-300 hover:text-white transition-colors text-sm">Cybersecurity</Link></li>
+              <li><Link to="/data-analytics" className="text-gray-300 hover:text-white transition-colors text-sm">Data Analytics</Link></li>
+              <li><Link to="/devops" className="text-gray-300 hover:text-white transition-colors text-sm">DevOps</Link></li>
             </ul>
           </div>
 
@@ -79,9 +80,9 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-              <a href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
-              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</a>
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
             </div>
           </div>
         </div>
