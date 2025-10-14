@@ -45,7 +45,7 @@ const FiveGOptimizationPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6 h-6 text-emerald-600" />
@@ -96,7 +96,7 @@ const FiveGOptimizationPage: React.FC = () => {
           </p>
           <Link 
             to="/contact" 
-            className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
+            className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />

@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGModernizationPage = () => {
   const services = [
     {
-      title: '5G Network Modernization';,
-      description: 'Complete modernization of legacy networks to 5G technology.';
+      title: '5G Network Modernization',
+      description: 'Complete modernization of legacy networks to 5G technology.'
     },
     {
-      title: 'Security Modernization';,
-      description: 'Upgrade security infrastructure to support 5G requirements.';
+      title: 'Security Modernization',
+      description: 'Upgrade security infrastructure to support 5G requirements.'
     },
     {
-      title: 'Team Training';,
-      description: 'Comprehensive training for modernized 5G network operations.';
+      title: 'Team Training',
+      description: 'Comprehensive training for modernized 5G network operations.'
     }
   ]
 
@@ -36,7 +36,7 @@ title="5G Modernization Services - Zion Tech Group"
           </p>
         </div>
 
-        <div className="grid md: grid-cols-3 gap-8 mb-16">;
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-4">
@@ -50,7 +50,7 @@ title="5G Modernization Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />

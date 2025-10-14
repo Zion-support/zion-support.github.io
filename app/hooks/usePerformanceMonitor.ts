@@ -8,14 +8,14 @@ export const usePerformanceMonitor = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         if (entries.length > 0) {
-          setMetrics((prev: Record<string;, number>) => ({
+          setMetrics((prev: Record<string, number>) => ({
             ...prev,
             [entries[0].name]: entries[0].startTime
           }));
         }
       });
 
-      observer.observe({ entryTypes: ['measure';, 'navigation'] });
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
 
       return () => {
         observer.disconnect();

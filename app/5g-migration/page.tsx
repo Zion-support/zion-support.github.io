@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGMigrationPage = () => {
   const services = [
     {
-      title: '5G Migration Planning';,
-      description: 'Strategic planning for migrating from legacy networks to 5G.';
+      title: '5G Migration Planning',
+      description: 'Strategic planning for migrating from legacy networks to 5G.'
     },
     {
-      title: 'Security Migration';,
-      description: 'Secure migration of security protocols to 5G infrastructure.';
+      title: 'Security Migration',
+      description: 'Secure migration of security protocols to 5G infrastructure.'
     },
     {
-      title: 'Team Training';,
-      description: 'Comprehensive training for 5G migration and new technology adoption.';
+      title: 'Team Training',
+      description: 'Comprehensive training for 5G migration and new technology adoption.'
     }
   ]
 
@@ -36,7 +36,7 @@ title="5G Migration Services - Zion Tech Group"
           </p>
         </div>
 
-        <div className="grid md: grid-cols-3 gap-8 mb-16">;
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
               <div className="flex items-center mb-4">
@@ -50,7 +50,7 @@ title="5G Migration Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
