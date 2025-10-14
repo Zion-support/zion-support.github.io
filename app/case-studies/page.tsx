@@ -211,10 +211,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div
-                  key={study.id}
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group"
-                >
+                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -265,10 +262,7 @@ const CaseStudiesPage: React.FC = () => {
                       </h4>
                       <ul className="space-y-2">
                         {study.results.map((result, index) => (
-                          <li
-                            key={index}
-                            className="flex items-center text-gray-300 text-sm"
-                          >
+                          <li key={index} className="flex items-center text-gray-300 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
                           </li>
@@ -277,10 +271,8 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <Link
-                        to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                      >
+                      <Link to={`/case-studies/${study.id}`}
+                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4" />
                       </Link>

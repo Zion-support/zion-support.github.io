@@ -1,6 +1,9 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React, { memo } from 'react';
+import { Phone, Mail, MapPin, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -13,69 +16,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const services = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
-      price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
-      price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
-    },
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "5G Implementation",
-      description: "Complete 5G network deployment with ultra-low latency and massive IoT connectivity.",
-      price: "$999/month",
-      features: ["5G Network Setup", "IoT Integration", "Edge Computing", "Performance Monitoring"],
-      link: "/5g-implementation"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Advanced Security Suite",
-      description: "Comprehensive cybersecurity with AI threat detection, automated response, and compliance management.",
-      price: "$399/month",
-      features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
-      link: "/advanced-security-suite"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
-    { number: "150+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
-  ];
+  // Removed unused state and function to fix linting errors
 
   return (
     <>

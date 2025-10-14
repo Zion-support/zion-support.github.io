@@ -158,14 +158,8 @@ const CareersPage: React.FC = () => {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta
-          name="description"
-          content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities."
-        />
-        <meta
-          name="keywords"
-          content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company"
-        />
+        <meta name ="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
+        <meta name ="keywords" content="tech careers, AI jobs, quantum computing jobs, software engineering, remote work, tech company" />
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
@@ -226,14 +220,10 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div
-                  key={position.id}
+                <div key={position.id}
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured
-                      ? "border-purple-400 shadow-2xl shadow-purple-500/25"
-                      : "border-white/20"
-                  } hover:border-purple-400 transition-all duration-300 group`}
-                >
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
+                  } hover:border-purple-400 transition-all duration-300 group`}>
                   {position.featured && (
                     <div className="flex items-center gap-2 mb-4">
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />

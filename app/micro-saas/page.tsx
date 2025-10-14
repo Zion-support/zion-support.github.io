@@ -130,25 +130,10 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   const benefits = [
-    "No upfront costs or setup fees",
-    "Quick deployment in 24-48 hours",
-    "Scalable solutions that grow with you",
-    "Regular updates and new features",
-    "24/7 technical support",
-    "Easy integration with existing tools",
-    "Free trial for all products",
-    "Cancel anytime, no long-term contracts",
+    'No upfront costs or setup fees','Quick deployment in 24-48 hours','Scalable solutions that grow with you','Regular updates and new features','24/7 technical support','Easy integration with existing tools','Free trial for all products','Cancel anytime, no long-term contracts'
   ];
 
-  const categories = [
-    "All",
-    "Analytics",
-    "CRM",
-    "Security",
-    "Infrastructure",
-    "Marketing",
-    "Support",
-  ];
+  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
 
   const stats = [
     {
@@ -234,14 +219,12 @@ const MicroSaasPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
-                <button
-                  key={category}
+                <button key={category}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === "All"
-                      ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white"
-                      : "bg-white/10 text-gray-300 hover:bg-white/20"
-                  }`}
-                >
+                    category === 'All'
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}>
                   {category}
                 </button>
               ))}
@@ -264,14 +247,12 @@ const MicroSaasPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
-                <div
-                  key={product.id}
+                <div key={product.id}
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     product.popular
-                      ? "border-purple-400 shadow-2xl shadow-purple-500/25 scale-105"
-                      : "border-white/20"
-                  } hover:border-purple-400 transition-all duration-300 group`}
-                >
+                      ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
+                      : 'border-white/20'
+                  } hover:border-purple-400 transition-all duration-300 group`}>
                   {product.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
@@ -304,10 +285,7 @@ const MicroSaasPage: React.FC = () => {
 
                   <ul className="space-y-3 mb-8">
                     {product.features.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-center text-gray-300 text-sm"
-                      >
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
@@ -420,17 +398,13 @@ const MicroSaasPage: React.FC = () => {
                 Start with a free trial and scale as you grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                >
+                <Link to="/contact"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Zap className="w-5 h-5" />
                   Start Free Trial
                 </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                >
+                <Link to="/pricing"
+                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   View All Plans
                 </Link>
               </div>

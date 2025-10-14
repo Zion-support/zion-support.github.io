@@ -1,44 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement("link");
-      criticalCSS.rel = "preload";
-      criticalCSS.href = "/critical.css";
-      criticalCSS.as = "style";
-      criticalCSS.onload = () => {
-        criticalCSS.rel = "stylesheet";
-      };
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const fontPreload = document.createElement("link");
-      fontPreload.rel = "preload";
-      fontPreload.href =
-        "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
-      fontPreload.as = "style";
-      document.head.appendChild(fontPreload);
-    };
-
-    // Optimize images
+    // Performance optimization code
     const optimizeImages = () => {
-      const images = document.querySelectorAll("img");
+      const images = document.querySelectorAll('img');
       images.forEach((img) => {
         if (!img.loading) {
-          img.loading = "lazy";
-        }
-        if (!img.decoding) {
-          img.decoding = "async";
+          img.loading = 'lazy';
         }
       });
     };
 
-    // Initialize performance optimizations
-    preloadCriticalResources();
+    const preloadCriticalResources = () => {
+      // Preload critical CSS and fonts
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/css/critical.css'
+      ];
+
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'font';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
+      });
+    };
+
+    // Run optimizations
     optimizeImages();
+    preloadCriticalResources();
 
     // Cleanup function
     return () => {
