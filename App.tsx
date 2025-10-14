@@ -2,7 +2,9 @@ import React, { Suspense, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
-// Components - Navigation removed for now
+// Components
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
 
 // Pages
 import HomePage from "./app/page";
@@ -57,17 +59,16 @@ if (typeof window !== 'undefined') {
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            {/* Navigation removed for now */}
-            <main className="relative z-10" id="main-content" role="main">
-              <Suspense
-                fallback={
-                  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                    <div className="text-white text-xl">
-                      Loading application...
-                    </div>
+            <Header />
+            <main className="relative z-10 pt-20" id="main-content" role="main">
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <div className="text-center">
+                    <div className="cyber-loading mx-auto mb-4"></div>
+                    <div className="text-white text-xl">Loading application...</div>
                   </div>
-                }
-              >
+                </div>
+              }>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -76,6 +77,7 @@ if (typeof window !== 'undefined') {
                 </Routes>
               </Suspense>
             </main>
+            <Footer />
           </div>
         </Router>
       </HelmetProvider>
