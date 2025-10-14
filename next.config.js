@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -9,25 +8,26 @@ const nextConfig = {
       'via.placeholder.com',
       'ziontechgroup.com'
     ],
-    formats: ['image/webp', 'image/avif']
   },
   experimental: {
-    optimizeCss: true
+    optimizeCss: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
-  }
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config) => {
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    };
+    return config;
+  },
 };
 
 module.exports = nextConfig;
-=======
-import withBundleAnalyzer from '; import crypto from ';crypto;,';,'''
-enabled: process.env.ANALYZE === 'true'';''
-/** @type {} import( 'next'';,';,'')'
-domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,'']'
-formats: ['image/webp', '';,''']'
-);,
-contentSecurityPolicy: "default-src 'self'; script-src 'none'';)'""'"'"'
-}
-]'""'"'"'
->>>>>>> cursor/fix-errors-and-merge-to-main-c3d6

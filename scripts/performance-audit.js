@@ -1,3 +1,5 @@
-const performanceAudit = () => {;}
-  console.log('Performance audit completed'';)'
-}
+const performanceAudit = () => {
+  console.log('Performance audit completed');
+};
+
+performanceAudit();

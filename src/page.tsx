@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 export default function HomePage() {
   return (
@@ -9,28 +8,21 @@ export default function HomePage() {
         <p className="text-gray-300 text-lg">
           Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
           and digital transformation services.
-=======
-export default function Component; PagePage() {}
-  return ()
-  <div className="min-h-screen bg-gray-900 text-white py-20">"
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-      <div className="container mx-auto px-4">"
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <h1 className="text-4xl font-bold mb-8">Page</h1>"
-        <p className="text-gray-300 text-lg">"
         </p>
-        </p>
-          This page is under development.;
->>>>>>> cursor/fix-errors-and-merge-to-main-c3d6
-        </p>
+        <div className="mt-8">
+          <a 
+            href="/contact" 
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+          >
+            Get Started
+          </a>
+          <a 
+            href="/services" 
+            className="bg-transparent hover:bg-blue-600 text-blue-400 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+          >
+            Our Services
+          </a>
+        </div>
       </div>
     </div>
   );
