@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -61,3 +62,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 export default LoadingSpinner;
+=======
+import React from "react";
+
+const LoadingSpinner = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LoadingSpinner</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> origin/main

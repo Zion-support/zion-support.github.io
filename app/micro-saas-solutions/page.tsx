@@ -1,9 +1,9 @@
-'use client';'use client';
-'use client';
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+'use client';'use client';'
+'use client';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Link } from 'react-router-dom';'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -23,153 +23,132 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline';'
 const MicroSaaSSolutionsPage: React.FC = () => {
   const solutions = [
-export default function MicroSaaSSolutionsPage() {
-  const microSaaSProducts = [
     {
-      title: "AI-Powered Analytics Dashboard",
-      description: "Comprehensive analytics solution with AI-driven insights and real-time data visualization.",
+      title: "AI-Powered Analytics Dashboard","
+      description: "Comprehensive analytics solution with AI-driven insights and real-time data visualization.","
       icon: ChartBarIcon,
       features: [
-        "Real-time data processing",
-        "AI-powered insights",
-        "Custom dashboards",
-        "Automated reporting",
-        "Data export capabilities",
+        "Real-time data processing","
+        "AI-powered insights","
+        "Custom dashboards","
+        "Automated reporting","
+        "Data export capabilities","
         "Multi-user access"
       ],
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $99/month",
-      benefits: ["Increased efficiency", "Better decision making", "Cost savings"],
-      useCases: ["Business intelligence", "Performance tracking", "Data analysis"],
+      color: "from-blue-500 to-cyan-500","
+      price: "Starting at $99/month","
+      benefits: ["Increased efficiency", "Better decision making", "Cost savings"],"
+      useCases: ["Business intelligence", "Performance tracking", "Data analysis"],"
       href: "/micro-saas/analytics-dashboard"
     },
     {
-      title: "AI Content Generator",
-      description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.",
+      title: "AI Content Generator","
+      description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.","
       icon: DocumentTextIcon,
       features: [
-        "AI content generation",
-        "Multiple content types",
-        "SEO optimization",
-        "Brand voice consistency",
-        "Content scheduling",
+        "AI content generation","
+        "Multiple content types","
+        "SEO optimization","
+        "Brand voice consistency","
+        "Content scheduling","
         "Performance analytics"
       ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $79/month",
-      benefits: ["Time savings", "Consistent quality", "SEO optimization"],
-      useCases: ["Content marketing", "Social media", "Blog management"],
+      color: "from-green-500 to-emerald-500","
+      price: "Starting at $79/month","
+      benefits: ["Time savings", "Consistent quality", "SEO optimization"],"
+      useCases: ["Content marketing", "Social media", "Blog management"],"
       href: "/micro-saas/content-generator"
     },
     {
-      title: "AI Customer Support Chatbot",
-      description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.",
+      title: "AI Customer Support Chatbot","
+      description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.","
       icon: ChatBubbleLeftRightIcon,
       features: [
-        "Natural language processing",
-        "24/7 availability",
-        "Multi-language support",
-        "Integration capabilities",
-        "Analytics dashboard",
+        "Natural language processing","
+        "24/7 availability","
+        "Multi-language support","
+        "Integration capabilities","
+        "Analytics dashboard","
         "Custom training"
       ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $149/month",
-      benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],
-      useCases: ["Customer service", "Lead qualification", "FAQ automation"],
+      color: "from-purple-500 to-pink-500","
+      price: "Starting at $149/month","
+      benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],"
+      useCases: ["Customer service", "Lead qualification", "FAQ automation"],"
       href: "/micro-saas/ai-customer-support-chatbot"
     },
     {
-      title: "AI Project Manager",
-      description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.",
+      title: "AI Project Manager","
+      description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.","
       icon: CogIcon,
       features: [
-        "AI task optimization",
-        "Team collaboration",
-        "Progress tracking",
-        "Resource management",
-        "Automated scheduling",
+        "AI task optimization","
+        "Team collaboration","
+        "Progress tracking","
+        "Resource management","
+        "Automated scheduling","
         "Performance insights"
       ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $129/month",
-      benefits: ["Better organization", "Improved productivity", "Resource optimization"],
-      useCases: ["Project management", "Team coordination", "Task automation"],
+      color: "from-orange-500 to-red-500","
+      price: "Starting at $129/month","
+      benefits: ["Better organization", "Improved productivity", "Resource optimization"],"
+      useCases: ["Project management", "Team coordination", "Task automation"],"
       href: "/micro-saas/ai-project-manager"
     },
     {
-      title: "AI Inventory Manager",
-      description: "Smart inventory management system with predictive analytics and automated reordering capabilities.",
+      title: "AI Inventory Manager","
+      description: "Smart inventory management system with predictive analytics and automated reordering capabilities.","
       icon: EyeIcon,
       features: [
-        "Predictive analytics",
-        "Automated reordering",
-        "Stock optimization",
-        "Multi-location support",
-        "Integration APIs",
+        "Predictive analytics","
+        "Automated reordering","
+        "Stock optimization","
+        "Multi-location support","
+        "Integration APIs","
         "Real-time tracking"
       ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $199/month",
-      benefits: ["Reduced waste", "Optimized stock", "Cost savings"],
-      useCases: ["Inventory management", "Supply chain", "Retail operations"],
+      color: "from-indigo-500 to-purple-500","
+      price: "Starting at $199/month","
+      benefits: ["Reduced waste", "Optimized stock", "Cost savings"],"
+      useCases: ["Inventory management", "Supply chain", "Retail operations"],"
       href: "/micro-saas/ai-inventory-manager"
     },
     {
-      title: "AI Expense Tracker",
-      description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.",
+      title: "AI Expense Tracker","
+      description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.","
       icon: CurrencyDollarIcon,
       features: [
-        "Automated categorization",
-        "Receipt processing",
-        "Expense reporting",
-        "Budget tracking",
-        "Tax preparation",
+        "Automated categorization","
+        "Receipt processing","
+        "Expense reporting","
+        "Budget tracking","
+        "Tax preparation","
         "Multi-currency support"
       ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $59/month",
-      benefits: ["Time savings", "Better tracking", "Tax compliance"],
-      useCases: ["Expense management", "Financial tracking", "Tax preparation"],
+      color: "from-cyan-500 to-blue-500","
+      price: "Starting at $59/month","
+      benefits: ["Time savings", "Better tracking", "Tax compliance"],"
+      useCases: ["Expense management", "Financial tracking", "Tax preparation"],"
       href: "/micro-saas/ai-expense-tracker"
     }
   ];
-  const features = [
-    {
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.",
-      icon: CpuChipIcon
-    },
-    {
-      title: "Scalable Architecture",
-      description: "Built to grow with your business, from startup to enterprise scale.",
-      icon: CloudIcon
-    },
-    {
-      title: "Easy Integration",
-      description: "Seamlessly integrate with your existing tools and workflows.",
-      icon: CogIcon
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: UserGroupIcon
-    }
-  ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
+
+const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
-        <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
+      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -183,13 +162,13 @@ import { Helmet } from 'react-helmet-async';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Get Started
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 View Demo
@@ -197,6 +176,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
+
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -225,6 +205,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
@@ -244,6 +225,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -251,17 +233,17 @@ import { Helmet } from 'react-helmet-async';
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our micro SaaS solutions can help you achieve your goals.
+              Let's discuss how our micro SaaS solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Contact Us
               </Link>
               <Link 
-                to="/demo" 
+                to="/demo"
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Schedule Demo
@@ -269,35 +251,11 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-        <meta name="description" content="Discover our micro SaaS solutions designed to help you launch and scale your software business." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Micro SaaS Solutions</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Launch and scale your software business with our comprehensive micro SaaS solutions
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">SaaS Development</h3>
-              <p className="text-gray-300 mb-6">Custom SaaS applications built with modern technologies and best practices.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">API Integration</h3>
-              <p className="text-gray-300 mb-6">Seamless integration with third-party services and APIs.</p>
-            </div>
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Scalable Architecture</h3>
-              <p className="text-gray-300 mb-6">Cloud-native architecture designed for growth and scalability.</p>
-            </div>
-          </div>
-        </div>
       </div>
         <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions." />
         <meta name="keywords" content="micro SaaS, software solutions, AI analytics, content management, customer support, business automation" />
       </Helmet>
+      
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
@@ -315,6 +273,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
+
       {/* Micro SaaS Products Grid */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -330,6 +289,7 @@ import { Helmet } from 'react-helmet-async';
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {product.description}
                   </p>
+                  
                   {/* Pricing */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
@@ -340,6 +300,7 @@ import { Helmet } from 'react-helmet-async';
                       Setup fee: {product.setupFee}
                     </div>
                   </div>
+
                   {/* Features */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
@@ -352,6 +313,7 @@ import { Helmet } from 'react-helmet-async';
                       ))}
                     </ul>
                   </div>
+
                   {/* Benefits */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
@@ -363,6 +325,7 @@ import { Helmet } from 'react-helmet-async';
                       ))}
                     </div>
                   </div>
+
                   {/* Use Cases */}
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
@@ -374,6 +337,7 @@ import { Helmet } from 'react-helmet-async';
                       ))}
                     </div>
                   </div>
+
                   <div className="flex gap-2">
                     <Link
                       to={product.href}
@@ -394,6 +358,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
+
       {/* Why Choose Our Micro SaaS */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
@@ -445,6 +410,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -453,7 +419,7 @@ import { Helmet } from 'react-helmet-async';
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss which micro SaaS solution is perfect for your business needs
+              Let's discuss which micro SaaS solution is perfect for your business needs'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -485,8 +451,18 @@ import { Helmet } from 'react-helmet-async';
         </div>
       </section>
     </>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
   );
-}
-export default MicroSaaSSolutionsPage;
 };
-export default MicroSaaSSolutionsPage;
+
+export default HomePage;

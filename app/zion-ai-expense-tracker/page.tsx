@@ -1,24 +1,23 @@
-import React from 'react'
+<<<<<<< HEAD
 'use client'
-import React from 'react';'
-'use client';
+import React from 'react'
+export default function ZionAiExpenseTrackerPage() {
+=======
+"use client";
+>>>>>>> origin/main
+
+import React from "react";
+
 export default function ZionAiExpenseTrackerPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Expense Tracker</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.;
-        </p>
-      </div>
+    <div>
+      <h1 className="text-4xl font-bold mb-8">Zion Ai Expense Tracker</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
-          This page is under development.</p></div></div>
-  )}
-        </p>;
-      </div>;
-    </div>;
-  );}
+  );
+=======
 }
-'
+>>>>>>> origin/main

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+
+>>>>>>> origin/main
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Settings, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+<<<<<<< HEAD
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
@@ -9,9 +14,18 @@ export default function AiPoweredDevops() {
     "AI-powered automated testing and quality assurance",Intelligent deployment orchestration and rollback",Predictive infrastructure scaling and optimization",Automated security vulnerability detection and patching",AI-driven performance monitoring and alerting",Intelligent log analysis and anomaly detection",Automated code review and optimization suggestions",Smart resource allocation and cost optimization",AI-powered incident response and resolution",Automated compliance checking and reporting",Intelligent capacity planning and forecasting",AI-driven continuous integration and deployment"
   ];
 
+<<<<<<< HEAD
   const benefits = [
     "Reduce deployment time by 80%",Eliminate 95% of manual DevOps tasks",Improve system reliability by 99.9%",Cut infrastructure costs by 40%"
   ];
+=======
+  // const benefits = [
+  //   "Reduce deployment time by 80%",
+  //   "Eliminate 95% of manual DevOps tasks",
+  //   "Improve system reliability by 99.9%",
+  //   "Cut infrastructure costs by 40%"
+  // ];
+>>>>>>> origin/main
 
   const pricingPlans = [
     {
@@ -99,21 +113,17 @@ export default function AiPoweredDevops() {
       color: "from-orange-500 to-red-500"
     }
   ];
+=======
+>>>>>>> origin/main
 
+const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-        />
-        <meta
-          name="keywords"
-          content="AI DevOps, automated testing, intelligent deployment, predictive scaling, DevOps automation, CI/CD, infrastructure automation, monitoring AI"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       <SEOOptimizer
         title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
         description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
@@ -412,7 +422,22 @@ export default function AiPoweredDevops() {
             </div>
           </div>
         </section>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+>>>>>>> origin/main
       </div>
-    </>
+    </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default HomePage;
+>>>>>>> origin/main

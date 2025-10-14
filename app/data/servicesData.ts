@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
   id: string;
   title: string;
@@ -336,3 +337,10 @@ export const services: Service[] = [
     href: '/micro-saas-solutions'
   }
 ];
+=======
+// servicesData - Basic implementation;
+export default function servicesData() {;
+  return null;
+}
+;
+>>>>>>> origin/main

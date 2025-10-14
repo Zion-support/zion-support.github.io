@@ -1,30 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+
 const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
-        </Routes>
-      </Router>
-    </HelmetProvider>
-import React from 'react';'
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
-{ HelmetProvider } from 'react-helmet-async';
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>;
-      <Router>;
-        <Routes>;}
-          <Route path="/" element={<div>Home Page</div>} />;
-        </Routes>;
-      </Router>;
-    </HelmetProvider>;
-  );
-}
+  return <div>Minimal App</div>;
 };
+
 export default App;
-export default App;
-'

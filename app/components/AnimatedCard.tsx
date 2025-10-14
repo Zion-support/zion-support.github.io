@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 interface AnimatedCardProps {
@@ -34,3 +35,17 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
 }
 
 export default AnimatedCard
+=======
+import React from "react";
+
+const AnimatedCard = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AnimatedCard</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default AnimatedCard;
+>>>>>>> origin/main

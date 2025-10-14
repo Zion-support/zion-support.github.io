@@ -1,22 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const SupportPage: React.FC = () => {
+"use client";
+
+import React from "react";
+
+export default function SupportPage() {
   return (
-  <>
-      <Helmet></Helmet>
-        <title>SupportPage - Zion Tech Group</title>
-        <meta name="description" content="SupportPage - Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">SupportPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-)
-    </>)
+    <div>
+      <h1 className="text-4xl font-bold mb-8">SupportPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
   );
 }
-}
-export default SupportPag;e;

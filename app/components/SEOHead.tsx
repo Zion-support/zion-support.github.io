@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -45,3 +46,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }
 
 export default SEOHead
+=======
+import React from "react";
+
+const SEOHead = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">SEOHead</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SEOHead;
+>>>>>>> origin/main

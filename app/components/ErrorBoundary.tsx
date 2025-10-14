@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -36,11 +37,36 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
+=======
+import React, { Component, ReactNode } from "react";
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> origin/main
   }
 
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
             <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
@@ -86,6 +112,11 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </div>
           </div>
+=======
+        <div className="p-4">
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
+>>>>>>> origin/main
         </div>
       );
     }
@@ -94,4 +125,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
+=======
+export default ErrorBoundary;
+>>>>>>> origin/main
