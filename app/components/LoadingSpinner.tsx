@@ -1,3 +1,4 @@
+import React from 'react';
   text?: string
   fullScreen?: boolean
   className?: string}

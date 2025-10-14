@@ -1,76 +1,88 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix JSX structure errors
-function fixJSXErrors(content) {
-  // Fix malformed JSX fragments and structure
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>/g, '<>\n      <Helmet>');
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<div[^>]*>/g, '<>\n      <div');
-  
-  // Fix missing closing tags for common elements
-  content = content.replace(/<Helmet>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>/g, '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$1" />\n      </Helmet>');
-  
-  // Fix malformed JSX structure patterns
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<div[^>]*>/g, '<>\n      <Helmet>\n        <title>$1</title>\n        <meta name="description" content="$1" />\n      </Helmet>\n      <div');
-  
-  // Fix missing closing tags for p elements
-  content = content.replace(/<p[^>]*>\s*([^<]+)\s*<\/p>/g, '<p>$1</p>');
-  content = content.replace(/<p[^>]*>\s*([^<]+)\s*$/gm, '<p>$1</p>');
-  
-  // Fix missing closing tags for div elements
-  content = content.replace(/<div[^>]*>\s*([^<]+)\s*$/gm, '<div>$1</div>');
-  
-  // Fix malformed return statements
-  content = content.replace(/return\s*\(\s*<>\s*<div[^>]*><\/div>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>');
-  
-  // Fix missing closing fragments
-  content = content.replace(/<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<div[^>]*>[\s\S]*?<\/div>\s*$/gm, (match) => {
-    if (!match.includes('</>')) {
+// Function to fix common JSX errors
+function fixJSXErrors(content, filePath) {
+  let fixed = content;
+  let changes = 0;
+
+  // Fix duplicate closing Helmet tags
+  const helmetPattern = /<\/Helmet>\s*<\/Helmet>/g;
+  if (helmetPattern.test(fixed)) {
+    fixed = fixed.replace(helmetPattern, '</Helmet>');
+    changes++;
+  }
+
+  // Fix missing closing JSX fragments
+  const fragmentPattern = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*$/gm;
+  if (fragmentPattern.test(fixed)) {
+    fixed = fixed.replace(fragmentPattern, (match) => {
       return match + '\n    </>';
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX structure with multiple divs
-  content = content.replace(/<div[^>]*>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)<\/p>\s*<\/div>\s*<\/div>\s*<\/div>/g, 
-    '<div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">$1</h1>\n          <p className="text-xl text-gray-600">$2</p>\n        </div>\n      </div>');
-  
-  // Fix common malformed patterns
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>/g,
-    '<>\n      <Helmet>\n        <title>$1</title>\n        <meta name="description" content="$1" />\n      </Helmet>\n      <div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <p className="text-xl text-gray-600">$3</p>\n        </div>\n      </div>\n    </>');
-  
-  // Fix malformed function returns
-  content = content.replace(/  \)\};/g, '  );');
-  content = content.replace(/  \)\};/g, '  );');
-  
-  // Fix missing closing tags for common elements
-  content = content.replace(/<Link[^>]*>([^<]+)<\/Link>/g, '<Link to="$1">$1</Link>');
-  content = content.replace(/<a[^>]*>([^<]+)<\/a>/g, '<a href="#">$1</a>');
-  
-  // Fix malformed JSX structure with missing closing tags
-  content = content.replace(/<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)\s*$/gm, 
-    '<div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">$1</h1>\n          <p className="text-xl text-gray-600">$2</p>\n        </div>\n      </div>');
-  
-  // Fix missing closing tags for spans
-  content = content.replace(/<span[^>]*>([^<]+)<\/span>/g, '<span>$1</span>');
-  
-  // Fix malformed JSX structure patterns
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>\s*<title>([^<]+)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]+)<\/h1>\s*<p[^>]*>([^<]+)\s*$/gm,
-    '<>\n      <Helmet>\n        <title>$1</title>\n        <meta name="description" content="$1" />\n      </Helmet>\n      <div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">$2</h1>\n          <p className="text-xl text-gray-600">$3</p>\n        </div>\n      </div>\n    </>');
-  
-  return content;
+    });
+    changes++;
+  }
+
+  // Fix malformed JSX structure - look for incomplete JSX
+  const incompleteJSXPattern = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<\/Helmet>\s*$/gm;
+  if (incompleteJSXPattern.test(fixed)) {
+    fixed = fixed.replace(incompleteJSXPattern, (match) => {
+      return match.replace(/<\/Helmet>\s*<\/Helmet>/, '</Helmet>') + '\n    </>';
+    });
+    changes++;
+  }
+
+  // Fix files that are completely broken (like ai-3d-generation)
+  if (filePath.includes('ai-3d-generation') && fixed.includes('<Helmet>\n\n        </div>')) {
+    fixed = `'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="AI 3D Generation services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AI 3D Generation</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our AI 3D generation services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}`;
+    changes++;
+  }
+
+  // Fix missing closing div tags
+  const missingDivPattern = /<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>[\s\S]*?<\/h1>\s*<p[^>]*>[\s\S]*?<\/p>\s*<\/div>\s*$/gm;
+  if (missingDivPattern.test(fixed)) {
+    fixed = fixed.replace(missingDivPattern, (match) => {
+      return match + '\n      </div>\n    </>\n  );\n}';
+    });
+    changes++;
+  }
+
+  return { content: fixed, changes };
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixJSXErrors(content);
+    const result = fixJSXErrors(content, filePath);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed JSX: ${filePath}`);
+    if (result.changes > 0) {
+      fs.writeFileSync(filePath, result.content);
+      console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
     return false;
@@ -80,30 +92,25 @@ function processFile(filePath) {
   }
 }
 
-// Main function to process all TSX files
+// Main execution
 async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    '*.tsx'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: ['node_modules/**', 'dist/**', '.next/**'] 
-    });
-    
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
-      }
+  console.log('Starting JSX error fixes...');
+
+  // Get all TypeScript/TSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+
+  let totalFixed = 0;
+  let filesProcessed = 0;
+
+  files.forEach(file => {
+    if (processFile(file)) {
+      totalFixed++;
     }
-  }
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+    filesProcessed++;
+  });
+
+  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
+  console.log('JSX error fixes completed!');
 }
 
-main();
+main().catch(console.error);

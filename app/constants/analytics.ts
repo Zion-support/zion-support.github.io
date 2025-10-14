@@ -1,3 +1,4 @@
+import React from 'react';
 // Analytics constants;
 export const ANALYTICS_EVENTS = {
   PAGE_VIEW: 'page_view',''

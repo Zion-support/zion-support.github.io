@@ -1,3 +1,4 @@
+import React from 'react';
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code;'

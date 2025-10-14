@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { Helmet    } from "react-helmet-async
 import { 
   CheckCircleIcon,
@@ -15,6 +17,7 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>About Us - Zion Tech Group</title>"
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
       </Helmet>

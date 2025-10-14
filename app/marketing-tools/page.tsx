@@ -81,9 +81,8 @@ const MarketingToolsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-      </Helmet>
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
+        <meta name="description" content="Marketing Tools - Zion Tech Group - Zion Tech Group" />
+        <meta name="keywords" content="marketing, tools, -, zion, tech, group, AI solutions, IT services" />
       </Helmet>
 
       {/* Hero Section */}

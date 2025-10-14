@@ -1,3 +1,4 @@
+import React from 'react';
 export const reportError = (
   error: Error,
   context?: Record<string, unknown>,)

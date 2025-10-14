@@ -2,27 +2,25 @@ import React from 'react';
 import Link from 'next/link';
 
 interface ContentPreviewCardProps {
-  id: string;
   title: string;
   excerpt: string;
   author: string;
-  publishedAt: string;
+  date: string;
   readTime: string;
   category: string;
-  imageUrl?: string;
   slug: string;
+  imageUrl?: string;
 }
 
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
-  id: _id,
   title,
   excerpt,
   author,
-  publishedAt,
+  date,
   readTime,
   category,
-  imageUrl,
-  slug
+  slug,
+  imageUrl
 }) => {
   return (
     <article className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -37,19 +35,20 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
       )}
       
       <div className="p-6">
-        <div className="flex items-center justify-between mb-2">
-          <span>
+        <div className="flex items-center justify-between mb-4">
+          <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
             {category}
           </span>
           <span className="text-sm text-gray-500">{readTime}</span>
+        </div>
         
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           <Link href={`/blog/${slug}`} className="hover:text-blue-600 transition-colors">
             {title}
-          </h3>
+          </Link>
+        </h3>
         
-        <p>{excerpt}</p>
-        </p>
+        <p className="text-gray-600 text-sm line-clamp-3 mb-4">{excerpt}</p>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -57,10 +56,12 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
               <span className="text-sm font-medium text-gray-700">
                 {author.charAt(0).toUpperCase()}
               </span>
+            </div>
             <div>
-              <p>{author}</p>
-              <p className="text-sm text-gray-500">{publishedAt}</p>
-          
+              <p className="text-sm font-medium text-gray-900">{author}</p>
+              <p className="text-xs text-gray-500">{date}</p>
+            </div>
+          </div>
           <Link
             href={`/blog/${slug}`}
             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
@@ -68,8 +69,10 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </Link>
+            </svg>
+          </Link>
         </div>
+      </div>
     </article>
   );
 };

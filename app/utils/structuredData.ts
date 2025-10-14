@@ -1,3 +1,4 @@
+import React from 'react';
 // StructuredData utility;
 export const structureddata = () => {
   // Implementation here;

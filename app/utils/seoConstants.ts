@@ -1,3 +1,4 @@
+import React from 'react';
 // SeoConstants utility;
 export const seoconstants = () => {
   // Implementation here;

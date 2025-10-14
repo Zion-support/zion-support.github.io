@@ -1,3 +1,4 @@
+import React from 'react';
 import React, { lazy, ComponentType, ComponentProps, Suspense } from "react";
 
 // Higher-order component for lazy loading;

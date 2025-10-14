@@ -1,3 +1,4 @@
+import React from 'react';
 // Analytics Context Definition;
 export interface AnalyticsContextType {
   trackEvent: (event: string, properties?: Record<string, unknown>) => void;

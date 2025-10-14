@@ -1,91 +1,38 @@
-            Critical Resource Preloader
-          </h1>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional critical resource preloader services
-            designed to help your business grow and succeed.
-          </p>
-        </div>
-      </section>
-      { /* Content Section */ }
-            Critical Resource Preloader</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional critical resource preloader services
-            <div></div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive critical resource preloader
-                solutions tailored to your specific needs and requirements.
-              </p>
-              <ul className="space-y-3">"
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions
-                </li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation
-                </li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
-              <p className="mb-6">
-                Ready to transform your business with our critical resource preloader services?
-              </p>
-              <a;
-                href="$1
-                className="$1"></a>
-                Contact Us
-              </a>
-            </div>
+import React from 'react';
+
+const CriticalResourcePreloader: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">
+          Critical Resource Preloader
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Professional critical resource preloader services designed to help your business grow and succeed.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Resource Optimization</h3>
+            <p className="text-gray-600">
+              Optimize critical resources for faster loading times and better performance.
+            </p>
+          </div>
+          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Preloading Strategy</h3>
+            <p className="text-gray-600">
+              Implement smart preloading strategies to improve user experience.
+            </p>
+          </div>
+          <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Monitoring</h3>
+            <p className="text-gray-600">
+              Monitor and analyze resource loading performance in real-time.
+            </p>
           </div>
         </div>
-      </section>
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let"s discuss how our critical resource preloader
-            services can help you achieve your goals.
-          </p>
-          <a;
-            href="$1
-            className="$1"></a>
-            Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>)
-  )
-export default CriticalResourcePreloader
-                We provide comprehensive critical resource preloader
-                solutions tailored to your specific needs and requirements.</p>
-              <ul className="space-y-3">"
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions</li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation</li>
-                <li className="flex items-center">"
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support</li></ul></div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>"
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>"
-              <p className="mb-6">
-                Ready to transform your business with our critical resource preloader services?</p>
-              <a
-            Ready to Get Started?</h2></a>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our critical resource preloader'
-            services can help you achieve your goals.</p>
+      </div>
+    </div>
+  );
+};
 
-  )
-export default CriticalResourcePreloader
-}
-export default CriticalResourcePreloader
+export default CriticalResourcePreloader;

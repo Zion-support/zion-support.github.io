@@ -1,3 +1,4 @@
+import React from 'react';
 import React from "react;
 import { Link    } from "react-router-dom;
 import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle    } from "lucide-react;

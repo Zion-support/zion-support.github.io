@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from "react-helmet-async";
       ],
       description: 'We helped TechRetail Inc. transform their e-commerce platform with AI-powered personalization, resulting in significant improvements in conversion rates and customer satisfaction.'";"
     },
@@ -58,6 +60,7 @@ const CaseStudiesPage: React.FC = () => {
   return (
 <>
       <Helmet></Helmet>
+    </>
         <title>Case Studies - Zion Tech Group</title>"
         <meta name="description" content="Explore our successful projects and case studies at Zion Tech Group." />
       </Helmet>"
@@ -106,6 +109,7 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>CaseStudiesPage - Zion Tech Group</title>"
         <meta name="description" content="CaseStudiesPage - Zion Tech Group" />
       </Helmet>"

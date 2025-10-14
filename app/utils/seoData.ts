@@ -1,3 +1,4 @@
+import React from 'react';
 // SeoData utility;
 export const seodata = () => {
   // Implementation here;

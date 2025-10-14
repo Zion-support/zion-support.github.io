@@ -1,3 +1,4 @@
+import React from 'react';
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean }

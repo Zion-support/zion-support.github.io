@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from "react-helmet-async";
   description: string
   keywords: string
   canonical: string
@@ -40,6 +42,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const mergedStructuredData = structuredData || defaultStructuredData
   return (
 <>    <Helmet></Helmet>
+    </>
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       </script>

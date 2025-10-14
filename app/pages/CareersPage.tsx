@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from "react-helmet-async";
       <Helmet></Helmet>
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />"
@@ -22,6 +24,7 @@ const CareersPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>Careers - Zion Tech Group</title>"
         <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI and IT." />"
       </Helmet>"

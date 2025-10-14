@@ -1,3 +1,4 @@
+import React from 'react';
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: null,

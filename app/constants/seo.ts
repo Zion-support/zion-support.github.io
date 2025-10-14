@@ -1,3 +1,4 @@
+import React from 'react';
 // SEO constants;
 export const DEFAULT_SEO = {
   title: 'ZionTechGroup-AdvancedAIandITSolutions',''
