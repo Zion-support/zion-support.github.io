@@ -39,11 +39,7 @@ export default defineConfig({
     assetsInlineLimit: 2048,
     // Enable compression
     reportCompressedSize: true,
-<<<<<<< HEAD
-    // Additional optimizations
-=======
     // Optimize for production
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
     terserOptions: {
       compress: {
         drop_console: true,
@@ -90,13 +86,37 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Large page components (lazy load)
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+          // AI service pages - split by category
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            if (id.includes('analytics') || id.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (id.includes('content') || id.includes('generation')) {
+              return 'ai-content'
+            }
+            if (id.includes('cybersecurity') || id.includes('security')) {
+              return 'ai-security'
+            }
+            if (id.includes('customer') || id.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-services'
           }
-          // Service pages
-          if (id.includes('/ai-') || id.includes('/zion-')) {
-            return 'services'
+          // Zion micro SAAS pages
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            return 'zion-saas'
+          }
+          // 5G solutions
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            return '5g-solutions'
+          }
+          // Main pages
+          if (id.includes('/app/') && id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            return 'main-pages'
+          }
+          // Components
+          if (id.includes('/components/')) {
+            return 'components'
           }
           // Default chunk for other modules
           return 'vendor'

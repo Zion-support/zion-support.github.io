@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Activity } from 'lucide-react'
+import PerformanceDashboard from './PerformanceDashboard'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [isPerformanceDashboardOpen, setIsPerformanceDashboardOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -18,6 +20,10 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const togglePerformanceDashboard = useCallback(() => {
+    setIsPerformanceDashboardOpen(!isPerformanceDashboardOpen)
+  }, [isPerformanceDashboardOpen])
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -77,54 +83,6 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleSolutions();
-                  }
-                }}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 rounded-md px-2 py-1"
-                aria-expanded={isSolutionsOpen}
-                aria-haspopup="true"
-                aria-label="Solutions menu"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20"
-                  role="menu"
-                  aria-label="Solutions submenu"
-                >
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-300 rounded-lg mx-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-                      onClick={() => setIsSolutionsOpen(false)}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -295,18 +253,34 @@ const Navigation = React.memo(() => {
                 )}
               </div>
 
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
-                onClick={toggleMenu}
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="flex flex-col space-y-3 mt-4">
+                <button
+                  onClick={togglePerformanceDashboard}
+                  className="flex items-center justify-center space-x-2 px-4 py-3 bg-slate-700 hover:bg-slate-600 rounded-lg transition-all duration-300 text-white"
+                >
+                  <Activity className="w-4 h-4" />
+                  <span>Performance Dashboard</span>
+                </button>
+                
+                <Link
+                  to="/consultation"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold flex items-center justify-center space-x-2"
+                  onClick={toggleMenu}
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         )}
       </div>
+
+      {/* Performance Dashboard */}
+      <PerformanceDashboard
+        isVisible={isPerformanceDashboardOpen}
+        onClose={() => setIsPerformanceDashboardOpen(false)}
+      />
     </nav>
   )
 })
