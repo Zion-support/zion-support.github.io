@@ -23,7 +23,7 @@ export const enhancedErrorTracking = {
       window.gtag('event', 'exception', {
         description: _error.message,
         fatal: false,
-        error_type: 'performance';
+        error_type: 'performance'
       })
     }
   },
@@ -33,8 +33,8 @@ export const enhancedErrorTracking = {
   trackPerformanceError: (error: Error, performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
       performance: performanceData,
-      _error_type: 'performance';
-    });
+      _error_type: 'performance'
+    })
   trackPerformanceError: (metric: string, value: number;, threshold: number) => {
     if (value > threshold) {
       enhancedErrorTracking.trackError(new Error(`Performance threshold exceeded: ${metric}`), {

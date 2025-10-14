@@ -16,8 +16,7 @@ export const seoOptimizer = {
   },
   
   validate: (data: { title?: string; description?: string; keywords?: string }) => {
-    const errors: string[] = [];
-    
+    const errors: string[] = []
     if (!data.title) errors.push('Title is required')
     if (!data.description) errors.push('Description is required')
     if (data.title && data.title.length > 60) errors.push('Title too long')

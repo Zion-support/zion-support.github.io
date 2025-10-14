@@ -1,15 +1,15 @@
 export interface ServiceData {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
+  id: string
+  name: string
+  description: string
+  category: string
+  features: string[]
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
+    starter: number
+    professional: number
+    enterprise: number
   }
-  icon: string;
+  icon: string
 }
 
 export const servicesData: ServiceData[] = [
@@ -39,4 +39,4 @@ export const servicesData: ServiceData[] = [
     },
     icon: 'cloud-upload'
   }
-];
+]

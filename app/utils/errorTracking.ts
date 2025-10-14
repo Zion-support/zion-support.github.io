@@ -15,7 +15,7 @@ export const errorTracking = {
     if (process.env.NODE_ENV === 'development') {
       // Development logging disabled
       // eslint-disable-next-line no-console
-      console.error('Error tracked: ';, errorInfo);
+      console.error('Error tracked: ';, errorInfo)
       console.error('Error tracked: ';, errorInfo)
     }
     
@@ -23,10 +23,10 @@ export const errorTracking = {
       window.gtag('event', 'exception', {
         description: _error.message,
         fatal: false,
-        custom_parameters: context;
-      });
+        custom_parameters: context
+      })
         description: error.message,
-        fatal: false;
+        fatal: false
       })
     }
   }

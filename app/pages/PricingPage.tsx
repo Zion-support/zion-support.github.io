@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const PricingPage: React.FC = () => {
   return (
     <>
@@ -9,14 +8,14 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for our AI and IT solutions" />
         <meta name="keywords" content="pricing, plans, cost, subscription" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-autopx-4py-1 6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="containermx-autopx-4py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-boldtext-white mb-8">Pricing</h1>
-            <p className="text-xl text-gray-30 0 mb-8">
+            <h1 className="text-4xlfont-boldtext-whitemb-8">Pricing</h1>
+            <p className="text-xl text-gray-300 mb-8">
               Transparent pricing for our AI and IT solutions
             </p>
-            <div className="text-gray-4 0 0">
+            <div className="text-gray-400">
               <p>Pricing information coming soon...</p>
               </div>
         </div>
@@ -26,7 +25,6 @@ const PricingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default PricingPage;
+  )
+}
+export default PricingPage

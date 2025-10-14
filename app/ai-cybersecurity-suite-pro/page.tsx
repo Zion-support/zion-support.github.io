@@ -1,7 +1,6 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, Brain, Lock } from 'lucide-react';
-
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Shield, Brain, Lock } from 'lucide-react'
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (
     <>
@@ -10,36 +9,36 @@ const AICybersecuritySuiteProPage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered cybersecurity solutions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00via-purple-9 0 0to-slate-9 0 0">
-        <div className="container mx-autopx-4py-1 6">
-          <div className="text-center mb-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="containermx-autopx-4py-16">
+          <div className="text-centermb-16">
             <h1 className="text-5xlfont-boldtext-whitemb-6">
               AI Cybersecurity Suite Pro
             </h1>
-            <p className="text-xl text-gray-30 0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Protect your business with AI-powered cybersecurity solutions
             </p>
           </div>
           
           <div className="gridmd:grid-cols-3gap-8">
-            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Shield className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/20">
+              <Shield className="w-12h-12text-blue-400mb-4" />
               <h3 className="text-xlfont-semiboldtext-whitemb-3">Threat Detection</h3>
-              <p className="text-gray-3 0 0">
+              <p className="text-gray-300">
                 AI-powered threat detection and prevention systems.
               </p>
             </div>
-            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Lock className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/20">
+              <Lock className="w-12h-12text-blue-400mb-4" />
               <h3 className="text-xlfont-semiboldtext-whitemb-3">Data Protection</h3>
-              <p className="text-gray-3 0 0">
+              <p className="text-gray-300">
                 Advanced encryption and data protection mechanisms.
               </p>
             </div>
-            <div className="bg-white/1 0backdrop-blur-smrounded-lgp-6borderborder-white/2 0">
-              <Brain className="w -1 2h-1 2 text-blue-4 0 0mb-4" />
+            <div className="bg-white/10backdrop-blur-smrounded-lgp-6borderborder-white/20">
+              <Brain className="w-12h-12text-blue-400mb-4" />
               <h3 className="text-xlfont-semiboldtext-whitemb-3">AI Monitoring</h3>
-              <p className="text-gray-3 0 0">
+              <p className="text-gray-300">
                 Continuous AI monitoring and security analysis.
               </p>
             </div>
@@ -47,7 +46,6 @@ const AICybersecuritySuiteProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
-
-export default AICybersecuritySuiteProPage;
+  )
+}
+export default AICybersecuritySuiteProPage

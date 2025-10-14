@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface MetaManagerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
 }
 
 const MetaManager: React.FC<MetaManagerProps> = ({
@@ -22,50 +21,49 @@ const MetaManager: React.FC<MetaManagerProps> = ({
 }) => {
   useEffect(() => {
     // Update document title
-    if (title) => {
-      document.title = title;
+    if (title) {
+      document.title = title
     }
 
     // Update meta description
-    if (description) => {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) => {
-        metaDescription.setAttribute('content', description);
+    if (description) {
+      const metaDescription = document.querySelector('meta[name="description"]')
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description)
       } else {
-        const meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = description;
-        document.head.appendChild(meta);
+        const meta = document.createElement('meta')
+        meta.name = 'description'
+        meta.content = description
+        document.head.appendChild(meta)
       }
     }
 
     // Update meta keywords
-    if (keywords) => {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) => {
-        metaKeywords.setAttribute('content', keywords);
+    if (keywords) {
+      const metaKeywords = document.querySelector('meta[name="keywords"]')
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords)
       } else {
-        const meta = document.createElement('meta');
-        meta.name = 'keywords';
-        meta.content = keywords;
-        document.head.appendChild(meta);
+        const meta = document.createElement('meta')
+        meta.name = 'keywords'
+        meta.content = keywords
+        document.head.appendChild(meta)
       }
     }
 
     // Update canonical URL
-    if (canonical) => {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink) => {
-        canonicalLink.setAttribute('href', canonical);
+    if (canonical) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]')
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical)
       } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonical;
-        document.head.appendChild(link);
+        const link = document.createElement('link')
+        link.rel = 'canonical'
+        link.href = canonical
+        document.head.appendChild(link)
       }
     }
-  }, [title, description, keywords, canonical]);
-
+  }, [title, description, keywords, canonical])
   return (
     <Helmet>
       {title && <title>{title}</title>}
@@ -86,7 +84,6 @@ const MetaManager: React.FC<MetaManagerProps> = ({
       {description && <meta name="twitter:description" content={description} />}
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </Helmet>
-  );
-};
-
-export default MetaManager;
+  )
+}
+export default MetaManager

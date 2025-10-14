@@ -4,7 +4,7 @@ export const analyticsTracker = {
       window.gtag('event', 'page_view', {
         page_title: title || document.title,
         page_location: window.location.href,
-        page_path: page;
+        page_path: page
       })
     }
   },
@@ -14,7 +14,7 @@ export const analyticsTracker = {
       window.gtag('event', 'click', {
         event_category: 'engagement',
         event_label: element,
-        custom_parameter: location;
+        custom_parameter: location
       })
     }
   },
@@ -24,7 +24,7 @@ export const analyticsTracker = {
       window.gtag('event', 'form_submit', {
         event_category: 'engagement',
         event_label: formName,
-        value: success ? 1 : 0;
+        value: success ? 1 : 0
       })
     }
   },
@@ -33,7 +33,7 @@ export const analyticsTracker = {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
         send_to: conversionId,
-        value: value;
+        value: value
       })
     }
   }
