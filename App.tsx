@@ -7,16 +7,7 @@ import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
@@ -41,7 +32,6 @@ const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
   return <>{children}</>;
 };
 
@@ -50,21 +40,14 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
-        <SkipLink />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
-              <PerformanceOptimizer>
-                <AdvancedPerformanceOptimizer>
-                  <EnhancedAccessibility>
-                    <AccessibilityEnhancer>
-                      <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1">
-                        <Suspense fallback={<PageLoader />}>
+                <PerformanceMonitor />
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <Navigation />
+                  <main id="main-content" className="flex-1">
+                    <Suspense fallback={<div>Loading...</div>}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -83,14 +66,10 @@ const App: React.FC = () => {
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
                           </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                    </AccessibilityEnhancer>
-                  </EnhancedAccessibility>
-                </AdvancedPerformanceOptimizer>
-              </PerformanceOptimizer>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                </div>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
         </Router>
