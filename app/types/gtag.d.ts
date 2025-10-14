@@ -6,7 +6,10 @@ declare global {
       config?: Record<string, unknown>
     ) => void;
     dataLayer: unknown[];
+      config?: any
+      config?: Record<string, unknown>
+    ) => void
   }
 }
 
-export {};
+export {}

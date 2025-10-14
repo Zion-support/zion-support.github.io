@@ -1,14 +1,32 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = 'https://ziontechgroup.com';
+const baseUrl = 'https://zion.app';
 const pages = [
   { url: '/', changefreq: 'daily', priority: '1.0' },
-  { url: '/about', changefreq: 'monthly', priority: '0.8' },
-  { url: '/services', changefreq: 'weekly', priority: '0.9' },
-  { url: '/contact', changefreq: 'monthly', priority: '0.7' },
-  { url: '/pricing', changefreq: 'weekly', priority: '0.8' },
-  { url: '/blog', changefreq: 'daily', priority: '0.6' },
+  { url: '/ai-solutions', changefreq: 'weekly', priority: '0.9' },
+  { url: '/it-solutions', changefreq: 'weekly', priority: '0.9' },
+  { url: '/micro-saas-solutions', changefreq: 'weekly', priority: '0.9' },
+  { url: '/ai-business-intelligence-pro', changefreq: 'weekly', priority: '0.8' },
+  { url: '/ai-cybersecurity-suite-pro', changefreq: 'weekly', priority: '0.8' },
+  // 5G Services
+  { url: '/5g-consulting', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-deployment', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-integration', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-maintenance', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-migration', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-modernization', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-monitoring', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-optimization', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-performance', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-reliability', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-scalability', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-security', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-support', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-testing', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-training', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-transformation', changefreq: 'weekly', priority: '0.8' },
+  { url: '/5g-upgrade', changefreq: 'weekly', priority: '0.8' },
 ];
 
 const generateSitemap = () => {

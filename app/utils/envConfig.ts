@@ -7,4 +7,4 @@ export const envConfig = {
     performance: process.env.NEXT_PUBLIC_PERFORMANCE_ENABLED === 'true'
   },
   debug: process.env.NODE_ENV === 'development'
-};
+}
