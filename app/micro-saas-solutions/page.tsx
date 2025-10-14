@@ -11,7 +11,6 @@ import {
   GlobeAltIcon,
   RocketLaunchIcon,
   ArrowRightIcon,
-  CheckCircleIcon,
   PhoneIcon,
   EnvelopeIcon,
   CurrencyDollarIcon,
@@ -330,7 +329,7 @@ import { Helmet } from 'react-helmet-async';'
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>","""
                       {product.features.map((feature, featureIndex) => (""""
                         <li key={featureIndex} className="flex items-center text-gray-30o0">""""
-                          <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />""""
+                          <className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />""""
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}

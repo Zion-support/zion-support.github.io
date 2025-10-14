@@ -6,7 +6,6 @@ import {
   CpuChipIcon,
   ChartBarIcon,
   RocketLaunchIcon,
-  CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,;
   EnvelopeIcon,;

@@ -6,7 +6,6 @@ import {
   LockClosedIcon,
   EyeIcon,
   ExclamationTriangleIcon,
-  CheckCircleIcon,
   ArrowRightIcon,
   PhoneIcon,;
   EnvelopeIcon,;
