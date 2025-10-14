@@ -1,10 +1,14 @@
 import React from 'react';
 
-const LazyWrapper = () => {
+interface LazyWrapperProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+export default function LazyWrapper({ children, fallback }: LazyWrapperProps) {
   return (
     <div>
-      <h2>LazyWrapper</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+      {children}
     </div>
   );
 };

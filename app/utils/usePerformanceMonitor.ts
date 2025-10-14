@@ -1,11 +1,35 @@
 import { useEffect, useCallback } from 'react';
 
-export const usePerformanceMonitor = () => {
-  const measurePerformance = useCallback((name: string, fn: () => void) => {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
-    console.log(`${name} took ${end - start} milliseconds`);
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
+}
+
+export const usePerformanceMonitor = (): PerformanceMetrics => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+  });
+
+  useEffect(() => {
+    const startTime = performance.now();
+    
+    const measurePerformance = () => {
+      const loadTime = performance.now() - startTime;
+      const memoryUsage = (performance as { memory?: { usedJSHeapSize?: number } }).memory?.usedJSHeapSize;
+      
+      setMetrics({
+        loadTime,
+        renderTime: performance.now() - startTime,
+        memoryUsage,
+      });
+    };
+
+    // Measure after component mount
+    const timeoutId = setTimeout(measurePerformance, 100);
+    
+    return () => clearTimeout(timeoutId);
   }, []);
 
   useEffect(() => {

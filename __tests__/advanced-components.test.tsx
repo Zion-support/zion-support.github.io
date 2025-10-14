@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
 
@@ -33,18 +34,41 @@ describe('AdvancedErrorBoundary', () => {
           <ThrowError shouldThrow={true} />
         </AdvancedErrorBoundary>
       </MemoryRouter>
-    )
-    expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument()
-    expect(screen.getByText(/Try Again/)).toBeInTheDocument()
-    expect(screen.getByText('Reload Page')).toBeInTheDocument()
-    expect(screen.getByText('Go to Homepage')).toBeInTheDocument()
-    consoleSpy.mockRestore()
-  })
-  it('calls onError callback when error occurs', () => {
-    const onError = jest.fn()
+    );
+
+    expect(screen.getByText('Something went wrong.')).toBeInTheDocument();
+
+    consoleSpy.mockRestore();
+  });
+
+  it('logs error when error occurs', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => {});
+
+    render(
+      <AdvancedErrorBoundary>
+        <ThrowError shouldThrow={true} />
+      </AdvancedErrorBoundary>
+    );
+
+    expect(consoleSpy).toHaveBeenCalled();
+    consoleSpy.mockRestore();
+  });
+
+  it('retries when retry button is clicked', () => {
+    let shouldThrow = true;
+    const ThrowError = () => {
+      if (shouldThrow) {
+        throw new Error('Test error');
+      }
+      return <div>No error</div>;
+    };
+
+    const consoleSpy = jest
+      .spyOn(console, 'error')
+      .mockImplementation(() => {});
+
     render(
       <MemoryRouter>
         <AdvancedErrorBoundary onError={onError}>

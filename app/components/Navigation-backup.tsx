@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navigation-backup = () => {
+export default function NavigationBackup() {
   return (
     <div>
       <h2>Navigation-backup</h2>

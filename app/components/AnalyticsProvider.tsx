@@ -26,10 +26,15 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     trackPageView,
   };
 
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   return (
-    <AnalyticsContext.Provider value={value}>
+    <div>
       {children}
-    </AnalyticsContext.Provider>
+    </div>
   );
 }
 
