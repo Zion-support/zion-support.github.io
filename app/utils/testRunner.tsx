@@ -52,8 +52,8 @@ export default function Page() { return (
         </div>
       </div>
     </div>
-)
-  ); }
+  );,
+};
 
             TestRunner</h1>"""
           <p className=text-xl text-gray-600 mb-8>

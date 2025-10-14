@@ -51,8 +51,8 @@ export default function Page() { return (
         </div>
       </div>
     </div>
-)
-  ); }
+  );,
+};
 
             Sitemap page</h1>"""
           <p className=text-xl text-gray-600 mb-8>

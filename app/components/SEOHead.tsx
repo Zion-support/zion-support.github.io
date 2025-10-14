@@ -1,4 +1,4 @@
-structuredData
+structuredData;
 }) => {
   return (
     <Helmet>

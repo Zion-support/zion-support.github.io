@@ -50,7 +50,7 @@ const AIContentWriterPage = () => {
 
         <Footer />
       </div>
-    </>)
+    </div>
   );
 };
 export default AIContentWriterPage;

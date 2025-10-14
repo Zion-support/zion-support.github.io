@@ -14,8 +14,8 @@ const HomePage = () => {"""
             This page is under construction. Please check back later.
           </p>
         </div>
-      </div>)
-    </div>)
+      </div>
+    </div>
   );
 };
 export default HomePage;

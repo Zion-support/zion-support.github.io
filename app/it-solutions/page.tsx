@@ -188,7 +188,10 @@ import { Helmet } from 'react-helmet-async';'
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  );
+};
 
       {/* IT Services Grid */}
 

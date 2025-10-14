@@ -79,6 +79,7 @@ export default function AITranslationServicePage() {
     }
   ];
 
+const PagePage = () => {
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
@@ -233,7 +234,8 @@ export default function AITranslationServicePage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
-}
->>>>>>> origin/main
+};
+
+export default PagePage;

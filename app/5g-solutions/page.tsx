@@ -15,7 +15,7 @@ const FiveGSolutionsPage = () => {
           </p>
         </div>
       </div>
-    </div>)
+    </div>
   );
 };
 export default FiveGSolutionsPage;

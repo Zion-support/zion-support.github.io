@@ -1,6 +1,6 @@
 import React from 'react';
 variant?: 'default' | 'glow' | 'gradient' }
-;
+
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '','')
@@ -17,7 +17,7 @@ const variantClasses = {
   className?: string';
   variant?: 'default' | 'glow' | 'gradient';}'
 }
-;
+
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ children, '
   className = '',';'
   variant = 'default''; })
@@ -52,7 +52,7 @@ export default FuturisticCard;
     </div>)
   );
 export default FuturisticCard
-
+;
 };
 export default FuturisticCard;'
 """

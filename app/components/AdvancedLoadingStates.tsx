@@ -30,12 +30,14 @@ const getLoadingIcon = () => {
     }
   };
 
+const AdvancedLoadingStatesPage = () => {
   return (
     <div className={`${fullScreen ? 'fixed inset-0' : ''} flex items-center justify-center bg-slate-900 text-white`}></div>"""
       <div className="text-center"></div>)""
         {getLoadingIcon()}
         <p>{message || 'Loading...'}</p>
       </div>
+    
     </div>
   );
 };

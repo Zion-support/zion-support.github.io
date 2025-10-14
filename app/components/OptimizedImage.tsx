@@ -1,7 +1,5 @@
-onError?: () => void }
-import React, { useState, useRef, useEffect } from 'react';';
-import { Helmet } from 'react-helmet-async';
-interface OptimizedImageProps { src: string;
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
   alt: string;
   width?: number;

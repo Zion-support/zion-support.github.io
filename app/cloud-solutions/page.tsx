@@ -15,7 +15,7 @@ const CloudSolutionsPage = () => {
           </p>
         </div>
       </div>
-    </div>)
+    </div>
   );
 };
 export default CloudSolutionsPage;

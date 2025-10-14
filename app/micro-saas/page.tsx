@@ -119,6 +119,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
       <EnhancedSEO
@@ -242,7 +243,6 @@ const MicroSaasPage: React.FC = () => {
                 <div>
                   <p className=text-white font-semibold>{testimonial.name}</p>
                   <p className=text-gray-400 text-sm>{testimonial.role}, {testimonial.company}</p>
->>>>>>> origin/main
 
                 </div>
               </div>

@@ -36,6 +36,6 @@ export default function ServicesData() {
           </div>
         </div>
       </div>
-    </div>)
+    </div>
   );
 }"""

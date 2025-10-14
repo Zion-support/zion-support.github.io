@@ -108,6 +108,7 @@ const BlogPage: React.FC = () => {
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
 
+const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">""
       <EnhancedSEO
@@ -394,12 +395,11 @@ export default function Page() {
             />
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">""
               Subscribe
->>>>>>> origin/main
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

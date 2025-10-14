@@ -14,6 +14,7 @@ import {
 
 } from '@heroicons/react/24/outline';
 
+const AboutPagePage = () => {
   return (
     <>
       <Helmet>

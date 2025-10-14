@@ -37,4 +37,3 @@ const ImprovedErrorBoundary: React.FC = () => { return (
                 We provide comprehensive improved error boundary;
                 solutions tailored to your specific needs and requirements.;
 
->>>>>>> origin/main

@@ -98,6 +98,7 @@ const benefits = [
     }
   ];
 
+const PagePage = () => {
   return (
     <>
       <SEOOptimizer
@@ -273,7 +274,7 @@ const benefits = [
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 export default AIFraudDetectionPage;

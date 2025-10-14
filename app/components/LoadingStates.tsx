@@ -1,5 +1,5 @@
-import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 interface LoadingPageProps {
   type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
@@ -87,6 +87,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </div>
         </div>
       </div>
+    
     </div>
   );
 };
@@ -208,6 +209,3 @@ export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "C
     </div>
   )}
 }''
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

@@ -186,7 +186,7 @@ console.log('Fixed page.tsx');
 const aboutPath = './app/about/page.tsx';
 if (fs.existsSync(aboutPath)) {
   const aboutContent = fs.readFileSync(aboutPath, 'utf8');
-  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('<<<<<<< HEAD')) {
+  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {
     fs.writeFileSync(aboutPath, createCleanPage(aboutPath));
     console.log('Fixed about/page.tsx');
   }

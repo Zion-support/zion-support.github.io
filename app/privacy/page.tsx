@@ -15,7 +15,7 @@ const PrivacyPage = () => {
           </p>
         </div>
       </div>
-    </div>)
+    </div>
   );
 };
 export default PrivacyPage;

@@ -1,3 +1,5 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import { Helmet } from 'react-helmet-async';
 
@@ -132,8 +134,7 @@ const benefits = ['Access to cutting-edge technology',''
           </div>
         </section>
       </div>
-    </>
-)
+    </div>
   );
 }
 """

@@ -161,7 +161,10 @@
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  );
+};
 
       {/* Micro SaaS Products Grid */}
 

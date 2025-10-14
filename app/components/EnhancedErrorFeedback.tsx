@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 interface Props {
   children: ReactNode;
@@ -192,13 +192,9 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
-    }
+      </div>
+    </div>
+  );
+};
 
-    return this.props.children;
-  }
-}
-
-export default GlobalErrorBoundary;
->>>>>>> origin/main
->>>>>>> origin/main
+export default EnhancedErrorFeedbackPage;

@@ -1,6 +1,5 @@
-  export interface NextPageProps {
-  export default content;
-// Next.js type definitions
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 declare module "next" {""
     params: { [key: string]: string };

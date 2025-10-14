@@ -75,6 +75,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
+const EnhancedSEOPage = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -145,4 +146,4 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   );
 };
 
-export default EnhancedSEO;
+export default EnhancedSEO

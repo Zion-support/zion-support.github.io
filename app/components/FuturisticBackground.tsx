@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const FuturisticBackground = () => {
+const FuturisticBackgroundPage = () => {
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">"""
       {/* Animated Grid Background */}
@@ -19,7 +20,6 @@ const FuturisticBackground = () => {
                   animationDuration: '3s''
                 }
                 }}
->>>>>>> origin/main
               ></div>
             ))
           </div>
@@ -174,12 +174,8 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       <div className="relative z-10">""
         {children}
       </div>
->>>>>>> origin/main
     </div>
   );
 };
 
-export default FuturisticBackground;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+export default FuturisticBackgroundPage;

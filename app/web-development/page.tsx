@@ -71,6 +71,7 @@ const WebDevelopmentPage: React.FC = () => {
     }
   ];
 
+const PagePage = () => {
   return (
     <>
       <SEOOptimizer
@@ -236,10 +237,9 @@ const WebDevelopmentPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
 export default WebDevelopmentPage;
 
->>>>>>> origin/main

@@ -156,6 +156,7 @@ const ImprovedFooter = () => {
     { name: "Security", href: "/security" },""
   ], []);
 
+const FooterPage = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">""
@@ -347,7 +348,6 @@ const legal = [
                 >
                   {link.label}
                 </Link>
->>>>>>> origin/main
               ))}
             </div>
           </div>
@@ -406,7 +406,6 @@ const legal = [
             <div className="flex items-center">"""
               <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />"""
               <span className="text-gray-300">San Francisco, CA</span>"""
->>>>>>> origin/main
             </div>
           </div>
         </div>
@@ -453,18 +452,13 @@ const legal = [
             <HeartIcon className="w-4 h-4 inline text-red-500" /> for our clients.""
 
           </p>
-
         </div>
       </div>
-    </footer>
-
+    </div>
   );
-});
+};
 
 Footer.displayName = "Footer";""
 
 export default Footer;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
 

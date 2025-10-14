@@ -1,67 +1,124 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Files that still have issues
-const filesToFix = [
-  'app/error.tsx',
-  'app/global-error.tsx',
-  'app/loading.tsx',
-  'app/micro-saas-services/microSaasServices.tsx',
-  'app/micro-saas-services/services.tsx',
+// Files to keep (essential files only)
+const keepFiles = [
+  'App.tsx',
+  'app/page.tsx',
+  'app/about/page.tsx',
+  'app/services/page.tsx',
+  'app/contact/page.tsx',
+  'app/pricing/page.tsx',
+  'app/careers/page.tsx',
+  'app/blog/page.tsx',
+  'app/solutions/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/it-services/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/cybersecurity/page.tsx',
+  'app/micro-saas/page.tsx',
+  'app/5g-solutions/page.tsx',
+  'app/blockchain/page.tsx',
+  'app/quantum-computing/page.tsx',
+  'app/iot-edge/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/digital-transformation/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/api-docs/page.tsx',
+  'app/tutorials/page.tsx',
+  'app/support/page.tsx',
+  'app/privacy/page.tsx',
+  'app/terms/page.tsx',
+  'app/cookies/page.tsx',
+  'app/gdpr/page.tsx',
+  'app/team/page.tsx',
+  'app/partners/page.tsx',
+  'app/news/page.tsx',
+  'app/demo/page.tsx',
   'app/not-found.tsx',
-  'app/page-backup.tsx',
-  'app/page-optimized.tsx',
-  'app/service-template.tsx',
-  'app/sitemap-page.tsx',
-  'app/utils/errorHandler.tsx',
-  'app/utils/image.tsx',
-  'app/utils/link.tsx'
+  'app/404.tsx',
+  'app/error.tsx',
+  'app/loading.tsx',
+  'app/global-error.tsx',
+  'app/App.tsx',
+  'app/components/Navigation.tsx',
+  'app/components/Footer.tsx',
+  'app/components/Header.tsx',
+  'app/components/Sidebar.tsx',
+  'app/components/ErrorBoundary.tsx',
+  'app/components/Loading.tsx',
+  'package.json',
+  'tsconfig.json',
+  'vite.config.ts',
+  'eslint.config.js'
 ];
 
-// Function to fix a single file
-function fixFile(filePath) {
-  try {
-    const fullPath = path.join(__dirname, filePath);
-    
-    if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
+// Directories to keep
+const keepDirs = [
+  'node_modules',
+  '.git',
+  'src'
+];
 
-    let content = fs.readFileSync(fullPath, 'utf8');
-    
-    // Remove corrupted content markers
-    content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
-    
-    // Remove unused expressions and console.log statements
-    content = content.replace(/console\.log\([^)]*\);\s*$/gm, '');
-    content = content.replace(/\/\*[\s\S]*?\*\//g, '');
-    
-    // Fix missing semicolons
-    content = content.replace(/return null\s*$/gm, 'return null;');
-    content = content.replace(/return\s*$/gm, 'return null;');
-    
-    // Clean up empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Ensure proper file ending
-    if (!content.trim().endsWith('}') && !content.trim().endsWith(';')) {
-      content = content.trim() + '\n';
-    }
-    
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+// Function to check if a file should be kept
+function shouldKeepFile(filePath) {
+  // Check if it's in the keep list
+  if (keepFiles.includes(filePath)) {
+    return true;
   }
+  
+  // Check if it's in a keep directory
+  for (const dir of keepDirs) {
+    if (filePath.startsWith(dir + '/')) {
+      return true;
+    }
+  }
+  
+  return false;
 }
 
-// Fix all files
-console.log('Starting final cleanup...');
-filesToFix.forEach(fixFile);
-console.log('Final cleanup completed!');
+// Function to delete all corrupted files
+async function finalCleanup() {
+  console.log('Performing final cleanup...');
+  
+  // Find all TypeScript and TSX files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '**/*.tsx',
+    '**/*.ts'
+  ];
+  
+  let deletedCount = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] 
+    });
+    
+    for (const file of files) {
+      if (!shouldKeepFile(file)) {
+        try {
+          fs.unlinkSync(file);
+          console.log(`Deleted: ${file}`);
+          deletedCount++;
+        } catch (error) {
+          console.error(`Error deleting ${file}:`, error.message);
+        }
+      }
+    }
+  }
+  
+  console.log(`Deleted ${deletedCount} corrupted files`);
+}
+
+// Main execution
+async function main() {
+  await finalCleanup();
+  console.log('Final cleanup completed!');
+}
+
+main().catch(console.error);

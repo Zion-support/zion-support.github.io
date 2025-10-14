@@ -1,73 +1,22 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
->>>>>>> origin/main
-}
-;
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    // Track event with Google Analytics or other analytics service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', eventName, properties);
-    }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, properties);
-    }
-  };
-
-  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    // Track page view with Google Analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-        ...properties
-      });
-    }
-    
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page View:', pageName, properties);
-    }
-  };
-
-  useEffect(() => {
-    // Initialize analytics on mount
-    if (typeof window !== 'undefined') {
-      // Initialize Google Analytics or other analytics service
-      console.log('Analytics initialized');
-    }
-  }, []);
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView
-  };
-
+const AnalyticsProviderPage = () => {
   return (
-    <AnalyticsContext.Provider value={value}>
->>>>>>> origin/main
-      {children}
-    </AnalyticsContext.Provider>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AnalyticsProvider - Zion Tech Group</title>
+        <meta name="description" content="AnalyticsProvider - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">AnalyticsProvider</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -130,8 +79,4 @@ export default AnalyticsProvider;
     page
   };
 
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
 

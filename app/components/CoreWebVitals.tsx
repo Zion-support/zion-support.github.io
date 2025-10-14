@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback, ReactNode } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 interface WebVitalsData {
   name: string;
@@ -75,8 +75,7 @@ export default CoreWebVitals;
         </div>
       </div>
     </div>
-  )}
-}''
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+  );
+};
+
+export default CoreWebVitalsPage;
