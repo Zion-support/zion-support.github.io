@@ -1,6 +1,5 @@
 
-import React from 'react';
-
+import React from 'react'
 export default function SupportPage() {
 
           <h1 className="text-4xl font-bold text-white mb-4">Support</h1>
@@ -8,6 +7,6 @@ export default function SupportPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
- f7f852c0f7415181a1b362c4aa5a784585ad5828
+ 

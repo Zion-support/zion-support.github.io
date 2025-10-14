@@ -2,7 +2,10 @@
 import React from 'react';
 
 export default function BlogPage() {
-
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about blog</p>
         </div>
@@ -10,4 +13,3 @@ export default function BlogPage() {
     </div>
   );
 }
- f7f852c0f7415181a1b362c4aa5a784585ad5828
