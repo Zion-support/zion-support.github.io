@@ -13,11 +13,23 @@ jest.mock('react-router-dom', () => {
       state: null,
       key: 'default'
     }),
-
-    useNavigate: () => jest.fn(),    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
+    useNavigate: () => jest.fn(),
+    Link: ({ to, children, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ to, children, ...props }) => {
+      const React = require('react');
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => {
+      const React = require('react');
+      return React.createElement('div', { 'data-testid': 'browser-router' }, children);
+    },
+    MemoryRouter: ({ children }) => {
+      const React = require('react');
+      return React.createElement('div', { 'data-testid': 'memory-router' }, children);
+    }
   };
 });
 

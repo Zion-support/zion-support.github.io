@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
-import React, { useState, useEffect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 interface PerformanceMetrics {
   cls: number | null;
   inp: number | null;
@@ -20,8 +16,7 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
-    ttfb: null
+ttfb: null
   });
 
   useEffect(() => {
@@ -49,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
-  }, []);
+  }, [])
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
@@ -60,69 +55,7 @@ const PerformanceMonitor: React.FC = () => {
         <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>      </div>
-=======
-    ttfb: null,
-    loadTime: null
-  });
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only run in browser
-    if (typeof window === 'undefined') return;
-
-    // Get performance metrics
-    const getPerformanceMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint');
-      
-      setMetrics({
-        cls: 0, // Would need to be calculated with observer
-        inp: 0, // Would need to be calculated with observer
-        fcp: fcp ? fcp.startTime : null,
-        lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,
-        ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
-        loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null
-      });
-    };
-
-    // Wait for page load
-    if (document.readyState === 'complete') {
-      getPerformanceMetrics();
-    } else {
-      window.addEventListener('load', getPerformanceMetrics);
-    }
-
-    return () => {
-      window.removeEventListener('load', getPerformanceMetrics);
-    };
-  }, []);
-
-  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'text-gray-500';
-    if (value <= thresholds.good) return 'text-green-500';
-    if (value <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
-      >
-        Performance
-      </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-      
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
@@ -154,8 +87,7 @@ const PerformanceMonitor: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="flex justify-between">
+<div className="flex justify-between">
           <span>LCP:</span>
           <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
@@ -192,13 +124,7 @@ import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
   return null;
-}
-export default PerformanceMonitor;
-=======
-      )}
-    </div>
-  );
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

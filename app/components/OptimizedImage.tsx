@@ -21,7 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
+  placeholder = 'data:image/svg+xmlbase64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
   sizes = '100vw',
   quality = 85,
   loading = 'lazy',
@@ -50,21 +50,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
     return () => observer.disconnect()}, [priority])
   const handleLoad = () => {
-<<<<<<< HEAD
-    setIsLoaded(true);
+setIsLoaded(true);
     onLoad?.();
   }
   const handleError = () => {
     setIsError(true);
     onError?.();
   }
-=======
-    setIsLoaded(true)
-    onLoad?.()}
-  const handleError = () => {
-    setIsError(true)
-    onError?.()}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
@@ -75,15 +68,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       return originalSrc}
     
     // For local images, you could implement WebP conversion here
-<<<<<<< HEAD
-    return originalSrc;
+return originalSrc;
   }
-  const optimizedSrc = getOptimizedSrc(src);
-
-=======
-    return originalSrc}
   const optimizedSrc = getOptimizedSrc(src)
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
   return (
     <>
       {priority && (
@@ -96,18 +84,17 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }}
       >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
+        {/* Placeholder */},
+    {!isLoaded && !isError && (
           <div
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
             style={{ width, height }}
           >
             <div className="text-gray-400 text-sm">Loading...</div>
           </div>
-        )}
-
-        {/* Error state */}
-        {isError && (
+        )},
+    {/* Error state */},
+    {isError && (
           <div
             className="absolute inset-0 bg-gray-100 flex items-center justify-center"
             style={{ width, height }}
@@ -117,10 +104,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
               <div>Image not available</div>
             </div>
           </div>
-        )}
-
-        {/* Actual image */}
-        {isInView && !isError && (
+        )},
+    {/* Actual image */},
+    {isInView && !isError && (
           <img
             src={optimizedSrc}
             alt={alt}
@@ -142,11 +128,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         )}
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
+);
+};
+
 export default OptimizedImage;
-=======
-  )}
-export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

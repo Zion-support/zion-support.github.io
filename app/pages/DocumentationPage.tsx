@@ -210,7 +210,7 @@ const response = await client.ai.generateText({
   prompt: 'Hello, world!',
   maxTokens: 100
 })
-console.log(response.data);`}</code>
+console.log(response.data)`}</code>9389
               </pre>
             </div>
             

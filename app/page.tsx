@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -51,12 +48,11 @@ const HomePage: React.FC = () => {
     'Security First',
     'Performance Optimized',
     'Cost Effective'
-  ];
+  ]
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Zion Tech Group - Advanced AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group" />
@@ -87,19 +83,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
               Zion Tech Group
-=======
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Business with AI & IT Solutions
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               We deliver cutting-edge artificial intelligence and information technology solutions 
@@ -120,8 +104,7 @@ const HomePage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
+</div>
       </section>
 
       {/* Services Section */}
@@ -256,6 +239,10 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
@@ -314,17 +301,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-        </section>
 
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               {services.map((service, index) => (
                 <Link 
                   key={index} 
@@ -390,13 +367,10 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </div>
+    </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default HomePage;
-=======
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

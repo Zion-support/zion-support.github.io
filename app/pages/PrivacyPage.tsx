@@ -16,11 +16,8 @@ const PrivacyPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
+);
+};
+
 export default PrivacyPage;
-=======
-  )}
-export default PrivacyPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

@@ -82,26 +82,25 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
 
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
+      {/* Article specific meta tags */},
+    {type === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
+      )},
+    {type === 'article' && modifiedTime && (
         <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
+      )},
+    {type === 'article' && author && (
         <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
+      )},
+    {type === 'article' && section && (
         <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
+      )},
+    {type === 'article' && tags.length > 0 && (
         tags.map((tag, index) => (
           <meta key={index} property="article:tag" content={tag} />
         ))
-      )}
-
-      {/* Additional SEO Meta Tags */}
+      )},
+    {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -114,11 +113,8 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-<<<<<<< HEAD
-  );
-}
+);
+};
+
 export default SEO;
-=======
-  )}
-export default SEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

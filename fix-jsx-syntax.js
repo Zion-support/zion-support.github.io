@@ -33,11 +33,11 @@ function fixJSXSyntax(filePath) {
   
   // Fix semicolons after JSX elements
   content = content.replace(/>\s*;\s*\n/g, '>\n');
-  content = content.replace(/>\s*;\s*$/gm, '>');
+  content = content.replace(/>\s*;\s*$/gm, '>')
   
   // Fix semicolons after closing JSX tags
-  content = content.replace(/<\/[^>]+>\s*;\s*\n/g, '</$1>\n');
-  content = content.replace(/<\/[^>]+>\s*;\s*$/gm, '</$1>');
+  content = content.replace(/<\/[^>]+>\s*\s*\n/g, '</$1>1284\n')
+  content = content.replace(/<\/[^>]+>\s*\s*$/gm, '</$1>1347');
   
   // Fix semicolons after JSX expressions
   content = content.replace(/\}\s*;\s*\n/g, '}\n');

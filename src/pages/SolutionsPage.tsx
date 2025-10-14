@@ -12,8 +12,8 @@ const SolutionsPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>
             <p className="text-xl text-gray-300 text-center mb-12">
-              Comprehensive AI and IT solutions tailored to your business needs;
-            </p>
+              Comprehensive AI and IT solutions tailored to your business needs
+            </p>568
             <section className="mb-16">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-gray-800 p-6 rounded-lg">
@@ -22,8 +22,8 @@ const SolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>
                   <p className="text-gray-300 mb-4">
-                    Advanced artificial intelligence solutions for automation and optimization.;
-                  </p>
+                    Advanced artificial intelligence solutions for automation and optimization.
+                  </p>1194
                   <ul className="text-sm text-gray-400 space-y-1">
                     <li>• Machine Learning</li>
                     <li>• Natural Language Processing</li>
@@ -35,21 +35,21 @@ const SolutionsPage: React.FC = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>
               <p className="text-gray-300 mb-8">
-                Contact us today to discuss your specific requirements.;
-              </p>
+                Contact us today to discuss your specific requirements.
+              </p>1782
               <div className="flex justify-center space-x-4">
-                <a;
+                <a
                   href="$1"
-                  className="$1"
+                  className=""
                 >
-                  Contact Us;
-                </a>
-                <a;
+                  Contact Us
+                </a>1987
+                <a
                   href="$1"
-                  className="$1"
+                  className=""
                 >
-                  Request Demo;
-                </a>
+                  Request Demo
+                </a>2137
               </div>
             </section>
           </div>

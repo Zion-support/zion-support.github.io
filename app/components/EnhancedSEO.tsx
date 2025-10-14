@@ -53,12 +53,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       'https://twitter.com/ziontechgroup'
     ]
   }
-<<<<<<< HEAD
-  const mergedStructuredData = structuredData || defaultStructuredData;
+const mergedStructuredData = structuredData || defaultStructuredData
 
-=======
-  const mergedStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -112,11 +108,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>
-<<<<<<< HEAD
-  );
-}
+);
+};
+
 export default EnhancedSEO;
-=======
-  )}
-export default EnhancedSEO
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

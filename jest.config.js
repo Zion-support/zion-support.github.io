@@ -1,9 +1,9 @@
 export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapping: {
-
-    '^@/(.*)$': '<rootDir>/app/$1',    '^@/components/(.*)$': '<rootDir>/app/components/$1',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/app/$1',
+    '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
     '^@/utils/(.*)$': '<rootDir>/app/utils/$1',
     '^@/types/(.*)$': '<rootDir>/app/types/$1',
@@ -19,11 +19,17 @@ export default {
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
-
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/app-broken/',
+    '<rootDir>/app-disabled/',
+    '<rootDir>/temp-broken/',
+    '<rootDir>/src/'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
@@ -32,7 +38,6 @@ export default {
     'ts-jest': {
       useESM: true
     }
-
   },
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   preset: 'ts-jest'

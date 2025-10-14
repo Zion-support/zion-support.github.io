@@ -32,7 +32,7 @@ const _path = require('_path'';
       issues.push('Missing alt attributes on images'';
       recommendations.push('Add descriptive alt attributes to all images'';
     const interactiveElements = ['button', 'input', 'select', 'textarea'';
-      const regex = new RegExp(`<${element}(?![^>]*aria-label)`, 'g'';
+      const regex = new RegExp(`<${element}(?![^>]*aria-label)`, 'g''
     if (content.includes('<div') && !content.includes('role='';
         issues.push('Consider adding role attributes to div elements'';
         recommendations.push('Add appropriate role attributes to div elements'';

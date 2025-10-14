@@ -59,7 +59,7 @@ const App: React.FC = () => {
       }
     }
     initApp();
-  }, []);
+  }, [])
 
   if (!isInitialized) {
     return <LoadingSpinner />

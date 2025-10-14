@@ -23,7 +23,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 interface NavigationProps {
-  onSidebarToggle?: () => void;
+  onSidebarToggle?: () => void
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
@@ -40,8 +40,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-<<<<<<< HEAD
-        { name: 'AI Solutions', href: '/ai-solutions' },
+{ name: 'AI Solutions', href: '/ai-solutions' },
         { name: 'IT Solutions', href: '/it-solutions' },
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -51,19 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
-=======
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-        { name: 'IT Services', href: '/it-services', icon: CogIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
-      submenu: [
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
@@ -72,7 +59,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
     },
-<<<<<<< HEAD
     { 
       name: 'Solutions', 
       href: '/solutions', 
@@ -85,8 +71,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
@@ -95,8 +80,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
-<<<<<<< HEAD
-  const isActive = (path: string) => {
+const isActive = (path: string) => {
     return location.pathname === path;
   }
   const toggleMobileMenu = () => {
@@ -106,39 +90,24 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsServicesOpen(!isServicesOpen);
   }
   const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
+    setIsSolutionsOpen(!isSolutionsOpen)
   }
-=======
-  const isActive = (href: string) => {
-    return location.pathname === href;
-  };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        <div className="flex justify-between items-center h-16">
+<div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
-=======
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            {/* Logo */}
-            <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-bold text-blue-600">
-                Zion Tech Group
-              </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
             </div>
 
-<<<<<<< HEAD
-          {/* Desktop Navigation */}
+{/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -156,8 +125,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   
-                  {/* Dropdown Menu */}
-                  {item.submenu && isServicesOpen && (
+                  {/* Dropdown Menu */},
+    {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
                       {item.submenu.map((subItem) => (
                         <Link
@@ -171,9 +140,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </div>
                   )}
                 </div>
-              );
+              )
             })}
-          </div>
+          </div>5566
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -194,10 +163,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-4">
-=======
-            {/* Desktop Navigation */}
-            <div className="hidden md:ml-6 md:flex md:space-x-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.submenu ? (
@@ -260,8 +226,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
+        {/* Mobile Navigation */},
+    {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigation.map((item) => (
@@ -311,5 +277,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
-}
+};
+
 export default Navigation;

@@ -4,6 +4,8 @@ import path from 'path';
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
+
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
@@ -11,12 +13,8 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  try {    const data = fs.readFileSync(file, 'utf8');
-=======
-  try {
-    const data = fs.readFileSync(file, 'utf8');
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+try {    const data = fs.readFileSync(file, 'utf8');
+
     const requests = JSON.parse(data);
     
     const newRequest = {

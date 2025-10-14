@@ -31,7 +31,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "contactType": "customer service";
     }
   }
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData
 
   return (
     <.Fragment>
@@ -39,9 +39,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {/* Basic Meta Tags */}
         <title>{title}
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />';
+        <meta name="keywords" content={keywords.join(', ')} />'
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />'
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />

@@ -44,7 +44,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       "contactType": "customer service";
     }
   }
-  const finalStructuredData = structuredData || baseStructuredData;
+  const finalStructuredData = structuredData || baseStructuredData
 
   return (
     <.Fragment>
@@ -52,9 +52,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {/* Basic Meta Tags */}
         <title>{title}
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />';
+        <meta name="keywords" content={keywords.join(', ')} />'
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />'
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         

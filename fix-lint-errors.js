@@ -60,8 +60,8 @@ function fixFile(filePath) {
       return `_${varName}`;
     });
 
-    // Fix parsing errors in JSX;
-    content = content.replace(/<div\s+([^>]*?)\s*$/gm, '<div $1>');
+    // Fix parsing errors in JSX
+    content = content.replace(/<div\s+([^>]*?)\s*$/gm, '<div $1>')
     content = content.replace(/<p\s+([^>]*?)\s*$/gm, '<p $1>');
     // Fix unterminated strings;
     content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {';

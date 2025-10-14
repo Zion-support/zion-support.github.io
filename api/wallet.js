@@ -4,6 +4,8 @@ import path from 'path';
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'wallets.json');
 
+
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Content-Type', 'application/json');
@@ -18,12 +20,8 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  let wallets = [];  try {
-=======
-  let wallets = [];
-  try {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+let wallets = [];  try {
+
     const data = fs.readFileSync(file, 'utf8');
     wallets = JSON.parse(data);
   } catch (error) {
@@ -58,10 +56,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
   }
 }

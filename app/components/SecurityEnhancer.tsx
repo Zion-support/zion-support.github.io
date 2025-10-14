@@ -11,70 +11,45 @@ export default function Page() {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
-<<<<<<< HEAD
-            Enhancer;
-          </h1>
+Enhancer
+          </h1>458
           <p className="text-xl text-gray-600 mb-8">
-            Professional securityenhancer solutions tailored to your business needs.;
-          </p>
+            Professional securityenhancer solutions tailored to your business needs.
+          </p>549
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions;
-              </h3>
+                Expert Solutions
+              </h3>861
               <p className="text-blue-700">
-                Our team of experts delivers cutting-edge securityenhancer solutions.;
-              </p>
+                Our team of experts delivers cutting-edge securityenhancer solutions.
+              </p>987
             </div>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation;
-              </h3>
+                Custom Implementation
+              </h3>1237
               <p className="text-green-700">
-                Tailored securityenhancer implementations for your specific requirements.;
-              </p>
+                Tailored securityenhancer implementations for your specific requirements.
+              </p>1369
             </div>
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support;
-              </h3>
+                24/7 Support
+              </h3>1626
               <p className="text-purple-700">
-                Round-the-clock support for all your securityenhancer needs.;
-              </p>
+                Round-the-clock support for all your securityenhancer needs.
+              </p>1750
             </div>
           </div>
           <div className="mt-12">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today;
-            </button>
+              Get Started Today
+            </button>1961
           </div>
         </div>
       </div>
     </div>
   );
 }
-=======
-            Enhancer</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional securityenhancer solutions tailored to your business needs.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions</h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge securityenhancer solutions.</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation</h3>
-              <p className="text-green-700">
-                Tailored securityenhancer implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support</h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your securityenhancer needs.</p></div></div>
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today</button></div></div></div></div>
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

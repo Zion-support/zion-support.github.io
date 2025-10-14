@@ -35,17 +35,17 @@ function findFilesWithConflicts(dir) {
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<>/g, '<>')
+    content = content.replace(/<\/>/g, '</>1477')
+    content = content.replace(/<Helmet>/g, '<Helmet>')
+    content = content.replace(/<\/Helmet>/g, '</Helmet>1581')
+    content = content.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>')
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix common syntax errors
-    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
+    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {')
     content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
+    content = content.replace(/\s*<\/>/g, '\n    </>2023');
     content = content.replace(/;\s*\);/g, '\n  );');
     
     // Remove duplicate React imports
@@ -89,11 +89,11 @@ function fixUnterminatedStrings(filePath) {
     const lines = content.split('\n');
     const fixedLines = [];
     
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0 i < lines.length; i++) {
       let line = lines[i];
       
       // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "import React from 'react';");
+      if (line.includes("import React from 'react';;/, "import React from 'react';");
       }
       if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "import { Helmet } from 'react-helmet-async';");
       }
@@ -102,11 +102,11 @@ function fixUnterminatedStrings(filePath) {
       }
       
       // Fix malformed JSX syntax
-      line = line.replace(/<>/g, '<>');
-      line = line.replace(/<\/>;/g, '</>');
-      line = line.replace(/<Helmet>/g, '<Helmet>');
-      line = line.replace(/<\/Helmet>;/g, '</Helmet>');
-      line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+      line = line.replace(/<>/g, '<>')
+      line = line.replace(/<\/>/g, '</>4113')
+      line = line.replace(/<Helmet>/g, '<Helmet>')
+      line = line.replace(/<\/Helmet>/g, '</Helmet>4209')
+      line = line.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>')
       line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
       
       fixedLines.push(line);

@@ -59,7 +59,7 @@ img {
   // Write optimized CSS
   const cssPath = path.join(__dirname, '..', 'public', 'performance.css');
   fs.writeFileSync(cssPath, cssOptimizations);
-  console.log('✅ Performance CSS created');
+  console.log('✅ Performance CSS created')
 
   // Create preload hints
   const preloadHints = `

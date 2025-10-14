@@ -27,51 +27,51 @@ const : React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   }
-  ];
+  ]
 
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
-              <p className="text-xs text-cyan-400">AI & IT Solutions;
+              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
+              <p className="text-xs text-cyan-400">AI & IT Solutions
             <to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About;
+              About
                             <to={`/${category.title.toLowerCase().replace(&apos; &apos;, &apos;-&apos;)}`}
-                    <to="$1"
+                    <to="/"
               )}
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <to="$1"
-            <to="$1"
-              className="$1"
+            <to="/"
+            <to="/"
+              className=""
               onClick={closeAllMenus}
             >
-              Blog;
-            <to="$1"
-              className="$1"
+              Blog
+            <to="/"
+              className=""
               onClick={closeAllMenus}
             >
-              Contact;
+              Contact
             {/* CTA Button */}
-            <a;
+            <a
               href="$1"
-              className="$1"
+              className=""
               onClick={closeAllMenus}
             >
               <className="w-4 h-4 mr-2" />
-              (302) 464-0950;
-              <to="$1"
-              <to="$1"
-                className="$1"
+              (302) 464-0950
+              <to="/"
+              <to="/"
+                className=""
                 onClick={closeAllMenus}
               >
-                About;
+                About
               {/* Mobile Services */}
-                <button;
-                          <to="$1"
-                            className="$1"
+                <button
+                          <to="/"
+                            className=""
                           >
               <div className="mt-4 pt-4 border-t border-gray-700">
-                <a;
+                <a
                   href="$1"
-                  className="$1"
+                  className=""
                   onClick={closeAllMenus}
                 >
                   <className="w-4 h-4 inline mr-2" />

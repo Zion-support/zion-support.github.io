@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, User } from 'lucide-react';
 
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
@@ -129,10 +123,8 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
 
-<<<<<<< HEAD
-                      <div className="w-4 h-4 mr-1" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+<div className="w-4 h-4 mr-1" />
+
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -180,11 +172,8 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
+);
+};
+
 export default BlogPage;
-=======
-  )}
-export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 'use client';'use client';
-=======
-'use client';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -162,11 +158,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ];
-<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+import { Helmet } from 'react-helmet-async'
 
   return (
     <>
@@ -281,11 +274,7 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-export default MicroSaaSSolutionsPage;
-=======
 };
 
 export default MicroSaaSSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+

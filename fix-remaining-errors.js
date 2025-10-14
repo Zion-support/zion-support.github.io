@@ -18,21 +18,21 @@ function fixFile(filePath) {
     content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
     
     // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<>/g, '<>')
+    content = content.replace(/<\/>/g, '</>866')
+    content = content.replace(/<Helmet>/g, '<Helmet>')
+    content = content.replace(/<\/Helmet>/g, '</Helmet>970')
+    content = content.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>')
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix unterminated string constants
     content = content.replace(/'use client';/g, "'use client';");
     
     // Fix malformed function declarations
-    content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {');
+    content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {')
     
     // Fix missing closing parentheses
-    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\);/g, 'return (\n    <>\n$1\n    </>\n  );');
+    content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>;\s*\)/g, 'return (\n    <>\n$1\n    </>\n  );');
     
     // Fix test file issues by commenting out problematic lines
     if (filePath.includes('.test.') || filePath.includes('__tests__') || filePath.includes('test')) {
@@ -53,7 +53,7 @@ function fixFile(filePath) {
     content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
     // Fix specific syntax errors
     content = content.replace(/;\s*\);/g, '\n  );');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
+    content = content.replace(/\s*<\/>/g, '\n    </>2543');
     content = content.replace(/;\s*\);/g, '\n  );');
     
     // Fix malformed JSX in broken files
@@ -61,7 +61,7 @@ function fixFile(filePath) {
       // For broken/disabled files, try to create a minimal valid structure
       if (content.includes('import React from') && !content.includes('export default')) {
         content = content.replace(/import React[^;]+;/g, '');
-        content = `import React from 'react';\n\nexport default function Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
+        content = `import React from 'react'\n\nexport default function Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
       }
     }
     
@@ -97,7 +97,7 @@ function findProblematicFiles(dir) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('import React from \'react;') || 
-              content.includes('import { Helmet } from \'react-helmet-async;') ||
+              content.includes('import { Helmet } from \'react-helmet-async') ||
               content.includes('<>') ||
               content.includes('</>') ||
               content.includes('') ||
