@@ -6,8 +6,8 @@ export const useSEO = (structuredData?: unknown) => {,
 
     // Add structured data to the page,
     if (structuredData) {,
-
-      const script = document.createElement('script');,
+'
+      const script = document.createElement('script');,'
       script.type = 'application/ld+json';,
       script.text = JSON.stringify(structuredData);,
       document.head.appendChild(script);,
@@ -15,9 +15,9 @@ export const useSEO = (structuredData?: unknown) => {,
 
         if (document.head.contains(script)) {,
 
-          document.head.removeChild(script);}
+          document.head.removeChild(script);},
       };,
-    }
+    },
     return undefined;,
-  }, [structuredData]);,
+  }, [structuredData]);,'
 };,

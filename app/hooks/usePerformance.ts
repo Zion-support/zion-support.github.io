@@ -15,4 +15,4 @@ export const useUsePerformance = () => {
     error,
     // Add your hook methods here
   };
-};
+};'

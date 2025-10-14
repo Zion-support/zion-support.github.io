@@ -4,8 +4,7 @@ interface PerformanceMetrics {,
 
   loadTime: number;,
   renderTime: number;,
-  memoryUsage?: number;}
-
+  memoryUsage?: number;},
 export const usePerformanceMonitor = (): PerformanceMetrics => {,
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>({,
@@ -37,5 +36,5 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {,
 
   return metrics;,
 };,
-
+'
 export default usePerformanceMonitor;,

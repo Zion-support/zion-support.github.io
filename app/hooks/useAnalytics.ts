@@ -14,5 +14,5 @@ export const useUseAnalytics = () => {
     loading,
     error,
     // Add your hook methods here
-  };
+  };'
 };
