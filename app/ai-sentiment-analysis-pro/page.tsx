@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, Clock, MessageSquare, Target, BarChart3 } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -34,14 +33,7 @@ const AISentimentAnalysisPro = () => {
     }
   ];
 
-  const benefits = [
-    "95% sentiment accuracy",
-    "Real-time monitoring",
-    "Multi-language support",
-    "Emotion detection",
-    "Trend analysis",
-    "Actionable insights"
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Camera, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Eye, Image, Target, Scan } from 'lucide-react';
+import { ArrowRight, CheckCircle, Image, Scan } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -34,14 +33,7 @@ const AIImageRecognitionPro = () => {
     }
   ];
 
-  const benefits = [
-    "99.2% recognition accuracy",
-    "Real-time processing",
-    "Multi-format support",
-    "Advanced security",
-    "Scalable infrastructure",
-    "Easy integration"
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

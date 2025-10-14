@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Zap, Brain, Shield, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Settings, Target, Workflow } from 'lucide-react';
+import { ArrowRight, CheckCircle, Workflow } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -34,14 +33,7 @@ const AIAutomationPlatform = () => {
     }
   ];
 
-  const benefits = [
-    "70% process efficiency gain",
-    "Automated decision making",
-    "Seamless integrations",
-    "Real-time optimization",
-    "Scalable workflows",
-    "Cost reduction"
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

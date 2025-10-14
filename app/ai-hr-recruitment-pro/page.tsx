@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Brain, Shield, Zap, Globe, Star, Award, CheckCircle, TrendingUp, Clock, UserCheck, FileText, Target, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle, UserCheck, FileText } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -34,14 +33,7 @@ const AIHRRecruitmentPro = () => {
     }
   ];
 
-  const benefits = [
-    "60% faster hiring process",
-    "95% candidate matching accuracy",
-    "Automated resume screening",
-    "Intelligent interview scheduling",
-    "Comprehensive talent analytics",
-    "Reduced bias in hiring"
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
