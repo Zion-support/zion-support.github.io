@@ -168,9 +168,9 @@ const CareersPage: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {positions.map((position) => (
-                <div key ={position.id}
+                <div key={position.id}
                   className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' :'border-white/20'
+                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
                   } hover:border-purple-400 transition-all duration-300 group`}>
                   {position.featured && (
                     <div className="flex items-center gap-2 mb-4">
