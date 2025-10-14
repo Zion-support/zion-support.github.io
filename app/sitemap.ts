@@ -3,6 +3,9 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
+const baseUrl = 'https://ziontechgroup.com'
+
+export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,

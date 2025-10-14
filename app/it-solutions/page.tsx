@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Shield, Cloud, Database } from 'lucide-react';
+import React, { Suspense } from 'react';
+import { Server, Cloud } from 'lucide-react';
 
-const ITSolutionsPage: React.FC = () => {
+import React, { Suspense } from 'react';
+const ItSolutionsPage: React.FC = () => {
+
   return (
     <>
       <Helmet>
@@ -43,4 +46,8 @@ const ITSolutionsPage: React.FC = () => {
   );
 };
 
-export default ITSolutionsPage;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default ItSolutionsPage;

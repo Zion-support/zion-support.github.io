@@ -24,4 +24,10 @@ export interface AnalyticsEvent {
   category: string
   label?: string
   value?: number
+export interface ContactForm {
+  name: string
+  email: string
+  company: string
+  message: string
+  service: string
 }

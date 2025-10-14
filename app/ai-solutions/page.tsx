@@ -1,8 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, Users } from 'lucide-react';
+import React, { Suspense } from 'react';
+import { Brain, Zap } from 'lucide-react';
 
-const AISolutionsPage: React.FC = () => {
+import React, { Suspense } from 'react';
+const AiSolutionsPage: React.FC = () => {
+
   return (
     <>
       <Helmet>
@@ -43,4 +46,8 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-export default AISolutionsPage;
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
+export default AiSolutionsPage;
