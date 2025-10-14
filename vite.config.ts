@@ -103,6 +103,10 @@ export default defineConfig({
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
     target: 'esnext',
+    logLevel: 'silent',
+    logOverride: {
+      'this-is-undefined-in-esm': 'silent',
+    },
   },
   // Performance optimizations
   define: {

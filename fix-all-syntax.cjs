@@ -3,60 +3,60 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix malformed imports and syntax
-function fixImports(filePath) {
+// Function to fix all syntax issues in a file
+function fixAllSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix malformed 'use client' directive
-    content = content.replace(/'use client';?'/g, "'use client'");
-    content = content.replace(/'use client';/g, "'use client'");
-    
-    // Fix malformed import statements
+    // Fix malformed import statements with extra quotes
     content = content.replace(/import\s+([^"';]+)\s+from\s+([^"';]+);?'/g, (match, imports, module) => {
       modified = true;
       return `import ${imports} from "${module.trim()}";`;
     });
     
-    // Fix malformed import statements without quotes
-    content = content.replace(/import\s+([^"';]+)\s+from\s+([^"';]+);?/g, (match, imports, module) => {
-      if (!module.startsWith('"') && !module.startsWith("'")) {
-        modified = true;
-        return `import ${imports} from "${module.trim()}";`;
-      }
-      return match;
+    // Fix malformed import statements with extra quotes at the end
+    content = content.replace(/import\s+([^"';]+)\s+from\s+([^"';]+);?''/g, (match, imports, module) => {
+      modified = true;
+      return `import ${imports} from "${module.trim()}";`;
     });
     
     // Fix malformed React imports
-    content = content.replace(/import\s+React\s+from\s+([^"';]+);?'/g, (match, module) => {
+    content = content.replace(/import\s+React,?\s*\{?\s*([^}]*?)\s*\}?\s+from\s+([^"';]+);?'/g, (match, imports, module) => {
       modified = true;
-      return `import React from "react";`;
+      if (imports.trim()) {
+        return `import React, { ${imports.trim()} } from "react";`;
+      } else {
+        return `import React from "react";`;
+      }
     });
     
-    // Fix malformed Helmet imports
-    content = content.replace(/import\s+\{\s*Helmet\s*\}\s+from\s+([^"';]+);?'/g, (match, module) => {
+    // Fix malformed component declarations
+    content = content.replace(/const\s+(\w+):\s*"React\.FC\s*=\s*\(\)\s*=>\s*\{/g, (match, name) => {
       modified = true;
-      return `import { Helmet } from "react-helmet-async";`;
+      return `const ${name}: React.FC = () => {`;
     });
     
-    // Fix malformed Link imports
-    content = content.replace(/import\s+\{\s*Link\s*\}\s+from\s+([^"';]+);?'/g, (match, module) => {
+    // Fix malformed component declarations with extra quotes
+    content = content.replace(/const\s+(\w+):\s*"React\.FC\s*=\s*\(\)\s*=>\s*\{/g, (match, name) => {
       modified = true;
-      return `import { Link } from "react-router-dom";`;
+      return `const ${name}: React.FC = () => {`;
     });
     
-    // Fix malformed icon imports
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+([^"';]+);?'/g, (match, imports, module) => {
-      if (module.includes('heroicons') || module.includes('lucide')) {
+    // Fix malformed object properties
+    content = content.replace(/(\w+):\s*"([^"]*?)",?'/g, (match, key, value) => {
+      modified = true;
+      return `${key}: "${value}",`;
+    });
+    
+    // Fix malformed object properties without quotes
+    content = content.replace(/(\w+):\s*([^,}\n]+)(?=\s*[,}])/g, (match, key, value) => {
+      if (!value.startsWith('"') && !value.startsWith("'") && !value.startsWith('{') && !value.startsWith('[') && !value.includes('=>')) {
         modified = true;
-        return `import { ${imports} } from "${module.trim()}";`;
+        return `${key}: "${value.trim()}",`;
       }
       return match;
     });
-    
-    // Fix empty import statements
-    content = content.replace(/import\s*\{\s*\}\s*from\s*[^;]+;?/g, '');
     
     // Fix malformed JSX attributes
     content = content.replace(/(\w+)=([^"'\s>]+)(?=\s|>)/g, (match, attr, value) => {
@@ -76,14 +76,29 @@ function fixImports(filePath) {
       return match;
     });
     
-    // Clean up extra semicolons and quotes
+    // Fix malformed function calls
+    content = content.replace(/useEffect\(\(\)\s*=>\s*\{\}/g, (match) => {
+      modified = true;
+      return `useEffect(() => {}, []);`;
+    });
+    
+    // Fix malformed JSX expressions
+    content = content.replace(/\{([^}]*?)(\n|$)/g, (match, expr, newline) => {
+      if (!expr.includes('}') && expr.trim() && !expr.trim().endsWith(';')) {
+        modified = true;
+        return `{${expr.trim()}}${newline}`;
+      }
+      return match;
+    });
+    
+    // Clean up extra quotes and semicolons
     content = content.replace(/;'$/gm, ';');
     content = content.replace(/;$/gm, '');
     content = content.replace(/\s+$/gm, '');
     
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
+      console.log(`Fixed syntax in: ${filePath}`);
       return true;
     }
     
@@ -114,7 +129,7 @@ function fixAllFiles(dir) {
       } else if (stat.isFile()) {
         // Only process TypeScript/JavaScript files
         if (item.match(/\.(ts|tsx|js|jsx)$/)) {
-          if (fixImports(fullPath)) {
+          if (fixAllSyntax(fullPath)) {
             fixedCount++;
           }
         }
@@ -128,7 +143,7 @@ function fixAllFiles(dir) {
 }
 
 // Main execution
-console.log('Starting import and syntax fix...');
+console.log('Starting comprehensive syntax fix...');
 
 // Fix files in the main directories
 const directories = [
@@ -146,7 +161,7 @@ for (const dir of directories) {
   }
 }
 
-console.log(`\nFixed imports and syntax in ${totalFixed} files.`);
+console.log(`\nFixed syntax in ${totalFixed} files.`);
 
 // Try to build to see if it works now
 console.log('\nTrying to build...');
@@ -155,7 +170,7 @@ try {
   execSync('npm run build', { stdio: 'inherit', cwd: '/workspace' });
   console.log('Build successful!');
 } catch (error) {
-  console.log('Build still has issues, but many imports should be fixed.');
+  console.log('Build still has issues, but many syntax errors should be resolved.');
 }
 
-console.log('Import and syntax fix complete!');
+console.log('Comprehensive syntax fix complete!');
