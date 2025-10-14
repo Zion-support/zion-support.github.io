@@ -2,15 +2,14 @@ import React from 'react';;
 import { Helmet } from 'react-helmet-async'';use client';
 import { Helmet } from 'react-helmet-async';;
 'use client';
-const NotFound: React.FC = () => {
-  return (
+const NotFound: React.FC = () => { return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Not Found - Zion Tech Group</title>
         <meta name="description" content="Professional not found services by Zion Tech Group." />
-      </Helmet>}
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+      </Helmet> }
+      { /* Hero Section */ }"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Not Found</h1>
@@ -19,12 +18,13 @@ const NotFound: React.FC = () => {
             designed to help your business grow and succeed.</p>
         </div>
       </section>
-      {/* Content Section */}
-            Not Found</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+      { /* Content Section */ }
+            Not Found</h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional not found services
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
-      <section className="py-16 px-4">
+
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
+      <section className="py-16 px-4">"
         <div className="max-w-6xl mx-auto">
           <div className="grid md: grid-cols-2 gap-12 items-center">
             <div>
@@ -36,13 +36,13 @@ const NotFound: React.FC = () => {
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Custom solutions;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                </li>"
+                <li className="flex items-center">""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Expert consultation;
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                </li>"
+                <li className="flex items-center">""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Ongoing support;
                 </li>
               </ul>
@@ -61,10 +61,12 @@ const NotFound: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+
+      { /* CTA Section */ }"
+      <section className="py-16 px-4 bg-blue-600">"
+        <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6">
+
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">

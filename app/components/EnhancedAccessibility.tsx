@@ -57,8 +57,8 @@ const EnhancedAccessibility: React.FC = () => {
 document.body.insertBefore(skipLink, document.body.firstChild)}
     const enhanceFocusManagement = () => {
       // Add focus indicators
-      const style = document.createElement('style')
-      style.textContent = `
+      const style = document.createElement('style')'
+      style.textContent = ``
         *:focus {
           outline: 2px solid #06b6d4 !important
           outline-offset: 2px !important}
@@ -112,7 +112,7 @@ document.body.insertBefore(skipLink, document.body.firstChild)}
 document.head.appendChild(style)}
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])')
+      const buttons = document.querySelectorAll('button:not([aria-label])')'
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
 button.setAttribute('aria-label', 'Button')}
@@ -120,7 +120,7 @@ button.setAttribute('aria-label', 'Button')}
     // Apply accessibility settings
     applyAccessibilitySettings(settings)
     // Listen for system preference changes
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'
     const handleChange = () => {
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))
     }
@@ -230,9 +230,8 @@ filter: contrast(150%) brightness(110%)}
       .reduced-motion * {
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important}
-      .accessibility-panel {
-        position: fixed
+        transition-duration: 0.01ms !important }
+      .accessibility-panel { position: fixed
         top: 50%
         right: -300px
         transform: translateY(-50%)
@@ -243,11 +242,9 @@ filter: contrast(150%) brightness(110%)}
         padding: 1rem
         z-index: 1000
         transition: right 0.3s ease
-        color: white}
-      .accessibility-panel.visible {
-        right: 0}
-      .accessibility-toggle {
-        position: fixed
+        color: white }
+      .accessibility-panel.visible { right: 0 }
+      .accessibility-toggle { position: fixed
         top: 50%
         right: 0
         transform: translateY(-50%)
@@ -263,10 +260,10 @@ filter: contrast(150%) brightness(110%)}
         text-orientation: mixed}
       .accessibility-toggle:hover {
         background: #7c3aed}
-    `
+    ``
     document.head.appendChild(style)
     return () => {
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')
+      const existingStyle = document.getElementById('enhanced-accessibility-styles')'
       if (existingStyle) {
         existingStyle.remove()
       }
@@ -276,10 +273,10 @@ existingStyle.remove()}
   return (
     <>
       <button
-        className="accessibility-toggle"
+        className="accessibility-toggle""
         onClick={toggleVisibility}
-        aria-label="Toggle accessibility options"
-        title="Accessibility Options"
+        aria-label="Toggle accessibility options""
+        title="Accessibility Options""
       >
         ♿ A11y
       </button>
@@ -287,45 +284,45 @@ existingStyle.remove()}
         <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
         <div className="space-y-4">
           <div>
-            <label className="flex items-center space-x-2">
+            <label className="flex items-center space-x-2">"
               <input
-                type="checkbox"
+                type="checkbox""
                 checked={settings.highContrast}
                 onChange={toggleHighContrast}
-                className="rounded"
+                className="rounded""
               />
               <span>High Contrast</span>
             </label>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>
-            <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
-                <label key={size} className="flex items-center space-x-2">
+            <label className="block text-sm font-medium mb-2">Font Size</label>"
+            <div className="space-y-2">"
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
+                <label key={size} className="flex items-center space-x-2">"
                   <input
-                    type="radio"
-                    name="fontSize"
+                    type="radio""
+                    name="fontSize""
                     value={size}
                     checked={settings.fontSize === size}
 onChange={() => setFontSize(size)}
                     className="rounded"
                   />
-                  <span className="capitalize">{size}</span>
+                  <span className="capitalize">{size}</span>"
                 </label>
 ))}
             </div>
           </div>
           <div>
-            <p className="text-sm text-gray-300">
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
+            <p className="text-sm text-gray-300">"
+              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'
             </p>
-            <p className="text-sm text-gray-300">
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}
+            <p className="text-sm text-gray-300">"
+              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'
             </p>
           </div>
           <button
             onClick={toggleVisibility}
-            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"
+            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""
           >
             Close
           </button>

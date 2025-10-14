@@ -76,6 +76,7 @@ export const services: Service[] = [
     href: '/ai-solutions;
   },
   {
+
     id: 'cybersecurity',
     title: 'Cybersecurity',
     description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',
@@ -93,9 +94,10 @@ export const services: Service[] = [
     pricing: {
       basic: 3000,
       pro: 10000,
-      enterprise: 30000
+      enterprise: 30000;
     },
     benefits: [
+
       'Enhanced Security',
       'Compliance Assurance',
       'Risk Mitigation',
@@ -128,6 +130,7 @@ export const services: Service[] = [
     href: '/cybersecurity;
   },
   {
+
     id: 'cloud-infrastructure',
     title: 'Cloud Infrastructure',
     description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',

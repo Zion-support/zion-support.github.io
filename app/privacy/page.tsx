@@ -3,11 +3,10 @@ import { Helmet } from 'react-helmet-async';;
 import React from 'react;
 const PrivacyPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Learn about how Zion Tech Group collects, uses, and protects your personal information in accordance with privacy laws and best practices." />
-        <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />
+        <meta name="description" content="Privacy Policy - Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">}

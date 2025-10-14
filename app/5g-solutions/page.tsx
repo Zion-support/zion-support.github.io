@@ -51,12 +51,12 @@ const FiveGSolutionsPage: React.FC = () => {
     }
   ]
 
+const FiveGSolutionsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G solutions for ultra-fast connectivity and IoT integration" />
-        <meta name="keywords" content="5G, connectivity, IoT, mobile, enterprise, solutions" />
+        <meta name="description" content="5G Solutions - Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -157,18 +157,10 @@ const FiveGSolutionsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your 5G implementation strategy
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Schedule Consultation
-            </button>
-            <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-              Download Brochure
-            </button>
-          </div>
         </div>
       </div>
     </div>
-  )
-}
-
-export default FiveGSolutionsPage
+  );
+  );
+};
+export default FiveGSolutionsPage;

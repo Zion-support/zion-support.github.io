@@ -3,85 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Globe, Smartphone, Shield, Settings } from 'lucide-react';
 
-export default function FiveGImplementationPage() {
-  const features = [
-    {
-      icon: Zap,
-      title: 'Ultra-Fast Speeds',
-      description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
-      benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
-    },
-    {
-      icon: Globe,
-      title: 'Global Coverage',
-      description: 'Comprehensive 5G network coverage across multiple regions',
-      benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Optimization',
-      description: 'Optimized 5G solutions for mobile devices and applications',
-      benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
-    },
-    {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Advanced security protocols for enterprise 5G networks',
-      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Compliance ready']
-    },
-    {
-      icon: Settings,
-      title: 'Custom Implementation',
-      description: 'Tailored 5G solutions for your specific business requirements',
-      benefits: ['Custom architecture', 'Integration support', 'Training & support', 'Ongoing maintenance']
-    }
-  ]
-
-  const implementationSteps = [
-    {
-      step: '01',
-      title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of your current infrastructure and 5G requirements',
-      details: ['Network audit', 'Capacity planning', 'Coverage analysis', 'Timeline development']
-    },
-    {
-      step: '02',
-      title: 'Design & Architecture',
-      description: 'Custom 5G network design tailored to your business needs',
-      details: ['Network topology', 'Equipment selection', 'Security design', 'Integration planning']
-    },
-    {
-      step: '03',
-      title: 'Installation & Setup',
-      description: 'Professional installation and configuration of 5G infrastructure',
-      details: ['Hardware installation', 'Software configuration', 'Network testing', 'Performance optimization']
-    },
-    {
-      step: '04',
-      title: 'Testing & Optimization',
-      description: 'Comprehensive testing and performance optimization',
-      details: ['Speed testing', 'Coverage verification', 'Security validation', 'Performance tuning']
-    },
-    {
-      step: '05',
-      title: 'Deployment & Support',
-      description: 'Full deployment with ongoing support and maintenance',
-      details: ['Go-live support', 'User training', 'Monitoring setup', '24/7 support']
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+const FiveGImplementationPage = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G implementation services by Zion Tech Group" />
-        <meta name="keywords" content="5G implementation, network setup, enterprise solutions, connectivity" />
+        <meta name="description" content="5G Implementation - Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -185,16 +112,11 @@ export default function FiveGImplementationPage() {
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your 5G implementation project
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Schedule Consultation
-            </button>
-            <button className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-              Download Brochure
-            </button>
-          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+  );
+};
+
+export default FiveGImplementationPage;

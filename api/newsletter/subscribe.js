@@ -1,5 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// API endpoint for newsletter subscription
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
 export default function handler(req, res) {
   res.status(200).json({ message: 'API endpoint working' });
@@ -15,25 +18,11 @@ export default function handler(req, res) {
           </div>
         </section>
 
-        {/* Content Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
-                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
-                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+    if (!email) {
+      return res.status(400).json({ 
+        error: 'Email is required' 
+      });
+    }
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">

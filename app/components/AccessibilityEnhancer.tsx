@@ -1,5 +1,81 @@
-import React, { useEffect } from 'react';
-const AccessibilityEnhancer: React.FC = () => {
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilityEnhancerProps {
+  isHighContrast?: boolean;
+  isReducedMotion?: boolean;
+  fontSize?: 'small' | 'normal' | 'large' | 'extra-large';
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  isHighContrast = false,
+  isReducedMotion = false,
+  fontSize = 'normal'
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const container = containerRef.current;
+
+    // Enable keyboard navigation
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip if user is typing in an input
+        if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) {
+          return;
+        }
+
+        switch (event.key) {
+          case 'Tab':
+            // Ensure proper tab order
+            const focusableElements = container.querySelectorAll(
+              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'""
+            );
+            const firstElement = focusableElements[0] as HTMLElement;
+            const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+            if (event.shiftKey && document.activeElement === firstElement) {
+              event.preventDefault();
+              lastElement?.focus();
+            } else if (!event.shiftKey && document.activeElement === lastElement) {
+              event.preventDefault();
+              firstElement?.focus();
+            }
+            break;
+          case 'Enter':
+          case ' ':
+            // Handle Enter and Space for buttons and links
+            if (event.target instanceof HTMLElement) {
+              if (event.target.tagName === 'BUTTON' || event.target.tagName === 'A') {
+                event.preventDefault();
+                event.target.click();
+              }
+            }
+            break;
+          case 'Escape':
+            // Close any open modals or dropdowns
+            const modals = container.querySelectorAll('[role="dialog"], [role="menu"]');"
+            modals.forEach(modal => {
+              if (modal instanceof HTMLElement && modal.style.display !== 'none') {
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+              }
+            });
+            break;
+        }
+      };
+
+      container.addEventListener('keydown', handleKeyDown);
+      return () => container.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {
+    if (!enableScreenReader) return;
+
+    // Add screen reader announcements
+    const announceToScreenReader = (message: string) => {
   useEffect(() => {
     // Add skip link functionality
     const addSkipLink = () => {
@@ -23,6 +99,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation')
     }
+    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')"}"""
     // Add focus indicators for keyboard navigation
     }
     // Add focus styles
@@ -64,7 +141,7 @@ const AccessibilityEnhancer: React.FC = () => {
   }, [isHighContrast, isReducedMotion, fontSize])
   // Keyboard navigation enhancement
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: globalThis.KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         e.preventDefault()
@@ -74,7 +151,7 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
+        const activeElement = document.activeElement as globalThis.HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur()
         }

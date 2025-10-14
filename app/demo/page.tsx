@@ -88,9 +88,9 @@ icon: Play,
   return (
     <>
       <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

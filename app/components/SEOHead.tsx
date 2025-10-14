@@ -44,4 +44,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   )
 }
 
-export default SEOHead
+      <meta name=description content={description} />""
+      <meta name=keywords content={keywords} />
+
+      {structuredData && ("""
+        <script type="application/ld+json">")""
+          {JSON.stringify(structuredData)
+        </script>
+      )
+    </Helmet>
+
+  )
+"""
+}}

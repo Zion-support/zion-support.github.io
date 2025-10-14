@@ -8,17 +8,11 @@ import {
   PhoneIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon,
-  GlobeAltIcon,
   CloudIcon,
   CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
+  SignalIcon
 } from '@heroicons/react/24/outline';
 
 interface SidebarProps {
@@ -42,39 +36,47 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     )
   }
 
-  const navigation = [
+  const navigationItems = [
     { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
       name: 'Services', 
-      href: '/services', 
+      href: '/services',
       icon: BriefcaseIcon,
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+      children: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: SignalIcon }
       ]
     },
-    { name: 'Solutions', href: '/solutions', icon: GlobeAltIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
     { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
     { name: 'Blog', href: '/blog', icon: AcademicCapIcon },
-    { name: 'Resources', href: '/resources', icon: PlayIcon },
-    { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
-      <div className="relative flex flex-col w-64 h-full bg-slate-900">
-        <div className="flex items-center justify-between p-4 border-b border-slate-700">
-          <span className="text-xl font-bold text-white">Menu</span>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
-            <XMarkIcon className="w-6 h-6" />
+    <>
+      {/* Overlay */}
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        onClick={onClose}
+      />
+      
+      {/* Sidebar */}
+      <div className="fixed inset-y-0 left-0 w-64 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+          <div className="flex items-center space-x-2">
+            <CpuChipIcon className="h-8 w-8 text-blue-400" />
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            <XMarkIcon className="h-6 w-6" />
           </button>
         </div>
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">

@@ -136,8 +136,6 @@ const  {
     "telephone": "+1-555-0123",
     "contactType": "customer service",
     "availableLanguage": "English"},
-    "availableLanguage": "English";}
-  },
   "sameAs": ["https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
     "https://github.com/zion-tech-group"

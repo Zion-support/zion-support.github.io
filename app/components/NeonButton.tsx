@@ -54,17 +54,15 @@ const NeonButton: React.FC<NeonButtonProps> = ({
       <Link to={to} className={classes}>
         {children}
       </Link>
+)
     )
-  }
-  
   return (
-    <button
+    <button;
       onClick={onClick}
       className={classes}
     >
       {children}
-    </button>
+    </button>)
   )
-}
 
-export default NeonButton
+export default NeonButtonPage;"

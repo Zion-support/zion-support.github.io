@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet-async';;
 import React from 'react;
 export default function AiChatbotBuilder() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI chatbot builder solutions by Zion Tech Group" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">

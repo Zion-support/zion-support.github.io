@@ -16,10 +16,17 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-  canonicalUrl?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
-  ogType?: string;
+  ogUrl?: string;
   twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean,}
@@ -32,8 +39,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   ogType = 'website',;
   twitterCard = 'summary_large_image',
   structuredData,
-  noIndex = false,
-  noFollow = false
+  lang = "en"""
 }) => {
   const siteName = 'Zion Tech Group;
   const siteUrl = 'https://ziontechgroup.com;
@@ -71,9 +77,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup',;
       'https://twitter.com/ziontechgroup;
     ]
-  }
-  const mergedStructuredData = structuredData || defaultStructuredData;
-  const mergedStructuredData = structuredData || defaultStructuredData
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+const EnhancedSEOPage = () => {
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -99,26 +107,40 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
-      {/* Mobile Optimization */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <meta name=theme-color content=#06b6d4 />
+      <meta name=msapplication-TileColor content=#06b6d4 />
+      <meta name=apple-mobile-web-app-capable content=yes />
+      <meta name=apple-mobile-web-app-status-bar-style content=black-translucent />
+      <meta name=apple-mobile-web-app-title content=Zion Tech Group />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />""
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />""
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />""
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />""
+      <link rel="manifest" href="/site.webmanifest" />""
+      
       {/* Structured Data */}
       <script type="application/ld+json">
 {JSON.stringify(mergedStructuredData)}
       </script>
+      
+      {/* Additional Meta Tags for Better SEO */}
+      <meta name=google-site-verification content=your-google-verification-code />
+      <meta name=yandex-verification content=your-yandex-verification-code />
+      <meta name=bing-site-verification content=your-bing-verification-code />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />""
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />""
+      <link rel="preconnect" href="https://images.unsplash.com" />""
+      
+      {/* DNS Prefetch for better performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />""
+      <link rel="dns-prefetch" href="//images.unsplash.com" />""
+      
+      {/* Additional Performance Hints */}
+      <meta httpEquiv=x-dns-prefetch-control content=on />
     </Helmet>
   )
 }

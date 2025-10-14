@@ -33,15 +33,19 @@ const Header: React.FC = () => {
     { name: 'Blog', href: '/blog' },;
     { name: 'Contact', href: '/contact' }'];
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+    }`}>
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-white">
-              Zion Tech Group;
+          <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
+              <CpuChipIcon className="h-8 w-8 text-blue-400" />
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -99,6 +103,7 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
 ))}
             </div>
           </div>
+
           {/* CTA Button */}
           <div className="hidden md: block">
             <Link;
@@ -108,21 +113,27 @@ onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
               Get Started,
             </Link>
           </div>
+
           {/* Mobile menu button */}
           <div className="md: hidden">
             <button,
 onClick={() => setIsOpen(!isOpen)}
               className="$1"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
+
         {/* Mobile Navigation */}
-        {isOpen && (
+        {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
-              {navigationItems.map((item) => (
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-md mt-2">
+              {navigation.map((item) => (
                 <div key={item.name}>
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
@@ -136,7 +147,7 @@ onClick={() => setIsOpen(false)}
                     {item.name}
                   </Link>
                   {item.submenu && (
-                    <div className="ml-4 space-y-1">
+                    <div className="pl-4 space-y-1">
                       {item.submenu.map((subItem) => (
                         <Link;}
                           key={subItem.name}
@@ -185,7 +196,7 @@ onClick={() => setIsOpen(false)}
                   className="$1"
 onClick={() => setIsOpen(false)}
                 >
-                  Get Started;
+                  Get Started
                 </Link>
               </div>
             </div>

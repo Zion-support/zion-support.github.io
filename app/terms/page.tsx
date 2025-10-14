@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';;
 import React from 'react;
 const TermsPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Terms of Service - Zion Tech Group</title>';
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />;

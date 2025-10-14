@@ -76,7 +76,7 @@ export default function HomePage() {
     'Cost Effective;
   ];
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
@@ -103,6 +103,7 @@ export default function HomePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }
         />
       </Helmet>
+      
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
@@ -294,16 +295,16 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              to="/services"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Your Project
+              Our Services
             </Link>
             <Link
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              to="/contact"
+              className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
-              Schedule Demo
+              Get In Touch
             </Link>
           </div>
         </div>

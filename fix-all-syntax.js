@@ -1,97 +1,89 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-function fixFile(filePath) {
+import { execSync } from 'child_process';
+
+// Get all TypeScript/JavaScript files that might have syntax errors
+const filesToCheck = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v app-broken | grep -v app-disabled | grep -v temp-broken | grep -v src', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.trim());
+
+console.log(`Checking ${filesToCheck.length} files for all syntax errors`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+filesToCheck.forEach(filePath => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Fix common syntax patterns
-    content = content.replace(/export default functio;n;\s*(\w+)\s*\(/g, 'export default function Component; $1(');
-    content = content.replace(/export default function Component;\s*(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Helmet>/g, 'export default function Component; $1() {\n  return (\n    <>\n      <Helmet>\n        <title>$2</title>\n        <meta name="description" content="$3" />\n      </Helmet>');
-    // Fix malformed JSX
-    content = content.replace(/<div\s+key="([^"]*)"\s*>\s*className="([^"]*)"\s*>/g, '<div key="$1" className="$2">');
-    content = content.replace(/className="\$1"/g, 'className="service-card"');
-    // Fix missing closing tags
-    content = content.replace(/<div\s+key="([^"]*)"\s*>\s*className="([^"]*)"\s*>\s*<div/g, '<div key="$1" className="$2"><div');
-    // Fix malformed function declarations
-    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Helmet>/g, 'function $1() {\n  return (\n    <>\n      <Helmet>\n        <title>$2</title>\n        <meta name="description" content="$3" />\n      </Helmet>');
-    // Fix missing semicolons
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-    // Fix malformed object literals
-}
-    content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n  $1\n}');
-    // Fix missing commas in arrays and objects
-    content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    // Fix JSX fragment issues
-    content = content.replace(/<>\s*<\/>/g, '<></>');
-    // Fix missing closing parentheses
-    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
-    // Fix malformed JSX attributes
-    content = content.replace(/<(\w+)\s+([^>]*)\s*>\s*<\/\1>/g, '<$1 $2 />');
-    // Clean up extra whitespace and newlines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    // Fix specific patterns for React components
-    if (content.includes('export default function Component;') && !content.includes('export default function Component; ')) {
-  content = content.replace(/export default function Component;/g, 'export default function Component; Component');
-}
-    }
+    let originalContent = content;
+    
+    // Fix common syntax errors
+    
+    // 1. Fix malformed imports
+    content = content.replace(/import React from 'react';/g, "import React from 'react';");
+    content = content.replace(/import React from 'react';-dom/g, "import React from 'react';\nimport ReactDOM from 'react-dom';");
+    
+    // 2. Fix duplicate imports
+    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*ArrowRightIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';");
+    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*import {[^}]+} from 'lucide-react';\s*HeartIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';\nimport { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';");
+    
+    // 3. Fix malformed interfaces
+    content = content.replace(/interface (\w+)Props \{\s*children: Node\}/g, 'interface $1Props {\n  children: React.ReactNode;\n}');
+    
+    // 4. Fix missing semicolons and braces
+    content = content.replace(/\}\s*export default/g, '};\n\nexport default');
+    content = content.replace(/\}\s*\)\s*export default/g, '});\n\nexport default');
+    
+    // 5. Fix malformed JSX closing
+    content = content.replace(/<\/section>\s*<\/>\s*\d+/g, '</section>\n    </>');
+    content = content.replace(/<\/section>\s*<\/>\s*\w+/g, '</section>\n    </>');
+    
+    // 6. Fix missing function closing braces
+    content = content.replace(/\}\s*export default (\w+);/g, '};\n\nexport default $1;');
+    
+    // 7. Fix malformed array declarations
+    content = content.replace(/];\s*\{[^}]+\}\s*];/g, '];');
+    
+    // 8. Fix malformed function declarations
+    content = content.replace(/const (\w+): React\.FC<EnhancedAccessibilityProps> = \(\{ children \}\) => \{/g, 'const $1: React.FC = () => {');
+    content = content.replace(/const (\w+): React\.FC<EnhancedAccessibilityProps> = \(\{ children \}\) => \{/g, 'const $1: React.FC = () => {');
+    
+    // 9. Fix missing closing parentheses
+    content = content.replace(/\);(\s*export default)/g, ');\n$1');
+    
+    // 10. Fix malformed JSX fragments
+    content = content.replace(/<>\s*(\d+)/g, '<>');
+    
+    // 11. Fix missing commas in object arrays
+    content = content.replace(/\}\s*\{/g, '},\n    {');
+    
+    // 12. Fix malformed string literals
+    content = content.replace(/import { createRoot } from 'react-dom\/client;/g, "import { createRoot } from 'react-dom/client';");
+    content = content.replace(/import App from '\.\/App;/g, "import App from './App';");
+    content = content.replace(/import '\.\/index\.css;/g, "import './index.css';");
+    
+    // 13. Fix malformed comments
+    content = content.replace(/\/\/ Ensure scheduler is properly initialized;/g, '// Ensure scheduler is properly initialized');
+    content = content.replace(/\/\/ Fix for scheduler unstable_now error;/g, '// Fix for scheduler unstable_now error');
+    
+    // 14. Fix malformed if statements
+    content = content.replace(/if \(typeof window !== 'undefined'\) \{';/g, "if (typeof window !== 'undefined') {");
+    
+    // 15. Fix malformed object properties
+    content = content.replace(/window\.performance = window\.performance \|\| \{\}/g, 'window.performance = window.performance || {};;');
+    
     if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-      return true;
-}
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    return false;
+    
   } catch (error) {
-}
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    errorCount++;
   }
-}
-function findCorruptedFiles(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
-        traverse(fullPath);
-}
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
-  try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          // Check for common corruption patterns
-          if (content.includes('export default functio;n;') || 
-              content.includes('className="service-card"') ||
-              content.includes('export default function Component;') && !content.includes('export default function Component; ')) {
-            files.push(fullPath);
-}
-          }
-        } catch (error) {
-  // Skip files that can't be read
-}
-        }
-      }
-    }
-  }
-  traverse(dir);
-  return files;
-}
-// Main execution
-const projectRoot = process.cwd();
-console.log('Searching for corrupted files...');
-const corruptedFiles = findCorruptedFiles(projectRoot);
-console.log(`Found ${corruptedFiles.length} corrupted files`);
-let fixedCount = 0;
-for (const file of corruptedFiles) {
-  if (fixFile(file)) {
-    fixedCount++;
-}
-    console.log(`Fixed: ${file}`);
-  }
-}
-console.log(`Fixed ${fixedCount} corrupted files`);
+});
+
+console.log(`\nFixed ${fixedCount} files, ${errorCount} errors`);

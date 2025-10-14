@@ -1,6 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {
+"use client";""
+";""
+import React from "react";"
+export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>

@@ -4,8 +4,8 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, cybersecurity, and digital transformation services." />
+        <title>ContactPage - Zion Tech Group</title>
+        <meta name="description" content="ContactPage page for Zion Tech Group" />
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -72,3 +72,4 @@ const ContactPage: React.FC = () => {
   )
 }
 export default ContactPage;
+

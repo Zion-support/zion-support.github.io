@@ -7,17 +7,11 @@ import {
   PhoneIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  PlayIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon,
-  GlobeAltIcon,
   CloudIcon,
   CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
+  SignalIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation: React.FC = () => {
@@ -39,44 +33,22 @@ const Navigation: React.FC = () => {
     )
   }
 
-  const navigation = [
+  const navigationItems = [
     { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
       name: 'Services', 
-      href: '/services', 
+      href: '/services',
       icon: BriefcaseIcon,
-      submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+      children: [
+        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'IT Solutions', href: '/it-solutions' },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: SignalIcon }
       ]
     },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      icon: CogIcon,
-      submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: GlobeAltIcon },
-        { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: SignalIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
-      ]
-    },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+    { name: 'Blog', href: '/blog', icon: AcademicCapIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
@@ -104,12 +76,13 @@ onClick={() => toggleExpanded(item.name)}
                   <div className="py-1">
                     {item.submenu.map((subItem) => (
                       <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        key={service.path}
+                        to={service.path}
+                        onClick={closeAllDropdowns}
+                        className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors"""
                       >
-                        {subItem.icon && <subItem.icon className="w-4 h-4 mr-3" />}
-                        {subItem.name}
+                        <service.icon className="h-4 w-4 mr-3" />""
+                        {service.name}
                       </Link>
 ))}
                   </div>

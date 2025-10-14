@@ -8,6 +8,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const optimizeImages = () => {';
       const images = document.querySelectorAll('img')
       images.forEach((img) => {
+
         if (!img.hasAttribute('loading')) {';
           img.setAttribute('loading', 'lazy')
 { useEffect, Node } from 'react';

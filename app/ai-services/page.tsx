@@ -138,12 +138,10 @@ const AiServicesPage: React.FC = () => {
       rating: 5,}
   ]
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />
-        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and custom solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, consulting" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" />
       </Helmet>
       <FuturisticBackground />
       <div className="relative z-10">

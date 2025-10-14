@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet-async';;
 'use client';
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>AI Content Writer - Zion Tech Group</title>
+        <meta name="description" content="AI Content Writer - Zion Tech Group" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">

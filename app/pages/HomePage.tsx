@@ -6,6 +6,8 @@ import {
   ShieldCheckIcon, 
   CloudIcon, 
   CpuChipIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
@@ -17,9 +19,11 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
+export default function HomePage()  {
 
-export default function HomePage() {
   const structuredData = {
+export default function HomePage() {
+const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -59,51 +63,126 @@ export default function HomePage() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead ;
         title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services, business automation"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-slate-900 text-white">
-        <FuturisticBackground />
-        
-        {/* Hero Section */}
-        <div className="relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-                Transform Your Business with AI
+      <FuturisticBackground />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden>"
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-5xl mx-auto>"
+            {/* Animated Title */}
+            <div className="mb-8">
+              <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-pulse>"
+                Zion Tech Group;
               </h1>
-              <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-                Leading provider of advanced AI solutions, cybersecurity, and digital transformation services
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <NeonButton href="/services" className="px-8 py-4">
-                  Explore Services
-                  <ArrowRightIcon className="w-5 h-5 ml-2" />
-                </NeonButton>
-                <Link
-                  to="/contact"
-                  className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  Get Started
-                </Link>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <SparklesIcon className="w-8 h-8 text-purple-400 animate-bounce />"
+                <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" />
+                <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200 />"
               </div>
+            </div>
+            
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
+              Advanced AI and IT Solutions for Modern Businesses;
+            </p>
+            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed>"
+              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
+              cloud infrastructure, and digital transformation services to drive innovation and growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <NeonButton to="/contact" variant="primary" size="lg">
+                Get Started Today;
+                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+              </NeonButton>
+              <NeonButton to="/services" variant="secondary" size="lg">
+                Explore Services;
+                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+              </NeonButton>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Features Section */}
-        <div className="py-20 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Featured Services Section */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4>"
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent>"
+              Our Featured Services;
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto>"
+            {featuredServices.map((service, index) => (
+              <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
+                <div className="text-center mb-6>"
+                  <div className="text-6xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-bold text-white mb-3>{service.title}</h3>"
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
+                </div>
+                
+                <div className="space-y-3 mb-6>"
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center text-gray-300">
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3></div>"
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="mb-6>"
+                  <div className="text-center">
+                    <span className="text-3xl font-bold text-white>${service.pricing.basic}</span>"
+                    <span className="text-gray-400 text-sm ml-2">/month</span>
+                  </div>
+                  <p className="text-gray-400 text-sm text-center mt-1>Starting from</p>"
+                </div>
+                
+                <div className="flex flex-col gap-3">
+                  <NeonButton to={service.href} variant="primary" size="sm">
+                    Learn More;
+                    <ArrowRightIcon className="w-4 h-4 ml-2 />"
+                  </NeonButton>
+                  <NeonButton to="/contact" variant="secondary" size="sm">
+                    Get Quote;
+                  </NeonButton>
+                </div>
+              </AnimatedCard>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12>"
+            <NeonButton to="/services" variant="primary" size="lg">
+              View All Services;
+              <ArrowRightIcon className="w-5 h-5 ml-2 />"
+            </NeonButton>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900></div>"
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto>"
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent>"
                 Why Choose Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge technology meets enterprise-grade reliability
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">
+                With over 4 years of experience in cutting-edge technology solutions, 
+                we've helped businesses across various industries transform their operations ;
+                and achieve unprecedented growth.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -126,16 +205,19 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Services Section */}
-        <div className="py-20 bg-slate-800/30 relative z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Section */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-slate-900></div>"
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto>"
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Our Services
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent>"
+                Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions for modern businesses
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Let's discuss how our technology solutions can drive your business forward;
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -156,33 +238,20 @@ export default function HomePage() {
                 </AnimatedCard>
 ))}
             </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how we can help you achieve your technology goals
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <NeonButton href="/contact" className="px-8 py-4">
-                Get In Touch
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <NeonButton to="/contact" variant="primary" size="lg">
+                Get In Touch;
+                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+              </NeonButton>
+              <NeonButton to="/demo" variant="secondary" size="lg">
+                Schedule Demo;
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
-              <Link
-                to="/about"
-                className="border border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
-                Learn About Us
-              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

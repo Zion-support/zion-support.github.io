@@ -39,15 +39,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,;
   loading = 'lazy',
   onLoad,
-  onError}
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const imgRef = useRef<HTMLImageElement>(null)
+
+  onError })
+}) => {;
+const [isLoaded, setIsLoaded] = useState(false);
+const [isError, setIsError] = useState(false);
+const [isInView, setIsInView] = useState(priority);
+const imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
-    if (priority) return
-    const observer = new IntersectionObserver(
+    if (priority) return;
+const observer = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
@@ -105,7 +106,8 @@ onError?.()}
         </Helmet>
 )}
       <div
-        ref={imgRef}
+
+        ref={ imgRef }
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
       >

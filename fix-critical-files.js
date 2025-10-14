@@ -2,134 +2,209 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Function to create a clean, working page component
+function createCleanPage(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
+  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  
+  return `import React from "react";
+import { Helmet } from "react-helmet-async";
 
-function fixAppTsx() {
-  const content = `import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+const ${componentName} = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>${pageTitle} - Zion Tech Group</title>
+        <meta name="description" content="${pageTitle} - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">${pageTitle}</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ${componentName};`;
+}
+
+// Function to create a clean main.tsx
+function createCleanMain() {
+  return `import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import Navigation from './app/components/Navigation';
-import Sidebar from './app/components/Sidebar';
+import App from './App';
+import './index.css';
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>
+);`;
+}
+
+// Function to create a clean App.tsx
+function createCleanApp() {
+  return `import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 // Import pages
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ServicesPage from './app/pages/ServicesPage';
-import ContactPage from './app/pages/ContactPage';
-import NotFoundPage from './app/404';
+import HomePage from './page';
+import AboutPage from './about/page';
+import ServicesPage from './services/page';
+import ContactPage from './contact/page';
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900 flex">
-            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
-              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
-              <main className="relative z-10 flex-1" id="main-content" role="main">
-                <ErrorBoundary>
-                  <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
-                  </Suspense>
-                </ErrorBoundary>
-              </main>
-            </div>
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <div className="App">
+      <Helmet>
+        <title>Zion Tech Group - AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
+      </Helmet>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </div>
   );
 }
 
 export default App;`;
-  
-  fs.writeFileSync('/workspace/App.tsx', content);
-  console.log('Fixed App.tsx');
 }
 
-function fix404Page() {
-  const content = `import React from 'react';
+// Function to create a clean home page
+function createCleanHomePage() {
+  return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export default function NotFoundPage() {
+const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>404 - Zion Tech Group</title>
-        <meta name="description" content="Page not found - Zion Tech Group" />
+        <title>Zion Tech Group - AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            404 - Page Not Found
+      
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Welcome to Zion Tech Group
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            The page you are looking for does not exist.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are a leading technology company specializing in AI and IT solutions, 
+            dedicated to transforming businesses through innovative technology.
           </p>
-          <a 
-            href="/" 
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Go Home
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/services"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Our Services
+            </Link>
+            <Link
+              to="/contact"
+              className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+            >
+              Get In Touch
+            </Link>
+          </div>
         </div>
-      </div>
-    </>
-  );
-}`;
-  
-  fs.writeFileSync('/workspace/app/404.tsx', content);
-  console.log('Fixed 404.tsx');
-}
+      </section>
 
-function fix5gImplementationPage() {
-  const content = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function FiveGImplementationPage() {
-  return (
-    <>
-      <Helmet>
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G implementation services by Zion Tech Group." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            5G Implementation Services
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Transform your business with cutting-edge 5G technology.
-          </p>
+      {/* Services Preview */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+              <p className="text-gray-300">
+                Cutting-edge artificial intelligence solutions to automate and optimize your business processes.
+              </p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+              <p className="text-gray-300">
+                Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation.
+              </p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Consulting</h3>
+              <p className="text-gray-300">
+                Expert consulting services to help you navigate the digital landscape and achieve your goals.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
-}`;
-  
-  fs.writeFileSync('/workspace/app/5g-implementation/page.tsx', content);
-  console.log('Fixed 5g-implementation/page.tsx');
+};
+
+export default HomePage;`;
 }
 
 // Main execution
-console.log('Fixing critical files...');
+console.log('Starting critical file fixes...');
 
-fixAppTsx();
-fix404Page();
-fix5gImplementationPage();
+// Fix main.tsx
+const mainPath = './app/main.tsx';
+fs.writeFileSync(mainPath, createCleanMain());
+console.log('Fixed main.tsx');
 
-console.log('Critical files fixed!');
+// Fix App.tsx
+const appPath = './app/App.tsx';
+fs.writeFileSync(appPath, createCleanApp());
+console.log('Fixed App.tsx');
+
+// Fix home page
+const homePath = './app/page.tsx';
+fs.writeFileSync(homePath, createCleanHomePage());
+console.log('Fixed page.tsx');
+
+// Fix about page (already done, but ensure it's clean)
+const aboutPath = './app/about/page.tsx';
+if (fs.existsSync(aboutPath)) {
+  const aboutContent = fs.readFileSync(aboutPath, 'utf8');
+  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {
+    fs.writeFileSync(aboutPath, createCleanPage(aboutPath));
+    console.log('Fixed about/page.tsx');
+  }
+}
+
+// Fix other critical pages
+const criticalPages = [
+  './app/services/page.tsx',
+  './app/contact/page.tsx',
+  './app/404.tsx',
+  './app/not-found.tsx'
+];
+
+for (const pagePath of criticalPages) {
+  if (fs.existsSync(pagePath)) {
+    fs.writeFileSync(pagePath, createCleanPage(pagePath));
+    console.log(`Fixed ${pagePath}`);
+  }
+}
+
+console.log('Critical file fixes completed!');

@@ -1,6 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode,
@@ -80,6 +78,30 @@ onClick={() => window.location.reload()}
                 </div>
               </div>
             </div>
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We apologize for the inconvenience. Please try refreshing the page.
+              </p>
+            </div>
+            <div className="mt-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              >
+                Refresh Page
+              </button>
+            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-2 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
       )

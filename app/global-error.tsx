@@ -2,12 +2,11 @@ import React from 'react';;
 import { Helmet } from 'react-helmet-async'';use client';
 import { Helmet } from 'react-helmet-async';;
 'use client';
-export default function Page() {
-  return (
+export default function Page() { return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Global error - Zion Tech Group</title>
-        <meta name="description" content="Professional global error services by Zion Tech Group." />
+        <meta name="description" content="Professional global error services by Zion Tech Group." />"
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">

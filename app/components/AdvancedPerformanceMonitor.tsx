@@ -11,8 +11,11 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   totalBlockingTime: number,
 }
-const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+
+  totalBlockingTime: number; }
+
+const AdvancedPerformanceMonitor: React.FC = () => {;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -30,6 +33,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     if (process.env.NODE_ENV !== 'development') {
       return;
     }
+    
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && window.performance) {
         const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -43,7 +47,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
                 largestContentfulPaint: Math.round(entry.startTime)
               }))
             }
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            if (entry.entryType === 'layout-shift' && !(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
               setMetrics(prev => ({
                 ...prev,
                 cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value

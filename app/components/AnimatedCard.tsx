@@ -30,7 +30,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
       {children}
     </div>
-  )
-}
-
-export default AnimatedCard
+);
+};
+"
+export default AnimatedCard;

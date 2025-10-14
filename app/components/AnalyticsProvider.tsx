@@ -67,8 +67,6 @@ console.log('Analytics initialized')}
   const value: AnalyticsContextType = {
     track,
     identify,
-    page;
-  }
     page
     page;}
   return (
