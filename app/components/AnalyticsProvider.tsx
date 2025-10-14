@@ -1,9 +1,6 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+import React, { ReactNode } from 'react';
+import { ANALYTICS_CONFIG } from '../constants/analytics';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
@@ -19,7 +16,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const trackPageView = (pageName: string) => {
     console.log('Page View:', pageName);
     if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-      (window as unknown as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as unknown as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', ANALYTICS_CONFIG.GA_MEASUREMENT_ID, {
         page_title: pageName,
         page_location: window.location.href,
       });
@@ -34,12 +31,5 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       {children}
     </AnalyticsContext.Provider>
   );
-};
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
 };
 export default AnalyticsProvider;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { DEFAULT_SEO } from '../constants/seo';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -11,12 +12,12 @@ interface SEOEnhancerProps {
   structuredData?: unknown;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
-  image = '/images/og-image.jpg',
+  title = DEFAULT_SEO.title,
+  description = DEFAULT_SEO.description,
+  keywords = DEFAULT_SEO.keywords,
+  image = DEFAULT_SEO.image,
   url = typeof window !== 'undefined' ? window.location.href : '',
-  type = 'website',
+  type = DEFAULT_SEO.type,
   structuredData
 }) => {
   useEffect(() => {
@@ -81,32 +82,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   );
 };
-// Default structured data for the organization
-export const defaultStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
-    "contactType": "customer service",
-    "availableLanguage": "English"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/ziontechgroup"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"
-  }
-};
+
 export default SEOEnhancer;
