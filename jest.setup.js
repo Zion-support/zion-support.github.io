@@ -1,61 +1,75 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  return {
-    ...actual,
-<<<<<<< HEAD
-    useNavigate: () => jest.fn(),
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
-      key: 'default'
-    }),
-<<<<<<< HEAD
-    Link: ({ to, children, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => children,
-    Routes: ({ children }) => children,
-    Route: ({ element }) => element,
-    useParams: () => ({}),
-    useSearchParams: () => [new URLSearchParams(), jest.fn()],
-    createBrowserRouter: () => ({
-      path: '/',
-      element: React.createElement('div')
-    })
-  };
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
 });
 
-// Suppress console warnings for tests
-=======
-    useNavigate: () => jest.fn(),
-    Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
-    BrowserRouter: ({ children }) => React.createElement('div', { 'data-testid': 'browser-router' }, children),
-    MemoryRouter: ({ children }) => React.createElement('div', { 'data-testid': 'memory-router' }, children)
-  };
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock performance
+Object.defineProperty(window, 'performance', {
+  writable: true,
+  value: {
+    now: jest.fn(() => Date.now()),
+    mark: jest.fn(),
+    measure: jest.fn(),
+    getEntriesByType: jest.fn(() => []),
+    getEntriesByName: jest.fn(() => []),
+  },
 });
 
-// Suppress console warnings
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+// Mock console methods to reduce noise in tests
 const originalError = console.error;
+const originalWarn = console.warn;
+
 beforeAll(() => {
   console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
       return;
     }
     originalError.call(console, ...args);
+  };
+  
+  console.warn = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('componentWillReceiveProps')
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
   };
 });
 
 afterAll(() => {
   console.error = originalError;
+  console.warn = originalWarn;
 });

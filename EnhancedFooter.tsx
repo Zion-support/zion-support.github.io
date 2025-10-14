@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -9,7 +9,6 @@ const EnhancedFooter: React.FC = () => {
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -17,7 +16,7 @@ const EnhancedFooter: React.FC = () => {
             Enhanced Footer
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional enhanced footer services 
+            Professional enhanced footer services
             designed to help your business grow and succeed.
           </p>
         </div>

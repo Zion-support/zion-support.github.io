@@ -1,52 +1,38 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
-    }
-  };
-};
-
-export default withErrorLogging(async (req, res) => {
+// API endpoint for creating checkout sessions
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
-
-  const { productId } = req.body;
-  if (!productId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-<<<<<<< HEAD
-    console.log('Creating checkout session for product:', productId);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    const { amount, currency = 'usd', items } = req.body;
+
+    if (!amount || !items) {
+      return res.status(400).json({ 
+        error: 'Missing required fields: amount and items' 
+      });
+    }
+
+    // Here you would integrate with your payment processor
+    // For example, Stripe, PayPal, etc.
+    const checkoutSession = {
+      id: `cs_${Date.now()}`,
+      amount: amount,
+      currency: currency,
+      items: items,
       status: 'pending',
-      message: 'Checkout session created successfully'
-    }));
-  } catch (error) {
-    console.error('Error:', error);
-=======
-    const session = {
-      id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
-      status: 'pending',
-      productId: productId
+      created: new Date().toISOString()
     };
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(session));
+    res.status(200).json({
+      success: true,
+      session: checkoutSession
+    });
+
   } catch (error) {
-    console.error('Checkout session creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    console.error('Error creating checkout session:', error);
+    res.status(500).json({ 
+      error: 'Internal server error' 
+    });
   }
-});
+}

@@ -1,172 +1,121 @@
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-=======
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
+#!/usr/bin/env node;
+import fs from "fs";";
+import path from "path";";
+import { fileURLToPath   } from "url";";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 
-function fixHtmlEntities(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
-    let modified = false;
+// Function to recursively find all files;
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
 
-    // Fix common HTML entities
-    const replacements = [
-=======
-    
-    // Fix common HTML entities
-    const fixes = [
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-      { from: /&apos;/g, to: "'" },
-      { from: /&quot;/g, to: '"' },
-      { from: /&lt;/g, to: '<' },
-      { from: /&gt;/g, to: '>' },
-      { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
-      { from: /&nbsp;/g, to: ' ' },
-      { from: /&rbrace;/g, to: '}' },
-      { from: /&lbrace;/g, to: '{' },
-      { from: /&rpar;/g, to: ')' },
-      { from: /&lpar;/g, to: '(' },
-      { from: /&rsqb;/g, to: ']' },
-      { from: /&lsqb;/g, to: '[' },
-      { from: /&comma;/g, to: ',' },
-      { from: /&semi;/g, to: ';' },
-      { from: /&colon;/g, to: ':' },
-      { from: /&period;/g, to: '.' },
-      { from: /&excl;/g, to: '!' },
-      { from: /&quest;/g, to: '?' },
-      { from: /&plus;/g, to: '+' },
-      { from: /&minus;/g, to: '-' },
-      { from: /&times;/g, to: '*' },
-      { from: /&divide;/g, to: '/' },
-      { from: /&equals;/g, to: '=' },
-      { from: /&hash;/g, to: '#' },
-      { from: /&dollar;/g, to: '$' },
-      { from: /&percent;/g, to: '%' },
-      { from: /&at;/g, to: '@' },
-      { from: /&caret;/g, to: '^' },
-      { from: /&tilde;/g, to: '~' },
-      { from: /&grave;/g, to: '`' },
-      { from: /&bar;/g, to: '|' },
-      { from: /&bsol;/g, to: '\\' },
-      { from: /&sol;/g, to: '/' },
-      { from: /&lowbar;/g, to: '_' },
-    ];
-
-    replacements.forEach(({ from, to }) => {
-      if (from.test(content)) {
-        content = content.replace(from, to);
-        modified = true;
+  files.forEach(file => {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Skip node_modules and other common directories;
+      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';
+        getAllFiles(fullPath, arrayOfFiles);
+      };
+    } else {
+      // Only process TypeScript, JavaScript, and JSX files;
+      if (file.match(/\.(ts|tsx|js|jsx)$/)) {
+        arrayOfFiles.push(fullPath);
       }
-    });
-
-    if (modified) {
-=======
-      { from: /&rbrace;/g, to: '}' },
-      { from: /&lbrace;/g, to: '{' }
-    ];
-    
-    let hasChanges = false;
-    fixes.forEach(fix => {
-      if (fix.from.test(content)) {
-        content = content.replace(fix.from, fix.to);
-        hasChanges = true;
-      }
-    });
-    
-    if (hasChanges) {
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed HTML entities in: ${filePath}`);
-      return true;
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+  });
+
+  return arrayOfFiles;
 }
 
-<<<<<<< HEAD
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
+// Function to fix HTML entities;
+function fixHtmlEntities(content) {
+  let fixed = content;
+  let fixesApplied = 0;
+
+  // HTML entity mappings;
+  const entityMap = {
+    ''': "'",'";
+    '"': '"','";
+    '<': '<',';
+    '>': '>',';
+    '&': '&',';
+    ''': "'",'";
+    ''': "'",'";
+    ''': "'",'";
+    '"': '"','";
+    '"': '"','";
+    '...': '...',';
+    '–': '–',';
+    '—': '—',';
+    ' ': ' ',';
+    '©': '©',';
+    '®': '®',';
+    '™': '™',';
+  };
+
+  // Fix HTML entities;
+  Object.entries(entityMap).forEach(([entity, replacement]) => {
+    const before = fixed;
+    fixed = fixed.replace(new RegExp(entity, 'g'), replacement);';
+    if (before !== fixed) {
+      fixesApplied++;
+    }
+  });
+
+  // Fix malformed quotes and strings;
+  fixed = fixed.replace(/'([^']*?)'/g, "'$1'");'";
+  fixed = fixed.replace(/"([^"]*?)"/g, '"$1"');'";
+  // Fix extra quotes at end of lines;
+  fixed = fixed.replace(/;/g, ';);';
+  fixed = fixed.replace(/;/g, ';);';
+  // Fix malformed imports;
+  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1   } from "$2";);'";
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)['"];?/g, 'import $1 from "$2";);'";
+  // Fix malformed exports;
+  fixed = fixed.replace(/export\s+default\s+([^;]+);?/g, 'export default $1;);';
+  // Fix malformed function calls;
+  fixed = fixed.replace(/resolve\(__dirname,\s*['"]([^'"]+)['"]\)/g, 'resolve(__dirname, "$1")');'";
+  // Fix extra semicolons;
+  fixed = fixed.replace(/;+/g, ';);';
+  // Fix malformed JSX;
+  fixed = fixed.replace(/<(\w+)([^>]*?)(?<!\s)\s*>/g, '<////$1$2>');';
+  return { content: fixed, fixesApplied };
+}
+
+// Main function;
+function main() {
+  console.log('🔍 Scanning for files with HTML entities...');';
+  const allFiles = getAllFiles(process.cwd());
+  let totalFixes = 0;
+  let filesProcessed = 0;
+
+  allFiles.forEach(file => {
+    try {
+      const originalContent = fs.readFileSync(file, 'utf8');';
+      const { content: fixedContent, fixesApplied } = fixHtmlEntities(originalContent);
       
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {
-          fixedCount += processDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?|ts|js)$/.test(item)) {
-        if (fixHtmlEntities(fullPath)) {
-          fixedCount++;
-        }
+      if (fixesApplied > 0) {
+        fs.writeFileSync(file, fixedContent, 'utf8');';
+        console.log(`✅ Fixed ${fixesApplied} HTML entities in ${file}`);`;
+        totalFixes += fixesApplied;
+        filesProcessed++;
       }
+    } catch (error) {
+      console.warn(`⚠️  Could not process file ${file}: ${error.message}`);`;
     }
-  } catch (error) {
-    console.error(`Error reading directory ${dirPath}:`, error.message);
+  });
+
+  console.log(`\n🎉 Summary:`);`;
+  console.log(`   Files processed: ${filesProcessed}`);`;
+  console.log(`   Total fixes applied: ${totalFixes}`);`;
+  if (totalFixes > 0) {
+    console.log(`\n✨ All HTML entities have been fixed!`);`;
+  } else {
+    console.log(`\n✨ No HTML entities found to fix.`);`;
   }
-  
-  return fixedCount;
 }
 
-console.log('Starting HTML entity fix...');
-const totalFixed = processDirectory('./app');
-console.log(`Fixed HTML entities in ${totalFixed} files.`);
-=======
-function findTsxFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath);
-      }
-    }
-  }
-  
-  traverse(dir);
-  return files;
-}
+// Run the script;
+main();
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findTsxFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to process...`);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixHtmlEntities(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`Fixed HTML entities in ${fixedCount} files.`);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+export { fixHtmlEntities };

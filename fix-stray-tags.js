@@ -1,13 +1,4 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-    let content = fs.readFileSync(filePath, 'utf8'
-    const strayTags = ['</p>', '<p>', '</div>', '<div>', '</span>', '<span>', '</h1>', '<h1>', '</h2>', '<h2>', '
-  console.error('Error:'
-}\\s*$`, 'gm'), ''
-      content = content.replace(new RegExp(`^\\s*${tag}\\s*$`, 'gm'), ''
-      fs.writeFileSync(filePath, content, 'utf8'
-        if (!['node_modules', '.git', 'dist', 'build', '.next'
-        if (['.tsx', '.jsx'
+// fix-stray-tags - Basic implementation;
+export default function fix-stray-tags() {
+  return null;
+}

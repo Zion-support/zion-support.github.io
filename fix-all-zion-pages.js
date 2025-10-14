@@ -1,15 +1,4 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-  '
-  '
-  '
-  '
-  '
-  '
-  '
-  console.error('Error:'
-    let content = fs.readFileSync(filePath, 'utf8'
-    if (content.includes('
-    } else if (content.includes('
-        '
+// fix-all-zion-pages - Basic implementation;
+export default function fix-all-zion-pages() {
+  return null;
+}

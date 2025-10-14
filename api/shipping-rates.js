@@ -1,102 +1,54 @@
-import fs from 'fs';
-import path from 'path';
-
-<<<<<<< HEAD
-// Shipping rates calculation
-=======
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-
-export default async function handler(req, res) {
+// API endpoint for shipping rates
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { destination, weight } = req.body;
-<<<<<<< HEAD
-  
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-  if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
-
-<<<<<<< HEAD
   try {
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    const { 
+      origin, 
+      destination, 
+      weight
+    } = req.body;
+
+    if (!origin || !destination || !weight) {
+      return res.status(400).json({ 
+        error: 'Missing required fields' 
+      });
     }
 
-    // Calculate shipping rates (mock calculation)
-
-    // Calculate shipping rates (mock calculation)
-    const baseRate = 10;
-    const weightMultiplier = parseFloat(weight) * 0.5;
-    const destinationMultiplier = destination === 'international' ? 2 : 1;
-    
-    const rates = [
+    // Here you would integrate with shipping providers
+    // For example, UPS, FedEx, DHL, etc.
+    const shippingRates = [
       {
-        service: 'Standard',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier),
-        days: destination === 'international' ? '7-14' : '3-5'
+        carrier: 'Standard',
+        service: 'Ground',
+        cost: 15.99,
+        estimatedDays: 5
       },
       {
-        service: 'Express',
-        cost: Math.round((baseRate + weightMultiplier) * destinationMultiplier * 1.5),
-        days: destination === 'international' ? '3-7' : '1-2'
+        carrier: 'Express',
+        service: '2-Day',
+        cost: 29.99,
+        estimatedDays: 2
+      },
+      {
+        carrier: 'Express',
+        service: 'Overnight',
+        cost: 49.99,
+        estimatedDays: 1
       }
     ];
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      rates,
-      destination,
-      weight
-=======
-  let rates = [];
-  try {
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
-  }
-
-  const distanceMultiplier = destination === 'US' ? 1 : 2;
-  const baseRate = 10;
-  const rate = baseRate + (weight * 0.5 * distanceMultiplier);
-
-  try {
-    const newRate = {
-      id: Date.now().toString(),
-      destination,
-      weight,
-      rate,
-      createdAt: new Date().toISOString()
-    };
-
-    rates.push(newRate);
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
+    res.status(200).json({
       success: true,
-      rate: rate,
-      message: 'Shipping rate calculated successfully' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    }));
+      rates: shippingRates
+    });
+
   } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-    res.end(JSON.stringify({ error: 'Failed to calculate shipping rates' }));
-=======
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+    console.error('Error calculating shipping rates:', error);
+    res.status(500).json({ 
+      error: 'Internal server error' 
+    });
   }
 }

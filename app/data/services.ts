@@ -1,7 +1,5 @@
-// services utility
-export const services = () => {
-  // Implementation
-  return true;
+// Services data
+export const Services = {
+  // Add your data here
 };
-
-export default services;
+export default services

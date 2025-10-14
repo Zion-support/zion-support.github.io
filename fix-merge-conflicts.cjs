@@ -3,91 +3,52 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common merge conflict issues
-function fixMergeConflicts(content) {
-  // Remove merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  
-  // Fix common syntax issues
-  content = content.replace(/\}\s*\)\s*}/g, '})}'); // Fix })}
-  content = content.replace(/\}\s*\)\s*\)/g, '}))'); // Fix }))
-  content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))'); // Fix })))
-  content = content.replace(/\}\s*\)\s*\)\s*\)\s*\)/g, '}))))'); // Fix }))))
-  
-  // Fix missing semicolons after imports
-  content = content.replace(/import[^;]+from[^;]+(?=\n)/g, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-    }
-    return match;
-  });
-  
-  // Fix missing semicolons after variable declarations
-  content = content.replace(/(const|let|var)\s+[^=]+=[^;]+(?=\n)/g, (match) => {
-    if (!match.endsWith(';')) {
-      return match + ';';
-    }
-    return match;
-  });
-  
-  // Fix JSX closing tags
-  content = content.replace(/>\s*}/g, '>}');
-  content = content.replace(/>\s*\)/g, '>)');
-  
-  // Fix function declarations
-  content = content.replace(/function\s+[^{]+{\s*}/g, (match) => {
-    return match.replace(/\s*}/, ' {}');
-  });
-  
-  // Fix arrow functions
-  content = content.replace(/=>\s*{\s*}/g, ' => {}');
-  
-  // Remove extra whitespace
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
+function fixMergeConflicts(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
-
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
     
+    // Remove merge conflict markers and keep the HEAD version (before )
+    content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
-    // Clean up any double newlines that might have been created
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+    // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
-
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed merge conflicts in: ${filePath}`);
-    } else {
-      console.log(`No conflicts found in: ${filePath}`);
-    }
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Main execution
-console.log('Starting merge conflict resolution...');
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
-filesWithConflicts.forEach(filePath => {
-  fixMergeConflicts(filePath);
-});
+// Find all TypeScript files
+const files = findTsxFiles('./app');
 
-console.log('Merge conflict resolution completed!');
+// Fix merge conflicts in each file
+files.forEach(fixMergeConflicts);
+
+console.log('Merge conflict cleanup completed!');

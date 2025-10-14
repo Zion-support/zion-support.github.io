@@ -1,11 +1,2 @@
-import fs from 'fs'
-import path from 'path'
-  '
-  '
-  '
-  '
-  '
-  '
-    let content = fs.readFileSync(filePath, 'utf8'
-  console.error('Error:'
-console.log('All page files fixed!'
+// fix-remaining-pages.js - Under development;
+console.log('fix-remaining-pages.js loaded');';

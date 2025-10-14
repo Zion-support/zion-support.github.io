@@ -1,6 +1,4 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-import path from 'path'
-const pageTemplate = (pageName, title) => `'use client'
-import React from 'react'
+// fix-broken-pages - Basic implementation;
+export default function fix-broken-pages() {
+  return null;
+}
