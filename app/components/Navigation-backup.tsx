@@ -1,17 +1,14 @@
 import React from 'react';
-'use client'
-export default function ComponentsPage() {
 
+interface NavigationBackupProps {
+  className?: string;
+}
+
+export default function NavigationBackup({ className = '' }: NavigationBackupProps) {
   return (
-    <div
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.;
-        </p>
-      </div>
+    <div className={`${className}`}>
+      <h2>Navigation-backup</h2>
+      <p>Component content goes here.</p>
     </div>
   );
-}"
-        </p></div></div>"
-  )
-''""
+}

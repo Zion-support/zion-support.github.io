@@ -1,6 +1,14 @@
-import React from 'react''; import { Helmet } from 'react-helmet-async''; const TutorialsPage: React.FC = () => {} return ( <>Helme t><///Helme t><//titl e>TutorialsPage - Zion Tech Group</titl e><//meta nam e="description" conten t="TutorialsPage - Zion Tech Group" />"" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">"" <div classNam e="text-center">"" <h1 classNam e="text-4xl font-bold mb-4">TutorialsPage</h 1>"" <p classNam e="text-gray-300">This page is under construction.</p> </di v><///di v>"'"
-) </>) ); "
-}""
-export default TutorialsPag;e"'"
+import React from 'react';
 
+interface TutorialsPageProps {
+  className?: string;
+}
+
+export default function TutorialsPage({ className = '' }: TutorialsPageProps) {
+  return (
+    <div className={`${className}`}>
+      <h2>TutorialsPage</h2>
+      <p>Component content goes here.</p>
     </div>
+  );
+}

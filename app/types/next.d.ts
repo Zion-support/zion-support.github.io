@@ -1,17 +1,14 @@
+import React from 'react';
 
-// Next.js type declarations;
-declare module 'next' {'
-  interface NextApiRequest {
-    user?: any;}
-  }
-  interface NextConfig {
-    // Add any Next.js specific types here;}
-  }
+interface next.d.tsProps {
+  className?: string;
 }
-// Export a utility function;
-export const nextUtil = () => {;
-  // Implementation;
-  return true;}
-};
-export default nextUtil
 
+export default function next.d.ts({ className = '' }: next.d.tsProps) {
+  return (
+    <div className={`${className}`}>
+      <h2>next.d.ts</h2>
+      <p>Component content goes here.</p>
+    </div>
+  );
+}
