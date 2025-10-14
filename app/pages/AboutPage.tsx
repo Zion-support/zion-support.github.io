@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';import { 
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -18,14 +14,6 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-=======
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -47,7 +35,6 @@ const AboutPage: React.FC = () => {
       icon: RocketLaunchIcon,
       title: 'Excellence',
       description: 'We strive for excellence in everything we do, from design to implementation.'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ];
 
@@ -72,20 +59,10 @@ const AboutPage: React.FC = () => {
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Founded in 2020, we've been at the forefront of digital transformation, 
-              helping companies leverage the power of artificial intelligence, cybersecurity, 
-              and cloud technologies to achieve unprecedented growth.            </p>
-=======
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We are a leading technology company specializing in AI and IT solutions, 
               dedicated to transforming businesses through innovative technology.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
           </div>
         </section>
 
@@ -125,22 +102,6 @@ Empowering businesses through innovative technology solutions
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300">
-            We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}
-export default AboutPage;
-=======
         </section>
 
         {/* Mission Section */}
@@ -170,4 +131,3 @@ export default AboutPage;
 };
 
 export default AboutPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
