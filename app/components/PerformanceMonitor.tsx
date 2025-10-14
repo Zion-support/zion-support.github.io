@@ -8,6 +8,15 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart?: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 const PerformanceMonitor = () => {
   useEffect(() => {
     // Only run in production
