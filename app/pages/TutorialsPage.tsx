@@ -18,10 +18,7 @@ const TutorialsPage: React.FC = () => {
             </p>
             <div className="text-gray-4 0 0">
               <p>Tutorials coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>

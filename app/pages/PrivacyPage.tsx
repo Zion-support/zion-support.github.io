@@ -18,10 +18,7 @@ const PrivacyPage: React.FC = () => {
             </p>
             <div className="text-gray-4 0 0">
               <p>Privacy policy content coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>

@@ -18,10 +18,7 @@ const BlogPage: React.FC = () => {
             </p>
             <div className="text-gray-4 0 0">
               <p>Blog posts coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>

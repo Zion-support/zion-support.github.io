@@ -18,10 +18,7 @@ const TermsPage: React.FC = () => {
             </p>
             <div className="text-gray-4 0 0">
               <p>Terms content coming soon...</p>
-              </div>
-        </div>
             </div>
-        </div>
           </div>
         </div>
       </div>
