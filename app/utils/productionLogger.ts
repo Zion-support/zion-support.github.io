@@ -1,6 +1,6 @@
 export const productionLogger = {
-  log: (level: 'info' | 'warn' | 'error', _message: string, _data?: unknown) => {
-  log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
+  log: (level: 'info' | 'warn' | 'error', _message: string;, _data?: unknown) => {
+  log: (level: 'info' | 'warn' | 'error', message: string;, data?: unknown) => {
     if (process.env.NODE_ENV === 'production') {
       if (level === 'error') {
         // Production error logging disabled

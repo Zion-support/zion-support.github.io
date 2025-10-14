@@ -11,14 +11,14 @@ export interface AnalyticsContextType {
 }
 
 export interface AnalyticsProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export interface AnalyticsEvent {
   name: string;
   properties?: Record<string, unknown>;
   timestamp: number;
-  name: string
+  name: string;
   properties?: Record<string, unknown>
-  timestamp: number
+  timestamp: number;
 }

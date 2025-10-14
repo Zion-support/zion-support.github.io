@@ -1,9 +1,15 @@
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
+import React from 'react';
 
 import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
+
+// Mock the lazy loading for testing
+jest.mock('react', () => ({
+  ...jest.requireActual('react'),
+  lazy: (fn) => fn()
+}));
+
 import HomePage from '../app/page';
 
 describe('HomePage', () => {
@@ -26,6 +32,6 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Get Started')).toBeInTheDocument();
+    expect(screen.getByText('Get Started Today')).toBeInTheDocument();
   });
 });

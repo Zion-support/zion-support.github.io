@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import React, { Suspense } from 'react';
 const AiLogoDesignerPage: React.FC = () => {
   return (
     <>
@@ -17,7 +16,7 @@ const AiLogoDesignerPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional Ai logo designer solutions and services
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
@@ -50,7 +49,5 @@ const AiLogoDesignerPage: React.FC = () => {
   );
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default AiLogoDesignerPage;
 

@@ -1,13 +1,4 @@
 import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-
 const FiveGReliabilityPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -24,9 +15,4 @@ const FiveGReliabilityPage: React.FC = () => {
     </div>
   );
 }
-import React, { Suspense } from 'react';
-
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGReliabilityPage;

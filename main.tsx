@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import React, { Suspense } from 'react';
 import App from './App';
 import './index.css';
 
@@ -31,7 +30,6 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-import React, { Suspense } from 'react';
       .then((_registration) => {
         if (process.env.NODE_ENV === 'development') {
           console.warn('Service Worker registered successfully');
@@ -39,7 +37,6 @@ import React, { Suspense } from 'react';
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-import React, { Suspense } from 'react';
           console.warn('Service Worker registration failed');
         }
       });
