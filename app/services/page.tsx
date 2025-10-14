@@ -13,15 +13,15 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-autopx-4 py-16">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4 xlfont-bold text-white mb-8">Services</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Services</h1>
             <p className="text-xl text-gray-300 mb-8">
               Professional services solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 borderborder-blue-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-blue-900 mb-2">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
                 </h3>
                 <p className="text-blue-700">
@@ -36,8 +36,8 @@ const ServicesPage: React.FC = () => {
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
-              <div className="bg-purple-50 borderborder-purple-200 rounded-lg p-6">
-                <h3 className="text-lgfont-semiboldtext-purple-900 mb-2">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support
                 </h3>
                 <p className="text-purple-700">
