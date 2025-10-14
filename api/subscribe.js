@@ -11,19 +11,15 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { email, name, interests } = req.body;
   
-=======
   const { email, name } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
 
-<<<<<<< HEAD
   try {
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
@@ -64,7 +60,6 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-=======
   let subscribers = [];
   try {
     const data = fs.readFileSync(file, 'utf8');
@@ -95,16 +90,12 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       message: 'Successfully subscribed to newsletter' 
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to process subscription' }));
-=======
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   }
 }

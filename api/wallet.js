@@ -11,19 +11,15 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { address, type, userId } = req.body;
   
-=======
   const { address, type, name, userId } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));
     return;
   }
 
-<<<<<<< HEAD
   try {
     // Ensure data directory exists
     if (!fs.existsSync(dir)) {
@@ -55,7 +51,6 @@ export default async function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       walletId: newWallet.id
-=======
   let wallets = [];
   try {
     const data = fs.readFileSync(file, 'utf8');
@@ -88,15 +83,11 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true,
       message: 'Wallet added successfully' 
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to add wallet' }));
-=======
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
   }
 }

@@ -31,34 +31,41 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;
         }
-        
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+        .focus\\:not-sr-only:focus {
+          position: static;
+          width: auto;
+          height: auto;
+          padding: 0.5rem 1rem;
+          margin: 0;
+          overflow: visible;
+          clip: auto;
+          white-space: normal;
         }
       `;
       document.head.appendChild(style);
     };
 
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-<<<<<<< HEAD
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
+    // Add ARIA labels and roles
+    const addAriaLabels = () => {
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
+      }
+
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
       }
 
       const footer = document.querySelector('footer');
@@ -74,28 +81,27 @@ const AccessibilityEnhancer: React.FC = () => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
       });
     };
 
-    // Initialize accessibility enhancements
+    // Initialize accessibility features
     addSkipLink();
     addFocusStyles();
-    addAriaLandmarks();
+    addAriaLabels();
     addAltText();
 
     // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
-    // Cleanup
+    // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default AccessibilityEnhancer;

@@ -2,71 +2,50 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string;
-  image?: string;
   url?: string;
-  type?: 'website' | 'article' | 'profile';
-  author?: string;
+  image?: string;
+  type?: string;
   publishedTime?: string;
   modifiedTime?: string;
+  author?: string;
   section?: string;
   tags?: string[];
+  noindex?: boolean;
+  canonical?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
-  image = '/og-image.svg',
-  url = 'https://ziontechgroup.com',
+  title,
+  description,
+  keywords = '',
+  url = '',
+  image = '/og-image.jpg',
   type = 'website',
-  author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
+  author = 'Zion Tech Group',
   section,
-  tags = []
+  tags = [],
+  noindex = false,
+  canonical
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.svg',
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  };
+  const canonicalUrl = canonical || fullUrl;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={fullUrl} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -76,6 +55,14 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={fullImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+      
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {author && <meta property="article:author" content={author} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map(tag => (
+        <meta key={tag} property="article:tag" content={tag} />
+      ))}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -86,36 +73,41 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
 
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
-      {type === 'article' && section && (
-        <meta property="article:section" content={section} />
-      )}
-      {type === 'article' && tags.length > 0 && (
-        tags.map((tag, index) => (
-          <meta key={index} property="article:tag" content={tag} />
-        ))
-      )}
-
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": type === 'article' ? 'Article' : 'WebPage',
+          "headline": fullTitle,
+          "description": description,
+          "url": fullUrl,
+          "image": fullImage,
+          "author": {
+            "@type": "Organization",
+            "name": author
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://ziontechgroup.com/logo.svg"
+            }
+          },
+          "datePublished": publishedTime,
+          "dateModified": modifiedTime,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": fullUrl
+          }
+        })}
       </script>
     </Helmet>
   );

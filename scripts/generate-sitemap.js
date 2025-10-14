@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
 const baseUrl = 'https://ziontechgroup.com';
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
@@ -28,7 +27,6 @@ const generateSitemap = () => {
 ${pages.map(page => `  <url>
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-=======
 // Define all the pages and their priorities
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -85,13 +83,11 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 ${pages.map(page => `  <url>
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${currentDate}</lastmod>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`).join('\n')}
 </urlset>`;
 
-<<<<<<< HEAD
   const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
@@ -102,7 +98,6 @@ ${pages.map(page => `  <url>
 };
 
 generateSitemap();
-=======
 // Write sitemap to public directory
 const publicDir = path.join(__dirname, '..', 'public');
 if (!fs.existsSync(publicDir)) {
@@ -143,4 +138,3 @@ fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
 console.log('✅ Sitemap and robots.txt generated successfully!');
 console.log(`📄 Generated sitemap with ${pages.length} pages`);
 console.log(`🤖 Generated robots.txt`);
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c

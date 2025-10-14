@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -10,27 +8,22 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 
 function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
     let modified = false;
 
     // Fix common HTML entities
     const replacements = [
-=======
     
     // Fix common HTML entities
     const fixes = [
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
       { from: /&gt;/g, to: '>' },
       { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
       { from: /&nbsp;/g, to: ' ' },
       { from: /&rbrace;/g, to: '}' },
       { from: /&lbrace;/g, to: '{' },
@@ -70,7 +63,6 @@ function fixHtmlEntities(filePath) {
     });
 
     if (modified) {
-=======
       { from: /&rbrace;/g, to: '}' },
       { from: /&lbrace;/g, to: '{' }
     ];
@@ -84,15 +76,11 @@ function fixHtmlEntities(filePath) {
     });
     
     if (hasChanges) {
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
-=======
     
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -100,7 +88,6 @@ function fixHtmlEntities(filePath) {
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
   let fixedCount = 0;
   
@@ -132,7 +119,6 @@ function processDirectory(dirPath) {
 console.log('Starting HTML entity fix...');
 const totalFixed = processDirectory('./app');
 console.log(`Fixed HTML entities in ${totalFixed} files.`);
-=======
 function findTsxFiles(dir) {
   const files = [];
   
@@ -169,4 +155,3 @@ files.forEach(file => {
 });
 
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3

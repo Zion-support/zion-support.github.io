@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -18,7 +14,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false,
   className = ''
-=======
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -31,12 +26,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', 
   text = 'Loading...', 
   className = '' 
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
@@ -63,7 +56,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
-=======
     lg: 'w-12 h-12'
   };
 
@@ -75,7 +67,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   );
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 };
 
 export default LoadingSpinner;

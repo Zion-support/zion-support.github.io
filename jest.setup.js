@@ -6,10 +6,7 @@ jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
-<<<<<<< HEAD
     useNavigate: () => jest.fn(),
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     useLocation: () => ({
       pathname: '/',
       search: '',
@@ -17,7 +14,6 @@ jest.mock('react-router-dom', () => {
       state: null,
       key: 'default'
     }),
-<<<<<<< HEAD
     Link: ({ to, children, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
     },
@@ -35,7 +31,6 @@ jest.mock('react-router-dom', () => {
 });
 
 // Suppress console warnings for tests
-=======
     useNavigate: () => jest.fn(),
     Link: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
     NavLink: ({ to, children, ...props }) => React.createElement('a', { href: to, ...props }, children),
@@ -45,7 +40,6 @@ jest.mock('react-router-dom', () => {
 });
 
 // Suppress console warnings
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
