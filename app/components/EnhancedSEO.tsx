@@ -1,115 +1,127 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
-  title: string;
-  description: string;
+interface EnhancedSEOProps {
+  title?: string;
+  description?: string;
   keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  canonicalUrl?: string;  ogUrl?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean}
 
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
-  canonicalUrl,
-  ogImage = '/api/placeholder/1200/630',
+  keywords,
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogUrl,
   ogType = 'website',
   twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
   structuredData,
   noIndex = false,
-  noFollow = false
+  noFollow = false,
+  lang = 'en'
 }) => {
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: siteName,
-    url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://github.com/ziontechgroup',
-      'https://twitter.com/ziontechgroup'
-    ]
-  };
-
-  const mergedStructuredData = structuredData || defaultStructuredData;
+  const baseUrl = 'https://ziontechgroup.com';
+  const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
+  const fullOgUrl = ogUrl ? `${baseUrl}${ogUrl}` : baseUrl;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonicalUrl} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <link rel="canonical" href={fullCanonical} />
+      <html lang={lang} />
       
       {/* Robots */}
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+      <meta name="googlebot" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullCanonicalUrl} />
-      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullOgImage} />
+      <meta name="twitter:title" content={twitterTitle || title} />
+      <meta name="twitter:description" content={twitterDescription || description} />
+      <meta name="twitter:image" content={twitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" /> cursor/analyze-improve-and-deploy-application-c573
       
-      {/* Additional SEO Meta Tags */}
+      {/* Article Specific Meta Tags */}
+      {publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          <meta property="article:author" content={author} />
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+      
+      {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
       
-      {/* Mobile Optimization */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
-      
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(mergedStructuredData)}
-      </script>
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData, null, 2)}
+        </script>
+      )}
+      
+      {/* Default Structured Data */}
+      {!structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": baseUrl,
+            "logo": `${baseUrl}/logo.png`,
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-555-123-4567",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ]
+          }, null, 2)}
+        </script>
+      )}
     </Helmet>
   )};
 

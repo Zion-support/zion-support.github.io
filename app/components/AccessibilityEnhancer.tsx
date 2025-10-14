@@ -44,30 +44,73 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     addAriaLandmarks();
   }, [isHighContrast, isReducedMotion, fontSize]);
 
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-        }
-      }
+    // Focus management
+    if (enableFocusManagement) {
+      const setupFocusManagement = () => {
+        let lastFocusedElement: HTMLElement | null = null;
+        
+        const handleFocusIn = (event: FocusEvent) => {
+          lastFocusedElement = event.target as HTMLElement;
+        };
+        
+        const handleFocusOut = (event: FocusEvent) => {
+          const target = event.target as HTMLElement;
+          if (target && !target.contains(document.activeElement)) {
+            lastFocusedElement = target;
+          }
+        };
+        
+        document.addEventListener('focusin', handleFocusIn);
+        document.addEventListener('focusout', handleFocusOut);
+        
+        return () => {
+          document.removeEventListener('focusin', handleFocusIn);
+          document.removeEventListener('focusout', handleFocusOut);
+        };
+      };
+      
+      cleanupFunctions.push(setupFocusManagement());
+    }
 
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
+    // Keyboard navigation enhancements
+    if (enableKeyboardNavigation) {
+      const setupKeyboardNavigation = () => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+          // Skip to main content with Alt + M
+          if (event.altKey && event.key === 'm') {
+            event.preventDefault();
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+              mainContent.focus();
+              mainContent.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+          
+          // Skip to navigation with Alt + N
+          if (event.altKey && event.key === 'n') {
+            event.preventDefault();
+            const navigation = document.querySelector('nav');
+            if (navigation) {
+              const firstFocusable = navigation.querySelector('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])') as HTMLElement;
+              if (firstFocusable) {
+                firstFocusable.focus();
+              }
+            }
+          }
+        };
+        
+        document.addEventListener('keydown', handleKeyDown);
+        
+        return () => {
+          document.removeEventListener('keydown', handleKeyDown);
+        };
+      };
+      
+      cleanupFunctions.push(setupKeyboardNavigation());
+    }
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+    // Add skip link
+    cleanupFunctions.push(addSkipLink());
 
   // Focus management
   useEffect(() => {

@@ -1,40 +1,94 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
+import React from "react";
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      description:
+        "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
+      features: [
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+      ],
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",
+      description:
+        "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
+      features: [
+        "Security Audits",
+        "Threat Detection",
+        "Data Protection",
+        "Compliance Management",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "Cloud Infrastructure",
+      description:
+        "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
+      features: [
+        "Cloud Migration",
+        "Infrastructure as Code",
+        "Auto-scaling",
+        "Disaster Recovery",
+      ],
+    },
+    {
+      icon: Globe,
+      title: "Digital Transformation",
+      description:
+        "Complete digital transformation services to modernize your business and stay competitive.",
+      features: [
+        "Strategy Development",
+        "Technology Integration",
+        "Change Management",
+        "Training & Support",
+      ],
+    },
+  ];
+
   return (
-    <div className="min-h-screen bg-white">;
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>EnhancedServicesShowcase - Zion Tech Group</title>
         <meta name="description" content="Professional enhancedservicesshowcase services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
             EnhancedServicesShowcase;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8">;
-            Professional enhancedservicesshowcase solutions tailored to your business needs.;
-          </p>;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional enhancedservicesshowcase solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
                 Expert Solutions;
-              </h3>;
-              <p className="text-blue-700">;
-                Our team of experts delivers cutting-edge enhancedservicesshowcase solutions.;
-              </p>;
-            </div>;
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge enhancedservicesshowcase solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
                 Custom Implementation;
-              </h3>;
-              <p className="text-green-700">;
-                Tailored enhancedservicesshowcase implementations for your specific requirements.;
-              </p>;
-            </div>;
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
+              </h3>
+              <p className="text-green-700">
+                Tailored enhancedservicesshowcase implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
                 24/7 Support;
               </h3>;
               <p className="text-purple-700">;

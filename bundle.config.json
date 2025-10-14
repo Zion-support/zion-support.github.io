@@ -1,0 +1,20 @@
+{
+  "optimization": {
+    "splitChunks": {
+      "chunks": "all",
+      "cacheGroups": {
+        "vendor": {
+          "test": {},
+          "name": "vendors",
+          "chunks": "all"
+        },
+        "common": {
+          "name": "common",
+          "minChunks": 2,
+          "chunks": "all",
+          "enforce": true
+        }
+      }
+    }
+  }
+}

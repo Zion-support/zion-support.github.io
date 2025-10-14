@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react';
 const DigitalTransformationPage: React.FC = () => {
-  const services = [{
+  const services = [
+    {
       icon: RefreshCw,
       title: 'Process Automation',';
       description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
@@ -34,14 +35,24 @@ const DigitalTransformationPage: React.FC = () => {
       features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']'}
   ];
 
+  const benefits = [
+    'Increased Operational Efficiency',
+    'Enhanced Customer Experience',
+    'Improved Data-Driven Decision Making',
+    'Reduced Operational Costs',
+    'Faster Time to Market',
+    'Competitive Advantage'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">;
+    <>
       <Helmet>
-        <title>Digital Transformation | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive digital transformation services to modernize your business processes and technology infrastructure." />
-        <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, innovation" />
+        <title>Digital Transformation Services | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive digital transformation services. Process automation, change management, and innovation consulting." />
+        <meta name="keywords" content="digital transformation, process automation, change management, digital strategy, data analytics, innovation consulting" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-5xl font-bold text-white mb-6">;

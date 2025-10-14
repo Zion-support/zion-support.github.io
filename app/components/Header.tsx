@@ -6,8 +6,8 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navigationItems = [{ name: 'Home', href: '/' },';
-    { name: 'About', href: '/about' },';
+  const navigationItems = [{ name: 'Home', href: '/' },'
+    { name: 'About', href: '/about' },'
     { 
       name: 'Services',';
       href: '/services',';
@@ -20,39 +20,42 @@ const Header: React.FC = () => {
     { name: 'Blog', href: '/blog' },';
     { name: 'Contact', href: '/contact' }'];
 
+export default function Header() {
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-        <div className="flex justify-between items-center h-16">;
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">;
-            <Link to="/" className="text-2xl font-bold text-white">;
-              Zion Tech Group;
-            </Link>;
-          </div>;
+          <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
+              <CpuChipIcon className="h-8 w-8 text-blue-400" />
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            </Link>
+          </div>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:block">;
-            <div className="ml-10 flex items-baseline space-x-4">;
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">;
                   <Link>
                     to={item.href}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors";
-                    onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                    onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                  >;
+                    className="$1"
+onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
+onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  >
                     {item.name}
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>;
+                  </Link>
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">;
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
                         <Link>
                           key={subItem.name}
                           to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700";
-                        >;
+                          className="$1"
+                        >
                           {subItem.name}
                         </Link>))}
                     </div>)}
@@ -86,20 +89,20 @@ const Header: React.FC = () => {
                 <div key={item.name}>;
                   <Link>
                     to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium";
-                    onClick={() => setIsOpen(false)}
-                  >;
+                    className="$1"
+onClick={() => setIsOpen(false)}
+                  >
                     {item.name}
-                  </Link>;
+                  </Link>
                   {item.submenu && (
-                    <div className="ml-4 space-y-1">;
+                    <div className="pl-4 space-y-1">
                       {item.submenu.map((subItem) => (
                         <Link>
                           key={subItem.name}
                           to={subItem.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm";
-                          onClick={() => setIsOpen(false)}
-                        >;
+                          className="$1"
+onClick={() => setIsOpen(false)}
+                        >
                           {subItem.name}
                         </Link>))}
                     </div>)}

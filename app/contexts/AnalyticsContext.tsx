@@ -1,15 +1,17 @@
 import { createContext, useContext, useState, useEffect } from 'react;
-'use client';
+'use client'
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
+  trackPageView: (pageName: string) => void,
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
+  const [isEnabled, setIsEnabled] = useState(false)
+  const [userId, setUserId] = useState<string | null>(null)
   useEffect(() => {
+    // if analytics is enabled
+setIsEnabled(true)}, [])
     // if analytics is enabled;
     setIsEnabled(true)}, []);
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -28,9 +30,10 @@ const  ({ children }) => {
     trackPageView,
     setUser,
     isEnabled,
-  };
+  }
+    isEnabled,}
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>)};
 export { AnalyticsContext };

@@ -48,12 +48,13 @@ const CaseStudiesPage: React.FC = () => {
       description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.''}
   ];
 
+const CaseStudiesPagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">;
+    <>
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies showcasing AI and IT solutions that transformed businesses across various industries." />
-        <meta name="keywords" content="case studies, success stories, AI implementation, IT solutions, business transformation" />
+        <meta name="description" content="Case Studies - Professional services from Zion Tech Group" />
+        <meta name="keywords" content="case studies, services, solutions, technology" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
@@ -130,4 +131,4 @@ const CaseStudiesPage: React.FC = () => {
       </div>;
     </div>)};
 
-export default CaseStudiesPage;
+export default CaseStudiesPagePage;

@@ -1,331 +1,321 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   PlayIcon,
   ClockIcon,
   UserIcon,
+  StarIcon,
   ArrowRightIcon,
-  BookOpenIcon,
+  MagnifyingGlassIcon,
+  FunnelIcon,
+  AcademicCapIcon,
   CodeBracketIcon,
+  CogIcon,
   ShieldCheckIcon,
   CloudIcon
 } from '@heroicons/react/24/outline';
 
-export default function TutorialsPage() {
+const TutorialsPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedLevel, setSelectedLevel] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Tutorials', icon: AcademicCapIcon },
+    { id: 'ai', name: 'AI & Machine Learning', icon: CodeBracketIcon },
+    { id: 'cloud', name: 'Cloud Computing', icon: CloudIcon },
+    { id: 'security', name: 'Cybersecurity', icon: ShieldCheckIcon },
+    { id: 'development', name: 'Development', icon: CogIcon }
+  ];
+
+  const levels = [
+    { id: 'all', name: 'All Levels' },
+    { id: 'beginner', name: 'Beginner' },
+    { id: 'intermediate', name: 'Intermediate' },
+    { id: 'advanced', name: 'Advanced' }
+  ];
+
   const tutorials = [
     {
       id: 1,
-      title: "Getting Started with AI: A Complete Beginner's Guide",
-      description: "Learn the fundamentals of artificial intelligence and how to implement basic AI solutions in your business.",
-      category: "AI & Machine Learning",
-      duration: "2 hours",
-      difficulty: "Beginner",
-      instructor: "AI Team",
-      thumbnail: "/images/tutorials/ai-basics.jpg",
-      icon: CodeBracketIcon,
-      color: "from-purple-500 to-pink-500"
+      title: 'Getting Started with AI: A Complete Beginner\'s Guide',
+      description: 'Learn the fundamentals of artificial intelligence and machine learning from scratch.',
+      duration: '2 hours',
+      level: 'beginner',
+      category: 'ai',
+      rating: 4.8,
+      students: 1250,
+      instructor: 'Kleber Santos',
+      thumbnail: '/images/tutorials/ai-basics.jpg',
+      videoUrl: '/videos/ai-basics.mp4',
+      tags: ['AI', 'Machine Learning', 'Python', 'Beginners']
     },
     {
       id: 2,
-      title: "Cybersecurity Fundamentals for Business Owners",
-      description: "Essential cybersecurity practices to protect your business from common threats and vulnerabilities.",
-      category: "Cybersecurity",
-      duration: "1.5 hours",
-      difficulty: "Beginner",
-      instructor: "Security Team",
-      thumbnail: "/images/tutorials/cybersecurity-basics.jpg",
-      icon: ShieldCheckIcon,
-      color: "from-cyan-500 to-blue-500"
+      title: 'Cloud Infrastructure Setup with AWS',
+      description: 'Master AWS cloud services and learn to build scalable infrastructure solutions.',
+      duration: '3 hours',
+      level: 'intermediate',
+      category: 'cloud',
+      rating: 4.9,
+      students: 980,
+      instructor: 'Sarah Johnson',
+      thumbnail: '/images/tutorials/aws-setup.jpg',
+      videoUrl: '/videos/aws-setup.mp4',
+      tags: ['AWS', 'Cloud', 'Infrastructure', 'DevOps']
     },
     {
       id: 3,
-      title: "Cloud Migration Strategy and Implementation",
-      description: "Step-by-step guide to migrating your infrastructure to the cloud with minimal downtime.",
-      category: "Cloud Computing",
-      duration: "3 hours",
-      difficulty: "Intermediate",
-      instructor: "Cloud Team",
-      thumbnail: "/images/tutorials/cloud-migration.jpg",
-      icon: CloudIcon,
-      color: "from-green-500 to-emerald-500"
+      title: 'Cybersecurity Fundamentals: Protecting Your Business',
+      description: 'Essential cybersecurity practices and tools to secure your organization.',
+      duration: '2.5 hours',
+      level: 'beginner',
+      category: 'security',
+      rating: 4.7,
+      students: 1100,
+      instructor: 'Michael Chen',
+      thumbnail: '/images/tutorials/cybersecurity.jpg',
+      videoUrl: '/videos/cybersecurity.mp4',
+      tags: ['Security', 'Protection', 'Best Practices', 'Compliance']
     },
     {
       id: 4,
-      title: "Building Your First Micro SaaS Application",
-      description: "Complete tutorial on creating a micro SaaS application from concept to deployment.",
-      category: "Micro SaaS",
-      duration: "4 hours",
-      difficulty: "Intermediate",
-      instructor: "Development Team",
-      thumbnail: "/images/tutorials/micro-saas.jpg",
-      icon: CodeBracketIcon,
-      color: "from-pink-500 to-rose-500"
+      title: 'Advanced Machine Learning with Python',
+      description: 'Deep dive into advanced machine learning techniques and algorithms.',
+      duration: '4 hours',
+      level: 'advanced',
+      category: 'ai',
+      rating: 4.9,
+      students: 750,
+      instructor: 'Emily Rodriguez',
+      thumbnail: '/images/tutorials/ml-advanced.jpg',
+      videoUrl: '/videos/ml-advanced.mp4',
+      tags: ['Machine Learning', 'Python', 'Deep Learning', 'Advanced']
     },
     {
       id: 5,
-      title: "5G Technology Implementation for Businesses",
-      description: "Understanding 5G capabilities and how to leverage them for your business operations.",
-      category: "5G Solutions",
-      duration: "2.5 hours",
-      difficulty: "Advanced",
-      instructor: "5G Team",
-      thumbnail: "/images/tutorials/5g-implementation.jpg",
-      icon: CloudIcon,
-      color: "from-indigo-500 to-purple-500"
+      title: 'Micro SaaS Development: From Idea to Launch',
+      description: 'Build and launch your own micro SaaS application from scratch.',
+      duration: '5 hours',
+      level: 'intermediate',
+      category: 'development',
+      rating: 4.8,
+      students: 890,
+      instructor: 'David Kim',
+      thumbnail: '/images/tutorials/micro-saas.jpg',
+      videoUrl: '/videos/micro-saas.mp4',
+      tags: ['SaaS', 'Development', 'Business', 'Startup']
     },
     {
       id: 6,
-      title: "Digital Transformation Roadmap Development",
-      description: "Learn how to create and execute a comprehensive digital transformation strategy.",
-      category: "Digital Transformation",
-      duration: "3.5 hours",
-      difficulty: "Advanced",
-      instructor: "Strategy Team",
-      thumbnail: "/images/tutorials/digital-transformation.jpg",
-      icon: BookOpenIcon,
-      color: "from-yellow-500 to-orange-500"
+      title: '5G Technology Implementation Guide',
+      description: 'Understanding and implementing 5G solutions for modern applications.',
+      duration: '3.5 hours',
+      level: 'intermediate',
+      category: 'development',
+      rating: 4.6,
+      students: 650,
+      instructor: 'Lisa Wang',
+      thumbnail: '/images/tutorials/5g-implementation.jpg',
+      videoUrl: '/videos/5g-implementation.mp4',
+      tags: ['5G', 'Technology', 'Implementation', 'IoT']
     }
   ];
 
-  const categories = [
-    "All Tutorials",
-    "AI & Machine Learning",
-    "Cybersecurity",
-    "Cloud Computing",
-    "Micro SaaS",
-    "5G Solutions",
-    "Digital Transformation"
-  ];
+  const filteredTutorials = tutorials.filter(tutorial => {
+    const matchesSearch = tutorial.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         tutorial.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || tutorial.category === selectedCategory;
+    const matchesLevel = selectedLevel === 'all' || tutorial.level === selectedLevel;
+    return matchesSearch && matchesCategory && matchesLevel;
+  });
 
-  const difficultyColors = {
-    "Beginner": "bg-green-500",
-    "Intermediate": "bg-yellow-500",
-    "Advanced": "bg-red-500"
-  };
+  const featuredTutorial = tutorials[0];
 
   return (
     <>
       <Helmet>
         <title>Tutorials - Zion Tech Group</title>
-        <meta name="description" content="Learn AI, cybersecurity, cloud computing, and digital transformation with our comprehensive tutorials and guides." />
-        <meta name="keywords" content="AI tutorials, cybersecurity training, cloud computing guide, digital transformation, technology learning" />
+        <meta name="description" content="Learn from expert tutorials on AI, cloud computing, cybersecurity, and digital transformation. Comprehensive courses for all skill levels." />
+        <meta name="keywords" content="tutorials, courses, learning, AI tutorials, cloud computing, cybersecurity, digital transformation, online learning" />
       </Helmet>
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Tutorials & Learning
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Learn from the Experts
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Master the latest technologies with our comprehensive tutorials and guides
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Master the latest technologies with our comprehensive tutorials and courses. 
+              From beginner to advanced, we have something for everyone.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From beginner-friendly introductions to advanced implementation guides, 
-              our tutorials cover everything you need to succeed in the digital age.
-            </p>
-          </div>
-        </div>
-      </section>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto relative mb-8">
+              <div className="relative">
+                <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search tutorials..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+            </div>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-slate-900 border-b border-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-6 py-2 rounded-full border border-slate-600 text-gray-300 hover:border-purple-500 hover:text-purple-300 transition-colors"
-              >
-                {category}
-              </button>
-            ))}
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-gray-600">Tutorials</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">5,000+</div>
+                <div className="text-gray-600">Students</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">4.8</div>
+                <div className="text-gray-600">Average Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+                <div className="text-gray-600">Hours of Content</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tutorials Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {tutorials.map((tutorial) => {
-              const Icon = tutorial.icon;
-              return (
-                <div 
-                  key={tutorial.id}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden"
-                >
-                  <div className="aspect-video bg-gradient-to-br from-slate-700 to-slate-600 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${tutorial.color} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                        <Icon className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
-                    <div className="absolute top-4 left-4">
-                      <span className={`px-3 py-1 ${difficultyColors[tutorial.difficulty]} text-white text-sm font-semibold rounded-full`}>
-                        {tutorial.difficulty}
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          {/* Filters */}
+          <div className="mb-8">
+            <div className="flex flex-wrap gap-4 mb-6">
+              {/* Category Filter */}
+              <div className="flex items-center space-x-2">
+                <FunnelIcon className="w-5 h-5 text-gray-500" />
+                <span className="text-gray-700 font-medium">Category:</span>
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                        selectedCategory === category.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      <category.icon className="w-4 h-4" />
+                      <span>{category.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Level Filter */}
+            <div className="flex items-center space-x-2">
+              <span className="text-gray-700 font-medium">Level:</span>
+              <div className="flex flex-wrap gap-2">
+                {levels.map((level) => (
+                  <button
+                    key={level.id}
+                    onClick={() => setSelectedLevel(level.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                      selectedLevel === level.id
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {level.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Featured Tutorial */}
+          {selectedCategory === 'all' && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Tutorial</h2>
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
+                        {featuredTutorial.category.toUpperCase()}
                       </span>
+                      <span className="text-blue-100">{featuredTutorial.duration}</span>
+                      <span className="text-blue-100">{featuredTutorial.level}</span>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="w-12 h-12 bg-black/50 rounded-full flex items-center justify-center">
-                        <PlayIcon className="w-6 h-6 text-white" />
+                    <h3 className="text-3xl font-bold mb-4">{featuredTutorial.title}</h3>
+                    <p className="text-xl text-blue-100 mb-6">{featuredTutorial.description}</p>
+                    <div className="flex items-center space-x-6 mb-6">
+                      <div className="flex items-center space-x-2">
+                        <StarIcon className="w-5 h-5 text-yellow-400" />
+                        <span>{featuredTutorial.rating}</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <UserIcon className="w-5 h-5" />
+                        <span>{featuredTutorial.students} students</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <ClockIcon className="w-5 h-5" />
+                        <span>{featuredTutorial.duration}</span>
                       </div>
                     </div>
+                    <Link
+                      to={`/tutorials/${featuredTutorial.id}`}
+                      className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                    >
+                      <PlayIcon className="w-5 h-5 mr-2" />
+                      Start Learning
+                    </Link>
                   </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
-                      <div className="flex items-center gap-2">
-                        <ClockIcon className="w-4 h-4" />
-                        <span>{tutorial.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <UserIcon className="w-4 h-4" />
-                        <span>{tutorial.instructor}</span>
-                      </div>
-                    </div>
-                    
-                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
-                      {tutorial.title}
-                    </h2>
-                    
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {tutorial.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full">
-                        {tutorial.category}
-                      </span>
-                      
-                      <Link 
-                        to={`/tutorials/${tutorial.id}`}
-                        className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
-                      >
-                        Start Learning <ArrowRightIcon className="w-4 h-4" />
-                      </Link>
+                  <div className="relative">
+                    <div className="aspect-video bg-black/20 rounded-lg flex items-center justify-center">
+                      <PlayIcon className="w-16 h-16 text-white" />
                     </div>
                   </div>
                 </div>
               )})}
           </div>
+
+          {filteredTutorials.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No tutorials found matching your criteria.</p>
+            </div>
+          )}
         </div>
-      </section>
 
-      {/* Learning Paths */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Learning Paths
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Structured learning journeys designed to take you from beginner to expert
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                <CodeBracketIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Developer Path</h3>
-              <p className="text-gray-300 mb-6">
-                Master artificial intelligence development from basics to advanced implementations.
-              </p>
-              <ul className="space-y-2 text-gray-300 mb-6">
-                <li>• 12 Tutorials</li>
-                <li>• 24 Hours Content</li>
-                <li>• 3 Projects</li>
-                <li>• Certificate</li>
-              </ul>
-              <Link 
-                to="/learning-paths/ai-developer"
-                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold"
-              >
-                Start Path <ArrowRightIcon className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
-                <ShieldCheckIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity Expert</h3>
-              <p className="text-gray-300 mb-6">
-                Become a cybersecurity professional with comprehensive security training.
-              </p>
-              <ul className="space-y-2 text-gray-300 mb-6">
-                <li>• 15 Tutorials</li>
-                <li>• 30 Hours Content</li>
-                <li>• 5 Labs</li>
-                <li>• Certification</li>
-              </ul>
-              <Link 
-                to="/learning-paths/cybersecurity"
-                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold"
-              >
-                Start Path <ArrowRightIcon className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
-                <CloudIcon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Architect</h3>
-              <p className="text-gray-300 mb-6">
-                Design and implement scalable cloud solutions for modern businesses.
-              </p>
-              <ul className="space-y-2 text-gray-300 mb-6">
-                <li>• 18 Tutorials</li>
-                <li>• 36 Hours Content</li>
-                <li>• 4 Projects</li>
-                <li>• Badge</li>
-              </ul>
-              <Link 
-                to="/learning-paths/cloud-architect"
-                className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 font-semibold"
-              >
-                Start Path <ArrowRightIcon className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Ready to Start Learning?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Join thousands of professionals who are advancing their careers with our tutorials
+            <p className="text-lg text-gray-600 mb-8">
+              Join thousands of students who are already learning with our expert tutorials.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/tutorials"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                to="/contact" 
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
               >
-                Browse All Tutorials
-                <ArrowRightIcon className="w-5 h-5" />
+                Get Started
               </Link>
               <Link 
-                to="/contact"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                to="/demo" 
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
-                Get Custom Training
-                <ArrowRightIcon className="w-5 h-5" />
+                Watch Demo
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </>
   )}

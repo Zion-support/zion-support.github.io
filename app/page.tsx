@@ -26,7 +26,7 @@ export default function HomePage() {
       "telephone": "+1-555-123-4567",
       "contactType": "customer service"
     }
-  };
+  ];
 
   const features = [
     {
@@ -165,4 +165,7 @@ export default function HomePage() {
       </FuturisticBackground>
     </>
   );
-}
+};
+
+const page = React.lazy(() => import('./page'));
+export default page;

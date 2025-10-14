@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, Globe } from 'lucide-react';
 const CloudInfrastructurePage: React.FC = () => {
-  const services = [{
+  const services = [
+    {
       icon: Cloud,
       title: 'Cloud Migration',';
       description: 'Seamlessly migrate your applications and data to the cloud with minimal downtime.',';
@@ -34,14 +35,24 @@ const CloudInfrastructurePage: React.FC = () => {
       features: ['Cloud Strategy', 'Vendor Management', 'Disaster Recovery', 'Cost Optimization']'}
   ];
 
+  const benefits = [
+    'Reduced Infrastructure Costs',
+    'Improved Scalability',
+    'Enhanced Security',
+    'Better Performance',
+    '24/7 Monitoring',
+    'Disaster Recovery'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">;
+    <>
       <Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud infrastructure services including migration, automation, security, and optimization." />
-        <meta name="keywords" content="cloud infrastructure, cloud migration, DevOps, infrastructure as code, cloud security" />
+        <title>Cloud Infrastructure Services | Zion Tech Group</title>
+        <meta name="description" content="Expert cloud infrastructure services including migration, automation, and optimization. Transform your business with scalable cloud solutions." />
+        <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, DevOps, infrastructure as code" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-5xl font-bold text-white mb-6">;

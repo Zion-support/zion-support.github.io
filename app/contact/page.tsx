@@ -1,6 +1,31 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Wifi } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
@@ -33,17 +58,14 @@ export default function ContactPage()    {
 
   const contactInfo = [
     {
-
-      icon: 'Phone',
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: 'Location',
@@ -57,25 +79,24 @@ export default function ContactPage()    {
       value: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
-  ];
-
+  ]
   const subjects = [
-    'AI Services',
-    'IT Services',
-    'Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
+    'AI Services'
+    'IT Services'
+    'Services'
+    'Micro SAAS'
+    'Digital Transformation'
+    '5G Implementation'
     'Other'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
-      </Helmet>
+    <>
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
@@ -145,74 +166,42 @@ export default function ContactPage()    {
                   })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
-                Send Another Message
-              </button>
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
+          </div>
+        </section>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-white font-medium mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
+              ))}
+            </div>
 
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">

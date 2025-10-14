@@ -7,6 +7,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
   children: ReactNode}
 

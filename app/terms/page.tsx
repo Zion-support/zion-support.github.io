@@ -1,85 +1,145 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const TermsPage: React.FC = () => {
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Wifi } from 'lucide-react';
+import { Building2 } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
   return (
     <>
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />';
-        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+      <EnhancedSEO 
+        title="Page - Zion Tech Group"
+        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
+        keywords="page, business solutions, technology services, professional services"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
-              Terms of;
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                Service;
-              </span>;
-            </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
-              Please read these terms carefully before using our services.;
-            </p>;
-          </div>;
-        </section>;
-        {/* Content Section */}
-        <section className="py-20 px-4">;
-          <div className="max-w-4xl mx-auto">;
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">;
-              <div className="prose prose-invert max-w-none">;
-                <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>;
-                <p className="text-gray-300 mb-6">;
-                  By accessing and using our services, you accept and agree to be bound by the terms;
-                  and provision of this agreement.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Use License</h2>;
-                <p className="text-gray-300 mb-6">;
-                  Permission is granted to temporarily download one copy of our materials for personal, 
-                  non-commercial transitory viewing only.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>;
-                <p className="text-gray-300 mb-6">;
-                  The materials on our website are provided on an 'as is' basis. Zion Tech Group makes';
-                  no warranties, expressed or implied, and hereby disclaims and negates all other warranties.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Limitations</h2>;
-                <p className="text-gray-300 mb-6">;
-                  In no event shall Zion Tech Group or its suppliers be liable for any damages arising;
-                  out of the use or inability to use the materials on our website.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Accuracy of Materials</h2>;
-                <p className="text-gray-300 mb-6">;
-                  The materials appearing on our website could include technical, typographical, or;
-                  photographic errors. We do not warrant that any of the materials on its website are;
-                  accurate, complete, or current.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">s</h2>;
-                <p className="text-gray-300 mb-6">;
-                  We have not reviewed all of the sites linked to our website and are not responsible;
-                  for the contents of any such linked site.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Modifications</h2>;
-                <p className="text-gray-300 mb-6">;
-                  We may revise these terms of service at any time without notice. By using this website, 
-                  you are agreeing to be bound by the then current version of these terms.;
-                </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>;
-                <p className="text-gray-300 mb-6">;
-                  If you have any questions about these terms of service, please contact us at;
-                  <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">;
-                    legal@ziontechgroup.com;
-                  </a>.;
-                </p>;
-                <p className="text-gray-400 text-sm mt-8">;
-                  Last updated: {new Date().toLocaleDateString()}
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional page services designed to help your business succeed and grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View Demo
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Page Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver exceptional results with cutting-edge technology and expert knowledge.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our page services can help your business succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   )};
 
-export default TermsPage;
+const page = React.lazy(() => import('./page'));
+export default page;

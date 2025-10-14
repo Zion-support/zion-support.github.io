@@ -2,229 +2,179 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  CpuChipIcon,
+  CpuChipIcon, 
+  CloudIcon, 
   ShieldCheckIcon,
-  CloudIcon,
   ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  StarIcon,
+  DocumentTextIcon,
   UserGroupIcon,
-  BuildingOfficeIcon,
-  AcademicCapIcon
+  CogIcon,
+  RocketLaunchIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
+  CurrencyDollarIcon,
+  ClockIcon,
+  GlobeAltIcon,
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon,
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
 export default function SolutionsPage() {
   const solutions = [
     {
-      title: "AI-Powered Business Intelligence",
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+      id: 'ai-solutions',
+      title: 'AI Solutions',
+      description: 'Comprehensive artificial intelligence solutions including machine learning, computer vision, natural language processing, and automation.',
+      features: [
+        'Machine Learning Models',
+        'Computer Vision',
+        'Natural Language Processing',
+        'Predictive Analytics',
+        'Automated Decision Making',
+        'Custom AI Development'
+      ],
       icon: CpuChipIcon,
-      features: [
-        "Predictive Analytics",
-        "Real-time Dashboards",
-        "Automated Reporting",
-        "Machine Learning Models",
-        "Natural Language Queries"
-      ],
-      benefits: [
-        "Increase decision-making speed by 300%",
-        "Reduce manual reporting time by 80%",
-        "Improve forecast accuracy by 40%"
-      ],
-      industries: ["Finance", "Retail", "Healthcare", "Manufacturing"],
-      color: "from-purple-500 to-pink-500",
-      href: "/solutions/ai-business-intelligence"
+      href: '/ai-solutions',
+      pricing: 'Starting from $299/month'
     },
     {
-      title: "Enterprise Cybersecurity Suite",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
-      icon: ShieldCheckIcon,
+      id: 'it-solutions',
+      title: 'IT Solutions',
+      description: 'Complete IT infrastructure and services including cloud computing, network management, cybersecurity, and digital transformation.',
       features: [
-        "Threat Detection & Response",
-        "Vulnerability Assessment",
-        "Compliance Management",
-        "Security Training",
-        "Incident Response"
+        'Cloud Infrastructure',
+        'Network Management',
+        'Cybersecurity',
+        'Data Center Solutions',
+        'IT Support Services',
+        'Digital Transformation'
       ],
-      benefits: [
-        "Reduce security incidents by 90%",
-        "Achieve 100% compliance",
-        "Cut security costs by 50%"
-      ],
-      industries: ["Banking", "Government", "Healthcare", "Technology"],
-      color: "from-cyan-500 to-blue-500",
-      href: "/solutions/enterprise-cybersecurity"
+      icon: ServerIcon,
+      href: '/it-solutions',
+      pricing: 'Starting from $199/month'
     },
     {
-      title: "Cloud Infrastructure Optimization",
-      description: "Maximize performance and minimize costs with our cloud management solutions.",
-      icon: CloudIcon,
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
+      description: 'Specialized software solutions designed to solve specific business problems with AI-powered intelligence and automation.',
       features: [
-        "Multi-cloud Management",
-        "Cost Optimization",
-        "Auto-scaling",
-        "Disaster Recovery",
-        "Performance Monitoring"
+        'AI Content Generation',
+        'Social Media Management',
+        'Email Marketing Automation',
+        'Project Management',
+        'Customer Support Bots',
+        'Inventory Management'
       ],
-      benefits: [
-        "Reduce cloud costs by 35%",
-        "Improve uptime to 99.9%",
-        "Scale resources automatically"
-      ],
-      industries: ["E-commerce", "SaaS", "Media", "Gaming"],
-      color: "from-green-500 to-emerald-500",
-      href: "/solutions/cloud-optimization"
-    },
-    {
-      title: "Digital Transformation Platform",
-      description: "Modernize your business processes with our comprehensive digital transformation solutions.",
-      icon: ChartBarIcon,
-      features: [
-        "Process Automation",
-        "Legacy System Modernization",
-        "Change Management",
-        "Technology Integration",
-        "Performance Analytics"
-      ],
-      benefits: [
-        "Increase operational efficiency by 60%",
-        "Reduce manual errors by 85%",
-        "Accelerate time-to-market by 50%"
-      ],
-      industries: ["Manufacturing", "Logistics", "Real Estate", "Education"],
-      color: "from-yellow-500 to-orange-500",
-      href: "/solutions/digital-transformation"
-    },
-    {
-      title: "Micro SaaS Development",
-      description: "Build and deploy custom micro SaaS applications tailored to your specific business needs.",
       icon: GlobeAltIcon,
-      features: [
-        "Rapid Prototyping",
-        "Custom Development",
-        "API Integration",
-        "User Management",
-        "Payment Processing"
-      ],
-      benefits: [
-        "Launch products 3x faster",
-        "Reduce development costs by 70%",
-        "Scale with your business"
-      ],
-      industries: ["Startups", "SMBs", "Consulting", "Professional Services"],
-      color: "from-pink-500 to-rose-500",
-      href: "/solutions/micro-saas"
+      href: '/micro-saas-solutions',
+      pricing: 'Starting from $29/month'
     },
     {
-      title: "5G Technology Solutions",
-      description: "Leverage next-generation 5G technology for enhanced connectivity and IoT applications.",
-      icon: RocketLaunchIcon,
+      id: 'cybersecurity',
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security solutions to protect your digital assets with threat detection, vulnerability assessment, and compliance management.',
       features: [
-        "5G Network Planning",
-        "IoT Integration",
-        "Edge Computing",
-        "Real-time Applications",
-        "Smart City Solutions"
+        'Threat Detection',
+        'Vulnerability Assessment',
+        'Security Monitoring',
+        'Incident Response',
+        'Compliance Management',
+        'Security Training'
       ],
-      benefits: [
-        "Enable ultra-low latency applications",
-        "Support massive IoT deployments",
-        "Improve network efficiency by 90%"
+      icon: ShieldCheckIcon,
+      href: '/cybersecurity',
+      pricing: 'Starting from $199/month'
+    },
+    {
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud Platform expertise for modern business needs.',
+      features: [
+        'Cloud Migration',
+        'Infrastructure as Code',
+        'Auto-scaling',
+        'Load Balancing',
+        'Disaster Recovery',
+        'Cost Optimization'
       ],
-      industries: ["Telecommunications", "Smart Cities", "Automotive", "Agriculture"],
-      color: "from-indigo-500 to-purple-500",
-      href: "/solutions/5g-technology"
+      icon: CloudIcon,
+      href: '/cloud-solutions',
+      pricing: 'Starting from $299/month'
+    },
+    {
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation services to modernize your business processes and technology infrastructure.',
+      features: [
+        'Process Analysis',
+        'Technology Assessment',
+        'Digital Strategy',
+        'System Integration',
+        'Change Management',
+        'Performance Monitoring'
+      ],
+      icon: RocketLaunchIcon,
+      href: '/digital-transformation',
+      pricing: 'Starting from $399/month'
     }
   ];
 
   const industries = [
-    {
-      name: "Healthcare",
-      description: "AI-powered diagnostics, patient management, and medical research solutions",
-      icon: UserGroupIcon,
-      solutions: ["AI Diagnostics", "Patient Analytics", "Medical Imaging", "Drug Discovery"]
-    },
-    {
-      name: "Financial Services",
-      description: "Advanced fraud detection, risk management, and algorithmic trading solutions",
-      icon: BuildingOfficeIcon,
-      solutions: ["Fraud Detection", "Risk Analytics", "Algorithmic Trading", "Compliance"]
-    },
-    {
-      name: "Education",
-      description: "Personalized learning, student analytics, and educational technology platforms",
-      icon: AcademicCapIcon,
-      solutions: ["Learning Analytics", "Personalized Education", "Student Management", "Assessment Tools"]
-    },
-    {
-      name: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      icon: ChartBarIcon,
-      solutions: ["Predictive Maintenance", "Quality Control", "Supply Chain AI", "Process Optimization"]
-    }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Fortune 500 Retailer",
-      challenge: "Needed to optimize inventory management and reduce waste across 500+ stores",
-      solution: "Implemented AI-powered demand forecasting and automated replenishment system",
-      results: [
-        "35% reduction in inventory costs",
-        "50% decrease in stockouts",
-        "25% improvement in profit margins"
-      ],
-      industry: "Retail"
-    },
-    {
-      title: "Regional Healthcare System",
-      challenge: "Required secure, HIPAA-compliant patient data management and analytics",
-      solution: "Deployed comprehensive cybersecurity suite with AI-powered threat detection",
-      results: [
-        "100% HIPAA compliance achieved",
-        "90% reduction in security incidents",
-        "60% faster threat response time"
-      ],
-      industry: "Healthcare"
-    },
-    {
-      title: "Global Manufacturing Company",
-      challenge: "Needed to modernize legacy systems and improve operational efficiency",
-      solution: "Implemented digital transformation platform with process automation",
-      results: [
-        "40% increase in production efficiency",
-        "70% reduction in manual processes",
-        "50% faster time-to-market for new products"
-      ],
-      industry: "Manufacturing"
-    }
+    { name: 'Healthcare', icon: '🏥', description: 'AI-powered medical solutions and secure data management' },
+    { name: 'Finance', icon: '💼', description: 'Fintech solutions and fraud detection systems' },
+    { name: 'Manufacturing', icon: '🏭', description: 'IoT integration and predictive maintenance' },
+    { name: 'Retail', icon: '🛍️', description: 'E-commerce optimization and customer analytics' },
+    { name: 'Education', icon: '🎓', description: 'Learning management systems and AI tutoring' },
+    { name: 'Government', icon: '🏛️', description: 'Secure infrastructure and citizen services' }
   ];
 
   return (
     <>
       <Helmet>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive AI and IT solutions designed to transform businesses across various industries." />
-        <meta name="keywords" content="AI solutions, IT solutions, business intelligence, cybersecurity, cloud computing, digital transformation" />
+        <meta name="description" content="Comprehensive technology solutions for businesses. AI, IT, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <meta name="keywords" content="technology solutions, AI solutions, IT services, cybersecurity, cloud computing, digital transformation" />
+        <meta property="og:title" content="Solutions - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive technology solutions for businesses. AI, IT, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/solutions" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive Solutions
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
+              Our Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business with our cutting-edge AI and IT solutions
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to transform your business and drive innovation across all industries.
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From artificial intelligence to cybersecurity, we provide end-to-end technology 
-              solutions that drive innovation, efficiency, and growth across all industries.
-            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -233,78 +183,19 @@ export default function SolutionsPage() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Solutions
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+              Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to address your specific business challenges
+              Cutting-edge solutions powered by artificial intelligence, cloud computing, and advanced cybersecurity.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {solutions.map((solution, index) => {
-              const Icon = solution.icon;
-              return (
-                <div 
-                  key={solution.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105 p-8"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
-                    {solution.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {solution.description}
-                  </p>
-                  
-                  <div className="space-y-4 mb-6">
-                    <h4 className="text-lg font-semibold text-white">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                          <CheckCircleIcon className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="space-y-4 mb-6">
-                    <h4 className="text-lg font-semibold text-white">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {solution.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center gap-3 text-gray-300">
-                          <StarIcon className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Industries:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {solution.industries.map((industry, industryIndex) => (
-                        <span 
-                          key={industryIndex}
-                          className="px-3 py-1 bg-slate-700 text-gray-300 text-sm rounded-full"
-                        >
-                          {industry}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    to={solution.href}
-                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution) => (
+              <div key={solution.id} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating">
+                  <solution.icon className="w-8 h-8 text-white" />
                 </div>
               )})}
           </div>
@@ -372,36 +263,53 @@ export default function SolutionsPage() {
                 className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8"
               >
                 <div className="mb-6">
-                  <span className="px-3 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">
-                    {study.industry}
-                  </span>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-4">{study.title}</h3>
-                
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Challenge:</h4>
-                    <p className="text-gray-300 text-sm">{study.challenge}</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Solution:</h4>
-                    <p className="text-gray-300 text-sm">{study.solution}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-3">Results:</h4>
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center gap-3 text-gray-300">
-                        <StarIcon className="w-4 h-4 text-yellow-400 flex-shrink-0" />
-                        <span className="text-sm">{result}</span>
+                    {solution.features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
+
+                {/* Pricing */}
+                <div className="mb-6">
+                  <div className="text-sm text-gray-400 mb-1">Starting from</div>
+                  <div className="text-xl font-bold text-purple-400">{solution.pricing}</div>
+                </div>
+
+                <Link 
+                  to={solution.href}
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all glow-effect"
+                >
+                  Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
+              Industries We Serve
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our solutions are tailored to meet the unique needs of various industries and sectors.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <div key={industry.name} className="bg-slate-800/50 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift">
+                <div className="text-4xl mb-4">{industry.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
+                <p className="text-gray-300 text-sm">{industry.description}</p>
               </div>
             ))}
           </div>
@@ -409,32 +317,27 @@ export default function SolutionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our solutions can address your specific challenges and drive measurable results
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Get Custom Solution
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-              <Link 
-                to="/demo"
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Schedule Demo
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-            </div>
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12">
+            Contact us today to discuss your specific needs and get a customized solution for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              to="/demo"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
           </div>
         </div>
       </section>

@@ -1,19 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { LucideIcon, ArrowRight } from 'lucide-react';
+
 interface FuturisticButtonProps {
   children: React.ReactNode;
-  className?: string;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-  icon?: React.ReactNode;
+  href?: string;
+  to?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset'}
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
-  children, 
-  className = '',';
-  variant = 'primary',';
-  size = 'md',';
-  icon,
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({
+  children,
+  href,
+  to,
   onClick,
   type = 'button''}) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';

@@ -34,12 +34,13 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']'}
   ];
 
+const ITServicesPagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
+    <>
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />
-        <meta name="keywords" content="IT services, infrastructure, cloud computing, cybersecurity, technical support, system integration" />
+        <meta name="description" content="IT Services - Professional services from Zion Tech Group" />
+        <meta name="keywords" content="it services, services, solutions, technology" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         {/* Hero Section */}
@@ -94,4 +95,4 @@ const ITServicesPage: React.FC = () => {
       </div>;
     </div>)};
 
-export default ITServicesPage;
+export default ITServicesPagePage;

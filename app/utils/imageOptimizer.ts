@@ -8,12 +8,11 @@ export interface ImageOptimizationOptions {
 export const optimizeImage = (
   src: string,
   options: ImageOptimizationOptions = {}
-): string => {
+): string => {'}
   const { width, height, quality = 80, format = 'webp', lazy = true } = options;
   // In a real implementation, you would use a service like Cloudinary or ImageKit;
   // For now, we'll return the original src with query parameters';
   const params = new URLSearchParams();
-  
   if (width) params.set('w', width.toString());
   if (height) params.set('h', height.toString());
   if (quality) params.set('q', quality.toString());

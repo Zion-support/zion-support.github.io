@@ -2,19 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
   lcp: number | null;
+  inp: number | null;
+  cls: number | null;
+  fcp: number | null;
   ttfb: number | null;
-  loadTime: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
     lcp: null,
     ttfb: null,
     loadTime: null

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -19,18 +19,26 @@ const Footer: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' }
   ];
 
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Support', href: '/support' },
-    { name: 'Community', href: '/community' },
-    { name: 'Status', href: '/status' },
+  const microSaasServices = [
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'Contract Manager', path: '/micro-saas/contract-manager' },
+    { name: 'Email Signature Manager', path: '/micro-saas/email-signature' },
+    { name: 'Employee Directory', path: '/micro-saas/employee-directory' },
+    { name: 'Document Processor', path: '/micro-saas/document-processor' },
+    { name: 'AI Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker Pro', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Manager', path: '/micro-saas/inventory-management' },
+    { name: 'Lead Generation Suite', path: '/micro-saas/lead-generation' },
+    { name: 'Social Media Scheduler', path: '/micro-saas/social-scheduler' },
+    { name: 'AI Password Manager Pro', path: '/micro-saas/ai-password-manager' },
+    { name: 'AI Task Manager', path: '/micro-saas/ai-task-manager' },
+    { name: 'AI Email Marketing', path: '/micro-saas/ai-email-marketing' }
   ];
 
   const legal = [
@@ -79,7 +87,13 @@ const Footer: React.FC = () => {
                     {service.name}
                   </Link>
                 </li>
-              ))}
+              ))}          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4> cursor/analyze-improve-and-deploy-application-c573
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white transition-colors">Demo</Link></li>
             </ul>
           </div>
 
@@ -117,6 +131,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+      </div>
 
         {/* Contact Info */}
         <div className="border-t border-slate-700 mt-8 pt-8">
@@ -135,6 +150,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -153,6 +169,14 @@ const Footer: React.FC = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 right-1/4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-pink-400 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-0 right-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
       </div>
     </footer>
   );

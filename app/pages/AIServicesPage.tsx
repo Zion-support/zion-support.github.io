@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react';
 const AIServicesPage: React.FC = () => {
-  const services = [{
+  const services = [
+    {
       icon: Brain,
       title: 'AI Strategy & Consulting',';
       description: 'Develop comprehensive AI strategies tailored to your business objectives and industry requirements.',';
@@ -34,14 +35,24 @@ const AIServicesPage: React.FC = () => {
       features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']'}
   ];
 
+  const benefits = [
+    'Increased Efficiency',
+    'Cost Reduction',
+    'Better Decision Making',
+    'Enhanced Customer Experience',
+    'Competitive Advantage',
+    'Scalable Solutions'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+    <>
       <Helmet>
         <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation solutions." />
-        <meta name="keywords" content="AI services, machine learning, NLP, computer vision, automation, artificial intelligence" />
+        <meta name="description" content="Comprehensive AI services including strategy, development, and implementation. Transform your business with cutting-edge artificial intelligence solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI consulting, AI development, AI strategy" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="text-center mb-16">;
           <h1 className="text-5xl font-bold text-white mb-6">;

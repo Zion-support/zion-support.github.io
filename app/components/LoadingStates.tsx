@@ -1,7 +1,27 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-export default function Page() {
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
+
+interface LoadingPageProps {
+  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
+  message?: string;
+  variant?: 'default' | 'futuristic' | 'minimal';
+}
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  message = "Loading...", 
+  variant = "futuristic" 
+}) => {
+  if (variant === 'minimal') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="flex items-center space-x-3">
+          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
+          <span className="text-white text-lg">{message}</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-white">;
       <Helmet>

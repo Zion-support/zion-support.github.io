@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
+'use client'
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">;
@@ -8,9 +8,9 @@ export default function Page() {
         <title>EnhancedPerformanceOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional enhancedperformanceoptimizer services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">;
-        <div className="text-center">;
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
             EnhancedPerformanceOptimizer;
           </h1>;
           <p className="text-xl text-gray-600 mb-8">;

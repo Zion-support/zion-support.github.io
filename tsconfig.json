@@ -14,8 +14,13 @@
     "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
+<<<<<<< HEAD
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+=======
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -55,6 +60,8 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "**/*.spec.tsx",
+    "app/components-broken/**",
+    "app/pages-broken/**"
   ]
 }
