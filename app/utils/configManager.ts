@@ -1,3 +1,14 @@
+interface Config {
+  apiUrl: string;
+  environment: string;
+  features: {
+    analytics: boolean;
+    seo: boolean;
+    performance: boolean;
+  };
+  [key: string]: any;
+}
+
 export const configManager = {
   config: {
     apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
@@ -7,7 +18,7 @@ export const configManager = {
       seo: true,
       performance: true
     }
-  } as Record<string, any>,
+  } as Config,
   
   get: (key: string) => {
     return key.split('.').reduce((obj, k) => obj?.[k], configManager.config);

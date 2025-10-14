@@ -9,7 +9,7 @@ import { CheckCircle } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 
-function AICybersecuritySuitePro() {
+function Page() {
   const features = [
     {
       icon: Shield,

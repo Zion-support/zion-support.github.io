@@ -58,6 +58,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
       </div>
+
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
+            <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Services
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
