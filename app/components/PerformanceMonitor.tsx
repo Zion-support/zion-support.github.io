@@ -27,7 +27,10 @@ const PerformanceMonitor = () => {
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        metrics.fid = entry.processingStart - entry.startTime;
+        const fidEntry = entry as any;
+        if (fidEntry.processingStart) {
+          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+        }
       });
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
