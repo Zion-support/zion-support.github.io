@@ -1,34 +1,62 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
+
+const resolve = path.resolve;
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable JSX runtime
+      jsxRuntime: "automatic",
+    }),
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@app': path.resolve(__dirname, './app'),
+      '@': resolve(__dirname, './src'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
-    outDir: 'dist',
-    sourcemap: true,
+    outDir: "dist",
+    sourcemap: false,
+    minify: "esbuild",
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
+        assetFileNames: (assetInfo) => {
+          if (
+            assetInfo.name &&
+            /.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
   },
   server: {
     port: 3000,
-    open: true,
+    open: false,
+    cors: true,
+    hmr: {
+      overlay: true,
+    },
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+    ],
   },
 });
