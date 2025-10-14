@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -11,9 +12,17 @@ import {
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+=======
+import React from "react";
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react";
 
+const Footer = () => {
+>>>>>>> origin/main
+  const currentYear = new Date().getFullYear();
+  
   const services = [
+<<<<<<< HEAD
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
@@ -88,14 +97,42 @@ const Footer: React.FC = () => {
                   >
                     <ArrowRight className="h-4 w-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
+=======
+    { name: "AI Solutions", href: "/ai-solutions" },
+    { name: "Cybersecurity", href: "/cybersecurity" },
+    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
+    { name: "Digital Transformation", href: "/digital-transformation" },
+    { name: "IT Services", href: "/it-services" },
+    { name: "Micro SAAS", href: "/micro-saas" }
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400">
+              Leading provider of AI-powered IT solutions and digital transformation services.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link to={service.href} className="text-gray-400 hover:text-white">
+                    {service.name};
+>>>>>>> origin/main
                   </Link>
                 </li>
-              ))}
+  ))};
             </ul>
           </div>
-
-          {/* Company */}
+          
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
@@ -110,10 +147,30 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+=======
+            <h4 className="text-md font-semibold mb-4">Contact</h4>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">New York, NY</span>
+              </div>
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+>>>>>>> origin/main
           </div>
-
-          {/* Resources */}
+          
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {resources.map((resource) => (
@@ -174,6 +231,27 @@ const Footer: React.FC = () => {
               </Link>
             ))}
           </div>
+=======
+            <h4 className="text-md font-semibold mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Github className="h-5 w-5"/>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Twitter className="h-5 w-5"/>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Linkedin className="h-5 w-5"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> origin/main
         </div>
       </div>
     </footer>

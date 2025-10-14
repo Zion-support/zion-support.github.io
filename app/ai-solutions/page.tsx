@@ -1,28 +1,7 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
-import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  DocumentTextIcon,
-  LightBulbIcon
-} from '@heroicons/react/24/outline'
-export default function AISolutionsPage() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
   const aiServices = [
     {
       title: "Machine Learning Models","
@@ -157,28 +136,23 @@ const AISolutionsPage: React.FC = () => {
       icon: UserGroupIcon
     }
   ]
+=======
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
-              AI Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your business with cutting-edge artificial intelligence solutions
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From machine learning models to conversational AI, our comprehensive AI solutions 
-              help businesses automate processes, gain insights, and deliver exceptional customer experiences.
-            </p>
-          </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* AI Services Grid */}
@@ -502,6 +476,11 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/main
       </div>
-    </>
-  )}
+    </div>
+  );
+};
+
+export default HomePage;

@@ -1,4 +1,7 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
 'use client';'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
@@ -161,13 +164,16 @@ import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
+=======
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
-        <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -517,6 +523,18 @@ import { Helmet } from 'react-helmet-async';'
         </div>
       </section>
     </>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
   );
-}
-export default ITSolutionsPage;
+};
+
+export default HomePage;

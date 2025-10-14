@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';'use client';'
 'use client';'
 import React from 'react';'
@@ -134,40 +135,19 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       href: "/micro-saas/ai-expense-tracker"
     }
   ];
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/main
 
-  const features = [
-    {
-      title: "AI-Powered Solutions","
-      description: "Leverage cutting-edge artificial intelligence to automate and optimize your business processes.","
-      icon: CpuChipIcon
-    },
-    {
-      title: "Scalable Architecture","
-      description: "Built to grow with your business, from startup to enterprise scale.","
-      icon: CloudIcon
-    },
-    {
-      title: "Easy Integration","
-      description: "Seamlessly integrate with your existing tools and workflows.","
-      icon: CogIcon
-    },
-    {
-      title: "24/7 Support","
-      description: "Round-the-clock support to ensure your success.","
-      icon: UserGroupIcon
-    }
-  ];
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+const HomePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
-        <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -471,6 +451,18 @@ import { Helmet } from 'react-helmet-async';'
         </div>
       </section>
     </>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
   );
-}
-export default MicroSaaSSolutionsPage;
+};
+
+export default HomePage;

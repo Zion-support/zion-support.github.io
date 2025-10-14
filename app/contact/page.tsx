@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
-export default function ContactPage() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+<<<<<<< HEAD
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -86,28 +85,23 @@ export default function ContactPage() {
     '5G Implementation',''
     'Other''
   ]
+=======
+const ContactPage = () => {
+>>>>>>> origin/main
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-        <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Us
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
-            Get in touch with our experts today.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
+          <p className="text-gray-300 text-lg">
+            Get in touch with our team for AI and IT solutions.
           </p>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Contact Info */}
@@ -291,5 +285,14 @@ export default function ContactPage() {
           )}
         </div>
       </section>
+=======
+      </div>
+>>>>>>> origin/main
     </div>
-  )}
+  );
+};
+
+export default ContactPage;
+
+
+
