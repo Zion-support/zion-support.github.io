@@ -39,10 +39,11 @@ export default tseslint.config(
         module: 'readonly',
         exports: 'readonly',
         fs: 'readonly',
+        __dirname: 'readonly',
         // Jest globals
         describe: 'readonly',
-        test: 'readonly',
         it: 'readonly',
+        test: 'readonly',
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
