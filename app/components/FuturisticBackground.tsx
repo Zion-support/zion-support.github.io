@@ -9,7 +9,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-20">
-        <div className="grid grid-cols-12 gap-4 h-full">
+        <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
           {Array.from({ length: 144 }).map((_, index) => (
             <div
               key={index}

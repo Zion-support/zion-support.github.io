@@ -6,6 +6,8 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group',

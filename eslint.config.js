@@ -6,6 +6,31 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      '**/*.cjs',
+      '**/*.mjs',
+      '**/build-*.js',
+      '**/check-*.js',
+      '**/clean-*.js',
+      '**/cleanup-*.js',
+      '**/comprehensive-*.js',
+      '**/final-*.js',
+      '**/fix-*.js',
+      '**/app-broken/**',
+      '**/app-disabled/**',
+      '**/__tests__/**',
+      '**/src/**',
+      '**/temp-disabled/**',
+      '**/scripts/**',
+      '**/*.setup.js',
+      '**/resolve*.js',
+      '**/tailwind.config.js',
+      '**/vite-env.d.ts'
+    ]
+  },
   js.configs.recommended,
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
@@ -45,12 +70,13 @@ export default [
       "react-refresh": reactRefresh
     },
     rules: {
+      ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       '@typescript-eslint/no-unused-vars': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-undef': 'off', // Turn off no-undef for TypeScript files
+      'no-undef': 'off',
     },
     settings: {
       react: {

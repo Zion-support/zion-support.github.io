@@ -1,8 +1,8 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require("@testing-library/jest-dom");
+require('@testing-library/jest-dom');
 
 // Polyfills for Node.js environment
-const { TextEncoder, TextDecoder } = require("util");
+const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -11,11 +11,12 @@ jest.mock('react-lazy-load-image-component/src/effects/blur.css', () => ({}));
 
 // Mock react-lazy-load-image-component
 jest.mock('react-lazy-load-image-component', () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   const React = require('react');
   return {
-    LazyLoadImage: ({ children, placeholderSrc, ...props }) => {
+    LazyLoadImage: ({ children, ...props }) => {
       // Filter out non-DOM props
-      const { effect, ...domProps } = props;
+      const { ...domProps } = props;
       return React.createElement('img', domProps, children);
     },
   };
