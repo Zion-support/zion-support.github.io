@@ -11,7 +11,7 @@ export const seoEnhancer = {
     };
   },
   
-  generateMetaTags: (data: ReturnType<typeof this.enhance>) => {
+  generateMetaTags: function(data: ReturnType<typeof this.enhance>) {
     return {
       title: data.title,
       description: data.description,

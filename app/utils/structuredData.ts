@@ -16,7 +16,7 @@ export const structuredData = {
     description: 'Leading technology solutions provider'
   },
   
-  generate: (type: 'organization' | 'website') => {
+  generate: function(type: 'organization' | 'website') {
     return this[type];
   }
 };

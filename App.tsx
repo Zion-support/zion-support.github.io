@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, useCallback } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from './app/components/Navigation';
@@ -6,17 +6,7 @@ import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import LoadingPage from './app/components/Loading';
 import HomePage from './app/page';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import WebVitalsTracker from './app/components/WebVitalsTracker';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import CoreWebVitals from './app/components/CoreWebVitals';
-import FuturisticBackground from './app/components/FuturisticBackground';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import Breadcrumb from './app/components/Breadcrumb';
-import EnhancedSEO from './app/components/EnhancedSEO';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
 
 // All necessary imports are already defined above
 
@@ -35,10 +25,6 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
@@ -49,8 +35,6 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
 import CookiesPage from './app/pages/CookiesPage';
 // TODO: Add lazy imports for components when they are created
 
@@ -68,31 +52,23 @@ import SitemapPage from './app/pages/SitemapPage';
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
-
-  const closeSidebar = useCallback(() => {
-    setIsSidebarOpen(false);
-  }, []);
 
   useEffect(() => {
     // Performance monitoring
     if (typeof window !== 'undefined') {
       // Monitor Core Web Vitals
       import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-        onCLS(console.log);
-        onFCP(console.log);
-        onLCP(console.log);
-        onTTFB(console.log);
+        onCLS(() => {});
+        onFCP(() => {});
+        onLCP(() => {});
+        onTTFB(() => {});
       });
 
       // Monitor bundle size
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
+            // Page load time monitoring
           }
         }
       });
@@ -102,9 +78,7 @@ function App() {
 
   useEffect(() => {
     // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
+    // App initialized
   }, []);
 
   return (

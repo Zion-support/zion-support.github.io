@@ -12,11 +12,11 @@ export const preloadOptimizer = {
     img.src = src;
   },
   
-  preloadScript: (src: string) => {
+  preloadScript: function(src: string) {
     this.preload(src, 'script');
   },
   
-  preloadStyle: (href: string) => {
+  preloadStyle: function(href: string) {
     this.preload(href, 'style');
   }
 };

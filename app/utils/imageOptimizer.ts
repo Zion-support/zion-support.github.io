@@ -10,7 +10,7 @@ export const imageOptimizer = {
     return queryString ? `${src}?${queryString}` : src;
   },
   
-  getResponsiveSrc: (src: string, sizes: number[]) => {
+  getResponsiveSrc: function(src: string, sizes: number[]) {
     return sizes.map(size => ({
       src: this.optimize(src, size),
       width: size

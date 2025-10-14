@@ -17,7 +17,7 @@ export const seoData = {
     keywords: 'contact, get in touch'
   },
   
-  getPageData: (page: string) => {
+  getPageData: function(page: string) {
     return this[page as keyof typeof this] || this.home;
   }
 };

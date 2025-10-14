@@ -3,15 +3,15 @@ export const seoConstants = {
   defaultDescription: 'Leading technology solutions provider',
   defaultKeywords: 'technology, solutions, innovation',
   
-  getTitle: (pageTitle?: string) => {
+  getTitle: function(pageTitle?: string) {
     return pageTitle ? `${pageTitle} - ${this.defaultTitle}` : this.defaultTitle;
   },
   
-  getDescription: (pageDescription?: string) => {
+  getDescription: function(pageDescription?: string) {
     return pageDescription || this.defaultDescription;
   },
   
-  getKeywords: (pageKeywords?: string) => {
+  getKeywords: function(pageKeywords?: string) {
     return pageKeywords || this.defaultKeywords;
   }
 };

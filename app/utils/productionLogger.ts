@@ -11,7 +11,7 @@ export const productionLogger = {
     }
   },
   
-  info: (message: string, data?: any) => this.log('info', message, data),
-  warn: (message: string, data?: any) => this.log('warn', message, data),
-  error: (message: string, data?: any) => this.log('error', message, data)
+  info: function(message: string, data?: any) { return this.log('info', message, data); },
+  warn: function(message: string, data?: any) { return this.log('warn', message, data); },
+  error: function(message: string, data?: any) { return this.log('error', message, data); }
 };

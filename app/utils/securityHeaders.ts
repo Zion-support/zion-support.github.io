@@ -15,7 +15,7 @@ export const securityHeaders = {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
   },
   
-  getHeaders: () => {
+  getHeaders: function() {
     return {
       ...this.headers,
       'Content-Security-Policy': Object.entries(this.csp)

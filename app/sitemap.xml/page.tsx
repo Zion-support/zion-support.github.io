@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-function Page() {
+function Sitemap.xmlPage() {
   return (
     <>
       <Helmet>
@@ -49,3 +49,4 @@ function Page() {
   );
 }
 
+export default Sitemap.xmlPage;

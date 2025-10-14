@@ -1,7 +1,7 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
@@ -15,5 +15,14 @@ export default {
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
-  testMatch: '[',
-    '<rootDir>/app/**/__tests__/**
+  testMatch: [
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js)'
+  ],
+  collectCoverageFrom: [
+    'app/**/*.{ts,tsx}',
+    '!app/**/*.d.ts',
+    '!app/**/node_modules/**'
+  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js']
+};
