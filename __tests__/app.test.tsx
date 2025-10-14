@@ -21,7 +21,8 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Advanced AI & IT Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Advanced AI & IT')).toBeInTheDocument();
+    expect(screen.getByText('Solutions')).toBeInTheDocument();
   });
   
   it('renders navigation links', () => {
@@ -32,6 +33,6 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Get Started')).toBeInTheDocument();
+    expect(screen.getByText('Get Quote')).toBeInTheDocument();
   });
 });
