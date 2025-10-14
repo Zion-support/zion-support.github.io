@@ -3,6 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
@@ -37,7 +38,8 @@ export default [
       },
     },
     plugins: {
-      "react-hooks": reactHooks
+      "@typescript-eslint": typescript,
+      "react-hooks": reactHooks,
       "react-refresh": reactRefresh
     },
     rules: {
@@ -48,6 +50,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-undef': 'off', // Turn off no-undef for TypeScript files
+      'react-refresh/only-export-components': 'warn',
     },
     settings: {
       react: {

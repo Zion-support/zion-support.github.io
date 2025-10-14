@@ -5,11 +5,11 @@ import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Face
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = ["
-    {"
-      title: 'AI Services'"
-      icon: <Brain className="w-5 h-5"
-      color: 'from-blue-500 to-cyan-500'
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: <Brain className="w-5 h-5" />,
+      color: 'from-blue-500 to-cyan-500',
       links: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
@@ -121,7 +121,9 @@ const Footer = () => {
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white"
+                <h3 className="text-lg font-semibold text-white">
+                  {category.title}
+                </h3>
               </div>
               <ul className="space-y-3">
                 {category.links.map((link, linkIndex) => (
@@ -138,15 +140,6 @@ const Footer = () => {
             </div>
           ))}
         </div>
-
-              ))}
-            </div>
-          </div>
-
-                  </Link>
-                </li>
-
-  ))};
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-8 pt-8">
