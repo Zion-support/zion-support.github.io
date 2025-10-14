@@ -53,7 +53,7 @@ const benefits = [
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of a team that's shaping the future of AI and IT solutions.';
-            Work on cutting-edge projects and make a real impact.;
+            Work on cutting-edge projects and make a real impact.
           </p>
         </div>
         {/* Why Work With Us */}
@@ -94,7 +94,7 @@ const benefits = [
                 </div>
                 <p className="text-gray-300 mb-4">Join our team and make an impact</p>
                 <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-                  Apply Now;
+                  Apply Now
                 </button>
               </div>
             ))}

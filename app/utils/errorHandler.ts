@@ -5,7 +5,7 @@ export const errorHandler = {
       window.gtag('event', 'exception', {
         description: _error.message;,
         fatal: false;,
-        context: context;
+        context: context
       });
     }
     
