@@ -31,29 +31,28 @@ interface EnhancedSEOProps {
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/logo.svg`,
-    "description": fullDescription,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: siteName,
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      addressCountry: 'US'
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
     },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+    sameAs: [
+      'https://www.linkedin.com/company/zion-tech-group',
+      'https://github.com/ziontechgroup',
+      'https://twitter.com/ziontechgroup'
     ]
   };
 
@@ -94,6 +93,7 @@ interface EnhancedSEOProps {
     nofollow ? 'nofollow' : 'follow'
   ].join(', ');
 
+  const mergedStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
       {/* Basic Meta Tags */}

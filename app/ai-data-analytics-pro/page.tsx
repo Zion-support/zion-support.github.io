@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Database, PieChart, Activity, Target } from 'lucide-react';
+import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -34,14 +33,7 @@ const AIDataAnalyticsPro = () => {
     }
   ];
 
-  const benefits = [
-    "40% faster data processing",
-    "99.9% accuracy in predictions",
-    "Real-time dashboard updates",
-    "Automated report generation",
-    "Multi-source data integration",
-    "Advanced security protocols"
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

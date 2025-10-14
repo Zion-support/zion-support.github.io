@@ -23,48 +23,64 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Set up event listeners
     document.addEventListener('keydown', handleKeyDown);
-    
-    const highContrastMedia = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    highContrastMedia.addEventListener('change', handleHighContrast);
-    reducedMotionMedia.addEventListener('change', handleReducedMotion);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [enableKeyboardNavigation]);
 
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      highContrastMedia.removeEventListener('change', handleHighContrast);
-      reducedMotionMedia.removeEventListener('change', handleReducedMotion);
-      cleanupFunctions.forEach(cleanup => cleanup());
-    };
-  }, []);
-
-  // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  // Expose announcement function globally for use by other components
   useEffect(() => {
-    (window as any).announceToScreenReader = announceToScreenReader;
+    if (!enableScreenReader) return;
+
+    // Announce page changes to screen readers
+    const announcePageChange = () => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.textContent = 'Page content has been updated';
+      
+      document.body.appendChild(announcement);
+      
+      setTimeout(() => {
+        document.body.removeChild(announcement);
+      }, 1000);
+    };
+
+    // Listen for route changes or content updates
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+          announcePageChange();
+        }
+      });
+    });
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    return () => observer.disconnect();
+  }, [enableScreenReader]);
+
+  useEffect(() => {
+    if (!enableHighContrast) return;
+
+    // Apply high contrast mode
+    document.body.classList.add('high-contrast');
     
     return () => {
-      delete (window as any).announceToScreenReader;
+      document.body.classList.remove('high-contrast');
     };
-  }, []);
+  }, [enableHighContrast]);
 
   return (
-    <div ref={containerRef} className="accessibility-enhanced">
+    <div 
+      ref={containerRef}
+      className="accessibility-enhanced"
+      role="main"
+      aria-label="Main content"
+    >
       {children}
     </div>
   );

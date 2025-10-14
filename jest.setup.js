@@ -1,37 +1,65 @@
-require("@testing-library/jest-dom");
-// Polyfill for TextEncoder/TextDecoder
-const { TextEncoder, TextDecoder } = require("util");
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+require('@testing-library/jest-dom');
+const React = require('react');
+
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
+  const React = require('react');
+
+  return {
+    ...actual,
+    useNavigate: () => jest.fn(),
+    useLocation: () => ({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null
+    }),
+    useParams: () => ({}),
+    Link: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    NavLink: ({ children, to, ...props }) => {
+      return React.createElement('a', { href: to, ...props }, children);
+    },
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
+      const router = createMemoryRouter([
+        {
+          path: '/',
+          element: children
+        }
+      ], {
+        initialEntries: ['/'],
+        initialIndex: 0
+      });
+      return React.createElement(RouterProvider, { router });
+    },
+    RouterProvider: ({ router }) => null
+  };
 });
-// Mock IntersectionObserver
+
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
-  disconnect() {}
   observe() {}
   unobserve() {}
-};
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
   disconnect() {}
-  observe() {}
-  unobserve() {}
 };
-// Mock window.gtag
-global.gtag = jest.fn();
-// Mock window.dataLayer
-global.dataLayer = [];
+
+// Suppress console errors in tests
+const originalError = console.error;
+beforeAll(() => {
+  console.error = (...args) => {
+    if (
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console.error = originalError;
+});

@@ -88,7 +88,7 @@ const Footer = React.memo(() => {
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ], []);    <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
@@ -126,14 +126,14 @@ const Footer = React.memo(() => {
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    to={service.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors text-sm flex items-center group"
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link 
+                    to={service.href} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -229,14 +229,14 @@ const Footer = React.memo(() => {
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
             <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-3">
-              {company.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.href}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors text-sm flex items-center group"
+            <ul className="space-y-2">
+              {company.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {item.name}
                   </Link>
                 </li>
@@ -244,41 +244,60 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Support & Legal */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Get the latest updates on our AI solutions and technology innovations.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800/50 border border-cyan-500/20 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
-              />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
+            <h3 className="text-white font-semibold mb-4">Support</h3>
+            <ul className="space-y-2 mb-6">
+              {support.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legal.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRightIcon className="w-4 h-4 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-700/50 mt-8 pt-8"> cursor/analyze-improve-and-deploy-application-30da
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
-                Privacy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
-                Terms
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
-                Cookies
-              </a>
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  {getSocialIcon(social.icon)}
+                </a>
+              ))}
+            </div>
+            
+            <div className="flex items-center text-gray-400 text-sm">
+              <span>© {currentYear} Zion Tech Group. Made with</span>
+              <HeartIcon className="w-4 h-4 mx-1 text-red-500" />
+              <span>for innovation.</span>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
   Zap,
   ChevronDown
@@ -150,13 +150,17 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         <div className="grid grid-cols-1 gap-1">
                           {item.dropdown.map((subItem, subIndex) => (
                             <Link
-                              key={subIndex}
-                              to={subItem.path}
-                              className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-md transition-all duration-300"
-                              onClick={() => setIsServicesOpen(false)}
+                              key={child.name}
+                              to={child.path}
+                              onClick={closeDropdown}
+                              className={`flex items-center space-x-2 px-4 py-2 text-sm transition-colors ${
+                                isActive(child.path)
+                                  ? 'text-cyan-400 bg-cyan-500/10'
+                                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                              }`}
                             >
-                              <span>{subItem.icon}</span>
-                              <span>{subItem.name}</span>
+                              {child.icon}
+                              <span>{child.name}</span>
                             </Link>
                           ))}
                         </div>
@@ -197,51 +201,63 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {isMobileMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2 border border-cyan-500/20">
-              {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="text-cyan-400 font-medium px-3 py-2">Services</div>
-                {services.map((service, index) => (
-                  <Link
-                    key={index}
-                    to={service.href}
-                    className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 rounded-md transition-colors"
-                  >
-                    {service.icon}
-                    <span>{service.title}</span>
-                  </Link>
-                ))}
-              </div>
-
-              {/* Mobile Regular Links */}
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                About
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Contact
-              </Link>
-
-              {/* Mobile CTA */}
-              <div className="pt-4">
-                <FuturisticButton
-                  href="/contact"
-                  variant="primary"
-                  size="sm"
-                  className="w-full justify-center"
-                >
-                  Get Started
-                </FuturisticButton>
-              </div>
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  {item.children ? (
+                    <div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                      >
+                        <div className="flex items-center space-x-2">
+                          {item.icon}
+                          <span>{item.name}</span>
+                        </div>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      
+                      {activeDropdown === item.name && (
+                        <div className="ml-4 space-y-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.path}
+                              onClick={() => {
+                                closeDropdown();
+                                setIsMobileMenuOpen(false);
+                              }}
+                              className={`flex items-center space-x-2 px-3 py-2 text-sm rounded-lg transition-colors ${
+                                isActive(child.path)
+                                  ? 'text-cyan-400 bg-cyan-500/10'
+                                  : 'text-gray-300 hover:text-white hover:bg-white/10'
+                              }`}
+                            >
+                              {child.icon}
+                              <span>{child.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-lg transition-colors ${
+                        isActive(item.path)
+                          ? 'text-cyan-400 bg-cyan-500/10'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      {item.icon}
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         )}

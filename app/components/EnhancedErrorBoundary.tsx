@@ -1,6 +1,7 @@
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
   constructor(props: Props) {
     super(props);
+    };
     this.state = { hasError: false };
   }
 
@@ -32,68 +33,32 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error monitoring service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        retryCount: this.state.retryCount
-      };
-
-      // Example: Send to monitoring service
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: true,
-          custom_map: errorData
-        });
-      }
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-  private handleRetry = () => {
-    this.setState(prevState => ({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: prevState.retryCount + 1
-    }));
-  };
-
-  private handleGoHome = () => {
+  handleGoHome = () => {
     window.location.href = '/';
   };
 
-  private handleReload = () => {
-    window.location.reload();
-  };
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
   componentWillUnmount() {
     if (this.retryTimeoutId) {
@@ -110,12 +75,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-5 h-5" />
                 Try Again cursor/analyze-improve-and-deploy-application-30da
               </button>
+              
               <button
                 onClick={() => window.location.href = '/'}
                 className="w-full flex items-center justify-center space-x-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-lg transition-colors"
               >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
+                <Bug className="w-4 h-4" />
+                Contact Support
               </button>
             </div> cursor/analyze-improve-and-deploy-application-30da
           </div>
@@ -125,7 +91,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
+    })}
+  private handleReload = () => {
+    window.location.reload()}
+  private handleGoHome = () => {
+    window.location.href = '/'}
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
 
 export default EnhancedErrorBoundary;
 

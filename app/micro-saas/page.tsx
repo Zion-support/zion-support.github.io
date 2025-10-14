@@ -267,21 +267,43 @@ import ResponsiveGrid from '../components/ResponsiveGrid';      id: "zion-analyt
       price: '$39/month',
       featured: false
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our powerful micro SAAS solutions designed to streamline your business operations. Analytics, security, cloud storage, and more." />
-        <meta name="keywords" content="micro saas, business software, analytics, security, cloud storage, productivity tools" />
+        <meta name="description" content="Comprehensive micro SAAS solutions for small and medium businesses." />
       </Helmet>
-
-      <div className="min-h-screen pt-16">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="flex justify-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.;
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.;
+              </p>
             </div>
           </div>
         </div> cursor/analyze-improve-and-deploy-application-30da

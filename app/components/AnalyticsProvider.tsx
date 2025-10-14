@@ -4,7 +4,7 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react'; 
 
 export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({

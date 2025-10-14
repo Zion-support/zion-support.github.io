@@ -6,16 +6,17 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
   const categories = [
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Cloud Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
+    { id: "all", name: "All Posts" },
+    { id: "ai", name: "Artificial Intelligence" },
+    { id: "blockchain", name: "Blockchain & Web3" },
+    { id: "cloud", name: "Cloud Computing" },
+    { id: "devops", name: "DevOps" },
+    { id: "security", name: "Cybersecurity" }
   ];
 
   const blogPosts = [
@@ -70,7 +71,7 @@ const BlogPage: React.FC = () => {
       author: "AI Team",
       date: "2024-01-03",
       readTime: "9 min read",
-      category: "ai",
+      category: "AI & Technology",
       image: "/api/placeholder/400/250",
       featured: true
     },

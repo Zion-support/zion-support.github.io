@@ -1,6 +1,7 @@
   lcp: number | null;
   fid: number | null;
   cls: number | null;
+  inp: number | null;
   fcp: number | null;
   ttfb: number | null;export default PerformanceMonitor; cursor/analyze-improve-and-deploy-application-c573
 import React, { useEffect, ReactNode } from 'react';

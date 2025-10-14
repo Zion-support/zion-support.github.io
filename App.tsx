@@ -37,7 +37,6 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
 const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
@@ -112,11 +111,21 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
+    // Simulate initial loading
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <GlobalErrorBoundary>
@@ -145,7 +154,6 @@ function App() {
                                 <Route path="/blog" element={<BlogPage />} />
                                 <Route path="/privacy" element={<PrivacyPage />} />
                                 <Route path="/terms" element={<TermsPage />} />
-                                <Route path="/ai-services" element={<AIServicesPage />} />
                                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                 <Route path="/tutorials" element={<TutorialsPage />} />
