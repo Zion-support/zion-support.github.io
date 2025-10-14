@@ -1,15 +1,21 @@
 import React from 'react';
 
-const LoadingStates = () => {
+interface LoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
-      </div>
+    <div className={`loadingstates-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">LoadingStates</h3>
+          <p className="text-gray-600">This is the LoadingStates component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default LoadingStates;
-

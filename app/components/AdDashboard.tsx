@@ -1,13 +1,21 @@
 import React from 'react';
 
-const AdDashboard = () => {
+interface AdDashboardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdDashboard: React.FC<AdDashboardProps> = ({ className = '', children }) => {
   return (
-    <div className="addashboard-component">
-      <h2>AdDashboard</h2>
-      <p>This component is under construction.</p>
+    <div className={`addashboard-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">AdDashboard</h3>
+          <p className="text-gray-600">This is the AdDashboard component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default AdDashboard;
-

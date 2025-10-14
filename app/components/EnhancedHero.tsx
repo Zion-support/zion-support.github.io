@@ -1,13 +1,21 @@
 import React from 'react';
 
-const EnhancedHero = () => {
+interface EnhancedHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({ className = '', children }) => {
   return (
-    <div className="enhancedhero-component">
-      <h2>EnhancedHero</h2>
-      <p>This component is under construction.</p>
+    <div className={`enhancedhero-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">EnhancedHero</h3>
+          <p className="text-gray-600">This is the EnhancedHero component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default EnhancedHero;
-

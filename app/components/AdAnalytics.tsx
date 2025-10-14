@@ -1,13 +1,21 @@
 import React from 'react';
 
-const AdAnalytics = () => {
+interface AdAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AdAnalytics: React.FC<AdAnalyticsProps> = ({ className = '', children }) => {
   return (
-    <div className="adanalytics-component">
-      <h2>AdAnalytics</h2>
-      <p>This component is under construction.</p>
+    <div className={`adanalytics-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">AdAnalytics</h3>
+          <p className="text-gray-600">This is the AdAnalytics component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default AdAnalytics;
-

@@ -1,13 +1,21 @@
 import React from 'react';
 
-const LazyImage = () => {
+interface LazyImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const LazyImage: React.FC<LazyImageProps> = ({ className = '', children }) => {
   return (
-    <div className="lazyimage-component">
-      <h2>LazyImage</h2>
-      <p>This component is under construction.</p>
+    <div className={`lazyimage-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">LazyImage</h3>
+          <p className="text-gray-600">This is the LazyImage component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default LazyImage;
-

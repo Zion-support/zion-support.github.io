@@ -1,13 +1,21 @@
 import React from 'react';
 
-const ResponsiveText = () => {
+interface ResponsiveTextProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ResponsiveText: React.FC<ResponsiveTextProps> = ({ className = '', children }) => {
   return (
-    <div className="responsivetext-component">
-      <h2>ResponsiveText</h2>
-      <p>This component is under construction.</p>
+    <div className={`responsivetext-component ${className}`}>
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">ResponsiveText</h3>
+          <p className="text-gray-600">This is the ResponsiveText component.</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ResponsiveText;
-
