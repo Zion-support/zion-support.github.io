@@ -2,11 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 'use client'
-export default function Page() {
-
-
-const AboutPage: React.FC = () => {
-=======
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -17,6 +12,8 @@ import {
   GlobeAltIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
+
+const AboutPage: React.FC = () => {
 
 export default function AboutPage() {
   const team = [
@@ -63,7 +60,6 @@ export default function AboutPage() {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ce9c
   return (
     <>
       <Helmet>

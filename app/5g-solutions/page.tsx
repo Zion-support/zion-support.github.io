@@ -150,8 +150,17 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Solutions Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our 5G Solutions</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect 5G solution for your business size and requirements.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
@@ -166,9 +175,9 @@ const FiveGSolutionsPage: React.FC = () => {
                 </ul>
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Learn More
-
                 </button>
               </div>
+            ))}
             </div>
           </div>
         </section>
