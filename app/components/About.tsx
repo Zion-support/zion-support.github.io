@@ -1,3 +1,4 @@
+import { Users } from 'lucide-react';
 import React from 'react';
 import { CheckIcon, 
   UsersIcon, 
@@ -31,11 +32,11 @@ const About: React.FC = () => {
 
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4 xl md:text-5 xl font-bold text-gray-900 mb-6">
               About Zion Tech Group
             </h2>
             <p className="text-xl text-gray-600 mb-8">
@@ -78,7 +79,7 @@ const About: React.FC = () => {
                   <div className="flex justify-center mb-2">
                     <stat.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                  <div className="text-2 xl font-bold text-gray-900">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
               ))}
@@ -87,8 +88,8 @@ const About: React.FC = () => {
 
           {/* Image/Visual */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2 xl p-8 text-white">
+              <h3 className="text-2 xl font-bold mb-4">Our Mission</h3>
               <p className="text-lg mb-6 opacity-90">
                 To democratize access to advanced technology and AI solutions, 
                 enabling businesses of all sizes to compete and thrive in the 
@@ -115,7 +116,7 @@ const About: React.FC = () => {
 
         {/* Values Section */}
         <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h3 className="text-3 xl font-bold text-center text-gray-900 mb-12">
             Our Core Values
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

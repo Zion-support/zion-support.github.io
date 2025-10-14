@@ -7,7 +7,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-3 xl mx-auto px-4">
           <div className="mb-6 inline-flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
               GUIDE
@@ -16,7 +16,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               Sep    30, 2025
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          <h1 className="text-4 xl md:text-5 xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
           <p className="text-gray-300 text-lg">
@@ -29,9 +29,9 @@ const OperationalTrustScorecardsPage: React.FC = () => {
       </section>
 
       <section className="py-12">
-        <div className="max-w-3xl mx-auto px-4 space-y-10">
+        <div className="max-w-3 xl mx-auto px-4 space-y-10">
           <div>
-            <h2 className="text-2xl font-bold mb-3">Why Operational    Trust</h2>
+            <h2 className="text-2 xl font-bold mb-3">Why Operational    Trust</h2>
             <p className="text-gray-300">
               Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
@@ -41,7 +41,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
+            <h2 className="text-2 xl font-bold mb-3">Scorecard    Structure</h2>
             <ul className="list-disc pl-6 text-gray-300 space-y-2">
               <li>
                 <strong className="text-white">Reliability   :</strong> pass rates,
@@ -63,7 +63,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
+            <h2 className="text-2 xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300">
               Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if

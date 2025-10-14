@@ -12,10 +12,10 @@ const LoadingPage = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             Loading
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Professional loading services designed to help your business grow and succeed.
           </p>
         </div>

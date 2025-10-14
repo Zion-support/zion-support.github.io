@@ -72,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return allPages.map(page => ({
     url: page.url,
     lastModified: currentDate,
-    changeFrequency: page.changeFrequency as any,
-    priority: page.priority,
-  }));
+    changeFrequency: page.changeFrequency as unknown,
+    priority: page.priority}));
 }

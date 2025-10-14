@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -13,10 +12,10 @@ const ContentPromotionBannerPage = () => {
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             ContentPromotionBanner
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
             Professional ContentPromotionBanner services designed to help your business grow and succeed.
           </p>
         </div>
@@ -42,28 +41,9 @@ const ContentPromotionBannerPage = () => {
               Track record of delivering successful projects and exceeding client expectations.
             </p>
           </div>
-        </div>
-=======
-import React from 'react';
-
-const ContentPromotionBanner: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4">
-      <div className="container mx-auto text-center">
-        <p className="text-sm font-medium">
-          🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
-          <a href="/business-intelligence" className="underline hover:no-underline ml-1">
-            Learn More →
-          </a>
-        </p>
->>>>>>> origin/cursor/resolve-all-prs-and-merge
-      </div>
+        </div>      </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ContentPromotionBannerPage;
-=======
-export default ContentPromotionBanner;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

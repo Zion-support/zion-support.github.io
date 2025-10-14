@@ -1,37 +1,22 @@
-<<<<<<< HEAD
 import React from "react";
 
 const SEOHead = () => {
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEOHead</h2>
+      <h2 className="text-2 xl font-bold text-white mb-4">SEOHead</h2>
       <p className="text-gray-300">
         This is a placeholder component for SEOHead.
       </p>
     </div>
   );
-=======
-import React from 'react';
+}
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
-  alternateHreflang?: Array<{ hreflang: string; href: string }>;
-=======
   canonicalUrl?: string;
   ogImage?: string;
->>>>>>> origin/main
   structuredData?: object;
 }
 
@@ -51,8 +36,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   canonical,
   alternateHreflang = [],
-  structuredData,
-}) => {
+  structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
   const robotsContent = [
@@ -87,8 +71,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: 'en',
-    },
+      availableLanguage: 'en'},
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
@@ -99,8 +82,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       addressLocality: 'Middletown',
       addressRegion: 'DE',
       postalCode: '19709',
-      addressCountry: 'US',
-    }
+      addressCountry: 'US'}
   };
 
   return (
@@ -144,12 +126,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
->>>>>>> origin/main
     </Helmet>
   );
-=======
     );
->>>>>>> origin/cursor/resolve-all-prs-and-merge
 };
 
 export default SEOHead;

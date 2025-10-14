@@ -1,3 +1,4 @@
+import { Shield, ArrowRight, Star, Cpu } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -71,11 +72,11 @@ const ServicesPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-7 xl mx-auto text-center">
+          <h1 className="text-4 xl md:text-6 xl font-bold text-white mb-6">
             Our Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business and drive innovation. 
             From cutting-edge AI technology to robust cybersecurity, we provide everything you need to succeed.
           </p>
@@ -99,24 +100,24 @@ const ServicesPage = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7 xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4">
               Service Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3 xl mx-auto">
               Explore our comprehensive range of AI and IT services designed to meet your business needs.
             </p>
           </div>
 
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div key={categoryIndex} className="bg-white/10 backdrop-blur-sm rounded-2 xl p-8 border border-white/20">
                 <div className="flex items-center mb-8">
                   <div className={`p-3 rounded-lg ${category.bgColor} mr-4`}>
                     <category.icon className={`w-8 h-8 ${category.color}`} />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2 xl font-bold text-white">
                     {category.title}
                   </h3>
                 </div>
@@ -154,8 +155,8 @@ const ServicesPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <div className="max-w-4 xl mx-auto text-center">
+          <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">

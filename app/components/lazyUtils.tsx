@@ -3,13 +3,12 @@ import React, { lazy, ComponentType, Suspense } from 'react';
 // Higher-order component for lazy loading
 export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
   Component: T,
-  fallback?: React.ReactNode,
-) {
+  fallback?: React.ReactNode) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
   const WrappedComponent = (props: React.ComponentProps<T>) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const LazyComponentAny = LazyComponent as any;
+     
+    const LazyComponentAny = LazyComponent as unknown;
     return (
       <Suspense fallback={fallback || <div>Loading...</div>}>
         <LazyComponentAny {...props} />
@@ -23,13 +22,12 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
 // Utility function to create lazy-loaded components
 export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunction: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode,
-) {
+  fallback?: React.ReactNode) {
   const LazyComponent = lazy(importFunction);
   
   const WrappedComponent = (props: React.ComponentProps<T>) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const LazyComponentAny = LazyComponent as any;
+     
+    const LazyComponentAny = LazyComponent as unknown;
     return (
       <Suspense fallback={fallback || <div>Loading...</div>}>
         <LazyComponentAny {...props} />
