@@ -1,16 +1,16 @@
 
 import { Component, ReactNode, ErrorInfo } from 'react';
 
-interface Props {
+interfaceProps {
   children: ReactNode;
 }
 
-interface State {
+interfaceState {
   hasError: boolean;
   error?: Error;
 }
 
-class Error Boundary extends Component<Props, State> {
+classError Boundary extendsComponent<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -22,7 +22,7 @@ class Error Boundary extends Component<Props, State> {
     // Error logged
   }
   render() {
-    if (this.state.has Error) {
+    if (this.state.hasError) {
       return (
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">

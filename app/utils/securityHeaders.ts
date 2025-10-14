@@ -1,4 +1,4 @@
-export const security Headers = {
+export const securityHeaders = {
   csp: {
     'default-src': ["'self'"],
     'script-src': ["'self'", "'unsafe-inline'"],
@@ -7,7 +7,7 @@ export const security Headers = {
   },
   
   getCSPHeader: () => {
-    return Object.entries(securityHeaders.csp)
+    returnObject.entries(securityHeaders.csp)
       .map(([key, values]) => `${key} ${values.join(' ')}`)
       .join('; ')
   }

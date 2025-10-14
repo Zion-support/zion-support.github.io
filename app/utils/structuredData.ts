@@ -1,4 +1,4 @@
-export const structured Data = {
+export const structuredData = {
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -12,6 +12,6 @@ export const structured Data = {
     description: 'Leading technology solutions provider'
   },
   generate: (type: 'organization' | 'website') => {
-    return structured Data[type]
+    return structuredData[type]
   }
 }

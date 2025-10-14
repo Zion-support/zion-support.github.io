@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Users, CheckCircle, Zap, Award, TrendingUp, Clock, Globe, BarChart3 } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, set Counters] = use State({
+  const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
     satisfaction: 0,
@@ -70,19 +70,19 @@ const ContentStatistics: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      stats: ['95% Accuracy', '10 x Faster', '24/7 Learning']
+      stats: ['95% Accuracy', '10 xFaster', '24/7 Learning']
     },
     {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
-      stats: ['< 100 ms Response', '99.9% Uptime', '10 M+ Requests']
+      stats: ['< 100 msResponse', '99.9% Uptime', '10 M+ Requests']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
-      stats: ['256-bit Encryption', 'SOC 2 Compliant', 'Zero Breaches']
+      stats: ['256-bitEncryption', 'SOC 2 Compliant', 'Zero Breaches']
     },
     {
       icon: Globe,
@@ -136,27 +136,27 @@ const ContentStatistics: React.FC = () => {
 
     const duration = 3000; // 3 seconds
     const steps = 60;
-    const step Duration = duration / steps;
+    const stepDuration = duration / steps;
 
-    const timers = Object.keys(target Counters).map((key) => {
-      const target = target Counters[key as keyof typeof target Counters];
+    const timers = Object.keys(targetCounters).map((key) => {
+      const target = targetCounters[key as keyof typeof targetCounters];
       const increment = target / steps;
       let current = 0;
 
-      return set Interval(() => {
+      return setInterval(() => {
         current += increment;
         if (current >= target) {
           current = target;
         }
-        set Counters(prev => ({
+        setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
         }));
-      }, step Duration);
+      }, stepDuration);
     });
 
     return () => {
-      timers.for Each(timer => clear Interval(timer));
+      timers.forEach(timer => clearInterval(timer));
     };
   }, []);
 
@@ -166,7 +166,7 @@ const ContentStatistics: React.FC = () => {
         {/* Header */}
         <div className="text-centermb-16">
           <h2 className="text-3 xlmd:text-4 xl font-bold text-white mb-6">
-            Our <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
+            Our <span className="text-transparentbg-clip-textbg-gradient-to-r from-blue-400 to-purple-400">Impact</span> inNumbers
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover the measurable impact we&apos;ve made for businesses worldwide through our innovative AI and IT solutions.
@@ -181,7 +181,7 @@ const ContentStatistics: React.FC = () => {
                 <stat.icon className="w-8 h-8" />
               </div>
               <div className={`text-4 xl font-bold ${stat.color} mb-2`}>
-                {stat.value.to Locale String()}{stat.suffix}
+                {stat.value.toLocale String()}{stat.suffix}
               </div>
               <div className="text-lgfont-semiboldtext-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -192,7 +192,7 @@ const ContentStatistics: React.FC = () => {
         {/* Features Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why We&apos;re the Right Choice</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Why We&apos;re theRight Choice</h3>
             <p className="text-gray-300 max-w-3xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
             </p>
@@ -209,8 +209,8 @@ const ContentStatistics: React.FC = () => {
                 </h4>
                 <p className="text-gray-300 text-smmb-4">{feature.description}</p>
                 <div className="space-y-2">
-                  {feature.stats.map((stat, stat Index) => (
-                    <divkey={stat Index} className="flexitems-centertext-xs text-gray-400">
+                  {feature.stats.map((stat, statIndex) => (
+                    <divkey={statIndex} className="flexitems-centertext-xs text-gray-400">
                       <CheckCircle className="w-3 h-3text-green-400 mr-2 flex-shrink-0" />
                       {stat}
                     </div>
@@ -267,7 +267,7 @@ const ContentStatistics: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-12">
             <h3 className="text-3 xlfont-bold text-white mb-4">
-              Ready to Join Our Success Stories?
+              Ready toJoin Our Success Stories?
             </h3>
             <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Be part of our growing community of successful businesses. Start your transformation journey today.

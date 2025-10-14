@@ -1,4 +1,4 @@
-export interface Service Data {
+export interfaceService Data {
   id: string;
   name: string;
   description: string;
@@ -12,7 +12,7 @@ export interface Service Data {
   icon: string;
 }
 
-export const services Data: Service Data[] = [
+export const servicesData: Service Data[] = [
   {
     id: 'ai-solutions',
     name: 'AI Solutions',
@@ -31,7 +31,7 @@ export const services Data: Service Data[] = [
     name: 'Cloud Solutions',
     description: 'Scalable cloud infrastructure and services',
     category: 'Cloud',
-    features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps'],
+    features: ['Cloud Migration', 'Infrastructure asCode', 'DevOps'],
     pricing: {
       starter: 2000,
       professional: 5000,

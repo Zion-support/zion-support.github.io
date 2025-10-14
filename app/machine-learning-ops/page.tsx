@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Machine Learning Ops Page: React.FC = () => {
+const MachineLearningOpsPage: React.FC = () => {
   return (
     <>
       <Helmet>

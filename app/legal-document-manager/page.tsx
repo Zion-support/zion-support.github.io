@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Legal Document Manager Page: React.FC = () => {
+const LegalDocumentManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>

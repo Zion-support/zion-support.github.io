@@ -61,10 +61,10 @@ export const enhancedErrorHandler = {
         case 500:
           return { message: 'Server error', code: 'SERVER_ERROR' };
         default:
-          return { message: error With Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+          return { message: errorWith Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
       }
     }
     
-    return { message: error With Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    return { message: errorWith Response.message || 'Unknown error', code: 'UNKNOWN_ERROR' };
   }
 };

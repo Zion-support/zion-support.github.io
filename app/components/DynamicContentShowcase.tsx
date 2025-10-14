@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Play, ArrowRight, Star, Users, ChevronLeft, Pause, ChevronRight, CheckCircle, Zap } from 'lucide-react';
 
-interface Feature {
+interfaceFeature {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
@@ -13,7 +13,7 @@ interface Feature {
   }[];
 }
 
-interface Testimonial {
+interfaceTestimonial {
   name: string;
   company: string;
   role: string;
@@ -23,8 +23,8 @@ interface Testimonial {
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [current Index, set Current Index] = use State(0);
-  const [is Playing, set Is Playing] = use State(true);
+  const [currentIndex, setCurrent Index] = useState(0);
+  const [isPlaying, setIs Playing] = useState(true);
 
   const features: Feature[] = [
     {
@@ -107,29 +107,29 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-  use Effect(() => {
-    if (!is Playing) return;
+  useEffect(() => {
+    if (!isPlaying) return;
     
-    const timer = set Interval(() => {
-      set Current Index((prev) => (prev + 1) % testimonials.length);
+    const timer = setInterval(() => {
+      setCurrent Index((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
-    return () => clear Interval(timer);
-  }, [is Playing, testimonials.length]);
+    return () => clearInterval(timer);
+  }, [isPlaying, testimonials.length]);
 
-  const next Testimonial = () => {
-    set Current Index((prev) => (prev + 1) % testimonials.length);
+  const nextTestimonial = () => {
+    setCurrent Index((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prev Testimonial = () => {
-    set Current Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prevTestimonial = () => {
+    setCurrent Index((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const toggle Play Pause = () => {
-    set Is Playing(!is Playing);
+  const togglePlay Pause = () => {
+    setIs Playing(!isPlaying);
   };
 
-  const current Testimonial = testimonials[current Index];
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <div className="bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 min-h-screen">
@@ -181,8 +181,8 @@ const DynamicContentShowcase: React.FC = () => {
                 
                 {feature.stats && (
                   <div className="gridgrid-cols-3 gap-4">
-                    {feature.stats.map((stat, stat Index) => (
-                      <divkey={stat Index} className="text-center">
+                    {feature.stats.map((stat, statIndex) => (
+                      <divkey={statIndex} className="text-center">
                         <div className="text-lgfont-boldtext-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
@@ -209,7 +209,7 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lgrounded-2 xl p-12 border border-white/20">
               <div className="text-center">
                 <div className="flexjustify-centermb-6">
-                  {[...Array(current Testimonial.rating)].map((_, i) => (
+                  {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Starkey={i} className="w-6 h-6text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -223,9 +223,9 @@ const DynamicContentShowcase: React.FC = () => {
                     <Users className="w-8 h-8text-white" />
                   </div>
                   <div className="text-left">
-                    <div className="text-lgfont-semiboldtext-white">{current Testimonial.name}</div>
-                    <div className="text-gray-400">{current Testimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{current Testimonial.company}</div>
+                    <div className="text-lgfont-semiboldtext-white">{currentTestimonial.name}</div>
+                    <div className="text-gray-400">{currentTestimonial.role}</div>
+                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
                   </div>
                 </div>
               </div>
@@ -233,19 +233,19 @@ const DynamicContentShowcase: React.FC = () => {
 
             {/* Navigation Controls */}
             <div className="flexitems-centerjustify-center gap-4 mt-8">
-              <but tonon Click={prev Testimonial}
+              <but tononClick={prevTestimonial}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronLeft className="w-6 h-6" />
               </butn>
               
-              <but tonon Click={toggle Play Pause}
+              <but tononClick={togglePlay Pause}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
-                {is Playing ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </butn>
               
-              <but tonon Click={next Testimonial}
+              <but tononClick={nextTestimonial}
                 className="p-3 bg-white/10hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -256,9 +256,9 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="flexjustify-centermt-6 space-x-2">
               {testimonials.map((_, index) => (
                 <but tonkey={index}
-                  on Click={() => set Current Index(index)}
+                  onClick={() => setCurrent Index(index)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === current Index ? 'bg-purple-400' : 'bg-white/30'
+                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />
               ))}
@@ -295,7 +295,7 @@ const DynamicContentShowcase: React.FC = () => {
         <div className="max-w-4 xlmx-auto text-center">
           <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-12">
             <h2 className="text-3 xlfont-bold text-white mb-6">
-              Ready to Experience the Future?
+              Ready toExperience theFuture?
             </h2>
             <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.

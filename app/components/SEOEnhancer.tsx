@@ -6,14 +6,14 @@ interface SEOEnhancer Props {
   description: string;
   keywords?: string[];
   type?: string;
-  structured Data?: Record<string, unknown>;
+  structuredData?: Record<string, unknown>;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
   keywords = [],
   type = 'website',
-  structured Data
+  structuredData
 }) => {
   return (
     <Helmet>
@@ -26,9 +26,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta="twitter:title" content={title} />
       <meta="twitter:description" content={description} />
-      {structured Data && (
+      {structuredData && (
         <scripttype="application/ld+json">
-          {JSON.stringify(structured Data)}
+          {JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>

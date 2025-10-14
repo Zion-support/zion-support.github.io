@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Medical Records Manager Page: React.FC = () => {
+const MedicalRecordsManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>

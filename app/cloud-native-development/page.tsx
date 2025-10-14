@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Cloud Native Development Page: React.FC = () => {
+const CloudNativeDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>

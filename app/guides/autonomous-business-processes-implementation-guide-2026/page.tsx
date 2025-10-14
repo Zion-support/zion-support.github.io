@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Autonomous Business Processes Implementation Guide 2026 Page: React.FC = () => {
+constAutonomous Business Processes Implementation Guide 2026 Page: React.FC = () => {
   return (
     <>
       <Helmet>

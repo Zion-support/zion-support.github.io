@@ -133,7 +133,7 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="text-center">
           <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 rounded-2 xl p-12">
             <h2 className="text-3 xlfont-bold text-white mb-4">
-              Ready to Transform Your Business?
+              Ready toTransform Your Business?
             </h2>
             <p className="text-xltext-white/90 mb-8 max-w-2 xl mx-auto">
               Join the future of business technology. Get started with our AI solutions today and see the difference.

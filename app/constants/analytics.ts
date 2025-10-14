@@ -1,11 +1,11 @@
-export const analytics Config = {
-  google Analytics: {
-    measurement Id: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
+export const analyticsConfig = {
+  googleAnalytics: {
+    measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
     enabled: process.env.NODE_ENV === 'production',
-    page View: 'page_view',
+    pageView: 'page_view',
     click: 'click',
     scroll: 'scroll',
-    form Submit: 'form_submit',
+    formSubmit: 'form_submit',
     page: 'page',
     section: 'section',
     action: 'action'

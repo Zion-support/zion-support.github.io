@@ -1,4 +1,4 @@
-export const seo Optimizer = {
+export const seoOptimizer = {
   optimize: (data: { title?: string; description?: string; keywords?: string }) => {
     const optimized = { ...data }
     

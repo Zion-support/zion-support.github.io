@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ar Vr Platform Page: React.FC = () => {
+const ArVrPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>

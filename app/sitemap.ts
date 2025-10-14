@@ -5,21 +5,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   return [
     {
-      url: base Url,
-      last Modified: new Date(),
-      change Frequency: 'yearly',
+      url: baseUrl,
+      lastModified: newDate(),
+      changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: `${base Url}/ai-solutions`,
-      last Modified: new Date(),
-      change Frequency: 'monthly',
+      url: `${baseUrl}/ai-solutions`,
+      lastModified: newDate(),
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${base Url}/it-solutions`,
-      last Modified: new Date(),
-      change Frequency: 'monthly',
+      url: `${baseUrl}/it-solutions`,
+      lastModified: newDate(),
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
   ];

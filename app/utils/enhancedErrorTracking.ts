@@ -3,7 +3,7 @@ export const enhancedErrorTracking = {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
-      timestamp: new Date().to ISOString(),
+      timestamp: newDate().to ISOString(),
       context: context || {}
     };
     
@@ -22,7 +22,7 @@ export const enhancedErrorTracking = {
   
   trackPerformanceError: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {
-      enhanced Error Tracking.track Error(new Error(`Performance threshold exceeded: ${metric}`), {
+      enhancedError Tracking.trackError(newError(`Performance threshold exceeded: ${metric}`), {
         metric,
         value,
         threshold

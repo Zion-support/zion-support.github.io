@@ -20,7 +20,7 @@ export const seoEnhancer = {
       twitterDescription: data.description || 'Leading technology solutions provider'
     }
   },
-  set Meta Tags: (data: EnhancedSEOData) => {
+  setMeta Tags: (data: EnhancedSEOData) => {
     if (typeof document !== 'undefined') {
       document.title = data.title
       

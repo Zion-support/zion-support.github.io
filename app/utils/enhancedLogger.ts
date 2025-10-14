@@ -1,4 +1,4 @@
-export const enhanced Logger = {
+export const enhancedLogger = {
   log: (level: 'info' | 'warn' | 'error', message: string, data?: unknown) => {
     if (process.env.NODE_ENV === 'development') {
       if (level === 'info') {
@@ -16,11 +16,11 @@ export const enhanced Logger = {
         level,
         message,
         data,
-        timestamp: new Date().to ISOString()
+        timestamp: newDate().to ISOString()
       })
     }
   },
-  info: (message: string, data?: unknown) => enhanced Logger.log('info', message, data),
-  warn: (message: string, data?: unknown) => enhanced Logger.log('warn', message, data),
-  error: (message: string, data?: unknown) => enhanced Logger.log('error', message, data)
+  info: (message: string, data?: unknown) => enhancedLogger.log('info', message, data),
+  warn: (message: string, data?: unknown) => enhancedLogger.log('warn', message, data),
+  error: (message: string, data?: unknown) => enhancedLogger.log('error', message, data)
 }

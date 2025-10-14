@@ -1,19 +1,19 @@
 'use client';
 
-import React, { use Effect } from 'react';
+import React, { useEffect } from 'react';
 
-interface Accessibility Enhancer Props {
-  enable Keyboard Navigation?: boolean;
-  enable Screen Reader Support?: boolean;
-  enable High Contrast?: boolean;
-  enable Focus Management?: boolean;
+interfaceAccessibility Enhancer Props {
+  enableKeyboard Navigation?: boolean;
+  enableScreen Reader Support?: boolean;
+  enableHigh Contrast?: boolean;
+  enableFocus Management?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enable Keyboard Navigation = true,
-  enable Screen Reader Support = true,
-  enable High Contrast = true,
-  enable Focus Management = true
+  enableKeyboard Navigation = true,
+  enableScreen Reader Support = true,
+  enableHigh Contrast = true,
+  enableFocus Management = true
 }) => {
   useEffect(() => {
     const root = document.documentElement;
@@ -46,8 +46,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      document.add Event Listener('keydown', handle Key Down);
-      return () => document.remove Event Listener('keydown', handle Key Down);
+      document.addEvent Listener('keydown', handleKey Down);
+      return () => document.removeEvent Listener('keydown', handleKey Down);
     }
   }, [enableKeyboardNavigation, enableHighContrast]);
 
@@ -71,7 +71,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] as Element;
+            const addedNode = mutation.addedNodes[0] asElement;
             if (addedNode && addedNode.nodeType === Node.ELEMENT_NODE) {
               const heading = addedNode.querySelector('h1, h2, h3, h4, h5, h6');
               if (heading) {
@@ -95,7 +95,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableFocusManagement) {
       // Focus management for modals and dropdowns
       const manageFocus = (event: FocusEvent) => {
-        const target = event.target as Element;
+        const target = event.target asElement;
         if (target && target.closest('[role="dialog"], [role="menu"], [role="listbox"]')) {
           const focusableElements = target.closest('[role="dialog"], [role="menu"], [role="listbox"]')?.querySelectorAll(
             'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'

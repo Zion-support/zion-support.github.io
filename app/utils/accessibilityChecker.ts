@@ -3,8 +3,8 @@ export const accessibilityChecker = {
     const images = document.querySelectorAll('img');
     const issues: Array<{ element: HTMLElement; issue: string }> = [];
     
-    images.for Each((img) => {
-      if (!img.get Attribute('alt')) {
+    images.forEach((img) => {
+      if (!img.getAttribute('alt')) {
         issues.push({
           element: img as HTMLElement,
           issue: 'Missing alt text'
@@ -33,7 +33,7 @@ export const accessibilityChecker = {
     
     return issues;
   },
-  check Color Contrast: () => {
+  checkColor Contrast: () => {
     // This would require a more complex implementation
     // For now, return empty array
     return [];

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Zion Invoice Genius Page: React.FC = () => {
+const ZionInvoiceGeniusPage: React.FC = () => {
   return (
     <>
       <Helmet>

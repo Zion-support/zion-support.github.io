@@ -1,4 +1,4 @@
-export const performance Monitoring = {
+export const performanceMonitoring = {
   start: (name: string) => {
     performance.mark(`${name}-start`)
   },
@@ -6,10 +6,10 @@ export const performance Monitoring = {
     performance.mark(`${name}-end`)
     performance.measure(name, `${name}-start`, `${name}-end`)
     
-    const measures = performance.get Entries By Name(name)
+    const measures = performance.getEntries By Name(name)
     if (measures.length > 0) {
       const measure = measures[0]
-      console.warn(`${name} took ${measure.duration.to Fixed(2)}ms`)
+      console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
       
       // Send to analytics
       if (typeof window !== 'undefined' && window.gtag) {

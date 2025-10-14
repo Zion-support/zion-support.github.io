@@ -1,15 +1,15 @@
-export const preload Optimizer = {
+export const preloadOptimizer = {
   preload: (href: string, as: string) => {
-    const link = document.create Element('link');
+    const link = document.createElement('link');
     link.rel = 'preload';
     link.href = href;
     link.as = as;
-    document.head.append Child(link);
+    document.head.appendChild(link);
   },
-  preload Script: (src: string) => {
-    preload Optimizer.preload(src, 'script');
+  preloadScript: (src: string) => {
+    preloadOptimizer.preload(src, 'script');
   },
-  preload Style: (href: string) => {
-    preload Optimizer.preload(href, 'style');
+  preloadStyle: (href: string) => {
+    preloadOptimizer.preload(href, 'style');
   }
 };

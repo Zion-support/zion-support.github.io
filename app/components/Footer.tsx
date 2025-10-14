@@ -33,7 +33,7 @@ const resources = [
 
 const legal = [
   { name: 'Privacy Policy', path: '/privacy' },
-  { name: 'Terms of Service', path: '/terms' },
+  { name: 'Terms ofService', path: '/terms' },
   { name: 'Cookie Policy', path: '/cookies' },
   { name: 'Compliance', path: '/compliance' }
 ];
@@ -71,13 +71,13 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lgfont-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
-              {quick Links.map((link, index) => (
-                <likey={index}>
-                  <Link to={link.path} className="text-gray-400 hover:text-whitetransition-colors text-sm flex items-center group">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {link.name}
-                    <ArrowRight className="w-3 h-3ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </li>
               ))}
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
 
           {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lgfont-semibold">Our Services</h3>
+            <h3 className="text-lg font-semibold">Our Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -101,11 +101,14 @@ const Footer: React.FC = () => {
 
           {/* Resources */}
           <div className="space-y-4">
-            <h3 className="text-lgfont-semibold">Resources</h3>
+            <h3 className="text-lg font-semibold">Resources</h3>
             <ul className="space-y-2">
               {resources.map((resource, index) => (
-                <likey={index}>
-                  <Link to={resource.path} className="text-gray-400 hover:text-whitetransition-colors text-sm flex items-center group">
+                <li key={index}>
+                  <Link 
+                    to={resource.path} 
+                    className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group"
+                  >
                     {resource.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
@@ -151,14 +154,14 @@ const Footer: React.FC = () => {
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
           <div className="text-center">
-            <h3 className="text-xlfont-semiboldtext-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 text-smmb-4">Get the latest insights on AI, technology trends, and industry updates.</p>
-            <div className="flexflex-colsm:flex-row gap-3 max-w-md mx-auto">
-              <inputtype="email"
-                placeholder="Enteryour email"
-                className="flex-1 px-4py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
+            <p className="text-gray-300 text-sm mb-4">Get the latest insights on AI, technology trends, and industry updates.</p>
+            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <but ton className="bg-gradient-to-rfrom-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
@@ -167,15 +170,15 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-tborder-gray-800 pt-8">
-          <div className="flexflex-colmd:flex-row justify-between items-center">
-            <div className="flexflex-colmd:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
                 © 2024 Zion Tech Group. All rights reserved.
               </p>
-              <div className="flexspace-x-6">
-                {legal.map((item, index) => (
-                  <Linkkey={index} to={item.path} className="text-gray-400 hover:text-whitetransition-colors text-sm">
+                <div className="flex space-x-6">
+                  {legal.map((item, index) => (
+                    <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {item.name}
                   </Link>
                 ))}
@@ -183,7 +186,7 @@ const Footer: React.FC = () => {
             </div>
             <div className="mt-4 md:mt-0">
               <p className="text-gray-500 text-xs">
-                Built with ❤️ by Zion Tech Group
+                Built with ❤️ byZion Tech Group
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-interface Performance Metrics {
+interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
   cls?: number;
@@ -72,7 +72,7 @@ const PerformanceMonitor = () => {
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
-    // Measure Time to First Byte (TTFB)
+    // Measure Time toFirst Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       currentMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
@@ -88,7 +88,7 @@ const PerformanceMonitor = () => {
     };
 
     // Send metrics when page is about to unload
-    window.add Event Listener('beforeunload', send Metrics);
+      window.addEventListener('beforeunload', sendMetrics);
 
     // Cleanup observers
     return () => {
@@ -107,7 +107,7 @@ const PerformanceMonitor = () => {
 
   // Development mode: show performance metrics
 
-  const get Score Color = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+    const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';

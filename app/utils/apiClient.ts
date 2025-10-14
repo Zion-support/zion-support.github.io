@@ -1,4 +1,4 @@
-export const api Client = {
+export const apiClient = {
   base URL: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
   
   async request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
@@ -12,7 +12,7 @@ export const api Client = {
     });
     
     if (!response.ok) {
-      throw new Error(`API request failed: ${response.status}`);
+      throw newError(`API request failed: ${response.status}`);
     }
     
     return response.json();

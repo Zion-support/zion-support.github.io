@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Project Management Tool Page: React.FC = () => {
+const ProjectManagementToolPage: React.FC = () => {
   return (
     <>
       <Helmet>

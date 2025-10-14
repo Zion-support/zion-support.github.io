@@ -1,13 +1,13 @@
-import React, { use Effect } from 'react';
+import React, { useEffect } from 'react';
 
 interface SEOOptimizer Props {
   title?: string;
   description?: string;
   keywords?: string;
   canonical?: string;
-  og Image?: string;
-  og Type?: string;
-  twitter Card?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -19,7 +19,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogType: _ogType = 'website',
   twitterCard: _twitterCard = 'summary_large_image'
 }) => {
-  use Effect(() => {
+  useEffect(() => {
     // Update document title
     if (title) {
       document.title = title;
@@ -27,40 +27,40 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Update meta description
     if (description) {
-      const meta Description = document.query Selector('meta[name="description"]');
-      if (meta Description) {
-        meta Description.set Attribute('content', description);
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
       } else {
-        const meta = document.create Element('meta');
+        const meta = document.createElement('meta');
         meta.name = 'description';
         meta.content = description;
-        document.head.append Child(meta);
+        document.head.appendChild(meta);
       }
     }
 
     // Update meta keywords
     if (keywords) {
-      const meta Keywords = document.query Selector('meta[name="keywords"]');
-      if (meta Keywords) {
-        meta Keywords.set Attribute('content', keywords);
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
       } else {
-        const meta = document.create Element('meta');
+        const meta = document.createElement('meta');
         meta.name = 'keywords';
         meta.content = keywords;
-        document.head.append Child(meta);
+        document.head.appendChild(meta);
       }
     }
 
     // Update canonical URL
     if (canonical) {
-      const canonical Link = document.query Selector('link[rel="canonical"]');
-      if (canonical Link) {
-        canonical Link.set Attribute('href', canonical);
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink) {
+        canonicalLink.setAttribute('href', canonical);
       } else {
-        const link = document.create Element('link');
+        const link = document.createElement('link');
         link.rel = 'canonical';
         link.href = canonical;
-        document.head.append Child(link);
+        document.head.appendChild(link);
       }
     }
   }, [title, description, keywords, canonical]);

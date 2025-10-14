@@ -1,23 +1,23 @@
-export const performance Optimizations = {
+export const performanceOptimizations = {
   debounce: <Textends (...args: unknown[]) => unknown>(func: T, wait: number): T => {
     let timeout: Node JS.Timeout;
     return ((...args: unknown[]) => {
-      clear Timeout(timeout);
-      timeout = set Timeout(() => func.apply(this, args), wait);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
     }) as T;
   },
   throttle: <Textends (...args: unknown[]) => unknown>(func: T, limit: number): T => {
-    let in Throttle: boolean;
+    let inThrottle: boolean;
     return ((...args: unknown[]) => {
-      if (!in Throttle) {
+      if (!inThrottle) {
         func.apply(this, args);
-        in Throttle = true;
-        set Timeout(() => in Throttle = false, limit);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
       }
     }) as T;
   },
   memoize: <Textends (...args: unknown[]) => unknown>(func: T): T => {
-    const cache = new Map();
+    const cache = newMap();
     return ((...args: unknown[]) => {
       const key = JSON.stringify(args);
       if (cache.has(key)) {

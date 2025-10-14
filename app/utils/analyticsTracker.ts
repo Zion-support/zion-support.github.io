@@ -20,7 +20,7 @@ export const analyticsTracker = {
   trackFormSubmit: (formName: string, success: boolean) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'form_submit', {
-        form_name: form Name,
+        form_name: formName,
         success: success
       });
     }

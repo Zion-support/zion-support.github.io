@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Brain, Shield, Globe, Users, CheckCircle, Zap, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface Slide {
+interfaceSlide {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
@@ -15,7 +15,7 @@ interface Slide {
 }
 
 const ContentCarousel: React.FC = () => {
-  const [current Slide, set Current Slide] = use State(0);
+  const [currentSlide, setCurrent Slide] = useState(0);
 
   const slides: Slide[] = [
     {
@@ -77,8 +77,8 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prev Slide = () => {
-    set Current Slide((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () => {
+    setCurrent Slide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   return (
@@ -102,14 +102,14 @@ const ContentCarousel: React.FC = () => {
               <div className="space-y-8">
                 <div className="flexitems-centergap-4">
                   <div className="w-16 h-16bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <currentSl ide Data.icon className="w-8 h-8text-white" />
+                    <currentSl ideData.icon className="w-8 h-8text-white" />
                   </div>
                   <div>
                     <h3 className="text-2 xlmd:text-3 xl font-bold text-white mb-2">
-                      {current Slide Data.title}
+                      {currentSlide Data.title}
                     </h3>
                     <p className="text-gray-300 text-lg">
-                      {current Slide Data.description}
+                      {currentSlide Data.description}
                     </p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ const ContentCarousel: React.FC = () => {
                 <div className="space-y-4">
                   <h4 className="text-lgfont-semiboldtext-white mb-4">Key Features:</h4>
                   <div className="gridgrid-cols-1 sm:grid-cols-2 gap-3">
-                    {current Slide Data.features.map((feature, index) => (
+                    {currentSlide Data.features.map((feature, index) => (
                       <divkey={index} className="flexitems-centerspace-x-3">
                         <CheckCircle className="w-5 h-5text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -128,9 +128,9 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Stats */}
-                {current Slide Data.stats && (
+                {currentSlide Data.stats && (
                   <div className="gridgrid-cols-3 gap-6">
-                    {current Slide Data.stats.map((stat, index) => (
+                    {currentSlide Data.stats.map((stat, index) => (
                       <divkey={index} className="text-center">
                         <div className="text-2 xlfont-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>

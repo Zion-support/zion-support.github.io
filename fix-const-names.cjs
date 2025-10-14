@@ -1,26 +1,24 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix import statements
-function fixImportStatements(filePath) {
+// Function to fix const declarations with missing spaces
+function fixConstDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix import statements that were incorrectly modified
+    // Fix const declarations with missing spaces
     const fixes = [
-      { pattern: /importReact/g, replacement: 'import React' },
-      { pattern: /import\{/g, replacement: 'import {' },
-      { pattern: /from'react'/g, replacement: "from 'react'" },
-      { pattern: /from'react-helmet-async'/g, replacement: "from 'react-helmet-async'" },
-      { pattern: /from'react-router-dom'/g, replacement: "from 'react-router-dom'" },
-      { pattern: /from'lucide-react'/g, replacement: "from 'lucide-react'" },
-      { pattern: /from'@\/components'/g, replacement: "from '@/components'" },
-      { pattern: /from'@\/hooks'/g, replacement: "from '@/hooks'" },
-      { pattern: /from'@\/utils'/g, replacement: "from '@/utils'" },
-      { pattern: /from'@\/contexts'/g, replacement: "from '@/contexts'" },
-      { pattern: /from'@\/config'/g, replacement: "from '@/config'" },
-      { pattern: /from'@\/constants'/g, replacement: "from '@/constants'" },
+      // Fix const declarations like "constFive GEdge Computing Page"
+      { pattern: /const([A-Z][a-zA-Z\s]+[A-Za-z])\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, replacement: (match, name) => {
+        const cleanName = name.replace(/\s+/g, '');
+        return `const ${cleanName}: React.FC = () => {`;
+      }},
+      // Fix export default statements with missing spaces
+      { pattern: /export\s+default([A-Z][a-zA-Z\s]+[A-Za-z]);/g, replacement: (match, name) => {
+        const cleanName = name.replace(/\s+/g, '');
+        return `export default ${cleanName};`;
+      }},
     ];
 
     fixes.forEach(fix => {
@@ -33,7 +31,7 @@ function fixImportStatements(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
+      console.log(`Fixed const declarations in: ${filePath}`);
       return true;
     }
     return false;
@@ -55,7 +53,7 @@ function fixAllFiles(dir) {
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
       fixedCount += fixAllFiles(filePath);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixImportStatements(filePath)) {
+      if (fixConstDeclarations(filePath)) {
         fixedCount++;
       }
     }
@@ -65,6 +63,6 @@ function fixAllFiles(dir) {
 }
 
 // Start fixing from the app directory
-console.log('Starting to fix import statements...');
+console.log('Starting to fix const declarations...');
 const fixedCount = fixAllFiles('./app');
-console.log(`Fixed ${fixedCount} files with import issues.`);
+console.log(`Fixed ${fixedCount} files with const declaration issues.`);

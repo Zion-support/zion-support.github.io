@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Ai Sales Automation Page: React.FC = () => {
+const AiSalesAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>

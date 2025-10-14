@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready toTransform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let&apos;s discuss how our technology solutions can drive your success.
           </p>

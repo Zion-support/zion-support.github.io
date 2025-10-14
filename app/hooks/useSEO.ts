@@ -9,11 +9,11 @@ interface UseSEOProps {
 export const useSEO = ({ title, description, keywords }: UseSEOProps) => {
   useEffect(() => {
     if (typeof document !== 'undefined') {
-      const meta Description = document.query Selector('meta[name="description"]');
-      const meta Keywords = document.query Selector('meta[name="keywords"]');
+      const metaDescription = document.querySelector('meta[name="description"]');
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
       
-      if (meta Description) {
-        meta Description.set Attribute('content', description);
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
       }
       if (metaKeywords && keywords) {
         metaKeywords.setAttribute('content', keywords);

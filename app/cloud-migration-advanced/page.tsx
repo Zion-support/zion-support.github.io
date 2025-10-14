@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Cloud Migration Advanced Page: React.FC = () => {
+const CloudMigrationAdvancedPage: React.FC = () => {
   return (
     <>
       <Helmet>

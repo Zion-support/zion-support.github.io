@@ -1,18 +1,18 @@
-import React, { use Effect } from 'react';
+import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
-  use Effect(() => {
+  useEffect(() => {
     // Performance optimization logic
-    const optimize Images = () => {
-      const images = document.query Selector All('img');
-      images.for Each((img) => {
+    const optimizeImages = () => {
+      const images = document.querySelector All('img');
+      images.forEach((img) => {
         if (!img.loading) {
           img.loading = 'lazy';
         }
       });
     };
 
-    const optimize Fonts = () => {
+    const optimizeFonts = () => {
       // Preload critical fonts
       const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
@@ -23,7 +23,7 @@ const PerformanceOptimizer: React.FC = () => {
       document.head.appendChild(fontPreload);
     };
 
-    const optimize Resources = () => {
+    const optimizeResources = () => {
       // Add resource hints
       const resourceHints = [
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -32,8 +32,8 @@ const PerformanceOptimizer: React.FC = () => {
         { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       ];
 
-      resource Hints.for Each((hint) => {
-        const link = document.create Element('link');
+      resourceHints.forEach((hint) => {
+        const link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
         document.head.appendChild(link);
@@ -41,9 +41,9 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Run optimizations
-    optimize Images();
-    optimize Fonts();
-    optimize Resources();
+    optimizeImages();
+    optimizeFonts();
+    optimizeResources();
 
     // Cleanup function
     return () => {
