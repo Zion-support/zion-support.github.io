@@ -20,15 +20,15 @@ import ServicesPage from './app/services/page';
 import ContactPage from './app/contact/page';
 
 const App: React.FC = () => {
-  const handlePerformanceMetrics = (metrics: any) => {
+  const handlePerformanceMetrics = (metrics: Record<string, number>) => {
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance Metrics:', metrics);
     }
     
     // Send to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metrics', {
+    if (typeof window !== 'undefined' && (window as Record<string, unknown>).gtag) {
+      (window as Record<string, unknown>).gtag('event', 'performance_metrics', {
         custom_parameter_1: metrics.fcp,
         custom_parameter_2: metrics.lcp,
         custom_parameter_3: metrics.fid,
