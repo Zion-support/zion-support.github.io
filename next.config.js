@@ -1,46 +1,34 @@
-<<<<<<< HEAD
-import crypto from 'crypto';,';,
-enabled: process.env.ANALYZE === 'true
-/** @type {} import( 'next'';,';,
-domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,
-formats: ['image/webp', '';,
-);,
-contentSecurityPolicy: "default-src 'self'; script-src 'none'';)
+import crypto from 'crypto',','
+enabled: process.env.ANALYZE === 'true'
+/** @type {} import( 'next'',','
+domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'',',']'
+formats: ['image/webp', '',']'
+);,;
+contentSecurityPolicy: "default-src 'self' script-src 'none'')'
 }
 ]
-=======
-import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: process.env.ANALYZE === 'true'
-/** @type {} import( 'next,';,domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com,';,formats: ['image/webp', ,'
-
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
-);,
-contentSecurityPolicy: "default-src 'self'; script-src 'none)
+);,;
+contentSecurityPolicy: "default-src 'self' script-src 'none)'
 }
 ]
-/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */'
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+  reactStrictMode: true,;}
+  swcMinify: true,;
   images: {
-    domains: [
-      'images.unsplash.com',
-      'via.placeholder.com',
-      'ziontechgroup.com
-    ],
-    formats: ['image/webp', 'image/avif']
-  },
+    domains: [}]
+      'images.unsplash.com','
+      'via.placeholder.com','
+      'ziontechgroup.com'
+    ],;
+    formats: ['image/webp', 'image/avif']'
+  },;
   experimental: {
-    optimizeCss: true
-  },
+    optimizeCss: true}
+  },;
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production
+    removeConsole: process.env.NODE_ENV === 'production'}'
   }
 }
-
-<<<<<<< HEAD
+;
 module.exports = nextConfig
-=======
-module.exports = nextConfig;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

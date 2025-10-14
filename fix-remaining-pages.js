@@ -1,2 +1,2 @@
-import fs from 'fs; import path from ';path;'; let content = fs.readFileSync(; filePath, 'utf8console.error('Error:'
-); console.log('All page files fixed!)'
+import fs from 'fs; import path from 'path;' let content = fs.readFileSync(; filePath, 'utf8console.error('Error:''
+); console.log('All page files fixed!)'')'

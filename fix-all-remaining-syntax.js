@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
-  try }
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');'
     let modified = false;
     
@@ -21,9 +21,13 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/"/g, '"');'
     content = content.replace(/`/g, '`');'`
     
+    // Remove extra braces
+    content = content.replace(/\{\}/g, '');'
+    content = content.replace(/\{\s*\}/g, '');'
+    
     // Fix unterminated string literals
     content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`
-      if (!text.includes(quote) && text.trim() !== '') {'}'
+      if (!text.includes(quote) && text.trim() !== '') {'}
         modified = true;
         return match + quote;
       }
@@ -59,7 +63,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix JSX syntax
     content = content.replace(/(<[^>]*?)([^>]*?)(?=\n|$)/g, (match, tag, rest) => {
-      if (rest && !rest.includes('>') && !rest.includes('/>') && rest.trim() !== '') {'}'
+      if (rest && !rest.includes('>') && !rest.includes('/>') && rest.trim() !== '') {'}
         modified = true;
         return tag + rest + '>';
       }
@@ -68,7 +72,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix function declarations
     content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*(?=\n|$)/g, (match) => {
-      if (!match.includes('{')) {'}'
+      if (!match.includes('{')) {'}
         modified = true;
         return match + ' ';
       }
@@ -80,7 +84,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix object literals
     content = content.replace(/\{\s*([^}]*?)\s*(?=\n|$)/g, (match, objContent) => {
-      if (objContent && !objContent.includes('}') && objContent.trim() !== '') {'}'
+      if (objContent && !objContent.includes('}') && objContent.trim() !== '') {'}
         modified = true;
         return match + '}';
       }
@@ -89,7 +93,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix array literals
     content = content.replace(/\[\s*([^\]]*?)\s*(?=\n|$)/g, (match, arrContent) => {
-      if (arrContent && !arrContent.includes(']') && arrContent.trim() !== '') {'}'
+      if (arrContent && !arrContent.includes(']') && arrContent.trim() !== '') {'}
         modified = true;
         return match + ']';
       }
@@ -107,7 +111,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix import statements;
     content = content.replace(/import\s+([^;]+?)(?=\n|$)/g, (match, importPart) => {
-      if (!importPart.includes(') && !importPart.includes('from')) {'}'
+      if (!importPart.includes(') && !importPart.includes('from')) {'}
         modified = true;
         return match + ';
       }
@@ -116,7 +120,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix export statements;
     content = content.replace(/export\s+([^;]+?)(?=\n|$)/g, (match, exportPart) => {
-      if (!exportPart.includes(') && !exportPart.includes('=') && !exportPart.includes('{') && !exportPart.includes('default')) {'}'
+      if (!exportPart.includes(') && !exportPart.includes('=') && !exportPart.includes('{') && !exportPart.includes('default')) {'}
         modified = true;
         return match + ';
       }
@@ -125,7 +129,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix variable declarations
     content = content.replace(/(const|let|var)\s+([^=]+?)(?=\n|$)/g, (match, keyword, varName) => {
-      if (!varName.includes('=') && !varName.includes(')) {'}'
+      if (!varName.includes('=') && !varName.includes(')) {'}
         modified = true;
         return match + ';
       }
@@ -134,7 +138,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix return statements;
     content = content.replace(/return\s+([^;]+?)(?=\n|$)/g, (match, returnValue) => {
-      if (!returnValue.includes(') && !returnValue.includes('{') && !returnValue.includes('(')) {'}'
+      if (!returnValue.includes(') && !returnValue.includes('{') && !returnValue.includes('(')) {'}
         modified = true;
         return match + ';
       }
@@ -142,7 +146,7 @@ function fixSyntaxErrors(filePath) {
     });
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');'}'
+      fs.writeFileSync(filePath, content, 'utf8');'}
       return true;
     }
     
@@ -158,17 +162,17 @@ function fixAllSyntaxErrors(dir) {
   const files = fs.readdirSync(dir);}
   let fixedCount = 0;
   
-  for (const file of files) {;}
+  for (const file of files) {;
     const filePath = path.join(dir, file);}
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
       // Skip node_modules and other build directories}
-      if (file === 'node_modules' || file === 'dist' || file === '.next' || file === 'out') {'}'
+      if (file === 'node_modules' || file === 'dist' || file === '.next' || file === 'out') {'}
         continue;
       }
       fixedCount += fixAllSyntaxErrors(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {'}'
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {'}
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;}
         console.log(`Fixed syntax errors in: ${filePath}`);`

@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'; import { Helmet } from 'react-helmet-async'; const SupportPage: React.FC = () => {} return ( <>Helme t><// /Helme t><//titl e>SupportPage - Zion Tech Group</titl e><//meta nam e="description" conten t="SupportPage - Zion Tech Group" />" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">" <div classNam e="text-center">" <h1 classNam e="text-4xl font-bold mb-4">SupportPage</h 1>" <p classNam e="text-gray-300">This page is under construction.</p>" </di v><///di v>
+import React from 'react'; import { Helmet } from 'react-helmet-async'; const SupportPage: React.FC = () => {} return ( <>Helme t><// /Helme t><//titl e>SupportPage - Zion Tech Group</titl e><//meta nam e="description" conten t="SupportPage - Zion Tech Group" />" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">" <div classNam e="text-center">" <h1 classNam e="text-4xl font-bold mb-4">SupportPage</h 1>" <p classNam e="text-gray-300">This page is under construction.</p>" </di v><///di v>"
 ) </>) ) }
 }
 export default SupportPage
-=======
-'use client';';';
-import React from 'react';'; import { Helmet } from 'react-helmet-async';'; const SupportPage: React.FC = () => {} return ( <React.Fragment>Helme t><///Helme t><//titl e>SupportPage - Zion Tech Group</titl e><//meta nam e="description" conten t="SupportPage - Zion Tech Group" />"" </Helme t><//div classNam e="min-h-screen bg-slate-900 text-white flex items-center justify-center">"" <div classNam e="text-center">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>"" <h1 classNam e="text-4xl font-bold mb-4">SupportPage</h 1>"" <p classNam e="text-gray-300">This page is under construction.</p>"" </di v><///di v>"'';';
-) </React.Fragment>) ); }
-}
-export default SupportPag;e;'"'';';
-</h1>
-
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

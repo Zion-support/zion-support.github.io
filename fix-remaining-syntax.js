@@ -1,88 +1,185 @@
-import fs from 'fs';
-import { glob } from 'glob';
+#!/usr/bin/env node
 
-// Function to fix remaining syntax errors
-function fixRemainingSyntax(content) {
-  let fixed = content;
-  
-  // Remove unwanted characters added by previous fix
-  fixed = fixed.replace(/},\$1/g, '}');
-  fixed = fixed.replace(/,\$1/g, '');
-  fixed = fixed.replace(/\$1/g, '');
-  
-  // Fix malformed JSX closing tags
-  fixed = fixed.replace(/\);},\$1/g, ');');
-  fixed = fixed.replace(/\);},/g, ');');
-  fixed = fixed.replace(/}\);,\$1/g, '});');
-  fixed = fixed.replace(/}\);,/g, '});');
-  
-  // Fix malformed object properties
-  fixed = fixed.replace(/title: "([^"]*)"(\s*),\$1/g, 'title: "$1",$2');
-  fixed = fixed.replace(/description: "([^"]*)"(\s*),\$1/g, 'description: "$1",$2');
-  fixed = fixed.replace(/icon: ([^,}]+)(\s*),\$1/g, 'icon: $1,$2');
-  fixed = fixed.replace(/color: "([^"]*)"(\s*),\$1/g, 'color: "$1",$2');
-  
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/className="([^"]*)"(\s*),\$1/g, 'className="$1"$2');
-  
-  // Fix malformed function calls
-  fixed = fixed.replace(/map\(\([^)]+\) => \(},\$1/g, 'map(($1) => (');
-  fixed = fixed.replace(/map\(\([^)]+\) => \(},/g, 'map(($1) => (');
-  
-  // Fix malformed JSX fragments
-  fixed = fixed.replace(/<>\s*},\$1/g, '<>');
-  fixed = fixed.replace(/<\/>\s*},\$1/g, '</>');
-  
-  // Fix malformed closing tags
-  fixed = fixed.replace(/<\/div>\s*},\$1/g, '</div>');
-  fixed = fixed.replace(/<\/section>\s*},\$1/g, '</section>');
-  
-  // Clean up any remaining malformed patterns
-  fixed = fixed.replace(/\s*},\$1\s*$/gm, '');
-  fixed = fixed.replace(/\s*,\$1\s*$/gm, '');
-  
-  return fixed;
-}
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingSyntax(content);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try }
+    let content = fs.readFileSync(filePath, 'utf8');'
+    let modified = false;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Remove extra quotes and semicolons that were incorrectly added
+    content = content.replace(/'/g, "'");"
+    content = content.replace(/"/g, '"');'
+    content = content.replace(/`/g, '`');'`
+    content = content.replace(/'/g, "'");"
+    content = content.replace(/"/g, '"');'
+    content = content.replace(/`/g, '`');'`
+    
+    // Fix unterminated string literals
+    content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`
+      if (!text.includes(quote) && text.trim() !== '') {'}'
+        modified = true;
+        return match + quote;
+      }
+      return match;
+    });
+    
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;}
+    const closeBraces = (content.match(/\}/g) || []).length;
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;}
+      content += '\n' + '}'.repeat(missingBraces);'
+      modified = true;
+    }
+    
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;}
+      content += ')'.repeat(missingParens);'
+      modified = true;
+    }
+    
+    // Fix missing closing square brackets
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+    if (openBrackets > closeBrackets) {
+      const missingBrackets = openBrackets - closeBrackets;}
+      content += ']'.repeat(missingBrackets);'
+      modified = true;
+    }
+    
+    // Fix JSX syntax
+    content = content.replace(/(<[^>]*?)([^>]*?)(?=\n|$)/g, (match, tag, rest) => {
+      if (rest && !rest.includes('>') && !rest.includes('/>') && rest.trim() !== '') {'}'
+        modified = true;
+        return tag + rest + '>';
+      }
+      return match;
+    });
+    
+    // Fix function declarations
+    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*(?=\n|$)/g, (match) => {
+      if (!match.includes('{')) {'}'
+        modified = true;
+        return match + ' ';
+      }
+      return match;
+    });
+    
+    // Fix arrow functions
+    content = content.replace(/=>\s*(?=\n|$)/g, '=> ');'
+    
+    // Fix object literals
+    content = content.replace(/\{\s*([^}]*?)\s*(?=\n|$)/g, (match, objContent) => {
+      if (objContent && !objContent.includes('}') && objContent.trim() !== '') {'}'
+        modified = true;
+        return match + '}';
+      }
+      return match;
+    });
+    
+    // Fix array literals
+    content = content.replace(/\[\s*([^\]]*?)\s*(?=\n|$)/g, (match, arrContent) => {
+      if (arrContent && !arrContent.includes(']') && arrContent.trim() !== '') {'}'
+        modified = true;
+        return match + ']';
+      }
+      return match;
+    });
+    
+    // Fix template literals
+    content = content.replace(/`([^`]*?)(?=\n|$)/g, (match, templateContent) => {`}`
+      if (templateContent && !templateContent.includes('`') && templateContent.trim() !== '') {'}`
+        modified = true;
+        return match + '`'`;
+      }
+      return match;
+    });
+    
+    // Fix import statements;
+    content = content.replace(/import\s+([^;]+?)(?=\n|$)/g, (match, importPart) => {
+      if (!importPart.includes(') && !importPart.includes('from')) {'}'
+        modified = true;
+        return match + ';
+      }
+      return match;
+    });
+    
+    // Fix export statements;
+    content = content.replace(/export\s+([^;]+?)(?=\n|$)/g, (match, exportPart) => {
+      if (!exportPart.includes(') && !exportPart.includes('=') && !exportPart.includes('{') && !exportPart.includes('default')) {'}'
+        modified = true;
+        return match + ';
+      }
+      return match;
+    });
+    
+    // Fix variable declarations
+    content = content.replace(/(const|let|var)\s+([^=]+?)(?=\n|$)/g, (match, keyword, varName) => {
+      if (!varName.includes('=') && !varName.includes(')) {'}'
+        modified = true;
+        return match + ';
+      }
+      return match;
+    });
+    
+    // Fix return statements;
+    content = content.replace(/return\s+([^;]+?)(?=\n|$)/g, (match, returnValue) => {
+      if (!returnValue.includes(') && !returnValue.includes('{') && !returnValue.includes('(')) {'}'
+        modified = true;
+        return match + ';
+      }
+      return match;
+    });
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');'}'
       return true;
     }
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
     return false;
   }
 }
 
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js'
-  ];
+// Function to recursively fix syntax errors
+function fixAllSyntaxErrors(dir) {
+  const files = fs.readdirSync(dir);}
+  let fixedCount = 0;
   
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
+  for (const file of files) {;}
+    const filePath = path.join(dir, file);}
+    const stat = fs.statSync(filePath);
     
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
+    if (stat.isDirectory()) {
+      // Skip node_modules and other build directories}
+      if (file === 'node_modules' || file === 'dist' || file === '.next' || file === 'out') {'}'
+        continue;
+      }
+      fixedCount += fixAllSyntaxErrors(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {'}'
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;}
+        console.log(`Fixed syntax errors in: ${filePath}`);`
       }
     }
   }
   
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+  return fixedCount;
 }
 
-main();
+// Main execution
+console.log('Starting comprehensive syntax error resolution...');'
+const fixedCount = fixAllSyntaxErrors(process.cwd());
+console.log(`Fixed syntax errors in ${fixedCount} files.`);`
