@@ -67,28 +67,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
   ]
   const isActive = (path: string) => {
-<<<<<<< HEAD
-    return location.pathname === path;
-  }
-=======
     return location.pathname === path}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
-<<<<<<< HEAD
-    );
-  }
-  const isExpanded = (sectionName: string) => {
-    return expandedSections.includes(sectionName);
-  }
-=======
     )}
   const isExpanded = (sectionName: string) => {
     return expandedSections.includes(sectionName)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
     <>
       {/* Overlay */}
@@ -222,11 +209,5 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
-export default Sidebar;
-=======
   )}
 export default Sidebar
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

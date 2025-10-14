@@ -47,11 +47,5 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
         {children}
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}
-export default AnimatedCard;
-=======
   )}
 export default AnimatedCard
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

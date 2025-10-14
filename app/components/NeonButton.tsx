@@ -29,12 +29,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     md: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg"
   }
-<<<<<<< HEAD
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-=======
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   const content = (
     <>
       <span className="relative z-10">{children}</span>
@@ -59,11 +54,5 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     <button onClick={onClick} className={`${classes} group`}>
       {content}
     </button>
-<<<<<<< HEAD
-  );
-}
-export default NeonButton;
-=======
   )}
 export default NeonButton
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
