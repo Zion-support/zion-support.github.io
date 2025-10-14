@@ -34,6 +34,21 @@ function fixSyntaxErrors(filePath) {
       modified = true
 }
     // Fix missing closing parentheses
+<<<<<<< HEAD
+    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
+    // Fix malformed JSX attributes
+    content = content.replace(/<(\w+)\s+([^>]*)\s*>\s*<\/\1>/g, '<$1 $2 />');
+    // Clean up extra whitespace and newlines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    // Fix specific patterns for React components
+    if (content.includes('export default function Component;') && !content.includes('export default function Component; ')) { content = content.replace(/export default function Component;/g, 'export default function Component; Component'); }
+    }
+    if (content !== originalContent) { fs.writeFileSync(filePath, content);
+      return true; }
+    }
+    return false;
+=======
     const openParens = (content.match(/\(/g) || []).length
     const closeParens = (content.match(/\)/g) || []).length
     if (openParens > closeParens) {
@@ -128,6 +143,7 @@ function fixSyntaxErrors(filePath) {
       return true
 }
     return false
+>>>>>>> origin/main
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);`
     return false
@@ -151,7 +167,18 @@ function fixAllSyntaxErrors(dir) {
         console.log(`Fixed syntax errors in: ${filePath}`);`
 }
 }
+<<<<<<< HEAD
+          }
+        } catch (error) { // Skip files that can't be read }
+        }
+      }
+    }
+  }
+  traverse(dir);
+  return files;
+=======
   return fixedCount
+>>>>>>> origin/main
 }
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');'

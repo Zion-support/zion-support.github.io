@@ -1,6 +1,33 @@
+<<<<<<< HEAD
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
+'use client''
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+"use client"
+export default function Page() {return (
+    <div className="min-h-screen bg-white">"
+=======
+export default function Page() {
+=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+
+export default function AboutPage() {
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "100+", label: "Happy Clients" },
+    { number: "50+", label: "AI Solutions" },
+    { number: "24/7", label: "Support" }
+  ];
+=======
 import { Brain, Users, Award, Target, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> origin/main
 
 const AboutPage = () => {
   const values = [
@@ -48,13 +75,47 @@ const AboutPage = () => {
       expertise: "Full-Stack Development"
     }
   ];
+>>>>>>> origin/main
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/main
       <Helmet>
+<<<<<<< HEAD
+        <title>Page - Zion Tech Group</title>
+<<<<<<< HEAD
+        <meta name="description" content="Professional page services by Zion Tech Group." />"
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">"
+        <div className="text-center">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">"
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional page solutions tailored to your business needs.;
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge page solutions.;
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">"
+                Tailored page implementations for your specific requirements.;
+=======
+        <meta name="description" content="Professional services by Zion Tech Group." />
+=======
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group - Leading AI and IT solutions provider with a mission to transform businesses through innovative technology." />
         <meta name="keywords" content="about us, AI company, IT solutions, technology team, company values" />
+>>>>>>> origin/main
       </Helmet>
       
       {/* Hero Section */}
@@ -83,12 +144,29 @@ const AboutPage = () => {
               <p className="text-lg text-gray-300 mb-8">
                 We believe that technology should be accessible, understandable, and transformative. Our team of experts 
                 works tirelessly to create solutions that not only meet today's needs but anticipate tomorrow's challenges.
+>>>>>>> origin/main
               </p>
               <div className="flex items-center text-purple-400">
                 <CheckCircle className="w-6 h-6 mr-2" />
                 <span className="font-semibold">Committed to Excellence</span>
               </div>
             </div>
+<<<<<<< HEAD
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your page needs.;
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today;
+            </button>
+          </div>
+=======
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
@@ -110,6 +188,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+>>>>>>> origin/main
         </div>
       </section>
 
@@ -177,9 +256,61 @@ const AboutPage = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  )
+=======
+<<<<<<< HEAD
+  ); }
+>>>>>>> origin/main
+            Page</h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                Expert Solutions</h3>
+              <p className="text-blue-700">"
+                Our team of experts delivers cutting-edge page solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                Custom Implementation</h3>
+              <p className="text-green-700">"
+                Tailored page implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                24/7 Support</h3>
+              <p className="text-purple-700">"
+                Round-the-clock support for all your page needs.</p></div></div>
+          <div className="mt-12">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              Get Started Today</button></div></div></div></div>
+  )
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+<<<<<<< HEAD
+}''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
   );
+<<<<<<< HEAD
+}
+=======
 };
 export default AboutPage;
 
 
 
+>>>>>>> origin/main
+>>>>>>> origin/main
+>>>>>>> origin/main

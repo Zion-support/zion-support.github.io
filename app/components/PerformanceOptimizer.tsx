@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+import React from 'react'
+<<<<<<< HEAD
+import { useEffect, Node } from 'react'
+interface PerformanceOptimizerProps {
+  children: Node}
+=======
+import { useEffect, Node } from 'react
+interface PerformanceOptimizerProps { children: Node }
+>>>>>>> origin/main
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Performance optimization code''
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img')'
+      images.forEach((img) => {
+<<<<<<< HEAD
+        if (!img.hasAttribute('loading")) {"
+          img.setAttribute('loading', 'lazy')";
+import React from 'react';
+{ useEffect, Node } from 'react";
+interface PerformanceOptimizerProps {children: Node}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {useEffect(() => {
+    // Performance optimization code;
+    const optimizeImages = () => {''
+      const images = document.querySelectorAll('img')";
+      images.forEach((img) => {''
+        if (!img.hasAttribute('loading')) {'
+          img.setAttribute('loading', 'lazy')}'
+        }
+      }
+    const optimizeFonts = () => {
+      // Preload critical fonts';
+      const link = document.createElement('link')';
+=======
+        if (!img.hasAttribute('loading')) {';
+          img.setAttribute('loading', 'lazy');
+import React from 'react';'
+{ useEffect, Node } from 'react';
+interface PerformanceOptimizerProps { children: Node; }
+=======
 'use client';
 import React, { useEffect } from 'react';
 
@@ -9,6 +50,7 @@ interface PerformanceOptimizerProps {
   enablePrefetching?: boolean;
   enableCriticalCSS?: boolean;
   enableResourceHints?: boolean;
+>>>>>>> origin/main
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -39,6 +81,75 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
     }
+<<<<<<< HEAD
+    const optimizeFonts = () => { // Preload critical fonts;'
+      const link = document.createElement('link');'
+      link.rel = 'preload';'
+      link.href = '/fonts/inter.woff2';'
+      link.as = 'font';'
+      link.type = 'font/woff2';'
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link); }
+        if (!img.hasAttribute('loading')) { '
+          img.setAttribute('loading', 'lazy') }
+      })}
+    const optimizeFonts = () => { // Preload critical fonts
+      const link = document.createElement('link')
+>>>>>>> origin/main
+      link.rel = 'preload'
+      link.href = '/fonts/inter.woff2'
+      link.as = 'font'
+      link.type = 'font/woff2'
+<<<<<<< HEAD
+      link.crossOrigin = "anonymous"
+      document.head.appendChild(link)
+        if (!img.hasAttribute('loading')) {''
+          img.setAttribute('loading', 'lazy')}'
+      }
+    const optimizeFonts = () => {
+      // Preload critical fonts
+      const link = document.createElement('link')'
+      link.rel = 'preload''
+      link.href = '/fonts/inter.woff2''
+      link.as = 'font''
+      link.type = 'font/woff2''
+      link.crossOrigin = 'anonymous''
+      document.head.appendChild(link)
+    const optimizeResources = () => {// Preload critical resources
+      const criticalResources = ['/css/critical.css',''
+        '/js/critical.js'''
+      ]
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link')";
+      document.head.appendChild(link)
+    const optimizeResources = () => {// Preload critical resources';
+      const criticalResources = ['/css/critical.css','
+        '/js/critical.js''";
+      ];
+      criticalResources.forEach((resource) => {''
+        const link = document.createElement('link')';
+        link.rel = "preload"
+        link.href = resource';
+        link.as = resource.endsWith('.css') ? 'style' : "script"
+        document.head.appendChild(link)
+      }
+=======
+      link.crossOrigin = 'anonymous'
+      document.head.appendChild(link) }
+    const optimizeResources = () => {
+      // Preload critical resources
+      const criticalResources = ['/css/critical.css','
+        '/js/critical.js''
+      ]
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+      document.head.appendChild(link);}
+    };
+    const optimizeResources = () => {
+      // Preload critical resources;'
+      const criticalResources = ['/css/critical.css',';'
+        '/js/critical.js'';
+=======
 
     // Prefetch critical resources
     if (enablePrefetching) {
@@ -49,6 +160,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         '/it-services',
         '/about',
         '/blog',
+>>>>>>> origin/main
       ];
 
       prefetchLinks.forEach((href) => {
@@ -61,6 +173,46 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       });
     }
+<<<<<<< HEAD
+>>>>>>> origin/main
+    // Run optimizations;
+    optimizeImages()
+    optimizeFonts()
+    optimizeResources()
+    // Cleanup function;
+<<<<<<< HEAD
+    return () => {// Cleanup if needed}
+  }, [])
+=======
+    return () => { // Cleanup if needed; }
+  }, []);
+>>>>>>> origin/main
+  return <>{children}</>
+}
+export default PerformanceOptimizer;
+        const link = document.createElement('link')'
+        link.rel = 'preload''
+        link.href = resource
+        link.as = resource.endsWith('.css') ? 'style' : 'script''
+        document.head.appendChild(link)}
+    // Run optimizations
+    optimizeImages()
+    optimizeFonts()
+    optimizeResources()
+    // Cleanup function
+    return () => {
+      // Cleanup if needed}}, [])
+  return <>{children}</>
+}
+export default PerformanceOptimizer
+      // Cleanup if needed;}
+  }, [])
+  return <>{children}</>
+<<<<<<< HEAD
+}
+export default PerformanceOptimizer';
+=======
+=======
 
     // Add resource hints
     if (enableResourceHints) {
@@ -121,6 +273,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
 
   return <>{children}</>;
+>>>>>>> origin/main
 };
 
 export default PerformanceOptimizer;
+>>>>>>> origin/main

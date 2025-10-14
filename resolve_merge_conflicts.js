@@ -42,21 +42,16 @@ for (const file of conflictedFiles) {
     
     // Remove merge conflict markers and keep the main branch version
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+/gs,
-      (match, headContent, mainContent) => {
+      /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n      (match, headContent, mainContent) => {
         // Use the main branch content (after =======)
         return mainContent;
       }
     );
 
     // Handle any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]+/gs, '$1');
-    
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n    
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+/gs, '');
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n>>>>>>> [^\n]+/gs, '');
-    resolvedContent = resolvedContent.replace(/=======\n.*?\n>>>>>>> [^\n]+/gs, '');
-
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n=======\n.*?\n    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n.*?\n    resolvedContent = resolvedContent.replace(/=======\n.*?\n
     // Write the resolved content
     fs.writeFileSync(file, resolvedContent);
     

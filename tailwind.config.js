@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // tailwind.config - Basic implementation
 export default function tailwind.config() {
   return null;
@@ -283,4 +284,34 @@ export default {
     }
   ]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#eff6ff",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+=======
+// tailwind.config - Basic implementation
+export default function tailwind.config() {
+  return null;
+>>>>>>> origin/main
+>>>>>>> a6fbec30ec73a2dbaa370e4e107adc185d69ffc3
 }
