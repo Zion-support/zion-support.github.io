@@ -61,12 +61,9 @@ export default function RootLayout({
               <PWAInstaller>
                 <PerformanceOptimizer>
                   {children}
-                </PerformanceOptimizer>
-              </PWAInstaller>
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
-        </GlobalErrorBoundary>
-      </body>
+                </PWAInstaller>
+            </AnalyticsProvider>
+        </body>
     </html>
   );
 }

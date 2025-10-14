@@ -1,35 +1,28 @@
-          This page is under development.</p></div></div>
+          This page is under development.</div>
   )
-        </p>
-      </div>
+        </div>
     );
   }
 
   if (variant === 'cyber') {
     return (
-      <div className="flex flex-col items-center justify-center p-8 min-h-[200px]">
-        {/* Cyber-style loading animation */}
-        <div className="relative">
-          {/* Outer ring */}
+      <div>{/* Cyber-style loading animation */}</div>
+        <div>{/* Outer ring */}</div>
           <div className={`${sizeClasses[size]} border-2 border-transparent border-t-cyan-400 border-r-purple-500 rounded-full animate-spin`}></div>
           {/* Inner ring */}
           <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} border-2 border-transparent border-b-pink-500 border-l-green-400 rounded-full animate-spin`} style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
           {/* Center dot */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-        </div>
         
         {/* Loading text with cyber effect */}
         <div className="mt-6 text-center">
-          <p className={`${textSizeClasses[size]} font-medium text-white neon-text`}>
-            {message}
+          <p>{message}</p>
           </p>
           {/* Animated dots */}
           <div className="flex justify-center mt-2 space-x-1">
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
             <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
             <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-          </div>
-        </div>
 
         {/* Progress bar */}
         {showProgress && (
@@ -40,12 +33,8 @@
                 style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-pulse"></div>
-              </div>
+            <div>{Math.round(progress)}% Complete</div>
             </div>
-            <div className="text-center mt-2 text-sm text-gray-400">
-              {Math.round(progress)}% Complete
-            </div>
-          </div>
         )}
       </div>
     );
@@ -56,8 +45,7 @@
     <div className="flex flex-col items-center justify-center p-8">
       <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}></div>
       {message && (
-        <p className={`mt-4 text-gray-600 ${textSizeClasses[size]}`}>
-          {message}
+        <p>{message}</p>
         </p>
       )}
       {showProgress && (
@@ -66,7 +54,6 @@
             className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
             style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
           ></div>
-        </div>
       )}
     </div>
   )}

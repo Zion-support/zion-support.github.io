@@ -7,8 +7,7 @@ if (typeof window !== 'undefined') {'''
 const root = createRoot(
 root.render(
   <React.StrictMode></React>
-    <App /></App>
-  </React.StrictMode>,
+    <App /></React.StrictMode>,
 );
 // Register service worker for PWA functionality;
 if ("serviceWorker" in navigator) {"""
