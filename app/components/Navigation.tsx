@@ -71,17 +71,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   };
 
   return (
-    <nav className="bg-slate-900/95backdrop-blur-md border-b border-slate-700 sticky top-0 z-50 neon-border">
-      <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flexjustify-between items-center h-16">
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50 neon-border">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flexitems-center space-x-2 group">
-            <div className="w-8h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
-              <span className="text-whitefont-bold text-lg">Z</span>
-            <span className="text-xlfont-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hiddenlg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -97,7 +98,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}>
                     <Icon className="w-4 h-4" />
                     <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4h-4 ml-1" />}
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
                   </Link>
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
@@ -113,7 +114,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                       ))}
                     </div>
                   )}
-                </Link>
                 </div>
               );
             })}
@@ -139,7 +139,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
       {/* Mobile Navigation */}
       <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="px-2pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 border-t border-slate-700">
           {navigation.map((item) => (
             <div key={item.name}>
               {item.submenu ? (

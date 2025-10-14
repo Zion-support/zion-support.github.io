@@ -1,5 +1,4 @@
 export const analytics = {
-
   track: (event: string, properties: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties)
@@ -7,11 +6,10 @@ export const analytics = {
   },
   
   page: (page: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_path: page
-
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-c17d
     }
   }
 }
