@@ -47,11 +47,3 @@ const SystemStatusPage: React.FC = () => {
   );
 }
 export default SystemStatusPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

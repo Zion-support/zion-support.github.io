@@ -47,11 +47,3 @@ const ArVrPlatformPage: React.FC = () => {
   );
 }
 export default ArVrPlatformPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

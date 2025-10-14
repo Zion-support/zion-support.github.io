@@ -47,11 +47,3 @@ const CloudNativeSecurityPage: React.FC = () => {
   );
 }
 export default CloudNativeSecurityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

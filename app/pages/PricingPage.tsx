@@ -30,7 +30,3 @@ const PricingPage: React.FC = () => {
 };
 
 export default PricingPage;
-</meta>
-</titl>
-</h>
-</meta>

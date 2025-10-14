@@ -47,11 +47,3 @@ const TutorialsPage: React.FC = () => {
   );
 }
 export default TutorialsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

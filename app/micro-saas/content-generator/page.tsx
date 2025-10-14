@@ -47,11 +47,3 @@ const ContentGeneratorPage: React.FC = () => {
   );
 }
 export default ContentGeneratorPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const MicroSaasPage: React.FC = () => {
   );
 }
 export default MicroSaasPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

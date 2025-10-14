@@ -30,7 +30,3 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
-</meta>
-</titl>
-</h>
-</meta>

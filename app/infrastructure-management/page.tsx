@@ -47,11 +47,3 @@ const InfrastructureManagementPage: React.FC = () => {
   );
 }
 export default InfrastructureManagementPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

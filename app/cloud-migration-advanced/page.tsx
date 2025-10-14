@@ -47,11 +47,3 @@ const CloudMigrationAdvancedPage: React.FC = () => {
   );
 }
 export default CloudMigrationAdvancedPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

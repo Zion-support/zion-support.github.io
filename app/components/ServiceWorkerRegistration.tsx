@@ -54,7 +54,3 @@ export default function Page() {
     </>
   );
 }
-</meta>
-</titl>
-</h>
-</meta>

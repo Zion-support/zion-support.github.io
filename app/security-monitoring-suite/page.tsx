@@ -47,11 +47,3 @@ const SecurityMonitoringSuitePage: React.FC = () => {
   );
 }
 export default SecurityMonitoringSuitePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const FinancialReportingToolPage: React.FC = () => {
   );
 }
 export default FinancialReportingToolPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const IntelligentDatabaseMigrationPage: React.FC = () => {
   );
 }
 export default IntelligentDatabaseMigrationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

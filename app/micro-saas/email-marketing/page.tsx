@@ -47,11 +47,3 @@ const EmailMarketingPage: React.FC = () => {
   );
 }
 export default EmailMarketingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

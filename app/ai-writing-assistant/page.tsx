@@ -47,11 +47,3 @@ const AiWritingAssistantPage: React.FC = () => {
   );
 }
 export default AiWritingAssistantPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

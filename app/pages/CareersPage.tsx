@@ -130,25 +130,3 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
-
-</h>
-</Target>
-</Zap>
-</Users>
-</spa>
-</spa>
-</spa>
-</MapPin>
-</h>
-</Icon>
-</spa>
-</meta>
-</titl>
-</h>
-</h>
-</h>
-</h>
-</h>
-</h>
-</h>
-</meta>

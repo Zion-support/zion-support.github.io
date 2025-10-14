@@ -47,11 +47,3 @@ const SmartContractSecurityAuditPage: React.FC = () => {
   );
 }
 export default SmartContractSecurityAuditPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

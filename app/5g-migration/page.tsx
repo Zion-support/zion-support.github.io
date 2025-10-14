@@ -76,12 +76,7 @@ title="5G Migration Services - Zion Tech Group"
           </div>
         </div>
       </div>
-</div>
   )
 }
 
 export default FiveGMigrationPage
-
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>

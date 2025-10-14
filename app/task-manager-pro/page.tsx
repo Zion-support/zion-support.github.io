@@ -47,11 +47,3 @@ const TaskManagerProPage: React.FC = () => {
   );
 }
 export default TaskManagerProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

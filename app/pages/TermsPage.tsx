@@ -30,7 +30,3 @@ const TermsPage: React.FC = () => {
 };
 
 export default TermsPage;
-</meta>
-</titl>
-</h>
-</meta>

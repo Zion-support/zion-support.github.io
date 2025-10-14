@@ -47,11 +47,3 @@ const SmartInventoryOptimizerPage: React.FC = () => {
   );
 }
 export default SmartInventoryOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

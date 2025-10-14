@@ -47,11 +47,3 @@ const AiFashionDesignPage: React.FC = () => {
   );
 }
 export default AiFashionDesignPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

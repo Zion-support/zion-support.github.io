@@ -47,11 +47,3 @@ const ResourcesPage: React.FC = () => {
   );
 }
 export default ResourcesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

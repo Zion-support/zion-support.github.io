@@ -47,11 +47,3 @@ const NewsPage: React.FC = () => {
   );
 }
 export default NewsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

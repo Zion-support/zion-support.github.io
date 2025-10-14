@@ -30,7 +30,3 @@ const DemoPage: React.FC = () => {
 };
 
 export default DemoPage;
-</meta>
-</titl>
-</h>
-</meta>

@@ -215,14 +215,3 @@ const stats = [
 };
 
 export default AboutPage;
-</ArrowRightIcon>
-</di>
-</UserGroupIcon>
-</value>
-</di>
-</di>
-</meta>
-</titl>
-</h>
-</h>
-</meta>

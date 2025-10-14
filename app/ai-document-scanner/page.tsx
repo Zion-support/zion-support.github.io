@@ -47,11 +47,3 @@ const AiDocumentScannerPage: React.FC = () => {
   );
 }
 export default AiDocumentScannerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

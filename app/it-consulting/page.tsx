@@ -47,11 +47,3 @@ const ItConsultingPage: React.FC = () => {
   );
 }
 export default ItConsultingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

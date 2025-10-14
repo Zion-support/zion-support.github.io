@@ -47,11 +47,3 @@ const SoftwareDevelopmentPage: React.FC = () => {
   );
 }
 export default SoftwareDevelopmentPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

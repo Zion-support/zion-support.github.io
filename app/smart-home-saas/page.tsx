@@ -47,11 +47,3 @@ const SmartHomeSaasPage: React.FC = () => {
   );
 }
 export default SmartHomeSaasPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

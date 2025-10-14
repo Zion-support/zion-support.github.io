@@ -129,10 +129,3 @@ const DigitalTransformationPage: React.FC = () => {
 };
 
 export default DigitalTransformationPage;
-</CheckCircle>
-</h>
-</service>
-</meta>
-</titl>
-</h>
-</meta>

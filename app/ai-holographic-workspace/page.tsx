@@ -47,11 +47,3 @@ const AiHolographicWorkspacePage: React.FC = () => {
   );
 }
 export default AiHolographicWorkspacePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

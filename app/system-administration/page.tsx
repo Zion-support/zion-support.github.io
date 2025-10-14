@@ -47,11 +47,3 @@ const SystemAdministrationPage: React.FC = () => {
   );
 }
 export default SystemAdministrationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

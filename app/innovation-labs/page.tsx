@@ -47,11 +47,3 @@ const InnovationLabsPage: React.FC = () => {
   );
 }
 export default InnovationLabsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

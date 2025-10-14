@@ -47,11 +47,3 @@ const AiVideoGenerationPage: React.FC = () => {
   );
 }
 export default AiVideoGenerationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

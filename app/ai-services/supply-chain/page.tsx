@@ -47,11 +47,3 @@ const SupplyChainPage: React.FC = () => {
   );
 }
 export default SupplyChainPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

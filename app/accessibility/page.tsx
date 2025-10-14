@@ -47,11 +47,3 @@ const AccessibilityPage: React.FC = () => {
   );
 }
 export default AccessibilityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

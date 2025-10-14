@@ -47,11 +47,3 @@ const MarketingAutomationPage: React.FC = () => {
   );
 }
 export default MarketingAutomationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

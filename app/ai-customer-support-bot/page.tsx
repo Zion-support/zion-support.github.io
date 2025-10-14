@@ -47,11 +47,3 @@ const AiCustomerSupportBotPage: React.FC = () => {
   );
 }
 export default AiCustomerSupportBotPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

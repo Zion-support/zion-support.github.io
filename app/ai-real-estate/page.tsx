@@ -47,11 +47,3 @@ const AiRealEstatePage: React.FC = () => {
   );
 }
 export default AiRealEstatePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

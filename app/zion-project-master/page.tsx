@@ -47,11 +47,3 @@ const ZionProjectMasterPage: React.FC = () => {
   );
 }
 export default ZionProjectMasterPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

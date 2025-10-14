@@ -47,11 +47,3 @@ const AnalyticsPage: React.FC = () => {
   );
 }
 export default AnalyticsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

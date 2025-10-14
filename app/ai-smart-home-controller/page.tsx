@@ -47,11 +47,3 @@ const AiSmartHomeControllerPage: React.FC = () => {
   );
 }
 export default AiSmartHomeControllerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

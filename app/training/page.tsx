@@ -47,11 +47,3 @@ const TrainingPage: React.FC = () => {
   );
 }
 export default TrainingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

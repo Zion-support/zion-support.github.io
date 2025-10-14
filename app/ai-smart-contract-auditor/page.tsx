@@ -47,11 +47,3 @@ const AiSmartContractAuditorPage: React.FC = () => {
   );
 }
 export default AiSmartContractAuditorPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

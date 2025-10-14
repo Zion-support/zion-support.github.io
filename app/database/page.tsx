@@ -47,11 +47,3 @@ const DatabasePage: React.FC = () => {
   );
 }
 export default DatabasePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AiLeadScoringPage: React.FC = () => {
   );
 }
 export default AiLeadScoringPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

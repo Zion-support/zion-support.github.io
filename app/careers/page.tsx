@@ -47,11 +47,3 @@ const CareersPage: React.FC = () => {
   );
 }
 export default CareersPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

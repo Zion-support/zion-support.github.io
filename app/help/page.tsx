@@ -47,11 +47,3 @@ const HelpPage: React.FC = () => {
   );
 }
 export default HelpPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

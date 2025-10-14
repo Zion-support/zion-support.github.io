@@ -47,11 +47,3 @@ const ManagedItPage: React.FC = () => {
   );
 }
 export default ManagedItPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

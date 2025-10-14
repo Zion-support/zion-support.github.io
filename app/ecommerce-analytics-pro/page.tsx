@@ -47,11 +47,3 @@ const EcommerceAnalyticsProPage: React.FC = () => {
   );
 }
 export default EcommerceAnalyticsProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

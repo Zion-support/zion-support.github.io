@@ -47,11 +47,3 @@ const CloudSolutionsPage: React.FC = () => {
   );
 }
 export default CloudSolutionsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

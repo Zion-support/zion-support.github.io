@@ -47,11 +47,3 @@ const AiSmartSchedulerPage: React.FC = () => {
   );
 }
 export default AiSmartSchedulerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

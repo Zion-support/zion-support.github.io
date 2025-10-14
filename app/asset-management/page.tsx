@@ -47,11 +47,3 @@ const AssetManagementPage: React.FC = () => {
   );
 }
 export default AssetManagementPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

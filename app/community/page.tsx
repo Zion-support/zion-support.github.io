@@ -47,11 +47,3 @@ const CommunityPage: React.FC = () => {
   );
 }
 export default CommunityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

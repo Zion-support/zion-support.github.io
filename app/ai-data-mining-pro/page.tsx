@@ -47,11 +47,3 @@ const AiDataMiningProPage: React.FC = () => {
   );
 }
 export default AiDataMiningProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

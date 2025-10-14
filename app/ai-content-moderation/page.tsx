@@ -47,11 +47,3 @@ const AiContentModerationPage: React.FC = () => {
   );
 }
 export default AiContentModerationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

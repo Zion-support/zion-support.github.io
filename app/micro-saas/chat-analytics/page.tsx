@@ -47,11 +47,3 @@ const ChatAnalyticsPage: React.FC = () => {
   );
 }
 export default ChatAnalyticsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

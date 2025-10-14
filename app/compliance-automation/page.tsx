@@ -47,11 +47,3 @@ const ComplianceAutomationPage: React.FC = () => {
   );
 }
 export default ComplianceAutomationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

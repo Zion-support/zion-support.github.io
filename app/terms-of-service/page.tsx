@@ -47,11 +47,3 @@ const TermsOfServicePage: React.FC = () => {
   );
 }
 export default TermsOfServicePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

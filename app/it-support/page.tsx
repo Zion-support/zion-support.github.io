@@ -47,11 +47,3 @@ const ItSupportPage: React.FC = () => {
   );
 }
 export default ItSupportPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

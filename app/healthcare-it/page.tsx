@@ -47,11 +47,3 @@ const HealthcareItPage: React.FC = () => {
   );
 }
 export default HealthcareItPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

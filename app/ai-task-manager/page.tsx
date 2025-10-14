@@ -47,11 +47,3 @@ const AiTaskManagerPage: React.FC = () => {
   );
 }
 export default AiTaskManagerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

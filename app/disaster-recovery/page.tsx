@@ -47,11 +47,3 @@ const DisasterRecoveryPage: React.FC = () => {
   );
 }
 export default DisasterRecoveryPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

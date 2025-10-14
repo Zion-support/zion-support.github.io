@@ -47,11 +47,3 @@ const Ai3dGenerationPage: React.FC = () => {
   );
 }
 export default Ai3dGenerationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

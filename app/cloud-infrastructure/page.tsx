@@ -47,11 +47,3 @@ const CloudInfrastructurePage: React.FC = () => {
   );
 }
 export default CloudInfrastructurePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

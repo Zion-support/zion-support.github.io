@@ -47,11 +47,3 @@ const SolutionsPage: React.FC = () => {
   );
 }
 export default SolutionsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const DocumentProcessorPage: React.FC = () => {
   );
 }
 export default DocumentProcessorPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AiTranslationServicePage: React.FC = () => {
   );
 }
 export default AiTranslationServicePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

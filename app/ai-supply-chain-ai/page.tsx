@@ -47,11 +47,3 @@ const AiSupplyChainAiPage: React.FC = () => {
   );
 }
 export default AiSupplyChainAiPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

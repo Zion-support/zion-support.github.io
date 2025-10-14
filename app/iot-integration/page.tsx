@@ -47,11 +47,3 @@ const IotIntegrationPage: React.FC = () => {
   );
 }
 export default IotIntegrationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

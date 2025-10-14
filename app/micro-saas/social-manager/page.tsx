@@ -47,11 +47,3 @@ const SocialManagerPage: React.FC = () => {
   );
 }
 export default SocialManagerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

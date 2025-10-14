@@ -47,11 +47,3 @@ const ZionPerformanceMonitorPage: React.FC = () => {
   );
 }
 export default ZionPerformanceMonitorPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

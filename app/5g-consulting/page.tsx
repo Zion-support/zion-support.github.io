@@ -67,6 +67,3 @@ const FiveGConsultingPage = () => {
   );
 };
 export default FiveGConsultingPage
-
-</ArrowRight>
-</ArrowRight>

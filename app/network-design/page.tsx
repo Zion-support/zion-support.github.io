@@ -47,11 +47,3 @@ const NetworkDesignPage: React.FC = () => {
   );
 }
 export default NetworkDesignPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

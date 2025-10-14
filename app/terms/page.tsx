@@ -47,11 +47,3 @@ const TermsPage: React.FC = () => {
   );
 }
 export default TermsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

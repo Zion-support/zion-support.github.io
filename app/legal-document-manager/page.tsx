@@ -47,11 +47,3 @@ const LegalDocumentManagerPage: React.FC = () => {
   );
 }
 export default LegalDocumentManagerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

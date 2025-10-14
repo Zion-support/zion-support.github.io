@@ -47,11 +47,3 @@ const ItInfrastructurePage: React.FC = () => {
   );
 }
 export default ItInfrastructurePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

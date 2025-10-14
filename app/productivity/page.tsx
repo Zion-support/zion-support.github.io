@@ -47,11 +47,3 @@ const ProductivityPage: React.FC = () => {
   );
 }
 export default ProductivityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

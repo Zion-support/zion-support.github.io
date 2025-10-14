@@ -56,12 +56,3 @@ export const useAnalytics = () => {
 };
 
 export default AnalyticsProvider;
-</AnalyticsContext>
-</string>
-</string>
-</string>
-</AnalyticsProviderProps>
-</AnalyticsContextType>
-</string>
-</string>
-</string>

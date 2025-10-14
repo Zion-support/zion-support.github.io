@@ -37,6 +37,3 @@ import React, { Suspense } from 'react';
     }
     return this.props.children;
 export default ErrorBoundary;
-
-</Props>
-</h>

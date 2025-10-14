@@ -47,11 +47,3 @@ const SpecializedServicesPage: React.FC = () => {
   );
 }
 export default SpecializedServicesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const WebinarsPage: React.FC = () => {
   );
 }
 export default WebinarsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

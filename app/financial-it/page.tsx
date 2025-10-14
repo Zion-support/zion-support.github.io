@@ -47,11 +47,3 @@ const FinancialItPage: React.FC = () => {
   );
 }
 export default FinancialItPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

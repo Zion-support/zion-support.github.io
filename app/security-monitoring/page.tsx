@@ -47,11 +47,3 @@ const SecurityMonitoringPage: React.FC = () => {
   );
 }
 export default SecurityMonitoringPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

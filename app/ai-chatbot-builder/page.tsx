@@ -47,11 +47,3 @@ const AiChatbotBuilderPage: React.FC = () => {
   );
 }
 export default AiChatbotBuilderPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

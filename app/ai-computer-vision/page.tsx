@@ -47,11 +47,3 @@ const AiComputerVisionPage: React.FC = () => {
   );
 }
 export default AiComputerVisionPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

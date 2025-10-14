@@ -47,11 +47,3 @@ const SearchPage: React.FC = () => {
   );
 }
 export default SearchPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

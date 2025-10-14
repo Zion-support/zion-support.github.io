@@ -76,12 +76,7 @@ title="5G Deployment Services - Zion Tech Group"
           </div>
         </div>
       </div>
-</div>
   )
 }
 
 export default FiveGDeploymentPage
-
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>

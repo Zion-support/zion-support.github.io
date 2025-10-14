@@ -47,11 +47,3 @@ const HealthPage: React.FC = () => {
   );
 }
 export default HealthPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

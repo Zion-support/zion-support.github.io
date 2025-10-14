@@ -47,11 +47,3 @@ const AiContentGenerationPage: React.FC = () => {
   );
 }
 export default AiContentGenerationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

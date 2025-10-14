@@ -47,11 +47,3 @@ const AiPoweredDevopsPage: React.FC = () => {
   );
 }
 export default AiPoweredDevopsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

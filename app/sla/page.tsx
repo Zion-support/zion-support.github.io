@@ -47,11 +47,3 @@ const SlaPage: React.FC = () => {
   );
 }
 export default SlaPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

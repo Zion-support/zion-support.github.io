@@ -47,11 +47,3 @@ const GdprPage: React.FC = () => {
   );
 }
 export default GdprPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

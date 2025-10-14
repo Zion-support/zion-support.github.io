@@ -47,11 +47,3 @@ const DataEngineeringPage: React.FC = () => {
   );
 }
 export default DataEngineeringPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

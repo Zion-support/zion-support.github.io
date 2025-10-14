@@ -47,11 +47,3 @@ const FiveGIotSolutionsPage: React.FC = () => {
   );
 }
 export default FiveGIotSolutionsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

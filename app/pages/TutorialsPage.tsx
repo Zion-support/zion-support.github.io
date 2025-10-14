@@ -30,7 +30,3 @@ const TutorialsPage: React.FC = () => {
 };
 
 export default TutorialsPage;
-</meta>
-</titl>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const BusinessAppsPage: React.FC = () => {
   );
 }
 export default BusinessAppsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

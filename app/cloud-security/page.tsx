@@ -47,11 +47,3 @@ const CloudSecurityPage: React.FC = () => {
   );
 }
 export default CloudSecurityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

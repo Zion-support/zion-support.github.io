@@ -47,11 +47,3 @@ const CustomSoftwarePage: React.FC = () => {
   );
 }
 export default CustomSoftwarePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

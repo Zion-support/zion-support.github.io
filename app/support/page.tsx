@@ -47,11 +47,3 @@ const SupportPage: React.FC = () => {
   );
 }
 export default SupportPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

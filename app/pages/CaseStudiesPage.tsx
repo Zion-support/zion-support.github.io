@@ -153,16 +153,3 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
-</ArrowRight>
-</di>
-</result>
-</spa>
-</h>
-</di>
-</di>
-</meta>
-</titl>
-</h>
-</h>
-</h>
-</meta>

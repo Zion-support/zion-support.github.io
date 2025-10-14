@@ -47,11 +47,3 @@ const ApiDevelopmentPage: React.FC = () => {
   );
 }
 export default ApiDevelopmentPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

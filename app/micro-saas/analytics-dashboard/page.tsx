@@ -47,11 +47,3 @@ const AnalyticsDashboardPage: React.FC = () => {
   );
 }
 export default AnalyticsDashboardPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AiDataVisualizationPage: React.FC = () => {
   );
 }
 export default AiDataVisualizationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

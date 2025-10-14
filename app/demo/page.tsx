@@ -47,11 +47,3 @@ const DemoPage: React.FC = () => {
   );
 }
 export default DemoPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

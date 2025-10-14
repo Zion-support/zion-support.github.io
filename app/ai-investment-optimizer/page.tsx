@@ -47,11 +47,3 @@ const AiInvestmentOptimizerPage: React.FC = () => {
   );
 }
 export default AiInvestmentOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

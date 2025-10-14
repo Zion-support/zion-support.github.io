@@ -47,11 +47,3 @@ const ZionEcommerceOptimizerPage: React.FC = () => {
   );
 }
 export default ZionEcommerceOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

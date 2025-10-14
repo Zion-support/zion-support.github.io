@@ -47,11 +47,3 @@ const CaseStudiesPage: React.FC = () => {
   );
 }
 export default CaseStudiesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

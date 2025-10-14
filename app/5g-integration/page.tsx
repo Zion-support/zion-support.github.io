@@ -76,12 +76,7 @@ title="5G Integration Services - Zion Tech Group"
           </div>
         </div>
       </div>
-</div>
   )
 }
 
 export default FiveGIntegrationPage
-
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>

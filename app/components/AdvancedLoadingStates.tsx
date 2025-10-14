@@ -92,5 +92,3 @@ const AdvancedLoadingStates: React.FC = () => {
 };
 
 export default AdvancedLoadingStates;
-</di>
-</LoadingState>

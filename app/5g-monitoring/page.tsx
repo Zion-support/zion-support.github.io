@@ -66,11 +66,6 @@ title="5G Monitoring Services - Zion Tech Group"
             <ArrowRight className=" ml-2h-5w-5" />
           </Link>
       </div>
-</div>
   )
 }
 export default FiveGMonitoringPage
-
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>

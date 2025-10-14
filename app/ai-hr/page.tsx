@@ -47,11 +47,3 @@ const AiHrPage: React.FC = () => {
   );
 }
 export default AiHrPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

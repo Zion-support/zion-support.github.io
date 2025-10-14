@@ -47,11 +47,3 @@ const CloudConsultingPage: React.FC = () => {
   );
 }
 export default CloudConsultingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

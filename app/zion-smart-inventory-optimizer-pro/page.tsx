@@ -47,11 +47,3 @@ const ZionSmartInventoryOptimizerProPage: React.FC = () => {
   );
 }
 export default ZionSmartInventoryOptimizerProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

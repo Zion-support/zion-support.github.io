@@ -47,11 +47,3 @@ const BusinessIntelligencePage: React.FC = () => {
   );
 }
 export default BusinessIntelligencePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

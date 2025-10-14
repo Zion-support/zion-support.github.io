@@ -47,11 +47,3 @@ const ApiPage: React.FC = () => {
   );
 }
 export default ApiPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

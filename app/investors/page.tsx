@@ -47,11 +47,3 @@ const InvestorsPage: React.FC = () => {
   );
 }
 export default InvestorsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

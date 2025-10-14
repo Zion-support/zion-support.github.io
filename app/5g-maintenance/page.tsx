@@ -76,12 +76,7 @@ title="5G Maintenance Services - Zion Tech Group"
           </div>
         </div>
       </div>
-</div>
   )
 }
 
 export default FiveGMaintenancePage
-
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>

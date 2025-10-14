@@ -47,11 +47,3 @@ const ProjectManagementToolPage: React.FC = () => {
   );
 }
 export default ProjectManagementToolPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

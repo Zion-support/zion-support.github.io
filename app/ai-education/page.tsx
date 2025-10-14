@@ -47,11 +47,3 @@ const AiEducationPage: React.FC = () => {
   );
 }
 export default AiEducationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -30,7 +30,3 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
-</meta>
-</titl>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const EdgeComputingPage: React.FC = () => {
   );
 }
 export default EdgeComputingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

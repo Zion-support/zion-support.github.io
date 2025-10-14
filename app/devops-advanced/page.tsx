@@ -47,11 +47,3 @@ const DevopsAdvancedPage: React.FC = () => {
   );
 }
 export default DevopsAdvancedPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AppointmentSchedulerPage: React.FC = () => {
   );
 }
 export default AppointmentSchedulerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

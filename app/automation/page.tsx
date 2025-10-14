@@ -47,11 +47,3 @@ const AutomationPage: React.FC = () => {
   );
 }
 export default AutomationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

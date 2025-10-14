@@ -47,11 +47,3 @@ const ServicesPage: React.FC = () => {
   );
 }
 export default ServicesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

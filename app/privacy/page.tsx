@@ -47,11 +47,3 @@ const PrivacyPage: React.FC = () => {
   );
 }
 export default PrivacyPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

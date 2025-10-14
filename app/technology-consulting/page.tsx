@@ -47,11 +47,3 @@ const TechnologyConsultingPage: React.FC = () => {
   );
 }
 export default TechnologyConsultingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const EmailOptimizerPage: React.FC = () => {
   );
 }
 export default EmailOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

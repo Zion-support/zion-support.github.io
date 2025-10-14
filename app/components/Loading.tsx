@@ -13,5 +13,3 @@ const Loading: React.FC = () => {
 };
 
 export default Loading;
-</di>
-</h>

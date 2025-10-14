@@ -47,11 +47,3 @@ const DevopsPage: React.FC = () => {
   );
 }
 export default DevopsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

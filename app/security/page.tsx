@@ -47,11 +47,3 @@ const SecurityPage: React.FC = () => {
   );
 }
 export default SecurityPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

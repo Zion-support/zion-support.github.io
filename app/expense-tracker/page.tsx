@@ -47,11 +47,3 @@ const ExpenseTrackerPage: React.FC = () => {
   );
 }
 export default ExpenseTrackerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

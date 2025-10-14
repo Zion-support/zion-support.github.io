@@ -47,11 +47,3 @@ const SystemIntegrationPage: React.FC = () => {
   );
 }
 export default SystemIntegrationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

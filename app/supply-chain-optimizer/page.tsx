@@ -47,11 +47,3 @@ const SupplyChainOptimizerPage: React.FC = () => {
   );
 }
 export default SupplyChainOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

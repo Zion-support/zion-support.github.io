@@ -47,11 +47,3 @@ const HrAnalyticsPage: React.FC = () => {
   );
 }
 export default HrAnalyticsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

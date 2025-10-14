@@ -47,11 +47,3 @@ const SmartCityInfrastructurePage: React.FC = () => {
   );
 }
 export default SmartCityInfrastructurePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

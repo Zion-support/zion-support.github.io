@@ -47,11 +47,3 @@ const ContactPage: React.FC = () => {
   );
 }
 export default ContactPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

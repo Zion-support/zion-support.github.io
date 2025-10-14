@@ -47,11 +47,3 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
   );
 }
 export default AiHealthcareDiagnosticsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

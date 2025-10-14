@@ -47,11 +47,3 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
   );
 }
 export default AiSocialMediaSchedulerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

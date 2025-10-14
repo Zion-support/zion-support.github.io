@@ -47,11 +47,3 @@ const FraudDetectionPage: React.FC = () => {
   );
 }
 export default FraudDetectionPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

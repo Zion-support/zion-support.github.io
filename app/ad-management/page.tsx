@@ -47,11 +47,3 @@ const AdManagementPage: React.FC = () => {
   );
 }
 export default AdManagementPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

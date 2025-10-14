@@ -47,11 +47,3 @@ const QualityAssurancePage: React.FC = () => {
   );
 }
 export default QualityAssurancePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

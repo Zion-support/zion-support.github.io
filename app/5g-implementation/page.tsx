@@ -47,11 +47,3 @@ const FiveGImplementationPage: React.FC = () => {
   );
 }
 export default FiveGImplementationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

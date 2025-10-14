@@ -47,11 +47,3 @@ const AiCodeAssistantProPage: React.FC = () => {
   );
 }
 export default AiCodeAssistantProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

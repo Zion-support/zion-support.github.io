@@ -47,11 +47,3 @@ const FiveGSmartCitySolutionsPage: React.FC = () => {
   );
 }
 export default FiveGSmartCitySolutionsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

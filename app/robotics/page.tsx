@@ -47,11 +47,3 @@ const RoboticsPage: React.FC = () => {
   );
 }
 export default RoboticsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

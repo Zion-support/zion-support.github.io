@@ -95,13 +95,3 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
-</spa>
-</Mail>
-</spa>
-</Phone>
-</spa>
-</MapPin>
-</Icon>
-</X>
-</SidebarProps>
-</h>

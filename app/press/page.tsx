@@ -47,11 +47,3 @@ const PressPage: React.FC = () => {
   );
 }
 export default PressPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

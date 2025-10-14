@@ -47,11 +47,3 @@ const AiInsurancePage: React.FC = () => {
   );
 }
 export default AiInsurancePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const PenetrationTestingPage: React.FC = () => {
   );
 }
 export default PenetrationTestingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

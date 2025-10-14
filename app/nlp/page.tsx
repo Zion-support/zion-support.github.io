@@ -47,11 +47,3 @@ const NlpPage: React.FC = () => {
   );
 }
 export default NlpPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

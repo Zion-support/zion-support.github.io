@@ -47,11 +47,3 @@ const QuantumComputingSolutionsPage: React.FC = () => {
   );
 }
 export default QuantumComputingSolutionsPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

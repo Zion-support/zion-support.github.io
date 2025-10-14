@@ -47,11 +47,3 @@ const AiLegalResearchProPage: React.FC = () => {
   );
 }
 export default AiLegalResearchProPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

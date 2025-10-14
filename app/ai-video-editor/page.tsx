@@ -47,11 +47,3 @@ const AiVideoEditorPage: React.FC = () => {
   );
 }
 export default AiVideoEditorPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

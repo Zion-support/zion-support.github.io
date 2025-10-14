@@ -111,8 +111,3 @@ const FiveGOptimizationPage: React.FC = () => {
 };
 
 export default FiveGOptimizationPage;
-</ArrowRight>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</ArrowRight>

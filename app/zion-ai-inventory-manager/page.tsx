@@ -47,11 +47,3 @@ const ZionAiInventoryManagerPage: React.FC = () => {
   );
 }
 export default ZionAiInventoryManagerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const ManagedServicesPage: React.FC = () => {
   );
 }
 export default ManagedServicesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

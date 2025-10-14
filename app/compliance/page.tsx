@@ -47,11 +47,3 @@ const CompliancePage: React.FC = () => {
   );
 }
 export default CompliancePage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

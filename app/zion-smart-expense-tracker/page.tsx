@@ -47,11 +47,3 @@ const ZionSmartExpenseTrackerPage: React.FC = () => {
   );
 }
 export default ZionSmartExpenseTrackerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

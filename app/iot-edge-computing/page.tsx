@@ -47,11 +47,3 @@ const IotEdgeComputingPage: React.FC = () => {
   );
 }
 export default IotEdgeComputingPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

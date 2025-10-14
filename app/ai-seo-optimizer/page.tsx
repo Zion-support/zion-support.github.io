@@ -47,11 +47,3 @@ const AiSeoOptimizerPage: React.FC = () => {
   );
 }
 export default AiSeoOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

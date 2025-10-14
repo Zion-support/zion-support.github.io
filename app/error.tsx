@@ -20,7 +20,3 @@ const ErrorPage: React.FC = () => {
 };
 
 export default ErrorPage;
-
-</titl>
-</h>
-</meta>

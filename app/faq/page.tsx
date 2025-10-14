@@ -47,11 +47,3 @@ const FaqPage: React.FC = () => {
   );
 }
 export default FaqPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

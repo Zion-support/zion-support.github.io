@@ -47,11 +47,3 @@ const AiVideoAnalysisPage: React.FC = () => {
   );
 }
 export default AiVideoAnalysisPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

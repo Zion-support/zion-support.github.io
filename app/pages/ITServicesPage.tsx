@@ -129,10 +129,3 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ITServicesPage;
-</di>
-</h>
-</service>
-</meta>
-</titl>
-</h>
-</meta>

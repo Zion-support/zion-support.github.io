@@ -47,11 +47,3 @@ const AiSocialMediaManagerPage: React.FC = () => {
   );
 }
 export default AiSocialMediaManagerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AiAccountingAssistantPage: React.FC = () => {
   );
 }
 export default AiAccountingAssistantPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

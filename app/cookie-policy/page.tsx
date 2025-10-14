@@ -47,11 +47,3 @@ const CookiePolicyPage: React.FC = () => {
   );
 }
 export default CookiePolicyPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

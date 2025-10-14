@@ -47,11 +47,3 @@ const WebDevelopmentPage: React.FC = () => {
   );
 }
 export default WebDevelopmentPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

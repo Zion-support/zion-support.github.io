@@ -47,11 +47,3 @@ const StatusPage: React.FC = () => {
   );
 }
 export default StatusPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

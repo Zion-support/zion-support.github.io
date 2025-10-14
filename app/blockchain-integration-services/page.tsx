@@ -47,11 +47,3 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
   );
 }
 export default BlockchainIntegrationServicesPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

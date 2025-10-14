@@ -47,11 +47,3 @@ const LandingPageBuilderPage: React.FC = () => {
   );
 }
 export default LandingPageBuilderPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -47,11 +47,3 @@ const AiTransportationPage: React.FC = () => {
   );
 }
 export default AiTransportationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

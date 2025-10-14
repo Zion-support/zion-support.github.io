@@ -47,11 +47,3 @@ const BlockchainWeb3Page: React.FC = () => {
   );
 }
 export default BlockchainWeb3Page;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

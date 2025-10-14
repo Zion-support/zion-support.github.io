@@ -47,11 +47,3 @@ const AiMlPlatformPage: React.FC = () => {
   );
 }
 export default AiMlPlatformPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

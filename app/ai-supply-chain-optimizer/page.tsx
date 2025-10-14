@@ -47,11 +47,3 @@ const AiSupplyChainOptimizerPage: React.FC = () => {
   );
 }
 export default AiSupplyChainOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

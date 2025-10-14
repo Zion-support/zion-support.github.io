@@ -47,11 +47,3 @@ const WorkflowAutomationPage: React.FC = () => {
   );
 }
 export default WorkflowAutomationPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

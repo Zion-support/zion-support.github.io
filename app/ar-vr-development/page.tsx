@@ -47,11 +47,3 @@ const ArVrDevelopmentPage: React.FC = () => {
   );
 }
 export default ArVrDevelopmentPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

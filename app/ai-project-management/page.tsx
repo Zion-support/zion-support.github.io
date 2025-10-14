@@ -47,11 +47,3 @@ const AiProjectManagementPage: React.FC = () => {
   );
 }
 export default AiProjectManagementPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

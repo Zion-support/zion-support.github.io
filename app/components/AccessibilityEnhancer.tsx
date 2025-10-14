@@ -128,11 +128,3 @@ const AccessibilityEnhancer: React.FC = () => {
 };
 
 export default AccessibilityEnhancer;
-</optio>
-</optio>
-</optio>
-</optio>
-</labe>
-</spa>
-</spa>
-</h>

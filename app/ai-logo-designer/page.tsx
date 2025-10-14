@@ -47,11 +47,3 @@ const AiLogoDesignerPage: React.FC = () => {
   );
 }
 export default AiLogoDesignerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>

@@ -230,26 +230,3 @@ const services = [
 };
 
 export default Footer;
-
-</Lin>
-</Lin>
-</spa>
-</HeartIcon>
-</spa>
-</ArrowRightIcon>
-</ArrowRightIcon>
-</ArrowRightIcon>
-</ArrowRightIcon>
-</ArrowRightIcon>
-</spa>
-</MapPinIcon>
-</spa>
-</EnvelopeIcon>
-</spa>
-</PhoneIcon>
-</spa>
-</spa>
-</h>
-</h>
-</h>
-</h>

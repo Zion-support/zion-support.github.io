@@ -44,9 +44,3 @@ const AiSolutionsPage: React.FC = () => {
 };
 
 export default AiSolutionsPage;
-</Zap>
-</Brain>
-</titl>
-</h>
-</h>
-</meta>

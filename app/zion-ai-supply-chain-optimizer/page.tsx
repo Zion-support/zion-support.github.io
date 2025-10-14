@@ -47,11 +47,3 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
   );
 }
 export default ZionAiSupplyChainOptimizerPage;
-
-</h3>
-</h3>
-</meta>
-</titl>
-</p>
-</h>
-</meta>
