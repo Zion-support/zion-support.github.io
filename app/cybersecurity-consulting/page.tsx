@@ -46,8 +46,6 @@ const CybersecurityConsultingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CybersecurityConsultingPage;
 

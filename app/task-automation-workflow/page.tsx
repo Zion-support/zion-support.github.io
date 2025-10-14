@@ -46,8 +46,6 @@ const TaskAutomationWorkflowPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default TaskAutomationWorkflowPage;
 

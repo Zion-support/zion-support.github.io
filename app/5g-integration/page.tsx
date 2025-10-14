@@ -6,17 +6,14 @@ import { Link } from 'react-router-dom';
 const FiveGIntegrationPage = () => {
   const services = [
     {
-      title: '5G System Integration';,
-      description: 'Seamless integration of 5G technology with existing systems.';
-    },
+      title: '5G System Integration',
+      description: 'Seamless integration of 5G technology with existing systems.',},
     {
-      title: 'Security Integration';,
-      description: 'Comprehensive security integration for 5G networks.';
-    },
+      title: 'Security Integration',
+      description: 'Comprehensive security integration for 5G networks.',},
     {
-      title: 'Team Training';,
-      description: 'Expert training for 5G integration and maintenance.';
-    }
+      title: 'Team Training',
+      description: 'Expert training for 5G integration and maintenance.',}
   ]
 
   return (
@@ -50,19 +47,19 @@ title="5G Integration Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
-          ))}
+          ,)),}
         </div>
 
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700"
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -70,7 +67,5 @@ title="5G Integration Services - Zion Tech Group"
         </div>
       </div>
 </div>
-  )
-}
-
+  }
 export default FiveGIntegrationPage

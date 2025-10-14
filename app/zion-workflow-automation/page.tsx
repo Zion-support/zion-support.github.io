@@ -46,8 +46,6 @@ const ZionWorkflowAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionWorkflowAutomationPage;
 

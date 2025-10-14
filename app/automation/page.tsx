@@ -46,8 +46,6 @@ const AutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AutomationPage;
 

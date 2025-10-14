@@ -33,7 +33,7 @@ export default function AISolutionsPage() {
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
       href: "/ai-machine-learning"
-    },
+    ,},
     {
       title: "Natural Language Processing",
       description: "Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.",
@@ -51,7 +51,7 @@ export default function AISolutionsPage() {
       benefits: ["Multi-language support", "High accuracy", "Real-time processing"],
       useCases: ["Customer service", "Content analysis", "Language translation"],
       href: "/ai-nlp"
-    },
+    ,},
     {
       title: "Computer Vision",
       description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.",
@@ -69,7 +69,7 @@ export default function AISolutionsPage() {
       benefits: ["High precision", "Real-time processing", "Custom models"],
       useCases: ["Security systems", "Quality control", "Medical imaging"],
       href: "/ai-computer-vision"
-    },
+    ,},
     {
       title: "Predictive Analytics",
       description: "Data-driven insights and forecasting solutions to help you make informed business decisions.",
@@ -87,7 +87,7 @@ export default function AISolutionsPage() {
       benefits: ["Accurate predictions", "Real-time insights", "Custom models"],
       useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],
       href: "/ai-predictive-analytics"
-    },
+    ,},
     {
       title: "AI Chatbots",
       description: "Intelligent conversational agents that provide 24/7 customer support and automate interactions.",
@@ -105,7 +105,7 @@ export default function AISolutionsPage() {
       benefits: ["24/7 availability", "Instant responses", "Scalable"],
       useCases: ["Customer support", "Lead generation", "FAQ automation"],
       href: "/ai-chatbots"
-    },
+    ,},
     {
       title: "Content Generation",
       description: "AI-powered content creation for blogs, social media, marketing materials, and documentation.",
@@ -123,7 +123,7 @@ export default function AISolutionsPage() {
       benefits: ["High-quality content", "Brand consistency", "Time savings"],
       useCases: ["Content marketing", "Social media", "Documentation"],
       href: "/ai-content-generation"
-    },
+    ,},
     {
       title: "Data Analytics",
       description: "Advanced data analysis and visualization solutions to extract meaningful insights from your data.",
@@ -141,7 +141,7 @@ export default function AISolutionsPage() {
       benefits: ["Comprehensive insights", "Real-time data", "Custom reports"],
       useCases: ["Business intelligence", "Performance tracking", "Data-driven decisions"],
       href: "/ai-data-analytics"
-    },
+    ,},
     {
       title: "Process Automation",
       description: "Intelligent automation solutions to streamline workflows and reduce manual tasks.",
@@ -159,7 +159,7 @@ export default function AISolutionsPage() {
       benefits: ["Efficiency gains", "Cost reduction", "Error reduction"],
       useCases: ["Document processing", "Workflow optimization", "Quality control"],
       href: "/ai-process-automation"
-    }
+    ,}
   ];
 
   return (
@@ -188,8 +188,8 @@ export default function AISolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
+              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover: border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color,} rounded-lg flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -210,18 +210,18 @@ export default function AISolutionsPage() {
 
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                  <div className="text-gray-400 text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
+                  <div className="text-gray-400 text-sm mb-4">Benefits: {service.benefits.join(&apos;, &apos;)}</div>
                 </div>
 
                 <Link
                   to={service.href}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Learn More
                   <ArrowRightIcon className="w-4 h-4" />
                 </Link>
               </div>
-            ))}
+            ,)),}
           </div>
         </div>
       </section>
@@ -229,11 +229,11 @@ export default function AISolutionsPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -252,5 +252,4 @@ export default function AISolutionsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  }

@@ -46,8 +46,6 @@ const ComputerVisionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ComputerVisionPage;
 

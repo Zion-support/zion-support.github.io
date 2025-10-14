@@ -46,8 +46,6 @@ const ChatAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ChatAnalyticsPage;
 

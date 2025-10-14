@@ -46,8 +46,6 @@ const SmartExpenseCategorizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SmartExpenseCategorizerPage;
 

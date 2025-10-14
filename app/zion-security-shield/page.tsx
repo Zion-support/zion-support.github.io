@@ -46,8 +46,6 @@ const ZionSecurityShieldPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionSecurityShieldPage;
 

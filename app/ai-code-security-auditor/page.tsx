@@ -46,8 +46,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCodeSecurityAuditorPage;
 

@@ -46,8 +46,6 @@ const AiExpenseTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiExpenseTrackerPage;
 

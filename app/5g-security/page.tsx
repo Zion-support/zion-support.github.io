@@ -13,6 +13,5 @@ const FiveGSecurityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ),}
 export default FiveGSecurityPage;

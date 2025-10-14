@@ -46,8 +46,6 @@ const SupplyChainPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SupplyChainPage;
 

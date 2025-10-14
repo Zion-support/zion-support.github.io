@@ -46,8 +46,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiAutonomousSystemsPage;
 

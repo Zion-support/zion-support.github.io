@@ -46,8 +46,6 @@ const AiCyberDefenseMatrixPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCyberDefenseMatrixPage;
 

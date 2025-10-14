@@ -46,8 +46,6 @@ const AiSeoOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSeoOptimizerPage;
 

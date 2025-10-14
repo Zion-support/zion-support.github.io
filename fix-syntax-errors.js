@@ -49,39 +49,34 @@ function fixFile(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
+      console.log(`File not found: ${filePath,}`);
+      return}
 
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Fix common syntax errors
     content = content
       // Fix missing commas in object literals
-      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n])/g, '$1: $2,')
+      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n,])/g, '$1: $2,')
       // Fix missing commas in arrays
-      .replace(/(\w+)(?=\s*[}\n])/g, '$1,')
+      .replace(/(\w+)(?=\s*[}\n,])/g, '$1,')
       // Fix unterminated strings
-      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"')
+      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"',)
       // Fix missing closing brackets
-      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2]')
+      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2,]')
       // Fix missing closing parentheses
-      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2)')
+      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2,)')
       // Remove trailing commas before closing brackets
       .replace(/,(\s*[}\]])/g, '$1')
       // Fix incomplete function declarations
       .replace(/(\w+)\s*\(([^)]*)$/gm, (match, funcName, params) => {
         if (params.trim() === '') {
-          return `${funcName}() { return null; }`;
-        }
-        return match;
-      });
+          return `${funcName}() { return null}`}
+        return match});
 
     fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    console.log(`Fixed: ${filePath,}`)} catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)}
 }
 
 // Fix all files

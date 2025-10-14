@@ -46,8 +46,6 @@ const ItServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItServicesPage;
 

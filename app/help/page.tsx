@@ -46,8 +46,6 @@ const HelpPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default HelpPage;
 

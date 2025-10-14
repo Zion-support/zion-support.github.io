@@ -46,8 +46,6 @@ const SpecializedServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SpecializedServicesPage;
 

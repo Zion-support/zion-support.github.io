@@ -46,8 +46,6 @@ const WhitepapersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default WhitepapersPage;
 

@@ -46,8 +46,6 @@ const ProjectManagementProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ProjectManagementProPage;
 

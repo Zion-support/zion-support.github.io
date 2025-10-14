@@ -46,8 +46,6 @@ const AiHrRecruitmentProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiHrRecruitmentProPage;
 

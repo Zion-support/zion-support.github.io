@@ -46,8 +46,6 @@ const SecurityMonitoringPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SecurityMonitoringPage;
 

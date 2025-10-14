@@ -46,8 +46,6 @@ const LegalDocumentManagerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default LegalDocumentManagerPage;
 

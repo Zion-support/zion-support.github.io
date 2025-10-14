@@ -25,7 +25,7 @@ const PerformanceMonitor: React.FC = () => {
     ttfb: null,
     loadTime: 0,
     fid: null
-  });
+  ,});
 
   useEffect(() => {
     // Only run in production
@@ -34,18 +34,17 @@ const PerformanceMonitor: React.FC = () => {
     const handleMetric = (metric: unknown) => {
       setMetrics(prev => ({
         ...prev,
-        [(metric as { name: string; value: number }).name]: (metric as { name: string; value: number }).value
+        [(metric as { name: string, value: number ,}).name,]: (metric as { name: string, value: number ,}).value
       }));
 
       // Send to analytics service
       if (typeof window !== 'undefined' && (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
-        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', (metric as { name: string; value: number; id: string }).name, {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', (metric as { name: string, value: number; id: string ,}).name, {
           event_category: 'Web Vitals',
-          value: Math.round((metric as { name: string; value: number; id: string }).value),
-          event_label: (metric as { name: string; value: number; id: string }).id,
+          value: Math.round((metric as { name: string, value: number; id: string ,}).value),
+          event_label: (metric as { name: string, value: number; id: string ,}).id,
           non_interaction: true,
-        });
-      }
+        })}
     }
     onCLS(handleMetric);
     onINP(handleMetric);
@@ -56,49 +55,48 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+    return null}
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-sm max-w-xs z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2),}ms` : &apos;Loading...&apos}</div>
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2),}ms` : &apos;Loading...&apos}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2),}ms` : &apos;Loading...&apos}</div>
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4),}` : &apos;Loading...&apos}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2),}ms` : &apos;Loading...&apos}</div>
       </div>
       
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp || 0)}>
-            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
+          <span>FCP: </span>
+          <span className={getScoreColor(metrics.fcp || 0),}>
+            {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : &apos;N/A&apos}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp || 0)}>
-            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
+          <span>LCP: </span>
+          <span className={getScoreColor(metrics.lcp || 0),}>
+            {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : &apos;N/A&apos}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid || 0)}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          <span>FID: </span>
+          <span className={getScoreColor(metrics.fid || 0),}>
+            {metrics.fid ? `${Math.round(metrics.fid)}ms` : &apos;N/A&apos}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls || 0)}>
-            {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+          <span>CLS: </span>
+          <span className={getScoreColor(metrics.cls || 0),}>
+            {metrics.cls ? metrics.cls.toFixed(3) : &apos;N/A&apos}
           </span>
         </div>
         <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb || 0)}>
-            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
+          <span>TTFB: </span>
+          <span className={getScoreColor(metrics.ttfb || 0),}>
+            {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : &apos;N/A&apos}
           </span>
         </div>
       </div>
@@ -109,7 +107,6 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  ),};
 
 export default PerformanceMonitor;

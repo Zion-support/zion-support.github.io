@@ -46,8 +46,6 @@ const AiDocumentProcessorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDocumentProcessorPage;
 

@@ -46,8 +46,6 @@ const AiFitnessCoachPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiFitnessCoachPage;
 

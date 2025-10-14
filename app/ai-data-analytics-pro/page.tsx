@@ -46,8 +46,6 @@ const AiDataAnalyticsProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDataAnalyticsProPage;
 

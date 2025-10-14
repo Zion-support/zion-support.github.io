@@ -46,8 +46,6 @@ const WorkflowAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default WorkflowAutomationPage;
 

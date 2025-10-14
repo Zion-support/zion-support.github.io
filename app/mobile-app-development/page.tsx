@@ -46,8 +46,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default MobileAppDevelopmentPage;
 

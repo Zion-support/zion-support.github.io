@@ -46,8 +46,6 @@ const NewsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default NewsPage;
 

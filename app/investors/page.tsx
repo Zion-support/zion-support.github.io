@@ -46,8 +46,6 @@ const InvestorsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default InvestorsPage;
 

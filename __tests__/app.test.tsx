@@ -7,8 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 // Mock the lazy loading for testing
 jest.mock('react', () => ({
   ...jest.requireActual('react'),
-  lazy: (fn) => fn()
-}));
+  lazy: (fn,) => fn()
+,}));
 
 import HomePage from '../app/page';
 
@@ -21,8 +21,7 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument()});
   
   it('renders navigation links', () => {
     render(
@@ -32,6 +31,5 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Get Started Today')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Get Started Today')).toBeInTheDocument()});
 });

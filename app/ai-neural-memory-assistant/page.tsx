@@ -46,8 +46,6 @@ const AiNeuralMemoryAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiNeuralMemoryAssistantPage;
 

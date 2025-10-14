@@ -46,8 +46,6 @@ const DataAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DataAnalyticsPage;
 

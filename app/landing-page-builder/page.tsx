@@ -46,8 +46,6 @@ const LandingPageBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default LandingPageBuilderPage;
 

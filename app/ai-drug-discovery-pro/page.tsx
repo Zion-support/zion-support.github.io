@@ -46,8 +46,6 @@ const AiDrugDiscoveryProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDrugDiscoveryProPage;
 

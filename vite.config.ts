@@ -58,17 +58,17 @@ export default defineConfig({
         toplevel: true,
         properties: {
           regex: /^_/
-        }
+        ,}
       },
       format: {
         comments: false,
         ascii_only: true
-      }
+      ,}
     },
     // Enhanced build optimizations
     rollupOptions: {
       output: {
-        manualChunks: (id: string) => {
+        manualChunks: (id: string,) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
             // React ecosystem
@@ -88,7 +88,7 @@ export default defineConfig({
           }
           return undefined;
         },
-        assetFileNames: (assetInfo) => {
+        assetFileNames: (assetInfo,) => {
           if (
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)

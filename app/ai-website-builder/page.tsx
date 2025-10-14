@@ -46,8 +46,6 @@ const AiWebsiteBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiWebsiteBuilderPage;
 

@@ -46,8 +46,6 @@ const ZionAiMobileAppBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiMobileAppBuilderPage;
 

@@ -46,8 +46,6 @@ const ECommerceDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ECommerceDevelopmentPage;
 

@@ -46,8 +46,6 @@ const CustomerRelationshipManagerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CustomerRelationshipManagerPage;
 

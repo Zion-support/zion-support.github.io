@@ -46,8 +46,6 @@ const AiEmailAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiEmailAssistantPage;
 

@@ -46,8 +46,6 @@ const ZionAiDataCleanerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiDataCleanerPage;
 

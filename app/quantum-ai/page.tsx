@@ -46,8 +46,6 @@ const QuantumAiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default QuantumAiPage;
 

@@ -46,8 +46,6 @@ const AppointmentSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AppointmentSchedulerPage;
 

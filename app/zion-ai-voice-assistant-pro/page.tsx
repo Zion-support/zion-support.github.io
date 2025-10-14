@@ -46,7 +46,5 @@ const ZionAiVoiceAssistantProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiVoiceAssistantProPage;

@@ -46,8 +46,6 @@ const ZionAiProjectManagerProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiProjectManagerProPage;
 

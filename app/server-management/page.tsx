@@ -46,8 +46,6 @@ const ServerManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ServerManagementPage;
 

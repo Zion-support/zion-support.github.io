@@ -46,8 +46,6 @@ const AiHrPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiHrPage;
 

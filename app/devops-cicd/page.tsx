@@ -46,8 +46,6 @@ const DevopsCicdPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DevopsCicdPage;
 

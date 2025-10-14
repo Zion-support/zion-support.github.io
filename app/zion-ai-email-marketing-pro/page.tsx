@@ -46,8 +46,6 @@ const ZionAiEmailMarketingProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiEmailMarketingProPage;
 

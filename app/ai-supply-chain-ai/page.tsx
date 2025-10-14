@@ -46,8 +46,6 @@ const AiSupplyChainAiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSupplyChainAiPage;
 

@@ -46,8 +46,6 @@ const AiAutomationSuitePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiAutomationSuitePage;
 

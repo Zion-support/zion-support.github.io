@@ -46,8 +46,6 @@ const FraudDetectionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default FraudDetectionPage;
 

@@ -46,8 +46,6 @@ const BlockchainPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default BlockchainPage;
 

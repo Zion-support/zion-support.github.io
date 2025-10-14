@@ -46,8 +46,6 @@ const DatabaseServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DatabaseServicesPage;
 

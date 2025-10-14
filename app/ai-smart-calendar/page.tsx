@@ -46,8 +46,6 @@ const AiSmartCalendarPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSmartCalendarPage;
 

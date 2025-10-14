@@ -46,8 +46,6 @@ const ArVrSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ArVrSolutionsPage;
 

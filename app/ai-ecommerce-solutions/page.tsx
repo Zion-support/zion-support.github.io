@@ -46,8 +46,6 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiEcommerceSolutionsPage;
 

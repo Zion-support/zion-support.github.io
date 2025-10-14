@@ -46,8 +46,6 @@ const CloudInfrastructureManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CloudInfrastructureManagementPage;
 

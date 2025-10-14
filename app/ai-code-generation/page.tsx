@@ -46,8 +46,6 @@ const AiCodeGenerationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCodeGenerationPage;
 

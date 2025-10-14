@@ -46,8 +46,6 @@ const ItProjectManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItProjectManagementPage;
 

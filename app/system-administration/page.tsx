@@ -46,8 +46,6 @@ const SystemAdministrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SystemAdministrationPage;
 

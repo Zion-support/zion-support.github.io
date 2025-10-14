@@ -8,14 +8,12 @@ if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
     window.performance = window.performance || {};
-    window.performance.now = window.performance.now || (() => Date.now());
-  }
+    window.performance.now = window.performance.now || (() => Date.now())}
 }
 
 const container = document.getElementById('root');
 if (!container) {
-  throw new Error('Root element not found');
-}
+  throw new Error('Root element not found')}
 
 const root = createRoot(container);
 
@@ -32,13 +30,11 @@ if ("serviceWorker" in navigator) {
       .register("/sw.js")
       .then((_registration) => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Service Worker registered successfully');
-        }
+          console.warn('Service Worker registered successfully')}
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Service Worker registration failed');
-        }
+          console.warn('Service Worker registration failed')}
       });
   });
 }

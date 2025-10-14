@@ -46,8 +46,6 @@ const CrmLitePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CrmLitePage;
 

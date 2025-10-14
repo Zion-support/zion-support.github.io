@@ -46,8 +46,6 @@ const SystemIntegrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SystemIntegrationPage;
 

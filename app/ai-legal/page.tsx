@@ -46,8 +46,6 @@ const AiLegalPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiLegalPage;
 

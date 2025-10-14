@@ -46,8 +46,6 @@ const ZionAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAnalyticsPage;
 

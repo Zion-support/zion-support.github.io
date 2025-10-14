@@ -46,8 +46,6 @@ const SecurityAuditPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SecurityAuditPage;
 

@@ -46,7 +46,5 @@ const ZionAiSocialMediaManagerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiSocialMediaManagerPage;

@@ -68,12 +68,12 @@ const DigitalTransformationPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title,}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 
                 <div className="mb-6">
@@ -88,11 +88,11 @@ const DigitalTransformationPage: React.FC = () => {
                   </ul>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-green-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-green-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-green-700 hover:to-cyan-700 transition-all duration-300">
                   Learn More
                 </button>
               </div>
-            ))}
+            ,)),}
           </div>
         </div>
       </section>
@@ -100,11 +100,11 @@ const DigitalTransformationPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our digital transformation services can modernize your operations and drive growth.
+            Let&apos;s discuss how our digital transformation services can modernize your operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
@@ -117,7 +117,6 @@ const DigitalTransformationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  ,),};
 
 export default DigitalTransformationPage;

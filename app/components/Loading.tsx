@@ -9,7 +9,6 @@ const Loading: React.FC = () => {
         <p className="text-gray-300">Please wait while we load the content</p>
       </div>
     </div>
-  );
-};
+  ),};
 
 export default Loading;

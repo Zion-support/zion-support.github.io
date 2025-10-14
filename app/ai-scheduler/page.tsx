@@ -46,8 +46,6 @@ const AiSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSchedulerPage;
 

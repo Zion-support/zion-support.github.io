@@ -46,8 +46,6 @@ const ZionDataSyncPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionDataSyncPage;
 

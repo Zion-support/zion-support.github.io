@@ -46,8 +46,6 @@ const AiImageRecognitionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiImageRecognitionPage;
 

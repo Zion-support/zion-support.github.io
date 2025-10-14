@@ -46,8 +46,6 @@ const ZionAiCybersecuritySuiteProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCybersecuritySuiteProPage;
 

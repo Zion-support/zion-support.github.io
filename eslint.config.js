@@ -63,11 +63,11 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true ,},
       ],
       '@typescript-eslint/no-unused-vars': ['error', { 
         "argsIgnorePattern": "^_", 
-        "varsIgnorePattern": "^[A-Z]" 
+        "varsIgnorePattern": "^[A-Z,]" 
       }],
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -94,7 +94,7 @@ export default tseslint.config(
         URL: 'readonly',
         location: 'readonly',
         clients: 'readonly'
-      }
+      ,}
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',
@@ -111,7 +111,7 @@ export default tseslint.config(
         console: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly'
-      }
+      ,}
     },
     rules: {
       '@typescript-eslint/no-unused-vars': 'off',

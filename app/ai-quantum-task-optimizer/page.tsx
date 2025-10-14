@@ -46,8 +46,6 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiQuantumTaskOptimizerPage;
 

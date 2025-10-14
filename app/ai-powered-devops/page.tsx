@@ -46,8 +46,6 @@ const AiPoweredDevopsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiPoweredDevopsPage;
 

@@ -1,34 +1,34 @@
 export const validation = {
-  email: (email: string) => {
+  email: (email: string,) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
-  },
+  ,},
   
-  phone: (phone: string) => {
-    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
+  phone: (phone: string,) => {
+    const phoneRegex = /^[+]?[1-9,][\d,]{0,15}$/
     return phoneRegex.test(phone.replace(/\s/g, ''))
   },
   
-  required: (value: unknown) => {
+  required: (value: unknown,) => {
     return value !== null && value !== undefined && value !== '';
-  required: (value: any) => {
-  required: (value: unknown) => {
+  required: (value: any,) => {
+  required: (value: unknown,) => {
     return value !== null && value !== undefined && value !== ''
-  },
+  ,},
   
-  minLength: (value: string, min: number) => {
+  minLength: (value: string, min: number,) => {
     return value.length >= min
-  },
+  ,},
   
-  maxLength: (value: string, max: number) => {
+  maxLength: (value: string, max: number,) => {
     return value.length <= max
-  },
+  ,},
   
-  url: (url: string) => {
+  url: (url: string,) => {
     try {
       new URL(url)
       return true
-    } catch {
+    ,} catch {
       return false
     }
   }

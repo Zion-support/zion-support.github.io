@@ -46,8 +46,6 @@ const ZionAiCodeReviewerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCodeReviewerPage;
 

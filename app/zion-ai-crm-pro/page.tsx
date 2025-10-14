@@ -46,7 +46,5 @@ const ZionAiCrmProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCrmProPage;

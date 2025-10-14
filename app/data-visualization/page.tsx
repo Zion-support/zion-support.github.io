@@ -46,8 +46,6 @@ const DataVisualizationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DataVisualizationPage;
 

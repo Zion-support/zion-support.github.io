@@ -46,8 +46,6 @@ const AiIntegrationServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiIntegrationServicesPage;
 

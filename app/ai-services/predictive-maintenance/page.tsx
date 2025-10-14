@@ -46,8 +46,6 @@ const PredictiveMaintenancePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default PredictiveMaintenancePage;
 

@@ -10,14 +10,14 @@ const __dirname = path.dirname(__filename)
             <p className="text-xl text-gray-300 mb-8">
               Contact us today to learn more about our services and how they can benefit your organization.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover: bg-blue-700 transition-colors">
               Get Started
             </button>
           </div>
         </section>
       </div>
 import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import { Helmet ,} from 'react-helmet-async';'
 export default function performance-optimizer.js() {
   return (}
     <>
@@ -31,7 +31,7 @@ export default function performance-optimizer.js() {
               performance-optimizer.js
             <p className="text-xl text-gray-600 mb-8">"
               Professional performance-optimizer.js services by Zion Tech Group.
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">"
                   Expert Solutions
@@ -48,8 +48,7 @@ export default function performance-optimizer.js() {
                 <p className="text-purple-700">"
                   Round-the-clock support for all your needs.
     </>
-  )
-}
+  }
 const fs = require('fs')
 const path = require('path')
 
@@ -60,12 +59,12 @@ const viteConfigPath = path.join(__dirname, '../vite.config.ts')
 let viteConfig = fs.readFileSync(viteConfigPath, 'utf8')
 // Enhanced chunk splitting strategy
 const optimizedChunkConfig = `
-        manualChunks: (id) => {
+        manualChunks: (id,) => {
           // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react'
-            }
+            ,}
             if (id.includes('react-router')) {
               return 'vendor-router'
             }
@@ -107,7 +106,7 @@ const optimizedChunkConfig = `
         },`
 // Replace the existing chunk configuration
 viteConfig = viteConfig.replace(
-  /manualChunks: \(id\) => \{[\s\S]*?\},/,
+  /manualChunks: \(id\,) => \{[\s\S,]*?\,},/,
   optimizedChunkConfig
 )
 // Add performance optimizations
@@ -126,21 +125,21 @@ const performanceOptimizations = `
     assetsInlineLimit: 4096,
     rollupOptions: {
       output: {
-        ${optimizedChunkConfig}
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
+        ${optimizedChunkConfig,}
+        chunkFileNames: 'assets/[name,]-[hash,].js',
+        entryFileNames: 'assets/[name,]-[hash,].js',
+        assetFileNames: (assetInfo,) => {
           const ext = assetInfo.name?.split('.').pop()
           if (/\.(css)$/i.test(assetInfo.name || '')) {
-            return \`assets/css/[name]-[hash].\${ext}\`
+            return \`assets/css/[name,]-[hash,].\${ext,}\`
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return \`assets/images/[name]-[hash].\${ext}\`
+            return \`assets/images/[name,]-[hash,].\${ext}\`
           }
           if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
-            return \`assets/fonts/[name]-[hash].\${ext}\`
+            return \`assets/fonts/[name,]-[hash,].\${ext}\`
           }
-          return \`assets/[name]-[hash].\${ext}\`
+          return \`assets/[name,]-[hash,].\${ext}\`
         }
       }
     },
@@ -155,12 +154,12 @@ const performanceOptimizations = `
         safari10: true,
         properties: {
           regex: /^_/
-        }
+        ,}
       },
       format: {
         comments: false,
         ascii_only: true
-      }
+      ,}
     }
   },`
 // Write the optimized config
@@ -175,18 +174,18 @@ interface PerformanceMetrics {
   value: number
   delta: number
   id: string
-}
+,}
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    const sendToAnalytics = (metric: PerformanceMetrics) => {
+    const sendToAnalytics = (metric: PerformanceMetrics,) => {
       // Send to your analytics service
       // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as unknown).gtag) {
+      if (typeof window !== 'undefined' && (window as unknown,).gtag) {
         (window as unknown).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value,),
           non_interaction: true,
         })
       }
@@ -208,11 +207,11 @@ const PerformanceMonitor: React.FC = () => {
               value: entry.startTime,
               delta: entry.startTime,
               id: 'fcp-custom'
-            })
+            ,})
           }
         }
       })
-      observer.observe({ entryTypes: ['paint'] })
+      observer.observe({ entryTypes: ['paint'] ,})
     }
   }, [])
   return null
@@ -279,47 +278,47 @@ const optimizePerformance = () => {
 /* Performance optimizations */
 * {
   box-sizing: border-box
-}
+,}
 
 html {
   scroll-behavior: smooth
-}
+,}
 
 body {
   font-display: swap
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-}
+,}
 
 /* Critical CSS for above-the-fold content */
 .hero-section {
   contain: layout style paint
-}
+,}
 
 /* Optimize animations */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce,) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important
     animation-iteration-count: 1 !important
     transition-duration: 0.01ms !important
-  }
+  ,}
 }
 
 /* Optimize images */
 img {
   loading: lazy
   decoding: async
-}
+,}
 
 /* Optimize fonts */
 @font-face {
   font-family: 'Inter'
   font-display: swap
-  src: url('/fonts/inter-var.woff2') format('woff2-variations')
+  src: url('/fonts/inter-var.woff2',) format('woff2-variations')
   font-weight: 100 900
-}
+,}
 `
   // Write optimized CSS
   const cssPath = path.join(__dirname, '..', 'public', 'performance.css')

@@ -46,8 +46,6 @@ const CybersecurityAdvancedPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CybersecurityAdvancedPage;
 

@@ -46,8 +46,6 @@ const AiTimeTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiTimeTrackerPage;
 

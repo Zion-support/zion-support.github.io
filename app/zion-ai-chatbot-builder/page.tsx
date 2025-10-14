@@ -46,8 +46,6 @@ const ZionAiChatbotBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiChatbotBuilderPage;
 

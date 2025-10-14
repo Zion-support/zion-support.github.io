@@ -46,8 +46,6 @@ const DocumentProcessorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DocumentProcessorPage;
 

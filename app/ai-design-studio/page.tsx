@@ -46,8 +46,6 @@ const AiDesignStudioPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDesignStudioPage;
 

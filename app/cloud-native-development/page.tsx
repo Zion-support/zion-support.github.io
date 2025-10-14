@@ -46,8 +46,6 @@ const CloudNativeDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CloudNativeDevelopmentPage;
 

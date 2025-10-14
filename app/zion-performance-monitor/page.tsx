@@ -46,8 +46,6 @@ const ZionPerformanceMonitorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionPerformanceMonitorPage;
 

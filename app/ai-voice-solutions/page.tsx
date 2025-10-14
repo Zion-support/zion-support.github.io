@@ -46,8 +46,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiVoiceSolutionsPage;
 

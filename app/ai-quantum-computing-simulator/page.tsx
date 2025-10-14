@@ -46,8 +46,6 @@ const AiQuantumComputingSimulatorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiQuantumComputingSimulatorPage;
 

@@ -46,8 +46,6 @@ const ProjectManagementSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ProjectManagementSaasPage;
 

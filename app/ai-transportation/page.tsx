@@ -46,8 +46,6 @@ const AiTransportationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiTransportationPage;
 

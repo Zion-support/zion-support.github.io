@@ -46,8 +46,6 @@ const AiVoiceCloningPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiVoiceCloningPage;
 

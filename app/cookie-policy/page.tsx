@@ -46,8 +46,6 @@ const CookiePolicyPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CookiePolicyPage;
 

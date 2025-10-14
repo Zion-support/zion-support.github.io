@@ -46,8 +46,6 @@ const ItSecurityServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItSecurityServicesPage;
 

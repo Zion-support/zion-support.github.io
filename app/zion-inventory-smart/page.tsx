@@ -46,8 +46,6 @@ const ZionInventorySmartPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionInventorySmartPage;
 

@@ -46,8 +46,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiEmailMarketingAutomationPage;
 

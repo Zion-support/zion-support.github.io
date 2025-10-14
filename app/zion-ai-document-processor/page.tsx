@@ -46,8 +46,6 @@ const ZionAiDocumentProcessorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiDocumentProcessorPage;
 

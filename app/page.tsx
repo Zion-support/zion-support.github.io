@@ -48,16 +48,16 @@ const HomePage: React.FC = () => {
         
         {/* Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating cyber-glow"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating cyber-glow" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '1s',}}></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating cyber-glow" style={{animationDelay: '2s',}}></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating cyber-glow" style={{animationDelay: '3s',}}></div>
         
         {/* Cyber Grid Overlay */}
         <div className="absolute inset-0 cyber-grid opacity-10"></div>
         
         {/* Data Streams */}
         <div className="absolute top-1/3 left-0 w-full h-1 data-stream"></div>
-        <div className="absolute top-2/3 left-0 w-full h-1 data-stream" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute top-2/3 left-0 w-full h-1 data-stream" style={{animationDelay: '1.5s',}}></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -72,7 +72,7 @@ const HomePage: React.FC = () => {
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
@@ -92,11 +92,11 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+        {/* Services Section */}
       <section className="py-20 bg-slate-900 particles">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 gradient-text">
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -115,7 +115,7 @@ const HomePage: React.FC = () => {
                 Advanced artificial intelligence services including machine learning, 
                 natural language processing, and predictive analytics.
               </p>
-              <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
+              <Link to="/ai-solutions" className="text-purple-400 hover: text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -130,13 +130,13 @@ const HomePage: React.FC = () => {
                 Comprehensive security solutions to protect your digital assets, 
                 data, and infrastructure from evolving threats.
               </p>
-              <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
+              <Link to="/cybersecurity" className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
 
             {/* Cloud Infrastructure */}
-            <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
+            <div className="group neon-card p-8 rounded-xl border border-slate-600 hover: border-green-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
                 <CloudIcon className="w-8 h-8 text-white" />
               </div>
@@ -151,7 +151,7 @@ const HomePage: React.FC = () => {
             </div>
 
             {/* Digital Transformation */}
-            <div className="group neon-card p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
+            <div className="group neon-card p-8 rounded-xl border border-slate-600 hover: border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform cyber-glow">
                 <ChartBarIcon className="w-8 h-8 text-white" />
               </div>
@@ -175,7 +175,7 @@ const HomePage: React.FC = () => {
                 Custom micro SaaS solutions designed to solve specific business 
                 challenges with scalable, cost-effective applications.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
+              <Link to="/micro-saas" className="text-pink-400 hover: text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {
                 Next-generation 5G technology solutions for enhanced connectivity, 
                 IoT applications, and ultra-low latency services.
               </p>
-              <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
+              <Link to="/5g-solutions" className="text-indigo-400 hover: text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -207,11 +207,11 @@ const HomePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
+              we&apos;ve helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md: grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-300">Projects Completed</div>
@@ -230,7 +230,6 @@ const HomePage: React.FC = () => {
       </section>
       </div>
     </>
-  );
-};
+  ,),};
 
 export default HomePage;

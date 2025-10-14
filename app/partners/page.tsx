@@ -46,8 +46,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default PartnersPage;
 

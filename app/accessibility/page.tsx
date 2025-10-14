@@ -46,8 +46,6 @@ const AccessibilityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AccessibilityPage;
 

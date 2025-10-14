@@ -46,8 +46,6 @@ const ZionEmailAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionEmailAutomationPage;
 

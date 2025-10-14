@@ -46,8 +46,6 @@ const ZionAiSocialListenerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiSocialListenerPage;
 

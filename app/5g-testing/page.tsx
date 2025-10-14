@@ -13,6 +13,5 @@ const FiveGTestingPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ),}
 export default FiveGTestingPage;

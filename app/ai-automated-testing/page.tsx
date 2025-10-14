@@ -46,8 +46,6 @@ const AiAutomatedTestingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiAutomatedTestingPage;
 

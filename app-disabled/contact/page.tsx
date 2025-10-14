@@ -1,29 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {const [formData, setFormData,] = useState({
     name: '',    email: ',
     compunknown: ',
     phone: ',
     service: ',
-    message: ';)
-})const [isSubmitting, setIsSubmitting] = useState(false)
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle)
-const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
+    message: ',)
+,})const [isSubmitting, setIsSubmitting,] = useState(false)
+const [submitStatus, setSubmitStatus,] = useState<'idle' | 'success' | 'error'>(idle)
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>,) => {;
     setFormData(prev => ({
-    message: '';)
-})
-const [isSubmitting, setIsSubmitting] = useState(false)
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
+    message: '',)
+,})
+const [isSubmitting, setIsSubmitting,] = useState(false)
+const [submitStatus, setSubmitStatus,] = useState<'idle' | 'success' | 'error'>('idle')
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>,) => {,}
     setFormData(prev => ({}
       ...prev,
-      [e.target.name]: e.target.value;)
+      [e.target.name,]: e.target.value;)
 })))
 }, [])
-const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({
-  const handleSubmit = useCallback(async (e: .FormEvent) => {
-  const handleSubmit = useCallback (async (e: .FormEvent) => {
+const handleSubmit = useCallback(async (e: .FormEvent,) => {    setFormData(prev => ({
+  const handleSubmit = useCallback(async (e: .FormEvent,) => {
+  const handleSubmit = useCallback (async (e: .FormEvent,) => {
     e.preventDefault();    setIsSubmitting(true)
       setFormData({
         name: ',
@@ -32,7 +32,7 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
         phone: ',
         service: ',
 message: ']
-    });]
+    ,})]
     } catch (_error) {
       setSubmitStatus('_error)]
       setSubmitStatus('_error)
@@ -46,7 +46,7 @@ message: ']
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />
         <div className=">
         <div>
-    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight></h1>
+    <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight></h1>
             Get in
             <span className="></span>
               Touch
@@ -71,10 +71,10 @@ message: ']
                         <input
                           type="email"
                           name="email"
-                          value={formData.email}
+                          value={formData.email,}
                           onChange={handleChange}
                           required
-                          className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                          className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                       </div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         </label>
@@ -83,9 +83,9 @@ message: ']
                         <input
                           type="tel"
                           name="phone"
-                          value={formData.phone}
+                          value={formData.phone,}
                           onChange={handleChange}
-                          className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+                          className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                       </div>
   </div>
   <div>
@@ -104,19 +104,19 @@ message: ']
                       <option value="consulting">Consulting</option>
                       <option value="other">Other</option>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none">
+                      rows={5,}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none">
                     {isLoading ? (
                       <>
                         <div>
     <span>Sending...</span>
                       </>
-                    ) : (
+                    ,) : (
                       <>
                         <Send className="w-5 h-5 mr-2">
                         Send Message
         </div>
       </div>
   )
-}
+,}
       {

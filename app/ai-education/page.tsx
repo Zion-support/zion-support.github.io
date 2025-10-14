@@ -46,8 +46,6 @@ const AiEducationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiEducationPage;
 

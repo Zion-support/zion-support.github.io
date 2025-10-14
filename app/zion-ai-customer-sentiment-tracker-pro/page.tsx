@@ -46,8 +46,6 @@ const ZionAiCustomerSentimentTrackerProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCustomerSentimentTrackerProPage;
 

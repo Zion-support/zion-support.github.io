@@ -46,8 +46,6 @@ const ItAssetManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItAssetManagementPage;
 

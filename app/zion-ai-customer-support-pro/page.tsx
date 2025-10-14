@@ -46,8 +46,6 @@ const ZionAiCustomerSupportProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCustomerSupportProPage;
 

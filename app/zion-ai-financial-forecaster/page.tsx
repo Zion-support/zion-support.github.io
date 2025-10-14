@@ -46,8 +46,6 @@ const ZionAiFinancialForecasterPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiFinancialForecasterPage;
 

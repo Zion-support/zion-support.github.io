@@ -46,8 +46,6 @@ const AiConversationalAiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiConversationalAiPage;
 

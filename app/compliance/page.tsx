@@ -46,8 +46,6 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CompliancePage;
 

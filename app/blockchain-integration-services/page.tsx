@@ -46,8 +46,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default BlockchainIntegrationServicesPage;
 

@@ -46,8 +46,6 @@ const TaskManagementSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default TaskManagementSaasPage;
 

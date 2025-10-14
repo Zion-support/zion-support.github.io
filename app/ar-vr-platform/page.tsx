@@ -46,8 +46,6 @@ const ArVrPlatformPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ArVrPlatformPage;
 

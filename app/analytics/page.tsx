@@ -46,8 +46,6 @@ const AnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AnalyticsPage;
 

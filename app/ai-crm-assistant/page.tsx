@@ -46,8 +46,6 @@ const AiCrmAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCrmAssistantPage;
 

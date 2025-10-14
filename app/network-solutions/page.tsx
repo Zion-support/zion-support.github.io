@@ -46,8 +46,6 @@ const NetworkSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default NetworkSolutionsPage;
 

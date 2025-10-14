@@ -46,8 +46,6 @@ const AiCustomerSentimentTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCustomerSentimentTrackerPage;
 

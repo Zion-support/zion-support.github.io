@@ -46,8 +46,6 @@ const InventoryManagementSystemPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default InventoryManagementSystemPage;
 

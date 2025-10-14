@@ -46,8 +46,6 @@ const AiContentModerationProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiContentModerationProPage;
 

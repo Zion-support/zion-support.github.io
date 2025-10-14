@@ -46,8 +46,6 @@ const ItPerformancePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItPerformancePage;
 

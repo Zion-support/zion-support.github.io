@@ -46,8 +46,6 @@ const AiMeetingTranscriberPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiMeetingTranscriberPage;
 

@@ -46,8 +46,6 @@ const EnterpriseSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EnterpriseSolutionsPage;
 

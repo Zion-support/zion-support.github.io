@@ -46,8 +46,6 @@ const CustomerExperiencePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CustomerExperiencePage;
 

@@ -46,8 +46,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EcommerceAnalyticsProPage;
 

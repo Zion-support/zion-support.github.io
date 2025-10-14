@@ -46,8 +46,6 @@ const AiSpaceTechnologyProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSpaceTechnologyProPage;
 

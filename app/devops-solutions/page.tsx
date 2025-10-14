@@ -46,8 +46,6 @@ const DevopsSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DevopsSolutionsPage;
 

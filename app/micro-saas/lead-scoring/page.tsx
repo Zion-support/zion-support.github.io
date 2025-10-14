@@ -46,8 +46,6 @@ const LeadScoringPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default LeadScoringPage;
 

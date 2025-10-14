@@ -46,8 +46,6 @@ const FiveGNetworkOptimizationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default FiveGNetworkOptimizationPage;
 

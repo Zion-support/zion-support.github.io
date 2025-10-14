@@ -46,8 +46,6 @@ const ZionSmartExpenseTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionSmartExpenseTrackerPage;
 

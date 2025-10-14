@@ -46,8 +46,6 @@ const AiAutomatedReportingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiAutomatedReportingPage;
 

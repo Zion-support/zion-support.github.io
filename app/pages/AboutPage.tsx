@@ -11,10 +11,10 @@ import {
 
 
 const stats = [
-    { label: 'Projects Completed', value: '500+', number: '500+' },
-    { label: 'Happy Clients', value: '200+', number: '200+' },
-    { label: 'Team Members', value: '50+', number: '50+' },
-    { label: 'Years Experience', value: '10+', number: '10+' }
+    { label: 'Projects Completed', value: '500+', number: '500+' ,},
+    { label: 'Happy Clients', value: '200+', number: '200+' ,},
+    { label: 'Team Members', value: '50+', number: '50+' ,},
+    { label: 'Years Experience', value: '10+', number: '10+' ,}
   ];
 
   const AboutPage: React.FC = () => {
@@ -30,7 +30,7 @@ const stats = [
       icon: ShieldCheckIcon,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
-    },
+    ,},
     {
       icon: UserGroupIcon,
       title: 'Client-Centric',
@@ -40,7 +40,7 @@ const stats = [
       icon: RocketLaunchIcon,
       title: 'Results-Driven',
       description: 'We measure our success by the tangible results and value we deliver to our clients\' businesses.'
-    }
+    ,}
   ];
 
   const team = [
@@ -49,25 +49,25 @@ const stats = [
       role: 'Founder & CEO',
       description: 'AI and Machine Learning expert with 15+ years of experience in technology leadership.',
       image: '/team/kleber.jpg'
-    },
+    ,},
     {
       name: 'Sarah Johnson',
       role: 'CTO',
       description: 'Cloud architecture specialist with expertise in scalable system design and implementation.',
       image: '/team/sarah.jpg'
-    },
+    ,},
     {
       name: 'Michael Chen',
       role: 'Head of AI Research',
       description: 'PhD in Computer Science, leading our AI research and development initiatives.',
       image: '/team/michael.jpg'
-    },
+    ,},
     {
       name: 'Emily Rodriguez',
       role: 'Cybersecurity Director',
       description: 'Cybersecurity expert with certifications in ethical hacking and security architecture.',
       image: '/team/emily.jpg'
-    }
+    ,}
   ];
 
   return (
@@ -82,7 +82,7 @@ const stats = [
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -92,7 +92,7 @@ const stats = [
           </div>
         </section>
 
-        {/* Mission Section */}
+        {/* Mission Section */,}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -158,11 +158,11 @@ const stats = [
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700 hover:border-purple-500 transition-all duration-300">
+                <div key={index} className="bg-slate-800 rounded-xl p-6 text-center border border-slate-700 hover: border-purple-500 transition-all duration-300">
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <UserGroupIcon className="w-12 h-12 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name,}</h3>
                   <div className="text-purple-400 font-semibold mb-3">{member.role}</div>
                   <p className="text-gray-300 text-sm">{member.description}</p>
                 </div>
@@ -174,11 +174,11 @@ const stats = [
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our team can help transform your business with 
+              Let&apos;s discuss how our team can help transform your business with 
               cutting-edge AI and IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,7 +194,6 @@ const stats = [
         </section>
       </div>
     </>
-  );
-};
+  ,),};
 
 export default AboutPage;

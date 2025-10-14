@@ -46,8 +46,6 @@ const AiMentalHealthCompanionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiMentalHealthCompanionPage;
 

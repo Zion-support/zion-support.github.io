@@ -46,8 +46,6 @@ const EmployeeDirectoryPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EmployeeDirectoryPage;
 

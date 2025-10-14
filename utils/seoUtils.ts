@@ -26,11 +26,11 @@ interface SEOConfig {
     longitude?: string
     region?: string
     placename?: string
-  }
+  ,}
   alternate?: Array<{
     href: string
     hreflang: string
-  }>
+  ,}>
   structuredData?: unknown
   structuredData?: Record<string, unknown>
 }
@@ -71,10 +71,10 @@ export const defaultSEOConfig: SEOConfig = {
     longitude: '-74.0060',
     region: 'US-NY',
     placename: 'New York'
-  },
+  ,},
   alternate: [
-    { href: 'https://zion.app/en', hreflang: 'en' },
-    { href: 'https://zion.app/es', hreflang: 'es' }
+    { href: 'https://zion.app/en', hreflang: 'en' ,},
+    { href: 'https://zion.app/es', hreflang: 'es' ,}
   ],
   structuredData: {
     '@context': 'https://schema.org',
@@ -82,30 +82,30 @@ export const defaultSEOConfig: SEOConfig = {
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/images/logo.png'
-  }
+  ,}
 }
 
-export const generateSEOTags = (config: SEOConfig) => {
+export const generateSEOTags = (config: SEOConfig,) => {
   const tags = [
-    { name: 'title', content: config.title },
-    { name: 'description', content: config.description },
+    { name: 'title', content: config.title ,},
+    { name: 'description', content: config.description ,},
     { name: 'keywords', content: config.keywords.join(', ') },
-    { property: 'og:title', content: config.ogTitle || config.title },
-    { property: 'og:description', content: config.ogDescription || config.description },
-    { property: 'og:image', content: config.ogImage },
-    { property: 'og:type', content: config.ogType },
-    { property: 'og:url', content: config.canonicalUrl },
-    { name: 'twitter:card', content: config.twitterCard },
-    { name: 'twitter:title', content: config.twitterTitle || config.title },
-    { name: 'twitter:description', content: config.twitterDescription || config.description },
-    { name: 'twitter:image', content: config.twitterImage || config.ogImage }
+    { property: 'og:title', content: config.ogTitle || config.title ,},
+    { property: 'og:description', content: config.ogDescription || config.description ,},
+    { property: 'og:image', content: config.ogImage ,},
+    { property: 'og:type', content: config.ogType ,},
+    { property: 'og:url', content: config.canonicalUrl ,},
+    { name: 'twitter:card', content: config.twitterCard ,},
+    { name: 'twitter:title', content: config.twitterTitle || config.title ,},
+    { name: 'twitter:description', content: config.twitterDescription || config.description ,},
+    { name: 'twitter:image', content: config.twitterImage || config.ogImage ,}
   ]
 
   if (config.geo) {
     tags.push(
-      { name: 'geo.region', content: config.geo.region },
-      { name: 'geo.placename', content: config.geo.placename },
-      { name: 'geo.position', content: `${config.geo.latitude};${config.geo.longitude}` }
+      { name: 'geo.region', content: config.geo.region ,},
+      { name: 'geo.placename', content: config.geo.placename ,},
+      { name: 'geo.position', content: `${config.geo.latitude,};${config.geo.longitude}` }
     )
   }
 
@@ -113,16 +113,16 @@ export const generateSEOTags = (config: SEOConfig) => {
 }
 
 export const generateImageAlt = (imagePath: string, alt?: string) => {
-  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
+  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0,] || 'image'}`
 }
 
-export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app',) => {
+  return `${baseUrl,}${path.startsWith('/') ? path: `/${path,}`}`
   viewport: 'width=device-width, initial-scale=1',
   charset: 'UTF-8'
-}
+,}
 
-export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
+export const generateSEOTags = (config: Partial<SEOConfig> = {,}) => {
   const seoConfig = { ...defaultSEOConfig, ...config }
   
   return {
@@ -136,16 +136,16 @@ export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
       url: seoConfig.canonicalUrl,
       type: seoConfig.ogType,
       image: seoConfig.ogImage
-    },
+    ,},
     twitter: {
       card: seoConfig.twitterCard,
       title: seoConfig.twitterTitle || seoConfig.title,
       description: seoConfig.twitterDescription || seoConfig.description,
       image: seoConfig.twitterImage || seoConfig.ogImage
-    },
+    ,},
     robots: seoConfig.robots,
     author: seoConfig.author,
     publisher: seoConfig.publisher,
     language: seoConfig.language
-  }
+  ,}
 }

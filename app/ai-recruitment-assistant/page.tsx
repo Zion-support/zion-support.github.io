@@ -46,8 +46,6 @@ const AiRecruitmentAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiRecruitmentAssistantPage;
 

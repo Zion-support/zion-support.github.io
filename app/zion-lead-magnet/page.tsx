@@ -46,8 +46,6 @@ const ZionLeadMagnetPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionLeadMagnetPage;
 

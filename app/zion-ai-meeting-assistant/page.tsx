@@ -46,8 +46,6 @@ const ZionAiMeetingAssistantPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiMeetingAssistantPage;
 

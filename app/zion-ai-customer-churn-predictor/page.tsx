@@ -46,8 +46,6 @@ const ZionAiCustomerChurnPredictorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiCustomerChurnPredictorPage;
 

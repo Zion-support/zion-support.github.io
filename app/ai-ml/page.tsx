@@ -46,8 +46,6 @@ const AiMlPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiMlPage;
 

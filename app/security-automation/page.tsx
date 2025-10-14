@@ -46,8 +46,6 @@ const SecurityAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SecurityAutomationPage;
 

@@ -46,8 +46,6 @@ const IntelligentDatabaseMigrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default IntelligentDatabaseMigrationPage;
 

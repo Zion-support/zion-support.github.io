@@ -46,8 +46,6 @@ const SupplyChainOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SupplyChainOptimizerPage;
 

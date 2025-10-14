@@ -46,8 +46,6 @@ const PerformanceOptimizationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default PerformanceOptimizationPage;
 

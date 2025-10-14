@@ -46,8 +46,6 @@ const ZionAiMeetingTranscriberPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiMeetingTranscriberPage;
 

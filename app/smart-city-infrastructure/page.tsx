@@ -46,8 +46,6 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SmartCityInfrastructurePage;
 

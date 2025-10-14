@@ -46,8 +46,6 @@ const SocialMediaSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SocialMediaSchedulerPage;
 

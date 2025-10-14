@@ -46,8 +46,6 @@ const WebDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default WebDevelopmentPage;
 

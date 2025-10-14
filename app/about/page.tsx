@@ -46,8 +46,6 @@ const AboutPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AboutPage;
 

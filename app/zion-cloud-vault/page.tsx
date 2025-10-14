@@ -46,8 +46,6 @@ const ZionCloudVaultPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionCloudVaultPage;
 

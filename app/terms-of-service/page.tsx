@@ -46,8 +46,6 @@ const TermsOfServicePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default TermsOfServicePage;
 

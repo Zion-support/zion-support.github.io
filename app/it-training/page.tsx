@@ -46,8 +46,6 @@ const ItTrainingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItTrainingPage;
 

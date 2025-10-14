@@ -46,8 +46,6 @@ const ExpenseTrackerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ExpenseTrackerPage;
 

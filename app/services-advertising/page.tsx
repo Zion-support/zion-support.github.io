@@ -46,8 +46,6 @@ const ServicesAdvertisingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ServicesAdvertisingPage;
 

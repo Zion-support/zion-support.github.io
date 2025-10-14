@@ -13,6 +13,5 @@ const FiveGTrainingPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ),}
 export default FiveGTrainingPage;

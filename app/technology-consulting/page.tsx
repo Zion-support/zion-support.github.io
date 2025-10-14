@@ -46,8 +46,6 @@ const TechnologyConsultingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default TechnologyConsultingPage;
 

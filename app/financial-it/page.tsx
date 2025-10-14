@@ -46,8 +46,6 @@ const FinancialItPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default FinancialItPage;
 

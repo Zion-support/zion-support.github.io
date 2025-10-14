@@ -27,9 +27,9 @@ function auditHTMLStructure() {
     'canonical'
   ]
   metaTags.forEach(tag => {
-    if (!html.includes(`<meta name="${tag}"`) && !html.includes(`<title>`) && tag === 'title') {
+    if (!html.includes(`<meta name="${tag}"`) && !html.includes(`<title>`) && tag === &apos;title') {
       if (tag === 'title') {
-        if (!html.includes('<////title>')) {
+        if (!html.includes(&apos;<////title>')) {
           issues.push(`Missing ${tag} tag`)
         }
       } else {
@@ -38,16 +38,16 @@ function auditHTMLStructure() {
     }
   })
   // Check for Open Graph tags
-  const ogTags = ['og:title', 'og:description', 'og:image', 'og:url']
+  const ogTags = ['og:title', 'og:description', 'og:image', 'og: url']
   ogTags.forEach(tag => {
-    if (!html.includes(`property="${tag}"`)) {
+    if (!html.includes(`property="${tag,}"`)) {
       issues.push(`Missing Open Graph ${tag} tag`)
     }
   })
   // Check for Twitter Card tags
-  const twitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image']
+  const twitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter: image']
   twitterTags.forEach(tag => {
-    if (!html.includes(`name="${tag}"`)) {
+    if (!html.includes(`name="${tag,}"`)) {
       issues.push(`Missing Twitter Card ${tag} tag`)
     }
   })
@@ -64,7 +64,7 @@ function auditHTMLStructure() {
     }
   })
   // Check for heading hierarchy
-  const headings = html.match(/<h[1-6][^>]*>/g) || []
+  const headings = html.match(/<h[1-6,][^>]*>/g) || []
   if (headings.length === 0) {
     issues.push('No heading tags found')
   }
@@ -102,7 +102,7 @@ function auditSitemap() {
   }
 
   if (!sitemap.includes('<url>')) {
-    issues.push('Sitemap missing url elements')
+    issues.push(&apos;Sitemap missing url elements&apos;)
   }
 
   // Count URLs
@@ -128,17 +128,17 @@ function auditRobots() {
   }
 
   const robots = fs.readFileSync(robotsPath, 'utf8')
-  if (!robots.includes('User-agent: *')) {
+  if (!robots.includes('User-agent: *',)) {
     issues.push('robots.txt missing User-agent directive')
-  }
+  ,}
 
-  if (!robots.includes('Allow: /')) {
+  if (!robots.includes('Allow: /',)) {
     issues.push('robots.txt missing Allow directive')
-  }
+  ,}
 
-  if (!robots.includes('Sitemap:')) {
+  if (!robots.includes('Sitemap: ',)) {
     issues.push('robots.txt missing Sitemap reference')
-  }
+  ,}
 
   return { issues, recommendations }
 }
@@ -159,7 +159,7 @@ function auditPerformance() {
       const sizeKB = stats.size / 1024
       totalSize += stats.size
       if (sizeKB > 100) { // Files larger than 100KB
-        largeFiles.push({ file, sizeKB: Math.round(sizeKB) })
+        largeFiles.push({ file, sizeKB: Math.round(sizeKB,) ,})
       }
     }
   })
@@ -169,7 +169,7 @@ function auditPerformance() {
   }
 
   if (largeFiles.length > 0) {
-    recommendations.push('Consider optimizing large files: ' + largeFiles.map(f => `${f.file} (${f.sizeKB}KB)`).join(', '))
+    recommendations.push('Consider optimizing large files: ' + largeFiles.map(f => `${f.file,} (${f.sizeKB}KB)`).join(', '))
   }
 
   return { issues, recommendations }
@@ -181,14 +181,12 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
     ...htmlAudit.issues,
     ...sitemapAudit.issues,
     ...robotsAudit.issues,
-    ...performanceAudit.issues
-  ]
+    ...performanceAudit.issues,]
   const allRecommendations = [
     ...htmlAudit.recommendations,
     ...sitemapAudit.recommendations,
     ...robotsAudit.recommendations,
-    ...performanceAudit.recommendations
-  ]
+    ...performanceAudit.recommendations,]
   const report = {
     timestamp: new Date().toISOString(),
     summary: {
@@ -201,10 +199,10 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
       sitemap: sitemapAudit,
       robots: robotsAudit,
       performance: performanceAudit
-    },
+    ,},
     issues: allIssues,
     recommendations: allRecommendations
-  }
+  ,}
   // Write report
   fs.writeFileSync(
     path.join(__dirname, '../seo-audit-report.json'),

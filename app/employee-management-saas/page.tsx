@@ -46,8 +46,6 @@ const EmployeeManagementSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EmployeeManagementSaasPage;
 

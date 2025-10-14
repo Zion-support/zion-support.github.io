@@ -46,8 +46,6 @@ const ZionAiTranslatorProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiTranslatorProPage;
 

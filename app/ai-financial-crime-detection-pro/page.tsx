@@ -46,8 +46,6 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiFinancialCrimeDetectionProPage;
 

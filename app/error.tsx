@@ -15,7 +15,6 @@ const ErrorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  ),};
 
 export default ErrorPage;

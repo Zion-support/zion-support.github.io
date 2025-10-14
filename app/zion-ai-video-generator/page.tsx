@@ -46,8 +46,6 @@ const ZionAiVideoGeneratorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiVideoGeneratorPage;
 

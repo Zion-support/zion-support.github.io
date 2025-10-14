@@ -46,8 +46,6 @@ const ZionProjectMasterPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionProjectMasterPage;
 

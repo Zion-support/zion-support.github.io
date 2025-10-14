@@ -46,8 +46,6 @@ const CloudConsultingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CloudConsultingPage;
 

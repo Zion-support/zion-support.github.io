@@ -46,8 +46,6 @@ const AiBlockchainSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiBlockchainSolutionsPage;
 

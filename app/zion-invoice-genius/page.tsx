@@ -46,8 +46,6 @@ const ZionInvoiceGeniusPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionInvoiceGeniusPage;
 

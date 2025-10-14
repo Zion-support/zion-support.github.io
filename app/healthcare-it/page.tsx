@@ -46,8 +46,6 @@ const HealthcareItPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default HealthcareItPage;
 

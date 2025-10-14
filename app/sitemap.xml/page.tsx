@@ -46,8 +46,6 @@ const SitemapXmlPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SitemapXmlPage;
 

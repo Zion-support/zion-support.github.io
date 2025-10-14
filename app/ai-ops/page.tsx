@@ -46,8 +46,6 @@ const AiOpsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiOpsPage;
 

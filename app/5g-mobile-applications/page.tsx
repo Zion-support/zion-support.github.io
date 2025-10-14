@@ -46,8 +46,6 @@ const FiveGMobileApplicationsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default FiveGMobileApplicationsPage;
 

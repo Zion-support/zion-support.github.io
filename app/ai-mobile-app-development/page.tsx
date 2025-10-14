@@ -46,8 +46,6 @@ const AiMobileAppDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiMobileAppDevelopmentPage;
 

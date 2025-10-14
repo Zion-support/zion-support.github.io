@@ -46,8 +46,6 @@ const SocialMediaManagementSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SocialMediaManagementSaasPage;
 

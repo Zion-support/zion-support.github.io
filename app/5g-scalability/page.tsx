@@ -13,6 +13,5 @@ const FiveGScalabilityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ),}
 export default FiveGScalabilityPage;

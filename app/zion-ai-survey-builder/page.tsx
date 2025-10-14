@@ -46,8 +46,6 @@ const ZionAiSurveyBuilderPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiSurveyBuilderPage;
 

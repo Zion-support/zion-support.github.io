@@ -46,8 +46,6 @@ const AiPoweredChatbotSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiPoweredChatbotSaasPage;
 

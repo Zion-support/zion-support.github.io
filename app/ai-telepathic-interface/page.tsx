@@ -46,8 +46,6 @@ const AiTelepathicInterfacePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiTelepathicInterfacePage;
 

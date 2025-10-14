@@ -46,8 +46,6 @@ const DataCenterPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DataCenterPage;
 

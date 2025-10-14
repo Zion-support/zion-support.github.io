@@ -46,8 +46,6 @@ const AiContentWriterProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiContentWriterProPage;
 

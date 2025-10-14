@@ -46,8 +46,6 @@ const ZionCustomerInsightsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionCustomerInsightsPage;
 

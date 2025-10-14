@@ -13,6 +13,5 @@ describe('Advanced Components', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(container).toBeInTheDocument();
-  });
+    expect(container).toBeInTheDocument()});
 });

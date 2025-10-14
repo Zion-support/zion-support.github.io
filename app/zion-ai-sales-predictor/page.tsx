@@ -46,8 +46,6 @@ const ZionAiSalesPredictorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiSalesPredictorPage;
 

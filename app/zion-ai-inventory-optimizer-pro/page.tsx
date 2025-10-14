@@ -46,8 +46,6 @@ const ZionAiInventoryOptimizerProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiInventoryOptimizerProPage;
 

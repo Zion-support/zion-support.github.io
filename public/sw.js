@@ -18,8 +18,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
+        return cache.addAll(STATIC_ASSETS)})
       .catch((_error) => {
         })
   );
@@ -34,8 +33,7 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              return caches.delete(cacheName);
-            }
+              return caches.delete(cacheName)}
           })
         );
       })
@@ -50,8 +48,7 @@ self.addEventListener('fetch', (event) => {
   
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return;
-  }
+    return}
   
   // Skip cross-origin requests
   if (url.origin !== location.origin) {
@@ -71,8 +68,7 @@ self.addEventListener('fetch', (event) => {
           .then((response) => {
             // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
+              return response}
             
             // Clone the response
             const responseToCache = response.clone();
@@ -88,8 +84,7 @@ self.addEventListener('fetch', (event) => {
           .catch(() => {
             // Return offline page for navigation requests
             if (request.destination === 'document') {
-              return caches.match('/index.html');
-            }
+              return caches.match('/index.html')}
           });
       })
   );
@@ -100,8 +95,7 @@ self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(
       // Handle background sync tasks
-      );
-  }
+      )}
 });
 
 // Push notifications
@@ -110,29 +104,28 @@ self.addEventListener('push', (event) => {
     body: event.data ? event.data.text() : 'New update available',
     icon: '/images/icon-192x192.png',
     badge: '/images/icon-192x192.png',
-    vibrate: [100, 50, 100],
+    vibrate: [100, 50, 100,],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
-    },
+    ,},
     actions: [
       {
         action: 'explore',
         title: 'View',
         icon: '/images/icon-192x192.png'
-      },
+      ,},
       {
         action: 'close',
         title: 'Close',
         icon: '/images/icon-192x192.png'
-      }
+      ,}
     ]
   };
   
   event.waitUntil(
     self._registration.showNotification('Zion Tech Group', options)
-  );
-});
+  )});
 
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
@@ -141,6 +134,5 @@ self.addEventListener('notificationclick', (event) => {
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
-    );
-  }
+    )}
 });

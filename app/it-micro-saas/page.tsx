@@ -46,8 +46,6 @@ const ItMicroSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItMicroSaasPage;
 

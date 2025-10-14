@@ -5,8 +5,7 @@ interface LoadingSpinnerProps {
   text?: string;
   fullScreen?: boolean;
   className?: string;
-  color?: 'primary' | 'secondary' | 'white';
-}
+  color?: 'primary' | 'secondary' | 'white'}
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
@@ -19,18 +18,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  };
+  ,};
 
   const colorClasses = {
     primary: 'border-purple-500',
     secondary: 'border-cyan-500',
     white: 'border-white'
-  };
+  ,};
 
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div
-        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
+        className={`${sizeClasses[size,]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color,]}`}
       />
       {text && (
         <p className="mt-2 text-sm text-gray-300">
@@ -47,10 +46,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {spinner}
         </div>
       </div>
-    );
-  }
+    )}
 
-  return spinner;
-};
+  return spinner`};
 
 export default LoadingSpinner;

@@ -46,8 +46,6 @@ const AiIotAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiIotAnalyticsPage;
 

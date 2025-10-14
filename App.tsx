@@ -7,7 +7,7 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOEnhancer from './app/components/SEOEnhancer';
+import EnhancedSEO from './app/components/EnhancedSEO';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 // import LoadingStates from './app/components/LoadingStates';
@@ -31,7 +31,7 @@ const App: React.FC = () => {
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer />
-            <SEOEnhancer
+            <EnhancedSEO
               title="Zion Tech Group - Advanced AI and IT Solutions"
               description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
               keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
@@ -73,7 +73,6 @@ const App: React.FC = () => {
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
-  );
-};
+  )};
 
 export default App;

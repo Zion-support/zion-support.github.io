@@ -46,8 +46,6 @@ const WebsiteAnalyticsToolPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default WebsiteAnalyticsToolPage;
 

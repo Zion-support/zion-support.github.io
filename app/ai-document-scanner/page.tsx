@@ -46,8 +46,6 @@ const AiDocumentScannerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDocumentScannerPage;
 

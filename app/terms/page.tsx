@@ -46,8 +46,6 @@ const TermsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default TermsPage;
 

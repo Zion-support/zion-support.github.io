@@ -46,8 +46,6 @@ const ZionEcommerceOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionEcommerceOptimizerPage;
 

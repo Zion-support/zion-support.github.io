@@ -24,7 +24,7 @@ const FiveGOptimizationPage: React.FC = () => {
             </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
+              className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Optimize Now
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -33,7 +33,7 @@ const FiveGOptimizationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section */,}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -85,7 +85,7 @@ const FiveGOptimizationPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */,}
       <section className="bg-gray-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md: text-4xl font-bold mb-6">;
@@ -96,7 +96,7 @@ const FiveGOptimizationPage: React.FC = () => {
           </p>
           <Link 
             to="/contact" 
-            className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
+            className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -104,7 +104,6 @@ const FiveGOptimizationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  ,),};
 
 export default FiveGOptimizationPage;

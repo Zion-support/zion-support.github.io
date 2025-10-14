@@ -46,8 +46,6 @@ const AiDevopsAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDevopsAutomationPage;
 

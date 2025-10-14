@@ -46,8 +46,6 @@ const AiEcommerceOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiEcommerceOptimizerPage;
 

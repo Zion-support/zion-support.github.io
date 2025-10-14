@@ -46,8 +46,6 @@ const SmartAnalyticsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default SmartAnalyticsPage;
 

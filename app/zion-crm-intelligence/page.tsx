@@ -46,8 +46,6 @@ const ZionCrmIntelligencePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionCrmIntelligencePage;
 

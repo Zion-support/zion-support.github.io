@@ -46,8 +46,6 @@ const AiProjectManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiProjectManagementPage;
 

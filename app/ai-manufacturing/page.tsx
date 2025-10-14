@@ -46,8 +46,6 @@ const AiManufacturingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiManufacturingPage;
 

@@ -46,8 +46,6 @@ const AiTaskManagerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiTaskManagerPage;
 

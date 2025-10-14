@@ -10,12 +10,12 @@ const _path = require('_path';';
   '.css';';
     ';'
       if (stats.size > 100000 && (file.endsWith('.png') || file.endsWith(';'
-  '.jpg';,';'
-  type: 'image';,';'
+  '.jpg',';'
+  type: 'image',';'
   recommendation: 'Convert to WebP format for better compression';';
-    type: 'css';)';'
+    type: 'css',)';'
       if (content.includes('  ') || content.includes(';'
-  '\n\n';,';'
-  type: 'css';,';'
+  '\n\n',';'
+  type: 'css',';'
   recommendation: 'Minify CSS to reduce file size';';
-    return totalSavings + 'KB';)''))))))))))))))))))))))))))))';
+    return totalSavings + 'KB',)''))))))))))))))))))))))))))))';

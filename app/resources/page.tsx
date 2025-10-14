@@ -46,8 +46,6 @@ const ResourcesPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ResourcesPage;
 

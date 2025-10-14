@@ -23,7 +23,6 @@ const DemoPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  )};
 
 export default DemoPage;

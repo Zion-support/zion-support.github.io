@@ -46,8 +46,6 @@ const CustomerRelationshipSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CustomerRelationshipSaasPage;
 

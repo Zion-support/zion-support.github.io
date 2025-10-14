@@ -46,8 +46,6 @@ const QuantumDataEncryptionVaultPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default QuantumDataEncryptionVaultPage;
 

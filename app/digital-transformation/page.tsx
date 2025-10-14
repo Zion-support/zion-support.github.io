@@ -46,8 +46,6 @@ const DigitalTransformationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DigitalTransformationPage;
 

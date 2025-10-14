@@ -46,8 +46,6 @@ const AiApiManagerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiApiManagerPage;
 

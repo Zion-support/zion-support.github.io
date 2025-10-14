@@ -46,8 +46,6 @@ const EnterpriseIntegrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EnterpriseIntegrationPage;
 

@@ -46,8 +46,6 @@ const NetworkSecurityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default NetworkSecurityPage;
 

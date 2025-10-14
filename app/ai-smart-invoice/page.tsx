@@ -46,8 +46,6 @@ const AiSmartInvoicePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiSmartInvoicePage;
 

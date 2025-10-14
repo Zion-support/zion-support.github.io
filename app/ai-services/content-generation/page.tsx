@@ -46,8 +46,6 @@ const ContentGenerationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ContentGenerationPage;
 

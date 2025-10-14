@@ -46,8 +46,6 @@ const AiVideoAnalysisPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiVideoAnalysisPage;
 

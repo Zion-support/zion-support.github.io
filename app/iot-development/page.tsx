@@ -46,8 +46,6 @@ const IotDevelopmentPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default IotDevelopmentPage;
 

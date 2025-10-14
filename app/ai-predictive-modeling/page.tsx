@@ -46,8 +46,6 @@ const AiPredictiveModelingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiPredictiveModelingPage;
 

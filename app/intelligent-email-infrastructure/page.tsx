@@ -46,8 +46,6 @@ const IntelligentEmailInfrastructurePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default IntelligentEmailInfrastructurePage;
 

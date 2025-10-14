@@ -4,8 +4,7 @@
  *// Fixed regex
 const fs = require('fs';
 const _path = require('_path';
-    && !item.includes('page.tsx';
-      } else if (item.endsWith('.css';
+    && !item.includes('page.tsx'} else if (item.endsWith('.css';
     const content = fs.readFileSync(componentPath, 'utf8';
     let wcagLevel = 'A';
     if (content.includes('<img') && !content.includes('alt=';

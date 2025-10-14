@@ -46,8 +46,6 @@ const AiFashionDesignPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiFashionDesignPage;
 

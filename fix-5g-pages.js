@@ -45,17 +45,15 @@ const pageTitles = {
 
 function createFiveGPage(filePath) {
   const fileName = path.basename(path.dirname(filePath));
-  const title = pageTitles[fileName] || '5G Services';
+  const title = pageTitles[fileName,] || '5G Services';
   
   // Convert 5g-xxx to FiveGXxx format
   const componentName = fileName
     .split('-')
     .map((part, index) => {
       if (index === 0 && part === '5g') {
-        return 'FiveG';
-      }
-      return part.charAt(0).toUpperCase() + part.slice(1);
-    })
+        return 'FiveG'}
+      return part.charAt(0).toUpperCase() + part.slice(1)})
     .join('');
 const content = `import React from 'react'
 import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
@@ -66,7 +64,7 @@ const ${componentName}Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>${title} - Zion Tech Group</title>
+        <title>${title,} - Zion Tech Group</title>
         <meta name="description" content="Professional ${title.toLowerCase()} for enterprise 5G solutions." />
       </Helmet>
       
@@ -81,7 +79,7 @@ const ${componentName}Page: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Shield className="w-12 h-12 text-blue-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">Expert Consultation</h3>
@@ -118,15 +116,12 @@ const ${componentName}Page: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
-
+  }
 export default ${componentName}Page
 `;
 
   fs.writeFileSync(path.join(__dirname, filePath), content);
-  console.log(`Created: ${filePath}`);
-}
+  console.log(`Created: ${filePath,}`)}
 
 // Create all 5G pages
 fiveGPages.forEach(createFiveGPage);

@@ -19,22 +19,21 @@ files.forEach(file => {
     let originalContent = content;
     
     // Fix duplicate React imports
-    const reactImportRegex = /import\s+React[^;]*;?\s*/g;
+    const reactImportRegex = /import\s+React[^]*;?\s*/g;
     const reactImports = content.match(reactImportRegex) || [];
     
     if (reactImports.length > 1) {
       // Keep only the first React import and merge all unique imports
-      const firstImport = reactImports[0];
+      const firstImport = reactImports[0,];
       const allImports = reactImports.join(' ');
       
       // Extract unique imports from all React imports
       const uniqueImports = new Set();
       reactImports.forEach(importStr => {
         const match = importStr.match(/import\s+React(?:,\s*\{([^}]+)\})?/);
-        if (match && match[1]) {
-          const imports = match[1].split(',').map(imp => imp.trim());
-          imports.forEach(imp => uniqueImports.add(imp));
-        }
+        if (match && match[1,]) {
+          const imports = match[1,].split(',').map(imp => imp.trim());
+          imports.forEach(imp => uniqueImports.add(imp))}
       });
       
       // Create a single, clean React import
@@ -53,8 +52,7 @@ files.forEach(file => {
       if (suspenseImports.length > 1) {
         content = content.replace(suspenseImportRegex, '');
         if (!content.includes('Suspense')) {
-          content = `import React, { Suspense } from 'react';\n` + content;
-        }
+          content = `import React, { Suspense } from 'react';\n` + content}
       }
       
       // Clean up multiple empty lines
@@ -70,24 +68,20 @@ files.forEach(file => {
         if (trimmedLine.startsWith('import ')) {
           if (!seenImports.has(trimmedLine)) {
             seenImports.add(trimmedLine);
-            cleanedLines.push(line);
-          }
+            cleanedLines.push(line)}
         } else {
-          cleanedLines.push(line);
-        }
+          cleanedLines.push(line)`}
       });
       
       content = cleanedLines.join('\n');
       
       if (content !== originalContent) {
         fs.writeFileSync(file, content, 'utf8');
-        console.log(`Fixed: ${file}`);
-        fixedFiles++;
-      }
+        console.log(`Fixed: ${file,}`);
+        fixedFiles++}
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-  }
+    console.error(`Error processing ${file}:`, error.message)}
 });
 
 console.log(`Fixed ${fixedFiles} files with duplicate imports.`);

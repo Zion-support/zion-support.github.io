@@ -48,7 +48,6 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-};
+  ,),};
 
 export default AIBusinessIntelligenceProPage;

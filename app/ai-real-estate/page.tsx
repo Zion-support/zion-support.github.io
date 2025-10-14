@@ -46,8 +46,6 @@ const AiRealEstatePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiRealEstatePage;
 

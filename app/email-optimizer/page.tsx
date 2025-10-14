@@ -46,8 +46,6 @@ const EmailOptimizerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default EmailOptimizerPage;
 

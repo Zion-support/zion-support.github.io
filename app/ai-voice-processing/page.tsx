@@ -46,8 +46,6 @@ const AiVoiceProcessingPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiVoiceProcessingPage;
 

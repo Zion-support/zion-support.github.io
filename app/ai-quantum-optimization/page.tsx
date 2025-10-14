@@ -46,8 +46,6 @@ const AiQuantumOptimizationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiQuantumOptimizationPage;
 

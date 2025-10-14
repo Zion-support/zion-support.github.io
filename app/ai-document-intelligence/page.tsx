@@ -46,8 +46,6 @@ const AiDocumentIntelligencePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiDocumentIntelligencePage;
 

@@ -46,8 +46,6 @@ const CustomSoftwarePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CustomSoftwarePage;
 

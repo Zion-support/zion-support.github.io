@@ -46,8 +46,6 @@ const RoboticsIntegrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default RoboticsIntegrationPage;
 

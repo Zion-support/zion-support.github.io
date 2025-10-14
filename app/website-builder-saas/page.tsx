@@ -46,8 +46,6 @@ const WebsiteBuilderSaasPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default WebsiteBuilderSaasPage;
 

@@ -46,8 +46,6 @@ const ZionAiContentModerationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiContentModerationPage;
 

@@ -13,6 +13,5 @@ const FiveGReliabilityPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ),}
 export default FiveGReliabilityPage;

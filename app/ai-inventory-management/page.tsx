@@ -46,8 +46,6 @@ const AiInventoryManagementPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiInventoryManagementPage;
 

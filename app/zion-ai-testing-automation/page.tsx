@@ -46,8 +46,6 @@ const ZionAiTestingAutomationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiTestingAutomationPage;
 

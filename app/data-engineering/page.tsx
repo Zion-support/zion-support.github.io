@@ -46,8 +46,6 @@ const DataEngineeringPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DataEngineeringPage;
 

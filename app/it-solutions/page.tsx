@@ -32,7 +32,7 @@ export default function ITSolutionsPage() {
       benefits: ["99.9% uptime", "Scalable infrastructure", "Expert support"],
       useCases: ["Enterprise infrastructure", "Cloud migration", "System optimization"],
       href: "/it-infrastructure"
-    },
+    ,},
     {
       title: "Cybersecurity Solutions",
       description: "Advanced security solutions to protect your digital assets and ensure compliance with industry standards.",
@@ -50,7 +50,7 @@ export default function ITSolutionsPage() {
       benefits: ["Advanced protection", "Compliance ready", "24/7 monitoring"],
       useCases: ["Security audits", "Threat protection", "Compliance"],
       href: "/it-cybersecurity"
-    },
+    ,},
     {
       title: "Cloud Solutions",
       description: "Migrate to the cloud with our expert cloud architecture and management services for optimal performance.",
@@ -68,7 +68,7 @@ export default function ITSolutionsPage() {
       benefits: ["Scalable solutions", "Cost effective", "High availability"],
       useCases: ["Cloud migration", "Multi-cloud setup", "Cost optimization"],
       href: "/it-cloud-solutions"
-    },
+    ,},
     {
       title: "Data Analytics",
       description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
@@ -86,7 +86,7 @@ export default function ITSolutionsPage() {
       benefits: ["Data-driven insights", "Real-time analytics", "Custom dashboards"],
       useCases: ["Business intelligence", "Data visualization", "Predictive analytics"],
       href: "/it-data-analytics"
-    },
+    ,},
     {
       title: "System Integration",
       description: "Seamlessly integrate different systems and applications for improved efficiency and data flow.",
@@ -104,7 +104,7 @@ export default function ITSolutionsPage() {
       benefits: ["Seamless integration", "Improved efficiency", "Custom solutions"],
       useCases: ["System integration", "API development", "Workflow automation"],
       href: "/it-system-integration"
-    },
+    ,},
     {
       title: "Compliance & Governance",
       description: "Ensure your IT systems meet regulatory requirements and industry standards with our compliance solutions.",
@@ -122,7 +122,7 @@ export default function ITSolutionsPage() {
       benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
-    }
+    ,}
   ];
 
   return (
@@ -141,7 +141,7 @@ export default function ITSolutionsPage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we've got you covered.
+            From infrastructure to cloud, we&apos;ve got you covered.
           </p>
         </div>
       </section>
@@ -151,8 +151,8 @@ export default function ITSolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
+              <div key={index} className="bg-slate-800 rounded-xl p-8 border border-slate-700 hover: border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className={`w-16 h-16 bg-gradient-to-r ${service.color,} rounded-lg flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -173,18 +173,18 @@ export default function ITSolutionsPage() {
 
                 <div className="mb-6">
                   <div className="text-2xl font-bold text-blue-400 mb-2">{service.price}</div>
-                  <div className="text-gray-400 text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
+                  <div className="text-gray-400 text-sm mb-4">Benefits: {service.benefits.join(&apos;, &apos;)}</div>
                 </div>
 
                 <Link
                   to={service.href}
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   Learn More
                   <ArrowRightIcon className="w-4 h-4" />
                 </Link>
               </div>
-            ))}
+            ,)),}
           </div>
         </div>
       </section>
@@ -192,11 +192,11 @@ export default function ITSolutionsPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our IT solutions can improve your business operations and security.
+            Let&apos;s discuss how our IT solutions can improve your business operations and security.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -215,5 +215,4 @@ export default function ITSolutionsPage() {
         </div>
       </section>
     </div>
-  );
-}
+  }

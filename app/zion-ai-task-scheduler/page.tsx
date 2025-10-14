@@ -46,8 +46,6 @@ const ZionAiTaskSchedulerPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiTaskSchedulerPage;
 

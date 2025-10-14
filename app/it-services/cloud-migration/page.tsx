@@ -46,8 +46,6 @@ const CloudMigrationPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default CloudMigrationPage;
 

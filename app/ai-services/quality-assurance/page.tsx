@@ -46,8 +46,6 @@ const QualityAssurancePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default QualityAssurancePage;
 

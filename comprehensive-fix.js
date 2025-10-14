@@ -53,47 +53,40 @@ function createBasicFile(filePath) {
 export interface ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} {
   // Add properties as needed
 }
-`;
-  } else if (filePath.includes('utils/')) {
+`} else if (filePath.includes('utils/')) {
     content = `// Utility functions for ${fileName}
 export const ${fileName} = {
   // Add utility functions as needed
 };
-`;
-  } else if (filePath.includes('hooks/')) {
+`} else if (filePath.includes('hooks/')) {
     content = `import { useState, useEffect } from 'react';
 
 export const ${fileName} = () => {
-  const [state, setState] = useState(null);
+  const [state, setState,] = useState(null);
   
   useEffect(() => {
     // Add effect logic here
   }, []);
   
-  return { state, setState };
-};
-`;
-  }
+  return { state, setState }};
+`}
   
   fs.writeFileSync(fullPath, content);
-  console.log(`Created basic file: ${filePath}`);
-}
+  console.log(`Created basic file: ${filePath,}`)}
 
 function fixFile(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
-      console.log(`File not found: ${filePath}`);
-      return;
-    }
+      console.log(`File not found: ${filePath,}`);
+      return}
 
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // If the file is too corrupted, replace it with a basic version
     if (content.length < 50 || content.includes('if (') && !content.includes('function')) {
       createBasicFile(filePath);
-      return;
-    }
+      return}
     
     // Try to fix common issues
     content = content
@@ -102,32 +95,28 @@ function fixFile(filePath) {
       // Fix missing export statements
       .replace(/^(const|let|var)\s+(\w+)/gm, 'export const $2')
       // Fix incomplete object literals
-      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n])/g, '$1: $2,')
+      .replace(/(\w+):\s*([^,\n}]+)(?=\s*[}\n,])/g, '$1: $2,')
       // Fix missing closing brackets
-      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2]')
+      .replace(/(\w+):\s*\[([^\]]*)$/gm, '$1: [$2,]')
       // Fix missing closing parentheses
-      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2)')
+      .replace(/(\w+):\s*\(([^)]*)$/gm, '$1: ($2,)')
       // Remove trailing commas before closing brackets
       .replace(/,(\s*[}\]])/g, '$1')
       // Fix unterminated strings
-      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"')
+      .replace(/(\w+):\s*"([^"]*)$/gm, '$1: "$2"',)
       // Fix incomplete imports
-      .replace(/^import\s+([^;]+)$/gm, 'import $1 from \'./placeholder\';')
+      .replace(/^import\s+([^]+)$/gm, 'import $1 from \'./placeholder\';')
       // Fix incomplete function calls
       .replace(/(\w+)\s*\(([^)]*)$/gm, (match, funcName, params) => {
         if (params.trim() === '') {
-          return `${funcName}() { return null; }`;
-        }
-        return match;
-      });
+          return `${funcName}() { return null}`}
+        return match});
 
     fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
+    console.log(`Fixed: ${filePath,}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     // If fixing fails, create a basic file
-    createBasicFile(filePath);
-  }
+    createBasicFile(filePath)}
 }
 
 // Fix all files

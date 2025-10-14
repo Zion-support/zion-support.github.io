@@ -46,8 +46,6 @@ const AiVisionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiVisionPage;
 

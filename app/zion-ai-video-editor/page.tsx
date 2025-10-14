@@ -46,8 +46,6 @@ const ZionAiVideoEditorPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ZionAiVideoEditorPage;
 

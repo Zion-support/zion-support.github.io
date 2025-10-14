@@ -46,8 +46,6 @@ const AiCustomerSupportBotPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCustomerSupportBotPage;
 

@@ -46,8 +46,6 @@ const DataProtectionPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default DataProtectionPage;
 

@@ -8,12 +8,11 @@ export default function Page() {
       <h1>Page Under Construction</h1>
       <p>This page is currently being updated.</p>
     </div>
-  )};
-}
+  )}}
 // Mock components;
 const AdvancedErrorBoundary = () => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
+  const [hasError, setHasError,] = React.useState(false);
+  const [error, setError,] = React.useState<Error | null>(null);
 
   React.useEffect(() => {
     const handleError = () => {
@@ -30,7 +29,7 @@ const AdvancedErrorBoundary = () => {
     } catch (err) {
       handleError(err as Error);
     }
-  }, [onError]);
+  }, [onError,]);
 
   if (hasError) {
     return (
@@ -53,8 +52,7 @@ const AdvancedErrorBoundary = () => {
           </div>
         )}
       </div>
-    )};
-  }
+    )}}
 
   return <React.Fragment>{children}</React.Fragment>;
 };
@@ -85,8 +83,7 @@ describe('Advanced Components', () => {';
     ;
     expect(screen.getByTestId('_error-boundary')).toBeInTheDocument();';
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();';
-    consoleSpy.mockRestore();
-  });
+    consoleSpy.mockRestore()});
 
   test('SEOEnhancer works with HelmetProvider', () => {';
     const SEOEnhancer = () => (
@@ -103,5 +100,4 @@ describe('Advanced Components', () => {';
     );
     ;
     expect(document.title).toBe('Test Title');'
-  });
-});
+  })});

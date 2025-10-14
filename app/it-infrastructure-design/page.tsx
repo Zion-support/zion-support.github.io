@@ -46,8 +46,6 @@ const ItInfrastructureDesignPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default ItInfrastructureDesignPage;
 

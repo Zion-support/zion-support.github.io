@@ -46,8 +46,6 @@ const AiCybersecurityMonitorProPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
-
+  }
 export default AiCybersecurityMonitorProPage;
 
